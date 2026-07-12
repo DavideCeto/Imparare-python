@@ -69,3 +69,22 @@
 .admonition.prompt .copy-button:hover {
   background-color: #0041a4; /* Darker blue on hover */
 }
+
+/* Force the turtle graphics gallery grid to a fixed 3-column layout,
+   each column exactly 30% of the available (TOC-hidden) main section width */
+.md-typeset .grid.gallery-grid-3col {
+  grid-template-columns: repeat(3, 30%);
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 59.9375em) {
+  .md-typeset .grid.gallery-grid-3col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .grid.gallery-grid-3col {
+    grid-template-columns: 1fr;
+  }
+}
