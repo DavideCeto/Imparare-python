@@ -1,0 +1,503 @@
+{
+  "project": {
+    "title": "Learning Python",
+    "subtitle": "Auto-scanned intelligent textbook",
+    "author": "Dan McCreary",
+    "costPerMTokens": 15,
+    "sessionBudget": {
+      "pro": 900000,
+      "max": 3500000
+    }
+  },
+  "sections": {
+    "scaffold": {
+      "status": "published",
+      "tokensTarget": 2000,
+      "tokensDone": 2000
+    },
+    "course-description": {
+      "status": "published",
+      "tokensTarget": 4000,
+      "tokensDone": 3148
+    },
+    "learning-graph": {
+      "status": "published",
+      "tokensTarget": 20000,
+      "tokensDone": 20000
+    },
+    "chapter-structure": {
+      "status": "published",
+      "tokensTarget": 15000,
+      "tokensDone": 15000
+    },
+    "chapter-content": {
+      "countLabel": "38 chapters",
+      "children": [
+        {
+          "n": 1,
+          "title": "Welcome to Python and Skulpt",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 2,
+          "title": "Python Code Structure",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 3,
+          "title": "Variables and Numbers",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 4,
+          "title": "Functions and Objects",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 5,
+          "title": "Drawing with Turtle Graphics",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 6,
+          "title": "Math and Arithmetic",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 7,
+          "title": "For Loops and Drawing Shapes",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 8,
+          "title": "Working with Strings",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 9,
+          "title": "Making Decisions with If/Else",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 10,
+          "title": "While Loops and Animation",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 11,
+          "title": "Functions with Parameters and Scope",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 12,
+          "title": "Colors, Fill, and Turtle Art",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 13,
+          "title": "User Input and Type Conversion",
+          "status": "drafted",
+          "tokens": 10000
+        },
+        {
+          "n": 14,
+          "title": "String Methods and Formatting",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 15,
+          "title": "Lists \u2014 Basics",
+          "status": "drafted",
+          "tokens": 10000
+        },
+        {
+          "n": 16,
+          "title": "Lists \u2014 Methods and Patterns",
+          "status": "drafted",
+          "tokens": 10000
+        },
+        {
+          "n": 17,
+          "title": "Modules and Random Numbers",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 18,
+          "title": "Math Module and Turtle Projects",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 19,
+          "title": "More Booleans and Conditionals",
+          "status": "drafted",
+          "tokens": 10000
+        },
+        {
+          "n": 20,
+          "title": "Tuples and Sets",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 21,
+          "title": "Dictionaries",
+          "status": "drafted",
+          "tokens": 10000
+        },
+        {
+          "n": 22,
+          "title": "Advanced Collections and Built-in Functions",
+          "status": "drafted",
+          "tokens": 10000
+        },
+        {
+          "n": 23,
+          "title": "Error Handling and Debugging",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 24,
+          "title": "Recursion and Fractals",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 25,
+          "title": "Object-Oriented Programming",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 26,
+          "title": "File Input and Output",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 27,
+          "title": "Standard Library and JSON",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 28,
+          "title": "Python Development Tools",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 29,
+          "title": "Text Processing and Regular Expressions",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 30,
+          "title": "Algorithms and Data Structures",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 31,
+          "title": "Advanced Functions and OOP",
+          "status": "drafted",
+          "tokens": 10000
+        },
+        {
+          "n": 32,
+          "title": "Data Visualization with matplotlib",
+          "status": "drafted",
+          "tokens": 10000
+        },
+        {
+          "n": 33,
+          "title": "NumPy and Scientific Computing",
+          "status": "drafted",
+          "tokens": 10000
+        },
+        {
+          "n": 34,
+          "title": "Image Processing with Pillow",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 35,
+          "title": "Advanced Turtle and Event-Driven Programming",
+          "status": "drafted",
+          "tokens": 10000
+        },
+        {
+          "n": 36,
+          "title": "Computational Thinking and Best Practices",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 37,
+          "title": "Machine Learning Foundations",
+          "status": "published",
+          "tokens": 10000
+        },
+        {
+          "n": 38,
+          "title": "Neural Networks and MNIST",
+          "status": "published",
+          "tokens": 10000
+        }
+      ]
+    },
+    "chapter-images": {
+      "status": "published",
+      "tokensTarget": 8000,
+      "tokensDone": 8000
+    },
+    "microsims": {
+      "countLabel": "31 simulations",
+      "children": [
+        {
+          "n": 1,
+          "title": "Boolean Logic Lab",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 2,
+          "title": "Code Stepper",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 3,
+          "title": "Control Flow Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 4,
+          "title": "Dice Roll Histogram",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 5,
+          "title": "Dictionary Key Lookup",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 6,
+          "title": "Expression Evaluator",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 7,
+          "title": "For-Loop Stepper",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 8,
+          "title": "Fractal Tree Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 9,
+          "title": "Function Call Flow",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 10,
+          "title": "Graph Traversal Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 11,
+          "title": "Graph Viewer",
+          "status": "drafted",
+          "tokens": 5000
+        },
+        {
+          "n": 12,
+          "title": "Inheritance Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 13,
+          "title": "JSON to Python Type Mapper",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 14,
+          "title": "List Index Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 15,
+          "title": "Modulo Clock",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 16,
+          "title": "Object Instance Inspector",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 17,
+          "title": "Range Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 18,
+          "title": "Recursion Call Stack",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 19,
+          "title": "Regex Match Lab",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 20,
+          "title": "RGB Color Mixer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 21,
+          "title": "Scope Inspector",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 22,
+          "title": "Search Race",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 23,
+          "title": "Set Operations Venn",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 24,
+          "title": "Sine Wave Explorer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 25,
+          "title": "Sorting Algorithm Comparer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 26,
+          "title": "Stack and Queue Simulator",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 27,
+          "title": "String Slicer",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 28,
+          "title": "Turtle State Inspector",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 29,
+          "title": "Unit Circle Degrees and Radians",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 30,
+          "title": "Variable Memory Model",
+          "status": "published",
+          "tokens": 5000
+        },
+        {
+          "n": 31,
+          "title": "While-Loop Stepper",
+          "status": "published",
+          "tokens": 5000
+        }
+      ]
+    },
+    "glossary": {
+      "status": "published",
+      "tokensTarget": 24165,
+      "tokensDone": 24165
+    },
+    "faq": {
+      "status": "published",
+      "tokensTarget": 12000,
+      "tokensDone": 10403
+    },
+    "quiz": {
+      "status": "published",
+      "tokensTarget": 58819,
+      "tokensDone": 58819
+    },
+    "reference": {
+      "status": "published",
+      "tokensTarget": 20000,
+      "tokensDone": 18448
+    },
+    "teachers-guide": {
+      "status": "published",
+      "tokensTarget": 15000,
+      "tokensDone": 6170
+    },
+    "book-metrics": {
+      "status": "published",
+      "tokensTarget": 2000,
+      "tokensDone": 2000
+    },
+    "publish": {
+      "status": "published",
+      "tokensTarget": 10000,
+      "tokensDone": 10000
+    },
+    "stories": {
+      "status": "not-started",
+      "tokensTarget": 30000,
+      "tokensDone": 0
+    }
+  }
+}
