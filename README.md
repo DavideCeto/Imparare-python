@@ -1,3 +1,5 @@
+# Questo è un fork in lingua italiana del bellissimo progetto Learning Python di Dan McCreary (https://github.com/dmccreary/learning-python) 
+
 # Beginning Python — From Blocks to Code with Monty
 
 [![MkDocs](https://img.shields.io/badge/Made%20with-MkDocs-526CFE?logo=materialformkdocs)](https://www.mkdocs.org/)
