@@ -1,6 +1,6 @@
 # Questo è un fork in lingua italiana del bellissimo progetto Learning Python di Dan McCreary (https://github.com/dmccreary/learning-python) 
 
-# Beginning Python — From Blocks to Code with Monty
+# Introduzione a Python — Dalle istruzioni di programmazione ai codici con Monty
 
 [![MkDocs](https://img.shields.io/badge/Made%20with-MkDocs-526CFE?logo=materialformkdocs)](https://www.mkdocs.org/)
 [![Material for MkDocs](https://img.shields.io/badge/Material%20for%20MkDocs-526CFE?logo=materialformkdocs)](https://squidfunk.github.io/mkdocs-material/)
@@ -11,97 +11,82 @@
 [![p5.js](https://img.shields.io/badge/p5.js-ED225D?logo=p5.js&logoColor=white)](https://p5js.org/)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-## View the Live Site
+## Visualizza il sito web in tempo reale
 
-Read the book at: **[https://dmccreary.github.io/learning-python/](https://dmccreary.github.io/learning-python/)**
+Leggi il libro su: **[https://dmccreary.github.io/learning-python/](https://dmccreary.github.io/learning-python/)**
 
-## Overview
+## Descrizione
 
-**Beginning Python — From Blocks to Code with Monty** is an interactive, AI-generated
-intelligent textbook for students ages 10–13 who are ready to move from block-based
-programming (like Scratch) into real, text-based Python.
+**Introduzione a Python — Dalle istruzioni di programmazione ai codici con Monty** è un libro di testo interattivo e intelligente, creato da AI, per studenti di età compresa tra 10 e 13 anni che desiderano passare da programmazioni basate su blocchi (come Scratch) a programmazioni reali in Python.
 
-Every lesson is built around inline, in-browser coding powered by **Skulpt**, a
-JavaScript implementation of Python. Students can read a short working program,
-click **Run** to see it execute instantly (no install, no account), and then modify
-it — a color, a number, a direction — and run it again. Skulpt's built-in turtle
-graphics give immediate visual feedback, so students see shapes, spirals, and
-patterns appear the moment their code runs. Before most labs, a friendly mascot
-named Monty asks students to *predict* what the code will do before they click Run —
-a habit that builds real reasoning skills, not just copy-and-run familiarity.
+Ogni lezione è basata su programmazione interattiva, realizzata con **Skulpt**, una implementazione di Python in JavaScript. Gli studenti possono leggere un breve programma, cliccare su **Run** per vedere come esegue immediatamente (senza bisogno di installazione o account), e poi modificarlo: cambiare il colore, il numero, la direzione… e ripetere l’esecuzione. La grafica astratta fornita da Skulpt offre un feedback visivo immediato: gli studenti vedono immediatamente quali forme, spirali e pattern appaiono non appena il codice viene eseguito. Prima di ogni esercizio, una simpatica mascotte chiamata Monty chiede agli studenti di *prevedere* cosa farà il codice prima di cliccare su “Run”… Questo metodo favorisce lo sviluppo delle capacità di ragionamento, non solo di una semplice abitudine di copiare e eseguire.
 
-The book covers 38 chapters spanning 450 concepts, validated against a full
-concept-dependency learning graph so that every idea builds on what came before it.
-Content, quizzes, glossary entries, and MicroSims are generated and curated with
-Claude AI skills, making this a Level 2+ intelligent textbook with interactive,
-hands-on elements throughout.
+Il libro copre 38 capitoli che trattano 450 concetti, verificati attraverso un grafico della dipendenza dei concetti, in modo che ogni idea si basi su quella precedente. Il contenuto, i quiz, le voci del glossario e i MicroSims vengono generati e curati utilizzando le competenze di Claude AI, rendendo questo un libro di testo intelligente di livello 2+ con elementi interattivi e pratici in tutto il libro.
 
-## Site Status and Metrics
+## Stato del sito e metriche
 
 | Metric | Count |
 |--------|-------|
-| Concepts in Learning Graph | 450 |
-| Chapters | 38 |
+| Concetti nel grafico della dipendenza | 450 |
+| Capitoli | 38 |
 | MicroSims | 31 |
-| Glossary Terms | 338 |
-| FAQ Questions | 83 |
-| Quiz Questions | 380 |
-| References | 380 |
-| Total Words | 260,425 |
-| Equivalent Pages | 1,057 |
+| Termini del glossario | 338 |
+| Domande frequenti | 83 |
+| Domande dei quiz | 380 |
+| Riferimenti | 380 |
+| Parole totali | 260.425 |
+| Pagine equivalenti | 1.057 |
 
-## Getting Started
+## Come iniziare
 
-### Clone the Repository
+### Clonare il repository
 
 ```bash
 git clone https://github.com/dmccreary/learning-python.git
 cd learning-python
 ```
 
-### Install Dependencies
+### Installare le dipendenze
 
-This project uses MkDocs with the Material theme:
+Questo progetto utilizza MkDocs con lo stile Material:
 
 ```bash
 pip install mkdocs
 pip install mkdocs-material
 ```
 
-### Build and Serve Locally
+### Creare e servire localmente
 
-Serve locally for development (with live reload):
+Servire localmente per lo sviluppo (con ricarica in tempo reale):
 
 ```bash
 mkdocs serve
 ```
 
-Then open your browser to `http://localhost:8000`.
+Poi aprire il browser su `http://localhost:8000`.
 
-Build the static site:
+Creare il sito statico:
 
 ```bash
 mkdocs build
 ```
 
-### Deploy to GitHub Pages
+### Distribuire su GitHub Pages
 
 ```bash
 mkdocs gh-deploy
 ```
 
-This builds the site and pushes it to the `gh-pages` branch.
+Questo crea il sito e lo spinge sulla branch `gh-pages`.
 
-### Using the Book
+### Utilizzare il libro
 
-- Use the left sidebar to browse chapters, or the search icon to search all content.
-- Every chapter includes one or more inline Skulpt labs — read the code, predict what it
-  will do, click **Run**, then modify it and run it again.
-- Each chapter ends with a quiz and a list of annotated references.
-- Explore the [Turtle Graphics Gallery](docs/turtle-graphics-gallery) and
-  [MicroSims](docs/sims) for standalone interactive examples.
+- Utilizzare la barra laterale a sinistra per navigare tra i capitoli, o il pulsante di ricerca per cercare tutto il contenuto.
+- Ogni capitolo include uno o più laboratori interattivi — leggere il codice, prevedere cosa farà, cliccare su **Eseguire**, poi modificarlo ed eseguirlo di nuovo.
+- Ogni capitolo termina con un quiz e una lista di riferimenti annotati.
+- Esplorare la [Galleria grafica a teste](docs/turtle-graphics-gallery) e [MicroSims](docs/sims) per esempi interattivi autonomi.
 
-## Repository Structure
+## Struttura del repository
 
 ```
 learning-python/
@@ -123,48 +108,47 @@ learning-python/
 └── README.md                      # This file
 ```
 
-## Reporting Issues
+## Segnalare problemi
 
-Found a bug, typo, or have a suggestion for improvement? Please report it:
+Ha trovato un bug, un errore di battitura, o ha una suggerimento per miglioramenti? Si prega di segnalarlo:
 
-[GitHub Issues](https://github.com/dmccreary/learning-python/issues)
+[Issues su GitHub](https://github.com/dmccreary/learning-python/issues)
 
-When reporting issues, please include a description of the problem, steps to
-reproduce (for bugs), and screenshots if applicable.
+Quando segnalate problemi, si prega di includere una descrizione del problema, passaggi per riprodurre il problema (per i bug) e screenshot, se disponibili.
 
-## License
+## Licenza
 
-This work is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+Questo lavoro è licenziato sotto la [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-**You are free to:**
+**È libero di:**
 
-- Share — copy and redistribute the material
-- Adapt — remix, transform, and build upon the material
+- **Condividere** — copiare e distribuire il materiale
+- **Adattare** — rimixare, trasformare e sviluppare sul materiale
 
-**Under the following terms:**
+**Sotto i seguenti termini:**
 
-- **Attribution** — Give appropriate credit with a link to the original
-- **NonCommercial** — No commercial use without permission
-- **ShareAlike** — Distribute contributions under the same license
+- **Attribuzione** — Dare il dovuto credito con un link all'originale
+- **Non Commerciale** — Nessun uso commerciale senza permesso
+- **ShareAlike** — Distribuire i contributi sotto la stessa licenza
 
-See [docs/license.md](docs/license.md) for full details, including commercial licensing inquiries.
+Per maggiori dettagli, comprese le richieste di licenza commerciale, si veda [docs/license.md](docs/license.md).
 
-## Acknowledgements
+## Ringraziamenti
 
-This project is built on the shoulders of giants in the open source community:
+Questo progetto si basa sui contributi dei grandi esperti della comunità open source:
 
-- **[MkDocs](https://www.mkdocs.org/)** — Static site generator optimized for project documentation
-- **[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)** — Beautiful, responsive theme
-- **[Skulpt](https://skulpt.org/)** — In-browser Python implementation powering every coding lab
-- **[p5.js](https://p5js.org/)** — Creative coding library from NYU ITP, used in several MicroSims
-- **[Claude AI](https://claude.ai)** by Anthropic — AI-assisted content generation
-- **[GitHub Pages](https://pages.github.com/)** — Free hosting for open source projects
+- **[MkDocs](https://www.mkdocs.org/)** — Generatore di siti statici ottimizzato per la documentazione dei progetti
+- **[Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)** — Theme bello e reattivo per la documentazione
+- **[Skulpt](https://skulpt.org/)** — Implementazione Python in browser che alimenta ogni laboratorio di programmazione
+- **[p5.js](https://p5js.org/)** — Biblioteca di programmazione creativa dell'ITP della NYU, utilizzata in diversi progetti MicroSims
+- **[Claude AI](https://claude.ai)** di Anthropic — Generazione di contenuti assistita da intelligenza artificiale
+- **[GitHub Pages](https://pages.github.com/)** — Hosting gratuito per progetti open source
 
-## Contact
+## Contatti
 
 **Dan McCreary**
 
 - LinkedIn: [linkedin.com/in/danmccreary](https://www.linkedin.com/in/danmccreary/)
 - GitHub: [@dmccreary](https://github.com/dmccreary)
 
-Questions, suggestions, or collaboration opportunities? Feel free to connect on LinkedIn or open an issue on GitHub.
+Domande, suggerimenti o opportunità di collaborazione? Non esitate a contattarmi su LinkedIn o a creare un issue su GitHub.
