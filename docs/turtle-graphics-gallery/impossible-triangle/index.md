@@ -210,6 +210,8 @@ The bug is `angle = i * 100` — the copies land at 0°, 100°, and 200°, leavi
 
 4. **Break the illusion on purpose.** Fill all three beams with the same shade, `'#989898'`. You'll know it worked when the figure flattens into a plain 2-D triangle outline — proof that the shading, not the outline, fakes the 3-D.
 
+5. **Drive Logo Colors.** This same three-beam shape is also the basic outline of the logo used by a very large company's online file-storage and drive service — the kind of app millions of people use to save documents and photos in the cloud. Search online for that logo and find its three official RGB (or hex) color codes, then set `shades` to your findings, for example `shades = ['#FFD14F', '#0EBC5F', '#2882FB']`. You'll know it worked when your "impossible triangle" starts looking like a logo you've seen before! *Special thanks to Sebastian B. for this fun addition.*
+
 !!! mascot-celebration "You Drew the Undrawable!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     One point list, one rotation formula, three shades of gray —
