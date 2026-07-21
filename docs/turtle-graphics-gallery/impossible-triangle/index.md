@@ -212,6 +212,44 @@ The bug is `angle = i * 100` — the copies land at 0°, 100°, and 200°, leavi
 
 5. **Drive Logo Colors.** This same three-beam shape is also the basic outline of the logo used by a very large company's online file-storage and drive service — the kind of app millions of people use to save documents and photos in the cloud. Search online for that logo and find its three official RGB (or hex) color codes, then set `shades` to your findings, for example `shades = ['#FFD14F', '#0EBC5F', '#2882FB']`. You'll know it worked when your "impossible triangle" starts looking like a logo you've seen before! *Special thanks to Sebastian B. for this fun addition.*
 
+    ??? question "Show Solution"
+        ```python
+        import turtle
+        import math
+        monty = turtle.Turtle()
+        monty.speed(0)
+        monty.hideturtle()
+
+        beam = [(0, 76), (101, -99), (137, -99), (154, -69), (36, 137)]
+        shades = ['#FFD14F', '#0EBC5F', '#2882FB']
+
+        def rotate(point, angle):
+            a = math.radians(angle)
+            x = point[0]
+            y = point[1]
+            rx = x * math.cos(a) - y * math.sin(a)
+            ry = x * math.sin(a) + y * math.cos(a)
+            return (rx, ry)
+
+        def draw_beam(points, color):
+            monty.penup()
+            monty.goto(points[0][0], points[0][1])
+            monty.pendown()
+            monty.pencolor(color)
+            monty.fillcolor(color)
+            monty.pensize(2)
+            monty.begin_fill()
+            for p in points:
+                monty.goto(p[0], p[1])
+            monty.goto(points[0][0], points[0][1])
+            monty.end_fill()
+
+        for i in range(3):
+            angle = i * 120
+            turned = [rotate(p, angle) for p in beam]
+            draw_beam(turned, shades[i])
+        ```
+
 !!! mascot-celebration "You Drew the Undrawable!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     One point list, one rotation formula, three shades of gray —
