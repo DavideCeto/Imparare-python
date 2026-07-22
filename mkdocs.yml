@@ -1,7 +1,7 @@
-site_name: 'Learning Python'
-site_description: 'Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.'
+site_name: 'Imparare Python'
+site_description: 'Risorse per insegnare Python dalle scuole primarie in poi, da programmatori principianti a sviluppatori esperti.'
 site_author: 'Dan McCreary'
-repo_name: 'GitHub Repo'
+repo_name: 'Repository GitHub'
 repo_url: 'https://github.com/dmccreary/learning-python'
 site_url: 'https://dmccreary.github.io/learning-python/'
 edit_uri: 'blob/master/docs'
@@ -13,389 +13,389 @@ exclude_docs: |
 
 nav:
   - Home: index.md
-  - Course Description: course-description.md
-  - About Learning Python: about.md
-  - Chapters:
-    - List of Chapters: chapters/index.md
-    - 1. Welcome to Python and Skulpt:
-      - Content: chapters/01-welcome-to-python/index.md
-      - Annotated References: chapters/01-welcome-to-python/references.md
+  - Descrizione del Corso: course-description.md
+  - Informazioni su Imparare Python: about.md
+  - Capitoli:
+    - Elenco dei Capitoli: chapters/index.md
+    - 1. Benvenuto in Python e Skulpt:
+      - Contenuto: chapters/01-welcome-to-python/index.md
+      - Riferimenti Annotati: chapters/01-welcome-to-python/references.md
       - Quiz: chapters/01-welcome-to-python/quiz.md
-    - 2. Python Code Structure:
-      - Content: chapters/02-python-code-structure/index.md
-      - Annotated References: chapters/02-python-code-structure/references.md
+    - 2. Struttura del Codice Python:
+      - Contenuto: chapters/02-python-code-structure/index.md
+      - Riferimenti Annotati: chapters/02-python-code-structure/references.md
       - Quiz: chapters/02-python-code-structure/quiz.md
-    - 3. Variables and Numbers:
-      - Content: chapters/03-variables-and-numbers/index.md
-      - Annotated References: chapters/03-variables-and-numbers/references.md
+    - 3. Variabili e Numeri:
+      - Contenuto: chapters/03-variables-and-numbers/index.md
+      - Riferimenti Annotati: chapters/03-variables-and-numbers/references.md
       - Quiz: chapters/03-variables-and-numbers/quiz.md
-    - 4. Functions and Objects:
-      - Content: chapters/04-functions-and-objects/index.md
-      - Annotated References: chapters/04-functions-and-objects/references.md
+    - 4. Funzioni e Oggetti:
+      - Contenuto: chapters/04-functions-and-objects/index.md
+      - Riferimenti Annotati: chapters/04-functions-and-objects/references.md
       - Quiz: chapters/04-functions-and-objects/quiz.md
-    - 5. Drawing with Turtle Graphics:
-      - Content: chapters/05-drawing-with-turtle/index.md
-      - Annotated References: chapters/05-drawing-with-turtle/references.md
+    - 5. Disegno con Grafica Tartaruga:
+      - Contenuto: chapters/05-drawing-with-turtle/index.md
+      - Riferimenti Annotati: chapters/05-drawing-with-turtle/references.md
       - Quiz: chapters/05-drawing-with-turtle/quiz.md
-    - 6. Math and Arithmetic:
-      - Content: chapters/06-math-and-arithmetic/index.md
-      - Annotated References: chapters/06-math-and-arithmetic/references.md
+    - 6. Matematica e Aritmetica:
+      - Contenuto: chapters/06-math-and-arithmetic/index.md
+      - Riferimenti Annotati: chapters/06-math-and-arithmetic/references.md
       - Quiz: chapters/06-math-and-arithmetic/quiz.md
-    - 7. For Loops and Drawing Shapes:
-      - Content: chapters/07-for-loops-and-shapes/index.md
-      - Annotated References: chapters/07-for-loops-and-shapes/references.md
+    - 7. Cicli For e Disegno di Forme:
+      - Contenuto: chapters/07-for-loops-and-shapes/index.md
+      - Riferimenti Annotati: chapters/07-for-loops-and-shapes/references.md
       - Quiz: chapters/07-for-loops-and-shapes/quiz.md
-    - 8. Working with Strings:
-      - Content: chapters/08-working-with-strings/index.md
-      - Annotated References: chapters/08-working-with-strings/references.md
+    - 8. Lavorare con le Stringhe:
+      - Contenuto: chapters/08-working-with-strings/index.md
+      - Riferimenti Annotati: chapters/08-working-with-strings/references.md
       - Quiz: chapters/08-working-with-strings/quiz.md
-    - 9. Making Decisions with If/Else:
-      - Content: chapters/09-decisions-if-else/index.md
-      - Annotated References: chapters/09-decisions-if-else/references.md
+    - 9. Prendere Decisioni con If/Else:
+      - Contenuto: chapters/09-decisions-if-else/index.md
+      - Riferimenti Annotati: chapters/09-decisions-if-else/references.md
       - Quiz: chapters/09-decisions-if-else/quiz.md
-    - 10. While Loops and Animation:
-      - Content: chapters/10-while-loops-and-animation/index.md
-      - Annotated References: chapters/10-while-loops-and-animation/references.md
+    - 10. Cicli While e Animazione:
+      - Contenuto: chapters/10-while-loops-and-animation/index.md
+      - Riferimenti Annotati: chapters/10-while-loops-and-animation/references.md
       - Quiz: chapters/10-while-loops-and-animation/quiz.md
-    - 11. Functions with Parameters and Scope:
-      - Content: chapters/11-functions-parameters-scope/index.md
-      - Annotated References: chapters/11-functions-parameters-scope/references.md
+    - 11. Funzioni con Parametri e Scope:
+      - Contenuto: chapters/11-functions-parameters-scope/index.md
+      - Riferimenti Annotati: chapters/11-functions-parameters-scope/references.md
       - Quiz: chapters/11-functions-parameters-scope/quiz.md
-    - 12. Colors, Fill, and Turtle Art:
-      - Content: chapters/12-colors-fill-turtle-art/index.md
-      - Annotated References: chapters/12-colors-fill-turtle-art/references.md
+    - 12. Colori, Riempimento e Arte Tartaruga:
+      - Contenuto: chapters/12-colors-fill-turtle-art/index.md
+      - Riferimenti Annotati: chapters/12-colors-fill-turtle-art/references.md
       - Quiz: chapters/12-colors-fill-turtle-art/quiz.md
-    - 13. User Input and Type Conversion:
-      - Content: chapters/13-user-input-type-conversion/index.md
-      - Annotated References: chapters/13-user-input-type-conversion/references.md
+    - 13. Input dell'Utente e Conversione di Tipo:
+      - Contenuto: chapters/13-user-input-type-conversion/index.md
+      - Riferimenti Annotati: chapters/13-user-input-type-conversion/references.md
       - Quiz: chapters/13-user-input-type-conversion/quiz.md
-    - 14. String Methods and Formatting:
-      - Content: chapters/14-string-methods-formatting/index.md
-      - Annotated References: chapters/14-string-methods-formatting/references.md
+    - 14. Metodi di Stringa e Formattazione:
+      - Contenuto: chapters/14-string-methods-formatting/index.md
+      - Riferimenti Annotati: chapters/14-string-methods-formatting/references.md
       - Quiz: chapters/14-string-methods-formatting/quiz.md
-    - 15. Lists - Basics:
-      - Content: chapters/15-lists-basics/index.md
-      - Annotated References: chapters/15-lists-basics/references.md
+    - 15. Liste - Basi:
+      - Contenuto: chapters/15-lists-basics/index.md
+      - Riferimenti Annotati: chapters/15-lists-basics/references.md
       - Quiz: chapters/15-lists-basics/quiz.md
-    - 16. Lists - Methods and Patterns:
-      - Content: chapters/16-lists-methods-patterns/index.md
-      - Annotated References: chapters/16-lists-methods-patterns/references.md
+    - 16. Liste - Metodi e Schemi:
+      - Contenuto: chapters/16-lists-methods-patterns/index.md
+      - Riferimenti Annotati: chapters/16-lists-methods-patterns/references.md
       - Quiz: chapters/16-lists-methods-patterns/quiz.md
-    - 17. Modules and Random Numbers:
-      - Content: chapters/17-modules-and-random/index.md
-      - Annotated References: chapters/17-modules-and-random/references.md
+    - 17. Moduli e Numeri Casuali:
+      - Contenuto: chapters/17-modules-and-random/index.md
+      - Riferimenti Annotati: chapters/17-modules-and-random/references.md
       - Quiz: chapters/17-modules-and-random/quiz.md
-    - 18. Math Module and Turtle Projects:
-      - Content: chapters/18-math-module-turtle-projects/index.md
-      - Annotated References: chapters/18-math-module-turtle-projects/references.md
+    - 18. Modulo Math e Progetti Tartaruga:
+      - Contenuto: chapters/18-math-module-turtle-projects/index.md
+      - Riferimenti Annotati: chapters/18-math-module-turtle-projects/references.md
       - Quiz: chapters/18-math-module-turtle-projects/quiz.md
-    - 19. More Booleans and Conditionals:
-      - Content: chapters/19-booleans-and-conditionals/index.md
-      - Annotated References: chapters/19-booleans-and-conditionals/references.md
+    - 19. Altri Booleani e Condizionali:
+      - Contenuto: chapters/19-booleans-and-conditionals/index.md
+      - Riferimenti Annotati: chapters/19-booleans-and-conditionals/references.md
       - Quiz: chapters/19-booleans-and-conditionals/quiz.md
-    - 20. Tuples and Sets:
-      - Content: chapters/20-tuples-and-sets/index.md
-      - Annotated References: chapters/20-tuples-and-sets/references.md
+    - 20. Tuple e Insiemi:
+      - Contenuto: chapters/20-tuples-and-sets/index.md
+      - Riferimenti Annotati: chapters/20-tuples-and-sets/references.md
       - Quiz: chapters/20-tuples-and-sets/quiz.md
-    - 21. Dictionaries:
-      - Content: chapters/21-dictionaries/index.md
-      - Annotated References: chapters/21-dictionaries/references.md
+    - 21. Dizionari:
+      - Contenuto: chapters/21-dictionaries/index.md
+      - Riferimenti Annotati: chapters/21-dictionaries/references.md
       - Quiz: chapters/21-dictionaries/quiz.md
-    - 22. Advanced Collections and Built-in Functions:
-      - Content: chapters/22-advanced-collections/index.md
-      - Annotated References: chapters/22-advanced-collections/references.md
+    - 22. Collezioni Avanzate e Funzioni Built-in:
+      - Contenuto: chapters/22-advanced-collections/index.md
+      - Riferimenti Annotati: chapters/22-advanced-collections/references.md
       - Quiz: chapters/22-advanced-collections/quiz.md
-    - 23. Error Handling and Debugging:
-      - Content: chapters/23-error-handling-debugging/index.md
-      - Annotated References: chapters/23-error-handling-debugging/references.md
+    - 23. Gestione degli Errori e Debug:
+      - Contenuto: chapters/23-error-handling-debugging/index.md
+      - Riferimenti Annotati: chapters/23-error-handling-debugging/references.md
       - Quiz: chapters/23-error-handling-debugging/quiz.md
-    - 24. Recursion and Fractals:
-      - Content: chapters/24-recursion-and-fractals/index.md
-      - Annotated References: chapters/24-recursion-and-fractals/references.md
+    - 24. Ricorsione e Frattali:
+      - Contenuto: chapters/24-recursion-and-fractals/index.md
+      - Riferimenti Annotati: chapters/24-recursion-and-fractals/references.md
       - Quiz: chapters/24-recursion-and-fractals/quiz.md
-    - 25. Object-Oriented Programming:
-      - Content: chapters/25-object-oriented-programming/index.md
-      - Annotated References: chapters/25-object-oriented-programming/references.md
+    - 25. Programmazione Orientata agli Oggetti:
+      - Contenuto: chapters/25-object-oriented-programming/index.md
+      - Riferimenti Annotati: chapters/25-object-oriented-programming/references.md
       - Quiz: chapters/25-object-oriented-programming/quiz.md
-    - 26. File Input and Output:
-      - Content: chapters/26-file-input-output/index.md
-      - Annotated References: chapters/26-file-input-output/references.md
+    - 26. Input e Output da File:
+      - Contenuto: chapters/26-file-input-output/index.md
+      - Riferimenti Annotati: chapters/26-file-input-output/references.md
       - Quiz: chapters/26-file-input-output/quiz.md
-    - 27. Standard Library and JSON:
-      - Content: chapters/27-standard-library-json/index.md
-      - Annotated References: chapters/27-standard-library-json/references.md
+    - 27. Libreria Standard e JSON:
+      - Contenuto: chapters/27-standard-library-json/index.md
+      - Riferimenti Annotati: chapters/27-standard-library-json/references.md
       - Quiz: chapters/27-standard-library-json/quiz.md
-    - 28. Python Development Tools:
-      - Content: chapters/28-python-dev-tools/index.md
-      - Annotated References: chapters/28-python-dev-tools/references.md
+    - 28. Strumenti di Sviluppo Python:
+      - Contenuto: chapters/28-python-dev-tools/index.md
+      - Riferimenti Annotati: chapters/28-python-dev-tools/references.md
       - Quiz: chapters/28-python-dev-tools/quiz.md
-    - 29. Text Processing and Regular Expressions:
-      - Content: chapters/29-text-processing-regex/index.md
-      - Annotated References: chapters/29-text-processing-regex/references.md
+    - 29. Elaborazione del Testo e Espressioni Regolari:
+      - Contenuto: chapters/29-text-processing-regex/index.md
+      - Riferimenti Annotati: chapters/29-text-processing-regex/references.md
       - Quiz: chapters/29-text-processing-regex/quiz.md
-    - 30. Algorithms and Data Structures:
-      - Content: chapters/30-algorithms-data-structures/index.md
-      - Annotated References: chapters/30-algorithms-data-structures/references.md
+    - 30. Algoritmi e Strutture Dati:
+      - Contenuto: chapters/30-algorithms-data-structures/index.md
+      - Riferimenti Annotati: chapters/30-algorithms-data-structures/references.md
       - Quiz: chapters/30-algorithms-data-structures/quiz.md
-    - 31. Advanced Functions and OOP:
-      - Content: chapters/31-advanced-functions-oop/index.md
-      - Annotated References: chapters/31-advanced-functions-oop/references.md
+    - 31. Funzioni Avanzate e OOP:
+      - Contenuto: chapters/31-advanced-functions-oop/index.md
+      - Riferimenti Annotati: chapters/31-advanced-functions-oop/references.md
       - Quiz: chapters/31-advanced-functions-oop/quiz.md
-    - 32. Data Visualization with matplotlib:
-      - Content: chapters/32-data-visualization-matplotlib/index.md
-      - Annotated References: chapters/32-data-visualization-matplotlib/references.md
+    - 32. Visualizzazione Dati con matplotlib:
+      - Contenuto: chapters/32-data-visualization-matplotlib/index.md
+      - Riferimenti Annotati: chapters/32-data-visualization-matplotlib/references.md
       - Quiz: chapters/32-data-visualization-matplotlib/quiz.md
-    - 33. NumPy and Scientific Computing:
-      - Content: chapters/33-numpy-scientific-computing/index.md
-      - Annotated References: chapters/33-numpy-scientific-computing/references.md
+    - 33. NumPy e Calcolo Scientifico:
+      - Contenuto: chapters/33-numpy-scientific-computing/index.md
+      - Riferimenti Annotati: chapters/33-numpy-scientific-computing/references.md
       - Quiz: chapters/33-numpy-scientific-computing/quiz.md
-    - 34. Image Processing with Pillow:
-      - Content: chapters/34-image-processing-pillow/index.md
-      - Annotated References: chapters/34-image-processing-pillow/references.md
+    - 34. Elaborazione Immagini con Pillow:
+      - Contenuto: chapters/34-image-processing-pillow/index.md
+      - Riferimenti Annotati: chapters/34-image-processing-pillow/references.md
       - Quiz: chapters/34-image-processing-pillow/quiz.md
-    - 35. Advanced Turtle and Event-Driven Programming:
-      - Content: chapters/35-advanced-turtle-event-driven/index.md
-      - Annotated References: chapters/35-advanced-turtle-event-driven/references.md
+    - 35. Tartaruga Avanzata e Programmazione Guidata da Eventi:
+      - Contenuto: chapters/35-advanced-turtle-event-driven/index.md
+      - Riferimenti Annotati: chapters/35-advanced-turtle-event-driven/references.md
       - Quiz: chapters/35-advanced-turtle-event-driven/quiz.md
-    - 36. Computational Thinking and Best Practices:
-      - Content: chapters/36-computational-thinking-best-practices/index.md
-      - Annotated References: chapters/36-computational-thinking-best-practices/references.md
+    - 36. Pensiero Computazionale e Migliori Pratiche:
+      - Contenuto: chapters/36-computational-thinking-best-practices/index.md
+      - Riferimenti Annotati: chapters/36-computational-thinking-best-practices/references.md
       - Quiz: chapters/36-computational-thinking-best-practices/quiz.md
-    - 37. Machine Learning Foundations:
-      - Content: chapters/37-machine-learning-foundations/index.md
-      - Annotated References: chapters/37-machine-learning-foundations/references.md
+    - 37. Fondamenti di Machine Learning:
+      - Contenuto: chapters/37-machine-learning-foundations/index.md
+      - Riferimenti Annotati: chapters/37-machine-learning-foundations/references.md
       - Quiz: chapters/37-machine-learning-foundations/quiz.md
-    - 38. Neural Networks and MNIST:
-      - Content: chapters/38-neural-networks-and-mnist/index.md
-      - Annotated References: chapters/38-neural-networks-and-mnist/references.md
+    - 38. Reti Neurali e MNIST:
+      - Contenuto: chapters/38-neural-networks-and-mnist/index.md
+      - Riferimenti Annotati: chapters/38-neural-networks-and-mnist/references.md
       - Quiz: chapters/38-neural-networks-and-mnist/quiz.md
- 
-  - Python Labs:
-    - List of Labs: python-labs/index.md
-    - 01. Turtle Commands: python-labs/01-turtle-commands.md
-    - 02. Drawing a Square: python-labs/02-simple-square.md
-    - 03. Variables: python-labs/03-variables.md
-    - 04. Loops and Polygons: python-labs/04-loops.md
-    - 04a. Stop Sign: python-labs/04a-stop-sign.md
-    - 05. If-Else and Colors: python-labs/05-conditionals.md
-    - 06. Functions and Flowers: python-labs/06-functions-and-flowers.md
-    - 07. Function Parameters: python-labs/07-function-parameters.md
-    - 08. Random Circles: python-labs/08-random-circles.md
-    - 08. Color Lists: python-labs/08-color-lists.md
-    - 08b. Random Stars: python-labs/08b-random-stars.md
-    - 10. Reading Errors: python-labs/10-debugging.md
-    - 11. User Input: python-labs/11-user-input.md
-    - 12. Fractal Tree: python-labs/12-fractal-tree.md
-    - 14. Hex Colors: python-labs/14-hex-colors.md
-    - 15. Sine Wave: python-labs/15-sine-wave.md
-    - 17. Mouse Clicks: python-labs/17-mouse-clicks.md
-
-  - Turtle Graphics Gallery:
-    - Gallery: turtle-graphics-gallery/index.md
-    - Pattern Ideas: turtle-graphics-gallery/pattern-ideas.md
-    - Rainbow Square Spiral: turtle-graphics-gallery/rainbow-square-spiral/index.md
-    - Pinwheel of Triangles: turtle-graphics-gallery/pinwheel-of-triangles/index.md
-    - Nested Circles: turtle-graphics-gallery/nested-circles/index.md
-    - Starburst: turtle-graphics-gallery/starburst/index.md
-    - Checkerboard Grid: turtle-graphics-gallery/checkerboard-grid/index.md
-    - Diagonal Stripe Field: turtle-graphics-gallery/diagonal-stripe-field/index.md
-    - Dotted Grid: turtle-graphics-gallery/dotted-grid/index.md
-    - Color Wheel Wedges: turtle-graphics-gallery/color-wheel-wedges/index.md
-    - Pentagon Chain: turtle-graphics-gallery/pentagon-chain/index.md
-    - Overlapping Squares: turtle-graphics-gallery/overlapping-squares/index.md
-    - Flower with Petal Function: turtle-graphics-gallery/flower-petal-function/index.md
-    - Honeycomb Grid: turtle-graphics-gallery/honeycomb-grid/index.md
-    - City Skyline: turtle-graphics-gallery/city-skyline/index.md
-    - Snowflake Arms: turtle-graphics-gallery/snowflake-arms/index.md
-    - Polka Dot Canvas: turtle-graphics-gallery/polka-dot-canvas/index.md
-    - Brick Wall: turtle-graphics-gallery/brick-wall/index.md
-    - Stars of Different Sizes: turtle-graphics-gallery/stars-different-sizes/index.md
-    - Traffic Light Stack: turtle-graphics-gallery/traffic-light/index.md
-    - Fish School: turtle-graphics-gallery/fish-school/index.md
-    - Mountain Range: turtle-graphics-gallery/mountain-range/index.md
-    - Archimedean Square Spiral: turtle-graphics-gallery/archimedean-spiral/index.md
-    - Rainbow Line Spiral: turtle-graphics-gallery/rainbow-line-spiral/index.md
-    - Hexagonal Spiral: turtle-graphics-gallery/hexagonal-spiral/index.md
-    - Triangular Spiral: turtle-graphics-gallery/triangular-spiral/index.md
-    - Inward Collapsing Spiral: turtle-graphics-gallery/inward-spiral/index.md
-    - Colored Logarithmic Spiral: turtle-graphics-gallery/logarithmic-spiral/index.md
-    - Double Helix Spiral: turtle-graphics-gallery/double-helix-spiral/index.md
-    - Fibonacci Spiral: turtle-graphics-gallery/fibonacci-spiral/index.md
-    - Spiral of Spirals: turtle-graphics-gallery/spiral-of-spirals/index.md
-    - Color-Banded Pentagon Spiral: turtle-graphics-gallery/pentagon-spiral/index.md
-    - Koch Snowflake: turtle-graphics-gallery/koch-snowflake/index.md
-    - Sierpinski Triangle: turtle-graphics-gallery/sierpinski-triangle/index.md
-    - Fractal Tree: turtle-graphics-gallery/fractal-tree/index.md
-    - L-System Plant: turtle-graphics-gallery/l-system-plant/index.md
-    - Turtle Maze Generator: turtle-graphics-gallery/turtle-maze/index.md
-    - Parametric Surface Projection: turtle-graphics-gallery/parametric-surface/index.md
-    - Lindenmayer Snowflake Collection: turtle-graphics-gallery/linden-snowflakes/index.md
-    - Generative Art Loop: turtle-graphics-gallery/generative-art/index.md
-    - Bouncing Ball: turtle-graphics-gallery/bouncing-ball/index.md
-    - Clock Face: turtle-graphics-gallery/clock-face/index.md
-    - Spirograph Drawer: turtle-graphics-gallery/spirograph-drawer/index.md
-    - Spiral Text: turtle-graphics-gallery/spiral-text/index.md
-    - Seven-Segment Display: turtle-graphics-gallery/seven-segment/index.md
-    - Circular Name Badge: turtle-graphics-gallery/circular-badge/index.md
-    - Name in Block Letters: turtle-graphics-gallery/block-letters/index.md
-    - Rotating Squares Illusion: turtle-graphics-gallery/rotating-squares/index.md
-    - Café Wall Illusion: turtle-graphics-gallery/cafe-wall/index.md
-    - Moiré Pattern: turtle-graphics-gallery/moire-pattern/index.md
-    - Bridget Riley Waves: turtle-graphics-gallery/riley-waves/index.md
-    - Expanding Hexagons: turtle-graphics-gallery/expanding-hexagons/index.md
-    - Lissajous Figure: turtle-graphics-gallery/lissajous-figure/index.md
-    - Rose Curve: turtle-graphics-gallery/rose-curve/index.md
-    - Spirograph: turtle-graphics-gallery/spirograph/index.md
-    - Butterfly Curve: turtle-graphics-gallery/butterfly-curve/index.md
-    - Epicycloid Star: turtle-graphics-gallery/epicycloid-star/index.md
-    - Sunflower Seed Spiral: turtle-graphics-gallery/sunflower-spiral/index.md
-    - Spider Web: turtle-graphics-gallery/spider-web/index.md
-    - Lightning Bolt: turtle-graphics-gallery/lightning-bolt/index.md
-    - Galaxy Spiral Arms: turtle-graphics-gallery/galaxy-spiral/index.md
-    - Ripple Waves: turtle-graphics-gallery/ripple-waves/index.md
-    - Four-Fold Symmetric Doodle: turtle-graphics-gallery/four-fold-doodle/index.md
-    - Six-Fold Mandala: turtle-graphics-gallery/six-fold-mandala/index.md
-    - Mirror Butterfly: turtle-graphics-gallery/mirror-butterfly/index.md
-    - Truchet Tiles: turtle-graphics-gallery/truchet-tiles/index.md
-    - Islamic Geometric Star: turtle-graphics-gallery/islamic-star/index.md
-    - Mandelbrot Pixel Art: turtle-graphics-gallery/mandelbrot-pixel-art/index.md
-    - Julia Set Pixel Art: turtle-graphics-gallery/julia-set/index.md
-    - Sierpinski Carpet: turtle-graphics-gallery/sierpinski-carpet/index.md
-    - Barnsley Fern: turtle-graphics-gallery/barnsley-fern/index.md
-    - Anti-Koch Snowflake: turtle-graphics-gallery/anti-koch/index.md
-    - Pythagorean Tree: turtle-graphics-gallery/pythagorean-tree/index.md
-    - T-Square Fractal: turtle-graphics-gallery/t-square-fractal/index.md
-    - Levy C Curve: turtle-graphics-gallery/levy-c-curve/index.md
-    - Gosper Curve: turtle-graphics-gallery/gosper-curve/index.md
-    - Dragon Curve: turtle-graphics-gallery/dragon-curve/index.md
-    - Hilbert Curve: turtle-graphics-gallery/hilbert-curve/index.md
-    - Cantor Dust: turtle-graphics-gallery/cantor-dust/index.md
-    - Kaleidoscope Slice: turtle-graphics-gallery/kaleidoscope-slice/index.md
-    - Pinwheel Tiling: turtle-graphics-gallery/pinwheel-tiling/index.md
-    - Escher-Style Fish Tile: turtle-graphics-gallery/escher-fish/index.md
-    - Voronoi Color Regions: turtle-graphics-gallery/voronoi-regions/index.md
-    - Penrose Rhombus Tiling: turtle-graphics-gallery/penrose-rhombus/index.md
-    - River Delta: turtle-graphics-gallery/river-delta/index.md
-    - Coral Branch: turtle-graphics-gallery/coral-branch/index.md
-    - Leaf Venation: turtle-graphics-gallery/leaf-venation/index.md
-    - DNA Double Helix: turtle-graphics-gallery/dna-helix/index.md
-    - Topographic Map: turtle-graphics-gallery/topographic-map/index.md
-    - Epitrochoid: turtle-graphics-gallery/epitrochoid/index.md
-    - Superellipse: turtle-graphics-gallery/superellipse/index.md
-    - Cassini Oval: turtle-graphics-gallery/cassini-oval/index.md
-    - Fermat's Spiral: turtle-graphics-gallery/fermat-spiral/index.md
-    - Astroid: turtle-graphics-gallery/astroid/index.md
-    - Mach Bands: turtle-graphics-gallery/mach-bands/index.md
-    - Vasarely Sphere: turtle-graphics-gallery/vasarely-sphere/index.md
-    - Scintillating Grid: turtle-graphics-gallery/scintillating-grid/index.md
-    - Impossible Triangle: turtle-graphics-gallery/impossible-triangle/index.md
-    - Concentric Ring Pulsation: turtle-graphics-gallery/ring-pulsation/index.md
-    - Binary Tree Name: turtle-graphics-gallery/binary-tree-name/index.md
-    - Turtle Chase: turtle-graphics-gallery/turtle-chase/index.md
-    - Reaction-Diffusion Pattern: turtle-graphics-gallery/reaction-diffusion/index.md
-
-  - Jupyter Notebooks:
-    - List of Notebooks: jupyter/index.md
-    - Setup Turtle on Jupyter: jupyter/01-setup.md
-    - Drawing Figure: jupyter/02-draw-figure.md
-    - Setup Canvas on Jupyter Lab: jupyter/02-setup-canvas.md
-    - Canvas Color Bars: jupyter/20-canvas-color-bars.md
   
-  - Advanced Python Examples:
-    - Stock Ticker Analysis: advanced/stocks.md
-    - MNIST Digit Prediction: advanced/mnist.md
-  
-  - Trinket Labs (deprecated):
-    - Introduction: trinket/00-introduction.md
-    - Setting Up Trinket: trinket/01a-trinket-account.md
-    - Turtle Graphics: trinket/01b-turtle-graphics.md
-    - Turtle Square: trinket/02-simple-square.md
-    - Variables: trinket/03-variables.md
-    - Loops: trinket/04-loops.md
-    - Stop Sign: trinket/04a-stop-sign.md
-    - Conditional: trinket/05-conditionals.md
-    - Functions: trinket/06-functions.md
-    - Flower: trinket/07-flower.md
-    - Function Parameters: trinket/07-function-parameters.md
-    - Lists: trinket/08-list.md
-    - List of Turtle Shapes: trinket/08c-turtle-shapes.md
-    - Random Numbers: trinket/08-random.md
-    - Random Stars: trinket/08b-random-stars.md
+  - Laboratori Python:
+    - Elenco dei Laboratori: python-labs/index.md
+    - 01. Comandi Tartaruga: python-labs/01-turtle-commands.md
+    - 02. Disegnare un Quadrato: python-labs/02-simple-square.md
+    - 03. Variabili: python-labs/03-variables.md
+    - 04. Cicli e Poligoni: python-labs/04-loops.md
+    - 04a. Segnale di Stop: python-labs/04a-stop-sign.md
+    - 05. If-Else e Colori: python-labs/05-conditionals.md
+    - 06. Funzioni e Fiori: python-labs/06-functions-and-flowers.md
+    - 07. Parametri di Funzione: python-labs/07-function-parameters.md
+    - 08. Cerchi Casuali: python-labs/08-random-circles.md
+    - 08. Lista di Colori: python-labs/08-color-lists.md
+    - 08b. Stelle Casuali: python-labs/08b-random-stars.md
+    - 10. Leggere Errori: python-labs/10-debugging.md
+    - 11. Input dell'Utente: python-labs/11-user-input.md
+    - 12. Albero Frattale: python-labs/12-fractal-tree.md
+    - 14. Colori Esadecimali: python-labs/14-hex-colors.md
+    - 15. Onda Sinusoidale: python-labs/15-sine-wave.md
+    - 17. Clic del Mouse: python-labs/17-mouse-clicks.md
+
+  - Galleria Grafica Tartaruga:
+    - Galleria: turtle-graphics-gallery/index.md
+    - Idee di Modelli: turtle-graphics-gallery/pattern-ideas.md
+    - Spirale di Quadrati Arcobaleno: turtle-graphics-gallery/rainbow-square-spiral/index.md
+    - Ruota di Triangoli: turtle-graphics-gallery/pinwheel-of-triangles/index.md
+    - Cerchi Annidati: turtle-graphics-gallery/nested-circles/index.md
+    - Esplosione Stellare: turtle-graphics-gallery/starburst/index.md
+    - Griglia a Scacchiera: turtle-graphics-gallery/checkerboard-grid/index.md
+    - Campo a Righe Diagonali: turtle-graphics-gallery/diagonal-stripe-field/index.md
+    - Griglia Punteggiata: turtle-graphics-gallery/dotted-grid/index.md
+    - Spicchi di Ruota Cromatica: turtle-graphics-gallery/color-wheel-wedges/index.md
+    - Catena di Pentagoni: turtle-graphics-gallery/pentagon-chain/index.md
+    - Quadrati Sovrapposti: turtle-graphics-gallery/overlapping-squares/index.md
+    - Fiore con Funzione di Petalo: turtle-graphics-gallery/flower-petal-function/index.md
+    - Griglia a Favo: turtle-graphics-gallery/honeycomb-grid/index.md
+    - Skyline della Città: turtle-graphics-gallery/city-skyline/index.md
+    - Braccia di Fiocco di Neve: turtle-graphics-gallery/snowflake-arms/index.md
+    - Tela di Pallini: turtle-graphics-gallery/polka-dot-canvas/index.md
+    - Muro di Mattoni: turtle-graphics-gallery/brick-wall/index.md
+    - Stelle di Diverse Dimensioni: turtle-graphics-gallery/stars-different-sizes/index.md
+    - Pila di Semafori: turtle-graphics-gallery/traffic-light/index.md
+    - Branco di Pesci: turtle-graphics-gallery/fish-school/index.md
+    - Catena Montuosa: turtle-graphics-gallery/mountain-range/index.md
+    - Spirale Archimedea di Quadrati: turtle-graphics-gallery/archimedean-spiral/index.md
+    - Spirale di Linea Arcobaleno: turtle-graphics-gallery/rainbow-line-spiral/index.md
+    - Spirale Esagonale: turtle-graphics-gallery/hexagonal-spiral/index.md
+    - Spirale Triangolare: turtle-graphics-gallery/triangular-spiral/index.md
+    - Spirale Interna Collassante: turtle-graphics-gallery/inward-spiral/index.md
+    - Spirale Logaritmica Colorata: turtle-graphics-gallery/logarithmic-spiral/index.md
+    - Spirale a Doppia Elica: turtle-graphics-gallery/double-helix-spiral/index.md
+    - Spirale di Fibonacci: turtle-graphics-gallery/fibonacci-spiral/index.md
+    - Spirale di Spirali: turtle-graphics-gallery/spiral-of-spirals/index.md
+    - Spirale di Pentagoni a Bande Colorate: turtle-graphics-gallery/pentagon-spiral/index.md
+    - Fiocco di Neve di Koch: turtle-graphics-gallery/koch-snowflake/index.md
+    - Triangolo di Sierpinski: turtle-graphics-gallery/sierpinski-triangle/index.md
+    - Albero Frattale: turtle-graphics-gallery/fractal-tree/index.md
+    - Pianta del Sistema L: turtle-graphics-gallery/l-system-plant/index.md
+    - Generatore di Labirinto Tartaruga: turtle-graphics-gallery/turtle-maze/index.md
+    - Proiezione di Superficie Parametrica: turtle-graphics-gallery/parametric-surface/index.md
+    - Collezione di Fiocchi di Neve Lindenmayer: turtle-graphics-gallery/linden-snowflakes/index.md
+    - Ciclo di Arte Generativa: turtle-graphics-gallery/generative-art/index.md
+    - Palla Rimbalzante: turtle-graphics-gallery/bouncing-ball/index.md
+    - Quadrante di Orologio: turtle-graphics-gallery/clock-face/index.md
+    - Disegnatore di Spirografo: turtle-graphics-gallery/spirograph-drawer/index.md
+    - Testo a Spirale: turtle-graphics-gallery/spiral-text/index.md
+    - Display a Sette Segmenti: turtle-graphics-gallery/seven-segment/index.md
+    - Distintivo Circolare: turtle-graphics-gallery/circular-badge/index.md
+    - Nome in Lettere di Blocco: turtle-graphics-gallery/block-letters/index.md
+    - Illusione di Quadrati Rotanti: turtle-graphics-gallery/rotating-squares/index.md
+    - Illusione del Muro di Café: turtle-graphics-gallery/cafe-wall/index.md
+    - Modello di Moiré: turtle-graphics-gallery/moire-pattern/index.md
+    - Onde di Bridget Riley: turtle-graphics-gallery/riley-waves/index.md
+    - Esagoni Espandenti: turtle-graphics-gallery/expanding-hexagons/index.md
+    - Figura di Lissajous: turtle-graphics-gallery/lissajous-figure/index.md
+    - Curva Rosa: turtle-graphics-gallery/rose-curve/index.md
+    - Spirografo: turtle-graphics-gallery/spirograph/index.md
+    - Curva Farfalla: turtle-graphics-gallery/butterfly-curve/index.md
+    - Stella Epicicloide: turtle-graphics-gallery/epicycloid-star/index.md
+    - Spirale del Seme di Girasole: turtle-graphics-gallery/sunflower-spiral/index.md
+    - Ragnatela: turtle-graphics-gallery/spider-web/index.md
+    - Fulmine: turtle-graphics-gallery/lightning-bolt/index.md
+    - Braccia Spirali della Galassia: turtle-graphics-gallery/galaxy-spiral/index.md
+    - Onde di Increspatura: turtle-graphics-gallery/ripple-waves/index.md
+    - Scarabocchio Simmetrico a Quattro Assi: turtle-graphics-gallery/four-fold-doodle/index.md
+    - Mandala a Sei Assi: turtle-graphics-gallery/six-fold-mandala/index.md
+    - Farfalla Specchiata: turtle-graphics-gallery/mirror-butterfly/index.md
+    - Piastrelle di Truchet: turtle-graphics-gallery/truchet-tiles/index.md
+    - Stella Geometrica Islamica: turtle-graphics-gallery/islamic-star/index.md
+    - Arte Pixel del Mandelbrot: turtle-graphics-gallery/mandelbrot-pixel-art/index.md
+    - Arte Pixel dell'Insieme di Julia: turtle-graphics-gallery/julia-set/index.md
+    - Tappeto di Sierpinski: turtle-graphics-gallery/sierpinski-carpet/index.md
+    - Felce di Barnsley: turtle-graphics-gallery/barnsley-fern/index.md
+    - Fiocco di Neve Anti-Koch: turtle-graphics-gallery/anti-koch/index.md
+    - Albero Pitagorico: turtle-graphics-gallery/pythagorean-tree/index.md
+    - Frattale T-Square: turtle-graphics-gallery/t-square-fractal/index.md
+    - Curva di Lévy C: turtle-graphics-gallery/levy-c-curve/index.md
+    - Curva di Gosper: turtle-graphics-gallery/gosper-curve/index.md
+    - Curva del Drago: turtle-graphics-gallery/dragon-curve/index.md
+    - Curva di Hilbert: turtle-graphics-gallery/hilbert-curve/index.md
+    - Polvere di Cantor: turtle-graphics-gallery/cantor-dust/index.md
+    - Fetta di Caleidoscopio: turtle-graphics-gallery/kaleidoscope-slice/index.md
+    - Tassellatura di Pinwheel: turtle-graphics-gallery/pinwheel-tiling/index.md
+    - Piastrella di Pesce in Stile Escher: turtle-graphics-gallery/escher-fish/index.md
+    - Regioni di Colore di Voronoi: turtle-graphics-gallery/voronoi-regions/index.md
+    - Tassellatura di Rombi di Penrose: turtle-graphics-gallery/penrose-rhombus/index.md
+    - Delta Fluviale: turtle-graphics-gallery/river-delta/index.md
+    - Ramo di Corallo: turtle-graphics-gallery/coral-branch/index.md
+    - Venature di Foglia: turtle-graphics-gallery/leaf-venation/index.md
+    - Doppia Elica del DNA: turtle-graphics-gallery/dna-helix/index.md
+    - Mappa Topografica: turtle-graphics-gallery/topographic-map/index.md
+    - Epitrocoide: turtle-graphics-gallery/epitrochoid/index.md
+    - Superellisse: turtle-graphics-gallery/superellipse/index.md
+    - Ovale di Cassini: turtle-graphics-gallery/cassini-oval/index.md
+    - Spirale di Fermat: turtle-graphics-gallery/fermat-spiral/index.md
+    - Astroide: turtle-graphics-gallery/astroid/index.md
+    - Bande di Mach: turtle-graphics-gallery/mach-bands/index.md
+    - Sfera di Vasarely: turtle-graphics-gallery/vasarely-sphere/index.md
+    - Griglia Scintillante: turtle-graphics-gallery/scintillating-grid/index.md
+    - Triangolo Impossibile: turtle-graphics-gallery/impossible-triangle/index.md
+    - Pulsazione Anello Concentrico: turtle-graphics-gallery/ring-pulsation/index.md
+    - Nome ad Albero Binario: turtle-graphics-gallery/binary-tree-name/index.md
+    - Inseguimento Tartaruga: turtle-graphics-gallery/turtle-chase/index.md
+    - Modello di Reazione-Diffusione: turtle-graphics-gallery/reaction-diffusion/index.md
+
+  - Notebook Jupyter:
+    - Elenco dei Notebook: jupyter/index.md
+    - Impostare Tartaruga su Jupyter: jupyter/01-setup.md
+    - Disegnare una Figura: jupyter/02-draw-figure.md
+    - Impostare Canvas su Jupyter Lab: jupyter/02-setup-canvas.md
+    - Barre di Colore Canvas: jupyter/20-canvas-color-bars.md
+   
+  - Esempi Python Avanzati:
+    - Analisi del Ticker Azionario: advanced/stocks.md
+    - Previsione di Cifre MNIST: advanced/mnist.md
+   
+  - Laboratori Trinket (deprecato):
+    - Introduzione: trinket/00-introduction.md
+    - Configurazione di Trinket: trinket/01a-trinket-account.md
+    - Grafica Tartaruga: trinket/01b-turtle-graphics.md
+    - Quadrato Tartaruga: trinket/02-simple-square.md
+    - Variabili: trinket/03-variables.md
+    - Cicli: trinket/04-loops.md
+    - Segnale di Stop: trinket/04a-stop-sign.md
+    - Condizionale: trinket/05-conditionals.md
+    - Funzioni: trinket/06-functions.md
+    - Fiore: trinket/07-flower.md
+    - Parametri di Funzione: trinket/07-function-parameters.md
+    - Liste: trinket/08-list.md
+    - Elenco di Forme Tartaruga: trinket/08c-turtle-shapes.md
+    - Numeri Casuali: trinket/08-random.md
+    - Stelle Casuali: trinket/08b-random-stars.md
     - Input: trinket/11-input.md
-    - Recursion: trinket/12-recursion.md
-    - Shape Module: trinket/13-shape-module.md
-    - Color Picker: trinket/14-color-picker.md
-    - Sine Wave: trinket/15-sine-wave.md
-    - Changing background: trinket/16-changing-background.md
-    - Controlling mouseclicks: trinket/17-controlling-mouseclicks.md
-    - Other examples: trinket/examples.md
- 
-  - Learning Graph:
-    - Introduction: learning-graph/index.md
-    - Course Description Assessment: learning-graph/course-description-assessment.md
-    - Concept List v1: learning-graph/concept-list-v1.md
-    - Concept List: learning-graph/concept-list.md
-    - Graph Quality Analysis: learning-graph/quality-metrics.md
-    - Concept Taxonomy: learning-graph/concept-taxonomy.md
-    - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
-    - Mascot Style Guide: learning-graph/mascot-test.md
-    - FAQ Quality Report: learning-graph/faq-quality-report.md
+    - Ricorsione: trinket/12-recursion.md
+    - Modulo Forma: trinket/13-shape-module.md
+    - Selettore Colori: trinket/14-color-picker.md
+    - Onda Sinusoidale: trinket/15-sine-wave.md
+    - Cambio dello Sfondo: trinket/16-changing-background.md
+    - Controllo dei Clic del Mouse: trinket/17-controlling-mouseclicks.md
+    - Altri Esempi: trinket/examples.md
+  
+  - Grafo di Apprendimento:
+    - Introduzione: learning-graph/index.md
+    - Valutazione della Descrizione del Corso: learning-graph/course-description-assessment.md
+    - Elenco dei Concetti v1: learning-graph/concept-list-v1.md
+    - Elenco dei Concetti: learning-graph/concept-list.md
+    - Analisi della Qualità del Grafo: learning-graph/quality-metrics.md
+    - Tassonomia dei Concetti: learning-graph/concept-taxonomy.md
+    - Rapporto sulla Distribuzione della Tassonomia: learning-graph/taxonomy-distribution.md
+    - Guida allo Stile della Mascotte: learning-graph/mascot-test.md
+    - Rapporto sulla Qualità delle FAQ: learning-graph/faq-quality-report.md
 
   - MicroSims:
-    - List of MicroSims: sims/index.md
-    - Boolean Logic Lab: sims/boolean-logic-lab/index.md
-    - Code Stepper: sims/code-stepper/index.md
-    - Control Flow Explorer: sims/control-flow-explorer/index.md
-    - Dice Roll Histogram: sims/dice-roll-histogram/index.md
-    - Dictionary Key Lookup: sims/dictionary-key-lookup/index.md
-    - Expression Evaluator: sims/expression-evaluator/index.md
-    - For-Loop Stepper: sims/for-loop-stepper/index.md
-    - Fractal Tree Explorer: sims/fractal-tree-explorer/index.md
-    - Function Call Flow: sims/function-call-flow/index.md
-    - Graph Traversal Explorer: sims/graph-traversal-explorer/index.md
-    - Inheritance Explorer: sims/inheritance-explorer/index.md
-    - JSON to Python Type Mapper: sims/json-python-mapper/index.md
-    - Learning Graph Viewer: sims/graph-viewer/index.md
-    - List Index Explorer: sims/list-index-explorer/index.md
-    - Modulo Clock: sims/modulo-clock/index.md
-    - Object Instance Inspector: sims/object-instance-inspector/index.md
-    - Range Explorer: sims/range-explorer/index.md
-    - Recursion Call Stack: sims/recursion-call-stack/index.md
-    - Regex Match Lab: sims/regex-match-lab/index.md
-    - RGB Color Mixer: sims/rgb-color-mixer/index.md
-    - Scope Inspector: sims/scope-inspector/index.md
-    - Search Race: sims/search-race/index.md
-    - Set Operations Venn: sims/set-operations-venn/index.md
-    - Sine Wave Explorer: sims/sine-wave-explorer/index.md
-    - Sorting Algorithm Comparer: sims/sorting-comparer/index.md
-    - Stack and Queue Simulator: sims/stack-queue-simulator/index.md
-    - String Slicer: sims/string-slicer/index.md
-    - Turtle State Inspector: sims/turtle-state-inspector/index.md
-    - Unit Circle Degrees and Radians: sims/unit-circle-radians/index.md
-    - Variable Memory Model: sims/variable-memory-model/index.md
-    - While-Loop Stepper: sims/while-loop-stepper/index.md
+    - Elenco dei MicroSims: sims/index.md
+    - Laboratorio di Logica Booleana: sims/boolean-logic-lab/index.md
+    - Stepper del Codice: sims/code-stepper/index.md
+    - Esploratore del Flusso di Controllo: sims/control-flow-explorer/index.md
+    - Istogramma di Lanci di Dadi: sims/dice-roll-histogram/index.md
+    - Ricerca di Chiavi di Dizionario: sims/dictionary-key-lookup/index.md
+    - Valutatore di Espressioni: sims/expression-evaluator/index.md
+    - Stepper di Ciclo For: sims/for-loop-stepper/index.md
+    - Esploratore di Albero Frattale: sims/fractal-tree-explorer/index.md
+    - Flusso di Chiamata di Funzione: sims/function-call-flow/index.md
+    - Esploratore di Attraversamento di Grafo: sims/graph-traversal-explorer/index.md
+    - Esploratore di Ereditarietà: sims/inheritance-explorer/index.md
+    - Mappatore di Tipo JSON a Python: sims/json-python-mapper/index.md
+    - Visualizzatore Grafo di Apprendimento: sims/graph-viewer/index.md
+    - Esploratore Indice di Lista: sims/list-index-explorer/index.md
+    - Orologio Modulo: sims/modulo-clock/index.md
+    - Ispettore Istanza di Oggetto: sims/object-instance-inspector/index.md
+    - Esploratore di Intervallo: sims/range-explorer/index.md
+    - Stack di Chiamate di Ricorsione: sims/recursion-call-stack/index.md
+    - Laboratorio di Corrispondenza Regex: sims/regex-match-lab/index.md
+    - Mixer di Colore RGB: sims/rgb-color-mixer/index.md
+    - Ispettore di Scope: sims/scope-inspector/index.md
+    - Gara di Ricerca: sims/search-race/index.md
+    - Venn di Operazioni di Insiemi: sims/set-operations-venn/index.md
+    - Esploratore di Onda Sinusoidale: sims/sine-wave-explorer/index.md
+    - Comparatore di Algoritmo di Ordinamento: sims/sorting-comparer/index.md
+    - Simulatore di Stack e Coda: sims/stack-queue-simulator/index.md
+    - Affettatrice di Stringa: sims/string-slicer/index.md
+    - Ispettore di Stato Tartaruga: sims/turtle-state-inspector/index.md
+    - Cerchio Unitario Gradi e Radianti: sims/unit-circle-radians/index.md
+    - Modello di Memoria Variabile: sims/variable-memory-model/index.md
+    - Stepper di Ciclo While: sims/while-loop-stepper/index.md
 
-  - Teacher's Guide:
-    - Overview: teachers-guide/index.md
-    - How to Contribute Examples: teachers-guide/contribute.md
-    - Adding Custom Python Labs: teachers-guide/adding-custom-python-labs.md
-    - The Run ⇄ Pause Button: teachers-guide/run-pause-buttons.md
-    - CodeMirror Editor Example: teachers-guide/code-mirror-example.md
-    - Order of Concepts: teachers-guide/order-of-concepts.md
-    - Comparing Textbooks: teachers-guide/comparing-textbooks.md
-    - Sample Prompts:
-      - List of Prompts: teachers-guide/prompts/index.md
-      - List Old Concepts: teachers-guide/prompts/01-list-old-concepts.md
-      - Course Description: teachers-guide/prompts/02-course-description.md
-      - Learning Graph: teachers-guide/prompts/03-learning-graph.md
-      - Book Chapter Generator: teachers-guide/prompts/04-book-chapter-generator.md
-      - Content Generation Strategy: teachers-guide/prompts/05-content-generation-strategy.md
+  - Guida dell'Insegnante:
+    - Panoramica: teachers-guide/index.md
+    - Come Contribuire con Esempi: teachers-guide/contribute.md
+    - Aggiungere Laboratori Python Personalizzati: teachers-guide/adding-custom-python-labs.md
+    - Il Pulsante Esegui ⇄ Pausa: teachers-guide/run-pause-buttons.md
+    - Esempio di Editor CodeMirror: teachers-guide/code-mirror-example.md
+    - Ordine dei Concetti: teachers-guide/order-of-concepts.md
+    - Confronto di Libri di Testo: teachers-guide/comparing-textbooks.md
+    - Suggerimenti di Esempio:
+      - Elenco di Suggerimenti: teachers-guide/prompts/index.md
+      - Elenco Vecchi Concetti: teachers-guide/prompts/01-list-old-concepts.md
+      - Descrizione del Corso: teachers-guide/prompts/02-course-description.md
+      - Grafo di Apprendimento: teachers-guide/prompts/03-learning-graph.md
+      - Generatore di Capitoli di Libri: teachers-guide/prompts/04-book-chapter-generator.md
+      - Strategia di Generazione di Contenuti: teachers-guide/prompts/05-content-generation-strategy.md
 
-  - Glossary: glossary.md
+  - Glossario: glossary.md
   - FAQ: faq.md
-  - References: references.md
-  - License: license.md
-  - Contact: contact.md
+  - Riferimenti: references.md
+  - Licenza: license.md
+  - Contatti: contact.md
 
 
 # Hooks — runs local Python before/after page processing.
