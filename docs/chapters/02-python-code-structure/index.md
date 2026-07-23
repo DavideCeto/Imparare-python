@@ -1,69 +1,69 @@
 ---
-title: Python Code Structure
-description: Learn how Python uses indentation to group code, discover Python keywords, and add named colors to your turtle drawings.
+title: Struttura del Codice Python
+description: Scopri come Python usa l'indentazione per raggruppare il codice, scopri le parole chiave Python e aggiungi colori denominati ai tuoi disegni tartaruga.
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 08:35:09
 version: 0.09
 ---
 
-# Python Code Structure
+# Struttura del Codice Python
 
-## Summary
+## Riepilogo
 
-Python has a very clean look: instead of curly braces or `begin/end` keywords,
-it uses **indentation** (spaces) to group lines of code together.
-This chapter explores those rules — indentation, code blocks, statements,
-whitespace — plus Python keywords and named colors that you'll use with turtle.
+Python ha un aspetto molto pulito: invece di parentesi graffe o parole chiave `begin/end`,
+usa l'**indentazione** (spazi) per raggruppare le righe di codice insieme.
+Questo capitolo esplora queste regole — indentazione, blocchi di codice, istruzioni,
+spazi bianchi — più le parole chiave Python e i colori denominati che userai con tartaruga.
 
-## Concepts Covered
+## Concetti Coperti
 
-This chapter covers the following 7 concepts from the learning graph:
+Questo capitolo copre i seguenti 7 concetti dal grafico di apprendimento:
 
-1. Multi-Line Strings
-2. Indentation as Syntax
-3. Python Keywords
-4. Code Block Structure
-5. Statement vs Expression
-6. Whitespace Rules
-7. Named Colors
+1. Stringhe Multi-Riga
+2. Indentazione come Sintassi
+3. Parole Chiave Python
+4. Struttura del Blocco di Codice
+5. Istruzione vs Espressione
+6. Regole di Spazio Bianco
+7. Colori Denominati
 
-## Prerequisites
+## Prerequisiti
 
-This chapter builds on concepts from:
+Questo capitolo si basa su concetti da:
 
-- [Chapter 1: Welcome to Python and Skulpt](../01-welcome-to-python/index.md)
+- [Capitolo 1: Benvenuto in Python e Skulpt](../01-welcome-to-python/index.md)
 
 ---
 
-By the end of this lesson you'll be able to:
+Al termine di questa lezione sarai in grado di:
 
-- Write multi-line text using triple quotes
-- Explain why Python uses indentation to group lines of code together
-- Recognize Python keywords and understand why they cannot be used as variable names
-- Use named colors like `"red"` and `"forestgreen"` in turtle graphics programs
+- Scrivere testo multi-riga usando virgolette triple
+- Spiegare perché Python usa l'indentazione per raggruppare le righe di codice insieme
+- Riconoscere le parole chiave Python e capire perché non possono essere usate come nomi di variabili
+- Usare colori denominati come `"rosso"` e `"verde forestale"` nei programmi di grafica tartaruga
 
-In Chapter 1 you wrote your first Python lines: `print()`, comments, and a turtle drawing. Now you are ready to look at how Python is *structured* — the rules that govern how code is arranged on the page and what makes a Python program readable and correct.
+Nel Capitolo 1 hai scritto le tue prime righe Python: `print()`, commenti e un disegno tartaruga. Ora sei pronto a guardare come Python è *strutturato* — le regole che governano come il codice è disposto su
 
-!!! mascot-welcome "Welcome Back, Coder!"
-    ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Ready to go deeper? This chapter is all about how Python code is organized — and the rules are simpler than you might think. By the end you will also make your turtle drawings way more colorful. Let's code it together!
+!!! mascot-welcome "Bentornato, Codificatore!"
+    ![Monty saluta il benvenuto](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Pronto ad andare più a fondo? Questo capitolo riguarda come il codice Python è organizzato — e le regole sono più semplici di quanto potresti pensare. Alla fine renderai anche i tuoi disegni tartaruga molto più color
 
-## Multi-Line Strings
+## Stringhe Multi-Riga
 
-In Chapter 1 you used `print()` to display text surrounded by double quotes, like `"Hello, world!"`. That works great for short messages on one line. But what if you want to write several lines of text stored in a single variable?
+Nel Capitolo 1 hai usato `print()` per visualizzare il testo circondato da virgolette doppie, come `"Ciao, mondo!"`. Funziona bene per messaggi brevi su una riga. Ma cosa succede se vuoi scrivere diverse righe di
 
-Python solves this with a **multi-line string** — a string that spans multiple lines, created by wrapping text in **triple quotes**: three double-quote marks (`"""`) or three single-quote marks (`'''`). Everything between the opening triple quotes and the closing triple quotes — including line breaks — becomes part of the string.
+Python risolve questo con una **stringa multi-riga** — una stringa che si estende su più righe, creata racchiudendo il testo in **virgolette triple**: tre virgolette doppie (`"""`) o tre virgolette singole
 
 ```python
-haiku = """An old silent pond.
-A frog jumps into the pond.
-Splash! Silence again."""
+haiku = """Un vecchio stagno silenzioso.
+Una rana salta nello stagno.
+Spruzz! Silenzio di nuovo."""
 print(haiku)
 ```
 
-**Before you click Run:** how many lines do you think will appear in the output? Count the line breaks inside the triple quotes to make your prediction!
+**Prima di fare clic su Esegui:** quante linee pensi appariranno nell'output? Conta le interruzioni di riga dentro le virgolette triple per fare la tua previsione!
 
-## Try It: Multi-Line Strings
+## Provalo: Stringhe Multi-Riga
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -75,8 +75,8 @@ print(haiku)
   <div class="cm-editor-wrap">
     <div id="cm-editor"></div>
     <div class="cm-button-row">
-      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
-      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Esegui</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Ripristina</button>
     </div>
     <pre class="cm-output" id="cm-output"></pre>
   </div>
@@ -85,82 +85,82 @@ print(haiku)
   </div>
 </div>
 <script>
-initCmLab('', `haiku = """An old silent pond.
-A frog jumps into the pond.
-Splash! Silence again."""
+initCmLab('', `haiku = """Un vecchio stagno silenzioso.
+Una rana salta nello stagno.
+Spruzz! Silenzio di nuovo."""
 print(haiku)`);
 </script>
 
-Were you right? Three lines appear — one for each line inside the triple quotes. The variable `haiku` holds all three lines as a single string, and `print()` displays them all at once with the line breaks preserved.
+Avevi ragione? Tre righe appaiono — una per ogni riga dentro le virgolette triple. La variabile `haiku` contiene tutte e tre le righe come una singola stringa, e `print()` le visualizza tutte in una volta con il l
 
-## How Multi-Line Strings Work
+## Come Funzionano le Stringhe Multi-Riga
 
-A regular string uses one pair of quotes: `"Hello"`. A multi-line string uses three pairs: `"""Hello"""`. The triple quotes tell Python: "keep reading until you see three more quotes — no matter how many line breaks are in between."
+Una stringa regolare usa un paio di virgolette: `"Ciao"`. Una stringa multi-riga usa tre paia: `"""Ciao"""`. Le virgolette triple dicono a Python: "continua a leggere finché non vedi altre tre virgolette — non importa
 
-| Syntax | Can span multiple lines? | Example |
-|--------|-------------------------|---------|
-| `"text"` | No — one line only | `"Hello, world!"` |
-| `'text'` | No — one line only | `'Hello, world!'` |
-| `"""text"""` | Yes | `"""Line one\nLine two"""` |
-| `'''text'''` | Yes | `'''Line one\nLine two'''` |
+| Sintassi | Può estendersi su più righe? | Esempio |
+|--------|-------------------------|----------|
+| `"testo"` | No — una riga sola | `"Ciao, mondo!"` |
+| `'testo'` | No — una riga sola | `'Ciao, mondo!'` |
+| `"""testo"""` | Sì | `"""Riga uno\nRiga due"""` |
+| `'''testo'''` | Sì | `'''Riga uno\nRiga due'''` |
 
-Multi-line strings are useful for writing poems, paragraphs, or any block of text you want to keep together in one variable.
+Le stringhe multi-riga sono utili per scrivere poesie, paragrafi o qualsiasi blocco di testo che vuoi mantenere insieme in una variabile.
 
-## Indentation as Syntax
+## Indentazione come Sintassi
 
-Most programming languages use **curly braces** `{ }` or the words `begin` and `end` to show that lines of code belong together. Python does something different — it uses **indentation**: the number of spaces at the start of each line.
+La maggior parte dei linguaggi di programmazione usa **parentesi graffe** `{ }` o le parole `inizio` e `fine` per mostrare che le righe di codice appartengono insieme. Python fa qualcosa di diverso — usa l'**indentazione**: il n
 
-**Indentation** means pressing the spacebar (or the Tab key) before a line of code to push it to the right. In Python, indentation is not just for looks — it is part of the grammar of the language. Python reads the spaces at the start of a line to decide which lines belong together.
+**Indentazione** significa premere la barra spaziatrice (o il tasto Tab) prima di una riga di codice per spingerla a destra. In Python, l'indentazione non è solo per aspetto — è parte della grammatica del linguaggio
 
-!!! mascot-tip "Scratch Bridge"
-    ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch, you put blocks *inside* another block (like a Repeat block) by dragging them so they snap together inside it. In Python, you put lines *inside* a group by **indenting** them — adding 4 spaces at the start. The visual nesting you saw in Scratch now lives in those 4 spaces of whitespace.
+!!! mascot-tip "Ponte verso Scratch"
+    ![Monty con un consiglio](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    In Scratch, metti i blocchi *dentro* un altro blocco (come un blocco Repeat) trascinandoli in modo che si incastrino insieme dentro. In Python, metti le righe *dentro* un gruppo **indentandole** — a
 
-Here is a preview of what indentation looks like in action. You have not learned `for` loops yet — that is Chapter 7 — but look at the spacing pattern right now:
+Ecco un'anteprima di come appare l'indentazione in azione. Non hai ancora imparato i cicli `for` — questo è il Capitolo 7 — ma guarda il modello di spaziatura adesso:
 
 ```python
-# PREVIEW — you will learn for loops in Chapter 7
-# For now, just notice the indentation pattern
+# ANTEPRIMA — imparerai i cicli for nel Capitolo 7
+# Per ora, nota solo il modello di indentazione
 
-for i in range(4):   # This line starts at the left edge
-    t.forward(100)   # These two lines are indented 4 spaces
-    t.right(90)      # They belong INSIDE the for loop
+for i in range(4):   # Questa riga inizia al margine sinistro
+    t.forward(100)   # Queste due righe sono indentate 4 spazi
+    t.right(90)      # Appartengono DENTRO il ciclo for
 ```
 
-The two lines with 4 spaces before them are *inside* the loop. The `for` line itself is at the left edge. That difference in spacing is what Python uses to know which lines are part of the loop — not braces, not keywords, just spaces.
+Le due righe con 4 spazi prima sono *dentro* il ciclo. La riga `for` stessa è al margine sinistro. Quella differenza nella spaziatura è quello che Python usa per sapere quali righe fanno parte del ciclo
 
-!!! mascot-warning "IndentationError — The Most Common Python Mistake"
-    ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    If you accidentally put too many spaces, too few spaces, or mix tabs with spaces, Python will stop and show you an `IndentationError`. This is one of the most common errors beginners see. The fix is always the same: use exactly **4 spaces** for each level of indentation, and never mix tabs and spaces. Most code editors (including Skulpt) automatically insert 4 spaces when you press Tab.
+!!! mascot-warning "IndentationError — L'Errore Python Più Comune"
+    ![Monty avverte](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    Se accidentalmente metti troppi spazi, troppi pochi spazi, o mescoli tabulazioni con spazi, Python si fermerà e ti mostrerà un `IndentationError`. Questo è uno degli errori più comuni che vedono i principianti. Il
 
-## Code Block Structure
+## Struttura del Blocco di Codice
 
-A **code block** is a group of lines that belong together because they are all indented at the same level. Every block starts after a line that ends with a colon `:`, and every line in the block is indented by exactly 4 more spaces than the line that opened it.
+Un **blocco di codice** è un gruppo di righe che appartengono insieme perché sono tutte indentate allo stesso livello. Ogni blocco inizia dopo una riga che termina con i due punti `:`, e ogni riga nel blocco
 
-You will see this pattern constantly in Python:
+Vedrai questo modello costantemente in Python:
 
 ```python
-some_statement:        # colon opens a block
-    first line         # 4 spaces — inside the block
-    second line        # 4 spaces — still inside the block
-    third line         # 4 spaces — still inside the block
-back_to_normal         # 0 spaces — block is over
+some_statement:        # due punti aprono un blocco
+    first line         # 4 spazi — dentro il blocco
+    second line        # 4 spazi — ancora dentro il blocco
+    third line         # 4 spazi — ancora dentro il blocco
+back_to_normal         # 0 spazi — il blocco è finito
 ```
 
-Right now all your programs are a flat list of lines with no blocks. That changes when you reach loops (Chapter 7) and conditionals (Chapter 9). When you get there, you will already understand how blocks work — because you are learning it now.
+Al momento tutti i tuoi programmi sono una lista piatta di righe senza blocchi. Questo cambia quando raggiungi i cicli (Capitolo 7) e i condizionali (Capitolo 9). Quando arribi lì, avrai già capito come
 
-## Whitespace Rules
+## Regole di Spazio Bianco
 
-Whitespace is the name for any invisible characters in your code: spaces, tabs, and blank lines. Python has clear rules about how whitespace is used:
+Lo spazio bianco è il nome per qualsiasi carattere invisibile nel tuo codice: spazi, tabulazioni e righe vuote. Python ha regole chiare su come viene usato lo spazio bianco:
 
-- **Inside a line:** add a single space around operators (`2 + 3`, not `2+3`) to make expressions easier to read. Python ignores extra spaces inside a line, but one space is the convention.
-- **At the start of a line:** these spaces are *indentation* and they matter to Python (see above).
-- **Blank lines:** Python ignores blank lines completely. Use them to separate logical sections of your program.
+- **Dentro una riga:** aggiungi uno spazio singolo attorno agli operatori (`2 + 3`, non `2+3`) per rendere le espressioni più facili da leggere. Python ignora spazi extra dentro una riga, ma uno spazio è la convenzione.
+- **All'inizio di una riga:** questi spazi sono *indentazione* e contano per Python (vedi sopra).
+- **Righe vuote:** Python ignora completamente le righe vuote. Usale per separare le sezioni logiche del tuo programma.
 
-Here is the same turtle program written two ways:
+Ecco lo stesso programma tartaruga scritto in due modi:
 
 ```python
-# Hard to read — no whitespace
+# Difficile da leggere — nessuno spazio bianco
 import turtle
 t=turtle.Turtle()
 t.forward(100)
@@ -169,7 +169,7 @@ t.forward(100)
 ```
 
 ```python
-# Easy to read — good whitespace
+# Facile da leggere — buono spazio bianco
 import turtle
 
 t = turtle.Turtle()
@@ -179,17 +179,17 @@ t.right(90)
 t.forward(100)
 ```
 
-Both programs do exactly the same thing. The second one is much easier to read at a glance. Good programmers always choose the second style.
+Entrambi i programmi fanno esattamente la stessa cosa. Il secondo è molto più facile da leggere a colpo d'occhio. I buoni programmatori scelgono sempre il secondo stile.
 
-## Python Keywords
+## Parole Chiave Python
 
-Python reserves certain words for its own use. These are called **keywords** — words that already mean something specific in the Python language and cannot be used as names for your variables or functions.
+Python riserva certe parole per il suo uso proprio. Queste si chiamano **parole chiave** — parole che già significano qualcosa di specifico nel linguaggio Python e non possono essere usate come nomi per le tue variabili o
 
-For example, `for` is a Python keyword. You cannot name a variable `for` because Python would be confused — it would not know whether you meant the loop command or a variable. The same is true for `if`, `while`, `def`, `class`, and all the others in the table below.
+Per esempio, `for` è una parola chiave Python. Non puoi nominare una variabile `for` perché Python sarebbe confuso — non saprebbe se intendevi il comando del ciclo o una variabile. Lo stesso è vero per
 
-Here is the complete list of Python keywords:
+Ecco l'elenco completo delle parole chiave Python:
 
-| Keywords | | | | |
+| Parole Chiave | | | | |
 |---|---|---|---|---|
 | `False` | `None` | `True` | `and` | `as` |
 | `assert` | `async` | `await` | `break` | `class` |
@@ -199,75 +199,75 @@ Here is the complete list of Python keywords:
 | `nonlocal` | `not` | `or` | `pass` | `raise` |
 | `return` | `try` | `while` | `with` | `yield` |
 
-You do not need to memorize this list. As you write more Python programs, you will naturally come to recognize the keywords — most code editors highlight them in a different color to help you spot them at a glance.
+Non hai bisogno di memorizzare questo elenco. Man mano che scrivi più programmi Python, naturalmente riconoscerai le parole chiave — la maggior parte degli editor di codice le evidenzia in un colore diverso per aiutarti a s
 
-## Statement vs Expression
+## Istruzione vs Espressione
 
-Two words come up constantly when talking about Python code: **statement** and **expression**. They sound similar but they do different jobs.
+Due parole escono costantemente quando si parla di codice Python: **istruzione** e **espressione**. Suonano simili ma fanno compiti diversi.
 
-A **statement** is an instruction that *does* something. It performs an action. Statements do not produce a value you can store or pass around — they just act.
+Un'**istruzione** è un'istruzione che *fa* qualcosa. Esegue un'azione. Le istruzioni non producono un valore che puoi immagazzinare o passare in giro — agiscono semplicemente.
 
-An **expression** is a piece of code that *produces a value*. You can use an expression anywhere a value is expected — store it in a variable, pass it to a function, or print it.
+Un'**espressione** è un pezzo di codice che *produce un valore*. Puoi usare un'espressione ovunque sia previsto un valore — immagazzinarlo in una variabile, passarlo a una funzione, o stamparlo.
 
-The table below shows examples side by side:
+La tabella sottostante mostra esempi uno accanto all'altro:
 
-| Type | Example | What it does |
-|------|---------|-------------|
-| Statement | `print("Hello")` | Displays text — does not produce a value |
-| Statement | `import turtle` | Loads a library — does not produce a value |
-| Expression | `2 + 3` | Produces the value `5` |
-| Expression | `"Hello"` | Produces the string `"Hello"` |
-| Expression | `100 * 2` | Produces the value `200` |
+| Tipo | Esempio | Cosa fa |
+|------|---------|----------|
+| Istruzione | `print("Ciao")` | Visualizza il testo — non produce un valore |
+| Istruzione | `import turtle` | Carica una libreria — non produce un valore |
+| Espressione | `2 + 3` | Produce il valore `5` |
+| Espressione | `"Ciao"` | Produce la stringa `"Ciao"` |
+| Espressione | `100 * 2` | Produce il valore `200` |
 
-In practice, many lines of Python combine both: `print(2 + 3)` is a *statement* (the print) that contains an *expression* (the addition). Knowing the difference helps you understand error messages — Python will tell you when it expected an expression and got a statement, or the other way around.
+Nella pratica, molte righe di Python combinano entrambe: `print(2 + 3)` è un'*istruzione* (il print) che contiene un'*espressione* (l'addizione). Conoscere la differenza aiuta a capire i messaggi di errore
 
-## Named Colors
+## Colori Denominati
 
-The turtle library knows the names of hundreds of colors. Instead of describing a color mathematically, you can use a color's English name — a **named color** — as a string. Just pass it to `t.pencolor()` before you draw a line and the turtle will switch to that color.
+La libreria tartaruga conosce i nomi di centinaia di colori. Invece di descrivere un colore matematicamente, puoi usare il nome in inglese di un colore — un **colore denominato** — come stringa. Basta passarlo a
 
-Some named colors you can use right away:
+Alcuni colori denominati che puoi usare subito:
 
-- Common: `"red"`, `"blue"`, `"green"`, `"yellow"`, `"orange"`, `"purple"`, `"black"`, `"white"`
-- Shades: `"forestgreen"`, `"skyblue"`, `"salmon"`, `"coral"`, `"gold"`, `"crimson"`
-- Fun ones: `"hotpink"`, `"deepskyblue"`, `"limegreen"`, `"tomato"`, `"orchid"`
+- Comuni: `"rosso"`, `"blu"`, `"verde"`, `"giallo"`, `"arancione"`, `"viola"`, `"nero"`, `"bianco"`
+- Sfumature: `"verde forestale"`, `"blu cielo"`, `"salmone"`, `"corallo"`, `"oro"`, `"cremisi"`
+- Divertenti: `"rosa caldo"`, `"blu cielo profondo"`, `"verde lime"`, `"pomodoro"`, `"orchidea"`
 
-The complete list of named colors comes from a standard called **X11 colors**, which includes 140 names. You can experiment freely — if a name does not work, you will see an error in the output box and you can try a different spelling.
+L'elenco completo dei colori denominati viene da uno standard chiamato **colori X11**, che include 140 nomi. Puoi sperimentare liberamente — se un nome non funziona, vedrai un errore nell'output
 
-Here is a turtle program that draws a square with a different color on each side:
+Ecco un programma tartaruga che disegna un quadrato con un colore diverso su ogni lato:
 
 ```python
 import turtle
 
 t = turtle.Turtle()
 
-t.pencolor("red")
+t.pencolor("rosso")
 t.forward(100)
 t.right(90)
 
-t.pencolor("blue")
+t.pencolor("blu")
 t.forward(100)
 t.right(90)
 
-t.pencolor("forestgreen")
+t.pencolor("verde forestale")
 t.forward(100)
 t.right(90)
 
-t.pencolor("orange")
+t.pencolor("arancione")
 t.forward(100)
 ```
 
-!!! mascot-thinking "What Will You See?"
-    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Look at the program above. The turtle calls `pencolor()` four times — once before each side. How many different colors will you see in the drawing? What color will the very last side be? Make your predictions, then click Run!
+!!! mascot-thinking "Cosa Vedrai?"
+    ![Monty pensa](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Guarda il programma qui sopra. La tartaruga chiama `pencolor()` quattro volte — una volta prima di ogni lato. Quanti colori diversi vedrai nel disegno? Quale colore avrà l'ultimo lato? Ma
 
-## Try It: Colored Turtle Drawing
+## Provalo: Disegno Tartaruga Colorato
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
     <div id="cm-editor-2"></div>
     <div class="cm-button-row">
-      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
-      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Esegui</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Ripristina</button>
     </div>
     <pre class="cm-output" id="cm-output-2"></pre>
   </div>
@@ -296,33 +296,33 @@ t.pencolor("orange")
 t.forward(100)`);
 </script>
 
-Were you right? Each side of the square is a different color — red, blue, forest green, and orange. Notice the blank lines in the code separating each color-change group: they do not affect how the program runs, but they make the structure immediately clear to a reader.
+Avevi ragione? Ogni lato del quadrato è un colore diverso — rosso, blu, verde forestale e arancione. Nota le righe vuote nel codice che separano ogni gruppo di cambio colore: non influiscono su come
 
-## How pencolor() Works
+## Come Funziona pencolor()
 
-`t.pencolor("color name")` changes the color of the turtle's pen for all lines drawn after that call. It does not affect lines already drawn. Think of it like changing the color of a marker before drawing the next stroke.
+`t.pencolor("nome del colore")` cambia il colore della penna della tartaruga per tutte le linee disegnate dopo quella chiamata. Non influisce sulle linee già disegnate. Pensa a esso come cambiare il colore di un marcatore prima di
 
-| Line | What it does |
-|------|-------------|
-| `t.pencolor("red")` | Switches the pen to red |
-| `t.forward(100)` | Draws a red line 100 steps long |
-| `t.pencolor("blue")` | Switches the pen to blue |
-| `t.forward(100)` | Draws a blue line 100 steps long |
+| Riga | Cosa fa |
+|------|----------|
+| `t.pencolor("rosso")` | Cambia la penna al rosso |
+| `t.forward(100)` | Disegna una linea rossa lunga 100 passi |
+| `t.pencolor("blu")` | Cambia la penna al blu |
+| `t.forward(100)` | Disegna una linea blu lunga 100 passi |
 
-The color stays set until you call `pencolor()` again with a different color. If you never call `pencolor()`, the turtle draws in black by default.
+Il colore rimane impostato finché non chiami `pencolor()` di nuovo con un colore diverso. Se non chiami mai `pencolor()`, la tartaruga disegna in nero per impostazione predefinita.
 
-## Learning Check
+## Controllo di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add the Missing Color"
-    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below draws a three-sided shape, but the second side is missing its color change — it will draw in whatever color came before it. Add **one line** — a `t.pencolor()` call with the color `"purple"` — between the first `t.right(90)` and the second `t.forward(100)` to make the second side purple.
+!!! mascot-thinking "Il Tuo Turno — Aggiungi il Colore Mancante"
+    ![Monty pensa](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Il programma sottostante disegna una forma a tre lati, ma il secondo lato è senza il suo cambio di colore — disegnerà in qualunque colore venisse prima. Aggiungi **una riga** — una chiamata `t.pencolor()` con
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
     <div id="cm-editor-3"></div>
     <div class="cm-button-row">
-      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
-      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Esegui</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Ripristina</button>
     </div>
     <pre class="cm-output" id="cm-output-3"></pre>
   </div>
@@ -339,7 +339,7 @@ t.pencolor("red")
 t.forward(100)
 t.right(120)
 
-# Add one line here to change the color to purple
+# Aggiungi una riga qui per cambiare il colore in viola
 
 t.forward(100)
 t.right(120)
@@ -348,26 +348,26 @@ t.pencolor("gold")
 t.forward(100)`);
 </script>
 
-When you add the right line and click Run, you should see a triangle with sides in red, purple, and gold. If the second side is still red, check that you spelled `pencolor` in all lowercase and passed `"purple"` in quotes.
+Quando aggiungi la riga giusta e fai clic su Esegui, dovresti vedere un triangolo con i lati in rosso, viola e oro. Se il secondo lato è ancora rosso, verifica di aver scritto `pencolor` in minuscolo e di aver usato pa
 
-## Experiments
+## Esperimenti
 
-Try these changes to the programs above. For each one, predict what will happen first — then run it to check!
+Prova questi cambiamenti ai programmi sopra. Per ognuno, prevedi cosa accadrà prima — poi eseguilo per controllare!
 
-1. **Write your own multi-line string.** Change the haiku in the first program to a three-line poem you make up yourself. **You'll know it worked when** your poem appears in the output, one line at a time.
+1. **Scrivi la tua stringa multi-riga.** Cambia l'haiku nel primo programma in una poesia a tre righe che hai inventato tu. **Saprai che ha funzionato quando** la tua poesia appare nell'output, una riga
 
-2. **Change the colors in the square program.** Replace `"red"` with `"hotpink"`, `"blue"` with `"deepskyblue"`, `"forestgreen"` with `"limegreen"`, and `"orange"` with `"gold"`. **You'll know it worked when** the square draws in your four new colors.
+2. **Cambia i colori nel programma del quadrato.** Sostituisci `"rosso"` con `"rosa caldo"`, `"blu"` con `"blu cielo profondo"`, `"verde forestale"` con `"verde lime"` e `"arancione"` con `"oro"`. **Saprai che
 
-3. **Add a fifth side.** In the square program, add `t.pencolor("purple")` and `t.right(90)` and `t.forward(100)` at the end. Does the result look like a square with an extra line? **You'll know it worked when** you see a fifth line drawn in purple.
+3. **Aggiungi un quinto lato.** Nel programma del quadrato, aggiungi `t.pencolor("viola")` e `t.right(90)` e `t.forward(100)` alla fine. Il risultato sembra un quadrato con una linea extra? **Saprai che
 
-4. **Try a color that might not exist.** Change one `pencolor()` argument to `"neonblue"` and run the program. Read the error message carefully — it tells you what went wrong. Then switch it back to a valid color like `"cornflowerblue"`.
+4. **Prova un colore che potrebbe non esistere.** Cambia un argomento `pencolor()` in `"blu neon"` ed esegui il programma. Leggi il messaggio di errore con attenzione — ti dice cosa è andato male. Poi cambialo ba
 
-5. **Challenge — draw a rainbow triangle.** Use three named colors of your choice to draw an equilateral triangle (three equal sides, `right(120)` at each corner). Add blank lines and comments in the code to label each side. **You'll know it worked when** you see a closed triangle with three distinct colors and clean, readable code.
+5. **Sfida — disegna un triangolo arcobaleno.** Usa tre colori denominati di tua scelta per disegnare un triangolo equilatero (tre lati uguali, `right(120)` ad ogni angolo). Aggiungi righe vuote e commenti
 
-!!! mascot-celebration "Brilliant Work!"
-    ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You just learned how Python organizes code — multi-line strings, indentation, keywords, code blocks, statements, expressions, and whitespace rules — and you made your turtle drawings colorful in the process. Seven concepts in one chapter, and you handled them all beautifully. Keep going — you are building real programming skills! Let's code it together!
+!!! mascot-celebration "Lavoro Brillante!"
+    ![Monty celebra](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    Hai appena imparato come Python organizza il codice — stringhe multi-riga, indentazione, parole chiave, blocchi di codice, istruzioni, espressioni e regole di spazio bianco — e hai reso i tuoi disegni tartaruga colorati
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Revisione del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi Riferimenti Annotati](./references.md)
