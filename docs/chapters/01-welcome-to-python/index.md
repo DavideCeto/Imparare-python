@@ -1,125 +1,127 @@
 ---
-title: Welcome to Python and Skulpt
-description: Meet Monty, run your first Python code in the browser, and discover print(), comments, and turtle graphics.
+title: Benvenuto in Python e Skulpt
+description: Conosci Monty, esegui il tuo primo codice Python nel browser e scopri print(), commenti e grafica tartaruga.
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 08:28:14
 version: 0.09
 ---
 
-# Welcome to Python and Skulpt
+# Benvenuto in Python e Skulpt
 
-## Summary
+## Riepilogo
 
-In this first chapter you meet **Monty** — your friendly python-snake guide —
-and write your very first lines of Python code inside the Skulpt browser window.
-You'll discover what Python is, why it's so popular, and get an exciting preview:
-you'll run `import turtle` and watch Monty draw a shape right on the page.
-By the end you'll know how to print messages, write comments, and understand
-why Python is a great next step after Scratch.
+In questo primo capitolo conoscerai **Monty** — la tua guida amichevole serpente python —
+e scriverai le tue prime righe di codice Python nella finestra di Skulpt nel browser.
+Scoprirai cos'è Python, perché è così popolare, e avrai un'anteprima entusiasmante:
+eseguirai `import turtle` e guarderai Monty disegnare una forma proprio sulla pagina.
+Alla fine conoscerai come stampare messaggi, scrivere commenti e capire
+perché Python è un grande passo dopo Scratch.
 
-## Concepts Covered
+## Concetti Coperti
 
-This chapter covers the following 9 concepts from the learning graph:
+Questo capitolo copre i seguenti 9 concetti dal grafico di apprendimento:
 
-1. Python Interpreter Overview
-2. Browser-Based Python Environments
+1. Panoramica dell'Interprete Python
+2. Ambienti Python Basati su Browser
 3. Skulpt Browser Python
-4. print() Function
-5. Single-Line Comments
-6. Case Sensitivity
-7. Blank Lines and Readability
-8. import Statement
+4. Funzione print()
+5. Commenti su Singola Riga
+6. Sensibilità alle Maiuscole
+7. Righe Vuote e Leggibilità
+8. Istruzione import
 9. import turtle
 
-## Prerequisites
+## Prerequisiti
 
-This chapter builds on concepts from:
+Questo capitolo si basa su concetti da:
 
-This is the very first chapter — no prerequisites needed beyond familiarity with Scratch!
-This chapter assumes only the prerequisites listed in the [course description](../../course-description.md).
+Questo è il primissimo capitolo — non hai bisogno di prerequisiti se non la familiarità con Scratch!
+Questo capitolo presuppone solo i prerequisiti elencati nella [descrizione del corso](../../course-description.md).
 
 ---
 
-By the end of this lesson you'll be able to:
+Al termine di questa lezione sarai in grado di:
 
-- Run Python code right inside your browser without installing anything
-- Use `print()` to display messages on the screen
-- Write single-line comments to explain what your code does
-- Import the turtle library and watch it draw a shape on the page
+- Eseguire codice Python direttamente nel tuo browser senza installare nulla
+- Usare `print()` per visualizzare messaggi sullo schermo
+- Scrivere commenti su singola riga per spiegare cosa fa il tuo codice
+- Importare la libreria turtle e guardarla disegnare una forma sulla pagina
 
-You've been coding with colorful blocks — snapping pieces together in Scratch to make sprites move, say things, and react to clicks. Now it's time for the next adventure: writing **Python**, one of the most popular programming languages in the entire world. The good news? Everything you already know from Scratch still works — it just looks a little different in Python.
+Hai codificato con blocchi colorati — incastrando pezzi in Scratch per far muovere gli sprite, dire cose e reagire ai clic. Ora è tempo della prossima avventura: scrivere **Python**, uno
 
-!!! mascot-welcome "Hi! I'm Monty."
-    ![Monty waving hello](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Welcome to **Beginning Python — From Blocks to Code**! I'm **Monty**, a friendly python snake who lives right here in your textbook. I'll pop up throughout every lesson, but never randomly — I have exactly **seven jobs**, and you'll quickly learn to recognize me by which one I'm doing:
+!!! mascot-welcome "Ciao! Sono Monty."
+    ![Monty che saluta](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
+    Benvenuto in **Imparare Python — Dai Blocchi al Codice**! Sono **Monty**, un amichevole serpente python che vive proprio qui nel tuo libro di testo. Apparirò durante ogni lezione, ma mai casualmente.
 
-    1. **Welcome you** at the start of every lesson — exactly what I'm doing right now.
-    2. **Help you think and predict** before you run a program, so you build the habit of reasoning through code before executing it.
-    3. **Give you tips** — the clever moves that experienced programmers use that nobody bothers to write down.
-    4. **Bridge to Scratch** — whenever a Python idea has a direct Scratch equivalent, I'll connect the two so you can use what you already know.
-    5. **Warn you** about the spots where even careful coders trip up — common mistakes, sneaky bugs, and easy-to-miss rules.
-    6. **Encourage you** when a concept looks hard at first — some ideas take a moment to click, and that is completely normal.
-    7. **Celebrate with you** at the end of every lesson when you have earned it.
+    Farò sette cose e solo queste sette cose:
 
-    That is it. If I am not doing one of those seven things, I am not in the lesson. Let's code it together!
+    1. **Darti il benvenuto** all'inizio di ogni lezione — esattamente quello che sto facendo proprio ora.
+    2. **Aiutarti a pensare e prevedere** prima di eseguire un programma, così costruisci l'abitudine di ragionare attraverso il codice prima di eseguirlo.
+    3. **Darti consigli** — le mosse intelligenti che usano i programmatori esperti e che nessuno si prende la briga di scrivere.
+    4. **Ponte verso Scratch** — quando un'idea di Python ha un equivalente diretto in Scratch, collegherò i due così puoi usare quello che già conosci.
+    5. **Avvertirti** sui punti dove anche i codificatori attenti inciampano — errori comuni, bug subdoli e regole facili da perdere.
+    6. **Incoraggiarti** quando un concetto sembra difficile all'inizio — alcune idee richiedono un momento per fare clic, ed è completamente normale.
+    7. **Celebrare con te** alla fine di ogni lezione quando l'hai meritato.
 
-## What is Python?
+    È tutto. Se non sto facendo una di queste sette cose, non sono nella lezione. Codiamo insieme!
 
-Scratch uses colorful blocks that snap together. Python uses **text** — words and symbols you type on a keyboard. A **programming language** is a set of rules for writing instructions that a computer can follow. Python is one of those languages, and it is a great choice because it reads almost like plain English.
+## Cos'è Python?
 
-When you write a Python program, something called the **Python interpreter** reads your code one line at a time from top to bottom and carries out each instruction. Think of the interpreter as a super-fast reader who turns your words into actions. In Scratch, clicking the green flag started your program. In Python, the interpreter does the same job — it starts at the very first line and works its way down.
+Scratch usa blocchi colorati che si incastrano. Python usa **testo** — parole e simboli che digiti sulla tastiera. Un **linguaggio di programmazione** è un insieme di regole per scrivere istruzioni che un computer
 
-Python was invented in 1991 by a programmer named Guido van Rossum. He named it after a British comedy show — not after the snake, even though the snake mascot fits perfectly! Today Python powers YouTube, Instagram, NASA robots, and artificial intelligence research. It is consistently ranked the most popular first programming language in the world for both beginners and professionals.
+Quando scrivi un programma Python, qualcosa chiamato **interprete Python** legge il tuo codice una riga alla volta dall'alto verso il basso ed esegue ogni istruzione. Pensa all'interprete come a un
 
-## Ways to Run Python
+Python è stato inventato nel 1991 da un programmatore di nome Guido van Rossum. L'ha chiamato dopo uno spettacolo comico britannico — non dopo il serpente, anche se la mascotte del serpente si adatta perfettamente! Oggi Python alimenta
 
-Before you write your first line of Python, it helps to know *where* Python runs. There are several options, and each one has its place in this course.
+## Modi di Eseguire Python
 
-1. **Directly in a Webpage** — We use a powerful library called Skulpt that is built right into *this* textbook. Skulpt is a version of Python that runs directly inside the web page you are reading right now. Every interactive code box in Chapters 1–18 is powered by Skulpt. You do not need to open a new tab, log in, or install anything. You click **Run** and the code executes here on the page.
-The CodeMirror code editor is also used to display and make small changes to our examples.  The limitation is that some functions like reading and writing files from your local disk do not work with the in-browser approach.
-2. **On your own computer in a terminal** — You can install Python and run it from a terminal window. This is how professional programmers work, but it requires setup and is not where we start.
-3. **Using an Integrated Development Environment Tool (IDE)** - This is a tool like Thonny (recommended for beginners), Visual Studio Code or several other tools.
-4. **Using a Container (Docker)** - This process starts up and runs a small virtual machine to run Python.  Our Intermediate and Advanced labs use this approach.  We get consistent behavior on all systems but you must run the textbook on your local computer or have a docker runner configured for your school.  You can see the program that starts this in our GitHub scripts.
-5. **Jupyter Labs** - This is the approach for many data science projects.  However it
-is more complicated to configure.
+Prima di scrivere la tua prima riga di Python, è utile sapere *dove* Python viene eseguito. Ci sono diverse opzioni, e ognuna ha il suo posto in questo corso.
+
+1. **Direttamente in una Pagina Web** — Usiamo una potente libreria chiamata Skulpt che è integrata direttamente in *questo* libro di testo. Skulpt è una versione di Python che viene eseguita direttamente dentro la pagina web che stai leggendo
+L'editor CodeMirror viene anche utilizzato per visualizzare e apportare piccole modifiche ai nostri esempi.  Il limite è che alcune funzioni come leggere e scrivere file dal tuo disco locale non funzionano con
+2. **Sul tuo computer in un terminale** — Puoi installare Python ed eseguirlo da una finestra terminale. Così lavorano i programmatori professionisti, ma richiede configurazione e non è dove iniziamo.
+3. **Usando uno Strumento di Ambiente di Sviluppo Integrato (IDE)** - Questo è uno strumento come Thonny (consigliato per i principianti), Visual Studio Code o diversi altri strumenti.
+4. **Usando un Contenitore (Docker)** - Questo processo avvia ed esegue una piccola macchina virtuale per eseguire Python.  I nostri laboratori intermedi e avanzati usano questo approccio.  Otteniamo un comportamento coerente su tutti
+5. **Jupyter Labs** - Questo è l'approccio per molti progetti di data science.  Tuttavia
+è più complicato da configurare.
 
 !!! Note
-  The first versions of this book used the free `Thonny` website to run our Python programs.
-  Unfortunately, Thonny is no longer supported and all the Thonny labs have been converted
-  to use our current tools.
+  Le prime versioni di questo libro usavano il sito libero `Thonny` per eseguire i nostri programmi Python.
+  Sfortunatamente, Thonny non è più supportato e tutti i laboratori Thonny sono stati convertiti
+  per usare i nostri strumenti attuali.
 
-In this course, **Skulpt** is your main tool for the early chapters. The table below summarizes all three environments:
+In questo corso, **Skulpt** è il tuo strumento principale per i capitoli iniziali. La tabella sottostante riassume tutti e tre gli ambienti:
 
-| Environment | Where it runs | Needs install? | Best for |
+| Ambiente | Dove viene eseguito | Ha bisogno di installazione? | Migliore per |
 |------------|--------------|---------------|----------|
-| Your computer | Local terminal | Yes | Professional work |
-| Skulpt (this book) | This web page | No | Instant in-lesson practice |
+| Il tuo computer | Terminale locale | Sì | Lavoro professionale |
+| Skulpt (questo libro) | Questa pagina web | No | Pratica immediata in lezione |
 
-## Your First Python Line: print()
+## La Tua Prima Riga Python: print()
 
-The very first thing most programmers learn is how to make a program display a message. In Python, the command is called **`print()`**.
+La primissima cosa che imparano la maggior parte dei programmatori è come far visualizzare un messaggio a un programma. In Python, il comando si chiama **`print()`**.
 
-A **function** is a named action that Python knows how to carry out. `print()` is Python's built-in "display a message" function. Whatever you put inside the parentheses — surrounded by quote marks — appears in the output area when the program runs.
+Una **funzione** è un'azione nominata che Python sa come eseguire. `print()` è la funzione "visualizza un messaggio" integrata di Python. Qualunque cosa metti dentro le parentesi — circondate da virgolette
 
-!!! mascot-tip "Scratch Bridge"
-    ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch you used the **"Say [ ] for 2 seconds"** block to make your sprite show a speech bubble. In Python, `print("Hello!")` does the same job — it makes your program display a message. The difference is that Python shows the message as plain text below the code, not as a speech bubble on a character.
+!!! mascot-tip "Ponte verso Scratch"
+    ![Monty con un consiglio](../../img/mascot/tip.png){ class="mascot-admonition-img" }
+    In Scratch hai usato il blocco **"Dire [ ] per 2 secondi"** per far mostrare al tuo sprite una bolla di dialogo. In Python, `print("Ciao!")` fa lo stesso lavoro — fa visualizzare un messaggio al tuo programma.
 
-## Sample Code: print()
+## Codice di Esempio: print()
 
-Here is a short program with three `print()` calls. Read each line carefully before you run it:
+Qui c'è un breve programma con tre chiamate `print()`. Leggi attentamente ogni riga prima di eseguirla:
 
 ```python
-print("Hello, world!")
-print("My name is Monty.")
-print("Let's learn Python!")
+print("Ciao, mondo!")
+print("Il mio nome è Monty.")
+print("Impariamo Python!")
 ```
 
-**Before you click Run:** how many lines of text do you think will appear in the output box? Make your prediction, then try it!
+**Prima di fare clic su Esegui:** quante linee di testo pensi appariranno nella casella di output? Fai la tua previsione, poi provalo!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see the result right on this page. No account needed — everything runs in your browser.
+Modifica il codice qui sotto e fai clic su **Esegui** per vedere il risultato proprio su questa pagina. Nessun account necessario — tutto viene eseguito nel tuo browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -131,8 +133,8 @@ Edit the code below and click **Run** to see the result right on this page. No a
   <div class="cm-editor-wrap">
     <div id="cm-editor"></div>
     <div class="cm-button-row">
-      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Run</button>
-      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Reset</button>
+      <button class="cm-run-btn" onclick="runCmLab()">&#9654; Esegui</button>
+      <button class="cm-reset-btn" onclick="resetCmLab()">&#8635; Ripristina</button>
     </div>
     <pre class="cm-output" id="cm-output"></pre>
   </div>
@@ -141,113 +143,113 @@ Edit the code below and click **Run** to see the result right on this page. No a
   </div>
 </div>
 <script>
-initCmLab('', `print("Hello, world!")
-print("My name is Monty.")
-print("Let's learn Python!")`);
+initCmLab('', `print("Ciao, mondo!")
+print("Il mio nome è Monty.")
+print("Impariamo Python!")`);
 </script>
 
-Were you right? You should see three lines of text appear, one for each `print()` call — Python runs them in order from top to bottom.
+Avevi ragione? Dovresti vedere tre linee di testo apparire, una per ogni chiamata `print()` — Python le esegue in ordine dall'alto verso il basso.
 
-**If you see a red error message:** Check your spelling carefully. Python is case-sensitive, so `Print("Hello")` with a capital P won't work — it must be `print("Hello")` in all lowercase. Also make sure you have both an opening `"` and a closing `"` around your text.
+**Se vedi un messaggio di errore rosso:** Controlla l'ortografia con attenzione. Python è sensibile alle maiuscole, quindi `Print("Ciao")` con una P maiuscola non funzionerà — deve essere `print("Ciao")` in minuscolo. Anche
 
-## How print() Works
+## Come Funziona print()
 
-Each `print()` line runs one at a time, from the top of the program to the bottom — exactly the same order Scratch runs blocks inside a script. When Python sees `print("Hello, world!")` it does three things:
+Ogni riga `print()` viene eseguita una alla volta, dall'alto del programma al basso — esattamente nello stesso ordine in cui Scratch esegue i blocchi dentro uno script. Quando Python vede `print("Ciao, mondo!")` fa
 
-1. Reads the function name: `print`
-2. Reads the text inside the parentheses: `"Hello, world!"`
-3. Displays that text, then moves to the next line
+1. Legge il nome della funzione: `print`
+2. Legge il testo dentro le parentesi: `"Ciao, mondo!"`
+3. Visualizza quel testo, poi passa alla riga successiva
 
-The quote marks around the text are important. They tell Python that `"Hello, world!"` is a piece of text — what programmers call a **string**. A string is any sequence of characters (letters, numbers, spaces, punctuation) wrapped in quote marks. Without the quotes, Python would think you are writing the name of a variable or a command it does not recognize.
+Le virgolette attorno al testo sono importanti. Dicono a Python che `"Ciao, mondo!"` è un pezzo di testo — quello che i programmatori chiamano una **stringa**. Una stringa è qualsiasi sequenza di caratteri (lettere,
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `print("Hello, world!")` | Displays the text: Hello, world! |
-| `print("My name is Monty.")` | Displays the text: My name is Monty. |
-| `print("Let's learn Python!")` | Displays the text: Let's learn Python! |
+| `print("Ciao, mondo!")` | Visualizza il testo: Ciao, mondo! |
+| `print("Il mio nome è Monty.")` | Visualizza il testo: Il mio nome è Monty. |
+| `print("Impariamo Python!")` | Visualizza il testo: Impariamo Python! |
 
-## Writing Comments with \#
+## Scrivere Commenti con #
 
-As your programs grow longer, it becomes helpful to leave notes for yourself and for anyone else who reads your code. In Python, a **comment** is a note that the interpreter completely ignores when running the program — it exists only for human readers.
+Man mano che i tuoi programmi diventano più lunghi, diventa utile lasciare note per te stesso e per chiunque legga il tuo codice. In Python, un **commento** è una nota che l'interprete ignora completamente quando
 
-You start a comment by typing a `#` character (called a hash or pound sign). Everything on that line after the `#` is treated as a note, not as code.
+Inizi un commento digitando un carattere `#` (chiamato hash o pound). Tutto su quella riga dopo il `#` è trattato come una nota, non come codice.
 
 ```python
-# This line is a comment — Python ignores it completely
-print("But Python runs this line!")
+# Questa riga è un commento — Python la ignora completamente
+print("Ma Python esegue questa riga!")
 
-# Comments explain the WHY behind your code
-print("They make programs easier to read.")
+# I commenti spiegano il PERCHÉ dietro il tuo codice
+print("Rendono i programmi più facili da leggere.")
 ```
 
-Good programmers use comments constantly. A comment does not change what the program does — it just helps the next person (often you, six months later) understand what you were thinking.
+I buoni programmatori usano i commenti costantemente. Un commento non cambia quello che il programma fa — aiuta solo la prossima persona (spesso tu, sei mesi dopo) a capire quello che stavi pensando.
 
-## See It: Step Through a Program
+## Vedi: Passo attraverso un Programma
 
-You have learned that Python runs a program one line at a time, from top to bottom, and that it skips comments and blank lines. The Code Stepper below lets you *watch* that happen. Before you click anything, look at the program on the left and **predict exactly what the output panel will show when the program finishes**. Then click **Next Step** to check your prediction one line at a time.
+Hai imparato che Python esegue un programma una riga alla volta, dall'alto verso il basso, e che salta i commenti e le righe vuote. Lo Stepper di Codice sotto ti permette di *guardare* accadere. Prima di fare clic
 
 <iframe src="../../sims/code-stepper/main.html" height="452" width="100%" scrolling="no"></iframe>
 
-[Explore the Code Stepper MicroSim](../../sims/code-stepper/index.md){ .md-button }
+[Esplora il MicroSim Code Stepper](../../sims/code-stepper/index.md){ .md-button }
 
-Try the **Comments Everywhere** program from the dropdown — how many lines do you think will print? Step through it to find out whether a `print()` hiding inside a comment ever runs.
+Prova il programma **Commenti Ovunque** dal menu a discesa — quante linee pensi verranno stampate? Fai un passo attraverso di esso per scoprire se un `print()` nascosto dentro un commento viene mai eseguito.
 
-## Case Sensitivity
+## Sensibilità alle Maiuscole
 
-Python is **case-sensitive**, which means uppercase and lowercase letters are treated as completely different things. The command `print` and the word `Print` are not the same.
+Python è **sensibile alle maiuscole**, il che significa che le lettere maiuscole e minuscole sono trattate come cose completamente diverse. Il comando `print` e la parola `Print` non sono la stessa cosa.
 
-!!! mascot-warning "Capital Letters Matter!"
-    ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    One of the most common first-week mistakes is typing `Print("Hello")` with a capital P. Python will respond with a `NameError: name 'Print' is not defined` message. The fix is simple: always use lowercase `print()`. This rule applies to every Python command — `Forward` is not the same as `forward`, and `Turtle` (capital T) refers to something different from `turtle` (lowercase t). When you are learning a new command, always double-check the capitalization.
+!!! mascot-warning "Le Lettere Maiuscole Contano!"
+    ![Monty avverte](../../img/mascot/warning.png){ class="mascot-admonition-img" }
+    Uno degli errori più comuni della prima settimana è digitare `Print("Ciao")` con una P maiuscola. Python risponderà con un messaggio `NameError: name 'Print' is not defined`. La soluzione è semplice: scrivi sempre
 
-## Blank Lines Make Code Readable
+## Le Righe Vuote Rendono il Codice Leggibile
 
-Python does not care about blank lines — you can add as many empty lines as you like between statements and the interpreter ignores them all. But *human readers* care a great deal.
+Python non si preoccupa delle righe vuote — puoi aggiungere quante righe vuote desideri tra le istruzioni e l'interprete le ignora tutte. Ma i *lettori umani* se ne preoccupano molto.
 
-Blank lines divide your code into logical groups, the same way paragraph breaks divide a story into scenes. Two lines of code that do the same task belong together; two lines that do different tasks should be separated with a blank line (and optionally a comment label).
-
-```python
-# --- Introduction ---
-print("Welcome to my program!")
-print("Let's get started.")
-
-# --- Main message ---
-print("Python is fun to learn.")
-print("You are doing great!")
-```
-
-Get into the habit early: if two chunks of code do different jobs, separate them with a blank line. Your programs will be much easier to read — and to fix when something goes wrong.
-
-## Importing Libraries with import
-
-One of Python's greatest strengths is its huge collection of pre-built tools. You can bring any of those tools into your program with an **`import` statement**.
-
-The keyword `import` tells the Python interpreter: "I need this extra toolkit — please load it before running the rest of my program." By itself Python knows how to do many things (`print`, basic math, and more), but libraries like `turtle`, `random`, and `math` must be imported before you can use them.
-
-An import statement always goes at the very **top** of your program — before any other code — so Python loads the library before it needs it.
+Le righe vuote dividono il tuo codice in gruppi logici, lo stesso modo in cui le interruzioni di paragrafo dividono una storia in scene. Due righe di codice che fanno lo stesso compito appartengono insieme; due righe che fanno compiti diversi
 
 ```python
-import turtle   # Load the turtle library
+# --- Introduzione ---
+print("Benvenuto nel mio programma!")
+print("Iniziamo.")
+
+# --- Messaggio principale ---
+print("Python è divertente da imparare.")
+print("Stai facendo bene!")
 ```
 
-After that one line, everything in the turtle library is available to your program.
+Abituati presto: se due blocchi di codice fanno compiti diversi, separali con una riga vuota. I tuoi programmi saranno molto più facili da leggere — e da correggere quando qualcosa va male.
 
-## Drawing with import turtle
+## Importare Librerie con import
 
-The **turtle** library lets you draw pictures by moving a virtual pen around the screen. Imagine a tiny turtle holding a pen. When you tell the turtle `forward(100)`, it walks forward 100 steps and draws a line as it goes. When you tell it `right(90)`, it pivots 90 degrees clockwise.
+Una delle più grandi forze di Python è la sua enorme collezione di strumenti già costruiti. Puoi portare qualsiasi di questi strumenti nel tuo programma con un'**istruzione `import`**.
 
-Every turtle program starts the same way:
+La parola chiave `import` dice all'interprete Python: "Ho bisogno di questo toolkit extra — per favore caricalo prima di eseguire il resto del mio programma." Di per sé Python sa come fare molte cose (`print`, basis
+
+Un'istruzione import va sempre molto **in alto** nel tuo programma — prima di qualsiasi altro codice — così Python carica la libreria prima di averne bisogno.
+
+```python
+import turtle   # Carica la libreria turtle
+```
+
+Dopo quella riga, tutto nella libreria turtle è disponibile al tuo programma.
+
+## Disegnare con import turtle
+
+La libreria **turtle** ti permette di disegnare immagini spostando una penna virtuale intorno allo schermo. Immagina una piccola tartaruga che tiene una penna. Quando dici alla tartaruga `forward(100)`, cammina avanti 100 passi e
+
+Ogni programma turtle inizia nello stesso modo:
 
 ```python
 import turtle
 t = turtle.Turtle()
 ```
 
-The first line loads the library. The second line creates a turtle and gives it the name `t`. Once you have a turtle, you direct it using dot notation — `t.forward(100)` means "tell turtle `t` to go forward 100 steps."
+La prima riga carica la libreria. La seconda riga crea una tartaruga e le dà il nome `t`. Una volta che hai una tartaruga, la dirigi usando la notazione del punto — `t.forward(100)` significa "dì alla tartaruga `t` di
 
-## Sample Code: Drawing a Shape
+## Codice di Esempio: Disegno di una Forma
 
-Here is a short turtle program. It calls `forward(100)` and `right(90)` several times in a row:
+Qui c'è un breve programma turtle. Chiama `forward(100)` e `right(90)` diverse volte di seguito:
 
 ```python
 import turtle
@@ -262,18 +264,18 @@ t.right(90)
 t.forward(100)
 ```
 
-!!! mascot-thinking "What Shape Will Monty Draw?"
-    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Look at the program above. The turtle calls `forward(100)` four times and `right(90)` three times in between. The number 90 is the number of degrees in each right turn. How many sides will the finished shape have, and what is the name of that shape? Make your guess — then click Run to find out!
+!!! mascot-thinking "Quale Forma Disegnerà Monty?"
+    ![Monty pensa](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Guarda il programma qui sopra. La tartaruga chiama `forward(100)` quattro volte e `right(90)` tre volte nel mezzo. Il numero 90 è il numero di gradi in ogni curva verso destra. Quanti lati avrà il
 
-## Try It: Turtle Graphics
+## Prova: Grafica Tartaruga
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
     <div id="cm-editor-2"></div>
     <div class="cm-button-row">
-      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Run</button>
-      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Reset</button>
+      <button class="cm-run-btn" onclick="runCmLab('-2')">&#9654; Esegui</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-2')">&#8635; Ripristina</button>
     </div>
     <pre class="cm-output" id="cm-output-2"></pre>
   </div>
@@ -294,33 +296,33 @@ t.right(90)
 t.forward(100)`);
 </script>
 
-Were you right? The turtle draws a **square** — four sides of equal length with a 90-degree right turn between each side. Four turns of 90 degrees adds up to 360 degrees, which is one full rotation, so the turtle ends up facing the same direction it started.
+Avevi ragione? La tartaruga disegna un **quadrato** — quattro lati di lunghezza uguale con una curva verso destra di 90 gradi tra ogni lato. Quattro curve di 90 gradi si sommano a 360 gradi, che è una rotazione completa
 
-## How the Turtle Program Works
+## Come Funziona il Programma Tartaruga
 
-Let's trace through each line:
+Tracciamo ogni riga:
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `import turtle` | Loads the turtle graphics library |
-| `t = turtle.Turtle()` | Creates a new turtle and names it `t` |
-| `t.forward(100)` | Moves `t` forward 100 steps, drawing a line |
-| `t.right(90)` | Turns `t` clockwise by 90 degrees |
+| `import turtle` | Carica la libreria di grafica tartaruga |
+| `t = turtle.Turtle()` | Crea una nuova tartaruga e le dà il nome `t` |
+| `t.forward(100)` | Muove `t` in avanti 100 passi, disegnando una linea |
+| `t.right(90)` | Gira `t` in senso orario di 90 gradi |
 
-The number inside `forward()` controls how far the turtle walks — bigger numbers draw longer lines. The number inside `right()` controls how sharply the turtle turns — 90 degrees makes a square corner. Changing these two numbers is how you draw different shapes.
+Il numero dentro `forward()` controlla quanto lontano cammina la tartaruga — numeri più grandi disegnano linee più lunghe. Il numero dentro `right()` controlla quanto bruscamente la tartaruga gira — 90 gradi crea un quadrato
 
-## Learning Check
+## Controllo di Apprendimento
 
-!!! mascot-thinking "Your Turn — Complete the Triangle!"
-    ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below draws **two sides** of a triangle and then stops. A triangle has three equal sides, with a 120-degree right turn at each corner. Add **one line** — `t.forward(100)` — to draw the missing third side and close the triangle!
+!!! mascot-thinking "Il Tuo Turno — Completa il Triangolo!"
+    ![Monty pensa](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
+    Il programma sottostante disegna **due lati** di un triangolo e poi si ferma. Un triangolo ha tre lati uguali, con una curva verso destra di 120 gradi ad ogni angolo. Aggiungi **una riga** — `t.forward(100)` — e
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
     <div id="cm-editor-3"></div>
     <div class="cm-button-row">
-      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Run</button>
-      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Reset</button>
+      <button class="cm-run-btn" onclick="runCmLab('-3')">&#9654; Esegui</button>
+      <button class="cm-reset-btn" onclick="resetCmLab('-3')">&#8635; Ripristina</button>
     </div>
     <pre class="cm-output" id="cm-output-3"></pre>
   </div>
@@ -336,29 +338,29 @@ t.forward(100)
 t.right(120)
 t.forward(100)
 t.right(120)
-# Add one line here to complete the triangle!`);
+# Aggiungi una riga qui per completare il triangolo!`);
 </script>
 
-When you add the missing line and click Run, the turtle should draw a closed triangle. If the shape does not close, double-check that your added line spells `forward` in all lowercase and uses parentheses with the number 100 inside.
+Quando aggiungi la riga mancante e fai clic su Esegui, la tartaruga dovrebbe disegnare un triangolo chiuso. Se la forma non si chiude, doppio controllo che la tua riga aggiunta scriva `forward` in minuscolo e usi pa
 
-## Experiments
+## Esperimenti
 
-Try these changes to the programs above. For each one, **predict what will happen first** — then run it to check!
+Prova questi cambiamenti ai programmi sopra. Per ognuno, **prevedi cosa accadrà prima** — poi eseguilo per controllare!
 
-1. **Change a message in `print()`**. Replace `"Hello, world!"` with your own name, like `print("Hello, I'm Alex!")`. **You'll know it worked when** your name appears in the output box.
+1. **Cambia un messaggio in `print()`**. Sostituisci `"Ciao, mondo!"` con il tuo nome, come `print("Ciao, sono Alex!")`. **Saprai che ha funzionato quando** il tuo nome appare nella casella di output.
 
-2. **Add a fourth `print()` line** with a message of your choice. **You'll know it worked when** four lines of text appear in the output, not three.
+2. **Aggiungi una quarta riga `print()`** con un messaggio di tua scelta. **Saprai che ha funzionato quando** quattro linee di testo appaiono nell'output, non tre.
 
-3. **Change `forward(100)` in the square to `forward(200)`**. **You'll know it worked when** the square is twice as wide and tall.
+3. **Cambia `forward(100)` nel quadrato in `forward(200)`**. **Saprai che ha funzionato quando** il quadrato è il doppio della larghezza e dell'altezza.
 
-4. **Draw a different shape**: change the square program to use `right(60)` and repeat `forward(100)` and `right(60)` six times. **You'll know it worked when** you see a six-sided hexagon.
+4. **Disegna una forma diversa**: cambia il programma del quadrato per usare `right(60)` e ripeti `forward(100)` e `right(60)` sei volte. **Saprai che ha funzionato quando** vedi un esagono a sei lati.
 
-5. **Challenge — change the speed**: add the line `t.speed(1)` right after `t = turtle.Turtle()` in the square program. Run it and watch what happens. Then try `t.speed(10)`. **You'll know it worked when** the drawing speed visibly changes between the two runs.
+5. **Sfida — cambia la velocità**: aggiungi la riga `t.speed(1)` subito dopo `t = turtle.Turtle()` nel programma del quadrato. Eseguilo e osserva cosa accade. Poi prova `t.speed(10)`. **Saprai che ha
 
-!!! mascot-celebration "Fantastic Work!"
-    ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You just wrote your very first Python programs — and they actually ran! You used `print()` to display messages, `#` to write comments, `import` to load a library, and `import turtle` to draw a shape on screen. That is nine brand-new concepts in one chapter, and you handled every single one. You have got this — let's keep coding together!
+!!! mascot-celebration "Fantastici Lavori!"
+    ![Monty celebra](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
+    Hai appena scritto i tuoi primissimi programmi Python — e hanno davvero funzionato! Hai usato `print()` per visualizzare messaggi, `#` per scrivere commenti, `import` per caricare una libreria, e `import turtle` per disegnare
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Revisione del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi Riferimenti Annotati](./references.md)
