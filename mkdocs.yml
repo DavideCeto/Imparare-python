@@ -4,7 +4,7 @@ site_author: 'Dan McCreary'
 repo_name: 'GitHub Repo'
 repo_url: 'https://github.com/dmccreary/learning-python'
 site_url: 'https://dmccreary.github.io/learning-python/'
-edit_uri: 'blob/master/docs'
+edit_uri: 'blob/main/docs'
 
 # Files under docs/ to exclude from the built site.
 # Patterns are gitignore-style and relative to docs_dir.
