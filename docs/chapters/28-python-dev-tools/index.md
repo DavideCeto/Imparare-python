@@ -13,7 +13,8 @@ By the end of this lesson you'll be able to:
 - Describe the key Python development environments and when to use each one
 - Install Python locally and run scripts from the terminal
 - Use the **Python REPL** (interactive shell) for quick experiments
-- Install packages with `pip` and understand **virtual environments**
+- Install packages with `pip` or `uv` and understand **virtual environments**
+- Explain when a slow Python task might be a good candidate for Rust
 
 Skulpt is great for learning — you don't need to install anything.
 But real Python projects use richer tools. This chapter is your map to the Python ecosystem.
@@ -186,6 +187,79 @@ To see what's installed: `pip list`
 
 To install a specific version: `pip install requests==2.31.0`
 
+## `uv` — A Fast, All-in-One Python Tool
+
+As projects grow, you may need several tools to install Python, create a virtual environment,
+add packages, record exact package versions, run scripts, build a package, and publish it.
+**uv** combines many of those jobs in one tool. It is a Python package and project manager
+written in Rust, and it includes a familiar, `pip`-compatible interface.
+
+The uv team reports that it can be 10–100 times faster than `pip` in its benchmarks.
+The exact speedup depends on the project, computer, network, and whether packages are already
+in uv's cache. A **cache** keeps downloaded files so the tool can reuse them instead of
+downloading the same files again.
+
+Once uv is installed, these commands create a project, add the `requests` package, run its
+Python program, and build files that could be published as a package:
+
+```bash
+uv init weather-app
+cd weather-app
+uv add requests
+uv run main.py
+uv build
+```
+
+For an existing project that already uses `pip`, uv also offers similar commands:
+
+```bash
+uv venv
+uv pip install requests
+uv pip list
+```
+
+uv can take the place of several separate tools, but its commands are not identical to every
+tool it replaces. Start with `uv pip` when you want a familiar workflow. Try the higher-level
+`uv add`, `uv lock`, `uv sync`, and `uv run` commands when you want uv to manage the whole
+project. See the [official uv documentation](https://docs.astral.sh/uv/) for installation
+instructions for your operating system.
+
+## Python vs. Rust
+
+Python normally runs your source code through a Python interpreter. This makes Python quick
+to learn, change, and test. Rust is a **compiled language**: a compiler checks Rust source code
+and turns it into a machine-code program before you run it. Compiled Rust programs can be much
+faster for some kinds of work, but Rust usually takes more time to learn and write.
+
+Modern computers have several processor **cores**, like several workers that can do separate
+jobs at the same time. Rust has threads, message-passing channels, shared-state tools, and a
+type system that catches many unsafe concurrency mistakes while compiling. These features can
+help a carefully designed program spread CPU-heavy work across multiple cores. Rust does not
+make every program parallel automatically—the problem must contain work that can safely be
+split into independent parts.
+
+The comparison below summarizes when each language often fits best.
+
+| Choose Python when... | Consider Rust when... |
+|-----------------------|-----------------------|
+| You are learning, experimenting, or building a first version | A measured slow section performs a huge amount of repeated computation |
+| Clear code and fast development matter most | Runtime speed or low memory use is a major requirement |
+| Python libraries already solve the hard parts | Work can be divided safely across several CPU cores |
+| The program spends most of its time waiting for files or the network | The code must become a fast command-line tool or reusable Python extension |
+
+An AI coding tool can help create a first Rust version of a small, well-tested Python function.
+This may be worth trying for image filters, simulations, data conversion, compression, or other
+CPU-heavy loops that run millions of times. First, **profile** the Python program—measure where
+it actually spends its time. Converting code that is not a real bottleneck adds complexity
+without making the program noticeably faster.
+
+AI conversion is a draft, not proof that the new program is correct. Python and Rust handle
+types, memory, errors, and parallel work differently, so a line-for-line translation may be
+wrong or slower than expected. Keep tests with known answers, compare the Python and Rust
+results, measure both versions, and have a person review the Rust code. Often the best design
+keeps most of the project in friendly, flexible Python and moves only one proven bottleneck
+into Rust.
+
 ## Virtual Environments
 
 A **virtual environment** is an isolated Python installation for a specific project.
@@ -305,6 +379,7 @@ GPIO.output(17, True)      # turn on an LED
 | Just learning Python | Skulpt (this course) or Thonny |
 | Sharing code online | Repl.it or Google Colab |
 | Professional projects | VS Code |
+| Fast package and project management | uv |
 | Data science / ML | Jupyter Notebook or JupyterLab |
 | Hardware projects | Raspberry Pi + Thonny |
 | Scientific computing | Spyder + Anaconda |
@@ -351,6 +426,13 @@ initCmLab('-3', `# Scenario → Best tool
 # 4. A maker wants to control LEDs and sensors with Python on cheap hardware.
 #    Answer:
 
+# 5. A team wants one fast tool to create environments, add packages, and lock versions.
+#    Answer:
+
+# 6. Profiling shows that one image-processing loop uses nearly all the running time.
+#    Should the team keep all the code in Python, or test a Rust version of that loop?
+#    Answer:
+
 print("Scenarios answered above!")`);
 </script>
 
@@ -367,7 +449,8 @@ Try these changes. Predict what will happen first, then run it to check!
 3. Try `sys.maxsize` — the maximum integer Python can store efficiently.
    **You'll know it worked when** you see a very large number (9,223,372,036,854,775,807 on 64-bit systems).
 
-4. Research: look up what `pip show numpy` does (in a real terminal). Write a comment explaining it.
+4. Compare `pip show numpy` with `uv pip show numpy` in a real terminal. Write a comment
+   explaining what both commands display.
    **You'll know it worked when** your comment describes the package version, author, and install location.
 
 5. Write a comment block listing three packages from PyPI you'd like to explore next and why.

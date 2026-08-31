@@ -1,4 +1,4 @@
-// LinkedIn carousel generator for "Beginning Python — From Blocks to Code with Monty"
+// LinkedIn carousel generator for "Learning Python — From Blocks to Code with Monty"
 // Generated via the linkedin-carousel-generator skill.
 const path = require("path");
 const pptxgen = require("pptxgenjs");
@@ -71,7 +71,7 @@ function imageAsideSlide(pptx, { heading, body, imagePath, imageSide = "right" }
   });
   s.addText(body, {
     x: textX, y: 1.9, w: 3.9, h: 6.8,
-    fontFace: FONT_BODY, fontSize: 16, color: C.ink, valign: "top", lineSpacing: 23,
+    fontFace: FONT_BODY, fontSize: 18, color: C.ink, valign: "top", lineSpacing: 25,
   });
   s.addImage({ path: imagePath, x: imgX, y: 1.7, w: 4.4, h: 4.4, sizing: { type: "contain", w: 4.4, h: 4.4 } });
   return s;
@@ -219,7 +219,7 @@ function closingCtaSlide(pptx, { headline, siteUrl, repoUrl, mascotPath }) {
 // 1. Cover
 coverSlide(pptx, {
   coverImage: IMG("cover.png"),
-  headline: "Beginning Python",
+  headline: "Learning Python",
   subhead: "From Blocks to Code with Monty",
   tagline: "An intelligent textbook for ages 10 and up — free, interactive, and open source",
 });

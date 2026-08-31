@@ -1,4 +1,4 @@
-# Content Generation Guidelines — Beginning Python
+# Content Generation Guidelines — Learning Python
 
 This file defines rules for generating student-facing content in this course.
 All AI agents and human authors creating lessons, labs, quizzes, or other

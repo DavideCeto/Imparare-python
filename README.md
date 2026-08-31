@@ -1,4 +1,4 @@
-# Beginning Python — From Blocks to Code with Monty
+# Learning Python — From Blocks to Code with Monty
 
 [![MkDocs](https://img.shields.io/badge/Made%20with-MkDocs-526CFE?logo=materialformkdocs)](https://www.mkdocs.org/)
 [![Material for MkDocs](https://img.shields.io/badge/Material%20for%20MkDocs-526CFE?logo=materialformkdocs)](https://squidfunk.github.io/mkdocs-material/)
@@ -15,7 +15,7 @@ Read the book at: **[https://dmccreary.github.io/learning-python/](https://dmccr
 
 ## Overview
 
-**Beginning Python — From Blocks to Code with Monty** is an interactive, AI-generated
+**Learning Python — From Blocks to Code with Monty** is an interactive, AI-generated
 intelligent textbook for students ages 10–13 who are ready to move from block-based
 programming (like Scratch) into real, text-based Python.
 

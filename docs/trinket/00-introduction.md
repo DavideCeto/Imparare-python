@@ -13,9 +13,9 @@ We use the [Trinket web site](https://trinket.io/) because it a kid-safe place t
 
 If you want to try another web-based system that support turtle graphics and Python 3.X we suggest the web site [repl.it](http://repl.it).  Note that repl.it is not specifically designed for kids.
 
-## Beginning Python Journey Map
+## Learning Python Journey Map
 
-![Beginning Python Journey Map](./beginning-python-journey-map.png)
+![Learning Python Journey Map](./beginning-python-journey-map.png)
 The map above is a visual guide to our Introduction to Python course.  Students start their journey in the upper left corner at the green start circle.  They then journey through each of the lessons until they reach the finish line.  Many of our courses give badges and laptop stickers for students that complete the journey from the start to the finish.
 
 ## List of Trinket Python Learning Labs

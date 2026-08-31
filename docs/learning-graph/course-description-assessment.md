@@ -1,6 +1,6 @@
 # Course Description Assessment Report
 
-**Course:** Beginning Python — From Blocks to Code with Monty  
+**Course:** Learning Python — From Blocks to Code with Monty  
 **File assessed:** `docs/course-description.md`  
 **Skill version:** Course Description Analyzer v0.03  
 

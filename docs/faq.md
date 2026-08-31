@@ -1,6 +1,6 @@
-# Beginning Python FAQ
+# Learning Python FAQ
 
-Welcome to the Frequently Asked Questions for *Beginning Python — From Blocks to Code with Monty*.
+Welcome to the Frequently Asked Questions for *Learning Python — From Blocks to Code with Monty*.
 These questions are organized from introductory topics all the way to advanced concepts,
 so you can jump straight to whatever you need most.
 
@@ -10,7 +10,7 @@ so you can jump straight to whatever you need most.
 
 ### What is this course about?
 
-*Beginning Python — From Blocks to Code with Monty* is a project-driven course that takes
+*Learning Python — From Blocks to Code with Monty* is a project-driven course that takes
 students who have already learned Scratch (or another block-based language) and teaches them
 how to write real Python programs. The course starts with visual turtle graphics — so you see
 results immediately — and builds steadily toward variables, loops, functions, data structures,

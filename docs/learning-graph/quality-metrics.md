@@ -2,11 +2,11 @@
 
 ## Overview
 
-- **Total Concepts**: 450
+- **Total Concepts**: 452
 - **Foundational Concepts** (no prerequisites, other concepts depend on them): 2
 - **Terminal Nodes** (nothing depends on them, but have prerequisites): 235
 - **Orphaned Nodes** (completely disconnected, no edges): 0
-- **Concepts with Dependencies**: 448
+- **Concepts with Dependencies**: 450
 - **Average Dependencies per Concept**: 1.87
 
 ## Graph Structure Validation
@@ -46,7 +46,7 @@ These concepts have no prerequisites:
 
 Terminal nodes are concepts that nothing else depends on but have prerequisites. They represent natural endpoints of learning paths — culminating or specialized concepts.
 
-- **Total Terminal Nodes**: 235 (52.2% of all concepts)
+- **Total Terminal Nodes**: 235 (52.0% of all concepts)
 - **Healthy Range**: 5-40% of total concepts
 
 Concepts at the end of learning paths:
@@ -57,8 +57,6 @@ Concepts at the end of learning paths:
 - **6**: Spyder Scientific IDE
 - **7**: VS Code Editor
 - **9**: JupyterLab Environment
-- **12**: Virtual Environments
-- **14**: Running Scripts from Terminal
 - **15**: Python REPL Shell
 - **16**: Raspberry Pi Python Platform
 - **17**: Skulpt Browser Python
@@ -71,6 +69,8 @@ Concepts at the end of learning paths:
 - **39**: Swap Two Variables
 - **40**: Naming Conflicts to Avoid
 - **43**: Division Returns Float
+- **44**: Integer Division Operator
+- **45**: Modulo Operator
 
 *...and 215 more*
 
@@ -100,8 +100,8 @@ Top 10 concepts that are prerequisites for the most other concepts:
 | 4 | 205 | import Statement | 25 |
 | 5 | 31 | Variable Definition and Assignment | 24 |
 | 6 | 41 | Integer Type | 23 |
-| 7 | 100 | for Loop over Sequence | 21 |
-| 8 | 1 | Python Interpreter Overview | 20 |
+| 7 | 1 | Python Interpreter Overview | 21 |
+| 8 | 100 | for Loop over Sequence | 21 |
 | 9 | 285 | Objects and Classes Overview | 18 |
 | 10 | 163 | Dictionary Type | 16 |
 
@@ -111,13 +111,13 @@ Top 10 concepts that are prerequisites for the most other concepts:
 |--------------|--------------------|
 | 0 | 2 |
 | 1 | 132 |
-| 2 | 247 |
+| 2 | 249 |
 | 3 | 64 |
 | 4 | 5 |
 
 ## Recommendations
 
-- ℹ️ **High terminal node percentage** (52.2%): Consider if some terminal concepts should be prerequisites for advanced concepts
+- ℹ️ **High terminal node percentage** (52.0%): Consider if some terminal concepts should be prerequisites for advanced concepts
 - ✅ **DAG structure verified**: Graph supports valid learning progressions
 
 ---

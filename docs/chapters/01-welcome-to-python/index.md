@@ -51,7 +51,7 @@ You've been coding with colorful blocks — snapping pieces together in Scratch 
 
 !!! mascot-welcome "Hi! I'm Monty."
     ![Monty waving hello](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Welcome to **Beginning Python — From Blocks to Code**! I'm **Monty**, a friendly python snake who lives right here in your textbook. I'll pop up throughout every lesson, but never randomly — I have exactly **seven jobs**, and you'll quickly learn to recognize me by which one I'm doing:
+    Welcome to **Learning Python — From Blocks to Code**! I'm **Monty**, a friendly python snake who lives right here in your textbook. I'll pop up throughout every lesson, but never randomly — I have exactly **seven jobs**, and you'll quickly learn to recognize me by which one I'm doing:
 
     1. **Welcome you** at the start of every lesson — exactly what I'm doing right now.
     2. **Help you think and predict** before you run a program, so you build the habit of reasoning through code before executing it.

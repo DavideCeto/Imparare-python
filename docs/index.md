@@ -12,7 +12,7 @@ image: img/cover.png
     as you learn to write real Python — right here in your browser, no installation needed.
     Let's go!
 
-**Beginning Python — From Blocks to Code with Monty** is an interactive intelligent textbook
+**Learning Python — From Blocks to Code with Monty** is an interactive intelligent textbook
 for students ages 10–13 who are ready to move from block-based programming (like Scratch)
 into real, text-based Python. Every lesson includes live coding windows powered by
 **Skulpt** — a Python engine that runs directly in your browser so you can read, run,

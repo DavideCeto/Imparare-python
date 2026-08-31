@@ -1,9 +1,17 @@
+---
+title: Gallery of Turtle Graphics Programs
+description: A multi-column display of the images from a collection of over 100 turtle graphic programs used to teach Python and get students to be curious about how patterns are generated.
+image: turtle-graphics-gallery/social-media-preview.png
+og:image: turtle-graphics-gallery/social-media-preview.png
+hide:
+    toc
+---
 # Turtle Graphics Gallery
 
 Browse these examples to see what turtle graphics can do.
 Each pattern is runnable in your browser — click the link to open the interactive lab.
 
-<div class="grid cards" markdown>
+<div class="grid cards gallery-grid-3col" markdown>
 
 -   **Rainbow Square Spiral**
 

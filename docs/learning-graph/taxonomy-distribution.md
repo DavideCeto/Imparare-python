@@ -2,46 +2,46 @@
 
 ## Overview
 
-- **Total Concepts**: 450
+- **Total Concepts**: 452
 - **Number of Taxonomies**: 14
-- **Average Concepts per Taxonomy**: 32.1
+- **Average Concepts per Taxonomy**: 32.3
 
 ## Distribution Summary
 
 | Category | TaxonomyID | Count | Percentage | Status |
 |----------|-----------|-------|------------|--------|
-| COL | COL | 68 | 15.1% | ✅ |
-| VIZ | VIZ | 63 | 14.0% | ✅ |
-| Advanced Topics | ADV | 61 | 13.6% | ✅ |
-| DAT | DAT | 55 | 12.2% | ✅ |
-| MOD | MOD | 36 | 8.0% | ✅ |
-| CTL | CTL | 29 | 6.4% | ✅ |
-| FUN | FUN | 22 | 4.9% | ✅ |
-| ALG | ALG | 22 | 4.9% | ✅ |
-| ENV | ENV | 20 | 4.4% | ✅ |
-| OOP | OOP | 20 | 4.4% | ✅ |
-| FIO | FIO | 16 | 3.6% | ✅ |
-| TXT | TXT | 14 | 3.1% | ✅ |
-| ERR | ERR | 14 | 3.1% | ✅ |
-| SYN | SYN | 10 | 2.2% | ℹ️ Under |
+| Collections | COL | 68 | 15.0% | ✅ |
+| Turtle Graphics & Visualization | VIZ | 63 | 13.9% | ✅ |
+| Advanced & Applied Python | ADV | 61 | 13.5% | ✅ |
+| Variables & Data Types | DAT | 55 | 12.2% | ✅ |
+| Modules & Standard Library | MOD | 36 | 8.0% | ✅ |
+| Input & Control Flow | CTL | 29 | 6.4% | ✅ |
+| Environment & Tools | ENV | 22 | 4.9% | ✅ |
+| Functions & Scope | FUN | 22 | 4.9% | ✅ |
+| Algorithms & Data Structures | ALG | 22 | 4.9% | ✅ |
+| Object-Oriented Programming | OOP | 20 | 4.4% | ✅ |
+| File I/O & Data | FIO | 16 | 3.5% | ✅ |
+| Text Processing & Regex | TXT | 14 | 3.1% | ✅ |
+| Error Handling & Debugging | ERR | 14 | 3.1% | ✅ |
+| Core Syntax & Output | SYN | 10 | 2.2% | ℹ️ Under |
 
 ## Visual Distribution
 
 ```
-COL             ███████  68 ( 15.1%)
-VIZ             ███████  63 ( 14.0%)
-Advanced Topics ██████  61 ( 13.6%)
-DAT             ██████  55 ( 12.2%)
-MOD             ████  36 (  8.0%)
-CTL             ███  29 (  6.4%)
-FUN             ██  22 (  4.9%)
-ALG             ██  22 (  4.9%)
-ENV             ██  20 (  4.4%)
-OOP             ██  20 (  4.4%)
-FIO             █  16 (  3.6%)
-TXT             █  14 (  3.1%)
-ERR             █  14 (  3.1%)
-SYN             █  10 (  2.2%)
+Collections               ███████  68 ( 15.0%)
+Turtle Graphics & Visuali ██████  63 ( 13.9%)
+Advanced & Applied Python ██████  61 ( 13.5%)
+Variables & Data Types    ██████  55 ( 12.2%)
+Modules & Standard Librar ███  36 (  8.0%)
+Input & Control Flow      ███  29 (  6.4%)
+Environment & Tools       ██  22 (  4.9%)
+Functions & Scope         ██  22 (  4.9%)
+Algorithms & Data Structu ██  22 (  4.9%)
+Object-Oriented Programmi ██  20 (  4.4%)
+File I/O & Data           █  16 (  3.5%)
+Text Processing & Regex   █  14 (  3.1%)
+Error Handling & Debuggin █  14 (  3.1%)
+Core Syntax & Output      █  10 (  2.2%)
 ```
 
 ## Balance Analysis
@@ -52,14 +52,14 @@ All categories are under the 30% threshold. Good balance!
 
 ### ℹ️ Under-Represented Categories (<3%)
 
-- **SYN** (SYN): 10 concepts (2.2%)
+- **Core Syntax & Output** (SYN): 10 concepts (2.2%)
   - *Note*: Small categories are acceptable for specialized topics
 
 ## Category Details
 
-### COL (COL)
+### Collections (COL)
 
-**Count**: 68 concepts (15.1%)
+**Count**: 68 concepts (15.0%)
 
 **Concepts**:
 
@@ -80,9 +80,9 @@ All categories are under the 30% threshold. Good balance!
 - 151. List Comprehensions
 - *...and 53 more*
 
-### VIZ (VIZ)
+### Turtle Graphics & Visualization (VIZ)
 
-**Count**: 63 concepts (14.0%)
+**Count**: 63 concepts (13.9%)
 
 **Concepts**:
 
@@ -103,9 +103,9 @@ All categories are under the 30% threshold. Good balance!
 - 319. Clearing and Resetting
 - *...and 48 more*
 
-### Advanced Topics (ADV)
+### Advanced & Applied Python (ADV)
 
-**Count**: 61 concepts (13.6%)
+**Count**: 61 concepts (13.5%)
 
 **Concepts**:
 
@@ -126,7 +126,7 @@ All categories are under the 30% threshold. Good balance!
 - 400. Categorical Crossentropy Loss
 - *...and 46 more*
 
-### DAT (DAT)
+### Variables & Data Types (DAT)
 
 **Count**: 55 concepts (12.2%)
 
@@ -149,7 +149,7 @@ All categories are under the 30% threshold. Good balance!
 - 45. Modulo Operator
 - *...and 40 more*
 
-### MOD (MOD)
+### Modules & Standard Library (MOD)
 
 **Count**: 36 concepts (8.0%)
 
@@ -172,7 +172,7 @@ All categories are under the 30% threshold. Good balance!
 - 219. random.random() Float
 - *...and 21 more*
 
-### CTL (CTL)
+### Input & Control Flow (CTL)
 
 **Count**: 29 concepts (6.4%)
 
@@ -195,7 +195,30 @@ All categories are under the 30% threshold. Good balance!
 - 100. for Loop over Sequence
 - *...and 14 more*
 
-### FUN (FUN)
+### Environment & Tools (ENV)
+
+**Count**: 22 concepts (4.9%)
+
+**Concepts**:
+
+- 1. Python Interpreter Overview
+- 2. Python 2 vs Python 3
+- 3. Browser-Based Python Environments
+- 4. Repl.it Online IDE
+- 5. Thonny Beginner IDE
+- 6. Spyder Scientific IDE
+- 7. VS Code Editor
+- 8. Jupyter Notebooks
+- 9. JupyterLab Environment
+- 10. Conda Package Manager
+- 11. pip Package Installer
+- 12. Virtual Environments
+- 13. Installing Python Locally
+- 14. Running Scripts from Terminal
+- 15. Python REPL Shell
+- *...and 7 more*
+
+### Functions & Scope (FUN)
 
 **Count**: 22 concepts (4.9%)
 
@@ -218,7 +241,7 @@ All categories are under the 30% threshold. Good balance!
 - 129. Recursion Base Case
 - *...and 7 more*
 
-### ALG (ALG)
+### Algorithms & Data Structures (ALG)
 
 **Count**: 22 concepts (4.9%)
 
@@ -241,30 +264,7 @@ All categories are under the 30% threshold. Good balance!
 - 378. Selection Sort
 - *...and 7 more*
 
-### ENV (ENV)
-
-**Count**: 20 concepts (4.4%)
-
-**Concepts**:
-
-- 1. Python Interpreter Overview
-- 2. Python 2 vs Python 3
-- 3. Browser-Based Python Environments
-- 4. Repl.it Online IDE
-- 5. Thonny Beginner IDE
-- 6. Spyder Scientific IDE
-- 7. VS Code Editor
-- 8. Jupyter Notebooks
-- 9. JupyterLab Environment
-- 10. Conda Package Manager
-- 11. pip Package Installer
-- 12. Virtual Environments
-- 13. Installing Python Locally
-- 14. Running Scripts from Terminal
-- 15. Python REPL Shell
-- *...and 5 more*
-
-### OOP (OOP)
+### Object-Oriented Programming (OOP)
 
 **Count**: 20 concepts (4.4%)
 
@@ -287,9 +287,9 @@ All categories are under the 30% threshold. Good balance!
 - 299. super() Function
 - *...and 5 more*
 
-### FIO (FIO)
+### File I/O & Data (FIO)
 
-**Count**: 16 concepts (3.6%)
+**Count**: 16 concepts (3.5%)
 
 **Concepts**:
 
@@ -310,7 +310,7 @@ All categories are under the 30% threshold. Good balance!
 - 269. File Path Handling
 - *...and 1 more*
 
-### TXT (TXT)
+### Text Processing & Regex (TXT)
 
 **Count**: 14 concepts (3.1%)
 
@@ -331,7 +331,7 @@ All categories are under the 30% threshold. Good balance!
 - 253. Regex Groups with Parentheses
 - 254. Compiled Regex Patterns
 
-### ERR (ERR)
+### Error Handling & Debugging (ERR)
 
 **Count**: 14 concepts (3.1%)
 
@@ -352,7 +352,7 @@ All categories are under the 30% threshold. Good balance!
 - 283. Custom Exception Classes
 - 284. Exception Chaining
 
-### SYN (SYN)
+### Core Syntax & Output (SYN)
 
 **Count**: 10 concepts (2.2%)
 
@@ -371,7 +371,7 @@ All categories are under the 30% threshold. Good balance!
 
 ## Recommendations
 
-- ✅ **Excellent balance**: Categories are evenly distributed (spread: 12.9%)
+- ✅ **Excellent balance**: Categories are evenly distributed (spread: 12.8%)
 - ✅ **MISC category minimal**: Good categorization specificity
 
 ### Educational Use Recommendations

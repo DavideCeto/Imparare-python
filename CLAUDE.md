@@ -1,4 +1,4 @@
-# Beginning Python — Project Instructions
+# Learning Python — Project Instructions
 
 ## Core Teaching Philosophy
 

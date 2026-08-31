@@ -21,7 +21,7 @@ Convolutional networks keep the 2-D structure of images and look for **local pat
 
 !!! mascot-welcome "Welcome to Chapter 38!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Welcome to the final chapter of *Beginning Python*!
+    Welcome to the final chapter of *Learning Python*!
     You've come from printing "Hello, World!" all the way to building AI that reads handwritten digits.
     Let's finish strong! Let's code it together!
 
@@ -399,7 +399,7 @@ Try these changes. Predict what will happen first, then run it to check!
 
 !!! mascot-celebration "You Did It — Python Graduate!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You have completed all 38 chapters of *Beginning Python*!
+    You have completed all 38 chapters of *Learning Python*!
     You started with a turtle drawing a square and finished by building an AI that reads handwritten digits with 99% accuracy.
     You are no longer a beginner — you are a Python programmer. Go build something amazing!
 

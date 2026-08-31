@@ -1,10 +1,10 @@
-# Learning Graph for Beginning Python
+# Learning Graph
 
 [Open Learning Graph Viewer Fullscreen](../sims/graph-viewer/main.html){ .md-button .md-button--primary }
 
 <iframe src="../sims/graph-viewer/main.html" width="100%" height="600px" frameborder="0"></iframe>
 
-This section contains the learning graph for Beginning Python — From Blocks to Code with Monty.
+This section contains the learning graph for *Learning Python — From Blocks to Code with Monty*.
 A learning graph is a graph of concepts used in this course. Each concept is represented by a
 node in a network graph. Concepts are connected by directed edges that indicate
 what concepts each node depends on before that concept is understood by the student.

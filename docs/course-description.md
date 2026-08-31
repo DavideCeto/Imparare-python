@@ -1,12 +1,12 @@
 ---
-title: Course Description for Beginning Python
-description: A detailed course description for Beginning Python including overview, topics covered and learning objectives in the format of the 2001 Bloom Taxonomy
+title: Course Description for Learning Python
+description: A detailed course description for Learning Python including overview, topics covered and learning objectives in the format of the 2001 Bloom Taxonomy
 quality_score: 96
 ---
 
-# Beginning Python
+# Learning Python
 
-**Title:** Beginning Python — From Blocks to Code with Monty
+**Title:** Learning Python — From Blocks to Code with Monty
 
 **Target Audience:** Elementary and middle school students, approximately ages 10–14,
 who have completed at least one semester of block-based programming (e.g., Scratch, Snap!,
@@ -22,7 +22,7 @@ or have the help of an adult or mentor.
 
 ## Course Overview
 
-Beginning Python is a fun, project-driven course that guides young programmers on the
+Learning Python is a fun, project-driven course that guides young programmers on the
 journey from block-based coding to writing real Python. Throughout the course, students
 are accompanied by **Monty**, a friendly and curious python-snake mascot who introduces
 new concepts, offers hints, celebrates successes, and helps make abstract ideas concrete.

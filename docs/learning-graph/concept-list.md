@@ -1,7 +1,7 @@
-# Beginning Python — Concept List
+# Learning Python — Concept List
 
 Generated for the learning graph. This list includes all 350 concepts from concept-list-v1.md
-plus additional foundational and dependency concepts, expanded to 450 total.
+plus additional foundational and dependency concepts, expanded to 452 total.
 
 ---
 
@@ -632,3 +632,10 @@ plus additional foundational and dependency concepts, expanded to 450 total.
 448. Algorithm Design
 449. Pseudocode Writing
 450. Debugging Strategies
+
+---
+
+## 37. Modern Development Tools
+
+451. uv
+452. Rust

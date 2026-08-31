@@ -1,9 +1,9 @@
 ---
-title: MicroSim Ideas for Beginning Python
-description: A prioritized, Bloom-classified list of proposed MicroSims for the Beginning Python textbook, with an implementation plan for each.
+title: MicroSim Ideas for Learning Python
+description: A prioritized, Bloom-classified list of proposed MicroSims for the Learning Python textbook, with an implementation plan for each.
 status: draft-for-review
 ---
-# MicroSim Ideas for Beginning Python
+# MicroSim Ideas for Learning Python
 
 **Status: Draft for review — no sims have been generated yet.**
 

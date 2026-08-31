@@ -1,4 +1,4 @@
-# Beginning Python — Concept List v1
+# Learning Python — Concept List v1
 
 This concept list was derived from the existing manually created course content in the `docs/` directory
 and supplemented with additional concepts appropriate for a beginning Python course.
