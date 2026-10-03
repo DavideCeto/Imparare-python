@@ -1,23 +1,23 @@
 ---
-title: Math and Arithmetic
-description: Master Python's arithmetic operators, operator precedence, integer division, modulo, and exponentiation — then connect math to turtle graphics.
+title: Matematica e Aritmetica
+description: Padroneggia gli operatori aritmetici di Python, la precedenza degli operatori, la divisione intera, il modulo e l'elevamento a potenza — poi collega la matematica alla grafica turtle.
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 10:10:29
 version: 0.09
 ---
 
-# Math and Arithmetic
+# Matematica e Aritmetica
 
-## Summary
+## Riepilogo
 
-Python is a powerful calculator. This chapter explores every arithmetic operator:
-integer division (`//`), the remainder (`%`), exponentiation (`**`), order of operations,
-negative numbers, and scientific notation. You'll also learn to assign multiple
-variables at once and use augmented operators like `+=` to make your code shorter.
+Python è una potente calcolatrice. Questo capitolo esplora ogni operatore aritmetico:
+divisione intera (`//`), resto (`%`), elevamento a potenza (`**`), ordine delle operazioni,
+numeri negativi e notazione scientifica. Imparerai anche ad assegnare più
+variabili in una volta e a usare operatori aumentati come `+=` per rendere il tuo codice più breve.
 
-## Concepts Covered
+## Concetti Trattati
 
-This chapter covers the following 10 concepts from the learning graph:
+Questo capitolo tratta i seguenti 10 concetti del grafo di apprendimento:
 
 1. Multiple Assignment
 2. Augmented Assignment Operators
@@ -30,63 +30,63 @@ This chapter covers the following 10 concepts from the learning graph:
 9. Negative Numbers
 10. Scientific Notation Floats
 
-## Prerequisites
+## Prerequisiti
 
-This chapter builds on concepts from:
+Questo capitolo si basa sui concetti di:
 
-- [Chapter 3: Variables and Numbers](../03-variables-and-numbers/index.md)
+- [Capitolo 3: Variabili e Numeri](../03-variables-and-numbers/index.md)
 
 ---
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Calculate results using Python's seven arithmetic operators (`+`, `-`, `*`, `/`, `//`, `%`, `**`)
-- Explain the difference between regular division (`/`) and integer division (`//`)
-- Use augmented assignment operators like `+=` to update a variable in one step
-- Draw any regular polygon by applying the formula `360 / sides` to your turtle
+- Calcolare risultati usando i sette operatori aritmetici di Python (`+`, `-`, `*`, `/`, `//`, `%`, `**`)
+- Spiegare la differenza tra la divisione normale (`/`) e la divisione intera (`//`)
+- Usare operatori di assegnazione aumentata come `+=` per aggiornare una variabile in un solo passaggio
+- Disegnare qualsiasi poligono regolare applicando la formula `360 / lati` alla tua turtle
 
-Python already knows all of mathematics. When you type an expression like `10 * 3` or `2 ** 8`, Python evaluates it instantly — no calculator needed.
+Python conosce già tutta la matematica. Quando scrivi un'espressione come `10 * 3` o `2 ** 8`, Python la valuta all'istante — nessuna calcolatrice necessaria.
 
-!!! mascot-welcome "Welcome to Chapter 6!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 6!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    This chapter is where Python becomes your personal math helper! We'll explore every arithmetic operator Python knows — including a few that don't exist in Scratch — and finish by using math to draw any regular polygon you can imagine. Let's code it together!
+    Questo è il capitolo in cui Python diventa il tuo aiutante matematico personale! Esploreremo ogni operatore aritmetico che Python conosce — inclusi alcuni che non esistono in Scratch — e finiremo usando la matematica per disegnare qualsiasi poligono regolare tu possa immaginare. Programmiamo insieme!
 
-## Arithmetic Operators
+## Operatori Aritmetici
 
-An **arithmetic operator** is a symbol that tells Python to perform a math calculation.
-You already know four of them from math class: `+`, `-`, `*`, and `/`.
-Python adds three more that are especially useful in programming.
+Un **operatore aritmetico** è un simbolo che dice a Python di eseguire un calcolo matematico.
+Ne conosci già quattro dalla lezione di matematica: `+`, `-`, `*` e `/`.
+Python ne aggiunge altri tre particolarmente utili nella programmazione.
 
-Here is the complete set:
+Ecco l'insieme completo:
 
-| Operator | Name | Example | Result |
+| Operatore | Nome | Esempio | Risultato |
 |----------|------|---------|--------|
-| `+` | Addition | `10 + 3` | `13` |
-| `-` | Subtraction | `10 - 3` | `7` |
-| `*` | Multiplication | `10 * 3` | `30` |
-| `/` | Division | `10 / 3` | `3.3333...` |
-| `//` | Integer Division | `10 // 3` | `3` |
-| `%` | Modulo (remainder) | `10 % 3` | `1` |
-| `**` | Exponentiation | `10 ** 3` | `1000` |
+| `+` | Addizione | `10 + 3` | `13` |
+| `-` | Sottrazione | `10 - 3` | `7` |
+| `*` | Moltiplicazione | `10 * 3` | `30` |
+| `/` | Divisione | `10 / 3` | `3.3333...` |
+| `//` | Divisione Intera | `10 // 3` | `3` |
+| `%` | Modulo (resto) | `10 % 3` | `1` |
+| `**` | Elevamento a Potenza | `10 ** 3` | `1000` |
 
-The last three — `//`, `%`, and `**` — may be new to you, but you will use all three constantly.
+Gli ultimi tre — `//`, `%` e `**` — potrebbero essere nuovi per te, ma li userai costantemente tutti e tre.
 
-!!! mascot-tip "Scratch Bridge"
+!!! mascot-tip "Ponte con Scratch"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch, the green **Operators** palette has blocks for `+`, `-`, `×`, and `÷`. Python uses the same ideas but you type the symbols directly instead of dragging blocks. Python's three bonus operators — `**`, `//`, and `%` — don't have Scratch equivalents, but they unlock a whole new world of math tricks!
+    In Scratch, la tavolozza verde **Operators** ha blocchi per `+`, `-`, `×` e `÷`. Python usa le stesse idee ma tu digiti i simboli direttamente invece di trascinare blocchi. I tre operatori bonus di Python — `**`, `//` e `%` — non hanno equivalenti in Scratch, ma sbloccano un intero nuovo mondo di trucchi matematici!
 
-The program below runs all seven operators at once so you can see their output side by side.
+Il programma qui sotto esegue tutti e sette gli operatori insieme così puoi vedere il loro output fianco a fianco.
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Before you click Run, look at two lines: `print(10 / 3)` and `print(10 // 3)`.
-    Do you think they will print the same number or different numbers?
-    And what about `print(10 % 3)` — what does the "remainder after dividing" equal?
-    Make your guesses, then click Run to find out!
+    Prima di cliccare su Run, guarda due righe: `print(10 / 3)` e `print(10 // 3)`.
+    Pensi che stamperanno lo stesso numero o numeri diversi?
+    E `print(10 % 3)` — a cosa equivale "il resto dopo la divisione"?
+    Fai le tue previsioni, poi clicca su Run per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see the result.
+Modifica il codice qui sotto e clicca **Run** per vedere il risultato.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -117,66 +117,66 @@ print("Modulo:          ", 10 % 3)
 print("Exponentiation:  ", 10 ** 3)`);
 </script>
 
-Were you right? `10 / 3` and `10 // 3` give *different* answers — one keeps the decimal, the other throws it away. And `10 % 3` equals `1`, because 10 ÷ 3 = 3 with **1** left over.
+Avevi indovinato? `10 / 3` e `10 // 3` danno risposte *diverse* — una mantiene il decimale, l'altra lo scarta. E `10 % 3` è uguale a `1`, perché 10 ÷ 3 = 3 con **1** di resto.
 
-## How It Works
+## Come Funziona
 
-Let's look more closely at the three operators that may be new to you.
+Guardiamo più da vicino i tre operatori che potrebbero essere nuovi per te.
 
-**`/` — Division always returns a float.** A **float** (short for "floating-point number") is any number with a decimal point — like `3.3333`, `5.0`, or `-0.75`. In Python, the `/` operator *always* gives you a float, even when the numbers divide evenly: `10 / 2` gives `5.0`, not `5`.
+**`/` — La divisione restituisce sempre un float.** Un **float** (abbreviazione di "numero a virgola mobile") è qualsiasi numero con una virgola decimale — come `3.3333`, `5.0` o `-0.75`. In Python, l'operatore `/` dà *sempre* un float, anche quando i numeri si dividono esattamente: `10 / 2` dà `5.0`, non `5`.
 
-**`//` — Integer division keeps only the whole number.** The `//` operator divides and throws away everything after the decimal point. `10 // 3` = `3`. Think of it as asking: "How many times does 3 fit *completely* inside 10?" Three times — with something left over.
+**`//` — La divisione intera mantiene solo il numero intero.** L'operatore `//` divide e scarta tutto ciò che viene dopo la virgola decimale. `10 // 3` = `3`. Pensalo come chiedersi: "Quante volte entra *completamente* 3 dentro 10?" Tre volte — con qualcosa che avanza.
 
-**`%` — Modulo gives you the leftover.** After fitting three 3's into 10 (that's 9), you have `10 − 9 = 1` left over, so `10 % 3` = `1`. Modulo is useful for checking whether a number is even (`n % 2 == 0` is `True` when n is even) and for creating repeating patterns.
+**`%` — Il modulo ti dà il resto.** Dopo aver inserito tre 3 dentro 10 (cioè 9), rimane `10 − 9 = 1` di resto, quindi `10 % 3` = `1`. Il modulo è utile per verificare se un numero è pari (`n % 2 == 0` è `True` quando n è pari) e per creare pattern ripetuti.
 
-**`**` — Exponentiation.** Two stars together means "to the power of." `2 ** 8` = 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 = 256. `10 ** 3` = 10 × 10 × 10 = 1000.
+**`**` — Elevamento a potenza.** Due asterischi insieme significano "elevato alla potenza di." `2 ** 8` = 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 = 256. `10 ** 3` = 10 × 10 × 10 = 1000.
 
-### See It: The Modulo Clock
+### Osservalo: L'Orologio del Modulo
 
-The remainder is easiest to understand as **wrap-around counting**. The Modulo Clock below shows `%` two ways at once: counting around a dial that wraps at the divisor, and splitting dots into equal rows with the leftovers highlighted in orange. Before you touch the sliders, predict: **what is `17 % 5`?** Then drag the sliders and check.
+Il resto è più facile da capire come **conteggio circolare**. L'Orologio del Modulo qui sotto mostra `%` in due modi contemporaneamente: contando intorno a un quadrante che si ripete al raggiungimento del divisore, e dividendo i puntini in righe uguali con gli avanzi evidenziati in arancione. Prima di toccare i cursori, prevedi: **quanto vale `17 % 5`?** Poi trascina i cursori e verifica.
 
 <iframe src="../../sims/modulo-clock/main.html" height="502" width="100%" scrolling="no"></iframe>
 
-[Explore the Modulo Clock MicroSim](../../sims/modulo-clock/index.md){ .md-button }
+[Esplora il MicroSim Modulo Clock](../../sims/modulo-clock/index.md){ .md-button }
 
-Slide the divisor down to **2** and move the dividend — the sim tells you whether each number is even or odd. That is exactly the `n % 2` trick you will use in later chapters.
+Sposta il divisore a **2** e muovi il dividendo — il simulatore ti dice se ogni numero è pari o dispari. Questo è esattamente il trucco `n % 2` che userai nei capitoli successivi.
 
-## Order of Operations
+## Ordine delle Operazioni
 
-Python follows the same order of operations you use in math class — **PEMDAS**:
+Python segue lo stesso ordine delle operazioni che usi nella lezione di matematica — **PEMDAS**:
 
-1. **P**arentheses are calculated first
-2. **E**xponents (`**`) next
-3. **M**ultiplication, **D**ivision, `//`, and `%` — left to right
-4. **A**ddition and **S**ubtraction — left to right
+1. Le **P**arentesi si calcolano per prime
+2. Gli **E**sponenti (`**`) subito dopo
+3. **M**oltiplicazione, **D**ivisione, `//` e `%` — da sinistra a destra
+4. **A**ddizione e **S**ottrazione — da sinistra a destra
 
-| Expression | How Python reads it | Result |
+| Espressione | Come la legge Python | Risultato |
 |------------|---------------------|--------|
 | `2 + 3 * 4` | `2 + (3 * 4)` = `2 + 12` | `14` |
 | `(2 + 3) * 4` | `5 * 4` | `20` |
 | `10 - 2 ** 3` | `10 - (2 ** 3)` = `10 - 8` | `2` |
 | `15 // 4 % 2` | `(15 // 4) % 2` = `3 % 2` | `1` |
 
-When in doubt, add parentheses. `(2 + 3) * 4` is clearer than `2 + 3 * 4`, and extra parentheses never cause errors.
+Nel dubbio, aggiungi parentesi. `(2 + 3) * 4` è più chiaro di `2 + 3 * 4`, e le parentesi extra non causano mai errori.
 
-### See It: Watch an Expression Collapse
+### Osservalo: Guarda un'Espressione Risolversi
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The MicroSim below starts with `2 + 3 * 4`. Which operation will Python
-    compute first — the `+` or the `*`? And what will the final answer be?
-    Make your guess, then click Next Step to watch the expression collapse
-    one operation at a time!
+    Il MicroSim qui sotto inizia con `2 + 3 * 4`. Quale operazione calcolerà
+    Python per prima — il `+` o il `*`? E quale sarà il risultato finale?
+    Fai la tua previsione, poi clicca su Next Step per osservare l'espressione
+    risolversi un'operazione alla volta!
 
 <iframe src="../../sims/expression-evaluator/main.html" height="422" width="100%" scrolling="no"></iframe>
 
-[Explore the Expression Evaluator MicroSim](../../sims/expression-evaluator/index.md){ .md-button }
+[Esplora il MicroSim Expression Evaluator](../../sims/expression-evaluator/index.md){ .md-button }
 
-Were you right? Try every expression in the dropdown — the last one, `17 // 5 + 17 % 5`, shows how `//` and `%` work as a team.
+Avevi indovinato? Prova ogni espressione nel menu a tendina — l'ultima, `17 // 5 + 17 % 5`, mostra come `//` e `%` lavorano in squadra.
 
-## Negative Numbers
+## Numeri Negativi
 
-Negative numbers work exactly the way you'd expect — just put a minus sign in front:
+I numeri negativi funzionano esattamente come ti aspetteresti — basta mettere un segno meno davanti:
 
 ```python
 temperature = -15
@@ -185,12 +185,12 @@ print(temperature * -2)   # 30   (negative × negative = positive)
 print(abs(temperature))   # 15   (abs() gives the absolute value)
 ```
 
-Python follows standard sign rules: negative × positive = negative, negative × negative = positive.
+Python segue le regole standard dei segni: negativo × positivo = negativo, negativo × negativo = positivo.
 
-## Scientific Notation Floats
+## Notazione Scientifica dei Float
 
-Very large or very small numbers can be written in **scientific notation** using the letter `e`.
-The number after `e` is the power of ten to multiply by:
+I numeri molto grandi o molto piccoli possono essere scritti in **notazione scientifica** usando la lettera `e`.
+Il numero dopo `e` è la potenza di dieci per cui moltiplicare:
 
 ```python
 speed_of_light = 3e8        # 3 × 10^8 = 300,000,000
@@ -199,12 +199,12 @@ print(speed_of_light)       # 300000000.0
 print(2.5e3)                # 2500.0
 ```
 
-You will see scientific notation most often in science simulations and when working with very small probabilities.
+Vedrai la notazione scientifica più spesso nelle simulazioni scientifiche e quando lavori con probabilità molto piccole.
 
-## Multiple Assignment
+## Assegnazione Multipla
 
-Python lets you assign values to two or more variables on the same line.
-This is called **multiple assignment**, and it works by listing variable names on the left and values on the right, separated by commas:
+Python ti permette di assegnare valori a due o più variabili sulla stessa riga.
+Questo si chiama **assegnazione multipla**, e funziona elencando i nomi delle variabili a sinistra e i valori a destra, separati da virgole:
 
 ```python
 x, y = 10, 20
@@ -212,7 +212,7 @@ print(x)    # 10
 print(y)    # 20
 ```
 
-Multiple assignment is especially powerful for **swapping two variables** in a single line — something that normally takes three lines:
+L'assegnazione multipla è particolarmente potente per **scambiare due variabili** in una sola riga — qualcosa che normalmente richiede tre righe:
 
 ```python
 a = 5
@@ -221,46 +221,46 @@ a, b = b, a      # swap in one line!
 print(a, b)      # 100  5
 ```
 
-## Augmented Assignment Operators
+## Operatori di Assegnazione Aumentata
 
-Programmers frequently need to update a variable by adding to it, subtracting from it, or doubling it.
-Python provides shorthand called **augmented assignment operators**:
+I programmatori hanno spesso bisogno di aggiornare una variabile aggiungendole qualcosa, sottraendole qualcosa, o raddoppiandola.
+Python fornisce un'abbreviazione chiamata **operatori di assegnazione aumentata**:
 
-| Shorthand | Same as | Effect |
+| Abbreviazione | Equivale a | Effetto |
 |-----------|---------|--------|
-| `x += 5` | `x = x + 5` | Adds 5 to x |
-| `x -= 5` | `x = x - 5` | Subtracts 5 from x |
-| `x *= 2` | `x = x * 2` | Doubles x |
-| `x /= 2` | `x = x / 2` | Halves x (returns float) |
-| `x //= 2` | `x = x // 2` | Integer-halves x |
-| `x %= 3` | `x = x % 3` | Keeps remainder after ÷ 3 |
-| `x **= 2` | `x = x ** 2` | Squares x |
+| `x += 5` | `x = x + 5` | Aggiunge 5 a x |
+| `x -= 5` | `x = x - 5` | Sottrae 5 da x |
+| `x *= 2` | `x = x * 2` | Raddoppia x |
+| `x /= 2` | `x = x / 2` | Dimezza x (restituisce un float) |
+| `x //= 2` | `x = x // 2` | Dimezza x come intero |
+| `x %= 3` | `x = x % 3` | Mantiene il resto dopo ÷ 3 |
+| `x **= 2` | `x = x ** 2` | Eleva x al quadrato |
 
-You will use `+=` constantly once you start writing loops.
-For example, `count += 1` adds 1 to a counter every time the loop repeats.
+Userai `+=` costantemente una volta che inizierai a scrivere cicli.
+Per esempio, `count += 1` aggiunge 1 a un contatore ogni volta che il ciclo si ripete.
 
-## Math and Turtle: Drawing Any Regular Polygon
+## Matematica e Turtle: Disegnare Qualsiasi Poligono Regolare
 
-Here is where arithmetic meets art.
-Every **regular polygon** — a shape where all sides are equal and all angles are equal — has one key property:
-the turtle must turn the **same angle** at every corner, and that angle is always:
+Ecco dove l'aritmetica incontra l'arte.
+Ogni **poligono regolare** — una forma in cui tutti i lati sono uguali e tutti gli angoli sono uguali — ha una proprietà fondamentale:
+la turtle deve girare dello **stesso angolo** a ogni angolo, e quell'angolo è sempre:
 
 ```
 turn_angle = 360 / number_of_sides
 ```
 
-- Triangle (3 sides): `360 / 3` = **120°** per turn
-- Square (4 sides): `360 / 4` = **90°** per turn
-- Pentagon (5 sides): `360 / 5` = **72°** per turn
-- Hexagon (6 sides): `360 / 6` = **60°** per turn
+- Triangolo (3 lati): `360 / 3` = **120°** per svolta
+- Quadrato (4 lati): `360 / 4` = **90°** per svolta
+- Pentagono (5 lati): `360 / 5` = **72°** per svolta
+- Esagono (6 lati): `360 / 6` = **60°** per svolta
 
-The program below draws a polygon — but it is missing the one line that calculates the turn angle.
+Il programma qui sotto disegna un poligono — ma manca la riga che calcola l'angolo di svolta.
 
-!!! mascot-thinking "Your Turn — Add the Missing Line"
+!!! mascot-thinking "Tocca a Te — Aggiungi la Riga Mancante"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The turtle wants to draw a triangle but doesn't know how far to turn at each corner.
-    Add **one line** below the comment to calculate `turn_angle` using `360` and `sides`.
-    Use `/` (not `//`) so the formula gives a precise decimal angle for any polygon!
+    La turtle vuole disegnare un triangolo ma non sa di quanto girare a ogni angolo.
+    Aggiungi **una riga** sotto il commento per calcolare `turn_angle` usando `360` e `sides`.
+    Usa `/` (non `//`) così la formula dà un angolo decimale preciso per qualsiasi poligono!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -286,22 +286,22 @@ for i in range(sides):
     t.right(turn_angle)`);
 </script>
 
-Once the triangle appears, try changing `sides` to `5` or `6` — the formula adapts automatically!
+Una volta che il triangolo appare, prova a cambiare `sides` in `5` o `6` — la formula si adatta automaticamente!
 
-## Experiments
+## Esperimenti
 
-Try these changes to the polygon program above. For each one, predict what will happen first, then run it to check!
+Prova questi cambiamenti al programma del poligono qui sopra. Per ciascuno, prevedi prima cosa succederà, poi eseguilo per verificare!
 
-1. Change `sides = 3` to `sides = 5`. **You'll know it worked when** you see a five-sided pentagon.
-2. Change `sides = 6`. **You'll know it worked when** you see a hexagon that looks like a honeycomb cell.
-3. Try `sides = 360`. **You'll know it worked when** the turtle traces something that looks almost like a perfect circle.
-4. Add `t.pencolor("blue")` before the `for` loop. **You'll know it worked when** all the lines turn blue.
-5. Change `t.forward(100)` to `t.forward(300 // sides)`. **You'll know it worked when** larger polygons draw longer lines and smaller polygons draw shorter ones.
+1. Cambia `sides = 3` in `sides = 5`. **Saprai che ha funzionato quando** vedi un pentagono a cinque lati.
+2. Cambia in `sides = 6`. **Saprai che ha funzionato quando** vedi un esagono che somiglia a una cella di un nido d'ape.
+3. Prova `sides = 360`. **Saprai che ha funzionato quando** la turtle traccia qualcosa che sembra quasi un cerchio perfetto.
+4. Aggiungi `t.pencolor("blue")` prima del ciclo `for`. **Saprai che ha funzionato quando** tutte le linee diventano blu.
+5. Cambia `t.forward(100)` in `t.forward(300 // sides)`. **Saprai che ha funzionato quando** i poligoni più grandi disegnano linee più lunghe e quelli più piccoli disegnano linee più corte.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've unlocked Python's full arithmetic toolkit — seven operators, order of operations, and two powerful assignment shortcuts. Best of all, you connected math to art with one formula. That's exactly how programmers think! Let's keep coding it together!
+    Hai sbloccato l'intero toolkit aritmetico di Python — sette operatori, l'ordine delle operazioni, e due potenti scorciatoie di assegnazione. Soprattutto, hai collegato la matematica all'arte con un'unica formula. È esattamente così che pensano i programmatori! Continuiamo a programmare insieme!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Commentati](./references.md)

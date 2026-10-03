@@ -1,10 +1,10 @@
-# Quiz: Math and Arithmetic
+# Quiz: Matematica e Aritmetica
 
-Test your understanding of Python's arithmetic operators, order of operations, and augmented assignment with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione degli operatori aritmetici di Python, dell'ordine delle operazioni e dell'assegnazione aumentata con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What is the result of `10 // 3` in Python?
+#### 1. Qual è il risultato di `10 // 3` in Python?
 
 <div class="upper-alpha" markdown>
 1. `3.3333`
@@ -13,30 +13,30 @@ Test your understanding of Python's arithmetic operators, order of operations, a
 4. `0.3`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. The `//` operator is integer division — it divides and keeps only the whole-number part, throwing away any decimal. 10 divided by 3 is 3 with a remainder of 1, so `10 // 3` gives `3`. If you want the decimal result, use `/` instead: `10 / 3` gives `3.3333...`.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. L'operatore `//` è la divisione intera — divide e mantiene solo la parte di numero intero, scartando ogni decimale. 10 diviso 3 fa 3 con un resto di 1, quindi `10 // 3` dà `3`. Se vuoi il risultato decimale, usa invece `/`: `10 / 3` dà `3.3333...`.
 
     **Concept Tested:** Integer Division Operator
 
 ---
 
-#### 2. What does the modulo operator `%` calculate?
+#### 2. Cosa calcola l'operatore modulo `%`?
 
 <div class="upper-alpha" markdown>
-1. The percentage of one number compared to another
-2. The remainder left over after dividing two integers
-3. The average of two numbers
-4. The larger of two numbers
+1. La percentuale di un numero rispetto a un altro
+2. Il resto che rimane dopo aver diviso due interi
+3. La media di due numeri
+4. Il maggiore tra due numeri
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. The `%` operator (modulo) gives you the remainder after division. For example, `10 % 3` is `1` because 3 goes into 10 three times (that's 9), and 10 − 9 = 1 left over. Modulo is very useful for checking if a number is even (`n % 2 == 0`) and for creating repeating patterns in programs.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. L'operatore `%` (modulo) ti dà il resto dopo la divisione. Per esempio, `10 % 3` è `1` perché il 3 entra in 10 tre volte (cioè 9), e 10 − 9 = 1 di resto. Il modulo è molto utile per verificare se un numero è pari (`n % 2 == 0`) e per creare pattern ripetuti nei programmi.
 
     **Concept Tested:** Modulo Operator
 
 ---
 
-#### 3. What does `2 ** 8` evaluate to in Python?
+#### 3. A cosa equivale `2 ** 8` in Python?
 
 <div class="upper-alpha" markdown>
 1. `16`
@@ -45,14 +45,14 @@ Test your understanding of Python's arithmetic operators, order of operations, a
 4. `10`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. The `**` operator is exponentiation — "to the power of." `2 ** 8` means 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2, which equals 256. This is the same as 2 raised to the 8th power in mathematics. Exponentiation is one of Python's three extra arithmetic operators not found in Scratch.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. L'operatore `**` è l'elevamento a potenza — "elevato alla potenza di." `2 ** 8` significa 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2, che equivale a 256. È lo stesso di 2 elevato all'ottava potenza in matematica. L'elevamento a potenza è uno dei tre operatori aritmetici extra di Python non presenti in Scratch.
 
     **Concept Tested:** Exponentiation Operator
 
 ---
 
-#### 4. What is the result of `2 + 3 * 4` in Python?
+#### 4. Qual è il risultato di `2 + 3 * 4` in Python?
 
 <div class="upper-alpha" markdown>
 1. `20`
@@ -61,14 +61,14 @@ Test your understanding of Python's arithmetic operators, order of operations, a
 4. `9`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Python follows the standard order of operations (PEMDAS): multiplication comes before addition. So Python calculates `3 * 4 = 12` first, then adds `2 + 12 = 14`. If you wanted to add first and then multiply, you would write `(2 + 3) * 4`, which equals `20`.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Python segue l'ordine standard delle operazioni (PEMDAS): la moltiplicazione viene prima dell'addizione. Quindi Python calcola prima `3 * 4 = 12`, poi somma `2 + 12 = 14`. Se volessi sommare prima e poi moltiplicare, scriveresti `(2 + 3) * 4`, che equivale a `20`.
 
     **Concept Tested:** Order of Operations
 
 ---
 
-#### 5. Which shorthand operator adds 5 to the variable `score`?
+#### 5. Quale operatore abbreviato aggiunge 5 alla variabile `score`?
 
 <div class="upper-alpha" markdown>
 1. `score =+ 5`
@@ -77,14 +77,14 @@ Test your understanding of Python's arithmetic operators, order of operations, a
 4. `score == score + 5`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `score += 5` is an augmented assignment operator — it is shorthand for `score = score + 5`. It reads the current value of `score`, adds 5, and stores the result back in `score`. This pattern is used constantly in loops: `count += 1` adds 1 to a counter every time the loop repeats.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `score += 5` è un operatore di assegnazione aumentata — è l'abbreviazione di `score = score + 5`. Legge il valore attuale di `score`, aggiunge 5, e memorizza il risultato di nuovo in `score`. Questo schema si usa costantemente nei cicli: `count += 1` aggiunge 1 a un contatore ogni volta che il ciclo si ripete.
 
     **Concept Tested:** Augmented Assignment Operators
 
 ---
 
-#### 6. What is the value of `x` after this code runs?
+#### 6. Qual è il valore di `x` dopo l'esecuzione di questo codice?
 
 ```python
 x = 10
@@ -100,72 +100,72 @@ print(x)
 4. `4`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Python runs each line in order. First `x = 10` sets x to 10. Then `x -= 3` means `x = x - 3` = `10 - 3` = 7, so x is now 7. Then `x *= 2` means `x = x * 2` = `7 * 2` = 14. The final value printed is 14.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Python esegue ogni riga in ordine. Prima `x = 10` imposta x a 10. Poi `x -= 3` significa `x = x - 3` = `10 - 3` = 7, quindi x ora è 7. Poi `x *= 2` significa `x = x * 2` = `7 * 2` = 14. Il valore finale stampato è 14.
 
     **Concept Tested:** Augmented Assignment Operators
 
 ---
 
-#### 7. What does `a, b = 5, 10` do in Python?
+#### 7. Cosa fa `a, b = 5, 10` in Python?
 
 <div class="upper-alpha" markdown>
-1. Creates a list with two items: 5 and 10
-2. Assigns 5 to `a` and 10 to `b` at the same time
-3. Swaps the values of `a` and `b`
-4. Multiplies `a` by `b` and stores the result
+1. Crea una lista con due elementi: 5 e 10
+2. Assegna 5 ad `a` e 10 a `b` contemporaneamente
+3. Scambia i valori di `a` e `b`
+4. Moltiplica `a` per `b` e memorizza il risultato
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Multiple assignment lets you assign values to two or more variables in one line. Python reads the values on the right (`5` and `10`) and assigns them left to right to the variables on the left (`a` and `b`). After this line, `a` holds `5` and `b` holds `10`.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. L'assegnazione multipla ti permette di assegnare valori a due o più variabili in una riga. Python legge i valori a destra (`5` e `10`) e li assegna da sinistra a destra alle variabili a sinistra (`a` e `b`). Dopo questa riga, `a` contiene `5` e `b` contiene `10`.
 
     **Concept Tested:** Multiple Assignment
 
 ---
 
-#### 8. Why does `10 / 2` return `5.0` instead of `5` in Python?
+#### 8. Perché `10 / 2` restituisce `5.0` invece di `5` in Python?
 
 <div class="upper-alpha" markdown>
-1. Python automatically rounds up all division results
-2. The `/` operator always returns a float, even when the answer is a whole number
-3. `5.0` and `5` are exactly the same in Python
-4. You need to use parentheses to get an integer from division
+1. Python arrotonda automaticamente per eccesso tutti i risultati delle divisioni
+2. L'operatore `/` restituisce sempre un float, anche quando la risposta è un numero intero
+3. `5.0` e `5` sono esattamente la stessa cosa in Python
+4. Devi usare le parentesi per ottenere un intero dalla divisione
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. In Python 3, the `/` division operator always returns a float (a number with a decimal point), even when the numbers divide evenly. So `10 / 2` gives `5.0`, not `5`. If you want the integer result, use the `//` operator: `10 // 2` gives `5`.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. In Python 3, l'operatore di divisione `/` restituisce sempre un float (un numero con una virgola decimale), anche quando i numeri si dividono esattamente. Quindi `10 / 2` dà `5.0`, non `5`. Se vuoi il risultato intero, usa l'operatore `//`: `10 // 2` dà `5`.
 
     **Concept Tested:** Division Returns Float
 
 ---
 
-#### 9. What is `3e8` in Python?
+#### 9. Cos'è `3e8` in Python?
 
 <div class="upper-alpha" markdown>
-1. The number 38
-2. 3 raised to the power of 8 (= 6561)
-3. 3 times 10 to the power of 8 (= 300,000,000)
-4. An error, because `e` is not a valid number character
+1. Il numero 38
+2. 3 elevato alla potenza di 8 (= 6561)
+3. 3 moltiplicato per 10 elevato alla potenza di 8 (= 300.000.000)
+4. Un errore, perché `e` non è un carattere numerico valido
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Python uses the letter `e` (or `E`) for scientific notation. `3e8` means 3 × 10^8, which equals 300,000,000 (the approximate speed of light in meters per second). Scientific notation is useful when working with very large or very small numbers to avoid writing many zeros.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Python usa la lettera `e` (o `E`) per la notazione scientifica. `3e8` significa 3 × 10^8, che equivale a 300.000.000 (la velocità approssimativa della luce in metri al secondo). La notazione scientifica è utile quando si lavora con numeri molto grandi o molto piccoli per evitare di scrivere molti zeri.
 
     **Concept Tested:** Scientific Notation Floats
 
 ---
 
-#### 10. To draw a regular hexagon with a turtle, what turn angle should you use at each corner?
+#### 10. Per disegnare un esagono regolare con una turtle, quale angolo di svolta dovresti usare a ogni angolo?
 
 <div class="upper-alpha" markdown>
-1. 45 degrees
-2. 72 degrees
-3. 60 degrees
-4. 120 degrees
+1. 45 gradi
+2. 72 gradi
+3. 60 gradi
+4. 120 gradi
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. For any regular polygon, the turn angle at each corner is `360 / number_of_sides`. A hexagon has 6 sides, so the turn angle is `360 / 6 = 60` degrees. You would repeat `t.forward(length)` and `t.right(60)` six times. For a pentagon (5 sides), the turn is `360 / 5 = 72` degrees.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Per qualsiasi poligono regolare, l'angolo di svolta a ogni angolo è `360 / numero_di_lati`. Un esagono ha 6 lati, quindi l'angolo di svolta è `360 / 6 = 60` gradi. Dovresti ripetere `t.forward(lunghezza)` e `t.right(60)` sei volte. Per un pentagono (5 lati), la svolta è `360 / 5 = 72` gradi.
 
     **Concept Tested:** Arithmetic Operators
 
