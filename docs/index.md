@@ -1,40 +1,41 @@
 ---
 title: "Learning Python"
-description: "An interactive intelligent textbook for learning Python using inline coding guided by a friendly mascot"
+description: "Un libro di testo intelligente e interattivo per imparare Python con esercizi di codice guidati da una mascotte amichevole"
 image: img/cover.png
 ---
 # Learning Python
 ![](./img/cover.png)
 
-!!! mascot-welcome "Welcome from Monty!"
+!!! mascot-welcome "Benvenuto/a da Monty!"
     ![Monty welcoming you](./img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Hi! I'm Monty, your friendly python-snake guide. I'll be with you every step of the way
-    as you learn to write real Python — right here in your browser, no installation needed.
-    Let's go!
+    Ciao! Sono Monty, il tuo amichevole serpente-guida Python. Sarò con te a ogni passo
+    mentre impari a scrivere vero codice Python — proprio qui nel tuo browser, senza
+    bisogno di installare nulla. Andiamo!
 
-**Beginning Python — From Blocks to Code with Monty** is an interactive intelligent textbook
-for students ages 10–13 who are ready to move from block-based programming (like Scratch)
-into real, text-based Python. Every lesson includes live coding windows powered by
-**Skulpt** — a Python engine that runs directly in your browser so you can read, run,
-and modify code instantly on every page.
+**Beginning Python — From Blocks to Code with Monty** è un libro di testo intelligente e
+interattivo per studenti dai 10 ai 13 anni pronti a passare dalla programmazione a blocchi
+(come Scratch) al vero codice Python testuale. Ogni lezione include finestre di codice dal
+vivo basate su **Skulpt** — un motore Python che funziona direttamente nel tuo browser,
+così puoi leggere, eseguire e modificare il codice all'istante in ogni pagina.
 
-## Learning Python with Skulpt
+## Imparare Python con Skulpt
 
-The primary coding environment throughout this textbook is **Skulpt** — a JavaScript
-implementation of Python that runs entirely in your browser. No account, no download,
-no setup. Every chapter includes one or more inline Skulpt labs where you can:
+L'ambiente di programmazione principale usato in tutto questo libro è **Skulpt** — una
+implementazione JavaScript di Python che funziona interamente nel tuo browser. Nessun
+account, nessun download, nessuna installazione. Ogni capitolo include uno o più
+laboratori Skulpt incorporati dove puoi:
 
-1. **Read** a short, working Python program
-2. **Run** it instantly by clicking the Run button
-3. **Modify** it — change a number, a color, a direction — and run it again
+1. **Leggere** un breve programma Python funzionante
+2. **Eseguirlo** immediatamente cliccando sul pulsante Run
+3. **Modificarlo** — cambiando un numero, un colore, una direzione — ed eseguirlo di nuovo
 
-Skulpt supports **turtle graphics** out of the box, giving students immediate visual
-feedback as they draw shapes, spirals, flowers, and fractals. The drawing canvas
-appears right below the code editor, so learners see their program's output the
-moment they click Run.
+Skulpt supporta nativamente le **grafiche turtle**, dando agli studenti un riscontro
+visivo immediato mentre disegnano forme, spirali, fiori e frattali. L'area di disegno
+appare subito sotto l'editor di codice, così chi impara vede il risultato del proprio
+programma nel momento stesso in cui clicca su Run.
 
-Try it yourself right now — click **Run** to see the turtle draw a colorful hexagon,
-then change the colors, the number of sides, or the distance and run it again:
+Provalo subito tu stesso/a — clicca su **Run** per vedere la tartaruga disegnare un
+esagono colorato, poi cambia i colori, il numero di lati o la distanza ed eseguilo di nuovo:
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -65,71 +66,74 @@ for i in range(6):
     t.right(60)`);
 </script>
 
-That seven-line program draws a colorful hexagon — and changing `6` to `5` or `100` to `150`
-takes one second and teaches more than a paragraph of explanation ever could.
+Questo programma di sette righe disegna un esagono colorato — e cambiare `6` in `5` o
+`100` in `150` richiede un secondo e insegna più di quanto potrebbe mai fare un paragrafo
+di spiegazione.
 
-## Learning Python with Jupyter Notebooks
+## Imparare Python con i Jupyter Notebook
 
-[Jupyter Notebooks](https://jupyter.org/) are the preferred tool for data science
-professionals and a great next step after this textbook. They support turtle graphics
-(opening a separate drawing window) and give students access to tens of thousands of
-community-written example notebooks. Jupyter is ideal for students moving into data
-visualization, NumPy, and machine learning.
+I [Jupyter Notebook](https://jupyter.org/) sono lo strumento preferito dai professionisti
+della data science e un ottimo passo successivo dopo questo libro. Supportano le grafiche
+turtle (aprendo una finestra di disegno separata) e danno agli studenti accesso a decine
+di migliaia di notebook di esempio scritti dalla community. Jupyter è ideale per gli
+studenti che si avvicinano alla visualizzazione dati, a NumPy e al machine learning.
 
-## Learning Python with Raspberry Pi
+## Imparare Python con Raspberry Pi
 
-The [Raspberry Pi Foundation](https://www.raspberrypi.org/documentation/usage/python/)
-chose Python as the primary language for physical computing on the Pi. If you have a
-Raspberry Pi, Python runs natively on it and all the standard libraries — turtle,
-matplotlib, and even Keras — work out of the box. The Pi is a great platform for
-robotics, sensors, and maker projects once students are comfortable with the core
-language taught in this textbook.
+La [Raspberry Pi Foundation](https://www.raspberrypi.org/documentation/usage/python/)
+ha scelto Python come linguaggio principale per il physical computing sul Pi. Se hai un
+Raspberry Pi, Python funziona nativamente e tutte le librerie standard — turtle,
+matplotlib e persino Keras — funzionano senza configurazioni aggiuntive. Il Pi è
+un'ottima piattaforma per robotica, sensori e progetti maker una volta che gli studenti
+hanno acquisito familiarità con il linguaggio di base insegnato in questo libro.
 
-## Course Structure
+## Struttura del corso
 
-This textbook covers **38 chapters** and approximately **450 concepts**, progressing
-from a student's very first Python line all the way through neural networks and the
-MNIST handwritten-digit dataset:
+Questo libro copre **38 capitoli** e circa **450 concetti**, procedendo dalla prima
+riga di Python di uno studente fino alle reti neurali e al dataset di cifre scritte a
+mano MNIST:
 
-| Stage | Chapters | Topics |
+| Livello | Capitoli | Argomenti |
 |---|---|---|
-| **Beginning** | 1–18 | Turtle graphics, variables, loops, functions, strings, lists, modules |
-| **Intermediate** | 19–29 | Booleans, dictionaries, OOP, file I/O, recursion, regular expressions |
-| **Advanced** | 30–38 | Algorithms, data structures, matplotlib, NumPy, image processing, ML |
+| **Iniziale** | 1–18 | Grafiche turtle, variabili, cicli, funzioni, stringhe, liste, moduli |
+| **Intermedio** | 19–29 | Booleani, dizionari, OOP, I/O su file, ricorsione, espressioni regolari |
+| **Avanzato** | 30–38 | Algoritmi, strutture dati, matplotlib, NumPy, elaborazione immagini, ML |
 
-## Key Concepts
+## Concetti chiave
 
-Here are some of the programming ideas you will learn along the way:
+Ecco alcune delle idee di programmazione che imparerai lungo il percorso:
 
-- **Importing libraries** — telling Python which tools your program needs
-- **Turtle graphics** — drawing shapes, spirals, flowers, and fractals with visual feedback
-- **Variables** — giving names to values so programs are easier to read and change
-- **Loops** — repeating actions with `for` and `while` without copying code
-- **Conditionals** — making decisions with `if`, `elif`, and `else`
-- **Functions** — breaking programs into named, reusable chunks
-- **Parameters and return values** — making functions flexible and composable
-- **Random numbers** — adding chance and variety to drawings and games
-- **Lists and dictionaries** — storing and organizing collections of data
-- **Recursion** — functions that call themselves to build fractals and solve mazes
-- **Object-oriented programming** — modeling the world with classes and objects
-- **Data visualization** — plotting data with matplotlib
-- **Machine learning** — training a neural network to recognize handwritten digits
+- **Importare librerie** — dire a Python di quali strumenti ha bisogno il tuo programma
+- **Grafiche turtle** — disegnare forme, spirali, fiori e frattali con riscontro visivo
+- **Variabili** — dare nomi ai valori per rendere i programmi più facili da leggere e modificare
+- **Cicli** — ripetere azioni con `for` e `while` senza copiare il codice
+- **Condizionali** — prendere decisioni con `if`, `elif` ed `else`
+- **Funzioni** — suddividere i programmi in parti nominate e riutilizzabili
+- **Parametri e valori di ritorno** — rendere le funzioni flessibili e componibili
+- **Numeri casuali** — aggiungere elementi di casualità e varietà a disegni e giochi
+- **Liste e dizionari** — memorizzare e organizzare collezioni di dati
+- **Ricorsione** — funzioni che richiamano se stesse per costruire frattali e risolvere labirinti
+- **Programmazione orientata agli oggetti** — modellare il mondo con classi e oggetti
+- **Visualizzazione dati** — rappresentare graficamente i dati con matplotlib
+- **Machine learning** — addestrare una rete neurale a riconoscere cifre scritte a mano
 
-## Target Audience
+## Pubblico di riferimento
 
-This textbook is ideal for students with good keyboarding skills who have completed
-at least one semester of block-based programming (Scratch, Snap!, or similar).
-No prior text-based programming experience is required.
+Questo libro è ideale per studenti con buone capacità di digitazione che hanno completato
+almeno un semestre di programmazione a blocchi (Scratch, Snap! o simili).
+Non è richiesta alcuna precedente esperienza di programmazione testuale.
 
-If a student is not yet comfortable with a keyboard, we recommend starting with
-[Scratch](https://scratch.mit.edu/) first and returning here when they are ready.
+Se uno studente non è ancora a proprio agio con la tastiera, consigliamo di iniziare
+prima con [Scratch](https://scratch.mit.edu/) e tornare qui quando sarà pronto.
 
-## Contributing
+## Contribuire
 
-Have an example you'd like to share with other students and teachers?
-See the [Contributing](teachers-guide/contribute.md) page for details on how to submit code.
+Hai un esempio che vorresti condividere con altri studenti e insegnanti?
+Consulta la pagina [Contribuire](teachers-guide/contribute.md) per i dettagli su come
+inviare il tuo codice.
 
-!!! mascot-celebration "You're in the right place!"
+!!! mascot-celebration "Sei nel posto giusto!"
     ![Monty celebrating](./img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Hundreds of students have used this textbook to write their first Python program.
-    Pick a chapter from the sidebar and start coding — I'll be right there with you!
+    Centinaia di studenti hanno usato questo libro per scrivere il loro primo programma
+    Python. Scegli un capitolo dalla barra laterale e inizia a programmare — sarò proprio
+    lì con te!

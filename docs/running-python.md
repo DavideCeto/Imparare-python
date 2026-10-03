@@ -1,4 +1,5 @@
-# Running Python Code
+# Eseguire codice Python
 
-This interactive intelligent textbook is designed to run most beginning
-Python programs directly in your web browser using the powerful [Skulpt]
+Questo libro di testo intelligente e interattivo è progettato per eseguire la maggior
+parte dei programmi Python per principianti direttamente nel tuo browser usando il
+potente [Skulpt]

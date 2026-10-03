@@ -1,8 +1,8 @@
-## Contacts
+## Contatti
 
-#### General Code Savvy Contact
+#### Generale Contatto per Conoscenze Tecniche
 kidscode@codesavvy.org
 
-#### Specific questions on this repository
+#### Domande Specifiche su questo Repositore
 Dan McCreary
 Dan.McCreary@gmail.com

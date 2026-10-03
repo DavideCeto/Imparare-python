@@ -1,40 +1,40 @@
-# Creative Commons License
+# Licenza Creative Commons
 
 ![License](./img/license.png)
 
-All content in this repository is governed by the following license agreement:
+Tutti i contenuti di questo repository sono regolati dal seguente accordo di licenza:
 
-## License Type
+## Tipo di licenza
 
 Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0 DEED)
 
-## Link to License Agreement
+## Link all'accordo di licenza
 
 [https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)
 
-## Your Rights
+## I tuoi diritti
 
-You are free to:
+Sei libero/a di:
 
-* **Share** — copy and redistribute the material in any medium or format
-* **Adapt** — remix, transform, and build upon the material
+* **Condividere** — copiare e ridistribuire il materiale con qualsiasi mezzo e formato
+* **Adattare** — remixare, trasformare e sviluppare il materiale
 
-The licensor cannot revoke these freedoms as long as you follow the license terms.
+Il licenziante non può revocare queste libertà finché rispetti i termini della licenza.
 
-## Restrictions
+## Restrizioni
 
-* **Attribution** — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
-* **NonCommercial** — You may not use the material for commercial purposes.
-* **ShareAlike** — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
-* **No additional restrictions** — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+* **Attribuzione** — Devi riconoscere la paternità dell'opera in modo adeguato, fornire un link alla licenza e indicare se sono state apportate modifiche. Puoi farlo in qualsiasi maniera ragionevole, ma non con modalità che suggeriscano che il licenziante approvi te o il tuo utilizzo.
+* **NonCommerciale** — Non puoi usare il materiale per scopi commerciali.
+* **CondividiAllostessoModo** — Se remixi, trasformi o sviluppi il materiale, devi distribuire i tuoi contributi con la stessa licenza dell'originale.
+* **Nessuna restrizione aggiuntiva** — Non puoi applicare termini legali o misure tecnologiche che limitino legalmente altri dal fare ciò che la licenza permette.
 
 !!! Notices
-    You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation.
+    Non sei tenuto/a a rispettare la licenza per gli elementi del materiale di pubblico dominio o laddove il tuo utilizzo sia consentito da un'eccezione o limitazione applicabile.
 
-    No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.
+    Non vengono fornite garanzie. La licenza potrebbe non concederti tutti i permessi necessari per l'uso che intendi farne. Ad esempio, altri diritti come pubblicità, privacy o diritti morali potrebbero limitare il modo in cui utilizzi il materiale.
 
-    This deed highlights only some of the key features and terms of the actual license. It is not a license and has no legal value. You should carefully review all of the terms and conditions of the actual license before using the licensed material.
+    Questo documento evidenzia solo alcune delle caratteristiche e dei termini principali della licenza effettiva. Non è una licenza e non ha valore legale. Dovresti esaminare attentamente tutti i termini e le condizioni della licenza effettiva prima di utilizzare il materiale concesso in licenza.
 
-## Commercial Licensing
+## Licenza commerciale
 
-Commercial rights are reserved by the copyright holder. For commercial licensing, publication inquiries, or permission to use this work in commercial contexts, please contact [Dan McCreary on LinkedIn](https://www.linkedin.com/in/danmccreary/).
+I diritti commerciali sono riservati al detentore del copyright. Per licenze commerciali, richieste di pubblicazione o il permesso di utilizzare quest'opera in contesti commerciali, contatta [Dan McCreary su LinkedIn](https://www.linkedin.com/in/danmccreary/).

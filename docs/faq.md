@@ -1,145 +1,92 @@
-# Beginning Python FAQ
+# Domande frequenti su Python
 
-Welcome to the Frequently Asked Questions for *Beginning Python — From Blocks to Code with Monty*.
-These questions are organized from introductory topics all the way to advanced concepts,
-so you can jump straight to whatever you need most.
-
----
-
-## Getting Started Questions
-
-### What is this course about?
-
-*Beginning Python — From Blocks to Code with Monty* is a project-driven course that takes
-students who have already learned Scratch (or another block-based language) and teaches them
-how to write real Python programs. The course starts with visual turtle graphics — so you see
-results immediately — and builds steadily toward variables, loops, functions, data structures,
-and eventually machine learning. Along the way, **Monty** the python-snake mascot pops up in
-every lesson to give tips, bridge ideas from Scratch, and celebrate your progress.
-
-See [course-description.md](course-description.md) for the full overview.
-
-### Who is this course for?
-
-This course is designed for elementary and middle school students, approximately **ages 10–13**,
-who have completed at least one semester of block-based programming — Scratch, Snap!, or MIT
-App Inventor — and are ready to move to text-based coding. You do not need any prior Python
-experience. You just need basic reading skills and the ability to add and subtract.
-
-### What should I already know before starting?
-
-You should be comfortable with the idea of **sequences** (doing steps in order), **loops**
-(repeating actions), **conditionals** (if something is true, do this), and **variables**
-(storing a value under a name). If you have used those ideas in Scratch, you are fully prepared.
-No prior Python, no math beyond arithmetic, and no installation required.
-
-### How do I run Python code in this textbook?
-
-Every lesson in Chapters 1–18 contains one or more **Skulpt labs** — interactive code windows
-built right into the page. You click **Run** and Python executes immediately in your browser.
-No login, no account, no installation needed. For Chapters 19–38, some examples use a
-locally installed Python, but Skulpt labs still appear throughout.
-
-### What is Skulpt and why do Chapters 1–18 use it?
-
-**Skulpt** is a version of Python that runs entirely inside a web browser using JavaScript.
-Because it runs in the browser, students do not need to install anything or open a new tab —
-the code window is right on the page. The first 18 chapters focus on concepts that Skulpt
-handles well: print, variables, loops, functions, lists, and turtle graphics. Later chapters
-introduce libraries (NumPy, matplotlib, Pillow, Keras) that require a full Python installation.
-
-See [chapters/01-welcome-to-python/index.md](chapters/01-welcome-to-python/index.md) for an
-introduction to Skulpt.
-
-### Who is Monty and what does he do?
-
-**Monty** is the friendly python-snake mascot who lives inside this textbook. Monty has exactly
-seven jobs: welcoming you at the start of each lesson, helping you predict what code will do
-before you run it, giving tips that experienced programmers use, bridging Python ideas to their
-Scratch equivalents, warning you about common mistakes, encouraging you when a concept is hard,
-and celebrating with you at the end of each lesson. Monty only appears when doing one of those
-seven things — never randomly.
-
-### Do I need to install Python to use this textbook?
-
-**No** — not for Chapters 1–18. All you need is a modern web browser. The inline Skulpt labs
-run Python right on the page. If you want to explore beyond the textbook — or tackle the more
-advanced chapters that use NumPy, matplotlib, or Keras — you can install Python from
-[python.org](https://www.python.org) or use a cloud environment like Google Colab.
-
-See [chapters/28-python-dev-tools/index.md](chapters/28-python-dev-tools/index.md) for
-installation guidance.
-
-### What makes Python different from Scratch?
-
-In Scratch you drag colorful blocks and snap them together. In Python you **type** instructions
-as text. The core ideas — sequences, loops, conditionals, variables — are the same, but typing
-gives you much more flexibility: you can write loops that run millions of times, work with large
-data files, create graphics, and build machine learning models. Monty highlights the Scratch
-equivalent whenever a new Python concept appears so you can build on what you already know.
-
-See [chapters/01-welcome-to-python/index.md](chapters/01-welcome-to-python/index.md) for the
-full Scratch-to-Python comparison.
-
-### What can I build by the end of this course?
-
-By the end of this 38-chapter course you will be able to build:
-
-- Colorful turtle graphics programs and animated fractals
-- Interactive games using mouse clicks and keyboard events
-- Data-processing programs that read and write text files
-- Custom modules you can reuse across projects
-- Maze-solving programs using graph algorithms
-- Data visualization dashboards with matplotlib
-- A neural network that recognizes handwritten digits from the MNIST dataset
-
-### How long does this course take to complete?
-
-The course is designed for approximately **one school year** in a coding club or elective class
-that meets two or three times per week, or for motivated self-directed students who spend
-30–45 minutes per session. The 38 chapters are organized so that Chapters 1–18 form a complete
-**beginning** track and Chapters 19–38 form an **intermediate-to-advanced** extension.
-
-### Is there a teacher's guide available?
-
-Yes. The course includes a **detailed teacher's guide** with pacing recommendations,
-prerequisite concept maps, discussion prompts, common misconceptions, extension activities,
-assessment rubrics, and alignment to CSTA K-12 CS education standards. See
-[course-description.md](course-description.md) for a description of all included materials.
-
-### How are the chapters organized?
-
-The 38 chapters follow a carefully sequenced learning graph of 450 concepts, each concept
-building on the ones before it. The first five chapters introduce the Python environment and
-turtle graphics, establishing visual, immediate feedback as a learning tool. Chapters 6–18
-cover the core language: math, loops, strings, decisions, functions, colors, input, and lists.
-Chapters 19–30 introduce advanced collections, error handling, recursion, OOP, file I/O, and
-algorithms. Chapters 31–38 cover data visualization, NumPy, image processing, and machine
-learning.
+Benvenuti alle Domande frequenti per *Beginning Python – Dall’inizio alla programmazione con Monty*.
+Queste domande sono organizzate per argomenti di base fino a concetti avanzati,
+in modo da poter passare direttamente alla parte che vi interessa di più.
 
 ---
 
-## Core Concept Questions
+## Domande di avvio
 
-### What is the Python interpreter?
+### Di cosa tratta questo corso?
 
-The **Python interpreter** is the program that reads your Python code and carries out its
-instructions, one line at a time from top to bottom. Think of it as a very fast reader who
-translates your English-like instructions into actions the computer can perform. When you click
-**Run** in a Skulpt lab, the Skulpt interpreter — a version of Python built for web browsers —
-does exactly this job. When you run a `.py` file from a terminal, the standard CPython
-interpreter does the same thing on your own computer.
+*Beginning Python – Dall’inizio alla programmazione con Monty* è un corso orientato al progetto che si rivolge a studenti che hanno già imparato Scratch (o un altro linguaggio basato su blocchi) e li aiuta a scrivere programmi Python veri. Il corso inizia con l’uso della grafica visiva dei “turtles”, in modo da vedere i risultati immediatamente, e si sviluppa progressivamente verso variabili, cicli, funzioni, strutture dati e, infine, l’apprendimento del machine learning. Lungo il percorso, **Monty**, la mascotte della Python, appare in ogni lezione per fornire consigli, collegare idee provenienti da Scratch e celebrare i vostri progressi.
 
-See [chapters/01-welcome-to-python/index.md](chapters/01-welcome-to-python/index.md).
+Per una descrizione completa, consultate [course-description.md](course-description.md).
 
-### What is indentation and why does Python care about it?
+### A chi è destinato questo corso?
 
-**Indentation** means putting spaces (or a tab) at the start of a line to show that it belongs
-inside a block. In Python, indentation is not just style — it is part of the language syntax.
-A `for` loop body, an `if` block, and a function body are all identified by their indentation.
-Most Python programmers use **4 spaces** per level.
+Questo corso è pensato per studenti delle scuole elementari e medie, circa **età 10–13 anni**, che hanno già completato almeno un semestre di programmazione basata su blocchi – Scratch, Snap! o MIT App Inventor – e sono pronti a passare a una programmazione basata su testi. Non è necessario avere alcuna esperienza pregressa con Python. È sufficiente avere abilità di lettura di base e la capacità di fare operazioni aritmetiche.
 
-Example — the `print` below is inside the loop because it is indented:
+### Cosa devo sapere prima di iniziare?
+
+Dovreste essere a vostro agio con i concetti di **sequenze** (eseguire passaggi in ordine), **cicli** (ripetere azioni), **condizionalità** (eseguire qualcosa se una condizione è vera) e **variabili** (conservare un valore sotto un nome). Se avete già utilizzato questi concetti in Scratch, siete completamente pronti. Non è necessario avere esperienza pregressa con Python, né con le matematiche al di fuori delle operazioni aritmetiche. Non è necessario effettuare alcuna installazione particolare.
+
+### Come si esegue il codice Python in questo libro di testo?
+
+**Ogni lezione nei Capitoli 1–18 contiene uno o più **Skulpt labs** – finestre di codice interattive integrate direttamente nella pagina. Fai clic su **Run** e il Python viene eseguito immediatamente nel tuo browser. Non è necessario effettuare login, creare un account o installare nulla. Per i Capitoli 19–38, alcuni esempi utilizzano un Python installato localmente, ma i Skulpt labs continuano a comparire.
+
+### Cos’è Skulpt e perché viene utilizzato nei Capitoli 1–18?
+
+**Skulpt** è una versione del Python che viene eseguita interamente all’interno di un browser web, utilizzando JavaScript. Poiché viene eseguito nel browser, gli studenti non hanno bisogno di installare nulla o aprire una nuova finestra – la finestra di codice si trova direttamente sulla pagina. I primi 18 capitoli si concentrano su concetti che Skulpt gestisce bene: stampa, variabili, cicli, funzioni, liste e grafica con il programma turtle. I capitoli successivi introducono librerie (NumPy, matplotlib, Pillow, Keras) che richiedono un’installazione completa di Python.
+
+Per maggiori informazioni su Skulpt, consulta [chapters/01-welcome-to-python/index.md](chapters/01-welcome-to-python/index.md).
+
+### Chi è Monty e cosa fa?
+
+**Monty** è la simpatica mascotte di python-snake che vive all’interno di questo libro di testo. Monty ha esattamente sette compiti: accoglierti all’inizio di ogni lezione, aiutarti a prevedere cosa farà il codice prima di eseguirlo, fornirti consigli utilizzati dai programmatori esperti, collegare le idee di Python alle loro corrispondenti funzionalità in Scratch, avvertirti sui errori comuni, incoraggiarti quando un concetto è difficile, e festeggiare con te alla fine di ogni lezione. Monty appare solo quando svolge uno di questi sette compiti – mai in modo casuale.
+
+### Devo installare Python per utilizzare questo libro di testo?
+
+**No** — non per i capitoli 1–18. Tutto ciò di cui hai bisogno è un moderno browser web. I laboratori Skulpt eseguono Python direttamente sulla pagina. Se desideri esplorare oltre il libro di testo — o affrontare i capitoli più avanzati che utilizzano NumPy, matplotlib o Keras — puoi installare Python su [python.org](https://www.python.org) o utilizzare un ambiente cloud come Google Colab.
+
+Per istruzioni sull’installazione, consulta [chapters/28-python-dev-tools/index.md](chapters/28-python-dev-tools/index.md).
+
+### Cosa rende Python diverso da Scratch?
+
+In Scratch si trascinano blocchi colorati e si assemblano tra loro. In Python si **scrivono** istruzioni come testo. Le idee fondamentali — sequenze, cicli, condizionalità, variabili — sono le stesse, ma scrivere permette di avere molta più flessibilità: si possono scrivere cicli che vengono eseguiti milioni di volte, lavorare con grandi file di dati, creare grafici e costruire modelli di machine learning. Monty evidenzia i concetti equivalenti a Scratch ogni volta che appare un nuovo concetto di Python, in modo da poter costruire sulle conoscenze già acquisite.
+
+Per una comparazione completa tra Scratch e Python, consulta [chapters/01-welcome-to-python/index.md](chapters/01-welcome-to-python/index.md).
+
+### Cosa posso costruire alla fine di questo corso?
+
+Alla fine di questo corso di 38 capitoli, sarai in grado di creare:
+
+- Programmi grafici con grafici a torta colorati e frattali animati
+- Giochi interattivi che utilizzano clic del mouse e eventi tastiera
+- Programmi di elaborazione dati che leggono e scrivono file di testo
+- Moduli personalizzati che possono essere riutilizzati in diversi progetti
+- Programmi per risolvere labirinti utilizzando algoritmi grafici
+- Pannelli di visualizzazione dei dati con matplotlib
+- Un network neurale in grado di riconoscere caratteri scritti dal dataset MNIST
+
+### Quanto tempo impiega questo corso per essere completato?
+
+Il corso è pensato per circa **un anno scolastico** in un club di programmazione o in una lezione alternativa, che si tengono due o tre volte a settimana, oppure per studenti motivati che si dedicano alla lezione per 30–45 minuti a sessione. I 38 capitoli sono organizzati in modo che i capitoli 1–18 costituiscono una completa **fase iniziale**, mentre i capitoli 19–38 rappresentano una **fase intermedio-alta**.
+
+### È disponibile una guida per gli insegnanti?
+
+Sì. Il corso include una **guida dettagliata per gli insegnanti**, che contiene raccomandazioni per il ritmo degli esercizi, mappe concettuali di riferimento, domande per le discussioni, informazioni sui concetti errati comuni, attività di approfondimento, criteri di valutazione e un allineamento con gli standard educativi CSTA K-12 in materia di programmazione. Per una descrizione di tutti i materiali inclusi, consultare [course-description.md](course-description.md).
+
+### I capitoli sono organizzati come?
+
+I 38 capitoli seguono una sequenza logica che comprende 450 concetti, ciascuno dei quali si basa sui concetti precedenti. I primi cinque capitoli introducono l’ambiente di programmazione in Python e i grattugi di testo, utilizzando il feedback visivo come strumento di apprendimento. I capitoli 6–18 trattano i concetti fondamentali del linguaggio: matematica, cicli, stringhe, decisioni, funzioni, colori, input e liste. I capitoli 19–30 introducono concetti avanzati come collezioni, gestione degli errori, ricorsione, programmazione orientata agli oggetti, input/output di file e algoritmi. I capitoli 31–38 trattano la visualizzazione dei dati, NumPy, l’elaborazione delle immagini e l’apprendimento automatico.
+
+---
+
+## Domande sui concetti fondamentali
+
+### Cos’è l’interprete di Python?
+
+Il **interprete di Python** è il programma che legge il codice Python e esegue le sue istruzioni, linea per linea, dall’alto verso il basso. Pensatelo come un lettore molto veloce che traduce le vostre istruzioni, simili a quelle in linguaggio inglese, in azioni che il computer può eseguire. Quando fate clic su **Run** in un ambiente Skulpt, l’interprete Skulpt – una versione di Python progettata per browser web – svolge esattamente questo compito. Quando eseguite un file `.py` dal terminale, l’interprete standard CPython fa lo stesso sul vostro computer.
+
+Vedere [chapters/01-welcome-to-python/index.md](chapters/01-welcome-to-python/index.md).
+
+### Cosa è l’indentazione e perché Python ci tiene?
+
+L’**indentazione** significa inserire spazi (o una tabulazione) all’inizio di una riga per indicare che essa appartiene a un blocco. In Python, l’indentazione non è solo uno stile – è parte della sintassi del linguaggio. Il corpo di un ciclo, un blocco e il corpo di una funzione sono tutti identificati attraverso l’indentazione. La maggior parte dei programmatori Python utilizza **4 spazi** per ogni livello di indentazione.
+
+Esempio: il `print` qui sotto è all’interno del ciclo perché è indentato:
 
 ```python
 for i in range(3):
@@ -147,63 +94,50 @@ for i in range(3):
 print("done")  # not indented — runs once after the loop
 ```
 
-If you forget to indent, Python raises an `IndentationError`.
+Se dimenticate di indentare, Python genera un errore `IndentationError`.
 
-See [chapters/02-python-code-structure/index.md](chapters/02-python-code-structure/index.md).
+Vedere [chapters/02-python-code-structure/index.md](chapters/02-python-code-structure/index.md).
 
-### What is a variable?
+### Cos’è una variabile?
 
-A **variable** is a named container that holds a value. You create one with the assignment
-operator `=`:
+Una **variabile** è un contenitore a nome che contiene un valore. Create una variabile utilizzando l’operatore di assegnazione `=`:
 
 ```python
 score = 10
 name = "Monty"
 ```
 
-After that line, `score` refers to the number `10` and `name` refers to the text `"Monty"`.
-You can use the variable name anywhere you would use the value, and you can update it by
-assigning a new value at any time. In Scratch, these were called *variables* too — same idea,
-different spelling.
-
-See [chapters/03-variables-and-numbers/index.md](chapters/03-variables-and-numbers/index.md).
-
-### What are the six core Python data types?
-
-Python's six core data types are:
-
-| Type | Example | What it holds |
+Dopo quella riga, `score` si riferisce al numero `10` e `name` si riferisce al testo `"Monty"`.  
+Puoi utilizzare il nome della variabile ovunque utilizzeresti il valore corrispondente, e puoi aggiornarla in qualsiasi momento assegnandole un nuovo valore. In Scratch, queste venivano chiamate *variabili* – la stessa idea, solo scritta in modo diverso.  
+Vedi [chapters/03-variables-and-numbers/index.md](chapters/03-variables-and-numbers/index.md).  
+  
+### Quali sono i sei tipi di dati di base in Python?  
+I sei tipi di dati di base in Python sono:  
+  
+| Tipo | Esempio | Cosa contiene |
 |------|---------|--------------|
-| `int` | `42` | Whole numbers |
-| `float` | `3.14` | Decimal numbers |
-| `str` | `"hello"` | Text |
-| `bool` | `True` / `False` | True or false |
-| `list` | `[1, 2, 3]` | Ordered, changeable collection |
-| `dict` | `{"a": 1}` | Key-value pairs |
+| `int` | `42` | Numeri interi |
+| `float` | `3.14` | Numeri decimali |
+| `str` | `"hello"` | Testo |
+| `bool` | `True` / `False` | Vero o falso |
+| `list` | `[1, 2, 3]` | Collezione ordinata e modificabile |
+| `dict` | `{"a": 1}` | Pari di chiave e valore |
 
-You can always check the type of a value with `type(value)`.
-
-### What is a for loop?
-
-A **`for` loop** repeats a block of code once for each item in a sequence. The most common
-form uses `range()` to count:
-
+Puoi sempre verificare il tipo di un valore utilizzando `type(value)`.  
+  
+### Cos’è un ciclo `for`?  
+Un **ciclo `for`** ripete un blocco di codice una volta per ogni elemento in una sequenza. La forma più comune utilizza `range()` per contare:  
 ```python
 for i in range(4):
     print(i)   # prints 0, 1, 2, 3
-```
+```  
+  
+Puoi anche eseguire il ciclo su una lista, una stringa o qualsiasi altra sequenza. I cicli `for` sono l’equivalente in Python del blocco *repeat N volte* di Scratch. Vengono utilizzati costantemente per disegnare figure, elaborare liste e creare pattern accumulativi.  
+Vedi [chapters/07-for-loops-and-shapes/index.md](chapters/07-for-loops-and-shapes/index.md).  
+  
+### Cos’è un ciclo `while`?
 
-You can also loop over a list, a string, or any other sequence. For loops are the Python
-equivalent of Scratch's *repeat N times* block. They are used constantly for drawing shapes,
-processing lists, and building accumulator patterns.
-
-See [chapters/07-for-loops-and-shapes/index.md](chapters/07-for-loops-and-shapes/index.md).
-
-### What is a while loop?
-
-A **`while` loop** repeats a block of code as long as a condition stays `True`. Unlike a `for`
-loop (which counts a fixed number of repetitions), a `while` loop runs an unknown number of
-times — it depends on what happens inside the loop.
+A **`while` loop** ripete un blocco di codice finché una condizione è soddisfatta `True`. A differenza di un `for` loop (che conta un numero fisso di ripetizioni), un `while` loop viene eseguito un numero sconosciuto di volte — dipende da ciò che succede all’interno della buca.
 
 ```python
 count = 0
@@ -212,17 +146,13 @@ while count < 5:
     count += 1
 ```
 
-While loops are perfect for animation (keep going until the user clicks stop), input validation
-(keep asking until the user enters a valid number), and game loops (keep playing until someone
-wins).
+I cicli while sono perfetti per l’animazione (continua l’esecuzione finché l’utente non clicca sul pulsante “stop”), per la validazione delle input (continua a chiedere finché l’utente non inserisce un numero valido) e per i cicli dei giochi (continua a giocare finché qualcuno non vince).
 
-See [chapters/10-while-loops-and-animation/index.md](chapters/10-while-loops-and-animation/index.md).
+Vedi [chapters/10-while-loops-and-animation/index.md](chapters/10-while-loops-and-animation/index.md).
 
-### How does an if/elif/else statement work?
+### Come funziona un’istruzione if/elif/else?
 
-An **`if` statement** runs a block of code only when a condition is `True`. Add **`elif`**
-(short for "else if") to check additional conditions in order. Add **`else`** to catch
-everything that did not match:
+Una **`if` istruzione** esegue un blocco di codice solo quando una condizione è soddisfatta `True`. Aggiungi **`elif`** (abbreviazione di “else if”) per verificare ulteriori condizioni. Aggiungi **`else`** per gestire tutte le situazioni in cui la condizione non è soddisfatta:
 
 ```python
 score = 85
@@ -234,15 +164,13 @@ else:
     print("Keep practicing!")
 ```
 
-Python checks each condition from top to bottom and runs only the first block that is `True`.
-This is exactly how Scratch's *if-else* block works, just written in text.
+Python controlla ogni condizione dall’alto verso il basso e esegue soltanto il primo blocco che soddisfa la condizione `True`. È esattamente così che funziona il blocco *if-else* di Scratch, semplicemente scritto in testo.
 
-See [chapters/09-decisions-if-else/index.md](chapters/09-decisions-if-else/index.md).
+Vedi [chapters/09-decisions-if-else/index.md](chapters/09-decisions-if-else/index.md).
 
-### What is a function and why should I use one?
+### Cos’è una funzione e perché dovrei usarla?
 
-A **function** is a reusable block of code that you give a name and can call whenever you need
-it. You define a function with `def`:
+Una **funzione** è un blocco di codice riutilizzabile che si dà un nome e si può chiamare ogni volta che è necessario. Definisci una funzione con `def`:
 
 ```python
 def greet(name):
@@ -252,15 +180,13 @@ greet("Monty")   # prints: Hello, Monty!
 greet("Alex")    # prints: Hello, Alex!
 ```
 
-Functions let you avoid writing the same code twice (the DRY principle), make programs easier
-to read, and break big problems into smaller, manageable pieces. In Scratch, custom blocks work
-the same way.
+Le funzioni permettono di evitare di scrivere lo stesso codice due volte (principio DRY), rendono i programmi più leggibili e permettono di suddividere problemi grandi in parti più piccole e gestibili. In Scratch, i blocchi personalizzati funzionano allo stesso modo.
 
-See [chapters/11-functions-parameters-scope/index.md](chapters/11-functions-parameters-scope/index.md).
+Vedi [chapters/11-functions-parameters-scope/index.md](chapters/11-functions-parameters-scope/index.md).
 
-### What is a list?
+### Cos’è una lista?
 
-A **list** is an ordered, changeable collection of values. You create one with square brackets:
+**Lista** è una collezione ordinata e modificabile di valori. Si crea utilizzando parentesi quadre:
 
 ```python
 colors = ["red", "green", "blue"]
@@ -268,16 +194,13 @@ print(colors[0])   # red — indexing starts at 0
 colors.append("yellow")
 ```
 
-Lists are the workhorse of Python data storage. You can add items (`append`), remove items
-(`remove`, `pop`), sort them, loop over them, and slice out sub-sections. Every list keeps
-items in the order you put them.
+Le liste sono lo strumento principale nello storage dei dati in Python. È possibile aggiungere elementi (`append`), rimuovere elementi (`remove`, `pop`), ordinare le liste, iterare su di esse e estrarre sottosezioni. Ogni lista conserva gli elementi nell’ordine in cui sono stati inseriti.
 
-See [chapters/15-lists-basics/index.md](chapters/15-lists-basics/index.md).
+Per maggiori informazioni, consultare [chapters/15-lists-basics/index.md](chapters/15-lists-basics/index.md).
 
-### What is a dictionary?
+### Cosa è un dizionario?
 
-A **dictionary** stores data as **key-value pairs**. Instead of a number index, you look up
-values by a descriptive key:
+Un **dizionario** memorizza dati sotto forma di **coppie chiave-valore**. Invece di un indice numerico, si ricerca i valori attraverso una chiave descrittiva:
 
 ```python
 grades = {"Alice": 95, "Bob": 88, "Carol": 92}
@@ -285,26 +208,21 @@ print(grades["Alice"])  # 95
 grades["Dan"] = 79      # add a new entry
 ```
 
-Dictionaries are perfect for storing named data: a grade book, a word frequency counter,
-configuration settings, or any situation where you want to look something up by name rather
-than by position.
+I dizionari sono perfetti per memorizzare dati con nomi specifici: elenchi di voti, contatori di frequenza delle parole, impostazioni di configurazione, o qualsiasi situazione in cui si desidera recuperare informazioni attraverso un nome piuttosto che un indice.
 
-See [chapters/21-dictionaries/index.md](chapters/21-dictionaries/index.md).
+Per maggiori informazioni, consultare [chapters/21-dictionaries/index.md](chapters/21-dictionaries/index.md).
 
-### What is turtle graphics?
+### Cosa sono le grafiche a tortora?
 
-**Turtle graphics** is a way to draw shapes by controlling a small arrow (the "turtle") that
-moves around a canvas. You give commands like `forward(100)`, `left(90)`, and `pencolor("red")`
-to direct its movement and appearance. Because you can see the result of every command
-immediately, turtle graphics is an excellent way to learn loops, functions, and coordinates.
-It is the primary drawing tool in Chapters 5–18 of this course.
+Le **grafiche a tortora** sono un modo per disegnare figure controllando un piccolo “tortora” che si muove attorno a una tela. Si forniscono comandi come `forward(100)`, `left(90)` e `pencolor("red")` per dirigere il movimento e l’aspetto del tortora. Poiché il risultato di ogni comando può essere visualizzato immediatamente, le grafiche a tortora sono un ottimo strumento per imparare i cicli, le funzioni e le coordinate.
 
-See [chapters/05-drawing-with-turtle/index.md](chapters/05-drawing-with-turtle/index.md).
+È lo strumento principale per il disegno nei capitoli 5–18 di questo corso.
 
-### What is recursion?
+Per maggiori informazioni, consultare [chapters/05-drawing-with-turtle/index.md](chapters/05-drawing-with-turtle/index.md).
 
-**Recursion** is when a function calls itself. Each recursive call works on a smaller version
-of the problem until it reaches the **base case** — a condition that stops the chain of calls.
+### Cosa è la ricorsione?
+
+La **ricorsione** è quando una funzione chiama se stessa. Ogni chiamata ricorsiva lavora su una versione più semplificata del problema, fino a raggiungere il **caso base** – una condizione che interrompe la catena di chiamate.
 
 ```python
 def countdown(n):
@@ -315,15 +233,13 @@ def countdown(n):
     countdown(n - 1)    # recursive call
 ```
 
-Recursion is especially powerful for problems that have a naturally self-similar structure,
-like fractal trees, where each branch is a smaller version of the whole tree.
+**Recursione è particolarmente potente per problemi che hanno una struttura naturalmente auto-similare, come gli alberi frattali, dove ogni ramo è una versione più piccola dell’intero albero.**
 
-See [chapters/24-recursion-and-fractals/index.md](chapters/24-recursion-and-fractals/index.md).
+Vedi [chapters/24-recursione-and-fractals/index.md](chapters/24-recursione-and-fractals/index.md).
 
-### What is a module?
+### Che cos’è un modulo?
 
-A **module** is a Python file (or collection of files) that contains reusable functions,
-variables, and classes. You bring a module into your program with `import`:
+Un **modulo** è un file di Python (o una raccolta di file) che contiene funzioni, variabili e classi riutilizzabili. Puoi inserire un modulo nel tuo programma utilizzando `import`:
 
 ```python
 import math
@@ -333,17 +249,13 @@ import random
 print(random.randint(1, 10))   # a random number 1-10
 ```
 
-Python ships with a large **standard library** of modules covering math, file handling, dates,
-regular expressions, data structures, and much more. You can also create your own modules and
-import them into other programs.
+Python include una grande **biblioteca standard** di moduli che coprono argomenti come matematica, gestione dei file, data, espressioni regolari, strutture dati e molto altro. Puoi anche creare i tuoi propri moduli e importarli in altri programmi.
 
-See [chapters/17-modules-and-random/index.md](chapters/17-modules-and-random/index.md).
+Vedi [chapters/17-modules-and-random/index.md](chapters/17-modules-and-random/index.md).
 
-### What is a class in Python?
+### Che cos’è una classe in Python?
 
-A **class** is a blueprint for creating objects. Each object built from the class gets its own
-set of **attributes** (data) and **methods** (actions). You define a class with `class` and
-set up its attributes in a special method called `__init__`:
+Una **classe** è un modello per creare oggetti. Ogni oggetto creato a partire dalla classe riceve il proprio **insieme di attributi** (dati) e **metodi** (azioni). Definisci una classe utilizzando `class` e configuri i suoi attributi tramite un metodo speciale chiamato `__init__`:
 
 ```python
 class Dog:
@@ -358,16 +270,13 @@ fido = Dog("Fido", "Labrador")
 fido.bark()   # Fido says: Woof!
 ```
 
-You have been using classes already: `turtle.Turtle()` and `turtle.Screen()` are both classes
-provided by the turtle module.
+Hai già utilizzato delle classi: `turtle.Turtle()` e `turtle.Screen()` sono entrambe classi fornite dal modulo turtle.
 
-See [chapters/25-object-oriented-programming/index.md](chapters/25-object-oriented-programming/index.md).
+Vedi [chapters/25-object-oriented-programming/index.md](chapters/25-object-oriented-programming/index.md).
 
-### What is a string?
+### Che cos’è una stringa?
 
-A **string** is a sequence of text characters enclosed in quotes. Both single quotes `'hello'`
-and double quotes `"hello"` work. Strings are **immutable** — you cannot change individual
-characters, but you can create new strings by combining or transforming existing ones:
+Una **stringa** è una sequenza di caratteri testuali racchiusi tra virgolette. Sia le virgole single `'hello'` che quelle doppie `"hello"` funzionano. Le stringhe sono **immutabili**: non puoi modificare singoli caratteri, ma puoi creare nuove stringhe combinando o trasformando quelle esistenti:
 
 ```python
 greeting = "Hello, " + "world!"   # concatenation
@@ -375,32 +284,27 @@ upper = greeting.upper()           # "HELLO, WORLD!"
 words = greeting.split(", ")      # ["Hello", "world!"]
 ```
 
-Strings have dozens of built-in methods for searching, splitting, replacing, and formatting text.
+Le stringhe dispongono di decine di metodi incorporati per cercare, spezzare, sostituire e formattare il testo.
 
-See [chapters/08-working-with-strings/index.md](chapters/08-working-with-strings/index.md).
+Vedi [chapters/08-working-with-strings/index.md](chapters/08-working-with-strings/index.md).
 
-### What is the difference between a list, a tuple, and a set?
+### Qual è la differenza tra una lista, una tupla e un insieme?
 
-All three are Python collections, but they differ in important ways:
+Tutte e tre sono collezioni in Python, ma differiscono per diversi aspetti:
 
-| Collection | Ordered? | Changeable? | Duplicates? |
+| Collezione | Ordinata? | Modificabile? | Duplicati? |
 |------------|----------|-------------|-------------|
-| `list` | Yes | Yes (mutable) | Allowed |
-| `tuple` | Yes | No (immutable) | Allowed |
-| `set` | No | Yes | Not allowed |
+| `list` | Sì | Sì (mutabile) | Permesso |
+| `tuple` | Sì | No (immutabile) | Permesso |
+| `set` | No | Sì | Non permesso |
 
-Use a **list** when order matters and you need to add or remove items. Use a **tuple** for a
-fixed collection of values (like coordinates `(x, y)`). Use a **set** when you only care
-whether an item is present and each item must be unique.
+Usa una **lista** quando l'ordine è importante e devi aggiungere o rimuovere elementi. Usa una **tupla** per una collezione fissa di valori (come coordinate `(x, y)`). Usa un **insieme** quando ti interessa solo che un elemento sia presente e ogni elemento deve essere unico.
 
-See [chapters/20-tuples-and-sets/index.md](chapters/20-tuples-and-sets/index.md).
+Vedi [chapters/20-tuples-and-sets/index.md](chapters/20-tuples-and-sets/index.md).
 
-### What is scope in Python?
+### Che cos'è il **scope** in Python?
 
-**Scope** determines where in a program a variable can be seen. A variable defined inside a
-function has **local scope** — it only exists inside that function. A variable defined outside
-all functions has **global scope** — it can be seen everywhere. This means two functions can
-each have their own variable named `count` without interfering with each other.
+Il **scope** determina dove in un programma una variabile può essere vista. Una variabile definita all'interno di una funzione ha **scope locale** — esiste solo all'interno di quella funzione. Una variabile definita al di fuori di tutte le funzioni ha **scope globale** — può essere vista ovunque. Questo significa che due funzioni possono avere ciascuna la propria variabile denominata `count` senza interferire tra loro.
 
 ```python
 def example():
@@ -409,44 +313,27 @@ def example():
 y = 20          # global — visible everywhere
 ```
 
-Understanding scope prevents a common class of bugs where you accidentally overwrite a
-variable from another part of your program.
+Comprendere il scope evita una comune categoria di errori in cui si sovrascrive accidentalmente una variabile proveniente da un'altra parte del programma.
 
-See [chapters/11-functions-parameters-scope/index.md](chapters/11-functions-parameters-scope/index.md).
+Vedi [chapters/11-functions-parameters-scope/index.md](chapters/11-functions-parameters-scope/index.md).
 
-### What are BFS and DFS?
+### Che cos' sono BFS e DFS?
 
-**BFS (Breadth-First Search)** and **DFS (Depth-First Search)** are algorithms for visiting
-every node in a graph or tree.
+**BFS (Breadth-First Search)** e **DFS (Depth-First Search)** sono algoritmi per visitare tutti gli nodi in un grafo o un albero.
 
-- **BFS** uses a **queue** (first-in, first-out). It explores all neighbors at the current
-  distance before going deeper. BFS **guarantees the shortest path** in an unweighted graph.
-- **DFS** uses a **stack** (last-in, first-out) — or recursion. It plunges as deep as possible
-  along one path before backtracking.
+- **BFS** utilizza una **coda** (primo arrivato, primo uscito). Esplora tutti i vicini alla distanza attuale prima di approfondire ulteriormente. BFS **garantisce il percorso più breve** in un grafo non ponderato.
+- **DFS** utilizza una **stack** (ultimo arrivato, primo uscito) — o ricorsione. Si spinge il più possibile lungo un percorso prima di tornare indietro.
+BFS è la scelta giusta per trovare il percorso più breve in un labirinto. DFS è spesso più semplice da implementare ricorsivamente e funziona bene per problemi che richiedono l'esplorazione di tutte le possibilità.
+Vedi [chapters/30-algorithms-data-structures/index.md](chapters/30-algorithms-data-structures/index.md).
 
-BFS is the right choice for finding the shortest route through a maze. DFS is often simpler to
-implement recursively and works well for problems that require exploring all possibilities.
+### Che cos'è la programmazione orientata agli oggetti?
 
-See [chapters/30-algorithms-data-structures/index.md](chapters/30-algorithms-data-structures/index.md).
+**Programmazione orientata agli oggetti (OOP)** è uno stile di programmazione che organizza il codice attorno a **oggetti** — entità che combinano dati (attributi) e comportamenti (metodi). Python è un linguaggio orientato agli oggetti: stringhe, liste, dictionary e grafici con turtle sono tutti oggetti. Quando chiami `my_list.append(5)`, stai chiamando il metodo `append` su un oggetto lista. OOP diventa particolarmente utile per modellare cose del mondo reale: una classe `Player` in un gioco, una classe `Quiz` per un'app per quiz, una classe `Turtle` per il tuo agente di disegno.
+Vedi [chapters/25-object-oriented-programming/index.md](chapters/25-object-oriented-programming/index.md).
 
-### What is object-oriented programming?
+### Che cos'è una struttura dati grafica?
 
-**Object-oriented programming (OOP)** is a style of programming that organizes code around
-**objects** — entities that bundle data (attributes) and behavior (methods) together.
-Python is an object-oriented language: strings, lists, dictionaries, and turtle graphics are all
-objects. When you call `my_list.append(5)`, you are calling the `append` method on a list
-object. OOP becomes especially useful for modeling real-world things: a `Player` class in a
-game, a `Quiz` class for a quiz app, a `Turtle` class for your drawing agent.
-
-See [chapters/25-object-oriented-programming/index.md](chapters/25-object-oriented-programming/index.md).
-
-### What is a graph data structure?
-
-In computer science, a **graph** is a collection of **nodes** (also called vertices) connected
-by **edges**. Graphs model networks: cities connected by roads, web pages linked by hyperlinks,
-or rooms in a maze connected by corridors. Python represents graphs as **adjacency lists** —
-dictionaries where each key is a node and its value is a list of neighboring nodes.
-
+In informatica, un **grafo** è una collezione di **nodi** (chiamati anche vertici) collegati da **aristri** (o legami). I grafi modellano reti: città collegate da strade, pagine web collegate da hyperlink, o stanze in un labirinto collegate da corridoi. Python rappresenta i grafi come **liste di adiacenza** — dictionary in cui ogni chiave è un nodo e il suo valore è una lista dei nodi vicini.
 ```python
 graph = {
     "A": ["B", "C"],
