@@ -1,42 +1,42 @@
-# Quiz: Python Code Structure
+# Quiz: Struttura del Codice Python
 
-Test your understanding of Python code structure, indentation, keywords, and more with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione della struttura del codice Python, dell'indentazione, delle parole chiave e altro ancora con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. How do you create a multi-line string in Python?
+#### 1. Come si crea una stringa multi-riga in Python?
 
 <div class="upper-alpha" markdown>
-1. Wrap the text in single quotes like `'text'`
-2. Wrap the text in triple quotes like `"""text"""`
-3. Use the `multiline()` function
-4. Add a `#` before each line of text
+1. Racchiudendo il testo tra virgolette singole come `'text'`
+2. Racchiudendo il testo tra triple virgolette come `"""text"""`
+3. Usando la funzione `multiline()`
+4. Aggiungendo un `#` prima di ogni riga di testo
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Triple quotes (`"""` or `'''`) create a multi-line string in Python. Everything between the opening and closing triple quotes — including line breaks — becomes part of the string. Regular single or double quotes only work for text that stays on one line.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Le triple virgolette (`"""` o `'''`) creano una stringa multi-riga in Python. Tutto ciò che si trova tra le triple virgolette di apertura e quelle di chiusura — incluse le righe a capo — diventa parte della stringa. Le virgolette singole o doppie normali funzionano solo per testo che resta su una riga.
 
     **Concept Tested:** Multi-Line Strings
 
 ---
 
-#### 2. In Python, what does indentation mean?
+#### 2. In Python, cosa significa indentazione?
 
 <div class="upper-alpha" markdown>
-1. Using curly braces `{ }` to group lines of code together
-2. Adding extra blank lines between sections of your program
-3. Adding spaces at the start of lines to show which lines belong together
-4. Writing comments at the end of every line of code
+1. Usare le parentesi graffe `{ }` per raggruppare righe di codice
+2. Aggiungere righe vuote extra tra le sezioni del tuo programma
+3. Aggiungere spazi all'inizio delle righe per mostrare quali righe vanno insieme
+4. Scrivere commenti alla fine di ogni riga di codice
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Indentation means adding spaces at the beginning of a line to push it to the right. In Python, indentation is not just for looks — it is part of the language's grammar. Python uses the number of spaces at the start of each line to decide which lines belong together in a block.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Indentazione significa aggiungere spazi all'inizio di una riga per spostarla verso destra. In Python, l'indentazione non è solo estetica — fa parte della grammatica del linguaggio. Python usa il numero di spazi all'inizio di ogni riga per decidere quali righe vanno insieme in un blocco.
 
     **Concept Tested:** Indentation as Syntax
 
 ---
 
-#### 3. What error does Python show when your indentation is wrong?
+#### 3. Quale errore mostra Python quando la tua indentazione è sbagliata?
 
 <div class="upper-alpha" markdown>
 1. `NameError`
@@ -45,30 +45,30 @@ Test your understanding of Python code structure, indentation, keywords, and mor
 4. `IndentationError`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. When you have too many spaces, too few spaces, or mix tabs and spaces, Python stops and shows an `IndentationError`. The fix is always to use exactly 4 spaces for each level of indentation and never mix tabs and spaces in the same file.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. Quando hai troppi spazi, troppo pochi, o mescoli tab e spazi, Python si ferma e mostra un `IndentationError`. La soluzione è sempre usare esattamente 4 spazi per ogni livello di indentazione e non mescolare mai tab e spazi nello stesso file.
 
     **Concept Tested:** Indentation as Syntax
 
 ---
 
-#### 4. What is a Python keyword?
+#### 4. Cos'è una parola chiave di Python?
 
 <div class="upper-alpha" markdown>
-1. A special word that Python reserves for its own use and cannot be used as a variable name
-2. Any word you type inside a `print()` statement
-3. The name you give to a turtle object
-4. A word that appears in a comment after the `#` symbol
+1. Una parola speciale che Python riserva per il proprio uso e non può essere usata come nome di variabile
+2. Qualsiasi parola che digiti dentro un'istruzione `print()`
+3. Il nome che dai a un oggetto tartaruga
+4. Una parola che appare in un commento dopo il simbolo `#`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **A**. Python keywords are words that already have a specific meaning in the language — words like `for`, `if`, `while`, `def`, and `import`. You cannot use them as names for your own variables or functions because Python would be confused about whether you meant the command or your variable.
+??? question "Mostra risposta"
+    La risposta corretta è **A**. Le parole chiave di Python sono parole che hanno già un significato specifico nel linguaggio — parole come `for`, `if`, `while`, `def` e `import`. Non puoi usarle come nomi per le tue variabili o funzioni perché Python si confonderebbe su se intendevi il comando o la tua variabile.
 
     **Concept Tested:** Python Keywords
 
 ---
 
-#### 5. Which of the following is a Python keyword?
+#### 5. Quale delle seguenti è una parola chiave di Python?
 
 <div class="upper-alpha" markdown>
 1. `turtle`
@@ -77,62 +77,62 @@ Test your understanding of Python code structure, indentation, keywords, and mor
 4. `forward`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `for` is a reserved Python keyword used to write loops. You cannot use `for` as a variable name. The others — `turtle`, `print`, and `forward` — are not keywords; they are built-in names or library names that could technically be reused (though doing so is a bad idea).
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `for` è una parola chiave riservata di Python usata per scrivere i cicli. Non puoi usare `for` come nome di variabile. Le altre — `turtle`, `print` e `forward` — non sono parole chiave; sono nomi integrati o nomi di libreria che potrebbero tecnicamente essere riutilizzati (anche se farlo è una pessima idea).
 
     **Concept Tested:** Python Keywords
 
 ---
 
-#### 6. What signals the start of a code block in Python?
+#### 6. Cosa segnala l'inizio di un blocco di codice in Python?
 
 <div class="upper-alpha" markdown>
-1. A line that starts with `#`
-2. A line that ends with a colon `:`
-3. A blank line before the indented code
-4. The word `begin` at the start of the line
+1. Una riga che inizia con `#`
+2. Una riga che termina con i due punti `:`
+3. Una riga vuota prima del codice indentato
+4. La parola `begin` all'inizio della riga
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. In Python, a colon `:` at the end of a line opens a new code block. The lines that follow, indented by 4 spaces, belong to that block. This pattern appears with `for` loops, `if` statements, function definitions, and more. Python does not use `begin`/`end` keywords like some other languages.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. In Python, i due punti `:` alla fine di una riga aprono un nuovo blocco di codice. Le righe successive, indentate di 4 spazi, appartengono a quel blocco. Questo schema compare con i cicli `for`, le istruzioni `if`, le definizioni di funzione e altro ancora. Python non usa parole chiave `begin`/`end` come alcuni altri linguaggi.
 
     **Concept Tested:** Code Block Structure
 
 ---
 
-#### 7. What is the difference between a statement and an expression in Python?
+#### 7. Qual è la differenza tra uno statement e un'espressione in Python?
 
 <div class="upper-alpha" markdown>
-1. A statement produces a value; an expression performs an action
-2. A statement performs an action; an expression produces a value
-3. Statements use quotes; expressions use numbers
-4. Statements and expressions are two names for the exact same thing
+1. Uno statement produce un valore; un'espressione compie un'azione
+2. Uno statement compie un'azione; un'espressione produce un valore
+3. Gli statement usano le virgolette; le espressioni usano i numeri
+4. Statement ed espressioni sono due nomi per la stessa identica cosa
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. A statement is an instruction that *does* something (like `print("Hello")` or `import turtle`) but does not produce a value you can store. An expression is a piece of code that *produces a value* (like `2 + 3` which produces `5`). Many Python lines combine both — for example `print(2 + 3)` is a statement containing an expression.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Uno statement è un'istruzione che *fa* qualcosa (come `print("Hello")` o `import turtle`) ma non produce un valore che puoi memorizzare. Un'espressione è un pezzo di codice che *produce un valore* (come `2 + 3`, che produce `5`). Molte righe Python combinano entrambi — per esempio `print(2 + 3)` è uno statement che contiene un'espressione.
 
     **Concept Tested:** Statement vs Expression
 
 ---
 
-#### 8. Which whitespace rule does Python actually enforce (cause an error if broken)?
+#### 8. Quale regola sugli spazi bianchi Python impone davvero (causando un errore se violata)?
 
 <div class="upper-alpha" markdown>
-1. You must add one blank line between every two statements
-2. You must put exactly one space after every comma
-3. You must use consistent indentation to show which lines belong inside a block
-4. You must add spaces around the `=` sign in every assignment
+1. Devi aggiungere una riga vuota tra ogni due statement
+2. Devi mettere esattamente uno spazio dopo ogni virgola
+3. Devi usare un'indentazione coerente per mostrare quali righe vanno dentro un blocco
+4. Devi aggiungere spazi intorno al segno `=` in ogni assegnazione
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Python enforces indentation rules — inconsistent or incorrect indentation causes an `IndentationError`. The other rules (spaces after commas, spaces around `=`, blank lines between statements) are style conventions that make code more readable but do not cause errors if you break them.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Python impone le regole di indentazione — un'indentazione incoerente o scorretta causa un `IndentationError`. Le altre regole (spazi dopo le virgole, spazi intorno a `=`, righe vuote tra statement) sono convenzioni di stile che rendono il codice più leggibile ma non causano errori se le violi.
 
     **Concept Tested:** Whitespace Rules
 
 ---
 
-#### 9. How do you set the turtle's pen color to orange in Python?
+#### 9. Come si imposta il colore della penna della tartaruga su arancione in Python?
 
 <div class="upper-alpha" markdown>
 1. `t.color = "orange"`
@@ -141,14 +141,14 @@ Test your understanding of Python code structure, indentation, keywords, and mor
 4. `color("orange", t)`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. The turtle method `pencolor()` sets the color of the turtle's drawing pen. You call it with a named color string like `t.pencolor("orange")`. The other options use incorrect syntax — Python would either raise an `AttributeError` or produce no visible change.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Il metodo turtle `pencolor()` imposta il colore della penna di disegno della tartaruga. Lo chiami con una stringa di colore con nome come `t.pencolor("orange")`. Le altre opzioni usano una sintassi scorretta — Python solleverebbe un `AttributeError` oppure non produrrebbe alcun cambiamento visibile.
 
     **Concept Tested:** Named Colors
 
 ---
 
-#### 10. Which of the following is NOT a valid named color you can use with turtle?
+#### 10. Quale delle seguenti NON è un colore con nome valido che puoi usare con turtle?
 
 <div class="upper-alpha" markdown>
 1. `"skyblue"`
@@ -157,8 +157,8 @@ Test your understanding of Python code structure, indentation, keywords, and mor
 4. `"crimson"`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `"ultraviolet"` is not one of the 140 named X11 colors that the turtle library recognizes — it would cause a color error. The other options — `"skyblue"`, `"forestgreen"`, and `"crimson"` — are all valid X11 named colors you can use with `t.pencolor()`.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `"ultraviolet"` non è uno dei 140 colori con nome X11 riconosciuti dalla libreria turtle — causerebbe un errore di colore. Le altre opzioni — `"skyblue"`, `"forestgreen"` e `"crimson"` — sono tutti colori con nome X11 validi che puoi usare con `t.pencolor()`.
 
     **Concept Tested:** Named Colors
 
