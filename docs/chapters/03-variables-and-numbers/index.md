@@ -1,68 +1,68 @@
 ---
-title: Variables and Numbers
-description: Learn how to create variables, store integers and floats, follow Python naming conventions, and understand the None value.
+title: Variabili e Numeri
+description: Scopri come creare variabili, memorizzare interi e numeri decimali, seguire le convenzioni di denominazione di Python e capire il valore None.
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 08:55:45
 version: 0.09
 ---
 
-# Variables and Numbers
+# Variabili e Numeri
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Create a variable in Python and store a number inside it
-- Name variables using `snake_case` and choose clear, descriptive names
-- Explain the difference between an integer and a float
+- Creare una variabile in Python e memorizzare un numero al suo interno
+- Dare un nome alle variabili usando lo `snake_case` e scegliere nomi chiari e descrittivi
+- Spiegare la differenza tra un numero intero e un numero decimale
 
-Imagine you are playing a video game and you need to remember your score.
-You could try to hold it in your head — but what if it changes?
-What if you need that number in five different places in your code?
-A **variable** solves this problem.
-A variable is a labeled storage location in your program's memory.
-You give it a name, put a value inside it, and Python remembers that value for you.
+Immagina di giocare a un videogioco e di dover ricordare il tuo punteggio.
+Potresti provare a tenerlo a mente — ma cosa succede se cambia?
+E se ti serve quel numero in cinque punti diversi del tuo codice?
+Una **variabile** risolve questo problema.
+Una variabile è una posizione etichettata nella memoria del tuo programma.
+Le dai un nome, ci metti dentro un valore, e Python ricorda quel valore per te.
 
-!!! mascot-welcome "Welcome to Chapter 3!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 3!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Variables are one of the most powerful ideas in all of programming — and you've already used them in Scratch! Today we learn how Python does the same thing with just a few keystrokes. Let's code it together!
+    Le variabili sono una delle idee più potenti di tutta la programmazione — e le hai già usate in Scratch! Oggi impariamo come Python fa la stessa cosa con poche battute di tastiera. Programmiamo insieme!
 
-## What Is a Variable?
+## Cos'è una Variabile?
 
-Picture a sticky note on your desk.
-The front has a name written on it — like **score** — and on the back you write the current value, like **10**.
-Whenever you need to know the score, you flip it over and read it.
-If the score changes, you erase the old number and write a new one — but the name on the front stays the same.
+Immagina un post-it sulla tua scrivania.
+Sul davanti c'è scritto un nome — come **punteggio** — e sul retro scrivi il valore attuale, come **10**.
+Ogni volta che hai bisogno di sapere il punteggio, lo giri e lo leggi.
+Se il punteggio cambia, cancelli il vecchio numero e ne scrivi uno nuovo — ma il nome sul davanti resta lo stesso.
 
-In Python, a variable works exactly like that sticky note.
-You create a variable by writing its name, then an equals sign, then the value you want to store.
-This is called **variable assignment**:
+In Python, una variabile funziona esattamente come quel post-it.
+Crei una variabile scrivendo il suo nome, poi un segno di uguale, poi il valore che vuoi memorizzare.
+Questo si chiama **assegnazione di variabile**:
 
 ```python
 score = 10
 ```
 
-- The name on the left (`score`) is the variable's label.
-- The equals sign (`=`) means "store this value in this name."
-- The value on the right (`10`) is what gets stored.
+- Il nome a sinistra (`score`) è l'etichetta della variabile.
+- Il segno di uguale (`=`) significa "memorizza questo valore con questo nome."
+- Il valore a destra (`10`) è ciò che viene memorizzato.
 
-Notice that `=` in Python does **not** mean "is equal to" the way it does in math.
-It is a one-way instruction: "take the value on the right and put it in the box on the left."
-The value flows from right to left, always.
+Nota che `=` in Python **non** significa "è uguale a" come in matematica.
+È un'istruzione a senso unico: "prendi il valore a destra e mettilo nella scatola a sinistra."
+Il valore fluisce sempre da destra verso sinistra.
 
-After you store a value, you can read it back using `print()`:
+Dopo aver memorizzato un valore, puoi rileggerlo usando `print()`:
 
 ```python
 score = 10
 print(score)
 ```
 
-!!! mascot-tip "Scratch Bridge"
+!!! mascot-tip "Ponte con Scratch"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch, you clicked the **"Set score to 10"** block to create a variable and give it a starting value. In Python, `score = 10` does exactly the same thing — same idea, just written as text instead of snapped together as blocks!
+    In Scratch, cliccavi sul blocco **"Set score to 10"** per creare una variabile e darle un valore iniziale. In Python, `score = 10` fa esattamente la stessa cosa — stessa idea, solo scritta come testo invece che incastrata come blocchi!
 
-## Sample Code
+## Codice di Esempio
 
-Here is a short program that creates two variables and prints both of them.
-Read through it before you run it.
+Ecco un breve programma che crea due variabili e le stampa entrambe.
+Leggilo prima di eseguirlo.
 
 ```python
 score = 10
@@ -71,14 +71,14 @@ print(score)
 print(lives)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Before you click Run, look at those four lines. The program stores two numbers and then prints them. What do you think the output will look like — will both numbers appear, or just one? And in what order? Make your prediction, then click Run to find out!
+    Prima di cliccare su Run, guarda queste quattro righe. Il programma memorizza due numeri e poi li stampa. Cosa pensi mostrerà l'output — appariranno entrambi i numeri, o solo uno? E in che ordine? Fai la tua previsione, poi clicca su Run per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see the result right on this page.
-No account needed — everything runs in your browser.
+Modifica il codice qui sotto e clicca **Run** per vedere il risultato proprio su questa pagina.
+Non serve alcun account — tutto viene eseguito nel tuo browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -106,80 +106,80 @@ print(score)
 print(lives)`);
 </script>
 
-Were you right?
-Python printed `10` on the first line and `3` on the second — one value per `print()` call, in the order they appeared.
+Avevi indovinato?
+Python ha stampato `10` sulla prima riga e `3` sulla seconda — un valore per ogni chiamata a `print()`, nell'ordine in cui sono apparse.
 
-**If you see a red error message:** Check your spelling carefully.
-Python is case-sensitive, so `Score = 10` and `score = 10` are two completely different variables.
-Make sure there are no extra spaces around the `=` sign.
+**Se vedi un messaggio di errore rosso:** controlla attentamente l'ortografia.
+Python distingue tra maiuscole e minuscole, quindi `Score = 10` e `score = 10` sono due variabili completamente diverse.
+Assicurati che non ci siano spazi extra attorno al segno `=`.
 
-## How It Works
+## Come Funziona
 
-When Python runs `score = 10`, it sets aside a small storage location in memory, writes `10` into it, and attaches the label `score`.
-When Python then sees `print(score)`, it looks up that label, retrieves the stored value, and displays it.
+Quando Python esegue `score = 10`, riserva un piccolo spazio di memoria, ci scrive dentro `10` e attacca l'etichetta `score`.
+Quando Python incontra poi `print(score)`, cerca quell'etichetta, recupera il valore memorizzato e lo mostra.
 
-The table below explains each line of the program:
+La tabella qui sotto spiega ogni riga del programma:
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `score = 10` | Creates a variable named `score` and stores the integer `10` inside it |
-| `lives = 3` | Creates a second variable named `lives` and stores `3` inside it |
-| `print(score)` | Looks up the value in `score` and prints it |
-| `print(lives)` | Looks up the value in `lives` and prints it |
+| `score = 10` | Crea una variabile chiamata `score` e ci memorizza dentro l'intero `10` |
+| `lives = 3` | Crea una seconda variabile chiamata `lives` e ci memorizza dentro `3` |
+| `print(score)` | Cerca il valore in `score` e lo stampa |
+| `print(lives)` | Cerca il valore in `lives` e lo stampa |
 
-Each variable is independent.
-Changing one does not affect the other.
-You can have as many variables as you like — your program's memory can hold thousands of them.
+Ogni variabile è indipendente.
+Cambiarne una non influisce sull'altra.
+Puoi avere tutte le variabili che vuoi — la memoria del tuo programma può contenerne migliaia.
 
-## Naming Your Variables
+## Dare un Nome alle Variabili
 
-Python lets you name a variable almost anything — but there are rules you must follow:
+Python ti permette di chiamare una variabile quasi in qualsiasi modo — ma ci sono regole da seguire:
 
-- **Start with a letter or underscore** — not a digit. `score` is fine; `1score` causes an error.
-- **Use only letters, digits, and underscores** — no spaces, hyphens, or symbols like `@` or `!`.
-- **Avoid Python keywords** — words like `print`, `for`, `if`, and `while` are reserved. Python needs those words for itself.
+- **Inizia con una lettera o un underscore** — non con una cifra. `score` va bene; `1score` causa un errore.
+- **Usa solo lettere, cifre e underscore** — niente spazi, trattini o simboli come `@` o `!`.
+- **Evita le parole chiave di Python** — parole come `print`, `for`, `if` e `while` sono riservate. Python ha bisogno di quelle parole per sé.
 
-Python is also **case-sensitive**: `Score`, `SCORE`, and `score` are three completely separate variables.
-Mixing upper and lower case accidentally is one of the most common sources of bugs for beginners.
+Python distingue anche tra **maiuscole e minuscole**: `Score`, `SCORE` e `score` sono tre variabili completamente separate.
+Mescolare accidentalmente maiuscole e minuscole è una delle fonti di bug più comuni per i principianti.
 
-### Snake_case: Python's Naming Style
+### Snake_case: Lo Stile di Denominazione di Python
 
-When a variable name has more than one word, Python programmers join the words with underscores and keep all letters lowercase.
-This style is called **snake_case** (picture the underscores as a snake lying flat between the words).
+Quando il nome di una variabile ha più di una parola, i programmatori Python uniscono le parole con underscore e mantengono tutte le lettere minuscole.
+Questo stile si chiama **snake_case** (immagina gli underscore come un serpente disteso tra le parole).
 
-The table below shows common naming mistakes and their snake_case fixes:
+La tabella qui sotto mostra errori comuni nei nomi e le loro correzioni in snake_case:
 
-| Problematic name | What's wrong | Better name |
+| Nome problematico | Cosa c'è di sbagliato | Nome migliore |
 |-----------------|-------------|-------------|
-| `myscore` | Words run together — hard to read | `my_score` |
-| `MyScore` | Capital letters belong to a different naming style | `my_score` |
-| `my score` | Spaces are not allowed in variable names | `my_score` |
-| `my-score` | Python reads the dash as **subtraction** — `my - score` — not a name! | `my_score` |
-| `x` | Too vague — what does `x` mean? | `player_score` |
-| `s` | Single letters give no information | `lives_remaining` |
+| `myscore` | Le parole sono attaccate — difficile da leggere | `my_score` |
+| `MyScore` | Le lettere maiuscole appartengono a un altro stile di denominazione | `my_score` |
+| `my score` | Gli spazi non sono ammessi nei nomi di variabile | `my_score` |
+| `my-score` | Python legge il trattino come **sottrazione** — `my - score` — non come un nome! | `my_score` |
+| `x` | Troppo vago — cosa significa `x`? | `player_score` |
+| `s` | Le lettere singole non danno alcuna informazione | `lives_remaining` |
 
-### Meaningful Variable Names
+### Nomi di Variabile Significativi
 
-The best variable names describe exactly what the variable holds.
-A name like `player_score` tells you immediately what the number represents.
-A name like `x` gives you no information at all.
+I nomi di variabile migliori descrivono esattamente cosa contiene la variabile.
+Un nome come `player_score` ti dice immediatamente cosa rappresenta il numero.
+Un nome come `x` non ti dà alcuna informazione.
 
-This matters because programs grow.
-A program you write today might be 10 lines — easy to keep in your head.
-But programs grow to hundreds and thousands of lines.
-When that happens, a good name is the difference between code you can read and code that feels like a puzzle.
+Questo è importante perché i programmi crescono.
+Un programma che scrivi oggi potrebbe essere di 10 righe — facile da tenere a mente.
+Ma i programmi crescono fino a centinaia e migliaia di righe.
+Quando succede, un buon nome fa la differenza tra codice che puoi leggere e codice che sembra un rompicapo.
 
-!!! mascot-warning "Naming Pitfalls!"
+!!! mascot-warning "Trappole nei Nomi!"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    Watch out for the dash! If you write `my-score` instead of `my_score`, Python reads the dash as a minus sign and thinks you are subtracting a variable called `score` from a variable called `my`. Use an **underscore** (`_`), never a dash (`-`), to join words in a name. Other common traps: single-letter names like `x` that tell you nothing, capital letters that break snake_case, and accidentally using a Python keyword as your variable name.
+    Attento/a al trattino! Se scrivi `my-score` invece di `my_score`, Python legge il trattino come segno meno e pensa che tu stia sottraendo una variabile chiamata `score` da una variabile chiamata `my`. Usa un **underscore** (`_`), mai un trattino (`-`), per unire le parole in un nome. Altre trappole comuni: nomi di una sola lettera come `x` che non dicono nulla, lettere maiuscole che rompono lo snake_case, e l'uso accidentale di una parola chiave Python come nome di variabile.
 
-## Integers: Whole Numbers
+## Interi: Numeri Interi
 
-Now that you know how to create and name variables, let's look more carefully at the kinds of numbers Python understands.
+Ora che sai come creare e nominare variabili, vediamo più da vicino i tipi di numeri che Python capisce.
 
-A whole number — one with no decimal point — is called an **integer**, or `int` for short.
-Integers can be positive, negative, or zero.
-You use integers for things you count: the number of lives in a game, the number of sides on a shape, a player's score.
+Un numero intero — senza virgola decimale — si chiama **intero**, o `int` in breve.
+Gli interi possono essere positivi, negativi o zero.
+Usi gli interi per le cose che conti: il numero di vite in un gioco, il numero di lati di una forma, il punteggio di un giocatore.
 
 ```python
 sides = 6
@@ -187,12 +187,12 @@ lives = 3
 temperature = -5
 ```
 
-All three of those variables hold integers.
+Tutte e tre quelle variabili contengono interi.
 
-## Floats: Decimal Numbers
+## Float: Numeri Decimali
 
-A number with a decimal point is called a **float** — short for "floating-point number."
-Floats are used for measurements and values that don't land exactly on a whole number.
+Un numero con una virgola decimale si chiama **float** — abbreviazione di "numero a virgola mobile" ("floating-point number").
+I float si usano per misurazioni e valori che non cadono esattamente su un numero intero.
 
 ```python
 price = 4.99
@@ -200,47 +200,32 @@ height = 1.75
 pi = 3.14159
 ```
 
-The name "float" comes from how computers store these numbers internally — the decimal point can "float" to different positions.
-You don't need to know the internal details.
-What matters is when to use each type:
+Il nome "float" deriva dal modo in cui i computer memorizzano questi numeri internamente — la virgola decimale può "galleggiare" (float) in posizioni diverse.
+Non hai bisogno di conoscere i dettagli interni.
+Ciò che conta è quando usare ciascun tipo:
 
-| Kind | Python type | When to use | Examples |
+| Tipo | Tipo Python | Quando usarlo | Esempi |
 |------|-------------|-------------|---------|
-| Whole number | `int` | Counting, game scores, number of repetitions | `0`, `7`, `-12`, `1000` |
-| Decimal number | `float` | Measurements, money, percentages, averages | `3.14`, `0.5`, `-2.7`, `99.0` |
+| Numero intero | `int` | Conteggi, punteggi di gioco, numero di ripetizioni | `0`, `7`, `-12`, `1000` |
+| Numero decimale | `float` | Misurazioni, denaro, percentuali, medie | `3.14`, `0.5`, `-2.7`, `99.0` |
 
-One important detail: dividing two integers with `/` always gives you a float, even when the result is a whole number.
+Un dettaglio importante: dividere due interi con `/` restituisce sempre un float, anche quando il risultato è un numero intero.
 
 ```python
 result = 10 / 2
 print(result)
 ```
 
-That prints `5.0`, not `5` — note the decimal point.
-Python uses `//` (floor division) if you want a whole-number result: `10 // 2` gives `5`.
+Questo stampa `5.0`, non `5` — nota la virgola decimale.
+Python usa `//` (divisione intera) se vuoi un risultato intero: `10 // 2` restituisce `5`.
 
-## Variable Reassignment
+## Riassegnazione di Variabile
 
-One of the most powerful things about variables is that you can change them.
-You **reassign** a variable by writing its name again on the left side of `=` with a new value on the right.
-Python discards the old value and stores the new one under the same label.
+Una delle cose più potenti delle variabili è che puoi cambiarle.
+**Riassegni** una variabile scrivendo di nuovo il suo nome a sinistra di `=` con un nuovo valore a destra.
+Python scarta il vecchio valore e memorizza quello nuovo sotto la stessa etichetta.
 
-Here is a program that changes a score partway through:
-
-```python
-score = 10
-print(score)
-
-score = 25
-print(score)
-```
-
-Read through that before you run it.
-The first `print` shows the original value.
-The second assignment replaces it.
-The second `print` shows the updated value.
-
-## Sample Code — Reassignment
+Ecco un programma che cambia un punteggio a metà esecuzione:
 
 ```python
 score = 10
@@ -250,7 +235,22 @@ score = 25
 print(score)
 ```
 
-## Try It Now — Reassignment
+Leggilo prima di eseguirlo.
+Il primo `print` mostra il valore originale.
+La seconda assegnazione lo sostituisce.
+Il secondo `print` mostra il valore aggiornato.
+
+## Codice di Esempio — Riassegnazione
+
+```python
+score = 10
+print(score)
+
+score = 25
+print(score)
+```
+
+## Provalo Ora — Riassegnazione
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -273,10 +273,10 @@ score = 25
 print(score)`);
 </script>
 
-Python printed `10` first and `25` second.
-The name `score` stayed the same; only the value changed.
+Python ha stampato prima `10` e poi `25`.
+Il nome `score` è rimasto lo stesso; è cambiato solo il valore.
 
-You can also use the current value of a variable to calculate a new one:
+Puoi anche usare il valore attuale di una variabile per calcolarne uno nuovo:
 
 ```python
 score = 10
@@ -284,30 +284,30 @@ score = score + 5
 print(score)
 ```
 
-Python evaluates the right side first: `score + 5` is `10 + 5`, which equals `15`.
-Then it stores `15` back into `score`.
-This pattern — "take the old value, add something, store the result back" — appears constantly in real programs.
+Python valuta prima il lato destro: `score + 5` è `10 + 5`, che è uguale a `15`.
+Poi memorizza `15` di nuovo in `score`.
+Questo pattern — "prendi il vecchio valore, aggiungi qualcosa, memorizza il risultato" — compare costantemente nei programmi veri.
 
-## See It: Boxes in Memory
+## Osservalo: Scatole in Memoria
 
-The MicroSim below lets you *watch* the sticky-note boxes as a script runs. Before you click anything, look at the script on the left and **predict how many boxes will exist when it finishes — and what value each box will hold**. Then click **Next Step** to check yourself, one line at a time.
+Il MicroSim qui sotto ti permette di *osservare* le scatole-post-it mentre uno script viene eseguito. Prima di cliccare qualsiasi cosa, guarda lo script a sinistra e **prevedi quante scatole esisteranno alla fine — e quale valore conterrà ciascuna**. Poi clicca **Next Step** per verificare, una riga alla volta.
 
 <iframe src="../../sims/variable-memory-model/main.html" height="482" width="100%" scrolling="no"></iframe>
 
-[Explore the Variable Memory Model MicroSim](../../sims/variable-memory-model/index.md){ .md-button }
+[Esplora il MicroSim Variable Memory Model](../../sims/variable-memory-model/index.md){ .md-button }
 
-Do not miss the **Copy Surprise** program in the dropdown: after `b = a`, does changing `a` change `b`? Make your prediction, then step through to find out.
+Non perderti il programma **Copy Surprise** nel menu a tendina: dopo `b = a`, cambiare `a` cambia anche `b`? Fai la tua previsione, poi procedi passo passo per scoprirlo.
 
-## None: The "Nothing" Value
+## None: Il Valore "Niente"
 
-Python has one special value that is neither an integer nor a float.
-It is called **None**, and its type is called `NoneType`.
+Python ha un valore speciale che non è né un intero né un float.
+Si chiama **None**, e il suo tipo si chiama `NoneType`.
 
-None means "no value yet" or "nothing here."
-You will see it in two common situations:
+None significa "nessun valore ancora" o "niente qui."
+Lo vedrai in due situazioni comuni:
 
-1. When you want a variable to exist but you haven't decided its value yet.
-2. When a function finishes without returning anything — Python automatically gives back `None` in that case.
+1. Quando vuoi che una variabile esista ma non hai ancora deciso il suo valore.
+2. Quando una funzione termina senza restituire nulla — Python restituisce automaticamente `None` in quel caso.
 
 ```python
 winner = None
@@ -315,24 +315,24 @@ print(winner)
 print(type(winner))
 ```
 
-Running that program prints:
+Eseguendo quel programma si stampa:
 ```
 None
 <class 'NoneType'>
 ```
 
-None is not zero.
-None is not an empty string.
-None is its own special thing that means "the absence of a value."
-Think of it like a sticky note that exists on your desk but has nothing written on the back yet.
+None non è zero.
+None non è una stringa vuota.
+None è una cosa speciale a sé, che significa "l'assenza di un valore."
+Pensalo come un post-it che esiste sulla tua scrivania ma non ha ancora nulla scritto sul retro.
 
-Later in the course you will use None to mark the start of a search, represent an empty box in a game board, or signal that a function didn't find what it was looking for.
+Più avanti nel corso userai None per segnare l'inizio di una ricerca, rappresentare una casella vuota in un tabellone di gioco, o segnalare che una funzione non ha trovato ciò che cercava.
 
-## What `type()` Tells You
+## Cosa Ti Dice `type()`
 
-Python has a built-in function called `type()` that tells you what kind of value is stored in a variable.
-You saw it used with `None` above.
-Here it is with an integer and a float:
+Python ha una funzione integrata chiamata `type()` che ti dice che tipo di valore è memorizzato in una variabile.
+L'hai vista usata con `None` sopra.
+Eccola con un intero e un float:
 
 ```python
 score = 10
@@ -348,15 +348,15 @@ Output:
 <class 'float'>
 ```
 
-The word `class` in the output is how Python describes categories of values.
-For now, just read `<class 'int'>` as "this is an integer" and `<class 'float'>` as "this is a float."
-You will learn much more about classes later in the course.
+La parola `class` nell'output è il modo in cui Python descrive le categorie di valori.
+Per ora, leggi semplicemente `<class 'int'>` come "questo è un intero" e `<class 'float'>` come "questo è un float."
+Imparerai molto di più sulle classi più avanti nel corso.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add the Missing Line"
+!!! mascot-thinking "Tocca a Te — Aggiungi la Riga Mancante"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below creates two variables — `player_score` and `bonus_points`. It prints `player_score` just fine, but something is missing: `bonus_points` never gets printed. Add **one line** so the output shows both numbers, one on each line.
+    Il programma qui sotto crea due variabili — `player_score` e `bonus_points`. Stampa `player_score` senza problemi, ma manca qualcosa: `bonus_points` non viene mai stampata. Aggiungi **una riga** in modo che l'output mostri entrambi i numeri, uno per riga.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -378,24 +378,24 @@ print(player_score)
 # Add one line below to also print bonus_points`);
 </script>
 
-If your output shows `42` on the first line and `10` on the second, you got it!
-The missing line was `print(bonus_points)`.
+Se il tuo output mostra `42` sulla prima riga e `10` sulla seconda, ce l'hai fatta!
+La riga mancante era `print(bonus_points)`.
 
-## Experiments
+## Esperimenti
 
-Try these changes in the labs above.
-For each one, predict what will happen first — then run the code to check!
+Prova questi cambiamenti nei laboratori qui sopra.
+Per ciascuno, prevedi prima cosa succederà — poi esegui il codice per verificare!
 
-1. In Lab 1, change `score = 10` to `score = 750`. **You'll know it worked when** the output shows `750` instead of `10`.
-2. In Lab 1, add a third variable called `high_score` set to `100`. Add a `print(high_score)` line. **You'll know it worked when** you see three numbers in the output.
-3. In Lab 2 (the reassignment lab), change `score = 25` to `score = score * 2`. **You'll know it worked when** the output shows `10` on the first line and `20` on the second.
-4. Create a float variable called `average_score` and set it to `87.5`. Print it. **You'll know it worked when** the output shows `87.5`.
-5. Create a variable called `champion` and set it to `None`. Print it. Then reassign `champion` to `1`. Print it again. **You'll know it worked when** the output shows `None` on one line and `1` on the next.
+1. Nel Laboratorio 1, cambia `score = 10` in `score = 750`. **Saprai che ha funzionato quando** l'output mostra `750` invece di `10`.
+2. Nel Laboratorio 1, aggiungi una terza variabile chiamata `high_score` impostata a `100`. Aggiungi una riga `print(high_score)`. **Saprai che ha funzionato quando** vedi tre numeri nell'output.
+3. Nel Laboratorio 2 (quello della riassegnazione), cambia `score = 25` in `score = score * 2`. **Saprai che ha funzionato quando** l'output mostra `10` sulla prima riga e `20` sulla seconda.
+4. Crea una variabile float chiamata `average_score` e impostala a `87.5`. Stampala. **Saprai che ha funzionato quando** l'output mostra `87.5`.
+5. Crea una variabile chiamata `champion` e impostala a `None`. Stampala. Poi riassegna `champion` a `1`. Stampala di nuovo. **Saprai che ha funzionato quando** l'output mostra `None` su una riga e `1` sulla successiva.
 
-!!! mascot-celebration "You've Got Variables!"
+!!! mascot-celebration "Hai Imparato le Variabili!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Variables, integers, floats, snake_case naming, reassignment, None — you now have the building blocks every Python program is built on. Every chapter from here uses what you just learned. Brilliant work, coder! Let's code it together!
+    Variabili, interi, float, denominazione snake_case, riassegnazione, None — ora hai i mattoni fondamentali su cui è costruito ogni programma Python. Ogni capitolo da qui in poi userà quello che hai appena imparato. Lavoro splendido, programmatore! Programmiamo insieme!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Commentati](./references.md)

@@ -1,21 +1,21 @@
-# References: Variables and Numbers
+# Riferimenti: Variabili e Numeri
 
-1. [Variable (computer science)](https://en.wikipedia.org/wiki/Variable_(computer_science)) - Wikipedia - Comprehensive overview of variables as named storage locations in programs, covering assignment, scope, and types. Directly supports the core concept of this chapter for students coming from Scratch.
+1. [Variable (computer science)](https://en.wikipedia.org/wiki/Variable_(computer_science)) - Wikipedia - Panoramica completa sulle variabili come posizioni di memoria con nome nei programmi, che copre assegnazione, scope e tipi. Supporta direttamente il concetto centrale di questo capitolo per studenti che arrivano da Scratch.
 
-2. [Integer (computer science)](https://en.wikipedia.org/wiki/Integer_(computer_science)) - Wikipedia - Explains how whole numbers are stored and represented in computer memory, including the difference between fixed-width integer types. Provides the technical foundation behind Python's `int` type.
+2. [Integer (computer science)](https://en.wikipedia.org/wiki/Integer_(computer_science)) - Wikipedia - Spiega come i numeri interi vengono memorizzati e rappresentati nella memoria del computer, inclusa la differenza tra i tipi interi a larghezza fissa. Fornisce le basi tecniche dietro al tipo `int` di Python.
 
-3. [Floating-point arithmetic](https://en.wikipedia.org/wiki/Floating-point_arithmetic) - Wikipedia - Covers how decimal numbers are stored in computers, including precision limitations and common pitfalls. Helps students understand why Python distinguishes between `int` and `float`.
+3. [Floating-point arithmetic](https://en.wikipedia.org/wiki/Floating-point_arithmetic) - Wikipedia - Spiega come i numeri decimali vengono memorizzati nei computer, incluse le limitazioni di precisione e le insidie più comuni. Aiuta gli studenti a capire perché Python distingue tra `int` e `float`.
 
-4. Python Crash Course, 3rd Edition - Eric Matthes - No Starch Press - Chapter 2 introduces variables, strings, and numbers with hands-on exercises that closely mirror this chapter's goals, making it an ideal companion reference for ages 12 and up.
+4. Python Crash Course, 3rd Edition - Eric Matthes - No Starch Press - Il Capitolo 2 introduce variabili, stringhe e numeri con esercizi pratici che rispecchiano da vicino gli obiettivi di questo capitolo, rendendolo un riferimento ideale per studenti dai 12 anni in su.
 
-5. Python for Kids - Jason R. Briggs - No Starch Press - Written specifically for young learners, Chapter 2 covers variables and basic arithmetic in a friendly, visual style that matches the audience and teaching approach of this textbook.
+5. Python for Kids - Jason R. Briggs - No Starch Press - Scritto appositamente per giovani studenti, il Capitolo 2 copre variabili e aritmetica di base in uno stile amichevole e visivo che corrisponde al pubblico e all'approccio didattico di questo libro.
 
-6. [Python Variables](https://www.w3schools.com/python/python_variables.asp) - W3Schools - Interactive tutorial on creating and naming variables in Python, with a built-in "Try it Yourself" editor. Ideal for students who want to experiment with variable assignment immediately after reading this chapter.
+6. [Python Variables](https://www.w3schools.com/python/python_variables.asp) - W3Schools - Tutorial interattivo sulla creazione e denominazione di variabili in Python, con un editor "Try it Yourself" integrato. Ideale per studenti che vogliono sperimentare subito l'assegnazione di variabili dopo aver letto questo capitolo.
 
-7. [Python Numbers](https://www.w3schools.com/python/python_numbers.asp) - W3Schools - Covers `int`, `float`, and `complex` number types with examples and an interactive editor. Students can confirm the difference between integer and float division without any local setup.
+7. [Python Numbers](https://www.w3schools.com/python/python_numbers.asp) - W3Schools - Copre i tipi numerici `int`, `float` e `complex` con esempi e un editor interattivo. Gli studenti possono verificare la differenza tra divisione intera e decimale senza alcuna installazione locale.
 
-8. [Python Variables, Constants and Literals](https://www.programiz.com/python-programming/variables-constants-literals) - Programiz - Clear explanations of variable assignment, naming rules, and the difference between integers and floats, with beginner-friendly examples that reinforce this chapter's naming conventions lesson.
+8. [Python Variables, Constants and Literals](https://www.programiz.com/python-programming/variables-constants-literals) - Programiz - Spiegazioni chiare dell'assegnazione di variabili, delle regole di denominazione e della differenza tra interi e float, con esempi adatti ai principianti che rafforzano la lezione di questo capitolo sulle convenzioni di denominazione.
 
-9. [Variables in Python](https://realpython.com/python-variables/) - Real Python - In-depth tutorial explaining variable assignment, dynamic typing, and naming conventions including `snake_case`. A strong follow-up resource for curious students who want to go deeper after completing this chapter.
+9. [Variables in Python](https://realpython.com/python-variables/) - Real Python - Tutorial approfondito che spiega l'assegnazione di variabili, la tipizzazione dinamica e le convenzioni di denominazione incluso lo `snake_case`. Un'ottima risorsa di approfondimento per studenti curiosi che vogliono andare oltre dopo aver completato questo capitolo.
 
-10. [Python Variables](https://docs.python.org/3/tutorial/introduction.html#numbers) - Python.org Official Tutorial - The official Python tutorial section on numbers demonstrates `int` and `float` arithmetic directly in the Python interpreter, giving students an authoritative and accurate reference for the numeric concepts in this chapter.
+10. [Python Variables](https://docs.python.org/3/tutorial/introduction.html#numbers) - Python.org Official Tutorial - La sezione sui numeri del tutorial ufficiale di Python mostra l'aritmetica di `int` e `float` direttamente nell'interprete Python, offrendo agli studenti un riferimento autorevole e accurato per i concetti numerici di questo capitolo.
