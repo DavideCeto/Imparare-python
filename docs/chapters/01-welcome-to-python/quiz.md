@@ -1,26 +1,26 @@
-# Quiz: Welcome to Python and Skulpt
+# Quiz: Benvenuto in Python e Skulpt
 
-Test your understanding of Python basics, the Skulpt environment, and your first programs with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione delle basi di Python, dell'ambiente Skulpt e dei tuoi primi programmi con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What is the Python interpreter?
+#### 1. Cos'è l'interprete Python?
 
 <div class="upper-alpha" markdown>
-1. A website where you log in to write Python code
-2. A program that reads your Python code and carries out each instruction
-3. A colorful block editor similar to Scratch
-4. A special keyboard for typing Python commands
+1. Un sito web dove accedi per scrivere codice Python
+2. Un programma che legge il tuo codice Python ed esegue ogni istruzione
+3. Un editor a blocchi colorati simile a Scratch
+4. Una tastiera speciale per digitare comandi Python
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. The Python interpreter reads your code one line at a time from top to bottom and carries out each instruction. Think of it as a super-fast reader that turns your words into actions — similar to how clicking the green flag in Scratch starts your program running.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. L'interprete Python legge il tuo codice una riga alla volta, dall'alto verso il basso, ed esegue ogni istruzione. Pensalo come un lettore velocissimo che trasforma le tue parole in azioni — in modo simile a come cliccare sulla bandierina verde in Scratch avvia l'esecuzione del tuo programma.
 
     **Concept Tested:** Python Interpreter Overview
 
 ---
 
-#### 2. Which tool is built directly into this textbook so you can run Python without opening a new tab?
+#### 2. Quale strumento è integrato direttamente in questo libro di testo, così puoi eseguire Python senza aprire una nuova scheda?
 
 <div class="upper-alpha" markdown>
 1. Thonny
@@ -29,14 +29,14 @@ Test your understanding of Python basics, the Skulpt environment, and your first
 4. Visual Studio Code
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Skulpt is a version of Python that runs directly inside the web page you are reading. Every interactive code box in the early chapters is powered by Skulpt — you click Run and the code executes right on the page, with no account or installation needed.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Skulpt è una versione di Python che funziona direttamente dentro la pagina web che stai leggendo. Ogni finestra di codice interattiva nei primi capitoli è alimentata da Skulpt — clicchi su Run e il codice viene eseguito proprio sulla pagina, senza bisogno di account o installazioni.
 
     **Concept Tested:** Skulpt Browser Python
 
 ---
 
-#### 3. What will the following code display when it runs?
+#### 3. Cosa mostrerà il seguente codice quando viene eseguito?
 
 ```python
 print("Hello!")
@@ -44,36 +44,36 @@ print("Bye!")
 ```
 
 <div class="upper-alpha" markdown>
-1. Hello! Bye! on one line
-2. Only the word Hello!
-3. Hello! on one line, then Bye! on the next line
-4. Nothing — print() needs a number, not text
+1. Hello! Bye! su una sola riga
+2. Solo la parola Hello!
+3. Hello! su una riga, poi Bye! sulla riga successiva
+4. Niente — print() ha bisogno di un numero, non di testo
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Each `print()` call displays its text and then moves to a new line. So the first call prints `Hello!` and the second prints `Bye!` on the line below it. Python runs each statement in order from top to bottom, just like Scratch runs blocks in a script.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Ogni chiamata a `print()` mostra il suo testo e poi passa a una nuova riga. Quindi la prima chiamata stampa `Hello!` e la seconda stampa `Bye!` sulla riga sottostante. Python esegue ogni istruzione in ordine dall'alto verso il basso, proprio come Scratch esegue i blocchi in uno script.
 
     **Concept Tested:** print() Function
 
 ---
 
-#### 4. What does the `#` symbol do in a Python program?
+#### 4. Cosa fa il simbolo `#` in un programma Python?
 
 <div class="upper-alpha" markdown>
-1. It tells Python to print a number
-2. It starts a comment that Python ignores when running the program
-3. It imports a library into your program
-4. It creates a new turtle on the screen
+1. Dice a Python di stampare un numero
+2. Avvia un commento che Python ignora durante l'esecuzione del programma
+3. Importa una libreria nel tuo programma
+4. Crea una nuova tartaruga sullo schermo
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. The `#` character starts a single-line comment. Everything on that line after the `#` is a note for human readers — the Python interpreter completely ignores it when running the program. Comments help explain what your code does without changing how it works.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Il carattere `#` avvia un commento su una riga. Tutto ciò che si trova su quella riga dopo il `#` è una nota per i lettori umani — l'interprete Python la ignora completamente quando esegue il programma. I commenti aiutano a spiegare cosa fa il tuo codice senza cambiare come funziona.
 
     **Concept Tested:** Single-Line Comments
 
 ---
 
-#### 5. Which of the following will cause an error in Python?
+#### 5. Quale delle seguenti istruzioni causerà un errore in Python?
 
 <div class="upper-alpha" markdown>
 1. `print("hello")`
@@ -82,46 +82,46 @@ print("Bye!")
 4. `print("123")`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Python is case-sensitive, so `Print` with a capital P is not recognized as the built-in print function. Python will respond with a `NameError: name 'Print' is not defined`. Always use lowercase `print()`.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Python distingue tra maiuscole e minuscole, quindi `Print` con la P maiuscola non viene riconosciuto come la funzione print integrata. Python risponderà con `NameError: name 'Print' is not defined`. Usa sempre `print()` minuscolo.
 
     **Concept Tested:** Case Sensitivity
 
 ---
 
-#### 6. Why do programmers add blank lines between sections of code?
+#### 6. Perché i programmatori aggiungono righe vuote tra le sezioni di codice?
 
 <div class="upper-alpha" markdown>
-1. Python requires blank lines or the program will crash
-2. Blank lines make the output appear on separate screens
-3. Blank lines divide code into readable groups, making it easier for humans to read
-4. Blank lines tell Python to pause for one second
+1. Python richiede righe vuote, altrimenti il programma va in crash
+2. Le righe vuote fanno apparire l'output su schermate separate
+3. Le righe vuote dividono il codice in gruppi leggibili, rendendolo più facile da leggere per gli esseri umani
+4. Le righe vuote dicono a Python di fare una pausa di un secondo
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Python ignores blank lines completely — they have no effect on how the program runs. But human readers find them very helpful. Blank lines divide code into logical groups, the same way paragraph breaks divide a story into scenes. It is a good habit to add them between sections that do different jobs.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Python ignora completamente le righe vuote — non hanno alcun effetto su come viene eseguito il programma. Ma per i lettori umani sono molto utili. Le righe vuote dividono il codice in gruppi logici, proprio come gli a capo dividono una storia in scene. È una buona abitudine aggiungerle tra sezioni che svolgono compiti diversi.
 
     **Concept Tested:** Blank Lines and Readability
 
 ---
 
-#### 7. What does the `import` statement do?
+#### 7. Cosa fa l'istruzione `import`?
 
 <div class="upper-alpha" markdown>
-1. It saves your Python file to your computer
-2. It tells Python to display the next line of output
-3. It loads an extra toolkit (library) so your program can use its features
-4. It creates a new variable to store a number
+1. Salva il tuo file Python sul tuo computer
+2. Dice a Python di mostrare la riga di output successiva
+3. Carica un set di strumenti extra (una libreria) così il tuo programma può usarne le funzionalità
+4. Crea una nuova variabile per memorizzare un numero
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. The `import` keyword tells the Python interpreter to load a library before running the rest of your program. By itself Python knows how to do basic things like `print()`, but tools like `turtle`, `random`, and `math` must be imported first. Import statements always go at the very top of your program.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. La parola chiave `import` dice all'interprete Python di caricare una libreria prima di eseguire il resto del tuo programma. Da solo Python sa fare cose di base come `print()`, ma strumenti come `turtle`, `random` e `math` devono prima essere importati. Le istruzioni import vanno sempre proprio in cima al tuo programma.
 
     **Concept Tested:** import Statement
 
 ---
 
-#### 8. What is the correct first line to write before using turtle graphics?
+#### 8. Qual è la prima riga corretta da scrivere prima di usare la grafica turtle?
 
 <div class="upper-alpha" markdown>
 1. `use turtle`
@@ -130,40 +130,40 @@ print("Bye!")
 4. `start turtle`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. You must write `import turtle` to load the turtle library before your program can use any turtle commands. The keyword is `import` — not `use`, `load`, or `start`. This line should appear at the top of your program before any turtle commands.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Devi scrivere `import turtle` per caricare la libreria turtle prima che il tuo programma possa usare qualsiasi comando turtle. La parola chiave è `import` — non `use`, `load` o `start`. Questa riga deve comparire in cima al tuo programma, prima di qualsiasi comando turtle.
 
     **Concept Tested:** import turtle
 
 ---
 
-#### 9. In the code `t = turtle.Turtle()`, what does the variable `t` represent?
+#### 9. Nel codice `t = turtle.Turtle()`, cosa rappresenta la variabile `t`?
 
 <div class="upper-alpha" markdown>
-1. The number of steps the turtle will take
-2. The color of the turtle's pen
-3. A turtle object that you can give movement commands to
-4. The title of the turtle window
+1. Il numero di passi che la tartaruga farà
+2. Il colore della penna della tartaruga
+3. Un oggetto tartaruga a cui puoi dare comandi di movimento
+4. Il titolo della finestra della tartaruga
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `turtle.Turtle()` creates a new turtle object and assigns it to the variable `t`. Once you have this turtle, you can give it commands using dot notation — for example, `t.forward(100)` tells turtle `t` to move forward 100 steps while drawing a line.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `turtle.Turtle()` crea un nuovo oggetto tartaruga e lo assegna alla variabile `t`. Una volta che hai questa tartaruga, puoi darle comandi usando la notazione col punto — per esempio, `t.forward(100)` dice alla tartaruga `t` di muoversi in avanti di 100 passi disegnando una linea.
 
     **Concept Tested:** import turtle
 
 ---
 
-#### 10. Which of the following best describes why Python is a good language to learn after Scratch?
+#### 10. Quale delle seguenti frasi descrive meglio perché Python è un buon linguaggio da imparare dopo Scratch?
 
 <div class="upper-alpha" markdown>
-1. Python uses the same colorful snap-together blocks as Scratch
-2. Python is only used by beginners and has no professional uses
-3. Python uses text-based instructions that read almost like plain English and is used by professionals worldwide
-4. Python programs can only run on websites, just like Scratch projects
+1. Python usa gli stessi blocchi colorati a incastro di Scratch
+2. Python è usato solo dai principianti e non ha usi professionali
+3. Python usa istruzioni testuali che si leggono quasi come l'inglese comune ed è usato da professionisti in tutto il mondo
+4. I programmi Python possono funzionare solo sui siti web, proprio come i progetti Scratch
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Python is a text-based language whose syntax reads almost like plain English, making it a natural step up from Scratch's visual blocks. It is one of the most popular programming languages in the world, used by professionals at companies like YouTube, NASA, and in artificial intelligence research.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Python è un linguaggio testuale la cui sintassi si legge quasi come l'inglese comune, il che lo rende un passo naturale dopo i blocchi visuali di Scratch. È uno dei linguaggi di programmazione più popolari al mondo, usato da professionisti in aziende come YouTube, NASA e nella ricerca sull'intelligenza artificiale.
 
     **Concept Tested:** Python Interpreter Overview
 
