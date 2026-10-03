@@ -1,110 +1,110 @@
 ---
-title: Drawing with Turtle Graphics
-description: Create your first turtle drawings using the Turtle and Screen objects, movement commands, pen control, colors, shapes, and speed settings.
+title: Disegnare con la Grafica Turtle
+description: Crea i tuoi primi disegni turtle usando gli oggetti Turtle e Screen, i comandi di movimento, il controllo della penna, i colori, le forme e le impostazioni di velocità.
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 09:48:25
 version: 0.09
 ---
 
-# Drawing with Turtle Graphics
+# Disegnare con la Grafica Turtle
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Create a `turtle.Screen()` and a `turtle.Turtle()` object to set up a drawing window
-- Move the turtle forward, backward, left, and right to draw lines
-- Lift and lower the pen to skip spaces in your drawing
-- Change the turtle's color, thickness, shape, and drawing speed
+- Creare un oggetto `turtle.Screen()` e un oggetto `turtle.Turtle()` per impostare una finestra di disegno
+- Muovere la turtle avanti, indietro, a sinistra e a destra per disegnare linee
+- Alzare e abbassare la penna per saltare spazi nel tuo disegno
+- Cambiare il colore, lo spessore, la forma e la velocità di disegno della turtle
 
-Imagine a tiny robot with a marker strapped to its belly.
-You tell the robot where to walk, and the marker draws a trail wherever it goes.
-That is exactly what **turtle graphics** does — and in this chapter you get to write the commands that bring that robot to life.
+Immagina un piccolo robot con un pennarello legato alla pancia.
+Dici al robot dove camminare, e il pennarello disegna una traccia ovunque vada.
+Questo è esattamente ciò che fa la **grafica turtle** — e in questo capitolo scriverai i comandi che danno vita a quel robot.
 
-!!! mascot-welcome "Welcome to Chapter 5!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 5!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    This is the chapter where Python becomes truly visual! Every command you type makes your turtle move and draw — instantly, right here in the browser. There is no better way to build your Python instincts than to type a command, click Run, and watch the turtle obey. Let's code it together!
+    Questo è il capitolo in cui Python diventa davvero visivo! Ogni comando che digiti fa muovere e disegnare la tua turtle — all'istante, proprio qui nel browser. Non c'è modo migliore per sviluppare il tuo istinto Python che digitare un comando, cliccare Run, e guardare la turtle obbedire. Programmiamo insieme!
 
-## Setting Up the Drawing Stage
+## Preparare il Palcoscenico del Disegno
 
-Before any drawing can happen, Python needs two things in place: a **screen** to draw on, and a **turtle** to do the drawing.
+Prima che possa avvenire qualsiasi disegno, Python ha bisogno di due cose: uno **schermo** su cui disegnare, e una **turtle** che disegni.
 
-### The turtle.Screen() Object
+### L'Oggetto turtle.Screen()
 
-A **`turtle.Screen()`** creates the drawing window — the blank canvas where all your shapes will appear.
-Think of it as the stage in a play: you have to set up the stage before the actors can perform.
+Un **`turtle.Screen()`** crea la finestra di disegno — la tela vuota dove appariranno tutte le tue forme.
+Pensalo come il palcoscenico di uno spettacolo teatrale: devi allestire il palco prima che gli attori possano esibirsi.
 
-You store the screen in a variable so you can send it instructions later:
+Memorizzi lo schermo in una variabile così da potergli dare istruzioni più tardi:
 
 ```python
 import turtle
 wn = turtle.Screen()
 ```
 
-The name `wn` stands for "window" — that is the most common nickname programmers use for this variable, but you can call it anything you like.
+Il nome `wn` sta per "window" (finestra) — è il soprannome più comune usato dai programmatori per questa variabile, ma puoi chiamarla come vuoi.
 
-Once you have the screen, you can change its background color using **`bgcolor()`** (short for "background color"):
+Una volta che hai lo schermo, puoi cambiarne il colore di sfondo usando **`bgcolor()`** (abbreviazione di "background color", colore di sfondo):
 
 ```python
 wn.bgcolor("lightblue")
 ```
 
-Put any color name in quotes — `"lightyellow"`, `"pink"`, `"white"`, `"black"`, or any of the 140 named web colors Python understands.
-`bgcolor()` changes the window background the moment Python runs that line.
+Metti qualsiasi nome di colore tra virgolette — `"lightyellow"`, `"pink"`, `"white"`, `"black"`, o uno qualsiasi dei 140 colori web con nome che Python conosce.
+`bgcolor()` cambia lo sfondo della finestra nel momento in cui Python esegue quella riga.
 
-### The turtle.Turtle() Object
+### L'Oggetto turtle.Turtle()
 
-A **`turtle.Turtle()`** creates your drawing agent — the small arrow (or turtle shape!) that moves around the canvas, leaving a colored line wherever it goes.
+Un **`turtle.Turtle()`** crea il tuo agente di disegno — la piccola freccia (o forma a tartaruga!) che si muove sulla tela, lasciando una linea colorata ovunque vada.
 
-In Chapter 4 you learned that **objects** have their own **methods** that you call with a dot.
-A turtle is a perfect example of this idea in action.
-You create one object and then call methods on it to make it move, turn, and draw.
+Nel Capitolo 4 hai imparato che gli **oggetti** hanno propri **metodi** che chiami con un punto.
+Una turtle è un esempio perfetto di questa idea in azione.
+Crei un oggetto e poi chiami metodi su di esso per farlo muovere, girare e disegnare.
 
 ```python
 t = turtle.Turtle()
 ```
 
-The variable `t` now holds your turtle.
-Whenever you want the turtle to do something, write `t.` followed by a command name and parentheses.
+La variabile `t` ora contiene la tua turtle.
+Ogni volta che vuoi che la turtle faccia qualcosa, scrivi `t.` seguito da un nome di comando e parentesi.
 
-!!! mascot-tip "Scratch Bridge"
+!!! mascot-tip "Ponte con Scratch"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch, the **Stage** was the white backdrop where your sprites lived, and a **Sprite** was the character you programmed to move. In Python turtle, `turtle.Screen()` is your Stage and `turtle.Turtle()` is your Sprite. The big difference? Instead of dragging a sprite with your mouse, you write Python commands to control it — and that gives you far more power than drag-and-drop ever could!
+    In Scratch, lo **Stage** era lo sfondo bianco dove vivevano i tuoi sprite, e uno **Sprite** era il personaggio che programmavi per muoversi. Nella turtle di Python, `turtle.Screen()` è il tuo Stage e `turtle.Turtle()` è il tuo Sprite. La grande differenza? Invece di trascinare uno sprite con il mouse, scrivi comandi Python per controllarlo — e questo ti dà molto più potere di quanto potrebbe mai darti il trascina-e-rilascia!
 
-## Moving the Turtle
+## Muovere la Turtle
 
-The turtle always starts at the center of the screen, facing right (East).
-You have four movement commands to work with:
+La turtle inizia sempre al centro dello schermo, rivolta verso destra (Est).
+Hai quattro comandi di movimento con cui lavorare:
 
-| Command | What it does |
+| Comando | Cosa fa |
 |---------|-------------|
-| `t.forward(n)` | Move `n` pixels forward in the direction the turtle faces |
-| `t.backward(n)` | Move `n` pixels backward (tail-first) |
-| `t.right(n)` | Rotate the turtle `n` degrees clockwise |
-| `t.left(n)` | Rotate the turtle `n` degrees counter-clockwise |
+| `t.forward(n)` | Si muove `n` pixel in avanti nella direzione verso cui è rivolta la turtle |
+| `t.backward(n)` | Si muove `n` pixel all'indietro (prima la coda) |
+| `t.right(n)` | Ruota la turtle di `n` gradi in senso orario |
+| `t.left(n)` | Ruota la turtle di `n` gradi in senso antiorario |
 
-The `n` in `forward()` and `backward()` is measured in **pixels** — tiny dots on your screen.
-One hundred pixels is roughly the length of your thumb held next to a typical monitor.
+L'`n` in `forward()` e `backward()` si misura in **pixel** — minuscoli puntini sul tuo schermo.
+Cento pixel sono circa la lunghezza del tuo pollice tenuto accanto a un monitor tipico.
 
-The `n` in `right()` and `left()` is measured in **degrees**, just like in your geometry class.
-A full circle is 360°.
-A right-angle corner — like the corner of a piece of paper — is exactly 90°.
+L'`n` in `right()` e `left()` si misura in **gradi**, proprio come nella tua lezione di geometria.
+Un cerchio completo è 360°.
+Un angolo retto — come l'angolo di un foglio di carta — è esattamente 90°.
 
-These four commands map directly to blocks you already know from Scratch.
-The **Move N steps** block is `forward(n)` in Python.
-The **Turn ↻ N degrees** block is `right(n)`, and the **Turn ↺ N degrees** block is `left(n)` — same ideas, just written as text.
+Questi quattro comandi corrispondono direttamente a blocchi che già conosci da Scratch.
+Il blocco **Move N steps** è `forward(n)` in Python.
+Il blocco **Turn ↻ N degrees** è `right(n)`, e il blocco **Turn ↺ N degrees** è `left(n)` — stesse idee, solo scritte come testo.
 
-Before you run the first lab, take a moment to read the code carefully.
+Prima di eseguire il primo laboratorio, prenditi un momento per leggere attentamente il codice.
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Look at the program below before you click Run.
-    The turtle moves forward 100, turns right 90°, moves forward 100, turns right 90°, then moves forward one more time.
-    How many sides of a square do you think you will see?
-    Make your guess — then click Run to find out!
+    Guarda il programma qui sotto prima di cliccare su Run.
+    La turtle si muove avanti di 100, gira a destra di 90°, si muove avanti di 100, gira a destra di 90°, poi si muove avanti un'altra volta.
+    Quanti lati di un quadrato pensi vedrai?
+    Fai la tua previsione — poi clicca su Run per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see the result right on this page.
-No account needed — everything runs in your browser.
+Modifica il codice qui sotto e clicca **Run** per vedere il risultato proprio su questa pagina.
+Non serve alcun account — tutto viene eseguito nel tuo browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -137,54 +137,54 @@ t.right(90)
 t.forward(100)`);
 </script>
 
-Were you right? The turtle drew exactly three sides of a square — one 90° right turn for each corner!
+Avevi indovinato? La turtle ha disegnato esattamente tre lati di un quadrato — una svolta di 90° a destra per ogni angolo!
 
-**If you see a red error message:** Check your spelling carefully.
-Python is case-sensitive, so `Forward(100)` will not work but `forward(100)` will.
-Also make sure each line ends with a closing parenthesis `)`.
+**Se vedi un messaggio di errore rosso:** controlla attentamente l'ortografia.
+Python distingue tra maiuscole e minuscole, quindi `Forward(100)` non funzionerà ma `forward(100)` sì.
+Assicurati anche che ogni riga termini con una parentesi di chiusura `)`.
 
-## How It Works
+## Come Funziona
 
-Here is what each line of the program does:
+Ecco cosa fa ogni riga del programma:
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `import turtle` | Loads the turtle library so Python knows all the drawing commands |
-| `wn = turtle.Screen()` | Creates the drawing window and stores it in `wn` |
-| `wn.bgcolor("lightyellow")` | Sets the window background to light yellow |
-| `t = turtle.Turtle()` | Creates a turtle object and stores it in `t` |
-| `t.forward(100)` | Moves the turtle forward 100 pixels in the direction it is currently facing |
-| `t.right(90)` | Rotates the turtle 90° clockwise — a perfect right-angle corner |
+| `import turtle` | Carica la libreria turtle così Python conosce tutti i comandi di disegno |
+| `wn = turtle.Screen()` | Crea la finestra di disegno e la memorizza in `wn` |
+| `wn.bgcolor("lightyellow")` | Imposta lo sfondo della finestra su giallo chiaro |
+| `t = turtle.Turtle()` | Crea un oggetto turtle e lo memorizza in `t` |
+| `t.forward(100)` | Muove la turtle di 100 pixel in avanti nella direzione verso cui è attualmente rivolta |
+| `t.right(90)` | Ruota la turtle di 90° in senso orario — un angolo retto perfetto |
 
-Notice the pattern: every command uses the object (`wn` or `t`), then a dot, then the method name with a number inside the parentheses.
-This is exactly the object-method pattern from Chapter 4.
+Nota lo schema: ogni comando usa l'oggetto (`wn` o `t`), poi un punto, poi il nome del metodo con un numero dentro le parentesi.
+Questo è esattamente lo schema oggetto-metodo del Capitolo 4.
 
-## See It: What the Turtle Knows
+## Osservalo: Cosa Sa la Turtle
 
-The turtle secretly keeps track of four things at all times: its **x position**, its **y position**, its **heading** (the direction it faces), and whether its **pen** is up or down. The inspector below shows all of them while you step through a program one command at a time. Before you click, **predict where the turtle will be and which way it will face after the first two commands**.
+La turtle tiene segretamente traccia di quattro cose in ogni momento: la sua **posizione x**, la sua **posizione y**, il suo **orientamento** (la direzione verso cui è rivolta), e se la sua **penna** è alzata o abbassata. L'ispettore qui sotto le mostra tutte mentre procedi passo passo attraverso un programma, un comando alla volta. Prima di cliccare, **prevedi dove si troverà la turtle e verso quale direzione sarà rivolta dopo i primi due comandi**.
 
 <iframe src="../../sims/turtle-state-inspector/main.html" height="512" width="100%" scrolling="no"></iframe>
 
-[Explore the Turtle State Inspector MicroSim](../../sims/turtle-state-inspector/index.md){ .md-button }
+[Esplora il MicroSim Turtle State Inspector](../../sims/turtle-state-inspector/index.md){ .md-button }
 
-Watch the heading value as you step through the Square program: `t.right(90)` subtracts 90 from the heading each time. Then try the **Pen Demo** program to see the gap that `penup()` leaves behind.
+Osserva il valore dell'orientamento mentre procedi passo passo nel programma Square: `t.right(90)` sottrae 90 dall'orientamento ogni volta. Poi prova il programma **Pen Demo** per vedere lo spazio vuoto che lascia `penup()`.
 
-## Pen Control: penup() and pendown()
+## Controllo della Penna: penup() e pendown()
 
-Right now the turtle draws a line everywhere it moves.
-But what if you want two separate shapes with a gap between them?
+In questo momento la turtle disegna una linea ovunque si muova.
+Ma cosa succede se vuoi due forme separate con uno spazio tra loro?
 
-Think about drawing with a real pen: you would lift the pen off the paper, slide it to the new spot, then press it back down.
-Turtle graphics works the same way.
+Pensa a disegnare con una penna vera: solleveresti la penna dal foglio, la faresti scorrere nel nuovo punto, poi la premeresti di nuovo giù.
+La grafica turtle funziona allo stesso modo.
 
-- **`t.penup()`** lifts the pen off the canvas. The turtle can move without drawing anything.
-- **`t.pendown()`** sets the pen back on the canvas. Every step after this leaves a line.
+- **`t.penup()`** solleva la penna dalla tela. La turtle può muoversi senza disegnare nulla.
+- **`t.pendown()`** riappoggia la penna sulla tela. Ogni passo dopo questo lascia una linea.
 
-The turtle always starts with the pen down, which is why the very first `forward()` call draws a line.
+La turtle inizia sempre con la penna abbassata, ed è per questo che la primissima chiamata a `forward()` disegna una linea.
 
-In Scratch you may have used the **Pen Up** and **Pen Down** blocks from the pen extension — `penup()` and `pendown()` work exactly the same way.
+In Scratch potresti aver usato i blocchi **Pen Up** e **Pen Down** dall'estensione pen — `penup()` e `pendown()` funzionano esattamente allo stesso modo.
 
-Here is a program that draws two separate lines with a gap in the middle:
+Ecco un programma che disegna due linee separate con uno spazio nel mezzo:
 
 ```python
 import turtle
@@ -196,7 +196,7 @@ t.pendown()        # lower the pen
 t.forward(80)      # draw another line
 ```
 
-Try this in the lab below — pay close attention to the blank space in the middle of the drawing.
+Provalo nel laboratorio qui sotto — presta molta attenzione allo spazio vuoto nel mezzo del disegno.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -221,63 +221,63 @@ t.pendown()
 t.forward(80)`);
 </script>
 
-The gap is where the turtle traveled with its pen in the air.
-Try changing the `40` in the middle `t.forward(40)` to `80` — the gap doubles in width.
+Lo spazio vuoto è dove la turtle ha viaggiato con la penna in aria.
+Prova a cambiare il `40` nel `t.forward(40)` centrale in `80` — lo spazio vuoto raddoppia di larghezza.
 
-!!! mascot-warning "Don't Forget pendown()!"
+!!! mascot-warning "Non Dimenticare pendown()!"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    The most common `penup()` mistake is forgetting to call `pendown()` afterward. If your turtle moves but the canvas stays completely blank, look for a missing `pendown()`. The turtle moves exactly as you command it — it just leaves no trace because the pen is still lifted. Add `t.pendown()` before the line you want drawn and you are back in business!
+    L'errore più comune con `penup()` è dimenticare di chiamare `pendown()` dopo. Se la tua turtle si muove ma la tela resta completamente vuota, cerca un `pendown()` mancante. La turtle si muove esattamente come la comandi — semplicemente non lascia traccia perché la penna è ancora sollevata. Aggiungi `t.pendown()` prima della riga che vuoi disegnare e sei di nuovo a posto!
 
-## Pen Size and Color
+## Spessore e Colore della Penna
 
-A black line on a white background is just the beginning.
-You can choose any color and any thickness for your turtle's pen.
+Una linea nera su uno sfondo bianco è solo l'inizio.
+Puoi scegliere qualsiasi colore e qualsiasi spessore per la penna della tua turtle.
 
-Two commands control how the line looks:
+Due comandi controllano l'aspetto della linea:
 
-- **`t.pensize(n)`** sets the line thickness in pixels. The default is `1`. Try `3`, `5`, or `10` to draw bolder lines.
-- **`t.pencolor("color")`** sets the color of the line the turtle draws. Use a color name in quotes: `"red"`, `"blue"`, `"green"`, `"orange"`, `"purple"`, or any named web color.
+- **`t.pensize(n)`** imposta lo spessore della linea in pixel. Il valore predefinito è `1`. Prova `3`, `5` o `10` per disegnare linee più marcate.
+- **`t.pencolor("colore")`** imposta il colore della linea disegnata dalla turtle. Usa un nome di colore tra virgolette: `"red"`, `"blue"`, `"green"`, `"orange"`, `"purple"`, o qualsiasi colore web con nome.
 
-Just like the **Set pen color** block in Scratch, `pencolor()` changes the color for every line drawn after that call.
-You can change colors in the middle of a program — each call to `pencolor()` affects only the lines that come after it.
+Proprio come il blocco **Set pen color** in Scratch, `pencolor()` cambia il colore per ogni linea disegnata dopo quella chiamata.
+Puoi cambiare colore a metà di un programma — ogni chiamata a `pencolor()` influisce solo sulle linee che vengono dopo.
 
-## Turtle Appearance: shape(), hideturtle(), and showturtle()
+## Aspetto della Turtle: shape(), hideturtle() e showturtle()
 
-The default turtle looks like a small arrowhead.
-The **`t.shape()`** command swaps it for a different look.
-Here are all six built-in shapes:
+La turtle predefinita somiglia a una piccola punta di freccia.
+Il comando **`t.shape()`** la sostituisce con un aspetto diverso.
+Ecco tutte e sei le forme integrate:
 
-| Shape name | What it looks like |
+| Nome forma | Che aspetto ha |
 |------------|-------------------|
-| `"arrow"` | A small arrowhead (the default) |
-| `"turtle"` | A top-down cartoon turtle |
-| `"circle"` | A filled circle |
-| `"square"` | A small filled square |
-| `"triangle"` | A small triangle |
-| `"classic"` | A slightly different arrowhead shape |
+| `"arrow"` | Una piccola punta di freccia (quella predefinita) |
+| `"turtle"` | Una tartaruga a fumetti vista dall'alto |
+| `"circle"` | Un cerchio pieno |
+| `"square"` | Un piccolo quadrato pieno |
+| `"triangle"` | Un piccolo triangolo |
+| `"classic"` | Una forma di freccia leggermente diversa |
 
-Sometimes you want the turtle cursor to disappear from a finished drawing so it does not distract from your art.
-Two commands handle this:
+A volte vuoi che il cursore della turtle scompaia da un disegno finito, così non distrae dalla tua opera.
+Due comandi gestiscono questo:
 
-- **`t.hideturtle()`** makes the turtle cursor invisible. Your drawing still shows — the turtle just steps out of the way.
-- **`t.showturtle()`** brings a hidden turtle back into view.
+- **`t.hideturtle()`** rende invisibile il cursore della turtle. Il tuo disegno resta comunque visibile — la turtle si fa semplicemente da parte.
+- **`t.showturtle()`** riporta in vista una turtle nascosta.
 
-## Speed Control: speed()
+## Controllo della Velocità: speed()
 
-Every turtle starts at a medium drawing speed.
-The **`t.speed(n)`** command controls how fast it moves, using a number from `0` to `10`:
+Ogni turtle inizia con una velocità di disegno media.
+Il comando **`t.speed(n)`** controlla quanto velocemente si muove, usando un numero da `0` a `10`:
 
-| Value | Speed |
+| Valore | Velocità |
 |-------|-------|
-| `1` | Slowest — good for watching each step |
-| `5` | Medium — the default |
-| `10` | Fast |
-| `0` | Instant — skips the animation entirely |
+| `1` | La più lenta — buona per osservare ogni passo |
+| `5` | Media — il valore predefinito |
+| `10` | Veloce |
+| `0` | Istantanea — salta completamente l'animazione |
 
-Use `speed(0)` when your program draws many lines and you do not want to wait.
-Use `speed(1)` when you are learning or debugging and want to see the turtle move one step at a time.
+Usa `speed(0)` quando il tuo programma disegna molte linee e non vuoi aspettare.
+Usa `speed(1)` quando stai imparando o facendo debug e vuoi vedere la turtle muoversi un passo alla volta.
 
-Now try a lab that combines color, appearance, and speed — all in one program:
+Ora prova un laboratorio che combina colore, aspetto e velocità — tutto in un unico programma:
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -306,21 +306,21 @@ t.forward(100)
 t.hideturtle()`);
 </script>
 
-Notice that the first line is blue and the second is red — changing `pencolor()` in the middle of a drawing affects only the lines that come after that call.
-When the program finishes, the turtle cursor itself disappears because of `hideturtle()`.
+Nota che la prima linea è blu e la seconda è rossa — cambiare `pencolor()` a metà di un disegno influisce solo sulle linee che vengono dopo quella chiamata.
+Quando il programma termina, il cursore della turtle stesso scompare a causa di `hideturtle()`.
 
-## Learning Check
+## Verifica di Apprendimento
 
-You have now seen all ten commands from this chapter.
-Time to put them to the test!
-The program below draws two sides of a square and then stops.
+Hai ora visto tutti e dieci i comandi di questo capitolo.
+Ora mettili alla prova!
+Il programma qui sotto disegna due lati di un quadrato e poi si ferma.
 
-!!! mascot-thinking "Your Turn — Add the Missing Line"
+!!! mascot-thinking "Tocca a Te — Aggiungi la Riga Mancante"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below draws two sides of a square and then stops short.
-    After the second `t.right(90)`, the turtle is already pointing in the right direction for the third side.
-    Add **one line** to make it draw that third side — 100 pixels long.
-    Hint: which command moves the turtle forward?
+    Il programma qui sotto disegna due lati di un quadrato e poi si ferma a metà.
+    Dopo il secondo `t.right(90)`, la turtle è già rivolta nella direzione giusta per il terzo lato.
+    Aggiungi **una riga** per farle disegnare quel terzo lato — lungo 100 pixel.
+    Suggerimento: quale comando muove la turtle in avanti?
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -349,24 +349,24 @@ t.right(90)
 # Add ONE line below to draw the third side of the square`);
 </script>
 
-If you got it right, you will see three sides of a square drawn in green.
-The missing line is `t.forward(100)` — the turtle was already facing the right direction after two right turns, so it just needed one more push forward!
+Se hai risposto correttamente, vedrai tre lati di un quadrato disegnati in verde.
+La riga mancante è `t.forward(100)` — la turtle era già rivolta nella direzione giusta dopo due svolte a destra, quindi le serviva solo un'altra spinta in avanti!
 
-## Experiments
+## Esperimenti
 
-Try these changes to the programs above.
-For each one, predict what will happen first — then run it to check!
+Prova questi cambiamenti ai programmi qui sopra.
+Per ciascuno, prevedi prima cosa succederà — poi eseguilo per verificare!
 
-1. In Lab 1, change both `t.right(90)` calls to `t.right(120)`. **You'll know it worked when** the turtle draws the corner of a triangle instead of a square corner.
-2. In Lab 1, change `wn.bgcolor("lightyellow")` to `wn.bgcolor("lightblue")`. **You'll know it worked when** the background turns a soft sky blue.
-3. In Lab 2, change the `40` in `t.forward(40)` (the middle one, between penup and pendown) to `100`. **You'll know it worked when** the gap between the two lines is much wider than the lines themselves.
-4. In Lab 3, try each of the six shape names in `t.shape()`: `"arrow"`, `"turtle"`, `"circle"`, `"square"`, `"triangle"`, `"classic"`. **You'll know it worked when** the turtle cursor changes shape before it starts drawing.
-5. **Challenge:** In Lab 3, change `t.speed(5)` to `t.speed(1)` and watch the turtle draw slowly. Then change it to `t.speed(0)` and run again. What is different? When would each speed setting be useful?
+1. Nel Laboratorio 1, cambia entrambe le chiamate `t.right(90)` in `t.right(120)`. **Saprai che ha funzionato quando** la turtle disegna l'angolo di un triangolo invece dell'angolo di un quadrato.
+2. Nel Laboratorio 1, cambia `wn.bgcolor("lightyellow")` in `wn.bgcolor("lightblue")`. **Saprai che ha funzionato quando** lo sfondo diventa un delicato azzurro cielo.
+3. Nel Laboratorio 2, cambia il `40` in `t.forward(40)` (quello di mezzo, tra penup e pendown) in `100`. **Saprai che ha funzionato quando** lo spazio tra le due linee è molto più largo delle linee stesse.
+4. Nel Laboratorio 3, prova ciascuno dei sei nomi di forma in `t.shape()`: `"arrow"`, `"turtle"`, `"circle"`, `"square"`, `"triangle"`, `"classic"`. **Saprai che ha funzionato quando** il cursore della turtle cambia forma prima di iniziare a disegnare.
+5. **Sfida:** Nel Laboratorio 3, cambia `t.speed(5)` in `t.speed(1)` e guarda la turtle disegnare lentamente. Poi cambialo in `t.speed(0)` ed esegui di nuovo. Cosa cambia? Quando sarebbe utile ciascuna impostazione di velocità?
 
-!!! mascot-celebration "You Can Command a Turtle!"
+!!! mascot-celebration "Sai Comandare una Turtle!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You have just learned ten Python turtle commands and used them to draw real shapes on the screen — that is a big deal! In the chapters ahead you will combine these commands with loops and functions to draw patterns no human could make by hand. You have earned this one. Let's keep coding it together!
+    Hai appena imparato dieci comandi turtle di Python e li hai usati per disegnare forme vere sullo schermo — non è poco! Nei capitoli che seguono combinerai questi comandi con cicli e funzioni per disegnare pattern che nessun essere umano potrebbe creare a mano. Te lo sei meritato. Continuiamo a programmare insieme!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Commentati](./references.md)

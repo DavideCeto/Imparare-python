@@ -1,26 +1,26 @@
-# Quiz: Drawing with Turtle Graphics
+# Quiz: Disegnare con la Grafica Turtle
 
-Test your understanding of turtle graphics commands, pen control, and screen setup with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione dei comandi di grafica turtle, del controllo della penna e dell'impostazione dello schermo con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What does `turtle.Screen()` create in a turtle program?
+#### 1. Cosa crea `turtle.Screen()` in un programma turtle?
 
 <div class="upper-alpha" markdown>
-1. The turtle drawing agent that moves around and draws lines
-2. The drawing window where all your shapes will appear
-3. The color of the background behind the turtle
-4. A list of all available turtle commands
+1. L'agente di disegno turtle che si muove e disegna linee
+2. La finestra di disegno dove appariranno tutte le tue forme
+3. Il colore dello sfondo dietro la turtle
+4. Un elenco di tutti i comandi turtle disponibili
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `turtle.Screen()` creates the drawing window — the blank canvas where your turtle will draw. Think of it as the stage in a play: you set it up before the actors perform. You store it in a variable (commonly `wn` for "window") so you can give it instructions like changing the background color.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `turtle.Screen()` crea la finestra di disegno — la tela vuota dove la tua turtle disegnerà. Pensala come il palcoscenico di uno spettacolo teatrale: lo allestisci prima che gli attori si esibiscano. La memorizzi in una variabile (comunemente `wn` per "window") così da poterle dare istruzioni come cambiare il colore di sfondo.
 
     **Concept Tested:** turtle.Screen() Object
 
 ---
 
-#### 2. Which command moves the turtle forward 100 pixels in the direction it is facing?
+#### 2. Quale comando muove la turtle di 100 pixel in avanti nella direzione verso cui è rivolta?
 
 <div class="upper-alpha" markdown>
 1. `t.move(100)`
@@ -29,46 +29,46 @@ Test your understanding of turtle graphics commands, pen control, and screen set
 4. `t.walk(100)`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `t.forward(100)` tells the turtle to walk forward 100 pixels in whatever direction it is currently facing while drawing a line. The turtle starts facing right (East). The other options — `move()`, `go()`, and `walk()` — are not valid turtle methods and would cause an `AttributeError`.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `t.forward(100)` dice alla turtle di camminare in avanti di 100 pixel nella direzione verso cui è attualmente rivolta, disegnando una linea. La turtle inizia rivolta verso destra (Est). Le altre opzioni — `move()`, `go()` e `walk()` — non sono metodi turtle validi e causerebbero un `AttributeError`.
 
     **Concept Tested:** Turtle Movement Commands
 
 ---
 
-#### 3. The turtle always starts at the center of the screen facing which direction?
+#### 3. La turtle inizia sempre al centro dello schermo rivolta verso quale direzione?
 
 <div class="upper-alpha" markdown>
-1. North (up)
-2. South (down)
-3. West (left)
-4. East (right)
+1. Nord (su)
+2. Sud (giù)
+3. Ovest (sinistra)
+4. Est (destra)
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. When you create a new `turtle.Turtle()`, it starts at the center of the screen facing East (right). The first `t.forward(100)` will therefore draw a line pointing to the right. You use `t.right()` and `t.left()` to change the direction it faces before moving.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. Quando crei una nuova `turtle.Turtle()`, inizia al centro dello schermo rivolta verso Est (destra). Il primo `t.forward(100)` disegnerà quindi una linea puntata verso destra. Usi `t.right()` e `t.left()` per cambiare la direzione verso cui è rivolta prima di muoverla.
 
     **Concept Tested:** Turtle Movement Commands
 
 ---
 
-#### 4. What does `t.penup()` do?
+#### 4. Cosa fa `t.penup()`?
 
 <div class="upper-alpha" markdown>
-1. Makes the turtle move faster
-2. Changes the pen color to white
-3. Lifts the pen so the turtle can move without drawing a line
-4. Erases the most recent line the turtle drew
+1. Fa muovere la turtle più velocemente
+2. Cambia il colore della penna in bianco
+3. Solleva la penna così la turtle può muoversi senza disegnare una linea
+4. Cancella l'ultima linea disegnata dalla turtle
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `t.penup()` lifts the virtual pen off the canvas, so the turtle can travel to a new position without leaving a mark. This is how you create gaps in a drawing. After moving to the new position, call `t.pendown()` to lower the pen again so future movements draw lines.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `t.penup()` solleva la penna virtuale dalla tela, così la turtle può spostarsi in una nuova posizione senza lasciare traccia. È così che crei spazi vuoti in un disegno. Dopo essersi spostata nella nuova posizione, chiama `t.pendown()` per riabbassare la penna così i movimenti successivi disegnano linee.
 
     **Concept Tested:** penup() and pendown()
 
 ---
 
-#### 5. A student runs this code and sees nothing drawn on the canvas. What is most likely wrong?
+#### 5. Uno studente esegue questo codice e non vede nulla disegnato sulla tela. Cosa è più probabile che sia sbagliato?
 
 ```python
 import turtle
@@ -79,20 +79,20 @@ t.forward(100)
 ```
 
 <div class="upper-alpha" markdown>
-1. `forward()` does not work after `penup()`
-2. The turtle needs a `Screen()` before it can move
-3. The student forgot to call `t.pendown()` before drawing
-4. You must import turtle twice to draw two lines
+1. `forward()` non funziona dopo `penup()`
+2. La turtle ha bisogno di uno `Screen()` prima di potersi muovere
+3. Lo studente ha dimenticato di chiamare `t.pendown()` prima di disegnare
+4. Devi importare turtle due volte per disegnare due linee
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. The student called `t.penup()` but never called `t.pendown()`. The turtle moves exactly where commanded — but with the pen up, it leaves no trace on the canvas. Adding `t.pendown()` before the second `forward()` (or between them, depending on where the gap should be) would fix the problem.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Lo studente ha chiamato `t.penup()` ma non ha mai chiamato `t.pendown()`. La turtle si muove esattamente dove comandato — ma con la penna alzata, non lascia traccia sulla tela. Aggiungere `t.pendown()` prima del secondo `forward()` (o tra i due, a seconda di dove dovrebbe trovarsi lo spazio vuoto) risolverebbe il problema.
 
     **Concept Tested:** penup() and pendown()
 
 ---
 
-#### 6. Which command sets the background color of the turtle window to light blue?
+#### 6. Quale comando imposta il colore di sfondo della finestra turtle su azzurro chiaro?
 
 <div class="upper-alpha" markdown>
 1. `t.bgcolor("lightblue")`
@@ -101,32 +101,30 @@ t.forward(100)
 4. `turtle.background("lightblue")`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `bgcolor()` is a method on the **Screen** object, not on the Turtle object. You call it as `wn.bgcolor("lightblue")` where `wn` is the variable holding your `turtle.Screen()`. The turtle's `pencolor()` method only changes the drawing pen's color, not the background.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `bgcolor()` è un metodo dell'oggetto **Screen**, non dell'oggetto Turtle. Lo chiami come `wn.bgcolor("lightblue")` dove `wn` è la variabile che contiene il tuo `turtle.Screen()`. Il metodo `pencolor()` della turtle cambia solo il colore della penna di disegno, non lo sfondo.
 
     **Concept Tested:** turtle.Screen() Object
 
 ---
 
-#### 7. What does `t.pensize(5)` do?
-
-<parameter name="content">#### 7. What does `t.pensize(5)` do?
+#### 7. Cosa fa `t.pensize(5)`?
 
 <div class="upper-alpha" markdown>
-1. Makes the turtle move 5 times faster
-2. Sets the thickness of the lines the turtle draws to 5 pixels
-3. Changes the turtle's shape to a size-5 circle
-4. Draws a square with sides 5 pixels long
+1. Fa muovere la turtle 5 volte più velocemente
+2. Imposta lo spessore delle linee disegnate dalla turtle a 5 pixel
+3. Cambia la forma della turtle in un cerchio di dimensione 5
+4. Disegna un quadrato con lati lunghi 5 pixel
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `t.pensize(5)` sets the width (thickness) of the lines the turtle draws to 5 pixels. The default size is 1 pixel, which is quite thin. Increasing the pen size to 3, 5, or 10 creates bolder, more visible lines. It does not affect speed, shape, or the size of shapes drawn.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `t.pensize(5)` imposta la larghezza (spessore) delle linee disegnate dalla turtle a 5 pixel. La dimensione predefinita è 1 pixel, piuttosto sottile. Aumentare lo spessore della penna a 3, 5 o 10 crea linee più marcate e visibili. Non influisce sulla velocità, sulla forma, o sulla dimensione delle forme disegnate.
 
     **Concept Tested:** Pen Size and Color
 
 ---
 
-#### 8. Which turtle command makes the turtle cursor invisible without erasing the drawing?
+#### 8. Quale comando turtle rende invisibile il cursore della turtle senza cancellare il disegno?
 
 <div class="upper-alpha" markdown>
 1. `t.erase()`
@@ -135,40 +133,40 @@ t.forward(100)
 4. `t.penup()`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `t.hideturtle()` makes the turtle cursor invisible so it does not appear on your finished drawing. The drawing itself stays fully visible on screen. You can bring the turtle back with `t.showturtle()`. This is useful when you want to display a clean artwork without the arrow cursor on top of it.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `t.hideturtle()` rende invisibile il cursore della turtle così non appare sul tuo disegno finito. Il disegno stesso resta completamente visibile sullo schermo. Puoi far riapparire la turtle con `t.showturtle()`. Questo è utile quando vuoi mostrare un'opera pulita senza il cursore a freccia sopra di essa.
 
     **Concept Tested:** Turtle Appearance
 
 ---
 
-#### 9. How many degrees should the turtle turn to make a right-angle corner (like the corner of a square)?
+#### 9. Di quanti gradi dovrebbe girare la turtle per fare un angolo retto (come l'angolo di un quadrato)?
 
 <div class="upper-alpha" markdown>
-1. 45 degrees
-2. 90 degrees
-3. 180 degrees
-4. 360 degrees
+1. 45 gradi
+2. 90 gradi
+3. 180 gradi
+4. 360 gradi
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. A right-angle corner is 90 degrees — one quarter of a full 360-degree circle. To draw a square, you repeat `forward()` and `right(90)` four times. This is exactly like the geometry you learn in school: the corners of a square are all 90 degrees.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Un angolo retto è di 90 gradi — un quarto di un cerchio completo di 360 gradi. Per disegnare un quadrato, ripeti `forward()` e `right(90)` quattro volte. È esattamente come la geometria che impari a scuola: gli angoli di un quadrato sono tutti di 90 gradi.
 
     **Concept Tested:** Turtle Movement Commands
 
 ---
 
-#### 10. What does `t.shape("turtle")` do?
+#### 10. Cosa fa `t.shape("turtle")`?
 
 <div class="upper-alpha" markdown>
-1. Draws a turtle shape on the canvas in the turtle's current color
-2. Changes the appearance of the turtle cursor from an arrow to a cartoon turtle
-3. Creates a second turtle object named "turtle"
-4. Imports a picture of a turtle from the internet
+1. Disegna una forma a tartaruga sulla tela nel colore attuale della turtle
+2. Cambia l'aspetto del cursore della turtle da una freccia a una tartaruga a fumetti
+3. Crea un secondo oggetto turtle chiamato "turtle"
+4. Importa un'immagine di una tartaruga da internet
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `t.shape("turtle")` changes the appearance of the turtle cursor — the small icon that shows where the turtle is on the screen. Instead of the default arrowhead, it displays a top-down cartoon turtle. Six built-in shapes are available: `"arrow"`, `"turtle"`, `"circle"`, `"square"`, `"triangle"`, and `"classic"`.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `t.shape("turtle")` cambia l'aspetto del cursore della turtle — la piccola icona che mostra dove si trova la turtle sullo schermo. Invece della punta di freccia predefinita, mostra una tartaruga a fumetti vista dall'alto. Sono disponibili sei forme integrate: `"arrow"`, `"turtle"`, `"circle"`, `"square"`, `"triangle"` e `"classic"`.
 
     **Concept Tested:** Turtle Appearance
 
