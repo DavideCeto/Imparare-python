@@ -19,7 +19,7 @@ Leggi il libro su: **[https://dmccreary.github.io/learning-python/](https://dmcc
 
 **Introduzione a Python — Dalle istruzioni di programmazione ai codici con Monty** è un libro di testo interattivo e intelligente, creato da AI, per studenti di età compresa tra 10 e 13 anni che desiderano passare da programmazioni basate su blocchi (come Scratch) a programmazioni reali in Python.
 
-Ogni lezione è basata su programmazione interattiva, realizzata con **Skulpt**, una implementazione di Python in JavaScript. Gli studenti possono leggere un breve programma, cliccare su **Run** per vedere come esegue immediatamente (senza bisogno di installazione o account), e poi modificarlo: cambiare il colore, il numero, la direzione… e ripetere l’esecuzione. La grafica astratta fornita da Skulpt offre un feedback visivo immediato: gli studenti vedono immediatamente quali forme, spirali e pattern appaiono non appena il codice viene eseguito. Prima di ogni esercizio, una simpatica mascotte chiamata Monty chiede agli studenti di *prevedere* cosa farà il codice prima di cliccare su “Run”… Questo metodo favorisce lo sviluppo delle capacità di ragionamento, non solo di una semplice abitudine di copiare e eseguire.
+Ogni lezione si basa su una programmazione interattiva, realizzata con **Skulpt**, una implementazione di Python in JavaScript. Gli studenti possono leggere un breve programma, cliccare su **Run** per vedere come viene eseguito immediatamente (senza bisogno di installazione o account), e poi modificarlo: cambiare il colore, il numero, la direzione… e ripetere l’esecuzione. La grafica astratta fornita da Skulpt offre un feedback visivo immediato: gli studenti vedono immediatamente quali forme, spirali e pattern appaiono non appena il codice viene eseguito. Prima di ogni esercizio, una simpatica mascotte chiamata Monty chiede agli studenti di *prevedere* cosa farà il codice prima di cliccare su “Run”… Questo metodo favorisce lo sviluppo delle capacità di ragionamento, non solo di una semplice abitudine di copiare e eseguire.
 
 Il libro copre 38 capitoli che trattano 450 concetti, verificati attraverso un grafico della dipendenza dei concetti, in modo che ogni idea si basi su quella precedente. Il contenuto, i quiz, le voci del glossario e i MicroSims vengono generati e curati utilizzando le competenze di Claude AI, rendendo questo un libro di testo intelligente di livello 2+ con elementi interattivi e pratici in tutto il libro.
 
@@ -57,7 +57,7 @@ pip install mkdocs-material
 
 ### Creare e servire localmente
 
-Servire localmente per lo sviluppo (con ricarica in tempo reale):
+**Servire localmente per lo sviluppo (con ricarica in tempo reale):**
 
 ```bash
 mkdocs serve

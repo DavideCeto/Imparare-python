@@ -1,47 +1,33 @@
-# Content Generation Guidelines — Beginning Python
+# Linee guida per la generazione di contenuti — Introduzione al Python
 
-This file defines rules for generating student-facing content in this course.
-All AI agents and human authors creating lessons, labs, quizzes, or other
-student-facing pages must follow these guidelines. Instructor-facing content
-(teacher's guide, course description) does not need to use the mascot.
+Questo file definisce le regole per la creazione di contenuti rivolti agli studenti in questo corso.
+Tutti gli agenti AI e gli autori umani che creano lezioni, laboratori, quiz o altre pagine rivolte agli studenti devono seguire queste linee guida. I contenuti rivolti agli insegnanti (guida per gli insegnanti, descrizione del corso) non devono utilizzare questa modalità.
 
 ---
 
-## Primary Teaching Tool: Inline Interactive Turtle Graphics
+## Strumento principale di insegnamento: Grafica Turtle interattiva
 
-**The core feature of this textbook is inline Skulpt turtle graphics that run directly in the browser.**
+**La caratteristica fondamentale di questo libro di testo è la grafica Turtle interattiva che viene eseguita direttamente nel browser.**
 
-In Chapters 1–18, every lesson must teach through interactive turtle programs, not static
-code listings. Students click **Run**, watch Monty draw something on the canvas, then
-immediately modify the code and run it again — all without installing anything or leaving
-the page. This live feedback loop is what makes the textbook engaging for ages 10–14.
+Nei capitoli da 1 a 18, ogni lezione deve essere svolta attraverso programmi Turtle interattivi, non attraverso elenchi di codice statici. Gli studenti cliccano su **Esegui** e osservano il programma Turtle disegnare qualcosa sul canvas, poi modificano immediatamente il codice ed eseguono nuovamente l'esecuzione — tutto questo senza installare nulla o lasciare la pagina. Questo ciclo di feedback live è ciò che rende il libro di testo interessante per gli studenti dai 10 ai 14 anni.
 
-### The "See It, Run It, Modify It" Cycle
+### Il ciclo “Vedere, Eseguire, Modificare”
 
-Every Skulpt lab follows this three-phase experience:
+Ogni laboratorio Skulpt segue questo ciclo di tre fasi:
 
-1. **See it** — a short (5–15 line) working turtle program appears in the editable textarea,
-   accompanied by a prose explanation of what it does.
-2. **Run it** — the student clicks Run and sees the turtle draw something on the canvas to
-   the right of the code.
-3. **Modify it** — the Experiments section at the bottom of each lesson gives 3–5 specific
-   invitations to change the code: a different color, a different number of sides, a new
-   shape, a faster speed, etc.
+1. **Vedere** — un breve programma Turtle (da 5 a 15 righe) appare nella zona di testo modificabile, accompagnato da una spiegazione in prosa del suo funzionamento.
+2. **Eseguire** — lo studente clicca su Esegui e vede il programma Turtle disegnare qualcosa sul canvas, a destra del codice.
+3. **Modificare** — la sezione “Esercizi” in fondo a ogni lezione offre 3-5 opportunità specifiche per modificare il codice: un colore diverso, un numero diverso di lati, una nuova forma, una velocità maggiore, ecc.
 
-**This cycle is the heartbeat of the textbook.** Do not replace it with static code blocks,
-output screenshots, or off-site links (e.g., Trinket) in any lesson for Chapters 1–18.
+**Questo ciclo è il cuore del libro di testo.** Non sostituire mai blocchi di codice statici, screenshot di output o link esterni (ad esempio Trinket) in qualsiasi lezione dei capitoli da 1 a 18.
 
-### Predict Before You Run
+### Prevedere prima di eseguire
 
-Before every Skulpt demo lab, Monty asks the student to **predict what the program will do
-before clicking Run.** Pausing to reason through code before executing it is one of the most
-transferable habits a beginning programmer can build — it trains the mental model that lets
-students debug independently instead of changing things at random.
+Prima di ogni laboratorio di dimostrazione di Skulpt, Monty chiede allo studente di **prevedere cosa farà il programma prima di cliccare su “Run”**. Fermarsi per riflettere sul codice prima di eseguirlo è una delle abitudini più importanti che un programmatore principiante può sviluppare: si allena il modello mentale che permette agli studenti di risolvere i problemi in modo autonomo, invece di cambiare le cose a caso.
 
-**Placement:** the prediction prompt goes **immediately above** the Skulpt lab block, before
-the student can run the code.
+**Posizione:** Il messaggio per la previsione viene inserito **immediatamente sopra** il blocco del laboratorio di Skulpt, prima che lo studente possa eseguire il codice.
 
-**Format — use `mascot-thinking`:**
+**Formato — utilizzare `mascot-thinking`:**
 
 ```markdown
 !!! mascot-thinking "What Do You Think Will Happen?"
@@ -50,27 +36,26 @@ the student can run the code.
     How many sides do you think the turtle will draw? Make your guess — then find out!
 ```
 
-**Rules:**
+**Regole:**
 
-| Rule | Detail |
-|------|--------|
-| Ask one specific question | "How many sides?" / "What color?" / "How many times will the loop run?" — not vague "What happens?" |
-| Calibrate difficulty | Aim for ~50% correct on a first guess — easy enough to attempt, surprising enough to build the habit |
-| Close the loop | After the lab, add one short prose sentence ("Were you right?") — no second admonition needed |
-| Skip in Learning Checks | Learning Check labs already give the student a task; stacking a prediction on top causes overload |
-| Counts toward mascot cap | Prediction `mascot-thinking` and concept `mascot-thinking` both count in the 6-per-lesson limit |
+| Regola | Dettaglio |
+|--------|----------|
+| Chiedere una domanda specifica | “Quanti lati?” / “Quale colore?” / “Quante volte il ciclo si ripeterà?” – non “Cosa succederà?” |
+| Calibrare la difficoltà | Aver circa il 50% di probabilità di risposta corretta nella prima previsione – abbastanza facile da tentare, ma abbastanza sorprendente da favorire lo sviluppo dell’abitudine |
+| Chiudere il ciclo | Dopo il laboratorio, aggiungere una breve frase di commento (“Hai indovinato?”) – non è necessario un secondo avvertimento |
+| Evitare sovraccarico con controlli di apprendimento | I laboratori di controllo dell’apprendimento forniscono già allo studente un compito; aggiungere una previsione in più può causare sovraccarico |
+| Conta per il limite della mascotte | Le previsioni `mascot-thinking` e i concetti `mascot-thinking` entrambi sono conteggiati nel limite di 6 unità per lezione |
 
-### Learning Checks
+### Controlli di Apprendimento
 
-For every important concept, include at least one **Learning Check** — a second Skulpt lab
-(distinct from the main demo) where the student must actively produce or repair code:
+Per ogni concetto importante, includere almeno uno **Controllo di Apprendimento** – un secondo laboratorio di Skulpt (distinto dal laboratorio principale) in cui lo studente deve produrre o riparare il codice attivamente.
 
-| Type | When to use | Admonition |
+| Tipo | Quando utilizzare | Avvertenza |
 |------|-------------|------------|
-| **Add the missing line** — program stops short or gives the wrong result until the student adds one key line | Introducing a new command or concept | `mascot-thinking` |
-| **Find and fix the bug** — program has a small deliberate error (wrong method name, off-by-one in `range()`, missing `pendown()`, etc.) | After a concept has been introduced | `mascot-warning` |
+| **Aggiungere la riga mancante** — il programma si ferma prima o restituisce un risultato errato finché lo studente aggiunge una riga | Introduzione di un nuovo comando o concetto | `mascot-thinking` |
+| **Trovare e correggere il bug** — il programma presenta un piccolo errore intenzionale (nome del metodo errato, errore di un singolo elemento in `range()`, mancanza di `pendown()`, ecc.) | Dopo l’introduzione di un concetto | `mascot-warning` |
 
-**Learning Check format — missing line:**
+**Formato di controllo dell’apprendimento — riga mancante:**
 
 ```markdown
 !!! mascot-thinking "Your Turn — Add the Missing Line"
@@ -81,7 +66,7 @@ For every important concept, include at least one **Learning Check** — a secon
 [Skulpt lab block with the incomplete program in the editor]
 ```
 
-**Learning Check format — find the bug:**
+**Formato di controllo dell’apprendimento — trovare il bug:**
 
 ```markdown
 !!! mascot-warning "Spot the Bug!"
@@ -92,49 +77,40 @@ For every important concept, include at least one **Learning Check** — a secon
 [Skulpt lab block with the buggy program in the editor]
 ```
 
-### Skulpt Lab Sizing for Turtle Programs
+### Dimensionamento dei laboratori per i programmi con turtle
 
-Keep programs short enough that students can read the whole thing at a glance:
+Mantenere i programmi abbastanza brevi affinché gli studenti possano leggere tutto d’un fiato:
 
-- **Introductory labs (Chapters 1–5):** 4–8 lines of Python
-- **Mid-course labs (Chapters 6–18):** 8–20 lines of Python
-- **Advanced labs (Chapters 19+):** no strict limit, but prefer several short focused labs over one long one
+- **Laboratori introduttivi (Capitoli 1–5):** 4–8 righe di Python
+- **Laboratori intermedi (Capitoli 6–18):** 8–20 righe di Python
+- **Laboratori avanzati (Capitoli 19+):** nessun limite stretto, ma si preferiscono diversi laboratori brevi e specifici piuttosto che uno lungo
 
-### When to Use Each Lab Type
+### Quando utilizzare ogni tipo di laboratorio
 
-There are two Skulpt lab layouts. Choose based on whether the program uses turtle graphics:
+Esistono due schemi per i laboratori di Skulpt. Scegliate in base a se il programma utilizza grafica con turtle:
 
-| Situation | Lab type | HTML class |
-|-----------|----------|------------|
-| Program uses `import turtle` or any turtle command | **Drawing lab** | `class="cm-lab"` |
-| Program uses only `print()`, variables, loops, functions, etc. | **Text-only lab** | `class="cm-lab cm-text-only"` |
+| Situazione | Tipo di laboratorio | Class HTML |
+|-----------|-------------|------------|
+| Il programma utilizza `import turtle` o qualsiasi comando con turtle | **Laboratorio di disegno** | `class="cm-lab"` |
+| Il programma utilizza solo `print()`, variabili, cicli, funzioni, ecc. | **Laboratorio testuale** | `class="cm-lab cm-text-only"` |
 
-**Drawing labs** (Chapters 1–18 turtle lessons) show a 400 × 400 px canvas to the right of the
-code editor where the turtle draws.
+**Laboratori di disegno** (Lezioni 1–18 con turtle) mostrano un canvas di 400 × 400 pixel a destra dello schermo, dove il programma con turtle disegna.
 
-**Text-only labs** hide the canvas panel entirely; the code editor stretches to fill the full
-content width. Use these for any program that produces only text output — `print()` calls,
-variable values, string results, etc. This layout is the default from Chapter 19 onward, and
-can also appear in earlier chapters for the rare non-turtle concept (e.g., a `print()`-only
-variable lesson).
+**Laboratori di tipo testuale** nascondono completamente il pannello della tavola; lo editor del codice si estende per riempire l’intera larghezza del contenuto. Utilizzare questi laboratori per qualsiasi programma che produce soltanto output testuale — chiamate, valori variabili, risultati in stringhe, ecc. Questa disposizione è la default dal Capitolo 19 in poi, e può anche apparire nei capitoli precedenti per i rari concetti che non richiedono l’uso della tartaruga (ad esempio, una lezione che utilizza soltanto variabili del tipo `print()`).
 
-Never put a text-only lab in a lesson that also needs the canvas, and never put a drawing
-lab in a lesson whose programs do not call any turtle commands — the empty canvas just
-wastes space and confuses students.
+Non inserire mai un laboratorio di tipo testuale in una lezione che richiede anche la presenza della tavola, e non inserire mai un laboratorio di disegno in una lezione i cui programmi non utilizzano comandi della tartaruga — la tavola vuota spreca semplicemente spazio e confonde gli studenti.
 
 ---
 
-## Lesson Structure Requirements
+## Requisiti di struttura della lezione
 
-These rules apply to every student-facing lesson page regardless of chapter.
+Queste regole si applicano a ogni pagina della lezione destinata agli studenti, indipendentemente dal capitolo.
 
-### Learning Objectives
+### Obiettivi di apprendimento
 
-Every lesson must open with 1–3 student-facing learning objectives written in plain English.
-Place them **before** the `mascot-welcome` admonition so students know what they are working
-toward before Monty speaks.
+Ogni lezione deve iniziare con 1–3 obiettivi di apprendimento scritti in inglese semplice. Posizionarli **prima** della nota `mascot-welcome`, in modo che gli studenti sappiano verso cosa stanno lavorando prima che Monty inizi a parlare.
 
-**Format:**
+**Formato:**
 
 ```markdown
 By the end of this lesson you'll be able to:
@@ -144,21 +120,18 @@ By the end of this lesson you'll be able to:
 - Change the number of sides to draw any regular polygon
 ```
 
-**Rules:**
+**Regole:**
 
-- Write from the student's perspective: "you'll be able to…"
-- Use concrete, observable verbs: *draw, write, fix, explain, change, build* — never "understand" or "know about"
-- 1 objective = 1 new concept; if you have 4+ objectives the lesson is too broad — split it into two lessons
-- Keep language at a 5th-grade reading level — no jargon in the objectives themselves; define it later in the lesson
+- Scrivere dal punto di vista dello studente: “Potrete…”
+- Utilizzare verbi concreti e osservabili: *disegnare, scrivere, sistemare, spiegare, modificare, costruire* — mai “comprendere” o “sapere di”
+- 1 obiettivo = 1 nuovo concetto; se ci sono 4 o più obiettivi, la lezione è troppo ampia — suddividerla in due lezioni
+- Mantenere il linguaggio a un livello di lettura adeguato alla scuola elementare — nessun gergo negli obiettivi stessi; definirli successivamente nella lezione
 
-### Scratch Bridge
+### Ponte con Scratch
 
-For every new concept in Chapters 1–14 that has a Scratch analogue, include a **Scratch Bridge**
-callout immediately after the concept is first introduced. This is the highest-leverage move for
-this audience — students already have a working mental model from Scratch; connecting to it
-explicitly saves significant cognitive effort.
+Per ogni nuovo concetto nei capitoli 1–14 che ha un equivalente in Scratch, includere un **Ponte con Scratch** subito dopo l’introduzione del concetto. Questo è il modo più efficace per coinvolgere gli studenti: essi già hanno un modello mentale basato su Scratch; collegarlo esplicitamente riduce notevolmente lo sforzo cognitivo.
 
-**Format — use `mascot-tip` with the label "Scratch Bridge":**
+**Format — utilizzare `mascot-tip` per la etichetta “Ponte Scratch”:**
 
 ```markdown
 !!! mascot-tip "Scratch Bridge"
@@ -168,107 +141,96 @@ explicitly saves significant cognitive effort.
     it tells Monty to walk forward 10 steps!
 ```
 
-**Common Scratch-to-Python bridges:**
+**Comuni ponti tra Scratch e Python:**
 
-| Scratch block | Python equivalent | First appears |
+| Blocco Scratch | Equivalente Python | Prima apparizione |
 |---------------|-------------------|---------------|
-| Move ___ steps | `forward(n)` | Ch 5 |
-| Turn ↻ ___ degrees | `right(n)` | Ch 5 |
-| Turn ↺ ___ degrees | `left(n)` | Ch 5 |
-| Pen down / Pen up | `pendown()` / `penup()` | Ch 5 |
-| Set pen color | `pencolor("red")` | Ch 5 |
-| Repeat ___ | `for i in range(n):` | Ch 7 |
-| If ___ then | `if condition:` | Ch 9 |
-| If ___ then / else | `if condition: … else:` | Ch 9 |
-| Set ___ to ___ | `variable = value` | Ch 3 |
-| Say ___ | `print(...)` | Ch 1 |
-| Ask ___ and wait | `input(...)` | Ch 13 |
+| Muovere ___ passi | `forward(n)` | Capitolo 5 |
+| Girare ↻ ___ gradi | `right(n)` | Capitolo 5 |
+| Girare ↺ ___ gradi | `left(n)` | Capitolo 5 |
+| Abbassare/Alzare la penna | `pendown()` / `penup()` | Capitolo 5 |
+| Impostare il colore della penna | `pencolor("red")` | Capitolo 5 |
+| Ripetere ___ | `for i in range(n):` | Capitolo 7 |
+| Se ___ allora | `if condition:` | Capitolo 9 |
+| Se ___ allora/altro | `if condition: … else:` | Capitolo 9 |
+| Impostare ___ su ___ | `variable = value` | Capitolo 3 |
+| Dire ___ | `print(...)` | Capitolo 1 |
+| Chiedere ___ e aspettare | `input(...)` | Capitolo 13 |
 
-**Rules:**
+**Regole:**
 
-- Required whenever a Scratch analogue exists (Chapters 1–10); optional but encouraged in Chapters 11–14
-- Skip in Chapter 15+ — students have moved past the Scratch mental model
-- Always frame Python as the natural next step — never say "in Scratch you had to…" (sounds dismissive)
-- Counts toward the 6-per-lesson mascot admonition cap
+- Requisito ogni volta che esiste un equivalente Scratch (Capitoli 1–10); opzionale ma incoraggiato nei Capitoli 11–14
+- Saltato nei Capitoli 15+ — gli studenti hanno superato il modello mentale Scratch
+- Devi sempre considerare Python come il passo naturale successivo — non dire mai “in Scratch dovevi…” (suona disprezzante)
+- Conta per il limite massimo di 6 concetti per lezione
 
-### One New Concept Per Lab
+### Un nuovo concetto per ogni laboratorio
 
-Each Skulpt **demo lab** must introduce exactly **one new concept**. If a lesson covers three
-new turtle commands, write three short sequential labs — not one lab that introduces all three
-at once.
+Ogni **laboratorio di dimostrazione** deve introdurre esattamente **un nuovo concetto**. Se una lezione tratta tre comandi Python, scrivere tre laboratori brevi e sequenziali — non un laboratorio che introduca tutti e tre insieme.
 
-This is the single most important cognitive load rule in this textbook. A novice programmer
-cannot simultaneously parse unfamiliar syntax, predict program behavior, and map it to prior
-knowledge. Isolate each new idea in its own runnable chunk.
+Questa è la regola di carico cognitivo più importante in questo libro di testo. Un programmatore principiante non può analizzare la sintassi sconosciuta, prevedere il comportamento del programma e riconnetterlo con le conoscenze pregresse. Isolare ogni nuovo concetto in un blocco di codice funzionante.
 
-**Correct pattern:** Lab A shows `penup()` alone → Lab B adds `goto()` → Lab C completes the
-idea with `pendown()`, each building on the last.
+**Modello corretto:** Laboratorio A mostra solo `penup()` → Laboratorio B aggiunge `goto()` → Laboratorio C completa l’idea con `pendown()`, ognuno basato sull’altro.
 
-**Incorrect pattern:** One lab where `penup()`, `goto()`, and `pendown()` all appear for the
-first time together.
+**Modello errato:** In un laboratorio, in cui `penup()`, `goto()` e `pendown()` appaiono per la prima volta insieme.
 
-The demo lab for any concept should be the **simplest possible program** that demonstrates
-only that concept. Save combinations and creative uses for the Experiments section.
+Il laboratorio di dimostrazione per qualsiasi concetto dovrebbe essere il **programma più semplice possibile** che dimostri soltanto quel concetto. Salva le combinazioni e le utilizzazioni creative per la sezione degli esperimenti.
 
-### New Vocabulary
+### Nuovo vocabolario
 
-When a technical term appears **for the first time**, follow this three-step rule:
+Quando un termine tecnico appare **per la prima volta**, segui questa regola a tre passi:
 
-1. **Bold** the term on first use: `**parameter**`
-2. Define it immediately in one plain-English sentence using a concrete analogy
-3. Show it in working code on the same page
+1. **Incolla** il termine la prima volta: `**parameter**`
+2. Definiscilo immediatamente in una frase in lingua comune, utilizzando una analogia concreta
+3. Mostragli nel codice funzionante sulla stessa pagina
 
-**Example:**
-> A **parameter** is information you pass into a function when you call it — like telling
-> a vending machine which button to press before it does anything.
+**Esempio:**
+> Un **parametro** è informazione che passi a una funzione quando la chiami — come dire a una macchina distributrice quale pulsante premere prima che faccia qualcosa.
 
-**Additional rules:**
+**Regole aggiuntive:**
 
-- Never introduce a term in the first sentence of an explanation — establish the concept in plain English first, then name it
-- Do not define two new terms in the same sentence
-- Reinforce the term at least once more in the same lesson (in the explanation table, an experiment prompt, or Monty's dialogue)
-- Do not bold a term on its second or later appearance — bolding signals "this is new"
+- Non introduci mai un termine nella prima frase di una spiegazione — stabilisci il concetto in lingua comune prima, poi chiamalo
+- Non definisci due termini nuovi nella stessa frase
+- Rinfresca il termine almeno un'altra volta nella stessa lezione (nella tabella delle spiegazioni, in un prompt di esperimento, o nel dialogo di Monty)
+- Non incolla un termine la seconda volta o dopo — l'incollando segnala "questo è nuovo"
 
-### Spaced Repetition and Spiral Review
+### Ripasso e revisione spiralata
 
-Each lesson must naturally use at least 2–3 concepts from **previous chapters** as background
-context in its demo labs — without re-teaching them. Students consolidate earlier learning by
-encountering it in new situations.
+Ogni lezione deve naturalmente utilizzare almeno 2–3 concetti dai **capitoli precedenti** come contesto di riferimento nei laboratori di dimostrazione — senza ricomporli. Gli studenti consolidano l'apprendimento precedente incontrandolo in nuove situazioni.
 
-**How to apply:**
+**Come applicare:**
 
-- Teaching `for` loops (Ch 7)? Write the loop body using `forward()` and `right()` — reinforcing Ch 5 commands
-- Teaching `if/else` (Ch 9)? Use a variable for the condition — reinforcing Ch 3 variables
-- Teaching string methods (Ch 14)? Feed them from `input()` — reinforcing Ch 13 user input
+- **Insegnare i cicli `for` (Capitolo 7)?** Scrivi il corpo del ciclo utilizzando `forward()` e `right()` — rafforzando i comandi del Capitolo 5.
+- **Insegnare `if/else` (Capitolo 9)?** Utilizzare una variabile per la condizione — rafforzando le variabili del Capitolo 3.
+- **Insegnare i metodi string (Capitolo 14)?** Forniscili da `input()` — rafforzando l'input utente del Capitolo 13.
 
-**What not to do:**
+**Cosa non fare:**
 
-- Do not add a "reminder" paragraph re-explaining a prior concept — just use it
-- Do not re-introduce a prior concept as if new: "First, recall that `forward()` moves the turtle…" — trust that students read the earlier chapters
+- Non aggiungere un paragrafo di "ricordo" per riesporre un concetto precedente — utilizzalo semplicemente.
+- Non ripresentare un concetto precedente come se fosse nuovo: "Prima di tutto, ricorda che `forward()` sposta la tartaruga…" — affidi che gli studenti leggano i capitoli precedenti.
 
-### Handling Skulpt Error Messages
+### Gestione dei messaggi di errore di Skulpt
 
-Students will produce errors while modifying code. Skulpt prints tracebacks to
-the `<pre class="cm-output">` panel. Lessons should prepare students to read errors calmly.
+Gli studenti potranno verificarsi modificando il codice. Skulpt stampa i messaggi di errore sul pannello `<pre class="cm-output">`. Le lezioni dovrebbero preparare gli studenti a leggere gli errori con calma.
 
-**By chapter range:**
+**Per fasce di capitoli:**
 
-| Chapters | Guidance |
+| Capitoli | Indicazioni |
 |----------|----------|
-| 1–5 | Add a short plain-text "If you see a red error message" note after the first lab. 2–3 sentences max. |
-| 6–12 | Fold error guidance into the `mascot-warning` admonition for the most likely mistake in that lesson. |
-| 13+ | Expect students to read tracebacks independently. Only add notes for genuinely tricky errors (e.g., `TypeError: can only concatenate str (not "int") to str`). |
+| 1–5 | Aggiungere un breve paragrafo in testo semplice "Se vedi un messaggio di errore rosso" dopo il primo laboratorio. Massimo 2–3 frasi. |
+| 6–12 | Includere le indicazioni di errore nel `mascot-warning` per il errore più probabile in quel capitolo. |
+| 13+ | Aspettarsi che gli studenti leggano i messaggi di errore in modo autonomo. Aggiungere note solo per errori particolarmente difficili (ad esempio, `TypeError: can only concatenate str (not "int") to str`). |
 
-**Most common Skulpt errors by chapter range:**
+**Erroi più comuni di Skulpt per fasce di capitoli:**
 
-| Chapters | Common errors |
+| Capitoli | Errori comuni |
 |----------|---------------|
-| 1–4 | `NameError` from misspelled command, wrong indentation |
-| 5–8 | Missing `pendown()`, wrong argument type passed to `forward()` |
-| 9–12 | Missing colon after `if` / `for`, wrong indentation after colon |
-| 13–18 | `TypeError` mixing `str` + `int`, `ValueError` from bad `int()` conversion |
+| 1–4 | `NameError` con comandi scritti male, imputazione errata |
+| 5–8 | Mancanza di `pendown()`, tipo di argomento errato passato a `forward()` |
+| 9–12 | Mancanza di un punto e virgola dopo `if` / `for`, imputazione errata dopo il punto e virgola |
+| 13–18 | `TypeError` che mescola `str` + `int`, `ValueError` proveniente da una conversione errata di `int()` |
 
-**"If you see an error" note format (Chapters 1–5):**
+**Formato del paragrafo "Se vedi un errore" (Capitoli 1–5):**
 
 ```markdown
 **If you see a red error message:** Check your spelling — Python is case-sensitive,
@@ -278,107 +240,104 @@ Also make sure every line inside the loop is indented by exactly 4 spaces.
 
 ---
 
-## Learning Mascot: Monty the Python
+## Apprendimento della Maschera: Monty il Python
 
-### Mascot File Index
+### Indice dei File della Maschera
 
-The canonical files for this mascot. When editing any of these, update the
-others in the same turn so they stay in sync.
+I file canonici per questa maschera. Quando si modifica uno di questi, aggiorna gli altri nello stesso turno in modo che rimangano sincronizzati.
 
-| File | Purpose |
+| File | Scopo |
 |------|---------|
-| [`docs/img/mascot/neutral.png`](docs/img/mascot/neutral.png) | Default / general-purpose pose |
-| [`docs/img/mascot/welcome.png`](docs/img/mascot/welcome.png) | Chapter-opening pose |
-| [`docs/img/mascot/thinking.png`](docs/img/mascot/thinking.png) | Key-concept / prediction / learning-check pose |
-| [`docs/img/mascot/tip.png`](docs/img/mascot/tip.png) | Hint / Scratch Bridge / helpful-guidance pose |
-| [`docs/img/mascot/warning.png`](docs/img/mascot/warning.png) | Common-mistake / bug-fix / pitfall pose |
-| [`docs/img/mascot/encouraging.png`](docs/img/mascot/encouraging.png) | Difficult-content / struggle pose |
-| [`docs/img/mascot/celebration.png`](docs/img/mascot/celebration.png) | End-of-lesson / achievement pose |
-| [`docs/css/mascot.css`](docs/css/mascot.css) | Custom admonition styles for the seven pose contexts |
-| [`docs/learning-graph/mascot-test.md`](docs/learning-graph/mascot-test.md) | Rendering test page that exercises every admonition style |
+| [`docs/img/mascot/neutral.png`](docs/img/mascot/neutral.png) | Posizione di default / utilizzo generale |
+| [`docs/img/mascot/welcome.png`](docs/img/mascot/welcome.png) | Posizione all'inizio del capitolo |
+| [`docs/img/mascot/thinking.png`](docs/img/mascot/thinking.png) | Posizione per i concetti chiave / previsioni / verifica dell'apprendimento |
+| [`docs/img/mascot/tip.png`](docs/img/mascot/tip.png) | Suggerimento / Ponte dei Crolli / guida utile |
+| [`docs/img/mascot/warning.png`](docs/img/mascot/warning.png) | Posizione per gli errori comuni / correzione dei bug / pericoli |
+| [`docs/img/mascot/encouraging.png`](docs/img/mascot/encouraging.png) | Posizione per il contenuto difficile / lotta |
+| [`docs/img/mascot/celebration.png`](docs/img/mascot/celebration.png) | Posizione alla fine della lezione / realizzazione |
+| [`docs/css/mascot.css`](docs/css/mascot.css) | Stili di avvertimento personalizzati per i sette contesti della posizione |
+| [`docs/learning-graph/mascot-test.md`](docs/learning-graph/mascot-test.md) | Pagina di test che esercita ogni stile di avvertimento |
 
-### Character Overview
+### Panoramica del Personaggio
 
-- **Name**: Monty
-- **Species**: Python snake
-- **Personality**: Curious, encouraging, patient, playful, never sarcastic or intimidating
-- **Catchphrase**: "Let's code it together!"
-- **Visual**: Friendly cartoon python with bright emerald-green scales, oversized round wire-rim
-  glasses, large sparkling blue-green eyes, two small expressive arms, and a curling tail.
-  Flat vector style, transparent background, consistent across all poses.
+- **Nome**: Monty
+- **Specie**: Serpente Python
+- **Personalità**: Curioso, incoraggiante, paziente, giocoso, mai sarcastico o intimidatorio
+- **Coda**: "Andiamo a codare insieme!"
+- **Aspetto**: Serpente cartoonistico amichevole con scaglie di un brillante verde smeraldo, occhiali di vetro rotondi di grandi dimensioni, grandi occhi blu-verdi scintillanti, due braccia espressivi e una coda riccia.
+  Stile vettore piatto, sfondo trasparente, uniforme in tutte le posizioni.
 
-### Voice Characteristics
+### Caratteristiche della Voce
 
-- Uses simple, encouraging language appropriate for ages 10–14
-- Celebrates small wins — never dismisses a question as "easy"
-- Refers to students as "coders" or "programmers"
-- Occasionally uses Python puns ("Let's uncoil this problem!", "I've got a hiss-tory of coding!")
-- Never uses jargon without defining it first
-- Signature phrases: "Let's code it together!", "You've got this!", "Great question!"
+**Regole IMPORTANTI:**  
+- Mantieni ESATTAMENTE invariati i placeholder nella forma §§PLACEHOLDER_N§§ (non tradurli, non modificarli).  
+- Mantieni la formattazione Markdown (titoli #, elenchi, grassetto, ecc.).  
+- Non aggiungere commenti, note o spiegazioni: restituisci SOLO il testo tradotto.  
+- Usa un registro tecnico-didattico adatto a un manuale universitario.  
 
-### Mascot Admonition Format
+**Testo:**  
+- Utilizza un linguaggio semplice e incoraggiante, adatto per un pubblico di età 10–14 anni.  
+- Celebra i piccoli successi; non scartare mai una domanda come “facile”.  
+- Si riferisce agli studenti come “coders” o “programmers”.  
+- Utilizza occasionalmente giochi di parole in Python (“Let’s uncoil this problem!”, “I’ve got a hiss-tory of coding!”).  
+- Non utilizza gergo senza definirlo prima.  
+- Frasi di firma: “Let’s code it together!”, “You’ve got this!”, “Great question!”.  
 
-**Always** place mascot images in the admonition body, never in the title bar.
-Use the Markdown image syntax with the `mascot-admonition-img` class:
+### **Formato delle avvertenze della mascotte**  
+**Sempre** inserisci le immagini della mascotte all’interno del corpo dell’avvertenza, mai nella barra del titolo.  
+Utilizza la sintassi Markdown per le immagini con la classe `mascot-admonition-img`:  
 
 ```markdown
 !!! mascot-welcome "Welcome to This Lesson!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
     Admonition text goes here after the image. Keep it to 1–3 sentences.
-```
+```  
 
-**Image path depth:** The path `../../img/mascot/` is correct for pages two
-directories deep (e.g., `chapters/05-drawing-with-turtle/` or `skulpt/02-simple-square/`).
-For pages at the root of `docs/`, use `img/mascot/`.
-For pages one level deep (e.g., `docs/strategy/index.md`), use `../img/mascot/`.
+**Profondità del percorso delle immagini:** Il percorso `../../img/mascot/` è corretto per le pagine a due livelli (es.: `chapters/05-drawing-with-turtle/` o `skulpt/02-simple-square/`).  
+Per le pagine alla radice del sito, utilizza `img/mascot/`.  
+Per le pagine a un livello di profondità (es.: `docs/strategy/index.md`), utilizza `../img/mascot/`.  
 
-### Placement Rules
+### **Regole di posizionamento**
 
-| Context | Admonition Type | Image | Frequency |
-|---------|----------------|-------|-----------|
-| Lesson opening | `mascot-welcome` | `welcome.png` | Once per lesson — always first |
-| Prediction prompt | `mascot-thinking` | `thinking.png` | Once per demo lab |
-| Key concept or insight | `mascot-thinking` | `thinking.png` | 1–2 per lesson |
-| Scratch Bridge | `mascot-tip` | `tip.png` | Once per new concept with a Scratch analogue |
-| Helpful hint or shortcut | `mascot-tip` | `tip.png` | As needed |
-| Common mistake / pitfall | `mascot-warning` | `warning.png` | As needed |
-| Find-the-bug Learning Check | `mascot-warning` | `warning.png` | Once per learning check of this type |
-| Difficult content | `mascot-encourage` | `encouraging.png` | Where students may struggle |
-| End of lesson / experiments | `mascot-celebration` | `celebration.png` | Once per lesson — always last |
-| General sidebar | `mascot-neutral` | `neutral.png` | As needed |
+**Do:**  
+- Use the placeholders in their original form (§§PLACEHOLDER_N§§).  
+- Maintain the Markdown format (titles with #, lists, bold, etc.).  
+- Provide only the translated text.  
+- Use a technical-didactic style suitable for a university manual.  
 
-### Hard Limits
+**Don’t:**  
+- Modify the placeholders.  
+- Add comments, notes, or explanations.  
+- Use mascot admonitions purely for decoration; they must add instructional value.  
 
-- **Maximum 6 mascot admonitions per lesson** — more than this interrupts reading flow
-- **No back-to-back mascot admonitions** — always separate with at least one paragraph of content
-- **One `mascot-welcome` maximum per lesson** — always at the very start (after learning objectives)
-- **One `mascot-celebration` maximum per lesson** — always at the very end
-- Do not use mascot admonitions purely for decoration — every use must add instructional value
+### Hard Limits  
+- **Maximum 6 mascot admonitions per lesson** — more than this interrupts reading flow.  
+- **No back-to-back mascot admonitions** — always separate them with at least one paragraph of content.  
+- **One `mascot-welcome` maximum per lesson** — always at the very start (after learning objectives).  
+- **One `mascot-celebration` maximum per lesson** — always at the very end.  
+- Do not use mascot admonitions for decorative purposes; they must enhance instructional value.
 
-### Do's and Don'ts
+**Fai:**  
+- Utilizza Monty per introdurre nuovi argomenti con calore all'inizio di ogni lezione.  
+- Include la frase “L’abbiamo fatto insieme!” nelle presentazioni di benvenuto.  
+- Mantieni i dialoghi brevi (massimo 1–3 frasi).  
+- Assegnare le immagini ai diversi contenuti: posture per le istruzioni per Scratch Bridge, avvertimenti per i bug e le insidie.  
+- Scrivi in tono incoraggiante e adatto ai bambini, usando la voce di Monty.  
 
-**Do:**
-- Use Monty to introduce new topics warmly at the start of every lesson
-- Include the catchphrase "Let's code it together!" in welcome admonitions
-- Keep dialogue brief (1–3 sentences maximum)
-- Match the pose image to the content type (tip pose for Scratch Bridge and hints, warning pose for bugs and pitfalls)
-- Write in Monty's encouraging, kid-friendly voice
-
-**Don't:**
-- Use Monty more than 6 times in a single lesson
-- Put mascot admonitions back-to-back without intervening content
-- Change Monty's personality or make him sound sarcastic or intimidating
-- Use `<img>` HTML tags — always use Markdown image syntax with `{ class="mascot-admonition-img" }`
-- Place images in the admonition title bar
+**Non fare:**  
+- Utilizzare Monty più di 6 volte in una singola lezione.  
+- Inserire le istruzioni in modo consecutivo, senza contenuti intermedi.  
+- Modificare la personalità di Monty o farlo sembrare sarcastico o intimidatorio.  
+- Usare le etichette HTML `<img>`; utilizza sempre la sintassi Markdown per le immagini con `{ class="mascot-admonition-img" }`.  
+- Posizionare le immagini nella barra del titolo delle istruzioni.  
 
 ---
 
-## Skulpt Lab Format
+## Struttura del Laboratorio Skulpt  
 
-All Skulpt interactive labs share a common structure. Follow this template exactly
-when generating a new lesson page.
+Tutti i laboratori interattivi Skulpt seguono una struttura comune. Seguire esattamente questo template quando crei una nuova pagina di lezione.  
 
-### Page Structure
+### Struttura della Pagina  
 
 ```markdown
 # Lesson Title
@@ -405,8 +364,8 @@ technically. Bold the term on first use and define it with an analogy.
 
 ## Sample Code
 
-```python
-[working turtle program — as short as possible for this concept]
+```python  
+[Programma di lavoro con il turtle – il più breve possibile per questo concetto]  
 ```
 
 !!! mascot-thinking "What Do You Think Will Happen?"
@@ -463,19 +422,13 @@ then run it to check!
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     You've completed this lesson — and that's something to celebrate!
     Try the experiments above to go even further. Let's code it together!
-```
+```  
 
-### Lab HTML Block
+### Blocco HTML del Laboratorio  
 
-There are two lab templates. Pick based on whether the program uses turtle graphics
-(see [When to Use Each Lab Type](#when-to-use-each-lab-type)). Both use the
-**CodeMirror** editor — line numbers, syntax highlighting, and auto-indent — wired to
-the Skulpt runtime.
+Esistono due template per il laboratorio. Scegli quello appropriato in base al tipo di programma utilizzato (vedi [Quando utilizzare ciascun tipo di laboratorio](#quando-utilizzare-ciascun-laboratorio)). Entrambi i template utilizzano l’editor **CodeMirror** – numeri di riga, evidenziazione della sintassi e indentazione automatica – collegato alla piattaforma Skulpt.  
 
-The `<script>` tags must appear **once per page**, before the first lab block. The
-CodeMirror CSS and `codemirror-lab.css` load globally via `mkdocs.yml`, so do not add
-inline `<style>` or `<link>` tags. The final script, `codemirror-lab.js`, defines the
-`initCmLab`, `runCmLab`, and `resetCmLab` functions the labs call:
+Le etichette `<script>` devono apparire **una volta per pagina**, prima del primo blocco di laboratorio. Il CSS per CodeMirror e le etichette `codemirror-lab.css` vengono caricati globalmente tramite `mkdocs.yml`; quindi non utilizzare etichette inline `<style>` o `<link>`. Il codice finale, `codemirror-lab.js`, definisce le funzioni `initCmLab`, `runCmLab` e `resetCmLab` che vengono chiamate nei laboratori.  
 
 ```html
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
@@ -485,14 +438,13 @@ inline `<style>` or `<link>` tags. The final script, `codemirror-lab.js`, define
 <script src="../../js/codemirror-lab.js"></script>
 ```
 
-**Path depth matters** on the last tag. Chapter pages are two levels deep
-(`chapters/05-.../index.md`) → `../../js/codemirror-lab.js`. Lab pages one level deep
+**Profondità del percorso è importante** nell'ultima etichetta. Le pagine dei capitoli hanno una profondità di due livelli
+(`chapters/05-.../index.md`) → `../../js/codemirror-lab.js`. Le pagine del laboratorio hanno una profondità di un livello
 (`python-labs/02-simple-square.md`) → `../js/codemirror-lab.js`.
 
-#### Drawing Lab (turtle programs)
-
-Use when the program calls `import turtle` or any turtle command.
-The canvas appears to the right of the code editor.
+#### Laboratorio di disegno (programmi con teste)
+Usare quando il programma chiede `import turtle` o qualsiasi comando per le teste.
+Il canvas appare a destra dell'editor di codice.
 
 ```html
 <div class="cm-lab">
@@ -513,12 +465,8 @@ initCmLab('', `PYTHON CODE HERE`);
 </script>
 ```
 
-#### Text-Only Lab (print/variables/logic — no turtle)
-
-Use when the program produces only text output. Add `cm-text-only` to the lab's
-class list. The canvas container is hidden by CSS and the editor fills the full
-content width. The `cm-turtle` div must still be present so the lab initialises
-cleanly — it just isn't visible.
+#### Laboratorio solo testuale (print/versori/logica — senza teste)
+Usare quando il programma produce solo output testuale. Aggiungere `cm-text-only` alla lista delle classi del laboratorio. Il contenitore del canvas è nascosto tramite CSS e l'editor occupa tutta la larghezza del contenuto. Il div `cm-turtle` deve comunque essere presente affinché il laboratorio venga inizializzato correttamente — semplicemente non è visibile.
 
 ```html
 <div class="cm-lab cm-text-only">
@@ -539,25 +487,16 @@ initCmLab('', `PYTHON CODE HERE`);
 </script>
 ```
 
-#### Rules that apply to both templates
+#### Regole applicabili a entrambi i template
+- Il codice Python va inserito all'interno del `initCmLab('', ...)` **template literal** (tilde), e deve corrispondere esattamente al blocco di codice di esempio.
+- Poiché il codice si trova all'interno di un template JavaScript, un tilde o una barra lunga nel codice Python deve essere escapeata con una barra lunga. I programmi con teste per principianti quasi mai utilizzano entrambi; le strumentazioni di conversione automatica li escapeano automaticamente.
+- **Non impostare l'altezza dell'editor** — CodeMirror si autoesclude per il codice, con un fallback da `min-height` a `codemirror-lab.css`.
+- La prima pagina del laboratorio utilizza gli ID semplici (`cm-editor`, `cm-output`, `cm-turtle`)
+e il suffisso vuoto `''`.
 
-- The Python code goes inside the `initCmLab('', ...)` **template literal** (backticks),
-  and must match the Sample Code block exactly
-- Because the code sits in a JavaScript template literal, a literal backtick or
-  backslash in the Python must be backslash-escaped. Beginner turtle programs almost
-  never contain either; the bulk-conversion tooling escapes them automatically
-- **Do not set a height on the editor** — CodeMirror auto-sizes to the code, with a
-  `min-height` fallback from `codemirror-lab.css`
-- The first lab on a page uses the plain IDs (`cm-editor`, `cm-output`, `cm-turtle`)
-  and the empty suffix `''`
+#### Multiple laboratori su una pagina (Verifiche di apprendimento, ecc.)
 
-#### Multiple labs on one page (Learning Checks, etc.)
-
-Every lab after the first uses a `-2`, `-3`, … suffix on the three element IDs
-(`cm-editor-2`, `cm-output-2`, `cm-turtle-2`) and passes that same suffix to
-`initCmLab`, `runCmLab`, and `resetCmLab`. The `cm-text-only` class applies to each
-lab independently — a page may have a drawing lab first and a text-only lab second,
-or vice versa.
+Ogni laboratorio, dopo il primo, utilizza il suffisso `-2`, `-3`, … sui nomi dei tre elementi (`cm-editor-2`, `cm-output-2`, `cm-turtle-2`) e applica lo stesso suffisso a `initCmLab`, `runCmLab` e `resetCmLab`. La classe `cm-text-only` si applica indipendentemente a ogni laboratorio: una pagina può avere prima un laboratorio di disegno e poi un laboratorio di testo, oppure il contrario.
 
 ```html
 <!-- Second drawing lab -->
@@ -579,20 +518,19 @@ initCmLab('-2', `PYTHON CODE HERE`);
 </script>
 ```
 
-For a text-only second lab, use `<div class="cm-lab cm-text-only">` with the same
-`-2` suffixes.
+Per un laboratorio di testo, utilizzare `<div class="cm-lab cm-text-only">` con gli stessi suffissi `-2`.
 
-Do not add the CDN `<script>` tags a second time — one copy per page is enough.
+Non aggiungere i tag CDN `<script>` per un secondo laboratorio: è sufficiente utilizzare un solo copia per pagina.
 
 ---
 
-## General Writing Style
+## Stile di scrittura generale
 
-- **Audience**: Kids ages 10–14, just finished learning Scratch
-- **Tone**: Friendly, encouraging, never condescending
-- **Sentences**: Short and clear — aim for a 5th-grade reading level
-- **Code comments**: Use `#` comments in Python code to explain non-obvious lines; omit comments on lines that are self-explanatory
-- **New terms**: Bold on first use, define immediately with a plain-English analogy (see [New Vocabulary](#new-vocabulary))
-- **Experiments section**: Every lesson must end with 3–5 numbered experiments. Each must include a **"You'll know it worked when…"** success criterion so students can self-assess without a teacher present
-- **No external links to Trinket** in Skulpt lessons — these labs are fully self-contained
-- **One idea at a time**: Never introduce more than one new concept in a single code example (see [One New Concept Per Lab](#one-new-concept-per-lab))
+- **Destinatari**: Bambini di 10–14 anni, appena iniziato a imparare Scratch.
+- **Tono**: Amichevole, incoraggiante, mai condiscendente.
+- **Sentenze**: Brevi e chiare – target di lettura equivalente al livello di un quinto grado.
+- **Commenti al codice**: Utilizzare i commenti `#` nel codice Python per spiegare linee poco chiare; omettere i commenti per linee che sono autoesplicative.
+- **Termini nuovi**: Ingrassare il primo utilizzo, definire immediatamente con un’analogia in lingua normale (vedi [Nuovo vocabolario](#new-vocabulary)).
+- **Sezione degli esperimenti**: Ogni lezione deve terminare con 3–5 esperimenti numerati. Ogni esperimento deve includere un criterio di successo “Saprai che funziona quando…”, in modo che gli studenti possano valutare autonomamente, senza l’ausilio di un insegnante.
+- **Nessun link esterno a Trinket** nelle lezioni Skulpt – questi laboratori sono completamente autonomi.
+- **Un’idea alla volta**: Non introdurre più di un nuovo concetto in un singolo esempio di codice (vedi [Un nuovo concetto per laboratorio](#one-new-concept-per-lab)).
