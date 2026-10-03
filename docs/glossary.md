@@ -1,2024 +1,2023 @@
-# Glossary of Terms
+# Glossario dei termini
 
-#### abs() — absolute value
+#### abs() — valore assoluto
 
-A built-in function that returns the non-negative magnitude of a number, converting negative numbers to their positive equivalents while leaving non-negative numbers unchanged.
+Una funzione built-in che restituisce la grandezza non negativa di un numero, convertendo i numeri negativi nei loro equivalenti positivi e lasciando invariati i numeri non negativi.
 
-**Example:** `abs(-7)` returns `7`; `abs(5)` returns `5`; `abs(-3.14)` returns `3.14`.
+**Esempio:** `abs(-7)` restituisce `7`; `abs(5)` restituisce `5`; `abs(-3.14)` restituisce `3.14`.
 
-#### Absolute positioning: goto(x, y), setx(), sety()
+#### Posizionamento assoluto: goto(x, y), setx(), sety()
 
-Turtle methods that move the turtle to a specific point on the screen rather than relative to its current position: `goto(x, y)` moves to coordinates; `setx(x)` changes only the x-coordinate; `sety(y)` changes only y.
+Metodi della turtle che spostano la turtle in un punto specifico dello schermo invece che relativamente alla sua posizione attuale: `goto(x, y)` si sposta alle coordinate indicate; `setx(x)` cambia solo la coordinata x; `sety(y)` cambia solo la y.
 
-**Example:** `t.goto(0, 0)` moves the turtle to the center of the screen; `t.goto(-200, 100)` moves it to the upper-left area.
+**Esempio:** `t.goto(0, 0)` sposta la turtle al centro dello schermo; `t.goto(-200, 100)` la sposta nella zona in alto a sinistra.
 
-#### Abstract data types overview
+#### Panoramica sui tipi di dati astratti
 
-A conceptual description of a data structure defined by its behavior (the operations it supports and their rules) rather than by how it is implemented, allowing programmers to reason about data without worrying about low-level details.
+Una descrizione concettuale di una struttura dati definita dal suo comportamento (le operazioni che supporta e le loro regole) piuttosto che da come è implementata, permettendo ai programmatori di ragionare sui dati senza preoccuparsi dei dettagli di basso livello.
 
-**Example:** A stack is an abstract data type defined by push and pop operations; it can be implemented using a Python list.
+**Esempio:** Uno stack è un tipo di dato astratto definito dalle operazioni push e pop; può essere implementato usando una lista Python.
 
-#### Accessing attributes and calling methods (obj.attr, obj.method())
+#### Accedere ad attributi e chiamare metodi (obj.attr, obj.method())
 
-The dot notation syntax used to read or set an object's attribute (`obj.attribute`) or to invoke one of its methods (`obj.method(arguments)`).
+La notazione a punto usata per leggere o impostare un attributo di un oggetto (`obj.attribute`) o per invocare uno dei suoi metodi (`obj.method(argomenti)`).
 
-**Example:** `player.score = 100` sets an attribute; `player.level_up()` calls a method on the same `player` object.
+**Esempio:** `player.score = 100` imposta un attributo; `player.level_up()` chiama un metodo sullo stesso oggetto `player`.
 
-#### Accessing values by key (d[key])
+#### Accedere ai valori tramite chiave (d[key])
 
-The method of retrieving a value stored in a dictionary by placing the key inside square brackets after the dictionary name; if the key does not exist, Python raises a `KeyError`.
+Il metodo per recuperare un valore memorizzato in un dizionario inserendo la chiave tra parentesi quadre dopo il nome del dizionario; se la chiave non esiste, Python genera un `KeyError`.
 
-**Example:** `student["name"]` returns `"Alex"` from a dictionary where `"name"` is a key; accessing a missing key like `student["phone"]` raises an error.
+**Esempio:** `student["name"]` restituisce `"Alex"` da un dizionario in cui `"name"` è una chiave; accedere a una chiave mancante come `student["phone"]` genera un errore.
 
-#### Activation functions: relu, softmax
+#### Funzioni di attivazione: relu, softmax
 
-Mathematical functions applied to each neuron's output in a neural network layer: `relu` (Rectified Linear Unit) outputs zero for negative inputs and the input itself for positive ones; `softmax` converts a list of values into probabilities that sum to 1.
+Funzioni matematiche applicate all'output di ogni neurone in uno strato di rete neurale: `relu` (Rectified Linear Unit) restituisce zero per gli input negativi e l'input stesso per quelli positivi; `softmax` converte una lista di valori in probabilità che sommano a 1.
 
-**Example:** Hidden layers typically use `relu` to introduce non-linearity; the final layer of a classifier uses `softmax` to output one probability per class.
+**Esempio:** Gli strati nascosti usano tipicamente `relu` per introdurre non linearità; lo strato finale di un classificatore usa `softmax` per restituire una probabilità per ciascuna classe.
 
-#### .add(), .remove(), .discard() methods
+#### Metodi .add(), .remove(), .discard()
 
-Set methods that modify a set: `.add(item)` inserts one item; `.remove(item)` deletes an item and raises `KeyError` if it's missing; `.discard(item)` deletes an item silently if it exists or does nothing if it doesn't.
+Metodi degli insiemi che modificano un insieme: `.add(item)` inserisce un elemento; `.remove(item)` elimina un elemento e genera `KeyError` se manca; `.discard(item)` elimina un elemento silenziosamente se esiste, o non fa nulla se non esiste.
 
-**Example:** `s.add(5)` adds 5; `s.discard(99)` does nothing if 99 is not in the set, avoiding an error.
+**Esempio:** `s.add(5)` aggiunge 5; `s.discard(99)` non fa nulla se 99 non è nell'insieme, evitando un errore.
 
-#### Adding and updating key-value pairs
+#### Aggiungere e aggiornare coppie chiave-valore
 
-The way to insert a new key-value pair into a dictionary or change the value of an existing key by using assignment with square bracket notation.
+Il modo per inserire una nuova coppia chiave-valore in un dizionario o cambiare il valore di una chiave esistente usando l'assegnazione con la notazione a parentesi quadre.
 
-**Example:** `inventory["apples"] = 10` adds a new entry; `inventory["apples"] = 15` updates it if `"apples"` already existed.
+**Esempio:** `inventory["apples"] = 10` aggiunge una nuova voce; `inventory["apples"] = 15` la aggiorna se `"apples"` esisteva già.
 
-#### Adjacency list representation
+#### Rappresentazione a lista di adiacenza
 
-A way to represent a graph by storing, for each node, a list of the other nodes it is directly connected to, typically as a dictionary where keys are node names and values are lists of neighbors.
+Un modo per rappresentare un grafo memorizzando, per ogni nodo, una lista degli altri nodi a cui è direttamente collegato, tipicamente come un dizionario in cui le chiavi sono i nomi dei nodi e i valori sono liste di vicini.
 
-**Example:** `graph = {"A": ["B", "C"], "B": ["A"], "C": ["A"]}` represents a triangle graph where A is connected to both B and C.
+**Esempio:** `graph = {"A": ["B", "C"], "B": ["A"], "C": ["A"]}` rappresenta un grafo triangolare in cui A è collegato sia a B che a C.
 
-#### Alternation with |
+#### Alternanza con |
 
-A regex operator that matches either the pattern on its left or the pattern on its right, working like a logical OR inside a regular expression.
+Un operatore regex che corrisponde al pattern alla sua sinistra oppure al pattern alla sua destra, funzionando come un OR logico all'interno di un'espressione regolare.
 
-**Example:** `r"cat|dog"` matches a string containing either `"cat"` or `"dog"`.
+**Esempio:** `r"cat|dog"` corrisponde a una stringa contenente `"cat"` oppure `"dog"`.
 
-#### Anchors: ^ (start), $ (end)
+#### Ancore: ^ (inizio), $ (fine)
 
-Special regex symbols that match positions in a string rather than characters: `^` asserts that the match must start at the very beginning of the string; `$` asserts that it must end at the very end.
+Simboli regex speciali che corrispondono a posizioni in una stringa anziché a caratteri: `^` richiede che la corrispondenza inizi proprio all'inizio della stringa; `$` richiede che finisca proprio alla fine.
 
-**Example:** `r"^\d+"` matches a string that begins with digits; `r"\.$"` matches a string that ends with a period.
+**Esempio:** `r"^\d+"` corrisponde a una stringa che inizia con cifre; `r"\.$"` corrisponde a una stringa che termina con un punto.
 
-#### Animation loops
+#### Cicli di animazione
 
-Repeated cycles of clear-draw-update that create the illusion of motion by quickly redrawing a scene with slightly changed positions, similar to frames in a film.
+Cicli ripetuti di cancella-disegna-aggiorna che creano l'illusione del movimento ridisegnando rapidamente una scena con posizioni leggermente cambiate, in modo simile ai fotogrammi di un film.
 
-**Example:** A simple turtle animation loop calls `clear()`, updates ball position, draws the ball, then calls the loop again many times per second.
+**Esempio:** Un semplice ciclo di animazione con turtle chiama `clear()`, aggiorna la posizione della palla, disegna la palla, poi richiama il ciclo molte volte al secondo.
 
-#### Animation with turtle (frame-based loops)
+#### Animazione con turtle (cicli basati su fotogrammi)
 
-A technique for creating moving images in turtle graphics by repeatedly clearing the canvas and redrawing updated positions inside a loop, using `tracer()` and `update()` for smooth animation.
+Una tecnica per creare immagini in movimento nella grafica turtle cancellando ripetutamente il canvas e ridisegnando le posizioni aggiornate dentro un ciclo, usando `tracer()` e `update()` per un'animazione fluida.
 
-**Example:** A ball animation erases the old position, calculates the new one, draws the ball there, and repeats rapidly so the ball appears to move smoothly.
+**Esempio:** Un'animazione di una palla cancella la vecchia posizione, calcola quella nuova, disegna la palla lì, e ripete rapidamente così la palla sembra muoversi in modo fluido.
 
-#### Arithmetic operators: +, -, *, /
+#### Operatori aritmetici: +, -, *, /
 
-The four basic mathematical operators in Python: `+` adds, `-` subtracts, `*` multiplies, and `/` divides two numeric values.
+I quattro operatori matematici di base in Python: `+` somma, `-` sottrae, `*` moltiplica e `/` divide due valori numerici.
 
-**Example:** `total = price * quantity + tax` uses three arithmetic operators in one expression.
+**Esempio:** `total = price * quantity + tax` usa tre operatori aritmetici in una sola espressione.
 
-#### Array operations and broadcasting basics
+#### Operazioni sugli array e nozioni di base sul broadcasting
 
-The NumPy feature that applies arithmetic operators to entire arrays element by element, and automatically expands a smaller array to match the shape of a larger one when performing operations between arrays of different sizes.
+La funzionalità di NumPy che applica gli operatori aritmetici a interi array elemento per elemento, ed espande automaticamente un array più piccolo per farlo corrispondere alla forma di uno più grande quando si eseguono operazioni tra array di dimensioni diverse.
 
-**Example:** `np.array([1, 2, 3]) + np.array([10, 20, 30])` returns `array([11, 22, 33])` without any loop.
+**Esempio:** `np.array([1, 2, 3]) + np.array([10, 20, 30])` restituisce `array([11, 22, 33])` senza alcun ciclo.
 
-#### assert statement with error messages
+#### Istruzione assert con messaggi di errore
 
-A debugging tool that tests a condition and raises an `AssertionError` with an optional message if the condition is `False`, used to verify assumptions within a program during development.
+Uno strumento di debug che verifica una condizione e genera un `AssertionError` con un messaggio opzionale se la condizione è `False`, usato per verificare le ipotesi all'interno di un programma durante lo sviluppo.
 
-**Example:** `assert score >= 0, "Score must not be negative"` crashes with that message if `score` is somehow below zero.
+**Esempio:** `assert score >= 0, "Score must not be negative"` interrompe il programma con quel messaggio se `score` risulta in qualche modo negativo.
 
-#### Attributes — properties of an object
+#### Attributi — proprietà di un oggetto
 
-Variables that belong to a specific object and store data describing that object's characteristics; accessed using dot notation after the object's name.
+Variabili che appartengono a un oggetto specifico e memorizzano dati che ne descrivono le caratteristiche; vi si accede usando la notazione a punto dopo il nome dell'oggetto.
 
-**Example:** If `player` is an object, `player.name` and `player.score` are attributes that store the player's name and score.
+**Esempio:** Se `player` è un oggetto, `player.name` e `player.score` sono attributi che memorizzano il nome e il punteggio del giocatore.
 
-#### Augmented assignment operators (+=, -=, *=, /=)
+#### Operatori di assegnazione aumentata (+=, -=, *=, /=)
 
-Shorthand operators that combine an arithmetic operation with assignment, updating a variable's value based on its current value without retyping the variable name twice.
+Operatori abbreviati che combinano un'operazione aritmetica con l'assegnazione, aggiornando il valore di una variabile in base al suo valore attuale senza riscrivere due volte il nome della variabile.
 
-**Example:** `score += 10` adds 10 to the current value of `score`, which is equivalent to writing `score = score + 10`.
+**Esempio:** `score += 10` aggiunge 10 al valore attuale di `score`, equivalente a scrivere `score = score + 10`.
 
-#### Autoencoders — overview
+#### Autoencoder — panoramica
 
-A neural network architecture with an encoder that compresses input data into a compact representation and a decoder that reconstructs the original data, trained to minimize reconstruction error.
+Un'architettura di rete neurale con un encoder che comprime i dati di input in una rappresentazione compatta e un decoder che ricostruisce i dati originali, addestrata per minimizzare l'errore di ricostruzione.
 
-**Example:** An autoencoder trained on face images learns a compressed code for each face; the code can be used for denoising, generation, or anomaly detection.
+**Esempio:** Un autoencoder addestrato su immagini di volti impara un codice compresso per ogni volto; il codice può essere usato per rimozione del rumore, generazione o rilevamento di anomalie.
 
-#### Background and pen colors
+#### Colore di sfondo e colore della penna
 
-Two separate color settings in turtle graphics: the background color fills the entire drawing window and is set with `bgcolor()`; the pen color determines the color of lines the turtle draws and is set with `pencolor()`.
+Due impostazioni di colore separate nella grafica turtle: il colore di sfondo riempie l'intera finestra di disegno ed è impostato con `bgcolor()`; il colore della penna determina il colore delle linee disegnate dalla turtle ed è impostato con `pencolor()`.
 
-**Example:** `screen.bgcolor("black"); t.pencolor("white")` creates a starfield effect where white lines are visible against the dark background.
+**Esempio:** `screen.bgcolor("black"); t.pencolor("white")` crea un effetto cielo stellato in cui le linee bianche sono visibili sullo sfondo scuro.
 
-#### Batch size and epochs
+#### Dimensione del batch ed epoche
 
-Two training hyperparameters: batch size is the number of training examples processed before the model's weights are updated; an epoch is one full pass through the entire training dataset.
+Due iperparametri di addestramento: la dimensione del batch è il numero di esempi di addestramento elaborati prima che i pesi del modello vengano aggiornati; un'epoca è un intero passaggio attraverso tutto il dataset di addestramento.
 
-**Example:** With 1000 samples, `batch_size=32` and `epochs=5` means the model updates its weights about 31 times per epoch and trains for 5 epochs (155 updates total).
+**Esempio:** Con 1000 campioni, `batch_size=32` ed `epochs=5` significa che il modello aggiorna i pesi circa 31 volte per epoca e si addestra per 5 epoche (155 aggiornamenti totali).
 
-#### BFS color tracking (white, gray, black)
+#### Tracciamento dei colori nella BFS (bianco, grigio, nero)
 
-A classic BFS implementation technique where nodes are labeled white (unvisited), gray (discovered but not fully processed), or black (fully explored), to track progress and avoid revisiting nodes.
+Una tecnica classica di implementazione della BFS in cui i nodi sono etichettati bianco (non visitato), grigio (scoperto ma non ancora completamente elaborato) o nero (completamente esplorato), per tracciare i progressi ed evitare di rivisitare i nodi.
 
-**Example:** When BFS first encounters a neighbor, it marks it gray and adds it to the queue; after processing all its neighbors, it marks it black.
+**Esempio:** Quando la BFS incontra per la prima volta un vicino, lo marca grigio e lo aggiunge alla coda; dopo aver elaborato tutti i suoi vicini, lo marca nero.
 
-#### BFS for path finding
+#### BFS per la ricerca di percorsi
 
-The application of Breadth-First Search to discover the shortest path between two nodes in a graph, by recording each node's parent during traversal and tracing back from destination to source.
+L'applicazione della ricerca in ampiezza (Breadth-First Search) per scoprire il percorso più breve tra due nodi in un grafo, registrando il genitore di ogni nodo durante l'attraversamento e ripercorrendo a ritroso dalla destinazione alla sorgente.
 
-**Example:** In a maze grid, BFS finds the minimum number of steps from start to finish by exploring all reachable cells one step at a time.
+**Esempio:** In una griglia a labirinto, la BFS trova il numero minimo di passi dall'inizio alla fine esplorando tutte le celle raggiungibili un passo alla volta.
 
-#### Binary search concept
+#### Concetto di ricerca binaria
 
-An efficient algorithm for finding a value in a sorted list by repeatedly halving the search range — checking the middle element and eliminating half the remaining items — rather than checking each element one by one.
+Un algoritmo efficiente per trovare un valore in una lista ordinata dimezzando ripetutamente l'intervallo di ricerca — controllando l'elemento centrale ed eliminando metà degli elementi rimanenti — invece di controllare ogni elemento uno per uno.
 
-**Example:** Guessing a number between 1 and 100 by always guessing the midpoint (50, then 25 or 75, etc.) is binary search; it finds any number in at most 7 guesses.
+**Esempio:** Indovinare un numero tra 1 e 100 tentando sempre il punto medio (50, poi 25 o 75, ecc.) è una ricerca binaria; trova qualsiasi numero in al massimo 7 tentativi.
 
-#### Blank lines and code readability
+#### Righe vuote e leggibilità del codice
 
-The practice of inserting empty lines between sections of code — such as between function definitions or logical groups of statements — to make programs easier to scan and understand.
+La pratica di inserire righe vuote tra sezioni di codice — ad esempio tra definizioni di funzioni o gruppi logici di istruzioni — per rendere i programmi più facili da scorrere e capire.
 
-**Example:** Placing a blank line before and after each function definition helps readers quickly see where one function ends and the next begins.
+**Esempio:** Inserire una riga vuota prima e dopo ogni definizione di funzione aiuta i lettori a vedere rapidamente dove finisce una funzione e inizia la successiva.
 
-#### bool() — convert to boolean
+#### bool() — conversione a booleano
 
-A built-in function that converts a value to `True` or `False` following Python's truthiness rules: `0`, `None`, empty strings, and empty collections become `False`; everything else becomes `True`.
+Una funzione built-in che converte un valore in `True` o `False` seguendo le regole di verità (truthiness) di Python: `0`, `None`, stringhe vuote e collezioni vuote diventano `False`; tutto il resto diventa `True`.
 
-**Example:** `bool(0)` returns `False`; `bool("hello")` returns `True`; `bool([])` returns `False`.
+**Esempio:** `bool(0)` restituisce `False`; `bool("hello")` restituisce `True`; `bool([])` restituisce `False`.
 
-#### Boolean type (bool) — True and False
+#### Tipo booleano (bool) — True e False
 
-A Python data type that holds exactly one of two values — `True` or `False` — used to represent the result of comparisons and to control the flow of `if` statements and loops.
+Un tipo di dato Python che contiene esattamente uno di due valori — `True` o `False` — usato per rappresentare il risultato di confronti e per controllare il flusso di istruzioni `if` e cicli.
 
-**Example:** `is_raining = True` stores a yes/no fact; `5 > 3` evaluates to `True` and `5 < 3` evaluates to `False`.
+**Esempio:** `is_raining = True` memorizza un fatto sì/no; `5 > 3` restituisce `True` e `5 < 3` restituisce `False`.
 
-#### Breadth-First Search (BFS) algorithm
+#### Algoritmo di ricerca in ampiezza (BFS)
 
-A graph traversal algorithm that explores all neighbors of a starting node before moving to their neighbors, visiting nodes level by level outward, and is guaranteed to find the shortest path in an unweighted graph.
+Un algoritmo di attraversamento dei grafi che esplora tutti i vicini di un nodo di partenza prima di passare ai loro vicini, visitando i nodi livello per livello verso l'esterno, ed è garantito trovare il percorso più breve in un grafo non pesato.
 
-**Example:** BFS on a map graph finds the fewest road segments between two cities by exploring all cities one hop away before two hops away.
+**Esempio:** La BFS su un grafo stradale trova il minor numero di tratti stradali tra due città esplorando tutte le città a un salto di distanza prima di quelle a due salti.
 
-#### break — exit a loop early
+#### break — uscire anticipatamente da un ciclo
 
-A statement that immediately ends the nearest enclosing `for` or `while` loop, skipping any remaining iterations and continuing with the code after the loop.
+Un'istruzione che termina immediatamente il ciclo `for` o `while` più vicino, saltando le iterazioni rimanenti e proseguendo con il codice dopo il ciclo.
 
-**Example:** `for n in range(100):` / `if n == 5: break` stops the loop as soon as `n` reaches 5 instead of continuing to 99.
+**Esempio:** `for n in range(100):` / `if n == 5: break` interrompe il ciclo non appena `n` raggiunge 5 invece di continuare fino a 99.
 
-#### Building a color picker with turtle
+#### Costruire un selettore di colori con turtle
 
-A turtle graphics project that creates clickable colored regions on the screen, demonstrating event handling, coordinate math, and conditional logic to change the active drawing color when the user clicks.
+Un progetto di grafica turtle che crea regioni colorate cliccabili sullo schermo, dimostrando la gestione degli eventi, la matematica delle coordinate e la logica condizionale per cambiare il colore di disegno attivo quando l'utente clicca.
 
-**Example:** A row of colored rectangles is drawn, and an `onscreenclick` handler checks which rectangle was clicked to update the pen color.
+**Esempio:** Viene disegnata una fila di rettangoli colorati, e un gestore `onscreenclick` controlla quale rettangolo è stato cliccato per aggiornare il colore della penna.
 
-#### Callback functions
+#### Funzioni di callback
 
-Functions that are passed as arguments to another function or registered with an event system, so they can be called later — automatically, in response to an event — rather than being called directly.
+Funzioni passate come argomenti a un'altra funzione o registrate presso un sistema di eventi, così da poter essere chiamate in seguito — automaticamente, in risposta a un evento — invece di essere chiamate direttamente.
 
-**Example:** In `screen.onscreenclick(draw_dot)`, `draw_dot` is a callback that the turtle system calls automatically whenever a click event occurs.
+**Esempio:** In `screen.onscreenclick(draw_dot)`, `draw_dot` è una callback che il sistema turtle chiama automaticamente ogni volta che si verifica un evento di click.
 
-#### Calling a function
+#### Chiamare una funzione
 
-The act of executing a previously defined function by writing its name followed by parentheses, optionally passing arguments inside the parentheses.
+L'azione di eseguire una funzione precedentemente definita scrivendone il nome seguito da parentesi, passando opzionalmente argomenti all'interno delle parentesi.
 
-**Example:** After defining `def greet(name): print("Hello, " + name)`, writing `greet("Alex")` runs the function and prints `Hello, Alex`.
+**Esempio:** Dopo aver definito `def greet(name): print("Hello, " + name)`, scrivere `greet("Alex")` esegue la funzione e stampa `Hello, Alex`.
 
-#### Case sensitivity in Python
+#### Sensibilità alle maiuscole/minuscole in Python
 
-The property of Python where uppercase and lowercase letters are treated as different characters, so `Name`, `name`, and `NAME` are three separate, unrelated variable names.
+La proprietà di Python per cui le lettere maiuscole e minuscole sono trattate come caratteri diversi, quindi `Name`, `name` e `NAME` sono tre nomi di variabile distinti e non collegati.
 
-**Example:** If you store a value in `score` but later type `Score`, Python will raise a `NameError` because it does not recognize `Score`.
+**Esempio:** Se memorizzi un valore in `score` ma in seguito scrivi `Score`, Python genererà un `NameError` perché non riconosce `Score`.
 
-#### Character classes: [a-z], [A-Z], [0-9]
+#### Classi di caratteri: [a-z], [A-Z], [0-9]
 
-Regex syntax that uses square brackets to define a set of characters, where a range like `a-z` matches any single lowercase letter, `A-Z` any uppercase letter, and `0-9` any single digit.
+Sintassi regex che usa le parentesi quadre per definire un insieme di caratteri, dove un intervallo come `a-z` corrisponde a qualsiasi lettera minuscola singola, `A-Z` a qualsiasi lettera maiuscola, e `0-9` a qualsiasi singola cifra.
 
-**Example:** `r"[aeiou]"` matches any vowel; `r"[A-Za-z]"` matches any letter regardless of case.
+**Esempio:** `r"[aeiou]"` corrisponde a qualsiasi vocale; `r"[A-Za-z]"` corrisponde a qualsiasi lettera indipendentemente dal maiuscolo/minuscolo.
 
-#### Checking for None with is None
+#### Verificare None con is None
 
-The recommended way to test whether a variable holds the `None` value, using the `is` operator rather than `==`, because `is` checks identity (the exact same object) rather than equality.
+Il modo consigliato per verificare se una variabile contiene il valore `None`, usando l'operatore `is` invece di `==`, perché `is` controlla l'identità (lo stesso identico oggetto) piuttosto che l'uguaglianza.
 
-**Example:** `if result is None: print("No value returned")` safely checks for `None` without triggering unexpected behavior from overloaded equality.
+**Esempio:** `if result is None: print("No value returned")` verifica in modo sicuro la presenza di `None` senza innescare comportamenti inattesi da un'uguaglianza sovraccaricata.
 
-#### Checking key membership with in
+#### Verificare l'appartenenza di una chiave con in
 
-Using the `in` keyword with a dictionary to test whether a specified key exists in the dictionary, returning `True` or `False` without raising an error.
+Usare la parola chiave `in` con un dizionario per verificare se una determinata chiave esiste nel dizionario, restituendo `True` o `False` senza generare un errore.
 
-**Example:** `if "score" in student:` checks whether the key `"score"` exists before trying to access it.
+**Esempio:** `if "score" in student:` controlla se la chiave `"score"` esiste prima di provare ad accedervi.
 
-#### Checking membership with in
+#### Verificare l'appartenenza con in
 
-A keyword used in a Boolean expression to test whether a value exists as an element of a list, string, tuple, or other sequence, returning `True` or `False`.
+Una parola chiave usata in un'espressione booleana per verificare se un valore esiste come elemento di una lista, stringa, tupla o altra sequenza, restituendo `True` o `False`.
 
-**Example:** `"apple" in fruits` returns `True` if the list `fruits` contains `"apple"`.
+**Esempio:** `"apple" in fruits` restituisce `True` se la lista `fruits` contiene `"apple"`.
 
-#### Checking membership with in (sets)
+#### Verificare l'appartenenza con in (insiemi)
 
-Using the `in` keyword to test whether a value is a member of a set; this operation is very fast for sets (much faster than searching a list) because sets use hashing internally.
+Usare la parola chiave `in` per verificare se un valore è membro di un insieme; questa operazione è molto veloce per gli insiemi (molto più veloce che cercare in una lista) perché gli insiemi usano l'hashing internamente.
 
-**Example:** `if "python" in known_words:` checks whether a word exists in the set of known words almost instantly, even for very large sets.
+**Esempio:** `if "python" in known_words:` verifica se una parola esiste nell'insieme di parole conosciute quasi istantaneamente, anche per insiemi molto grandi.
 
-#### Class __str__() and __repr__() methods
+#### Metodi di classe __str__() e __repr__()
 
-Two special methods that control how objects are displayed: `__str__()` provides a friendly human-readable description used by `print()` and `str()`; `__repr__()` provides an unambiguous developer-oriented description used in the REPL and for debugging.
+Due metodi speciali che controllano come vengono visualizzati gli oggetti: `__str__()` fornisce una descrizione leggibile e amichevole usata da `print()` e `str()`; `__repr__()` fornisce una descrizione inequivocabile orientata allo sviluppatore usata nella REPL e per il debug.
 
-**Example:** `str(Dog("Buddy"))` might return `"Dog named Buddy"` while `repr(Dog("Buddy"))` returns `"Dog('Buddy', age=3)"` with all the data needed to recreate the object.
+**Esempio:** `str(Dog("Buddy"))` potrebbe restituire `"Dog named Buddy"` mentre `repr(Dog("Buddy"))` restituisce `"Dog('Buddy', age=3)"` con tutti i dati necessari per ricreare l'oggetto.
 
-#### class keyword — defining a class
+#### Parola chiave class — definire una classe
 
-The Python keyword used to begin the definition of a new class, followed by the class name and a colon, after which an indented block contains the class's attributes and methods.
+La parola chiave Python usata per iniziare la definizione di una nuova classe, seguita dal nome della classe e da due punti, dopo i quali un blocco indentato contiene gli attributi e i metodi della classe.
 
-**Example:** `class Dog:` begins the definition of a `Dog` class; everything indented beneath it is part of the class.
+**Esempio:** `class Dog:` inizia la definizione di una classe `Dog`; tutto ciò che è indentato sotto fa parte della classe.
 
-#### Clearing: clear(), reset()
+#### Cancellare: clear(), reset()
 
-Two turtle methods that erase drawings: `clear()` erases all lines the turtle drew but keeps its current position, color, and settings; `reset()` erases drawings and also returns the turtle to the center with default settings.
+Due metodi della turtle che cancellano i disegni: `clear()` cancella tutte le linee disegnate dalla turtle ma mantiene la sua posizione, colore e impostazioni attuali; `reset()` cancella i disegni e riporta anche la turtle al centro con le impostazioni predefinite.
 
-**Example:** In a game, calling `t.clear()` at the start of each frame erases the previous drawing before redrawing the updated scene.
+**Esempio:** In un gioco, chiamare `t.clear()` all'inizio di ogni fotogramma cancella il disegno precedente prima di ridisegnare la scena aggiornata.
 
-#### Code comments — when and why
+#### Commenti nel codice — quando e perché
 
-The practice of adding `#` comments to explain the why behind complex or non-obvious code — the reasoning, context, or intent — rather than restating what the code already makes clear.
+La pratica di aggiungere commenti con `#` per spiegare il perché dietro un codice complesso o non ovvio — il ragionamento, il contesto o l'intento — piuttosto che ripetere ciò che il codice rende già chiaro.
 
-**Example:** `# Reverse the list so newest entries appear first` explains the intent; `# adds 1 to x` on `x += 1` adds no value.
+**Esempio:** `# Reverse the list so newest entries appear first` spiega l'intento; `# adds 1 to x` su `x += 1` non aggiunge alcun valore.
 
-#### Code reusability
+#### Riutilizzabilità del codice
 
-The design goal of writing code — especially functions and modules — in a general enough way that it can be used in multiple places or projects without being rewritten.
+L'obiettivo di progettazione di scrivere codice — in particolare funzioni e moduli — in modo sufficientemente generale da poter essere usato in più punti o progetti senza doverlo riscrivere.
 
-**Example:** A `calculate_area(width, height)` function can be called anywhere you need an area, rather than rewriting the multiplication formula every time.
+**Esempio:** Una funzione `calculate_area(width, height)` può essere chiamata ovunque serva un'area, invece di riscrivere la formula di moltiplicazione ogni volta.
 
-#### Color bars and data visualization in Jupyter
+#### Grafici a barre colorati e visualizzazione dati in Jupyter
 
-The use of matplotlib or other libraries inside a Jupyter notebook to create visual representations of data — such as color-coded bars — displayed inline in the notebook output.
+L'uso di matplotlib o altre librerie all'interno di un Jupyter notebook per creare rappresentazioni visive dei dati — come barre colorate — mostrate direttamente nell'output del notebook.
 
-**Example:** `plt.bar(subjects, scores, color=["red","blue","green"]); plt.show()` displays a color-coded bar chart of test scores directly in the notebook.
+**Esempio:** `plt.bar(subjects, scores, color=["red","blue","green"]); plt.show()` mostra un grafico a barre colorato dei punteggi dei test direttamente nel notebook.
 
-#### Color in turtle graphics
+#### Il colore nella grafica turtle
 
-The system turtle uses to set drawing and fill colors, accepting named color strings, hex strings, or RGB tuples (after calling `colormode(255)`), and applied with methods like `color()`, `pencolor()`, and `fillcolor()`.
+Il sistema che turtle usa per impostare i colori di disegno e riempimento, accettando stringhe di colori con nome, stringhe esadecimali o tuple RGB (dopo aver chiamato `colormode(255)`), e applicato con metodi come `color()`, `pencolor()` e `fillcolor()`.
 
-**Example:** `screen.colormode(255); t.color((100, 149, 237))` sets the pen to cornflower blue using an RGB tuple.
+**Esempio:** `screen.colormode(255); t.color((100, 149, 237))` imposta la penna su un blu cornflower usando una tupla RGB.
 
-#### Color: color(), pencolor(), fillcolor()
+#### Colore: color(), pencolor(), fillcolor()
 
-Turtle methods that set drawing colors: `color(c)` sets both pen and fill color at once; `pencolor(c)` sets only the line color; `fillcolor(c)` sets only the interior fill color for shapes.
+Metodi della turtle che impostano i colori di disegno: `color(c)` imposta sia il colore della penna che quello di riempimento insieme; `pencolor(c)` imposta solo il colore della linea; `fillcolor(c)` imposta solo il colore di riempimento interno delle forme.
 
-**Example:** `t.color("blue")` makes both the outline and fill blue; `t.pencolor("red"); t.fillcolor("yellow")` sets them separately.
+**Esempio:** `t.color("blue")` rende sia il contorno che il riempimento blu; `t.pencolor("red"); t.fillcolor("yellow")` li imposta separatamente.
 
-#### Comments (single-line with #)
+#### Commenti (su singola riga con #)
 
-Text in a Python program that begins with the `#` character and is completely ignored by the interpreter; comments exist solely to explain the code to human readers.
+Testo in un programma Python che inizia con il carattere `#` e viene completamente ignorato dall'interprete; i commenti servono solo a spiegare il codice ai lettori umani.
 
-**Example:** `# This loop draws a square` placed above a loop tells the reader what the code does without affecting how it runs.
+**Esempio:** `# This loop draws a square` posto sopra un ciclo dice al lettore cosa fa il codice senza influire sulla sua esecuzione.
 
-#### Common exceptions: ValueError, TypeError, IndexError, KeyError, NameError, ZeroDivisionError
+#### Eccezioni comuni: ValueError, TypeError, IndexError, KeyError, NameError, ZeroDivisionError
 
-Six frequently encountered Python error types: `ValueError` (wrong value type), `TypeError` (wrong data type), `IndexError` (index out of range), `KeyError` (dictionary key not found), `NameError` (variable not defined), `ZeroDivisionError` (dividing by zero).
+Sei tipi di errore Python frequentemente incontrati: `ValueError` (valore del tipo sbagliato), `TypeError` (tipo di dato sbagliato), `IndexError` (indice fuori intervallo), `KeyError` (chiave del dizionario non trovata), `NameError` (variabile non definita), `ZeroDivisionError` (divisione per zero).
 
-**Example:** `int("hello")` raises `ValueError`; `"text" + 5` raises `TypeError`; `[][0]` raises `IndexError`.
+**Esempio:** `int("hello")` genera `ValueError`; `"text" + 5` genera `TypeError`; `[][0]` genera `IndexError`.
 
-#### Common regex patterns: \d (digit), \w (word char), \s (whitespace)
+#### Pattern regex comuni: \d (cifra), \w (carattere di parola), \s (spazio bianco)
 
-Three frequently used shorthand character classes in regular expressions: `\d` matches any digit `0-9`; `\w` matches any letter, digit, or underscore; `\s` matches any whitespace character (space, tab, newline).
+Tre classi di caratteri abbreviate frequentemente usate nelle espressioni regolari: `\d` corrisponde a qualsiasi cifra `0-9`; `\w` corrisponde a qualsiasi lettera, cifra o underscore; `\s` corrisponde a qualsiasi carattere di spaziatura (spazio, tab, a capo).
 
-**Example:** `r"\d\d\d-\d\d\d\d"` matches a phone number pattern like `555-1234`; `r"\w+"` matches any whole word.
+**Esempio:** `r"\d\d\d-\d\d\d\d"` corrisponde a un pattern di numero di telefono come `555-1234`; `r"\w+"` corrisponde a un'intera parola.
 
-#### Comparison operators: >, <, >=, <=, ==, !=
+#### Operatori di confronto: >, <, >=, <=, ==, !=
 
-Operators that compare two values and return a Boolean result: `>` (greater than), `<` (less than), `>=` (greater than or equal), `<=` (less than or equal), `==` (equal), `!=` (not equal).
+Operatori che confrontano due valori e restituiscono un risultato booleano: `>` (maggiore di), `<` (minore di), `>=` (maggiore o uguale a), `<=` (minore o uguale a), `==` (uguale a), `!=` (diverso da).
 
-**Example:** `score >= 90` returns `True` if the score is 90 or higher, which you might use to decide whether to print "A grade".
+**Esempio:** `score >= 90` restituisce `True` se il punteggio è 90 o superiore, cosa che potresti usare per decidere se stampare "A grade".
 
-#### Conda — environment and package manager
+#### Conda — gestore di ambienti e pacchetti
 
-A tool that installs Python packages and creates isolated environments so that different projects can use different versions of libraries without interfering with each other.
+Uno strumento che installa pacchetti Python e crea ambienti isolati così che progetti diversi possano usare versioni diverse delle librerie senza interferire tra loro.
 
-**Example:** You can use conda to create one environment with an older library for a school project and a separate environment with a newer library for a personal project.
+**Esempio:** Puoi usare conda per creare un ambiente con una libreria più vecchia per un progetto scolastico e un ambiente separato con una libreria più recente per un progetto personale.
 
-#### Conditional expressions (ternary): x if condition else y
+#### Espressioni condizionali (ternarie): x if condizione else y
 
-A compact single-line expression that returns one of two values depending on a condition, written as `value_if_true if condition else value_if_false`.
+Un'espressione compatta su una sola riga che restituisce uno di due valori a seconda di una condizione, scritta come `valore_se_vero if condizione else valore_se_falso`.
 
-**Example:** `label = "adult" if age >= 18 else "minor"` sets `label` in one line instead of a four-line `if...else` block.
+**Esempio:** `label = "adult" if age >= 18 else "minor"` imposta `label` in una riga invece di un blocco `if...else` di quattro righe.
 
-#### Constants (by convention, ALL_CAPS)
+#### Costanti (per convenzione, TUTTO_MAIUSCOLO)
 
-Values in a program that are intended never to change during execution, indicated by writing their names entirely in uppercase letters with underscores, though Python does not technically prevent reassignment.
+Valori in un programma che non devono mai cambiare durante l'esecuzione, indicati scrivendone i nomi interamente in lettere maiuscole con underscore, anche se Python non impedisce tecnicamente la riassegnazione.
 
-**Example:** `MAX_PLAYERS = 4` and `GRAVITY = 9.8` are constants whose ALL_CAPS names signal to readers that these values should stay fixed.
+**Esempio:** `MAX_PLAYERS = 4` e `GRAVITY = 9.8` sono costanti i cui nomi TUTTO_MAIUSCOLO segnalano ai lettori che questi valori dovrebbero restare fissi.
 
-#### continue — skip to next iteration
+#### continue — saltare alla prossima iterazione
 
-A statement that skips the rest of the current loop iteration and jumps directly to the next one, without exiting the loop entirely.
+Un'istruzione che salta il resto dell'iterazione corrente del ciclo e passa direttamente alla successiva, senza uscire completamente dal ciclo.
 
-**Example:** `for n in range(10):` / `if n % 2 == 0: continue` / `print(n)` prints only the odd numbers by skipping the even ones.
+**Esempio:** `for n in range(10):` / `if n % 2 == 0: continue` / `print(n)` stampa solo i numeri dispari saltando quelli pari.
 
-#### Conv2D — convolutional layers
+#### Conv2D — strati convoluzionali
 
-A Keras layer that applies a set of small filters (kernels) across an image to detect local patterns such as edges, textures, and shapes, forming the core building block of image-recognition networks.
+Uno strato di Keras che applica un insieme di piccoli filtri (kernel) su un'immagine per rilevare pattern locali come bordi, texture e forme, formando il blocco costitutivo principale delle reti di riconoscimento immagini.
 
-**Example:** `Conv2D(32, (3, 3), activation="relu")` applies 32 different 3×3 filters to the input image to detect 32 different low-level features.
+**Esempio:** `Conv2D(32, (3, 3), activation="relu")` applica 32 filtri 3×3 diversi all'immagine di input per rilevare 32 diverse caratteristiche di basso livello.
 
-#### Converting input strings to numbers with int() / float()
+#### Convertire le stringhe di input in numeri con int() / float()
 
-The necessary step of wrapping `input()` with `int()` or `float()` to turn the text the user types into a numeric value that can be used in calculations.
+Il passaggio necessario di avvolgere `input()` con `int()` o `float()` per trasformare il testo digitato dall'utente in un valore numerico utilizzabile nei calcoli.
 
-**Example:** `age = int(input("Enter your age: "))` converts the typed text to an integer so you can write `age + 1` without a `TypeError`.
+**Esempio:** `age = int(input("Enter your age: "))` converte il testo digitato in un intero così puoi scrivere `age + 1` senza un `TypeError`.
 
-#### Convolutional Neural Networks (CNN)
+#### Reti neurali convoluzionali (CNN)
 
-A type of neural network architecture designed for processing grid-like data such as images, using convolutional layers to detect local patterns and pooling layers to reduce spatial size.
+Un tipo di architettura di rete neurale progettata per elaborare dati a griglia come le immagini, usando strati convoluzionali per rilevare pattern locali e strati di pooling per ridurre la dimensione spaziale.
 
-**Example:** The image-recognizing system in your phone's camera app is powered by a CNN that learned to identify objects from millions of labeled photos.
+**Esempio:** Il sistema di riconoscimento immagini nell'app fotocamera del tuo telefono è alimentato da una CNN addestrata a identificare oggetti da milioni di foto etichettate.
 
-#### Creating a dictionary with {}
+#### Creare un dizionario con {}
 
-The syntax for making a new dictionary by enclosing comma-separated `key: value` pairs inside curly braces, with each key and its value separated by a colon.
+La sintassi per creare un nuovo dizionario racchiudendo coppie `chiave: valore` separate da virgola tra parentesi graffe, con ogni chiave e il suo valore separati da due punti.
 
-**Example:** `ages = {"Alice": 12, "Bob": 13, "Carol": 11}` creates a dictionary mapping names to ages.
+**Esempio:** `ages = {"Alice": 12, "Bob": 13, "Carol": 11}` crea un dizionario che associa nomi a età.
 
-#### Creating a list with []
+#### Creare una lista con []
 
-The syntax for making a new list in Python by placing zero or more comma-separated items inside square brackets.
+La sintassi per creare una nuova lista in Python inserendo zero o più elementi separati da virgola tra parentesi quadre.
 
-**Example:** `empty = []` creates an empty list; `numbers = [1, 2, 3, 4, 5]` creates a list of five integers.
+**Esempio:** `empty = []` crea una lista vuota; `numbers = [1, 2, 3, 4, 5]` crea una lista di cinque interi.
 
-#### Creating a set with {} or set()
+#### Creare un insieme con {} o set()
 
-The two ways to make a set: curly braces with items (`{1, 2, 3}`) or the `set()` constructor with an iterable (`set([1, 2, 3])`); an empty set must be created with `set()` because `{}` creates an empty dictionary.
+I due modi per creare un insieme: parentesi graffe con elementi (`{1, 2, 3}`) o il costruttore `set()` con un iterabile (`set([1, 2, 3])`); un insieme vuoto deve essere creato con `set()` perché `{}` crea un dizionario vuoto.
 
-**Example:** `vowels = {"a", "e", "i", "o", "u"}` uses curly braces; `digits = set(range(10))` converts a range to a set.
+**Esempio:** `vowels = {"a", "e", "i", "o", "u"}` usa le parentesi graffe; `digits = set(range(10))` converte un range in un insieme.
 
-#### Creating a tuple with ()
+#### Creare una tupla con ()
 
-The syntax for making a new tuple by placing comma-separated items inside parentheses; the parentheses are actually optional — commas create the tuple.
+La sintassi per creare una nuova tupla inserendo elementi separati da virgola tra parentesi tonde; le parentesi sono in realtà opzionali — sono le virgole a creare la tupla.
 
-**Example:** `colors = ("red", "green", "blue")` creates a tuple; `pair = 1, 2` also creates a tuple `(1, 2)` because the comma is what matters.
+**Esempio:** `colors = ("red", "green", "blue")` crea una tupla; `pair = 1, 2` crea anch'essa una tupla `(1, 2)` perché è la virgola che conta.
 
-#### Creating a turtle.Screen() object
+#### Creare un oggetto turtle.Screen()
 
-The act of calling `turtle.Screen()` to get a reference to the drawing window, which lets you set its size, background color, title, and respond to events.
+L'atto di chiamare `turtle.Screen()` per ottenere un riferimento alla finestra di disegno, che permette di impostarne dimensioni, colore di sfondo, titolo e di rispondere agli eventi.
 
-**Example:** `screen = turtle.Screen(); screen.bgcolor("lightblue")` creates the screen object and sets its background color.
+**Esempio:** `screen = turtle.Screen(); screen.bgcolor("lightblue")` crea l'oggetto schermo e ne imposta il colore di sfondo.
 
-#### Creating a turtle.Turtle() object
+#### Creare un oggetto turtle.Turtle()
 
-The act of calling `turtle.Turtle()` to create a new turtle — a drawing cursor — that can be moved, turned, and styled to draw lines and shapes on the screen.
+L'atto di chiamare `turtle.Turtle()` per creare una nuova turtle — un cursore di disegno — che può essere spostata, ruotata e personalizzata per disegnare linee e forme sullo schermo.
 
-**Example:** `t = turtle.Turtle()` creates a turtle named `t`; then `t.forward(100)` moves it forward 100 pixels.
+**Esempio:** `t = turtle.Turtle()` crea una turtle chiamata `t`; poi `t.forward(100)` la sposta in avanti di 100 pixel.
 
-#### Creating custom modules (.py files)
+#### Creare moduli personalizzati (file .py)
 
-The practice of saving Python functions and variables in a `.py` file that other programs can import, allowing code to be organized, shared, and reused across multiple projects.
+La pratica di salvare funzioni e variabili Python in un file `.py` che altri programmi possono importare, permettendo di organizzare, condividere e riutilizzare il codice tra più progetti.
 
-**Example:** Saving `def greet(name): print("Hi", name)` in `helpers.py` lets another file do `from helpers import greet` and call it.
+**Esempio:** Salvare `def greet(name): print("Hi", name)` in `helpers.py` permette a un altro file di fare `from helpers import greet` e chiamarla.
 
-#### Creating instances of a class
+#### Creare istanze di una classe
 
-The process of calling a class like a function to produce a new, independent object with its own copy of the class's attributes, initialized by `__init__()`.
+Il processo di chiamare una classe come una funzione per produrre un nuovo oggetto indipendente con una propria copia degli attributi della classe, inizializzato da `__init__()`.
 
-**Example:** `my_dog = Dog("Buddy", 3)` creates a new `Dog` object; `your_dog = Dog("Max", 5)` creates a separate one.
+**Esempio:** `my_dog = Dog("Buddy", 3)` crea un nuovo oggetto `Dog`; `your_dog = Dog("Max", 5)` ne crea uno separato.
 
-#### CSV file reading basics
+#### Nozioni di base sulla lettura di file CSV
 
-The process of reading a file whose values are separated by commas (Comma-Separated Values), typically done by splitting each line on commas or by using Python's `csv` module.
+Il processo di leggere un file i cui valori sono separati da virgole (Comma-Separated Values), tipicamente eseguito dividendo ogni riga sulle virgole o usando il modulo `csv` di Python.
 
-**Example:** A line `"Alice,90,A"` from a CSV file can be split with `.split(",")` to get `["Alice", "90", "A"]`.
+**Esempio:** Una riga `"Alice,90,A"` da un file CSV può essere divisa con `.split(",")` per ottenere `["Alice", "90", "A"]`.
 
-#### CSV files — reading/writing structured data
+#### File CSV — leggere/scrivere dati strutturati
 
-Files that store tabular data (rows and columns) as plain text, with values on each row separated by commas, readable by Python's `csv` module for reliable handling of quoted fields and special characters.
+File che memorizzano dati tabellari (righe e colonne) come testo semplice, con i valori di ogni riga separati da virgole, leggibili dal modulo `csv` di Python per una gestione affidabile di campi tra virgolette e caratteri speciali.
 
-**Example:** `import csv` / `with open("data.csv") as f: reader = csv.reader(f)` / `for row in reader: print(row)` reads each row as a list.
+**Esempio:** `import csv` / `with open("data.csv") as f: reader = csv.reader(f)` / `for row in reader: print(row)` legge ogni riga come una lista.
 
-#### Data normalization/preprocessing
+#### Normalizzazione/preprocessing dei dati
 
-The step of transforming raw input data into a consistent numeric range — such as dividing pixel values by 255 to scale them from 0–255 to 0–1 — so that the neural network trains more stably and quickly.
+Il passaggio di trasformare i dati grezzi di input in un intervallo numerico coerente — ad esempio dividendo i valori dei pixel per 255 per riportarli dall'intervallo 0–255 a 0–1 — così che la rete neurale si addestri in modo più stabile e veloce.
 
-**Example:** `x_train = x_train / 255.0` scales MNIST pixel values to the 0–1 range before feeding them to the model.
+**Esempio:** `x_train = x_train / 255.0` riporta i valori dei pixel di MNIST all'intervallo 0–1 prima di passarli al modello.
 
-#### Debugging with print() statements
+#### Debug con istruzioni print()
 
-A simple technique of inserting temporary `print()` calls at strategic points in a program to display variable values and trace execution, helping pinpoint where unexpected behavior occurs.
+Una tecnica semplice che consiste nell'inserire chiamate temporanee a `print()` in punti strategici di un programma per visualizzare i valori delle variabili e tracciare l'esecuzione, aiutando a individuare dove si verifica un comportamento inatteso.
 
-**Example:** Adding `print("x =", x)` before a calculation confirms whether `x` holds the right value before the operation runs.
+**Esempio:** Aggiungere `print("x =", x)` prima di un calcolo conferma se `x` contiene il valore giusto prima che l'operazione venga eseguita.
 
-#### Default parameter values
+#### Valori predefiniti dei parametri
 
-Values specified in a function definition that are used when a caller does not supply the corresponding argument, making those parameters optional.
+Valori specificati nella definizione di una funzione che vengono usati quando chi chiama la funzione non fornisce l'argomento corrispondente, rendendo opzionali quei parametri.
 
-**Example:** `def greet(name, greeting="Hello"): print(greeting + ", " + name)` can be called as `greet("Alex")` or `greet("Alex", "Hi")`.
+**Esempio:** `def greet(name, greeting="Hello"): print(greeting + ", " + name)` può essere chiamata come `greet("Alex")` o `greet("Alex", "Hi")`.
 
-#### Defining a function with def
+#### Definire una funzione con def
 
-The way to create a reusable named block of code in Python by writing the `def` keyword, a function name, parentheses for parameters, a colon, and an indented body of statements.
+Il modo per creare un blocco di codice nominato e riutilizzabile in Python scrivendo la parola chiave `def`, un nome di funzione, parentesi per i parametri, due punti e un corpo indentato di istruzioni.
 
-**Example:** `def greet(name): print("Hello, " + name)` defines a function called `greet` that can be called many times with different names.
+**Esempio:** `def greet(name): print("Hello, " + name)` definisce una funzione chiamata `greet` che può essere chiamata molte volte con nomi diversi.
 
-#### Dense layers — fully connected layers
+#### Strati densi — strati completamente connessi
 
-A type of neural network layer in which every neuron in the layer receives input from every neuron in the previous layer, learning a weighted combination of all inputs.
+Un tipo di strato di rete neurale in cui ogni neurone dello strato riceve input da ogni neurone dello strato precedente, imparando una combinazione pesata di tutti gli input.
 
-**Example:** `Dense(128, activation="relu")` creates a layer with 128 neurons, each connected to every input, suitable for general-purpose learning tasks.
+**Esempio:** `Dense(128, activation="relu")` crea uno strato con 128 neuroni, ciascuno connesso a ogni input, adatto a compiti di apprendimento generici.
 
-#### Depth-First Search (DFS) algorithm
+#### Algoritmo di ricerca in profondità (DFS)
 
-A graph traversal algorithm that follows one path as deeply as possible before backtracking and trying another branch, exploring nodes by going as far as it can in one direction first.
+Un algoritmo di attraversamento dei grafi che segue un percorso il più a fondo possibile prima di tornare indietro e provarne un altro, esplorando i nodi andando il più lontano possibile in una direzione prima di cambiare.
 
-**Example:** DFS on a file system explores an entire folder and all its subfolders before moving to the next folder at the same level.
+**Esempio:** La DFS su un file system esplora un'intera cartella e tutte le sue sottocartelle prima di passare alla cartella successiva allo stesso livello.
 
-#### DFS and BFS for maze solving
+#### DFS e BFS per risolvere labirinti
 
-The application of both DFS (explore one path fully before trying another) and BFS (explore all paths level by level) to find a route through a maze, with BFS guaranteeing the shortest solution.
+L'applicazione sia della DFS (esplorare completamente un percorso prima di provarne un altro) sia della BFS (esplorare tutti i percorsi livello per livello) per trovare una via attraverso un labirinto, con la BFS che garantisce la soluzione più breve.
 
-**Example:** In a grid maze, DFS might find a long winding path quickly; BFS will take longer but always returns the shortest path.
+**Esempio:** In un labirinto a griglia, la DFS potrebbe trovare rapidamente un percorso lungo e tortuoso; la BFS impiegherà più tempo ma restituirà sempre il percorso più breve.
 
-#### DFS with recursion and backtracking
+#### DFS con ricorsione e backtracking
 
-An implementation of Depth-First Search where each node is visited by a recursive function call, and returning from the call automatically backtracks to the previous node to try another path.
+Un'implementazione della ricerca in profondità in cui ogni nodo viene visitato tramite una chiamata di funzione ricorsiva, e il ritorno dalla chiamata esegue automaticamente il backtracking al nodo precedente per provare un altro percorso.
 
-**Example:** A recursive maze solver calls itself for each neighbor, marks the path as visited, and "backtracks" by unmarking when no forward path exists.
+**Esempio:** Un risolutore ricorsivo di labirinti richiama se stesso per ogni vicino, marca il percorso come visitato e fa "backtracking" rimuovendo il marcatore quando non esiste un percorso in avanti.
 
-#### Dictionary comprehensions
+#### Comprehension di dizionari
 
-A concise one-line syntax for creating a new dictionary by computing key-value pairs from an iterable, optionally filtered by a condition, all inside curly braces.
+Una sintassi concisa su una riga per creare un nuovo dizionario calcolando coppie chiave-valore da un iterabile, opzionalmente filtrate da una condizione, tutto dentro parentesi graffe.
 
-**Example:** `{name: len(name) for name in ["Alice", "Bob"]}` produces `{"Alice": 5, "Bob": 3}`.
+**Esempio:** `{name: len(name) for name in ["Alice", "Bob"]}` produce `{"Alice": 5, "Bob": 3}`.
 
-#### Dictionary methods: .keys(), .values(), .items()
+#### Metodi dei dizionari: .keys(), .values(), .items()
 
-Built-in dictionary methods that return view objects: `.keys()` yields all keys; `.values()` yields all values; `.items()` yields all (key, value) pairs as tuples.
+Metodi built-in dei dizionari che restituiscono oggetti vista: `.keys()` restituisce tutte le chiavi; `.values()` restituisce tutti i valori; `.items()` restituisce tutte le coppie (chiave, valore) come tuple.
 
-**Example:** `for subject, grade in report.items(): print(subject, grade)` iterates over every subject-grade pair in a report card dictionary.
+**Esempio:** `for subject, grade in report.items(): print(subject, grade)` itera su ogni coppia materia-voto in un dizionario di pagella.
 
-#### Dictionary type (dict) — key-value pairs
+#### Tipo dizionario (dict) — coppie chiave-valore
 
-A Python data type that stores an unordered collection of pairs where each unique key maps to an associated value, allowing fast lookup of values by their key.
+Un tipo di dato Python che memorizza una collezione non ordinata di coppie in cui ogni chiave univoca è associata a un valore, permettendo una ricerca veloce dei valori tramite la loro chiave.
 
-**Example:** `student = {"name": "Alex", "grade": 8, "score": 95}` stores three related pieces of information under descriptive keys.
+**Esempio:** `student = {"name": "Alex", "grade": 8, "score": 95}` memorizza tre informazioni correlate sotto chiavi descrittive.
 
-#### dir() — list attributes/methods of an object
+#### dir() — elenca attributi/metodi di un oggetto
 
-A built-in function that returns a sorted list of names of all attributes and methods available on a given object or in the current scope, useful for exploring what you can do with a value.
+Una funzione built-in che restituisce un elenco ordinato dei nomi di tutti gli attributi e metodi disponibili su un dato oggetto o nell'ambito corrente, utile per esplorare cosa si può fare con un valore.
 
-**Example:** `dir("hello")` shows all the string methods like `upper`, `lower`, `split`, and many more.
+**Esempio:** `dir("hello")` mostra tutti i metodi delle stringhe come `upper`, `lower`, `split` e molti altri.
 
-#### Direction: setheading(angle)
+#### Direzione: setheading(angle)
 
-A turtle method that sets the turtle's direction to an absolute angle in degrees, where 0 is right (east), 90 is up (north), 180 is left (west), and 270 is down (south).
+Un metodo della turtle che imposta la direzione della turtle a un angolo assoluto in gradi, dove 0 è destra (est), 90 è su (nord), 180 è sinistra (ovest) e 270 è giù (sud).
 
-**Example:** `t.setheading(90)` points the turtle straight up; `t.setheading(0)` points it to the right.
+**Esempio:** `t.setheading(90)` punta la turtle verso l'alto; `t.setheading(0)` la punta verso destra.
 
-#### Division always returns float in Python 3
+#### La divisione restituisce sempre un float in Python 3
 
-A rule in Python 3 stating that the `/` operator always produces a floating-point result even when both operands are integers and the quotient is a whole number.
+Una regola in Python 3 secondo cui l'operatore `/` produce sempre un risultato in virgola mobile anche quando entrambi gli operandi sono interi e il quoziente è un numero intero.
 
-**Example:** `10 / 2` evaluates to `5.0`, not `5`; use `10 // 2` if you need the integer result `5`.
+**Esempio:** `10 / 2` vale `5.0`, non `5`; usa `10 // 2` se ti serve il risultato intero `5`.
 
-#### Docstrings — documenting functions
+#### Docstring — documentare le funzioni
 
-A string literal placed as the very first statement in a function, class, or module body, surrounded by triple quotes, that describes what the function does and can be read by the `help()` function.
+Una stringa letterale posta come prima istruzione nel corpo di una funzione, classe o modulo, racchiusa tra virgolette triple, che descrive cosa fa la funzione e può essere letta dalla funzione `help()`.
 
-**Example:** `def area(r): """Return the area of a circle with radius r.""" return 3.14 * r * r` includes a docstring describing the function's purpose.
+**Esempio:** `def area(r): """Return the area of a circle with radius r.""" return 3.14 * r * r` include una docstring che descrive lo scopo della funzione.
 
-#### Drawing a sine wave with turtle and math
+#### Disegnare un'onda sinusoidale con turtle e math
 
-A turtle graphics project that combines `math.sin()` with a loop to move the turtle along a wavy path, demonstrating how mathematical functions can produce visual curves.
+Un progetto di grafica turtle che combina `math.sin()` con un ciclo per spostare la turtle lungo un percorso ondulato, dimostrando come le funzioni matematiche possano produrre curve visive.
 
-**Example:** `for x in range(-300, 300): t.goto(x, 100 * math.sin(math.radians(x)))` draws a smooth sine wave across the screen.
+**Esempio:** `for x in range(-300, 300): t.goto(x, 100 * math.sin(math.radians(x)))` disegna un'onda sinusoidale fluida sullo schermo.
 
-#### Drawing fractals with recursion and turtle
+#### Disegnare frattali con ricorsione e turtle
 
-A turtle graphics technique that uses recursive functions to draw self-similar patterns such as the Sierpiński triangle or Koch snowflake, where each level of recursion draws smaller copies of the same shape.
+Una tecnica di grafica turtle che usa funzioni ricorsive per disegnare pattern autosimili come il triangolo di Sierpiński o il fiocco di neve di Koch, dove ogni livello di ricorsione disegna copie più piccole della stessa forma.
 
-**Example:** A recursive `branch(length)` function draws a line, then calls itself twice with a shorter length at two angles, building a tree-like fractal.
+**Esempio:** Una funzione ricorsiva `branch(length)` disegna una linea, poi richiama se stessa due volte con una lunghezza minore a due angoli diversi, costruendo un frattale a forma di albero.
 
-#### Drawing shapes on a canvas
+#### Disegnare forme su un canvas
 
-The process of using drawing library functions to render geometric shapes — such as rectangles, circles, and lines — by specifying coordinates, sizes, and colors programmatically.
+Il processo di usare le funzioni di una libreria di disegno per rendere forme geometriche — come rettangoli, cerchi e linee — specificando programmaticamente coordinate, dimensioni e colori.
 
-**Example:** `canvas.fill_style = "red"; canvas.fill_circle(200, 150, 50)` draws a filled red circle centered at (200, 150) with radius 50.
+**Esempio:** `canvas.fill_style = "red"; canvas.fill_circle(200, 150, 50)` disegna un cerchio rosso pieno centrato in (200, 150) con raggio 50.
 
-#### Drawing shapes: circle(radius), drawing squares/polygons with loops
+#### Disegnare forme: circle(radius), disegnare quadrati/poligoni con i cicli
 
-Turtle drawing techniques: `circle(r)` draws a circle with radius `r`; squares and regular polygons are drawn by repeating `forward()` and `right()` in a loop, turning by 360 divided by the number of sides.
+Tecniche di disegno turtle: `circle(r)` disegna un cerchio di raggio `r`; quadrati e poligoni regolari si disegnano ripetendo `forward()` e `right()` in un ciclo, girando di 360 diviso il numero di lati.
 
-**Example:** `for _ in range(6): t.forward(80); t.right(60)` draws a regular hexagon by turning 60° (360°÷6) six times.
+**Esempio:** `for _ in range(6): t.forward(80); t.right(60)` disegna un esagono regolare girando di 60° (360°÷6) sei volte.
 
-#### Dropout — regularization to prevent overfitting
+#### Dropout — regolarizzazione per prevenire l'overfitting
 
-A Keras layer that randomly sets a fraction of neuron outputs to zero during training, forcing the network not to rely too heavily on any single neuron and reducing overfitting to training data.
+Uno strato di Keras che azzera casualmente una frazione degli output dei neuroni durante l'addestramento, costringendo la rete a non affidarsi troppo a un singolo neurone e riducendo l'overfitting sui dati di addestramento.
 
-**Example:** `Dropout(0.5)` randomly turns off 50% of neurons during each training step, which helps the model generalize better to new data.
+**Esempio:** `Dropout(0.5)` disattiva casualmente il 50% dei neuroni a ogni passo di addestramento, il che aiuta il modello a generalizzare meglio su nuovi dati.
 
-#### DRY principle (Don't Repeat Yourself)
+#### Principio DRY (Don't Repeat Yourself)
 
-A software design principle stating that every piece of knowledge or logic should exist in exactly one place in a codebase, reducing duplication and making changes easier to apply consistently.
+Un principio di progettazione del software secondo cui ogni informazione o logica dovrebbe esistere in esattamente un solo punto di una codebase, riducendo la duplicazione e rendendo più facile applicare le modifiche in modo coerente.
 
-**Example:** If you find yourself copying and pasting the same five lines in three places, the DRY principle suggests putting those lines in a function and calling it three times instead.
+**Esempio:** Se ti accorgi di copiare e incollare le stesse cinque righe in tre punti, il principio DRY suggerisce di mettere quelle righe in una funzione e chiamarla tre volte invece.
 
-#### DRY principle and code reuse patterns
+#### Principio DRY e pattern di riutilizzo del codice
 
-The combined practice of avoiding duplicated logic (Don't Repeat Yourself) and the specific coding patterns — such as functions, loops, and modules — that enable code to be written once and called many times.
+La pratica combinata di evitare logica duplicata (Don't Repeat Yourself) e gli specifici pattern di programmazione — come funzioni, cicli e moduli — che permettono di scrivere il codice una volta e richiamarlo molte volte.
 
-**Example:** Extracting repeated password-checking logic into a `validate_password(pw)` function lets every part of the program call one shared, maintainable function instead of containing its own copy.
+**Esempio:** Estrarre la logica ripetuta di verifica della password in una funzione `validate_password(pw)` permette a ogni parte del programma di chiamare un'unica funzione condivisa e manutenibile invece di contenere una propria copia.
 
-#### elif (else-if) chains
+#### Catene elif (else-if)
 
-A way to test multiple conditions in sequence by adding one or more `elif` clauses between an `if` and an optional `else`, so Python checks each condition in order and runs only the first matching block.
+Un modo per verificare più condizioni in sequenza aggiungendo una o più clausole `elif` tra un `if` e un `else` opzionale, così Python verifica ogni condizione in ordine ed esegue solo il primo blocco corrispondente.
 
-**Example:** Checking a grade: `if score >= 90: ... elif score >= 70: ... else: ...` covers A, passing, and failing in three branches.
+**Esempio:** Verificare un voto: `if score >= 90: ... elif score >= 70: ... else: ...` copre in tre rami A, sufficienza e bocciatura.
 
-#### else clause in try/except
+#### Clausola else in try/except
 
-An optional block after the `except` clauses that runs only if the `try` block completed without raising any exception, keeping successful-path code separate from error-handling code.
+Un blocco opzionale dopo le clausole `except` che viene eseguito solo se il blocco `try` è terminato senza generare alcuna eccezione, mantenendo separato il codice del percorso di successo da quello di gestione degli errori.
 
-**Example:** `try: n = int(input(...))` / `except ValueError: print("Not a number")` / `else: print("Got:", n)` prints the value only when conversion succeeded.
+**Esempio:** `try: n = int(input(...))` / `except ValueError: print("Not a number")` / `else: print("Got:", n)` stampa il valore solo quando la conversione è riuscita.
 
-#### else clause on loops
+#### Clausola else sui cicli
 
-An optional block that follows a `for` or `while` loop and runs only if the loop finished normally — that is, it was not terminated by a `break` statement.
+Un blocco opzionale che segue un ciclo `for` o `while` e viene eseguito solo se il ciclo è terminato normalmente — cioè non è stato interrotto da un'istruzione `break`.
 
-**Example:** `for item in inventory:` / `if item == target: break` / `else: print("Not found")` reports only when the item was never found.
+**Esempio:** `for item in inventory:` / `if item == target: break` / `else: print("Not found")` segnala solo quando l'elemento non è mai stato trovato.
 
-#### enumerate() — iterate with index and value
+#### enumerate() — iterare con indice e valore
 
-A built-in function that wraps an iterable and yields pairs of (index, value) during a `for` loop, so you can access both the position of an item and the item itself at the same time.
+Una funzione built-in che avvolge un iterabile e restituisce coppie (indice, valore) durante un ciclo `for`, così puoi accedere contemporaneamente alla posizione di un elemento e all'elemento stesso.
 
-**Example:** `for i, name in enumerate(["Alice", "Bob", "Carol"]): print(i, name)` prints `0 Alice`, `1 Bob`, `2 Carol`.
+**Esempio:** `for i, name in enumerate(["Alice", "Bob", "Carol"]): print(i, name)` stampa `0 Alice`, `1 Bob`, `2 Carol`.
 
-#### Escape characters (\n, \t, \\, \")
+#### Caratteri di escape (\n, \t, \\, \")
 
-Special two-character sequences beginning with a backslash that represent characters difficult to type directly inside a string, such as a newline `\n`, a tab `\t`, a literal backslash `\\`, or a quote `\"`.
+Sequenze speciali di due caratteri che iniziano con un backslash e rappresentano caratteri difficili da digitare direttamente dentro una stringa, come un a capo `\n`, un tab `\t`, un backslash letterale `\\`, o una virgoletta `\"`.
 
-**Example:** `print("Line 1\nLine 2")` prints two separate lines because `\n` tells Python to start a new line.
+**Esempio:** `print("Line 1\nLine 2")` stampa due righe separate perché `\n` dice a Python di andare a capo.
 
-#### Escaping special characters with \
+#### Escape di caratteri speciali con \
 
-The practice of placing a backslash before a regex metacharacter (such as `.`, `*`, `+`, `(`, `)`) to match it literally rather than treating it as a special operator.
+La pratica di porre un backslash prima di un metacarattere regex (come `.`, `*`, `+`, `(`, `)`) per farlo corrispondere letteralmente invece di trattarlo come un operatore speciale.
 
-**Example:** `r"\."` matches a literal period, while `r"."` matches any single character.
+**Esempio:** `r"\."` corrisponde a un punto letterale, mentre `r"."` corrisponde a qualsiasi singolo carattere.
 
-#### Event handling: onscreenclick(function)
+#### Gestione degli eventi: onscreenclick(function)
 
-A turtle screen method that registers a callback function to be called whenever the user clicks on the drawing window, passing the click's x and y coordinates to the function.
+Un metodo dello schermo turtle che registra una funzione di callback da chiamare ogni volta che l'utente clicca sulla finestra di disegno, passando alla funzione le coordinate x e y del click.
 
-**Example:** `screen.onscreenclick(draw_dot)` makes the turtle draw a dot wherever the user clicks on the canvas.
+**Esempio:** `screen.onscreenclick(draw_dot)` fa sì che la turtle disegni un punto ovunque l'utente clicchi sul canvas.
 
-#### Event-driven programming model
+#### Modello di programmazione guidata dagli eventi
 
-A programming paradigm where the flow of execution is determined by user actions or system events — such as mouse clicks, key presses, or timers — rather than by a fixed sequential order.
+Un paradigma di programmazione in cui il flusso di esecuzione è determinato dalle azioni dell'utente o dagli eventi di sistema — come click del mouse, pressioni di tasti o timer — invece che da un ordine sequenziale fisso.
 
-**Example:** A turtle graphics program that draws a dot wherever the user clicks uses event-driven programming: the click event triggers the drawing function.
+**Esempio:** Un programma di grafica turtle che disegna un punto ovunque l'utente clicchi usa la programmazione guidata dagli eventi: l'evento di click attiva la funzione di disegno.
 
-#### except ExceptionType as e — catching specific exceptions
+#### except TipoEccezione as e — catturare eccezioni specifiche
 
-A way to catch only a particular type of exception and bind the exception object to a variable, allowing you to print a detailed error message or take specific action for that error.
+Un modo per catturare solo un particolare tipo di eccezione e assegnare l'oggetto eccezione a una variabile, permettendo di stampare un messaggio di errore dettagliato o intraprendere un'azione specifica per quell'errore.
 
-**Example:** `except ValueError as e: print("Bad input:", e)` catches only `ValueError` and prints the exception's message.
+**Esempio:** `except ValueError as e: print("Bad input:", e)` cattura solo `ValueError` e stampa il messaggio dell'eccezione.
 
-#### Exception hierarchy — understanding Exception base class
+#### Gerarchia delle eccezioni — capire la classe base Exception
 
-The tree-shaped organization of Python's built-in exception types, where more general classes sit higher up (such as `Exception`) and specific errors like `ValueError` and `TypeError` are subclasses further down.
+L'organizzazione ad albero dei tipi di eccezione built-in di Python, dove le classi più generali si trovano più in alto (come `Exception`) e gli errori specifici come `ValueError` e `TypeError` sono sottoclassi più in basso.
 
-**Example:** `except Exception as e:` catches almost any error because `ValueError`, `TypeError`, and most others all inherit from `Exception`.
+**Esempio:** `except Exception as e:` cattura quasi ogni errore perché `ValueError`, `TypeError` e la maggior parte degli altri ereditano tutti da `Exception`.
 
-#### Exponentiation (**)
+#### Elevamento a potenza (**)
 
-An arithmetic operator that raises a number to a power, computing the result of multiplying a base by itself a given number of times.
+Un operatore aritmetico che eleva un numero a una potenza, calcolando il risultato della moltiplicazione di una base per se stessa un dato numero di volte.
 
-**Example:** `2 ** 8` equals `256`; `9 ** 0.5` equals `3.0`, the square root of 9.
+**Esempio:** `2 ** 8` è uguale a `256`; `9 ** 0.5` è uguale a `3.0`, la radice quadrata di 9.
 
-#### f-strings (formatted string literals)
+#### f-string (stringhe letterali formattate)
 
-A modern Python string syntax where an `f` before the opening quote allows expressions inside `{}` braces to be evaluated and inserted directly into the string, making formatting concise and readable.
+Una sintassi moderna di Python in cui una `f` prima della virgoletta di apertura permette di valutare espressioni dentro parentesi graffe `{}` e inserirle direttamente nella stringa, rendendo la formattazione concisa e leggibile.
 
-**Example:** `name = "Alex"; age = 12; f"Hello, {name}! You are {age} years old."` produces `"Hello, Alex! You are 12 years old."`.
+**Esempio:** `name = "Alex"; age = 12; f"Hello, {name}! You are {age} years old."` produce `"Hello, Alex! You are 12 years old."`.
 
-#### Feedforward networks
+#### Reti feedforward
 
-A neural network architecture where information flows in one direction only — from the input layer through hidden layers to the output layer — with no cycles or feedback connections.
+Un'architettura di rete neurale in cui le informazioni fluiscono in una sola direzione — dallo strato di input attraverso gli strati nascosti fino allo strato di output — senza cicli o connessioni di retroazione.
 
-**Example:** A simple Keras `Sequential` model with `Dense` layers is a feedforward network; input goes in one end and a prediction comes out the other.
+**Esempio:** Un semplice modello Keras `Sequential` con strati `Dense` è una rete feedforward; l'input entra da un lato ed esce una previsione dall'altro.
 
-#### File modes: 'r' (read), 'w' (write), 'a' (append), 'b' (binary)
+#### Modalità dei file: 'r' (lettura), 'w' (scrittura), 'a' (append), 'b' (binario)
 
-Options passed to `open()` that determine how the file is accessed: `'r'` opens for reading (default); `'w'` opens for writing and erases existing content; `'a'` appends to existing content; `'b'` opens in binary mode for non-text files.
+Opzioni passate a `open()` che determinano come si accede al file: `'r'` apre in lettura (predefinito); `'w'` apre in scrittura e cancella il contenuto esistente; `'a'` aggiunge in coda al contenuto esistente; `'b'` apre in modalità binaria per file non di testo.
 
-**Example:** `open("log.txt", "a")` opens the file so that each new `write()` adds to the end without deleting previous lines.
+**Esempio:** `open("log.txt", "a")` apre il file così che ogni nuova `write()` aggiunga alla fine senza cancellare le righe precedenti.
 
-#### file.close() — close file handle
+#### file.close() — chiudere il file handle
 
-A file method that flushes any unwritten data, releases system resources held by the open file, and marks the file object as unusable; failing to close files can cause data loss or resource leaks.
+Un metodo dei file che scarica eventuali dati non ancora scritti, rilascia le risorse di sistema occupate dal file aperto e marca l'oggetto file come inutilizzabile; non chiudere i file può causare perdita di dati o fughe di risorse.
 
-**Example:** After reading or writing, calling `f.close()` ensures the file is properly saved and released.
+**Esempio:** Dopo aver letto o scritto, chiamare `f.close()` assicura che il file venga salvato e rilasciato correttamente.
 
-#### file.read() — read entire file as string
+#### file.read() — leggere l'intero file come stringa
 
-A file method that reads the entire contents of an open file and returns them as a single string.
+Un metodo dei file che legge l'intero contenuto di un file aperto e lo restituisce come un'unica stringa.
 
-**Example:** `content = f.read()` stores every byte of the file as one long string in `content`.
+**Esempio:** `content = f.read()` memorizza ogni byte del file come un'unica lunga stringa in `content`.
 
-#### file.readline() — read one line at a time
+#### file.readline() — leggere una riga alla volta
 
-A file method that reads and returns the next line of an open file as a string, advancing the file's internal cursor; returns an empty string when the end of the file is reached.
+Un metodo dei file che legge e restituisce la riga successiva di un file aperto come stringa, facendo avanzare il cursore interno del file; restituisce una stringa vuota quando viene raggiunta la fine del file.
 
-**Example:** Calling `f.readline()` repeatedly returns each line one by one until the file is exhausted.
+**Esempio:** Chiamare ripetutamente `f.readline()` restituisce ogni riga una alla volta finché il file non è esaurito.
 
-#### file.readlines() — read all lines into a list
+#### file.readlines() — leggere tutte le righe in una lista
 
-A file method that reads all lines of an open file and returns them as a list of strings, where each string ends with a newline character `\n`.
+Un metodo dei file che legge tutte le righe di un file aperto e le restituisce come una lista di stringhe, dove ogni stringa termina con un carattere di a capo `\n`.
 
-**Example:** `lines = f.readlines()` gives a list like `["Line 1\n", "Line 2\n", "Line 3\n"]`.
+**Esempio:** `lines = f.readlines()` restituisce una lista come `["Line 1\n", "Line 2\n", "Line 3\n"]`.
 
-#### file.write() — write string to file
+#### file.write() — scrivere una stringa su file
 
-A file method that writes a string to an open file at the current cursor position; it does not automatically add a newline, so you must include `\n` explicitly if needed.
+Un metodo dei file che scrive una stringa in un file aperto alla posizione attuale del cursore; non aggiunge automaticamente un a capo, quindi devi includere `\n` esplicitamente se necessario.
 
-**Example:** `f.write("Hello, world!\n")` writes the text followed by a newline to the file.
+**Esempio:** `f.write("Hello, world!\n")` scrive il testo seguito da un a capo nel file.
 
-#### Fill: begin_fill(), end_fill()
+#### Riempimento: begin_fill(), end_fill()
 
-A pair of turtle methods that together color in the interior of any shape drawn between them: call `begin_fill()` before drawing the shape and `end_fill()` after, and Python fills the enclosed area with the current fill color.
+Una coppia di metodi della turtle che insieme coloriscono l'interno di qualsiasi forma disegnata tra di essi: chiama `begin_fill()` prima di disegnare la forma e `end_fill()` dopo, e Python riempie l'area racchiusa con il colore di riempimento attuale.
 
-**Example:** `t.fillcolor("green"); t.begin_fill(); draw_triangle(); t.end_fill()` draws a solid green triangle.
+**Esempio:** `t.fillcolor("green"); t.begin_fill(); draw_triangle(); t.end_fill()` disegna un triangolo verde pieno.
 
-#### filter() — filter items by condition
+#### filter() — filtrare elementi in base a una condizione
 
-A built-in function that applies a test function to each item in an iterable and returns an iterator containing only the items for which the test returns `True`.
+Una funzione built-in che applica una funzione di test a ogni elemento di un iterabile e restituisce un iteratore contenente solo gli elementi per cui il test restituisce `True`.
 
-**Example:** `list(filter(lambda x: x > 0, [-1, 2, -3, 4]))` returns `[2, 4]`, keeping only positive numbers.
+**Esempio:** `list(filter(lambda x: x > 0, [-1, 2, -3, 4]))` restituisce `[2, 4]`, mantenendo solo i numeri positivi.
 
-#### finally clause — always executes
+#### Clausola finally — si esegue sempre
 
-An optional block at the end of a `try/except` structure that runs regardless of whether an exception occurred or not, commonly used to release resources such as closing a file or a network connection.
+Un blocco opzionale alla fine di una struttura `try/except` che viene eseguito indipendentemente dal fatto che si sia verificata un'eccezione o meno, comunemente usato per rilasciare risorse come chiudere un file o una connessione di rete.
 
-**Example:** `try: f = open("data.txt")` / `finally: f.close()` ensures the file is closed even if an error happens during reading.
+**Esempio:** `try: f = open("data.txt")` / `finally: f.close()` garantisce che il file venga chiuso anche se si verifica un errore durante la lettura.
 
-#### Flatten layer — reshape for dense layers
+#### Strato Flatten — rimodellare per gli strati densi
 
-A Keras layer that reshapes a multi-dimensional tensor (such as a 2D image feature map) into a one-dimensional vector, bridging the gap between convolutional layers and fully connected dense layers.
+Uno strato di Keras che rimodella un tensore multidimensionale (come una mappa di caratteristiche di un'immagine 2D) in un vettore monodimensionale, facendo da ponte tra gli strati convoluzionali e gli strati densi completamente connessi.
 
-**Example:** After `Conv2D` and `MaxPooling2D` layers, a `Flatten()` layer converts the 2D grid of features into a flat list that `Dense` layers can process.
+**Esempio:** Dopo gli strati `Conv2D` e `MaxPooling2D`, uno strato `Flatten()` converte la griglia 2D di caratteristiche in una lista piatta che gli strati `Dense` possono elaborare.
 
-#### float() — convert to float
+#### float() — conversione a float
 
-A built-in function that converts an integer or a numeric string into a floating-point number with a decimal point.
+Una funzione built-in che converte un intero o una stringa numerica in un numero in virgola mobile con un punto decimale.
 
-**Example:** `float("3.14")` returns `3.14`; `float(5)` returns `5.0`.
+**Esempio:** `float("3.14")` restituisce `3.14`; `float(5)` restituisce `5.0`.
 
-#### Floats (float) — decimal numbers
+#### Float (float) — numeri decimali
 
-A Python data type that represents numbers with a decimal point, stored in a format that allows a wide range of values but may introduce tiny rounding differences for some calculations.
+Un tipo di dato Python che rappresenta numeri con un punto decimale, memorizzato in un formato che consente un ampio intervallo di valori ma può introdurre piccole differenze di arrotondamento in alcuni calcoli.
 
-**Example:** `3.14`, `-0.5`, and `2.0` are floats; `1/3` evaluates to `0.3333333333333333` rather than the exact fraction.
+**Esempio:** `3.14`, `-0.5` e `2.0` sono float; `1/3` restituisce `0.3333333333333333` invece della frazione esatta.
 
-#### for loop with range()
+#### Ciclo for con range()
 
-A common pattern that uses `range()` to generate a sequence of integers and repeats a block of code for each integer, providing a simple way to loop a specific number of times.
+Un pattern comune che usa `range()` per generare una sequenza di interi e ripete un blocco di codice per ogni intero, fornendo un modo semplice per ciclare un numero specifico di volte.
 
-**Example:** `for i in range(5): print(i)` prints `0`, `1`, `2`, `3`, and `4`.
+**Esempio:** `for i in range(5): print(i)` stampa `0`, `1`, `2`, `3` e `4`.
 
-#### for loop — iterating over a sequence
+#### Ciclo for — iterare su una sequenza
 
-A control-flow statement that repeats a block of code once for each item in a sequence — such as a list, string, or range — automatically moving to the next item after each repetition.
+Un'istruzione di controllo del flusso che ripete un blocco di codice una volta per ogni elemento di una sequenza — come una lista, una stringa o un range — passando automaticamente all'elemento successivo dopo ogni ripetizione.
 
-**Example:** `for color in ["red", "green", "blue"]: print(color)` prints each color on its own line.
+**Esempio:** `for color in ["red", "green", "blue"]: print(color)` stampa ogni colore su una riga propria.
 
-#### from ... import * — import all (use sparingly)
+#### from ... import * — importare tutto (usare con parsimonia)
 
-A way to import every public name from a module directly into the current namespace at once; generally discouraged because it can create name conflicts and makes it hard to tell where a name came from.
+Un modo per importare tutti i nomi pubblici di un modulo direttamente nel namespace corrente in una sola volta; generalmente sconsigliato perché può creare conflitti di nomi e rende difficile capire da dove provenga un nome.
 
-**Example:** `from math import *` lets you write `sqrt(4)` directly, but may overwrite a variable you named `sqrt` earlier.
+**Esempio:** `from math import *` permette di scrivere `sqrt(4)` direttamente, ma potrebbe sovrascrivere una variabile che avevi chiamato `sqrt` in precedenza.
 
-#### from ... import ... — import specific names
+#### from ... import ... — importare nomi specifici
 
-A variation of the `import` statement that loads only the specified names from a module directly into the current namespace, so they can be used without the module name prefix.
+Una variante dell'istruzione `import` che carica solo i nomi specificati da un modulo direttamente nel namespace corrente, così possono essere usati senza il prefisso del nome del modulo.
 
-**Example:** `from math import sqrt, pi` lets you write `sqrt(16)` and `pi` instead of `math.sqrt(16)` and `math.pi`.
+**Esempio:** `from math import sqrt, pi` permette di scrivere `sqrt(16)` e `pi` invece di `math.sqrt(16)` e `math.pi`.
 
-#### Frozensets (immutable sets)
+#### Frozenset (insiemi immutabili)
 
-A variant of the set data type whose contents cannot be changed after creation, making frozensets hashable and usable as dictionary keys or elements of other sets.
+Una variante del tipo di dato insieme il cui contenuto non può essere cambiato dopo la creazione, rendendo i frozenset hashabili e utilizzabili come chiavi di dizionario o elementi di altri insiemi.
 
-**Example:** `fs = frozenset([1, 2, 3])` creates an immutable set; trying `fs.add(4)` raises an `AttributeError`.
+**Esempio:** `fs = frozenset([1, 2, 3])` crea un insieme immutabile; provare `fs.add(4)` genera un `AttributeError`.
 
-#### Function parameters (positional)
+#### Parametri di funzione (posizionali)
 
-Variables listed inside the parentheses of a `def` statement that receive the values passed when the function is called, matched by their position in the argument list.
+Variabili elencate tra le parentesi di un'istruzione `def` che ricevono i valori passati quando la funzione viene chiamata, abbinati in base alla loro posizione nell'elenco degli argomenti.
 
-**Example:** In `def add(a, b): return a + b`, calling `add(3, 5)` assigns `3` to `a` and `5` to `b` by position.
+**Esempio:** In `def add(a, b): return a + b`, chiamare `add(3, 5)` assegna `3` ad `a` e `5` a `b` in base alla posizione.
 
-#### Functions that return None implicitly
+#### Funzioni che restituiscono None implicitamente
 
-The behavior of Python functions that finish executing without a `return` statement, automatically sending the special value `None` back to any code that called them.
+Il comportamento delle funzioni Python che terminano l'esecuzione senza un'istruzione `return`, restituendo automaticamente il valore speciale `None` a qualsiasi codice che le abbia chiamate.
 
-**Example:** `def say_hi(): print("Hi")` has no `return`, so `x = say_hi()` stores `None` in `x` even though "Hi" was printed.
+**Esempio:** `def say_hi(): print("Hi")` non ha `return`, quindi `x = say_hi()` memorizza `None` in `x` anche se "Hi" è stato stampato.
 
-#### Functions without return return None
+#### Le funzioni senza return restituiscono None
 
-A rule in Python stating that any function that reaches the end of its body without executing a `return` statement automatically returns the value `None` to the caller.
+Una regola in Python secondo cui qualsiasi funzione che raggiunge la fine del proprio corpo senza eseguire un'istruzione `return` restituisce automaticamente il valore `None` a chi l'ha chiamata.
 
-**Example:** `def greet(): print("Hi")` returns `None`; `result = greet()` stores `None` in `result` even though "Hi" was printed.
+**Esempio:** `def greet(): print("Hi")` restituisce `None`; `result = greet()` memorizza `None` in `result` anche se "Hi" è stato stampato.
 
-#### .get() method — safe key access with default
+#### Metodo .get() — accesso sicuro a una chiave con valore predefinito
 
-A dictionary method that returns the value for a specified key if the key exists, or a default value (such as `None` or a specified fallback) if the key is not present, without raising an error.
+Un metodo dei dizionari che restituisce il valore di una chiave specificata se la chiave esiste, o un valore predefinito (come `None` o un valore di riserva specificato) se la chiave non è presente, senza generare un errore.
 
-**Example:** `student.get("score", 0)` returns the score if it exists or `0` if the key `"score"` was never added.
+**Esempio:** `student.get("score", 0)` restituisce il punteggio se esiste o `0` se la chiave `"score"` non è mai stata aggiunta.
 
-#### global keyword — access global variable inside function
+#### Parola chiave global — accedere a una variabile globale dentro una funzione
 
-A declaration inside a function that tells Python a particular variable name refers to the global-scope variable rather than creating a new local one, allowing the function to read and modify the global value.
+Una dichiarazione dentro una funzione che dice a Python che un particolare nome di variabile si riferisce alla variabile di ambito globale invece di crearne una nuova locale, permettendo alla funzione di leggere e modificare il valore globale.
 
-**Example:** `def add_point(): global score; score += 1` modifies the global `score` variable instead of creating a local copy.
+**Esempio:** `def add_point(): global score; score += 1` modifica la variabile globale `score` invece di crearne una copia locale.
 
-#### Global scope — variables at module level
+#### Ambito globale — variabili a livello di modulo
 
-The area of a program outside all functions where variables can be accessed from anywhere in the same file, including inside functions that reference them (but do not reassign them without the `global` keyword).
+L'area di un programma al di fuori di tutte le funzioni dove le variabili possono essere accedute da qualsiasi punto dello stesso file, incluso dentro le funzioni che vi fanno riferimento (ma senza riassegnarle senza la parola chiave `global`).
 
-**Example:** `MAX_SIZE = 100` defined at the top of a file is a global variable readable inside any function in that file.
+**Esempio:** `MAX_SIZE = 100` definita in cima a un file è una variabile globale leggibile dentro qualsiasi funzione di quel file.
 
-#### Graph — nodes and edges
+#### Grafo — nodi e archi
 
-A data structure consisting of a set of nodes (also called vertices) representing entities and edges connecting pairs of nodes, used to model relationships such as friendships, roads, or computer networks.
+Una struttura dati composta da un insieme di nodi (detti anche vertici) che rappresentano entità e archi che collegano coppie di nodi, usata per modellare relazioni come amicizie, strade o reti di computer.
 
-**Example:** A social network is a graph where each person is a node and each friendship is an edge connecting two nodes.
+**Esempio:** Una rete sociale è un grafo in cui ogni persona è un nodo e ogni amicizia è un arco che collega due nodi.
 
-#### help() — display documentation
+#### help() — mostrare la documentazione
 
-A built-in function that prints the docstring and usage information for a function, module, class, or method, providing a quick reference without leaving the Python shell.
+Una funzione built-in che stampa la docstring e le informazioni d'uso per una funzione, modulo, classe o metodo, fornendo un riferimento rapido senza uscire dalla shell Python.
 
-**Example:** `help(str.split)` displays an explanation of how the `.split()` method works, including its parameters.
+**Esempio:** `help(str.split)` mostra una spiegazione di come funziona il metodo `.split()`, inclusi i suoi parametri.
 
-#### Hex color values (#FA057F)
+#### Valori di colore esadecimali (#FA057F)
 
-A way of specifying a color as a six-digit hexadecimal number preceded by `#`, where the first two digits set red intensity, the middle two set green, and the last two set blue, each ranging from `00` (none) to `FF` (maximum).
+Un modo di specificare un colore come un numero esadecimale a sei cifre preceduto da `#`, dove le prime due cifre impostano l'intensità del rosso, le due centrali il verde e le ultime due il blu, ciascuna compresa tra `00` (nessuno) e `FF` (massimo).
 
-**Example:** `"#FF0000"` is pure red; `"#00FF00"` is pure green; `"#FA057F"` is a bright pink used in design tools and web pages.
+**Esempio:** `"#FF0000"` è rosso puro; `"#00FF00"` è verde puro; `"#FA057F"` è un rosa acceso usato in strumenti di design e pagine web.
 
-#### Hiding/showing turtle: hideturtle(), showturtle()
+#### Nascondere/mostrare la turtle: hideturtle(), showturtle()
 
-Turtle methods that control whether the turtle cursor is visible on screen: `hideturtle()` makes it invisible while still drawing; `showturtle()` makes it visible again.
+Metodi della turtle che controllano se il cursore turtle è visibile sullo schermo: `hideturtle()` lo rende invisibile mentre continua a disegnare; `showturtle()` lo rende di nuovo visibile.
 
-**Example:** Calling `t.hideturtle()` before a complex drawing makes it appear faster because the screen doesn't need to redraw the cursor at every step.
+**Esempio:** Chiamare `t.hideturtle()` prima di un disegno complesso lo fa apparire più velocemente perché lo schermo non deve ridisegnare il cursore a ogni passo.
 
-#### if statement
+#### Istruzione if
 
-A control-flow statement that executes a block of code only when a specified condition evaluates to `True`, allowing programs to make decisions.
+Un'istruzione di controllo del flusso che esegue un blocco di codice solo quando una condizione specificata risulta `True`, permettendo ai programmi di prendere decisioni.
 
-**Example:** `if score >= 60: print("You passed!")` prints the message only when the score is 60 or higher.
+**Esempio:** `if score >= 60: print("You passed!")` stampa il messaggio solo quando il punteggio è 60 o superiore.
 
-#### if...else block
+#### Blocco if...else
 
-A control-flow structure that executes one block of code when a condition is `True` and a different block when the condition is `False`, ensuring that exactly one of the two paths always runs.
+Una struttura di controllo del flusso che esegue un blocco di codice quando una condizione è `True` e un blocco diverso quando è `False`, garantendo che venga sempre eseguito esattamente uno dei due percorsi.
 
-**Example:** `if temperature > 30: print("Hot day")` / `else: print("Nice day")` prints exactly one message based on the temperature.
+**Esempio:** `if temperature > 30: print("Hot day")` / `else: print("Nice day")` stampa esattamente un messaggio in base alla temperatura.
 
-#### Image.open(path) — open an image
+#### Image.open(path) — aprire un'immagine
 
-A Pillow function that opens an image file from a given file path and returns an Image object that you can inspect, modify, and save.
+Una funzione di Pillow che apre un file immagine da un percorso dato e restituisce un oggetto Image che puoi ispezionare, modificare e salvare.
 
-**Example:** `img = Image.open("photo.jpg")` loads the image so you can call `img.size` to get its dimensions.
+**Esempio:** `img = Image.open("photo.jpg")` carica l'immagine così puoi chiamare `img.size` per ottenerne le dimensioni.
 
-#### image.show() — display an image
+#### image.show() — mostrare un'immagine
 
-A Pillow method that opens the image in the operating system's default image viewer, useful for quickly checking what an image looks like during development.
+Un metodo di Pillow che apre l'immagine nel visualizzatore di immagini predefinito del sistema operativo, utile per controllare rapidamente come appare un'immagine durante lo sviluppo.
 
-**Example:** `img.show()` opens the image in Preview on a Mac or Photos on Windows without saving a separate file.
+**Esempio:** `img.show()` apre l'immagine in Preview su Mac o Foto su Windows senza salvare un file separato.
 
-#### import ... as ... — alias a module
+#### import ... as ... — assegnare un alias a un modulo
 
-A way to import a module under a shorter or more convenient name, so you type that alias instead of the full module name throughout your code.
+Un modo per importare un modulo con un nome più breve o più comodo, così scrivi quell'alias invece del nome completo del modulo in tutto il codice.
 
-**Example:** `import numpy as np` allows you to write `np.array([1, 2, 3])` instead of `numpy.array([1, 2, 3])`.
+**Esempio:** `import numpy as np` permette di scrivere `np.array([1, 2, 3])` invece di `numpy.array([1, 2, 3])`.
 
 #### import matplotlib.pyplot as plt
 
-The standard way to import the plotting sub-module of matplotlib, giving it the short alias `plt` so you can call `plt.plot()`, `plt.show()`, and other functions concisely.
+Il modo standard per importare il sotto-modulo di plotting di matplotlib, assegnandogli l'alias breve `plt` così puoi chiamare `plt.plot()`, `plt.show()` e altre funzioni in modo conciso.
 
-**Example:** `import matplotlib.pyplot as plt; plt.plot([1, 2, 3], [4, 1, 7]); plt.show()` creates and displays a simple line graph.
+**Esempio:** `import matplotlib.pyplot as plt; plt.plot([1, 2, 3], [4, 1, 7]); plt.show()` crea e mostra un semplice grafico a linee.
 
 #### import numpy as np
 
-The standard way to import NumPy, using the alias `np` so that all NumPy functions can be called with the shorter prefix, following a near-universal Python convention.
+Il modo standard per importare NumPy, usando l'alias `np` così che tutte le funzioni di NumPy possano essere chiamate con il prefisso più breve, seguendo una convenzione Python quasi universale.
 
-**Example:** After `import numpy as np`, you write `np.zeros(5)` instead of `numpy.zeros(5)` throughout your code.
+**Esempio:** Dopo `import numpy as np`, scrivi `np.zeros(5)` invece di `numpy.zeros(5)` in tutto il codice.
 
-#### import statement
+#### Istruzione import
 
-A statement that loads a module (a file of Python code) into the current program, making the module's functions, classes, and variables available under the module's name.
+Un'istruzione che carica un modulo (un file di codice Python) nel programma corrente, rendendo disponibili le funzioni, le classi e le variabili del modulo sotto il nome del modulo stesso.
 
-**Example:** `import math` loads the math module so you can call `math.sqrt(16)` to get `4.0`.
+**Esempio:** `import math` carica il modulo math così puoi chiamare `math.sqrt(16)` per ottenere `4.0`.
 
 #### import turtle
 
-The statement that loads Python's built-in turtle graphics module, making all turtle drawing functions and classes available for creating visual programs.
+L'istruzione che carica il modulo di grafica turtle integrato in Python, rendendo disponibili tutte le funzioni e classi di disegno turtle per creare programmi visivi.
 
-**Example:** `import turtle` is always the first line in a turtle program; after it, you can create a `turtle.Turtle()` object and start drawing.
+**Esempio:** `import turtle` è sempre la prima riga in un programma turtle; dopo, puoi creare un oggetto `turtle.Turtle()` e iniziare a disegnare.
 
-#### Importing re module
+#### Importare il modulo re
 
-The step of writing `import re` at the top of a Python file to load the regular expressions module and make its functions — such as `re.search()`, `re.findall()`, and `re.sub()` — available for use.
+Il passaggio di scrivere `import re` all'inizio di un file Python per caricare il modulo delle espressioni regolari e rendere disponibili le sue funzioni — come `re.search()`, `re.findall()` e `re.sub()`.
 
-**Example:** After `import re`, you can call `re.findall(r"\w+", sentence)` to extract all words from a sentence.
+**Esempio:** Dopo `import re`, puoi chiamare `re.findall(r"\w+", sentence)` per estrarre tutte le parole da una frase.
 
-#### Indentation as syntax (whitespace rules)
+#### L'indentazione come sintassi (regole sugli spazi bianchi)
 
-The rule in Python that the spaces or tabs at the beginning of a line determine which block of code a statement belongs to, making indentation a required part of the language rather than just a style choice.
+La regola in Python per cui gli spazi o i tab all'inizio di una riga determinano a quale blocco di codice appartiene un'istruzione, rendendo l'indentazione una parte obbligatoria del linguaggio e non solo una scelta di stile.
 
-**Example:** The body of an `if` statement must be indented four spaces; if it is not, Python raises an `IndentationError`.
+**Esempio:** Il corpo di un'istruzione `if` deve essere indentato di quattro spazi; se non lo è, Python genera un `IndentationError`.
 
-#### Infinite loops and how to avoid them
+#### Cicli infiniti e come evitarli
 
-A loop whose condition never becomes `False`, causing it to run forever; avoided by making sure the loop variable changes with each iteration or by including a `break` statement that eventually triggers.
+Un ciclo la cui condizione non diventa mai `False`, facendolo girare per sempre; si evita assicurandosi che la variabile del ciclo cambi a ogni iterazione o includendo un'istruzione `break` che prima o poi si attiva.
 
-**Example:** `while True: ...` is intentionally infinite and must contain a `break`; forgetting to write `count += 1` inside `while count < 10:` also creates an accidental infinite loop.
+**Esempio:** `while True: ...` è intenzionalmente infinito e deve contenere un `break`; dimenticare di scrivere `count += 1` dentro `while count < 10:` crea anch'esso un ciclo infinito accidentale.
 
-#### Inheritance — basics
+#### Ereditarietà — nozioni di base
 
-A feature of object-oriented programming where a new class (child or subclass) is created by extending an existing class (parent or superclass), automatically gaining all of the parent's attributes and methods.
+Una funzionalità della programmazione orientata agli oggetti in cui una nuova classe (figlia o sottoclasse) viene creata estendendo una classe esistente (genitore o superclasse), ottenendo automaticamente tutti gli attributi e i metodi del genitore.
 
-**Example:** A `Cat` class that inherits from an `Animal` class automatically has `Animal`'s `name` attribute and `eat()` method without redefining them.
+**Esempio:** Una classe `Cat` che eredita da una classe `Animal` ha automaticamente l'attributo `name` e il metodo `eat()` di `Animal` senza doverli ridefinire.
 
-#### __init__() — constructor method
+#### __init__() — metodo costruttore
 
-A special method in a Python class that is automatically called when a new object is created, used to set up the object's initial attribute values.
+Un metodo speciale in una classe Python che viene chiamato automaticamente quando viene creato un nuovo oggetto, usato per impostare i valori iniziali degli attributi dell'oggetto.
 
-**Example:** `def __init__(self, name, age): self.name = name; self.age = age` runs automatically when you write `Dog("Buddy", 3)`.
+**Esempio:** `def __init__(self, name, age): self.name = name; self.age = age` viene eseguito automaticamente quando scrivi `Dog("Buddy", 3)`.
 
-#### Input validation basics
+#### Nozioni di base sulla validazione dell'input
 
-The practice of checking that the value a user entered meets expected requirements — such as being a number, being within a certain range, or not being empty — before using it in calculations.
+La pratica di verificare che il valore inserito da un utente soddisfi i requisiti attesi — come essere un numero, rientrare in un certo intervallo o non essere vuoto — prima di usarlo nei calcoli.
 
-**Example:** After calling `input()`, you might check `if response.isdigit()` before converting to `int()` to avoid a crash if the user types a letter.
+**Esempio:** Dopo aver chiamato `input()`, potresti controllare `if response.isdigit()` prima di convertire con `int()` per evitare un crash se l'utente digita una lettera.
 
-#### input() function — read text from user
+#### Funzione input() — leggere testo dall'utente
 
-A built-in function that pauses the program, waits for the user to type something and press Enter, and returns the typed text as a string.
+Una funzione built-in che mette in pausa il programma, aspetta che l'utente digiti qualcosa e prema Invio, e restituisce il testo digitato come stringa.
 
-**Example:** `name = input()` stores whatever the user types into the variable `name`.
+**Esempio:** `name = input()` memorizza qualsiasi cosa l'utente digiti nella variabile `name`.
 
-#### input() — read user input
+#### input() — leggere l'input dell'utente
 
-A built-in Python function that pauses program execution, displays an optional prompt string, waits for the user to type a line of text and press Enter, then returns that text as a string.
+Una funzione built-in di Python che mette in pausa l'esecuzione del programma, mostra una stringa di prompt opzionale, aspetta che l'utente digiti una riga di testo e prema Invio, poi restituisce quel testo come stringa.
 
-**Example:** `name = input("Enter your name: ")` stores whatever the user types in `name`.
+**Esempio:** `name = input("Enter your name: ")` memorizza in `name` qualsiasi cosa l'utente digiti.
 
-#### Installing Python locally
+#### Installare Python localmente
 
-The process of downloading the Python interpreter from python.org and setting it up on your computer so you can run Python programs without needing an internet connection or a web-based tool.
+Il processo di scaricare l'interprete Python da python.org e configurarlo sul proprio computer così da poter eseguire programmi Python senza bisogno di una connessione internet o di uno strumento basato sul web.
 
-#### int() — convert to integer
+#### int() — conversione a intero
 
-A built-in function that converts a value — such as a float or a string of digits — into an integer, truncating any decimal part for floats and raising a `ValueError` if the string is not a valid number.
+Una funzione built-in che converte un valore — come un float o una stringa di cifre — in un intero, troncando qualsiasi parte decimale per i float e generando un `ValueError` se la stringa non è un numero valido.
 
-**Example:** `int("42")` returns the integer `42`; `int(3.9)` returns `3` by truncating (not rounding) the decimal.
+**Esempio:** `int("42")` restituisce l'intero `42`; `int(3.9)` restituisce `3` troncando (non arrotondando) il decimale.
 
-#### int(), float(), str(), bool() — type conversions
+#### int(), float(), str(), bool() — conversioni di tipo
 
-Four built-in functions that convert a value from one data type to another: `int()` to whole number, `float()` to decimal, `str()` to text, and `bool()` to `True` or `False`.
+Quattro funzioni built-in che convertono un valore da un tipo di dato a un altro: `int()` in numero intero, `float()` in decimale, `str()` in testo, e `bool()` in `True` o `False`.
 
-**Example:** `int("5") + 3` gives `8`; `str(100)` gives `"100"` for use in string concatenation.
+**Esempio:** `int("5") + 3` dà `8`; `str(100)` dà `"100"` per l'uso nella concatenazione di stringhe.
 
-#### Integer division (//)
+#### Divisione intera (//)
 
-An arithmetic operator that divides two numbers and rounds the result down to the nearest whole number, discarding any decimal remainder.
+Un operatore aritmetico che divide due numeri e arrotonda il risultato per difetto al numero intero più vicino, scartando qualsiasi resto decimale.
 
-**Example:** `17 // 5` gives `3` because 5 goes into 17 three whole times with 2 left over.
+**Esempio:** `17 // 5` dà `3` perché 5 entra in 17 tre volte intere con 2 di resto.
 
-#### Integers (int) — whole numbers, positive and negative
+#### Interi (int) — numeri interi, positivi e negativi
 
-A Python data type that represents whole numbers with no decimal point, which can be positive, negative, or zero, and supports arithmetic operations exactly without rounding.
+Un tipo di dato Python che rappresenta numeri interi senza punto decimale, che possono essere positivi, negativi o zero, e supporta operazioni aritmetiche esatte senza arrotondamenti.
 
-**Example:** `3`, `-17`, and `0` are all integers; you can compute `7 // 2` to get the integer `3` with no remainder kept.
+**Esempio:** `3`, `-17` e `0` sono tutti interi; puoi calcolare `7 // 2` per ottenere l'intero `3` senza mantenere alcun resto.
 
-#### ipycanvas — canvas drawing in Jupyter
+#### ipycanvas — disegno su canvas in Jupyter
 
-A Python library for Jupyter notebooks that wraps the HTML5 Canvas API, allowing you to draw shapes, images, and text programmatically inside a notebook cell.
+Una libreria Python per i Jupyter notebook che avvolge l'API Canvas HTML5, permettendo di disegnare forme, immagini e testo programmaticamente dentro una cella del notebook.
 
-**Example:** `from ipycanvas import Canvas; c = Canvas(width=400, height=300); c.fill_rect(10, 10, 100, 50)` draws a rectangle in a Jupyter notebook cell.
+**Esempio:** `from ipycanvas import Canvas; c = Canvas(width=400, height=300); c.fill_rect(10, 10, 100, 50)` disegna un rettangolo in una cella di un Jupyter notebook.
 
-#### isinstance() — check if object is an instance of a type
+#### isinstance() — verificare se un oggetto è un'istanza di un tipo
 
-A built-in function that returns `True` if a given object is an instance of the specified class or one of its subclasses, and `False` otherwise, providing a safer type check than `type() ==`.
+Una funzione built-in che restituisce `True` se un dato oggetto è un'istanza della classe specificata o di una delle sue sottoclassi, e `False` altrimenti, fornendo un controllo di tipo più sicuro rispetto a `type() ==`.
 
-**Example:** `isinstance(42, int)` returns `True`; `isinstance("hello", int)` returns `False`.
+**Esempio:** `isinstance(42, int)` restituisce `True`; `isinstance("hello", int)` restituisce `False`.
 
-#### Iterating over a dictionary
+#### Iterare su un dizionario
 
-The process of using a `for` loop to visit each key (by default), or each value or key-value pair when using `.values()` or `.items()`, to process all entries in a dictionary.
+Il processo di usare un ciclo `for` per visitare ogni chiave (per impostazione predefinita), o ogni valore o coppia chiave-valore quando si usano `.values()` o `.items()`, per elaborare tutte le voci di un dizionario.
 
-**Example:** `for key in d: print(key, d[key])` prints every key and its associated value from dictionary `d`.
+**Esempio:** `for key in d: print(key, d[key])` stampa ogni chiave e il suo valore associato dal dizionario `d`.
 
-#### Iterating over a list with for
+#### Iterare su una lista con for
 
-The common pattern of using a `for` loop to visit each item in a list one at a time, processing or printing each item in sequence.
+Il pattern comune di usare un ciclo `for` per visitare ogni elemento di una lista uno alla volta, elaborando o stampando ogni elemento in sequenza.
 
-**Example:** `for score in scores: print(score)` prints every score in the list on its own line.
+**Esempio:** `for score in scores: print(score)` stampa ogni punteggio della lista su una riga propria.
 
-#### Iterating over file lines with for
+#### Iterare sulle righe di un file con for
 
-The common pattern of using a `for` loop directly on a file object to read one line at a time without loading the entire file into memory, which is efficient for large files.
+Il pattern comune di usare un ciclo `for` direttamente su un oggetto file per leggere una riga alla volta senza caricare l'intero file in memoria, cosa efficiente per file di grandi dimensioni.
 
-**Example:** `with open("words.txt") as f:` / `for line in f: print(line.strip())` prints each line without the trailing newline.
+**Esempio:** `with open("words.txt") as f:` / `for line in f: print(line.strip())` stampa ogni riga senza l'a capo finale.
 
-#### Jupyter Notebooks — interactive computational environment
+#### Jupyter Notebook — ambiente computazionale interattivo
 
-A web-based tool that lets you mix runnable Python code, text explanations, and charts in a single document made of cells, so you can tell a story with your data and code together.
+Uno strumento basato sul web che permette di mischiare codice Python eseguibile, spiegazioni testuali e grafici in un unico documento fatto di celle, così puoi raccontare una storia con i tuoi dati e il tuo codice insieme.
 
-**Example:** A data scientist writes a heading cell explaining a graph, then a code cell that draws the graph, and both appear together in the same notebook.
+**Esempio:** Un data scientist scrive una cella di intestazione che spiega un grafico, poi una cella di codice che disegna il grafico, ed entrambe appaiono insieme nello stesso notebook.
 
-#### JupyterLab — enhanced Jupyter environment
+#### JupyterLab — ambiente Jupyter avanzato
 
-An updated, more powerful version of Jupyter Notebooks that adds a file browser, multiple tabs, and a terminal window alongside your notebooks in one browser-based workspace.
+Una versione aggiornata e più potente dei Jupyter Notebook che aggiunge un browser di file, più schede e una finestra di terminale accanto ai notebook in un unico spazio di lavoro basato sul browser.
 
-#### keras library overview
+#### Panoramica sulla libreria keras
 
-A high-level Python library for building and training neural networks, designed to make deep learning accessible by providing simple, readable building blocks for defining model architectures.
+Una libreria Python di alto livello per costruire e addestrare reti neurali, progettata per rendere il deep learning accessibile fornendo blocchi costitutivi semplici e leggibili per definire architetture di modelli.
 
-**Example:** `from tensorflow import keras` gives you access to tools for building image classifiers, text analyzers, and other AI models in just a few lines of code.
+**Esempio:** `from tensorflow import keras` dà accesso a strumenti per costruire classificatori di immagini, analizzatori di testo e altri modelli di IA in poche righe di codice.
 
-#### Keyboard event handlers (turtle onkey)
+#### Gestori di eventi da tastiera (turtle onkey)
 
-A turtle function that registers a callback function to be called whenever a specific keyboard key is pressed, enabling interactive keyboard-controlled programs.
+Una funzione di turtle che registra una funzione di callback da chiamare ogni volta che viene premuto un tasto specifico, abilitando programmi interattivi controllati da tastiera.
 
-**Example:** `screen.onkey(move_up, "Up")` calls `move_up()` whenever the user presses the Up arrow key.
+**Esempio:** `screen.onkey(move_up, "Up")` chiama `move_up()` ogni volta che l'utente preme la freccia Su.
 
-#### Keyword arguments
+#### Argomenti con nome (keyword arguments)
 
-A way of calling a function by explicitly naming each parameter and its value, so arguments can be passed in any order regardless of their position in the function definition.
+Un modo di chiamare una funzione nominando esplicitamente ogni parametro e il suo valore, così gli argomenti possono essere passati in qualsiasi ordine indipendentemente dalla loro posizione nella definizione della funzione.
 
-**Example:** `draw_box(width=100, height=50, color="blue")` makes it clear what each value means and allows any order.
+**Esempio:** `draw_box(width=100, height=50, color="blue")` rende chiaro cosa significa ogni valore e permette qualsiasi ordine.
 
-#### Lambda functions (anonymous functions)
+#### Funzioni lambda (funzioni anonime)
 
-A way to define a small, one-expression function without a name using the `lambda` keyword, often used for short operations passed as arguments to other functions.
+Un modo per definire una piccola funzione a una sola espressione senza nome usando la parola chiave `lambda`, spesso usata per operazioni brevi passate come argomenti ad altre funzioni.
 
-**Example:** `double = lambda x: x * 2` creates an unnamed function stored in `double`; `double(5)` returns `10`.
+**Esempio:** `double = lambda x: x * 2` crea una funzione senza nome memorizzata in `double`; `double(5)` restituisce `10`.
 
-#### len() — length of a sequence
+#### len() — lunghezza di una sequenza
 
-A built-in Python function that returns the number of items in any sequence or collection, including strings (characters), lists (elements), tuples, dictionaries (keys), and sets.
+Una funzione built-in di Python che restituisce il numero di elementi in qualsiasi sequenza o collezione, incluse stringhe (caratteri), liste (elementi), tuple, dizionari (chiavi) e insiemi.
 
-**Example:** `len("hello")` returns `5`; `len([1, 2, 3])` returns `3`; `len({})` returns `0`.
+**Esempio:** `len("hello")` restituisce `5`; `len([1, 2, 3])` restituisce `3`; `len({})` restituisce `0`.
 
-#### len() — number of items in a list
+#### len() — numero di elementi in una lista
 
-A built-in function that returns an integer equal to the number of items currently stored in a list (or any sequence).
+Una funzione built-in che restituisce un intero pari al numero di elementi attualmente memorizzati in una lista (o qualsiasi sequenza).
 
-**Example:** `len([10, 20, 30])` returns `3`; `len([])` returns `0` for an empty list.
+**Esempio:** `len([10, 20, 30])` restituisce `3`; `len([])` restituisce `0` per una lista vuota.
 
-#### List comprehensions
+#### Comprehension di liste
 
-A concise one-line syntax for creating a new list by applying an expression to each item in an iterable, optionally filtered by a condition, all inside square brackets.
+Una sintassi concisa su una riga per creare una nuova lista applicando un'espressione a ogni elemento di un iterabile, opzionalmente filtrata da una condizione, tutto dentro parentesi quadre.
 
-**Example:** `[x * 2 for x in range(5)]` produces `[0, 2, 4, 6, 8]`; `[x for x in scores if x >= 60]` keeps only passing scores.
+**Esempio:** `[x * 2 for x in range(5)]` produce `[0, 2, 4, 6, 8]`; `[x for x in scores if x >= 60]` mantiene solo i punteggi sufficienti.
 
-#### List concatenation and repetition
+#### Concatenazione e ripetizione di liste
 
-The ability to join two lists using `+` to create a new combined list, or to repeat a list's items using `*` a specified number of times.
+La possibilità di unire due liste usando `+` per creare una nuova lista combinata, o di ripetere gli elementi di una lista usando `*` un numero specificato di volte.
 
-**Example:** `[1, 2] + [3, 4]` produces `[1, 2, 3, 4]`; `["go"] * 3` produces `["go", "go", "go"]`.
+**Esempio:** `[1, 2] + [3, 4]` produce `[1, 2, 3, 4]`; `["go"] * 3` produce `["go", "go", "go"]`.
 
-#### List indexing (0-based, negative indexing)
+#### Indicizzazione delle liste (basata su 0, indici negativi)
 
-The method of accessing a single item in a list by its position, where the first item is at index `0`; negative indices count from the end, with `-1` being the last item.
+Il metodo per accedere a un singolo elemento di una lista tramite la sua posizione, dove il primo elemento è all'indice `0`; gli indici negativi contano dalla fine, con `-1` come ultimo elemento.
 
-**Example:** For `colors = ["red", "green", "blue"]`, `colors[0]` is `"red"` and `colors[-1]` is `"blue"`.
+**Esempio:** Per `colors = ["red", "green", "blue"]`, `colors[0]` è `"red"` e `colors[-1]` è `"blue"`.
 
-#### List methods as examples of OOP
+#### I metodi delle liste come esempio di OOP
 
-An observation that Python lists are objects, and calling methods like `.append()` or `.sort()` on them is a real-world example of object-oriented programming where data and behavior are bundled together.
+Un'osservazione per cui le liste Python sono oggetti, e chiamare metodi come `.append()` o `.sort()` su di esse è un esempio concreto di programmazione orientata agli oggetti in cui dati e comportamento sono raggruppati insieme.
 
-**Example:** `my_list.append(5)` is OOP: `my_list` is the object and `.append()` is a method that modifies that specific list.
+**Esempio:** `my_list.append(5)` è OOP: `my_list` è l'oggetto e `.append()` è un metodo che modifica quella specifica lista.
 
-#### List methods: .append(), .insert(), .extend()
+#### Metodi delle liste: .append(), .insert(), .extend()
 
-Built-in list methods that add items: `.append(item)` adds one item to the end; `.insert(index, item)` adds one item at a specific position; `.extend(iterable)` adds all items from another iterable to the end.
+Metodi built-in delle liste che aggiungono elementi: `.append(item)` aggiunge un elemento alla fine; `.insert(index, item)` aggiunge un elemento in una posizione specifica; `.extend(iterable)` aggiunge tutti gli elementi di un altro iterabile alla fine.
 
-**Example:** `fruits.append("mango")` adds `"mango"` at the end; `fruits.insert(0, "apple")` puts `"apple"` at the front.
+**Esempio:** `fruits.append("mango")` aggiunge `"mango"` alla fine; `fruits.insert(0, "apple")` mette `"apple"` all'inizio.
 
-#### List methods: .index(), .count()
+#### Metodi delle liste: .index(), .count()
 
-Built-in list methods that search a list: `.index(value)` returns the index of the first occurrence of a value (raises `ValueError` if not found); `.count(value)` returns how many times a value appears.
+Metodi built-in delle liste che effettuano ricerche: `.index(value)` restituisce l'indice della prima occorrenza di un valore (genera `ValueError` se non trovato); `.count(value)` restituisce quante volte un valore compare.
 
-**Example:** `["a","b","c"].index("b")` returns `1`; `[1,2,2,3].count(2)` returns `2`.
+**Esempio:** `["a","b","c"].index("b")` restituisce `1`; `[1,2,2,3].count(2)` restituisce `2`.
 
-#### List methods: .remove(), .pop(), .clear()
+#### Metodi delle liste: .remove(), .pop(), .clear()
 
-Built-in list methods that remove items: `.remove(value)` deletes the first occurrence of a value; `.pop(index)` removes and returns the item at the given index (last item if no index given); `.clear()` removes all items.
+Metodi built-in delle liste che rimuovono elementi: `.remove(value)` elimina la prima occorrenza di un valore; `.pop(index)` rimuove e restituisce l'elemento all'indice dato (l'ultimo se non viene fornito un indice); `.clear()` rimuove tutti gli elementi.
 
-**Example:** `scores.pop()` removes and returns the last score; `names.remove("Alex")` deletes the first `"Alex"` found.
+**Esempio:** `scores.pop()` rimuove e restituisce l'ultimo punteggio; `names.remove("Alex")` elimina il primo `"Alex"` trovato.
 
-#### List methods: .sort(), .reverse(), .copy()
+#### Metodi delle liste: .sort(), .reverse(), .copy()
 
-Built-in list methods that rearrange or duplicate a list: `.sort()` sorts items in place (ascending by default); `.reverse()` reverses the order in place; `.copy()` returns a new list with the same items.
+Metodi built-in delle liste che riordinano o duplicano una lista: `.sort()` ordina gli elementi sul posto (crescente per impostazione predefinita); `.reverse()` inverte l'ordine sul posto; `.copy()` restituisce una nuova lista con gli stessi elementi.
 
-**Example:** `scores.sort()` rearranges the list from lowest to highest; `steps.reverse()` flips the order of the steps.
+**Esempio:** `scores.sort()` riordina la lista dal più basso al più alto; `steps.reverse()` capovolge l'ordine dei passi.
 
-#### List slicing
+#### Slicing delle liste
 
-The operation of extracting a sub-list from a list by specifying a start index, an end index (exclusive), and an optional step, using the same `[start:end:step]` syntax as string slicing.
+L'operazione di estrarre una sotto-lista da una lista specificando un indice di inizio, un indice di fine (esclusivo) e un passo opzionale, usando la stessa sintassi `[inizio:fine:passo]` dello slicing delle stringhe.
 
-**Example:** `numbers[1:4]` returns items at indices 1, 2, and 3; `numbers[::-1]` returns a reversed copy of the entire list.
+**Esempio:** `numbers[1:4]` restituisce gli elementi agli indici 1, 2 e 3; `numbers[::-1]` restituisce una copia invertita dell'intera lista.
 
-#### List type (list) — ordered, mutable collection
+#### Tipo lista (list) — collezione ordinata e modificabile
 
-A Python data type that stores an ordered sequence of items that can be of any type; lists can be changed after creation by adding, removing, or replacing items.
+Un tipo di dato Python che memorizza una sequenza ordinata di elementi di qualsiasi tipo; le liste possono essere modificate dopo la creazione aggiungendo, rimuovendo o sostituendo elementi.
 
-**Example:** `fruits = ["apple", "banana", "cherry"]` creates a list of three strings that can be modified later.
+**Esempio:** `fruits = ["apple", "banana", "cherry"]` crea una lista di tre stringhe che può essere modificata in seguito.
 
-#### list(), tuple(), set(), dict() — collection constructors
+#### list(), tuple(), set(), dict() — costruttori di collezioni
 
-Built-in functions that create a new collection of the specified type, optionally from an existing iterable; `dict()` can also accept keyword arguments to set initial key-value pairs.
+Funzioni built-in che creano una nuova collezione del tipo specificato, opzionalmente a partire da un iterabile esistente; `dict()` può anche accettare argomenti con nome per impostare le coppie chiave-valore iniziali.
 
-**Example:** `list(range(5))` produces `[0, 1, 2, 3, 4]`; `set("hello")` produces `{'h', 'e', 'l', 'o'}`.
+**Esempio:** `list(range(5))` produce `[0, 1, 2, 3, 4]`; `set("hello")` produce `{'h', 'e', 'l', 'o'}`.
 
-#### Literate programming with Jupyter
+#### Programmazione letterata con Jupyter
 
-A style of writing programs in Jupyter notebooks where code cells are interspersed with narrative text cells, so a notebook reads like an illustrated document that also happens to run.
+Uno stile di scrittura di programmi nei Jupyter notebook in cui le celle di codice sono alternate a celle di testo narrativo, così un notebook si legge come un documento illustrato che per di più è anche eseguibile.
 
-**Example:** A Jupyter notebook might have a markdown cell explaining a statistical formula, followed immediately by a code cell that implements and tests it.
+**Esempio:** Un Jupyter notebook potrebbe avere una cella markdown che spiega una formula statistica, seguita immediatamente da una cella di codice che la implementa e la verifica.
 
-#### Local scope — variables inside functions
+#### Ambito locale — variabili dentro le funzioni
 
-The area of a program where a variable is accessible; variables created inside a function exist only for the duration of that function call and cannot be seen or used by code outside the function.
+L'area di un programma in cui una variabile è accessibile; le variabili create dentro una funzione esistono solo per la durata di quella chiamata e non possono essere viste o usate dal codice al di fuori della funzione.
 
-**Example:** The variable `total` created inside `def calculate():` disappears when the function finishes and cannot be accessed from the rest of the program.
+**Esempio:** La variabile `total` creata dentro `def calculate():` scompare quando la funzione termina e non può essere accessibile dal resto del programma.
 
-#### Logical operators: and, or, not
+#### Operatori logici: and, or, not
 
-Operators that combine or invert Boolean values: `and` is `True` only when both sides are `True`; `or` is `True` when at least one side is `True`; `not` flips `True` to `False` and vice versa.
+Operatori che combinano o invertono valori booleani: `and` è `True` solo quando entrambi i lati sono `True`; `or` è `True` quando almeno un lato è `True`; `not` inverte `True` in `False` e viceversa.
 
-**Example:** `age >= 10 and age <= 13` is `True` only when age is between 10 and 13 inclusive.
+**Esempio:** `age >= 10 and age <= 13` è `True` solo quando l'età è compresa tra 10 e 13 inclusi.
 
-#### Loop counter variable (i, j)
+#### Variabile contatore del ciclo (i, j)
 
-A variable — commonly named `i` or `j` by convention — that tracks which iteration of a loop is currently running, typically used as the loop variable in `for` loops with `range()`.
+Una variabile — comunemente chiamata `i` o `j` per convenzione — che tiene traccia di quale iterazione di un ciclo è in corso, tipicamente usata come variabile di ciclo nei cicli `for` con `range()`.
 
-**Example:** `for i in range(10): print(i)` uses `i` as the counter that goes from `0` to `9`.
+**Esempio:** `for i in range(10): print(i)` usa `i` come contatore che va da `0` a `9`.
 
-#### Loss functions: categorical_crossentropy
+#### Funzioni di perdita (loss): categorical_crossentropy
 
-A commonly used loss function for multi-class classification problems that measures how different the model's predicted probability distribution is from the true one-hot encoded labels.
+Una funzione di perdita comunemente usata per problemi di classificazione multi-classe che misura quanto la distribuzione di probabilità prevista dal modello differisca da quella vera codificata one-hot.
 
-**Example:** If the model predicts `[0.1, 0.8, 0.1]` for an image that is truly class 1 (`[0, 1, 0]`), categorical crossentropy gives a low loss because the prediction was mostly correct.
+**Esempio:** Se il modello prevede `[0.1, 0.8, 0.1]` per un'immagine che è realmente della classe 1 (`[0, 1, 0]`), la categorical crossentropy dà una perdita bassa perché la previsione era per lo più corretta.
 
-#### LSTM networks — overview
+#### Reti LSTM — panoramica
 
-A type of recurrent neural network with special memory cells and gating mechanisms that help it learn long-range dependencies in sequences without losing earlier information.
+Un tipo di rete neurale ricorrente con celle di memoria speciali e meccanismi di gating che la aiutano a imparare dipendenze a lungo raggio nelle sequenze senza perdere le informazioni precedenti.
 
-**Example:** An LSTM trained on text can generate coherent sentences because it "remembers" words from many steps back in the sequence.
+**Esempio:** Una LSTM addestrata su testo può generare frasi coerenti perché "ricorda" parole di molti passi precedenti nella sequenza.
 
-#### Machine learning overview — supervised vs unsupervised
+#### Panoramica sul machine learning — supervisionato vs non supervisionato
 
-An introduction to the branch of artificial intelligence where computers learn patterns from data: supervised learning trains on labeled examples (input → correct answer); unsupervised learning finds hidden patterns in unlabeled data.
+Un'introduzione al ramo dell'intelligenza artificiale in cui i computer imparano pattern dai dati: l'apprendimento supervisionato si addestra su esempi etichettati (input → risposta corretta); l'apprendimento non supervisionato trova pattern nascosti in dati non etichettati.
 
-**Example:** Training a model to classify photos of cats and dogs using labeled images is supervised; grouping customers into segments without labels is unsupervised.
+**Esempio:** Addestrare un modello a classificare foto di gatti e cani usando immagini etichettate è supervisionato; raggruppare i clienti in segmenti senza etichette è non supervisionato.
 
-#### map() and filter() — functional programming basics
+#### map() e filter() — nozioni di base di programmazione funzionale
 
-Two higher-order functions that apply a function to a collection without explicit loops, following a functional programming style: `map()` transforms each item; `filter()` selects items that pass a test.
+Due funzioni di ordine superiore che applicano una funzione a una collezione senza cicli espliciti, seguendo uno stile di programmazione funzionale: `map()` trasforma ogni elemento; `filter()` seleziona gli elementi che superano un test.
 
-**Example:** `list(map(str.upper, ["a","b","c"]))` gives `["A","B","C"]`; `list(filter(lambda x: x>0, [-1,2,-3,4]))` gives `[2,4]`.
+**Esempio:** `list(map(str.upper, ["a","b","c"]))` dà `["A","B","C"]`; `list(filter(lambda x: x>0, [-1,2,-3,4]))` dà `[2,4]`.
 
-#### map() — apply function to each item
+#### map() — applicare una funzione a ogni elemento
 
-A built-in function that applies a given function to every item in an iterable and returns an iterator of the results, avoiding the need to write an explicit loop for simple transformations.
+Una funzione built-in che applica una data funzione a ogni elemento di un iterabile e restituisce un iteratore dei risultati, evitando la necessità di scrivere un ciclo esplicito per semplici trasformazioni.
 
-**Example:** `list(map(int, ["1", "2", "3"]))` converts a list of strings to `[1, 2, 3]`.
+**Esempio:** `list(map(int, ["1", "2", "3"]))` converte una lista di stringhe in `[1, 2, 3]`.
 
-#### match/case statement (Python 3.10+, structural pattern matching)
+#### Istruzione match/case (Python 3.10+, pattern matching strutturale)
 
-A control-flow statement introduced in Python 3.10 that compares a value against a series of patterns and executes the block belonging to the first matching pattern, similar to a switch statement in other languages.
+Un'istruzione di controllo del flusso introdotta in Python 3.10 che confronta un valore con una serie di pattern ed esegue il blocco appartenente al primo pattern corrispondente, simile a uno switch in altri linguaggi.
 
-**Example:** `match command:` / `case "quit": exit()` / `case "help": show_help()` routes program flow based on the user's command.
+**Esempio:** `match command:` / `case "quit": exit()` / `case "help": show_help()` instrada il flusso del programma in base al comando dell'utente.
 
-#### math — mathematical functions
+#### math — funzioni matematiche
 
-A standard library module that provides mathematical functions and constants, such as square root, trigonometric functions, logarithms, and the value of pi, for use in calculations.
+Un modulo della libreria standard che fornisce funzioni e costanti matematiche, come radice quadrata, funzioni trigonometriche, logaritmi e il valore di pi greco, da usare nei calcoli.
 
-**Example:** `import math; math.sqrt(144)` returns `12.0`.
+**Esempio:** `import math; math.sqrt(144)` restituisce `12.0`.
 
-#### math.radians() — degrees to radians
+#### math.radians() — da gradi a radianti
 
-A function from the `math` module that converts an angle from degrees to radians, which is the unit required by `math.sin()`, `math.cos()`, and other trigonometric functions.
+Una funzione del modulo `math` che converte un angolo da gradi a radianti, l'unità richiesta da `math.sin()`, `math.cos()` e altre funzioni trigonometriche.
 
-**Example:** `math.radians(180)` returns `3.141592...` (π), because 180 degrees equals π radians.
+**Esempio:** `math.radians(180)` restituisce `3.141592...` (π), perché 180 gradi equivalgono a π radianti.
 
 #### math.sin(), math.cos(), math.pi
 
-Functions and a constant from the `math` module: `sin(x)` and `cos(x)` return the sine and cosine of angle `x` in radians; `math.pi` is the constant π ≈ 3.14159.
+Funzioni e una costante del modulo `math`: `sin(x)` e `cos(x)` restituiscono il seno e il coseno dell'angolo `x` in radianti; `math.pi` è la costante π ≈ 3,14159.
 
-**Example:** `math.sin(math.pi / 2)` returns `1.0` because the sine of 90 degrees (π/2 radians) is 1.
+**Esempio:** `math.sin(math.pi / 2)` restituisce `1.0` perché il seno di 90 gradi (π/2 radianti) è 1.
 
 #### math.sqrt(), math.floor(), math.ceil()
 
-Three functions from the `math` module: `sqrt(x)` returns the square root of `x`; `floor(x)` rounds down to the nearest integer; `ceil(x)` rounds up to the nearest integer.
+Tre funzioni del modulo `math`: `sqrt(x)` restituisce la radice quadrata di `x`; `floor(x)` arrotonda per difetto all'intero più vicino; `ceil(x)` arrotonda per eccesso all'intero più vicino.
 
-**Example:** `math.floor(3.9)` returns `3`; `math.ceil(3.1)` returns `4`; `math.sqrt(25)` returns `5.0`.
+**Esempio:** `math.floor(3.9)` restituisce `3`; `math.ceil(3.1)` restituisce `4`; `math.sqrt(25)` restituisce `5.0`.
 
-#### matplotlib library overview
+#### Panoramica sulla libreria matplotlib
 
-A popular third-party Python library for creating static, animated, and interactive charts and graphs, widely used in data science and scientific computing to visualize data.
+Una popolare libreria Python di terze parti per creare grafici statici, animati e interattivi, ampiamente usata nella data science e nel calcolo scientifico per visualizzare i dati.
 
-**Example:** `import matplotlib.pyplot as plt` gives you access to functions for making line plots, bar charts, histograms, and scatter plots.
+**Esempio:** `import matplotlib.pyplot as plt` dà accesso a funzioni per creare grafici a linee, a barre, istogrammi e a dispersione.
 
-#### max(), min() — find maximum/minimum
+#### max(), min() — trovare massimo/minimo
 
-Built-in functions that return the largest or smallest value from a collection of items or from multiple arguments; they also accept a `key` function to customize comparison.
+Funzioni built-in che restituiscono il valore più grande o più piccolo da una collezione di elementi o da più argomenti; accettano anche una funzione `key` per personalizzare il confronto.
 
-**Example:** `max([3, 7, 1, 9])` returns `9`; `min("apple", "banana", "cherry")` returns `"apple"` (alphabetically first).
+**Esempio:** `max([3, 7, 1, 9])` restituisce `9`; `min("apple", "banana", "cherry")` restituisce `"apple"` (il primo in ordine alfabetico).
 
-#### MaxPooling2D — pooling layers
+#### MaxPooling2D — strati di pooling
 
-A Keras layer that reduces the spatial size of a feature map by taking the maximum value within each small window, making the representation smaller and more robust to small shifts.
+Uno strato di Keras che riduce la dimensione spaziale di una mappa di caratteristiche prendendo il valore massimo all'interno di ogni piccola finestra, rendendo la rappresentazione più piccola e più robusta a piccoli spostamenti.
 
-**Example:** `MaxPooling2D((2, 2))` halves both the width and height of the feature map by keeping only the largest value in each 2×2 block.
+**Esempio:** `MaxPooling2D((2, 2))` dimezza sia la larghezza che l'altezza della mappa di caratteristiche mantenendo solo il valore più grande in ogni blocco 2×2.
 
-#### Meaningful variable and function names
+#### Nomi significativi per variabili e funzioni
 
-The practice of choosing names that clearly describe the purpose of a variable or the action of a function, making code self-documenting and easier to read without extra comments.
+La pratica di scegliere nomi che descrivono chiaramente lo scopo di una variabile o l'azione di una funzione, rendendo il codice autoesplicativo e più facile da leggere senza commenti aggiuntivi.
 
-**Example:** `calculate_total_price()` is a meaningful function name; `f()` is not — the reader cannot tell what `f()` does without reading its body.
+**Esempio:** `calculate_total_price()` è un nome di funzione significativo; `f()` non lo è — il lettore non può capire cosa faccia `f()` senza leggerne il corpo.
 
-#### Meaningful variable names
+#### Nomi di variabili significativi
 
-The practice of choosing variable names that clearly describe the data they hold, making programs easier to read and debug than if single-letter or vague names were used.
+La pratica di scegliere nomi di variabili che descrivono chiaramente i dati che contengono, rendendo i programmi più facili da leggere e correggere rispetto all'uso di nomi di una sola lettera o vaghi.
 
-**Example:** Using `student_count` instead of `x` immediately tells a reader that the variable stores the number of students.
+**Esempio:** Usare `student_count` invece di `x` dice immediatamente al lettore che la variabile memorizza il numero di studenti.
 
-#### Methods — functions belonging to an object
+#### Metodi — funzioni che appartengono a un oggetto
 
-Functions defined inside a class that operate on the object's own data; called using dot notation and automatically receive the object itself as their first argument.
+Funzioni definite dentro una classe che operano sui dati propri dell'oggetto; vengono chiamate usando la notazione a punto e ricevono automaticamente l'oggetto stesso come primo argomento.
 
-**Example:** `turtle.forward(100)` calls the `forward` method on a turtle object, moving that specific turtle forward 100 units.
+**Esempio:** `turtle.forward(100)` chiama il metodo `forward` su un oggetto turtle, spostando in avanti di 100 unità quella specifica turtle.
 
-#### Metrics: accuracy
+#### Metriche: accuracy
 
-A performance measurement for classification models that reports the fraction of predictions that exactly matched the true labels, expressed as a decimal or percentage.
+Una misura delle prestazioni per i modelli di classificazione che riporta la frazione di previsioni che corrispondevano esattamente alle etichette vere, espressa come decimale o percentuale.
 
-**Example:** An accuracy of `0.97` means the model correctly classified 97 out of every 100 test examples.
+**Esempio:** Un'accuracy di `0.97` significa che il modello ha classificato correttamente 97 esempi su ogni 100 di test.
 
-#### MNIST dataset — handwritten digit recognition
+#### Dataset MNIST — riconoscimento di cifre scritte a mano
 
-A classic benchmark dataset of 70,000 grayscale images of handwritten digits (0–9), each 28×28 pixels, widely used to learn and test image classification models.
+Un classico dataset di riferimento di 70.000 immagini in scala di grigi di cifre scritte a mano (0–9), ciascuna di 28×28 pixel, ampiamente usato per imparare e testare modelli di classificazione delle immagini.
 
-**Example:** Training a neural network on MNIST to correctly identify handwritten digits is one of the most common introductory machine learning exercises.
+**Esempio:** Addestrare una rete neurale su MNIST per identificare correttamente le cifre scritte a mano è uno degli esercizi introduttivi di machine learning più comuni.
 
-#### mobilechelonian — turtle graphics in Jupyter
+#### mobilechelonian — grafica turtle in Jupyter
 
-A Python library that provides a turtle graphics environment that runs inside a Jupyter notebook cell, making turtle-style drawing accessible without a separate graphics window.
+Una libreria Python che fornisce un ambiente di grafica turtle eseguibile dentro una cella di Jupyter notebook, rendendo accessibile il disegno in stile turtle senza una finestra grafica separata.
 
-**Example:** `from mobilechelonian import Turtle; t = Turtle(); t.forward(100); t.right(90)` draws inside a Jupyter cell.
+**Esempio:** `from mobilechelonian import Turtle; t = Turtle(); t.forward(100); t.right(90)` disegna dentro una cella Jupyter.
 
-#### model.compile() — loss function, optimizer, metrics
+#### model.compile() — funzione di perdita, ottimizzatore, metriche
 
-A Keras method that configures the model for training by specifying how to measure error (loss function), how to update weights (optimizer), and what statistics to track (metrics).
+Un metodo di Keras che configura il modello per l'addestramento specificando come misurare l'errore (funzione di perdita), come aggiornare i pesi (ottimizzatore) e quali statistiche tracciare (metriche).
 
-**Example:** `model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"])` prepares the model to minimize classification error.
+**Esempio:** `model.compile(optimizer="adam", loss="categorical_crossentropy", metrics=["accuracy"])` prepara il modello a minimizzare l'errore di classificazione.
 
-#### model.evaluate() — testing accuracy
+#### model.evaluate() — verificare l'accuracy
 
-A Keras method that measures the model's performance on a separate test dataset that was not used during training, returning the loss and any tracked metrics.
+Un metodo di Keras che misura le prestazioni del modello su un dataset di test separato che non è stato usato durante l'addestramento, restituendo la perdita e qualsiasi metrica tracciata.
 
-**Example:** `loss, acc = model.evaluate(x_test, y_test)` gives the final accuracy on data the model has never seen.
+**Esempio:** `loss, acc = model.evaluate(x_test, y_test)` dà l'accuracy finale su dati che il modello non ha mai visto.
 
-#### model.fit() — training the model
+#### model.fit() — addestrare il modello
 
-A Keras method that trains the model by feeding it batches of training data, computing the loss, and updating weights repeatedly for a specified number of epochs.
+Un metodo di Keras che addestra il modello alimentandolo con batch di dati di addestramento, calcolando la perdita e aggiornando i pesi ripetutamente per un numero specificato di epoche.
 
-**Example:** `model.fit(x_train, y_train, epochs=10, batch_size=32)` trains the model for 10 passes through the training data.
+**Esempio:** `model.fit(x_train, y_train, epochs=10, batch_size=32)` addestra il modello per 10 passaggi attraverso i dati di addestramento.
 
-#### model.predict() — making predictions
+#### model.predict() — fare previsioni
 
-A Keras method that passes new input data through the trained model and returns the output, such as class probabilities or regression values, for each input sample.
+Un metodo di Keras che passa nuovi dati di input attraverso il modello addestrato e ne restituisce l'output, come probabilità di classe o valori di regressione, per ogni campione di input.
 
-**Example:** `predictions = model.predict(x_new)` returns an array of softmax probabilities for each image in `x_new`.
+**Esempio:** `predictions = model.predict(x_new)` restituisce un array di probabilità softmax per ogni immagine in `x_new`.
 
-#### Modularity — breaking code into functions
+#### Modularità — suddividere il codice in funzioni
 
-The practice of dividing a large program into smaller, named functions that each do one clearly defined task, making the overall program easier to understand, test, and change.
+La pratica di suddividere un programma grande in funzioni più piccole e nominate che svolgono ciascuna un compito chiaramente definito, rendendo il programma complessivo più facile da capire, testare e modificare.
 
-**Example:** Instead of one long script, a game might have separate functions: `draw_board()`, `get_player_move()`, and `check_winner()`, each handling one responsibility.
+**Esempio:** Invece di un unico script lungo, un gioco potrebbe avere funzioni separate: `draw_board()`, `get_player_move()` e `check_winner()`, ciascuna responsabile di un compito.
 
-#### Modulo operator (%) — remainder after division
+#### Operatore modulo (%) — resto della divisione
 
-An arithmetic operator that returns the remainder left over after dividing one number by another, useful for checking whether a number is even or odd and for cycling through ranges.
+Un operatore aritmetico che restituisce il resto rimanente dopo aver diviso un numero per un altro, utile per verificare se un numero è pari o dispari e per ciclare attraverso intervalli.
 
-**Example:** `17 % 5` gives `2` because 17 divided by 5 is 3 with a remainder of 2; `n % 2 == 0` checks whether `n` is even.
+**Esempio:** `17 % 5` dà `2` perché 17 diviso 5 fa 3 con un resto di 2; `n % 2 == 0` verifica se `n` è pari.
 
-#### Mouse click event handlers (onscreenclick)
+#### Gestori di eventi di click del mouse (onscreenclick)
 
-A turtle function that registers a callback function to be automatically called with the (x, y) coordinates whenever the user clicks on the drawing window.
+Una funzione di turtle che registra una funzione di callback da chiamare automaticamente con le coordinate (x, y) ogni volta che l'utente clicca sulla finestra di disegno.
 
-**Example:** `screen.onscreenclick(handle_click)` registers `handle_click` so that every click triggers `handle_click(x, y)` with the click location.
+**Esempio:** `screen.onscreenclick(handle_click)` registra `handle_click` così che ogni click attivi `handle_click(x, y)` con la posizione del click.
 
-#### Movement: forward(), backward(), left(), right()
+#### Movimento: forward(), backward(), left(), right()
 
-Four fundamental turtle methods that move and turn the turtle: `forward(n)` moves `n` pixels in the current direction; `backward(n)` moves backward; `left(angle)` turns left by `angle` degrees; `right(angle)` turns right.
+Quattro metodi fondamentali della turtle che la spostano e la ruotano: `forward(n)` si sposta di `n` pixel nella direzione attuale; `backward(n)` si sposta all'indietro; `left(angle)` ruota a sinistra di `angle` gradi; `right(angle)` ruota a destra.
 
-**Example:** `t.forward(100); t.right(90)` moves the turtle forward then turns it to draw one side and corner of a square.
+**Esempio:** `t.forward(100); t.right(90)` sposta la turtle in avanti e poi la ruota per disegnare un lato e un angolo di un quadrato.
 
-#### Multi-line strings (triple quotes)
+#### Stringhe multiriga (virgolette triple)
 
-A string that spans more than one line, created by surrounding the text with three single quotes `'''` or three double quotes `"""`, preserving all line breaks inside.
+Una stringa che si estende su più di una riga, creata racchiudendo il testo con tre virgolette singole `'''` o tre virgolette doppie `"""`, mantenendo tutti gli a capo al suo interno.
 
-**Example:** `"""Line one\nLine two\nLine three"""` stores three lines of text in a single string variable.
+**Esempio:** `"""Line one\nLine two\nLine three"""` memorizza tre righe di testo in un'unica variabile stringa.
 
-#### Multiple assignment (a, b = 1, 2)
+#### Assegnazione multipla (a, b = 1, 2)
 
-A Python feature that assigns values to several variables in a single statement by matching each name on the left with the corresponding value on the right.
+Una funzionalità di Python che assegna valori a più variabili in una singola istruzione abbinando ogni nome a sinistra al valore corrispondente a destra.
 
-**Example:** `x, y = 10, 20` sets `x` to `10` and `y` to `20` at the same time; you can also use `a, b = b, a` to swap two values.
+**Esempio:** `x, y = 10, 20` imposta `x` a `10` e `y` a `20` contemporaneamente; puoi anche usare `a, b = b, a` per scambiare due valori.
 
-#### __name__ == "__main__" guard
+#### Guardia __name__ == "__main__"
 
-A common Python pattern that runs a block of code only when the script is executed directly (not imported as a module), by checking whether the special variable `__name__` equals `"__main__"`.
+Un pattern comune di Python che esegue un blocco di codice solo quando lo script viene eseguito direttamente (non importato come modulo), verificando se la variabile speciale `__name__` è uguale a `"__main__"`.
 
-**Example:** `if __name__ == "__main__": main()` prevents `main()` from running when another file imports the module for its functions.
+**Esempio:** `if __name__ == "__main__": main()` impedisce l'esecuzione di `main()` quando un altro file importa il modulo per le sue funzioni.
 
-#### __name__ == "__main__" guard for runnable modules
+#### Guardia __name__ == "__main__" per moduli eseguibili
 
-The pattern of wrapping the main execution code of a Python script inside `if __name__ == "__main__":` so that the code runs when the file is executed directly but is skipped when the file is imported as a module by another script.
+Il pattern di racchiudere il codice di esecuzione principale di uno script Python dentro `if __name__ == "__main__":` così che il codice venga eseguito quando il file viene eseguito direttamente ma venga saltato quando il file è importato come modulo da un altro script.
 
-**Example:** A helper module `utils.py` with `if __name__ == "__main__": run_tests()` runs self-tests only when you execute it directly, not when another script imports its functions.
+**Esempio:** Un modulo di supporto `utils.py` con `if __name__ == "__main__": run_tests()` esegue i propri test solo quando lo esegui direttamente, non quando un altro script ne importa le funzioni.
 
-#### Named colors (red, green, blue, orange, etc.)
+#### Colori con nome (red, green, blue, orange, ecc.)
 
-Pre-defined color names built into turtle graphics and many other Python libraries that let you specify colors using easy-to-remember English words instead of numeric codes.
+Nomi di colore predefiniti integrati nella grafica turtle e in molte altre librerie Python che permettono di specificare i colori usando parole inglesi facili da ricordare invece di codici numerici.
 
-**Example:** `t.color("tomato")` and `t.color("dodgerblue")` use named colors; turtle supports over 100 such names including `"lime"`, `"gold"`, and `"orchid"`.
+**Esempio:** `t.color("tomato")` e `t.color("dodgerblue")` usano colori con nome; turtle supporta oltre 100 di questi nomi tra cui `"lime"`, `"gold"` e `"orchid"`.
 
-#### Nested dictionaries
+#### Dizionari annidati
 
-A dictionary in which some or all of the values are themselves dictionaries, allowing complex hierarchical data to be stored and accessed with multiple levels of keys.
+Un dizionario in cui alcuni o tutti i valori sono a loro volta dizionari, permettendo di memorizzare e accedere a dati gerarchici complessi con più livelli di chiavi.
 
-**Example:** `school = {"Alice": {"grade": 8, "score": 90}, "Bob": {"grade": 7, "score": 85}}` stores each student's data under their name.
+**Esempio:** `school = {"Alice": {"grade": 8, "score": 90}, "Bob": {"grade": 7, "score": 85}}` memorizza i dati di ogni studente sotto il proprio nome.
 
-#### Nested if statements
+#### Istruzioni if annidate
 
-An `if` (or `if...else`) statement placed inside the body of another `if` statement, allowing programs to check a second condition only after a first condition has been confirmed true.
+Un'istruzione `if` (o `if...else`) posta dentro il corpo di un'altra istruzione `if`, permettendo ai programmi di verificare una seconda condizione solo dopo che la prima è stata confermata vera.
 
-**Example:** `if is_member: if balance >= 10: print("Purchase allowed")` checks membership first, then balance.
+**Esempio:** `if is_member: if balance >= 10: print("Purchase allowed")` verifica prima l'iscrizione, poi il saldo.
 
-#### Nested lists (lists of lists)
+#### Liste annidate (liste di liste)
 
-A list that contains other lists as its elements, used to represent two-dimensional data such as grids, tables, or matrices.
+Una lista che contiene altre liste come suoi elementi, usata per rappresentare dati bidimensionali come griglie, tabelle o matrici.
 
-**Example:** `grid = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]` is a 3×3 grid; `grid[1][2]` accesses the value `6`.
+**Esempio:** `grid = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]` è una griglia 3×3; `grid[1][2]` accede al valore `6`.
 
-#### Nested loops
+#### Cicli annidati
 
-A loop placed inside the body of another loop, so that for each iteration of the outer loop, the inner loop runs through all of its iterations.
+Un ciclo posto dentro il corpo di un altro ciclo, così che per ogni iterazione del ciclo esterno, il ciclo interno esegua tutte le proprie iterazioni.
 
-**Example:** Two nested `for` loops with variables `row` and `col` can visit every cell in a grid, like the squares on a chessboard.
+**Esempio:** Due cicli `for` annidati con variabili `row` e `col` possono visitare ogni cella di una griglia, come le caselle di una scacchiera.
 
-#### None — null/empty value, NoneType
+#### None — valore nullo/vuoto, NoneType
 
-A special Python value representing the intentional absence of any value, belonging to its own type called `NoneType`; it is returned by functions that do not explicitly return anything.
+Un valore speciale di Python che rappresenta l'assenza intenzionale di qualsiasi valore, appartenente a un proprio tipo chiamato `NoneType`; viene restituito dalle funzioni che non restituiscono esplicitamente nulla.
 
-**Example:** A function that prints a message but has no `return` statement gives back `None`; checking `if result is None` tests whether a function returned anything useful.
+**Esempio:** Una funzione che stampa un messaggio ma non ha un'istruzione `return` restituisce `None`; verificare `if result is None` controlla se una funzione ha restituito qualcosa di utile.
 
-#### nonlocal keyword — access enclosing scope variable
+#### Parola chiave nonlocal — accedere a una variabile dell'ambito racchiudente
 
-A declaration inside a nested (inner) function that tells Python a variable name refers to the variable in the nearest enclosing (outer) function's scope, allowing the inner function to modify it.
+Una dichiarazione dentro una funzione annidata (interna) che dice a Python che un nome di variabile si riferisce alla variabile nell'ambito della funzione (esterna) racchiudente più vicina, permettendo alla funzione interna di modificarla.
 
-**Example:** An inner function uses `nonlocal counter` to update a `counter` variable defined in the outer function that wraps it.
+**Esempio:** Una funzione interna usa `nonlocal counter` per aggiornare una variabile `counter` definita nella funzione esterna che la racchiude.
 
-#### np.argmax() — index of maximum value
+#### np.argmax() — indice del valore massimo
 
-A NumPy function that returns the index of the largest value in an array, useful for finding which category received the highest score in a machine learning model's output.
+Una funzione di NumPy che restituisce l'indice del valore più grande in un array, utile per trovare quale categoria ha ricevuto il punteggio più alto nell'output di un modello di machine learning.
 
-**Example:** `np.argmax([0.1, 0.8, 0.1])` returns `1`, indicating that the second item (index 1) has the highest value.
+**Esempio:** `np.argmax([0.1, 0.8, 0.1])` restituisce `1`, indicando che il secondo elemento (indice 1) ha il valore più alto.
 
-#### np.array() — creating arrays
+#### np.array() — creare array
 
-A NumPy function that converts a Python list (or list of lists) into a NumPy array, an efficient data structure that supports fast element-wise math operations.
+Una funzione di NumPy che converte una lista Python (o lista di liste) in un array NumPy, una struttura dati efficiente che supporta operazioni matematiche veloci elemento per elemento.
 
-**Example:** `arr = np.array([1, 2, 3, 4]); arr * 3` produces `array([3, 6, 9, 12])` in one step.
+**Esempio:** `arr = np.array([1, 2, 3, 4]); arr * 3` produce `array([3, 6, 9, 12])` in un solo passaggio.
 
-#### numpy library overview
+#### Panoramica sulla libreria numpy
 
-A powerful third-party Python library that provides a fast array data type and mathematical functions for operating on entire arrays at once, forming the foundation for most scientific and data science Python work.
+Una potente libreria Python di terze parti che fornisce un tipo di dato array veloce e funzioni matematiche per operare su interi array in una volta sola, costituendo la base della maggior parte del lavoro Python scientifico e di data science.
 
-**Example:** `import numpy as np; np.array([1, 2, 3]) * 2` returns `array([2, 4, 6])` without needing a loop.
+**Esempio:** `import numpy as np; np.array([1, 2, 3]) * 2` restituisce `array([2, 4, 6])` senza bisogno di un ciclo.
 
-#### Objects and classes — conceptual overview
+#### Oggetti e classi — panoramica concettuale
 
-A programming model where data and related actions are bundled together into a single unit called an object; objects are created from templates called classes, which define their attributes (data) and methods (behaviors).
+Un modello di programmazione in cui dati e azioni correlate sono raggruppati insieme in un'unica unità chiamata oggetto; gli oggetti vengono creati da modelli chiamati classi, che ne definiscono gli attributi (dati) e i metodi (comportamenti).
 
-**Example:** A `Dog` class might define attributes like `name` and `breed` and methods like `bark()` and `fetch()`, and each individual dog is a separate object created from that class.
+**Esempio:** Una classe `Dog` potrebbe definire attributi come `name` e `breed` e metodi come `bark()` e `fetch()`, e ogni singolo cane è un oggetto separato creato da quella classe.
 
-#### open() function
+#### Funzione open()
 
-A built-in Python function that opens a file and returns a file object through which you can read from or write to the file; you must specify the file path and optionally the mode.
+Una funzione built-in di Python che apre un file e restituisce un oggetto file tramite cui puoi leggere o scrivere nel file; devi specificare il percorso del file e opzionalmente la modalità.
 
-**Example:** `f = open("notes.txt", "r")` opens `notes.txt` for reading and stores the file object in `f`.
+**Esempio:** `f = open("notes.txt", "r")` apre `notes.txt` in lettura e memorizza l'oggetto file in `f`.
 
-#### Optimizer: Adam
+#### Ottimizzatore: Adam
 
-A popular gradient-descent optimization algorithm used to train neural networks that automatically adjusts the learning rate for each parameter, combining the benefits of momentum and adaptive learning rates.
+Un popolare algoritmo di ottimizzazione a discesa del gradiente usato per addestrare reti neurali che regola automaticamente il tasso di apprendimento per ogni parametro, combinando i vantaggi del momentum e dei tassi di apprendimento adattivi.
 
-**Example:** `optimizer="adam"` in `model.compile()` tells Keras to use the Adam algorithm, which typically trains faster than basic gradient descent.
+**Esempio:** `optimizer="adam"` in `model.compile()` dice a Keras di usare l'algoritmo Adam, che tipicamente si addestra più velocemente della discesa del gradiente di base.
 
-#### os — operating system interface
+#### os — interfaccia con il sistema operativo
 
-A standard library module that provides functions for interacting with the operating system, including working with files and directories, reading environment variables, and running system commands.
+Un modulo della libreria standard che fornisce funzioni per interagire con il sistema operativo, inclusi il lavoro con file e cartelle, la lettura delle variabili d'ambiente e l'esecuzione di comandi di sistema.
 
-**Example:** `import os; os.getcwd()` returns the path of the current working directory.
+**Esempio:** `import os; os.getcwd()` restituisce il percorso della cartella di lavoro corrente.
 
-#### os.path — file path operations
+#### os.path — operazioni sui percorsi dei file
 
-A sub-module of `os` that provides functions for manipulating file and directory path strings in a way that works correctly on any operating system.
+Un sotto-modulo di `os` che fornisce funzioni per manipolare le stringhe di percorso di file e cartelle in un modo che funziona correttamente su qualsiasi sistema operativo.
 
-**Example:** `os.path.exists("data.txt")` returns `True` if the file exists; `os.path.join("folder", "file.txt")` builds a path that works on Windows and Mac.
+**Esempio:** `os.path.exists("data.txt")` restituisce `True` se il file esiste; `os.path.join("folder", "file.txt")` costruisce un percorso che funziona su Windows e Mac.
 
-#### Pen control: penup(), pendown(), pensize()
+#### Controllo della penna: penup(), pendown(), pensize()
 
-Turtle methods that control whether the turtle draws as it moves: `penup()` lifts the pen so movement leaves no mark; `pendown()` lowers the pen so movement draws a line; `pensize(n)` sets the line thickness in pixels.
+Metodi della turtle che controllano se la turtle disegna mentre si muove: `penup()` solleva la penna così il movimento non lascia traccia; `pendown()` abbassa la penna così il movimento disegna una linea; `pensize(n)` imposta lo spessore della linea in pixel.
 
-**Example:** `t.penup(); t.goto(100, 0); t.pendown()` moves the turtle without drawing, then resumes drawing from the new position.
+**Esempio:** `t.penup(); t.goto(100, 0); t.pendown()` sposta la turtle senza disegnare, poi riprende a disegnare dalla nuova posizione.
 
-#### PIL (Python Imaging Library) / Pillow overview
+#### Panoramica su PIL (Python Imaging Library) / Pillow
 
-A third-party Python library for opening, editing, and saving image files in many formats; Pillow is the actively maintained fork of the original PIL.
+Una libreria Python di terze parti per aprire, modificare e salvare file immagine in molti formati; Pillow è il fork attivamente mantenuto della PIL originale.
 
-**Example:** `from PIL import Image` gives you functions to open a JPEG, resize it, convert it to grayscale, and save the result.
+**Esempio:** `from PIL import Image` dà accesso a funzioni per aprire un JPEG, ridimensionarlo, convertirlo in scala di grigi e salvare il risultato.
 
-#### pip — Python package installer
+#### pip — installatore di pacchetti Python
 
-The standard command-line tool that downloads and installs Python libraries from the internet, making it easy to add new capabilities to Python such as web scraping or image processing.
+Lo strumento standard da riga di comando che scarica e installa librerie Python da internet, rendendo facile aggiungere a Python nuove funzionalità come il web scraping o l'elaborazione delle immagini.
 
-**Example:** Running `pip install pillow` in the terminal downloads and installs the Pillow image library so you can use it in your programs.
+**Esempio:** Eseguire `pip install pillow` nel terminale scarica e installa la libreria immagine Pillow così puoi usarla nei tuoi programmi.
 
-#### Pixel data and image arrays
+#### Dati dei pixel e array di immagini
 
-The representation of an image as a two-dimensional grid where each cell holds one pixel's color value; in Pillow or NumPy, this data can be read and modified as a 2D or 3D array.
+La rappresentazione di un'immagine come una griglia bidimensionale in cui ogni cella contiene il valore di colore di un pixel; in Pillow o NumPy, questi dati possono essere letti e modificati come un array 2D o 3D.
 
-**Example:** Converting an image to a NumPy array with `np.array(img)` gives a 3D array where each pixel is `[red, green, blue]`.
+**Esempio:** Convertire un'immagine in un array NumPy con `np.array(img)` dà un array 3D in cui ogni pixel è `[red, green, blue]`.
 
-#### Plotting a sine wave
+#### Disegnare un'onda sinusoidale (plotting)
 
-A common introductory data visualization task that generates a list of x-values, computes `math.sin()` for each, and passes both lists to `plt.plot()` to draw a smooth wave-shaped curve.
+Un comune compito introduttivo di visualizzazione dati che genera una lista di valori x, calcola `math.sin()` per ciascuno, e passa entrambe le liste a `plt.plot()` per disegnare una curva ondulata fluida.
 
-**Example:** `x = [i/10 for i in range(63)]; y = [math.sin(v) for v in x]; plt.plot(x, y)` plots one full cycle of a sine wave.
+**Esempio:** `x = [i/10 for i in range(63)]; y = [math.sin(v) for v in x]; plt.plot(x, y)` disegna un ciclo completo di un'onda sinusoidale.
 
-#### plt.grid() — show grid lines
+#### plt.grid() — mostrare le linee della griglia
 
-A matplotlib function that adds a grid of horizontal and vertical reference lines to a chart, making it easier to read data values from the plot.
+Una funzione di matplotlib che aggiunge una griglia di linee di riferimento orizzontali e verticali a un grafico, rendendo più facile leggere i valori dei dati dal grafico.
 
-**Example:** `plt.grid(True)` adds grid lines; `plt.grid(True, linestyle="--", alpha=0.5)` uses dashed semi-transparent lines.
+**Esempio:** `plt.grid(True)` aggiunge le linee della griglia; `plt.grid(True, linestyle="--", alpha=0.5)` usa linee tratteggiate semitrasparenti.
 
-#### plt.plot(x, y) — line plot
+#### plt.plot(x, y) — grafico a linee
 
-A matplotlib function that draws a line graph connecting data points defined by matching lists of x-values and y-values.
+Una funzione di matplotlib che disegna un grafico a linee che collega i punti dati definiti da liste corrispondenti di valori x e valori y.
 
-**Example:** `plt.plot([0, 1, 2, 3], [0, 1, 4, 9])` draws a line through the points (0,0), (1,1), (2,4), (3,9), producing a curve that looks like a parabola.
+**Esempio:** `plt.plot([0, 1, 2, 3], [0, 1, 4, 9])` disegna una linea attraverso i punti (0,0), (1,1), (2,4), (3,9), producendo una curva simile a una parabola.
 
-#### plt.show() — display plot
+#### plt.show() — mostrare il grafico
 
-A matplotlib function that renders all currently created charts and displays them in a window or inline in a Jupyter notebook; without it, the plot is created in memory but never shown.
+Una funzione di matplotlib che rende tutti i grafici attualmente creati e li mostra in una finestra o in linea in un Jupyter notebook; senza di essa, il grafico viene creato in memoria ma non viene mai mostrato.
 
-**Example:** After calling `plt.plot(...)` and `plt.title(...)`, calling `plt.show()` opens the window with the finished chart.
+**Esempio:** Dopo aver chiamato `plt.plot(...)` e `plt.title(...)`, chiamare `plt.show()` apre la finestra con il grafico completato.
 
-#### plt.title(), plt.xlabel(), plt.ylabel() — labels
+#### plt.title(), plt.xlabel(), plt.ylabel() — etichette
 
-Matplotlib functions that add a title above the chart and labels to the x- and y-axes, making graphs easier to interpret.
+Funzioni di matplotlib che aggiungono un titolo sopra il grafico ed etichette agli assi x e y, rendendo i grafici più facili da interpretare.
 
-**Example:** `plt.title("Temperature Over Time"); plt.xlabel("Day"); plt.ylabel("°C")` labels the axes of a temperature chart.
+**Esempio:** `plt.title("Temperature Over Time"); plt.xlabel("Day"); plt.ylabel("°C")` etichetta gli assi di un grafico della temperatura.
 
-#### Position query: xcor(), ycor(), heading()
+#### Interrogare la posizione: xcor(), ycor(), heading()
 
-Turtle methods that report the turtle's current state: `xcor()` returns the x-coordinate; `ycor()` returns the y-coordinate; `heading()` returns the direction the turtle is facing in degrees.
+Metodi della turtle che riportano lo stato attuale della turtle: `xcor()` restituisce la coordinata x; `ycor()` restituisce la coordinata y; `heading()` restituisce la direzione verso cui è rivolta la turtle in gradi.
 
-**Example:** `print(t.xcor(), t.ycor())` prints the turtle's current position, useful for debugging or collision detection.
+**Esempio:** `print(t.xcor(), t.ycor())` stampa la posizione attuale della turtle, utile per il debug o il rilevamento di collisioni.
 
-#### print() function
+#### Funzione print()
 
-A built-in Python function that displays one or more values as text in the console or terminal window, ending with a newline by default.
+Una funzione built-in di Python che mostra uno o più valori come testo nella console o nel terminale, terminando con un a capo per impostazione predefinita.
 
-**Example:** `print("Hello, world!")` outputs the text `Hello, world!` to the screen.
+**Esempio:** `print("Hello, world!")` stampa il testo `Hello, world!` sullo schermo.
 
-#### print() — output to console
+#### print() — output sulla console
 
-A built-in Python function that displays text or values in the terminal or console window, with optional separator and end characters, making program output visible to the user.
+Una funzione built-in di Python che mostra testo o valori nel terminale o nella finestra della console, con caratteri separatore e finale opzionali, rendendo visibile all'utente l'output del programma.
 
-**Example:** `print("Score:", score)` shows `Score: 42` if `score` is `42`; `print("a", "b", sep="-")` shows `a-b`.
+**Esempio:** `print("Score:", score)` mostra `Score: 42` se `score` è `42`; `print("a", "b", sep="-")` mostra `a-b`.
 
-#### Prompting the user (passing a string to input())
+#### Chiedere input all'utente (passando una stringa a input())
 
-The practice of passing a descriptive string argument to `input()` so that the user sees a message explaining what they should type before the program waits for their input.
+La pratica di passare una stringa descrittiva come argomento a `input()` così che l'utente veda un messaggio che spiega cosa deve digitare prima che il programma aspetti il suo input.
 
-**Example:** `age = input("How old are you? ")` displays the question and stores the answer, making the program friendlier than a blank cursor.
+**Esempio:** `age = input("How old are you? ")` mostra la domanda e memorizza la risposta, rendendo il programma più amichevole di un cursore vuoto.
 
-#### Pure functions vs functions with side effects
+#### Funzioni pure vs funzioni con effetti collaterali
 
-A distinction between functions that always return the same output for the same input and change nothing outside themselves (pure), and functions that affect external state such as printing, writing files, or modifying global variables (side effects).
+Una distinzione tra le funzioni che restituiscono sempre lo stesso output per lo stesso input e non cambiano nulla al di fuori di se stesse (pure), e le funzioni che influenzano lo stato esterno come stampare, scrivere file o modificare variabili globali (effetti collaterali).
 
-**Example:** `def double(x): return x * 2` is pure; `def log(x): print(x)` has a side effect because it changes what appears on the screen.
+**Esempio:** `def double(x): return x * 2` è pura; `def log(x): print(x)` ha un effetto collaterale perché cambia ciò che appare sullo schermo.
 
-#### Python 2 vs Python 3 differences
+#### Differenze tra Python 2 e Python 3
 
-Two major versions of the Python language that are not fully compatible with each other; Python 3 is the current standard and includes improvements such as `print()` being a function rather than a statement, and division always returning a decimal result.
+Due versioni principali del linguaggio Python non pienamente compatibili tra loro; Python 3 è lo standard attuale e include miglioramenti come `print()` che è una funzione invece che un'istruzione, e la divisione che restituisce sempre un risultato decimale.
 
-**Example:** In Python 2, `print "Hello"` works, but in Python 3 you must write `print("Hello")` with parentheses.
+**Esempio:** In Python 2, `print "Hello"` funziona, ma in Python 3 devi scrivere `print("Hello")` con le parentesi.
 
-#### Python interpreter overview
+#### Panoramica sull'interprete Python
 
-A program that reads Python code one instruction at a time and carries out each instruction immediately, translating human-readable Python into actions the computer can perform without needing to compile the entire program first.
+Un programma che legge il codice Python un'istruzione alla volta ed esegue immediatamente ciascuna istruzione, traducendo il Python leggibile dagli umani in azioni che il computer può eseguire senza dover compilare prima l'intero programma.
 
-**Example:** When you type `print("Hello!")` and press Enter in a Python shell, the interpreter reads that line and displays `Hello!` on the screen right away.
+**Esempio:** Quando digiti `print("Hello!")` e premi Invio in una shell Python, l'interprete legge quella riga e mostra subito `Hello!` sullo schermo.
 
-#### Python keywords (reserved words)
+#### Parole chiave di Python (parole riservate)
 
-Special words built into the Python language — such as `if`, `for`, `while`, `def`, `return`, and `True` — that have fixed meanings and cannot be used as variable or function names.
+Parole speciali integrate nel linguaggio Python — come `if`, `for`, `while`, `def`, `return` e `True` — che hanno significati fissi e non possono essere usate come nomi di variabili o funzioni.
 
-**Example:** Trying to name a variable `for = 5` causes a `SyntaxError` because `for` is a reserved keyword.
+**Esempio:** Provare a nominare una variabile `for = 5` causa un `SyntaxError` perché `for` è una parola chiave riservata.
 
-#### Quantifiers: + (one or more), * (zero or more), ? (optional)
+#### Quantificatori: + (uno o più), * (zero o più), ? (opzionale)
 
-Regex symbols placed after a character or group to specify how many times it may repeat: `+` requires at least one occurrence; `*` allows zero or more; `?` makes the preceding element optional (zero or one).
+Simboli regex posti dopo un carattere o un gruppo per specificare quante volte può ripetersi: `+` richiede almeno un'occorrenza; `*` ne permette zero o più; `?` rende opzionale l'elemento precedente (zero o una).
 
-**Example:** `r"\d+"` matches one or more digits; `r"colou?r"` matches both `"color"` and `"colour"`.
+**Esempio:** `r"\d+"` corrisponde a una o più cifre; `r"colou?r"` corrisponde sia a `"color"` che a `"colour"`.
 
-#### Queue operations: enqueue (append()), dequeue (pop(0))
+#### Operazioni sulla coda: enqueue (append()), dequeue (pop(0))
 
-The two fundamental queue operations: enqueue adds an item to the back of the queue (implemented with `.append()`); dequeue removes and returns the item at the front (implemented with `.pop(0)`).
+Le due operazioni fondamentali di una coda: enqueue aggiunge un elemento in fondo alla coda (implementato con `.append()`); dequeue rimuove e restituisce l'elemento in testa (implementato con `.pop(0)`).
 
-**Example:** `queue = []; queue.append("Alice"); queue.append("Bob"); queue.pop(0)` returns `"Alice"`, who arrived first.
+**Esempio:** `queue = []; queue.append("Alice"); queue.append("Bob"); queue.pop(0)` restituisce `"Alice"`, che è arrivata per prima.
 
-#### Queue — FIFO (First In, First Out)
+#### Coda — FIFO (First In, First Out)
 
-An abstract data type where items are added at one end (the back) and removed from the other end (the front), so the item that has waited longest is always served next.
+Un tipo di dato astratto in cui gli elementi vengono aggiunti a un'estremità (il fondo) e rimossi dall'altra (la testa), così che l'elemento che ha aspettato più a lungo viene sempre servito per primo.
 
-**Example:** A printer queue is FIFO — the first document sent to the printer is the first one printed.
+**Esempio:** Una coda di stampa è FIFO — il primo documento inviato alla stampante è il primo a essere stampato.
 
-#### raise — raising exceptions manually
+#### raise — generare eccezioni manualmente
 
-A statement that deliberately triggers an exception, either to re-raise a caught one or to signal an error condition with a specific message to the caller.
+Un'istruzione che attiva deliberatamente un'eccezione, sia per rilanciarne una già catturata sia per segnalare una condizione di errore con un messaggio specifico a chi ha chiamato il codice.
 
-**Example:** `if age < 0: raise ValueError("Age cannot be negative")` stops the program with a descriptive message when invalid data is detected.
+**Esempio:** `if age < 0: raise ValueError("Age cannot be negative")` interrompe il programma con un messaggio descrittivo quando vengono rilevati dati non validi.
 
-#### random — random number generation
+#### random — generazione di numeri casuali
 
-A standard library module that provides functions for generating pseudo-random numbers, making random choices, and shuffling sequences, useful for games, simulations, and sampling.
+Un modulo della libreria standard che fornisce funzioni per generare numeri pseudo-casuali, fare scelte casuali e mescolare sequenze, utile per giochi, simulazioni e campionamento.
 
-**Example:** `import random; random.randint(1, 6)` simulates rolling a six-sided die.
+**Esempio:** `import random; random.randint(1, 6)` simula il lancio di un dado a sei facce.
 
 #### random.choice(sequence)
 
-A function from the `random` module that returns a single randomly selected item from a non-empty sequence such as a list or string.
+Una funzione del modulo `random` che restituisce un singolo elemento scelto casualmente da una sequenza non vuota come una lista o una stringa.
 
-**Example:** `random.choice(["rock", "paper", "scissors"])` returns one of the three options at random.
+**Esempio:** `random.choice(["rock", "paper", "scissors"])` restituisce una delle tre opzioni a caso.
 
 #### random.randint(min, max)
 
-A function from the `random` module that returns a random integer between `min` and `max`, inclusive on both ends.
+Una funzione del modulo `random` che restituisce un intero casuale tra `min` e `max`, inclusi entrambi gli estremi.
 
-**Example:** `random.randint(1, 10)` returns one random whole number between 1 and 10 each time it is called.
+**Esempio:** `random.randint(1, 10)` restituisce un numero intero casuale tra 1 e 10 ogni volta che viene chiamata.
 
-#### random.seed() — reproducibility
+#### random.seed() — riproducibilità
 
-A function from the `random` module that initializes the random number generator with a specified starting value, ensuring that the same sequence of random numbers is produced every time the program runs — useful for testing.
+Una funzione del modulo `random` che inizializza il generatore di numeri casuali con un valore di partenza specificato, assicurando che venga prodotta la stessa sequenza di numeri casuali ogni volta che il programma viene eseguito — utile per i test.
 
-**Example:** `random.seed(42); print(random.randint(1, 100))` always prints the same number when the seed is `42`.
+**Esempio:** `random.seed(42); print(random.randint(1, 100))` stampa sempre lo stesso numero quando il seed è `42`.
 
 #### random.shuffle(list)
 
-A function from the `random` module that randomly rearranges the items of a list in place, modifying the original list rather than creating a new one.
+Una funzione del modulo `random` che riordina casualmente sul posto gli elementi di una lista, modificando la lista originale invece di crearne una nuova.
 
-**Example:** `cards = [1, 2, 3, 4, 5]; random.shuffle(cards)` rearranges `cards` into a random order each time.
+**Esempio:** `cards = [1, 2, 3, 4, 5]; random.shuffle(cards)` riordina `cards` in un ordine casuale ogni volta.
 
-#### range() — generate a sequence of numbers
+#### range() — generare una sequenza di numeri
 
-A built-in function that produces an immutable sequence of integers on demand without storing all of them in memory, commonly used to control the number of iterations in a `for` loop.
+Una funzione built-in che produce su richiesta una sequenza immutabile di interi senza memorizzarli tutti, comunemente usata per controllare il numero di iterazioni in un ciclo `for`.
 
-**Example:** `range(5)` generates `0, 1, 2, 3, 4`; `range(10, 0, -2)` generates `10, 8, 6, 4, 2`.
+**Esempio:** `range(5)` genera `0, 1, 2, 3, 4`; `range(10, 0, -2)` genera `10, 8, 6, 4, 2`.
 
 #### range(start, stop, step)
 
-A built-in function that generates a sequence of integers from `start` up to but not including `stop`, incrementing by `step` each time; `start` and `step` are optional and default to `0` and `1`.
+Una funzione built-in che genera una sequenza di interi da `start` fino a (ma non incluso) `stop`, incrementando di `step` ogni volta; `start` e `step` sono opzionali e valgono per impostazione predefinita `0` e `1`.
 
-**Example:** `range(2, 10, 2)` generates `2, 4, 6, 8`; `range(5)` generates `0, 1, 2, 3, 4`.
+**Esempio:** `range(2, 10, 2)` genera `2, 4, 6, 8`; `range(5)` genera `0, 1, 2, 3, 4`.
 
-#### Raspberry Pi as a Python platform
+#### Raspberry Pi come piattaforma Python
 
-A small, inexpensive single-board computer that runs Linux and comes with Python pre-installed, making it a popular device for learning programming and building physical computing projects.
+Un piccolo ed economico computer a scheda singola che esegue Linux e viene fornito con Python preinstallato, rendendolo un dispositivo popolare per imparare a programmare e costruire progetti di physical computing.
 
-**Example:** Students use a Raspberry Pi to run a Python program that controls LED lights connected to the board's GPIO pins.
+**Esempio:** Gli studenti usano un Raspberry Pi per eseguire un programma Python che controlla luci LED collegate ai pin GPIO della scheda.
 
-#### Raw strings for regex patterns (r"...")
+#### Stringhe raw per i pattern regex (r"...")
 
-A string prefixed with `r` that tells Python to treat backslashes as literal backslash characters rather than escape sequences, making regex patterns easier to write and read.
+Una stringa preceduta da `r` che dice a Python di trattare i backslash come caratteri letterali invece che come sequenze di escape, rendendo più facili da scrivere e leggere i pattern regex.
 
-**Example:** `r"\n"` is a two-character string (backslash + n) used in regex; without the `r`, `"\n"` would be a newline character.
+**Esempio:** `r"\n"` è una stringa di due caratteri (backslash + n) usata nelle regex; senza la `r`, `"\n"` sarebbe un carattere di a capo.
 
-#### re — regular expressions
+#### re — espressioni regolari
 
-A standard library module that provides tools for searching, matching, and manipulating strings using patterns called regular expressions, which describe text shapes rather than exact text.
+Un modulo della libreria standard che fornisce strumenti per cercare, confrontare e manipolare stringhe usando pattern chiamati espressioni regolari, che descrivono forme di testo anziché testo esatto.
 
-**Example:** `import re; re.search(r"\d+", "Order 42")` finds the number `42` inside the string.
+**Esempio:** `import re; re.search(r"\d+", "Order 42")` trova il numero `42` dentro la stringa.
 
-#### re.findall(pattern, string) — find all matches
+#### re.findall(pattern, string) — trovare tutte le corrispondenze
 
-A function from the `re` module that returns a list of all non-overlapping matches of a pattern found in a string, in the order they appear.
+Una funzione del modulo `re` che restituisce una lista di tutte le corrispondenze non sovrapposte di un pattern trovate in una stringa, nell'ordine in cui compaiono.
 
-**Example:** `re.findall(r"\d+", "Call 911 or 112")` returns `["911", "112"]`.
+**Esempio:** `re.findall(r"\d+", "Call 911 or 112")` restituisce `["911", "112"]`.
 
-#### re.search(pattern, string) — find first match
+#### re.search(pattern, string) — trovare la prima corrispondenza
 
-A function from the `re` module that scans a string and returns a match object for the first location where the pattern is found, or `None` if no match exists anywhere.
+Una funzione del modulo `re` che scansiona una stringa e restituisce un oggetto match per la prima posizione in cui viene trovato il pattern, o `None` se non esiste alcuna corrispondenza.
 
-**Example:** `re.search(r"\d+", "I have 3 cats")` returns a match object for `"3"`; checking `if re.search(...):` safely tests for existence.
+**Esempio:** `re.search(r"\d+", "I have 3 cats")` restituisce un oggetto match per `"3"`; verificare `if re.search(...):` controlla in modo sicuro l'esistenza di una corrispondenza.
 
-#### re.split(pattern, string) — split by pattern
+#### re.split(pattern, string) — dividere in base a un pattern
 
-A function from the `re` module that splits a string at every location where the pattern matches, returning a list of the pieces between matches.
+Una funzione del modulo `re` che divide una stringa in ogni punto in cui il pattern corrisponde, restituendo una lista dei pezzi tra le corrispondenze.
 
-**Example:** `re.split(r"\s+", "hello   world  there")` splits on any whitespace, returning `["hello", "world", "there"]`.
+**Esempio:** `re.split(r"\s+", "hello   world  there")` divide su qualsiasi spazio bianco, restituendo `["hello", "world", "there"]`.
 
-#### re.sub(pattern, replacement, string) — substitute matches
+#### re.sub(pattern, replacement, string) — sostituire le corrispondenze
 
-A function from the `re` module that replaces every occurrence of a pattern in a string with a specified replacement string and returns the modified result.
+Una funzione del modulo `re` che sostituisce ogni occorrenza di un pattern in una stringa con una stringa di sostituzione specificata e restituisce il risultato modificato.
 
-**Example:** `re.sub(r"\d", "*", "Phone: 555-1234")` returns `"Phone: ***-****"` by replacing each digit with `*`.
+**Esempio:** `re.sub(r"\d", "*", "Phone: 555-1234")` restituisce `"Phone: ***-****"` sostituendo ogni cifra con `*`.
 
-#### Reading a traceback (stack trace)
+#### Leggere un traceback (stack trace)
 
-The skill of interpreting Python's error output, which lists the chain of function calls leading to the crash and identifies the file, line number, and type of error at the bottom.
+La competenza di interpretare l'output di errore di Python, che elenca la catena di chiamate di funzione che hanno portato al crash e indica, in fondo, il file, il numero di riga e il tipo di errore.
 
-**Example:** A traceback showing `ZeroDivisionError: division by zero` at line 12 tells you exactly where to look in your code to find the bug.
+**Esempio:** Un traceback che mostra `ZeroDivisionError: division by zero` alla riga 12 ti dice esattamente dove guardare nel tuo codice per trovare il bug.
 
-#### Reading and writing JSON files (json module)
+#### Leggere e scrivere file JSON (modulo json)
 
-The use of Python's built-in `json` module to serialize Python objects (dictionaries, lists) to a JSON-formatted text file with `json.dump()` and to parse JSON files back into Python objects with `json.load()`.
+L'uso del modulo `json` integrato in Python per serializzare oggetti Python (dizionari, liste) in un file di testo in formato JSON con `json.dump()` e per analizzare file JSON e riconvertirli in oggetti Python con `json.load()`.
 
-**Example:** `import json` / `with open("settings.json", "w") as f: json.dump({"level": 3, "score": 500}, f)` saves game settings; `json.load(f)` reads them back.
+**Esempio:** `import json` / `with open("settings.json", "w") as f: json.dump({"level": 3, "score": 500}, f)` salva le impostazioni di gioco; `json.load(f)` le rilegge.
 
-#### Reading documentation with help() and dir()
+#### Leggere la documentazione con help() e dir()
 
-The skill of using Python's built-in `help()` to read a function's docstring and `dir()` to list an object's available attributes and methods, allowing exploration of unfamiliar code without leaving the interpreter.
+La competenza di usare `help()` integrata in Python per leggere la docstring di una funzione e `dir()` per elencare gli attributi e i metodi disponibili di un oggetto, permettendo di esplorare codice sconosciuto senza uscire dall'interprete.
 
-**Example:** `dir(str)` shows all string methods; `help(str.replace)` explains exactly how `.replace()` works and what arguments it takes.
+**Esempio:** `dir(str)` mostra tutti i metodi delle stringhe; `help(str.replace)` spiega esattamente come funziona `.replace()` e quali argomenti accetta.
 
-#### Recurrent networks (RNN) — overview
+#### Reti ricorrenti (RNN) — panoramica
 
-A class of neural network where connections can form directed cycles, allowing the network to maintain a hidden state across time steps, making them suitable for sequential data like text or time series.
+Una classe di rete neurale in cui le connessioni possono formare cicli diretti, permettendo alla rete di mantenere uno stato nascosto attraverso i passi temporali, rendendole adatte a dati sequenziali come testo o serie temporali.
 
-**Example:** An RNN can process a sentence word by word, keeping track of context from earlier words to better understand the meaning of each new word.
+**Esempio:** Una RNN può elaborare una frase parola per parola, tenendo traccia del contesto delle parole precedenti per capire meglio il significato di ogni nuova parola.
 
-#### Recursion base case and recursive case
+#### Caso base e caso ricorsivo della ricorsione
 
-The two essential parts of any recursive function: the base case is a condition that stops the recursion by returning a result without a recursive call; the recursive case breaks the problem into a smaller version and calls the function again.
+Le due parti essenziali di qualsiasi funzione ricorsiva: il caso base è una condizione che ferma la ricorsione restituendo un risultato senza una chiamata ricorsiva; il caso ricorsivo scompone il problema in una versione più piccola e richiama di nuovo la funzione.
 
-**Example:** In a factorial function, `if n == 1: return 1` is the base case and `return n * factorial(n - 1)` is the recursive case.
+**Esempio:** In una funzione fattoriale, `if n == 1: return 1` è il caso base e `return n * factorial(n - 1)` è il caso ricorsivo.
 
-#### Recursion depth and stack overflow
+#### Profondità di ricorsione e stack overflow
 
-The limitation on how many times a function can call itself before Python raises a `RecursionError`; each call adds a frame to the call stack, and Python has a default maximum depth (usually 1000) to prevent the program from crashing.
+Il limite al numero di volte in cui una funzione può richiamare se stessa prima che Python generi un `RecursionError`; ogni chiamata aggiunge un frame allo stack delle chiamate, e Python ha una profondità massima predefinita (di solito 1000) per evitare che il programma vada in crash.
 
-**Example:** A recursive function that never reaches its base case keeps calling itself until Python raises `RecursionError: maximum recursion depth exceeded`.
+**Esempio:** Una funzione ricorsiva che non raggiunge mai il suo caso base continua a richiamare se stessa finché Python non genera `RecursionError: maximum recursion depth exceeded`.
 
-#### Recursion — a function calling itself
+#### Ricorsione — una funzione che richiama se stessa
 
-A programming technique where a function solves a problem by calling itself with a smaller or simpler version of the problem, continuing until a base case is reached that stops the chain of calls.
+Una tecnica di programmazione in cui una funzione risolve un problema richiamando se stessa con una versione più piccola o più semplice del problema, continuando finché non viene raggiunto un caso base che interrompe la catena di chiamate.
 
-**Example:** A recursive function that counts down from `n` calls itself with `n - 1` until it reaches `0`, at which point it stops.
+**Esempio:** Una funzione ricorsiva che conta alla rovescia da `n` richiama se stessa con `n - 1` finché non raggiunge `0`, punto in cui si ferma.
 
-#### Removing entries: .pop(), del
+#### Rimuovere voci: .pop(), del
 
-Two ways to delete a key-value pair from a dictionary: `.pop(key)` removes the pair and returns the value; `del d[key]` removes the pair without returning anything.
+Due modi per eliminare una coppia chiave-valore da un dizionario: `.pop(key)` rimuove la coppia e restituisce il valore; `del d[key]` rimuove la coppia senza restituire nulla.
 
-**Example:** `removed = inventory.pop("apples")` removes `"apples"` and stores its value; `del inventory["apples"]` removes it and discards the value.
+**Esempio:** `removed = inventory.pop("apples")` rimuove `"apples"` e ne memorizza il valore; `del inventory["apples"]` la rimuove scartando il valore.
 
-#### repl.it — online Python IDE
+#### repl.it — IDE Python online
 
-A web-based platform where you can write, run, and share Python programs from any device with a browser, providing an editor, a console, and file storage all in one place.
+Una piattaforma basata sul web dove puoi scrivere, eseguire e condividere programmi Python da qualsiasi dispositivo con un browser, fornendo un editor, una console e l'archiviazione dei file tutto in un unico posto.
 
-**Example:** You can start a new Python repl at repl.it, type your code on the left, and see the output on the right without installing anything.
+**Esempio:** Puoi avviare un nuovo repl Python su repl.it, digitare il tuo codice a sinistra e vedere l'output a destra senza installare nulla.
 
-#### Reshaping arrays (array.reshape())
+#### Rimodellare gli array (array.reshape())
 
-A NumPy method that changes the shape (dimensions) of an array without changing its data, such as converting a flat list of 12 numbers into a 3×4 grid.
+Un metodo di NumPy che cambia la forma (dimensioni) di un array senza cambiarne i dati, ad esempio convertendo una lista piatta di 12 numeri in una griglia 3×4.
 
-**Example:** `np.arange(12).reshape(3, 4)` turns the sequence 0–11 into a 3-row, 4-column 2D array.
+**Esempio:** `np.arange(12).reshape(3, 4)` trasforma la sequenza 0–11 in un array 2D di 3 righe e 4 colonne.
 
-#### return statement
+#### Istruzione return
 
-A statement inside a function body that immediately ends the function and sends a specified value back to the caller; without it, the function returns `None`.
+Un'istruzione dentro il corpo di una funzione che termina immediatamente la funzione e invia un valore specificato indietro a chi l'ha chiamata; senza di essa, la funzione restituisce `None`.
 
-**Example:** `def square(n): return n * n` sends back the result so `result = square(5)` stores `25`.
+**Esempio:** `def square(n): return n * n` invia indietro il risultato così `result = square(5)` memorizza `25`.
 
-#### reversed() — return reverse iterator
+#### reversed() — restituire un iteratore inverso
 
-A built-in function that returns an iterator that yields items from a sequence in reverse order without modifying the original or creating a full reversed copy.
+Una funzione built-in che restituisce un iteratore che produce gli elementi di una sequenza in ordine inverso senza modificare l'originale né creare una copia invertita completa.
 
-**Example:** `list(reversed([1, 2, 3]))` produces `[3, 2, 1]`; `for c in reversed("abc"): print(c)` prints `c`, `b`, `a`.
+**Esempio:** `list(reversed([1, 2, 3]))` produce `[3, 2, 1]`; `for c in reversed("abc"): print(c)` stampa `c`, `b`, `a`.
 
-#### RGB color model
+#### Modello di colore RGB
 
-A method of representing colors by specifying the intensity of red, green, and blue light components, each typically ranging from 0 to 255, that are combined to produce any visible color.
+Un metodo per rappresentare i colori specificando l'intensità delle componenti di luce rossa, verde e blu, ciascuna tipicamente compresa tra 0 e 255, che vengono combinate per produrre qualsiasi colore visibile.
 
-**Example:** RGB `(255, 0, 0)` is red; `(0, 255, 0)` is green; `(128, 0, 128)` is purple; `(255, 255, 255)` is white.
+**Esempio:** RGB `(255, 0, 0)` è rosso; `(0, 255, 0)` è verde; `(128, 0, 128)` è viola; `(255, 255, 255)` è bianco.
 
-#### round() — round a number
+#### round() — arrotondare un numero
 
-A built-in function that rounds a floating-point number to the nearest integer or to a specified number of decimal places.
+Una funzione built-in che arrotonda un numero in virgola mobile all'intero più vicino o a un numero specificato di cifre decimali.
 
-**Example:** `round(3.7)` returns `4`; `round(3.14159, 2)` returns `3.14`.
+**Esempio:** `round(3.7)` restituisce `4`; `round(3.14159, 2)` restituisce `3.14`.
 
-#### Running Python scripts from the terminal
+#### Eseguire script Python dal terminale
 
-Executing a saved `.py` file by typing `python filename.py` (or `python3 filename.py`) in a command-line window, which causes the interpreter to run the entire file from top to bottom.
+Eseguire un file `.py` salvato digitando `python filename.py` (o `python3 filename.py`) in una finestra a riga di comando, il che fa sì che l'interprete esegua l'intero file dall'inizio alla fine.
 
-**Example:** After saving `hello.py`, you open a terminal, navigate to the file's folder, and type `python hello.py` to see the output.
+**Esempio:** Dopo aver salvato `hello.py`, apri un terminale, navighi fino alla cartella del file e digiti `python hello.py` per vedere l'output.
 
-#### Screen setup: setup(width, height), bgcolor(color), title(text)
+#### Impostazione dello schermo: setup(width, height), bgcolor(color), title(text)
 
-Three methods called on a `turtle.Screen()` object that configure the drawing window: `setup()` sets its pixel dimensions; `bgcolor()` sets the background color; `title()` sets the text shown in the title bar.
+Tre metodi chiamati su un oggetto `turtle.Screen()` che configurano la finestra di disegno: `setup()` ne imposta le dimensioni in pixel; `bgcolor()` imposta il colore di sfondo; `title()` imposta il testo mostrato nella barra del titolo.
 
-**Example:** `screen.setup(600, 400); screen.bgcolor("black"); screen.title("My Drawing")` creates a 600×400 black window.
+**Esempio:** `screen.setup(600, 400); screen.bgcolor("black"); screen.title("My Drawing")` crea una finestra nera di 600×400.
 
-#### Searching Stack Overflow and documentation
+#### Cercare su Stack Overflow e nella documentazione
 
-The practical skill of finding answers to programming questions by searching official Python documentation or the community Q&A site Stack Overflow, where millions of coding questions have already been answered.
+La competenza pratica di trovare risposte a domande di programmazione cercando nella documentazione ufficiale di Python o sul sito di domande e risposte della community Stack Overflow, dove milioni di domande di programmazione hanno già ricevuto risposta.
 
-**Example:** Searching Stack Overflow for "python list remove duplicates" returns dozens of solutions using sets or list comprehensions that you can study and adapt.
+**Esempio:** Cercare su Stack Overflow "python list remove duplicates" restituisce decine di soluzioni che usano insiemi o comprehension di liste che puoi studiare e adattare.
 
-#### self parameter
+#### Parametro self
 
-A conventional first parameter in every instance method definition that refers to the specific object the method is being called on, allowing the method to access and modify the object's own attributes.
+Un primo parametro convenzionale in ogni definizione di metodo d'istanza che si riferisce allo specifico oggetto su cui viene chiamato il metodo, permettendo al metodo di accedere e modificare gli attributi propri dell'oggetto.
 
-**Example:** In `def bark(self): print(self.name, "says woof!")`, `self.name` refers to the name of the particular dog that called `bark()`.
+**Esempio:** In `def bark(self): print(self.name, "says woof!")`, `self.name` si riferisce al nome del cane particolare che ha chiamato `bark()`.
 
-#### Sequential model
+#### Modello Sequential
 
-A Keras model type that stacks layers in a linear sequence, where data flows from the first layer through each subsequent layer in order, used for most straightforward neural network architectures.
+Un tipo di modello Keras che impila gli strati in una sequenza lineare, dove i dati fluiscono dal primo strato attraverso ogni strato successivo in ordine, usato per la maggior parte delle architetture di rete neurale più semplici.
 
-**Example:** `model = keras.Sequential([Dense(64, activation="relu"), Dense(10, activation="softmax")])` builds a two-layer network.
+**Esempio:** `model = keras.Sequential([Dense(64, activation="relu"), Dense(10, activation="softmax")])` costruisce una rete a due strati.
 
-#### Set operations: union (|), intersection (&), difference (-)
+#### Operazioni sugli insiemi: unione (|), intersezione (&), differenza (-)
 
-Mathematical operations on two sets: `|` returns all items in either set; `&` returns only items in both sets; `-` returns items in the first set but not the second.
+Operazioni matematiche su due insiemi: `|` restituisce tutti gli elementi presenti in uno dei due insiemi; `&` restituisce solo gli elementi presenti in entrambi; `-` restituisce gli elementi presenti nel primo insieme ma non nel secondo.
 
-**Example:** `{1,2,3} | {3,4,5}` gives `{1,2,3,4,5}`; `{1,2,3} & {3,4,5}` gives `{3}`; `{1,2,3} - {3,4,5}` gives `{1,2}`.
+**Esempio:** `{1,2,3} | {3,4,5}` dà `{1,2,3,4,5}`; `{1,2,3} & {3,4,5}` dà `{3}`; `{1,2,3} - {3,4,5}` dà `{1,2}`.
 
-#### Set type (set) — unordered collection of unique items
+#### Tipo insieme (set) — collezione non ordinata di elementi unici
 
-A Python data type that stores an unordered group of items where each value can appear only once, making sets ideal for removing duplicates and performing mathematical set operations.
+Un tipo di dato Python che memorizza un gruppo non ordinato di elementi in cui ogni valore può comparire una sola volta, rendendo gli insiemi ideali per rimuovere i duplicati ed eseguire operazioni matematiche sugli insiemi.
 
-**Example:** `unique = {1, 2, 3, 2, 1}` stores only `{1, 2, 3}` because duplicates are automatically removed.
+**Esempio:** `unique = {1, 2, 3, 2, 1}` memorizza solo `{1, 2, 3}` perché i duplicati vengono rimossi automaticamente.
 
-#### Single vs double quotes
+#### Virgolette singole vs doppie
 
-Two interchangeable ways to delimit a string in Python, where `'text'` and `"text"` produce identical strings; the choice matters only when the string itself contains one type of quote.
+Due modi intercambiabili per delimitare una stringa in Python, dove `'text'` e `"text"` producono stringhe identiche; la scelta conta solo quando la stringa stessa contiene un tipo di virgoletta.
 
-**Example:** Use `"It's a great day!"` to include an apostrophe without escaping it, or `'She said "wow"'` to include double quotes inside.
+**Esempio:** Usa `"It's a great day!"` per includere un apostrofo senza doverlo escapare, oppure `'She said "wow"'` per includere virgolette doppie all'interno.
 
-#### Single-element tuple syntax ((x,))
+#### Sintassi della tupla a un solo elemento ((x,))
 
-The special syntax required to create a tuple with exactly one item, where a trailing comma must follow the item inside the parentheses; without the comma, Python treats the parentheses as grouping rather than a tuple.
+La sintassi speciale necessaria per creare una tupla con esattamente un elemento, in cui una virgola finale deve seguire l'elemento dentro le parentesi; senza la virgola, Python tratta le parentesi come un raggruppamento invece che come una tupla.
 
-**Example:** `single = (42,)` creates a one-item tuple; `not_a_tuple = (42)` is just the integer `42` in parentheses.
+**Esempio:** `single = (42,)` crea una tupla con un elemento; `not_a_tuple = (42)` è solo l'intero `42` tra parentesi.
 
-#### Snake_case naming convention
+#### Convenzione di denominazione snake_case
 
-A style for writing multi-word variable and function names in Python where all letters are lowercase and words are separated by underscores, making names readable without spaces.
+Uno stile per scrivere nomi di variabili e funzioni composti da più parole in Python in cui tutte le lettere sono minuscole e le parole sono separate da underscore, rendendo i nomi leggibili senza spazi.
 
-**Example:** `total_price`, `player_name`, and `max_speed` are all written in snake_case.
+**Esempio:** `total_price`, `player_name` e `max_speed` sono tutti scritti in snake_case.
 
-#### sorted() — return sorted list
+#### sorted() — restituire una lista ordinata
 
-A built-in function that returns a new sorted list from any iterable, leaving the original unchanged; accepts optional `key` and `reverse` arguments.
+Una funzione built-in che restituisce una nuova lista ordinata a partire da qualsiasi iterabile, lasciando invariato l'originale; accetta gli argomenti opzionali `key` e `reverse`.
 
-**Example:** `sorted([3, 1, 4, 1, 5])` returns `[1, 1, 3, 4, 5]`; `sorted(["banana", "apple"])` returns `["apple", "banana"]`.
+**Esempio:** `sorted([3, 1, 4, 1, 5])` restituisce `[1, 1, 3, 4, 5]`; `sorted(["banana", "apple"])` restituisce `["apple", "banana"]`.
 
-#### Sorting algorithms overview (bubble, selection, insertion)
+#### Panoramica sugli algoritmi di ordinamento (bubble, selection, insertion)
 
-An introduction to three simple comparison-based sorting methods: bubble sort repeatedly swaps adjacent out-of-order elements; selection sort finds the minimum each pass; insertion sort places each element in its correct position among already-sorted elements.
+Un'introduzione a tre semplici metodi di ordinamento basati su confronto: il bubble sort scambia ripetutamente gli elementi adiacenti fuori ordine; il selection sort trova il minimo a ogni passaggio; l'insertion sort colloca ogni elemento nella sua posizione corretta tra quelli già ordinati.
 
-**Example:** Bubble sort on `[3, 1, 2]` compares and swaps neighbors repeatedly until the list reads `[1, 2, 3]`.
+**Esempio:** Il bubble sort su `[3, 1, 2]` confronta e scambia ripetutamente gli elementi vicini finché la lista non diventa `[1, 2, 3]`.
 
-#### Sorting with a key function (sorted(list, key=...))
+#### Ordinare con una funzione chiave (sorted(list, key=...))
 
-A technique that customizes how `sorted()` or `.sort()` orders items by passing a `key` function that maps each item to a comparison value; items are then sorted by those values.
+Una tecnica che personalizza il modo in cui `sorted()` o `.sort()` ordinano gli elementi passando una funzione `key` che associa a ogni elemento un valore di confronto; gli elementi vengono quindi ordinati in base a quei valori.
 
-**Example:** `sorted(words, key=len)` sorts a list of strings from shortest to longest; `sorted(students, key=lambda s: s["score"])` sorts student dictionaries by score.
+**Esempio:** `sorted(words, key=len)` ordina una lista di stringhe dalla più corta alla più lunga; `sorted(students, key=lambda s: s["score"])` ordina i dizionari degli studenti per punteggio.
 
-#### Speed control: speed(value)
+#### Controllo della velocità: speed(value)
 
-A turtle method that sets how fast the turtle moves and draws, accepting values from `0` (fastest, no animation) to `10` (fast) or slow descriptive strings like `"slow"`, `"normal"`, `"fast"`.
+Un metodo della turtle che imposta la velocità con cui la turtle si muove e disegna, accettando valori da `0` (velocissima, senza animazione) a `10` (veloce) o stringhe descrittive come `"slow"`, `"normal"`, `"fast"`.
 
-**Example:** `t.speed(0)` makes the turtle draw as fast as possible, useful when drawing many complex shapes.
+**Esempio:** `t.speed(0)` fa disegnare la turtle il più velocemente possibile, utile quando si disegnano molte forme complesse.
 
-#### Spyder IDE — scientific Python IDE
+#### Spyder IDE — IDE Python scientifico
 
-A free development environment built for data science and math-heavy Python work that includes a variable explorer, a console, and easy access to libraries like NumPy and Matplotlib.
+Un ambiente di sviluppo gratuito pensato per la data science e il lavoro Python matematicamente intensivo che include un esploratore di variabili, una console e un facile accesso a librerie come NumPy e Matplotlib.
 
 #### Stack — LIFO (Last In, First Out)
 
-An abstract data type where items are added and removed from the same end (the top), so the most recently added item is always the first one removed.
+Un tipo di dato astratto in cui gli elementi vengono aggiunti e rimossi dalla stessa estremità (la cima), così che l'elemento aggiunto più di recente è sempre il primo a essere rimosso.
 
-**Example:** Python function calls use an internal stack — the most recently called function is the first to finish and be removed.
+**Esempio:** Le chiamate di funzione Python usano uno stack interno — la funzione chiamata più di recente è la prima a terminare ed essere rimossa.
 
-#### str() — convert to string
+#### str() — conversione a stringa
 
-A built-in function that converts any value — such as an integer, float, or list — into its text representation as a string, enabling it to be concatenated or printed with other strings.
+Una funzione built-in che converte qualsiasi valore — come un intero, un float o una lista — nella sua rappresentazione testuale come stringa, permettendo di concatenarlo o stamparlo insieme ad altre stringhe.
 
-**Example:** `str(42)` returns `"42"`; `"Your score is " + str(score)` combines text with a number variable.
+**Esempio:** `str(42)` restituisce `"42"`; `"Your score is " + str(score)` combina del testo con una variabile numerica.
 
-#### __str__() — string representation of an object
+#### __str__() — rappresentazione testuale di un oggetto
 
-A special method defined in a class that controls what is returned when the object is converted to a string (e.g., with `str()` or `print()`), making objects display in a human-readable format.
+Un metodo speciale definito in una classe che controlla cosa viene restituito quando l'oggetto viene convertito in stringa (es. con `str()` o `print()`), facendo sì che gli oggetti vengano visualizzati in un formato leggibile dall'uomo.
 
-**Example:** `def __str__(self): return f"Dog({self.name}, age {self.age})"` makes `print(my_dog)` show `Dog(Buddy, age 3)`.
+**Esempio:** `def __str__(self): return f"Dog({self.name}, age {self.age})"` fa sì che `print(my_dog)` mostri `Dog(Buddy, age 3)`.
 
-#### String concatenation with +
+#### Concatenazione di stringhe con +
 
-The operation of joining two or more strings end-to-end using the `+` operator to produce a single longer string.
+L'operazione di unire due o più stringhe una dopo l'altra usando l'operatore `+` per produrre un'unica stringa più lunga.
 
-**Example:** `"Hello, " + "world!"` produces `"Hello, world!"`; `first + " " + last` combines a first and last name with a space between them.
+**Esempio:** `"Hello, " + "world!"` produce `"Hello, world!"`; `first + " " + last` combina un nome e un cognome con uno spazio tra i due.
 
-#### String f-string formatting with format specifiers (e.g., {x:.2f})
+#### Formattazione f-string con specificatori di formato (es. {x:.2f})
 
-A feature of f-strings that allows precise control over how values are displayed, using format codes inside the curly braces after a colon to specify decimal places, width, alignment, and more.
+Una funzionalità delle f-string che permette un controllo preciso su come vengono mostrati i valori, usando codici di formato dentro le parentesi graffe dopo i due punti per specificare cifre decimali, larghezza, allineamento e altro.
 
-**Example:** `f"Pi is approximately {math.pi:.2f}"` displays `Pi is approximately 3.14` by rounding to two decimal places.
+**Esempio:** `f"Pi is approximately {math.pi:.2f}"` mostra `Pi is approximately 3.14` arrotondando a due cifre decimali.
 
-#### String formatting with .format()
+#### Formattazione di stringhe con .format()
 
-A string method that inserts values into a template string by replacing `{}` placeholders with the provided arguments, allowing numbers and variables to be embedded neatly in text.
+Un metodo delle stringhe che inserisce valori in una stringa modello sostituendo i segnaposto `{}` con gli argomenti forniti, permettendo di inserire in modo ordinato numeri e variabili nel testo.
 
-**Example:** `"Hello, {}! You are {} years old.".format("Alex", 12)` produces `"Hello, Alex! You are 12 years old."`.
+**Esempio:** `"Hello, {}! You are {} years old.".format("Alex", 12)` produce `"Hello, Alex! You are 12 years old."`.
 
-#### String immutability
+#### Immutabilità delle stringhe
 
-The property of Python strings that prevents any character from being changed after the string is created; operations that appear to modify a string actually create and return a new string.
+La proprietà delle stringhe Python che impedisce di cambiare qualsiasi carattere dopo la creazione della stringa; le operazioni che sembrano modificare una stringa in realtà ne creano e restituiscono una nuova.
 
-**Example:** `s = "hello"; s[0] = "H"` raises a `TypeError`; instead, use `s = "H" + s[1:]` to build a new string.
+**Esempio:** `s = "hello"; s[0] = "H"` genera un `TypeError`; usa invece `s = "H" + s[1:]` per costruire una nuova stringa.
 
-#### String indexing (0-based)
+#### Indicizzazione delle stringhe (basata su 0)
 
-The method of accessing a single character in a string by its position number, where the first character is at index `0`, the second at index `1`, and negative indices count backward from the end.
+Il metodo per accedere a un singolo carattere di una stringa tramite il suo numero di posizione, dove il primo carattere è all'indice `0`, il secondo all'indice `1`, e gli indici negativi contano all'indietro dalla fine.
 
-**Example:** If `word = "Python"`, then `word[0]` is `'P'`, `word[2]` is `'t'`, and `word[-1]` is `'n'`.
+**Esempio:** Se `word = "Python"`, allora `word[0]` è `'P'`, `word[2]` è `'t'`, e `word[-1]` è `'n'`.
 
-#### String length with len()
+#### Lunghezza di una stringa con len()
 
-A built-in function that counts and returns the number of characters in a string, including spaces and punctuation.
+Una funzione built-in che conta e restituisce il numero di caratteri in una stringa, inclusi spazi e punteggiatura.
 
-**Example:** `len("hello")` returns `5`; `len("Hi there!")` returns `9`.
+**Esempio:** `len("hello")` restituisce `5`; `len("Hi there!")` restituisce `9`.
 
-#### String methods as examples of OOP
+#### I metodi delle stringhe come esempio di OOP
 
-An observation that Python strings are objects, and calling methods like `.upper()` or `.split()` on them demonstrates object-oriented programming — the string is the object and the method operates on it.
+Un'osservazione per cui le stringhe Python sono oggetti, e chiamare metodi come `.upper()` o `.split()` su di esse dimostra la programmazione orientata agli oggetti — la stringa è l'oggetto e il metodo opera su di essa.
 
-**Example:** `"hello".upper()` shows OOP in action: `"hello"` is the object and `.upper()` is the method that belongs to it.
+**Esempio:** `"hello".upper()` mostra l'OOP in azione: `"hello"` è l'oggetto e `.upper()` è il metodo che gli appartiene.
 
-#### String methods for text processing: .strip(), .lower(), .replace()
+#### Metodi delle stringhe per l'elaborazione del testo: .strip(), .lower(), .replace()
 
-Three string methods frequently used when processing file content: `.strip()` removes leading/trailing whitespace and newlines; `.lower()` normalizes case; `.replace()` substitutes substrings.
+Tre metodi delle stringhe usati frequentemente nell'elaborazione del contenuto dei file: `.strip()` rimuove gli spazi bianchi e gli a capo iniziali/finali; `.lower()` normalizza il maiuscolo/minuscolo; `.replace()` sostituisce sottostringhe.
 
-**Example:** `line.strip().lower()` cleans a line read from a file by removing surrounding whitespace and converting to lowercase.
+**Esempio:** `line.strip().lower()` pulisce una riga letta da un file rimuovendo gli spazi bianchi circostanti e convertendola in minuscolo.
 
-#### String methods: .isdigit(), .isalpha(), .isalnum()
+#### Metodi delle stringhe: .isdigit(), .isalpha(), .isalnum()
 
-Built-in string methods that return `True` or `False` based on the characters in a string: `.isdigit()` checks that every character is a digit; `.isalpha()` checks for letters only; `.isalnum()` checks for letters or digits with no spaces or symbols.
+Metodi built-in delle stringhe che restituiscono `True` o `False` in base ai caratteri presenti in una stringa: `.isdigit()` verifica che ogni carattere sia una cifra; `.isalpha()` verifica che siano solo lettere; `.isalnum()` verifica che siano lettere o cifre senza spazi o simboli.
 
-**Example:** `"123".isdigit()` returns `True`; `"abc123".isalpha()` returns `False` because digits are present.
+**Esempio:** `"123".isdigit()` restituisce `True`; `"abc123".isalpha()` restituisce `False` perché sono presenti delle cifre.
 
-#### String methods: .lower(), .upper(), .strip(), .lstrip(), .rstrip()
+#### Metodi delle stringhe: .lower(), .upper(), .strip(), .lstrip(), .rstrip()
 
-Built-in string methods that return modified copies of a string: `.lower()` converts all letters to lowercase; `.upper()` to uppercase; `.strip()` removes leading and trailing whitespace; `.lstrip()` removes only leading whitespace; `.rstrip()` only trailing.
+Metodi built-in delle stringhe che restituiscono copie modificate di una stringa: `.lower()` converte tutte le lettere in minuscolo; `.upper()` in maiuscolo; `.strip()` rimuove gli spazi bianchi iniziali e finali; `.lstrip()` rimuove solo quelli iniziali; `.rstrip()` solo quelli finali.
 
-**Example:** `"  Hello  ".strip()` returns `"Hello"`; `"Python".lower()` returns `"python"`.
+**Esempio:** `"  Hello  ".strip()` restituisce `"Hello"`; `"Python".lower()` restituisce `"python"`.
 
-#### String methods: .split(), .join(), .replace()
+#### Metodi delle stringhe: .split(), .join(), .replace()
 
-Built-in string methods that restructure strings: `.split()` breaks a string into a list at a delimiter; `.join()` merges a list of strings with a separator; `.replace()` swaps every occurrence of one substring with another.
+Metodi built-in delle stringhe che ristrutturano le stringhe: `.split()` suddivide una stringa in una lista in corrispondenza di un delimitatore; `.join()` unisce una lista di stringhe con un separatore; `.replace()` sostituisce ogni occorrenza di una sottostringa con un'altra.
 
-**Example:** `"a,b,c".split(",")` returns `["a", "b", "c"]`; `",".join(["a", "b", "c"])` returns `"a,b,c"`.
+**Esempio:** `"a,b,c".split(",")` restituisce `["a", "b", "c"]`; `",".join(["a", "b", "c"])` restituisce `"a,b,c"`.
 
-#### String methods: .startswith(), .endswith(), .find(), .count()
+#### Metodi delle stringhe: .startswith(), .endswith(), .find(), .count()
 
-Built-in string methods that inspect a string's content: `.startswith()` and `.endswith()` check how the string begins or ends; `.find()` returns the index of the first match (or `-1`); `.count()` counts non-overlapping occurrences of a substring.
+Metodi built-in delle stringhe che ispezionano il contenuto di una stringa: `.startswith()` e `.endswith()` verificano come inizia o finisce la stringa; `.find()` restituisce l'indice della prima corrispondenza (o `-1`); `.count()` conta le occorrenze non sovrapposte di una sottostringa.
 
-**Example:** `"hello.py".endswith(".py")` returns `True`; `"banana".count("a")` returns `3`.
+**Esempio:** `"hello.py".endswith(".py")` restituisce `True`; `"banana".count("a")` restituisce `3`.
 
-#### String repetition with *
+#### Ripetizione di stringhe con *
 
-The operation of repeating a string a specified number of times using the `*` operator, producing a new string that contains the original repeated consecutively.
+L'operazione di ripetere una stringa un numero specificato di volte usando l'operatore `*`, producendo una nuova stringa che contiene l'originale ripetuto consecutivamente.
 
-**Example:** `"ha" * 3` produces `"hahaha"`; `"-" * 20` creates a divider line of twenty dashes.
+**Esempio:** `"ha" * 3` produce `"hahaha"`; `"-" * 20` crea una riga divisoria di venti trattini.
 
-#### String slicing (s[start:end:step])
+#### Slicing delle stringhe (s[start:end:step])
 
-The operation of extracting a portion of a string by specifying a start index, an end index (exclusive), and an optional step value inside square brackets.
+L'operazione di estrarre una porzione di una stringa specificando un indice di inizio, un indice di fine (esclusivo) e un valore di passo opzionale tra parentesi quadre.
 
-**Example:** `"Python"[0:3]` returns `"Pyt"`; `"abcdef"[::2]` returns `"ace"` by taking every other character.
+**Esempio:** `"Python"[0:3]` restituisce `"Pyt"`; `"abcdef"[::2]` restituisce `"ace"` prendendo un carattere ogni due.
 
-#### String type (str) — text enclosed in quotes
+#### Tipo stringa (str) — testo racchiuso tra virgolette
 
-A Python data type that stores a sequence of characters — letters, digits, symbols, and spaces — surrounded by matching single or double quotation marks.
+Un tipo di dato Python che memorizza una sequenza di caratteri — lettere, cifre, simboli e spazi — racchiusa tra virgolette singole o doppie corrispondenti.
 
-**Example:** `greeting = "Hello, world!"` stores a string of 13 characters in the variable `greeting`.
+**Esempio:** `greeting = "Hello, world!"` memorizza una stringa di 13 caratteri nella variabile `greeting`.
 
-#### string — string constants (punctuation, digits, etc.)
+#### string — costanti di stringa (punteggiatura, cifre, ecc.)
 
-A standard library module that provides useful pre-built string constants such as `string.ascii_letters`, `string.digits`, and `string.punctuation`, saving you from typing them out manually.
+Un modulo della libreria standard che fornisce utili costanti di stringa predefinite come `string.ascii_letters`, `string.digits` e `string.punctuation`, risparmiandoti di doverle digitare manualmente.
 
-**Example:** `import string; string.digits` gives `"0123456789"`; you can use it to check whether a character is a digit.
+**Esempio:** `import string; string.digits` dà `"0123456789"`; puoi usarlo per verificare se un carattere è una cifra.
 
-#### sum() — sum values in an iterable
+#### sum() — sommare i valori di un iterabile
 
-A built-in function that adds all numeric items in an iterable and returns their total, with an optional starting value.
+Una funzione built-in che somma tutti gli elementi numerici di un iterabile e ne restituisce il totale, con un valore di partenza opzionale.
 
-**Example:** `sum([10, 20, 30])` returns `60`; `sum(range(101))` returns `5050`, the sum of 1 through 100.
+**Esempio:** `sum([10, 20, 30])` restituisce `60`; `sum(range(101))` restituisce `5050`, la somma da 1 a 100.
 
-#### sys — system-level operations
+#### sys — operazioni a livello di sistema
 
-A standard library module that provides access to variables and functions related to the Python interpreter itself, such as command-line arguments, the Python version, and the ability to exit the program.
+Un modulo della libreria standard che fornisce accesso a variabili e funzioni relative all'interprete Python stesso, come gli argomenti da riga di comando, la versione di Python e la possibilità di terminare il programma.
 
-**Example:** `import sys; sys.exit()` stops the program immediately from anywhere in the code.
+**Esempio:** `import sys; sys.exit()` ferma immediatamente il programma da qualsiasi punto del codice.
 
-#### sys.path — Python module search path
+#### sys.path — percorso di ricerca dei moduli Python
 
-A list inside the `sys` module that contains the directories Python searches in order when you use an `import` statement, determining where Python looks for module files.
+Una lista all'interno del modulo `sys` che contiene le cartelle in cui Python cerca, in ordine, quando usi un'istruzione `import`, determinando dove Python cerca i file dei moduli.
 
-**Example:** Printing `sys.path` shows a list of folder paths; adding a folder to `sys.path` lets Python find modules stored there.
+**Esempio:** Stampare `sys.path` mostra una lista di percorsi di cartelle; aggiungere una cartella a `sys.path` permette a Python di trovare i moduli lì memorizzati.
 
-#### The Python REPL (interactive shell)
+#### La REPL di Python (shell interattiva)
 
-An interactive environment — short for Read-Eval-Print Loop — where you type one Python expression at a time, the interpreter evaluates it, prints the result, and waits for your next input.
+Un ambiente interattivo — abbreviazione di Read-Eval-Print Loop — in cui digiti un'espressione Python alla volta, l'interprete la valuta, ne stampa il risultato e aspetta il tuo input successivo.
 
-**Example:** Typing `2 + 3` in the Python REPL immediately shows `5` without needing to write a full program.
+**Esempio:** Digitare `2 + 3` nella REPL di Python mostra immediatamente `5` senza bisogno di scrivere un programma completo.
 
-#### The Python standard library overview
+#### Panoramica sulla libreria standard di Python
 
-A large collection of modules that comes bundled with every Python installation and provides ready-made tools for tasks like math, file I/O, working with dates, networking, and much more.
+Un'ampia collezione di moduli inclusa in ogni installazione di Python che fornisce strumenti già pronti per compiti come la matematica, l'I/O su file, la gestione delle date, il networking e molto altro.
 
-**Example:** Without installing anything extra, you can use `import random`, `import math`, `import os`, and dozens of other modules from the standard library.
+**Esempio:** Senza installare nulla di aggiuntivo, puoi usare `import random`, `import math`, `import os` e decine di altri moduli della libreria standard.
 
-#### Thonny — beginner-friendly Python IDE
+#### Thonny — IDE Python per principianti
 
-A free, lightweight code editor designed for people learning Python that highlights variables, shows each step of execution, and displays helpful error messages in plain language.
+Un editor di codice gratuito e leggero progettato per chi sta imparando Python, che evidenzia le variabili, mostra ogni passo dell'esecuzione e visualizza messaggi di errore utili in un linguaggio semplice.
 
-**Example:** In Thonny you can click the Step button to watch your program run one line at a time, which makes it easy to spot mistakes.
+**Esempio:** In Thonny puoi cliccare il pulsante Step per guardare il tuo programma eseguirsi una riga alla volta, il che rende facile individuare gli errori.
 
-#### time — time operations
+#### time — operazioni sul tempo
 
-A standard library module that provides functions for working with time, including getting the current time, measuring elapsed time, and pausing program execution.
+Un modulo della libreria standard che fornisce funzioni per lavorare con il tempo, inclusi ottenere l'ora attuale, misurare il tempo trascorso e mettere in pausa l'esecuzione del programma.
 
-**Example:** `import time; start = time.time()` records the start time so you can measure how long a block of code takes to run.
+**Esempio:** `import time; start = time.time()` registra l'ora di inizio così puoi misurare quanto tempo impiega un blocco di codice a essere eseguito.
 
-#### time.sleep() — pause execution
+#### time.sleep() — mettere in pausa l'esecuzione
 
-A function from the `time` module that pauses the program for a specified number of seconds before continuing to the next line, useful for creating delays in animations or games.
+Una funzione del modulo `time` che mette in pausa il programma per un numero specificato di secondi prima di continuare con la riga successiva, utile per creare ritardi in animazioni o giochi.
 
-**Example:** `time.sleep(2)` causes the program to wait two seconds before executing the next line.
+**Esempio:** `time.sleep(2)` fa sì che il programma aspetti due secondi prima di eseguire la riga successiva.
 
-#### Trinket.io — web-based Python environment (deprecated)
+#### Trinket.io — ambiente Python basato sul web (deprecato)
 
-A free, browser-based tool that let you write and run Python programs — including turtle graphics — directly in a web page without installing any software. This textbook originally used Trinket, but Trinket is [shutting down in August 2026](about.md#a-note-on-platform-history); the book now runs every lab with inline **Skulpt** editors instead.
+Uno strumento gratuito basato sul browser che permetteva di scrivere ed eseguire programmi Python — inclusa la grafica turtle — direttamente in una pagina web senza installare alcun software. Questo libro usava originariamente Trinket, ma Trinket [chiuderà nell'agosto 2026](about.md#a-note-on-platform-history); il libro ora esegue ogni laboratorio con editor **Skulpt** incorporati.
 
-**Example:** Early versions of this book shared a Trinket link so students could click Run and watch a turtle draw a square; today that same lab runs directly on the page with Skulpt.
+**Esempio:** Le prime versioni di questo libro condividevano un link Trinket così gli studenti potevano cliccare Run e guardare una turtle disegnare un quadrato; oggi lo stesso laboratorio funziona direttamente nella pagina con Skulpt.
 
-#### Truthiness and falsiness of values
+#### Veridicità e falsità dei valori (truthiness e falsiness)
 
-The property of non-Boolean Python values being treated as either `True` or `False` inside an `if` or `while` condition: empty strings, `0`, `None`, and empty collections are falsy; everything else is truthy.
+La proprietà per cui i valori Python non booleani vengono trattati come `True` o `False` dentro una condizione `if` o `while`: stringhe vuote, `0`, `None` e collezioni vuote sono falsy; tutto il resto è truthy.
 
-**Example:** `if name:` checks whether `name` is a non-empty string without needing to write `if name != ""`.
+**Esempio:** `if name:` verifica se `name` è una stringa non vuota senza bisogno di scrivere `if name != ""`.
 
-#### try...except block
+#### Blocco try...except
 
-A control-flow structure that attempts to run a block of code inside `try` and, if an exception occurs, executes the matching `except` block instead of crashing the program.
+Una struttura di controllo del flusso che tenta di eseguire un blocco di codice dentro `try` e, se si verifica un'eccezione, esegue il blocco `except` corrispondente invece di far andare in crash il programma.
 
-**Example:** `try: result = 10 / 0` / `except ZeroDivisionError: print("Can't divide by zero!")` catches the error gracefully.
+**Esempio:** `try: result = 10 / 0` / `except ZeroDivisionError: print("Can't divide by zero!")` cattura l'errore in modo controllato.
 
-#### Tuple indexing and slicing
+#### Indicizzazione e slicing delle tuple
 
-The same bracket-based method used for lists that allows accessing individual items by index or extracting a sub-tuple by slicing, since tuples are ordered sequences.
+Lo stesso metodo basato su parentesi usato per le liste che permette di accedere a singoli elementi tramite indice o estrarre una sotto-tupla tramite slicing, poiché le tuple sono sequenze ordinate.
 
-**Example:** `point = (10, 20, 30); point[0]` returns `10`; `point[1:]` returns `(20, 30)`.
+**Esempio:** `point = (10, 20, 30); point[0]` restituisce `10`; `point[1:]` restituisce `(20, 30)`.
 
-#### Tuple type (tuple) — ordered, immutable collection
+#### Tipo tupla (tuple) — collezione ordinata e immutabile
 
-A Python data type that stores an ordered sequence of items that cannot be changed after creation, making tuples useful for fixed data that should not be accidentally modified.
+Un tipo di dato Python che memorizza una sequenza ordinata di elementi che non può essere modificata dopo la creazione, rendendo le tuple utili per dati fissi che non dovrebbero essere modificati accidentalmente.
 
-**Example:** `point = (3, 7)` stores an x-y coordinate that should not change; `months = ("Jan", "Feb", "Mar")` stores a fixed list of month names.
+**Esempio:** `point = (3, 7)` memorizza una coordinata x-y che non dovrebbe cambiare; `months = ("Jan", "Feb", "Mar")` memorizza un elenco fisso di nomi di mesi.
 
-#### Tuple unpacking
+#### Spacchettamento delle tuple (tuple unpacking)
 
-The ability to assign the individual items of a tuple to multiple variables in a single statement by matching the number of variables on the left to the number of items in the tuple.
+La possibilità di assegnare i singoli elementi di una tupla a più variabili in una singola istruzione abbinando il numero di variabili a sinistra al numero di elementi nella tupla.
 
-**Example:** `x, y = (3, 7)` stores `3` in `x` and `7` in `y`; `first, *rest = (1, 2, 3, 4)` stores `1` in `first` and `[2, 3, 4]` in `rest`.
+**Esempio:** `x, y = (3, 7)` memorizza `3` in `x` e `7` in `y`; `first, *rest = (1, 2, 3, 4)` memorizza `1` in `first` e `[2, 3, 4]` in `rest`.
 
-#### Turtle appearance: shape() (turtle, arrow, circle, square, triangle, classic)
+#### Aspetto della turtle: shape() (turtle, arrow, circle, square, triangle, classic)
 
-A turtle method that changes the visual appearance of the turtle cursor itself, choosing from built-in shapes: `"turtle"`, `"arrow"`, `"circle"`, `"square"`, `"triangle"`, or `"classic"`.
+Un metodo della turtle che cambia l'aspetto visivo del cursore turtle stesso, scegliendo tra forme integrate: `"turtle"`, `"arrow"`, `"circle"`, `"square"`, `"triangle"` o `"classic"`.
 
-**Example:** `t.shape("turtle")` replaces the default arrow cursor with a little turtle icon.
+**Esempio:** `t.shape("turtle")` sostituisce il cursore a freccia predefinito con una piccola icona a forma di tartaruga.
 
-#### type() — get type of an object
+#### type() — ottenere il tipo di un oggetto
 
-A built-in function that returns the class (data type) of any Python object, which is helpful when debugging to confirm what kind of value a variable holds.
+Una funzione built-in che restituisce la classe (tipo di dato) di qualsiasi oggetto Python, utile durante il debug per confermare che tipo di valore contiene una variabile.
 
-**Example:** `type(3.14)` returns `<class 'float'>`; `type([1, 2])` returns `<class 'list'>`.
+**Esempio:** `type(3.14)` restituisce `<class 'float'>`; `type([1, 2])` restituisce `<class 'list'>`.
 
-#### type() — inspect a variable's type
+#### type() — ispezionare il tipo di una variabile
 
-A built-in function that returns the data type of any Python object, which is useful for understanding what kind of value a variable holds during debugging.
+Una funzione built-in che restituisce il tipo di dato di qualsiasi oggetto Python, utile per capire che tipo di valore contiene una variabile durante il debug.
 
-**Example:** `type(42)` returns `<class 'int'>`; `type("hello")` returns `<class 'str'>`; `type(3.14)` returns `<class 'float'>`.
+**Esempio:** `type(42)` restituisce `<class 'int'>`; `type("hello")` restituisce `<class 'str'>`; `type(3.14)` restituisce `<class 'float'>`.
 
-#### Types of errors: syntax errors vs runtime errors vs logic errors
+#### Tipi di errore: errori di sintassi vs errori di runtime vs errori logici
 
-Three categories of programming mistakes: syntax errors are caught before the program runs (misspelled keywords, missing colons); runtime errors crash the program while it runs (dividing by zero); logic errors produce wrong answers without crashing.
+Tre categorie di errori di programmazione: gli errori di sintassi vengono rilevati prima che il programma venga eseguito (parole chiave scritte male, due punti mancanti); gli errori di runtime fanno andare in crash il programma durante l'esecuzione (divisione per zero); gli errori logici producono risposte sbagliate senza far andare in crash il programma.
 
-**Example:** Forgetting a colon after `if x > 5` is a syntax error; accessing index 10 in a 5-item list is a runtime error; adding instead of subtracting is a logic error.
+**Esempio:** Dimenticare i due punti dopo `if x > 5` è un errore di sintassi; accedere all'indice 10 in una lista di 5 elementi è un errore di runtime; sommare invece di sottrarre è un errore logico.
 
-#### Using Google and Stack Overflow to debug errors
+#### Usare Google e Stack Overflow per fare debug degli errori
 
-The practical skill of copying a Python error message into a search engine or visiting Stack Overflow to find explanations and solutions posted by other programmers who encountered the same problem.
+La competenza pratica di copiare un messaggio di errore Python in un motore di ricerca o visitare Stack Overflow per trovare spiegazioni e soluzioni pubblicate da altri programmatori che hanno incontrato lo stesso problema.
 
-**Example:** Searching `"Python IndexError: list index out of range"` on Google typically returns several explanations and fixes within seconds.
+**Esempio:** Cercare `"Python IndexError: list index out of range"` su Google restituisce tipicamente diverse spiegazioni e soluzioni in pochi secondi.
 
-#### Variable definition and assignment (=)
+#### Definizione e assegnazione di variabili (=)
 
-The act of creating a named storage location and giving it a value using the `=` operator, which binds the name on the left to the object on the right.
+L'atto di creare una posizione di memorizzazione nominata e assegnarle un valore usando l'operatore `=`, che lega il nome a sinistra all'oggetto a destra.
 
-**Example:** `age = 13` creates a variable named `age` and stores the integer `13` in it so you can use `age` later in your program.
+**Esempio:** `age = 13` crea una variabile chiamata `age` e vi memorizza l'intero `13` così puoi usare `age` più avanti nel tuo programma.
 
-#### Variable naming rules (letters, digits, underscores)
+#### Regole per i nomi delle variabili (lettere, cifre, underscore)
 
-The set of rules Python enforces for valid variable names: they must start with a letter or underscore, contain only letters, digits, and underscores, and must not be a Python keyword.
+L'insieme di regole che Python impone per i nomi di variabile validi: devono iniziare con una lettera o un underscore, contenere solo lettere, cifre e underscore, e non devono essere una parola chiave di Python.
 
-**Example:** `player1_score` is a valid variable name, but `1player` is not because it starts with a digit.
+**Esempio:** `player1_score` è un nome di variabile valido, ma `1player` non lo è perché inizia con una cifra.
 
-#### Version control basics (git overview)
+#### Nozioni di base sul controllo di versione (panoramica su git)
 
-An introduction to git, a tool that tracks changes to files over time, allowing you to save snapshots of your work, see what changed, and undo mistakes by going back to a previous version.
+Un'introduzione a git, uno strumento che tiene traccia dei cambiamenti ai file nel tempo, permettendoti di salvare istantanee del tuo lavoro, vedere cosa è cambiato e annullare errori tornando a una versione precedente.
 
-**Example:** Running `git commit -m "Added score display"` saves a snapshot so you can return to this version of your program if later changes break something.
+**Esempio:** Eseguire `git commit -m "Added score display"` salva un'istantanea così puoi tornare a questa versione del tuo programma se modifiche successive dovessero rompere qualcosa.
 
-#### Virtual environments
+#### Ambienti virtuali
 
-Isolated folders that each contain their own copy of Python and installed libraries, allowing different projects to use different package versions without conflicts.
+Cartelle isolate che contengono ciascuna una propria copia di Python e delle librerie installate, permettendo a progetti diversi di usare versioni diverse dei pacchetti senza conflitti.
 
-**Example:** You create a virtual environment for your game project so its libraries don't clash with the libraries used by your data science project.
+**Esempio:** Crei un ambiente virtuale per il tuo progetto di gioco così le sue librerie non entrano in conflitto con quelle usate dal tuo progetto di data science.
 
-#### VS Code — general-purpose code editor
+#### VS Code — editor di codice general-purpose
 
-A free, popular code editor made by Microsoft that supports many programming languages including Python and can be extended with add-ons called extensions to add features like syntax highlighting and debugging.
+Un editor di codice gratuito e popolare realizzato da Microsoft che supporta molti linguaggi di programmazione incluso Python e può essere esteso con componenti aggiuntivi chiamati estensioni per aggiungere funzionalità come l'evidenziazione della sintassi e il debug.
 
-**Example:** After installing the Python extension in VS Code, the editor underlines mistakes in your code before you even run it.
+**Esempio:** Dopo aver installato l'estensione Python in VS Code, l'editor sottolinea gli errori nel tuo codice ancora prima che tu lo esegua.
 
-#### When to use tuples vs lists
+#### Quando usare le tuple invece delle liste
 
-A design guideline: use a tuple when the number of items and their meaning are fixed (like coordinates or RGB values), and use a list when the collection needs to grow, shrink, or be sorted.
+Una linea guida di progettazione: usa una tupla quando il numero di elementi e il loro significato sono fissi (come coordinate o valori RGB), e usa una lista quando la collezione deve crescere, ridursi o essere ordinata.
 
-**Example:** A screen position `(x, y)` suits a tuple because it always has exactly two components; a shopping list suits a `list` because items are added and removed.
+**Esempio:** Una posizione sullo schermo `(x, y)` si adatta bene a una tupla perché ha sempre esattamente due componenti; una lista della spesa si adatta bene a una `list` perché gli elementi vengono aggiunti e rimossi.
 
-#### while loop — condition-based repetition
+#### Ciclo while — ripetizione basata su condizione
 
-A control-flow statement that repeatedly executes a block of code for as long as a specified condition remains `True`, checking the condition before each iteration.
+Un'istruzione di controllo del flusso che esegue ripetutamente un blocco di codice finché una condizione specificata rimane `True`, verificando la condizione prima di ogni iterazione.
 
-**Example:** `while count < 10: count += 1` keeps adding 1 to `count` until it reaches 10.
+**Esempio:** `while count < 10: count += 1` continua ad aggiungere 1 a `count` finché non raggiunge 10.
 
-#### with statement (context manager) for safe file handling
+#### Istruzione with (context manager) per la gestione sicura dei file
 
-A Python statement that automatically calls a resource's cleanup method (such as `file.close()`) when the indented block finishes, even if an error occurs, making file handling safer and shorter.
+Un'istruzione Python che chiama automaticamente il metodo di pulizia di una risorsa (come `file.close()`) quando il blocco indentato termina, anche se si verifica un errore, rendendo la gestione dei file più sicura e concisa.
 
-**Example:** `with open("data.txt", "r") as f: content = f.read()` closes the file automatically when the block exits.
+**Esempio:** `with open("data.txt", "r") as f: content = f.read()` chiude automaticamente il file quando il blocco termina.
 
-#### Working with lists as x/y data
+#### Lavorare con le liste come dati x/y
 
-The technique of preparing two parallel lists — one for x-values and one for y-values — and passing them to plotting functions to define the data points of a chart.
+La tecnica di preparare due liste parallele — una per i valori x e una per i valori y — e passarle a funzioni di plotting per definire i punti dati di un grafico.
 
-**Example:** `x = [2020, 2021, 2022]; y = [150, 175, 210]` provides three data points for a bar or line chart of yearly sales.
+**Esempio:** `x = [2020, 2021, 2022]; y = [150, 175, 210]` fornisce tre punti dati per un grafico a barre o a linee delle vendite annuali.
 
-#### Writing text: write(text, font=...)
+#### Scrivere testo: write(text, font=...)
 
-A turtle method that places a string of text at the turtle's current position, with an optional `font` argument that specifies the font name, size, and style as a tuple.
+Un metodo della turtle che posiziona una stringa di testo nella posizione attuale della turtle, con un argomento opzionale `font` che specifica nome, dimensione e stile del font come tupla.
 
-**Example:** `t.write("Score: 100", font=("Arial", 16, "bold"))` displays the score in large bold text at the turtle's location.
+**Esempio:** `t.write("Score: 100", font=("Arial", 16, "bold"))` mostra il punteggio in testo grande e in grassetto nella posizione della turtle.
 
-#### zip() — iterate over multiple sequences simultaneously
+#### zip() — iterare su più sequenze contemporaneamente
 
-A built-in function that pairs up items from two or more iterables by position and yields tuples of matched items, stopping when the shortest iterable is exhausted.
+Una funzione built-in che abbina gli elementi di due o più iterabili in base alla posizione e restituisce tuple di elementi abbinati, fermandosi quando l'iterabile più corto si esaurisce.
 
-**Example:** `for name, score in zip(names, scores): print(name, score)` prints each student's name next to their corresponding score.
-
+**Esempio:** `for name, score in zip(names, scores): print(name, score)` stampa il nome di ogni studente accanto al suo punteggio corrispondente.
