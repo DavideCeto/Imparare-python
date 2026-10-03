@@ -1,54 +1,54 @@
 ---
-title: Functions and Objects
-description: Learn how to define and call functions using def, add positional parameters, return values, document code with docstrings, and get a first look at the Standard Library and Python objects.
+title: Funzioni e Oggetti
+description: Scopri come definire e chiamare funzioni usando def, aggiungere parametri posizionali, restituire valori, documentare il codice con le docstring e avere un primo sguardo sulla Standard Library e sugli oggetti Python.
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 09:19:38
 version: 0.09
 ---
 
-# Functions and Objects
+# Funzioni e Oggetti
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Define a function in Python using `def` and call it by name
-- Add **parameters** so a function can work with different values each time you call it
-- Use a `return` statement to send a result back from a function
+- Definire una funzione in Python usando `def` e chiamarla per nome
+- Aggiungere **parametri** in modo che una funzione possa lavorare con valori diversi ogni volta che la chiami
+- Usare un'istruzione `return` per restituire un risultato da una funzione
 
-Imagine you have a task you need to do over and over — say hello to each person on a list, calculate the area of many different rectangles, or draw the same shape in ten different colors.
-You could write out every step every single time.
-Or you could give those steps a name, write them once, and use that name whenever you need the job done.
-That is exactly what a **function** does in Python.
+Immagina di avere un compito da fare più e più volte — ad esempio salutare ogni persona di una lista, calcolare l'area di molti rettangoli diversi, o disegnare la stessa forma in dieci colori diversi.
+Potresti scrivere ogni passaggio ogni singola volta.
+Oppure potresti dare un nome a quei passaggi, scriverli una sola volta, e usare quel nome ogni volta che ti serve svolgere il compito.
+Questo è esattamente ciò che fa una **funzione** in Python.
 
-!!! mascot-welcome "Welcome to Chapter 4!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 4!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Functions are one of the biggest ideas in all of programming — they save you from writing the same code twice, keep your programs neat, and let you build bigger things from smaller pieces. You have already used functions every single lesson — `print()` is a function! Today you learn how to build your own. Let's code it together!
+    Le funzioni sono una delle idee più grandi di tutta la programmazione — ti evitano di scrivere lo stesso codice due volte, mantengono i tuoi programmi ordinati, e ti permettono di costruire cose più grandi a partire da pezzi più piccoli. Hai già usato funzioni in ogni singola lezione — `print()` è una funzione! Oggi impari a costruire le tue. Programmiamo insieme!
 
-## What Is a Function?
+## Cos'è una Funzione?
 
-You have been calling functions since Chapter 1.
-Every time you write `print("Hello")` you are calling a function called `print`.
-Someone wrote the steps that make `print` work — you just call it by name and hand it a value.
+Stai chiamando funzioni fin dal Capitolo 1.
+Ogni volta che scrivi `print("Hello")` stai chiamando una funzione chiamata `print`.
+Qualcuno ha scritto i passaggi che fanno funzionare `print` — tu la chiami semplicemente per nome e le passi un valore.
 
-A **function** is a named group of steps that you can run any time by writing its name.
+Una **funzione** è un gruppo di passaggi con un nome, che puoi eseguire in qualsiasi momento scrivendo il suo nome.
 
-In this chapter you learn to create your own functions — not just use the ones Python provides.
-The keyword that starts a function definition is `def`, which is short for "define."
+In questo capitolo impari a creare le tue funzioni — non solo a usare quelle che Python fornisce.
+La parola chiave che inizia una definizione di funzione è `def`, abbreviazione di "define" (definisci).
 
-!!! mascot-tip "Scratch Bridge"
+!!! mascot-tip "Ponte con Scratch"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch, you used **"Make a Block"** to create a custom block — a group of blocks you could snap in anywhere you needed that action. Python's `def` does exactly the same thing. You write the steps once under a name, then call that name wherever you need it. Same idea, just written as text instead of snapped together as blocks!
+    In Scratch, usavi **"Make a Block"** per creare un blocco personalizzato — un gruppo di blocchi che potevi incastrare ovunque ti servisse quell'azione. Il `def` di Python fa esattamente la stessa cosa. Scrivi i passaggi una volta sola sotto un nome, poi chiami quel nome ovunque ti serva. Stessa idea, solo scritta come testo invece che incastrata come blocchi!
 
-## Defining a Function with `def`
+## Definire una Funzione con `def`
 
-To create your own function, you write:
+Per creare la tua funzione, scrivi:
 
-1. The keyword `def`
-2. The function's name (use snake_case, just like variable names from Chapter 3)
-3. A pair of parentheses `()`
-4. A colon `:`
-5. Indented lines that contain the steps to run
+1. La parola chiave `def`
+2. Il nome della funzione (usa lo snake_case, proprio come i nomi di variabile del Capitolo 3)
+3. Una coppia di parentesi `()`
+4. Due punti `:`
+5. Righe indentate che contengono i passaggi da eseguire
 
-Here is the simplest possible function:
+Ecco la funzione più semplice possibile:
 
 ```python
 def greet():
@@ -56,35 +56,35 @@ def greet():
     print("Let's code it together!")
 ```
 
-The colon at the end of the `def` line is required — just like the colons you will see later with loops and conditionals.
-Everything indented below the `def` line belongs to the function body.
-When Python reads this, it **remembers** the function but does not run the steps yet.
-Think of it like writing a recipe on a card: writing the card is not the same as actually cooking the meal.
+I due punti alla fine della riga `def` sono obbligatori — proprio come i due punti che vedrai più avanti con i cicli e i condizionali.
+Tutto ciò che è indentato sotto la riga `def` appartiene al corpo della funzione.
+Quando Python legge questo, **ricorda** la funzione ma non esegue ancora i passaggi.
+Pensalo come scrivere una ricetta su un cartoncino: scrivere il cartoncino non è la stessa cosa che cucinare davvero il pasto.
 
-## Calling a Function
+## Chiamare una Funzione
 
-Defining a function and calling a function are two separate actions.
+Definire una funzione e chiamare una funzione sono due azioni separate.
 
-- **Defining** writes the recipe under a name.
-- **Calling** says "run the recipe right now."
+- **Definire** scrive la ricetta sotto un nome.
+- **Chiamare** dice "esegui la ricetta adesso."
 
-You call a function by writing its name followed by parentheses:
+Chiami una funzione scrivendo il suo nome seguito da parentesi:
 
 ```python
 greet()
 ```
 
-That one line triggers all the steps inside `greet`.
-You can call the same function as many times as you like — Python runs the entire body each time.
+Quella singola riga attiva tutti i passaggi dentro `greet`.
+Puoi chiamare la stessa funzione tutte le volte che vuoi — Python esegue l'intero corpo ogni volta.
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below defines `greet()` and then calls it three times. How many lines of text do you think will appear in the output? Make your prediction — then click Run to find out!
+    Il programma qui sotto definisce `greet()` e poi la chiama tre volte. Quante righe di testo pensi appariranno nell'output? Fai la tua previsione — poi clicca su Run per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see the result right on this page.
-No account needed — everything runs in your browser.
+Modifica il codice qui sotto e clicca **Run** per vedere il risultato proprio su questa pagina.
+Non serve alcun account — tutto viene eseguito nel tuo browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -115,63 +115,63 @@ greet()
 greet()`);
 </script>
 
-Were you right?
-Calling `greet()` three times printed six lines — two per call.
-That is the power of functions: write the steps once, run them as many times as you need.
+Avevi indovinato?
+Chiamare `greet()` tre volte ha stampato sei righe — due per ogni chiamata.
+Questo è il potere delle funzioni: scrivi i passaggi una volta, eseguili tutte le volte che ti servono.
 
-**If you see a red error message:** The two most common causes are a missing colon after `def greet()` or wrong indentation inside the function body.
-Python requires that every line inside the function body be indented by exactly four spaces.
-If the `print` lines start at the left edge instead of being indented, Python will give you an `IndentationError`.
+**Se vedi un messaggio di errore rosso:** le due cause più comuni sono i due punti mancanti dopo `def greet()` oppure un'indentazione sbagliata dentro il corpo della funzione.
+Python richiede che ogni riga dentro il corpo della funzione sia indentata esattamente di quattro spazi.
+Se le righe `print` iniziano al margine sinistro invece di essere indentate, Python ti darà un `IndentationError`.
 
-## How It Works
+## Come Funziona
 
-Python reads your program from top to bottom, but it does not run the function the moment it sees `def`.
-It reads and remembers the function, then keeps going.
-When it finally reaches `greet()`, that is the signal — only then does it jump into the function body and run both `print` lines.
-After the function body finishes, Python returns to where it left off and runs the next line.
+Python legge il tuo programma dall'alto verso il basso, ma non esegue la funzione nel momento in cui incontra `def`.
+Legge e ricorda la funzione, poi continua.
+Quando finalmente arriva a `greet()`, quello è il segnale — solo allora entra nel corpo della funzione ed esegue entrambe le righe `print`.
+Dopo che il corpo della funzione termina, Python torna al punto in cui si era fermato ed esegue la riga successiva.
 
-The table below traces each line of the program:
+La tabella qui sotto ripercorre ogni riga del programma:
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `def greet():` | Defines a new function named `greet` — Python remembers it but does not run it yet |
-| `    print("Hello, coder!")` | Step 1 inside the function body — indented 4 spaces |
-| `    print("Let's code it together!")` | Step 2 inside the function body — indented 4 spaces |
-| `greet()` | Calls the function — Python jumps in, runs both steps, then comes back |
+| `def greet():` | Definisce una nuova funzione chiamata `greet` — Python la ricorda ma non la esegue ancora |
+| `    print("Hello, coder!")` | Passaggio 1 dentro il corpo della funzione — indentato di 4 spazi |
+| `    print("Let's code it together!")` | Passaggio 2 dentro il corpo della funzione — indentato di 4 spazi |
+| `greet()` | Chiama la funzione — Python entra, esegue entrambi i passaggi, poi torna indietro |
 
-## Positional Parameters
+## Parametri Posizionali
 
-A function that always does the exact same thing is useful, but limited.
-To make a function flexible — able to work with different values each time — you give it **parameters**.
+Una funzione che fa sempre esattamente la stessa cosa è utile, ma limitata.
+Per rendere una funzione flessibile — capace di lavorare con valori diversi ogni volta — le dai dei **parametri**.
 
-A **parameter** is a variable that lives inside the function and receives a value when you call it.
-Think of it like a fill-in-the-blank sentence: "Hello, ______!" is the template, and the blank gets filled in with a different name every time.
+Un **parametro** è una variabile che vive dentro la funzione e riceve un valore quando la chiami.
+Pensalo come una frase da completare: "Ciao, ______!" è il modello, e lo spazio vuoto viene riempito con un nome diverso ogni volta.
 
-You declare parameters inside the parentheses of `def`:
+Dichiari i parametri dentro le parentesi di `def`:
 
 ```python
 def greet(name):
     print("Hello, " + name + "!")
 ```
 
-The word `name` between the parentheses is the parameter.
-Inside the function body, `name` works just like any variable from Chapter 3.
+La parola `name` tra le parentesi è il parametro.
+Dentro il corpo della funzione, `name` funziona esattamente come qualsiasi variabile del Capitolo 3.
 
-When you call this function, you supply a value:
+Quando chiami questa funzione, fornisci un valore:
 
 ```python
 greet("Monty")
 greet("Python")
 ```
 
-The values `"Monty"` and `"Python"` are called **arguments** — the real values you pass in at call time.
-Python copies the first argument into the first parameter before running the function body.
-Because the arguments line up by position (first argument goes to first parameter), they are called **positional parameters**.
+I valori `"Monty"` e `"Python"` si chiamano **argomenti** — i valori reali che passi al momento della chiamata.
+Python copia il primo argomento nel primo parametro prima di eseguire il corpo della funzione.
+Poiché gli argomenti corrispondono per posizione (il primo argomento va al primo parametro), si chiamano **parametri posizionali**.
 
-Before you click Run on the lab below, predict what you will see.
-Which names will appear, and in what order?
+Prima di cliccare su Run nel laboratorio qui sotto, prevedi cosa vedrai.
+Quali nomi appariranno, e in che ordine?
 
-## Try It Now — Parameters
+## Provalo Ora — Parametri
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -195,18 +195,18 @@ greet("Python")
 greet("World")`);
 </script>
 
-Each call to `greet` used the same template — `"Hello, " + name + "!"` — but filled in a different name.
-One function, three different outputs.
-Try changing the names in the three call lines to greet your friends or family!
+Ogni chiamata a `greet` ha usato lo stesso modello — `"Hello, " + name + "!"` — ma con un nome diverso inserito.
+Una funzione, tre output diversi.
+Prova a cambiare i nomi nelle tre righe di chiamata per salutare i tuoi amici o la tua famiglia!
 
-## The `return` Statement
+## L'Istruzione `return`
 
-So far, every function has done its work by calling `print()` directly.
-But sometimes you want a function to **calculate a result and hand it back**, so the rest of your program can use that result.
+Finora, ogni funzione ha svolto il suo lavoro chiamando direttamente `print()`.
+Ma a volte vuoi che una funzione **calcoli un risultato e lo restituisca**, così il resto del tuo programma può usare quel risultato.
 
-The keyword `return` sends a value back to the caller.
+La parola chiave `return` restituisce un valore a chi ha chiamato la funzione.
 
-Here is a function that adds two numbers and returns the sum:
+Ecco una funzione che somma due numeri e restituisce il totale:
 
 ```python
 def add(a, b):
@@ -214,46 +214,46 @@ def add(a, b):
     return result
 ```
 
-Notice that this function does **not** call `print`.
-Instead it hands the result back.
-You capture that returned value by storing it in a variable:
+Nota che questa funzione **non** chiama `print`.
+Invece restituisce il risultato.
+Catturi quel valore restituito memorizzandolo in una variabile:
 
 ```python
 total = add(5, 3)
 print(total)
 ```
 
-When Python runs `add(5, 3)`, it copies `5` into `a` and `3` into `b`, calculates `result = 8`, and then `return result` sends `8` back.
-That `8` becomes the value of `total`, which is then printed.
+Quando Python esegue `add(5, 3)`, copia `5` in `a` e `3` in `b`, calcola `result = 8`, e poi `return result` restituisce `8`.
+Quell'`8` diventa il valore di `total`, che viene poi stampato.
 
-The table below shows what each piece does:
+La tabella qui sotto mostra cosa fa ogni parte:
 
-| Code | What it does |
+| Codice | Cosa fa |
 |------|-------------|
-| `def add(a, b):` | Defines a function with two parameters |
-| `    result = a + b` | Adds the two parameters; stores in a local variable |
-| `    return result` | Sends the sum back to whoever called `add` |
-| `total = add(5, 3)` | Calls the function; the returned value `8` is stored in `total` |
-| `print(total)` | Prints `8` |
+| `def add(a, b):` | Definisce una funzione con due parametri |
+| `    result = a + b` | Somma i due parametri; memorizza in una variabile locale |
+| `    return result` | Restituisce la somma a chi ha chiamato `add` |
+| `total = add(5, 3)` | Chiama la funzione; il valore restituito `8` viene memorizzato in `total` |
+| `print(total)` | Stampa `8` |
 
-## See It: Watch a Call Flow Through a Function
+## Osservalo: Segui una Chiamata Attraverso una Funzione
 
-The MicroSim below traces a function call in slow motion: the argument flies into the parameter slot, the body computes, and the return value flies back out to the call site. Before you click anything, read the program on the left and **predict the two numbers it will print**. Then step through and watch where your numbers come from.
+Il MicroSim qui sotto ripercorre una chiamata di funzione al rallentatore: l'argomento vola nello slot del parametro, il corpo calcola, e il valore di ritorno vola indietro verso il punto di chiamata. Prima di cliccare qualsiasi cosa, leggi il programma a sinistra e **prevedi i due numeri che stamperà**. Poi procedi passo passo e osserva da dove arrivano i tuoi numeri.
 
 <iframe src="../../sims/function-call-flow/main.html" height="502" width="100%" scrolling="no"></iframe>
 
-[Explore the Function Call Flow MicroSim](../../sims/function-call-flow/index.md){ .md-button }
+[Esplora il MicroSim Function Call Flow](../../sims/function-call-flow/index.md){ .md-button }
 
-Notice that the function machine is built once at the `def` step, then used **twice** — the same recipe with two different ingredients.
+Nota che la macchina della funzione viene costruita una sola volta al passaggio `def`, poi usata **due volte** — la stessa ricetta con due ingredienti diversi.
 
-## Functions Returning None
+## Funzioni che Restituiscono None
 
-What happens if a function never uses `return`?
+Cosa succede se una funzione non usa mai `return`?
 
-Python still needs to hand something back to the caller.
-In that case, it automatically returns a special value from Chapter 3: **None**.
+Python deve comunque restituire qualcosa a chi l'ha chiamata.
+In quel caso, restituisce automaticamente un valore speciale che conosci dal Capitolo 3: **None**.
 
-You can see this happen:
+Puoi vederlo accadere:
 
 ```python
 def greet():
@@ -263,27 +263,27 @@ result = greet()
 print(result)
 ```
 
-The output will be:
+L'output sarà:
 ```
 Hello, coder!
 None
 ```
 
-`greet()` printed a line, then Python returned `None` automatically.
-When you stored that in `result` and printed it, you saw `None`.
+`greet()` ha stampato una riga, poi Python ha restituito `None` automaticamente.
+Quando l'hai memorizzato in `result` e l'hai stampato, hai visto `None`.
 
-This is the concept called **functions returning None**: any function that finishes without a `return` statement gives back `None`.
-You will not always notice this because most programs do not bother storing the return value of a `print`-only function — but it is good to know it is happening.
+Questo è il concetto chiamato **funzioni che restituiscono None**: qualsiasi funzione che termina senza un'istruzione `return` restituisce `None`.
+Non te ne accorgerai sempre perché la maggior parte dei programmi non si preoccupa di memorizzare il valore di ritorno di una funzione che fa solo `print` — ma è bene sapere che succede.
 
-!!! mascot-warning "Don't Forget `return`!"
+!!! mascot-warning "Non Dimenticare `return`!"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    A very common beginner bug: you write a function to calculate a value, but you forget to add `return` at the end. The function runs the calculation — but the answer disappears! The calling code gets `None` back instead of the number it expected. If you ever see `None` somewhere you expected a real number, check whether your function is missing a `return` statement.
+    Un bug molto comune tra i principianti: scrivi una funzione per calcolare un valore, ma dimentichi di aggiungere `return` alla fine. La funzione esegue il calcolo — ma la risposta sparisce! Il codice chiamante riceve `None` invece del numero che si aspettava. Se vedi `None` in un punto dove ti aspettavi un numero vero, controlla se alla tua funzione manca un'istruzione `return`.
 
-## Docstrings
+## Docstring
 
-Professional Python programmers always document their functions with a **docstring** — a string of text that explains what the function does.
+I programmatori Python professionisti documentano sempre le loro funzioni con una **docstring** — una stringa di testo che spiega cosa fa la funzione.
 
-A docstring is written on the first line inside the function body, surrounded by triple quotes (`"""`):
+Una docstring si scrive sulla prima riga dentro il corpo della funzione, racchiusa tra triple virgolette (`"""`):
 
 ```python
 def add(a, b):
@@ -292,7 +292,7 @@ def add(a, b):
     return result
 ```
 
-The triple quotes can span multiple lines if you need a longer explanation:
+Le triple virgolette possono estendersi su più righe se hai bisogno di una spiegazione più lunga:
 
 ```python
 def greet(name):
@@ -305,61 +305,61 @@ def greet(name):
     print("Hello, " + name + "!")
 ```
 
-Docstrings serve two purposes.
-First, they help the next person who reads your code — including future you — understand what the function does without reading every line.
-Second, Python tools can read docstrings automatically and display them as help text.
-If you type `help(add)` in a Python environment, Python shows the docstring you wrote.
+Le docstring hanno due scopi.
+Primo, aiutano la prossima persona che legge il tuo codice — incluso il te stesso del futuro — a capire cosa fa la funzione senza leggere ogni riga.
+Secondo, gli strumenti Python possono leggere le docstring automaticamente e mostrarle come testo di aiuto.
+Se digiti `help(add)` in un ambiente Python, Python mostra la docstring che hai scritto.
 
-Writing docstrings is a habit worth building from the start.
-In this course, every function you write from now on should have at least a one-line docstring.
+Scrivere docstring è un'abitudine che vale la pena costruire fin dall'inizio.
+In questo corso, ogni funzione che scrivi da ora in poi dovrebbe avere almeno una docstring di una riga.
 
-## The Standard Library: Python's Built-in Toolbox
+## La Standard Library: La Cassetta degli Attrezzi Integrata di Python
 
-You have already used one piece of Python's built-in toolbox: the `print()` function.
-Python ships with hundreds more pre-written functions organized into **modules** — files full of related functions that you can load into your program with the `import` keyword.
+Hai già usato un pezzo della cassetta degli attrezzi integrata di Python: la funzione `print()`.
+Python viene fornito con centinaia di altre funzioni già scritte, organizzate in **moduli** — file pieni di funzioni correlate che puoi caricare nel tuo programma con la parola chiave `import`.
 
-Together, all of these modules make up the **Standard Library** — a collection of tools that comes with every Python installation, completely free.
+Insieme, tutti questi moduli formano la **Standard Library** — una collezione di strumenti che arriva con ogni installazione di Python, completamente gratis.
 
-Here are four modules you will use throughout this course:
+Ecco quattro moduli che userai in tutto questo corso:
 
-| Module | What it contains | Example |
+| Modulo | Cosa contiene | Esempio |
 |--------|-----------------|---------|
-| `math` | Mathematical functions and constants | `math.sqrt(25)` → `5.0` |
-| `random` | Functions for generating random numbers | `random.randint(1, 6)` → rolls a die |
-| `time` | Functions for working with time and delays | `time.sleep(1)` → pauses for 1 second |
-| `turtle` | Functions and objects for drawing on screen | `turtle.forward(100)` → draws a line |
+| `math` | Funzioni e costanti matematiche | `math.sqrt(25)` → `5.0` |
+| `random` | Funzioni per generare numeri casuali | `random.randint(1, 6)` → lancia un dado |
+| `time` | Funzioni per lavorare con il tempo e le pause | `time.sleep(1)` → mette in pausa per 1 secondo |
+| `turtle` | Funzioni e oggetti per disegnare sullo schermo | `turtle.forward(100)` → disegna una linea |
 
-You import a module by writing `import` followed by the module's name at the top of your program.
-After that, you access its functions using dot notation — the module name, a dot, then the function name:
+Importi un modulo scrivendo `import` seguito dal nome del modulo in cima al tuo programma.
+Dopodiché, accedi alle sue funzioni usando la notazione a punto — il nome del modulo, un punto, poi il nome della funzione:
 
 ```python
 import math
 print(math.sqrt(16))
 ```
 
-That prints `4.0`.
-The dot connects the module (`math`) to the function inside it (`sqrt`).
-You will use this pattern constantly throughout the rest of the course.
+Questo stampa `4.0`.
+Il punto collega il modulo (`math`) alla funzione al suo interno (`sqrt`).
+Userai questo schema costantemente per il resto del corso.
 
-You will meet the `turtle` module in Chapter 5, `random` in Chapter 17, `math` in Chapter 18, and many others as the course progresses.
-For now, just know that the Standard Library exists and that `import` is how you unlock it.
+Incontrerai il modulo `turtle` nel Capitolo 5, `random` nel Capitolo 17, `math` nel Capitolo 18, e molti altri man mano che il corso procede.
+Per ora, sappi semplicemente che la Standard Library esiste e che `import` è il modo per sbloccarla.
 
-## Objects and Classes: A First Look
+## Oggetti e Classi: Un Primo Sguardo
 
-You are almost ready to meet the `turtle` module.
-Before you do, there is one more idea to preview — not fully explain, just introduce — because you will see it the moment you start drawing.
+Sei quasi pronto/a per incontrare il modulo `turtle`.
+Prima di farlo, c'è un'altra idea da anticipare — non spiegarla del tutto, solo introdurla — perché la vedrai nel momento in cui inizierai a disegnare.
 
-Python organizes many things as **objects**.
-An **object** is a package that bundles together two kinds of things:
+Python organizza molte cose come **oggetti**.
+Un **oggetto** è un pacchetto che raggruppa due tipi di cose:
 
-- **Data** (called attributes) — information the object knows about itself
-- **Actions** (called methods) — things the object can do
+- **Dati** (chiamati attributi) — informazioni che l'oggetto conosce su se stesso
+- **Azioni** (chiamate metodi) — cose che l'oggetto può fare
 
-The classic example is a turtle on screen.
-A turtle object knows its current position, its direction, its pen color, and whether its pen is up or down (those are its attributes).
-A turtle object can move forward, turn, change color, and lift or lower its pen (those are its methods).
+L'esempio classico è una turtle sullo schermo.
+Un oggetto turtle conosce la sua posizione attuale, la sua direzione, il colore della sua penna, e se la sua penna è alzata o abbassata (questi sono i suoi attributi).
+Un oggetto turtle può muoversi in avanti, girare, cambiare colore, e alzare o abbassare la penna (questi sono i suoi metodi).
 
-When you write code like this in Chapter 5:
+Quando scriverai codice come questo nel Capitolo 5:
 
 ```python
 import turtle
@@ -368,21 +368,21 @@ t.forward(100)
 t.right(90)
 ```
 
-`turtle.Turtle()` creates a new turtle object and stores it in the variable `t`.
-`t.forward(100)` calls the `forward` method on that object — same dot notation you just saw with modules.
+`turtle.Turtle()` crea un nuovo oggetto turtle e lo memorizza nella variabile `t`.
+`t.forward(100)` chiama il metodo `forward` su quell'oggetto — la stessa notazione a punto che hai appena visto con i moduli.
 
-A **class** is the blueprint that describes what attributes and methods an object has.
-`turtle.Turtle` is a class; `t` is one individual object (called an **instance**) made from that blueprint.
+Una **classe** è il progetto che descrive quali attributi e metodi ha un oggetto.
+`turtle.Turtle` è una classe; `t` è un singolo oggetto (chiamato **istanza**) creato a partire da quel progetto.
 
-You do not need to memorize all of this right now.
-The important takeaway is that objects come with built-in actions — and you call those actions by writing the object's name, a dot, and the method name.
-You will build the mental model step by step starting in Chapter 5, and you will write your own classes in Chapter 25.
+Non devi memorizzare tutto questo adesso.
+Il punto importante da portare a casa è che gli oggetti vengono forniti con azioni integrate — e chiami quelle azioni scrivendo il nome dell'oggetto, un punto, e il nome del metodo.
+Costruirai il modello mentale passo dopo passo a partire dal Capitolo 5, e scriverai le tue classi nel Capitolo 25.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add the Missing Line"
+!!! mascot-thinking "Tocca a Te — Aggiungi la Riga Mancante"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The function below is supposed to multiply two numbers and give the result back — but it is missing one key line. Right now, if you run the code, `product` gets `None` instead of `15`. Add **one line** inside the function so that `print(product)` shows `15`!
+    La funzione qui sotto dovrebbe moltiplicare due numeri e restituire il risultato — ma le manca una riga fondamentale. Al momento, se esegui il codice, `product` riceve `None` invece di `15`. Aggiungi **una riga** dentro la funzione in modo che `print(product)` mostri `15`!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -407,25 +407,25 @@ product = multiply(3, 5)
 print(product)`);
 </script>
 
-If your output shows `15`, you got it!
-The missing line was `return result`.
-Without it, Python silently returned `None` — and `None` is not the number you wanted.
+Se il tuo output mostra `15`, ce l'hai fatta!
+La riga mancante era `return result`.
+Senza di essa, Python restituiva silenziosamente `None` — e `None` non è il numero che volevi.
 
-## Experiments
+## Esperimenti
 
-Try these changes in the labs above.
-For each one, predict what will happen first — then run the code to check!
+Prova questi cambiamenti nei laboratori qui sopra.
+Per ciascuno, prevedi prima cosa succederà — poi esegui il codice per verificare!
 
-1. In Lab 1, change `greet()` so it prints only one line: `"Python is awesome!"`. Call it five times. **You'll know it worked when** the output shows five identical lines.
-2. In Lab 2, add a fourth call: `greet("your name here")` but replace `your name here` with your actual first name. **You'll know it worked when** the output greets you personally on the fourth line.
-3. In Lab 2, add a second parameter called `language` to the function so it prints `"Hello, Monty! You are learning Python."` Hint: you will need to update the `def` line and the `print` line inside the function. **You'll know it worked when** the output includes the language name.
-4. In the Learning Check lab, change the call to `multiply(7, 6)`. **You'll know it worked when** the output shows `42`.
-5. Write a brand-new function called `square(n)` that returns `n * n`. Call it with a few different numbers and print each result. **You'll know it worked when** `square(4)` prints `16` and `square(10)` prints `100`.
+1. Nel Laboratorio 1, cambia `greet()` in modo che stampi solo una riga: `"Python is awesome!"`. Chiamala cinque volte. **Saprai che ha funzionato quando** l'output mostra cinque righe identiche.
+2. Nel Laboratorio 2, aggiungi una quarta chiamata: `greet("your name here")` ma sostituisci `your name here` con il tuo vero nome. **Saprai che ha funzionato quando** l'output ti saluta personalmente nella quarta riga.
+3. Nel Laboratorio 2, aggiungi un secondo parametro chiamato `language` alla funzione in modo che stampi `"Hello, Monty! You are learning Python."` Suggerimento: dovrai aggiornare la riga `def` e la riga `print` dentro la funzione. **Saprai che ha funzionato quando** l'output include il nome della lingua.
+4. Nel laboratorio della Verifica di Apprendimento, cambia la chiamata in `multiply(7, 6)`. **Saprai che ha funzionato quando** l'output mostra `42`.
+5. Scrivi una funzione completamente nuova chiamata `square(n)` che restituisce `n * n`. Chiamala con alcuni numeri diversi e stampa ogni risultato. **Saprai che ha funzionato quando** `square(4)` stampa `16` e `square(10)` stampa `100`.
 
-!!! mascot-celebration "Functions Unlocked!"
+!!! mascot-celebration "Funzioni Sbloccate!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You just learned one of the most important skills in all of programming! `def`, parameters, `return`, `None`, docstrings, the Standard Library, and a first look at objects — that is a full chapter's worth of big ideas. In Chapter 5 you put functions to work immediately, using the `turtle` module to draw on screen. See you there! Let's code it together!
+    Hai appena imparato una delle competenze più importanti di tutta la programmazione! `def`, parametri, `return`, `None`, docstring, la Standard Library, e un primo sguardo sugli oggetti — un intero capitolo pieno di grandi idee. Nel Capitolo 5 metterai subito al lavoro le funzioni, usando il modulo `turtle` per disegnare sullo schermo. Ci vediamo lì! Programmiamo insieme!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Commentati](./references.md)

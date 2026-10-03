@@ -1,10 +1,10 @@
-# Quiz: Functions and Objects
+# Quiz: Funzioni e Oggetti
 
-Test your understanding of defining functions, parameters, return values, and the Standard Library with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione sulla definizione di funzioni, i parametri, i valori di ritorno e la Standard Library con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What Python keyword do you use to define a new function?
+#### 1. Quale parola chiave Python usi per definire una nuova funzione?
 
 <div class="upper-alpha" markdown>
 1. `function`
@@ -13,30 +13,30 @@ Test your understanding of defining functions, parameters, return values, and th
 4. `create`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. The keyword `def` (short for "define") starts a function definition in Python. You write `def`, then the function's name, then parentheses, then a colon. Everything indented below that line becomes the function body — the steps that run when you call the function.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. La parola chiave `def` (abbreviazione di "define", definisci) inizia una definizione di funzione in Python. Scrivi `def`, poi il nome della funzione, poi le parentesi, poi i due punti. Tutto ciò che è indentato sotto quella riga diventa il corpo della funzione — i passaggi che vengono eseguiti quando chiami la funzione.
 
     **Concept Tested:** def Keyword
 
 ---
 
-#### 2. What is the difference between defining a function and calling a function?
+#### 2. Qual è la differenza tra definire una funzione e chiamare una funzione?
 
 <div class="upper-alpha" markdown>
-1. Defining runs the function; calling writes the recipe for it
-2. Defining writes the steps under a name; calling says "run those steps right now"
-3. They are the same thing — defining and calling happen at the same time
-4. Defining removes the function from memory; calling creates it
+1. Definire esegue la funzione; chiamare ne scrive la ricetta
+2. Definire scrive i passaggi sotto un nome; chiamare dice "esegui quei passaggi adesso"
+3. Sono la stessa cosa — definire e chiamare avvengono nello stesso momento
+4. Definire rimuove la funzione dalla memoria; chiamare la crea
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Defining a function (with `def`) writes the recipe and stores it under a name — Python reads it but does not run it yet. Calling a function (writing its name with parentheses) tells Python to run the stored steps right now. You can define once and call many times.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Definire una funzione (con `def`) scrive la ricetta e la memorizza sotto un nome — Python la legge ma non la esegue ancora. Chiamare una funzione (scrivendo il suo nome con le parentesi) dice a Python di eseguire subito i passaggi memorizzati. Puoi definire una volta e chiamare molte volte.
 
     **Concept Tested:** Function Calls
 
 ---
 
-#### 3. How many lines of output will this program produce?
+#### 3. Quante righe di output produrrà questo programma?
 
 ```python
 def say_hi():
@@ -48,36 +48,36 @@ say_hi()
 ```
 
 <div class="upper-alpha" markdown>
-1. 2 lines
-2. 4 lines
-3. 1 line
-4. 6 lines
+1. 2 righe
+2. 4 righe
+3. 1 riga
+4. 6 righe
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. The function `say_hi()` contains two `print()` calls, so each call to the function produces 2 lines of output. The program calls `say_hi()` twice, giving 2 × 2 = 4 lines total. This shows the power of functions — write the steps once, run them as many times as you need.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. La funzione `say_hi()` contiene due chiamate a `print()`, quindi ogni chiamata alla funzione produce 2 righe di output. Il programma chiama `say_hi()` due volte, per un totale di 2 × 2 = 4 righe. Questo mostra il potere delle funzioni — scrivi i passaggi una volta, eseguili tutte le volte che ti servono.
 
     **Concept Tested:** Function Calls
 
 ---
 
-#### 4. What is a parameter in a Python function?
+#### 4. Cos'è un parametro in una funzione Python?
 
 <div class="upper-alpha" markdown>
-1. The colon at the end of the `def` line
-2. A variable declared inside the parentheses that receives a value when the function is called
-3. The name of the module where the function is stored
-4. A comment that explains what the function does
+1. I due punti alla fine della riga `def`
+2. Una variabile dichiarata dentro le parentesi che riceve un valore quando la funzione viene chiamata
+3. Il nome del modulo in cui è memorizzata la funzione
+4. Un commento che spiega cosa fa la funzione
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. A parameter is a variable listed inside the parentheses of a `def` statement. When you call the function and provide a value, Python copies that value into the parameter. Inside the function body, the parameter works just like any other variable. The value you provide at call time is called an argument.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Un parametro è una variabile elencata dentro le parentesi di un'istruzione `def`. Quando chiami la funzione e fornisci un valore, Python copia quel valore nel parametro. Dentro il corpo della funzione, il parametro funziona esattamente come qualsiasi altra variabile. Il valore che fornisci al momento della chiamata si chiama argomento.
 
     **Concept Tested:** Positional Parameters
 
 ---
 
-#### 5. What will this code print?
+#### 5. Cosa stamperà questo codice?
 
 ```python
 def greet(name):
@@ -90,91 +90,91 @@ greet("Monty")
 1. `Hello, name!`
 2. `Hello, Monty!`
 3. `greet("Monty")`
-4. An error, because `name` is not defined outside the function
+4. Un errore, perché `name` non è definita fuori dalla funzione
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. When `greet("Monty")` is called, the string `"Monty"` is copied into the parameter `name`. Inside the function, `"Hello, " + name + "!"` becomes `"Hello, Monty!"`, which is printed. The parameter `name` is only defined inside the function, so you would get an error trying to use `name` outside it — but the call itself works fine.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Quando viene chiamata `greet("Monty")`, la stringa `"Monty"` viene copiata nel parametro `name`. Dentro la funzione, `"Hello, " + name + "!"` diventa `"Hello, Monty!"`, che viene stampato. Il parametro `name` è definito solo dentro la funzione, quindi otterresti un errore provando a usare `name` fuori da essa — ma la chiamata in sé funziona perfettamente.
 
     **Concept Tested:** Positional Parameters
 
 ---
 
-#### 6. What does the `return` statement do in a function?
+#### 6. Cosa fa l'istruzione `return` in una funzione?
 
 <div class="upper-alpha" markdown>
-1. It prints the result to the screen
-2. It sends a value back to the code that called the function
-3. It repeats the function body from the beginning
-4. It ends the entire program immediately
+1. Stampa il risultato sullo schermo
+2. Restituisce un valore al codice che ha chiamato la funzione
+3. Ripete il corpo della funzione dall'inizio
+4. Termina immediatamente l'intero programma
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. The `return` statement sends a value back to whatever code called the function. The caller can then store that value in a variable or use it directly. `return` is different from `print()` — `print` displays something on screen, while `return` passes a value back invisibly so your program can use it further.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. L'istruzione `return` restituisce un valore a qualsiasi codice abbia chiamato la funzione. Chi ha effettuato la chiamata può poi memorizzare quel valore in una variabile o usarlo direttamente. `return` è diverso da `print()` — `print` mostra qualcosa sullo schermo, mentre `return` passa indietro un valore in modo invisibile così il tuo programma può usarlo ulteriormente.
 
     **Concept Tested:** Return Values
 
 ---
 
-#### 7. What value does Python return from a function that has no `return` statement?
+#### 7. Quale valore restituisce Python da una funzione che non ha un'istruzione `return`?
 
 <div class="upper-alpha" markdown>
 1. `0`
 2. `False`
 3. `None`
-4. An empty string `""`
+4. Una stringa vuota `""`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. If a function finishes running without hitting a `return` statement, Python automatically returns `None`. This is called "functions returning None." A very common beginner bug is forgetting to write `return` in a function that calculates something — the function runs but the result disappears, and the caller gets `None` instead.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Se una funzione termina l'esecuzione senza incontrare un'istruzione `return`, Python restituisce automaticamente `None`. Questo si chiama "funzioni che restituiscono None." Un bug molto comune tra i principianti è dimenticare di scrivere `return` in una funzione che calcola qualcosa — la funzione viene eseguita ma il risultato sparisce, e chi l'ha chiamata riceve `None` invece del valore atteso.
 
     **Concept Tested:** Functions Returning None
 
 ---
 
-#### 8. Where should a docstring be placed inside a function?
+#### 8. Dove dovrebbe essere posizionata una docstring dentro una funzione?
 
 <div class="upper-alpha" markdown>
-1. After the last line of the function body
-2. Before the `def` keyword on a separate line
-3. As the first line inside the function body, in triple quotes
-4. In a comment using `#` anywhere inside the function
+1. Dopo l'ultima riga del corpo della funzione
+2. Prima della parola chiave `def`, su una riga separata
+3. Come prima riga dentro il corpo della funzione, tra triple virgolette
+4. In un commento con `#` in un punto qualsiasi dentro la funzione
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. A docstring is a string surrounded by triple quotes (`"""`) placed as the very first line inside the function body. Python tools can read docstrings automatically and display them as help text. Docstrings explain what the function does, its parameters, and what it returns — helping the next reader (often future you) understand the code quickly.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Una docstring è una stringa racchiusa tra triple virgolette (`"""`) posizionata come primissima riga dentro il corpo della funzione. Gli strumenti Python possono leggere le docstring automaticamente e mostrarle come testo di aiuto. Le docstring spiegano cosa fa la funzione, i suoi parametri, e cosa restituisce — aiutando il prossimo lettore (spesso il te stesso del futuro) a capire rapidamente il codice.
 
     **Concept Tested:** Docstrings
 
 ---
 
-#### 9. What is the Python Standard Library?
+#### 9. Cos'è la Standard Library di Python?
 
 <div class="upper-alpha" markdown>
-1. A website where you download extra Python packages
-2. A collection of pre-written modules that comes with every Python installation
-3. The set of Python keywords that are reserved for the language
-4. A special file you create to store all your own functions
+1. Un sito web da cui scaricare pacchetti Python aggiuntivi
+2. Una collezione di moduli già scritti che arriva con ogni installazione di Python
+3. L'insieme delle parole chiave di Python riservate per il linguaggio
+4. Un file speciale che crei per memorizzare tutte le tue funzioni
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. The Standard Library is a large collection of pre-written modules (like `math`, `random`, `time`, and `turtle`) that comes bundled with every Python installation for free. You bring a module into your program using `import`, then access its functions with dot notation: `math.sqrt(25)`.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. La Standard Library è una grande collezione di moduli già scritti (come `math`, `random`, `time` e `turtle`) che viene fornita insieme a ogni installazione di Python, gratuitamente. Importi un modulo nel tuo programma usando `import`, poi accedi alle sue funzioni con la notazione a punto: `math.sqrt(25)`.
 
     **Concept Tested:** Standard Library
 
 ---
 
-#### 10. What does the dot in `math.sqrt(16)` mean?
+#### 10. Cosa significa il punto in `math.sqrt(16)`?
 
 <div class="upper-alpha" markdown>
-1. It multiplies `math` by `sqrt`
-2. It accesses the `sqrt` function that lives inside the `math` module
-3. It separates a whole number from a decimal
-4. It marks the end of the function call
+1. Moltiplica `math` per `sqrt`
+2. Accede alla funzione `sqrt` che si trova dentro il modulo `math`
+3. Separa un numero intero da un decimale
+4. Segna la fine della chiamata di funzione
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. The dot in `math.sqrt(16)` is dot notation — it connects the module name (`math`) to a function that lives inside it (`sqrt`). After you write `import math`, you access everything inside the module this way: module name, dot, then the function or value you want. You will use this pattern throughout the entire course.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Il punto in `math.sqrt(16)` è la notazione a punto — collega il nome del modulo (`math`) a una funzione che si trova al suo interno (`sqrt`). Dopo aver scritto `import math`, accedi a tutto ciò che è dentro il modulo in questo modo: nome del modulo, punto, poi la funzione o il valore che vuoi. Userai questo schema per tutto il corso.
 
     **Concept Tested:** Standard Library
 

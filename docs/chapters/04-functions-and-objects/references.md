@@ -1,21 +1,21 @@
-# References: Functions and Objects
+# Riferimenti: Funzioni e Oggetti
 
-1. [Function (computer science)](https://en.wikipedia.org/wiki/Function_(computer_science)) - Wikipedia - Explains what functions are in programming, why they exist, and how they work across languages. Provides the conceptual foundation for defining and calling functions covered in this chapter.
+1. [Function (computer science)](https://en.wikipedia.org/wiki/Function_(computer_science)) - Wikipedia - Spiega cosa sono le funzioni nella programmazione, perché esistono e come funzionano nei vari linguaggi. Fornisce le basi concettuali per definire e chiamare funzioni trattate in questo capitolo.
 
-2. [Object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) - Wikipedia - Covers the core ideas of objects, methods, and encapsulation that underlie Python's object model. Connects dot notation and method calls to the broader programming paradigm students will encounter throughout Python.
+2. [Object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) - Wikipedia - Copre le idee centrali di oggetti, metodi e incapsulamento che sono alla base del modello a oggetti di Python. Collega la notazione a punto e le chiamate ai metodi al paradigma di programmazione più ampio che gli studenti incontreranno in tutto Python.
 
-3. [Method (computer programming)](https://en.wikipedia.org/wiki/Method_(computer_programming)) - Wikipedia - Explains the difference between functions and methods, how methods belong to objects, and how dot notation is used to call them. Directly supports understanding why `turtle.forward()` uses a dot.
+3. [Method (computer programming)](https://en.wikipedia.org/wiki/Method_(computer_programming)) - Wikipedia - Spiega la differenza tra funzioni e metodi, come i metodi appartengono agli oggetti, e come si usa la notazione a punto per chiamarli. Supporta direttamente la comprensione del perché `turtle.forward()` usa un punto.
 
-4. Python Crash Course (3rd Edition) - Eric Matthes - No Starch Press - Chapter 8 introduces defining and calling functions with clear examples ideal for beginners; Chapter 9 introduces classes and objects with hands-on projects that reinforce dot notation and method use.
+4. Python Crash Course (3rd Edition) - Eric Matthes - No Starch Press - Il Capitolo 8 introduce la definizione e la chiamata di funzioni con esempi chiari ideali per principianti; il Capitolo 9 introduce classi e oggetti con progetti pratici che rafforzano la notazione a punto e l'uso dei metodi.
 
-5. Python for Kids - Jason R. Briggs - No Starch Press - Introduces functions and objects with kid-friendly language and cartoon illustrations aimed at ages 10–13, making abstract ideas like methods and dot notation accessible and memorable for this chapter's audience.
+5. Python for Kids - Jason R. Briggs - No Starch Press - Introduce funzioni e oggetti con un linguaggio adatto ai bambini e illustrazioni a fumetti pensate per l'età 10-13 anni, rendendo idee astratte come metodi e notazione a punto accessibili e memorabili per il pubblico di questo capitolo.
 
-6. [Python Built-in Functions](https://docs.python.org/3/library/functions.html) - Python Official Docs - The official reference for all of Python's built-in functions, including `print()`, `len()`, `type()`, and `range()`. Students can look up exact behavior for every built-in introduced in this chapter.
+6. [Python Built-in Functions](https://docs.python.org/3/library/functions.html) - Python Official Docs - Il riferimento ufficiale per tutte le funzioni integrate di Python, incluse `print()`, `len()`, `type()` e `range()`. Gli studenti possono consultare il comportamento esatto di ogni funzione integrata introdotta in questo capitolo.
 
-7. [Python Functions](https://www.w3schools.com/python/python_functions.asp) - W3Schools - Step-by-step tutorial on defining and calling functions in Python, with editable code examples students can run directly in the browser. Covers syntax, arguments, and return values at a beginner-friendly pace.
+7. [Python Functions](https://www.w3schools.com/python/python_functions.asp) - W3Schools - Tutorial passo passo sulla definizione e chiamata di funzioni in Python, con esempi di codice modificabili che gli studenti possono eseguire direttamente nel browser. Copre sintassi, argomenti e valori di ritorno a un ritmo adatto ai principianti.
 
-8. [Python Functions](https://www.programiz.com/python-programming/function) - Programiz - Beginner-friendly walkthrough of function definition, calling syntax, and how Python executes a function call. Includes worked examples and a built-in interactive editor for immediate practice.
+8. [Python Functions](https://www.programiz.com/python-programming/function) - Programiz - Percorso guidato adatto ai principianti sulla definizione delle funzioni, la sintassi di chiamata e come Python esegue una chiamata di funzione. Include esempi svolti e un editor interattivo integrato per la pratica immediata.
 
-9. [Python Methods](https://www.geeksforgeeks.org/python-programming-language/python-functions/) - GeeksforGeeks - Covers Python functions and introduces object methods with clear code snippets. Useful supplemental reading for students who want additional worked examples beyond the chapter's Skulpt labs.
+9. [Python Methods](https://www.geeksforgeeks.org/python-programming-language/python-functions/) - GeeksforGeeks - Copre le funzioni Python e introduce i metodi degli oggetti con frammenti di codice chiari. Lettura supplementare utile per studenti che vogliono esempi svolti aggiuntivi oltre ai laboratori Skulpt del capitolo.
 
-10. [Introduction to Python Fundamentals](https://www.khanacademy.org/computing/intro-to-python-fundamentals) - Khan Academy - Free video-based course that introduces Python functions and objects with interactive exercises. Well-paced for the 10–13 age range and complements the chapter's "see it, run it, modify it" approach.
+10. [Introduction to Python Fundamentals](https://www.khanacademy.org/computing/intro-to-python-fundamentals) - Khan Academy - Corso gratuito basato su video che introduce funzioni e oggetti Python con esercizi interattivi. Ben calibrato per la fascia d'età 10-13 anni e completa l'approccio "vedere, eseguire, modificare" del capitolo.
