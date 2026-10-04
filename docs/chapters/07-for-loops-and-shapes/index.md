@@ -1,24 +1,24 @@
 ---
-title: For Loops and Drawing Shapes
-description: Use Python's for loop and range() to draw squares, polygons, and star patterns with turtle graphics — then explore absolute positioning and screen control.
+title: Cicli For e Disegno di Forme
+description: Usa il ciclo for di Python e range() per disegnare quadrati, poligoni e pattern a stella con la grafica turtle — poi esplora il posizionamento assoluto e il controllo dello schermo.
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 10:25:00
 version: 0.09
 ---
 
-# For Loops and Drawing Shapes
+# Cicli For e Disegno di Forme
 
-## Summary
+## Riepilogo
 
-Loops let you repeat steps without copying and pasting — just like a Scratch
-"repeat" block. The `for` loop with `range()` is Python's workhorse for counting.
-This chapter uses loops to draw squares, triangles, and other polygons with
-turtle, then introduces absolute positioning (`goto()`), screen clearing,
-position queries, and a classic star pattern project.
+I cicli ti permettono di ripetere passaggi senza copiare e incollare — proprio come un
+blocco "repeat" di Scratch. Il ciclo `for` con `range()` è il cavallo di battaglia di Python
+per contare. Questo capitolo usa i cicli per disegnare quadrati, triangoli e altri poligoni
+con turtle, poi introduce il posizionamento assoluto (`goto()`), la pulizia dello schermo,
+le interrogazioni di posizione, e un classico progetto di pattern a stella.
 
-## Concepts Covered
+## Concetti Trattati
 
-This chapter covers the following 11 concepts from the learning graph:
+Questo capitolo tratta i seguenti 11 concetti del grafo di apprendimento:
 
 1. for Loop over Sequence
 2. for Loop with range()
@@ -32,59 +32,59 @@ This chapter covers the following 11 concepts from the learning graph:
 10. setheading() Direction
 11. Drawing Star Patterns
 
-## Prerequisites
+## Prerequisiti
 
-This chapter builds on concepts from:
+Questo capitolo si basa sui concetti di:
 
-- [Chapter 5: Drawing with Turtle Graphics](../05-drawing-with-turtle/index.md)
-- [Chapter 6: Math and Arithmetic](../06-math-and-arithmetic/index.md)
+- [Capitolo 5: Disegnare con la Grafica Turtle](../05-drawing-with-turtle/index.md)
+- [Capitolo 6: Matematica e Aritmetica](../06-math-and-arithmetic/index.md)
 
 ---
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Use a `for` loop with `range()` to repeat turtle commands any number of times
-- Draw any regular polygon by combining a loop with the `360 / sides` formula
-- Use `goto()`, `setheading()`, and `circle()` to control the turtle's position precisely
-- Draw a classic five-pointed star using the loop counter
+- Usare un ciclo `for` con `range()` per ripetere comandi turtle un numero qualsiasi di volte
+- Disegnare qualsiasi poligono regolare combinando un ciclo con la formula `360 / lati`
+- Usare `goto()`, `setheading()` e `circle()` per controllare con precisione la posizione della turtle
+- Disegnare una classica stella a cinque punte usando il contatore del ciclo
 
-In Chapter 5 you drew a partial square by writing four `forward()` and `right()` commands in a row.
-In this chapter you will write the same drawing with just **two lines** inside a loop — and then use that same idea to draw shapes with 100 sides.
+Nel Capitolo 5 hai disegnato un quadrato parziale scrivendo quattro comandi `forward()` e `right()` in fila.
+In questo capitolo scriverai lo stesso disegno con solo **due righe** dentro un ciclo — e poi userai quella stessa idea per disegnare forme con 100 lati.
 
-!!! mascot-welcome "Welcome to Chapter 7!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 7!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Loops are one of the biggest ideas in programming. Once you understand them, you'll never copy-and-paste code again — you'll just tell Python how many times to repeat something and let it do the work. Let's code it together!
+    I cicli sono una delle idee più grandi della programmazione. Una volta che li capisci, non copierai e incollerai mai più codice — dirai semplicemente a Python quante volte ripetere qualcosa e lascerai che faccia il lavoro. Programmiamo insieme!
 
-## The for Loop
+## Il Ciclo for
 
-A **for loop** repeats a block of code a set number of times.
-In Python, the most common form uses **`range()`** to count:
+Un **ciclo for** ripete un blocco di codice un numero prefissato di volte.
+In Python, la forma più comune usa **`range()`** per contare:
 
 ```python
 for i in range(4):
     print(i)
 ```
 
-This prints `0`, `1`, `2`, `3` — four numbers, starting at zero.
-The indented line (`print(i)`) is the **loop body** — everything Python repeats.
-The variable `i` is the **loop counter** — it changes value on every trip through the loop.
+Questo stampa `0`, `1`, `2`, `3` — quattro numeri, a partire da zero.
+La riga indentata (`print(i)`) è il **corpo del ciclo** — tutto ciò che Python ripete.
+La variabile `i` è il **contatore del ciclo** — cambia valore a ogni giro del ciclo.
 
-!!! mascot-tip "Scratch Bridge"
+!!! mascot-tip "Ponte con Scratch"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch, the **Repeat** block runs its contents a fixed number of times. Python's `for i in range(n):` does exactly the same thing! The big difference: Python also gives you the counter `i` as a variable you can use inside the loop — great for creating patterns that change on every step.
+    In Scratch, il blocco **Repeat** esegue il suo contenuto un numero fisso di volte. Il `for i in range(n):` di Python fa esattamente la stessa cosa! La grande differenza: Python ti dà anche il contatore `i` come variabile che puoi usare dentro il ciclo — ottimo per creare pattern che cambiano a ogni passo.
 
-Now let's put a `for` loop to work with the turtle.
-Before you run the program below, think about what `forward(100)` and `right(90)` repeated four times will draw.
+Ora mettiamo al lavoro un ciclo `for` con la turtle.
+Prima di eseguire il programma qui sotto, pensa a cosa disegneranno `forward(100)` e `right(90)` ripetuti quattro volte.
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The loop runs **4 times**. Each time, the turtle moves forward 100 pixels and turns right 90°.
-    A 90° right turn is a perfect corner. What shape do you think will appear?
-    Make your guess — then click Run!
+    Il ciclo gira **4 volte**. Ogni volta, la turtle si muove avanti di 100 pixel e gira a destra di 90°.
+    Una svolta di 90° a destra è un angolo perfetto. Quale forma pensi apparirà?
+    Fai la tua previsione — poi clicca su Run!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see the result.
+Modifica il codice qui sotto e clicca **Run** per vedere il risultato.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -113,22 +113,22 @@ for i in range(4):
     t.right(90)`);
 </script>
 
-Were you right? Two lines inside a loop draw a complete square — the same shape that took eight lines in Chapter 5!
+Avevi indovinato? Due righe dentro un ciclo disegnano un quadrato completo — la stessa forma che nel Capitolo 5 ha richiesto otto righe!
 
-## How the Loop Works
+## Come Funziona il Ciclo
 
-Here is what Python does on each trip through the loop:
+Ecco cosa fa Python a ogni giro del ciclo:
 
-| Trip | `i` value | What the turtle does |
+| Giro | Valore di `i` | Cosa fa la turtle |
 |------|-----------|----------------------|
-| 1st | `0` | forward 100, turn right 90° |
-| 2nd | `1` | forward 100, turn right 90° |
-| 3rd | `2` | forward 100, turn right 90° |
-| 4th | `3` | forward 100, turn right 90° |
+| 1° | `0` | avanti 100, gira a destra 90° |
+| 2° | `1` | avanti 100, gira a destra 90° |
+| 3° | `2` | avanti 100, gira a destra 90° |
+| 4° | `3` | avanti 100, gira a destra 90° |
 
-After four 90° turns the turtle has rotated a full 360° and is facing its original direction — which is why the shape closes perfectly into a square.
+Dopo quattro svolte di 90° la turtle ha ruotato di un giro completo di 360° ed è rivolta nella sua direzione originale — ed è per questo che la forma si chiude perfettamente in un quadrato.
 
-**Indentation matters.** The two lines inside the loop (`t.forward(100)` and `t.right(90)`) must both be indented by exactly four spaces (or one Tab). Python uses indentation to know which lines belong to the loop body and which ones come *after* the loop.
+**L'indentazione conta.** Le due righe dentro il ciclo (`t.forward(100)` e `t.right(90)`) devono essere entrambe indentate esattamente di quattro spazi (o un Tab). Python usa l'indentazione per sapere quali righe appartengono al corpo del ciclo e quali vengono *dopo* il ciclo.
 
 ```python
 for i in range(4):
@@ -137,54 +137,54 @@ for i in range(4):
 t.penup()             # ← NOT part of the loop (no indent)
 ```
 
-### See It: Step Through the Loop
+### Osservalo: Procedi Passo Passo nel Ciclo
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    In the stepper below, watch the value of `i` in the badge at the top.
-    What will `i` be on the very first trip — 1 or 0? And how many times will
-    the arrow jump back up to the `for` line? Make your guesses, then step
-    through and check!
+    Nello stepper qui sotto, osserva il valore di `i` nel badge in alto.
+    Quanto varrà `i` al primissimo giro — 1 o 0? E quante volte la freccia
+    salterà indietro verso la riga `for`? Fai le tue previsioni, poi procedi
+    passo passo e verifica!
 
 <iframe src="../../sims/for-loop-stepper/main.html" height="502" width="100%" scrolling="no"></iframe>
 
-[Explore the For-Loop Stepper MicroSim](../../sims/for-loop-stepper/index.md){ .md-button }
+[Esplora il MicroSim For-Loop Stepper](../../sims/for-loop-stepper/index.md){ .md-button }
 
-Were you right? The **Countdown** program in the dropdown shows the same rhythm with print(), and **Running Total** previews the accumulator pattern you will meet later in this chapter.
+Avevi indovinato? Il programma **Countdown** nel menu a tendina mostra lo stesso ritmo con print(), e **Running Total** anticipa il pattern accumulatore che incontrerai più avanti in questo capitolo.
 
-## Understanding range()
+## Capire range()
 
-`range()` can take one, two, or three arguments:
+`range()` può accettare uno, due o tre argomenti:
 
-| Form | What it produces | Example output |
+| Forma | Cosa produce | Output di esempio |
 |------|-----------------|----------------|
 | `range(n)` | 0, 1, 2, …, n-1 | `range(4)` → 0 1 2 3 |
 | `range(start, stop)` | start, start+1, …, stop-1 | `range(2, 6)` → 2 3 4 5 |
 | `range(start, stop, step)` | start, start+step, …, < stop | `range(0, 10, 2)` → 0 2 4 6 8 |
 
-The **step** argument lets you skip values or count backwards:
+L'argomento **step** ti permette di saltare valori o contare all'indietro:
 
 ```python
 for i in range(0, 360, 45):
     print(i)    # 0, 45, 90, 135, 180, 225, 270, 315
 ```
 
-This is useful for drawing shapes at regular angular intervals — for example, drawing eight lines radiating from the center like spokes on a wheel, each 45° apart.
+Questo è utile per disegnare forme a intervalli angolari regolari — per esempio, disegnare otto linee che si irradiano dal centro come i raggi di una ruota, ciascuna distanziata di 45°.
 
-### See It: The Range Explorer
+### Osservalo: Il Range Explorer
 
-The trickiest thing about `range()` is that the **stop value is never included**. In the explorer below, the stop value is drawn as a hollow orange ring — the counting always stops just before it. Before you move anything, predict: **which numbers does `range(2, 12, 3)` produce?** Then check the number line.
+La cosa più insidiosa di `range()` è che il **valore di stop non è mai incluso**. Nell'esploratore qui sotto, il valore di stop è disegnato come un anello arancione vuoto — il conteggio si ferma sempre appena prima. Prima di muovere qualsiasi cosa, prevedi: **quali numeri produce `range(2, 12, 3)`?** Poi verifica sulla linea dei numeri.
 
 <iframe src="../../sims/range-explorer/main.html" height="482" width="100%" scrolling="no"></iframe>
 
-[Explore the Range Explorer MicroSim](../../sims/range-explorer/index.md){ .md-button }
+[Esplora il MicroSim Range Explorer](../../sims/range-explorer/index.md){ .md-button }
 
-When you feel confident, click **New Challenge** — the sim shows green target rings, and your job is to find slider settings that light them up exactly.
+Quando ti senti sicuro/a, clicca su **New Challenge** — il simulatore mostra anelli bersaglio verdi, e il tuo compito è trovare le impostazioni dei cursori che li accendono esattamente.
 
-## The Loop Counter Variable
+## La Variabile Contatore del Ciclo
 
-The counter `i` is a real variable — you can use it *inside* the loop body.
-This lets you make each step slightly different:
+Il contatore `i` è una variabile vera — puoi usarla *dentro* il corpo del ciclo.
+Questo ti permette di rendere ogni passo leggermente diverso:
 
 ```python
 import turtle
@@ -194,13 +194,13 @@ for i in range(5):
     t.right(90)
 ```
 
-Each forward step gets 20 pixels longer because `i` grows by 1 on every trip.
-The result is a staircase shape instead of a square.
+Ogni passo in avanti diventa 20 pixel più lungo perché `i` cresce di 1 a ogni giro.
+Il risultato è una forma a scala invece di un quadrato.
 
-## The Loop Accumulator Pattern
+## Il Pattern Accumulatore del Ciclo
 
-An **accumulator** is a variable you set up *before* the loop and update *inside* the loop on every step.
-The most common accumulator just adds values together:
+Un **accumulatore** è una variabile che imposti *prima* del ciclo e aggiorni *dentro* il ciclo a ogni passo.
+L'accumulatore più comune semplicemente somma dei valori insieme:
 
 ```python
 total = 0               # start the accumulator at zero
@@ -209,11 +209,11 @@ for i in range(1, 6):   # i takes values 1, 2, 3, 4, 5
 print(total)            # 15  (1+2+3+4+5)
 ```
 
-You will use the accumulator pattern constantly — for counting things, summing scores, and building strings character by character.
+Userai il pattern accumulatore costantemente — per contare cose, sommare punteggi, e costruire stringhe carattere per carattere.
 
-## Drawing Any Regular Polygon
+## Disegnare Qualsiasi Poligono Regolare
 
-Combine the `for` loop with the `360 / sides` formula from Chapter 6 and you can draw any regular polygon:
+Combina il ciclo `for` con la formula `360 / lati` del Capitolo 6 e puoi disegnare qualsiasi poligono regolare:
 
 ```python
 import turtle
@@ -225,54 +225,54 @@ for i in range(sides):
     t.right(turn_angle)
 ```
 
-Change `sides` to any number and the loop adapts automatically.
+Cambia `sides` in qualsiasi numero e il ciclo si adatta automaticamente.
 
-## More Turtle Commands
+## Altri Comandi Turtle
 
-With the loop mastered, it's time to add precision turtle commands to your toolkit.
-Before looking at each one, here is a quick reference:
+Con il ciclo padroneggiato, è tempo di aggiungere comandi turtle di precisione al tuo repertorio.
+Prima di guardarli uno per uno, ecco un riferimento rapido:
 
-| Command | What it does |
+| Comando | Cosa fa |
 |---------|-------------|
-| `t.goto(x, y)` | Jump to position (x, y) — canvas center is (0, 0) |
-| `t.setheading(angle)` | Point the turtle in an exact compass direction |
-| `t.circle(radius)` | Draw a circle with the given radius |
-| `t.xcor()` | Return the turtle's current x position |
-| `t.ycor()` | Return the turtle's current y position |
-| `t.clear()` | Erase everything the turtle drew, but keep the turtle |
-| `t.reset()` | Erase drawings AND return the turtle to the start |
+| `t.goto(x, y)` | Salta alla posizione (x, y) — il centro della tela è (0, 0) |
+| `t.setheading(angle)` | Orienta la turtle verso una direzione esatta della bussola |
+| `t.circle(radius)` | Disegna un cerchio con il raggio indicato |
+| `t.xcor()` | Restituisce la posizione x attuale della turtle |
+| `t.ycor()` | Restituisce la posizione y attuale della turtle |
+| `t.clear()` | Cancella tutto ciò che la turtle ha disegnato, ma mantiene la turtle |
+| `t.reset()` | Cancella i disegni E riporta la turtle all'inizio |
 
-**Absolute positioning with `goto(x, y)`.** The canvas has a coordinate system where `(0, 0)` is the center. Positive x is right, positive y is up, negative x is left, negative y is down. `t.goto(100, 0)` moves the turtle to a point 100 pixels to the right of center — drawing a line there unless you call `t.penup()` first.
+**Posizionamento assoluto con `goto(x, y)`.** La tela ha un sistema di coordinate dove `(0, 0)` è il centro. La x positiva è a destra, la y positiva è in alto, la x negativa è a sinistra, la y negativa è in basso. `t.goto(100, 0)` sposta la turtle in un punto 100 pixel a destra del centro — disegnando una linea lì a meno che tu non chiami prima `t.penup()`.
 
-**Pointing with `setheading(angle)`.** The heading is measured in degrees from the positive x-axis (East), counter-clockwise:
-- `0` = East (right)
-- `90` = North (up)
-- `180` = West (left)
-- `270` = South (down)
+**Orientarsi con `setheading(angle)`.** L'orientamento si misura in gradi a partire dall'asse x positivo (Est), in senso antiorario:
+- `0` = Est (destra)
+- `90` = Nord (su)
+- `180` = Ovest (sinistra)
+- `270` = Sud (giù)
 
-**Drawing `circle(radius)`.** `t.circle(50)` draws a circle with a 50-pixel radius, starting where the turtle currently stands.
+**Disegnare con `circle(radius)`.** `t.circle(50)` disegna un cerchio con un raggio di 50 pixel, a partire da dove si trova attualmente la turtle.
 
-**Querying position.** `t.xcor()` and `t.ycor()` return the turtle's current x and y coordinates as floats.
-This is useful for printing progress or for placing text at the turtle's location.
+**Interrogare la posizione.** `t.xcor()` e `t.ycor()` restituiscono le coordinate x e y attuali della turtle come float.
+Questo è utile per stampare i progressi o per posizionare del testo nella posizione della turtle.
 
-## Drawing Star Patterns
+## Disegnare Pattern a Stella
 
-A **five-pointed star** is one of the most satisfying shapes to draw with a loop.
-The trick is the turn angle: `144°` per point.
+Una **stella a cinque punte** è una delle forme più soddisfacenti da disegnare con un ciclo.
+Il trucco è l'angolo di svolta: `144°` per punta.
 
-Here is how the math works:
-- A five-pointed star has 5 points
-- At each point, the turtle turns `360° × 2 / 5` = `144°`
-  (it travels *two* full rotations around the star instead of one)
+Ecco come funziona la matematica:
+- Una stella a cinque punte ha 5 punte
+- A ogni punta, la turtle gira di `360° × 2 / 5` = `144°`
+  (percorre *due* rotazioni complete intorno alla stella invece di una)
 
-The program below draws four of the five points — it is missing the correct turn angle.
+Il programma qui sotto disegna quattro delle cinque punte — manca l'angolo di svolta corretto.
 
-!!! mascot-thinking "Your Turn — Complete the Star"
+!!! mascot-thinking "Tocca a Te — Completa la Stella"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The turtle below draws lines but never closes the star because the turn angle is wrong.
-    Replace the `???` with the correct number of degrees so the turtle traces all five points
-    and returns to exactly where it started.
-    **Hint:** the turn angle for a 5-pointed star is `144`.
+    La turtle qui sotto disegna linee ma non chiude mai la stella perché l'angolo di svolta è sbagliato.
+    Sostituisci `???` con il numero corretto di gradi così la turtle traccia tutte e cinque le punte
+    e torna esattamente al punto di partenza.
+    **Suggerimento:** l'angolo di svolta per una stella a 5 punte è `144`.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -296,22 +296,22 @@ for i in range(5):
     t.right(???)    # replace ??? with the correct turn angle`);
 </script>
 
-When the star closes perfectly back at the starting point, you know the turn angle is correct!
+Quando la stella si chiude perfettamente tornando al punto di partenza, sai che l'angolo di svolta è corretto!
 
-## Experiments
+## Esperimenti
 
-Try these changes to the star program above. For each one, predict what will happen first, then run it to check!
+Prova questi cambiamenti al programma della stella qui sopra. Per ciascuno, prevedi prima cosa succederà, poi eseguilo per verificare!
 
-1. Change `range(5)` to `range(7)` and the turn angle to `154` (approximately `360 * 2 / 7`). **You'll know it worked when** you see a seven-pointed star.
-2. Change `t.forward(150)` to `t.forward(i * 30 + 30)`. **You'll know it worked when** each arm of the star gets longer than the last.
-3. Add `t.pencolor("red")` before the loop. **You'll know it worked when** the star draws in red.
-4. After the star loop, add `t.penup()`, `t.goto(0, 0)`, `t.pendown()`, and `t.circle(80)`. **You'll know it worked when** a circle appears in the center of the star.
-5. Change `t.speed(3)` to `t.speed(1)` and watch Monty draw slowly, or `t.speed(10)` for maximum speed.
+1. Cambia `range(5)` in `range(7)` e l'angolo di svolta in `154` (circa `360 * 2 / 7`). **Saprai che ha funzionato quando** vedi una stella a sette punte.
+2. Cambia `t.forward(150)` in `t.forward(i * 30 + 30)`. **Saprai che ha funzionato quando** ogni braccio della stella diventa più lungo del precedente.
+3. Aggiungi `t.pencolor("red")` prima del ciclo. **Saprai che ha funzionato quando** la stella viene disegnata in rosso.
+4. Dopo il ciclo della stella, aggiungi `t.penup()`, `t.goto(0, 0)`, `t.pendown()` e `t.circle(80)`. **Saprai che ha funzionato quando** appare un cerchio al centro della stella.
+5. Cambia `t.speed(3)` in `t.speed(1)` e guarda Monty disegnare lentamente, oppure `t.speed(10)` per la velocità massima.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've mastered one of the most important ideas in all of programming — the loop. With just two lines inside a `for` block you drew a square, then a polygon, then a star. You also learned `goto()`, `circle()`, and `setheading()` for precise turtle control. These tools will be your drawing toolkit for the rest of the course. Let's keep coding it together!
+    Hai padroneggiato una delle idee più importanti di tutta la programmazione — il ciclo. Con solo due righe dentro un blocco `for` hai disegnato un quadrato, poi un poligono, poi una stella. Hai anche imparato `goto()`, `circle()` e `setheading()` per un controllo preciso della turtle. Questi strumenti saranno il tuo kit di disegno per il resto del corso. Continuiamo a programmare insieme!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Commentati](./references.md)
