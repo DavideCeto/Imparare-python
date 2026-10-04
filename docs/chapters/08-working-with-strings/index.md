@@ -1,24 +1,24 @@
 ---
-title: Working with Strings
-description: Explore Python's string type — quotes, concatenation, repetition, escape characters, len(), immutability, raw strings, and turtle.write() for canvas labels.
+title: Lavorare con le Stringhe
+description: Esplora il tipo stringa di Python — virgolette, concatenazione, ripetizione, caratteri di escape, len(), immutabilità, stringhe raw e turtle.write() per etichette sulla tela.
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 10:40:00
 version: 0.09
 ---
 
-# Working with Strings
+# Lavorare con le Stringhe
 
-## Summary
+## Riepilogo
 
-Text in Python is called a *string*. This chapter introduces the string type,
-single vs double quotes, concatenation (joining strings), repetition, escape
-characters like `\n`, measuring length with `len()`, raw strings, and
-string immutability. As a practical project you'll use `turtle.write()` to
-draw labels and text directly onto your turtle canvas.
+Il testo in Python si chiama *stringa*. Questo capitolo introduce il tipo stringa,
+virgolette singole contro doppie, concatenazione (unire stringhe), ripetizione, caratteri
+di escape come `\n`, misurare la lunghezza con `len()`, stringhe raw, e
+l'immutabilità delle stringhe. Come progetto pratico userai `turtle.write()` per
+disegnare etichette e testo direttamente sulla tua tela turtle.
 
-## Concepts Covered
+## Concetti Trattati
 
-This chapter covers the following 9 concepts from the learning graph:
+Questo capitolo tratta i seguenti 9 concetti del grafo di apprendimento:
 
 1. String Type
 2. Single vs Double Quotes
@@ -30,34 +30,34 @@ This chapter covers the following 9 concepts from the learning graph:
 8. Raw Strings
 9. Writing Text with turtle.write()
 
-## Prerequisites
+## Prerequisiti
 
-This chapter builds on concepts from:
+Questo capitolo si basa sui concetti di:
 
-- [Chapter 5: Drawing with Turtle Graphics](../05-drawing-with-turtle/index.md)
-- [Chapter 7: For Loops and Drawing Shapes](../07-for-loops-and-shapes/index.md)
+- [Capitolo 5: Disegnare con la Grafica Turtle](../05-drawing-with-turtle/index.md)
+- [Capitolo 7: Cicli For e Disegno di Forme](../07-for-loops-and-shapes/index.md)
 
 ---
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Create strings using either single or double quotes
-- Join strings with `+` (concatenation) and repeat them with `*`
-- Use escape characters like `\n` and `\t` to control text layout
-- Draw labeled text directly onto the turtle canvas with `turtle.write()`
+- Creare stringhe usando virgolette singole o doppie
+- Unire stringhe con `+` (concatenazione) e ripeterle con `*`
+- Usare caratteri di escape come `\n` e `\t` per controllare la disposizione del testo
+- Disegnare testo etichettato direttamente sulla tela turtle con `turtle.write()`
 
-Numbers are not the only data Python works with.
-**Text** — names, sentences, emoji, file paths, URLs — is just as important.
-Python calls text a **string**, and this chapter gives you the tools to create, combine, and display strings in your programs.
+I numeri non sono gli unici dati con cui lavora Python.
+Il **testo** — nomi, frasi, emoji, percorsi di file, URL — è altrettanto importante.
+Python chiama il testo **stringa**, e questo capitolo ti dà gli strumenti per creare, combinare e mostrare stringhe nei tuoi programmi.
 
-!!! mascot-welcome "Welcome to Chapter 8!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 8!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Strings open up a whole new side of Python! Once you know how to work with text, your turtle programs can draw labels, scores, and messages right onto the canvas. Let's code it together!
+    Le stringhe aprono un intero nuovo lato di Python! Una volta che sai lavorare con il testo, i tuoi programmi turtle possono disegnare etichette, punteggi e messaggi direttamente sulla tela. Programmiamo insieme!
 
-## The String Type
+## Il Tipo Stringa
 
-A **string** is any sequence of characters — letters, digits, spaces, punctuation, emoji — wrapped in quotation marks.
-Python stores strings with the type name `str`.
+Una **stringa** è qualsiasi sequenza di caratteri — lettere, cifre, spazi, punteggiatura, emoji — racchiusa tra virgolette.
+Python memorizza le stringhe con il nome di tipo `str`.
 
 ```python
 greeting = "Hello, Coder!"
@@ -65,27 +65,27 @@ species  = 'Python snake'
 number   = "42"             # still a string, not an integer!
 ```
 
-Notice that `"42"` (with quotes) is a *string*, not the number 42.
-If you tried to add `"42" + 1` Python would give you an error — strings and numbers are different types.
+Nota che `"42"` (con le virgolette) è una *stringa*, non il numero 42.
+Se provassi a sommare `"42" + 1` Python ti darebbe un errore — stringhe e numeri sono tipi diversi.
 
-## Single vs Double Quotes
+## Virgolette Singole contro Doppie
 
-Python accepts both single quotes `'...'` and double quotes `"..."` for strings.
-They work identically — choose whichever you prefer, just be consistent.
+Python accetta sia le virgolette singole `'...'` sia quelle doppie `"..."` per le stringhe.
+Funzionano in modo identico — scegli quella che preferisci, basta essere coerenti.
 
-The main reason to know both is **when your string contains an apostrophe or quotation marks**:
+Il motivo principale per conoscerle entrambe è **quando la tua stringa contiene un apostrofo o dei segni di virgolette**:
 
 ```python
 msg1 = "It's a great day!"     # apostrophe inside — use double quotes
 msg2 = 'She said "wow!"'       # quote marks inside — use single quotes
 ```
 
-If you accidentally use the same quote type inside and outside the string, Python gets confused and gives you a `SyntaxError`.
+Se usi accidentalmente lo stesso tipo di virgolette sia dentro che fuori dalla stringa, Python si confonde e ti dà un `SyntaxError`.
 
-## String Concatenation
+## Concatenazione di Stringhe
 
-**Concatenation** means joining two or more strings end-to-end.
-Python uses the `+` operator for concatenation:
+**Concatenazione** significa unire due o più stringhe una dopo l'altra.
+Python usa l'operatore `+` per la concatenazione:
 
 ```python
 first = "Monty"
@@ -94,21 +94,21 @@ full  = first + " " + last
 print(full)    # Monty Python
 ```
 
-You can concatenate as many strings as you like in a single expression.
-Notice that Python does **not** add a space automatically — you have to include `" "` yourself if you want one.
+Puoi concatenare tutte le stringhe che vuoi in un'unica espressione.
+Nota che Python **non** aggiunge automaticamente uno spazio — devi includere tu stesso `" "` se ne vuoi uno.
 
-The program below builds a greeting message from two variables.
+Il programma qui sotto costruisce un messaggio di saluto da due variabili.
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Look at the last `print()` call before you click Run.
-    `name` is `"Alex"` and `greeting` is `"Hello, "`.
-    What exactly will the program print on that last line?
-    Make your guess — then find out!
+    Guarda l'ultima chiamata a `print()` prima di cliccare su Run.
+    `name` è `"Alex"` e `greeting` è `"Hello, "`.
+    Cosa stamperà esattamente il programma su quell'ultima riga?
+    Fai la tua previsione — poi scoprilo!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see the result.
+Modifica il codice qui sotto e clicca **Run** per vedere il risultato.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -143,32 +143,32 @@ print("-" * 20)
 print("Ha" * 4)`);
 </script>
 
-Were you right? The first `print()` outputs `Hello, Alex!`. Notice how `"-" * 20` creates a divider line of exactly twenty dashes — much faster than typing them one by one!
+Avevi indovinato? Il primo `print()` mostra `Hello, Alex!`. Nota come `"-" * 20` crea una linea divisoria di esattamente venti trattini — molto più veloce che digitarli uno per uno!
 
-## String Repetition
+## Ripetizione di Stringhe
 
-Just as `+` joins strings, `*` **repeats** a string a given number of times:
+Proprio come `+` unisce stringhe, `*` **ripete** una stringa un numero di volte indicato:
 
 ```python
 print("Echo! " * 3)    # Echo! Echo! Echo!
 print("=" * 30)        # ============================== (30 equals signs)
 ```
 
-String repetition is handy for creating visual separators, borders, and patterns.
-The number on the right must be an integer — `"ha" * 2.5` gives an error.
+La ripetizione di stringhe è comoda per creare separatori visivi, bordi e pattern.
+Il numero a destra deve essere un intero — `"ha" * 2.5` dà un errore.
 
-## Escape Characters
+## Caratteri di Escape
 
-Some characters can't be typed directly inside a string.
-Python provides **escape characters** — special two-character sequences that start with a backslash `\`:
+Alcuni caratteri non possono essere digitati direttamente dentro una stringa.
+Python fornisce i **caratteri di escape** — speciali sequenze di due caratteri che iniziano con una barra rovesciata `\`:
 
-| Escape | Meaning | Example output |
+| Escape | Significato | Output di esempio |
 |--------|---------|----------------|
-| `\n` | New line | Moves to the next line |
-| `\t` | Tab | Adds a tab-sized space |
-| `\\` | Literal backslash | Prints `\` |
-| `\'` | Literal single quote | Prints `'` inside a single-quoted string |
-| `\"` | Literal double quote | Prints `"` inside a double-quoted string |
+| `\n` | Nuova riga | Passa alla riga successiva |
+| `\t` | Tabulazione | Aggiunge uno spazio della dimensione di un tab |
+| `\\` | Barra rovesciata letterale | Stampa `\` |
+| `\'` | Virgoletta singola letterale | Stampa `'` dentro una stringa con virgolette singole |
+| `\"` | Virgoletta doppia letterale | Stampa `"` dentro una stringa con virgolette doppie |
 
 ```python
 print("Line one\nLine two\nLine three")
@@ -176,15 +176,15 @@ print("Name:\tMonty\nAge:\t12")
 print("She said \"Wow!\"")
 ```
 
-The `\n` (newline) is one of the most-used escape characters — it lets one `print()` call produce multiple lines of output.
+Il `\n` (nuova riga) è uno dei caratteri di escape più usati — permette a una singola chiamata `print()` di produrre più righe di output.
 
-!!! mascot-tip "Scratch Bridge"
+!!! mascot-tip "Ponte con Scratch"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch, the **Say** block displays one message at a time in a speech bubble. Python's `print()` is similar, but much more flexible — you can print multiple lines, add tabs, join variables and text, and display numbers all in one call!
+    In Scratch, il blocco **Say** mostra un messaggio alla volta in un fumetto. Il `print()` di Python è simile, ma molto più flessibile — puoi stampare più righe, aggiungere tabulazioni, unire variabili e testo, e mostrare numeri tutto in una sola chiamata!
 
-## String Length with len()
+## Lunghezza di una Stringa con len()
 
-The `len()` function counts how many characters are in a string — including spaces and punctuation:
+La funzione `len()` conta quanti caratteri ci sono in una stringa — inclusi spazi e punteggiatura:
 
 ```python
 word  = "Python"
@@ -194,21 +194,21 @@ print(len(sentence))      # 13
 print(len(""))            # 0  (empty string has length zero)
 ```
 
-`len()` is one of Python's **built-in functions** — you don't need to import anything, it just works.
-You'll use `len()` constantly: checking if a password is long enough, measuring user input, or controlling how many characters to display.
+`len()` è una delle **funzioni integrate** di Python — non devi importare nulla, funziona e basta.
+Userai `len()` costantemente: per controllare se una password è abbastanza lunga, misurare l'input dell'utente, o controllare quanti caratteri mostrare.
 
-## String Immutability
+## Immutabilità delle Stringhe
 
-Once a string is created, you **cannot change individual characters inside it**.
-This property is called **immutability**:
+Una volta creata una stringa, **non puoi cambiare i singoli caratteri al suo interno**.
+Questa proprietà si chiama **immutabilità**:
 
 ```python
 name = "Monty"
 name[0] = "B"    # ← ERROR! You can't change a single character
 ```
 
-This surprises beginners who expect strings to work like a list.
-To "change" a string, you create a *new* string from the old one:
+Questo sorprende i principianti che si aspettano che le stringhe funzionino come una lista.
+Per "cambiare" una stringa, crei una *nuova* stringa a partire da quella vecchia:
 
 ```python
 name = "Monty"
@@ -216,16 +216,16 @@ name = "B" + name[1:]    # creates a brand-new string "Bonty"
 print(name)              # Bonty
 ```
 
-Immutability is not a bug — it makes strings faster and safer to use.
-You will learn string slicing (the `[1:]` part above) in a later chapter.
+L'immutabilità non è un difetto — rende le stringhe più veloci e sicure da usare.
+Imparerai lo slicing delle stringhe (la parte `[1:]` qui sopra) in un capitolo successivo.
 
-## Raw Strings
+## Stringhe Raw
 
-Sometimes you want Python to ignore escape characters entirely.
-For example, if you are writing a Windows file path like `C:\new_folder\text.txt`, the `\n` and `\t` would be interpreted as a newline and a tab!
+A volte vuoi che Python ignori completamente i caratteri di escape.
+Per esempio, se stai scrivendo un percorso di file Windows come `C:\new_folder\text.txt`, `\n` e `\t` verrebbero interpretati come una nuova riga e una tabulazione!
 
-A **raw string** is created by putting `r` before the opening quote.
-Inside a raw string, backslashes are treated as literal characters:
+Una **stringa raw** si crea mettendo `r` prima della virgoletta di apertura.
+Dentro una stringa raw, le barre rovesciate sono trattate come caratteri letterali:
 
 ```python
 # Without r: \n becomes a newline, \t becomes a tab
@@ -235,32 +235,32 @@ print("C:\new_folder\text.txt")    # messy output!
 print(r"C:\new_folder\text.txt")   # C:\new_folder\text.txt
 ```
 
-Raw strings are most commonly used for file paths and patterns (which you'll learn about in Chapter 29).
+Le stringhe raw si usano più comunemente per percorsi di file e pattern (che imparerai nel Capitolo 29).
 
-!!! mascot-warning "Watch Out!"
+!!! mascot-warning "Attenzione!"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    A raw string cannot end with an **odd** number of backslashes. `r"path\"` gives a `SyntaxError` because the last `\"` looks like an escaped quote mark. If you need to end a string with a backslash, just use a regular string and write `"\\"` (two backslashes = one literal backslash).
+    Una stringa raw non può terminare con un numero **dispari** di barre rovesciate. `r"path\"` dà un `SyntaxError` perché l'ultimo `\"` sembra una virgoletta con escape. Se devi terminare una stringa con una barra rovesciata, usa semplicemente una stringa normale e scrivi `"\\"` (due barre rovesciate = una barra rovesciata letterale).
 
-## Writing Text with turtle.write()
+## Scrivere Testo con turtle.write()
 
-The `turtle.write()` function draws a text label directly onto the canvas at the turtle's current position.
-This lets your drawings include titles, captions, scores, or any other text.
+La funzione `turtle.write()` disegna un'etichetta di testo direttamente sulla tela nella posizione attuale della turtle.
+Questo permette ai tuoi disegni di includere titoli, didascalie, punteggi, o qualsiasi altro testo.
 
-The basic form is:
+La forma di base è:
 
 ```python
 t.write("Hello, turtle world!", font=("Arial", 16, "normal"))
 ```
 
-The `font` argument is a tuple of three values: the font name, the size in points, and the style (`"normal"`, `"bold"`, or `"italic"`).
+L'argomento `font` è una tupla di tre valori: il nome del font, la dimensione in punti, e lo stile (`"normal"`, `"bold"` o `"italic"`).
 
-The program below draws a polygon and then labels it.
+Il programma qui sotto disegna un poligono e poi lo etichetta.
 
-!!! mascot-thinking "Your Turn — Add the Label"
+!!! mascot-thinking "Tocca a Te — Aggiungi l'Etichetta"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below draws a pentagon but doesn't label it yet.
-    Add **one line** after the loop to call `t.write()` and display the text `"Pentagon"` on the canvas.
-    **Hint:** move `t.penup()` and position the turtle first with `t.goto(-40, -120)`, then call `t.write()`.
+    Il programma qui sotto disegna un pentagono ma non lo etichetta ancora.
+    Aggiungi **una riga** dopo il ciclo per chiamare `t.write()` e mostrare il testo `"Pentagon"` sulla tela.
+    **Suggerimento:** sposta prima `t.penup()` e posiziona la turtle con `t.goto(-40, -120)`, poi chiama `t.write()`.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -294,22 +294,22 @@ t.goto(-40, -120)
 # Use font=("Arial", 16, "bold") for a nice look`);
 </script>
 
-Once the label appears, try changing the font size, style, or the text itself!
+Una volta che l'etichetta appare, prova a cambiare la dimensione del font, lo stile, o il testo stesso!
 
-## Experiments
+## Esperimenti
 
-Try these changes to the programs above. For each one, predict what will happen first, then run it to check!
+Prova questi cambiamenti ai programmi qui sopra. Per ciascuno, prevedi prima cosa succederà, poi eseguilo per verificare!
 
-1. In the first lab, change `name = "Alex"` to your own name. **You'll know it worked when** the greeting prints your name.
-2. Change `"Ha" * 4` to `"Ha" * 10`. **You'll know it worked when** you see ten "Ha"s in a row.
-3. In the turtle lab, add a `print(len("Pentagon"))` line. **You'll know it worked when** you see `8` printed below the canvas.
-4. Change the label text to `"My " + str(sides) + "-sided shape"`. **You'll know it worked when** the label reads "My 5-sided shape".
-5. Try changing `sides = 5` to `sides = 8` and the label to `"Octagon"`. **You'll know it worked when** you see an eight-sided shape with the correct label.
+1. Nel primo laboratorio, cambia `name = "Alex"` con il tuo nome. **Saprai che ha funzionato quando** il saluto stampa il tuo nome.
+2. Cambia `"Ha" * 4` in `"Ha" * 10`. **Saprai che ha funzionato quando** vedi dieci "Ha" in fila.
+3. Nel laboratorio turtle, aggiungi una riga `print(len("Pentagon"))`. **Saprai che ha funzionato quando** vedi `8` stampato sotto la tela.
+4. Cambia il testo dell'etichetta in `"My " + str(sides) + "-sided shape"`. **Saprai che ha funzionato quando** l'etichetta dice "My 5-sided shape".
+5. Prova a cambiare `sides = 5` in `sides = 8` e l'etichetta in `"Octagon"`. **Saprai che ha funzionato quando** vedi una forma a otto lati con l'etichetta corretta.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've mastered Python's string type! You can join strings with `+`, repeat them with `*`, add newlines and tabs with escape characters, measure their length with `len()`, and even draw text labels right onto the turtle canvas. Strings are everywhere in programming — and now you know how to use them. Let's keep coding it together!
+    Hai padroneggiato il tipo stringa di Python! Puoi unire stringhe con `+`, ripeterle con `*`, aggiungere a capo e tabulazioni con i caratteri di escape, misurarne la lunghezza con `len()`, e persino disegnare etichette di testo direttamente sulla tela turtle. Le stringhe sono ovunque nella programmazione — e ora sai come usarle. Continuiamo a programmare insieme!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Commentati](./references.md)
