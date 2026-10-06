@@ -1,24 +1,24 @@
 ---
-title: Making Decisions with If/Else
-description: Teach Python to make choices using Boolean values, comparison operators, logical operators, if/elif/else branching, and nested conditionals.
+title: Prendere Decisioni con If/Else
+description: Insegna a Python a fare scelte usando i valori booleani, gli operatori di confronto, gli operatori logici, le diramazioni if/elif/else e i condizionali annidati.
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 10:55:00
 version: 0.09
 ---
 
-# Making Decisions with If/Else
+# Prendere Decisioni con If/Else
 
-## Summary
+## Riepilogo
 
-Programs need to make choices — just like Scratch's "if/then/else" blocks.
-Python's `if`, `elif`, and `else` keywords handle branching. This chapter
-introduces the Boolean type (`True`/`False`), comparison operators
-(`==`, `!=`, `<`, `>`), logical operators (`and`, `or`, `not`),
-chained comparisons, and nested conditionals for multi-way decisions.
+I programmi devono fare delle scelte — proprio come i blocchi "if/then/else" di Scratch.
+Le parole chiave `if`, `elif` ed `else` di Python gestiscono le diramazioni. Questo capitolo
+introduce il tipo booleano (`True`/`False`), gli operatori di confronto
+(`==`, `!=`, `<`, `>`), gli operatori logici (`and`, `or`, `not`),
+i confronti concatenati, e i condizionali annidati per decisioni a più vie.
 
-## Concepts Covered
+## Concetti Trattati
 
-This chapter covers the following 9 concepts from the learning graph:
+Questo capitolo tratta i seguenti 9 concetti del grafo di apprendimento:
 
 1. Boolean Type
 2. Comparison Operators
@@ -30,35 +30,35 @@ This chapter covers the following 9 concepts from the learning graph:
 8. elif Chains
 9. Nested if Statements
 
-## Prerequisites
+## Prerequisiti
 
-This chapter builds on concepts from:
+Questo capitolo si basa sui concetti di:
 
-- [Chapter 3: Variables and Numbers](../03-variables-and-numbers/index.md)
-- [Chapter 6: Math and Arithmetic](../06-math-and-arithmetic/index.md)
+- [Capitolo 3: Variabili e Numeri](../03-variables-and-numbers/index.md)
+- [Capitolo 6: Matematica e Aritmetica](../06-math-and-arithmetic/index.md)
 
 ---
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Create and compare Boolean values using `True`, `False`, and comparison operators
-- Write `if`, `if/else`, and `if/elif/else` blocks to make your program branch
-- Combine conditions with `and`, `or`, and `not`
-- Use an `if/elif/else` chain to draw different shapes based on a variable's value
+- Creare e confrontare valori booleani usando `True`, `False` e gli operatori di confronto
+- Scrivere blocchi `if`, `if/else` e `if/elif/else` per far diramare il tuo programma
+- Combinare condizioni con `and`, `or` e `not`
+- Usare una catena `if/elif/else` per disegnare forme diverse in base al valore di una variabile
 
-Every useful program makes decisions.
-A game needs to know if a player has won.
-A calculator needs to know if the denominator is zero before dividing.
-Python's **`if` statement** is how programs choose what to do based on what is true or false.
+Ogni programma utile prende decisioni.
+Un gioco deve sapere se un giocatore ha vinto.
+Una calcolatrice deve sapere se il denominatore è zero prima di dividere.
+L'**istruzione `if`** di Python è il modo in cui i programmi scelgono cosa fare in base a cosa è vero o falso.
 
-!!! mascot-welcome "Welcome to Chapter 9!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 9!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    This is the chapter where your programs stop being one-way streets! Once you know `if`, `elif`, and `else`, your code can respond differently to different situations — just like a real decision-maker. Let's code it together!
+    Questo è il capitolo in cui i tuoi programmi smettono di essere strade a senso unico! Una volta che conosci `if`, `elif` ed `else`, il tuo codice può rispondere diversamente a situazioni diverse — proprio come un vero decisore. Programmiamo insieme!
 
-## The Boolean Type
+## Il Tipo Booleano
 
-A **Boolean** (named after mathematician George Boole) is a value that is either `True` or `False` — and nothing else.
-In Python, `True` and `False` are written with a capital first letter.
+Un **booleano** (chiamato così dal matematico George Boole) è un valore che è `True` oppure `False` — e nient'altro.
+In Python, `True` e `False` si scrivono con la prima lettera maiuscola.
 
 ```python
 is_raining = True
@@ -67,43 +67,43 @@ print(is_raining)       # True
 print(type(True))       # <class 'bool'>
 ```
 
-Booleans are produced automatically whenever Python **compares** two values.
+I booleani vengono prodotti automaticamente ogni volta che Python **confronta** due valori.
 
-## Comparison Operators
+## Operatori di Confronto
 
-A **comparison operator** compares two values and returns a Boolean.
-Python has six comparison operators:
+Un **operatore di confronto** confronta due valori e restituisce un booleano.
+Python ha sei operatori di confronto:
 
-| Operator | Meaning | Example | Result |
+| Operatore | Significato | Esempio | Risultato |
 |----------|---------|---------|--------|
-| `==` | equal to | `5 == 5` | `True` |
-| `!=` | not equal to | `5 != 3` | `True` |
-| `<` | less than | `3 < 5` | `True` |
-| `>` | greater than | `5 > 3` | `True` |
-| `<=` | less than or equal | `5 <= 5` | `True` |
-| `>=` | greater than or equal | `4 >= 5` | `False` |
+| `==` | uguale a | `5 == 5` | `True` |
+| `!=` | diverso da | `5 != 3` | `True` |
+| `<` | minore di | `3 < 5` | `True` |
+| `>` | maggiore di | `5 > 3` | `True` |
+| `<=` | minore o uguale a | `5 <= 5` | `True` |
+| `>=` | maggiore o uguale a | `4 >= 5` | `False` |
 
-!!! mascot-warning "The Most Common Beginner Mistake"
+!!! mascot-warning "L'Errore più Comune dei Principianti"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    **`=` is NOT the same as `==`.** A single `=` *assigns* a value to a variable: `x = 5`. A double `==` *compares* two values: `x == 5`. Writing `if x = 5:` will give you a `SyntaxError`. This mistake happens to every beginner — now you know to look for it!
+    **`=` NON è la stessa cosa di `==`.** Un singolo `=` *assegna* un valore a una variabile: `x = 5`. Un doppio `==` *confronta* due valori: `x == 5`. Scrivere `if x = 5:` ti darà un `SyntaxError`. Questo errore capita a ogni principiante — ora sai che devi stare attento/a!
 
-!!! mascot-tip "Scratch Bridge"
+!!! mascot-tip "Ponte con Scratch"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch, the green **Operators** blocks include `=`, `<`, and `>` for comparisons, and the **Control** category has the "if/then" and "if/then/else" blocks. Python's `if` statement and comparison operators do exactly the same jobs — you just type them instead of dragging!
+    In Scratch, i blocchi verdi **Operators** includono `=`, `<` e `>` per i confronti, e la categoria **Control** ha i blocchi "if/then" e "if/then/else". L'istruzione `if` di Python e gli operatori di confronto svolgono esattamente gli stessi compiti — li digiti semplicemente invece di trascinarli!
 
-The program below uses comparisons to describe a score.
-Before clicking Run, think about which `print()` calls will actually run.
+Il programma qui sotto usa i confronti per descrivere un punteggio.
+Prima di cliccare su Run, pensa a quali chiamate `print()` verranno effettivamente eseguite.
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The variable `score` is `75`. Look at each `if` statement carefully.
-    Which conditions are `True` for a score of 75?
-    How many lines do you think will actually print?
-    Make your guess — then click Run!
+    La variabile `score` è `75`. Guarda attentamente ogni istruzione `if`.
+    Quali condizioni sono `True` per un punteggio di 75?
+    Quante righe pensi verranno effettivamente stampate?
+    Fai la tua previsione — poi clicca su Run!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see the result.
+Modifica il codice qui sotto e clicca **Run** per vedere il risultato.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -140,12 +140,12 @@ if score == 100:
     print("Perfect score!")`);
 </script>
 
-Were you right? The line `"Perfect score!"` did NOT print because `75 == 100` is `False`. The `if` body only runs when its condition is `True`.
+Avevi indovinato? La riga `"Perfect score!"` NON è stata stampata perché `75 == 100` è `False`. Il corpo dell'`if` viene eseguito solo quando la sua condizione è `True`.
 
-## The if Statement
+## L'Istruzione if
 
-An **`if` statement** runs a block of code only when a condition is `True`.
-The structure is:
+Un'**istruzione `if`** esegue un blocco di codice solo quando una condizione è `True`.
+La struttura è:
 
 ```python
 if condition:
@@ -153,12 +153,12 @@ if condition:
     do_something()
 ```
 
-The colon `:` at the end of the `if` line is required.
-The indented lines below it form the **if body** — they only run when the condition is `True`.
+I due punti `:` alla fine della riga `if` sono obbligatori.
+Le righe indentate sotto di essa formano il **corpo dell'if** — vengono eseguite solo quando la condizione è `True`.
 
-## The if…else Block
+## Il Blocco if…else
 
-An **`if/else` block** adds a second branch: code that runs when the condition is `False`.
+Un **blocco `if/else`** aggiunge un secondo ramo: codice che viene eseguito quando la condizione è `False`.
 
 ```python
 temperature = 15
@@ -169,12 +169,12 @@ else:
     print("It's cool — bring a jacket!")
 ```
 
-Every `if/else` runs *exactly one* branch — never both, never neither.
-When `temperature` is `15`, the condition `15 > 20` is `False`, so the `else` branch runs.
+Ogni `if/else` esegue *esattamente un* ramo — mai entrambi, mai nessuno.
+Quando `temperature` è `15`, la condizione `15 > 20` è `False`, quindi viene eseguito il ramo `else`.
 
-## elif Chains
+## Catene elif
 
-When you need more than two choices, use **`elif`** (short for "else if"):
+Quando hai bisogno di più di due scelte, usa **`elif`** (abbreviazione di "else if"):
 
 ```python
 score = 83
@@ -191,28 +191,28 @@ else:
     print("F")
 ```
 
-Python checks conditions from top to bottom and runs the **first** branch whose condition is `True`, then skips all the rest.
-For `score = 83`, the first `True` condition is `score >= 80`, so Python prints `"B"` and ignores the remaining branches.
+Python controlla le condizioni dall'alto verso il basso ed esegue il **primo** ramo la cui condizione è `True`, poi salta tutto il resto.
+Per `score = 83`, la prima condizione `True` è `score >= 80`, quindi Python stampa `"B"` e ignora i rami rimanenti.
 
-### See It: One Path Lights Up
+### Osservalo: Si Illumina un Solo Percorso
 
-The explorer below turns an elif chain into a flowchart. Exactly **one** path glows green, and — this is the important part — conditions after the first `True` are marked **"never checked"** because Python does not even look at them. Before you move the slider, predict: **with a score of 85, which conditions get checked, and which branch runs?**
+L'esploratore qui sotto trasforma una catena elif in un diagramma di flusso. Esattamente **un** percorso si illumina di verde e — questa è la parte importante — le condizioni dopo il primo `True` sono contrassegnate come **"mai controllate"** perché Python non le guarda nemmeno. Prima di muovere il cursore, prevedi: **con un punteggio di 85, quali condizioni vengono controllate, e quale ramo viene eseguito?**
 
 <iframe src="../../sims/control-flow-explorer/main.html" height="562" width="100%" scrolling="no"></iframe>
 
-[Explore the Control Flow Explorer MicroSim](../../sims/control-flow-explorer/index.md){ .md-button }
+[Esplora il MicroSim Control Flow Explorer](../../sims/control-flow-explorer/index.md){ .md-button }
 
-Slide the score slowly from 100 down to 0 and watch the green path move down the chain one branch at a time. Then try the **Simple if** program — what happens to the flowchart when the condition is False and there is no else?
+Fai scorrere lentamente il punteggio da 100 a 0 e osserva il percorso verde scendere lungo la catena un ramo alla volta. Poi prova il programma **Simple if** — cosa succede al diagramma di flusso quando la condizione è False e non c'è un else?
 
-## Logical Operators
+## Operatori Logici
 
-**Logical operators** combine two Boolean values into one:
+Gli **operatori logici** combinano due valori booleani in uno:
 
-| Operator | Meaning | Example | Result |
+| Operatore | Significato | Esempio | Risultato |
 |----------|---------|---------|--------|
-| `and` | Both must be True | `5 > 3 and 2 < 4` | `True` |
-| `or` | At least one must be True | `5 > 3 or 2 > 4` | `True` |
-| `not` | Flips True↔False | `not True` | `False` |
+| `and` | Entrambi devono essere True | `5 > 3 and 2 < 4` | `True` |
+| `or` | Almeno uno deve essere True | `5 > 3 or 2 > 4` | `True` |
+| `not` | Inverte True↔False | `not True` | `False` |
 
 ```python
 age = 13
@@ -225,19 +225,19 @@ if age < 5 or age > 65:
     print("Free admission!")
 ```
 
-### See It: The Boolean Logic Lab
+### Osservalo: Il Boolean Logic Lab
 
-Instead of memorizing truth tables, build them yourself. Set inputs A and B in the lab below and watch the result lamp. Before you start, predict: **if A is False, does `A and B` ever light the lamp — no matter what B is?**
+Invece di memorizzare le tavole di verità, costruiscile tu stesso/a. Imposta gli input A e B nel laboratorio qui sotto e osserva la lampadina del risultato. Prima di iniziare, prevedi: **se A è False, `A and B` accende mai la lampadina — indipendentemente da B?**
 
 <iframe src="../../sims/boolean-logic-lab/main.html" height="512" width="100%" scrolling="no"></iframe>
 
-[Explore the Boolean Logic Lab MicroSim](../../sims/boolean-logic-lab/index.md){ .md-button }
+[Esplora il MicroSim Boolean Logic Lab](../../sims/boolean-logic-lab/index.md){ .md-button }
 
-Notice something sneaky: when A alone decides the answer, the B block grays out and says "Python never looked here." That trick is called **short-circuit evaluation**, and you will meet it again in Chapter 19. The bonus panel at the bottom previews another Chapter 19 idea — every value, even `0` and `""`, can act as a Boolean.
+Nota una cosa furtiva: quando A da solo decide la risposta, il blocco B si oscura e dice "Python non ha mai guardato qui." Questo trucco si chiama **valutazione a corto circuito**, e lo incontrerai di nuovo nel Capitolo 19. Il pannello bonus in fondo anticipa un'altra idea del Capitolo 19 — ogni valore, anche `0` e `""`, può comportarsi come un booleano.
 
-## Chained Comparisons
+## Confronti Concatenati
 
-Python lets you write range checks in a natural, math-like way:
+Python ti permette di scrivere controlli di intervallo in un modo naturale, simile alla matematica:
 
 ```python
 x = 15
@@ -251,12 +251,12 @@ if x > 10 and x < 20:
     print("x is between 10 and 20")
 ```
 
-Both forms are correct, but chained comparisons read more naturally and look more like how you'd write it in math class.
+Entrambe le forme sono corrette, ma i confronti concatenati si leggono in modo più naturale e somigliano più a come lo scriveresti nella lezione di matematica.
 
-## Nested if Statements
+## Istruzioni if Annidate
 
-A **nested `if`** is an `if` statement placed inside another `if` body.
-Use nesting when you need to check a second condition only after a first one is already `True`:
+Un **`if` annidato** è un'istruzione `if` posizionata dentro il corpo di un altro `if`.
+Usa l'annidamento quando devi controllare una seconda condizione solo dopo che una prima è già `True`:
 
 ```python
 is_member = True
@@ -271,18 +271,18 @@ else:
     print("Please sign up first.")
 ```
 
-Keep nesting to two levels maximum — deeply nested code becomes hard to read quickly.
+Mantieni l'annidamento a un massimo di due livelli — il codice annidato troppo in profondità diventa difficile da leggere velocemente.
 
-## if/elif/else with Turtle: Draw Different Shapes
+## if/elif/else con Turtle: Disegna Forme Diverse
 
-Now let's use branching to make the turtle draw different shapes based on a variable.
-The program below should draw a different shape depending on the value of `shape_choice` — but the `elif` chain is incomplete.
+Ora usiamo le diramazioni per far disegnare alla turtle forme diverse in base a una variabile.
+Il programma qui sotto dovrebbe disegnare una forma diversa in base al valore di `shape_choice` — ma la catena `elif` è incompleta.
 
-!!! mascot-thinking "Your Turn — Complete the elif Chain"
+!!! mascot-thinking "Tocca a Te — Completa la Catena elif"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program checks `shape_choice` and draws a square when it equals `"square"`.
-    Add **two more elif blocks** so that `"triangle"` draws a triangle (3 sides, 120° turns)
-    and `"hexagon"` draws a hexagon (6 sides, 60° turns).
+    Il programma controlla `shape_choice` e disegna un quadrato quando è uguale a `"square"`.
+    Aggiungi **altri due blocchi elif** così che `"triangle"` disegni un triangolo (3 lati, svolte di 120°)
+    e `"hexagon"` disegni un esagono (6 lati, svolte di 60°).
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -316,22 +316,22 @@ else:
     t.write("Unknown shape: " + shape_choice, font=("Arial", 14, "normal"))`);
 </script>
 
-Once all three shapes work, try setting `shape_choice = "circle"` to see the else branch draw the "Unknown shape" message!
+Una volta che tutte e tre le forme funzionano, prova a impostare `shape_choice = "circle"` per vedere il ramo else disegnare il messaggio "Unknown shape"!
 
-## Experiments
+## Esperimenti
 
-Try these changes to the programs above. For each one, predict what will happen first, then run it to check!
+Prova questi cambiamenti ai programmi qui sopra. Per ciascuno, prevedi prima cosa succederà, poi eseguilo per verificare!
 
-1. In the first lab, change `score = 75` to `score = 92`. **You'll know it worked when** the `if score >= 60` block still runs but now `score >= 90` would also be `True`.
-2. Add an `elif score == 75: print("Exactly 75!")` block. **You'll know it worked when** changing `score` back to `75` prints that message.
-3. In the turtle lab, add an `elif shape_choice == "pentagon":` block that draws 5 sides with 72° turns. **You'll know it worked when** `shape_choice = "pentagon"` draws a pentagon.
-4. Add `t.pencolor("purple")` inside the triangle branch only. **You'll know it worked when** the triangle draws in purple but the square stays black.
-5. Try `shape_choice = "hexagon"`. **You'll know it worked when** a six-sided hexagon appears on the canvas.
+1. Nel primo laboratorio, cambia `score = 75` in `score = 92`. **Saprai che ha funzionato quando** il blocco `if score >= 60` viene ancora eseguito ma ora anche `score >= 90` sarebbe `True`.
+2. Aggiungi un blocco `elif score == 75: print("Exactly 75!")`. **Saprai che ha funzionato quando** riportare `score` a `75` stampa quel messaggio.
+3. Nel laboratorio turtle, aggiungi un blocco `elif shape_choice == "pentagon":` che disegni 5 lati con svolte di 72°. **Saprai che ha funzionato quando** `shape_choice = "pentagon"` disegna un pentagono.
+4. Aggiungi `t.pencolor("purple")` solo dentro il ramo del triangolo. **Saprai che ha funzionato quando** il triangolo viene disegnato in viola ma il quadrato resta nero.
+5. Prova `shape_choice = "hexagon"`. **Saprai che ha funzionato quando** appare un esagono a sei lati sulla tela.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Your programs can now make decisions! You know Boolean values, six comparison operators, three logical operators, and four types of branching: `if`, `if/else`, `elif` chains, and nested `if`. These are the building blocks of every interactive program ever written. Let's keep coding it together!
+    I tuoi programmi ora possono prendere decisioni! Conosci i valori booleani, sei operatori di confronto, tre operatori logici, e quattro tipi di diramazione: `if`, `if/else`, catene `elif`, e `if` annidati. Questi sono gli elementi costitutivi di ogni programma interattivo mai scritto. Continuiamo a programmare insieme!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Commentati](./references.md)

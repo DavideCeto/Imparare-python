@@ -1,42 +1,42 @@
-# Quiz: Making Decisions with If/Else
+# Quiz: Prendere Decisioni con If/Else
 
-Test your understanding of Boolean values, comparison operators, and if/elif/else branching with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione dei valori booleani, degli operatori di confronto, e delle diramazioni if/elif/else con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What are the only two possible values of a Boolean in Python?
+#### 1. Quali sono gli unici due valori possibili per un booleano in Python?
 
 <div class="upper-alpha" markdown>
-1. `yes` and `no`
-2. `1` and `0`
-3. `True` and `False`
-4. `on` and `off`
+1. `yes` e `no`
+2. `1` e `0`
+3. `True` e `False`
+4. `on` e `off`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. In Python, Boolean values are written exactly as `True` and `False` — with a capital first letter. They belong to the type `bool`. Booleans are the result of comparisons and are used in `if` statements to decide which branch of code to run.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. In Python, i valori booleani si scrivono esattamente come `True` e `False` — con la prima lettera maiuscola. Appartengono al tipo `bool`. I booleani sono il risultato dei confronti e vengono usati nelle istruzioni `if` per decidere quale ramo di codice eseguire.
 
     **Concept Tested:** Boolean Type
 
 ---
 
-#### 2. What is the difference between `=` and `==` in Python?
+#### 2. Qual è la differenza tra `=` e `==` in Python?
 
 <div class="upper-alpha" markdown>
-1. `=` compares two values; `==` assigns a value to a variable
-2. `=` assigns a value to a variable; `==` compares two values for equality
-3. Both do the same thing — they are interchangeable
-4. `=` works with numbers; `==` works with strings
+1. `=` confronta due valori; `==` assegna un valore a una variabile
+2. `=` assegna un valore a una variabile; `==` confronta due valori per verificarne l'uguaglianza
+3. Entrambi fanno la stessa cosa — sono intercambiabili
+4. `=` funziona con i numeri; `==` funziona con le stringhe
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `=` is the assignment operator: `x = 5` stores the value 5 in the variable `x`. `==` is the equality comparison operator: `x == 5` checks whether `x` currently holds the value 5 and returns `True` or `False`. Using `=` inside an `if` condition causes a `SyntaxError` — this is one of the most common beginner mistakes.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `=` è l'operatore di assegnazione: `x = 5` memorizza il valore 5 nella variabile `x`. `==` è l'operatore di confronto per l'uguaglianza: `x == 5` verifica se `x` contiene attualmente il valore 5 e restituisce `True` o `False`. Usare `=` dentro una condizione `if` causa un `SyntaxError` — questo è uno degli errori più comuni tra i principianti.
 
     **Concept Tested:** Comparison Operators
 
 ---
 
-#### 3. What will this code print when `score = 75`?
+#### 3. Cosa stamperà questo codice quando `score = 75`?
 
 ```python
 if score >= 60:
@@ -47,51 +47,51 @@ else:
 
 <div class="upper-alpha" markdown>
 1. `Try again!`
-2. Both `Passing!` and `Try again!`
+2. Sia `Passing!` sia `Try again!`
 3. `Passing!`
-4. Nothing — the program skips both branches
+4. Niente — il programma salta entrambi i rami
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. When `score = 75`, the condition `score >= 60` evaluates to `True` (75 is greater than or equal to 60). So Python runs the `if` block and prints `"Passing!"`. Since the `if` block ran, Python skips the `else` block entirely. An `if/else` always runs exactly one of the two branches.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Quando `score = 75`, la condizione `score >= 60` si valuta come `True` (75 è maggiore o uguale a 60). Quindi Python esegue il blocco `if` e stampa `"Passing!"`. Dato che il blocco `if` è stato eseguito, Python salta completamente il blocco `else`. Un `if/else` esegue sempre esattamente uno dei due rami.
 
     **Concept Tested:** if...else Block
 
 ---
 
-#### 4. What does the `elif` keyword do in a chain of conditions?
+#### 4. Cosa fa la parola chiave `elif` in una catena di condizioni?
 
 <div class="upper-alpha" markdown>
-1. It runs alongside the `if` block every time the program runs
-2. It creates a new variable to store a condition result
-3. It checks an additional condition only if all previous conditions were False
-4. It restarts the entire if/elif/else chain from the beginning
+1. Viene eseguita insieme al blocco `if` ogni volta che il programma viene eseguito
+2. Crea una nuova variabile per memorizzare il risultato di una condizione
+3. Controlla una condizione aggiuntiva solo se tutte le condizioni precedenti erano False
+4. Riavvia l'intera catena if/elif/else dall'inizio
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `elif` (short for "else if") adds another branch to a decision chain. Python checks conditions from top to bottom and runs the body of the **first** branch whose condition is `True`, then skips all remaining branches. If no `if` or `elif` is `True`, the `else` branch runs (if one exists).
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `elif` (abbreviazione di "else if") aggiunge un altro ramo a una catena decisionale. Python controlla le condizioni dall'alto verso il basso ed esegue il corpo del **primo** ramo la cui condizione è `True`, poi salta tutti i rami rimanenti. Se nessun `if` o `elif` è `True`, viene eseguito il ramo `else` (se esiste).
 
     **Concept Tested:** elif Chains
 
 ---
 
-#### 5. What does the `and` logical operator require for a combined condition to be `True`?
+#### 5. Cosa richiede l'operatore logico `and` perché una condizione combinata sia `True`?
 
 <div class="upper-alpha" markdown>
-1. At least one of the conditions must be `True`
-2. Neither condition can be `True`
-3. Both conditions must be `True`
-4. The conditions must be exactly equal to each other
+1. Almeno una delle condizioni deve essere `True`
+2. Nessuna delle due condizioni può essere `True`
+3. Entrambe le condizioni devono essere `True`
+4. Le condizioni devono essere esattamente uguali tra loro
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. The `and` operator returns `True` only when **both** conditions on its left and right are `True`. If either one is `False`, the whole expression is `False`. This is different from `or`, which returns `True` when **at least one** condition is `True`.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. L'operatore `and` restituisce `True` solo quando **entrambe** le condizioni alla sua sinistra e destra sono `True`. Se anche solo una è `False`, l'intera espressione è `False`. Questo è diverso da `or`, che restituisce `True` quando **almeno una** condizione è `True`.
 
     **Concept Tested:** Logical Operators
 
 ---
 
-#### 6. What is the result of `not True`?
+#### 6. Qual è il risultato di `not True`?
 
 <div class="upper-alpha" markdown>
 1. `True`
@@ -100,14 +100,14 @@ else:
 4. `False`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. The `not` operator flips a Boolean value: `not True` becomes `False`, and `not False` becomes `True`. It is useful for making conditions more readable — for example, `if not is_finished:` reads naturally as "if we are not finished yet."
+??? question "Mostra risposta"
+    La risposta corretta è **D**. L'operatore `not` inverte un valore booleano: `not True` diventa `False`, e `not False` diventa `True`. È utile per rendere le condizioni più leggibili — per esempio, `if not is_finished:` si legge naturalmente come "se non abbiamo ancora finito."
 
     **Concept Tested:** Logical Operators
 
 ---
 
-#### 7. Which grade will Python print for `score = 83` in this code?
+#### 7. Quale voto stamperà Python per `score = 83` in questo codice?
 
 ```python
 if score >= 90:
@@ -124,53 +124,53 @@ else:
 1. `A`
 2. `C`
 3. `B`
-4. Both `B` and `C`
+4. Sia `B` sia `C`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Python checks conditions from top to bottom and stops at the first `True` one. `83 >= 90` is `False`, so it moves to `83 >= 80`, which is `True`. Python prints `"B"` and skips all remaining branches, including `elif score >= 70`. Even though `83 >= 70` is also `True`, it is never checked because a branch already ran.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Python controlla le condizioni dall'alto verso il basso e si ferma alla prima che è `True`. `83 >= 90` è `False`, quindi passa a `83 >= 80`, che è `True`. Python stampa `"B"` e salta tutti i rami rimanenti, incluso `elif score >= 70`. Anche se `83 >= 70` è anch'essa `True`, non viene mai controllata perché un ramo è già stato eseguito.
 
     **Concept Tested:** elif Chains
 
 ---
 
-#### 8. What does this chained comparison check?
+#### 8. Cosa verifica questo confronto concatenato?
 
 ```python
 if 0 <= age < 18:
 ```
 
 <div class="upper-alpha" markdown>
-1. Whether `age` equals 0 or equals 18
-2. Whether `age` is between 0 and 18, including 0 but not including 18
-3. Whether `age` is negative or greater than 18
-4. Whether `age` is exactly 0 or exactly 18
+1. Se `age` è uguale a 0 o uguale a 18
+2. Se `age` è compresa tra 0 e 18, includendo 0 ma non 18
+3. Se `age` è negativa o maggiore di 18
+4. Se `age` è esattamente 0 o esattamente 18
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. The chained comparison `0 <= age < 18` checks whether `age` is at least 0 AND less than 18. This is equivalent to `age >= 0 and age < 18`. Python allows this math-like notation for range checks. Age 0 would pass (0 <= 0 is True) but age 18 would not (18 < 18 is False).
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Il confronto concatenato `0 <= age < 18` verifica se `age` è almeno 0 E minore di 18. Questo equivale a `age >= 0 and age < 18`. Python permette questa notazione simile alla matematica per i controlli di intervallo. L'età 0 passerebbe il test (0 <= 0 è True) ma l'età 18 no (18 < 18 è False).
 
     **Concept Tested:** Chained Comparisons
 
 ---
 
-#### 9. What is a nested `if` statement?
+#### 9. Cos'è un'istruzione `if` annidata?
 
 <div class="upper-alpha" markdown>
-1. An `if` statement written on a single line with no colon
-2. An `if` statement placed inside the body of another `if` statement
-3. An `if` statement that checks more than three conditions at once
-4. An `if` statement that runs backwards from bottom to top
+1. Un'istruzione `if` scritta su una sola riga senza i due punti
+2. Un'istruzione `if` posizionata dentro il corpo di un'altra istruzione `if`
+3. Un'istruzione `if` che controlla più di tre condizioni contemporaneamente
+4. Un'istruzione `if` che viene eseguita all'indietro dal basso verso l'alto
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. A nested `if` is an `if` statement written inside the body (indented block) of another `if` statement. This allows you to check a second condition only when the first condition is already `True`. Nesting gives you fine-grained control, but too many levels of nesting can make code hard to read.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Un `if` annidato è un'istruzione `if` scritta dentro il corpo (blocco indentato) di un'altra istruzione `if`. Questo ti permette di controllare una seconda condizione solo quando la prima condizione è già `True`. L'annidamento ti dà un controllo fine, ma troppi livelli di annidamento possono rendere il codice difficile da leggere.
 
     **Concept Tested:** Nested if Statements
 
 ---
 
-#### 10. Which condition correctly checks if a variable `n` is both greater than 0 AND even?
+#### 10. Quale condizione verifica correttamente se una variabile `n` è sia maggiore di 0 SIA pari?
 
 <div class="upper-alpha" markdown>
 1. `if n > 0 or n % 2 == 0:`
@@ -179,8 +179,8 @@ if 0 <= age < 18:
 4. `if n > 0 not n % 2 == 0:`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. To require both conditions, use `and`. `n > 0` checks that the number is positive, and `n % 2 == 0` checks that the remainder after dividing by 2 is zero (meaning it is even). Using `or` would make the condition `True` if only one of them is satisfied, which is not what we want.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Per richiedere entrambe le condizioni, usa `and`. `n > 0` verifica che il numero sia positivo, e `n % 2 == 0` verifica che il resto dopo la divisione per 2 sia zero (cioè che sia pari). Usare `or` renderebbe la condizione `True` se ne fosse soddisfatta anche solo una, il che non è quello che vogliamo.
 
     **Concept Tested:** Logical Operators
 
