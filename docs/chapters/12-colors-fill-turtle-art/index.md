@@ -1,27 +1,27 @@
 ---
-title: Colors, Fill, and Turtle Art
-description: Explore hex color codes, the RGB and HSL color models, transparency, and how to paint solid shapes with begin_fill() and end_fill()
+title: Colori, Riempimento e Arte con la Turtle
+description: Esplora i codici colore esadecimali, i modelli di colore RGB e HSL, la trasparenza, e come colorare forme solide con begin_fill() e end_fill()
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 12:00:00
 version: 0.09
 ---
 
-# Colors, Fill, and Turtle Art
+# Colori, Riempimento e Arte con la Turtle
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Use **hex color codes** and **RGB values** to set any color you can imagine
-- Explain the difference between the **RGB** and **HSL** color models
-- Paint solid filled shapes using `begin_fill()` and `end_fill()`
-- Set both the **pen color** and **background color** of the turtle canvas
+- Usare **codici colore esadecimali** e **valori RGB** per impostare qualsiasi colore tu possa immaginare
+- Spiegare la differenza tra i modelli di colore **RGB** e **HSL**
+- Colorare forme solide riempite usando `begin_fill()` e `end_fill()`
+- Impostare sia il **colore della penna** sia il **colore di sfondo** del canvas della tartaruga
 
-Colors make turtle art come alive. Until now our turtle has drawn outlines.
-Today we unlock the full color palette and learn to paint filled shapes.
+I colori fanno venire viva l'arte con la tartaruga. Finora la nostra tartaruga ha disegnato solo contorni.
+Oggi sblocchiamo l'intera tavolozza dei colori e impariamo a colorare forme riempite.
 
-!!! mascot-welcome "Welcome to Chapter 12!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 12!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Ready to paint? By the end of this lesson your turtle drawings will look like real art.
-    Let's mix some colors and fill some shapes! Let's code it together!
+    Pronto a dipingere? Alla fine di questa lezione i tuoi disegni con la tartaruga sembreranno vera arte.
+    Mescoliamo un po' di colori e riempiamo qualche forma! Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -29,17 +29,17 @@ Today we unlock the full color palette and learn to paint filled shapes.
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## Color in Turtle Graphics
+## Il Colore nella Grafica Turtle
 
-You already know how to set a color by name, like `t.pencolor("red")`.
-Python's turtle knows around 140 named colors, from `"aquamarine"` to `"yellow"`.
+Sai già come impostare un colore per nome, come `t.pencolor("red")`.
+La tartaruga di Python conosce circa 140 colori con nome, da `"aquamarine"` a `"yellow"`.
 
-But there are millions of colors that don't have names. To reach those, you need **color codes**.
+Ma ci sono milioni di colori che non hanno un nome. Per raggiungerli, hai bisogno dei **codici colore**.
 
-## Hex Color Codes
+## Codici Colore Esadecimali
 
-A **hex color code** is a six-character code that describes a color precisely.
-Each code starts with a `#` sign and contains exactly six letters and numbers.
+Un **codice colore esadecimale** è un codice di sei caratteri che descrive un colore con precisione.
+Ogni codice inizia con il simbolo `#` e contiene esattamente sei lettere e numeri.
 
 ```
 #FF0000  →  pure red
@@ -50,18 +50,18 @@ Each code starts with a `#` sign and contains exactly six letters and numbers.
 #FF6347  →  tomato red
 ```
 
-The six characters are split into three pairs:
-- First pair controls **red** (00 to FF)
-- Second pair controls **green** (00 to FF)
-- Third pair controls **blue** (00 to FF)
+I sei caratteri si dividono in tre coppie:
+- La prima coppia controlla il **rosso** (00 a FF)
+- La seconda coppia controlla il **verde** (00 a FF)
+- La terza coppia controlla il **blu** (00 a FF)
 
-`FF` means maximum brightness (255 in decimal). `00` means none (0).
+`FF` significa luminosità massima (255 in decimale). `00` significa nessuna (0).
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below draws a square in three different hex colors.
-    What colors do you think `#FF00FF` and `#FFFF00` will produce?
-    Make your guess — then run it to find out!
+    Il programma sotto disegna un quadrato in tre diversi colori esadecimali.
+    Quali colori pensi che produrranno `#FF00FF` e `#FFFF00`?
+    Fai la tua previsione — poi eseguilo per scoprirlo!
 
 ```python
 import turtle
@@ -114,25 +114,25 @@ for col, pos in zip(colors, positions):
         t.right(90)`);
 </script>
 
-Were you right? `#FF00FF` is magenta (red + blue, no green) and `#FFFF00` is yellow (red + green, no blue).
+Avevi indovinato? `#FF00FF` è magenta (rosso + blu, senza verde) e `#FFFF00` è giallo (rosso + verde, senza blu).
 
-## The RGB Color Model
+## Il Modello di Colore RGB
 
-The **RGB color model** mixes red, green, and blue light to make every other color.
-It's the same model your screen uses — every pixel on your monitor has a tiny red light, a green light, and a blue light.
+Il **modello di colore RGB** mescola luce rossa, verde, e blu per creare ogni altro colore.
+È lo stesso modello usato dal tuo schermo — ogni pixel del tuo monitor ha una minuscola luce rossa, una verde, e una blu.
 
-| Color | Red | Green | Blue |
+| Colore | Rosso | Verde | Blu |
 |-------|-----|-------|------|
-| Red | 255 | 0 | 0 |
-| Green | 0 | 255 | 0 |
-| Blue | 0 | 0 | 255 |
-| Yellow | 255 | 255 | 0 |
-| Cyan | 0 | 255 | 255 |
+| Rosso | 255 | 0 | 0 |
+| Verde | 0 | 255 | 0 |
+| Blu | 0 | 0 | 255 |
+| Giallo | 255 | 255 | 0 |
+| Ciano | 0 | 255 | 255 |
 | Magenta | 255 | 0 | 255 |
-| White | 255 | 255 | 255 |
-| Black | 0 | 0 | 0 |
+| Bianco | 255 | 255 | 255 |
+| Nero | 0 | 0 | 0 |
 
-You can use RGB values directly in turtle by converting them to a hex color string first. The helper function below does that math so you can keep thinking in 0–255 values.
+Puoi usare valori RGB direttamente in turtle convertendoli prima in una stringa di colore esadecimale. La funzione di supporto sotto fa questo calcolo così puoi continuare a pensare in valori da 0 a 255.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -170,47 +170,47 @@ for rgb, pos in zip(rgb_colors, positions):
     t.circle(40)`);
 </script>
 
-Try changing the numbers in the `rgb_colors` list. Each number goes from 0 (none) to 255 (full brightness).
+Prova a cambiare i numeri nella lista `rgb_colors`. Ogni numero va da 0 (nessuna) a 255 (luminosità piena).
 
-### See It: Mix Your Own Color
+### Guardalo: Mescola il Tuo Colore
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Before you touch the sliders below, predict: to make a bright **yellow**,
-    which two sliders need to be high, and which one low? Mix it and check
-    the hex code you get!
+    Prima di toccare gli slider sotto, prevedi: per ottenere un **giallo** brillante,
+    quali due slider devono essere alti, e quale basso? Mescolalo e controlla
+    il codice esadecimale che ottieni!
 
 <iframe src="../../sims/rgb-color-mixer/main.html" height="482" width="100%" scrolling="no"></iframe>
 
-[Explore the RGB Color Mixer MicroSim](../../sims/rgb-color-mixer/index.md){ .md-button }
+[Esplora il MicroSim RGB Color Mixer](../../sims/rgb-color-mixer/index.md){ .md-button }
 
-Watch the hex code as you drag one slider — only that channel's **two digits** change, highlighted in yellow. When you find a color you love, copy the `t.pencolor(...)` line straight into any turtle lab in this chapter. Click **New Challenge** to play match-the-color.
+Guarda il codice esadecimale mentre trascini uno slider — solo le **due cifre** di quel canale cambiano, evidenziate in giallo. Quando trovi un colore che ti piace, copia la riga `t.pencolor(...)` direttamente in qualsiasi laboratorio turtle di questo capitolo. Clicca **New Challenge** per giocare ad abbinare il colore.
 
-## Background and Pen Colors
+## Colori di Sfondo e della Penna
 
-Turtle lets you set two separate colors at once.
+Turtle ti permette di impostare due colori separati contemporaneamente.
 
-- `t.pencolor("red")` — the color of the lines the turtle draws
-- `t.fillcolor("yellow")` — the color used to fill shapes
-- `turtle.bgcolor("lightblue")` — the canvas background color
+- `t.pencolor("red")` — il colore delle linee che la tartaruga disegna
+- `t.fillcolor("yellow")` — il colore usato per riempire le forme
+- `turtle.bgcolor("lightblue")` — il colore di sfondo del canvas
 
-You can also set both pen and fill at once:
+Puoi anche impostare penna e riempimento insieme:
 
 ```python
 t.color("blue", "yellow")   # pencolor = blue, fillcolor = yellow
 ```
 
-## Filling Shapes with `begin_fill()` and `end_fill()`
+## Riempire Forme con `begin_fill()` ed `end_fill()`
 
-To paint a solid shape, wrap your drawing code between two calls:
+Per colorare una forma solida, racchiudi il tuo codice di disegno tra due chiamate:
 
-1. `t.begin_fill()` — tells the turtle "I'm about to draw a shape to fill"
-2. *draw the shape*
-3. `t.end_fill()` — seals the shape and fills it with the fill color
+1. `t.begin_fill()` — dice alla tartaruga "sto per disegnare una forma da riempire"
+2. *disegna la forma*
+3. `t.end_fill()` — sigilla la forma e la riempie con il colore di riempimento
 
-Before we look at the code, two key points:
-- You must set the fill color *before* calling `begin_fill()`
-- The shape must be closed (end where it started) for the fill to look correct
+Prima di guardare il codice, due punti chiave:
+- Devi impostare il colore di riempimento *prima* di chiamare `begin_fill()`
+- La forma deve essere chiusa (finire dove è iniziata) perché il riempimento appaia corretto
 
 ```python
 import turtle
@@ -251,39 +251,39 @@ for i in range(6):
 t.end_fill()`);
 </script>
 
-Try changing `"gold"` to any color name or hex code. Try changing `6` to `3` for a triangle or `5` for a pentagon.
+Prova a cambiare `"gold"` con qualsiasi nome di colore o codice esadecimale. Prova a cambiare `6` in `3` per un triangolo o `5` per un pentagono.
 
-## Color Theory Basics
+## Le Basi della Teoria del Colore
 
-Before we mix colors on the canvas, let's understand some color theory terms:
+Prima di mescolare colori sul canvas, capiamo alcuni termini della teoria del colore:
 
-- **Hue** — the basic color family (red, orange, yellow, green, blue, violet)
-- **Saturation** — how vivid or washed-out the color is (100% = vivid, 0% = grey)
-- **Lightness** — how bright or dark the color is (0% = black, 100% = white)
-- **Complementary colors** — colors opposite each other on the color wheel (e.g. red and green, blue and orange). They create strong contrast when placed side by side.
+- **Tonalità (Hue)** — la famiglia base del colore (rosso, arancione, giallo, verde, blu, violetto)
+- **Saturazione (Saturation)** — quanto è vivido o sbiadito il colore (100% = vivido, 0% = grigio)
+- **Luminosità (Lightness)** — quanto è chiaro o scuro il colore (0% = nero, 100% = bianco)
+- **Colori complementari** — colori opposti tra loro sulla ruota dei colori (ad es. rosso e verde, blu e arancione). Creano un forte contrasto quando sono posti fianco a fianco.
 
-## The HSL Color Model
+## Il Modello di Colore HSL
 
-The **HSL color model** describes colors in three values: **Hue**, **Saturation**, and **Lightness**.
-Many designers prefer HSL because it's easier to think about than RGB:
-"I want a moderately bright, slightly greenish blue" is natural in HSL but tricky in RGB.
+Il **modello di colore HSL** descrive i colori con tre valori: **Tonalità**, **Saturazione**, e **Luminosità**.
+Molti designer preferiscono l'HSL perché è più facile da immaginare rispetto all'RGB:
+"Voglio un blu moderatamente luminoso, leggermente verdastro" è naturale in HSL ma difficile in RGB.
 
-Python's turtle doesn't support HSL directly, but the concept appears in CSS and image editing tools.
-You can convert HSL to RGB using the `colorsys` module (covered later in the course).
+La tartaruga di Python non supporta l'HSL direttamente, ma il concetto appare nel CSS e negli strumenti di editing delle immagini.
+Puoi convertire HSL in RGB usando il modulo `colorsys` (trattato più avanti nel corso).
 
-## Transparency and Alpha
+## Trasparenza e Alpha
 
-In many drawing systems, color also has an **alpha** value that controls transparency.
-An alpha of 1.0 means fully opaque (solid) and 0.0 means fully transparent (invisible).
+In molti sistemi di disegno, il colore ha anche un valore **alpha** che controlla la trasparenza.
+Un alpha di 1.0 significa completamente opaco (solido) e 0.0 significa completamente trasparente (invisibile).
 
-Python's turtle doesn't support transparency natively, but image processing libraries like Pillow (Chapter 34) do.
-For now, knowing what alpha means will help you when you encounter it in web design, image editors, and game development.
+La tartaruga di Python non supporta la trasparenza nativamente, ma le librerie di elaborazione delle immagini come Pillow (Capitolo 34) sì.
+Per ora, sapere cosa significa alpha ti aiuterà quando lo incontrerai nel web design, negli editor di immagini, e nello sviluppo di giochi.
 
-## A Filled Flower
+## Un Fiore Riempito
 
-Let's combine everything: fill color, hex codes, and loops to create a colorful flower.
+Combiniamo tutto: colore di riempimento, codici esadecimali, e cicli per creare un fiore colorato.
 
-Before the code, note that `t.circle(r, extent)` draws an arc of a circle. If `extent=360` it's a full circle; `extent=120` draws one-third of a circle, which we'll use as a "petal."
+Prima del codice, nota che `t.circle(r, extent)` disegna un arco di un cerchio. Se `extent=360` è un cerchio completo; `extent=120` disegna un terzo di cerchio, che useremo come "petalo."
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -318,13 +318,13 @@ for i in range(6):
 t.hideturtle()`);
 </script>
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add the Missing Lines"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi le Righe Mancanti"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below draws a red square outline, but it should be filled with blue.
-    Add the three missing lines — set the fill color, open the fill, and close the fill —
-    to make the square solid blue with a red border!
+    Il programma sotto disegna il contorno di un quadrato rosso, ma dovrebbe essere riempito di blu.
+    Aggiungi le tre righe mancanti — imposta il colore di riempimento, apri il riempimento, e chiudi il riempimento —
+    per rendere il quadrato blu solido con un bordo rosso!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -354,31 +354,31 @@ for i in range(4):
 # Add: end_fill()`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. In the hex color demo, change `#FF0000` to `#FF8800`.
-   **You'll know it worked when** the first square turns orange.
+1. Nella demo dei colori esadecimali, cambia `#FF0000` in `#FF8800`.
+   **Saprai che ha funzionato quando** il primo quadrato diventa arancione.
 
-2. In the RGB circles demo, change the first tuple to `(255, 165, 0)`.
-   **You'll know it worked when** the first circle turns orange.
+2. Nella demo dei cerchi RGB, cambia la prima tupla in `(255, 165, 0)`.
+   **Saprai che ha funzionato quando** il primo cerchio diventa arancione.
 
-3. In the filled hexagon demo, add `turtle.bgcolor("navy")` before the loop.
-   **You'll know it worked when** the background turns dark blue.
+3. Nella demo dell'esagono riempito, aggiungi `turtle.bgcolor("navy")` prima del ciclo.
+   **Saprai che ha funzionato quando** lo sfondo diventa blu scuro.
 
-4. In the filled hexagon demo, add a `t.pencolor("#000000")` line before `t.begin_fill()`.
-   **You'll know it worked when** the hexagon has a black outline around the gold fill.
+4. Nella demo dell'esagono riempito, aggiungi una riga `t.pencolor("#000000")` prima di `t.begin_fill()`.
+   **Saprai che ha funzionato quando** l'esagono ha un contorno nero attorno al riempimento dorato.
 
-5. Modify the flower so each petal is the same color but the background is black.
-   **You'll know it worked when** your single-color flower glows against the dark background.
+5. Modifica il fiore così che ogni petalo sia dello stesso colore ma lo sfondo sia nero.
+   **Saprai che ha funzionato quando** il tuo fiore monocolore risplende contro lo sfondo scuro.
 
-!!! mascot-celebration "Beautiful Work!"
+!!! mascot-celebration "Lavoro Stupendo!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've mastered hex codes, RGB, HSL, fill colors, and background colors!
-    Your turtle art is now full-color and full of life.
-    Keep experimenting — every great digital artist started exactly where you are now!
+    Hai imparato i codici esadecimali, l'RGB, l'HSL, i colori di riempimento, e i colori di sfondo!
+    La tua arte con la tartaruga è ora a colori pieni e piena di vita.
+    Continua a sperimentare — ogni grande artista digitale è iniziato esattamente dove sei tu ora!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)

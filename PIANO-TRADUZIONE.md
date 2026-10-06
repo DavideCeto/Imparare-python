@@ -29,6 +29,10 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
 - `docs/chapters/11-functions-parameters-scope/` (index, references, quiz — questo capitolo
   nell'originale inglese non ha le sezioni "Summary"/"Concepts Covered"/"Prerequisites", a
   differenza dei Capitoli 1-10; la traduzione rispecchia questa differenza di struttura)
+- `docs/chapters/12-colors-fill-turtle-art/` (index, references, quiz — i nomi dei colori nella
+  tabella RGB e nelle risposte del quiz sono stati tradotti perché sono prosa descrittiva, non
+  identificatori di codice; i termini Hue/Saturation/Lightness sono stati tradotti con
+  l'originale inglese tra parentesi alla prima occorrenza)
 - `docs/glossary.md` (tutte le 338 voci, intestazioni `####` verificate 338/338 rispetto
   all'originale)
 
@@ -150,12 +154,12 @@ Fase 0 chiusa: i file skill (`skills/python-lab-generator/SKILL.md` e
 quindi non serve alcun ripristino. Decisioni della sezione 2 fissate il 2026-10-03.
 
 Fase 1 completata (pagine di ingresso, `docs/glossary.md`, nav di `mkdocs.yml` per le
-sezioni coperte). Fase 2 in corso: Capitoli 1-11 tradotti.
+sezioni coperte). Fase 2 in corso: Capitoli 1-12 tradotti.
 
-Prossimo: continuare la Fase 2 dal Capitolo 12 (`docs/chapters/12-colors-fill-turtle-art/`),
+Prossimo: continuare la Fase 2 dal Capitolo 13 (`docs/chapters/13-user-input-type-conversion/`),
 un capitolo alla volta (`index.md` + `references.md` + `quiz.md`), aggiornando questo
 piano e la nav di `mkdocs.yml` per ciascun capitolo completato (già tradotta per i
-Capitoli 10 e 11).
+Capitoli 10-12).
 
 Nota di qualità: durante la traduzione del Capitolo 5 è stato trovato e corretto un
 bug pre-esistente nell'originale inglese `docs/chapters/05-drawing-with-turtle/quiz.md`
