@@ -1,24 +1,24 @@
 ---
-title: While Loops and Animation
-description: Use while loops, break, continue, and the time module to build countdown programs and animated turtle drawings that move by themselves.
+title: Cicli While e Animazione
+description: Usa i cicli while, break, continue e il modulo time per costruire programmi di conto alla rovescia e disegni animati con la tartaruga che si muovono da soli.
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 11:10:00
 version: 0.09
 ---
 
-# While Loops and Animation
+# Cicli While e Animazione
 
-## Summary
+## Riepilogo
 
-`while` loops keep running as long as a condition is true — perfect for games
-and animations. This chapter covers `while`, how to stop loops with `break`,
-skip iterations with `continue`, the `else` clause on loops, infinite-loop
-dangers, countdown loops, and the `time` module. You'll finish with a
-real animated turtle drawing that moves by itself.
+I cicli `while` continuano a girare finché una condizione è vera — perfetti per giochi
+e animazioni. Questo capitolo tratta `while`, come fermare i cicli con `break`,
+saltare le iterazioni con `continue`, la clausola `else` sui cicli, i pericoli dei
+cicli infiniti, i cicli di conto alla rovescia e il modulo `time`. Finirai con un
+vero disegno animato con la tartaruga che si muove da solo.
 
-## Concepts Covered
+## Concetti Trattati
 
-This chapter covers the following 10 concepts from the learning graph:
+Questo capitolo tratta i seguenti 10 concetti del grafo di apprendimento:
 
 1. while Loop
 2. break Statement
@@ -31,36 +31,36 @@ This chapter covers the following 10 concepts from the learning graph:
 9. time.sleep()
 10. Animation with Turtle Loops
 
-## Prerequisites
+## Prerequisiti
 
-This chapter builds on concepts from:
+Questo capitolo si basa sui concetti di:
 
-- [Chapter 5: Drawing with Turtle Graphics](../05-drawing-with-turtle/index.md)
-- [Chapter 7: For Loops and Drawing Shapes](../07-for-loops-and-shapes/index.md)
-- [Chapter 9: Making Decisions with If/Else](../09-decisions-if-else/index.md)
+- [Capitolo 5: Disegnare con la Grafica Turtle](../05-drawing-with-turtle/index.md)
+- [Capitolo 7: Cicli For e Disegno di Forme](../07-for-loops-and-shapes/index.md)
+- [Capitolo 9: Prendere Decisioni con If/Else](../09-decisions-if-else/index.md)
 
 ---
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Write a `while` loop that runs as long as a condition is `True`
-- Use `break` to exit a loop early and `continue` to skip an iteration
-- Explain why infinite loops happen and how to avoid them
-- Build an animated turtle spiral that grows step by step using a `while` loop
+- Scrivere un ciclo `while` che gira finché una condizione è `True`
+- Usare `break` per uscire da un ciclo in anticipo e `continue` per saltare un'iterazione
+- Spiegare perché si verificano i cicli infiniti e come evitarli
+- Costruire una spirale animata con la tartaruga che cresce passo dopo passo usando un ciclo `while`
 
-The `for` loop you learned in Chapter 7 is perfect when you know exactly how many times to repeat — `for i in range(10)` repeats exactly ten times.
-But what if you don't know in advance when to stop?
-What if you want to keep counting down until a rocket launches, or keep drawing until the turtle reaches the edge of the screen?
-That is when you need a **`while` loop**.
+Il ciclo `for` che hai imparato nel Capitolo 7 è perfetto quando sai esattamente quante volte ripetere — `for i in range(10)` si ripete esattamente dieci volte.
+Ma cosa succede se non sai in anticipo quando fermarti?
+Cosa succede se vuoi continuare a contare alla rovescia finché un razzo non viene lanciato, o continuare a disegnare finché la tartaruga non raggiunge il bordo dello schermo?
+È allora che hai bisogno di un **ciclo `while`**.
 
-!!! mascot-welcome "Welcome to Chapter 10!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 10!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    The `while` loop is where programs come alive — it's the engine behind games, animations, and anything that runs until something changes. By the end of this chapter, Monty the turtle will be drawing all by himself! Let's code it together!
+    Il ciclo `while` è dove i programmi prendono vita — è il motore dietro ai giochi, alle animazioni e a tutto ciò che gira finché qualcosa non cambia. Alla fine di questo capitolo, Monty la tartaruga disegnerà tutto da solo! Programmiamo insieme!
 
-## The while Loop
+## Il Ciclo while
 
-A **`while` loop** repeats its body as long as a condition is `True`.
-The structure looks like an `if` statement, but instead of running once, it keeps running:
+Un **ciclo `while`** ripete il suo corpo finché una condizione è `True`.
+La struttura assomiglia a un'istruzione `if`, ma invece di girare una sola volta, continua a girare:
 
 ```python
 count = 5
@@ -70,35 +70,35 @@ while count > 0:
 print("Liftoff!")
 ```
 
-Here is what happens step by step:
+Ecco cosa succede passo dopo passo:
 
-| Step | `count` value | Condition `count > 0` | Action |
+| Passo | Valore di `count` | Condizione `count > 0` | Azione |
 |------|--------------|----------------------|--------|
-| 1 | 5 | True | print 5, count becomes 4 |
-| 2 | 4 | True | print 4, count becomes 3 |
-| 3 | 3 | True | print 3, count becomes 2 |
-| 4 | 2 | True | print 2, count becomes 1 |
-| 5 | 1 | True | print 1, count becomes 0 |
-| 6 | 0 | **False** | loop ends, print "Liftoff!" |
+| 1 | 5 | True | stampa 5, count diventa 4 |
+| 2 | 4 | True | stampa 4, count diventa 3 |
+| 3 | 3 | True | stampa 3, count diventa 2 |
+| 4 | 2 | True | stampa 2, count diventa 1 |
+| 5 | 1 | True | stampa 1, count diventa 0 |
+| 6 | 0 | **False** | il ciclo finisce, stampa "Liftoff!" |
 
-The loop runs exactly as long as the condition stays `True`.
-The moment it becomes `False`, Python exits the loop and continues with the next line.
+Il ciclo gira esattamente finché la condizione resta `True`.
+Nel momento in cui diventa `False`, Python esce dal ciclo e continua con la riga successiva.
 
-!!! mascot-tip "Scratch Bridge"
+!!! mascot-tip "Ponte Scratch"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch, the **Repeat Until** block keeps running its contents until a condition becomes true. Python's `while` loop is the same idea — except the condition is checked **at the start** of each trip: the loop continues while the condition is `True` and stops the moment it becomes `False`.
+    In Scratch, il blocco **Ripeti finché** continua a eseguire il suo contenuto finché una condizione non diventa vera. Il ciclo `while` di Python è la stessa idea — tranne che la condizione viene controllata **all'inizio** di ogni giro: il ciclo continua mentre la condizione è `True` e si ferma nel momento in cui diventa `False`.
 
-Before you run the countdown program, think about what it will print.
+Prima di eseguire il programma di conto alla rovescia, pensa a cosa stamperà.
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The variable `count` starts at `5`. The loop prints `count` and then subtracts 1 each trip.
-    How many lines do you think the program will print before "Liftoff!" appears?
-    Will it print the number `0`? Make your guess — then click Run!
+    La variabile `count` parte da `5`. Il ciclo stampa `count` e poi sottrae 1 a ogni giro.
+    Quante righe pensi che il programma stamperà prima che appaia "Liftoff!"?
+    Stamperà il numero `0`? Fai la tua previsione — poi clicca Esegui!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see the result.
+Modifica il codice sotto e clicca **Esegui** per vedere il risultato.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -127,14 +127,14 @@ while count > 0:
 print("Liftoff!")`);
 </script>
 
-Were you right? The loop prints `5`, `4`, `3`, `2`, `1` — five lines — and then `"Liftoff!"`.
-The number `0` is **not** printed because the condition `count > 0` is checked *before* each trip.
-When `count` is `0`, the condition is `False`, so the loop ends immediately.
+Avevi indovinato? Il ciclo stampa `5`, `4`, `3`, `2`, `1` — cinque righe — e poi `"Liftoff!"`.
+Il numero `0` **non** viene stampato perché la condizione `count > 0` viene controllata *prima* di ogni giro.
+Quando `count` è `0`, la condizione è `False`, quindi il ciclo finisce immediatamente.
 
-## Infinite Loops to Avoid
+## Cicli Infiniti da Evitare
 
-An **infinite loop** is a `while` loop whose condition never becomes `False`.
-The program runs forever (until you force-quit it):
+Un **ciclo infinito** è un ciclo `while` la cui condizione non diventa mai `False`.
+Il programma gira per sempre (finché non lo chiudi forzatamente):
 
 ```python
 # WARNING: this runs forever — don't run it!
@@ -142,8 +142,8 @@ while True:
     print("Help, I can't stop!")
 ```
 
-Infinite loops happen when you forget to change the variable that the condition depends on.
-The most common cause: forgetting `count -= 1` inside the loop.
+I cicli infiniti si verificano quando dimentichi di cambiare la variabile da cui dipende la condizione.
+La causa più comune: dimenticare `count -= 1` dentro il ciclo.
 
 ```python
 count = 5
@@ -152,23 +152,23 @@ while count > 0:
     # MISSING: count -= 1  ← without this, count stays 5 forever!
 ```
 
-**How to fix it:** Every `while` loop needs at least one line inside it that eventually makes the condition `False`.
-Always double-check: "What changes inside this loop to eventually stop it?"
+**Come risolverlo:** Ogni ciclo `while` ha bisogno di almeno una riga al suo interno che alla fine rende la condizione `False`.
+Controlla sempre: "Cosa cambia dentro questo ciclo per fermarlo alla fine?"
 
-### See It: Check, Run, Check Again
+### Guardalo: Controlla, Esegui, Controlla di Nuovo
 
-A while loop has a rhythm: **check** the condition, **run** the body, jump back, **check** again. The stepper below stamps a True or False verdict every time the condition is checked. Before you click, predict: **for a countdown starting at 3, how many times does the body run — and how many times is the condition checked?** (They are not the same number!)
+Un ciclo while ha un ritmo: **controlla** la condizione, **esegui** il corpo, torna indietro, **controlla** di nuovo. Il simulatore sotto stampa un verdetto True o False ogni volta che la condizione viene controllata. Prima di cliccare, prevedi: **per un conto alla rovescia che parte da 3, quante volte gira il corpo — e quante volte viene controllata la condizione?** (Non sono lo stesso numero!)
 
 <iframe src="../../sims/while-loop-stepper/main.html" height="502" width="100%" scrolling="no"></iframe>
 
-[Explore the While-Loop Stepper MicroSim](../../sims/while-loop-stepper/index.md){ .md-button }
+[Esplora il MicroSim While-Loop Stepper](../../sims/while-loop-stepper/index.md){ .md-button }
 
-Then pick the **Infinite Bug** program — it is the exact missing-decrement bug from above, running in a safe cage. Watch the trip odometer spin and the condition stamp True, True, True... forever. Skulpt protects you from this in the labs, but real Python will not!
+Poi scegli il programma **Infinite Bug** — è esattamente il bug del decremento mancante visto sopra, in esecuzione in una gabbia sicura. Guarda il contachilometri dei giri girare e la condizione segnare True, True, True... per sempre. Skulpt ti protegge da questo nei laboratori, ma il vero Python non lo farà!
 
-## The break Statement
+## L'Istruzione break
 
-`break` exits a loop immediately, even if the condition is still `True`.
-It's useful when you want to stop based on something that happens *inside* the loop:
+`break` esce immediatamente da un ciclo, anche se la condizione è ancora `True`.
+È utile quando vuoi fermarti in base a qualcosa che succede *dentro* il ciclo:
 
 ```python
 count = 10
@@ -180,12 +180,12 @@ while count > 0:
     count -= 1
 ```
 
-This countdown stops at `7` and never reaches `6` or below — the `break` jumps out of the loop entirely.
+Questo conto alla rovescia si ferma a `7` e non raggiunge mai `6` o valori inferiori — il `break` salta fuori dal ciclo completamente.
 
-## The continue Statement
+## L'Istruzione continue
 
-`continue` skips the rest of the current trip through the loop and jumps straight to the next check of the condition.
-Use it to skip certain values without stopping the whole loop:
+`continue` salta il resto del giro attuale del ciclo e va direttamente al controllo successivo della condizione.
+Usalo per saltare certi valori senza fermare l'intero ciclo:
 
 ```python
 count = 10
@@ -196,12 +196,12 @@ while count > 0:
     print(count)         # only prints odd numbers: 9, 7, 5, 3, 1
 ```
 
-Think of `break` as "exit the loop entirely" and `continue` as "skip this trip and try again."
+Pensa a `break` come "esci dal ciclo completamente" e a `continue` come "salta questo giro e riprova."
 
-## The else Clause on Loops
+## La Clausola else sui Cicli
 
-Python has an unusual feature: you can add an `else` clause to a `while` loop.
-The `else` block runs only if the loop ended *naturally* (condition became `False`) — not if it ended via `break`:
+Python ha una caratteristica inusuale: puoi aggiungere una clausola `else` a un ciclo `while`.
+Il blocco `else` gira solo se il ciclo è terminato *naturalmente* (la condizione è diventata `False`) — non se è terminato tramite `break`:
 
 ```python
 count = 3
@@ -223,12 +223,12 @@ else:
     print("This won't print — loop was broken!")  # skipped because break was used
 ```
 
-The `else` on a loop is rare in practice, but it's a clean way to handle the "search succeeded / search failed" pattern.
+L'`else` su un ciclo è raro in pratica, ma è un modo elegante di gestire lo schema "ricerca riuscita / ricerca fallita."
 
-## Nested Loops
+## Cicli Annidati
 
-A **nested loop** is a loop inside another loop.
-The inner loop runs completely for every single trip of the outer loop:
+Un **ciclo annidato** è un ciclo dentro un altro ciclo.
+Il ciclo interno gira completamente per ogni singolo giro del ciclo esterno:
 
 ```python
 for row in range(3):
@@ -237,21 +237,21 @@ for row in range(3):
     print()    # move to the next line after each row
 ```
 
-This prints a 3-row by 4-column grid of stars.
-The inner `for col in range(4)` completes four trips for every single trip of `for row in range(3)`.
+Questo stampa una griglia di stelle di 3 righe per 4 colonne.
+Il `for col in range(4)` interno completa quattro giri per ogni singolo giro di `for row in range(3)`.
 
-Nested loops are powerful for drawing grids, tables, and 2D patterns — and you will use them more in later chapters.
+I cicli annidati sono potenti per disegnare griglie, tabelle e pattern 2D — e li userai ancora di più nei capitoli successivi.
 
-## The time Module
+## Il Modulo time
 
-Python's built-in **`time` module** lets your program interact with the clock.
-Before using it, you import it like any other module:
+Il **modulo `time`** incorporato di Python permette al tuo programma di interagire con l'orologio.
+Prima di usarlo, lo importi come qualsiasi altro modulo:
 
 ```python
 import time
 ```
 
-The most useful function for animation is **`time.sleep(seconds)`** — it pauses the program for the given number of seconds (decimals are allowed):
+La funzione più utile per l'animazione è **`time.sleep(seconds)`** — pausa il programma per il numero di secondi indicato (i decimali sono permessi):
 
 ```python
 import time
@@ -260,25 +260,25 @@ time.sleep(2)          # pause for 2 seconds
 print("Done waiting!")
 ```
 
-`time.sleep()` is how you control the speed of animations: pause for 0.05 seconds between each frame to get roughly 20 frames per second.
+`time.sleep()` è come controlli la velocità delle animazioni: pausa di 0.05 secondi tra ogni fotogramma per ottenere circa 20 fotogrammi al secondo.
 
-!!! mascot-warning "time.sleep() in the Browser"
+!!! mascot-warning "time.sleep() nel Browser"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    In a real Python program on your computer, `time.sleep()` pauses the program smoothly. In the Skulpt browser labs, very long sleep times may cause the page to pause for a moment. Keep `time.sleep()` values small (0.05–0.2 seconds) in the labs, and use larger values only when running Python on your own machine.
+    In un vero programma Python sul tuo computer, `time.sleep()` pausa il programma in modo fluido. Nei laboratori Skulpt nel browser, tempi di pausa molto lunghi potrebbero causare un momento di blocco della pagina. Mantieni i valori di `time.sleep()` piccoli (0.05–0.2 secondi) nei laboratori, e usa valori più grandi solo quando esegui Python sul tuo computer.
 
-## Animation with Turtle Loops
+## Animazione con Cicli Turtle
 
-Combine a `while` loop with the turtle and `time.sleep()` to create a simple animation.
-The key idea: draw one small step, pause briefly, draw the next step, pause again — and repeat.
+Combina un ciclo `while` con la tartaruga e `time.sleep()` per creare una semplice animazione.
+L'idea chiave: disegna un piccolo passo, pausa brevemente, disegna il passo successivo, pausa di nuovo — e ripeti.
 
-The program below draws a growing spiral.
-Each time through the loop, the step length increases, so the spiral gets bigger on every trip.
+Il programma sotto disegna una spirale che cresce.
+Ogni volta che il ciclo gira, la lunghezza del passo aumenta, quindi la spirale diventa più grande a ogni giro.
 
-!!! mascot-thinking "Your Turn — Fix the Growing Spiral"
+!!! mascot-thinking "Il Tuo Turno — Correggi la Spirale che Cresce"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below has a bug: the spiral never grows because `step` never changes inside the loop.
-    Add **one line** inside the loop body to increase `step` by `5` on every trip.
-    **Hint:** use `step += 5`. Watch the spiral grow as you run it!
+    Il programma sotto ha un bug: la spirale non cresce mai perché `step` non cambia mai dentro il ciclo.
+    Aggiungi **una riga** dentro il corpo del ciclo per aumentare `step` di `5` a ogni giro.
+    **Suggerimento:** usa `step += 5`. Guarda la spirale crescere mentre la esegui!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -305,22 +305,22 @@ while step < 150:
     # Add one line here to increase step by 5 each trip`);
 </script>
 
-Once the spiral appears, notice how the `while step < 150` condition automatically stops the loop when the spiral is big enough — no manual counting needed!
+Una volta che la spirale appare, nota come la condizione `while step < 150` fermi automaticamente il ciclo quando la spirale è abbastanza grande — senza bisogno di contare manualmente!
 
-## Experiments
+## Esperimenti
 
-Try these changes to the programs above. For each one, predict what will happen first, then run it to check!
+Prova questi cambiamenti ai programmi sopra. Per ognuno, prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. In the countdown lab, change `count = 5` to `count = 10`. **You'll know it worked when** the countdown prints 10 numbers before "Liftoff!".
-2. Change `while count > 0` to `while count > 3`. **You'll know it worked when** the countdown stops at 4, not 1.
-3. In the spiral lab, change `t.right(45)` to `t.right(90)`. **You'll know it worked when** you see a square spiral instead of a diagonal one.
-4. Change `t.right(45)` to `t.right(91)`. **You'll know it worked when** you see a slowly rotating spiral with gaps between the lines.
-5. Add `t.pencolor("blue")` before the `while` loop, then inside the loop add `if step > 80: t.pencolor("red")`. **You'll know it worked when** the inner part of the spiral draws blue and the outer part draws red.
+1. Nel laboratorio del conto alla rovescia, cambia `count = 5` in `count = 10`. **Saprai che ha funzionato quando** il conto alla rovescia stampa 10 numeri prima di "Liftoff!".
+2. Cambia `while count > 0` in `while count > 3`. **Saprai che ha funzionato quando** il conto alla rovescia si ferma a 4, non a 1.
+3. Nel laboratorio della spirale, cambia `t.right(45)` in `t.right(90)`. **Saprai che ha funzionato quando** vedi una spirale quadrata invece di una diagonale.
+4. Cambia `t.right(45)` in `t.right(91)`. **Saprai che ha funzionato quando** vedi una spirale che ruota lentamente con degli spazi tra le linee.
+5. Aggiungi `t.pencolor("blue")` prima del ciclo `while`, poi dentro il ciclo aggiungi `if step > 80: t.pencolor("red")`. **Saprai che ha funzionato quando** la parte interna della spirale si disegna blu e la parte esterna si disegna rossa.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've mastered the `while` loop — Python's engine for open-ended repetition! You know how to stop loops with `break`, skip steps with `continue`, use the `time` module, and build animations that grow step by step. Games, simulations, and interactive programs all run on exactly this kind of loop. Let's keep coding it together!
+    Hai imparato il ciclo `while` — il motore di Python per la ripetizione a durata indefinita! Sai come fermare i cicli con `break`, saltare passi con `continue`, usare il modulo `time` e costruire animazioni che crescono passo dopo passo. Giochi, simulazioni e programmi interattivi girano tutti esattamente su questo tipo di ciclo. Continuiamo a programmare insieme!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)

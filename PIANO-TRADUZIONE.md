@@ -25,6 +25,7 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
 - `docs/chapters/07-for-loops-and-shapes/` (index, references, quiz)
 - `docs/chapters/08-working-with-strings/` (index, references, quiz)
 - `docs/chapters/09-decisions-if-else/` (index, references, quiz)
+- `docs/chapters/10-while-loops-and-animation/` (index, references, quiz)
 - `docs/glossary.md` (tutte le 338 voci, intestazioni `####` verificate 338/338 rispetto
   all'originale)
 
@@ -146,11 +147,12 @@ Fase 0 chiusa: i file skill (`skills/python-lab-generator/SKILL.md` e
 quindi non serve alcun ripristino. Decisioni della sezione 2 fissate il 2026-10-03.
 
 Fase 1 completata (pagine di ingresso, `docs/glossary.md`, nav di `mkdocs.yml` per le
-sezioni coperte). Fase 2 in corso: Capitoli 1-9 tradotti.
+sezioni coperte). Fase 2 in corso: Capitoli 1-10 tradotti.
 
-Prossimo: continuare la Fase 2 dal Capitolo 10 (`docs/chapters/10-while-loops-and-animation/`),
+Prossimo: continuare la Fase 2 dal Capitolo 11 (`docs/chapters/11-functions-parameters-scope/`),
 un capitolo alla volta (`index.md` + `references.md` + `quiz.md`), aggiornando questo
-piano e la nav di `mkdocs.yml` per ciascun capitolo completato.
+piano e la nav di `mkdocs.yml` per ciascun capitolo completato (già tradotta per il
+Capitolo 10: "10. Cicli while e animazione").
 
 Nota di qualità: durante la traduzione del Capitolo 5 è stato trovato e corretto un
 bug pre-esistente nell'originale inglese `docs/chapters/05-drawing-with-turtle/quiz.md`
