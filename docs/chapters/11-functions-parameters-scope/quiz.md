@@ -1,26 +1,26 @@
-# Quiz: Functions with Parameters and Scope
+# Quiz: Funzioni con Parametri e Scope
 
-Test your understanding of default parameters, keyword arguments, scope, and pure functions with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione dei parametri predefiniti, degli argomenti keyword, dello scope, e delle funzioni pure con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What is a default parameter value in a Python function?
+#### 1. Cos'è un valore predefinito di un parametro in una funzione Python?
 
 <div class="upper-alpha" markdown>
-1. The value a parameter holds when the function returns `None`
-2. A value the function uses automatically when the caller does not provide an argument for that parameter
-3. The first argument passed to a function when it is called
-4. A parameter that is required and must always be provided by the caller
+1. Il valore che un parametro contiene quando la funzione restituisce `None`
+2. Un valore che la funzione usa automaticamente quando chi la chiama non fornisce un argomento per quel parametro
+3. Il primo argomento passato a una funzione quando viene chiamata
+4. Un parametro che è obbligatorio e deve sempre essere fornito da chi chiama
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. A default parameter value is defined in the `def` line using `parameter=default`. When someone calls the function without providing that argument, Python automatically uses the default. When they do provide a value, that value overrides the default. This makes functions flexible — they work with or without certain arguments.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Un valore predefinito di un parametro è definito nella riga `def` usando `parametro=predefinito`. Quando qualcuno chiama la funzione senza fornire quell'argomento, Python usa automaticamente il valore predefinito. Quando invece fornisce un valore, quel valore sovrascrive il predefinito. Questo rende le funzioni flessibili — funzionano con o senza certi argomenti.
 
     **Concept Tested:** Default Parameter Values
 
 ---
 
-#### 2. Which function call uses a keyword argument?
+#### 2. Quale chiamata di funzione usa un argomento keyword?
 
 <div class="upper-alpha" markdown>
 1. `draw_polygon(6, 80, "red")`
@@ -29,62 +29,62 @@ Test your understanding of default parameters, keyword arguments, scope, and pur
 4. `draw_polygon(6)`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. A keyword argument uses the parameter's name followed by `=` and a value in the function call: `sides=6` and `color="red"`. Keyword arguments can be supplied in any order because Python matches them by name, not by position. Option A uses positional arguments, which must be in the correct order.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Un argomento keyword usa il nome del parametro seguito da `=` e un valore nella chiamata di funzione: `sides=6` e `color="red"`. Gli argomenti keyword possono essere forniti in qualsiasi ordine perché Python li associa per nome, non per posizione. L'opzione A usa argomenti posizionali, che devono essere nell'ordine corretto.
 
     **Concept Tested:** Keyword Arguments
 
 ---
 
-#### 3. What is the scope of a variable?
+#### 3. Cos'è lo scope di una variabile?
 
 <div class="upper-alpha" markdown>
-1. How many characters long the variable's name is
-2. How large the value stored in the variable is
-3. Which parts of the program can see and use the variable
-4. How many times the variable is used in the program
+1. Quanti caratteri lungo è il nome della variabile
+2. Quanto è grande il valore memorizzato nella variabile
+3. Quali parti del programma possono vedere e usare la variabile
+4. Quante volte la variabile viene usata nel programma
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Scope describes where in your program a variable is visible and accessible. A variable created inside a function has **local** scope — it only exists while that function runs. A variable created outside all functions has **global** scope — it is visible throughout the entire program.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Lo scope descrive dove nel tuo programma una variabile è visibile e accessibile. Una variabile creata dentro una funzione ha scope **locale** — esiste solo mentre quella funzione gira. Una variabile creata fuori da tutte le funzioni ha scope **globale** — è visibile in tutto il programma.
 
     **Concept Tested:** Local Scope and Global Scope
 
 ---
 
-#### 4. What happens when you try to use a local variable outside the function that created it?
+#### 4. Cosa succede quando provi a usare una variabile locale fuori dalla funzione che l'ha creata?
 
 <div class="upper-alpha" markdown>
-1. The variable keeps its last value and can be used anywhere
-2. Python prints the value automatically without needing `print()`
-3. Python raises a `NameError` because the variable does not exist outside the function
-4. The variable becomes a global variable after the function runs
+1. La variabile mantiene il suo ultimo valore e può essere usata ovunque
+2. Python stampa il valore automaticamente senza bisogno di `print()`
+3. Python genera un `NameError` perché la variabile non esiste fuori dalla funzione
+4. La variabile diventa una variabile globale dopo che la funzione finisce
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. A local variable only exists while its function is running. When the function finishes, the local variable disappears. Trying to use it afterward causes a `NameError: name 'variable' is not defined`. This is by design — local variables prevent naming conflicts between functions.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Una variabile locale esiste solo mentre la sua funzione è in esecuzione. Quando la funzione finisce, la variabile locale scompare. Provare a usarla dopo causa un `NameError: name 'variable' is not defined`. Questo è voluto — le variabili locali prevengono conflitti di nomi tra funzioni.
 
     **Concept Tested:** Local Scope and Global Scope
 
 ---
 
-#### 5. What does the `global` keyword inside a function tell Python?
+#### 5. Cosa dice a Python la parola chiave `global` dentro una funzione?
 
 <div class="upper-alpha" markdown>
-1. Create a brand-new local variable with that name inside this function
-2. Delete the global variable when the function finishes
-3. Use the variable that exists in the global (outer) scope, not create a new local one
-4. Print the variable's value to the output when the function is called
+1. Crea una variabile locale completamente nuova con quel nome dentro questa funzione
+2. Elimina la variabile globale quando la funzione finisce
+3. Usa la variabile che esiste nello scope globale (esterno), non crearne una locale nuova
+4. Stampa il valore della variabile nell'output quando la funzione viene chiamata
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Without `global`, if you assign to a variable inside a function, Python creates a new local variable that shadows the global one. Writing `global score` inside a function tells Python "I mean the `score` that lives outside, not a new local one" — so assignments to `score` inside that function actually change the global variable.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Senza `global`, se assegni un valore a una variabile dentro una funzione, Python crea una nuova variabile locale che oscura quella globale. Scrivere `global score` dentro una funzione dice a Python "Intendo lo `score` che vive fuori, non uno locale nuovo" — quindi le assegnazioni a `score` dentro quella funzione cambiano davvero la variabile globale.
 
     **Concept Tested:** global Keyword
 
 ---
 
-#### 6. What output does this program produce?
+#### 6. Quale output produce questo programma?
 
 ```python
 speed = 10
@@ -98,78 +98,78 @@ print("Outside:", speed)
 ```
 
 <div class="upper-alpha" markdown>
-1. `Inside: 0` then `Outside: 0`
-2. `Inside: 10` then `Outside: 10`
-3. `Inside: 0` then `Outside: 10`
-4. An error because `speed` is defined twice
+1. `Inside: 0` poi `Outside: 0`
+2. `Inside: 10` poi `Outside: 10`
+3. `Inside: 0` poi `Outside: 10`
+4. Un errore perché `speed` è definita due volte
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Inside `reset()`, `speed = 0` creates a **new local variable** named `speed` — it does NOT change the global `speed`. So inside the function, `speed` is 0. But outside, the global `speed` is still 10. This is a common naming conflict that causes confusing bugs; using `global speed` inside the function would fix it if you actually wanted to change the global.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Dentro `reset()`, `speed = 0` crea una **nuova variabile locale** chiamata `speed` — NON cambia lo `speed` globale. Quindi dentro la funzione, `speed` è 0. Ma fuori, lo `speed` globale è ancora 10. Questo è un conflitto di nomi comune che causa bug confusi; usare `global speed` dentro la funzione lo risolverebbe se davvero volessi cambiare il valore globale.
 
     **Concept Tested:** Local Scope and Global Scope
 
 ---
 
-#### 7. By convention, how do Python programmers write the name of a constant?
+#### 7. Per convenzione, come scrivono i programmatori Python il nome di una costante?
 
 <div class="upper-alpha" markdown>
-1. Starting with a lowercase letter, like `maxSpeed`
-2. Surrounded by double underscores, like `__max_speed__`
-3. In ALL_CAPS with underscores, like `MAX_SPEED`
-4. Starting with an uppercase letter, like `MaxSpeed`
+1. Iniziando con una lettera minuscola, come `maxSpeed`
+2. Circondato da doppi underscore, come `__max_speed__`
+3. In MAIUSCOLO con underscore, come `MAX_SPEED`
+4. Iniziando con una lettera maiuscola, come `MaxSpeed`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Python programmers use ALL_CAPS with underscores to signal that a variable is a constant — a value that should never be changed after it is set. Examples: `MAX_SPEED = 10`, `CANVAS_WIDTH = 400`. Python does not enforce this; it is a naming convention that tells other programmers "treat this as a fixed rule."
+??? question "Mostra risposta"
+    La risposta corretta è **C**. I programmatori Python usano il MAIUSCOLO con underscore per segnalare che una variabile è una costante — un valore che non dovrebbe mai cambiare dopo essere stato impostato. Esempi: `MAX_SPEED = 10`, `CANVAS_WIDTH = 400`. Python non lo impone; è una convenzione di denominazione che dice agli altri programmatori "trattalo come una regola fissa."
 
     **Concept Tested:** Constants by Convention
 
 ---
 
-#### 8. Which rule applies when defining a function that has both required parameters and default parameters?
+#### 8. Quale regola si applica quando definisci una funzione che ha sia parametri obbligatori sia parametri predefiniti?
 
 <div class="upper-alpha" markdown>
-1. Default parameters must come before required parameters
-2. Required parameters must come before default parameters
-3. You cannot mix required and default parameters in the same function
-4. Default parameters must all have the same default value
+1. I parametri predefiniti devono venire prima dei parametri obbligatori
+2. I parametri obbligatori devono venire prima dei parametri predefiniti
+3. Non puoi mischiare parametri obbligatori e predefiniti nella stessa funzione
+4. I parametri predefiniti devono tutti avere lo stesso valore predefinito
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Required parameters (those without defaults) must come first in the function definition, followed by parameters with default values. For example: `def greet(name, greeting="Hello"):` is valid. Writing `def greet(greeting="Hello", name):` would cause a `SyntaxError` because the required parameter `name` comes after the default parameter.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. I parametri obbligatori (quelli senza valori predefiniti) devono venire prima nella definizione della funzione, seguiti dai parametri con valori predefiniti. Per esempio: `def greet(name, greeting="Hello"):` è valido. Scrivere `def greet(greeting="Hello", name):` causerebbe un `SyntaxError` perché il parametro obbligatorio `name` viene dopo il parametro predefinito.
 
     **Concept Tested:** Default Parameter Values
 
 ---
 
-#### 9. What is a pure function?
+#### 9. Cos'è una funzione pura?
 
 <div class="upper-alpha" markdown>
-1. A function that only uses numbers, never strings
-2. A function defined with `def pure:` instead of `def`
-3. A function that always produces the same output for the same inputs and does not change anything outside itself
-4. A function that only calls other functions and never uses `print()`
+1. Una funzione che usa solo numeri, mai stringhe
+2. Una funzione definita con `def pure:` invece di `def`
+3. Una funzione che produce sempre lo stesso output per gli stessi input e non cambia nulla fuori di sé stessa
+4. Una funzione che chiama solo altre funzioni e non usa mai `print()`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. A pure function always returns the same result given the same arguments, and it does not change any variables outside its own scope (no side effects). Pure functions are easier to test and debug. In contrast, a function that modifies a global variable, prints to the screen, or draws on a canvas has side effects.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Una funzione pura restituisce sempre lo stesso risultato dati gli stessi argomenti, e non cambia nessuna variabile fuori dal proprio scope (nessun effetto collaterale). Le funzioni pure sono più facili da testare e debuggare. Al contrario, una funzione che modifica una variabile globale, stampa sullo schermo, o disegna su un canvas ha effetti collaterali.
 
     **Concept Tested:** Pure Functions vs Side Effects
 
 ---
 
-#### 10. What is the fastest way to swap the values of variables `a` and `b` in Python?
+#### 10. Qual è il modo più veloce per scambiare i valori delle variabili `a` e `b` in Python?
 
 <div class="upper-alpha" markdown>
-1. `a = b` then `b = a`
-2. `temp = a`, then `a = b`, then `b = temp`
+1. `a = b` poi `b = a`
+2. `temp = a`, poi `a = b`, poi `b = temp`
 3. `a, b = b, a`
 4. `swap(a, b)`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Python supports multiple assignment that evaluates the right side completely before assigning, making `a, b = b, a` a safe one-line swap. Option A loses the original value of `a`. Option B (the temporary variable approach) is correct but takes three lines. Option D is not a built-in Python function.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Python supporta l'assegnazione multipla che valuta completamente il lato destro prima di assegnare, rendendo `a, b = b, a` uno scambio sicuro in una riga. L'opzione A perde il valore originale di `a`. L'opzione B (l'approccio con variabile temporanea) è corretta ma richiede tre righe. L'opzione D non è una funzione Python built-in.
 
     **Concept Tested:** Swapping Variables
 

@@ -1,28 +1,28 @@
 ---
-title: Functions with Parameters and Scope
-description: Learn how to use default parameter values, keyword arguments, and understand variable scope in Python functions
+title: Funzioni con Parametri e Scope
+description: Impara a usare i valori predefiniti dei parametri, gli argomenti keyword, e a capire lo scope delle variabili nelle funzioni Python
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 11:55:00
 version: 0.09
 ---
 
-# Functions with Parameters and Scope
+# Funzioni con Parametri e Scope
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Write functions with **default parameter values** so they work even when a caller skips an argument
-- Use **keyword arguments** to make function calls easier to read
-- Explain the difference between **local** and **global** scope
-- Identify whether a function is **pure** or has **side effects**
+- Scrivere funzioni con **valori predefiniti dei parametri** così che funzionino anche quando chi le chiama salta un argomento
+- Usare gli **argomenti keyword** per rendere le chiamate di funzione più facili da leggere
+- Spiegare la differenza tra scope **locale** e **globale**
+- Identificare se una funzione è **pura** oppure ha **effetti collaterali**
 
-You already know how to define a function and call it.
-Now let's make functions even more powerful by giving them smarter inputs and understanding where variables live.
+Sai già come definire una funzione e chiamarla.
+Ora rendiamo le funzioni ancora più potenti dando loro input più intelligenti e capendo dove vivono le variabili.
 
-!!! mascot-welcome "Welcome to Chapter 11!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 11!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Functions with parameters are like ordering from a menu — you say what you want and the kitchen does the work.
-    Today we're going to make our functions even smarter by giving them *default* choices!
-    Let's code it together!
+    Le funzioni con parametri sono come ordinare da un menu — dici cosa vuoi e la cucina fa il lavoro.
+    Oggi renderemo le nostre funzioni ancora più intelligenti dando loro scelte *predefinite*!
+    Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -30,16 +30,16 @@ Now let's make functions even more powerful by giving them smarter inputs and un
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## Default Parameter Values
+## Valori Predefiniti dei Parametri
 
-A **default parameter value** is a value the function uses automatically if the caller doesn't provide one.
+Un **valore predefinito del parametro** è un valore che la funzione usa automaticamente se chi la chiama non ne fornisce uno.
 
-Write the default value right after the `=` sign in the function definition.
-If a caller passes a number, that number is used. If not, the function falls back to the default.
+Scrivi il valore predefinito subito dopo il segno `=` nella definizione della funzione.
+Se chi chiama passa un numero, viene usato quel numero. Se no, la funzione ricade sul valore predefinito.
 
-Here's an example. The function `draw_square` has a `size` parameter that defaults to `100`.
-Calling `draw_square()` with no argument draws a square 100 steps wide.
-Calling `draw_square(50)` draws a smaller square.
+Ecco un esempio. La funzione `draw_square` ha un parametro `size` che per default è `100`.
+Chiamare `draw_square()` senza argomenti disegna un quadrato largo 100 passi.
+Chiamare `draw_square(50)` disegna un quadrato più piccolo.
 
 ```python
 import turtle
@@ -58,10 +58,10 @@ t.pendown()
 draw_square()      # uses the default: size = 100
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    There are two calls to `draw_square()` — one with an argument and one without.
-    Which square do you think will be bigger? Make your guess, then click Run!
+    Ci sono due chiamate a `draw_square()` — una con un argomento e una senza.
+    Quale quadrato pensi che sarà più grande? Fai la tua previsione, poi clicca Esegui!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -93,26 +93,26 @@ t.pendown()
 draw_square()      # uses the default: size = 100`);
 </script>
 
-Were you right? The first square (size 50) is smaller. The second uses the default size of 100.
+Avevi indovinato? Il primo quadrato (size 50) è più piccolo. Il secondo usa la size predefinita di 100.
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `def draw_square(size=100):` | Defines `draw_square` — if you skip the argument, `size` is 100 |
-| `draw_square(50)` | Calls with size = 50 |
-| `draw_square()` | Calls with no argument — uses the default size = 100 |
+| `def draw_square(size=100):` | Definisce `draw_square` — se salti l'argomento, `size` è 100 |
+| `draw_square(50)` | Chiama con size = 50 |
+| `draw_square()` | Chiama senza argomento — usa la size predefinita = 100 |
 
-**Rule:** parameters *with* defaults must come **after** any parameters *without* defaults.
+**Regola:** i parametri *con* valori predefiniti devono venire **dopo** qualsiasi parametro *senza* valori predefiniti.
 
-## Keyword Arguments
+## Argomenti Keyword
 
-When you call a function, Python normally matches arguments by position.
-But you can also use the parameter's *name* when you call it.
-This is called a **keyword argument** — you write `name=value` in the call.
+Quando chiami una funzione, Python normalmente associa gli argomenti per posizione.
+Ma puoi anche usare il *nome* del parametro quando la chiami.
+Questo si chiama **argomento keyword** — scrivi `nome=valore` nella chiamata.
 
-The big advantage: you can put keyword arguments in any order.
+Il grande vantaggio: puoi metterli in qualsiasi ordine.
 
-The function below draws a colored polygon. It has three parameters: `sides`, `size`, and `color`.
-Watch how keyword arguments make the call read like plain English:
+La funzione sotto disegna un poligono colorato. Ha tre parametri: `sides`, `size`, e `color`.
+Guarda come gli argomenti keyword fanno leggere la chiamata come inglese semplice:
 
 ```python
 import turtle
@@ -155,26 +155,26 @@ def draw_polygon(sides=4, size=80, color="blue"):
 draw_polygon(sides=6, color="red", size=60)`);
 </script>
 
-The call uses `color` before `size`, but that's fine — keyword arguments can go in any order.
-Try changing `sides=6` to `sides=3` to draw a triangle, or change `color="red"` to any color you like.
+La chiamata usa `color` prima di `size`, ma va bene — gli argomenti keyword possono andare in qualsiasi ordine.
+Prova a cambiare `sides=6` in `sides=3` per disegnare un triangolo, o cambia `color="red"` con qualsiasi colore preferisci.
 
-!!! mascot-tip "Scratch Bridge"
+!!! mascot-tip "Ponte Scratch"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch, custom blocks have labeled input fields — you fill in "size" or "color" by name.
-    Python keyword arguments work the same way!
-    `draw_polygon(color="red")` is like filling in the "color" field in a Scratch block.
+    In Scratch, i blocchi personalizzati hanno campi di input etichettati — compili "size" o "color" per nome.
+    Gli argomenti keyword di Python funzionano allo stesso modo!
+    `draw_polygon(color="red")` è come compilare il campo "color" in un blocco Scratch.
 
-## Local Scope and Global Scope
+## Scope Locale e Scope Globale
 
-**Scope** describes where Python can see a variable.
+Lo **scope** descrive dove Python può vedere una variabile.
 
-A variable created *inside* a function has **local scope**.
-It only exists while the function runs. When the function finishes, that variable is gone.
+Una variabile creata *dentro* una funzione ha **scope locale**.
+Esiste solo mentre la funzione gira. Quando la funzione finisce, quella variabile scompare.
 
-A variable created *outside* any function has **global scope**.
-It exists for the whole program.
+Una variabile creata *fuori* da qualsiasi funzione ha **scope globale**.
+Esiste per tutto il programma.
 
-The example below shows both. A function can *read* a global variable, but the local variable inside the function is invisible from outside.
+L'esempio sotto mostra entrambi. Una funzione può *leggere* una variabile globale, ma la variabile locale dentro la funzione è invisibile da fuori.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -202,33 +202,33 @@ greet()
 print("name is:", name)`);
 </script>
 
-| Variable | Where defined | Visible inside `greet()`? | Visible outside `greet()`? |
+| Variabile | Dove definita | Visibile dentro `greet()`? | Visibile fuori `greet()`? |
 |----------|--------------|--------------------------|---------------------------|
-| `name` | Outside (global) | Yes | Yes |
-| `greeting` | Inside `greet()` (local) | Yes | No — NameError! |
+| `name` | Fuori (globale) | Sì | Sì |
+| `greeting` | Dentro `greet()` (locale) | Sì | No — NameError! |
 
-### See It: Rooms for Variables
+### Guardalo: Stanze per le Variabili
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    In the **Shadowing Bug** program below, a function sets `score = 99` while
-    the global `score` is 10. After the function finishes, what will
-    `print(score)` show — 99 or 10? Make your prediction, then step through
-    and watch the rooms!
+    Nel programma **Shadowing Bug** sotto, una funzione imposta `score = 99` mentre
+    lo `score` globale è 10. Dopo che la funzione finisce, cosa mostrerà
+    `print(score)` — 99 o 10? Fai la tua previsione, poi esegui passo passo
+    e guarda le stanze!
 
 <iframe src="../../sims/scope-inspector/main.html" height="512" width="100%" scrolling="no"></iframe>
 
-[Explore the Scope Inspector MicroSim](../../sims/scope-inspector/index.md){ .md-button }
+[Esplora il MicroSim Scope Inspector](../../sims/scope-inspector/index.md){ .md-button }
 
-Watch how the Function room appears when a call starts and **vanishes at return, taking its variables with it**. Then run **The global Fix** to see the one case where a function writes straight into the Global room.
+Guarda come la stanza della Funzione appare quando inizia una chiamata e **svanisce al return, portandosi via le sue variabili**. Poi esegui **The global Fix** per vedere l'unico caso in cui una funzione scrive direttamente nella stanza Globale.
 
-## The `global` Keyword
+## La Parola Chiave `global`
 
-By default, a function can *read* a global variable but cannot *change* it.
+Per default, una funzione può *leggere* una variabile globale ma non può *cambiarla*.
 
-If you want a function to update a global variable, use the **`global` keyword** to tell Python your intention.
+Se vuoi che una funzione aggiorni una variabile globale, usa la **parola chiave `global`** per dire a Python la tua intenzione.
 
-The key word `global score` inside the function tells Python: "I mean the `score` that lives outside, not a new local one."
+La parola chiave `global score` dentro la funzione dice a Python: "Intendo lo `score` che vive fuori, non uno locale nuovo."
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -255,11 +255,11 @@ add_points(5)
 print("Final score:", score)`);
 </script>
 
-Without the `global score` line, Python would create a *new* local variable named `score` and leave the global one untouched — which is usually not what you want.
+Senza la riga `global score`, Python creerebbe una *nuova* variabile locale chiamata `score` e lascerebbe quella globale intatta — che di solito non è quello che vuoi.
 
-## Naming Conflicts to Avoid
+## Conflitti di Nomi da Evitare
 
-If you create a local variable with the *same name* as a global variable, the local one **shadows** the global one inside that function. This can cause tricky bugs.
+Se crei una variabile locale con lo *stesso nome* di una variabile globale, quella locale **oscura** (shadow) quella globale dentro quella funzione. Questo può causare bug complicati.
 
 ```python
 speed = 10   # global
@@ -272,12 +272,12 @@ reset()
 print("Outside:", speed)   # still 10!
 ```
 
-To stay safe, choose different names for global and local variables — or use `global` if you truly want to change the global value.
+Per stare al sicuro, scegli nomi diversi per le variabili globali e locali — oppure usa `global` se vuoi davvero cambiare il valore globale.
 
-## Constants by Convention
+## Costanti per Convenzione
 
-A **constant** is a value that should never change after you set it.
-Python doesn't enforce this, but programmers follow a convention: write constant names in **ALL_CAPS** with underscores.
+Una **costante** è un valore che non dovrebbe mai cambiare dopo che lo imposti.
+Python non lo impone, ma i programmatori seguono una convenzione: scrivere i nomi delle costanti in **MAIUSCOLO** con underscore.
 
 ```python
 MAX_SPEED = 10
@@ -285,13 +285,13 @@ CANVAS_WIDTH = 400
 PEN_COLOR = "navy"
 ```
 
-ALL_CAPS is a signal to every reader: "Don't change this — treat it like a fixed rule."
+Il MAIUSCOLO è un segnale per ogni lettore: "Non cambiare questo — trattalo come una regola fissa."
 
-## Swapping Two Variables
+## Scambiare Due Variabili
 
-Here's a classic puzzle: how do you swap the values of two variables?
+Ecco un puzzle classico: come scambi i valori di due variabili?
 
-The *wrong* approach loses data:
+L'approccio *sbagliato* perde dati:
 
 ```python
 a = 5
@@ -300,7 +300,7 @@ a = b    # a is now 10
 b = a    # b gets 10 too — oops! 5 is gone
 ```
 
-The *right* approach uses a temporary variable:
+L'approccio *giusto* usa una variabile temporanea:
 
 ```python
 temp = a   # save a's original value
@@ -308,7 +308,7 @@ a = b      # a gets b's value
 b = temp   # b gets a's original value
 ```
 
-Python has a built-in shortcut that swaps in one line:
+Python ha una scorciatoia incorporata che scambia in una riga:
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -333,12 +333,12 @@ a, b = b, a   # Python swap shortcut
 print("After: ", a, b)`);
 </script>
 
-## Pure Functions vs Functions with Side Effects
+## Funzioni Pure vs Funzioni con Effetti Collaterali
 
-A **pure function** always gives the same output for the same input and doesn't change anything outside itself.
-Put in the same number, always get the same result — like a calculator.
+Una **funzione pura** dà sempre lo stesso output per lo stesso input e non cambia nulla fuori di sé stessa.
+Metti dentro lo stesso numero, ottieni sempre lo stesso risultato — come una calcolatrice.
 
-A function with **side effects** changes something outside itself, such as printing to the screen, modifying a global variable, or making the turtle draw.
+Una funzione con **effetti collaterali** cambia qualcosa fuori di sé stessa, come stampare sullo schermo, modificare una variabile globale, o far disegnare la tartaruga.
 
 ```python
 # Pure function — no side effects, always returns the same result
@@ -354,15 +354,15 @@ def add_to_total(n):
     print("Total is now:", total)
 ```
 
-Pure functions are easier to test because they're predictable.
-Side effects aren't bad — drawing with the turtle *is* a side effect — but knowing which type of function you're writing helps you write better code.
+Le funzioni pure sono più facili da testare perché sono prevedibili.
+Gli effetti collaterali non sono una cosa negativa — disegnare con la tartaruga *è* un effetto collaterale — ma sapere quale tipo di funzione stai scrivendo ti aiuta a scrivere codice migliore.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add the Missing Argument"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi l'Argomento Mancante"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The function below should draw a pentagon (5 sides), but the `sides` keyword argument is missing from the call.
-    Add `sides=5` to make it draw a pentagon!
+    La funzione sotto dovrebbe disegnare un pentagono (5 lati), ma l'argomento keyword `sides` manca dalla chiamata.
+    Aggiungi `sides=5` per farlo disegnare un pentagono!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -392,34 +392,34 @@ def draw_polygon(sides=4, size=80, color="blue"):
 draw_polygon(color="green", size=70)`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Change the default size in `draw_square` from `100` to `150`. Call `draw_square()` with no arguments.
-   **You'll know it worked when** the turtle draws a bigger square without you passing any number.
+1. Cambia la size predefinita in `draw_square` da `100` a `150`. Chiama `draw_square()` senza argomenti.
+   **Saprai che ha funzionato quando** la tartaruga disegna un quadrato più grande senza che tu passi alcun numero.
 
-2. Add a fourth parameter `line_width=1` to `draw_polygon` and call `t.pensize(line_width)` at the start.
-   Call it with `draw_polygon(sides=3, line_width=5)`.
-   **You'll know it worked when** the triangle has noticeably thick lines.
+2. Aggiungi un quarto parametro `line_width=1` a `draw_polygon` e chiama `t.pensize(line_width)` all'inizio.
+   Chiamala con `draw_polygon(sides=3, line_width=5)`.
+   **Saprai che ha funzionato quando** il triangolo ha linee visibilmente spesse.
 
-3. Create a global variable `COUNT = 0` and a function `increment()` that uses `global COUNT` to add 1.
-   Call `increment()` three times and `print(COUNT)`.
-   **You'll know it worked when** you see `3`.
+3. Crea una variabile globale `COUNT = 0` e una funzione `increment()` che usa `global COUNT` per aggiungere 1.
+   Chiama `increment()` tre volte e `print(COUNT)`.
+   **Saprai che ha funzionato quando** vedi `3`.
 
-4. Try the *wrong* swap (write `a = b` then `b = a`) and print both variables.
-   **You'll know it worked when** both variables show the same value — proving the bug!
+4. Prova lo scambio *sbagliato* (scrivi `a = b` poi `b = a`) e stampa entrambe le variabili.
+   **Saprai che ha funzionato quando** entrambe le variabili mostrano lo stesso valore — dimostrando il bug!
 
-5. Write a pure function `cube(n)` that returns `n * n * n`.
-   Call it inside `print(cube(4))`.
-   **You'll know it worked when** you see `64`.
+5. Scrivi una funzione pura `cube(n)` che restituisce `n * n * n`.
+   Chiamala dentro `print(cube(4))`.
+   **Saprai che ha funzionato quando** vedi `64`.
 
-!!! mascot-celebration "Fantastic Work!"
+!!! mascot-celebration "Lavoro Fantastico!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've learned how to write smarter functions with default values, keyword arguments, and proper scope!
-    These skills will make every function you write from now on more flexible and easier for others to read.
-    Let's keep coding together!
+    Hai imparato a scrivere funzioni più intelligenti con valori predefiniti, argomenti keyword, e scope corretto!
+    Queste competenze renderanno ogni funzione che scriverai da ora in poi più flessibile e più facile da leggere per gli altri.
+    Continuiamo a programmare insieme!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)

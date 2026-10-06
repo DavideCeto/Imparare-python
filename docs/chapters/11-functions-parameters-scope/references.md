@@ -1,39 +1,39 @@
-# References: Functions with Parameters and Scope
+# Riferimenti: Funzioni con Parametri e Scope
 
 1. **Wikipedia — Function (computer programming)**
    [https://en.wikipedia.org/wiki/Function_(computer_programming)](https://en.wikipedia.org/wiki/Function_(computer_programming))
-   Covers the concept of functions in programming languages, including how parameters work, return values, and why functions are the foundation of reusable, organized code.
+   Copre il concetto di funzioni nei linguaggi di programmazione, incluso come funzionano i parametri, i valori di ritorno, e perché le funzioni sono le fondamenta del codice riutilizzabile e organizzato.
 
 2. **Wikipedia — Scope (computer science)**
    [https://en.wikipedia.org/wiki/Scope_(computer_science)](https://en.wikipedia.org/wiki/Scope_(computer_science))
-   Explains local and global scope, variable visibility across different program regions, and how scope rules determine which code can access which variables — directly matching this chapter's scope topics.
+   Spiega lo scope locale e globale, la visibilità delle variabili tra diverse regioni del programma, e come le regole di scope determinano quale codice può accedere a quali variabili — corrispondendo direttamente agli argomenti di scope di questo capitolo.
 
 3. **Wikipedia — Parameter (computer programming)**
    [https://en.wikipedia.org/wiki/Parameter_(computer_programming)](https://en.wikipedia.org/wiki/Parameter_(computer_programming))
-   Distinguishes parameters from arguments, describes default parameter values and keyword arguments, and explains how data flows into functions — foundational knowledge for this chapter.
+   Distingue i parametri dagli argomenti, descrive i valori predefiniti dei parametri e gli argomenti keyword, e spiega come i dati entrano nelle funzioni — conoscenza fondamentale per questo capitolo.
 
-4. **Python Crash Course** by Eric Matthes (No Starch Press)
-   Chapter 8 provides an accessible, project-driven introduction to defining functions, passing arguments, using default values, and returning values — ideal supplemental reading for students ages 10–14 working through this chapter.
+4. **Python Crash Course** di Eric Matthes (No Starch Press)
+   Il Capitolo 8 fornisce un'introduzione accessibile e basata su progetti alla definizione di funzioni, al passaggio di argomenti, all'uso di valori predefiniti, e alla restituzione di valori — lettura supplementare ideale per studenti dai 10 ai 14 anni che affrontano questo capitolo.
 
-5. **Python for Kids** by Jason R. Briggs (No Starch Press)
-   Uses humor and visual examples to explain function parameters and scope at a level suited to younger learners, making it an excellent companion resource for students new to the concepts of local and global variables.
+5. **Python for Kids** di Jason R. Briggs (No Starch Press)
+   Usa umorismo ed esempi visivi per spiegare i parametri delle funzioni e lo scope a un livello adatto a studenti più giovani, rendendolo un'eccellente risorsa complementare per studenti nuovi ai concetti di variabili locali e globali.
 
-6. **Official Python Docs — Defining Functions**
+6. **Documentazione Ufficiale di Python — Defining Functions**
    [https://docs.python.org/3/tutorial/controlflow.html#defining-functions](https://docs.python.org/3/tutorial/controlflow.html#defining-functions)
-   The authoritative Python reference on writing functions with parameters, default argument values, and keyword arguments, with short examples that mirror exactly what this chapter teaches.
+   Il riferimento autorevole di Python su come scrivere funzioni con parametri, valori predefiniti degli argomenti, e argomenti keyword, con esempi brevi che rispecchiano esattamente ciò che insegna questo capitolo.
 
 7. **Real Python — Python Scope and the LEGB Rule**
    [https://realpython.com/python-scope-legb-rule/](https://realpython.com/python-scope-legb-rule/)
-   A thorough tutorial explaining local, enclosing, global, and built-in scope in Python with clear code examples, helping students visualize why variables inside functions do not collide with variables outside.
+   Un tutorial approfondito che spiega lo scope locale, enclosing, globale, e built-in in Python con esempi di codice chiari, aiutando gli studenti a visualizzare perché le variabili dentro le funzioni non entrano in collisione con le variabili fuori.
 
 8. **W3Schools — Python Functions**
    [https://www.w3schools.com/python/python_functions.asp](https://www.w3schools.com/python/python_functions.asp)
-   Offers short, runnable examples of function parameters, default values, keyword arguments, and return statements in a beginner-friendly format that students can explore alongside the chapter exercises.
+   Offre esempi brevi e provabili di parametri delle funzioni, valori predefiniti, argomenti keyword, e istruzioni return in un formato adatto ai principianti che gli studenti possono esplorare insieme agli esercizi del capitolo.
 
 9. **Programiz — Python Function Arguments**
    [https://www.programiz.com/python-programming/function-argument](https://www.programiz.com/python-programming/function-argument)
-   Clearly explains positional arguments, keyword arguments, and default parameter values with side-by-side code comparisons, making it easy for beginners to see how each argument style changes a function call.
+   Spiega chiaramente gli argomenti posizionali, gli argomenti keyword, e i valori predefiniti dei parametri con confronti di codice affiancati, rendendo facile per i principianti vedere come ogni stile di argomento cambia una chiamata di funzione.
 
 10. **GeeksforGeeks — Global and Local Variables in Python**
     [https://www.geeksforgeeks.org/global-local-variables-python/](https://www.geeksforgeeks.org/global-local-variables-python/)
-    Explains the difference between global and local variables with simple, well-commented examples and common beginner mistakes, reinforcing the scope concepts introduced in this chapter.
+    Spiega la differenza tra variabili globali e locali con esempi semplici e ben commentati e gli errori comuni dei principianti, rafforzando i concetti di scope introdotti in questo capitolo.
