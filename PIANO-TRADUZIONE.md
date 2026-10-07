@@ -39,6 +39,8 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
   `mkdocs.yml` già tradotta in precedenza: "Liste — Nozioni di Base", non "Le Basi")
 - `docs/chapters/16-lists-methods-patterns/` (index, references, quiz — titolo allineato alla
   nav: "Liste — Metodi e Pattern")
+- `docs/chapters/17-modules-and-random/` (index, references, quiz — titolo allineato alla
+  nav: "Moduli e Numeri Casuali")
 - `docs/glossary.md` (tutte le 338 voci, intestazioni `####` verificate 338/338 rispetto
   all'originale)
 
@@ -160,12 +162,12 @@ Fase 0 chiusa: i file skill (`skills/python-lab-generator/SKILL.md` e
 quindi non serve alcun ripristino. Decisioni della sezione 2 fissate il 2026-10-03.
 
 Fase 1 completata (pagine di ingresso, `docs/glossary.md`, nav di `mkdocs.yml` per le
-sezioni coperte). Fase 2 in corso: Capitoli 1-16 tradotti.
+sezioni coperte). Fase 2 in corso: Capitoli 1-17 tradotti.
 
-Prossimo: continuare la Fase 2 dal Capitolo 17 (`docs/chapters/17-modules-and-random/`),
+Prossimo: continuare la Fase 2 dal Capitolo 18 (`docs/chapters/18-math-module-turtle-projects/`),
 un capitolo alla volta (`index.md` + `references.md` + `quiz.md`). La nav di `mkdocs.yml`
 per tutti i 38 capitoli è già tradotta dalla Fase 1 — controllare sempre l'etichetta nav
-esistente e allineare il titolo H1/front matter a quella (vedi nota sui Capitoli 15-16),
+esistente e allineare il titolo H1/front matter a quella (vedi nota sui Capitoli 15-17),
 invece di tradurre il titolo da zero.
 
 Nota di qualità: durante la traduzione del Capitolo 5 è stato trovato e corretto un

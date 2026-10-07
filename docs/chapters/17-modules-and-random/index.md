@@ -1,29 +1,29 @@
 ---
-title: Modules and Random Numbers
-description: Learn how to import modules, use aliases, and harness the random module to build games and generative art
+title: Moduli e Numeri Casuali
+description: Impara come importare moduli, usare gli alias, e sfruttare il modulo random per costruire giochi e arte generativa
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 12:50:00
 version: 0.09
 ---
 
-# Modules and Random Numbers
+# Moduli e Numeri Casuali
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Import a module using `import`, `from...import`, and `import...as` syntax
-- Generate random integers with `random.randint()` and random floats with `random.random()`
-- Pick random items with `random.choice()` and shuffle a list with `random.shuffle()`
-- Use `random.seed()` to make your random results repeatable
+- Importare un modulo usando la sintassi `import`, `from...import`, e `import...as`
+- Generare interi casuali con `random.randint()` e float casuali con `random.random()`
+- Scegliere elementi casuali con `random.choice()` e mescolare una lista con `random.shuffle()`
+- Usare `random.seed()` per rendere ripetibili i tuoi risultati casuali
 
-Python comes with a huge library of extra tools called **modules**.
-Instead of writing everything from scratch, you `import` the tool you need.
-The `random` module is one of the most fun — it lets you add surprise and variety to your programs.
+Python viene fornito con un'enorme libreria di strumenti extra chiamati **moduli**.
+Invece di scrivere tutto da zero, fai `import` dello strumento di cui hai bisogno.
+Il modulo `random` è uno dei più divertenti — ti permette di aggiungere sorpresa e varietà ai tuoi programmi.
 
-!!! mascot-welcome "Welcome to Chapter 17!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 17!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Modules are like power-ups for your programs! Import one and suddenly you can do
-    things Python couldn't do on its own. Today we're unlocking the `random` module —
-    perfect for games and generative art. Let's code it together!
+    I moduli sono come dei potenziamenti per i tuoi programmi! Importane uno e improvvisamente puoi fare
+    cose che Python non poteva fare da solo. Oggi sblocchiamo il modulo `random` —
+    perfetto per giochi e arte generativa. Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -31,21 +31,21 @@ The `random` module is one of the most fun — it lets you add surprise and vari
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## The `import` Statement
+## L'Istruzione `import`
 
-Python's standard library contains dozens of modules ready to use.
-To load a module, write `import module_name` at the top of your program.
-After importing, access its functions with `module.function()`.
+La libreria standard di Python contiene decine di moduli pronti all'uso.
+Per caricare un modulo, scrivi `import module_name` in cima al tuo programma.
+Dopo l'importazione, accedi alle sue funzioni con `module.function()`.
 
 ```python
 import random
 print(random.randint(1, 10))   # random number between 1 and 10
 ```
 
-## `from...import` — Grab Specific Names
+## `from...import` — Prendi Nomi Specifici
 
-If you only need one or two functions from a module, you can import just those names.
-After a `from...import`, you call the function directly without the module prefix.
+Se hai bisogno solo di una o due funzioni da un modulo, puoi importare solo quei nomi.
+Dopo un `from...import`, chiami la funzione direttamente senza il prefisso del modulo.
 
 ```python
 from random import randint, choice
@@ -54,45 +54,45 @@ print(randint(1, 6))       # no "random." needed
 print(choice(["a","b","c"]))
 ```
 
-## `import...as` — Give a Module a Nickname
+## `import...as` — Dai un Soprannome a un Modulo
 
-Long module names can be shortened with `as`:
+I nomi lunghi dei moduli possono essere abbreviati con `as`:
 
 ```python
 import random as rnd
 print(rnd.randint(1, 100))
 ```
 
-## `from...import *` — Import Everything
+## `from...import *` — Importa Tutto
 
-`from random import *` imports every public name from the module.
-This is convenient but can cause confusion if two modules define a function with the same name.
-Use it only for quick experiments, not in serious programs.
+`from random import *` importa ogni nome pubblico dal modulo.
+Questo è comodo ma può causare confusione se due moduli definiscono una funzione con lo stesso nome.
+Usalo solo per esperimenti rapidi, non in programmi seri.
 
-## The `random` Module
+## Il Modulo `random`
 
-The `random` module generates numbers that look unpredictable.
+Il modulo `random` genera numeri che sembrano imprevedibili.
 
-Before we try each function, here's a summary of the key ones:
+Prima di provare ogni funzione, ecco un riepilogo di quelle principali:
 
-| Function | Returns | Example |
+| Funzione | Restituisce | Esempio |
 |----------|---------|---------|
-| `randint(a, b)` | Random integer from a to b (inclusive) | `randint(1, 6)` → 4 |
-| `random()` | Random float from 0.0 to 1.0 | `random()` → 0.73... |
-| `choice(seq)` | One random item from a list | `choice(["red","blue"])` |
-| `shuffle(lst)` | Shuffles a list in place (returns None) | `shuffle(cards)` |
-| `sample(seq, k)` | List of k unique random items | `sample(range(1,50), 6)` |
-| `seed(n)` | Sets the random starting point | `seed(42)` → same results every time |
+| `randint(a, b)` | Intero casuale da a a b (inclusi) | `randint(1, 6)` → 4 |
+| `random()` | Float casuale da 0.0 a 1.0 | `random()` → 0.73... |
+| `choice(seq)` | Un elemento casuale da una lista | `choice(["red","blue"])` |
+| `shuffle(lst)` | Mescola una lista sul posto (restituisce None) | `shuffle(cards)` |
+| `sample(seq, k)` | Lista di k elementi casuali unici | `sample(range(1,50), 6)` |
+| `seed(n)` | Imposta il punto di partenza casuale | `seed(42)` → stessi risultati ogni volta |
 
-## `random.randint()` — Random Integers
+## `random.randint()` — Interi Casuali
 
-`randint(a, b)` returns a random integer where `a <= result <= b`.
-Both endpoints are included.
+`randint(a, b)` restituisce un intero casuale dove `a <= result <= b`.
+Entrambi gli estremi sono inclusi.
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below simulates rolling a 6-sided die five times.
-    Will you ever get the same number twice in a row? Make your guess — then run it!
+    Il codice sotto simula il lancio di un dado a 6 facce cinque volte.
+    Otterrai mai lo stesso numero due volte di fila? Fai la tua previsione — poi eseguilo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -116,21 +116,21 @@ for i in range(5):
     print(f"  Roll {i+1}: {roll}")`);
 </script>
 
-Run it a few times — the results change each time because the numbers are random.
+Eseguilo un paio di volte — i risultati cambiano ogni volta perché i numeri sono casuali.
 
-### See It: Randomness Has a Shape
+### Guardalo: La Casualità ha una Forma
 
-Five rolls look like pure chaos. But what happens after a **thousand** rolls? Before you click anything in the histogram below, predict: **after 1000 rolls of one die, will some faces come up way more than others, or will the bars be roughly even?**
+Cinque lanci sembrano puro caos. Ma cosa succede dopo **mille** lanci? Prima di cliccare qualcosa nell'istogramma sotto, prevedi: **dopo 1000 lanci di un dado, alcune facce usciranno molto più di altre, o le barre saranno più o meno uguali?**
 
 <iframe src="../../sims/dice-roll-histogram/main.html" height="482" width="100%" scrolling="no"></iframe>
 
-[Explore the Dice Roll Histogram MicroSim](../../sims/dice-roll-histogram/index.md){ .md-button }
+[Esplora il MicroSim Dice Roll Histogram](../../sims/dice-roll-histogram/index.md){ .md-button }
 
-Now switch the dropdown to **Sum of two dice** and roll 1000 again. The flat skyline turns into a mountain with its peak at 7 — can you figure out why there are more ways to roll a 7 than a 2? That discovery is the seed of probability.
+Ora passa il menu a tendina a **Sum of two dice** e lancia di nuovo 1000 volte. Il profilo piatto si trasforma in una montagna con il picco al 7 — riesci a capire perché ci sono più modi per ottenere un 7 che un 2? Quella scoperta è il seme della probabilità.
 
-## `random.choice()` — Pick from a List
+## `random.choice()` — Scegli da una Lista
 
-`choice(seq)` picks one random item from a sequence (list, string, or tuple).
+`choice(seq)` sceglie un elemento casuale da una sequenza (lista, stringa, o tupla).
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -155,10 +155,10 @@ directions = ["left", "right", "forward", "back"]
 print("Random direction:", random.choice(directions))`);
 </script>
 
-## `random.shuffle()` — Shuffle a List
+## `random.shuffle()` — Mescola una Lista
 
-`shuffle(lst)` rearranges the items of a list in a random order.
-It modifies the list **in place** and returns `None` — so don't write `lst = shuffle(lst)`.
+`shuffle(lst)` riorganizza gli elementi di una lista in ordine casuale.
+Modifica la lista **sul posto** e restituisce `None` — quindi non scrivere `lst = shuffle(lst)`.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -182,11 +182,11 @@ random.shuffle(cards)
 print("After shuffle: ", cards[:5], "...")`);
 </script>
 
-## `random.random()` — Random Float
+## `random.random()` — Float Casuale
 
-`random()` returns a float between 0.0 and 1.0. The result can be exactly 0.0 but is never exactly 1.0.
+`random()` restituisce un float tra 0.0 e 1.0. Il risultato può essere esattamente 0.0 ma non è mai esattamente 1.0.
 
-This is useful when you want a *percentage* or *probability*. Multiply to scale it:
+Questo è utile quando vuoi una *percentuale* o una *probabilità*. Moltiplica per scalarlo:
 
 ```python
 import random
@@ -194,10 +194,10 @@ prob = random.random()           # between 0.0 and 1.0
 scaled = random.random() * 100  # between 0.0 and 100.0
 ```
 
-## `random.sample()` — Pick Without Replacement
+## `random.sample()` — Scegli Senza Ripetizione
 
-`sample(seq, k)` picks `k` unique items from the sequence (no repeats).
-This is like drawing lottery numbers — once a number is drawn, it can't be drawn again.
+`sample(seq, k)` sceglie `k` elementi unici dalla sequenza (senza ripetizioni).
+È come estrarre numeri della lotteria — una volta estratto un numero, non può essere estratto di nuovo.
 
 ```python
 import random
@@ -205,12 +205,12 @@ lottery = random.sample(range(1, 50), 6)
 print("Lottery numbers:", sorted(lottery))
 ```
 
-## `random.seed()` — Repeatable Randomness
+## `random.seed()` — Casualità Ripetibile
 
-Every time you run a random program, Python uses a different starting point (called a **seed**) so the results are different.
+Ogni volta che esegui un programma casuale, Python usa un punto di partenza diverso (chiamato **seme**) così che i risultati siano diversi.
 
-If you call `random.seed(n)` with the same number every time, you get exactly the same "random" sequence.
-This is useful for testing — you want your program to behave the same way during testing.
+Se chiami `random.seed(n)` con lo stesso numero ogni volta, ottieni esattamente la stessa sequenza "casuale".
+Questo è utile per i test — vuoi che il tuo programma si comporti nello stesso modo durante i test.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -238,9 +238,9 @@ print("Same again: ", [random.randint(1, 10) for _ in range(5)])
 print("No seed:   ", [random.randint(1, 10) for _ in range(5)])`);
 </script>
 
-## Random Art with Turtle
+## Arte Casuale con Turtle
 
-Let's put `random` to work with turtle graphics — random colors, sizes, and positions to create generative art.
+Mettiamo `random` al lavoro con la grafica turtle — colori, dimensioni, e posizioni casuali per creare arte generativa.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -284,17 +284,17 @@ for _ in range(40):
     t.end_fill()`);
 </script>
 
-Run it multiple times — because of randomness, you'll get a different artwork every single time!
+Eseguilo più volte — grazie alla casualità, otterrai un'opera diversa ogni singola volta!
 
-## Creating Your Own Module
+## Creare il Tuo Proprio Modulo
 
-So far you've only *used* modules that already exist. You can also **author** your own — package a set of functions into a `.py` file so other programs (or your future self) can `import` them, exactly like `random`.
+Finora hai solo *usato* moduli che già esistono. Puoi anche **crearne** uno tuo — impacchettare un insieme di funzioni in un file `.py` così che altri programmi (o il tuo futuro te stesso) possano farne `import`, esattamente come `random`.
 
-!!! mascot-warning "This Needs a Real Python Environment"
+!!! mascot-warning "Questo Richiede un Vero Ambiente Python"
     ![Monty with a warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    Creating a separate file and importing it only works with a real Python installation — Thonny, VS Code, or the terminal. Skulpt runs a single file, so this walkthrough uses regular code blocks instead of an interactive lab.
+    Creare un file separato e importarlo funziona solo con una vera installazione Python — Thonny, VS Code, o il terminale. Skulpt esegue un singolo file, quindi questa sezione usa normali blocchi di codice invece di un laboratorio interattivo.
 
-Save the functions below in a file named `fibo.py`:
+Salva le funzioni sotto in un file chiamato `fibo.py`:
 
 ```python
 # fibo.py
@@ -314,7 +314,7 @@ def fib2(n):   # return the Fibonacci series up to n as a list
     return result
 ```
 
-Then, in a **different** file saved in the same folder, `import` it by its filename (without the `.py`):
+Poi, in un file **diverso** salvato nella stessa cartella, fanne `import` con il suo nome di file (senza il `.py`):
 
 ```python
 import fibo
@@ -324,7 +324,7 @@ numbers = fibo.fib2(100)
 print(numbers)            # [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 ```
 
-You can also grab one function directly, just like you did with `random`:
+Puoi anche prendere una funzione direttamente, proprio come hai fatto con `random`:
 
 ```python
 from fibo import fib
@@ -332,15 +332,15 @@ from fibo import fib
 fib(20)
 ```
 
-Python treats every `.py` file the same way — whether it ships with the standard library or you wrote it five minutes ago.
+Python tratta ogni file `.py` allo stesso modo — sia che venga fornito con la libreria standard sia che tu l'abbia scritto cinque minuti fa.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Fix the Shuffle"
+!!! mascot-thinking "Il Tuo Turno — Correggi lo Shuffle"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below tries to shuffle a list and print it, but it has a bug —
-    it assigns the return value of `shuffle()` to `cards`, losing the list!
-    Fix it so the list is actually shuffled and printed.
+    Il codice sotto cerca di mescolare una lista e stamparla, ma ha un bug —
+    assegna il valore di ritorno di `shuffle()` a `cards`, perdendo la lista!
+    Correggilo così che la lista venga davvero mescolata e stampata.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -366,32 +366,32 @@ cards = random.shuffle(cards)
 print("Shuffled:", cards)`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Simulate flipping a coin 10 times. Use `random.choice(["heads", "tails"])` and count how many heads you get.
-   **You'll know it worked when** you see a count between 0 and 10.
+1. Simula il lancio di una moneta 10 volte. Usa `random.choice(["heads", "tails"])` e conta quante teste ottieni.
+   **Saprai che ha funzionato quando** vedi un conteggio tra 0 e 10.
 
-2. Pick 6 lottery numbers from 1–49 using `random.sample(range(1, 50), 6)`. Print them sorted.
-   **You'll know it worked when** you see 6 unique numbers in order.
+2. Scegli 6 numeri della lotteria da 1–49 usando `random.sample(range(1, 50), 6)`. Stampali ordinati.
+   **Saprai che ha funzionato quando** vedi 6 numeri unici in ordine.
 
-3. Change the random art loop count from `40` to `100`. Notice the effect.
-   **You'll know it worked when** the canvas is much more filled with shapes.
+3. Cambia il conteggio del ciclo dell'arte casuale da `40` a `100`. Nota l'effetto.
+   **Saprai che ha funzionato quando** il canvas è molto più riempito di forme.
 
-4. Set `random.seed(7)` before the random art loop. Run it twice.
-   **You'll know it worked when** both runs produce identical artwork.
+4. Imposta `random.seed(7)` prima del ciclo dell'arte casuale. Eseguilo due volte.
+   **Saprai che ha funzionato quando** entrambe le esecuzioni producono opere identiche.
 
-5. Use `random.random()` to simulate a 30% chance event: print `"Lucky!"` if the result is below `0.3`.
-   Run it 10 times with a loop.
-   **You'll know it worked when** roughly 3 out of 10 iterations print "Lucky!".
+5. Usa `random.random()` per simulare un evento con il 30% di probabilità: stampa `"Lucky!"` se il risultato è sotto `0.3`.
+   Eseguilo 10 volte con un ciclo.
+   **Saprai che ha funzionato quando** circa 3 iterazioni su 10 stampano "Lucky!".
 
-!!! mascot-celebration "Random Wizard!"
+!!! mascot-celebration "Mago della Casualità!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've unlocked modules and mastered the `random` module!
-    Games, simulations, and generative art all rely on randomness — and now you can use it too.
-    Next chapter we'll add math power to your turtle programs. Let's keep coding!
+    Hai sbloccato i moduli e padroneggiato il modulo `random`!
+    Giochi, simulazioni, e arte generativa dipendono tutti dalla casualità — e ora puoi usarla anche tu.
+    Nel prossimo capitolo aggiungeremo potere matematico ai tuoi programmi con la tartaruga. Continuiamo a programmare!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)
