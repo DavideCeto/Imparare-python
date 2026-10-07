@@ -1,74 +1,74 @@
-# Quiz: User Input and Type Conversion
+# Quiz: Input dell'Utente e Conversione di Tipo
 
-Test your understanding of the input() function, type conversion, and input validation with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione della funzione input(), della conversione di tipo, e della validazione dell'input con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What data type does `input()` always return?
+#### 1. Quale tipo di dato restituisce sempre `input()`?
 
 <div class="upper-alpha" markdown>
-1. An integer, if the user types a number
-2. A float, if the user types a decimal
-3. A string, regardless of what the user types
-4. A boolean, if the user types "yes" or "no"
+1. Un intero, se l'utente scrive un numero
+2. Un float, se l'utente scrive un decimale
+3. Una stringa, indipendentemente da cosa scrive l'utente
+4. Un booleano, se l'utente scrive "yes" o "no"
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `input()` always returns a string — no matter what the user types. If the user types `42`, Python gives you the string `"42"`, not the integer `42`. This means you must convert the input to the right data type before doing math or other operations that require a number.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `input()` restituisce sempre una stringa — indipendentemente da cosa scrive l'utente. Se l'utente scrive `42`, Python ti dà la stringa `"42"`, non l'intero `42`. Questo significa che devi convertire l'input nel tipo di dato giusto prima di fare calcoli matematici o altre operazioni che richiedono un numero.
 
     **Concept Tested:** input() Function
 
 ---
 
-#### 2. What happens if you try to add the result of `input()` to a number without converting it first?
+#### 2. Cosa succede se provi a sommare il risultato di `input()` a un numero senza convertirlo prima?
 
 <div class="upper-alpha" markdown>
-1. Python automatically converts the string to a number and adds them
-2. Python raises a `TypeError` because you cannot add a string and a number
-3. Python concatenates the number to the string
-4. Python prints an empty line and continues
+1. Python converte automaticamente la stringa in un numero e li somma
+2. Python genera un `TypeError` perché non puoi sommare una stringa e un numero
+3. Python concatena il numero alla stringa
+4. Python stampa una riga vuota e continua
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Python does not automatically convert types. If `age` holds the string `"12"` (from `input()`), then `age + 1` raises a `TypeError: can only concatenate str (not "int") to str`. You must explicitly convert with `int(age)` or `float(age)` before performing arithmetic.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Python non converte automaticamente i tipi. Se `age` contiene la stringa `"12"` (da `input()`), allora `age + 1` genera un `TypeError: can only concatenate str (not "int") to str`. Devi convertire esplicitamente con `int(age)` o `float(age)` prima di eseguire l'aritmetica.
 
     **Concept Tested:** Type Conversion
 
 ---
 
-#### 3. What does `int("42")` return?
+#### 3. Cosa restituisce `int("42")`?
 
 <div class="upper-alpha" markdown>
-1. The string `"42"` unchanged
-2. The float `42.0`
-3. The integer `42`
-4. An error, because strings cannot be converted to integers
+1. La stringa `"42"` invariata
+2. Il float `42.0`
+3. L'intero `42`
+4. Un errore, perché le stringhe non possono essere convertite in interi
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `int()` converts a string (or float) to a whole number (integer). `int("42")` returns the integer `42`. Note that `int("3.14")` would raise a `ValueError` because `"3.14"` contains a decimal point — you would need `float("3.14")` first, then `int()` if you want the whole number part.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `int()` converte una stringa (o un float) in un numero intero. `int("42")` restituisce l'intero `42`. Nota che `int("3.14")` genererebbe un `ValueError` perché `"3.14"` contiene un punto decimale — avresti bisogno prima di `float("3.14")`, poi di `int()` se vuoi la parte intera.
 
     **Concept Tested:** int() Conversion
 
 ---
 
-#### 4. Why do you need `str()` when building a message like `"Score: " + score`?
+#### 4. Perché hai bisogno di `str()` quando costruisci un messaggio come `"Score: " + score`?
 
 <div class="upper-alpha" markdown>
-1. `str()` makes the number print in bold
-2. Python cannot concatenate a string and an integer with `+` — you must convert the number to a string first
-3. `str()` converts the number to a float before joining
-4. You need `str()` only when the number is negative
+1. `str()` fa stampare il numero in grassetto
+2. Python non può concatenare una stringa e un intero con `+` — devi convertire prima il numero in una stringa
+3. `str()` converte il numero in un float prima di unirlo
+4. Hai bisogno di `str()` solo quando il numero è negativo
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. The `+` operator works differently depending on types. With two strings, it concatenates. With two numbers, it adds. But mixing a string and a number with `+` raises a `TypeError`. To build a message that includes a number, you must convert the number to a string first: `"Score: " + str(score)`.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. L'operatore `+` funziona in modo diverso in base ai tipi. Con due stringhe, concatena. Con due numeri, somma. Ma mischiare una stringa e un numero con `+` genera un `TypeError`. Per costruire un messaggio che include un numero, devi convertire prima il numero in una stringa: `"Score: " + str(score)`.
 
     **Concept Tested:** str() Conversion
 
 ---
 
-#### 5. What does `bool(0)` return?
+#### 5. Cosa restituisce `bool(0)`?
 
 <div class="upper-alpha" markdown>
 1. `True`
@@ -77,14 +77,14 @@ Test your understanding of the input() function, type conversion, and input vali
 4. `False`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. `bool()` converts a value to `True` or `False`. The values that become `False` are: `0`, `0.0`, `""` (empty string), `None`, and empty collections. Everything else becomes `True`. So `bool(0)` returns `False`, but `bool(1)` or `bool(-5)` returns `True`.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. `bool()` converte un valore in `True` o `False`. I valori che diventano `False` sono: `0`, `0.0`, `""` (stringa vuota), `None`, e le collezioni vuote. Tutto il resto diventa `True`. Quindi `bool(0)` restituisce `False`, ma `bool(1)` o `bool(-5)` restituisce `True`.
 
     **Concept Tested:** bool() Conversion
 
 ---
 
-#### 6. What does `type(3.14)` return?
+#### 6. Cosa restituisce `type(3.14)`?
 
 <div class="upper-alpha" markdown>
 1. `<class 'int'>`
@@ -93,62 +93,62 @@ Test your understanding of the input() function, type conversion, and input vali
 4. `<class 'float'>`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. `type()` returns the data type of a value as a class object. `3.14` is a floating-point number, so `type(3.14)` returns `<class 'float'>`. This is very useful for debugging when you are not sure what type a variable holds — especially after receiving input from the user.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. `type()` restituisce il tipo di dato di un valore come oggetto classe. `3.14` è un numero a virgola mobile, quindi `type(3.14)` restituisce `<class 'float'>`. Questo è molto utile per il debug quando non sei sicuro di che tipo contiene una variabile — specialmente dopo aver ricevuto l'input dall'utente.
 
     **Concept Tested:** type() Function
 
 ---
 
-#### 7. What does `"  hello  ".strip()` return?
+#### 7. Cosa restituisce `"  hello  ".strip()`?
 
 <div class="upper-alpha" markdown>
-1. `"hello"` with leading and trailing spaces removed
-2. `"HELLO"` in uppercase
-3. `"  hello  "` unchanged
-4. An error because `strip()` requires an argument
+1. `"hello"` con gli spazi iniziali e finali rimossi
+2. `"HELLO"` in maiuscolo
+3. `"  hello  "` invariata
+4. Un errore perché `strip()` richiede un argomento
 </div>
 
-??? question "Show Answer"
-    The correct answer is **A**. `strip()` removes leading and trailing whitespace (spaces, tabs, newlines) from a string. `"  hello  ".strip()` returns `"hello"`. This is important for cleaning up user input, which often has accidental extra spaces. `strip()` does not affect spaces in the middle of the string.
+??? question "Mostra risposta"
+    La risposta corretta è **A**. `strip()` rimuove gli spazi bianchi iniziali e finali (spazi, tabulazioni, ritorni a capo) da una stringa. `"  hello  ".strip()` restituisce `"hello"`. Questo è importante per pulire l'input dell'utente, che spesso ha spazi extra accidentali. `strip()` non modifica gli spazi in mezzo alla stringa.
 
     **Concept Tested:** Input Validation
 
 ---
 
-#### 8. What does `str.isdigit()` return when called on the string `"123"`?
+#### 8. Cosa restituisce `str.isdigit()` quando chiamato sulla stringa `"123"`?
 
 <div class="upper-alpha" markdown>
-1. `123` (the integer)
+1. `123` (l'intero)
 2. `True`
 3. `False`
 4. `"digit"`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `isdigit()` returns `True` if every character in the string is a digit (0-9), and `False` otherwise. `"123".isdigit()` returns `True`. `"12.3".isdigit()` returns `False` (because of the dot), and `"abc".isdigit()` returns `False`. This lets you safely check before calling `int()` to avoid a `ValueError`.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `isdigit()` restituisce `True` se ogni carattere nella stringa è una cifra (0-9), e `False` altrimenti. `"123".isdigit()` restituisce `True`. `"12.3".isdigit()` restituisce `False` (a causa del punto), e `"abc".isdigit()` restituisce `False`. Questo ti permette di controllare in sicurezza prima di chiamare `int()` per evitare un `ValueError`.
 
     **Concept Tested:** Input Validation
 
 ---
 
-#### 9. What is input validation?
+#### 9. Cos'è la validazione dell'input?
 
 <div class="upper-alpha" markdown>
-1. Automatically converting all input to integers
-2. Checking that user input is safe and in the expected format before using it
-3. Printing the user's input back to them before the program continues
-4. Storing user input in a global variable for later use
+1. Convertire automaticamente tutto l'input in interi
+2. Controllare che l'input dell'utente sia sicuro e nel formato previsto prima di usarlo
+3. Stampare l'input dell'utente prima che il programma continui
+4. Memorizzare l'input dell'utente in una variabile globale per un uso successivo
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Input validation means checking that the data the user provides is in the form your program expects before trying to use it. For example, checking that `raw.isdigit()` before calling `int(raw)` prevents a `ValueError` crash if the user types letters instead of a number. Good programs never trust raw user input without checking it first.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. La validazione dell'input significa controllare che i dati forniti dall'utente siano nella forma prevista dal tuo programma prima di provare a usarli. Per esempio, controllare `raw.isdigit()` prima di chiamare `int(raw)` previene un crash da `ValueError` se l'utente scrive lettere invece di un numero. I buoni programmi non si fidano mai dell'input grezzo dell'utente senza controllarlo prima.
 
     **Concept Tested:** Input Validation
 
 ---
 
-#### 10. Which line of code correctly reads a number from the user and stores it as an integer?
+#### 10. Quale riga di codice legge correttamente un numero dall'utente e lo memorizza come intero?
 
 <div class="upper-alpha" markdown>
 1. `age = input(int("How old are you? "))`
@@ -157,8 +157,8 @@ Test your understanding of the input() function, type conversion, and input vali
 4. `age = str(int("How old are you? "))`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `int(input("How old are you? "))` works by first calling `input()` to get the user's response as a string, then immediately passing that string to `int()` to convert it to an integer. This is the standard Python pattern for reading a number from the user. Option A incorrectly tries to convert the prompt message itself.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `int(input("How old are you? "))` funziona chiamando prima `input()` per ottenere la risposta dell'utente come stringa, poi passando immediatamente quella stringa a `int()` per convertirla in un intero. Questo è lo schema standard di Python per leggere un numero dall'utente. L'opzione A tenta erroneamente di convertire il messaggio del prompt stesso.
 
     **Concept Tested:** Type Conversion
 

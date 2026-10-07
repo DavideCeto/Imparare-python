@@ -1,28 +1,28 @@
 ---
-title: User Input and Type Conversion
-description: Learn how to get user input with input(), convert between data types, validate input, and use print() effectively
+title: Input dell'Utente e Conversione di Tipo
+description: Impara come ottenere l'input dell'utente con input(), convertire tra tipi di dati, validare l'input, e usare print() efficacemente
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 12:10:00
 version: 0.09
 ---
 
-# User Input and Type Conversion
+# Input dell'Utente e Conversione di Tipo
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Use `input()` to ask the user a question and read their answer
-- Convert between data types using `int()`, `float()`, `str()`, and `bool()`
-- Check a value's type with the `type()` function
-- Validate user input so your program doesn't crash on bad data
+- Usare `input()` per fare una domanda all'utente e leggere la sua risposta
+- Convertire tra tipi di dati usando `int()`, `float()`, `str()`, e `bool()`
+- Controllare il tipo di un valore con la funzione `type()`
+- Validare l'input dell'utente così che il tuo programma non si blocchi con dati sbagliati
 
-Until now your programs have run the same way every time.
-With `input()`, your program can have a conversation with the user — asking questions and responding to their answers.
+Finora i tuoi programmi hanno girato sempre nello stesso modo.
+Con `input()`, il tuo programma può avere una conversazione con l'utente — facendo domande e rispondendo alle sue risposte.
 
-!!! mascot-welcome "Welcome to Chapter 13!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 13!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Today your programs come alive! Instead of running the same way every time,
-    they'll ask the user questions and respond to the answers.
-    Get ready to build your first truly interactive programs! Let's code it together!
+    Oggi i tuoi programmi prendono vita! Invece di girare sempre nello stesso modo,
+    faranno domande all'utente e risponderanno alle risposte.
+    Preparati a costruire i tuoi primi programmi davvero interattivi! Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -30,12 +30,12 @@ With `input()`, your program can have a conversation with the user — asking qu
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## The `input()` Function
+## La Funzione `input()`
 
-`input()` stops the program, prints a message (called a **prompt**), and waits for the user to type something and press Enter.
-Whatever the user types comes back to your program as a **string**.
+`input()` ferma il programma, stampa un messaggio (chiamato **prompt**), e aspetta che l'utente scriva qualcosa e prema Invio.
+Qualsiasi cosa l'utente scriva torna al tuo programma come una **stringa**.
 
-The key word to remember: `input()` **always returns a string**, even if the user types a number.
+La parola chiave da ricordare: `input()` **restituisce sempre una stringa**, anche se l'utente scrive un numero.
 
 ```python
 name = input("What is your name? ")
@@ -60,24 +60,24 @@ initCmLab('', `name = input("What is your name? ")
 print("Hello,", name + "! Welcome to Python!")`);
 </script>
 
-!!! mascot-tip "Scratch Bridge"
+!!! mascot-tip "Ponte Scratch"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch, the **"Ask ___ and wait"** block pauses the program and stores the answer in a special variable called `answer`.
-    In Python, `input("your question")` does exactly the same thing — it pauses and returns the answer as a string.
+    In Scratch, il blocco **"Chiedi ___ e aspetta"** pausa il programma e memorizza la risposta in una variabile speciale chiamata `answer`.
+    In Python, `input("your question")` fa esattamente la stessa cosa — pausa e restituisce la risposta come una stringa.
 
-## Type Conversion
+## Conversione di Tipo
 
-Since `input()` always returns a string, you need to **convert** it before doing math.
+Dato che `input()` restituisce sempre una stringa, devi **convertirla** prima di fare calcoli matematici.
 
-Before we dive in, let's define three terms:
-- **Integer (int):** a whole number with no decimal point — `5`, `-12`, `0`
-- **Float:** a number with a decimal point — `3.14`, `-0.5`, `100.0`
-- **Type conversion:** changing a value from one data type to another
+Prima di immergerci, definiamo tre termini:
+- **Intero (int):** un numero intero senza punto decimale — `5`, `-12`, `0`
+- **Float:** un numero con un punto decimale — `3.14`, `-0.5`, `100.0`
+- **Conversione di tipo:** cambiare un valore da un tipo di dato a un altro
 
-### `int()` — Convert to Integer
+### `int()` — Converti in Intero
 
-`int()` converts a string (or float) to a whole number.
-If the string contains letters, `int()` raises a `ValueError` — so always convert only after checking the input looks like a number.
+`int()` converte una stringa (o un float) in un numero intero.
+Se la stringa contiene lettere, `int()` genera un `ValueError` — quindi convertila sempre solo dopo aver controllato che l'input sembri un numero.
 
 ```python
 age_text = input("How old are you? ")
@@ -104,10 +104,10 @@ age = int(age_text)
 print("Next year you'll be", age + 1)`);
 </script>
 
-### `float()` — Convert to Decimal Number
+### `float()` — Converti in Numero Decimale
 
-`float()` converts a string to a number with a decimal point.
-Use it when you need precision beyond whole numbers — for prices, measurements, or temperatures.
+`float()` converte una stringa in un numero con un punto decimale.
+Usalo quando hai bisogno di precisione oltre i numeri interi — per prezzi, misure, o temperature.
 
 ```python
 price = float(input("Enter price: $"))
@@ -115,27 +115,27 @@ tax = price * 0.08
 print("Total with tax: $" + str(round(price + tax, 2)))
 ```
 
-### `str()` — Convert to String
+### `str()` — Converti in Stringa
 
-`str()` converts a number (or other value) into a string.
-You need this when you want to join a number with text using `+`.
+`str()` converte un numero (o un altro valore) in una stringa.
+Ne hai bisogno quando vuoi unire un numero con del testo usando `+`.
 
 ```python
 score = 95
 print("Your score: " + str(score) + "/100")   # must convert to string first
 ```
 
-### `bool()` — Convert to True or False
+### `bool()` — Converti in True o False
 
-`bool()` converts a value to `True` or `False`.
-The rules for what becomes `False` are worth memorizing:
+`bool()` converte un valore in `True` o `False`.
+Le regole su cosa diventa `False` vanno memorizzate:
 
-| Value | `bool()` result |
+| Valore | Risultato di `bool()` |
 |-------|----------------|
 | `0` | `False` |
-| `""` (empty string) | `False` |
+| `""` (stringa vuota) | `False` |
 | `None` | `False` |
-| Anything else | `True` |
+| Qualsiasi altra cosa | `True` |
 
 ```python
 print(bool(0))       # False
@@ -144,10 +144,10 @@ print(bool("hi"))    # True
 print(bool(42))      # True
 ```
 
-## The `type()` Function
+## La Funzione `type()`
 
-`type()` tells you what data type a value is.
-It's incredibly useful for debugging — when you're not sure whether you're working with a string or a number, just ask Python.
+`type()` ti dice qual è il tipo di dato di un valore.
+È incredibilmente utile per il debug — quando non sei sicuro se stai lavorando con una stringa o un numero, basta chiederlo a Python.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -172,17 +172,17 @@ print("After int():", y)
 print("Type of y:", type(y))`);
 </script>
 
-If you type a number like `42`, you'll see `<class 'str'>` first, then `<class 'int'>` after the conversion.
+Se scrivi un numero come `42`, vedrai prima `<class 'str'>`, poi `<class 'int'>` dopo la conversione.
 
-## String Methods: `lower()`, `upper()`, `strip()`
+## Metodi delle Stringhe: `lower()`, `upper()`, `strip()`
 
-Before you convert or validate input, it's a good idea to **clean** it first.
+Prima di convertire o validare l'input, è una buona idea **pulirlo** prima.
 
-- `s.lower()` — converts all letters to lowercase (`"Hello"` → `"hello"`)
-- `s.upper()` — converts all letters to uppercase (`"hello"` → `"HELLO"`)
-- `s.strip()` — removes leading and trailing spaces (`"  hi  "` → `"hi"`)
+- `s.lower()` — converte tutte le lettere in minuscolo (`"Hello"` → `"hello"`)
+- `s.upper()` — converte tutte le lettere in maiuscolo (`"hello"` → `"HELLO"`)
+- `s.strip()` — rimuove gli spazi iniziali e finali (`"  hi  "` → `"hi"`)
 
-These three methods are very useful for input handling:
+Questi tre metodi sono molto utili per gestire l'input:
 
 ```python
 answer = input("Do you want to continue? (yes/no) ")
@@ -193,13 +193,13 @@ else:
     print("OK, stopping here.")
 ```
 
-## Input Validation Basics
+## Le Basi della Validazione dell'Input
 
-**Validation** means checking that the user's input is safe to use before using it.
+**Validazione** significa controllare che l'input dell'utente sia sicuro da usare prima di usarlo.
 
-A simple approach is to ask `str.isdigit()` — a string method that returns `True` if all characters are digits.
+Un approccio semplice è usare `str.isdigit()` — un metodo di stringa che restituisce `True` se tutti i caratteri sono cifre.
 
-Before calling `int()`, you can use `isdigit()` to avoid a crash:
+Prima di chiamare `int()`, puoi usare `isdigit()` per evitare un crash:
 
 ```python
 raw = input("Enter a whole number: ")
@@ -236,26 +236,26 @@ else:
     print("That doesn't look like a whole number!")`);
 </script>
 
-Try it twice: once with a number like `7`, and once with letters like `hello`.
+Provalo due volte: una volta con un numero come `7`, e una volta con lettere come `hello`.
 
-## `print()` Tips
+## Suggerimenti su `print()`
 
-`print()` is more powerful than it looks. A few useful tricks:
+`print()` è più potente di quanto sembri. Alcuni trucchi utili:
 
-| Feature | Example | Output |
+| Caratteristica | Esempio | Output |
 |---------|---------|--------|
-| Multiple values | `print("a", "b", "c")` | `a b c` |
-| Custom separator | `print("a", "b", sep="-")` | `a-b` |
-| No newline at end | `print("Hello", end=" ")` | stays on same line |
-| Empty line | `print()` | blank line |
+| Valori multipli | `print("a", "b", "c")` | `a b c` |
+| Separatore personalizzato | `print("a", "b", sep="-")` | `a-b` |
+| Nessun ritorno a capo alla fine | `print("Hello", end=" ")` | resta sulla stessa riga |
+| Riga vuota | `print()` | riga vuota |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Spot the Bug!"
+!!! mascot-thinking "Trova il Bug!"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below is supposed to add two numbers entered by the user.
-    But it has a bug — it concatenates strings instead of adding numbers!
-    Fix it so the math actually works.
+    Il programma sotto dovrebbe sommare due numeri inseriti dall'utente.
+    Ma ha un bug — concatena le stringhe invece di sommare i numeri!
+    Correggilo così che la matematica funzioni davvero.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -278,34 +278,34 @@ b = input("Enter second number: ")
 print("Sum:", a + b)`);
 </script>
 
-If you enter `3` and `4`, the buggy version prints `34` instead of `7`.
-Fix it by converting `a` and `b` to `int()` before adding them.
+Se inserisci `3` e `4`, la versione con il bug stampa `34` invece di `7`.
+Correggilo convertendo `a` e `b` con `int()` prima di sommarli.
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Change the greeting lab to ask for the user's favorite color. Print `"My favorite color is [color] too!"`.
-   **You'll know it worked when** the program echoes back whatever color you typed.
+1. Cambia il laboratorio del saluto per chiedere il colore preferito dell'utente. Stampa `"My favorite color is [color] too!"`.
+   **Saprai che ha funzionato quando** il programma ripete il colore che hai scritto.
 
-2. Ask the user for a temperature in Celsius. Convert it: `fahrenheit = (celsius * 9/5) + 32`. Print the result.
-   **You'll know it worked when** entering `100` prints `212.0`.
+2. Chiedi all'utente una temperatura in Celsius. Convertila: `fahrenheit = (celsius * 9/5) + 32`. Stampa il risultato.
+   **Saprai che ha funzionato quando** inserendo `100` stampa `212.0`.
 
-3. Ask the user for their name, then use `.upper()` to print it in capitals.
-   **You'll know it worked when** typing `monty` prints `MONTY`.
+3. Chiedi all'utente il suo nome, poi usa `.upper()` per stamparlo in maiuscolo.
+   **Saprai che ha funzionato quando** scrivendo `monty` stampa `MONTY`.
 
-4. In the validation demo, try typing a negative number like `-5`. Does `isdigit()` accept it?
-   **You'll know it worked when** you see that `-5` fails the `isdigit()` check — and you understand why!
+4. Nella demo di validazione, prova a scrivere un numero negativo come `-5`. `isdigit()` lo accetta?
+   **Saprai che ha funzionato quando** vedi che `-5` fallisce il controllo `isdigit()` — e capisci perché!
 
-5. Use `type()` to print the types of `3.14`, `True`, and `None`.
-   **You'll know it worked when** you see `float`, `bool`, and `NoneType`.
+5. Usa `type()` per stampare i tipi di `3.14`, `True`, e `None`.
+   **Saprai che ha funzionato quando** vedi `float`, `bool`, e `NoneType`.
 
-!!! mascot-celebration "Amazing Progress!"
+!!! mascot-celebration "Progresso Straordinario!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Your programs can now have real conversations with users!
-    You've learned `input()`, type conversion, validation, and string cleaning.
-    These skills appear in nearly every real Python program. Let's keep coding together!
+    I tuoi programmi possono ora avere vere conversazioni con gli utenti!
+    Hai imparato `input()`, la conversione di tipo, la validazione, e la pulizia delle stringhe.
+    Queste competenze appaiono in quasi ogni vero programma Python. Continuiamo a programmare insieme!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)
