@@ -1,28 +1,28 @@
 ---
-title: String Methods and Formatting
-description: Master string indexing, slicing, split/join/replace, f-strings, and multiline formatting for clean program output
+title: Metodi delle Stringhe e Formattazione
+description: Padroneggia l'indicizzazione e lo slicing delle stringhe, split/join/replace, le f-string, e la formattazione multilinea per un output di programma pulito
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 12:20:00
 version: 0.09
 ---
 
-# String Methods and Formatting
+# Metodi delle Stringhe e Formattazione
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Access individual characters using **string indexing** and extract substrings using **slicing**
-- Use `split()`, `join()`, `replace()`, `find()`, `startswith()`, and `endswith()` to work with text
-- Build clean output strings using **f-strings** — the modern Python way to embed variables in text
-- Format multiline output to make your programs look professional
+- Accedere a singoli caratteri usando l'**indicizzazione delle stringhe** ed estrarre sottostringhe usando lo **slicing**
+- Usare `split()`, `join()`, `replace()`, `find()`, `startswith()`, ed `endswith()` per lavorare con il testo
+- Costruire stringhe di output pulite usando le **f-string** — il modo moderno di Python per incorporare variabili nel testo
+- Formattare output multilinea per far sembrare i tuoi programmi professionali
 
-Strings are everywhere in programming. Usernames, messages, file names, web addresses — all text.
-Python gives you a huge toolkit of string methods so you can chop, search, replace, and format text with just a few lines of code.
+Le stringhe sono ovunque nella programmazione. Nomi utente, messaggi, nomi di file, indirizzi web — tutto testo.
+Python ti dà un enorme set di strumenti di metodi delle stringhe così puoi tagliare, cercare, sostituire, e formattare il testo con solo poche righe di codice.
 
-!!! mascot-welcome "Welcome to Chapter 14!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 14!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Strings are one of the most useful tools in your Python toolbox!
-    Today you'll learn how to slice them, search them, replace parts, and format beautiful output.
-    Let's code it together!
+    Le stringhe sono uno degli strumenti più utili nella tua cassetta degli attrezzi Python!
+    Oggi imparerai come tagliarle, cercarle, sostituire parti, e formattare un output bellissimo.
+    Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -30,12 +30,12 @@ Python gives you a huge toolkit of string methods so you can chop, search, repla
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## String Indexing
+## Indicizzazione delle Stringhe
 
-Every character in a string has a **position number** called an **index**.
-Python starts counting at zero — so the first character is at index `0`, the second at `1`, and so on.
+Ogni carattere in una stringa ha un **numero di posizione** chiamato **indice**.
+Python inizia a contare da zero — quindi il primo carattere è all'indice `0`, il secondo all'`1`, e così via.
 
-You access a character using square brackets: `word[index]`.
+Accedi a un carattere usando le parentesi quadre: `word[index]`.
 
 ```
 word = "Python"
@@ -43,7 +43,7 @@ word = "Python"
 index:   0  1  2  3  4  5
 ```
 
-You can also count backwards from the end using negative numbers:
+Puoi anche contare all'indietro dalla fine usando numeri negativi:
 
 ```
          P   y   t   h   o   n
@@ -72,10 +72,10 @@ print("Last character:", word[-1])
 print("Second to last:", word[-2])`);
 </script>
 
-## String Slicing
+## Slicing delle Stringhe
 
-**Slicing** extracts a portion (a "slice") of a string.
-The syntax is `word[start:end]` — it gives you characters from `start` up to (but NOT including) `end`.
+Lo **slicing** estrae una porzione (una "fetta") di una stringa.
+La sintassi è `word[start:end]` — ti dà i caratteri da `start` fino a (ma NON includendo) `end`.
 
 ```python
 word = "Python"
@@ -86,10 +86,10 @@ print(word[3:])    # "hon" — from 3 to the end
 print(word[:])     # "Python" — the whole string
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Before running the code below, predict what `"programming"[3:8]` will print.
-    Count the characters starting at index 0. Make your guess — then run it!
+    Prima di eseguire il codice sotto, prevedi cosa stamperà `"programming"[3:8]`.
+    Conta i caratteri partendo dall'indice 0. Fai la tua previsione — poi eseguilo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -112,28 +112,28 @@ print(s[-4:])
 print(s[::2])   # every other character (step of 2)`);
 </script>
 
-Were you right? `s[3:8]` gives you `"gramm"` — characters at positions 3, 4, 5, 6, and 7.
+Avevi indovinato? `s[3:8]` ti dà `"gramm"` — i caratteri nelle posizioni 3, 4, 5, 6, e 7.
 
-The `::2` notation is a **step** — `s[::2]` takes every second character.
+La notazione `::2` è uno **step** — `s[::2]` prende ogni secondo carattere.
 
-### See It: Slice with Your Hands
+### Guardalo: Fai lo Slice con le Tue Mani
 
-The slicer below turns slice notation into something you can grab. Drag the green **start** handle and the red **end** handle and watch the `word[2:7]` notation update live. Before you drag anything, predict: **where do the two handles need to sit to extract `"ROCKS"`?**
+Lo slicer sotto trasforma la notazione di slicing in qualcosa che puoi afferrare. Trascina la maniglia verde di **start** e la maniglia rossa di **end** e guarda la notazione `word[2:7]` aggiornarsi dal vivo. Prima di trascinare qualcosa, prevedi: **dove devono stare le due maniglie per estrarre `"ROCKS"`?**
 
 <iframe src="../../sims/string-slicer/main.html" height="482" width="100%" scrolling="no"></iframe>
 
-[Explore the String Slicer MicroSim](../../sims/string-slicer/index.md){ .md-button }
+[Esplora il MicroSim String Slicer](../../sims/string-slicer/index.md){ .md-button }
 
-Notice that the red end handle always sits **one position past** the last selected letter — the end index is never included. Click any single tile to see plain indexing like `word[3]`, type your own word, or click **New Challenge** to practice.
+Nota che la maniglia rossa di fine sta sempre **una posizione dopo** l'ultima lettera selezionata — l'indice di fine non è mai incluso. Clicca su qualsiasi singola tessera per vedere l'indicizzazione semplice come `word[3]`, scrivi la tua parola, oppure clicca **New Challenge** per esercitarti.
 
-## Split, Join, and Replace
+## Split, Join, e Replace
 
-Three of the most-used string methods are `split()`, `join()`, and `replace()`.
+Tre dei metodi delle stringhe più usati sono `split()`, `join()`, e `replace()`.
 
-Before looking at examples, here's a quick preview:
-- `split()` breaks a string into a **list** of pieces
-- `join()` glues a list of strings back together
-- `replace()` swaps every occurrence of one substring for another
+Prima di guardare gli esempi, ecco un'anteprima veloce:
+- `split()` spezza una stringa in una **lista** di pezzi
+- `join()` incolla di nuovo insieme una lista di stringhe
+- `replace()` scambia ogni occorrenza di una sottostringa con un'altra
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -165,23 +165,23 @@ new_sentence = sentence.replace("fox", "python")
 print("Replaced:", new_sentence)`);
 </script>
 
-| Method | What it does | Example |
+| Metodo | Cosa fa | Esempio |
 |--------|-------------|---------|
-| `s.split()` | Split on spaces | `"a b c".split()` → `["a","b","c"]` |
-| `s.split(",")` | Split on commas | `"a,b,c".split(",")` → `["a","b","c"]` |
-| `"-".join(lst)` | Join with dashes | `"-".join(["a","b"])` → `"a-b"` |
-| `s.replace("x","y")` | Replace x with y | `"fox".replace("x","t")` → `"fot"` |
+| `s.split()` | Divide sugli spazi | `"a b c".split()` → `["a","b","c"]` |
+| `s.split(",")` | Divide sulle virgole | `"a,b,c".split(",")` → `["a","b","c"]` |
+| `"-".join(lst)` | Unisce con dei trattini | `"-".join(["a","b"])` → `"a-b"` |
+| `s.replace("x","y")` | Sostituisce x con y | `"fox".replace("x","t")` → `"fot"` |
 
-## Searching Strings
+## Cercare nelle Stringhe
 
-Python gives you several methods to search inside a string:
+Python ti offre diversi metodi per cercare dentro una stringa:
 
-- `s.find("x")` — returns the index of the first occurrence of `"x"`, or `-1` if not found
-- `s.startswith("x")` — returns `True` if the string starts with `"x"`
-- `s.endswith("x")` — returns `True` if the string ends with `"x"`
-- `s.isdigit()` — returns `True` if all characters are digits (no letters, no spaces)
-- `s.isalpha()` — returns `True` if all characters are letters
-- `s.isalnum()` — returns `True` if all characters are letters or digits
+- `s.find("x")` — restituisce l'indice della prima occorrenza di `"x"`, o `-1` se non trovata
+- `s.startswith("x")` — restituisce `True` se la stringa inizia con `"x"`
+- `s.endswith("x")` — restituisce `True` se la stringa finisce con `"x"`
+- `s.isdigit()` — restituisce `True` se tutti i caratteri sono cifre (nessuna lettera, nessuno spazio)
+- `s.isalpha()` — restituisce `True` se tutti i caratteri sono lettere
+- `s.isalnum()` — restituisce `True` se tutti i caratteri sono lettere o cifre
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -209,12 +209,12 @@ print("isdigit:", code.isdigit())
 print("isalpha:", code.isalpha())`);
 </script>
 
-## f-Strings — The Modern Way to Format Text
+## Le f-String — Il Modo Moderno di Formattare il Testo
 
-An **f-string** (formatted string literal) lets you embed variables directly inside a string.
-Put an `f` before the opening quote and wrap each variable in curly braces `{}`.
+Una **f-string** (letterale di stringa formattata) ti permette di incorporare variabili direttamente dentro una stringa.
+Metti una `f` prima della virgoletta di apertura e racchiudi ogni variabile in parentesi graffe `{}`.
 
-Before f-strings, you had to write things like:
+Prima delle f-string, dovevi scrivere cose come:
 
 ```python
 name = "Monty"
@@ -222,7 +222,7 @@ score = 95
 print("Hello, " + name + "! Your score is " + str(score) + ".")
 ```
 
-With an f-string, that becomes much cleaner:
+Con una f-string, diventa molto più pulito:
 
 ```python
 print(f"Hello, {name}! Your score is {score}.")
@@ -252,13 +252,13 @@ print(f"Your score: {score}/{max_score}")
 print(f"Percentage: {percentage:.1f}%")   # .1f = 1 decimal place`);
 </script>
 
-The `:.1f` format code inside the curly braces says "show 1 decimal place."
-Try changing it to `:.2f` for two decimal places.
+Il codice di formato `:.1f` dentro le parentesi graffe dice "mostra 1 cifra decimale."
+Prova a cambiarlo in `:.2f` per due cifre decimali.
 
-## String Comparison
+## Confronto di Stringhe
 
-You can compare strings with `==`, `<`, and `>`.
-Python compares strings alphabetically, character by character.
+Puoi confrontare le stringhe con `==`, `<`, e `>`.
+Python confronta le stringhe alfabeticamente, carattere per carattere.
 
 ```python
 print("apple" == "apple")   # True
@@ -267,12 +267,12 @@ print("apple" < "banana")   # True — a comes before b
 print("zebra" > "ant")      # True — z comes after a
 ```
 
-Case matters! `"apple" != "Apple"`. Use `.lower()` on both sides if you want case-insensitive comparison.
+Le maiuscole contano! `"apple" != "Apple"`. Usa `.lower()` su entrambi i lati se vuoi un confronto senza distinzione tra maiuscole e minuscole.
 
-## Multiline String Formatting
+## Formattazione Multilinea delle Stringhe
 
-You can create a string that spans multiple lines using triple quotes `"""..."""`.
-This is perfect for longer messages or templates:
+Puoi creare una stringa che si estende su più righe usando le triple virgolette `"""..."""`.
+Questo è perfetto per messaggi più lunghi o template:
 
 ```python
 name = "Monty"
@@ -288,13 +288,13 @@ Status:   Complete!
 print(report)
 ```
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Fix the Greeting"
+!!! mascot-thinking "Il Tuo Turno — Correggi il Saluto"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below should print a polished greeting using an f-string,
-    but it still uses the old `+` concatenation style and forgets `str()` around the number.
-    Rewrite the `print()` line as a single f-string to fix both problems!
+    Il programma sotto dovrebbe stampare un saluto elegante usando una f-string,
+    ma usa ancora il vecchio stile di concatenazione con `+` e si dimentica `str()` attorno al numero.
+    Riscrivi la riga `print()` come una singola f-string per risolvere entrambi i problemi!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -317,31 +317,31 @@ level = 5
 print("Player: " + player + ", Level: " + str(level))`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Try `"Python"[::-1]` — that's a slice with step `-1`.
-   **You'll know it worked when** you see `nohtyP` (the string reversed!).
+1. Prova `"Python"[::-1]` — è uno slice con step `-1`.
+   **Saprai che ha funzionato quando** vedi `nohtyP` (la stringa invertita!).
 
-2. Use `split(",")` to split the string `"red,green,blue,yellow"` and print each color on its own line.
-   **You'll know it worked when** you see four lines, one color each.
+2. Usa `split(",")` per dividere la stringa `"red,green,blue,yellow"` e stampa ogni colore sulla sua riga.
+   **Saprai che ha funzionato quando** vedi quattro righe, un colore ciascuna.
 
-3. Use `replace()` to censor the word `"bad"` in `"This is a bad example"`, replacing it with `"***"`.
-   **You'll know it worked when** the output reads `This is a *** example`.
+3. Usa `replace()` per censurare la parola `"bad"` in `"This is a bad example"`, sostituendola con `"***"`.
+   **Saprai che ha funzionato quando** l'output legge `This is a *** example`.
 
-4. Write an f-string that displays a pizza order: ingredient (e.g. `"cheese"`) and price (e.g. `8.50`) with two decimal places.
-   **You'll know it worked when** you see something like `Pizza: cheese — $8.50`.
+4. Scrivi una f-string che mostra un ordine di pizza: ingrediente (ad es. `"cheese"`) e prezzo (ad es. `8.50`) con due cifre decimali.
+   **Saprai che ha funzionato quando** vedi qualcosa come `Pizza: cheese — $8.50`.
 
-5. Use `startswith()` to check if a filename ends with `".py"`. Print `"Python file!"` or `"Not a Python file"`.
-   **You'll know it worked when** `"hello.py"` gives one result and `"hello.txt"` gives the other.
+5. Usa `startswith()` per controllare se un nome di file finisce con `".py"`. Stampa `"Python file!"` oppure `"Not a Python file"`.
+   **Saprai che ha funzionato quando** `"hello.py"` dà un risultato e `"hello.txt"` dà l'altro.
 
-!!! mascot-celebration "String Master!"
+!!! mascot-celebration "Maestro delle Stringhe!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've learned indexing, slicing, split, join, replace, f-strings, and more!
-    These string skills appear in almost every real Python program — from web apps to data science.
-    You're building a seriously impressive toolkit! Let's keep coding!
+    Hai imparato l'indicizzazione, lo slicing, split, join, replace, le f-string, e altro ancora!
+    Queste competenze sulle stringhe appaiono in quasi ogni vero programma Python — dalle app web alla data science.
+    Stai costruendo una cassetta degli attrezzi davvero impressionante! Continuiamo a programmare!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)
