@@ -1,10 +1,10 @@
-# Quiz: Lists — Basics
+# Quiz: Liste — Nozioni di Base
 
-Test your understanding of Python lists, indexing, slicing, and mutability with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione delle liste Python, dell'indicizzazione, dello slicing, e della mutabilità con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. How do you create a list in Python that holds three colors?
+#### 1. Come crei in Python una lista che contiene tre colori?
 
 <div class="upper-alpha" markdown>
 1. `colors = {"red", "green", "blue"}`
@@ -13,14 +13,14 @@ Test your understanding of Python lists, indexing, slicing, and mutability with 
 4. `colors = "red, green, blue"`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Lists in Python are created using square brackets `[]` with items separated by commas. Option A creates a set (curly braces), option B creates a tuple (parentheses), and option D is just a single string — not a collection of separate items.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Le liste in Python si creano usando le parentesi quadre `[]` con gli elementi separati da virgole. L'opzione A crea un set (parentesi graffe), l'opzione B crea una tupla (parentesi), e l'opzione D è solo una singola stringa — non una collezione di elementi separati.
 
     **Concept Tested:** List Type
 
 ---
 
-#### 2. Given `scores = [95, 87, 100, 73]`, what does `scores[2]` return?
+#### 2. Data `scores = [95, 87, 100, 73]`, cosa restituisce `scores[2]`?
 
 <div class="upper-alpha" markdown>
 1. `87`
@@ -29,30 +29,30 @@ Test your understanding of Python lists, indexing, slicing, and mutability with 
 4. `100`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. Python uses zero-based indexing: index 0 is `95`, index 1 is `87`, index 2 is `100`, and index 3 is `73`. A very common mistake is to assume index 2 is the second item, but it is actually the third item (counting from zero).
+??? question "Mostra risposta"
+    La risposta corretta è **D**. Python usa l'indicizzazione a base zero: l'indice 0 è `95`, l'indice 1 è `87`, l'indice 2 è `100`, e l'indice 3 è `73`. Un errore molto comune è assumere che l'indice 2 sia il secondo elemento, ma in realtà è il terzo elemento (contando da zero).
 
     **Concept Tested:** List Indexing
 
 ---
 
-#### 3. Given `colors = ["red", "green", "blue", "yellow"]`, what does `colors[-1]` return?
+#### 3. Data `colors = ["red", "green", "blue", "yellow"]`, cosa restituisce `colors[-1]`?
 
 <div class="upper-alpha" markdown>
-1. `"red"` (the first item)
-2. An error, because negative indexes are invalid for lists
-3. `"green"` (the second item)
-4. `"yellow"` (the last item)
+1. `"red"` (il primo elemento)
+2. Un errore, perché gli indici negativi non sono validi per le liste
+3. `"green"` (il secondo elemento)
+4. `"yellow"` (l'ultimo elemento)
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. Negative indexes count from the end of the list. Index `-1` is the last item, `-2` is second-to-last, and so on. For `["red", "green", "blue", "yellow"]`, `colors[-1]` is `"yellow"`. This is useful when you want the last item without knowing the list's length.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. Gli indici negativi contano dalla fine della lista. L'indice `-1` è l'ultimo elemento, `-2` è il penultimo, e così via. Per `["red", "green", "blue", "yellow"]`, `colors[-1]` è `"yellow"`. Questo è utile quando vuoi l'ultimo elemento senza conoscere la lunghezza della lista.
 
     **Concept Tested:** Negative Indexing
 
 ---
 
-#### 4. What does `scores[1:3]` return for `scores = [95, 87, 100, 73]`?
+#### 4. Cosa restituisce `scores[1:3]` per `scores = [95, 87, 100, 73]`?
 
 <div class="upper-alpha" markdown>
 1. `[87, 100, 73]`
@@ -61,30 +61,30 @@ Test your understanding of Python lists, indexing, slicing, and mutability with 
 4. `[100, 73]`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. List slicing `[start:end]` returns items from index `start` up to but NOT including index `end`. `scores[1:3]` gives items at indexes 1 and 2: `[87, 100]`. The item at index 3 (`73`) is not included. This is the same rule as string slicing.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Lo slicing delle liste `[start:end]` restituisce gli elementi dall'indice `start` fino a ma NON includendo l'indice `end`. `scores[1:3]` dà gli elementi agli indici 1 e 2: `[87, 100]`. L'elemento all'indice 3 (`73`) non è incluso. Questa è la stessa regola dello slicing delle stringhe.
 
     **Concept Tested:** List Slicing
 
 ---
 
-#### 5. What does `len(["apple", "banana", "kiwi"])` return?
+#### 5. Cosa restituisce `len(["apple", "banana", "kiwi"])`?
 
 <div class="upper-alpha" markdown>
-1. `15` (the total number of characters in all words)
+1. `15` (il numero totale di caratteri in tutte le parole)
 2. `2`
 3. `3`
 4. `0`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `len()` counts the number of **items** in a list, not the number of characters in the items. The list `["apple", "banana", "kiwi"]` has 3 items, so `len()` returns `3`. `len()` works the same way on strings (counting characters) and other collections.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `len()` conta il numero di **elementi** in una lista, non il numero di caratteri negli elementi. La lista `["apple", "banana", "kiwi"]` ha 3 elementi, quindi `len()` restituisce `3`. `len()` funziona allo stesso modo sulle stringhe (contando i caratteri) e su altre collezioni.
 
     **Concept Tested:** List Length with len()
 
 ---
 
-#### 6. How do you check if `"mango"` is in the list `fruits = ["apple", "banana", "mango"]`?
+#### 6. Come controlli se `"mango"` è nella lista `fruits = ["apple", "banana", "mango"]`?
 
 <div class="upper-alpha" markdown>
 1. `fruits.contains("mango")`
@@ -93,46 +93,46 @@ Test your understanding of Python lists, indexing, slicing, and mutability with 
 4. `fruits["mango"]`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. The `in` operator checks membership and returns `True` or `False`. `"mango" in fruits` returns `True` because `"mango"` is in the list. You can also use `not in` to check that something is absent. This works the same way for strings: `"py" in "python"` returns `True`.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. L'operatore `in` controlla l'appartenenza e restituisce `True` o `False`. `"mango" in fruits` restituisce `True` perché `"mango"` è nella lista. Puoi anche usare `not in` per controllare che qualcosa sia assente. Questo funziona allo stesso modo per le stringhe: `"py" in "python"` restituisce `True`.
 
     **Concept Tested:** Membership with in
 
 ---
 
-#### 7. What is the key difference between mutable and immutable types?
+#### 7. Qual è la differenza fondamentale tra i tipi mutabili e immutabili?
 
 <div class="upper-alpha" markdown>
-1. Mutable types are faster; immutable types are slower
-2. Mutable types can be changed after creation; immutable types cannot
-3. Mutable types hold numbers; immutable types hold strings
-4. Mutable types are created with `[]`; immutable types use `()`
+1. I tipi mutabili sono più veloci; i tipi immutabili sono più lenti
+2. I tipi mutabili possono essere cambiati dopo la creazione; i tipi immutabili no
+3. I tipi mutabili contengono numeri; i tipi immutabili contengono stringhe
+4. I tipi mutabili si creano con `[]`; i tipi immutabili usano `()`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. A mutable object can be changed after it is created — you can update, add, or remove items. A list is mutable: `colors[0] = "purple"` works. An immutable object cannot be changed — you must create a new one instead. Strings are immutable: `word[0] = "H"` raises a `TypeError`.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Un oggetto mutabile può essere cambiato dopo essere stato creato — puoi aggiornare, aggiungere, o rimuovere elementi. Una lista è mutabile: `colors[0] = "purple"` funziona. Un oggetto immutabile non può essere cambiato — devi crearne uno nuovo invece. Le stringhe sono immutabili: `word[0] = "H"` genera un `TypeError`.
 
     **Concept Tested:** Mutable vs Immutable
 
 ---
 
-#### 8. What does `colors[1] = "purple"` do to the list `colors = ["red", "green", "blue"]`?
+#### 8. Cosa fa `colors[1] = "purple"` alla lista `colors = ["red", "green", "blue"]`?
 
 <div class="upper-alpha" markdown>
-1. Adds `"purple"` to the end of the list
-2. Creates a brand-new list with `"purple"` inserted
-3. Replaces `"green"` (at index 1) with `"purple"` in the existing list
-4. Raises a `TypeError` because lists cannot be changed
+1. Aggiunge `"purple"` alla fine della lista
+2. Crea una lista completamente nuova con `"purple"` inserito
+3. Sostituisce `"green"` (all'indice 1) con `"purple"` nella lista esistente
+4. Genera un `TypeError` perché le liste non possono essere cambiate
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Lists are mutable, so you can assign a new value to any existing index. `colors[1] = "purple"` changes the item at index 1 from `"green"` to `"purple"`. After this line, `colors` is `["red", "purple", "blue"]`. This in-place modification is one of the key features that distinguishes lists from immutable types like strings.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Le liste sono mutabili, quindi puoi assegnare un nuovo valore a qualsiasi indice esistente. `colors[1] = "purple"` cambia l'elemento all'indice 1 da `"green"` a `"purple"`. Dopo questa riga, `colors` è `["red", "purple", "blue"]`. Questa modifica sul posto è una delle caratteristiche chiave che distingue le liste dai tipi immutabili come le stringhe.
 
     **Concept Tested:** List Indexing
 
 ---
 
-#### 9. Which of the following correctly creates an empty list?
+#### 9. Quale delle seguenti crea correttamente una lista vuota?
 
 <div class="upper-alpha" markdown>
 1. `my_list = {}`
@@ -141,24 +141,24 @@ Test your understanding of Python lists, indexing, slicing, and mutability with 
 4. `my_list = []`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. An empty list is created with `[]` — square brackets with nothing inside. `{}` creates an empty dictionary (or set), `()` creates an empty tuple, and `None` is a special value meaning "nothing here." You can then add items to the empty list using methods like `append()`.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. Una lista vuota si crea con `[]` — parentesi quadre senza nulla dentro. `{}` crea un dizionario vuoto (o un set), `()` crea una tupla vuota, e `None` è un valore speciale che significa "niente qui." Puoi poi aggiungere elementi alla lista vuota usando metodi come `append()`.
 
     **Concept Tested:** List Type
 
 ---
 
-#### 10. What happens when you try to access `colors[10]` on a list that only has 4 items?
+#### 10. Cosa succede quando provi ad accedere a `colors[10]` su una lista che ha solo 4 elementi?
 
 <div class="upper-alpha" markdown>
-1. Python returns `None` for any out-of-range index
-2. Python returns the last item in the list
-3. Python raises an `IndexError` because the index is out of range
-4. Python automatically extends the list with empty items up to index 10
+1. Python restituisce `None` per qualsiasi indice fuori intervallo
+2. Python restituisce l'ultimo elemento della lista
+3. Python genera un `IndexError` perché l'indice è fuori intervallo
+4. Python estende automaticamente la lista con elementi vuoti fino all'indice 10
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Accessing an index that does not exist in a list raises an `IndexError: list index out of range`. For a list with 4 items, valid positive indexes are 0, 1, 2, and 3. Trying to access index 10 (or index 4 or higher) causes an error. Always make sure your index is within the valid range.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Accedere a un indice che non esiste in una lista genera un `IndexError: list index out of range`. Per una lista con 4 elementi, gli indici positivi validi sono 0, 1, 2, e 3. Provare ad accedere all'indice 10 (o all'indice 4 o superiore) causa un errore. Assicurati sempre che il tuo indice sia nell'intervallo valido.
 
     **Concept Tested:** List Indexing
 
