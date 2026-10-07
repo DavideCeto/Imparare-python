@@ -1,74 +1,74 @@
-# Quiz: Lists — Methods and Patterns
+# Quiz: Liste — Metodi e Pattern
 
-Test your understanding of list methods, sorting, list comprehensions, and stack/queue patterns with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione dei metodi delle liste, dell'ordinamento, delle list comprehension, e dei pattern pila/coda con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What does `fruits.append("mango")` do?
+#### 1. Cosa fa `fruits.append("mango")`?
 
 <div class="upper-alpha" markdown>
-1. Inserts `"mango"` at the beginning of the list
-2. Adds `"mango"` to the end of the list
-3. Replaces the first item with `"mango"`
-4. Creates a new list with `"mango"` as the only item
+1. Inserisce `"mango"` all'inizio della lista
+2. Aggiunge `"mango"` alla fine della lista
+3. Sostituisce il primo elemento con `"mango"`
+4. Crea una nuova lista con `"mango"` come unico elemento
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `append(x)` adds a single item to the **end** of an existing list, modifying it in place. If `fruits = ["apple", "banana"]`, then after `fruits.append("mango")` the list becomes `["apple", "banana", "mango"]`. Use `insert(i, x)` instead if you want to add the item at a specific position.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `append(x)` aggiunge un singolo elemento alla **fine** di una lista esistente, modificandola sul posto. Se `fruits = ["apple", "banana"]`, dopo `fruits.append("mango")` la lista diventa `["apple", "banana", "mango"]`. Usa invece `insert(i, x)` se vuoi aggiungere l'elemento in una posizione specifica.
 
     **Concept Tested:** append() Method
 
 ---
 
-#### 2. What does `items.insert(1, "kiwi")` do to `items = ["apple", "banana"]`?
+#### 2. Cosa fa `items.insert(1, "kiwi")` a `items = ["apple", "banana"]`?
 
 <div class="upper-alpha" markdown>
-1. Replaces `"banana"` with `"kiwi"`
-2. Adds `"kiwi"` to the end of the list
-3. Inserts `"kiwi"` before the item at index 1, making the list `["apple", "kiwi", "banana"]`
-4. Raises an error because `"banana"` is already at index 1
+1. Sostituisce `"banana"` con `"kiwi"`
+2. Aggiunge `"kiwi"` alla fine della lista
+3. Inserisce `"kiwi"` prima dell'elemento all'indice 1, rendendo la lista `["apple", "kiwi", "banana"]`
+4. Genera un errore perché `"banana"` è già all'indice 1
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `insert(i, x)` inserts item `x` **before** the item currently at index `i`. With `items = ["apple", "banana"]`, calling `items.insert(1, "kiwi")` places `"kiwi"` at index 1 and pushes `"banana"` to index 2: `["apple", "kiwi", "banana"]`. The list grows by one item.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `insert(i, x)` inserisce l'elemento `x` **prima** dell'elemento attualmente all'indice `i`. Con `items = ["apple", "banana"]`, chiamare `items.insert(1, "kiwi")` posiziona `"kiwi"` all'indice 1 e spinge `"banana"` all'indice 2: `["apple", "kiwi", "banana"]`. La lista cresce di un elemento.
 
     **Concept Tested:** insert() Method
 
 ---
 
-#### 3. What does `items.pop()` do?
+#### 3. Cosa fa `items.pop()`?
 
 <div class="upper-alpha" markdown>
-1. Removes the first item from the list and returns it
-2. Removes and returns the last item from the list
-3. Removes all items from the list
-4. Returns the last item without removing it
+1. Rimuove il primo elemento dalla lista e lo restituisce
+2. Rimuove e restituisce l'ultimo elemento dalla lista
+3. Rimuove tutti gli elementi dalla lista
+4. Restituisce l'ultimo elemento senza rimuoverlo
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `pop()` with no argument removes and returns the **last** item in the list. You can also use `pop(i)` to remove and return the item at a specific index. This makes `pop()` very useful for implementing stacks (last in, first out), where you always work with the top (last) item.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `pop()` senza argomento rimuove e restituisce l'**ultimo** elemento nella lista. Puoi anche usare `pop(i)` per rimuovere e restituire l'elemento a un indice specifico. Questo rende `pop()` molto utile per implementare le pile (ultimo entrato, primo uscito), dove lavori sempre con l'elemento in cima (l'ultimo).
 
     **Concept Tested:** pop() Method
 
 ---
 
-#### 4. What does `scores.sort()` do to `scores = [73, 100, 87, 55]`?
+#### 4. Cosa fa `scores.sort()` a `scores = [73, 100, 87, 55]`?
 
 <div class="upper-alpha" markdown>
-1. Returns a new sorted list without changing the original
-2. Sorts the list in descending order (largest first)
-3. Sorts the list in ascending order (smallest first) and modifies it in place
-4. Creates a sorted copy and stores it in a new variable called `sorted_scores`
+1. Restituisce una nuova lista ordinata senza cambiare l'originale
+2. Ordina la lista in ordine decrescente (il più grande prima)
+3. Ordina la lista in ordine crescente (il più piccolo prima) e la modifica sul posto
+4. Crea una copia ordinata e la memorizza in una nuova variabile chiamata `sorted_scores`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `sort()` rearranges the items in the list **in place** in ascending order (smallest-first for numbers, alphabetical for strings). After `scores.sort()`, `scores` itself becomes `[55, 73, 87, 100]`. It does NOT return a new list — if you write `result = scores.sort()`, `result` will be `None`.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `sort()` riorganizza gli elementi della lista **sul posto** in ordine crescente (dal più piccolo per i numeri, alfabetico per le stringhe). Dopo `scores.sort()`, `scores` stesso diventa `[55, 73, 87, 100]`. NON restituisce una nuova lista — se scrivi `result = scores.sort()`, `result` sarà `None`.
 
     **Concept Tested:** sort() Method
 
 ---
 
-#### 5. What is the result of `[s * 2 for s in [1, 2, 3]]`?
+#### 5. Qual è il risultato di `[s * 2 for s in [1, 2, 3]]`?
 
 <div class="upper-alpha" markdown>
 1. `[1, 2, 3, 1, 2, 3]`
@@ -77,66 +77,66 @@ Test your understanding of list methods, sorting, list comprehensions, and stack
 4. `[[2], [4], [6]]`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. This is a list comprehension — it builds a new list by applying an expression (`s * 2`) to each item in the source list `[1, 2, 3]`. The result is `[2, 4, 6]`. List comprehensions are a concise, readable way to transform lists without writing a full loop.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Questa è una list comprehension — costruisce una nuova lista applicando un'espressione (`s * 2`) a ogni elemento della lista sorgente `[1, 2, 3]`. Il risultato è `[2, 4, 6]`. Le list comprehension sono un modo conciso e leggibile per trasformare le liste senza scrivere un ciclo completo.
 
     **Concept Tested:** List Comprehensions
 
 ---
 
-#### 6. What does the following list comprehension produce?
+#### 6. Cosa produce la seguente list comprehension?
 
 ```python
 [s for s in [60, 80, 45, 90] if s >= 70]
 ```
 
 <div class="upper-alpha" markdown>
-1. `[60, 80, 45, 90]` — the original list unchanged
-2. `[80, 90]` — only scores 70 and above
-3. `[60, 45]` — only scores below 70
-4. `[True, True, False, True]` — a list of booleans
+1. `[60, 80, 45, 90]` — la lista originale invariata
+2. `[80, 90]` — solo i punteggi 70 e superiori
+3. `[60, 45]` — solo i punteggi sotto 70
+4. `[True, True, False, True]` — una lista di booleani
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. The `if` clause in a list comprehension acts as a filter — only items where the condition is `True` are included in the result. `s >= 70` is `True` for `80` and `90`, so only those two values appear in the output list. This is a very common pattern for filtering data.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. La clausola `if` in una list comprehension agisce come un filtro — solo gli elementi per cui la condizione è `True` vengono inclusi nel risultato. `s >= 70` è `True` per `80` e `90`, quindi solo questi due valori appaiono nella lista di output. Questo è un pattern molto comune per filtrare i dati.
 
     **Concept Tested:** List Comprehensions
 
 ---
 
-#### 7. What does `colors.remove("red")` do if `colors = ["red", "blue", "red"]`?
+#### 7. Cosa fa `colors.remove("red")` se `colors = ["red", "blue", "red"]`?
 
 <div class="upper-alpha" markdown>
-1. Removes all occurrences of `"red"` from the list
-2. Removes the item at the index named `"red"`
-3. Removes only the first occurrence of `"red"` from the list
-4. Raises a `ValueError` because `"red"` appears more than once
+1. Rimuove tutte le occorrenze di `"red"` dalla lista
+2. Rimuove l'elemento all'indice chiamato `"red"`
+3. Rimuove solo la prima occorrenza di `"red"` dalla lista
+4. Genera un `ValueError` perché `"red"` appare più di una volta
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `remove(x)` searches for and removes the **first** occurrence of the value `x`. After `colors.remove("red")`, the list becomes `["blue", "red"]` — the second `"red"` stays. If `x` is not in the list at all, `remove()` raises a `ValueError`.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `remove(x)` cerca e rimuove la **prima** occorrenza del valore `x`. Dopo `colors.remove("red")`, la lista diventa `["blue", "red"]` — il secondo `"red"` resta. Se `x` non è affatto nella lista, `remove()` genera un `ValueError`.
 
     **Concept Tested:** remove() Method
 
 ---
 
-#### 8. In a stack data structure, which item is removed first?
+#### 8. In una struttura di dati a pila, quale elemento viene rimosso per primo?
 
 <div class="upper-alpha" markdown>
-1. The item at index 0 (first added)
-2. The item in the middle of the stack
-3. A randomly chosen item
-4. The most recently added item (last in, first out)
+1. L'elemento all'indice 0 (aggiunto per primo)
+2. L'elemento nel mezzo della pila
+3. Un elemento scelto a caso
+4. L'elemento aggiunto più di recente (ultimo entrato, primo uscito)
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. A stack follows the LIFO (Last In, First Out) principle — the most recently added item is the first one to be removed. You implement a stack in Python with a list: `append()` to push items onto the top and `pop()` to remove items from the top. Think of a stack of plates — you always take the top one first.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. Una pila segue il principio LIFO (Last In, First Out) — l'elemento aggiunto più di recente è il primo a essere rimosso. Implementi una pila in Python con una lista: `append()` per impilare gli elementi in cima e `pop()` per rimuovere gli elementi dalla cima. Pensa a una pila di piatti — prendi sempre quello in cima per primo.
 
     **Concept Tested:** Stack Pattern
 
 ---
 
-#### 9. How do you find how many times the value `5` appears in `numbers = [5, 3, 5, 8, 5]`?
+#### 9. Come trovi quante volte appare il valore `5` in `numbers = [5, 3, 5, 8, 5]`?
 
 <div class="upper-alpha" markdown>
 1. `numbers.find(5)`
@@ -145,24 +145,24 @@ Test your understanding of list methods, sorting, list comprehensions, and stack
 4. `len(numbers, 5)`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `count(x)` returns the number of times the value `x` appears in the list. `numbers.count(5)` would return `3` because there are three `5`s in the list. `index(x)` returns the position of the first occurrence (not the count). `find()` is a string method, not a list method.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `count(x)` restituisce il numero di volte che il valore `x` appare nella lista. `numbers.count(5)` restituirebbe `3` perché ci sono tre `5` nella lista. `index(x)` restituisce la posizione della prima occorrenza (non il conteggio). `find()` è un metodo delle stringhe, non delle liste.
 
     **Concept Tested:** count() and index() Methods
 
 ---
 
-#### 10. What does `my_list.extend(["x", "y"])` do that `my_list.append(["x", "y"])` does NOT?
+#### 10. Cosa fa `my_list.extend(["x", "y"])` che `my_list.append(["x", "y"])` NON fa?
 
 <div class="upper-alpha" markdown>
-1. `extend()` adds each item individually; `append()` would add the whole list as a single nested item
-2. `extend()` creates a new list; `append()` modifies the original
-3. `extend()` only works with strings; `append()` works with any type
-4. They do the same thing — `extend()` and `append()` are interchangeable
+1. `extend()` aggiunge ogni elemento individualmente; `append()` aggiungerebbe l'intera lista come un singolo elemento annidato
+2. `extend()` crea una nuova lista; `append()` modifica l'originale
+3. `extend()` funziona solo con le stringhe; `append()` funziona con qualsiasi tipo
+4. Fanno la stessa cosa — `extend()` e `append()` sono intercambiabili
 </div>
 
-??? question "Show Answer"
-    The correct answer is **A**. `extend(other_list)` unpacks `other_list` and adds each item individually to the end. `append(other_list)` adds the entire list as a single item (creating a nested list). If `my_list = [1, 2]`, then `extend([3, 4])` gives `[1, 2, 3, 4]`, while `append([3, 4])` gives `[1, 2, [3, 4]]`.
+??? question "Mostra risposta"
+    La risposta corretta è **A**. `extend(other_list)` scompone `other_list` e aggiunge ogni elemento individualmente alla fine. `append(other_list)` aggiunge l'intera lista come un singolo elemento (creando una lista annidata). Se `my_list = [1, 2]`, allora `extend([3, 4])` dà `[1, 2, 3, 4]`, mentre `append([3, 4])` dà `[1, 2, [3, 4]]`.
 
     **Concept Tested:** extend() Method
 

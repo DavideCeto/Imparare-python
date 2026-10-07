@@ -1,28 +1,28 @@
 ---
-title: Lists — Methods and Patterns
-description: Master list methods for adding, removing, sorting, and iterating — plus list comprehensions, stacks, and queues
+title: Liste — Metodi e Pattern
+description: Padroneggia i metodi delle liste per aggiungere, rimuovere, ordinare, e iterare — più le list comprehension, le pile, e le code
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 12:40:00
 version: 0.09
 ---
 
-# Lists — Methods and Patterns
+# Liste — Metodi e Pattern
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Add items with `append()`, `insert()`, and `extend()`, and remove items with `remove()`, `pop()`, and `clear()`
-- Sort and reverse a list with `sort()` and `reverse()`
-- Build lists dynamically inside a `for` loop or using a **list comprehension**
-- Use a list as a **stack** (last in, first out) or a **queue** (first in, first out)
+- Aggiungere elementi con `append()`, `insert()`, ed `extend()`, e rimuovere elementi con `remove()`, `pop()`, e `clear()`
+- Ordinare e invertire una lista con `sort()` e `reverse()`
+- Costruire liste dinamicamente dentro un ciclo `for` oppure usando una **list comprehension**
+- Usare una lista come una **pila** (ultimo entrato, primo uscito) oppure una **coda** (primo entrato, primo uscito)
 
-Lists become really powerful once you can add, remove, and reorganize their items.
-In this chapter you'll see patterns that show up in real Python programs every day.
+Le liste diventano davvero potenti una volta che puoi aggiungere, rimuovere, e riorganizzare i loro elementi.
+In questo capitolo vedrai pattern che compaiono ogni giorno nei veri programmi Python.
 
-!!! mascot-welcome "Welcome to Chapter 16!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 16!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Ready to make your lists work harder? Today you'll learn to add items, remove items,
-    sort your collection, and even build brand-new lists automatically!
-    Let's code it together!
+    Pronto a far lavorare di più le tue liste? Oggi imparerai ad aggiungere elementi, rimuovere elementi,
+    ordinare la tua collezione, e persino costruire automaticamente liste completamente nuove!
+    Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -30,15 +30,15 @@ In this chapter you'll see patterns that show up in real Python programs every d
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## Adding Items to a List
+## Aggiungere Elementi a una Lista
 
-There are three methods for adding items.
+Ci sono tre metodi per aggiungere elementi.
 
-Before we try them, let's define each one clearly:
+Prima di provarli, definiamo ciascuno chiaramente:
 
-- `append(x)` — adds `x` to the **end** of the list
-- `insert(i, x)` — adds `x` **before** the item at index `i`
-- `extend(other_list)` — adds every item from `other_list` to the end
+- `append(x)` — aggiunge `x` alla **fine** della lista
+- `insert(i, x)` — aggiunge `x` **prima** dell'elemento all'indice `i`
+- `extend(other_list)` — aggiunge ogni elemento di `other_list` alla fine
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -68,20 +68,20 @@ fruits.extend(extras)
 print("After extend:", fruits)`);
 </script>
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    After `fruits.insert(1, "kiwi")`, what does the list look like?
-    Which item gets pushed to index 2? Make your guess — then run it!
+    Dopo `fruits.insert(1, "kiwi")`, come appare la lista?
+    Quale elemento viene spinto all'indice 2? Fai la tua previsione — poi eseguilo!
 
-Were you right? `insert(1, "kiwi")` slots `"kiwi"` at position 1, pushing `"banana"` to position 2.
+Avevi indovinato? `insert(1, "kiwi")` posiziona `"kiwi"` nella posizione 1, spingendo `"banana"` alla posizione 2.
 
-## Removing Items from a List
+## Rimuovere Elementi da una Lista
 
-There are three methods for removing items:
+Ci sono tre metodi per rimuovere elementi:
 
-- `remove(x)` — removes the **first** occurrence of the value `x` (raises `ValueError` if not found)
-- `pop()` — removes and returns the **last** item (or `pop(i)` removes at index `i`)
-- `clear()` — removes **all** items, leaving an empty list
+- `remove(x)` — rimuove la **prima** occorrenza del valore `x` (genera `ValueError` se non trovato)
+- `pop()` — rimuove e restituisce l'**ultimo** elemento (oppure `pop(i)` rimuove all'indice `i`)
+- `clear()` — rimuove **tutti** gli elementi, lasciando una lista vuota
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -112,12 +112,12 @@ print("Popped index 1:", second)
 print("After pop(1):", items)`);
 </script>
 
-## Sorting and Reversing
+## Ordinare e Invertire
 
-`sort()` rearranges the items in a list in ascending order (alphabetical for strings, smallest-first for numbers).
-`reverse()` flips the order — last becomes first.
+`sort()` riorganizza gli elementi di una lista in ordine crescente (alfabetico per le stringhe, dal più piccolo per i numeri).
+`reverse()` inverte l'ordine — l'ultimo diventa il primo.
 
-Both methods modify the list **in place** — the original list changes.
+Entrambi i metodi modificano la lista **sul posto** — la lista originale cambia.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -147,10 +147,10 @@ words.sort()
 print("Sorted words:", words)`);
 </script>
 
-## Finding Items with `index()` and `count()`
+## Trovare Elementi con `index()` e `count()`
 
-- `list.index(x)` — returns the index of the first occurrence of `x`
-- `list.count(x)` — counts how many times `x` appears
+- `list.index(x)` — restituisce l'indice della prima occorrenza di `x`
+- `list.count(x)` — conta quante volte appare `x`
 
 ```python
 colors = ["red", "blue", "red", "green", "red"]
@@ -158,16 +158,16 @@ print(colors.index("blue"))   # 1
 print(colors.count("red"))    # 3
 ```
 
-## Iterating Over a List
+## Iterare su una Lista
 
-The most common way to work with every item in a list is a `for` loop:
+Il modo più comune per lavorare con ogni elemento di una lista è un ciclo `for`:
 
 ```python
 for item in my_list:
     # do something with item
 ```
 
-You can also iterate and build a new list at the same time — called the **loop-with-list-building** pattern:
+Puoi anche iterare e costruire una nuova lista allo stesso tempo — chiamato il pattern **ciclo-con-costruzione-di-lista**:
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -193,12 +193,12 @@ print("Original:", scores)
 print("Doubled: ", doubled)`);
 </script>
 
-## List Comprehensions
+## List Comprehension
 
-A **list comprehension** is a shorter way to build a new list from an existing one.
-It packs the loop and the expression into a single line inside square brackets.
+Una **list comprehension** è un modo più corto per costruire una nuova lista a partire da una esistente.
+Racchiude il ciclo e l'espressione in una singola riga dentro parentesi quadre.
 
-Before the comprehension, make sure you understand the loop version:
+Prima della comprehension, assicurati di capire la versione con il ciclo:
 
 ```python
 # The long way:
@@ -210,9 +210,9 @@ for s in scores:
 doubled = [s * 2 for s in scores]
 ```
 
-Both produce exactly the same result. The comprehension just reads like English: "s times 2, for each s in scores."
+Entrambe producono esattamente lo stesso risultato. La comprehension si legge come l'inglese: "s per 2, per ogni s in scores."
 
-You can even add an `if` filter:
+Puoi anche aggiungere un filtro `if`:
 
 ```python
 passing = [s for s in scores if s >= 70]   # only scores 70 and above
@@ -243,10 +243,10 @@ print("Passing:", passing)
 print("Graded: ", graded)`);
 </script>
 
-## Nested Lists
+## Liste Annidate
 
-A **nested list** is a list that contains other lists as items.
-Think of it like a grid — rows and columns.
+Una **lista annidata** è una lista che contiene altre liste come elementi.
+Pensala come una griglia — righe e colonne.
 
 ```python
 grid = [
@@ -259,10 +259,10 @@ print(grid[0])      # [1, 2, 3] — first row
 print(grid[1][2])   # 6 — row 1, column 2
 ```
 
-## Lists as Stacks and Queues
+## Liste come Pile e Code
 
-A **stack** is a "last in, first out" collection — like a stack of plates. You add and remove from the top.
-Use `append()` to push and `pop()` to pop:
+Una **pila** (stack) è una collezione "ultimo entrato, primo uscito" — come una pila di piatti. Aggiungi e rimuovi dalla cima.
+Usa `append()` per impilare e `pop()` per togliere dalla cima:
 
 ```python
 stack = []
@@ -272,8 +272,8 @@ stack.append("c")
 print(stack.pop())  # "c" — last in, first out
 ```
 
-A **queue** is "first in, first out" — like a line at a lunch counter.
-Use `append()` to add to the back and `pop(0)` to remove from the front:
+Una **coda** (queue) è "primo entrato, primo uscito" — come una fila alla mensa.
+Usa `append()` per aggiungere in fondo e `pop(0)` per rimuovere dal fronte:
 
 ```python
 queue = []
@@ -283,23 +283,23 @@ queue.append("third")
 print(queue.pop(0))   # "first" — first in, first out
 ```
 
-### See It: Same Items, Different Exits
+### Guardalo: Stessi Elementi, Uscite Diverse
 
-The simulator below feeds the **same letters** into a stack of plates and a waiting line. Before you remove anything, predict: **after adding A, B, C, D, which letter leaves the stack first — and which leaves the queue first?**
+Il simulatore sotto alimenta le **stesse lettere** in una pila di piatti e in una fila d'attesa. Prima di rimuovere qualsiasi cosa, prevedi: **dopo aver aggiunto A, B, C, D, quale lettera esce prima dalla pila — e quale esce prima dalla coda?**
 
 <iframe src="../../sims/stack-queue-simulator/main.html" height="512" width="100%" scrolling="no"></iframe>
 
-[Explore the Stack and Queue Simulator MicroSim](../../sims/stack-queue-simulator/index.md){ .md-button }
+[Esplora il MicroSim Stack and Queue Simulator](../../sims/stack-queue-simulator/index.md){ .md-button }
 
-Empty both structures and compare the two history strips: the stack gives back D, C, B, A (reversed!) while the queue gives back A, B, C, D (same order). One tiny difference in code — `pop()` versus `pop(0)` — flips the whole story.
+Svuota entrambe le strutture e confronta le due strisce di storico: la pila restituisce D, C, B, A (al contrario!) mentre la coda restituisce A, B, C, D (lo stesso ordine). Una minuscola differenza nel codice — `pop()` contro `pop(0)` — ribalta tutta la storia.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Build a Filtered List"
+!!! mascot-thinking "Il Tuo Turno — Costruisci una Lista Filtrata"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below tries to build a list of only the even numbers from `numbers`,
-    but the list comprehension has a bug in its `if` condition.
-    Fix it so `evens` contains only even numbers!
+    Il codice sotto cerca di costruire una lista dei soli numeri pari da `numbers`,
+    ma la list comprehension ha un bug nella sua condizione `if`.
+    Correggilo così che `evens` contenga solo numeri pari!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -323,30 +323,30 @@ evens = [n for n in numbers if n % 2 == 1]
 print("Evens:", evens)`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Start with an empty list. Use `append()` to add the numbers 1 through 5. Print the list.
-   **You'll know it worked when** you see `[1, 2, 3, 4, 5]`.
+1. Inizia con una lista vuota. Usa `append()` per aggiungere i numeri da 1 a 5. Stampa la lista.
+   **Saprai che ha funzionato quando** vedi `[1, 2, 3, 4, 5]`.
 
-2. Create a list of five names. Sort it alphabetically and print it.
-   **You'll know it worked when** the names appear in A–Z order.
+2. Crea una lista di cinque nomi. Ordinala alfabeticamente e stampala.
+   **Saprai che ha funzionato quando** i nomi appaiono in ordine A-Z.
 
-3. Write a list comprehension that turns `["hello", "world", "python"]` into all-caps.
-   **You'll know it worked when** you see `["HELLO", "WORLD", "PYTHON"]`.
+3. Scrivi una list comprehension che trasforma `["hello", "world", "python"]` in tutto maiuscolo.
+   **Saprai che ha funzionato quando** vedi `["HELLO", "WORLD", "PYTHON"]`.
 
-4. Simulate a stack of three pancakes. Push "bottom", "middle", "top". Pop one. Print the remaining stack.
-   **You'll know it worked when** "top" is removed and two pancakes remain.
+4. Simula una pila di tre pancake. Impila "bottom", "middle", "top". Toglierne uno. Stampa la pila rimanente.
+   **Saprai che ha funzionato quando** "top" viene rimosso e rimangono due pancake.
 
-5. Create a nested list for a 3×3 grid. Print the center value (row 1, column 1).
-   **You'll know it worked when** you see the number at position `[1][1]`.
+5. Crea una lista annidata per una griglia 3×3. Stampa il valore centrale (riga 1, colonna 1).
+   **Saprai che ha funzionato quando** vedi il numero nella posizione `[1][1]`.
 
-!!! mascot-celebration "List Champion!"
+!!! mascot-celebration "Campione delle Liste!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've mastered append, insert, remove, sort, comprehensions, stacks, and queues!
-    Lists are one of the workhorses of Python — you'll use these patterns in almost every program you build from here on. Let's keep coding together!
+    Hai padroneggiato append, insert, remove, sort, le comprehension, le pile, e le code!
+    Le liste sono uno dei cavalli di battaglia di Python — userai questi pattern in quasi ogni programma che costruirai da qui in avanti. Continuiamo a programmare insieme!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)
