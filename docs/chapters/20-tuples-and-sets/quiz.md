@@ -1,26 +1,26 @@
-# Quiz: Tuples and Sets
+# Quiz: Tuple e Insiemi
 
-Test your understanding of Python's tuple and set types, tuple unpacking, and set operations with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione dei tipi tuple e set di Python, della scomposizione delle tuple, e delle operazioni sugli insiemi con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What is the key difference between a tuple and a list?
+#### 1. Qual è la differenza fondamentale tra una tupla e una lista?
 
 <div class="upper-alpha" markdown>
-1. Tuples use parentheses; lists use square brackets, but otherwise they are identical
-2. Tuples are immutable (cannot be changed after creation); lists are mutable (can be changed)
-3. Tuples can only hold numbers; lists can hold any type
-4. Tuples are faster to create; lists are faster to access
+1. Le tuple usano le parentesi; le liste usano le parentesi quadre, ma per il resto sono identiche
+2. Le tuple sono immutabili (non possono essere cambiate dopo la creazione); le liste sono mutabili (possono essere cambiate)
+3. Le tuple possono contenere solo numeri; le liste possono contenere qualsiasi tipo
+4. Le tuple sono più veloci da creare; le liste sono più veloci da accedere
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. The most important difference is mutability. Lists can have items added, removed, or changed. Tuples cannot — once created, their contents are fixed. Both support indexing, slicing, and iteration. Use a tuple when the data represents a fixed thing (like a coordinate) and a list when the collection needs to change.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. La differenza più importante è la mutabilità. Alle liste si possono aggiungere, rimuovere, o cambiare elementi. Le tuple no — una volta create, il loro contenuto è fisso. Entrambe supportano l'indicizzazione, lo slicing, e l'iterazione. Usa una tupla quando i dati rappresentano qualcosa di fisso (come una coordinata) e una lista quando la collezione deve cambiare.
 
     **Concept Tested:** Tuple Type
 
 ---
 
-#### 2. How do you create a single-element tuple containing the number 42?
+#### 2. Come crei una tupla a un solo elemento contenente il numero 42?
 
 <div class="upper-alpha" markdown>
 1. `(42)`
@@ -29,136 +29,136 @@ Test your understanding of Python's tuple and set types, tuple unpacking, and se
 4. `(42,)`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. A trailing comma is required to tell Python you mean a tuple. `(42)` is just the integer 42 in parentheses — not a tuple. `(42,)` has the trailing comma that signals "this is a one-element tuple." For tuples with two or more items, no trailing comma is needed: `(1, 2)` is already clearly a tuple.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. È richiesta una virgola finale per dire a Python che intendi una tupla. `(42)` è solo l'intero 42 tra parentesi — non una tupla. `(42,)` ha la virgola finale che segnala "questa è una tupla a un elemento." Per le tuple con due o più elementi, non è necessaria nessuna virgola finale: `(1, 2)` è già chiaramente una tupla.
 
     **Concept Tested:** Single-Element Tuple Syntax
 
 ---
 
-#### 3. What does tuple unpacking do?
+#### 3. Cosa fa la scomposizione delle tuple (tuple unpacking)?
 
 <div class="upper-alpha" markdown>
-1. Removes all items from a tuple one at a time
-2. Converts a tuple into a list so its items can be changed
-3. Assigns each item in a tuple to a separate variable in one step
-4. Prints all items in a tuple on separate lines
+1. Rimuove tutti gli elementi da una tupla uno alla volta
+2. Converte una tupla in una lista così i suoi elementi possono essere cambiati
+3. Assegna ogni elemento di una tupla a una variabile separata in un solo passo
+4. Stampa tutti gli elementi di una tupla su righe separate
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Tuple unpacking (also called destructuring) lets you write `x, y = (10, 20)` to assign `10` to `x` and `20` to `y` in a single line. The number of variables on the left must match the number of items in the tuple. This is the same mechanism that makes Python's one-line variable swap (`a, b = b, a`) work.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. La scomposizione delle tuple (chiamata anche destructuring) ti permette di scrivere `x, y = (10, 20)` per assegnare `10` a `x` e `20` a `y` in una singola riga. Il numero di variabili a sinistra deve corrispondere al numero di elementi nella tupla. Questo è lo stesso meccanismo che fa funzionare lo scambio di variabili in una riga di Python (`a, b = b, a`).
 
     **Concept Tested:** Tuple Unpacking
 
 ---
 
-#### 4. What is a common use case for returning a tuple from a function?
+#### 4. Qual è un caso d'uso comune per restituire una tupla da una funzione?
 
 <div class="upper-alpha" markdown>
-1. To make the function run faster
-2. To return multiple values from a function at once
-3. To prevent the caller from changing the return value
-4. To ensure the function can only be called once
+1. Per far girare la funzione più velocemente
+2. Per restituire valori multipli da una funzione in una volta
+3. Per impedire a chi chiama di cambiare il valore restituito
+4. Per assicurarsi che la funzione possa essere chiamata solo una volta
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. A function can only have one `return` statement, but you can pack multiple values into a tuple and return them all at once. For example, `return min_val, max_val` returns a tuple. The caller can then unpack it: `lo, hi = find_range(data)`. This is cleaner than returning a list or using global variables.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Una funzione può avere solo un'istruzione `return`, ma puoi impacchettare valori multipli in una tupla e restituirli tutti in una volta. Per esempio, `return min_val, max_val` restituisce una tupla. Chi chiama può poi scomporla: `lo, hi = find_range(data)`. Questo è più pulito che restituire una lista o usare variabili globali.
 
     **Concept Tested:** Tuples as Return Values
 
 ---
 
-#### 5. What happens when you add a duplicate item to a set?
+#### 5. Cosa succede quando aggiungi un elemento duplicato a un insieme?
 
 <div class="upper-alpha" markdown>
-1. The set raises a `ValueError`
-2. The item is added a second time, creating a duplicate
-3. The duplicate is silently ignored — the set stays unchanged
-4. The original item is replaced by the new copy
+1. L'insieme genera un `ValueError`
+2. L'elemento viene aggiunto una seconda volta, creando un duplicato
+3. Il duplicato viene ignorato silenziosamente — l'insieme resta invariato
+4. L'elemento originale viene sostituito dalla nuova copia
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Sets automatically enforce uniqueness — no duplicates are allowed. If you `add()` an item that is already in the set, or create a set with repeated values like `{1, 2, 2, 3}`, Python silently ignores the duplicates. The set `{1, 2, 2, 3}` becomes `{1, 2, 3}`.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Gli insiemi impongono automaticamente l'unicità — nessun duplicato è permesso. Se fai `add()` di un elemento già nell'insieme, o crei un insieme con valori ripetuti come `{1, 2, 2, 3}`, Python ignora silenziosamente i duplicati. L'insieme `{1, 2, 2, 3}` diventa `{1, 2, 3}`.
 
     **Concept Tested:** Set Type
 
 ---
 
-#### 6. Given `A = {1, 2, 3, 4}` and `B = {3, 4, 5, 6}`, what is `A & B`?
+#### 6. Dati `A = {1, 2, 3, 4}` e `B = {3, 4, 5, 6}`, cos'è `A & B`?
 
 <div class="upper-alpha" markdown>
-1. `{1, 2, 3, 4, 5, 6}` (all items from both)
-2. `{1, 2}` (items only in A)
-3. `{3, 4}` (items in both A and B)
-4. `{5, 6}` (items only in B)
+1. `{1, 2, 3, 4, 5, 6}` (tutti gli elementi di entrambi)
+2. `{1, 2}` (elementi solo in A)
+3. `{3, 4}` (elementi in sia A sia B)
+4. `{5, 6}` (elementi solo in B)
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. The `&` operator performs set intersection — it returns a new set containing only items that appear in **both** sets. Both `3` and `4` are in A and in B, so `A & B = {3, 4}`. The `|` operator is union (all items), and `-` is difference (in first but not second).
+??? question "Mostra risposta"
+    La risposta corretta è **C**. L'operatore `&` esegue l'intersezione tra insiemi — restituisce un nuovo insieme contenente solo gli elementi che appaiono in **entrambi** gli insiemi. Sia `3` sia `4` sono in A e in B, quindi `A & B = {3, 4}`. L'operatore `|` è l'unione (tutti gli elementi), e `-` è la differenza (nel primo ma non nel secondo).
 
     **Concept Tested:** Set Intersection
 
 ---
 
-#### 7. What does `A | B` produce for `A = {1, 2, 3}` and `B = {3, 4, 5}`?
+#### 7. Cosa produce `A | B` per `A = {1, 2, 3}` e `B = {3, 4, 5}`?
 
 <div class="upper-alpha" markdown>
-1. `{3}` (only the shared item)
-2. `{1, 2, 4, 5}` (items not in both)
-3. `{1, 2}` (items only in A)
-4. `{1, 2, 3, 4, 5}` (all unique items from both)
+1. `{3}` (solo l'elemento condiviso)
+2. `{1, 2, 4, 5}` (elementi non in entrambi)
+3. `{1, 2}` (elementi solo in A)
+4. `{1, 2, 3, 4, 5}` (tutti gli elementi unici di entrambi)
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. The `|` operator performs set union — it returns a new set containing all items from both sets, with no duplicates. `{1, 2, 3} | {3, 4, 5}` gives `{1, 2, 3, 4, 5}`. The shared item `3` appears only once in the result because sets do not allow duplicates.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. L'operatore `|` esegue l'unione tra insiemi — restituisce un nuovo insieme contenente tutti gli elementi di entrambi gli insiemi, senza duplicati. `{1, 2, 3} | {3, 4, 5}` dà `{1, 2, 3, 4, 5}`. L'elemento condiviso `3` appare solo una volta nel risultato perché gli insiemi non permettono duplicati.
 
     **Concept Tested:** Set Union
 
 ---
 
-#### 8. What is the difference between `s.remove(x)` and `s.discard(x)` on a set?
+#### 8. Qual è la differenza tra `s.remove(x)` e `s.discard(x)` su un insieme?
 
 <div class="upper-alpha" markdown>
-1. `remove()` removes by index; `discard()` removes by value
-2. `remove()` raises a `KeyError` if `x` is not found; `discard()` silently does nothing if `x` is not found
-3. `remove()` works on lists; `discard()` only works on sets
-4. They are identical — just two names for the same operation
+1. `remove()` rimuove per indice; `discard()` rimuove per valore
+2. `remove()` genera un `KeyError` se `x` non viene trovato; `discard()` non fa nulla silenziosamente se `x` non viene trovato
+3. `remove()` funziona sulle liste; `discard()` funziona solo sugli insiemi
+4. Sono identici — solo due nomi per la stessa operazione
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Both methods remove an item from a set by value, but they differ in error handling. `remove(x)` raises a `KeyError` if `x` is not in the set. `discard(x)` does nothing and raises no error if `x` is absent. Use `discard()` when you are not sure whether the item exists and do not want to check first.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Entrambi i metodi rimuovono un elemento da un insieme per valore, ma differiscono nella gestione degli errori. `remove(x)` genera un `KeyError` se `x` non è nell'insieme. `discard(x)` non fa nulla e non genera errori se `x` è assente. Usa `discard()` quando non sei sicuro se l'elemento esiste e non vuoi controllare prima.
 
     **Concept Tested:** Set Methods
 
 ---
 
-#### 9. What is the quickest way to remove duplicates from a list in Python?
+#### 9. Qual è il modo più rapido di rimuovere i duplicati da una lista in Python?
 
 <div class="upper-alpha" markdown>
-1. Sort the list and remove adjacent duplicates with a loop
-2. Convert the list to a set with `set()`, which automatically removes duplicates
-3. Use `list.remove_duplicates()` (a built-in method)
-4. Iterate over the list and check each item with `in` before appending
+1. Ordinare la lista e rimuovere i duplicati adiacenti con un ciclo
+2. Convertire la lista in un insieme con `set()`, che rimuove automaticamente i duplicati
+3. Usare `list.remove_duplicates()` (un metodo built-in)
+4. Iterare sulla lista e controllare ogni elemento con `in` prima di aggiungerlo
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `set(my_list)` converts a list to a set, automatically discarding all duplicate values. If you need the result as a list again, wrap it: `list(set(my_list))`. The only caveat is that sets are unordered, so the original order is not preserved. There is no built-in `remove_duplicates()` method in Python.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `set(my_list)` converte una lista in un insieme, scartando automaticamente tutti i valori duplicati. Se hai bisogno del risultato di nuovo come lista, racchiudilo: `list(set(my_list))`. L'unico avvertimento è che gli insiemi non sono ordinati, quindi l'ordine originale non viene preservato. Non esiste un metodo built-in `remove_duplicates()` in Python.
 
     **Concept Tested:** Set Type
 
 ---
 
-#### 10. What does `A - B` produce for `A = {1, 2, 3, 4}` and `B = {3, 4, 5}`?
+#### 10. Cosa produce `A - B` per `A = {1, 2, 3, 4}` e `B = {3, 4, 5}`?
 
 <div class="upper-alpha" markdown>
-1. `{5}` (items only in B)
-2. `{-2, -2, -2, -1}` (subtracting each item)
-3. `{1, 2}` (items in A that are not in B)
-4. `{1, 2, 5}` (all unique items not shared)
+1. `{5}` (elementi solo in B)
+2. `{-2, -2, -2, -1}` (sottraendo ogni elemento)
+3. `{1, 2}` (elementi in A che non sono in B)
+4. `{1, 2, 5}` (tutti gli elementi unici non condivisi)
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. The `-` operator performs set difference — it returns items that are in the first set but NOT in the second. `{1, 2, 3, 4} - {3, 4, 5}` gives `{1, 2}` because `3` and `4` are removed (they are in B) and `5` is not included (it was only in B). Note that `A - B` and `B - A` give different results.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. L'operatore `-` esegue la differenza tra insiemi — restituisce gli elementi che sono nel primo insieme ma NON nel secondo. `{1, 2, 3, 4} - {3, 4, 5}` dà `{1, 2}` perché `3` e `4` vengono rimossi (sono in B) e `5` non viene incluso (era solo in B). Nota che `A - B` e `B - A` danno risultati diversi.
 
     **Concept Tested:** Set Difference
 

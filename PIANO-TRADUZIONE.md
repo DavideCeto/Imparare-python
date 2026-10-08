@@ -45,6 +45,8 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
   alla nav: "Modulo math e Progetti con la Turtle")
 - `docs/chapters/19-booleans-and-conditionals/` (index, references, quiz — titolo allineato
   alla nav: "Altri Booleani e Condizionali"; chiude i Capitoli 1-18 = Fase Skulpt/turtle)
+- `docs/chapters/20-tuples-and-sets/` (index, references, quiz — titolo allineato alla nav:
+  "Tuple e Insiemi")
 - `docs/glossary.md` (tutte le 338 voci, intestazioni `####` verificate 338/338 rispetto
   all'originale)
 
@@ -166,12 +168,12 @@ Fase 0 chiusa: i file skill (`skills/python-lab-generator/SKILL.md` e
 quindi non serve alcun ripristino. Decisioni della sezione 2 fissate il 2026-10-03.
 
 Fase 1 completata (pagine di ingresso, `docs/glossary.md`, nav di `mkdocs.yml` per le
-sezioni coperte). Fase 2 in corso: Capitoli 1-19 tradotti.
+sezioni coperte). Fase 2 in corso: Capitoli 1-20 tradotti.
 
-Prossimo: continuare la Fase 2 dal Capitolo 20 (`docs/chapters/20-tuples-and-sets/`),
+Prossimo: continuare la Fase 2 dal Capitolo 21 (`docs/chapters/21-dictionaries/`),
 un capitolo alla volta (`index.md` + `references.md` + `quiz.md`). La nav di `mkdocs.yml`
 per tutti i 38 capitoli è già tradotta dalla Fase 1 — controllare sempre l'etichetta nav
-esistente e allineare il titolo H1/front matter a quella (vedi nota sui Capitoli 15-19),
+esistente e allineare il titolo H1/front matter a quella (vedi nota sui Capitoli 15-20),
 invece di tradurre il titolo da zero.
 
 Nota di qualità: durante la traduzione del Capitolo 5 è stato trovato e corretto un

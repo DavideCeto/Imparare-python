@@ -1,27 +1,27 @@
 ---
-title: Tuples and Sets
-description: Learn Python's tuple and set types — immutable sequences for fixed data, and unordered collections for unique items and set math
+title: Tuple e Insiemi
+description: Impara i tipi tuple e set di Python — sequenze immutabili per dati fissi, e collezioni non ordinate per elementi unici e matematica degli insiemi
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 13:20:00
 version: 0.09
 ---
 
-# Tuples and Sets
+# Tuple e Insiemi
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Create and unpack **tuples**, and explain when to use them instead of lists
-- Return multiple values from a function using a tuple
-- Create a **set** and use `union()`, `intersection()`, and `difference()` for set math
-- Test membership in a set and add or remove items
+- Creare e scomporre le **tuple**, e spiegare quando usarle invece delle liste
+- Restituire valori multipli da una funzione usando una tupla
+- Creare un **insieme** (set) e usare `union()`, `intersection()`, e `difference()` per la matematica degli insiemi
+- Verificare l'appartenenza in un insieme e aggiungere o rimuovere elementi
 
-Python gives you four main collection types. You've mastered lists. Now let's meet two more: tuples and sets.
+Python ti offre quattro tipi principali di collezione. Hai padroneggiato le liste. Ora conosciamo altri due: le tuple e gli insiemi.
 
-!!! mascot-welcome "Welcome to Chapter 20!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 20!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Tuples are like lists that are locked in place — perfect for things that should never change.
-    Sets are like bags where duplicates are forbidden and order doesn't matter.
-    Let's explore both! Let's code it together!
+    Le tuple sono come liste bloccate sul posto — perfette per cose che non dovrebbero mai cambiare.
+    Gli insiemi sono come sacchetti dove i duplicati sono vietati e l'ordine non conta.
+    Esploriamo entrambi! Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -29,10 +29,10 @@ Python gives you four main collection types. You've mastered lists. Now let's me
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## The Tuple Type
+## Il Tipo Tuple
 
-A **tuple** is an ordered, immutable (unchangeable) collection of items.
-You create one using parentheses with items separated by commas.
+Una **tupla** è una collezione ordinata e immutabile (non modificabile) di elementi.
+La crei usando le parentesi, con gli elementi separati da virgole.
 
 ```python
 point = (3, 5)
@@ -40,21 +40,21 @@ rgb   = (255, 128, 0)
 empty = ()
 ```
 
-Tuples look and act a lot like lists, but they cannot be changed after creation.
-You cannot add, remove, or reassign items in a tuple.
+Le tuple sembrano e si comportano molto come le liste, ma non possono essere cambiate dopo la creazione.
+Non puoi aggiungere, rimuovere, o riassegnare elementi in una tupla.
 
-### When to Use a Tuple Instead of a List
+### Quando Usare una Tupla Invece di una Lista
 
-Use a tuple when the data is *fixed* and shouldn't change:
+Usa una tupla quando i dati sono *fissi* e non dovrebbero cambiare:
 
-| Use case | Example |
+| Caso d'uso | Esempio |
 |----------|---------|
-| Coordinates | `(x, y)` or `(x, y, z)` |
-| RGB color values | `(255, 0, 128)` |
-| Days of the week | `("Mon", "Tue", ...)` |
-| Function return values | return `(lat, lng)` |
+| Coordinate | `(x, y)` oppure `(x, y, z)` |
+| Valori di colore RGB | `(255, 0, 128)` |
+| Giorni della settimana | `("Mon", "Tue", ...)` |
+| Valori di ritorno di funzioni | return `(lat, lng)` |
 
-Use a list when you need to add, remove, or change items over time.
+Usa una lista quando hai bisogno di aggiungere, rimuovere, o cambiare elementi nel tempo.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -82,21 +82,21 @@ print("Last:", colors[-1])
 print("Slice:", colors[1:3])`);
 </script>
 
-## Single-Element Tuple Syntax
+## Sintassi della Tupla a un Solo Elemento
 
-A tuple with *one* item needs a trailing comma — otherwise Python just sees parentheses around a value:
+Una tupla con *un* solo elemento ha bisogno di una virgola finale — altrimenti Python vede solo delle parentesi attorno a un valore:
 
 ```python
 not_a_tuple = (42)    # just the integer 42
 is_a_tuple  = (42,)   # a tuple containing 42
 ```
 
-The trailing comma is the signal to Python that you mean a tuple.
+La virgola finale è il segnale per Python che intendi una tupla.
 
-## Tuple Unpacking
+## Scomposizione delle Tuple
 
-**Tuple unpacking** assigns each item in a tuple to a separate variable in one step.
-This makes code clean and expressive.
+La **scomposizione delle tuple** (tuple unpacking) assegna ogni elemento di una tupla a una variabile separata in un solo passo.
+Questo rende il codice pulito ed espressivo.
 
 ```python
 point = (10, 20)
@@ -105,11 +105,11 @@ print(x)              # 10
 print(y)              # 20
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below unpacks a tuple with three items.
-    What values do you think `a`, `b`, and `c` will have?
-    Make your guess — then run it!
+    Il codice sotto scompone una tupla con tre elementi.
+    Quali valori pensi che avranno `a`, `b`, e `c`?
+    Fai la tua previsione — poi eseguilo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -136,10 +136,10 @@ x, y = y, x
 print(f"After swap: x={x}, y={y}")`);
 </script>
 
-## Tuples as Return Values
+## Le Tuple come Valori di Ritorno
 
-Functions can return multiple values by packing them into a tuple.
-The caller unpacks the result:
+Le funzioni possono restituire valori multipli impacchettandoli in una tupla.
+Chi chiama la funzione scompone il risultato:
 
 ```python
 def min_max(numbers):
@@ -172,23 +172,23 @@ q, r = divide(17, 5)
 print(f"17 / 5 = {q} remainder {r}")`);
 </script>
 
-## The Set Type
+## Il Tipo Set
 
-A **set** is an unordered collection of **unique** items. Two key properties:
-1. No duplicates — adding the same item twice has no effect
-2. No guaranteed order — items may print in any order
+Un **insieme** (set) è una collezione non ordinata di elementi **unici**. Due proprietà chiave:
+1. Nessun duplicato — aggiungere lo stesso elemento due volte non ha effetto
+2. Nessun ordine garantito — gli elementi possono essere stampati in qualsiasi ordine
 
-Create a set with curly braces `{}` or the `set()` constructor:
+Crea un insieme con le parentesi graffe `{}` oppure il costruttore `set()`:
 
 ```python
 fruits = {"apple", "banana", "mango", "apple"}   # duplicates removed!
 print(fruits)   # {"mango", "banana", "apple"} — order varies
 ```
 
-Sets are most useful for:
-- Removing duplicates from a list
-- Fast membership testing (faster than lists for large collections)
-- Mathematical set operations
+Gli insiemi sono più utili per:
+- Rimuovere duplicati da una lista
+- Verifiche di appartenenza rapide (più veloci delle liste per grandi collezioni)
+- Operazioni matematiche sugli insiemi
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -215,21 +215,21 @@ print("3 in unique:", 3 in unique)
 print("7 in unique:", 7 in unique)`);
 </script>
 
-## Set Methods: `add()`, `remove()`, `discard()`
+## Metodi degli Insiemi: `add()`, `remove()`, `discard()`
 
-- `s.add(x)` — adds `x` to the set (no effect if already present)
-- `s.remove(x)` — removes `x`; raises `KeyError` if not found
-- `s.discard(x)` — removes `x` if present; silently does nothing if not found
+- `s.add(x)` — aggiunge `x` all'insieme (nessun effetto se già presente)
+- `s.remove(x)` — rimuove `x`; genera `KeyError` se non trovato
+- `s.discard(x)` — rimuove `x` se presente; non fa nulla silenziosamente se non trovato
 
-Use `discard()` when you're not sure whether the item exists.
+Usa `discard()` quando non sei sicuro se l'elemento esiste.
 
-## Set Operations: Union, Intersection, Difference
+## Operazioni sugli Insiemi: Unione, Intersezione, Differenza
 
-Before we try them, here's what each operation means:
+Prima di provarle, ecco cosa significa ogni operazione:
 
-- **Union (`|`)** — all items from both sets (no duplicates)
-- **Intersection (`&`)** — only items that appear in *both* sets
-- **Difference (`-`)** — items in the first set but not the second
+- **Unione (`|`)** — tutti gli elementi di entrambi gli insiemi (senza duplicati)
+- **Intersezione (`&`)** — solo gli elementi che appaiono in *entrambi* gli insiemi
+- **Differenza (`-`)** — elementi nel primo insieme ma non nel secondo
 
 ```
 A = {1, 2, 3, 4}
@@ -267,25 +267,25 @@ print("In either class:", either)
 print("Only in Python:", only_python)`);
 </script>
 
-### See It: Set Operations on a Venn Diagram
+### Guardalo: Operazioni sugli Insiemi su un Diagramma di Venn
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    In the diagram below, set A has dog, cat, fish, and bird; set B has cat,
-    bird, snake, and hamster. Before you click any operation button, predict:
-    **which animals will `A & B` give you?** Then click and see which region
-    lights up!
+    Nel diagramma sotto, l'insieme A ha dog, cat, fish, e bird; l'insieme B ha cat,
+    bird, snake, e hamster. Prima di cliccare qualsiasi pulsante di operazione, prevedi:
+    **quali animali ti darà `A & B`?** Poi clicca e guarda quale regione
+    si illumina!
 
 <iframe src="../../sims/set-operations-venn/main.html" height="542" width="100%" scrolling="no"></iframe>
 
-[Explore the Set Operations Venn MicroSim](../../sims/set-operations-venn/index.md){ .md-button }
+[Esplora il MicroSim Set Operations Venn](../../sims/set-operations-venn/index.md){ .md-button }
 
-Click all four operations and watch which region glows for each. Then edit the sets — type your own items, and try entering the same animal twice in one set to see the set collapse the duplicate. Notice that `A & B` with no shared items gives `set()`, Python's way of writing an empty set.
+Clicca tutte e quattro le operazioni e guarda quale regione si illumina per ciascuna. Poi modifica gli insiemi — scrivi i tuoi elementi, e prova a inserire lo stesso animale due volte in un insieme per vedere il duplicato collassare. Nota che `A & B` senza elementi condivisi dà `set()`, il modo in cui Python scrive un insieme vuoto.
 
-## Frozensets
+## Frozenset
 
-A **frozenset** is an immutable version of a set — you cannot add or remove items after creation.
-This makes it usable as a dictionary key or stored inside another set (regular sets can't do this).
+Un **frozenset** è una versione immutabile di un insieme — non puoi aggiungere o rimuovere elementi dopo la creazione.
+Questo lo rende usabile come chiave di dizionario o memorizzabile dentro un altro insieme (gli insiemi normali non possono farlo).
 
 ```python
 fs = frozenset([1, 2, 3])
@@ -293,12 +293,12 @@ print(fs)        # frozenset({1, 2, 3})
 # fs.add(4)      # AttributeError — frozenset is immutable
 ```
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Find Shared Interests"
+!!! mascot-thinking "Il Tuo Turno — Trova gli Interessi Condivisi"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Two friends listed their favorite animals. Write code to find which animals they *both* like.
-    Use the set intersection operator `&` to find the shared items!
+    Due amici hanno elencato i loro animali preferiti. Scrivi del codice per trovare quali animali piacciono a *entrambi*.
+    Usa l'operatore di intersezione degli insiemi `&` per trovare gli elementi condivisi!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -323,32 +323,32 @@ shared = alice_favorites  # replace this line with the correct operation
 print("Both like:", shared)`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Create a tuple of seven colors of the rainbow. Unpack the first three into `r`, `o`, `y`.
-   **You'll know it worked when** three color names are printed without errors.
+1. Crea una tupla con sette colori dell'arcobaleno. Scomponi i primi tre in `r`, `o`, `y`.
+   **Saprai che ha funzionato quando** tre nomi di colori vengono stampati senza errori.
 
-2. Write a function `circle_stats(radius)` that returns the area and circumference as a tuple.
-   Use `math.pi`. Unpack and print both values.
-   **You'll know it worked when** radius 5 gives area ≈ 78.54 and circumference ≈ 31.42.
+2. Scrivi una funzione `circle_stats(radius)` che restituisce l'area e la circonferenza come una tupla.
+   Usa `math.pi`. Scomponi e stampa entrambi i valori.
+   **Saprai che ha funzionato quando** raggio 5 dà area ≈ 78.54 e circonferenza ≈ 31.42.
 
-3. Convert the list `[3, 1, 4, 1, 5, 9, 2, 6, 5, 3]` to a set and back to a sorted list.
-   **You'll know it worked when** you see `[1, 2, 3, 4, 5, 6, 9]` — duplicates removed.
+3. Converti la lista `[3, 1, 4, 1, 5, 9, 2, 6, 5, 3]` in un insieme e poi di nuovo in una lista ordinata.
+   **Saprai che ha funzionato quando** vedi `[1, 2, 3, 4, 5, 6, 9]` — duplicati rimossi.
 
-4. Try adding an item to a frozen set. Read the error message carefully.
-   **You'll know it worked when** you see `AttributeError: 'frozenset' object has no attribute 'add'`.
+4. Prova ad aggiungere un elemento a un frozenset. Leggi attentamente il messaggio di errore.
+   **Saprai che ha funzionato quando** vedi `AttributeError: 'frozenset' object has no attribute 'add'`.
 
-5. Use the `|` union operator to merge two sets of numbers and print the sorted result.
-   **You'll know it worked when** you see a combined list with no duplicates.
+5. Usa l'operatore di unione `|` per unire due insiemi di numeri e stampa il risultato ordinato.
+   **Saprai che ha funzionato quando** vedi una lista combinata senza duplicati.
 
-!!! mascot-celebration "Collection Expert!"
+!!! mascot-celebration "Esperto delle Collezioni!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've mastered tuples for fixed data and sets for unique collections!
-    Now you have four collection tools: list, tuple, set, and (coming next) dictionary.
-    Each has its place — knowing when to use which one is a real programming skill!
+    Hai padroneggiato le tuple per i dati fissi e gli insiemi per le collezioni di elementi unici!
+    Ora hai quattro strumenti di collezione: list, tuple, set, e (il prossimo) dictionary.
+    Ognuno ha il suo posto — sapere quando usare quale è una vera competenza di programmazione!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)
