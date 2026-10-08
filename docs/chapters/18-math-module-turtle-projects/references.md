@@ -1,21 +1,21 @@
-# References: Math Module and Turtle Projects
+# Riferimenti: Modulo math e Progetti con la Turtle
 
-1. [Python math module](https://en.wikipedia.org/wiki/Python_(programming_language)#Standard_library) - Wikipedia - Overview of Python's standard library including the math module, covering built-in mathematical functions like `math.pi`, `math.sqrt`, `math.sin`, and `math.cos` used throughout this chapter.
+1. [Python math module](https://en.wikipedia.org/wiki/Python_(programming_language)#Standard_library) - Wikipedia - Panoramica della libreria standard di Python incluso il modulo math, che copre le funzioni matematiche built-in come `math.pi`, `math.sqrt`, `math.sin`, e `math.cos` usate in tutto questo capitolo.
 
-2. [Trigonometry](https://en.wikipedia.org/wiki/Trigonometry) - Wikipedia - Comprehensive introduction to trigonometry covering sine, cosine, angles, and the unit circle. Provides the mathematical foundation students need to understand how `math.sin` and `math.cos` control turtle movement and spiral drawing.
+2. [Trigonometry](https://en.wikipedia.org/wiki/Trigonometry) - Wikipedia - Introduzione completa alla trigonometria che copre seno, coseno, angoli, e la circonferenza unitaria. Fornisce le basi matematiche di cui gli studenti hanno bisogno per capire come `math.sin` e `math.cos` controllano il movimento della tartaruga e il disegno delle spirali.
 
-3. [Turtle graphics](https://en.wikipedia.org/wiki/Turtle_graphics) - Wikipedia - History and principles of turtle graphics programming, from Logo to modern Python. Explains how coordinate-based drawing and angle commands connect to the trigonometry and math functions explored in this chapter.
+3. [Turtle graphics](https://en.wikipedia.org/wiki/Turtle_graphics) - Wikipedia - Storia e principi della programmazione con la grafica turtle, da Logo al Python moderno. Spiega come il disegno basato su coordinate e i comandi degli angoli si collegano alla trigonometria e alle funzioni matematiche esplorate in questo capitolo.
 
-4. Python for Kids - Jason R. Briggs - No Starch Press - Chapter 12 introduces the math module and uses turtle graphics to draw shapes, making it an ideal companion for students who want extra practice combining `math.pi` and turtle commands.
+4. Python for Kids - Jason R. Briggs - No Starch Press - Il Capitolo 12 introduce il modulo math e usa la grafica turtle per disegnare forme, rendendolo un compagno ideale per studenti che vogliono esercitarsi di più combinando `math.pi` e i comandi della tartaruga.
 
-5. Python Crash Course (3rd Edition) - Eric Matthes - No Starch Press - Covers Python's standard library modules in depth, including the math module, with clear examples that reinforce the function-calling patterns and project-based exercises in this chapter.
+5. Python Crash Course (3ª edizione) - Eric Matthes - No Starch Press - Copre i moduli della libreria standard di Python a fondo, incluso il modulo math, con esempi chiari che rafforzano gli schemi di chiamata delle funzioni e gli esercizi basati su progetti di questo capitolo.
 
-6. [Python math Module Documentation](https://docs.python.org/3/library/math.html) - Python.org - Official reference for every function and constant in the `math` module, including `math.pi`, `math.sqrt`, `math.sin`, and `math.cos`. Authoritative source for understanding parameters, return values, and edge cases.
+6. [Python math Module Documentation](https://docs.python.org/3/library/math.html) - Python.org - Riferimento ufficiale per ogni funzione e costante nel modulo `math`, incluso `math.pi`, `math.sqrt`, `math.sin`, e `math.cos`. Fonte autorevole per capire parametri, valori di ritorno, e casi limite.
 
-7. [Python turtle Module Documentation](https://docs.python.org/3/library/turtle.html) - Python.org - Complete official documentation for Python's turtle graphics library, covering all movement and drawing commands. Essential reference for the turtle-based projects and spiral-drawing exercises in this chapter.
+7. [Python turtle Module Documentation](https://docs.python.org/3/library/turtle.html) - Python.org - Documentazione ufficiale completa per la libreria di grafica turtle di Python, che copre tutti i comandi di movimento e disegno. Riferimento essenziale per i progetti basati sulla tartaruga e gli esercizi di disegno di spirali in questo capitolo.
 
-8. [Python Math Module](https://www.w3schools.com/python/module_math.asp) - W3Schools - Beginner-friendly reference listing every `math` module function with runnable examples. Especially useful for students who want to quickly look up `math.sqrt`, `math.sin`, or `math.cos` while building their turtle projects.
+8. [Python Math Module](https://www.w3schools.com/python/module_math.asp) - W3Schools - Riferimento adatto ai principianti che elenca ogni funzione del modulo `math` con esempi provabili. Particolarmente utile per studenti che vogliono cercare velocemente `math.sqrt`, `math.sin`, o `math.cos` mentre costruiscono i loro progetti con la tartaruga.
 
-9. [Python Math Module](https://www.programiz.com/python-programming/modules/math) - Programiz - Structured tutorial on importing and using the `math` module with worked examples for common functions. Includes clear explanations of `math.pi` and trigonometric functions directly relevant to the spiral and geometry projects in this chapter.
+9. [Python Math Module](https://www.programiz.com/python-programming/modules/math) - Programiz - Tutorial strutturato sull'importazione e l'uso del modulo `math` con esempi lavorati per le funzioni comuni. Include spiegazioni chiare di `math.pi` e delle funzioni trigonometriche direttamente rilevanti per i progetti di spirali e geometria in questo capitolo.
 
-10. [Python math module](https://realpython.com/python-math-module/) - Real Python - In-depth tutorial on the Python `math` module covering constants, rounding, trigonometry, and logarithms. Provides practical examples that help students understand why and when to reach for `math.sin` and `math.cos` in creative coding projects.
+10. [Python math module](https://realpython.com/python-math-module/) - Real Python - Tutorial approfondito sul modulo `math` di Python che copre costanti, arrotondamento, trigonometria, e logaritmi. Fornisce esempi pratici che aiutano gli studenti a capire perché e quando usare `math.sin` e `math.cos` nei progetti di coding creativo.

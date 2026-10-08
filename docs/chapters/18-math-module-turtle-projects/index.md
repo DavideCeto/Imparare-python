@@ -1,28 +1,28 @@
 ---
-title: Math Module and Turtle Projects
-description: Use abs(), round(), math.sqrt(), sin(), cos(), and pi to build a rippling sine wave and a random turtle race
+title: Modulo math e Progetti con la Turtle
+description: Usa abs(), round(), math.sqrt(), sin(), cos(), e pi per costruire un'onda sinusoidale ondulata e una gara di tartarughe casuale
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 13:00:00
 version: 0.09
 ---
 
-# Math Module and Turtle Projects
+# Modulo math e Progetti con la Turtle
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Use built-in functions `abs()` and `round()` for common number operations
-- Import and use `math.sqrt()`, `math.floor()`, `math.ceil()`, `math.sin()`, `math.cos()`, and `math.pi`
-- Convert between radians and degrees using `math.radians()` and `math.degrees()`
-- Build two complete turtle projects: a **sine wave** drawing and a **turtle race simulation**
+- Usare le funzioni built-in `abs()` e `round()` per operazioni comuni sui numeri
+- Importare e usare `math.sqrt()`, `math.floor()`, `math.ceil()`, `math.sin()`, `math.cos()`, e `math.pi`
+- Convertire tra radianti e gradi usando `math.radians()` e `math.degrees()`
+- Costruire due progetti completi con la turtle: un disegno di **onda sinusoidale** e una **simulazione di gara di tartarughe**
 
-The `math` module gives Python superpowers for working with numbers — square roots, sine waves, logarithms, and more.
-In this chapter you'll use those superpowers to create two beautiful, interactive turtle projects.
+Il modulo `math` dà a Python superpoteri per lavorare con i numeri — radici quadrate, onde sinusoidali, logaritmi, e altro.
+In questo capitolo userai quei superpoteri per creare due bellissimi progetti interattivi con la tartaruga.
 
-!!! mascot-welcome "Welcome to Chapter 18!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 18!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Did you know that the smooth curves you see in games and animations are drawn with sine and cosine?
-    Today we'll learn the math tools that make that possible — and then draw our own wave!
-    Let's code it together!
+    Sapevi che le curve morbide che vedi nei giochi e nelle animazioni sono disegnate con il seno e il coseno?
+    Oggi imparerai gli strumenti matematici che lo rendono possibile — e poi disegneremo la nostra onda!
+    Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -30,11 +30,11 @@ In this chapter you'll use those superpowers to create two beautiful, interactiv
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## Built-in Number Functions
+## Funzioni Numeriche Built-in
 
-Python has two useful number functions built in — no import needed.
+Python ha due utili funzioni numeriche incorporate — nessun import necessario.
 
-`abs(x)` returns the **absolute value** of a number: the distance from zero, always positive.
+`abs(x)` restituisce il **valore assoluto** di un numero: la distanza da zero, sempre positiva.
 
 ```python
 print(abs(-7))    # 7
@@ -42,7 +42,7 @@ print(abs(5))     # 5
 print(abs(-3.14)) # 3.14
 ```
 
-`round(x)` rounds a number to the nearest integer (or to a given number of decimal places).
+`round(x)` arrotonda un numero all'intero più vicino (o a un numero dato di cifre decimali).
 
 ```python
 print(round(3.7))      # 4
@@ -72,24 +72,24 @@ print("round(2.3):", round(2.3))
 print("round(3.14159, 3):", round(3.14159, 3))`);
 </script>
 
-## The `math` Module
+## Il Modulo `math`
 
-Import the module with `import math`. Then access functions using `math.function_name()`.
+Importa il modulo con `import math`. Poi accedi alle funzioni usando `math.function_name()`.
 
-Before we try them, here's a quick guide to the key functions:
+Prima di provarle, ecco una guida rapida alle funzioni principali:
 
-| Function | What it does | Example |
+| Funzione | Cosa fa | Esempio |
 |----------|-------------|---------|
-| `math.sqrt(x)` | Square root of x | `math.sqrt(25)` → 5.0 |
-| `math.floor(x)` | Round down to nearest integer | `math.floor(3.9)` → 3 |
-| `math.ceil(x)` | Round up to nearest integer | `math.ceil(3.1)` → 4 |
-| `math.pi` | The constant π (3.14159...) | |
-| `math.sin(x)` | Sine of x (x in **radians**) | `math.sin(math.pi/2)` → 1.0 |
-| `math.cos(x)` | Cosine of x (x in **radians**) | `math.cos(0)` → 1.0 |
-| `math.radians(d)` | Convert degrees to radians | `math.radians(180)` → π |
-| `math.degrees(r)` | Convert radians to degrees | `math.degrees(math.pi)` → 180.0 |
-| `math.log(x)` | Natural logarithm of x | `math.log(1)` → 0.0 |
-| `math.factorial(n)` | n! (n factorial) | `math.factorial(5)` → 120 |
+| `math.sqrt(x)` | Radice quadrata di x | `math.sqrt(25)` → 5.0 |
+| `math.floor(x)` | Arrotonda in giù all'intero più vicino | `math.floor(3.9)` → 3 |
+| `math.ceil(x)` | Arrotonda in su all'intero più vicino | `math.ceil(3.1)` → 4 |
+| `math.pi` | La costante π (3.14159...) | |
+| `math.sin(x)` | Seno di x (x in **radianti**) | `math.sin(math.pi/2)` → 1.0 |
+| `math.cos(x)` | Coseno di x (x in **radianti**) | `math.cos(0)` → 1.0 |
+| `math.radians(d)` | Converte i gradi in radianti | `math.radians(180)` → π |
+| `math.degrees(r)` | Converte i radianti in gradi | `math.degrees(math.pi)` → 180.0 |
+| `math.log(x)` | Logaritmo naturale di x | `math.log(1)` → 0.0 |
+| `math.factorial(n)` | n! (fattoriale di n) | `math.factorial(5)` → 120 |
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -115,21 +115,21 @@ print("factorial(6):", math.factorial(6))
 print("degrees(pi):", math.degrees(math.pi))`);
 </script>
 
-## Sine and Cosine — Radians vs Degrees
+## Seno e Coseno — Radianti vs Gradi
 
-Python's `math.sin()` and `math.cos()` expect their input in **radians**, not degrees.
+`math.sin()` e `math.cos()` di Python si aspettano il loro input in **radianti**, non in gradi.
 
-A **radian** is a different way of measuring angles.
-One full circle = 360° = 2π radians.
-A half circle = 180° = π radians.
+Un **radiante** è un modo diverso di misurare gli angoli.
+Un cerchio completo = 360° = 2π radianti.
+Un mezzo cerchio = 180° = π radianti.
 
-To convert: use `math.radians(degrees)` to go from degrees → radians.
+Per convertire: usa `math.radians(degrees)` per andare da gradi → radianti.
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    `math.sin(math.radians(90))` asks for the sine of 90 degrees.
-    In trigonometry, `sin(90°) = 1.0`. Do you think Python will get the right answer?
-    Make your guess — then run it!
+    `math.sin(math.radians(90))` chiede il seno di 90 gradi.
+    In trigonometria, `sin(90°) = 1.0`. Pensi che Python darà la risposta giusta?
+    Fai la tua previsione — poi eseguilo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -154,30 +154,30 @@ print("cos(0°):", math.cos(math.radians(0)))
 print("cos(90°):", round(math.cos(math.radians(90)), 10))`);
 </script>
 
-### See It: One Angle, Two Languages
+### Guardalo: Un Angolo, Due Lingue
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The turtle speaks degrees, but `math.sin()` speaks radians. Before you
-    drag the orange point below, predict: **how many radians is half a turn
-    (180°)?** Drag the point there and check your answer!
+    La tartaruga parla in gradi, ma `math.sin()` parla in radianti. Prima di
+    trascinare il punto arancione sotto, prevedi: **quanti radianti sono mezzo giro
+    (180°)?** Trascina il punto lì e controlla la tua risposta!
 
 <iframe src="../../sims/unit-circle-radians/main.html" height="522" width="100%" scrolling="no"></iframe>
 
-[Explore the Unit Circle MicroSim](../../sims/unit-circle-radians/index.md){ .md-button }
+[Esplora il MicroSim Unit Circle](../../sims/unit-circle-radians/index.md){ .md-button }
 
-Were you right? Half a turn is exactly **π radians** (about 3.14). Watch the little turtle at the center — its heading always matches the angle, and the blue and green bars show `math.sin()` and `math.cos()` for whatever angle you choose.
+Avevi indovinato? Mezzo giro è esattamente **π radianti** (circa 3.14). Guarda la piccola tartaruga al centro — la sua direzione corrisponde sempre all'angolo, e le barre blu e verde mostrano `math.sin()` e `math.cos()` per qualsiasi angolo tu scelga.
 
-## Project 1 — Sine Wave with Turtle
+## Progetto 1 — Onda Sinusoidale con Turtle
 
-A **sine wave** is the smooth, repeating S-shaped wave you see in physics and music.
+Un'**onda sinusoidale** è l'onda morbida e ripetuta a forma di S che vedi in fisica e musica.
 
-The idea: step across the screen from left to right. For each x position, calculate `y = amplitude * sin(x * frequency)`. Move the turtle to `(x, y)`. The result is a smooth wave.
+L'idea: avanza attraverso lo schermo da sinistra a destra. Per ogni posizione x, calcola `y = amplitude * sin(x * frequency)`. Sposta la tartaruga a `(x, y)`. Il risultato è un'onda morbida.
 
-Before running the code, note that:
-- `amplitude` controls how tall the wave is (the peak height in pixels)
-- `frequency` (really a scaling factor) controls how many cycles appear in the window
-- `math.sin()` always returns a value between `-1.0` and `1.0`, so we multiply by `amplitude` to scale it up
+Prima di eseguire il codice, nota che:
+- `amplitude` controlla quanto è alta l'onda (l'altezza del picco in pixel)
+- `frequency` (in realtà un fattore di scala) controlla quanti cicli appaiono nella finestra
+- `math.sin()` restituisce sempre un valore tra `-1.0` e `1.0`, quindi moltiplichiamo per `amplitude` per scalarlo
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -215,26 +215,26 @@ for x in range(-190, 191):
 t.hideturtle()`);
 </script>
 
-Try changing `amplitude` to `150` for a taller wave or `frequency` to `0.1` for a faster wave.
+Prova a cambiare `amplitude` a `150` per un'onda più alta o `frequency` a `0.1` per un'onda più rapida.
 
-### See It: Play the Wave Like an Instrument
+### Guardalo: Suona l'Onda Come uno Strumento
 
-Editing numbers and re-running works, but sliders are faster for building intuition. In the explorer below, predict first: **which slider makes the wave taller, and which packs more wiggles into the same space?** Then drag each slider one at a time and watch the equation update.
+Modificare i numeri e rieseguire funziona, ma gli slider sono più rapidi per costruire l'intuizione. Nell'esploratore sotto, prevedi prima: **quale slider rende l'onda più alta, e quale ne infila più ondulazioni nello stesso spazio?** Poi trascina ogni slider uno alla volta e guarda l'equazione aggiornarsi.
 
 <iframe src="../../sims/sine-wave-explorer/main.html" height="492" width="100%" scrolling="no"></iframe>
 
-[Explore the Sine Wave Explorer MicroSim](../../sims/sine-wave-explorer/index.md){ .md-button }
+[Esplora il MicroSim Sine Wave Explorer](../../sims/sine-wave-explorer/index.md){ .md-button }
 
-Check **show plain sin(x)** to keep the original wave as a dotted reference — then slide the phase and watch your wave slide left past it. These are the exact `amplitude` and `frequency` variables from the turtle project above.
+Seleziona **show plain sin(x)** per mantenere l'onda originale come riferimento punteggiato — poi muovi la fase e guarda la tua onda scorrere a sinistra oltre di essa. Queste sono esattamente le variabili `amplitude` e `frequency` del progetto con la tartaruga sopra.
 
-## Project 2 — Turtle Race Simulation
+## Progetto 2 — Simulazione di Gara di Tartarughe
 
-Now let's combine `random` and a `for` loop to simulate a turtle race!
+Ora combiniamo `random` e un ciclo `for` per simulare una gara di tartarughe!
 
-Three turtles start at the left and move right in random-length hops. The first to cross x = 150 wins.
+Tre tartarughe partono da sinistra e si muovono a destra con salti di lunghezza casuale. La prima ad attraversare x = 150 vince.
 
-Before the code: `random.randint(1, 10)` gives each turtle a random step size on each turn.
-We check after every move whether any turtle has crossed the finish line.
+Prima del codice: `random.randint(1, 10)` dà a ogni tartaruga una dimensione di passo casuale a ogni turno.
+Controlliamo dopo ogni movimento se qualche tartaruga ha attraversato il traguardo.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -288,19 +288,19 @@ while True:
     break`);
 </script>
 
-Run it several times — the winner changes each time because the steps are random!
+Eseguilo più volte — il vincitore cambia ogni volta perché i passi sono casuali!
 
-!!! mascot-tip "How the Loop Breaks"
+!!! mascot-tip "Come si Interrompe il Ciclo"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    The `for/else` pattern here is a Python trick: the `else` clause on a `for` loop runs only if the loop completed *without* hitting a `break`. So if no turtle crossed the finish line in this round, we `continue` the `while True` loop. The moment a turtle wins, we `break` out of both loops.
+    Il pattern `for/else` qui è un trucco di Python: la clausola `else` su un ciclo `for` gira solo se il ciclo è terminato *senza* incontrare un `break`. Quindi se nessuna tartaruga ha attraversato il traguardo in questo giro, continuiamo (`continue`) il ciclo `while True`. Nel momento in cui una tartaruga vince, usciamo (`break`) da entrambi i cicli.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add a Fourth Racer"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi una Quarta Corridora"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The turtle race has three racers. Add a fourth turtle named `t4` with color `"orange"`,
-    starting at y = `-80`. Add `"Orange"` to the `names` list and `t4` to the `racers` list.
-    The race should now have four competitors!
+    La gara di tartarughe ha tre corridori. Aggiungi una quarta tartaruga chiamata `t4` con colore `"orange"`,
+    che parte da y = `-80`. Aggiungi `"Orange"` alla lista `names` e `t4` alla lista `racers`.
+    La gara dovrebbe ora avere quattro concorrenti!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -343,31 +343,31 @@ while True:
     break`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Change `amplitude` in the sine wave to `40` and `frequency` to `0.1`.
-   **You'll know it worked when** the wave is shorter and faster.
+1. Cambia `amplitude` nell'onda sinusoidale a `40` e `frequency` a `0.1`.
+   **Saprai che ha funzionato quando** l'onda è più corta e più rapida.
 
-2. Draw a **cosine wave** by replacing `math.sin` with `math.cos`.
-   **You'll know it worked when** the wave starts at its peak instead of zero.
+2. Disegna un'**onda cosinusoidale** sostituendo `math.sin` con `math.cos`.
+   **Saprai che ha funzionato quando** l'onda inizia dal suo picco invece che da zero.
 
-3. Draw two waves on the same canvas — one in blue, one in red, with different amplitudes.
-   **You'll know it worked when** two overlapping waves appear.
+3. Disegna due onde sullo stesso canvas — una blu, una rossa, con ampiezze diverse.
+   **Saprai che ha funzionato quando** appaiono due onde sovrapposte.
 
-4. Make the turtle race step range wider: `randint(1, 20)` instead of `randint(1, 10)`.
-   **You'll know it worked when** the race finishes faster but results are more unpredictable.
+4. Rendi più ampio l'intervallo dei passi della gara di tartarughe: `randint(1, 20)` invece di `randint(1, 10)`.
+   **Saprai che ha funzionato quando** la gara finisce più velocemente ma i risultati sono più imprevedibili.
 
-5. Print `math.factorial(10)` and `math.log(math.e)`.
-   **You'll know it worked when** you see `3628800` and approximately `1.0`.
+5. Stampa `math.factorial(10)` e `math.log(math.e)`.
+   **Saprai che ha funzionato quando** vedi `3628800` e approssimativamente `1.0`.
 
-!!! mascot-celebration "Math Wizard!"
+!!! mascot-celebration "Mago della Matematica!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've built a sine wave and a turtle race using real math — that's seriously impressive!
-    From here we move into more advanced Python: booleans, collections, and error handling.
-    You're ready for the next level! Let's keep coding!
+    Hai costruito un'onda sinusoidale e una gara di tartarughe usando vera matematica — davvero impressionante!
+    Da qui ci muoviamo verso un Python più avanzato: booleani, collezioni, e gestione degli errori.
+    Sei pronto per il livello successivo! Continuiamo a programmare!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)
