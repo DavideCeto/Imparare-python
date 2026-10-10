@@ -1,27 +1,27 @@
 ---
-title: Advanced Collections and Built-in Functions
-description: Master enumerate(), zip(), *args, **kwargs, max/min/sum/sorted, map/filter, and powerful collection construction patterns
+title: Collezioni Avanzate e Funzioni Built-in
+description: Padroneggia enumerate(), zip(), *args, **kwargs, max/min/sum/sorted, map/filter, e potenti pattern di costruzione delle collezioni
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 13:40:00
 version: 0.09
 ---
 
-# Advanced Collections and Built-in Functions
+# Collezioni Avanzate e Funzioni Built-in
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Use `enumerate()` for indexed loops and `zip()` to combine iterables
-- Write flexible functions with `*args` and `**kwargs`
-- Build dictionaries from two lists using `zip()`
-- Use `max()`, `min()`, `sum()`, `sorted()`, `reversed()`, `map()`, and `filter()` with confidence
+- Usare `enumerate()` per cicli indicizzati e `zip()` per combinare iterabili
+- Scrivere funzioni flessibili con `*args` e `**kwargs`
+- Costruire dizionari da due liste usando `zip()`
+- Usare `max()`, `min()`, `sum()`, `sorted()`, `reversed()`, `map()`, e `filter()` con sicurezza
 
-Python's built-in functions are a powerful toolkit. This chapter gathers the most useful ones so you can write shorter, cleaner code that does more.
+Le funzioni built-in di Python sono un set di strumenti potente. Questo capitolo raccoglie le più utili così puoi scrivere codice più corto e pulito che fa di più.
 
-!!! mascot-welcome "Welcome to Chapter 22!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 22!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Python's built-in toolkit is like a Swiss Army knife — there's a tool for almost everything!
-    Today we're learning the ones you'll reach for most often.
-    Let's code it together!
+    Il set di strumenti built-in di Python è come un coltellino svizzero — c'è uno strumento per quasi tutto!
+    Oggi imparerai quelli a cui ricorrerai più spesso.
+    Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -29,10 +29,10 @@ Python's built-in functions are a powerful toolkit. This chapter gathers the mos
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## `enumerate()` — Loop with an Index
+## `enumerate()` — Ciclo con un Indice
 
-`enumerate(iterable)` wraps a list (or any sequence) and gives you both the index *and* the item on each loop iteration.
-Without `enumerate()`, you'd need a separate counter variable.
+`enumerate(iterable)` incapsula una lista (o qualsiasi sequenza) e ti dà sia l'indice *sia* l'elemento a ogni iterazione del ciclo.
+Senza `enumerate()`, avresti bisogno di una variabile contatore separata.
 
 ```python
 # Without enumerate — manual counter:
@@ -45,7 +45,7 @@ for i, fruit in enumerate(fruits):
     print(i, fruit)
 ```
 
-Both produce the same output. `enumerate()` starts at 0 by default; use `enumerate(fruits, 1)` to start at 1.
+Entrambi producono lo stesso output. `enumerate()` inizia da 0 per default; usa `enumerate(fruits, 1)` per iniziare da 1.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -68,10 +68,10 @@ for num, item in enumerate(menu, 1):
     print(f"  {num}. {item}")`);
 </script>
 
-## `zip()` — Combine Iterables in Parallel
+## `zip()` — Combina Iterabili in Parallelo
 
-`zip(a, b)` pairs up items from two (or more) iterables step by step.
-It stops when the shortest iterable runs out.
+`zip(a, b)` accoppia gli elementi di due (o più) iterabili passo dopo passo.
+Si ferma quando il più corto degli iterabili finisce.
 
 ```python
 names  = ["Alice", "Bob", "Carol"]
@@ -81,11 +81,11 @@ for name, score in zip(names, scores):
     print(f"{name}: {score}")
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below zips two lists of different lengths.
-    How many pairs do you think `zip()` will produce?
-    Make your guess — then run it!
+    Il codice sotto fa lo zip di due liste di lunghezza diversa.
+    Quante coppie pensi che produrrà `zip()`?
+    Fai la tua previsione — poi eseguilo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -109,11 +109,11 @@ print("Pairs:", pairs)
 print("Count:", len(pairs))`);
 </script>
 
-Were you right? `zip()` stops at 3 pairs because `numbers` runs out first.
+Avevi indovinato? `zip()` si ferma a 3 coppie perché `numbers` finisce per primo.
 
-## Dictionary from Two Lists with `zip()`
+## Dizionario da Due Liste con `zip()`
 
-Combine `zip()` with `dict()` to build a dictionary from two parallel lists — one of keys, one of values:
+Combina `zip()` con `dict()` per costruire un dizionario da due liste parallele — una di chiavi, una di valori:
 
 ```python
 keys   = ["name", "age", "city"]
@@ -145,10 +145,10 @@ print(capital_map)
 print("Japan's capital:", capital_map["Japan"])`);
 </script>
 
-## `*args` — Variable Number of Positional Arguments
+## `*args` — Numero Variabile di Argomenti Posizionali
 
-Sometimes you want a function that can accept any number of arguments.
-`*args` collects all extra positional arguments into a tuple.
+A volte vuoi una funzione che possa accettare qualsiasi numero di argomenti.
+`*args` raccoglie tutti gli argomenti posizionali extra in una tupla.
 
 ```python
 def total(*args):
@@ -159,9 +159,9 @@ print(total(10, 20))        # 30
 print(total(5, 5, 5, 5))    # 20
 ```
 
-## `**kwargs` — Variable Number of Keyword Arguments
+## `**kwargs` — Numero Variabile di Argomenti Keyword
 
-`**kwargs` collects extra keyword arguments into a dictionary.
+`**kwargs` raccoglie gli argomenti keyword extra in un dizionario.
 
 ```python
 def describe(**kwargs):
@@ -198,9 +198,9 @@ print("Monty's profile:")
 describe(name="Monty", level=7, language="Python")`);
 </script>
 
-## Aggregating Functions: `max()`, `min()`, `sum()`
+## Funzioni di Aggregazione: `max()`, `min()`, `sum()`
 
-These three built-ins work on any iterable of numbers (or comparables for max/min):
+Queste tre funzioni built-in funzionano su qualsiasi iterabile di numeri (o di valori comparabili per max/min):
 
 ```python
 scores = [73, 100, 87, 55, 92]
@@ -211,17 +211,17 @@ print("Sum:", sum(scores))    # 407
 print("Avg:", sum(scores) / len(scores))  # 81.4
 ```
 
-## `sorted()` and `reversed()`
+## `sorted()` e `reversed()`
 
-`sorted(iterable)` returns a new sorted list without modifying the original.
-`reversed(iterable)` returns an iterator that goes through items in reverse order.
+`sorted(iterable)` restituisce una nuova lista ordinata senza modificare l'originale.
+`reversed(iterable)` restituisce un iteratore che scorre gli elementi in ordine inverso.
 
-| Function | Modifies original? | Returns |
+| Funzione | Modifica l'originale? | Restituisce |
 |----------|-------------------|---------|
-| `list.sort()` | Yes | None |
-| `sorted(list)` | No | New sorted list |
-| `list.reverse()` | Yes | None |
-| `reversed(list)` | No | Iterator |
+| `list.sort()` | Sì | None |
+| `sorted(list)` | No | Nuova lista ordinata |
+| `list.reverse()` | Sì | None |
+| `reversed(list)` | No | Iteratore |
 
 ```python
 numbers = [3, 1, 4, 1, 5, 9, 2, 6]
@@ -229,10 +229,10 @@ sorted_nums = sorted(numbers)               # ascending
 desc_nums   = sorted(numbers, reverse=True) # descending
 ```
 
-## `isinstance()` — Type Checking
+## `isinstance()` — Controllo del Tipo
 
-`isinstance(value, type)` returns `True` if the value is the given type (or a subtype).
-It's safer than using `type(x) == int` because it handles inheritance.
+`isinstance(value, type)` restituisce `True` se il valore è del tipo dato (o di un sottotipo).
+È più sicuro che usare `type(x) == int` perché gestisce l'eredità.
 
 ```python
 print(isinstance(42, int))         # True
@@ -242,12 +242,12 @@ print(isinstance([1,2], list))     # True
 print(isinstance(42, (int, float)))# True — multiple types allowed
 ```
 
-## `map()` and `filter()`
+## `map()` e `filter()`
 
-`map(func, iterable)` applies a function to every item and returns the results.
-`filter(func, iterable)` keeps only items where the function returns `True`.
+`map(func, iterable)` applica una funzione a ogni elemento e restituisce i risultati.
+`filter(func, iterable)` mantiene solo gli elementi per cui la funzione restituisce `True`.
 
-Both return iterators — wrap them in `list()` to see the results:
+Entrambi restituiscono iteratori — racchiudili in `list()` per vedere i risultati:
 
 ```python
 numbers = [1, 2, 3, 4, 5, 6]
@@ -259,7 +259,7 @@ print("Doubled:", doubled)   # [2, 4, 6, 8, 10, 12]
 print("Evens:", evens)       # [2, 4, 6]
 ```
 
-A **lambda** is a tiny anonymous function written on one line: `lambda x: x * 2` means "take x, return x times 2."
+Una **lambda** è una piccola funzione anonima scritta su una riga: `lambda x: x * 2` significa "prendi x, restituisci x per 2."
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -285,9 +285,9 @@ print("All scores + 5:", bonus)
 print("Max:", max(scores), "Min:", min(scores), "Avg:", round(sum(scores)/len(scores), 1))`);
 </script>
 
-## Collection Constructors
+## Costruttori di Collezioni
 
-You can convert between collection types using `list()`, `tuple()`, `set()`, and `dict()`:
+Puoi convertire tra tipi di collezione usando `list()`, `tuple()`, `set()`, e `dict()`:
 
 ```python
 my_list  = list(range(5))         # [0, 1, 2, 3, 4]
@@ -295,13 +295,13 @@ my_tuple = tuple([1, 2, 3])       # (1, 2, 3)
 my_set   = set([3, 1, 4, 1, 5])   # {1, 3, 4, 5}
 ```
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Use enumerate and zip Together"
+!!! mascot-thinking "Il Tuo Turno — Usa enumerate e zip Insieme"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below prints player names and their scores, but the output looks messy.
-    Fix it to use `zip()` to pair names with scores and `enumerate()` starting at 1 to number the entries.
-    Each line should look like: `1. Alice: 95`
+    Il codice sotto stampa i nomi dei giocatori e i loro punteggi, ma l'output sembra disordinato.
+    Correggilo per usare `zip()` per accoppiare i nomi con i punteggi e `enumerate()` partendo da 1 per numerare le voci.
+    Ogni riga dovrebbe sembrare: `1. Alice: 95`
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -325,31 +325,31 @@ for name in names:
     print(name)`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Use `enumerate(["Mon","Tue","Wed","Thu","Fri"], 1)` to print a numbered weekday list.
-   **You'll know it worked when** you see `1. Mon`, `2. Tue`, etc.
+1. Usa `enumerate(["Mon","Tue","Wed","Thu","Fri"], 1)` per stampare una lista numerata dei giorni della settimana.
+   **Saprai che ha funzionato quando** vedi `1. Mon`, `2. Tue`, ecc.
 
-2. Write a function `my_max(*args)` that returns the largest argument without using the built-in `max()`.
-   **You'll know it worked when** `my_max(3, 9, 1, 7)` returns `9`.
+2. Scrivi una funzione `my_max(*args)` che restituisce l'argomento più grande senza usare la funzione built-in `max()`.
+   **Saprai che ha funzionato quando** `my_max(3, 9, 1, 7)` restituisce `9`.
 
-3. Use `filter()` to keep only strings longer than 4 characters from `["cat","elephant","dog","hippo"]`.
-   **You'll know it worked when** you see `["elephant","hippo"]`.
+3. Usa `filter()` per mantenere solo le stringhe più lunghe di 4 caratteri da `["cat","elephant","dog","hippo"]`.
+   **Saprai che ha funzionato quando** vedi `["elephant","hippo"]`.
 
-4. Use `sorted(words, key=len)` to sort a list of words by their length (shortest first).
-   **You'll know it worked when** short words appear before long ones.
+4. Usa `sorted(words, key=len)` per ordinare una lista di parole per la loro lunghezza (la più corta prima).
+   **Saprai che ha funzionato quando** le parole corte appaiono prima di quelle lunghe.
 
-5. Use `dict(zip(range(1, 6), ["one","two","three","four","five"]))` to build a number-to-word dictionary.
-   **You'll know it worked when** `d[3]` prints `"three"`.
+5. Usa `dict(zip(range(1, 6), ["one","two","three","four","five"]))` per costruire un dizionario numero-parola.
+   **Saprai che ha funzionato quando** `d[3]` stampa `"three"`.
 
-!!! mascot-celebration "Built-in Function Master!"
+!!! mascot-celebration "Maestro delle Funzioni Built-in!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've leveled up with enumerate, zip, args, kwargs, map, filter, and more!
-    These tools make Python code shorter, more readable, and more powerful.
-    Professional programmers use every single one of them regularly. Great work!
+    Sei salito di livello con enumerate, zip, args, kwargs, map, filter, e altro!
+    Questi strumenti rendono il codice Python più corto, più leggibile, e più potente.
+    I programmatori professionisti usano ognuno di questi regolarmente. Ottimo lavoro!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)

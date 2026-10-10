@@ -1,39 +1,39 @@
-# References: Advanced Collections and Built-in Functions
+# Riferimenti: Collezioni Avanzate e Funzioni Built-in
 
 1. **List Comprehension** — Wikipedia
    [https://en.wikipedia.org/wiki/List_comprehension](https://en.wikipedia.org/wiki/List_comprehension)
-   Explains list comprehensions as a concise syntax for building lists, tracing the concept across Python and other languages. Useful background for understanding why Python adopted this pattern and how it compares to traditional loops.
+   Spiega le list comprehension come una sintassi concisa per costruire liste, seguendo il concetto in Python e altri linguaggi. Contesto utile per capire perché Python ha adottato questo pattern e come si confronta con i cicli tradizionali.
 
 2. **Higher-order Function** — Wikipedia
    [https://en.wikipedia.org/wiki/Higher-order_function](https://en.wikipedia.org/wiki/Higher-order_function)
-   Covers functions that accept other functions as arguments or return them, which is the core idea behind `map`, `filter`, and `sorted`. Provides the theoretical grounding for why these built-ins work the way they do.
+   Copre le funzioni che accettano altre funzioni come argomenti o le restituiscono, che è l'idea centrale dietro `map`, `filter`, e `sorted`. Fornisce le basi teoriche per cui queste funzioni built-in funzionano nel modo in cui funzionano.
 
 3. **Associative Array** — Wikipedia
    [https://en.wikipedia.org/wiki/Associative_array](https://en.wikipedia.org/wiki/Associative_array)
-   Describes the abstract data type that underlies Python dictionaries. Relevant to dict comprehensions because understanding what a dictionary is — key-value pairs with fast lookup — clarifies why building one concisely matters.
+   Descrive il tipo di dato abstract che sta alla base dei dizionari Python. Rilevante per le dict comprehension perché capire cos'è un dizionario — coppie chiave-valore con ricerca veloce — chiarisce perché è importante costruirne uno in modo conciso.
 
 4. **Python Crash Course** — Eric Matthes (No Starch Press, 2023)
-   Chapter 4 covers list operations and list comprehensions with clear examples aimed at beginners. An excellent companion for this chapter because it progresses naturally from basic loops to compact, Pythonic collection expressions.
+   Il Capitolo 4 copre le operazioni sulle liste e le list comprehension con esempi chiari pensati per principianti. Un eccellente compagno per questo capitolo perché progredisce naturalmente dai cicli di base alle espressioni di collezione compatte e Pythonic.
 
-5. **Automate the Boring Stuff with Python** — Al Sweigart (No Starch Press; free online at automatetheboringstuff.com)
-   Uses `zip`, `enumerate`, `sorted`, and comprehensions throughout its practical projects. Seeing these built-ins applied to real file-manipulation and data-processing tasks reinforces why they are worth learning.
+5. **Automate the Boring Stuff with Python** — Al Sweigart (No Starch Press; gratuito online su automatetheboringstuff.com)
+   Usa `zip`, `enumerate`, `sorted`, e le comprehension in tutti i suoi progetti pratici. Vedere queste funzioni built-in applicate a veri compiti di manipolazione di file e elaborazione di dati rafforza il motivo per cui vale la pena impararle.
 
-6. **Python Built-in Functions Reference** — Official Python Documentation
+6. **Python Built-in Functions Reference** — Documentazione Ufficiale di Python
    [https://docs.python.org/3/library/functions.html](https://docs.python.org/3/library/functions.html)
-   The authoritative reference for every built-in function covered in this chapter, including `map`, `filter`, `zip`, `enumerate`, `sorted`, `min`, `max`, and `sum`, with precise parameter descriptions and usage notes.
+   Il riferimento autorevole per ogni funzione built-in trattata in questo capitolo, incluso `map`, `filter`, `zip`, `enumerate`, `sorted`, `min`, `max`, e `sum`, con descrizioni precise dei parametri e note d'uso.
 
 7. **List Comprehensions in Python** — Real Python
    [https://realpython.com/list-comprehension-python/](https://realpython.com/list-comprehension-python/)
-   A thorough tutorial comparing list comprehensions to `for` loops and `map`/`filter`, with runnable examples. Particularly helpful for students who want to see all three approaches side by side before deciding which to use.
+   Un tutorial approfondito che confronta le list comprehension con i cicli `for` e `map`/`filter`, con esempi provabili. Particolarmente utile per studenti che vogliono vedere tutti e tre gli approcci affiancati prima di decidere quale usare.
 
 8. **Python List Comprehension** — W3Schools
    [https://www.w3schools.com/python/python_lists_comprehension.asp](https://www.w3schools.com/python/python_lists_comprehension.asp)
-   Provides short, editable code examples demonstrating list comprehension syntax with and without conditions. The interactive "Try it Yourself" editor lets students experiment directly in the browser without any setup.
+   Fornisce esempi di codice brevi e modificabili che mostrano la sintassi delle list comprehension con e senza condizioni. L'editor interattivo "Try it Yourself" permette agli studenti di sperimentare direttamente nel browser senza alcuna configurazione.
 
 9. **Python List Comprehension** — Programiz
    [https://www.programiz.com/python-programming/list-comprehension](https://www.programiz.com/python-programming/list-comprehension)
-   Walks through list and dict comprehension syntax step by step, then introduces `map` and `filter` as alternatives. The gradual progression from simple to nested comprehensions matches the difficulty curve of this chapter.
+   Percorre la sintassi delle list e dict comprehension passo passo, poi introduce `map` e `filter` come alternative. La progressione graduale dalle comprehension semplici a quelle annidate corrisponde alla curva di difficoltà di questo capitolo.
 
 10. **Python zip() Function** — GeeksforGeeks
     [https://www.geeksforgeeks.org/zip-in-python/](https://www.geeksforgeeks.org/zip-in-python/)
-    Explains `zip` with diagrams and multiple examples, including pairing two lists, iterating in parallel, and unzipping. A focused deep-dive that complements the broader chapter coverage of `zip`, `enumerate`, and `sorted`.
+    Spiega `zip` con diagrammi e molteplici esempi, incluso l'accoppiamento di due liste, l'iterazione in parallelo, e lo scompattamento. Un approfondimento mirato che completa la trattazione più ampia di `zip`, `enumerate`, e `sorted` del capitolo.

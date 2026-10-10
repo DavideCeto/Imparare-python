@@ -1,42 +1,42 @@
-# Quiz: Advanced Collections and Built-in Functions
+# Quiz: Collezioni Avanzate e Funzioni Built-in
 
-Test your understanding of enumerate(), zip(), *args, **kwargs, and Python's built-in functions with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione di enumerate(), zip(), *args, **kwargs, e delle funzioni built-in di Python con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What does `enumerate(["a", "b", "c"])` give you in a loop?
+#### 1. Cosa ti dà `enumerate(["a", "b", "c"])` in un ciclo?
 
 <div class="upper-alpha" markdown>
-1. Only the items: `"a"`, `"b"`, `"c"`
-2. Only the indexes: `0`, `1`, `2`
-3. Both the index and item as pairs: `(0, "a")`, `(1, "b")`, `(2, "c")`
-4. The items in reverse order: `"c"`, `"b"`, `"a"`
+1. Solo gli elementi: `"a"`, `"b"`, `"c"`
+2. Solo gli indici: `0`, `1`, `2`
+3. Sia l'indice sia l'elemento come coppie: `(0, "a")`, `(1, "b")`, `(2, "c")`
+4. Gli elementi in ordine inverso: `"c"`, `"b"`, `"a"`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `enumerate(iterable)` wraps a sequence and gives you both the index and the item on each loop iteration. Using `for i, item in enumerate(my_list):` is cleaner than maintaining a separate counter variable. By default counting starts at 0; pass a second argument to start at a different number: `enumerate(items, 1)` starts at 1.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `enumerate(iterable)` incapsula una sequenza e ti dà sia l'indice sia l'elemento a ogni iterazione del ciclo. Usare `for i, item in enumerate(my_list):` è più pulito che mantenere una variabile contatore separata. Per default il conteggio inizia da 0; passa un secondo argomento per iniziare da un numero diverso: `enumerate(items, 1)` inizia da 1.
 
     **Concept Tested:** enumerate()
 
 ---
 
-#### 2. What does `zip(["A", "B", "C"], [1, 2])` produce?
+#### 2. Cosa produce `zip(["A", "B", "C"], [1, 2])`?
 
 <div class="upper-alpha" markdown>
 1. `[("A", 1), ("B", 2), ("C", None)]`
 2. `[("A", 1), ("B", 2)]`
 3. `["A", "B", "C", 1, 2]`
-4. An error because the lists have different lengths
+4. Un errore perché le liste hanno lunghezze diverse
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `zip()` pairs up items from two or more iterables and stops when the shortest one runs out. Since the second list has only 2 items, `zip()` produces only 2 pairs: `("A", 1)` and `("B", 2)`. The third item `"C"` is ignored because there is no matching item in the second list.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `zip()` accoppia gli elementi di due o più iterabili e si ferma quando il più corto finisce. Dato che la seconda lista ha solo 2 elementi, `zip()` produce solo 2 coppie: `("A", 1)` e `("B", 2)`. Il terzo elemento `"C"` viene ignorato perché non c'è un elemento corrispondente nella seconda lista.
 
     **Concept Tested:** zip()
 
 ---
 
-#### 3. How do you build a dictionary from two lists `keys` and `values` using `zip()`?
+#### 3. Come costruisci un dizionario da due liste `keys` e `values` usando `zip()`?
 
 <div class="upper-alpha" markdown>
 1. `{keys: values}`
@@ -45,78 +45,78 @@ Test your understanding of enumerate(), zip(), *args, **kwargs, and Python's bui
 4. `zip(dict(keys), dict(values))`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `zip(keys, values)` pairs each key with its corresponding value. Wrapping with `dict()` converts those pairs into a dictionary. For example, `dict(zip(["a", "b"], [1, 2]))` gives `{"a": 1, "b": 2}`. This is a very common and clean pattern for building dictionaries from parallel lists.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `zip(keys, values)` accoppia ogni chiave con il suo valore corrispondente. Racchiudere con `dict()` converte quelle coppie in un dizionario. Per esempio, `dict(zip(["a", "b"], [1, 2]))` dà `{"a": 1, "b": 2}`. Questo è un pattern molto comune e pulito per costruire dizionari da liste parallele.
 
     **Concept Tested:** Dictionary from zip()
 
 ---
 
-#### 4. What does `*args` do in a function definition?
+#### 4. Cosa fa `*args` in una definizione di funzione?
 
 <div class="upper-alpha" markdown>
-1. Creates a required argument that must always be provided
-2. Collects all extra positional arguments into a tuple
-3. Spreads a list out into separate arguments
-4. Marks a parameter as optional with a default value of `None`
+1. Crea un argomento obbligatorio che deve sempre essere fornito
+2. Raccoglie tutti gli argomenti posizionali extra in una tupla
+3. Scompone una lista in argomenti separati
+4. Segna un parametro come opzionale con un valore predefinito di `None`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `*args` in a function definition collects any number of positional arguments the caller passes into a single tuple. For example, `def total(*args): return sum(args)` can be called as `total(1, 2, 3)` or `total(10)` — the extra positional arguments all end up in `args`.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `*args` in una definizione di funzione raccoglie qualsiasi numero di argomenti posizionali che chi chiama passa in una singola tupla. Per esempio, `def total(*args): return sum(args)` può essere chiamata come `total(1, 2, 3)` o `total(10)` — gli argomenti posizionali extra finiscono tutti in `args`.
 
     **Concept Tested:** *args
 
 ---
 
-#### 5. What does `**kwargs` collect in a function definition?
+#### 5. Cosa raccoglie `**kwargs` in una definizione di funzione?
 
 <div class="upper-alpha" markdown>
-1. Extra positional arguments as a list
-2. Extra keyword arguments as a dictionary
-3. A fixed set of keyword arguments with required types
-4. All arguments of any kind into a single tuple
+1. Argomenti posizionali extra come una lista
+2. Argomenti keyword extra come un dizionario
+3. Un insieme fisso di argomenti keyword con tipi obbligatori
+4. Tutti gli argomenti di qualsiasi tipo in una singola tupla
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `**kwargs` collects extra keyword arguments (those passed as `name=value`) into a dictionary. Calling `describe(color="red", size=5)` would give `kwargs = {"color": "red", "size": 5}` inside the function. You then iterate over it with `kwargs.items()`. `*args` handles positional arguments; `**kwargs` handles keyword arguments.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `**kwargs` raccoglie gli argomenti keyword extra (quelli passati come `name=value`) in un dizionario. Chiamare `describe(color="red", size=5)` darebbe `kwargs = {"color": "red", "size": 5}` dentro la funzione. Poi ci iteri sopra con `kwargs.items()`. `*args` gestisce gli argomenti posizionali; `**kwargs` gestisce gli argomenti keyword.
 
     **Concept Tested:** **kwargs
 
 ---
 
-#### 6. What does `max([73, 100, 87, 55])` return?
+#### 6. Cosa restituisce `max([73, 100, 87, 55])`?
 
 <div class="upper-alpha" markdown>
 1. `55`
 2. `73`
-3. `415` (the sum)
+3. `415` (la somma)
 4. `100`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. `max(iterable)` returns the largest value in the collection. For `[73, 100, 87, 55]`, the largest value is `100`. Similarly, `min()` returns the smallest value (`55` here), and `sum()` returns the total (`415`). All three work on any iterable of comparable values.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. `max(iterable)` restituisce il valore più grande nella collezione. Per `[73, 100, 87, 55]`, il valore più grande è `100`. In modo simile, `min()` restituisce il valore più piccolo (`55` qui), e `sum()` restituisce il totale (`415`). Tutte e tre funzionano su qualsiasi iterabile di valori comparabili.
 
     **Concept Tested:** max(), min(), sum()
 
 ---
 
-#### 7. What is the difference between `list.sort()` and `sorted(list)`?
+#### 7. Qual è la differenza tra `list.sort()` e `sorted(list)`?
 
 <div class="upper-alpha" markdown>
-1. `sort()` works on strings; `sorted()` works on numbers
-2. `sort()` modifies the list in place and returns `None`; `sorted()` returns a new sorted list without changing the original
-3. `sort()` is ascending; `sorted()` is always descending
-4. They produce identical results in every way
+1. `sort()` funziona sulle stringhe; `sorted()` funziona sui numeri
+2. `sort()` modifica la lista sul posto e restituisce `None`; `sorted()` restituisce una nuova lista ordinata senza cambiare l'originale
+3. `sort()` è crescente; `sorted()` è sempre decrescente
+4. Producono risultati identici in ogni modo
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `list.sort()` rearranges the list **in place** and returns `None`. `sorted(iterable)` creates and returns a **new** sorted list, leaving the original unchanged. Use `sort()` when you want to change the list directly. Use `sorted()` when you need to keep the original order while also having a sorted version.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `list.sort()` riorganizza la lista **sul posto** e restituisce `None`. `sorted(iterable)` crea e restituisce una **nuova** lista ordinata, lasciando l'originale invariata. Usa `sort()` quando vuoi cambiare la lista direttamente. Usa `sorted()` quando hai bisogno di mantenere l'ordine originale avendo anche una versione ordinata.
 
     **Concept Tested:** sorted() and reversed()
 
 ---
 
-#### 8. What does `isinstance(42, int)` return?
+#### 8. Cosa restituisce `isinstance(42, int)`?
 
 <div class="upper-alpha" markdown>
 1. `"int"`
@@ -125,30 +125,30 @@ Test your understanding of enumerate(), zip(), *args, **kwargs, and Python's bui
 4. `True`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. `isinstance(value, type)` returns `True` if the value is an instance of the given type, `False` otherwise. `42` is an integer, so `isinstance(42, int)` returns `True`. This is the preferred way to check types in Python because it also handles inheritance, unlike `type(x) == int` which does not.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. `isinstance(value, type)` restituisce `True` se il valore è un'istanza del tipo dato, `False` altrimenti. `42` è un intero, quindi `isinstance(42, int)` restituisce `True`. Questo è il modo preferito di controllare i tipi in Python perché gestisce anche l'eredità, a differenza di `type(x) == int` che non lo fa.
 
     **Concept Tested:** isinstance()
 
 ---
 
-#### 9. What does `sorted([5, 2, 8, 1], reverse=True)` return?
+#### 9. Cosa restituisce `sorted([5, 2, 8, 1], reverse=True)`?
 
 <div class="upper-alpha" markdown>
 1. `[1, 2, 5, 8]`
 2. `[8, 5, 2, 1]`
-3. `[5, 2, 8, 1]` (unchanged)
+3. `[5, 2, 8, 1]` (invariata)
 4. `[8, 5, 1, 2]`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `sorted(iterable, reverse=True)` returns a new list sorted in descending order (largest first). For `[5, 2, 8, 1]`, the result is `[8, 5, 2, 1]`. The original list is not modified. To sort ascending (the default), just use `sorted(iterable)` without the `reverse` argument.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `sorted(iterable, reverse=True)` restituisce una nuova lista ordinata in ordine decrescente (il più grande prima). Per `[5, 2, 8, 1]`, il risultato è `[8, 5, 2, 1]`. La lista originale non viene modificata. Per ordinare in modo crescente (il default), usa semplicemente `sorted(iterable)` senza l'argomento `reverse`.
 
     **Concept Tested:** sorted() and reversed()
 
 ---
 
-#### 10. What does `enumerate(["x", "y", "z"], 1)` produce as the first value in a loop?
+#### 10. Cosa produce `enumerate(["x", "y", "z"], 1)` come primo valore in un ciclo?
 
 <div class="upper-alpha" markdown>
 1. `(0, "x")`
@@ -157,8 +157,8 @@ Test your understanding of enumerate(), zip(), *args, **kwargs, and Python's bui
 4. `(1, "x")`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. `enumerate(iterable, start)` begins counting from the `start` value instead of 0. With `enumerate(["x", "y", "z"], 1)`, the first pair is `(1, "x")`, the second is `(2, "y")`, and so on. This is useful when you want to display numbered lists starting from 1 instead of 0.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. `enumerate(iterable, start)` inizia a contare dal valore `start` invece che da 0. Con `enumerate(["x", "y", "z"], 1)`, la prima coppia è `(1, "x")`, la seconda è `(2, "y")`, e così via. Questo è utile quando vuoi mostrare liste numerate a partire da 1 invece che da 0.
 
     **Concept Tested:** enumerate()
 
