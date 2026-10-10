@@ -1,27 +1,27 @@
 ---
-title: Dictionaries
-description: Master Python dictionaries — key-value pairs, safe access with get(), iteration, nesting, and dictionary comprehensions
+title: Dizionari
+description: Padroneggia i dizionari Python — coppie chiave-valore, accesso sicuro con get(), iterazione, annidamento, e dictionary comprehension
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 13:30:00
 version: 0.09
 ---
 
-# Dictionaries
+# Dizionari
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Create a dictionary and access values by key
-- Safely retrieve values with `get()` to avoid `KeyError`
-- Add, update, and remove entries, and iterate over keys, values, and items
-- Use nested dictionaries and dictionary comprehensions
+- Creare un dizionario e accedere ai valori per chiave
+- Recuperare in sicurezza i valori con `get()` per evitare `KeyError`
+- Aggiungere, aggiornare, e rimuovere voci, e iterare su chiavi, valori, e coppie
+- Usare dizionari annidati e dictionary comprehension
 
-A dictionary maps **keys** to **values** — exactly like a real-world dictionary maps words to definitions.
-Dictionaries are one of the most widely-used data structures in Python.
+Un dizionario mappa **chiavi** a **valori** — esattamente come un dizionario del mondo reale mappa le parole alle definizioni.
+I dizionari sono una delle strutture di dati più usate in Python.
 
-!!! mascot-welcome "Welcome to Chapter 21!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 21!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Imagine a phone book that you can look up in any order, add new contacts to, and search in an instant.
-    That's a Python dictionary! Let's build one. Let's code it together!
+    Immagina una rubrica telefonica che puoi consultare in qualsiasi ordine, a cui puoi aggiungere nuovi contatti, e che puoi cercare in un istante.
+    Questo è un dizionario Python! Costruiamone uno. Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -29,9 +29,9 @@ Dictionaries are one of the most widely-used data structures in Python.
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## Creating a Dictionary
+## Creare un Dizionario
 
-A dictionary is created with curly braces `{}`. Each entry is a `key: value` pair, separated by commas.
+Un dizionario si crea con le parentesi graffe `{}`. Ogni voce è una coppia `chiave: valore`, separata da virgole.
 
 ```python
 phone_book = {
@@ -41,8 +41,8 @@ phone_book = {
 }
 ```
 
-Keys must be unique within a dictionary.
-Keys are usually strings or numbers. Values can be anything — strings, numbers, lists, even other dictionaries.
+Le chiavi devono essere univoche all'interno di un dizionario.
+Le chiavi sono di solito stringhe o numeri. I valori possono essere qualsiasi cosa — stringhe, numeri, liste, persino altri dizionari.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -70,20 +70,20 @@ print("Type:", type(student))
 print("Keys:", list(student.keys()))`);
 </script>
 
-## Accessing Values by Key
+## Accedere ai Valori per Chiave
 
-Use square brackets with the key to retrieve a value:
+Usa le parentesi quadre con la chiave per recuperare un valore:
 
 ```python
 phone_book["Alice"]   # "555-1234"
 ```
 
-If the key doesn't exist, Python raises a `KeyError` — so be careful.
+Se la chiave non esiste, Python genera un `KeyError` — quindi fai attenzione.
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below tries to access both a key that exists and one that doesn't.
-    What do you think happens when a key is missing? Make your guess — then run it!
+    Il codice sotto cerca di accedere sia a una chiave che esiste sia a una che non esiste.
+    Cosa pensi che succeda quando una chiave manca? Fai la tua previsione — poi eseguilo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -108,10 +108,10 @@ print("Bob's grade:", grades["Bob"])
 # print("Dave's grade:", grades["Dave"])`);
 </script>
 
-## Safe Access with `get()`
+## Accesso Sicuro con `get()`
 
-`dict.get(key)` returns the value if the key exists, or `None` if it doesn't — no crash.
-You can also provide a default value: `dict.get(key, default)`.
+`dict.get(key)` restituisce il valore se la chiave esiste, oppure `None` se non esiste — nessun crash.
+Puoi anche fornire un valore predefinito: `dict.get(key, default)`.
 
 ```python
 grades = {"Alice": 95, "Bob": 87}
@@ -120,21 +120,21 @@ print(grades.get("Dave"))           # None
 print(grades.get("Dave", 0))        # 0 — custom default
 ```
 
-Use `get()` whenever you're not sure whether a key exists.
+Usa `get()` ogni volta che non sei sicuro se una chiave esiste.
 
-### See It: A Cabinet of Labeled Drawers
+### Guardalo: Un Mobiletto di Cassetti Etichettati
 
-A dictionary works like a cabinet where every drawer has its key written on the front — Python jumps straight to the right drawer without opening the others. Before you try the lookup below, predict: **what happens if you type `Grace` with a capital G instead of `grace`?**
+Un dizionario funziona come un mobiletto dove ogni cassetto ha la sua chiave scritta sul davanti — Python salta direttamente al cassetto giusto senza aprire gli altri. Prima di provare la ricerca sotto, prevedi: **cosa succede se scrivi `Grace` con la G maiuscola invece di `grace`?**
 
 <iframe src="../../sims/dictionary-key-lookup/main.html" height="532" width="100%" scrolling="no"></iframe>
 
-[Explore the Dictionary Key Lookup MicroSim](../../sims/dictionary-key-lookup/index.md){ .md-button }
+[Esplora il MicroSim Dictionary Key Lookup](../../sims/dictionary-key-lookup/index.md){ .md-button }
 
-Try a missing key both ways: with square brackets you get the `KeyError` crash, and with the **.get()** checkbox you get a polite `None`. Then check **compare with a list search** — the list has to check drawer after drawer, while the dictionary always takes one hop. That difference is why phone books, glossaries, and game inventories all use dictionaries.
+Prova una chiave mancante in entrambi i modi: con le parentesi quadre ottieni il crash `KeyError`, e con la casella **.get()** ottieni un gentile `None`. Poi controlla **compare with a list search** — la lista deve controllare cassetto dopo cassetto, mentre il dizionario fa sempre un solo salto. Questa differenza è il motivo per cui le rubriche, i glossari, e gli inventari di gioco usano tutti i dizionari.
 
-## Adding and Updating Entries
+## Aggiungere e Aggiornare Voci
 
-Add a new key or update an existing one using the same assignment syntax:
+Aggiungi una nuova chiave o aggiorna una esistente usando la stessa sintassi di assegnazione:
 
 ```python
 grades["Dave"] = 78     # new key
@@ -163,23 +163,23 @@ inventory["apples"] = 12    # update existing
 print("After update:", inventory)`);
 </script>
 
-## Removing Entries
+## Rimuovere Voci
 
-- `d.pop(key)` — removes the key and returns its value (raises `KeyError` if missing unless you pass a default)
-- `del d[key]` — removes the key (raises `KeyError` if missing)
+- `d.pop(key)` — rimuove la chiave e restituisce il suo valore (genera `KeyError` se mancante a meno che tu non passi un valore predefinito)
+- `del d[key]` — rimuove la chiave (genera `KeyError` se mancante)
 
 ```python
 grades.pop("Bob")      # removes Bob, returns 87
 del grades["Carol"]    # removes Carol
 ```
 
-## Keys, Values, and Items
+## Chiavi, Valori, e Coppie
 
-Three dictionary methods give you different views of the data:
+Tre metodi del dizionario ti danno diverse vedute dei dati:
 
-- `d.keys()` — all keys
-- `d.values()` — all values
-- `d.items()` — all `(key, value)` pairs as tuples
+- `d.keys()` — tutte le chiavi
+- `d.values()` — tutti i valori
+- `d.items()` — tutte le coppie `(chiave, valore)` come tuple
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -202,9 +202,9 @@ print("Values:", list(scores.values()))
 print("Items:", list(scores.items()))`);
 </script>
 
-## Iterating over a Dictionary
+## Iterare su un Dizionario
 
-You can loop over keys, values, or key-value pairs:
+Puoi fare un ciclo sulle chiavi, sui valori, o sulle coppie chiave-valore:
 
 ```python
 # Loop over keys:
@@ -216,19 +216,19 @@ for name, score in scores.items():
     print(f"{name}: {score}")
 ```
 
-## Key Membership with `in`
+## Appartenenza delle Chiavi con `in`
 
-Use `in` to check whether a key exists without causing a `KeyError`:
+Usa `in` per controllare se una chiave esiste senza causare un `KeyError`:
 
 ```python
 if "Alice" in scores:
     print("Alice's score:", scores["Alice"])
 ```
 
-## Nested Dictionaries
+## Dizionari Annidati
 
-A dictionary can contain other dictionaries as values.
-This is perfect for representing structured data — like a contacts list where each contact has several fields.
+Un dizionario può contenere altri dizionari come valori.
+Questo è perfetto per rappresentare dati strutturati — come una lista di contatti dove ogni contatto ha diversi campi.
 
 ```python
 contacts = {
@@ -240,13 +240,13 @@ contacts = {
 print(contacts["Alice"]["phone"])
 ```
 
-## Dictionary Comprehensions
+## Dictionary Comprehension
 
-A **dictionary comprehension** builds a new dictionary from an existing sequence, similar to a list comprehension.
+Una **dictionary comprehension** costruisce un nuovo dizionario a partire da una sequenza esistente, in modo simile a una list comprehension.
 
-Syntax: `{key_expr: value_expr for item in iterable}`
+Sintassi: `{espressione_chiave: espressione_valore for elemento in iterabile}`
 
-Before the comprehension, here's the long-form equivalent to make the pattern clear:
+Prima della comprehension, ecco l'equivalente nella forma lunga per rendere chiaro il pattern:
 
 ```python
 # Long way:
@@ -258,10 +258,10 @@ for n in range(1, 6):
 squares = {n: n * n for n in range(1, 6)}
 ```
 
-## The Default Dictionary Pattern
+## Il Pattern del Dizionario con Valore Predefinito
 
-A common pattern is building a dictionary where missing keys should start with a default value.
-The manual approach uses `get()`:
+Un pattern comune è costruire un dizionario dove le chiavi mancanti dovrebbero partire da un valore predefinito.
+L'approccio manuale usa `get()`:
 
 ```python
 word_count = {}
@@ -294,13 +294,13 @@ for word, count in sorted(word_count.items()):
     print(f"  {word}: {count}")`);
 </script>
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Build a Grade Book"
+!!! mascot-thinking "Il Tuo Turno — Costruisci un Registro Voti"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below creates an empty grade book.
-    Add three students — `"Alice"` with 95, `"Bob"` with 87, and `"Carol"` with 91 —
-    then print each student's name and grade using a `for` loop over `.items()`.
+    Il codice sotto crea un registro voti vuoto.
+    Aggiungi tre studenti — `"Alice"` con 95, `"Bob"` con 87, e `"Carol"` con 91 —
+    poi stampa il nome e il voto di ogni studente usando un ciclo `for` su `.items()`.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -326,32 +326,32 @@ for name, grade in grade_book.items():
     print(f"{name}: {grade}")`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Create a dictionary of capital cities: `{"France": "Paris", "Japan": "Tokyo", "Brazil": "Brasília"}`.
-   Print the capital of Japan.
-   **You'll know it worked when** you see `Tokyo`.
+1. Crea un dizionario di capitali: `{"France": "Paris", "Japan": "Tokyo", "Brazil": "Brasília"}`.
+   Stampa la capitale del Giappone.
+   **Saprai che ha funzionato quando** vedi `Tokyo`.
 
-2. Add a new country to your capitals dictionary and print all keys.
-   **You'll know it worked when** the new country appears in the key list.
+2. Aggiungi un nuovo paese al tuo dizionario delle capitali e stampa tutte le chiavi.
+   **Saprai che ha funzionato quando** il nuovo paese appare nella lista delle chiavi.
 
-3. Use a dictionary comprehension to create `{1: 1, 2: 8, 3: 27, 4: 64, 5: 125}` (cubes of 1–5).
-   **You'll know it worked when** you see those five key-value pairs.
+3. Usa una dictionary comprehension per creare `{1: 1, 2: 8, 3: 27, 4: 64, 5: 125}` (cubi da 1 a 5).
+   **Saprai che ha funzionato quando** vedi quelle cinque coppie chiave-valore.
 
-4. Try `capitals.get("Germany", "Unknown")` when "Germany" isn't in the dictionary.
-   **You'll know it worked when** you see "Unknown" instead of a `KeyError`.
+4. Prova `capitals.get("Germany", "Unknown")` quando "Germany" non è nel dizionario.
+   **Saprai che ha funzionato quando** vedi "Unknown" invece di un `KeyError`.
 
-5. Count the frequency of each letter in `"mississippi"` using the default dictionary pattern.
-   **You'll know it worked when** you see `{"m": 1, "i": 4, "s": 4, "p": 2}`.
+5. Conta la frequenza di ogni lettera in `"mississippi"` usando il pattern del dizionario con valore predefinito.
+   **Saprai che ha funzionato quando** vedi `{"m": 1, "i": 4, "s": 4, "p": 2}`.
 
-!!! mascot-celebration "Dictionary Wizard!"
+!!! mascot-celebration "Mago dei Dizionari!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've mastered one of Python's most powerful data structures!
-    Dictionaries are everywhere — in APIs, configuration files, databases, and machine learning models.
-    Next chapter we'll combine all four collection types with Python's powerful built-in functions!
+    Hai padroneggiato una delle strutture di dati più potenti di Python!
+    I dizionari sono ovunque — nelle API, nei file di configurazione, nei database, e nei modelli di machine learning.
+    Nel prossimo capitolo combineremo tutti e quattro i tipi di collezione con le potenti funzioni built-in di Python!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)
