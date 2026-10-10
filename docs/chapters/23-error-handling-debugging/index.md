@@ -1,27 +1,27 @@
 ---
-title: Error Handling and Debugging
-description: Learn to read tracebacks, catch exceptions with try/except, raise your own errors, use assert, and debug with strategic print statements
+title: Gestione degli Errori e Debugging
+description: Impara a leggere i traceback, catturare le eccezioni con try/except, generare i tuoi errori, usare assert, e fare debug con istruzioni print strategiche
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 13:50:00
 version: 0.09
 ---
 
-# Error Handling and Debugging
+# Gestione degli Errori e Debugging
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Identify the three types of Python errors: **syntax**, **runtime**, and **logic**
-- Read a Python **traceback** and find exactly where the problem is
-- Use `try/except` to catch errors and keep your program running
-- Use `raise`, `assert`, and strategic `print()` calls to find and report bugs
+- Identificare i tre tipi di errori Python: **sintattici**, **di runtime**, e **logici**
+- Leggere un **traceback** di Python e trovare esattamente dove sta il problema
+- Usare `try/except` per catturare gli errori e mantenere il tuo programma in esecuzione
+- Usare `raise`, `assert`, e chiamate `print()` strategiche per trovare e segnalare i bug
 
-Every programmer makes mistakes. The skill isn't avoiding errors — it's finding and fixing them quickly.
+Ogni programmatore fa errori. L'abilità non è evitare gli errori — è trovarli e correggerli velocemente.
 
-!!! mascot-welcome "Welcome to Chapter 23!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 23!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Errors aren't failures — they're clues! Python's error messages are actually very helpful once you know how to read them.
-    Today we'll turn scary red text into useful information.
-    Let's code it together!
+    Gli errori non sono fallimenti — sono indizi! I messaggi di errore di Python sono in realtà molto utili una volta che sai come leggerli.
+    Oggi trasformeremo del testo rosso spaventoso in informazioni utili.
+    Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -29,41 +29,41 @@ Every programmer makes mistakes. The skill isn't avoiding errors — it's findin
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## Three Types of Errors
+## Tre Tipi di Errori
 
-A **syntax error** is caught before the program runs. Python can't parse the code at all.
-A missing colon after `if`, bad indentation, or a mismatched parenthesis causes a syntax error.
+Un **errore sintattico** viene rilevato prima che il programma venga eseguito. Python non può nemmeno interpretare il codice.
+Un `:` mancante dopo `if`, un'indentazione sbagliata, o una parentesi non corrispondente causano un errore sintattico.
 
-A **runtime error** (also called an **exception**) happens while the program is running.
-The program starts, then crashes when it hits the bad line.
+Un **errore di runtime** (chiamato anche **eccezione**) succede mentre il programma è in esecuzione.
+Il programma parte, poi va in crash quando raggiunge la riga sbagliata.
 
-A **logic error** is the trickiest — the program runs without crashing, but produces the wrong result.
-Python can't detect logic errors; you have to find them yourself.
+Un **errore logico** è il più insidioso — il programma gira senza andare in crash, ma produce il risultato sbagliato.
+Python non può rilevare gli errori logici; devi trovarli da solo.
 
-| Error type | When detected | Example |
+| Tipo di errore | Quando viene rilevato | Esempio |
 |------------|--------------|---------|
-| Syntax error | Before running | Missing `:` after `if` |
-| Runtime error | While running | `int("hello")` |
-| Logic error | After running | Off-by-one in a loop |
+| Errore sintattico | Prima dell'esecuzione | `:` mancante dopo `if` |
+| Errore di runtime | Durante l'esecuzione | `int("hello")` |
+| Errore logico | Dopo l'esecuzione | Scarto di uno in un ciclo |
 
-## Common Exception Types
+## Tipi Comuni di Eccezioni
 
-When a runtime error occurs, Python raises an **exception** — a named error type.
+Quando si verifica un errore di runtime, Python genera un'**eccezione** — un tipo di errore con un nome.
 
-| Exception | Cause |
+| Eccezione | Causa |
 |-----------|-------|
-| `NameError` | Variable name doesn't exist |
-| `TypeError` | Wrong type — e.g. adding string to integer |
-| `ValueError` | Right type but bad value — e.g. `int("hello")` |
-| `IndexError` | List index out of range |
-| `KeyError` | Dictionary key doesn't exist |
-| `ZeroDivisionError` | Dividing by zero |
-| `AttributeError` | Method doesn't exist on the object |
-| `FileNotFoundError` | File can't be found |
+| `NameError` | Il nome della variabile non esiste |
+| `TypeError` | Tipo sbagliato — ad es. sommare una stringa a un intero |
+| `ValueError` | Tipo giusto ma valore sbagliato — ad es. `int("hello")` |
+| `IndexError` | Indice della lista fuori intervallo |
+| `KeyError` | La chiave del dizionario non esiste |
+| `ZeroDivisionError` | Divisione per zero |
+| `AttributeError` | Il metodo non esiste sull'oggetto |
+| `FileNotFoundError` | Il file non si trova |
 
-## Reading a Traceback
+## Leggere un Traceback
 
-When Python crashes, it prints a **traceback** — a trace of exactly where things went wrong.
+Quando Python va in crash, stampa un **traceback** — una traccia di esattamente dove le cose sono andate male.
 
 ```
 Traceback (most recent call last):
@@ -72,15 +72,15 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 ```
 
-Read from the **bottom up**:
-1. The last line gives the exception type and message: `ZeroDivisionError: division by zero`
-2. Above it, the exact code that crashed: `result = 10 / 0`
-3. File and line number so you know where to look: `line 5`
+Leggi dal **basso verso l'alto**:
+1. L'ultima riga dà il tipo di eccezione e il messaggio: `ZeroDivisionError: division by zero`
+2. Sopra di essa, il codice esatto che è andato in crash: `result = 10 / 0`
+3. File e numero di riga così sai dove guardare: `line 5`
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below has a bug. Which line will crash, and what exception type will appear?
-    Make your guess — then run it!
+    Il codice sotto ha un bug. Quale riga andrà in crash, e quale tipo di eccezione apparirà?
+    Fai la tua previsione — poi eseguilo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -102,11 +102,11 @@ print("Last:", numbers[5])   # this will fail!
 print("This line never runs.")`);
 </script>
 
-Were you right? `IndexError: list index out of range` — index 5 doesn't exist in a 3-item list.
+Avevi indovinato? `IndexError: list index out of range` — l'indice 5 non esiste in una lista di 3 elementi.
 
-## `try/except` Blocks
+## I Blocchi `try/except`
 
-A `try/except` block lets your program catch an error and handle it gracefully instead of crashing.
+Un blocco `try/except` permette al tuo programma di catturare un errore e gestirlo con eleganza invece di andare in crash.
 
 ```python
 try:
@@ -115,9 +115,9 @@ except ZeroDivisionError:
     print("Can't divide by zero!")
 ```
 
-Structure:
-1. `try:` — put the risky code here
-2. `except ErrorType:` — put the recovery code here; runs only if that error occurs
+Struttura:
+1. `try:` — metti qui il codice rischioso
+2. `except ErrorType:` — metti qui il codice di recupero; gira solo se si verifica quell'errore
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -145,9 +145,9 @@ print(safe_divide(10, 0))
 print(safe_divide(7, 3))`);
 </script>
 
-## Catching Specific Exceptions
+## Catturare Eccezioni Specifiche
 
-Catch multiple exception types with multiple `except` clauses:
+Cattura più tipi di eccezione con più clausole `except`:
 
 ```python
 try:
@@ -160,14 +160,14 @@ except ZeroDivisionError:
     print("Can't divide by zero!")
 ```
 
-Catching specific exceptions is better than a bare `except:` — it prevents hiding bugs you didn't intend to catch.
+Catturare eccezioni specifiche è meglio di un semplice `except:` — previene il nascondere bug che non intendevi catturare.
 
-## `else` and `finally` Clauses
+## Le Clausole `else` e `finally`
 
-Two optional extra clauses make `try/except` even more powerful:
+Due clausole extra opzionali rendono `try/except` ancora più potente:
 
-- `else:` runs only if the `try` block completed without any exception
-- `finally:` runs **always** — whether or not an exception occurred; perfect for cleanup
+- `else:` gira solo se il blocco `try` si è completato senza nessuna eccezione
+- `finally:` gira **sempre** — che si sia verificata o no un'eccezione; perfetta per la pulizia
 
 ```python
 try:
@@ -181,9 +181,9 @@ finally:
     print("Done.")               # always runs
 ```
 
-## The `raise` Statement
+## L'Istruzione `raise`
 
-Use `raise` to trigger an exception yourself when input violates a rule:
+Usa `raise` per innescare tu stesso un'eccezione quando l'input viola una regola:
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -214,10 +214,10 @@ for s in [60, -10, 400]:
         print(f"Invalid: {e}")`);
 </script>
 
-## The `assert` Statement
+## L'Istruzione `assert`
 
-`assert condition, "message"` checks that something you believe is true actually is true.
-If not, it raises `AssertionError`. Use it for internal checks during development.
+`assert condizione, "messaggio"` controlla che qualcosa che credi vero sia effettivamente vero.
+Se non lo è, genera `AssertionError`. Usala per controlli interni durante lo sviluppo.
 
 ```python
 def square(n):
@@ -226,9 +226,9 @@ def square(n):
     return result
 ```
 
-## Validating Input Before Casting
+## Validare l'Input Prima della Conversione
 
-`input()` always returns a **string** — even when you ask for a number. Casting it straight to `int()` crashes if the text isn't a valid number:
+`input()` restituisce sempre una **stringa** — anche quando chiedi un numero. Convertirla direttamente con `int()` va in crash se il testo non è un numero valido:
 
 ```python
 def cast_to_int():
@@ -238,7 +238,7 @@ def cast_to_int():
 print(cast_to_int())
 ```
 
-Typing a word instead of a number raises `ValueError: invalid literal for int() with base 10`. You can catch bad input *before* it crashes by checking it first with the string method `.isdigit()`, then using `assert` to stop with a clear message if the check fails:
+Scrivere una parola invece di un numero genera `ValueError: invalid literal for int() with base 10`. Puoi catturare l'input sbagliato *prima* che vada in crash controllandolo prima con il metodo di stringa `.isdigit()`, poi usando `assert` per fermarti con un messaggio chiaro se il controllo fallisce:
 
 ```python
 def cast_to_int():
@@ -249,11 +249,11 @@ def cast_to_int():
 print(cast_to_int())
 ```
 
-`.isdigit()` returns `True` only if every character in the string is a digit, so it catches bad input before `int()` ever runs.
+`.isdigit()` restituisce `True` solo se ogni carattere nella stringa è una cifra, quindi cattura l'input sbagliato prima che `int()` venga mai eseguito.
 
-## Debugging with `print()`
+## Debug con `print()`
 
-The simplest debugging tool is a strategic `print()` statement. Insert them to see what your program is doing at each step:
+Il più semplice strumento di debug è un'istruzione `print()` strategica. Inseriscile per vedere cosa fa il tuo programma a ogni passo:
 
 ```python
 def total_price(items):
@@ -265,20 +265,20 @@ def total_price(items):
     return total
 ```
 
-Remove debug prints once the problem is fixed.
+Rimuovi i print di debug una volta corretto il problema.
 
-!!! mascot-tip "Using Search Engines to Debug"
+!!! mascot-tip "Usare i Motori di Ricerca per Fare Debug"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    When you see an error you don't recognize, copy the last line of the traceback and paste it into a search engine — add "Python" at the start.
-    The Python community is enormous and someone has almost certainly had the same error before!
-    Reading solutions on Stack Overflow is how professional programmers debug every day.
+    Quando vedi un errore che non riconosci, copia l'ultima riga del traceback e incollala in un motore di ricerca — aggiungi "Python" all'inizio.
+    La comunità Python è enorme e quasi certamente qualcuno ha già avuto lo stesso errore prima!
+    Leggere le soluzioni su Stack Overflow è il modo in cui i programmatori professionisti fanno debug ogni giorno.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Wrap the Dangerous Code"
+!!! mascot-thinking "Il Tuo Turno — Racchiudi il Codice Pericoloso"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below crashes when the user enters something that isn't a number.
-    Wrap the `int()` call in a `try/except ValueError` block so it prints a friendly message instead!
+    Il programma sotto va in crash quando l'utente inserisce qualcosa che non è un numero.
+    Racchiudi la chiamata a `int()` in un blocco `try/except ValueError` così che stampi un messaggio gentile invece!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -301,31 +301,31 @@ n = int(raw)
 print(f"Double: {n * 2}")`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Write code that deliberately triggers a `NameError` by using an undefined variable, then catch it.
-   **You'll know it worked when** the error is caught and a friendly message appears instead of a crash.
+1. Scrivi del codice che innesca deliberatamente un `NameError` usando una variabile non definita, poi catturalo.
+   **Saprai che ha funzionato quando** l'errore viene catturato e appare un messaggio gentile invece di un crash.
 
-2. Write a function `safe_index(lst, i)` that returns `lst[i]` or `None` if `i` is out of range.
-   **You'll know it worked when** `safe_index([1,2,3], 10)` returns `None` without crashing.
+2. Scrivi una funzione `safe_index(lst, i)` che restituisce `lst[i]` oppure `None` se `i` è fuori intervallo.
+   **Saprai che ha funzionato quando** `safe_index([1,2,3], 10)` restituisce `None` senza andare in crash.
 
-3. Add an `else` clause to a `try/except` that prints `"Success!"` only when no error occurs.
-   **You'll know it worked when** valid input shows "Success!" and invalid input doesn't.
+3. Aggiungi una clausola `else` a un `try/except` che stampa `"Success!"` solo quando non si verifica nessun errore.
+   **Saprai che ha funzionato quando** l'input valido mostra "Success!" e l'input non valido no.
 
-4. Add a `finally` clause that always prints `"Calculation complete."` no matter what.
-   **You'll know it worked when** the message appears for both valid and invalid input.
+4. Aggiungi una clausola `finally` che stampa sempre `"Calculation complete."` a prescindere da tutto.
+   **Saprai che ha funzionato quando** il messaggio appare sia per l'input valido sia per quello non valido.
 
-5. Use `assert` to verify that a list has exactly 3 items. Test with lists of different lengths.
-   **You'll know it worked when** a 2-item list raises `AssertionError` and a 3-item list passes.
+5. Usa `assert` per verificare che una lista abbia esattamente 3 elementi. Testa con liste di lunghezze diverse.
+   **Saprai che ha funzionato quando** una lista di 2 elementi genera `AssertionError` e una lista di 3 elementi passa.
 
-!!! mascot-celebration "Debugging Champion!"
+!!! mascot-celebration "Campione del Debugging!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You can now read tracebacks, catch exceptions, raise your own errors, and debug like a professional!
-    These skills transform error messages from obstacles into tools.
-    That's a huge step forward. Let's keep coding!
+    Ora puoi leggere i traceback, catturare le eccezioni, generare i tuoi errori, e fare debug come un professionista!
+    Queste competenze trasformano i messaggi di errore da ostacoli in strumenti.
+    Questo è un grande passo avanti. Continuiamo a programmare!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)

@@ -51,6 +51,9 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
   "Dizionari")
 - `docs/chapters/22-advanced-collections/` (index, references, quiz — titolo allineato alla
   nav: "Collezioni Avanzate e Funzioni Built-in")
+- `docs/chapters/23-error-handling-debugging/` (index, references, quiz — titolo allineato
+  alla nav: "Gestione degli Errori e Debugging"; questo `references.md` ha anche un link
+  finale "[See Chapter Content](./index.md)" che gli altri capitoli non hanno — tradotto)
 - `docs/glossary.md` (tutte le 338 voci, intestazioni `####` verificate 338/338 rispetto
   all'originale)
 
@@ -172,12 +175,12 @@ Fase 0 chiusa: i file skill (`skills/python-lab-generator/SKILL.md` e
 quindi non serve alcun ripristino. Decisioni della sezione 2 fissate il 2026-10-03.
 
 Fase 1 completata (pagine di ingresso, `docs/glossary.md`, nav di `mkdocs.yml` per le
-sezioni coperte). Fase 2 in corso: Capitoli 1-22 tradotti.
+sezioni coperte). Fase 2 in corso: Capitoli 1-23 tradotti.
 
-Prossimo: continuare la Fase 2 dal Capitolo 23 (`docs/chapters/23-error-handling-debugging/`),
+Prossimo: continuare la Fase 2 dal Capitolo 24 (`docs/chapters/24-recursion-and-fractals/`),
 un capitolo alla volta (`index.md` + `references.md` + `quiz.md`). La nav di `mkdocs.yml`
 per tutti i 38 capitoli è già tradotta dalla Fase 1 — controllare sempre l'etichetta nav
-esistente e allineare il titolo H1/front matter a quella (vedi nota sui Capitoli 15-22),
+esistente e allineare il titolo H1/front matter a quella (vedi nota sui Capitoli 15-23),
 invece di tradurre il titolo da zero.
 
 Nota di qualità: durante la traduzione del Capitolo 5 è stato trovato e corretto un

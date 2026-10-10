@@ -1,26 +1,26 @@
-# Quiz: Error Handling and Debugging
+# Quiz: Gestione degli Errori e Debugging
 
-Test your understanding of Python error types, tracebacks, try/except, and debugging techniques with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione dei tipi di errore Python, dei traceback, di try/except, e delle tecniche di debug con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What type of error occurs when Python cannot parse your code before it even runs?
+#### 1. Quale tipo di errore si verifica quando Python non riesce a interpretare il tuo codice prima ancora che venga eseguito?
 
 <div class="upper-alpha" markdown>
-1. Logic error
-2. Runtime error
-3. Syntax error
-4. Import error
+1. Errore logico
+2. Errore di runtime
+3. Errore sintattico
+4. Errore di import
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. A syntax error is caught before the program runs because Python cannot even understand the code. Examples include a missing colon after `if`, mismatched parentheses, or bad indentation. Runtime errors (exceptions) occur while the program is running. Logic errors are when the program runs but produces the wrong answer.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Un errore sintattico viene rilevato prima che il programma venga eseguito perché Python non riesce nemmeno a capire il codice. Esempi includono un `:` mancante dopo `if`, parentesi non corrispondenti, o un'indentazione sbagliata. Gli errori di runtime (eccezioni) si verificano mentre il programma è in esecuzione. Gli errori logici sono quando il programma gira ma produce la risposta sbagliata.
 
     **Concept Tested:** Types of Errors
 
 ---
 
-#### 2. What kind of error is produced by `int("hello")`?
+#### 2. Quale tipo di errore produce `int("hello")`?
 
 <div class="upper-alpha" markdown>
 1. `SyntaxError`
@@ -29,46 +29,46 @@ Test your understanding of Python error types, tracebacks, try/except, and debug
 4. `TypeError`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. A `ValueError` occurs when a function receives a value of the correct type but an inappropriate value for the context. `int()` expects a string that looks like a number, but `"hello"` cannot be converted to an integer. A `TypeError` would occur if you passed the wrong type entirely (like `int([1, 2, 3])`).
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Un `ValueError` si verifica quando una funzione riceve un valore del tipo corretto ma un valore inappropriato per il contesto. `int()` si aspetta una stringa che sembra un numero, ma `"hello"` non può essere convertita in un intero. Un `TypeError` si verificherebbe se passassi un tipo completamente sbagliato (come `int([1, 2, 3])`).
 
     **Concept Tested:** Common Exception Types
 
 ---
 
-#### 3. What does a Python traceback tell you?
+#### 3. Cosa ti dice un traceback di Python?
 
 <div class="upper-alpha" markdown>
-1. How fast the program ran before the error
-2. The file, line number, exact code that crashed, and the exception type and message
-3. A suggestion for how to fix the error automatically
-4. The total memory used by the program before it crashed
+1. Quanto velocemente è girato il programma prima dell'errore
+2. Il file, il numero di riga, il codice esatto che è andato in crash, e il tipo di eccezione con il messaggio
+3. Un suggerimento su come correggere automaticamente l'errore
+4. La memoria totale usata dal programma prima del crash
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. A traceback shows the sequence of calls that led to the crash, and most importantly: the file name, line number, the exact line of code that failed, and the exception type with a description. Read it from the bottom up — the last line gives the error type and message, the lines above show where in the code it happened.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Un traceback mostra la sequenza di chiamate che ha portato al crash, e soprattutto: il nome del file, il numero di riga, la riga esatta di codice che ha fallito, e il tipo di eccezione con una descrizione. Leggilo dal basso verso l'alto — l'ultima riga dà il tipo di errore e il messaggio, le righe sopra mostrano dove nel codice è successo.
 
     **Concept Tested:** Reading Tracebacks
 
 ---
 
-#### 4. What is the purpose of a `try/except` block?
+#### 4. Qual è lo scopo di un blocco `try/except`?
 
 <div class="upper-alpha" markdown>
-1. To run code faster by skipping error checks
-2. To catch runtime errors and handle them gracefully so the program does not crash
-3. To test whether your code has syntax errors before running
-4. To repeat code until it runs without errors
+1. Far girare il codice più velocemente saltando i controlli di errore
+2. Catturare gli errori di runtime e gestirli con eleganza così che il programma non vada in crash
+3. Testare se il tuo codice ha errori sintattici prima di eseguirlo
+4. Ripetere il codice finché non gira senza errori
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. A `try/except` block lets you run risky code inside `try:` and specify what to do in `except:` if an error occurs. Instead of crashing, the program continues with the error-handling code. This is essential for writing programs that deal with user input, file operations, or network connections where errors are expected and should be handled.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Un blocco `try/except` ti permette di eseguire codice rischioso dentro `try:` e specificare cosa fare in `except:` se si verifica un errore. Invece di andare in crash, il programma continua con il codice di gestione dell'errore. Questo è essenziale per scrivere programmi che gestiscono input dell'utente, operazioni su file, o connessioni di rete dove gli errori sono previsti e dovrebbero essere gestiti.
 
     **Concept Tested:** try/except Blocks
 
 ---
 
-#### 5. What exception is raised when you try to divide by zero?
+#### 5. Quale eccezione viene generata quando provi a dividere per zero?
 
 <div class="upper-alpha" markdown>
 1. `ValueError`
@@ -77,88 +77,88 @@ Test your understanding of Python error types, tracebacks, try/except, and debug
 4. `ArithmeticException`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Python raises `ZeroDivisionError` when you attempt to divide any number by zero (`10 / 0`). You catch it specifically with `except ZeroDivisionError:`. Always check for a zero denominator before dividing if the denominator comes from user input or a calculation that could produce zero.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Python genera `ZeroDivisionError` quando provi a dividere qualsiasi numero per zero (`10 / 0`). La catturi specificamente con `except ZeroDivisionError:`. Controlla sempre un denominatore pari a zero prima di dividere se il denominatore proviene dall'input dell'utente o da un calcolo che potrebbe produrre zero.
 
     **Concept Tested:** Common Exception Types
 
 ---
 
-#### 6. What does the `else` clause do in a `try/except/else` block?
+#### 6. Cosa fa la clausola `else` in un blocco `try/except/else`?
 
 <div class="upper-alpha" markdown>
-1. It runs if an exception was caught
-2. It runs only if the `try` block completed without raising any exception
-3. It always runs, whether or not an exception occurred
-4. It re-raises the caught exception after handling it
+1. Gira se un'eccezione è stata catturata
+2. Gira solo se il blocco `try` si è completato senza generare nessuna eccezione
+3. Gira sempre, che si sia verificata o no un'eccezione
+4. Rigenera l'eccezione catturata dopo averla gestita
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. The `else` clause in a `try/except` block runs only when the `try` block completed successfully — with no exception raised. This is a clean way to write the "success path" code separately from the `try` block itself. The `finally` clause, by contrast, always runs regardless of whether an exception occurred.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. La clausola `else` in un blocco `try/except` gira solo quando il blocco `try` si è completato con successo — senza nessuna eccezione generata. Questo è un modo pulito di scrivere il codice del "percorso di successo" separatamente dal blocco `try` stesso. La clausola `finally`, al contrario, gira sempre indipendentemente dal fatto che si sia verificata un'eccezione.
 
     **Concept Tested:** else and finally Clauses
 
 ---
 
-#### 7. When does the `finally` block execute?
+#### 7. Quando viene eseguito il blocco `finally`?
 
 <div class="upper-alpha" markdown>
-1. Only when the `try` block raises an exception
-2. Only when no exception is raised
-3. Always — whether or not an exception occurred
-4. Only when you explicitly call it with `finally()`
+1. Solo quando il blocco `try` genera un'eccezione
+2. Solo quando non viene generata nessuna eccezione
+3. Sempre — che si sia verificata o no un'eccezione
+4. Solo quando lo chiami esplicitamente con `finally()`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. The `finally` clause always executes, no matter what happens in the `try` and `except` blocks. It runs even if an exception is caught, even if it is not caught, and even if there is a `return` statement in the `try` block. This makes `finally` perfect for cleanup operations like closing files or network connections.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. La clausola `finally` viene sempre eseguita, indipendentemente da cosa succede nei blocchi `try` ed `except`. Gira anche se un'eccezione viene catturata, anche se non viene catturata, e anche se c'è un'istruzione `return` nel blocco `try`. Questo rende `finally` perfetta per operazioni di pulizia come chiudere file o connessioni di rete.
 
     **Concept Tested:** else and finally Clauses
 
 ---
 
-#### 8. What does `raise ValueError("Speed cannot be negative.")` do?
+#### 8. Cosa fa `raise ValueError("Speed cannot be negative.")`?
 
 <div class="upper-alpha" markdown>
-1. Prints an error message and continues running the program
-2. Triggers a `ValueError` exception with the given message, which will crash the program unless caught
-3. Creates a new type of error called "Speed cannot be negative"
-4. Stores the message in a variable called `ValueError`
+1. Stampa un messaggio di errore e continua a eseguire il programma
+2. Innesca un'eccezione `ValueError` con il messaggio dato, che farà andare in crash il programma a meno che non venga catturata
+3. Crea un nuovo tipo di errore chiamato "Speed cannot be negative"
+4. Memorizza il messaggio in una variabile chiamata `ValueError`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. The `raise` statement deliberately triggers an exception. `raise ValueError("message")` creates a `ValueError` with your custom message. This is useful for enforcing rules in your code — if bad input is detected, you raise an exception so the caller knows something is wrong. The caller can catch it with `try/except ValueError`.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. L'istruzione `raise` innesca deliberatamente un'eccezione. `raise ValueError("message")` crea un `ValueError` con il tuo messaggio personalizzato. Questo è utile per imporre regole nel tuo codice — se viene rilevato un input sbagliato, generi un'eccezione così chi chiama sa che qualcosa non va. Chi chiama può catturarla con `try/except ValueError`.
 
     **Concept Tested:** raise Statement
 
 ---
 
-#### 9. What is the difference between a runtime error and a logic error?
+#### 9. Qual è la differenza tra un errore di runtime e un errore logico?
 
 <div class="upper-alpha" markdown>
-1. Runtime errors only occur in loops; logic errors only occur in functions
-2. Runtime errors crash the program while it is running; logic errors allow the program to run but produce wrong results
-3. Runtime errors can be fixed; logic errors are permanent
-4. Runtime errors only happen with user input; logic errors only happen with math
+1. Gli errori di runtime si verificano solo nei cicli; gli errori logici si verificano solo nelle funzioni
+2. Gli errori di runtime fanno andare in crash il programma mentre è in esecuzione; gli errori logici permettono al programma di girare ma producono risultati sbagliati
+3. Gli errori di runtime possono essere corretti; gli errori logici sono permanenti
+4. Gli errori di runtime succedono solo con l'input dell'utente; gli errori logici succedono solo con la matematica
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. A runtime error (exception) causes the program to crash mid-run with an error message — Python detected something wrong. A logic error is when the program runs to completion without crashing but produces incorrect results. Logic errors are often the hardest to find because Python gives no error message — you must figure out why the output is wrong.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Un errore di runtime (eccezione) fa andare in crash il programma a metà esecuzione con un messaggio di errore — Python ha rilevato qualcosa di sbagliato. Un errore logico è quando il programma gira fino al completamento senza andare in crash ma produce risultati scorretti. Gli errori logici sono spesso i più difficili da trovare perché Python non dà nessun messaggio di errore — devi capire da solo perché l'output è sbagliato.
 
     **Concept Tested:** Types of Errors
 
 ---
 
-#### 10. What is the `assert` statement used for?
+#### 10. Per cosa si usa l'istruzione `assert`?
 
 <div class="upper-alpha" markdown>
-1. To print a message to the output area
-2. To catch exceptions thrown by other code
-3. To check that a condition is True and raise an `AssertionError` if it is not
-4. To declare that a variable will never change
+1. Per stampare un messaggio nell'area di output
+2. Per catturare le eccezioni generate da altro codice
+3. Per controllare che una condizione sia True e generare un `AssertionError` se non lo è
+4. Per dichiarare che una variabile non cambierà mai
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `assert condition, "message"` checks that `condition` is `True`. If it is `False`, Python raises an `AssertionError` with your message. It is commonly used in testing and debugging to verify that your code's assumptions are correct at specific points. For example, `assert len(items) > 0, "List must not be empty"` confirms the list has items before processing it.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `assert condizione, "messaggio"` controlla che `condizione` sia `True`. Se è `False`, Python genera un `AssertionError` con il tuo messaggio. Viene comunemente usato nel testing e nel debug per verificare che le assunzioni del tuo codice siano corrette in punti specifici. Per esempio, `assert len(items) > 0, "List must not be empty"` conferma che la lista ha elementi prima di elaborarla.
 
     **Concept Tested:** assert Statement
 
