@@ -1,28 +1,28 @@
 ---
-title: Object-Oriented Programming
-description: Create your own classes with __init__, self, methods, inheritance, __str__, and class vs instance variables
+title: Programmazione Orientata agli Oggetti
+description: Crea le tue classi con __init__, self, metodi, eredità, __str__, e variabili di classe vs di istanza
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 14:10:00
 version: 0.09
 ---
 
-# Object-Oriented Programming
+# Programmazione Orientata agli Oggetti
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Define a **class** with `__init__()`, `self`, attributes, and methods
-- Create class **instances** and access their attributes with dot notation
-- Define a `__str__()` method so `print()` shows a useful description
-- Use **inheritance** and `super()` to build subclasses that extend parent classes
+- Definire una **classe** con `__init__()`, `self`, attributi, e metodi
+- Creare **istanze** di classe e accedere ai loro attributi con la notazione punto
+- Definire un metodo `__str__()` così che `print()` mostri una descrizione utile
+- Usare l'**eredità** (inheritance) e `super()` per costruire sottoclassi che estendono classi genitore
 
-You've been using objects all along — turtle, strings, lists, and dictionaries are all objects.
-Now it's time to create your own.
+Hai usato oggetti fin dall'inizio — la tartaruga, le stringhe, le liste, e i dizionari sono tutti oggetti.
+Ora è il momento di crearne di tuoi.
 
-!!! mascot-welcome "Welcome to Chapter 25!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 25!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    You've used objects like Lego bricks — now you get to design your own bricks!
-    Object-oriented programming is how most large Python programs are organized.
-    Let's build something! Let's code it together!
+    Hai usato oggetti come mattoncini Lego — ora puoi progettare i tuoi mattoncini!
+    La programmazione orientata agli oggetti è il modo in cui sono organizzati la maggior parte dei grandi programmi Python.
+    Costruiamo qualcosa! Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -30,9 +30,9 @@ Now it's time to create your own.
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## Attributes and Methods
+## Attributi e Metodi
 
-You already know that objects have **attributes** (data stored inside them) and **methods** (functions you call on them).
+Sai già che gli oggetti hanno **attributi** (dati memorizzati al loro interno) e **metodi** (funzioni che chiami su di essi).
 
 ```python
 t = turtle.Turtle()
@@ -40,27 +40,27 @@ t.speed(5)          # method call
 t.pencolor("red")   # method call — sets an attribute
 ```
 
-Now you'll define your own objects.
+Ora definirai i tuoi propri oggetti.
 
-## The `class` Keyword
+## La Parola Chiave `class`
 
-A **class** is a blueprint for creating objects.
-Use `class ClassName:` followed by indented code that defines the class.
-By convention, class names use **CamelCase** (each word capitalized, no underscores).
+Una **classe** è un progetto per creare oggetti.
+Usa `class NomeClasse:` seguito da codice indentato che definisce la classe.
+Per convenzione, i nomi delle classi usano il **CamelCase** (ogni parola con la maiuscola, nessun underscore).
 
 ```python
 class Dog:
     pass   # empty class — just a placeholder for now
 ```
 
-## `__init__()` — The Constructor
+## `__init__()` — Il Costruttore
 
-`__init__()` is the **constructor** — a special method Python calls automatically when you create a new instance.
-It sets up the object's initial attributes.
+`__init__()` è il **costruttore** — un metodo speciale che Python chiama automaticamente quando crei una nuova istanza.
+Imposta gli attributi iniziali dell'oggetto.
 
-`self` refers to the specific instance being created. Every method in a class takes `self` as its first parameter.
+`self` si riferisce all'istanza specifica che viene creata. Ogni metodo in una classe prende `self` come primo parametro.
 
-Before we define attributes, note that `self.attribute_name = value` stores a value inside the object:
+Prima di definire gli attributi, nota che `self.nome_attributo = valore` memorizza un valore dentro l'oggetto:
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -96,21 +96,21 @@ bella.bark()
 print(fido.name, fido.age)`);
 </script>
 
-## Creating Instances and Dot Notation
+## Creare Istanze e la Notazione Punto
 
-Each time you call the class like a function, Python creates a new **instance** (a separate object from the same blueprint).
+Ogni volta che chiami la classe come una funzione, Python crea una nuova **istanza** (un oggetto separato dallo stesso progetto).
 
 ```python
 fido  = Dog("Fido", "Labrador", 3)   # instance 1
 bella = Dog("Bella", "Poodle", 5)    # instance 2
 ```
 
-Access attributes and methods with **dot notation**: `fido.name`, `fido.bark()`.
+Accedi agli attributi e ai metodi con la **notazione punto**: `fido.name`, `fido.bark()`.
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below creates two `Student` instances. Which student has the higher score?
-    What will the loop print for each one? Make your guess — then run it!
+    Il codice sotto crea due istanze di `Student`. Quale studente ha il punteggio più alto?
+    Cosa stamperà il ciclo per ciascuno? Fai la tua previsione — poi eseguilo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -147,25 +147,25 @@ for s in students:
     print(f"{s.name}: {s.score} → {s.grade()}")`);
 </script>
 
-### See It: Blueprint vs Real Dogs
+### Guardalo: Progetto vs Veri Cani
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    In the inspector below, the program defines `class Dog` and then calls
-    `Dog(...)` twice. Predict: when `rex.bark()` runs, **how does Python know
-    which dog's name to print — Rex's or Bella's?** Step through and watch
-    the orange arrow!
+    Nell'ispettore sotto, il programma definisce `class Dog` e poi chiama
+    `Dog(...)` due volte. Prevedi: quando `rex.bark()` gira, **come sa Python
+    quale nome di cane stampare — quello di Rex o quello di Bella?** Esegui passo passo e guarda
+    la freccia arancione!
 
 <iframe src="../../sims/object-instance-inspector/main.html" height="572" width="100%" scrolling="no"></iframe>
 
-[Explore the Object Instance Inspector MicroSim](../../sims/object-instance-inspector/index.md){ .md-button }
+[Esplora il MicroSim Object Instance Inspector](../../sims/object-instance-inspector/index.md){ .md-button }
 
-The answer: `self` is always the object **left of the dot**. The class is just a dashed blueprint — the solid cards are the real objects, each with its own attribute boxes. The last step shows one more secret: `rex.species` is not on rex's card at all, so Python looks up to the blueprint, where the shared class variable lives.
+La risposta: `self` è sempre l'oggetto **a sinistra del punto**. La classe è solo un progetto a tratteggio — le carte solide sono gli oggetti reali, ognuno con le sue caselle di attributo. L'ultimo passo mostra un altro segreto: `rex.species` non è affatto sulla carta di rex, quindi Python guarda in alto, verso il progetto, dove vive la variabile di classe condivisa.
 
-## `__str__()` — String Representation
+## `__str__()` — Rappresentazione in Stringa
 
-`__str__()` defines what `print(obj)` and `str(obj)` show.
-Without it, `print(fido)` shows something like `<__main__.Dog object at 0x...>` — not very helpful.
+`__str__()` definisce cosa mostrano `print(obj)` e `str(obj)`.
+Senza di esso, `print(fido)` mostra qualcosa come `<__main__.Dog object at 0x...>` — non molto utile.
 
 ```python
 class Dog:
@@ -180,12 +180,12 @@ fido = Dog("Fido", "Labrador")
 print(fido)   # Dog(Fido, Labrador)
 ```
 
-`__repr__()` is similar but meant for developers — it should ideally show code you could paste to recreate the object.
+`__repr__()` è simile ma pensato per gli sviluppatori — dovrebbe idealmente mostrare codice che potresti incollare per ricreare l'oggetto.
 
-## Class Variables vs Instance Variables
+## Variabili di Classe vs Variabili di Istanza
 
-An **instance variable** (defined with `self.`) belongs to one specific object.
-A **class variable** (defined directly in the class body, not inside any method) is shared by all instances.
+Una **variabile di istanza** (definita con `self.`) appartiene a un oggetto specifico.
+Una **variabile di classe** (definita direttamente nel corpo della classe, non dentro nessun metodo) è condivisa da tutte le istanze.
 
 ```python
 class Counter:
@@ -200,9 +200,9 @@ c = Counter()
 print(Counter.count)   # 3 — three instances created
 ```
 
-## Strings and Lists as OOP Examples
+## Stringhe e Liste come Esempi di OOP
 
-You've been using OOP all along — string and list methods are just methods on objects:
+Hai usato la OOP fin dall'inizio — i metodi delle stringhe e delle liste sono solo metodi su oggetti:
 
 ```python
 name = "monty"
@@ -212,12 +212,12 @@ items = [3, 1, 2]
 items.sort()       # calls the sort() method on the list object
 ```
 
-## Inheritance
+## Eredità
 
-**Inheritance** lets you create a new class (**subclass**) that inherits all the attributes and methods of an existing class (**parent class**).
+L'**eredità** (inheritance) ti permette di creare una nuova classe (**sottoclasse**) che eredita tutti gli attributi e i metodi di una classe esistente (**classe genitore**).
 
-Use `class SubClass(ParentClass):` to declare inheritance.
-The `super()` function calls the parent class's `__init__()` so you don't have to repeat all its setup code.
+Usa `class Sottoclasse(ClasseGenitore):` per dichiarare l'eredità.
+La funzione `super()` chiama l'`__init__()` della classe genitore così non devi ripetere tutto il suo codice di impostazione.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -270,10 +270,10 @@ cat.purr()      # defined in Cat
 print(dog)      # uses Animal's __str__`);
 </script>
 
-## Method Overriding
+## Sovrascrittura dei Metodi (Method Overriding)
 
-A subclass can **override** a parent method by defining a method with the same name.
-The subclass version runs instead of the parent's.
+Una sottoclasse può **sovrascrivere** (override) un metodo del genitore definendo un metodo con lo stesso nome.
+La versione della sottoclasse gira invece di quella del genitore.
 
 ```python
 class Dog(Animal):
@@ -281,22 +281,22 @@ class Dog(Animal):
         print(f"{self.name} barks loudly!")   # overrides Animal.speak
 ```
 
-### See It: Watch the Method Lookup Climb
+### Guardalo: Guarda Salire la Ricerca del Metodo
 
-When you call `d.eat()` on a Dog, Python quietly searches: first in `class Dog`, and if the method is not there, up in `class Animal`. Before you click anything in the explorer below, predict: **which of the three calls — `d.fetch()`, `d.speak()`, `d.eat()` — needs to climb up to Animal?**
+Quando chiami `d.eat()` su un Dog, Python cerca silenziosamente: prima in `class Dog`, e se il metodo non c'è, sale a `class Animal`. Prima di cliccare qualcosa nell'esploratore sotto, prevedi: **quale delle tre chiamate — `d.fetch()`, `d.speak()`, `d.eat()` — ha bisogno di salire fino ad Animal?**
 
 <iframe src="../../sims/inheritance-explorer/main.html" height="507" width="100%" scrolling="no"></iframe>
 
-[Explore the Inheritance Explorer MicroSim](../../sims/inheritance-explorer/index.md){ .md-button }
+[Esplora il MicroSim Inheritance Explorer](../../sims/inheritance-explorer/index.md){ .md-button }
 
-Click all three calls and watch the highlights climb. Notice what happens after `d.speak()`: Animal's own `speak()` is marked **shadowed** — Dog's version won, exactly like the override example above. The last button shows `super()`, the polite way for a child class to run the parent's version anyway.
+Clicca tutte e tre le chiamate e guarda le evidenziazioni salire. Nota cosa succede dopo `d.speak()`: il proprio `speak()` di Animal è segnato come **shadowed** (oscurato) — ha vinto la versione di Dog, esattamente come l'esempio di override sopra. L'ultimo pulsante mostra `super()`, il modo gentile per una classe figlia di eseguire comunque la versione del genitore.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add a Method"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi un Metodo"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The `Rectangle` class below has `width` and `height` attributes but is missing two methods.
-    Add `area()` (returns width × height) and `perimeter()` (returns 2 × (width + height)).
+    La classe `Rectangle` sotto ha gli attributi `width` e `height` ma le mancano due metodi.
+    Aggiungi `area()` (restituisce width × height) e `perimeter()` (restituisce 2 × (width + height)).
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -330,31 +330,31 @@ print("Area:", r.area())
 print("Perimeter:", r.perimeter())`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Add a `birthday()` method to the `Dog` class that increments `self.age` by 1. Call it twice and print the age.
-   **You'll know it worked when** `fido.age` increases by 2 after two birthday calls.
+1. Aggiungi un metodo `birthday()` alla classe `Dog` che incrementa `self.age` di 1. Chiamalo due volte e stampa l'età.
+   **Saprai che ha funzionato quando** `fido.age` aumenta di 2 dopo due chiamate a birthday.
 
-2. Create a `Square(Rectangle)` subclass where `__init__` only takes `side` and calls `super().__init__(side, side)`.
-   **You'll know it worked when** `Square(5).area()` returns `25`.
+2. Crea una sottoclasse `Square(Rectangle)` dove `__init__` prende solo `side` e chiama `super().__init__(side, side)`.
+   **Saprai che ha funzionato quando** `Square(5).area()` restituisce `25`.
 
-3. Add a `__repr__()` to `Dog` that returns `f"Dog(name={self.name!r}, age={self.age})"`.
-   **You'll know it worked when** using `repr(fido)` shows a reconstructable string.
+3. Aggiungi un `__repr__()` a `Dog` che restituisce `f"Dog(name={self.name!r}, age={self.age})"`.
+   **Saprai che ha funzionato quando** usare `repr(fido)` mostra una stringa ricostruibile.
 
-4. Create a class `BankAccount` with `balance = 0`, a `deposit(n)` method, and a `withdraw(n)` method that refuses if the balance would go negative.
-   **You'll know it worked when** withdrawing more than the balance prints an error and balance stays unchanged.
+4. Crea una classe `BankAccount` con `balance = 0`, un metodo `deposit(n)`, e un metodo `withdraw(n)` che si rifiuta se il saldo diventerebbe negativo.
+   **Saprai che ha funzionato quando** prelevare più del saldo stampa un errore e il saldo resta invariato.
 
-5. Create a list of three `Student` objects and sort them by score using `sorted(students, key=lambda s: s.score)`.
-   **You'll know it worked when** the students appear in ascending score order.
+5. Crea una lista di tre oggetti `Student` e ordinali per punteggio usando `sorted(students, key=lambda s: s.score)`.
+   **Saprai che ha funzionato quando** gli studenti appaiono in ordine crescente di punteggio.
 
-!!! mascot-celebration "OOP Expert!"
+!!! mascot-celebration "Esperto di OOP!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've learned to design your own objects with classes, inheritance, and special methods!
-    OOP is the foundation of almost all professional Python code — from web frameworks to game engines.
-    You're building real software skills. Let's keep coding!
+    Hai imparato a progettare i tuoi propri oggetti con classi, eredità, e metodi speciali!
+    La OOP è la base di quasi tutto il codice Python professionale — dai framework web ai motori di gioco.
+    Stai costruendo vere competenze software. Continuiamo a programmare!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)

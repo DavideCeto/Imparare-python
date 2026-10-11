@@ -1,58 +1,58 @@
-# Quiz: Object-Oriented Programming
+# Quiz: Programmazione Orientata agli Oggetti
 
-Test your understanding of classes, instances, constructors, inheritance, and Python's OOP model with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione delle classi, delle istanze, dei costruttori, dell'eredità, e del modello OOP di Python con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What is a class in Python?
+#### 1. Cos'è una classe in Python?
 
 <div class="upper-alpha" markdown>
-1. A function that returns a list of objects
-2. A blueprint for creating objects, defining their attributes and methods
-3. A type of variable that stores multiple values
-4. A special loop used to process groups of items
+1. Una funzione che restituisce una lista di oggetti
+2. Un progetto per creare oggetti, che definisce i loro attributi e metodi
+3. Un tipo di variabile che memorizza valori multipli
+4. Un ciclo speciale usato per elaborare gruppi di elementi
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. A class is a blueprint or template for creating objects. It defines what data (attributes) and behaviors (methods) every instance of that class will have. You define a class with the `class` keyword, and then create individual objects (instances) by calling the class like a function.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Una classe è un progetto o modello per creare oggetti. Definisce quali dati (attributi) e comportamenti (metodi) avrà ogni istanza di quella classe. Definisci una classe con la parola chiave `class`, e poi crei singoli oggetti (istanze) chiamando la classe come una funzione.
 
     **Concept Tested:** class Keyword
 
 ---
 
-#### 2. What is the purpose of `__init__()` in a class?
+#### 2. Qual è lo scopo di `__init__()` in una classe?
 
 <div class="upper-alpha" markdown>
-1. To print the object's contents when it is created
-2. To import the class from another file
-3. To initialize an instance's attributes when the object is first created
-4. To delete the object from memory when it is no longer needed
+1. Stampare il contenuto dell'oggetto quando viene creato
+2. Importare la classe da un altro file
+3. Inizializzare gli attributi di un'istanza quando l'oggetto viene creato per la prima volta
+4. Eliminare l'oggetto dalla memoria quando non è più necessario
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `__init__()` is the constructor — a special method Python calls automatically each time you create a new instance. It sets up the object's initial state by assigning values to attributes with `self.attribute_name = value`. Without `__init__()`, the object would have no attributes until you set them manually.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `__init__()` è il costruttore — un metodo speciale che Python chiama automaticamente ogni volta che crei una nuova istanza. Imposta lo stato iniziale dell'oggetto assegnando valori agli attributi con `self.nome_attributo = valore`. Senza `__init__()`, l'oggetto non avrebbe attributi finché non li imposti manualmente.
 
     **Concept Tested:** __init__() Constructor
 
 ---
 
-#### 3. What does `self` refer to inside a class method?
+#### 3. A cosa si riferisce `self` dentro un metodo di classe?
 
 <div class="upper-alpha" markdown>
-1. The class definition itself
-2. The most recently created instance of the class
-3. The specific instance the method is being called on
-4. A required keyword meaning "this is a method, not a function"
+1. Alla definizione della classe stessa
+2. All'istanza più recentemente creata della classe
+3. All'istanza specifica su cui viene chiamato il metodo
+4. A una parola chiave obbligatoria che significa "questo è un metodo, non una funzione"
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `self` is a reference to the particular instance the method is being called on. When you write `fido.bark()`, Python passes `fido` as the `self` argument automatically. Inside `bark()`, `self.name` refers to `fido.name`. Every method in a class takes `self` as its first parameter, though Python fills it in automatically — you never pass it yourself.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `self` è un riferimento all'istanza particolare su cui viene chiamato il metodo. Quando scrivi `fido.bark()`, Python passa `fido` come argomento `self` automaticamente. Dentro `bark()`, `self.name` si riferisce a `fido.name`. Ogni metodo in una classe prende `self` come primo parametro, anche se Python lo riempie automaticamente — non lo passi mai tu stesso.
 
     **Concept Tested:** self
 
 ---
 
-#### 4. How do you create an instance of a class named `Dog`?
+#### 4. Come crei un'istanza di una classe chiamata `Dog`?
 
 <div class="upper-alpha" markdown>
 1. `Dog.create("Fido", "Labrador")`
@@ -61,62 +61,62 @@ Test your understanding of classes, instances, constructors, inheritance, and Py
 4. `fido = Dog("Fido", "Labrador")`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. You create an instance by calling the class like a function with the arguments that `__init__()` expects (after `self`). Python automatically calls `__init__()` and returns a new instance. Unlike some other languages, Python does not use the `new` keyword — you just call the class name with parentheses.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. Crei un'istanza chiamando la classe come una funzione con gli argomenti che `__init__()` si aspetta (dopo `self`). Python chiama automaticamente `__init__()` e restituisce una nuova istanza. A differenza di altri linguaggi, Python non usa la parola chiave `new` — chiami semplicemente il nome della classe con le parentesi.
 
     **Concept Tested:** Creating Instances
 
 ---
 
-#### 5. What is dot notation used for with objects?
+#### 5. Per cosa si usa la notazione punto con gli oggetti?
 
 <div class="upper-alpha" markdown>
-1. To add two objects together with the `+` operator
-2. To access an object's attributes and call its methods
-3. To import a specific method from a class
-4. To check whether one object is equal to another
+1. Per sommare due oggetti insieme con l'operatore `+`
+2. Per accedere agli attributi di un oggetto e chiamare i suoi metodi
+3. Per importare un metodo specifico da una classe
+4. Per controllare se un oggetto è uguale a un altro
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Dot notation (`object.attribute` or `object.method()`) is how you access data stored inside an object or call behaviors defined on it. For example, `fido.name` reads the `name` attribute, and `fido.bark()` calls the `bark` method. You have been using dot notation all along with strings (`"hello".upper()`), lists (`items.append(x)`), and the turtle (`t.forward(100)`).
+??? question "Mostra risposta"
+    La risposta corretta è **B**. La notazione punto (`oggetto.attributo` oppure `oggetto.metodo()`) è il modo in cui accedi ai dati memorizzati dentro un oggetto o chiami i comportamenti definiti su di esso. Per esempio, `fido.name` legge l'attributo `name`, e `fido.bark()` chiama il metodo `bark`. Hai usato la notazione punto fin dall'inizio con le stringhe (`"hello".upper()`), le liste (`items.append(x)`), e la tartaruga (`t.forward(100)`).
 
     **Concept Tested:** Dot Notation
 
 ---
 
-#### 6. What does `__str__()` control in a class?
+#### 6. Cosa controlla `__str__()` in una classe?
 
 <div class="upper-alpha" markdown>
-1. How the object is stored in memory
-2. What Python displays when you use `print(obj)` or `str(obj)` on the object
-3. How the object compares to other objects with `==`
-4. How many instances of the class can be created
+1. Come l'oggetto viene memorizzato in memoria
+2. Cosa Python mostra quando usi `print(obj)` o `str(obj)` sull'oggetto
+3. Come l'oggetto si confronta con altri oggetti con `==`
+4. Quante istanze della classe possono essere create
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `__str__()` defines the human-readable string representation of an object. Without it, `print(fido)` shows something unhelpful like `<__main__.Dog object at 0x10a3b2c>`. With `__str__()` returning `f"Dog({self.name}, {self.breed})"`, `print(fido)` shows `Dog(Fido, Labrador)` instead.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `__str__()` definisce la rappresentazione in stringa leggibile dall'uomo di un oggetto. Senza di esso, `print(fido)` mostra qualcosa di poco utile come `<__main__.Dog object at 0x10a3b2c>`. Con `__str__()` che restituisce `f"Dog({self.name}, {self.breed})"`, `print(fido)` mostra invece `Dog(Fido, Labrador)`.
 
     **Concept Tested:** __str__() Method
 
 ---
 
-#### 7. What is the difference between a class variable and an instance variable?
+#### 7. Qual è la differenza tra una variabile di classe e una variabile di istanza?
 
 <div class="upper-alpha" markdown>
-1. Class variables are faster to access; instance variables are slower
-2. A class variable is shared by all instances; an instance variable belongs to one specific object
-3. Class variables are defined with `self`; instance variables are defined without `self`
-4. Class variables can only hold numbers; instance variables can hold any type
+1. Le variabili di classe sono più veloci da accedere; le variabili di istanza sono più lente
+2. Una variabile di classe è condivisa da tutte le istanze; una variabile di istanza appartiene a un oggetto specifico
+3. Le variabili di classe sono definite con `self`; le variabili di istanza sono definite senza `self`
+4. Le variabili di classe possono contenere solo numeri; le variabili di istanza possono contenere qualsiasi tipo
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. An instance variable (`self.name = value`) belongs to one specific object. Changing it on one instance does not affect any other. A class variable is defined in the class body (not inside a method) and is shared by all instances. A common use of class variables is counting how many instances have been created.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Una variabile di istanza (`self.name = value`) appartiene a un oggetto specifico. Cambiarla su un'istanza non influenza nessun'altra. Una variabile di classe è definita nel corpo della classe (non dentro un metodo) ed è condivisa da tutte le istanze. Un uso comune delle variabili di classe è contare quante istanze sono state create.
 
     **Concept Tested:** Class vs Instance Variables
 
 ---
 
-#### 8. How is inheritance declared in Python?
+#### 8. Come si dichiara l'eredità in Python?
 
 <div class="upper-alpha" markdown>
 1. `class Puppy extends Dog:`
@@ -125,40 +125,40 @@ Test your understanding of classes, instances, constructors, inheritance, and Py
 4. `class Puppy from Dog:`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Put the parent class name in parentheses after the subclass name: `class Puppy(Dog):`. The subclass automatically inherits all attributes and methods from the parent. Only Python uses the `(ParentClass)` syntax for inheritance; other languages use `extends` or similar keywords.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Metti il nome della classe genitore tra parentesi dopo il nome della sottoclasse: `class Puppy(Dog):`. La sottoclasse eredita automaticamente tutti gli attributi e i metodi dal genitore. Solo Python usa la sintassi `(ClasseGenitore)` per l'eredità; altri linguaggi usano `extends` o parole chiave simili.
 
     **Concept Tested:** Inheritance
 
 ---
 
-#### 9. What does `super()` do inside a subclass constructor?
+#### 9. Cosa fa `super()` dentro il costruttore di una sottoclasse?
 
 <div class="upper-alpha" markdown>
-1. Creates an additional instance of the parent class
-2. Deletes the parent class so only the subclass remains
-3. Calls the parent class's `__init__()` method to set up inherited attributes
-4. Returns a reference to the class at the top of the inheritance chain
+1. Crea un'istanza aggiuntiva della classe genitore
+2. Elimina la classe genitore così che resti solo la sottoclasse
+3. Chiama il metodo `__init__()` della classe genitore per impostare gli attributi ereditati
+4. Restituisce un riferimento alla classe in cima alla catena di eredità
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `super().__init__(...)` calls the parent class's constructor, so you can run its setup code without rewriting it. This is important because the subclass needs the parent's attributes too. For example, if `Animal.__init__` sets `self.name` and `self.sound`, calling `super().__init__(name, sound)` in a subclass handles all of that automatically.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `super().__init__(...)` chiama il costruttore della classe genitore, così puoi eseguire il suo codice di impostazione senza riscriverlo. Questo è importante perché la sottoclasse ha bisogno anche degli attributi del genitore. Per esempio, se `Animal.__init__` imposta `self.name` e `self.sound`, chiamare `super().__init__(name, sound)` in una sottoclasse gestisce tutto questo automaticamente.
 
     **Concept Tested:** super()
 
 ---
 
-#### 10. Which naming convention does Python use for class names?
+#### 10. Quale convenzione di denominazione usa Python per i nomi delle classi?
 
 <div class="upper-alpha" markdown>
-1. `snake_case` (all lowercase with underscores)
-2. `ALL_CAPS` (all uppercase with underscores)
-3. `camelCase` (first word lowercase, rest capitalized)
-4. `CamelCase` (each word capitalized, no underscores)
+1. `snake_case` (tutto minuscolo con underscore)
+2. `ALL_CAPS` (tutto maiuscolo con underscore)
+3. `camelCase` (prima parola minuscola, resto con maiuscola)
+4. `CamelCase` (ogni parola con maiuscola, nessun underscore)
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. Python class names use CamelCase (also called PascalCase) — each word starts with a capital letter and there are no underscores: `Dog`, `Student`, `BankAccount`, `LinkedList`. This is a convention from PEP 8 (Python's style guide). By contrast, variable and function names use `snake_case`, and constants use `ALL_CAPS`.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. I nomi delle classi Python usano il CamelCase (chiamato anche PascalCase) — ogni parola inizia con una lettera maiuscola e non ci sono underscore: `Dog`, `Student`, `BankAccount`, `LinkedList`. Questa è una convenzione della PEP 8 (la guida di stile di Python). Al contrario, i nomi di variabili e funzioni usano `snake_case`, e le costanti usano `ALL_CAPS`.
 
     **Concept Tested:** CamelCase Naming Convention
 
