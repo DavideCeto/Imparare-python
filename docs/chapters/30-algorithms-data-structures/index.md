@@ -1,27 +1,27 @@
 ---
-title: Algorithms and Data Structures
-description: Explore stacks, queues, graphs, BFS, DFS, sorting algorithms, binary search, and Big-O complexity analysis
+title: Algoritmi e Strutture Dati
+description: Esplora le pile, le code, i grafi, BFS, DFS, gli algoritmi di ordinamento, la ricerca binaria, e l'analisi della complessità Big-O
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 15:00:00
 version: 0.09
 ---
 
-# Algorithms and Data Structures
+# Algoritmi e Strutture Dati
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Explain and implement a **stack** (LIFO) and a **queue** (FIFO)
-- Represent a **graph** as an adjacency list and traverse it with **BFS** and **DFS**
-- Implement **bubble sort**, **selection sort**, and **binary search**
-- Describe Big-O notation and explain the time complexity of common operations
+- Spiegare e implementare una **pila** (LIFO) e una **coda** (FIFO)
+- Rappresentare un **grafo** come una lista di adiacenza e attraversarlo con **BFS** e **DFS**
+- Implementare il **bubble sort**, il **selection sort**, e la **ricerca binaria**
+- Descrivere la notazione Big-O e spiegare la complessità temporale delle operazioni comuni
 
-This chapter introduces the computer science fundamentals that power everything from search engines to game AI.
+Questo capitolo introduce le basi dell'informatica che alimentano tutto, dai motori di ricerca all'IA dei giochi.
 
-!!! mascot-welcome "Welcome to Chapter 30!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 30!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Data structures and algorithms are the heart of computer science.
-    Every search, every recommendation, every route-planning app uses the ideas in this chapter.
-    Let's unlock them! Let's code it together!
+    Le strutture dati e gli algoritmi sono il cuore dell'informatica.
+    Ogni ricerca, ogni raccomandazione, ogni app di pianificazione del percorso usa le idee di questo capitolo.
+    Sblocchiamole! Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -29,21 +29,21 @@ This chapter introduces the computer science fundamentals that power everything 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## Abstract Data Types
+## Tipi di Dati Abstract
 
-An **Abstract Data Type (ADT)** describes *what* a data structure does, not *how* it does it internally.
-A stack, queue, and graph are ADTs — each defines operations like push, pop, enqueue, and dequeue.
+Un **Tipo di Dato Abstract (ADT)** descrive *cosa* fa una struttura di dati, non *come* lo fa internamente.
+Una pila, una coda, e un grafo sono ADT — ognuno definisce operazioni come push, pop, enqueue, e dequeue.
 
-## Stacks — LIFO
+## Pile — LIFO
 
-A **stack** is a Last In, First Out (LIFO) collection.
-Think of a stack of plates — you can only add or remove from the top.
+Una **pila** (stack) è una collezione Last In, First Out (LIFO) — ultimo entrato, primo uscito.
+Pensa a una pila di piatti — puoi solo aggiungere o rimuovere dalla cima.
 
-Two operations:
-- **Push** — add to the top
-- **Pop** — remove from the top
+Due operazioni:
+- **Push** — aggiungi in cima
+- **Pop** — rimuovi dalla cima
 
-Python lists work perfectly as stacks:
+Le liste Python funzionano perfettamente come pile:
 
 ```python
 stack = []
@@ -54,11 +54,11 @@ print(stack.pop())       # "third" — last in, first out
 print(stack.pop())       # "second"
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below uses a stack to reverse a string.
-    After pushing all characters and popping them, what order will they appear?
-    Make your guess — then run it!
+    Il codice sotto usa una pila per invertire una stringa.
+    Dopo aver spinto tutti i caratteri e averli tolti, in quale ordine appariranno?
+    Fai la tua previsione — poi eseguilo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -87,16 +87,16 @@ print(reverse_string("Hello"))
 print(reverse_string("Python"))`);
 </script>
 
-## Queues — FIFO
+## Code — FIFO
 
-A **queue** is a First In, First Out (FIFO) collection.
-Think of a line at a lunch counter — the first person in line is the first to be served.
+Una **coda** (queue) è una collezione First In, First Out (FIFO) — primo entrato, primo uscito.
+Pensa a una fila alla mensa — la prima persona in fila è la prima a essere servita.
 
-Two operations:
-- **Enqueue** — add to the back
-- **Dequeue** — remove from the front
+Due operazioni:
+- **Enqueue** — aggiungi in fondo
+- **Dequeue** — rimuovi dal fronte
 
-Python's `collections.deque` is more efficient than a list for queues:
+`collections.deque` di Python è più efficiente di una lista per le code:
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -125,12 +125,12 @@ print("Served:", queue.popleft())
 print("Remaining:", list(queue))`);
 </script>
 
-## Graphs — Nodes and Edges
+## Grafi — Nodi e Archi
 
-A **graph** is a set of **nodes** (also called vertices) connected by **edges**.
-Graphs model social networks, road maps, the internet, and many more real-world systems.
+Un **grafo** è un insieme di **nodi** (chiamati anche vertici) collegati da **archi**.
+I grafi modellano le reti sociali, le mappe stradali, internet, e molti altri sistemi del mondo reale.
 
-An **adjacency list** represents a graph as a dictionary where each key is a node and the value is a list of its neighbors.
+Una **lista di adiacenza** rappresenta un grafo come un dizionario dove ogni chiave è un nodo e il valore è una lista dei suoi vicini.
 
 ```python
 graph = {
@@ -143,16 +143,16 @@ graph = {
 }
 ```
 
-## Breadth-First Search (BFS)
+## Ricerca in Ampiezza (BFS)
 
-**BFS** explores a graph level by level — all nodes at distance 1 first, then distance 2, and so on.
-It uses a **queue** to keep track of which node to visit next.
+**BFS** (Breadth-First Search) esplora un grafo livello per livello — prima tutti i nodi a distanza 1, poi distanza 2, e così via.
+Usa una **coda** per tenere traccia di quale nodo visitare dopo.
 
-BFS finds the **shortest path** in an unweighted graph.
+BFS trova il **percorso più corto** in un grafo non pesato.
 
-Before the code, the key steps are:
-1. Start at the source node; mark it as visited; enqueue it
-2. While the queue is not empty: dequeue a node, process it, enqueue all unvisited neighbors
+Prima del codice, i passi chiave sono:
+1. Inizia dal nodo sorgente; segnalo come visitato; metti in coda
+2. Mentre la coda non è vuota: togli dalla coda un nodo, elaboralo, metti in coda tutti i vicini non visitati
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -197,12 +197,12 @@ def bfs(graph, start):
 print("BFS from A:", bfs(graph, "A"))`);
 </script>
 
-## Depth-First Search (DFS)
+## Ricerca in Profondità (DFS)
 
-**DFS** explores as far as possible along each branch before backtracking.
-It uses a **stack** (or recursion) to keep track of the path.
+**DFS** (Depth-First Search) esplora quanto più lontano possibile lungo ogni ramo prima di tornare indietro.
+Usa una **pila** (o la ricorsione) per tenere traccia del percorso.
 
-DFS does not guarantee the shortest path, but uses less memory than BFS for deep graphs.
+DFS non garantisce il percorso più corto, ma usa meno memoria di BFS per grafi profondi.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -243,29 +243,29 @@ print("BFS is level-by-level; DFS goes deep before backtracking.")`);
 
 | | BFS | DFS |
 |--|-----|-----|
-| Data structure | Queue | Stack / recursion |
-| Shortest path? | Yes (unweighted) | Not guaranteed |
-| Memory | More (stores whole frontier) | Less (stores one path) |
-| Best for | Shortest path, social networks | Exploring all paths, cycles |
+| Struttura di dati | Coda | Pila / ricorsione |
+| Percorso più corto? | Sì (non pesato) | Non garantito |
+| Memoria | Più (memorizza l'intero fronte) | Meno (memorizza un percorso) |
+| Migliore per | Percorso più corto, reti sociali | Esplorare tutti i percorsi, cicli |
 
-### See It: The Queue and the Stack Drive Everything
+### Guardalo: La Coda e la Pila Guidano Tutto
 
-The only difference between BFS and DFS is the row in that table's first line — which waiting node gets visited next. The explorer below shows the queue or stack **live** beside the graph while you step. Before you click, predict: **starting at A, which node does BFS visit third? Does DFS agree?**
+L'unica differenza tra BFS e DFS è la riga nella prima linea di quella tabella — quale nodo in attesa viene visitato dopo. L'esploratore sotto mostra la coda o la pila **dal vivo** accanto al grafo mentre procedi passo passo. Prima di cliccare, prevedi: **partendo da A, quale nodo visita BFS come terzo? DFS è d'accordo?**
 
 <iframe src="../../sims/graph-traversal-explorer/main.html" height="537" width="100%" scrolling="no"></iframe>
 
-[Explore the Graph Traversal Explorer MicroSim](../../sims/graph-traversal-explorer/index.md){ .md-button }
+[Esplora il MicroSim Graph Traversal Explorer](../../sims/graph-traversal-explorer/index.md){ .md-button }
 
-Step all the way through BFS and watch the ripple move level by level — then the final step reveals the payoff: following the parents backward gives the **shortest path** from A to the goal. Switch to DFS and step again: same graph, same start, completely different order, because the stack always grabs the *newest* discovery.
+Procedi passo passo attraverso BFS fino alla fine e guarda l'onda muoversi livello per livello — poi l'ultimo passo rivela il premio: seguire i genitori all'indietro dà il **percorso più corto** da A all'obiettivo. Passa a DFS e procedi di nuovo: stesso grafo, stesso inizio, ordine completamente diverso, perché la pila prende sempre la scoperta *più recente*.
 
-## Applying BFS: Finding a Path Through a Maze
+## Applicare BFS: Trovare un Percorso Attraverso un Labirinto
 
-A maze is just a graph — junctions and rooms are nodes, corridors are edges. BFS's queue already explores level by level, which means it can find the **shortest path**, not just answer "can I get there?" The trick is remembering **where you came from** at each step, so you can retrace your route once you reach the goal.
+Un labirinto è solo un grafo — gli incroci e le stanze sono nodi, i corridoi sono archi. La coda di BFS esplora già livello per livello, il che significa che può trovare il **percorso più corto**, non solo rispondere "posso arrivare lì?" Il trucco è ricordare **da dove sei venuto** a ogni passo, così puoi ripercorrere la tua strada una volta raggiunto l'obiettivo.
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The maze below has two possible routes from "Start" to "Goal".
-    Which rooms do you think the path will pass through — "A"/"C" or "B"/"D"? Make your guess — then run it!
+    Il labirinto sotto ha due possibili percorsi da "Start" a "Goal".
+    Attraverso quali stanze pensi che passerà il percorso — "A"/"C" oppure "B"/"D"? Fai la tua previsione — poi eseguilo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -315,17 +315,17 @@ def find_path(maze, start, goal):
 print("Path found:", find_path(maze, "Start", "Goal"))`);
 </script>
 
-Were you right? BFS discovers "A" and "B" at the same time, but "A" is listed first in `maze["Start"]`, so it's discovered first — the path goes through "A" and "C".
+Avevi indovinato? BFS scopre "A" e "B" nello stesso momento, ma "A" è elencato per primo in `maze["Start"]`, quindi viene scoperto per primo — il percorso passa attraverso "A" e "C".
 
-DFS could solve the same maze by following one corridor all the way before backtracking, but as the table above shows, it wouldn't guarantee the shortest route.
+DFS potrebbe risolvere lo stesso labirinto seguendo un corridoio fino alla fine prima di tornare indietro, ma come mostra la tabella sopra, non garantirebbe il percorso più corto.
 
-## Sorting Algorithms
+## Algoritmi di Ordinamento
 
 ### Bubble Sort
 
-**Bubble sort** compares adjacent items and swaps them if they're in the wrong order.
-Each pass "bubbles" the largest unsorted item to its correct position.
-Time complexity: O(n²) — slow for large lists.
+Il **bubble sort** confronta gli elementi adiacenti e li scambia se sono nell'ordine sbagliato.
+Ogni passaggio "fa risalire a bolla" l'elemento più grande non ordinato alla sua posizione corretta.
+Complessità temporale: O(n²) — lento per liste grandi.
 
 ```python
 def bubble_sort(lst):
@@ -339,13 +339,13 @@ def bubble_sort(lst):
 
 ### Selection Sort
 
-**Selection sort** finds the smallest item and moves it to the front, then repeats for the remaining items.
-Also O(n²) but makes fewer swaps than bubble sort.
+Il **selection sort** trova l'elemento più piccolo e lo sposta in avanti, poi ripete per gli elementi rimanenti.
+Anche questo è O(n²) ma fa meno scambi del bubble sort.
 
 ### Insertion Sort
 
-**Insertion sort** builds the sorted list one item at a time — like sorting playing cards in your hand.
-O(n²) worst case but O(n) for nearly-sorted lists, making it fast in practice for small or nearly-sorted inputs.
+L'**insertion sort** costruisce la lista ordinata un elemento alla volta — come ordinare le carte da gioco in mano.
+Caso peggiore O(n²) ma O(n) per liste quasi ordinate, rendendolo veloce in pratica per input piccoli o quasi ordinati.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -388,25 +388,25 @@ print("Insertion:", insertion_sort(data))
 print("Built-in:", sorted(data))`);
 </script>
 
-### See It: Sorting in Slow Motion
+### Guardalo: Ordinamento al Rallentatore
 
-The code above shows *what* each sort computes; the comparer below shows *how they move*. Every sort is just compares and swaps in a different choreography. Before you click Step, predict: **for 10 reversed values, roughly how many comparisons will bubble sort need?**
+Il codice sopra mostra *cosa* calcola ogni ordinamento; il comparatore sotto mostra *come si muovono*. Ogni ordinamento è solo confronti e scambi in una coreografia diversa. Prima di cliccare Step, prevedi: **per 10 valori invertiti, approssimativamente quanti confronti avrà bisogno il bubble sort?**
 
 <iframe src="../../sims/sorting-comparer/main.html" height="542" width="100%" scrolling="no"></iframe>
 
-[Explore the Sorting Algorithm Comparer MicroSim](../../sims/sorting-comparer/index.md){ .md-button }
+[Esplora il MicroSim Sorting Algorithm Comparer](../../sims/sorting-comparer/index.md){ .md-button }
 
-Step through each algorithm and watch its signature move: bubble sort's big values float right, selection sort hunts for the minimum, insertion sort slides each new value into place. Then pick **Race — Bubble vs Insertion**, switch the data to **nearly sorted**, and Auto-play: insertion sort demolishes bubble sort — the answer to "which sort is best?" is always *it depends on the data*.
+Procedi passo passo attraverso ogni algoritmo e guarda la sua mossa caratteristica: i valori grandi del bubble sort fluttuano a destra, il selection sort cerca il minimo, l'insertion sort fa scorrere ogni nuovo valore al suo posto. Poi scegli **Race — Bubble vs Insertion**, cambia i dati in **nearly sorted**, e Auto-play: l'insertion sort demolisce il bubble sort — la risposta a "quale ordinamento è il migliore?" è sempre *dipende dai dati*.
 
-## Binary Search
+## Ricerca Binaria
 
-**Binary search** finds an item in a *sorted* list in O(log n) time — far faster than linear search.
+La **ricerca binaria** trova un elemento in una lista *ordinata* in tempo O(log n) — molto più veloce della ricerca lineare.
 
-The idea: repeatedly cut the search range in half.
-1. Look at the middle item
-2. If it matches — done!
-3. If the target is smaller — search the left half
-4. If the target is larger — search the right half
+L'idea: taglia ripetutamente a metà l'intervallo di ricerca.
+1. Guarda l'elemento centrale
+2. Se corrisponde — fatto!
+3. Se l'obiettivo è più piccolo — cerca nella metà sinistra
+4. Se l'obiettivo è più grande — cerca nella metà destra
 
 ```python
 def binary_search(sorted_list, target):
@@ -422,45 +422,45 @@ def binary_search(sorted_list, target):
     return -1   # not found
 ```
 
-### See It: Linear vs Binary, Head to Head
+### Guardalo: Lineare vs Binaria, Testa a Testa
 
-The race below runs both searches on the same shelf of 31 boxes. Before you click Step, predict: **how many checks will each search need to find 24?** (Linear starts at the left; binary starts in the middle.)
+La gara sotto esegue entrambe le ricerche sullo stesso scaffale di 31 scatole. Prima di cliccare Step, prevedi: **quanti controlli avrà bisogno ciascuna ricerca per trovare 24?** (La lineare parte da sinistra; la binaria parte dal centro.)
 
 <iframe src="../../sims/search-race/main.html" height="522" width="100%" scrolling="no"></iframe>
 
-[Explore the Search Race MicroSim](../../sims/search-race/index.md){ .md-button }
+[Esplora il MicroSim Search Race](../../sims/search-race/index.md){ .md-button }
 
-Watch binary search throw away half the shelf with every check: 31 → 15 → 7 → 3 → 1. Then switch to the **shuffled shelf (trap!)** and search again — binary search can report NOT FOUND even when the target is sitting right there. Cutting the problem in half only works when the shelf is sorted, which is exactly why the function above is named `binary_search(sorted_list, ...)`.
+Guarda la ricerca binaria scartare metà dello scaffale a ogni controllo: 31 → 15 → 7 → 3 → 1. Poi passa allo **shuffled shelf (trap!)** e cerca di nuovo — la ricerca binaria può segnalare NOT FOUND anche quando l'obiettivo è proprio lì. Tagliare il problema a metà funziona solo quando lo scaffale è ordinato, che è esattamente il motivo per cui la funzione sopra si chiama `binary_search(sorted_list, ...)`.
 
-## Big-O Notation — Time and Space Complexity
+## Notazione Big-O — Complessità Temporale e Spaziale
 
-**Big-O notation** describes how an algorithm's running time grows with input size.
+La **notazione Big-O** descrive come cresce il tempo di esecuzione di un algoritmo con la dimensione dell'input.
 
-| Big-O | Name | Example |
+| Big-O | Nome | Esempio |
 |-------|------|---------|
-| O(1) | Constant | Dictionary lookup |
-| O(log n) | Logarithmic | Binary search |
-| O(n) | Linear | Linear search, single loop |
-| O(n log n) | Log-linear | Python's built-in `sorted()` |
-| O(n²) | Quadratic | Bubble sort, nested loops |
-| O(2ⁿ) | Exponential | Brute-force subset enumeration |
+| O(1) | Costante | Ricerca in un dizionario |
+| O(log n) | Logaritmica | Ricerca binaria |
+| O(n) | Lineare | Ricerca lineare, ciclo singolo |
+| O(n log n) | Log-lineare | `sorted()` built-in di Python |
+| O(n²) | Quadratica | Bubble sort, cicli annidati |
+| O(2ⁿ) | Esponenziale | Enumerazione di sottoinsiemi a forza bruta |
 
-**Space complexity** describes how much memory an algorithm uses.
-BFS uses O(n) memory because the queue can grow to hold all nodes.
-DFS uses O(depth) memory — just the current path.
+La **complessità spaziale** descrive quanta memoria usa un algoritmo.
+BFS usa O(n) memoria perché la coda può crescere fino a contenere tutti i nodi.
+DFS usa O(profondità) memoria — solo il percorso attuale.
 
-!!! mascot-tip "Why Big-O Matters"
+!!! mascot-tip "Perché Big-O È Importante"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    With 1,000 items: O(n²) = 1,000,000 operations; O(n log n) = ~10,000.
-    That's 100× faster! For 1,000,000 items, the gap becomes 1,000,000× faster.
-    Choosing the right algorithm is often more important than buying faster hardware.
+    Con 1.000 elementi: O(n²) = 1.000.000 operazioni; O(n log n) = ~10.000.
+    Questo è 100× più veloce! Per 1.000.000 di elementi, il divario diventa 1.000.000× più veloce.
+    Scegliere l'algoritmo giusto è spesso più importante che comprare hardware più veloce.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Implement Binary Search"
+!!! mascot-thinking "Il Tuo Turno — Implementa la Ricerca Binaria"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below calls `binary_search` but the function body is missing!
-    Implement it using the algorithm described above — repeatedly halve the search range.
+    Il codice sotto chiama `binary_search` ma il corpo della funzione manca!
+    Implementalo usando l'algoritmo descritto sopra — taglia a metà ripetutamente l'intervallo di ricerca.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -488,32 +488,32 @@ print("Find 23:", binary_search(data, 23))
 print("Find 99:", binary_search(data, 99))`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Modify the BFS function to also return the **distance** (number of hops) from the start to each node.
-   **You'll know it worked when** each node is paired with its distance from "A".
+1. Modifica la funzione BFS per restituire anche la **distanza** (numero di salti) dall'inizio a ogni nodo.
+   **Saprai che ha funzionato quando** ogni nodo è accoppiato con la sua distanza da "A".
 
-2. Add a new node "G" to the graph connected to "D". Run BFS again and check that G appears.
-   **You'll know it worked when** "G" is included in the BFS output.
+2. Aggiungi un nuovo nodo "G" al grafo collegato a "D". Esegui di nuovo BFS e controlla che G appaia.
+   **Saprai che ha funzionato quando** "G" è incluso nell'output di BFS.
 
-3. Compare BFS and DFS starting from "C" instead of "A". Notice how the visit orders differ.
-   **You'll know it worked when** both start at "C" and explore in clearly different patterns.
+3. Confronta BFS e DFS partendo da "C" invece di "A". Nota come differiscono gli ordini di visita.
+   **Saprai che ha funzionato quando** entrambi partono da "C" ed esplorano con pattern chiaramente diversi.
 
-4. Implement selection sort: find the minimum in the unsorted portion and swap it to the front.
-   **You'll know it worked when** `selection_sort([5, 3, 8, 1])` returns `[1, 3, 5, 8]`.
+4. Implementa il selection sort: trova il minimo nella porzione non ordinata e scambialo in avanti.
+   **Saprai che ha funzionato quando** `selection_sort([5, 3, 8, 1])` restituisce `[1, 3, 5, 8]`.
 
-5. Test binary search on a list of 1,000,000 items. How many comparisons does it need?
-   Add a counter inside the loop and print it.
-   **You'll know it worked when** you see it takes at most 20 comparisons — O(log 1,000,000) ≈ 20!
+5. Testa la ricerca binaria su una lista di 1.000.000 di elementi. Di quanti confronti ha bisogno?
+   Aggiungi un contatore dentro il ciclo e stampalo.
+   **Saprai che ha funzionato quando** vedi che richiede al massimo 20 confronti — O(log 1.000.000) ≈ 20!
 
-!!! mascot-celebration "Computer Scientist!"
+!!! mascot-celebration "Informatico!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've learned data structures and algorithms — the foundation of all efficient software!
-    Stacks, queues, graphs, BFS, DFS, sorting, and Big-O are the tools professional developers think about every day.
-    You're now thinking like a computer scientist. Let's keep coding!
+    Hai imparato le strutture dati e gli algoritmi — le basi di tutto il software efficiente!
+    Pile, code, grafi, BFS, DFS, ordinamento, e Big-O sono gli strumenti a cui pensano ogni giorno gli sviluppatori professionisti.
+    Ora stai pensando come un informatico. Continuiamo a programmare!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)

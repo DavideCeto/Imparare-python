@@ -1,164 +1,164 @@
-# Quiz: Algorithms and Data Structures
+# Quiz: Algoritmi e Strutture Dati
 
-Test your understanding of stacks, queues, graphs, BFS, DFS, sorting, binary search, and Big-O notation with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione delle pile, delle code, dei grafi, di BFS, DFS, dell'ordinamento, della ricerca binaria, e della notazione Big-O con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What does LIFO mean, and which data structure uses it?
+#### 1. Cosa significa LIFO, e quale struttura di dati lo usa?
 
 <div class="upper-alpha" markdown>
-1. Last In, First Out — used by a queue
-2. List In, Front Out — used by a sorted array
-3. Last In, First Out — used by a stack
-4. Least-Item-First-Out — used by a priority queue
+1. Last In, First Out — usato da una coda
+2. List In, Front Out — usato da un array ordinato
+3. Last In, First Out — usato da una pila
+4. Least-Item-First-Out — usato da una coda con priorità
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. LIFO stands for "Last In, First Out." In a stack, the most recently added item is the first one removed — like a stack of plates where you always take from the top. Python lists work as stacks using `.append()` to push and `.pop()` to pop. Queues use FIFO (First In, First Out).
+??? question "Mostra risposta"
+    La risposta corretta è **C**. LIFO sta per "Last In, First Out" (ultimo entrato, primo uscito). In una pila, l'elemento aggiunto più di recente è il primo a essere rimosso — come una pila di piatti dove prendi sempre dalla cima. Le liste Python funzionano come pile usando `.append()` per fare push e `.pop()` per fare pop. Le code usano FIFO (First In, First Out).
 
     **Concept Tested:** Stack (LIFO)
 
 ---
 
-#### 2. What does FIFO mean, and which data structure uses it?
+#### 2. Cosa significa FIFO, e quale struttura di dati lo usa?
 
 <div class="upper-alpha" markdown>
-1. First In, First Out — used by a queue
-2. First In, First Out — used by a stack
-3. Files-In, Files-Out — used by file operations
-4. Fastest Item First Out — used by a priority queue
+1. First In, First Out — usato da una coda
+2. First In, First Out — usato da una pila
+3. Files-In, Files-Out — usato dalle operazioni sui file
+4. Fastest Item First Out — usato da una coda con priorità
 </div>
 
-??? question "Show Answer"
-    The correct answer is **A**. FIFO stands for "First In, First Out." In a queue, the first item added is the first item removed — like a line at a lunch counter where the first person in line is served first. Python's `collections.deque` is the efficient way to implement a queue, using `.append()` to enqueue and `.popleft()` to dequeue.
+??? question "Mostra risposta"
+    La risposta corretta è **A**. FIFO sta per "First In, First Out" (primo entrato, primo uscito). In una coda, il primo elemento aggiunto è il primo elemento rimosso — come una fila alla mensa dove la prima persona in fila viene servita per prima. `collections.deque` di Python è il modo efficiente di implementare una coda, usando `.append()` per fare enqueue e `.popleft()` per fare dequeue.
 
     **Concept Tested:** Queue (FIFO)
 
 ---
 
-#### 3. What data structure is used by BFS to decide which node to visit next?
+#### 3. Quale struttura di dati usa BFS per decidere quale nodo visitare dopo?
 
 <div class="upper-alpha" markdown>
-1. A stack (LIFO)
-2. A sorted list
-3. A set (to prevent duplicates)
-4. A queue (FIFO)
+1. Una pila (LIFO)
+2. Una lista ordinata
+3. Un insieme (per prevenire i duplicati)
+4. Una coda (FIFO)
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. Breadth-First Search (BFS) uses a queue to track which nodes to visit next. Nodes are enqueued when they are discovered and dequeued in FIFO order — so BFS explores all nodes at distance 1 before any at distance 2, guaranteeing the shortest path in unweighted graphs. DFS, by contrast, uses a stack or recursion.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. La Ricerca in Ampiezza (BFS) usa una coda per tracciare quali nodi visitare dopo. I nodi vengono messi in coda quando vengono scoperti e tolti dalla coda in ordine FIFO — quindi BFS esplora tutti i nodi a distanza 1 prima di qualsiasi a distanza 2, garantendo il percorso più corto nei grafi non pesati. DFS, al contrario, usa una pila o la ricorsione.
 
     **Concept Tested:** BFS
 
 ---
 
-#### 4. What is an adjacency list used for?
+#### 4. Per cosa si usa una lista di adiacenza?
 
 <div class="upper-alpha" markdown>
-1. Storing a sorted list of numbers efficiently
-2. Representing a graph as a dictionary where each key is a node and the value is a list of its neighbors
-3. Tracking which items have been visited in a set
-4. Organizing dictionary keys in alphabetical order
+1. Memorizzare efficientemente una lista ordinata di numeri
+2. Rappresentare un grafo come un dizionario dove ogni chiave è un nodo e il valore è una lista dei suoi vicini
+3. Tracciare quali elementi sono stati visitati in un insieme
+4. Organizzare le chiavi di un dizionario in ordine alfabetico
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. An adjacency list represents a graph using a dictionary: each key is a node (vertex) and its value is a list of neighboring nodes (connected by edges). For example, `{"A": ["B", "C"], "B": ["A", "D"]}` means A connects to B and C, and B connects to A and D. This is memory-efficient for sparse graphs.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Una lista di adiacenza rappresenta un grafo usando un dizionario: ogni chiave è un nodo (vertice) e il suo valore è una lista di nodi vicini (collegati da archi). Per esempio, `{"A": ["B", "C"], "B": ["A", "D"]}` significa che A si collega a B e C, e B si collega ad A e D. Questo è efficiente in termini di memoria per i grafi sparsi.
 
     **Concept Tested:** Graph and Adjacency List
 
 ---
 
-#### 5. What is the key difference between BFS and DFS?
+#### 5. Qual è la differenza fondamentale tra BFS e DFS?
 
 <div class="upper-alpha" markdown>
-1. BFS uses recursion; DFS uses a loop
-2. BFS explores level by level (shortest path first) using a queue; DFS explores as deep as possible along each branch using a stack or recursion
-3. BFS only works on trees; DFS works on any graph
-4. BFS is always faster than DFS
+1. BFS usa la ricorsione; DFS usa un ciclo
+2. BFS esplora livello per livello (percorso più corto prima) usando una coda; DFS esplora quanto più profondamente possibile lungo ogni ramo usando una pila o la ricorsione
+3. BFS funziona solo sugli alberi; DFS funziona su qualsiasi grafo
+4. BFS è sempre più veloce di DFS
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. BFS (Breadth-First Search) explores neighbors level by level — all nodes at distance 1 first, then distance 2, guaranteeing the shortest path in an unweighted graph. It uses a queue. DFS (Depth-First Search) goes as far as possible down one path before backtracking, using a stack or recursion. DFS uses less memory for deep graphs but does not guarantee the shortest path.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. BFS (Ricerca in Ampiezza) esplora i vicini livello per livello — prima tutti i nodi a distanza 1, poi distanza 2, garantendo il percorso più corto in un grafo non pesato. Usa una coda. DFS (Ricerca in Profondità) va quanto più lontano possibile lungo un percorso prima di tornare indietro, usando una pila o la ricorsione. DFS usa meno memoria per i grafi profondi ma non garantisce il percorso più corto.
 
     **Concept Tested:** BFS and DFS
 
 ---
 
-#### 6. What does Big-O notation describe?
+#### 6. Cosa descrive la notazione Big-O?
 
 <div class="upper-alpha" markdown>
-1. The exact number of seconds an algorithm will take to run
-2. The amount of memory an algorithm uses in bytes
-3. How an algorithm's time or space requirements grow as the input size increases
-4. The number of lines of code in an algorithm
+1. Il numero esatto di secondi che un algoritmo impiegherà per girare
+2. La quantità di memoria che un algoritmo usa in byte
+3. Come crescono i requisiti di tempo o spazio di un algoritmo all'aumentare della dimensione dell'input
+4. Il numero di righe di codice in un algoritmo
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Big-O notation describes the growth rate of an algorithm's time or memory requirements as input size grows. For example, O(n) means time grows linearly — doubling the input doubles the time. O(n²) means time grows quadratically. It focuses on the dominant growth term and ignores constants, helping you compare algorithms independently of hardware speed.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. La notazione Big-O descrive il tasso di crescita dei requisiti di tempo o memoria di un algoritmo all'aumentare della dimensione dell'input. Per esempio, O(n) significa che il tempo cresce linearmente — raddoppiare l'input raddoppia il tempo. O(n²) significa che il tempo cresce quadraticamente. Si concentra sul termine di crescita dominante e ignora le costanti, aiutandoti a confrontare gli algoritmi indipendentemente dalla velocità dell'hardware.
 
     **Concept Tested:** Big-O Notation
 
 ---
 
-#### 7. What is the time complexity of binary search on a sorted list of n items?
+#### 7. Qual è la complessità temporale della ricerca binaria su una lista ordinata di n elementi?
 
 <div class="upper-alpha" markdown>
-1. O(n) — checks every item
-2. O(n²) — compares every pair
-3. O(1) — always takes the same time
-4. O(log n) — halves the search space with each step
+1. O(n) — controlla ogni elemento
+2. O(n²) — confronta ogni coppia
+3. O(1) — richiede sempre lo stesso tempo
+4. O(log n) — dimezza lo spazio di ricerca a ogni passo
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. Binary search works by repeatedly halving the search space. On each step, it checks the middle element: if it is too high, eliminate the upper half; if too low, eliminate the lower half. This gives O(log n) time — searching a million items takes about 20 steps (log₂(1,000,000) ≈ 20). Binary search requires the list to be sorted.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. La ricerca binaria funziona dimezzando ripetutamente lo spazio di ricerca. A ogni passo, controlla l'elemento centrale: se è troppo alto, elimina la metà superiore; se troppo basso, elimina la metà inferiore. Questo dà un tempo O(log n) — cercare in un milione di elementi richiede circa 20 passi (log₂(1.000.000) ≈ 20). La ricerca binaria richiede che la lista sia ordinata.
 
     **Concept Tested:** Binary Search
 
 ---
 
-#### 8. How does bubble sort work?
+#### 8. Come funziona il bubble sort?
 
 <div class="upper-alpha" markdown>
-1. It repeatedly picks the smallest remaining element and places it in its correct position
-2. It divides the list in half, sorts each half, and merges them back together
-3. It repeatedly steps through the list, comparing adjacent elements and swapping them if they are in the wrong order
-4. It uses a hash table to count element frequencies and reconstruct the sorted order
+1. Scegli ripetutamente l'elemento più piccolo rimanente e lo posiziona nella sua posizione corretta
+2. Divide la lista a metà, ordina ogni metà, e le fonde di nuovo insieme
+3. Scorre ripetutamente la lista, confrontando gli elementi adiacenti e scambiandoli se sono nell'ordine sbagliato
+4. Usa una tabella hash per contare le frequenze degli elementi e ricostruire l'ordine ordinato
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Bubble sort makes repeated passes through the list, comparing adjacent pairs and swapping them if the left one is larger than the right. After each pass, the largest unsorted element has "bubbled up" to its correct position. Bubble sort is O(n²) — easy to understand but slow for large lists. Python's built-in `sorted()` and `.sort()` are much faster for real use.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Il bubble sort fa passaggi ripetuti attraverso la lista, confrontando coppie adiacenti e scambiandole se quella a sinistra è più grande di quella a destra. Dopo ogni passaggio, l'elemento non ordinato più grande è "risalito a bolla" alla sua posizione corretta. Il bubble sort è O(n²) — facile da capire ma lento per liste grandi. `sorted()` e `.sort()` built-in di Python sono molto più veloci per l'uso reale.
 
     **Concept Tested:** Bubble Sort
 
 ---
 
-#### 9. What must be true about a list for binary search to work?
+#### 9. Cosa deve essere vero riguardo a una lista perché la ricerca binaria funzioni?
 
 <div class="upper-alpha" markdown>
-1. The list must contain only integers
-2. The list must have an even number of elements
-3. The list must already be sorted in order
-4. The list must have no duplicate values
+1. La lista deve contenere solo interi
+2. La lista deve avere un numero pari di elementi
+3. La lista deve già essere ordinata
+4. La lista non deve avere valori duplicati
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Binary search relies on the fact that the list is sorted. It compares the target to the middle element and decides which half to search next. If the list were unsorted, eliminating half the elements would be invalid — the target could be in either half. Binary search on an unsorted list produces incorrect results.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. La ricerca binaria si basa sul fatto che la lista sia ordinata. Confronta l'obiettivo con l'elemento centrale e decide quale metà cercare dopo. Se la lista fosse non ordinata, eliminare metà degli elementi non sarebbe valido — l'obiettivo potrebbe essere in entrambe le metà. La ricerca binaria su una lista non ordinata produce risultati scorretti.
 
     **Concept Tested:** Binary Search
 
 ---
 
-#### 10. Which data structure is most appropriate for tracking browser history where the back button takes you to the most recently visited page?
+#### 10. Quale struttura di dati è più appropriata per tracciare la cronologia del browser dove il pulsante indietro ti porta alla pagina visitata più di recente?
 
 <div class="upper-alpha" markdown>
-1. A queue (FIFO)
-2. A stack (LIFO)
-3. A sorted list
-4. A graph
+1. Una coda (FIFO)
+2. Una pila (LIFO)
+3. Una lista ordinata
+4. Un grafo
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Browser history is a classic stack use case. When you visit a new page, it is pushed onto the stack. When you click Back, the most recent page is popped off — Last In, First Out (LIFO). A queue would give you the oldest page first (wrong direction). A graph could model navigation between pages, but a stack is specifically what models the Back button.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. La cronologia del browser è un classico caso d'uso di una pila. Quando visiti una nuova pagina, viene spinta sulla pila. Quando clicchi Indietro, la pagina più recente viene tolta — Last In, First Out (LIFO). Una coda ti darebbe la pagina più vecchia prima (direzione sbagliata). Un grafo potrebbe modellare la navigazione tra le pagine, ma una pila è specificamente ciò che modella il pulsante Indietro.
 
     **Concept Tested:** Stack (LIFO)
 
