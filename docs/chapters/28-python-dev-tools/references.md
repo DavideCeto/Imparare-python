@@ -1,31 +1,31 @@
-# References: Python Development Tools
+# Riferimenti: Strumenti di Sviluppo Python
 
 1. **Wikipedia: Integrated Development Environment** — [https://en.wikipedia.org/wiki/Integrated_development_environment](https://en.wikipedia.org/wiki/Integrated_development_environment)
-   Overview of IDEs, their history, and key features such as code completion, debugging, and syntax highlighting — directly relevant to understanding Thonny and VS Code covered in this chapter.
+   Panoramica degli IDE, la loro storia, e caratteristiche chiave come il completamento del codice, il debug, e l'evidenziazione della sintassi — direttamente rilevante per capire Thonny e VS Code trattati in questo capitolo.
 
 2. **Wikipedia: Pip (package manager)** — [https://en.wikipedia.org/wiki/Pip_(package_manager)](https://en.wikipedia.org/wiki/Pip_(package_manager))
-   Explains pip, Python's standard package installer, including its history, usage, and role in managing third-party libraries — the foundation of the package installation section in this chapter.
+   Spiega pip, l'installatore di pacchetti standard di Python, inclusa la sua storia, l'uso, e il ruolo nella gestione delle librerie di terze parti — le basi della sezione sull'installazione dei pacchetti in questo capitolo.
 
 3. **Wikipedia: Virtual Environment (software)** — [https://en.wikipedia.org/wiki/Virtual_environment_software](https://en.wikipedia.org/wiki/Virtual_environment_software)
-   Describes virtual environments in software development, why they isolate project dependencies, and how they prevent version conflicts — key context for understanding Python virtual environments.
+   Descrive gli ambienti virtuali nello sviluppo software, perché isolano le dipendenze dei progetti, e come prevengono i conflitti di versione — contesto chiave per capire gli ambienti virtuali di Python.
 
-4. **Python Crash Course** by Eric Matthes (No Starch Press, 3rd ed.)
-   Covers installing Python, using a text editor, running scripts from the terminal, and debugging basics — an ideal companion for students setting up their first local Python environment.
+4. **Python Crash Course** di Eric Matthes (No Starch Press, 3ª ed.)
+   Copre l'installazione di Python, l'uso di un editor di testo, l'esecuzione di script dal terminale, e le basi del debug — un compagno ideale per studenti che configurano il loro primo ambiente Python locale.
 
-5. **Automate the Boring Stuff with Python** by Al Sweigart (No Starch Press; free at automatetheboringstuff.com)
-   Introduces pip, installing third-party modules, and using the IDLE and Mu editors — practical guidance for the package management and tool-selection topics in this chapter.
+5. **Automate the Boring Stuff with Python** di Al Sweigart (No Starch Press; gratuito su automatetheboringstuff.com)
+   Introduce pip, l'installazione di moduli di terze parti, e l'uso degli editor IDLE e Mu — guida pratica per gli argomenti di gestione dei pacchetti e selezione degli strumenti in questo capitolo.
 
 6. **Python Docs: Installing Python Modules** — [https://docs.python.org/3/installing/index.html](https://docs.python.org/3/installing/index.html)
-   The official guide to pip, virtual environments, and package indexes — the authoritative reference for installing and managing Python packages described in this chapter.
+   La guida ufficiale a pip, gli ambienti virtuali, e gli indici dei pacchetti — il riferimento autorevole per installare e gestire i pacchetti Python descritti in questo capitolo.
 
 7. **Real Python: Python IDEs and Code Editors (Guide)** — [https://realpython.com/python-ides-code-editors-guide/](https://realpython.com/python-ides-code-editors-guide/)
-   Comprehensive comparison of popular Python IDEs and editors including Thonny, VS Code, and IDLE, with recommendations for beginners — directly supports the tool-selection discussion in this chapter.
+   Confronto completo dei più popolari IDE ed editor Python incluso Thonny, VS Code, e IDLE, con raccomandazioni per i principianti — supporta direttamente la discussione sulla selezione degli strumenti in questo capitolo.
 
 8. **Real Python: An Intro to Virtual Environments** — [https://realpython.com/python-virtual-environments-a-primer/](https://realpython.com/python-virtual-environments-a-primer/)
-   Step-by-step primer on creating and activating virtual environments with `venv` and pip — reinforces the virtual environment concepts introduced in this chapter with practical examples.
+   Guida introduttiva passo passo alla creazione e attivazione degli ambienti virtuali con `venv` e pip — rafforza i concetti di ambiente virtuale introdotti in questo capitolo con esempi pratici.
 
 9. **W3Schools: Python Getting Started** — [https://www.w3schools.com/python/python_getstarted.asp](https://www.w3schools.com/python/python_getstarted.asp)
-   Beginner-friendly walkthrough of downloading Python, running the interpreter, and using IDLE — a quick-start reference students can use alongside this chapter when installing Python locally.
+   Percorso adatto ai principianti per scaricare Python, eseguire l'interprete, e usare IDLE — un riferimento di avvio rapido che gli studenti possono usare insieme a questo capitolo quando installano Python localmente.
 
 10. **Programiz: Python pip — Manage Packages** — [https://www.programiz.com/python-programming/pip](https://www.programiz.com/python-programming/pip)
-    Clear, example-driven introduction to pip commands for installing, upgrading, and removing packages — accessible to ages 10–13 and directly supports the pip section of this chapter.
+    Introduzione chiara e basata su esempi ai comandi pip per installare, aggiornare, e rimuovere pacchetti — accessibile per studenti dai 10 ai 13 anni e supporta direttamente la sezione su pip di questo capitolo.

@@ -1,28 +1,28 @@
 ---
-title: Python Development Tools
-description: Explore real Python environments — Thonny, VS Code, Jupyter, pip, virtual environments, the REPL, and Raspberry Pi
+title: Strumenti di Sviluppo Python
+description: Esplora i veri ambienti Python — Thonny, VS Code, Jupyter, pip, gli ambienti virtuali, la REPL, e il Raspberry Pi
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 14:40:00
 version: 0.09
 ---
 
-# Python Development Tools
+# Strumenti di Sviluppo Python
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Describe the key Python development environments and when to use each one
-- Install Python locally and run scripts from the terminal
-- Use the **Python REPL** (interactive shell) for quick experiments
-- Install packages with `pip` and understand **virtual environments**
+- Descrivere i principali ambienti di sviluppo Python e quando usare ciascuno
+- Installare Python localmente ed eseguire script dal terminale
+- Usare la **REPL di Python** (shell interattiva) per esperimenti rapidi
+- Installare pacchetti con `pip` e capire gli **ambienti virtuali**
 
-Skulpt is great for learning — you don't need to install anything.
-But real Python projects use richer tools. This chapter is your map to the Python ecosystem.
+Skulpt è ottimo per imparare — non devi installare nulla.
+Ma i veri progetti Python usano strumenti più ricchi. Questo capitolo è la tua mappa dell'ecosistema Python.
 
-!!! mascot-welcome "Welcome to Chapter 28!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 28!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    You're ready to step off the Skulpt training wheels and into the real Python world!
-    There are many great tools to choose from — let's find the right one for you.
-    Let's code it together!
+    Sei pronto a togliere le rotelle di Skulpt ed entrare nel vero mondo Python!
+    Ci sono molti ottimi strumenti tra cui scegliere — troviamo quello giusto per te.
+    Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -32,56 +32,56 @@ But real Python projects use richer tools. This chapter is your map to the Pytho
 
 ## Python 2 vs Python 3
 
-You may occasionally see Python code written for **Python 2** — an older version that reached its end of life in 2020.
-Python 3 is what everyone uses today.
+Potresti occasionalmente vedere codice Python scritto per **Python 2** — una versione più vecchia che ha raggiunto la fine del suo ciclo di vita nel 2020.
+Python 3 è quello che tutti usano oggi.
 
-Key differences you might encounter in old Python 2 code:
+Differenze chiave che potresti incontrare nel vecchio codice Python 2:
 
-| Feature | Python 2 | Python 3 |
+| Caratteristica | Python 2 | Python 3 |
 |---------|----------|----------|
 | Print | `print "hello"` | `print("hello")` |
-| Integer division | `5/2 = 2` | `5/2 = 2.5` |
-| String type | ASCII by default | Unicode by default |
+| Divisione intera | `5/2 = 2` | `5/2 = 2.5` |
+| Tipo stringa | ASCII per default | Unicode per default |
 
-If you ever see code that uses `print` without parentheses, it was written for Python 2.
-Avoid it — install Python 3.
+Se vedi del codice che usa `print` senza parentesi, è stato scritto per Python 2.
+Evitalo — installa Python 3.
 
-## Development Environments
+## Ambienti di Sviluppo
 
-A **development environment** (also called an IDE — Integrated Development Environment) is where you write, run, and debug Python code.
-Here's a comparison of the most popular options for beginners and beyond.
+Un **ambiente di sviluppo** (chiamato anche IDE — Integrated Development Environment) è dove scrivi, esegui, e fai debug del codice Python.
+Ecco un confronto delle opzioni più popolari per i principianti e oltre.
 
-### Thonny — Best for Beginners
+### Thonny — Il Migliore per i Principianti
 
-**Thonny** (thonny.org) is designed specifically for learning Python.
-It has a simple interface and a built-in debugger that shows you exactly how variables change as each line runs.
+**Thonny** (thonny.org) è progettato specificamente per imparare Python.
+Ha un'interfaccia semplice e un debugger integrato che ti mostra esattamente come cambiano le variabili mentre ogni riga viene eseguita.
 
-**Best for:** absolute beginners, ages 10–15, learning control flow and debugging
+**Migliore per:** principianti assoluti, dai 10 ai 15 anni, che imparano il controllo di flusso e il debug
 
-### Repl.it — Browser-Based Collaboration
+### Repl.it — Collaborazione Basata su Browser
 
-**Repl.it** (replit.com) lets you write and run Python in a browser with zero installation.
-It supports multiple files and collaborative editing.
+**Repl.it** (replit.com) ti permette di scrivere ed eseguire Python in un browser senza alcuna installazione.
+Supporta più file e l'editing collaborativo.
 
-**Best for:** sharing projects, working from any computer, coding club use
+**Migliore per:** condividere progetti, lavorare da qualsiasi computer, uso in club di programmazione
 
-### VS Code — Professional Choice
+### VS Code — Scelta Professionale
 
-**VS Code** (Visual Studio Code) is one of the most popular code editors in the world.
-With the Python extension installed, it provides autocomplete, debugging, a built-in terminal, Git integration, and hundreds of extensions.
+**VS Code** (Visual Studio Code) è uno degli editor di codice più popolari al mondo.
+Con l'estensione Python installata, fornisce autocompletamento, debug, un terminale integrato, integrazione Git, e centinaia di estensioni.
 
-**Best for:** serious projects, multiple languages, professional workflows
+**Migliore per:** progetti seri, linguaggi multipli, flussi di lavoro professionali
 
-### Spyder — Scientific Python
+### Spyder — Python Scientifico
 
-**Spyder** is designed for data science and scientific computing.
-It has a variable explorer that shows your NumPy arrays and DataFrames visually.
+**Spyder** è progettato per la data science e il calcolo scientifico.
+Ha un esploratore di variabili che mostra visivamente i tuoi array NumPy e DataFrame.
 
-**Best for:** data analysis, scientific computing, users coming from MATLAB
+**Migliore per:** analisi dei dati, calcolo scientifico, utenti che arrivano da MATLAB
 
-### Jupyter Notebooks — Interactive Data Science
+### Jupyter Notebook — Data Science Interattiva
 
-A **Jupyter Notebook** is a document that mixes text (Markdown), code cells you can run individually, and output (charts, tables, results) all in one file.
+Un **Jupyter Notebook** è un documento che mescola testo (Markdown), celle di codice che puoi eseguire individualmente, e output (grafici, tabelle, risultati) tutto in un singolo file.
 
 ```python
 # In a Jupyter Notebook, each "cell" is a runnable block:
@@ -94,43 +94,43 @@ plt.title("Squares")
 plt.show()
 ```
 
-**Best for:** data analysis, machine learning, reports that mix code and explanation
+**Migliore per:** analisi dei dati, machine learning, report che mescolano codice e spiegazione
 
-### Google Colab — Free Cloud Jupyter
+### Google Colab — Jupyter Gratuito nel Cloud
 
-**Google Colab** (colab.research.google.com) is a free cloud-hosted Jupyter Notebook environment.
-It comes with NumPy, pandas, TensorFlow, and GPU access pre-installed — no setup needed.
+**Google Colab** (colab.research.google.com) è un ambiente Jupyter Notebook gratuito ospitato nel cloud.
+Viene fornito con NumPy, pandas, TensorFlow, e accesso GPU pre-installati — nessuna configurazione necessaria.
 
-**Best for:** machine learning, free GPU access, sharing notebooks
+**Migliore per:** machine learning, accesso GPU gratuito, condivisione di notebook
 
 ### JupyterLab
 
-**JupyterLab** is the next-generation Jupyter interface — a full browser-based IDE with file browser, terminals, notebooks, and text editors in one.
+**JupyterLab** è l'interfaccia Jupyter di nuova generazione — un IDE completo basato su browser con browser dei file, terminali, notebook, ed editor di testo tutto in uno.
 
-## Installing Python Locally
+## Installare Python Localmente
 
-To run Python on your own computer:
+Per eseguire Python sul tuo computer:
 
-1. Visit [python.org](https://python.org) and download the latest Python 3 installer for your operating system.
-2. Run the installer — on Windows, check **"Add Python to PATH"** before clicking Install.
-3. Open a terminal (Command Prompt on Windows, Terminal on Mac/Linux).
-4. Type `python3 --version` to verify the installation.
+1. Visita [python.org](https://python.org) e scarica l'ultimo installer di Python 3 per il tuo sistema operativo.
+2. Esegui l'installer — su Windows, seleziona **"Add Python to PATH"** prima di cliccare Install.
+3. Apri un terminale (Prompt dei Comandi su Windows, Terminale su Mac/Linux).
+4. Scrivi `python3 --version` per verificare l'installazione.
 
-## Running Scripts from the Terminal
+## Eseguire Script dal Terminale
 
-Once Python is installed, you can run any `.py` file from the terminal:
+Una volta installato Python, puoi eseguire qualsiasi file `.py` dal terminale:
 
 ```bash
 python3 my_script.py
 ```
 
-On Windows, you may use `python` instead of `python3`.
+Su Windows, potresti usare `python` invece di `python3`.
 
-## The Python REPL Shell
+## La Shell REPL di Python
 
-The **REPL** (Read-Eval-Print Loop) is Python's interactive shell.
-Type `python3` (or just `python`) in the terminal to start it.
-Then type any Python expression and press Enter — Python evaluates it immediately.
+La **REPL** (Read-Eval-Print Loop) è la shell interattiva di Python.
+Scrivi `python3` (o semplicemente `python`) nel terminale per avviarla.
+Poi scrivi qualsiasi espressione Python e premi Invio — Python la valuta immediatamente.
 
 ```
 >>> 2 + 2
@@ -142,7 +142,7 @@ Hello, Monty
 [0, 1, 4, 9, 16]
 ```
 
-The REPL is perfect for quick experiments: testing a function, checking a formula, exploring a module.
+La REPL è perfetta per esperimenti rapidi: testare una funzione, controllare una formula, esplorare un modulo.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -169,12 +169,12 @@ print(math.gcd(48, 36))
 print(2 ** 32)`);
 </script>
 
-## `pip` — The Package Installer
+## `pip` — L'Installatore di Pacchetti
 
-Python's standard library is large, but thousands more packages are available at PyPI (Python Package Index).
-`pip` is the tool that installs them.
+La libreria standard di Python è grande, ma migliaia di pacchetti in più sono disponibili su PyPI (Python Package Index).
+`pip` è lo strumento che li installa.
 
-To install a package, run this in your terminal:
+Per installare un pacchetto, esegui questo nel tuo terminale:
 
 ```bash
 pip install requests
@@ -182,16 +182,16 @@ pip install matplotlib
 pip install pillow
 ```
 
-To see what's installed: `pip list`
+Per vedere cosa è installato: `pip list`
 
-To install a specific version: `pip install requests==2.31.0`
+Per installare una versione specifica: `pip install requests==2.31.0`
 
-## Virtual Environments
+## Ambienti Virtuali
 
-A **virtual environment** is an isolated Python installation for a specific project.
-It lets each project have its own set of packages without interfering with other projects.
+Un **ambiente virtuale** è un'installazione Python isolata per un progetto specifico.
+Permette a ogni progetto di avere il proprio insieme di pacchetti senza interferire con altri progetti.
 
-To create and use a virtual environment:
+Per creare e usare un ambiente virtuale:
 
 ```bash
 # Create:
@@ -210,14 +210,14 @@ pip install flask
 deactivate
 ```
 
-**Why bother?** Imagine two projects — one needs `requests 2.28`, another needs `requests 2.31`.
-Without virtual environments, installing one breaks the other. With them, each project is isolated.
+**Perché preoccuparsene?** Immagina due progetti — uno ha bisogno di `requests 2.28`, un altro ha bisogno di `requests 2.31`.
+Senza gli ambienti virtuali, installarne uno rompe l'altro. Con essi, ogni progetto è isolato.
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below prints information about the Python environment.
-    What Python version do you think is running in this Skulpt environment?
-    Make your guess — then run it!
+    Il codice sotto stampa informazioni sull'ambiente Python.
+    Quale versione di Python pensi che stia girando in questo ambiente Skulpt?
+    Fai la tua previsione — poi eseguilo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -240,9 +240,9 @@ print("Platform:", sys.platform)
 print("Default encoding:", sys.getdefaultencoding())`);
 </script>
 
-## Python's Module Search Path
+## Il Percorso di Ricerca dei Moduli di Python
 
-When you `import` a module, Python has to know where to look for it. It checks a list of folders called the **module search path**, stored in `sys.path`.
+Quando fai `import` di un modulo, Python deve sapere dove cercarlo. Controlla una lista di cartelle chiamata il **percorso di ricerca dei moduli**, memorizzata in `sys.path`.
 
 ```python
 import sys
@@ -251,30 +251,30 @@ for i, folder in enumerate(sys.path, 1):
     print(i, folder)
 ```
 
-Python checks these folders **in order** and uses the first matching module it finds. That's why two different modules with the same name, sitting in two different folders, can cause confusing bugs — Python only ever sees the first one.
+Python controlla queste cartelle **in ordine** e usa il primo modulo corrispondente che trova. È per questo che due moduli diversi con lo stesso nome, che stanno in due cartelle diverse, possono causare bug confusi — Python vede sempre solo il primo.
 
-## Dealing with Python Environments
+## Affrontare gli Ambienti Python
 
-If you've wrestled with installs, conflicting package versions, or "it works on my machine" bugs, you're in good company — even professional developers find Python's environment setup confusing. The webcomic XKCD captured the feeling perfectly:
+Se hai lottato con installazioni, versioni di pacchetti in conflitto, o bug del tipo "funziona sul mio computer", sei in buona compagnia — anche gli sviluppatori professionisti trovano confusa la configurazione degli ambienti Python. Il webcomic XKCD ha colto perfettamente la sensazione:
 
-![Python environments, as seen by XKCD](../../img/python_environment.png)
+![Gli ambienti Python, visti da XKCD](../../img/python_environment.png)
 
-The Python community is huge and moves fast. Everyone updates their own libraries on their own schedule, and older projects can depend on versions that clash with newer ones. A few habits keep the chaos manageable:
+La comunità Python è enorme e si muove velocemente. Ognuno aggiorna le proprie librerie secondo il proprio programma, e i progetti più vecchi possono dipendere da versioni che entrano in conflitto con quelle più nuove. Alcune abitudini mantengono il caos gestibile:
 
-1. Always know which Python version you're running (`python3 --version`).
-2. Use a separate virtual environment (or `conda` environment) for each project.
-3. Know how to check `sys.path` when an import doesn't behave the way you expect.
-4. Be cautious with your computer's default/global Python environment — it's often out of date.
+1. Sapere sempre quale versione di Python stai eseguendo (`python3 --version`).
+2. Usare un ambiente virtuale separato (o un ambiente `conda`) per ogni progetto.
+3. Sapere come controllare `sys.path` quando un import non si comporta come ti aspetti.
+4. Essere cauti con l'ambiente Python predefinito/globale del tuo computer — è spesso obsoleto.
 
-!!! mascot-tip "You Don't Need to Master This Today"
+!!! mascot-tip "Non Devi Padroneggiare Questo Oggi"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    Environment headaches happen to everyone — even senior developers joke about it.
-    Stick to the habits above and you'll avoid most of the pain.
+    I mal di testa da ambiente succedono a tutti — anche gli sviluppatori senior ci scherzano sopra.
+    Attieniti alle abitudini sopra ed evitarai la maggior parte del dolore.
 
-## The Conda Package Manager
+## Il Gestore di Pacchetti Conda
 
-**Conda** (from Anaconda) is an alternative package manager popular in data science.
-It manages both Python packages and non-Python dependencies (like C libraries needed by NumPy).
+**Conda** (da Anaconda) è un gestore di pacchetti alternativo popolare nella data science.
+Gestisce sia i pacchetti Python sia le dipendenze non-Python (come le librerie C di cui ha bisogno NumPy).
 
 ```bash
 conda create -n myenv python=3.11
@@ -282,15 +282,15 @@ conda activate myenv
 conda install numpy pandas matplotlib
 ```
 
-Anaconda (the full distribution) includes Python, conda, Jupyter, and 200+ data science packages pre-installed.
+Anaconda (la distribuzione completa) include Python, conda, Jupyter, e più di 200 pacchetti di data science pre-installati.
 
-## Raspberry Pi Python Platform
+## La Piattaforma Python per Raspberry Pi
 
-The **Raspberry Pi** is a tiny, affordable computer (about the size of a credit card) that runs full Python.
-It's popular for hardware projects — controlling LEDs, reading sensors, building robots.
+Il **Raspberry Pi** è un piccolo computer economico (circa delle dimensioni di una carta di credito) che esegue Python completo.
+È popolare per i progetti hardware — controllare LED, leggere sensori, costruire robot.
 
-Python comes pre-installed on Raspberry Pi OS.
-Libraries like `RPi.GPIO` let Python programs control physical pins.
+Python viene pre-installato su Raspberry Pi OS.
+Librerie come `RPi.GPIO` permettono ai programmi Python di controllare i pin fisici.
 
 ```python
 import RPi.GPIO as GPIO
@@ -298,31 +298,31 @@ GPIO.setup(17, GPIO.OUT)   # set pin 17 as output
 GPIO.output(17, True)      # turn on an LED
 ```
 
-## Choosing the Right Tool
+## Scegliere lo Strumento Giusto
 
-| Situation | Recommended tool |
+| Situazione | Strumento raccomandato |
 |-----------|-----------------|
-| Just learning Python | Skulpt (this course) or Thonny |
-| Sharing code online | Repl.it or Google Colab |
-| Professional projects | VS Code |
-| Data science / ML | Jupyter Notebook or JupyterLab |
-| Hardware projects | Raspberry Pi + Thonny |
-| Scientific computing | Spyder + Anaconda |
+| Sto solo imparando Python | Skulpt (questo corso) o Thonny |
+| Condividere codice online | Repl.it o Google Colab |
+| Progetti professionali | VS Code |
+| Data science / ML | Jupyter Notebook o JupyterLab |
+| Progetti hardware | Raspberry Pi + Thonny |
+| Calcolo scientifico | Spyder + Anaconda |
 
-!!! mascot-tip "Start Simple"
+!!! mascot-tip "Inizia Semplice"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    You don't need to pick the "perfect" tool right away.
-    Thonny is a great first step after Skulpt — it's free, runs offline, and shows you exactly what Python is doing.
-    Once you outgrow Thonny, VS Code is the natural next step for most programmers.
+    Non devi scegliere subito lo strumento "perfetto".
+    Thonny è un ottimo primo passo dopo Skulpt — è gratuito, gira offline, e ti mostra esattamente cosa fa Python.
+    Una volta che superi Thonny, VS Code è il naturale passo successivo per la maggior parte dei programmatori.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Match the Tool"
+!!! mascot-thinking "Il Tuo Turno — Abbina lo Strumento"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Read each scenario below and decide which tool fits best.
-    Write your answers — there's no code to run, just reasoning to do!
+    Leggi ogni scenario sotto e decidi quale strumento si adatta meglio.
+    Scrivi le tue risposte — non c'è codice da eseguire, solo ragionamento da fare!
 
-Use this Skulpt window to record your answers:
+Usa questa finestra Skulpt per registrare le tue risposte:
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -354,31 +354,31 @@ initCmLab('-3', `# Scenario → Best tool
 print("Scenarios answered above!")`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. In the sys info lab, also print `sys.executable` to see the full path to the Python interpreter.
-   **You'll know it worked when** you see a path ending in `python` or `python3`.
+1. Nel laboratorio di informazioni di sys, stampa anche `sys.executable` per vedere il percorso completo dell'interprete Python.
+   **Saprai che ha funzionato quando** vedi un percorso che finisce con `python` o `python3`.
 
-2. Use `sys.getsizeof([])` and `sys.getsizeof([1,2,3])` to compare list memory sizes.
-   **You'll know it worked when** you see that the list with 3 items takes more bytes.
+2. Usa `sys.getsizeof([])` e `sys.getsizeof([1,2,3])` per confrontare le dimensioni di memoria delle liste.
+   **Saprai che ha funzionato quando** vedi che la lista con 3 elementi occupa più byte.
 
-3. Try `sys.maxsize` — the maximum integer Python can store efficiently.
-   **You'll know it worked when** you see a very large number (9,223,372,036,854,775,807 on 64-bit systems).
+3. Prova `sys.maxsize` — l'intero massimo che Python può memorizzare in modo efficiente.
+   **Saprai che ha funzionato quando** vedi un numero molto grande (9.223.372.036.854.775.807 su sistemi a 64 bit).
 
-4. Research: look up what `pip show numpy` does (in a real terminal). Write a comment explaining it.
-   **You'll know it worked when** your comment describes the package version, author, and install location.
+4. Ricerca: scopri cosa fa `pip show numpy` (in un vero terminale). Scrivi un commento che lo spiega.
+   **Saprai che ha funzionato quando** il tuo commento descrive la versione del pacchetto, l'autore, e la posizione di installazione.
 
-5. Write a comment block listing three packages from PyPI you'd like to explore next and why.
-   **You'll know it worked when** you have a mini "wish list" for your Python learning journey.
+5. Scrivi un blocco di commenti elencando tre pacchetti da PyPI che vorresti esplorare in seguito e perché.
+   **Saprai che ha funzionato quando** hai una mini "lista dei desideri" per il tuo percorso di apprendimento Python.
 
-!!! mascot-celebration "Python World Explorer!"
+!!! mascot-celebration "Esploratore del Mondo Python!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You now have a map of the entire Python ecosystem — from beginner tools to professional environments!
-    Choosing the right tool for the job is a real developer skill.
-    When you're ready, pick one environment and start building something real. Let's keep coding!
+    Ora hai una mappa dell'intero ecosistema Python — dagli strumenti per principianti agli ambienti professionali!
+    Scegliere lo strumento giusto per il lavoro è una vera competenza da sviluppatore.
+    Quando sei pronto, scegli un ambiente e inizia a costruire qualcosa di vero. Continuiamo a programmare!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)
