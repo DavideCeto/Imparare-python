@@ -1,28 +1,28 @@
 ---
-title: File Input and Output
-description: Read and write files using open(), the with statement, file modes, line iteration, and CSV handling
+title: Input e Output su File
+description: Leggi e scrivi file usando open(), l'istruzione with, le modalità dei file, l'iterazione sulle righe, e la gestione dei CSV
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 16:30:00
 version: 0.09
 ---
 
-# File Input and Output
+# Input e Output su File
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Open a file for reading or writing using `open()` and the `with` statement
-- Read file contents with `read()`, `readlines()`, and line iteration
-- Write and append text to a file with `write()`
-- Read and write simple CSV files using Python's `csv` module
+- Aprire un file per leggere o scrivere usando `open()` e l'istruzione `with`
+- Leggere il contenuto di un file con `read()`, `readlines()`, e l'iterazione sulle righe
+- Scrivere e aggiungere testo a un file con `write()`
+- Leggere e scrivere semplici file CSV usando il modulo `csv` di Python
 
-Programs become much more useful when they can save data between runs.
-With file I/O, your programs can remember high scores, process text files, and share data with other programs.
+I programmi diventano molto più utili quando possono salvare dati tra un'esecuzione e l'altra.
+Con l'I/O su file, i tuoi programmi possono ricordare i punteggi più alti, elaborare file di testo, e condividere dati con altri programmi.
 
-!!! mascot-welcome "Welcome to Chapter 26!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 26!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Today your programs stop forgetting everything when they close!
-    Files let your programs save and load data — a superpower that opens up a whole new world of projects.
-    Let's code it together!
+    Oggi i tuoi programmi smettono di dimenticare tutto quando si chiudono!
+    I file permettono ai tuoi programmi di salvare e caricare dati — un superpotere che apre un mondo completamente nuovo di progetti.
+    Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -30,16 +30,16 @@ With file I/O, your programs can remember high scores, process text files, and s
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-!!! mascot-warning "File I/O Needs a Real Python Environment"
+!!! mascot-warning "L'I/O su File Richiede un Vero Ambiente Python"
     ![Monty with a warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    Actual file operations — `open()`, `write()`, `read()` — access your computer's disk.
-    The Skulpt browser environment cannot do this, so the interactive labs below **simulate** file behavior using Python strings and lists.
-    To run the real `open()`/`with` code shown in the code blocks, use **Thonny**, **VS Code**, or any local Python installation.
+    Le vere operazioni su file — `open()`, `write()`, `read()` — accedono al disco del tuo computer.
+    L'ambiente browser di Skulpt non può farlo, quindi i laboratori interattivi sotto **simulano** il comportamento dei file usando stringhe e liste Python.
+    Per eseguire il vero codice `open()`/`with` mostrato nei blocchi di codice, usa **Thonny**, **VS Code**, o qualsiasi installazione Python locale.
 
-## The Command Line and File System Navigation
+## La Riga di Comando e la Navigazione nel File System
 
-Files live in a **file system** organized as folders inside folders.
-When you run a Python script from the terminal, Python looks for files relative to the **current working directory** — the folder the script lives in.
+I file vivono in un **file system** organizzato come cartelle dentro cartelle.
+Quando esegui uno script Python dal terminale, Python cerca i file in relazione alla **cartella di lavoro attuale** — la cartella in cui vive lo script.
 
 ```
 cd foldername    # move into a folder
@@ -48,22 +48,22 @@ ls               # list files (Mac/Linux)
 dir              # list files (Windows)
 ```
 
-## `open()` and File Modes
+## `open()` e le Modalità dei File
 
-`open(filename, mode)` opens a file and returns a **file object**.
+`open(filename, mode)` apre un file e restituisce un **oggetto file**.
 
-The mode tells Python what you want to do with the file:
+La modalità dice a Python cosa vuoi fare con il file:
 
-| Mode | Meaning |
+| Modalità | Significato |
 |------|---------|
-| `"r"` | Read (default) — file must exist |
-| `"w"` | Write — creates file or overwrites existing content |
-| `"a"` | Append — adds to the end without deleting existing content |
-| `"b"` | Binary — used with `"rb"` or `"wb"` for images and other binary files |
+| `"r"` | Lettura (predefinita) — il file deve esistere |
+| `"w"` | Scrittura — crea il file o sovrascrive il contenuto esistente |
+| `"a"` | Aggiunta (append) — aggiunge alla fine senza eliminare il contenuto esistente |
+| `"b"` | Binario — usato con `"rb"` o `"wb"` per immagini e altri file binari |
 
-## The `with` Statement — Safe File Handling
+## L'Istruzione `with` — Gestione Sicura dei File
 
-The **`with` statement** opens a file, runs the indented block, then automatically closes the file — even if an error occurs.
+L'**istruzione `with`** apre un file, esegue il blocco indentato, poi chiude automaticamente il file — anche se si verifica un errore.
 
 ```python
 with open("greeting.txt", "w") as f:
@@ -71,13 +71,13 @@ with open("greeting.txt", "w") as f:
 # file is automatically closed here
 ```
 
-Always use `with open(...)`. It prevents the most common file bug: forgetting to close the file.
+Usa sempre `with open(...)`. Previene il bug più comune sui file: dimenticare di chiudere il file.
 
-## Writing to a File
+## Scrivere su un File
 
-`file.write(text)` writes text to the file. It does **not** add a newline automatically — you must add `"\n"` yourself.
+`file.write(text)` scrive del testo nel file. **Non** aggiunge automaticamente un ritorno a capo — devi aggiungere tu stesso `"\n"`.
 
-**Real Python (Thonny / VS Code):**
+**Vero Python (Thonny / VS Code):**
 ```python
 with open("notes.txt", "w") as f:
     f.write("Line 1: Hello, Python!\n")
@@ -85,13 +85,13 @@ with open("notes.txt", "w") as f:
     f.write("Line 3: This is fun!\n")
 ```
 
-**Skulpt simulation** — using a list as a virtual "file":
+**Simulazione Skulpt** — usando una lista come "file" virtuale:
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below uses a list to simulate writing to a file and then reading it back.
-    In what order will the lines appear when we read them?
-    Make your guess — then run it!
+    Il codice sotto usa una lista per simulare la scrittura su un file e poi la lettura.
+    In quale ordine appariranno le righe quando le leggiamo?
+    Fai la tua previsione — poi eseguilo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -126,22 +126,22 @@ for line in virtual_file:
 print(f"\\nTotal lines: {len(virtual_file)}")`);
 </script>
 
-## Reading from a File
+## Leggere da un File
 
-Three methods read file content:
+Tre metodi leggono il contenuto di un file:
 
-- `f.read()` — reads the entire file as one big string
-- `f.readlines()` — reads all lines into a list (each line includes `\n`)
-- `f.readline()` — reads one line at a time
+- `f.read()` — legge l'intero file come una grande stringa
+- `f.readlines()` — legge tutte le righe in una lista (ogni riga include `\n`)
+- `f.readline()` — legge una riga alla volta
 
-**Real Python:**
+**Vero Python:**
 ```python
 with open("notes.txt") as f:
     content = f.read()
     print(content)
 ```
 
-**Skulpt simulation** — splitting a multi-line string:
+**Simulazione Skulpt** — dividendo una stringa multilinea:
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -168,11 +168,11 @@ for i, line in enumerate(lines, 1):
     print(f"  Line {i}: {line.strip()}")`);
 </script>
 
-Note the `.strip()` call — it removes whitespace and `\n` from the ends of lines.
+Nota la chiamata `.strip()` — rimuove gli spazi bianchi e `\n` dalle estremità delle righe.
 
-## Iterating over File Lines
+## Iterare sulle Righe di un File
 
-The cleanest way to process a file line by line is a simple `for` loop:
+Il modo più pulito di elaborare un file riga per riga è un semplice ciclo `for`:
 
 ```python
 with open("data.txt") as f:
@@ -182,13 +182,13 @@ with open("data.txt") as f:
             print(line)
 ```
 
-## Text Processing with `strip()` and `lower()`
+## Elaborazione del Testo con `strip()` e `lower()`
 
-When processing file content, always clean the text first:
+Quando elabori il contenuto di un file, pulisci sempre il testo prima:
 
-- `.strip()` — removes leading and trailing whitespace
-- `.lower()` — converts to lowercase for case-insensitive comparisons
-- `.split()` — splits a line into words
+- `.strip()` — rimuove gli spazi bianchi iniziali e finali
+- `.lower()` — converte in minuscolo per confronti senza distinzione tra maiuscole e minuscole
+- `.split()` — divide una riga in parole
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -218,21 +218,21 @@ print("Sorted:       ", sorted(clean_words))
 print("Longest word: ", max(clean_words, key=len))`);
 </script>
 
-## Appending to a File
+## Aggiungere a un File
 
-Mode `"a"` adds to the end of a file without erasing existing content:
+La modalità `"a"` aggiunge alla fine di un file senza eliminare il contenuto esistente:
 
 ```python
 with open("log.txt", "a") as f:
     f.write("New entry added.\n")
 ```
 
-Run this multiple times and the log grows — each run adds a new line.
+Eseguilo più volte e il log crescerà — ogni esecuzione aggiunge una nuova riga.
 
-## CSV Files
+## File CSV
 
-**CSV** (Comma-Separated Values) is one of the most common file formats for tabular data.
-Each row is one line; columns are separated by commas.
+**CSV** (Comma-Separated Values, valori separati da virgola) è uno dei formati di file più comuni per i dati tabulari.
+Ogni riga è una linea; le colonne sono separate da virgole.
 
 ```
 name,age,score
@@ -241,10 +241,10 @@ Bob,13,87
 Carol,15,91
 ```
 
-Python's `csv` module reads and writes CSV files cleanly.
-`csv.DictReader` takes any iterable of strings — so we can pass `csv_text.splitlines()` directly, no file object needed.
+Il modulo `csv` di Python legge e scrive i file CSV in modo pulito.
+`csv.DictReader` prende qualsiasi iterabile di stringhe — quindi possiamo passare direttamente `csv_text.splitlines()`, senza bisogno di un oggetto file.
 
-`splitlines()` splits a multi-line string into a list of lines — exactly what `csv.DictReader` needs.
+`splitlines()` divide una stringa multilinea in una lista di righe — esattamente ciò di cui ha bisogno `csv.DictReader`.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -273,18 +273,18 @@ for row in reader:
     print(f"{row['name']}: age {row['age']}, score {row['score']}")`);
 </script>
 
-`csv.DictReader` uses the first row (the header) as column names and gives you each row as a dictionary.
+`csv.DictReader` usa la prima riga (l'intestazione) come nomi delle colonne e ti dà ogni riga come un dizionario.
 
-## Counting Word Frequencies — A Mini Case Study
+## Contare la Frequenza delle Parole — Un Mini Caso di Studio
 
-Reading text becomes powerful once you start asking questions about it. A classic exercise is counting how many times each word appears in a piece of text — the same basic idea search engines and spam filters use.
+Leggere del testo diventa potente quando inizi a fare domande su di esso. Un esercizio classico è contare quante volte appare ogni parola in un pezzo di testo — la stessa idea di base usata dai motori di ricerca e dai filtri antispam.
 
-Real code would read the text from a file with `open()`; here we simulate a short excerpt with a string so it runs right in the browser. Punctuation gets stripped one character at a time before splitting the text into words:
+Il vero codice leggerebbe il testo da un file con `open()`; qui simuliamo un breve estratto con una stringa così gira direttamente nel browser. La punteggiatura viene rimossa un carattere alla volta prima di dividere il testo in parole:
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below counts word frequencies in a short excerpt.
-    Which word do you think will appear the most times? Make your guess — then run it!
+    Il codice sotto conta le frequenze delle parole in un breve estratto.
+    Quale parola pensi che apparirà più volte? Fai la tua previsione — poi eseguilo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -321,17 +321,17 @@ for word, count in sorted(counts.items()):
     print(f"{word}: {count}")`);
 </script>
 
-Were you right? Short, common words like "the" and "i" repeat the most in this excerpt — with a whole book of text, that pattern becomes even more dramatic.
+Avevi indovinato? Parole brevi e comuni come "the" e "i" si ripetono di più in questo estratto — con un intero libro di testo, quel pattern diventa ancora più marcato.
 
-Chapter 29 shows a faster way to strip punctuation and split text using regular expressions.
+Il Capitolo 29 mostra un modo più veloce di rimuovere la punteggiatura e dividere il testo usando le espressioni regolari.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Process the CSV"
+!!! mascot-thinking "Il Tuo Turno — Elabora il CSV"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below reads student scores from a CSV string.
-    Add code to calculate and print the **average** score after the loop.
-    You'll need to convert the score strings to integers first!
+    Il codice sotto legge i punteggi degli studenti da una stringa CSV.
+    Aggiungi del codice per calcolare e stampare la **media** dei punteggi dopo il ciclo.
+    Dovrai prima convertire le stringhe dei punteggi in interi!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -363,31 +363,31 @@ for row in reader:
 # Add: calculate and print the average score`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Change the CSV to add a fourth column `"grade"` with values A/B/C. Print only rows where grade == `"A"`.
-   **You'll know it worked when** only Alice's row appears.
+1. Cambia il CSV per aggiungere una quarta colonna `"grade"` con valori A/B/C. Stampa solo le righe dove grade == `"A"`.
+   **Saprai che ha funzionato quando** appare solo la riga di Alice.
 
-2. Use `virtual_file` (a list) to simulate a to-do list: "write" three tasks, then print each one numbered 1, 2, 3.
-   **You'll know it worked when** each task prints on its own numbered line.
+2. Usa `virtual_file` (una lista) per simulare una lista di cose da fare: "scrivi" tre compiti, poi stampa ognuno numerato 1, 2, 3.
+   **Saprai che ha funzionato quando** ogni compito si stampa sulla sua riga numerata.
 
-3. Count how many words appear in a multi-line text string using `split()` and print the total.
-   **You'll know it worked when** you see the correct number of words.
+3. Conta quante parole appaiono in una stringa di testo multilinea usando `split()` e stampa il totale.
+   **Saprai che ha funzionato quando** vedi il numero corretto di parole.
 
-4. Read lines from a string and filter out any line that contains the word `"skip"`.
-   **You'll know it worked when** lines containing "skip" don't appear in the output.
+4. Leggi le righe da una stringa e filtra via qualsiasi riga che contiene la parola `"skip"`.
+   **Saprai che ha funzionato quando** le righe contenenti "skip" non appaiono nell'output.
 
-5. In Thonny or VS Code, create a file called `fruits.txt`, write five fruit names (one per line), then open it again and print each line with its line number.
-   **You'll know it worked when** all five fruits print in a real Python terminal with their numbers.
+5. In Thonny o VS Code, crea un file chiamato `fruits.txt`, scrivi cinque nomi di frutta (uno per riga), poi riaprilo e stampa ogni riga con il suo numero di riga.
+   **Saprai che ha funzionato quando** tutti i cinque frutti si stampano in un vero terminale Python con i loro numeri.
 
-!!! mascot-celebration "File I/O Expert!"
+!!! mascot-celebration "Esperto di I/O su File!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Your programs can now save and load data from files — including CSV spreadsheets!
-    This opens the door to real data processing, log files, configuration storage, and so much more.
-    For the real thing, open Thonny and practice `open()` on your own computer. Let's keep coding!
+    I tuoi programmi possono ora salvare e caricare dati dai file — inclusi i fogli di calcolo CSV!
+    Questo apre la porta alla vera elaborazione dei dati, ai file di log, alla memorizzazione delle configurazioni, e molto altro.
+    Per la vera esperienza, apri Thonny e pratica `open()` sul tuo computer. Continuiamo a programmare!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)

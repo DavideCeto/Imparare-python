@@ -1,122 +1,122 @@
-# Quiz: File Input and Output
+# Quiz: Input e Output su File
 
-Test your understanding of file modes, the with statement, reading and writing files, and CSV handling with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione delle modalità dei file, dell'istruzione with, della lettura e scrittura dei file, e della gestione dei CSV con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What does the `with` statement do when used with `open()`?
+#### 1. Cosa fa l'istruzione `with` quando usata con `open()`?
 
 <div class="upper-alpha" markdown>
-1. It makes the file read-only so it cannot be accidentally changed
-2. It opens the file, runs the indented block, and automatically closes the file when done
-3. It creates a backup copy of the file before opening it
-4. It downloads the file from the internet to your computer
+1. Rende il file di sola lettura così non può essere cambiato accidentalmente
+2. Apre il file, esegue il blocco indentato, e chiude automaticamente il file quando ha finito
+3. Crea una copia di backup del file prima di aprirlo
+4. Scarica il file da internet sul tuo computer
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. The `with` statement is a context manager. When you write `with open("file.txt") as f:`, Python opens the file, executes the indented block, and closes the file automatically when the block ends — even if an error occurs inside the block. This prevents the common bug of forgetting to close the file.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. L'istruzione `with` è un context manager. Quando scrivi `with open("file.txt") as f:`, Python apre il file, esegue il blocco indentato, e chiude il file automaticamente quando il blocco finisce — anche se si verifica un errore dentro il blocco. Questo previene il bug comune di dimenticare di chiudere il file.
 
     **Concept Tested:** with Statement
 
 ---
 
-#### 2. What file mode should you use to add content to the end of an existing file without deleting what is already there?
+#### 2. Quale modalità di file dovresti usare per aggiungere contenuto alla fine di un file esistente senza eliminare ciò che c'è già?
 
 <div class="upper-alpha" markdown>
-1. `"r"` (read mode)
-2. `"w"` (write mode)
-3. `"a"` (append mode)
-4. `"e"` (extend mode)
+1. `"r"` (modalità lettura)
+2. `"w"` (modalità scrittura)
+3. `"a"` (modalità aggiunta)
+4. `"e"` (modalità estensione)
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Opening a file with `"a"` (append mode) adds new content to the end of the existing file. Mode `"w"` (write mode) creates a new file or overwrites the entire existing content. Mode `"r"` (read mode) only allows reading — you cannot write to it. There is no `"e"` mode in Python.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Aprire un file con `"a"` (modalità aggiunta/append) aggiunge nuovo contenuto alla fine del file esistente. La modalità `"w"` (scrittura) crea un nuovo file o sovrascrive l'intero contenuto esistente. La modalità `"r"` (lettura) permette solo di leggere — non puoi scriverci. Non esiste una modalità `"e"` in Python.
 
     **Concept Tested:** File Modes
 
 ---
 
-#### 3. What does `open("data.txt", "w")` do if `data.txt` already exists?
+#### 3. Cosa fa `open("data.txt", "w")` se `data.txt` esiste già?
 
 <div class="upper-alpha" markdown>
-1. It raises a `FileExistsError` because the file already exists
-2. It opens the file for reading without changing anything
-3. It creates a new file with a different name like `data(1).txt`
-4. It creates a new empty file, overwriting and deleting all existing content
+1. Genera un `FileExistsError` perché il file esiste già
+2. Apre il file per la lettura senza cambiare nulla
+3. Crea un nuovo file con un nome diverso come `data(1).txt`
+4. Crea un nuovo file vuoto, sovrascrivendo ed eliminando tutto il contenuto esistente
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. Write mode (`"w"`) overwrites the file completely. If the file already exists, its previous contents are erased and replaced. If the file does not exist, Python creates it. This is why it is important to use `"a"` (append mode) if you want to preserve the existing content.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. La modalità scrittura (`"w"`) sovrascrive completamente il file. Se il file esiste già, il suo contenuto precedente viene eliminato e sostituito. Se il file non esiste, Python lo crea. Questo è il motivo per cui è importante usare `"a"` (modalità aggiunta) se vuoi preservare il contenuto esistente.
 
     **Concept Tested:** File Modes
 
 ---
 
-#### 4. Why must you add `"\n"` when writing lines to a file with `f.write()`?
+#### 4. Perché devi aggiungere `"\n"` quando scrivi righe in un file con `f.write()`?
 
 <div class="upper-alpha" markdown>
-1. Because `write()` automatically removes all line endings from text
-2. Because `write()` does not add a newline character automatically — you must add it yourself
-3. Because `"\n"` tells Python to flush the file to disk immediately
-4. Because files on Windows require double newlines (`"\n\n"`) between lines
+1. Perché `write()` rimuove automaticamente tutte le terminazioni di riga dal testo
+2. Perché `write()` non aggiunge automaticamente un carattere di ritorno a capo — devi aggiungerlo tu stesso
+3. Perché `"\n"` dice a Python di scrivere immediatamente il file sul disco
+4. Perché i file su Windows richiedono doppi ritorni a capo (`"\n\n"`) tra le righe
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Unlike `print()`, which automatically adds a newline at the end of each call, `f.write()` writes exactly what you give it — nothing more. If you want each piece of text on its own line in the file, you must include `"\n"` at the end: `f.write("Hello\n")`. Without it, all your text runs together on one line.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. A differenza di `print()`, che aggiunge automaticamente un ritorno a capo alla fine di ogni chiamata, `f.write()` scrive esattamente ciò che gli dai — niente di più. Se vuoi che ogni pezzo di testo sia sulla sua propria riga nel file, devi includere `"\n"` alla fine: `f.write("Hello\n")`. Senza di esso, tutto il tuo testo finisce insieme su una riga.
 
     **Concept Tested:** Writing to a File
 
 ---
 
-#### 5. What does `f.read()` return?
+#### 5. Cosa restituisce `f.read()`?
 
 <div class="upper-alpha" markdown>
-1. A list where each item is one line from the file
-2. The entire file contents as a single string
-3. Only the first line of the file
-4. The number of characters in the file
+1. Una lista dove ogni elemento è una riga del file
+2. L'intero contenuto del file come una singola stringa
+3. Solo la prima riga del file
+4. Il numero di caratteri nel file
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `f.read()` reads the entire file and returns all of its contents as one big string, including all newline characters `"\n"`. To get a list with each line as a separate item, use `f.readlines()`. To process one line at a time efficiently (especially for large files), iterate directly over the file object with `for line in f:`.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `f.read()` legge l'intero file e restituisce tutto il suo contenuto come una grande stringa, inclusi tutti i caratteri di ritorno a capo `"\n"`. Per ottenere una lista con ogni riga come elemento separato, usa `f.readlines()`. Per elaborare una riga alla volta in modo efficiente (specialmente per file grandi), itera direttamente sull'oggetto file con `for line in f:`.
 
     **Concept Tested:** Reading Files
 
 ---
 
-#### 6. What is the difference between `f.read()` and `f.readlines()`?
+#### 6. Qual è la differenza tra `f.read()` e `f.readlines()`?
 
 <div class="upper-alpha" markdown>
-1. `read()` reads text files; `readlines()` reads binary files
-2. `read()` returns a single string with all contents; `readlines()` returns a list where each item is one line
-3. `read()` is faster; `readlines()` is more accurate
-4. `read()` requires mode `"r"`; `readlines()` works with any mode
+1. `read()` legge file di testo; `readlines()` legge file binari
+2. `read()` restituisce una singola stringa con tutto il contenuto; `readlines()` restituisce una lista dove ogni elemento è una riga
+3. `read()` è più veloce; `readlines()` è più accurato
+4. `read()` richiede la modalità `"r"`; `readlines()` funziona con qualsiasi modalità
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `f.read()` returns the entire file as one string. `f.readlines()` reads the file and returns a list where each element is one line from the file (with the `"\n"` character still attached). Both require a file opened in read mode. Use `readlines()` when you want to process each line separately without manually splitting.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `f.read()` restituisce l'intero file come una stringa. `f.readlines()` legge il file e restituisce una lista dove ogni elemento è una riga del file (con il carattere `"\n"` ancora attaccato). Entrambi richiedono un file aperto in modalità lettura. Usa `readlines()` quando vuoi elaborare ogni riga separatamente senza dividerla manualmente.
 
     **Concept Tested:** readlines()
 
 ---
 
-#### 7. What does `"r"` (read mode) do if the file does not exist?
+#### 7. Cosa fa `"r"` (modalità lettura) se il file non esiste?
 
 <div class="upper-alpha" markdown>
-1. Python creates a new empty file with that name
-2. Python returns an empty string from `f.read()`
-3. Python raises a `FileNotFoundError`
-4. Python asks the user to type the file contents from the keyboard
+1. Python crea un nuovo file vuoto con quel nome
+2. Python restituisce una stringa vuota da `f.read()`
+3. Python genera un `FileNotFoundError`
+4. Python chiede all'utente di scrivere il contenuto del file dalla tastiera
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Read mode (`"r"`) requires the file to already exist. If the file cannot be found, Python raises `FileNotFoundError`. You can handle this gracefully with a `try/except FileNotFoundError:` block. Write mode (`"w"`) and append mode (`"a"`) both create the file if it does not exist.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. La modalità lettura (`"r"`) richiede che il file esista già. Se il file non viene trovato, Python genera `FileNotFoundError`. Puoi gestirlo con eleganza con un blocco `try/except FileNotFoundError:`. La modalità scrittura (`"w"`) e la modalità aggiunta (`"a"`) creano entrambe il file se non esiste.
 
     **Concept Tested:** File Modes
 
 ---
 
-#### 8. What Python module do you import to read and write CSV files?
+#### 8. Quale modulo Python importi per leggere e scrivere file CSV?
 
 <div class="upper-alpha" markdown>
 1. `import files`
@@ -125,40 +125,40 @@ Test your understanding of file modes, the with statement, reading and writing f
 4. `import tabular`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Python's standard library includes the `csv` module for reading and writing CSV (Comma-Separated Values) files. It handles tricky cases like commas inside quoted fields automatically. Use `csv.reader(f)` to read rows and `csv.writer(f)` to write rows. There is no `files`, `spreadsheet`, or `tabular` module in the standard library.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. La libreria standard di Python include il modulo `csv` per leggere e scrivere file CSV (Comma-Separated Values). Gestisce automaticamente casi difficili come le virgole dentro campi tra virgolette. Usa `csv.reader(f)` per leggere le righe e `csv.writer(f)` per scriverle. Non esiste un modulo `files`, `spreadsheet`, o `tabular` nella libreria standard.
 
     **Concept Tested:** CSV Module
 
 ---
 
-#### 9. What does each iteration give you when you loop over a file object with `for line in f:`?
+#### 9. Cosa ti dà ogni iterazione quando fai un ciclo su un oggetto file con `for line in f:`?
 
 <div class="upper-alpha" markdown>
-1. One character at a time from the file
-2. One word at a time separated by spaces
-3. One line at a time as a string, including the trailing `"\n"`
-4. A tuple of `(line_number, line_text)` for each line
+1. Un carattere alla volta dal file
+2. Una parola alla volta separata da spazi
+3. Una riga alla volta come stringa, incluso il `"\n"` finale
+4. Una tupla di `(numero_riga, testo_riga)` per ogni riga
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Iterating directly over a file object with `for line in f:` gives you one line per iteration as a string. The line includes the trailing newline character `"\n"` at the end (except possibly the last line). Use `line.strip()` to remove leading/trailing whitespace including `"\n"`. This is memory-efficient for large files because Python reads one line at a time instead of loading everything at once.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Iterare direttamente su un oggetto file con `for line in f:` ti dà una riga per iterazione come stringa. La riga include il carattere di ritorno a capo finale `"\n"` (eccetto forse l'ultima riga). Usa `line.strip()` per rimuovere gli spazi bianchi iniziali/finali incluso `"\n"`. Questo è efficiente in termini di memoria per i file grandi perché Python legge una riga alla volta invece di caricare tutto in una volta.
 
     **Concept Tested:** Line Iteration
 
 ---
 
-#### 10. What is the current working directory?
+#### 10. Cos'è la cartella di lavoro attuale (current working directory)?
 
 <div class="upper-alpha" markdown>
-1. The folder where Python is installed on your computer
-2. The folder that is currently active — the folder Python looks in when you specify a filename without a full path
-3. The last folder you visited before running Python
-4. The folder where all Python standard library files are stored
+1. La cartella dove Python è installato sul tuo computer
+2. La cartella attualmente attiva — la cartella in cui Python cerca quando specifichi un nome di file senza un percorso completo
+3. L'ultima cartella che hai visitato prima di eseguire Python
+4. La cartella dove sono memorizzati tutti i file della libreria standard di Python
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. The current working directory (CWD) is the folder Python uses as the starting point when you give a filename without a full path. If your script is in `~/projects/` and you write `open("data.txt")`, Python looks for `data.txt` in `~/projects/`. You can check the CWD with `import os; print(os.getcwd())` and navigate in the terminal with `cd`.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. La cartella di lavoro attuale (CWD) è la cartella che Python usa come punto di partenza quando dai un nome di file senza un percorso completo. Se il tuo script è in `~/projects/` e scrivi `open("data.txt")`, Python cerca `data.txt` in `~/projects/`. Puoi controllare la CWD con `import os; print(os.getcwd())` e navigare nel terminale con `cd`.
 
     **Concept Tested:** Current Working Directory
 
