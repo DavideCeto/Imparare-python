@@ -1,10 +1,10 @@
-# Quiz: NumPy and Scientific Computing
+# Quiz: NumPy e Calcolo Scientifico
 
-Test your understanding of NumPy arrays, element-wise math, broadcasting, array creation, slicing, and statistical functions with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione degli array NumPy, della matematica element-wise, del broadcasting, della creazione degli array, dello slicing, e delle funzioni statistiche con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What is the standard alias for importing NumPy?
+#### 1. Qual è l'alias standard per importare NumPy?
 
 <div class="upper-alpha" markdown>
 1. `import numpy as num`
@@ -13,94 +13,94 @@ Test your understanding of NumPy arrays, element-wise math, broadcasting, array 
 4. `from numpy import *`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. The universal convention is `import numpy as np`. Every tutorial, textbook, and professional code example uses `np` as the alias. This means you write `np.array()`, `np.zeros()`, etc. Using any other alias would make your code harder to read for other Python programmers.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. La convenzione universale è `import numpy as np`. Ogni tutorial, manuale, ed esempio di codice professionale usa `np` come alias. Questo significa che scrivi `np.array()`, `np.zeros()`, ecc. Usare qualsiasi altro alias renderebbe il tuo codice più difficile da leggere per altri programmatori Python.
 
     **Concept Tested:** Importing NumPy
 
 ---
 
-#### 2. What is the main advantage of a NumPy array over a Python list for numerical data?
+#### 2. Qual è il vantaggio principale di un array NumPy rispetto a una lista Python per i dati numerici?
 
 <div class="upper-alpha" markdown>
-1. NumPy arrays can hold more types of data than lists
-2. NumPy arrays have more methods like `.append()` and `.insert()`
-3. NumPy arrays perform element-wise math operations 10-100x faster, using optimized C code
-4. NumPy arrays automatically sort their contents
+1. Gli array NumPy possono contenere più tipi di dati delle liste
+2. Gli array NumPy hanno più metodi come `.append()` e `.insert()`
+3. Gli array NumPy eseguono operazioni matematiche element-wise 10-100 volte più velocemente, usando codice C ottimizzato
+4. Gli array NumPy ordinano automaticamente il loro contenuto
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. NumPy arrays store all values in a compact block of memory (all the same type) and perform operations in optimized C code. This makes them 10–100x faster than Python lists for numerical computations. The speed advantage is critical in data science and machine learning, where arrays can contain millions of values.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Gli array NumPy memorizzano tutti i valori in un blocco compatto di memoria (tutti dello stesso tipo) ed eseguono le operazioni in codice C ottimizzato. Questo li rende 10-100 volte più veloci delle liste Python per i calcoli numerici. Il vantaggio di velocità è fondamentale nella data science e nel machine learning, dove gli array possono contenere milioni di valori.
 
     **Concept Tested:** NumPy Arrays
 
 ---
 
-#### 3. Given `a = np.array([1, 2, 3, 4])`, what does `a * 2` produce?
+#### 3. Dato `a = np.array([1, 2, 3, 4])`, cosa produce `a * 2`?
 
 <div class="upper-alpha" markdown>
-1. `[1, 2, 3, 4, 1, 2, 3, 4]` (the array repeated twice)
-2. `[2, 4, 6, 8]` (every element multiplied by 2)
-3. `8` (the sum of all elements times 2)
-4. An error because you cannot multiply an array by a scalar
+1. `[1, 2, 3, 4, 1, 2, 3, 4]` (l'array ripetuto due volte)
+2. `[2, 4, 6, 8]` (ogni elemento moltiplicato per 2)
+3. `8` (la somma di tutti gli elementi per 2)
+4. Un errore perché non puoi moltiplicare un array per uno scalare
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. NumPy performs element-wise operations automatically. `a * 2` multiplies every element in the array by 2, giving `[2, 4, 6, 8]`. This is different from Python lists, where `[1, 2, 3, 4] * 2` repeats the list. Element-wise math is one of NumPy's most important features — no loop needed.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. NumPy esegue automaticamente le operazioni element-wise. `a * 2` moltiplica ogni elemento nell'array per 2, dando `[2, 4, 6, 8]`. Questo è diverso dalle liste Python, dove `[1, 2, 3, 4] * 2` ripete la lista. La matematica element-wise è una delle caratteristiche più importanti di NumPy — senza bisogno di nessun ciclo.
 
     **Concept Tested:** Element-Wise Math
 
 ---
 
-#### 4. What is broadcasting in NumPy?
+#### 4. Cos'è il broadcasting in NumPy?
 
 <div class="upper-alpha" markdown>
-1. Sending array data over a network to multiple computers
-2. Automatically applying a scalar (single number) or smaller array to every element of a larger array
-3. Printing the contents of an array in a formatted table
-4. Converting an array to a radio frequency signal
+1. Inviare dati di un array su una rete a più computer
+2. Applicare automaticamente uno scalare (singolo numero) o un array più piccolo a ogni elemento di un array più grande
+3. Stampare il contenuto di un array in una tabella formattata
+4. Convertire un array in un segnale di frequenza radio
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Broadcasting is NumPy's ability to automatically expand a scalar or smaller array to match the shape of a larger array during operations. When you write `a + 10`, NumPy "broadcasts" the value `10` across all elements — as if you had created an array of 10s the same size as `a`. This eliminates the need for explicit loops.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Il broadcasting è la capacità di NumPy di espandere automaticamente uno scalare o un array più piccolo per corrispondere alla forma di un array più grande durante le operazioni. Quando scrivi `a + 10`, NumPy "trasmette" il valore `10` attraverso tutti gli elementi — come se avessi creato un array di 10 della stessa dimensione di `a`. Questo elimina il bisogno di cicli espliciti.
 
     **Concept Tested:** Broadcasting
 
 ---
 
-#### 5. What does `np.linspace(0, 1, 5)` produce?
+#### 5. Cosa produce `np.linspace(0, 1, 5)`?
 
 <div class="upper-alpha" markdown>
-1. Five random values between 0 and 1
-2. `[0, 0.2, 0.4, 0.6, 0.8]` (not including the endpoint 1)
-3. `[0.0, 0.25, 0.5, 0.75, 1.0]` (5 evenly spaced values from 0 to 1, inclusive)
-4. A range object like Python's `range(0, 1, 5)`
+1. Cinque valori casuali tra 0 e 1
+2. `[0, 0.2, 0.4, 0.6, 0.8]` (senza includere l'estremo finale 1)
+3. `[0.0, 0.25, 0.5, 0.75, 1.0]` (5 valori equispaziati da 0 a 1, inclusi)
+4. Un oggetto range come il `range(0, 1, 5)` di Python
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `np.linspace(start, stop, num)` creates exactly `num` evenly spaced values from `start` to `stop`, inclusive. `np.linspace(0, 1, 5)` gives `[0.0, 0.25, 0.5, 0.75, 1.0]`. This is especially useful for generating x-values for math functions and plotting smooth curves, unlike `np.arange()` which uses a step size.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `np.linspace(start, stop, num)` crea esattamente `num` valori equispaziati da `start` a `stop`, inclusi. `np.linspace(0, 1, 5)` dà `[0.0, 0.25, 0.5, 0.75, 1.0]`. Questo è particolarmente utile per generare valori x per funzioni matematiche e disegnare curve morbide, a differenza di `np.arange()` che usa una dimensione del passo.
 
     **Concept Tested:** np.linspace()
 
 ---
 
-#### 6. What does `np.zeros(4)` create?
+#### 6. Cosa crea `np.zeros(4)`?
 
 <div class="upper-alpha" markdown>
-1. A Python list of four zeros: `[0, 0, 0, 0]`
-2. A NumPy array of four floating-point zeros: `array([0., 0., 0., 0.])`
-3. A 4×4 matrix of zeros
-4. An array of the four smallest possible numbers
+1. Una lista Python di quattro zeri: `[0, 0, 0, 0]`
+2. Un array NumPy di quattro zeri a virgola mobile: `array([0., 0., 0., 0.])`
+3. Una matrice 4×4 di zeri
+4. Un array dei quattro numeri più piccoli possibili
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `np.zeros(n)` creates a NumPy 1-D array of `n` zeros, with dtype `float64` by default. `np.ones(n)` creates an array of ones. Both are commonly used to initialize arrays before filling them with computed values. For a 2-D matrix of zeros, use `np.zeros((rows, cols))`.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `np.zeros(n)` crea un array NumPy 1-D di `n` zeri, con dtype `float64` per default. `np.ones(n)` crea un array di uni. Entrambi sono comunemente usati per inizializzare gli array prima di riempirli con valori calcolati. Per una matrice 2-D di zeri, usa `np.zeros((rows, cols))`.
 
     **Concept Tested:** np.zeros() and np.ones()
 
 ---
 
-#### 7. How do you find the index of the maximum value in a NumPy array `a`?
+#### 7. Come trovi l'indice del valore massimo in un array NumPy `a`?
 
 <div class="upper-alpha" markdown>
 1. `a.max_index()`
@@ -109,56 +109,56 @@ Test your understanding of NumPy arrays, element-wise math, broadcasting, array 
 4. `a.find_max()`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `np.argmax(a)` returns the index (position) of the largest value in the array. For example, if `a = np.array([3, 7, 2, 9, 1])`, then `np.argmax(a)` returns `3` (the index where `9` lives). `a.max()` returns the value `9` itself. `argmax` is useful when you need to know WHERE the maximum is, not just what it is.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `np.argmax(a)` restituisce l'indice (posizione) del valore più grande nell'array. Per esempio, se `a = np.array([3, 7, 2, 9, 1])`, allora `np.argmax(a)` restituisce `3` (l'indice dove vive `9`). `a.max()` restituisce il valore `9` stesso. `argmax` è utile quando hai bisogno di sapere DOVE si trova il massimo, non solo quale sia.
 
     **Concept Tested:** argmax
 
 ---
 
-#### 8. What does `a.mean()` compute for a NumPy array `a`?
+#### 8. Cosa calcola `a.mean()` per un array NumPy `a`?
 
 <div class="upper-alpha" markdown>
-1. The middle value when sorted (the median)
-2. The most frequently occurring value (the mode)
-3. The average (arithmetic mean) of all values in the array
-4. The standard deviation of the array's values
+1. Il valore centrale quando ordinato (la mediana)
+2. Il valore che occorre più frequentemente (la moda)
+3. La media (media aritmetica) di tutti i valori nell'array
+4. La deviazione standard dei valori dell'array
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `a.mean()` returns the arithmetic mean — the sum of all values divided by the count. For `np.array([2, 4, 6, 8])`, the mean is `(2+4+6+8)/4 = 5.0`. You can also use `np.mean(a)`. For the standard deviation (how spread out the values are), use `a.std()` or `np.std(a)`.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `a.mean()` restituisce la media aritmetica — la somma di tutti i valori divisa per il conteggio. Per `np.array([2, 4, 6, 8])`, la media è `(2+4+6+8)/4 = 5.0`. Puoi anche usare `np.mean(a)`. Per la deviazione standard (quanto sono sparsi i valori), usa `a.std()` oppure `np.std(a)`.
 
     **Concept Tested:** mean and std
 
 ---
 
-#### 9. What does `.shape` tell you about a NumPy array?
+#### 9. Cosa ti dice `.shape` riguardo a un array NumPy?
 
 <div class="upper-alpha" markdown>
-1. The data type of the elements stored in the array
-2. The total number of elements across all dimensions
-3. A tuple describing the number of rows and columns (or items in each dimension)
-4. Whether the array is stored in row-major or column-major order
+1. Il tipo di dato degli elementi memorizzati nell'array
+2. Il numero totale di elementi attraverso tutte le dimensioni
+3. Una tupla che descrive il numero di righe e colonne (o elementi in ogni dimensione)
+4. Se l'array è memorizzato in ordine row-major o column-major
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. The `.shape` attribute returns a tuple describing the array's dimensions. For a 1-D array of 5 elements, `a.shape` is `(5,)`. For a 2-D array with 3 rows and 4 columns, `a.shape` is `(3, 4)`. Use `.shape` to verify your array has the expected structure before passing it to a function.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. L'attributo `.shape` restituisce una tupla che descrive le dimensioni dell'array. Per un array 1-D di 5 elementi, `a.shape` è `(5,)`. Per un array 2-D con 3 righe e 4 colonne, `a.shape` è `(3, 4)`. Usa `.shape` per verificare che il tuo array abbia la struttura prevista prima di passarlo a una funzione.
 
     **Concept Tested:** Array Shape
 
 ---
 
-#### 10. How does slicing a NumPy array differ from slicing a Python list?
+#### 10. In che modo lo slicing di un array NumPy differisce dallo slicing di una lista Python?
 
 <div class="upper-alpha" markdown>
-1. NumPy arrays cannot be sliced — you must use `np.select()` instead
-2. NumPy array slices are views (changes to the slice affect the original); list slices are copies
-3. NumPy slices include the stop index; list slices do not
-4. NumPy arrays can only be sliced in one dimension
+1. Gli array NumPy non possono essere tagliati — devi usare `np.select()` invece
+2. Gli slice degli array NumPy sono vedute (i cambiamenti allo slice influenzano l'originale); gli slice delle liste sono copie
+3. Gli slice NumPy includono l'indice di stop; gli slice delle liste no
+4. Gli array NumPy possono essere tagliati solo in una dimensione
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. A NumPy array slice is a **view** — it shares the same memory as the original array. If you modify the slice, the original array changes too. A Python list slice creates an independent copy. This view behavior is intentional in NumPy for efficiency (no copying), but it can cause unexpected bugs if you are not aware of it. Use `.copy()` to get an independent copy.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Uno slice di un array NumPy è una **veduta** (view) — condivide la stessa memoria dell'array originale. Se modifichi lo slice, cambia anche l'array originale. Uno slice di una lista Python crea una copia indipendente. Questo comportamento a veduta è intenzionale in NumPy per l'efficienza (nessuna copia), ma può causare bug inaspettati se non ne sei consapevole. Usa `.copy()` per ottenere una copia indipendente.
 
     **Concept Tested:** Array Slicing
 
