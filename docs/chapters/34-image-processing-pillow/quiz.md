@@ -1,58 +1,58 @@
-# Quiz: Image Processing with Pillow
+# Quiz: Elaborazione delle Immagini con Pillow
 
-Test your understanding of Pillow (PIL), image modes, pixel data, resizing, cropping, and saving images with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione di Pillow (PIL), delle modalità delle immagini, dei dati dei pixel, del ridimensionamento, del ritaglio, e del salvataggio delle immagini con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. How do you install and import Pillow in Python?
+#### 1. Come installi e importi Pillow in Python?
 
 <div class="upper-alpha" markdown>
-1. Install with `pip install PIL`; import with `import pillow`
-2. Install with `pip install pillow`; import with `from PIL import Image`
-3. Install with `pip install image`; import with `import Image`
-4. Pillow is part of the standard library — no installation needed
+1. Installa con `pip install PIL`; importa con `import pillow`
+2. Installa con `pip install pillow`; importa con `from PIL import Image`
+3. Installa con `pip install image`; importa con `import Image`
+4. Pillow fa parte della libreria standard — nessuna installazione necessaria
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Install with `pip install pillow` (the package name is lowercase `pillow`), but import using the original name: `from PIL import Image`. This is because Pillow is the maintained fork of the older PIL (Python Imaging Library) and kept the same import name for backward compatibility.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Installa con `pip install pillow` (il nome del pacchetto è minuscolo `pillow`), ma importa usando il nome originale: `from PIL import Image`. Questo perché Pillow è il fork mantenuto della più vecchia PIL (Python Imaging Library) e ha mantenuto lo stesso nome di import per compatibilità retroattiva.
 
     **Concept Tested:** Importing Pillow
 
 ---
 
-#### 2. What does `img.size` return for a Pillow image?
+#### 2. Cosa restituisce `img.size` per un'immagine Pillow?
 
 <div class="upper-alpha" markdown>
-1. The file size in bytes
-2. A tuple `(width, height)` in pixels
-3. The total number of pixels (width × height)
-4. A tuple `(height, width)` following mathematical convention
+1. La dimensione del file in byte
+2. Una tupla `(width, height)` in pixel
+3. Il numero totale di pixel (width × height)
+4. Una tupla `(height, width)` seguendo la convenzione matematica
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `img.size` returns a tuple `(width, height)` — the image dimensions in pixels. For example, a 1920×1080 image has `img.size = (1920, 1080)`. Note this is `(width, height)` — the opposite of NumPy arrays which use `(rows, cols)` or `(height, width)`. You can also access `img.width` and `img.height` separately.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `img.size` restituisce una tupla `(width, height)` — le dimensioni dell'immagine in pixel. Per esempio, un'immagine 1920×1080 ha `img.size = (1920, 1080)`. Nota che questo è `(width, height)` — l'opposto degli array NumPy che usano `(rows, cols)` o `(height, width)`. Puoi anche accedere separatamente a `img.width` e `img.height`.
 
     **Concept Tested:** Image Attributes
 
 ---
 
-#### 3. What does `"L"` mean for `image.mode`?
+#### 3. Cosa significa `"L"` per `image.mode`?
 
 <div class="upper-alpha" markdown>
-1. Large format — the image is bigger than standard size
-2. Lossless compression format
-3. Luminance — grayscale mode where each pixel is a single brightness value 0-255
-4. Layered — the image has multiple transparent layers
+1. Large format — l'immagine è più grande della dimensione standard
+2. Formato di compressione senza perdita
+3. Luminanza — modalità scala di grigi dove ogni pixel è un singolo valore di luminosità 0-255
+4. Layered — l'immagine ha più livelli trasparenti
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. In Pillow's mode system, `"L"` means grayscale (luminance). Each pixel is a single integer from 0 (black) to 255 (white). `"RGB"` uses three values per pixel (red, green, blue), and `"RGBA"` adds a fourth alpha channel for transparency. Convert to grayscale with `img.convert("L")`.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Nel sistema di modalità di Pillow, `"L"` significa scala di grigi (luminanza). Ogni pixel è un singolo intero da 0 (nero) a 255 (bianco). `"RGB"` usa tre valori per pixel (rosso, verde, blu), e `"RGBA"` aggiunge un quarto canale alpha per la trasparenza. Converti in scala di grigi con `img.convert("L")`.
 
     **Concept Tested:** Image Mode
 
 ---
 
-#### 4. What are the RGB values for pure white?
+#### 4. Quali sono i valori RGB per il bianco puro?
 
 <div class="upper-alpha" markdown>
 1. `(0, 0, 0)`
@@ -61,14 +61,14 @@ Test your understanding of Pillow (PIL), image modes, pixel data, resizing, crop
 4. `(255, 0, 0)`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. In RGB mode, each channel (red, green, blue) ranges from 0 to 255. White has the maximum value for all three channels: `(255, 255, 255)`. Black is `(0, 0, 0)` — minimum for all channels. Gray is when all three are equal: `(128, 128, 128)`. Pure red is `(255, 0, 0)`.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. In modalità RGB, ogni canale (rosso, verde, blu) va da 0 a 255. Il bianco ha il valore massimo per tutti e tre i canali: `(255, 255, 255)`. Il nero è `(0, 0, 0)` — minimo per tutti i canali. Il grigio è quando tutti e tre sono uguali: `(128, 128, 128)`. Il rosso puro è `(255, 0, 0)`.
 
     **Concept Tested:** Pixel Data
 
 ---
 
-#### 5. How do you resize a Pillow image to 200×100 pixels?
+#### 5. Come ridimensioni un'immagine Pillow a 200×100 pixel?
 
 <div class="upper-alpha" markdown>
 1. `img.resize = (200, 100)`
@@ -77,30 +77,30 @@ Test your understanding of Pillow (PIL), image modes, pixel data, resizing, crop
 4. `img.setSize(200, 100)`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `img.resize((width, height))` returns a **new** image object at the specified dimensions — it does not modify the original. Always assign the result to a variable. For better quality when reducing size, pass a resampling filter: `img.resize((200, 100), Image.LANCZOS)`. There is no `.scale()` or `.setSize()` method in Pillow.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `img.resize((width, height))` restituisce un **nuovo** oggetto immagine alle dimensioni specificate — non modifica l'originale. Assegna sempre il risultato a una variabile. Per una migliore qualità quando riduci la dimensione, passa un filtro di resampling: `img.resize((200, 100), Image.LANCZOS)`. Non esiste un metodo `.scale()` o `.setSize()` in Pillow.
 
     **Concept Tested:** Resizing Images
 
 ---
 
-#### 6. What does `img.crop((left, top, right, bottom))` do?
+#### 6. Cosa fa `img.crop((left, top, right, bottom))`?
 
 <div class="upper-alpha" markdown>
-1. Deletes the border around the image
-2. Returns a new image containing only the rectangular region defined by the coordinates
-3. Rotates the image to remove empty space at the edges
-4. Converts the image to black and white by removing color information
+1. Elimina il bordo attorno all'immagine
+2. Restituisce una nuova immagine contenente solo la regione rettangolare definita dalle coordinate
+3. Ruota l'immagine per rimuovere lo spazio vuoto ai bordi
+4. Converte l'immagine in bianco e nero rimuovendo le informazioni sul colore
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `img.crop((left, top, right, bottom))` returns a new image that is a rectangular cutout of the original. The coordinates are in pixels from the top-left corner: `left` and `top` define the top-left corner of the crop box, and `right` and `bottom` define the bottom-right corner. Like `resize()`, `crop()` returns a new image without changing the original.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `img.crop((left, top, right, bottom))` restituisce una nuova immagine che è un ritaglio rettangolare dell'originale. Le coordinate sono in pixel dall'angolo in alto a sinistra: `left` e `top` definiscono l'angolo in alto a sinistra del riquadro di ritaglio, e `right` e `bottom` definiscono l'angolo in basso a destra. Come `resize()`, `crop()` restituisce una nuova immagine senza cambiare l'originale.
 
     **Concept Tested:** Cropping Images
 
 ---
 
-#### 7. How do you save a Pillow image as a PNG file?
+#### 7. Come salvi un'immagine Pillow come file PNG?
 
 <div class="upper-alpha" markdown>
 1. `img.export("output.png")`
@@ -109,56 +109,56 @@ Test your understanding of Pillow (PIL), image modes, pixel data, resizing, crop
 4. `img.save("output.png")`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. `img.save("filename.ext")` saves the image to a file. Pillow determines the format from the file extension — `.png` saves as PNG, `.jpg` saves as JPEG, `.gif` saves as GIF, etc. There is no `.export()`, `.write()`, or `Image.save()` function.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. `img.save("filename.ext")` salva l'immagine in un file. Pillow determina il formato dall'estensione del file — `.png` salva come PNG, `.jpg` salva come JPEG, `.gif` salva come GIF, ecc. Non esiste una funzione `.export()`, `.write()`, o `Image.save()`.
 
     **Concept Tested:** Saving Images
 
 ---
 
-#### 8. What does `img.convert("L")` do?
+#### 8. Cosa fa `img.convert("L")`?
 
 <div class="upper-alpha" markdown>
-1. Converts the image to a large-format high-resolution version
-2. Converts the image from RGB to grayscale
-3. Converts the image file to a lossless format
-4. Converts the pixel coordinates from (x, y) to (row, col) order
+1. Converte l'immagine in una versione a grande formato e alta risoluzione
+2. Converte l'immagine da RGB in scala di grigi
+3. Converte il file immagine in un formato senza perdita
+4. Converte le coordinate dei pixel da ordine (x, y) a (row, col)
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `img.convert("L")` returns a new image in grayscale mode. Each pixel becomes a single brightness value from 0 (black) to 255 (white). Other useful conversions: `img.convert("RGB")` converts to standard color mode, `img.convert("RGBA")` adds an alpha (transparency) channel, `img.convert("1")` converts to black-and-white (binary).
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `img.convert("L")` restituisce una nuova immagine in modalità scala di grigi. Ogni pixel diventa un singolo valore di luminosità da 0 (nero) a 255 (bianco). Altre conversioni utili: `img.convert("RGB")` converte alla modalità colore standard, `img.convert("RGBA")` aggiunge un canale alpha (trasparenza), `img.convert("1")` converte in bianco e nero (binario).
 
     **Concept Tested:** Color Mode Conversion
 
 ---
 
-#### 9. What does `img.getpixel((x, y))` return for an RGB image?
+#### 9. Cosa restituisce `img.getpixel((x, y))` per un'immagine RGB?
 
 <div class="upper-alpha" markdown>
-1. A single integer representing the pixel's brightness
-2. A list of all pixels in row y
-3. A tuple `(R, G, B)` with the red, green, and blue values of that pixel
-4. The hex color code of the pixel as a string like `"#FF5500"`
+1. Un singolo intero che rappresenta la luminosità del pixel
+2. Una lista di tutti i pixel nella riga y
+3. Una tupla `(R, G, B)` con i valori rosso, verde, e blu di quel pixel
+4. Il codice colore esadecimale del pixel come stringa come `"#FF5500"`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `img.getpixel((x, y))` returns the color of the pixel at column `x`, row `y` as a tuple. For an RGB image, this is `(R, G, B)` — three integers 0–255. For RGBA, it includes a fourth alpha value. For grayscale (`"L"` mode), it returns a single integer. Coordinates are `(x, y)` where (0,0) is the top-left corner.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `img.getpixel((x, y))` restituisce il colore del pixel alla colonna `x`, riga `y` come tupla. Per un'immagine RGB, questo è `(R, G, B)` — tre interi 0–255. Per RGBA, include un quarto valore alpha. Per la scala di grigi (modalità `"L"`), restituisce un singolo intero. Le coordinate sono `(x, y)` dove (0,0) è l'angolo in alto a sinistra.
 
     **Concept Tested:** Pixel Data
 
 ---
 
-#### 10. What is the main difference between JPEG and PNG image formats?
+#### 10. Qual è la differenza principale tra i formati immagine JPEG e PNG?
 
 <div class="upper-alpha" markdown>
-1. JPEG is for photos; PNG cannot store photographs at all
-2. JPEG uses lossy compression (loses some quality to reduce file size); PNG uses lossless compression (no quality loss) and supports transparency
-3. JPEG supports transparency; PNG does not
-4. PNG is an older format that most computers cannot open
+1. JPEG è per le foto; PNG non può memorizzare fotografie affatto
+2. JPEG usa la compressione lossy (perde un po' di qualità per ridurre la dimensione del file); PNG usa la compressione lossless (nessuna perdita di qualità) e supporta la trasparenza
+3. JPEG supporta la trasparenza; PNG no
+4. PNG è un formato più vecchio che la maggior parte dei computer non può aprire
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. JPEG uses lossy compression — it discards some image data to achieve smaller file sizes, which is fine for photographs but causes visible artifacts at high compression. PNG uses lossless compression — no data is lost, and it supports transparency (alpha channel). Use JPEG for photos where small file size matters; use PNG for logos, screenshots, and images where quality and transparency are important.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. JPEG usa la compressione lossy — scarta alcuni dati dell'immagine per ottenere dimensioni di file più piccole, il che va bene per le fotografie ma causa artefatti visibili con alta compressione. PNG usa la compressione lossless — nessun dato viene perso, e supporta la trasparenza (canale alpha). Usa JPEG per le foto dove la dimensione piccola del file è importante; usa PNG per i loghi, gli screenshot, e le immagini dove la qualità e la trasparenza sono importanti.
 
     **Concept Tested:** Image Formats
 

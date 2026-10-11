@@ -1,28 +1,28 @@
 ---
-title: Image Processing with Pillow
-description: Open, display, resize, crop, convert, and save images with Python's Pillow (PIL) library — and understand pixel-level data
+title: Elaborazione delle Immagini con Pillow
+description: Apri, mostra, ridimensiona, ritaglia, converti, e salva immagini con la libreria Pillow (PIL) di Python — e capisci i dati a livello di pixel
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 15:40:00
 version: 0.09
 ---
 
-# Image Processing with Pillow
+# Elaborazione delle Immagini con Pillow
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Open and display images with **Pillow** (`PIL`)
-- Inspect image size, mode, and pixel data
-- Resize, crop, flip, and rotate images
-- Convert between color modes (RGB, grayscale, RGBA)
-- Apply basic filters and save to different formats
+- Aprire e mostrare immagini con **Pillow** (`PIL`)
+- Ispezionare la dimensione, la modalità, e i dati dei pixel di un'immagine
+- Ridimensionare, ritagliare, specchiare, e ruotare le immagini
+- Convertire tra modalità di colore (RGB, scala di grigi, RGBA)
+- Applicare filtri di base e salvare in diversi formati
 
-A photograph on your phone is just a grid of colored pixels. Python can read, analyze, and transform that grid — automating tasks like resizing profile pictures, converting formats, adding watermarks, or applying artistic filters.
+Una fotografia sul tuo telefono è solo una griglia di pixel colorati. Python può leggere, analizzare, e trasformare quella griglia — automatizzando compiti come ridimensionare foto profilo, convertire formati, aggiungere watermark, o applicare filtri artistici.
 
-!!! mascot-welcome "Welcome to Chapter 34!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 34!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Pillow is Python's go-to library for image work — and it's surprisingly simple.
-    From a school photo to a satellite image, the same functions apply!
-    Let's start editing! Let's code it together!
+    Pillow è la libreria di riferimento di Python per il lavoro con le immagini — ed è sorprendentemente semplice.
+    Da una foto scolastica a un'immagine satellitare, si applicano le stesse funzioni!
+    Iniziamo a modificare! Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -30,34 +30,34 @@ A photograph on your phone is just a grid of colored pixels. Python can read, an
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## What is Pillow?
+## Cos'è Pillow?
 
-**Pillow** is the maintained fork of the classic **PIL** (Python Imaging Library). You install it with:
+**Pillow** è il fork mantenuto della classica **PIL** (Python Imaging Library). Lo installi con:
 
 ```bash
 pip install pillow
 ```
 
-But you import it using the original name:
+Ma lo importi usando il nome originale:
 
 ```python
 from PIL import Image
 ```
 
-Pillow supports over 30 image formats including JPEG, PNG, GIF, BMP, TIFF, and WebP.
+Pillow supporta oltre 30 formati di immagine incluso JPEG, PNG, GIF, BMP, TIFF, e WebP.
 
-## Opening and Inspecting Images
+## Aprire e Ispezionare le Immagini
 
-`Image.open(filepath)` loads an image file into memory.
-The returned object has several useful attributes:
+`Image.open(filepath)` carica un file immagine in memoria.
+L'oggetto restituito ha diversi attributi utili:
 
-| Attribute | What it tells you |
+| Attributo | Cosa ti dice |
 |-----------|------------------|
-| `image.size` | `(width, height)` in pixels |
-| `image.width` | Width in pixels |
-| `image.height` | Height in pixels |
-| `image.mode` | Color mode: `"RGB"`, `"RGBA"`, `"L"` (grayscale), `"P"` (palette) |
-| `image.format` | File format: `"JPEG"`, `"PNG"`, etc. (None if created in code) |
+| `image.size` | `(width, height)` in pixel |
+| `image.width` | Larghezza in pixel |
+| `image.height` | Altezza in pixel |
+| `image.mode` | Modalità di colore: `"RGB"`, `"RGBA"`, `"L"` (scala di grigi), `"P"` (palette) |
+| `image.format` | Formato del file: `"JPEG"`, `"PNG"`, ecc. (None se creato nel codice) |
 
 ```python
 from PIL import Image
@@ -68,11 +68,11 @@ print(img.mode)    # "RGB"
 img.show()         # opens in the system image viewer
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below creates a tiny image from scratch using pixel data.
-    What color do you think pixel (1,1) will be — red, green, or blue?
-    Predict first, then run it!
+    Il codice sotto crea una piccola immagine da zero usando i dati dei pixel.
+    Di quale colore pensi che sarà il pixel (1,1) — rosso, verde, o blu?
+    Prevedi prima, poi eseguilo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -110,27 +110,27 @@ print("Pixel at (1,0):", img.getpixel((1, 0)))   # top-middle
 print("Pixel at (1,1):", img.getpixel((1, 1)))   # center`);
 </script>
 
-## Understanding Pixel Data
+## Capire i Dati dei Pixel
 
-A pixel in RGB mode is a tuple of three integers — `(red, green, blue)` — each ranging from 0 to 255.
+Un pixel in modalità RGB è una tupla di tre interi — `(red, green, blue)` — ognuno che va da 0 a 255.
 
-| Color | RGB |
+| Colore | RGB |
 |-------|-----|
-| Red | (255, 0, 0) |
-| Green | (0, 255, 0) |
-| Blue | (0, 0, 255) |
-| White | (255, 255, 255) |
-| Black | (0, 0, 0) |
-| Yellow | (255, 255, 0) |
-| Cyan | (0, 255, 255) |
-| Gray | (128, 128, 128) |
+| Rosso | (255, 0, 0) |
+| Verde | (0, 255, 0) |
+| Blu | (0, 0, 255) |
+| Bianco | (255, 255, 255) |
+| Nero | (0, 0, 0) |
+| Giallo | (255, 255, 0) |
+| Ciano | (0, 255, 255) |
+| Grigio | (128, 128, 128) |
 
-`img.getpixel((x, y))` returns the color of one pixel. Note: x = column (left→right), y = row (top→bottom).
+`img.getpixel((x, y))` restituisce il colore di un pixel. Nota: x = colonna (sinistra→destra), y = riga (alto→basso).
 
-## Resizing and Thumbnailing
+## Ridimensionare e Creare Miniature
 
-`image.resize((width, height))` creates a new image at the requested size.
-The original is not modified — Pillow operations always return a new image.
+`image.resize((width, height))` crea una nuova immagine alla dimensione richiesta.
+L'originale non viene modificato — le operazioni di Pillow restituiscono sempre una nuova immagine.
 
 ```python
 from PIL import Image
@@ -140,16 +140,16 @@ small = img.resize((200, 150))
 small.save("photo_small.jpg")
 ```
 
-`image.thumbnail((max_width, max_height))` is smarter — it shrinks the image to fit within the box **while keeping the aspect ratio**. It modifies the image in place:
+`image.thumbnail((max_width, max_height))` è più intelligente — rimpicciolisce l'immagine per adattarla al riquadro **mantenendo le proporzioni**. Modifica l'immagine sul posto:
 
 ```python
 img.thumbnail((400, 400))   # fits in 400×400 box, keeps proportions
 ```
 
-## Cropping Images
+## Ritagliare le Immagini
 
-`image.crop((left, upper, right, lower))` extracts a rectangular region.
-The four numbers are pixel coordinates measured from the top-left corner.
+`image.crop((left, upper, right, lower))` estrae una regione rettangolare.
+I quattro numeri sono coordinate in pixel misurate dall'angolo in alto a sinistra.
 
 ```python
 # Crop a 100×100 region starting at pixel (50, 30):
@@ -191,10 +191,10 @@ print("Cropped pixel (0,0):", cropped.getpixel((0, 0)))
 print("Cropped pixel (4,4):", cropped.getpixel((4, 4)))`);
 </script>
 
-## Flipping and Rotating
+## Specchiare e Ruotare
 
-`image.transpose(method)` flips or rotates the image.
-The method constants live in `Image.Transpose` (or the older `Image` namespace):
+`image.transpose(method)` specchia o ruota l'immagine.
+Le costanti del metodo vivono in `Image.Transpose` (o nel namespace `Image` più vecchio):
 
 ```python
 from PIL import Image
@@ -205,22 +205,22 @@ flipped_v = img.transpose(Image.Transpose.FLIP_TOP_BOTTOM)   # mirror vertically
 rotated   = img.rotate(90)                                    # rotate 90° counter-clockwise
 ```
 
-`img.rotate(angle)` rotates by the given angle — positive angles rotate counter-clockwise.
+`img.rotate(angle)` ruota dell'angolo dato — gli angoli positivi ruotano in senso antiorario.
 
-## Color Mode Conversion
+## Conversione della Modalità di Colore
 
-`image.convert(mode)` changes the color mode of an image.
+`image.convert(mode)` cambia la modalità di colore di un'immagine.
 
-The most common conversions are:
+Le conversioni più comuni sono:
 
-| Conversion | What it does |
+| Conversione | Cosa fa |
 |------------|-------------|
-| `img.convert("L")` | Convert to grayscale (L = luminance) |
-| `img.convert("RGB")` | Convert to 3-channel color |
-| `img.convert("RGBA")` | Add transparency channel |
-| `img.convert("1")` | Convert to 1-bit black and white |
+| `img.convert("L")` | Converti in scala di grigi (L = luminanza) |
+| `img.convert("RGB")` | Converti in colore a 3 canali |
+| `img.convert("RGBA")` | Aggiungi il canale di trasparenza |
+| `img.convert("1")` | Converti in bianco e nero a 1 bit |
 
-Converting to grayscale is a simple way to apply a classic photo effect:
+Convertire in scala di grigi è un modo semplice di applicare un classico effetto fotografico:
 
 ```python
 from PIL import Image
@@ -268,9 +268,9 @@ for x in range(4):
     print(f"  ({x},0): {gray.getpixel((x, 0))}")`);
 </script>
 
-## Applying Filters
+## Applicare Filtri
 
-Pillow's `ImageFilter` module provides ready-made filters:
+Il modulo `ImageFilter` di Pillow fornisce filtri già pronti:
 
 ```python
 from PIL import Image, ImageFilter
@@ -285,12 +285,12 @@ embossed  = img.filter(ImageFilter.EMBOSS)
 edges.save("edges.png")
 ```
 
-Filters work by examining each pixel's neighbors and computing a new value — a process called **convolution**.
+I filtri funzionano esaminando i vicini di ogni pixel e calcolando un nuovo valore — un processo chiamato **convoluzione**.
 
-## Saving Images
+## Salvare le Immagini
 
-`image.save(filepath)` saves to any supported format.
-Pillow detects the format from the file extension:
+`image.save(filepath)` salva in qualsiasi formato supportato.
+Pillow rileva il formato dall'estensione del file:
 
 ```python
 img.save("output.png")   # saves as PNG
@@ -298,14 +298,14 @@ img.save("output.jpg", quality=85)   # JPEG with quality setting (1-95)
 img.save("output.bmp")   # BMP format
 ```
 
-For JPEG: lower quality = smaller file but more visual artifacts. Quality 80–90 is usually a good balance.
+Per JPEG: qualità più bassa = file più piccolo ma più artefatti visivi. Qualità 80–90 è di solito un buon equilibrio.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Write a Brightness Booster"
+!!! mascot-thinking "Il Tuo Turno — Scrivi un Potenziatore di Luminosità"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below has a function stub for `brighten(image, amount)`.
-    Complete it: for every pixel, add `amount` to each R, G, B channel — but clamp the result between 0 and 255!
+    Il codice sotto ha una funzione stub per `brighten(image, amount)`.
+    Completala: per ogni pixel, aggiungi `amount` a ogni canale R, G, B — ma limita il risultato tra 0 e 255!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -342,31 +342,31 @@ bright = brighten(img, 80)
 print("After brighten:", bright.getpixel((0, 0)))`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Create a 100×100 image where each pixel's R value equals its x-coordinate and G value equals its y-coordinate. Save it as a PNG and open it.
-   **You'll know it worked when** you see a gradient that shifts from dark to bright in two directions.
+1. Crea un'immagine 100×100 dove il valore R di ogni pixel è uguale alla sua coordinata x e il valore G è uguale alla sua coordinata y. Salvala come PNG e aprila.
+   **Saprai che ha funzionato quando** vedi un gradiente che passa da scuro a brillante in due direzioni.
 
-2. Open a JPEG photo and use `thumbnail((300, 300))` to shrink it, then save as PNG.
-   **You'll know it worked when** the output file is a smaller image in PNG format.
+2. Apri una foto JPEG e usa `thumbnail((300, 300))` per rimpicciolirla, poi salvala come PNG.
+   **Saprai che ha funzionato quando** il file di output è un'immagine più piccola in formato PNG.
 
-3. Convert an RGB image to grayscale and then convert it back to RGB. Print a pixel — is it the same as the original?
-   **You'll know it worked when** you see the gray color has equal R, G, B values.
+3. Converti un'immagine RGB in scala di grigi e poi riconvertila in RGB. Stampa un pixel — è lo stesso dell'originale?
+   **Saprai che ha funzionato quando** vedi che il colore grigio ha valori R, G, B uguali.
 
-4. Use `img.rotate(45)` on a photo. Note that the corners are black (background fill). Add `expand=True` to see the difference.
-   **You'll know it worked when** `expand=True` grows the canvas to show the full rotated image.
+4. Usa `img.rotate(45)` su una foto. Nota che gli angoli sono neri (riempimento di sfondo). Aggiungi `expand=True` per vedere la differenza.
+   **Saprai che ha funzionato quando** `expand=True` fa crescere il canvas per mostrare l'intera immagine ruotata.
 
-5. Apply `ImageFilter.FIND_EDGES` to a photo. Save the result and compare it to the original.
-   **You'll know it worked when** you see bright lines where the original had color edges.
+5. Applica `ImageFilter.FIND_EDGES` a una foto. Salva il risultato e confrontalo con l'originale.
+   **Saprai che ha funzionato quando** vedi linee brillanti dove l'originale aveva bordi di colore.
 
-!!! mascot-celebration "Image Wizard!"
+!!! mascot-celebration "Mago delle Immagini!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You can now open, inspect, transform, filter, and save images with Python!
-    These same techniques power computer vision systems, photo-editing apps, and machine learning pipelines.
-    The next chapter returns to turtle graphics for event-driven animation. Let's keep coding!
+    Ora puoi aprire, ispezionare, trasformare, filtrare, e salvare immagini con Python!
+    Queste stesse tecniche alimentano i sistemi di visione artificiale, le app di editing fotografico, e le pipeline di machine learning.
+    Il prossimo capitolo ritorna alla grafica turtle per l'animazione guidata da eventi. Continuiamo a programmare!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)
