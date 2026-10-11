@@ -1,21 +1,21 @@
-# References: Data Visualization with matplotlib
+# Riferimenti: Visualizzazione Dati con matplotlib
 
-1. [Matplotlib](https://en.wikipedia.org/wiki/Matplotlib) - Wikipedia - Comprehensive overview of the matplotlib library, its history, architecture, and capabilities for creating static, animated, and interactive visualizations in Python. Essential background for understanding what this chapter's charting tools can do.
+1. [Matplotlib](https://en.wikipedia.org/wiki/Matplotlib) - Wikipedia - Panoramica completa della libreria matplotlib, la sua storia, architettura, e capacità di creare visualizzazioni statiche, animate, e interattive in Python. Contesto essenziale per capire cosa possono fare gli strumenti di grafici di questo capitolo.
 
-2. [Data visualization](https://en.wikipedia.org/wiki/Data_visualization) - Wikipedia - Broad coverage of data visualization theory, chart types, design principles, and the role of visual communication in science and data analysis. Helps students understand why choosing the right chart type matters.
+2. [Data visualization](https://en.wikipedia.org/wiki/Data_visualization) - Wikipedia - Copertura ampia della teoria della visualizzazione dei dati, dei tipi di grafici, dei principi di design, e del ruolo della comunicazione visiva nella scienza e nell'analisi dei dati. Aiuta gli studenti a capire perché scegliere il tipo di grafico giusto è importante.
 
-3. [Plot (graphics)](https://en.wikipedia.org/wiki/Plot_(graphics)) - Wikipedia - Explains the anatomy of a plot — axes, labels, titles, legends, and scales — with examples of line plots, scatter plots, and bar charts. Directly maps to the chart elements introduced in this chapter.
+3. [Plot (graphics)](https://en.wikipedia.org/wiki/Plot_(graphics)) - Wikipedia - Spiega l'anatomia di un grafico — assi, etichette, titoli, legende, e scale — con esempi di grafici a linee, scatter plot, e grafici a barre. Corrisponde direttamente agli elementi dei grafici introdotti in questo capitolo.
 
-4. Python Crash Course (3rd Edition) - Eric Matthes - No Starch Press - Chapter 15 covers matplotlib from scratch, walking through line charts, scatter plots, and random-walk visualizations with beginner-friendly explanations ideal for students ages 10–14.
+4. Python Crash Course (3ª edizione) - Eric Matthes - No Starch Press - Il Capitolo 15 copre matplotlib da zero, percorrendo i grafici a linee, gli scatter plot, e le visualizzazioni di random walk con spiegazioni adatte ai principianti ideali per studenti dai 10 ai 14 anni.
 
-5. Python for Kids - Jason R. Briggs - No Starch Press - Introduces graphical output and basic charting concepts with a friendly tone suited to younger learners; provides a helpful complement to the matplotlib figure-customization techniques in this chapter.
+5. Python for Kids - Jason R. Briggs - No Starch Press - Introduce l'output grafico e i concetti base dei grafici con un tono amichevole adatto a studenti più giovani; fornisce un utile complemento alle tecniche di personalizzazione delle figure matplotlib di questo capitolo.
 
-6. [Matplotlib Tutorials — Official Documentation](https://matplotlib.org/stable/tutorials/index.html) - matplotlib.org - The official beginner and intermediate tutorials covering pyplot basics, plot types, labels, legends, and figure layout — the most authoritative reference for every function used in this chapter.
+6. [Matplotlib Tutorials — Official Documentation](https://matplotlib.org/stable/tutorials/index.html) - matplotlib.org - I tutorial ufficiali per principianti e intermedi che coprono le basi di pyplot, i tipi di grafici, le etichette, le legende, e il layout delle figure — il riferimento più autorevole per ogni funzione usata in questo capitolo.
 
-7. [Python Matplotlib Tutorial](https://www.w3schools.com/python/matplotlib_intro.asp) - W3Schools - Step-by-step interactive lessons on line plots, bar charts, scatter plots, histograms, and pie charts with live Try-It examples students can run immediately in the browser.
+7. [Python Matplotlib Tutorial](https://www.w3schools.com/python/matplotlib_intro.asp) - W3Schools - Lezioni interattive passo passo su grafici a linee, grafici a barre, scatter plot, istogrammi, e grafici a torta con esempi Try-It dal vivo che gli studenti possono eseguire immediatamente nel browser.
 
-8. [Python Matplotlib](https://www.programiz.com/python-programming/matplotlib) - Programiz - Clear, example-driven introduction to pyplot covering plot creation, axis labels, titles, and legends, with runnable code snippets well matched to the skill level of beginning Python programmers.
+8. [Python Matplotlib](https://www.programiz.com/python-programming/matplotlib) - Programiz - Introduzione chiara e basata su esempi a pyplot che copre la creazione dei grafici, le etichette degli assi, i titoli, e le legende, con frammenti di codice provabili ben adatti al livello di competenza dei programmatori Python principianti.
 
-9. [Matplotlib Tutorial](https://www.geeksforgeeks.org/matplotlib-tutorial/) - GeeksforGeeks - Extensive article series covering line plots, bar charts, scatter plots, figure customization, subplots, and saving figures — provides additional practice examples beyond what this chapter covers.
+9. [Matplotlib Tutorial](https://www.geeksforgeeks.org/matplotlib-tutorial/) - GeeksforGeeks - Un'ampia serie di articoli che copre i grafici a linee, i grafici a barre, gli scatter plot, la personalizzazione delle figure, i sottografici, e il salvataggio delle figure — fornisce esempi di pratica aggiuntivi oltre a quelli trattati in questo capitolo.
 
-10. [Python Matplotlib — Real Python](https://realpython.com/python-matplotlib-guide/) - Real Python - In-depth guide to the pyplot interface, figure and axes objects, multiple-line charts, and styling options; excellent next-step reading for students who want to go beyond the basics introduced in this chapter.
+10. [Python Matplotlib — Real Python](https://realpython.com/python-matplotlib-guide/) - Real Python - Guida approfondita all'interfaccia pyplot, agli oggetti figure e axes, ai grafici a linee multiple, e alle opzioni di stile; eccellente lettura di approfondimento per studenti che vogliono andare oltre le basi introdotte in questo capitolo.

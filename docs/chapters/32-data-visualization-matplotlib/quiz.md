@@ -1,10 +1,10 @@
-# Quiz: Data Visualization with matplotlib
+# Quiz: Visualizzazione Dati con matplotlib
 
-Test your understanding of matplotlib, chart types, labels, subplots, and saving figures with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione di matplotlib, dei tipi di grafici, delle etichette, dei sottografici, e del salvataggio delle figure con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What is the standard way to import matplotlib for chart creation?
+#### 1. Qual è il modo standard di importare matplotlib per creare grafici?
 
 <div class="upper-alpha" markdown>
 1. `import matplotlib`
@@ -13,30 +13,30 @@ Test your understanding of matplotlib, chart types, labels, subplots, and saving
 4. `import pyplot from matplotlib`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. The standard convention is `import matplotlib.pyplot as plt`. The `pyplot` sub-module contains all the charting functions: `plt.plot()`, `plt.show()`, `plt.title()`, etc. The alias `plt` is universally used in the Python data science community — you will see it in every tutorial, textbook, and professional code example.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. La convenzione standard è `import matplotlib.pyplot as plt`. Il sottomodulo `pyplot` contiene tutte le funzioni per i grafici: `plt.plot()`, `plt.show()`, `plt.title()`, ecc. L'alias `plt` è usato universalmente nella comunità di data science Python — lo vedrai in ogni tutorial, manuale, ed esempio di codice professionale.
 
     **Concept Tested:** Importing matplotlib
 
 ---
 
-#### 2. What does `plt.show()` do?
+#### 2. Cosa fa `plt.show()`?
 
 <div class="upper-alpha" markdown>
-1. Saves the current chart to a file named `chart.png`
-2. Clears all previous chart data and starts a new chart
-3. Renders and displays the chart that has been built up with previous `plt.plot()` calls
-4. Prints the raw data values used in the chart to the console
+1. Salva il grafico attuale in un file chiamato `chart.png`
+2. Elimina tutti i dati del grafico precedente e inizia un nuovo grafico
+3. Rende e mostra il grafico che è stato costruito con le precedenti chiamate a `plt.plot()`
+4. Stampa i valori grezzi dei dati usati nel grafico sulla console
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `plt.show()` renders and displays the chart window. You build up a chart by calling `plt.plot()`, `plt.title()`, `plt.xlabel()`, etc., then call `plt.show()` to actually display it. In Jupyter Notebooks, charts may render automatically without `plt.show()`, but it is always good practice to include it.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `plt.show()` rende e mostra la finestra del grafico. Costruisci un grafico chiamando `plt.plot()`, `plt.title()`, `plt.xlabel()`, ecc., poi chiami `plt.show()` per mostrarlo effettivamente. Nei Jupyter Notebook, i grafici potrebbero rendersi automaticamente senza `plt.show()`, ma è sempre buona pratica includerlo.
 
     **Concept Tested:** plt.show()
 
 ---
 
-#### 3. Which matplotlib function creates a scatter plot?
+#### 3. Quale funzione matplotlib crea uno scatter plot?
 
 <div class="upper-alpha" markdown>
 1. `plt.dots(x, y)`
@@ -45,120 +45,120 @@ Test your understanding of matplotlib, chart types, labels, subplots, and saving
 4. `plt.spot(x, y)`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `plt.scatter(x, y)` creates a scatter plot — individual points plotted without connecting lines. Scatter plots are useful for showing the relationship (correlation) between two variables. Use `plt.plot(x, y)` for line charts (connecting dots). There are no `dots()`, `points()`, or `spot()` functions in matplotlib.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `plt.scatter(x, y)` crea uno scatter plot — singoli punti disegnati senza collegare linee. Gli scatter plot sono utili per mostrare la relazione (correlazione) tra due variabili. Usa `plt.plot(x, y)` per i grafici a linee (che collegano i punti). Non esistono funzioni `dots()`, `points()`, o `spot()` in matplotlib.
 
     **Concept Tested:** Scatter Plots
 
 ---
 
-#### 4. What does `plt.xlabel("Time (seconds)")` do?
+#### 4. Cosa fa `plt.xlabel("Time (seconds)")`?
 
 <div class="upper-alpha" markdown>
-1. Sets the chart title to "Time (seconds)"
-2. Adds a label to the x-axis (horizontal axis)
-3. Limits the x-axis range to 0-10 seconds
-4. Changes the x-axis tick marks to show seconds
+1. Imposta il titolo del grafico a "Time (seconds)"
+2. Aggiunge un'etichetta all'asse x (asse orizzontale)
+3. Limita l'intervallo dell'asse x a 0-10 secondi
+4. Cambia i segni di graduazione dell'asse x per mostrare i secondi
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `plt.xlabel("text")` adds a text label below the x-axis (the horizontal axis) of the chart. Similarly, `plt.ylabel("text")` labels the y-axis (vertical axis), and `plt.title("text")` sets the title at the top. Always label your axes so readers know what the data represents and what units are being used.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `plt.xlabel("text")` aggiunge un'etichetta di testo sotto l'asse x (l'asse orizzontale) del grafico. In modo simile, `plt.ylabel("text")` etichetta l'asse y (asse verticale), e `plt.title("text")` imposta il titolo in cima. Etichetta sempre i tuoi assi così i lettori sanno cosa rappresentano i dati e quali unità vengono usate.
 
     **Concept Tested:** Axis Labels and Titles
 
 ---
 
-#### 5. How do you add multiple lines to one chart?
+#### 5. Come aggiungi più linee a un grafico?
 
 <div class="upper-alpha" markdown>
-1. Call `plt.new_line()` before each `plt.plot()` call
-2. Pass all data as a nested list to a single `plt.plot()` call
-3. Call `plt.plot()` multiple times before calling `plt.show()`
-4. Create multiple figures with `plt.figure()` and overlay them
+1. Chiama `plt.new_line()` prima di ogni chiamata a `plt.plot()`
+2. Passa tutti i dati come una lista annidata a una singola chiamata a `plt.plot()`
+3. Chiama `plt.plot()` più volte prima di chiamare `plt.show()`
+4. Crea più figure con `plt.figure()` e sovrapponile
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Each call to `plt.plot()` adds another line to the current chart. All lines are combined when you call `plt.show()`. Use the `label=` parameter on each `plt.plot()` call and then call `plt.legend()` to show a legend identifying which line is which.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Ogni chiamata a `plt.plot()` aggiunge un'altra linea al grafico attuale. Tutte le linee vengono combinate quando chiami `plt.show()`. Usa il parametro `label=` su ogni chiamata a `plt.plot()` e poi chiama `plt.legend()` per mostrare una legenda che identifica quale linea è quale.
 
     **Concept Tested:** Multiple Lines
 
 ---
 
-#### 6. What type of chart is best for showing how a continuous value changes over time?
+#### 6. Quale tipo di grafico è migliore per mostrare come cambia un valore continuo nel tempo?
 
 <div class="upper-alpha" markdown>
-1. A bar chart
-2. A histogram
-3. A pie chart
-4. A line chart
+1. Un grafico a barre
+2. Un istogramma
+3. Un grafico a torta
+4. Un grafico a linee
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. A line chart (created with `plt.plot()`) is ideal for showing continuous data that changes over time — like temperature over a week, a stock price over months, or a physics experiment over seconds. Bar charts compare discrete categories. Histograms show frequency distributions. Pie charts show proportions of a whole.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. Un grafico a linee (creato con `plt.plot()`) è ideale per mostrare dati continui che cambiano nel tempo — come la temperatura durante una settimana, il prezzo di un'azione nel corso di mesi, o un esperimento di fisica durante i secondi. I grafici a barre confrontano categorie discrete. Gli istogrammi mostrano le distribuzioni di frequenza. I grafici a torta mostrano le proporzioni di un totale.
 
     **Concept Tested:** Chart Types
 
 ---
 
-#### 7. What does `plt.grid(True)` do?
+#### 7. Cosa fa `plt.grid(True)`?
 
 <div class="upper-alpha" markdown>
-1. Divides the chart window into a grid of subplots
-2. Adds background grid lines to the chart to make values easier to read
-3. Snaps data points to the nearest grid intersection
-4. Displays the chart coordinates of every data point
+1. Divide la finestra del grafico in una griglia di sottografici
+2. Aggiunge linee della griglia di sfondo al grafico per rendere i valori più facili da leggere
+3. Aggancia i punti dei dati all'intersezione della griglia più vicina
+4. Mostra le coordinate del grafico di ogni punto di dati
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `plt.grid(True)` adds light background grid lines to the chart, making it easier to read approximate values from the chart visually. Call it after your `plt.plot()` calls but before `plt.show()`. The grid does not affect the data or calculations — it is purely a visual aid for the reader.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `plt.grid(True)` aggiunge leggere linee della griglia di sfondo al grafico, rendendo più facile leggere visivamente i valori approssimativi dal grafico. Chiamala dopo le tue chiamate a `plt.plot()` ma prima di `plt.show()`. La griglia non influenza i dati o i calcoli — è puramente un aiuto visivo per il lettore.
 
     **Concept Tested:** Grid Lines
 
 ---
 
-#### 8. What does `plt.savefig("chart.png")` do?
+#### 8. Cosa fa `plt.savefig("chart.png")`?
 
 <div class="upper-alpha" markdown>
-1. Loads a previously saved chart from `chart.png`
-2. Takes a screenshot of the entire screen and saves it
-3. Saves the current chart to a file named `chart.png` instead of displaying it in a window
-4. Converts the chart to a PDF format automatically
+1. Carica un grafico precedentemente salvato da `chart.png`
+2. Fa uno screenshot di tutto lo schermo e lo salva
+3. Salva il grafico attuale in un file chiamato `chart.png` invece di mostrarlo in una finestra
+4. Converte automaticamente il grafico in formato PDF
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `plt.savefig("filename.png")` saves the chart to an image file. Call it before `plt.show()` (or instead of it). You can save as PNG, PDF, SVG, or other formats by changing the file extension. This is essential for including charts in reports, websites, or sharing results without requiring the recipient to have matplotlib installed.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `plt.savefig("filename.png")` salva il grafico in un file immagine. Chiamala prima di `plt.show()` (o invece di essa). Puoi salvare come PNG, PDF, SVG, o altri formati cambiando l'estensione del file. Questo è essenziale per includere grafici in report, siti web, o condividere risultati senza richiedere che il destinatario abbia matplotlib installato.
 
     **Concept Tested:** Saving Figures
 
 ---
 
-#### 9. What does a histogram chart show?
+#### 9. Cosa mostra un grafico a istogramma?
 
 <div class="upper-alpha" markdown>
-1. The change in one variable over time
-2. The correlation between two variables plotted as individual points
-3. The frequency distribution of a dataset — how often values fall within each range
-4. A comparison of totals across discrete categories
+1. Il cambiamento di una variabile nel tempo
+2. La correlazione tra due variabili disegnate come punti individuali
+3. La distribuzione di frequenza di un insieme di dati — quanto spesso i valori rientrano in ogni intervallo
+4. Un confronto dei totali tra categorie discrete
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. A histogram (created with `plt.hist()`) shows how frequently values fall within ranges (called bins). For example, a histogram of student scores shows how many students scored 60-70, 70-80, 80-90, etc. It reveals the shape of the data distribution — whether it is symmetric, skewed, or has outliers. Bar charts compare distinct categories; histograms show continuous value distributions.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Un istogramma (creato con `plt.hist()`) mostra quanto frequentemente i valori rientrano in intervalli (chiamati bin). Per esempio, un istogramma dei punteggi degli studenti mostra quanti studenti hanno ottenuto 60-70, 70-80, 80-90, ecc. Rivela la forma della distribuzione dei dati — se è simmetrica, asimmetrica, o ha valori anomali. I grafici a barre confrontano categorie distinte; gli istogrammi mostrano distribuzioni di valori continui.
 
     **Concept Tested:** Histograms
 
 ---
 
-#### 10. What does `plt.subplots(1, 2)` create?
+#### 10. Cosa crea `plt.subplots(1, 2)`?
 
 <div class="upper-alpha" markdown>
-1. One chart with two y-axes for comparing different scales
-2. A figure with 1 row and 2 columns of chart panels side by side
-3. Two separate chart windows displayed on screen at once
-4. A single chart with two color themes applied simultaneously
+1. Un grafico con due assi y per confrontare scale diverse
+2. Una figura con 1 riga e 2 colonne di pannelli di grafici fianco a fianco
+3. Due finestre di grafico separate mostrate sullo schermo contemporaneamente
+4. Un singolo grafico con due temi di colore applicati simultaneamente
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `fig, axes = plt.subplots(rows, cols)` creates a figure with a grid of chart panels (subplots). `plt.subplots(1, 2)` creates one row and two columns — two charts side by side. You then plot to each one with `axes[0].plot(...)` and `axes[1].plot(...)`. This is how you compare related datasets in a single figure.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `fig, axes = plt.subplots(rows, cols)` crea una figura con una griglia di pannelli di grafici (sottografici). `plt.subplots(1, 2)` crea una riga e due colonne — due grafici fianco a fianco. Poi disegni su ciascuno con `axes[0].plot(...)` e `axes[1].plot(...)`. Questo è come confronti insiemi di dati correlati in una singola figura.
 
     **Concept Tested:** Subplots
 

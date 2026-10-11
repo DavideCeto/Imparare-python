@@ -1,28 +1,28 @@
 ---
-title: Data Visualization with matplotlib
-description: Create line charts, scatter plots, bar charts, histograms, and multi-panel figures using matplotlib — Python's most popular charting library
+title: Visualizzazione Dati con matplotlib
+description: Crea grafici a linee, scatter plot, grafici a barre, istogrammi, e figure multi-pannello usando matplotlib — la libreria di grafici più popolare di Python
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 15:20:00
 version: 0.09
 ---
 
-# Data Visualization with matplotlib
+# Visualizzazione Dati con matplotlib
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Import and use **matplotlib.pyplot** to create charts in Python
-- Add titles, axis labels, legends, and grids to any chart
-- Create **line plots**, **scatter plots**, **bar charts**, and **histograms**
-- Plot **multiple lines** on one chart and arrange **subplots** side by side
-- Save a chart to an image file with `savefig()`
+- Importare e usare **matplotlib.pyplot** per creare grafici in Python
+- Aggiungere titoli, etichette degli assi, legende, e griglie a qualsiasi grafico
+- Creare **grafici a linee**, **scatter plot**, **grafici a barre**, e **istogrammi**
+- Disegnare **linee multiple** su un grafico e disporre **sottografici** uno affianco all'altro
+- Salvare un grafico in un file immagine con `savefig()`
 
-A chart can communicate in one second what a table of numbers takes minutes to understand. `matplotlib` is the tool Python programmers reach for first.
+Un grafico può comunicare in un secondo quello che una tabella di numeri richiede minuti per essere capita. `matplotlib` è lo strumento a cui i programmatori Python ricorrono per primo.
 
-!!! mascot-welcome "Welcome to Chapter 32!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 32!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Data visualization turns raw numbers into stories you can see.
-    Scientists, journalists, business analysts, and game developers all use charts built with matplotlib.
-    Let's start plotting! Let's code it together!
+    La visualizzazione dei dati trasforma numeri grezzi in storie che puoi vedere.
+    Scienziati, giornalisti, analisti di business, e sviluppatori di giochi usano tutti grafici costruiti con matplotlib.
+    Iniziamo a disegnare! Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -30,28 +30,28 @@ A chart can communicate in one second what a table of numbers takes minutes to u
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## Importing matplotlib
+## Importare matplotlib
 
-matplotlib is a large library — you typically import just its `pyplot` sub-module, aliased as `plt`:
+matplotlib è una libreria grande — tipicamente importi solo il suo sottomodulo `pyplot`, con alias `plt`:
 
 ```python
 import matplotlib.pyplot as plt
 ```
 
-Everything you need — `plt.plot()`, `plt.show()`, `plt.title()` — lives in `pyplot`.
+Tutto ciò di cui hai bisogno — `plt.plot()`, `plt.show()`, `plt.title()` — vive in `pyplot`.
 
 !!! mascot-tip "matplotlib in Skulpt"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    The Skulpt labs below use a text-based simulation to show the data that matplotlib would chart.
-    In a real Python environment (Thonny, VS Code, Jupyter), `plt.show()` opens an interactive window.
-    The patterns you learn here transfer directly — same function names, same parameters.
+    I laboratori Skulpt sotto usano una simulazione basata su testo per mostrare i dati che matplotlib disegnerebbe.
+    In un vero ambiente Python (Thonny, VS Code, Jupyter), `plt.show()` apre una finestra interattiva.
+    I pattern che imparerai qui si trasferiscono direttamente — stessi nomi di funzione, stessi parametri.
 
-## Your First Line Chart
+## Il Tuo Primo Grafico a Linee
 
-`plt.plot(x_values, y_values)` draws a line connecting the given data points.
-`plt.show()` renders the chart.
+`plt.plot(x_values, y_values)` disegna una linea che collega i punti di dati dati.
+`plt.show()` rende il grafico.
 
-The simplest pattern is:
+Il pattern più semplice è:
 
 ```python
 import matplotlib.pyplot as plt
@@ -97,32 +97,32 @@ for i, j in zip(x, y):
     print(f"  x={i}, y={j}")`);
 </script>
 
-## Adding Labels, Titles, and a Grid
+## Aggiungere Etichette, Titoli, e una Griglia
 
-These functions dress up any chart:
+Queste funzioni rifiniscono qualsiasi grafico:
 
-| Function | Effect |
+| Funzione | Effetto |
 |----------|--------|
-| `plt.title("text")` | Chart title |
-| `plt.xlabel("text")` | Label the x-axis |
-| `plt.ylabel("text")` | Label the y-axis |
-| `plt.legend()` | Show a legend for labeled series |
-| `plt.grid(True)` | Add a background grid |
-| `plt.xlim(lo, hi)` | Set x-axis range |
-| `plt.ylim(lo, hi)` | Set y-axis range |
+| `plt.title("text")` | Titolo del grafico |
+| `plt.xlabel("text")` | Etichetta l'asse x |
+| `plt.ylabel("text")` | Etichetta l'asse y |
+| `plt.legend()` | Mostra una legenda per le serie etichettate |
+| `plt.grid(True)` | Aggiungi una griglia di sfondo |
+| `plt.xlim(lo, hi)` | Imposta l'intervallo dell'asse x |
+| `plt.ylim(lo, hi)` | Imposta l'intervallo dell'asse y |
 
-Call them after `plt.plot()` but before `plt.show()`.
+Chiamale dopo `plt.plot()` ma prima di `plt.show()`.
 
-## Plotting Multiple Lines
+## Disegnare Linee Multiple
 
-Calling `plt.plot()` multiple times before `plt.show()` puts all lines on the same chart.
-Use the `label=` parameter and then call `plt.legend()` so readers know which line is which.
+Chiamare `plt.plot()` più volte prima di `plt.show()` mette tutte le linee sullo stesso grafico.
+Usa il parametro `label=` e poi chiama `plt.legend()` così i lettori sanno quale linea è quale.
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below plots three different mathematical series on one chart.
-    Which one do you think will grow fastest: x, x squared, or x cubed (scaled down)?
-    Make your guess — then run it!
+    Il codice sotto disegna tre diverse serie matematiche su un grafico.
+    Quale pensi che crescerà più velocemente: x, x al quadrato, o x al cubo (ridotto in scala)?
+    Fai la tua previsione — poi eseguilo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -163,12 +163,12 @@ print(f"  quadratic: {y_square[-1]}")
 print(f"  cubic/10 : {y_cube[-1]:.1f}")`);
 </script>
 
-## Scatter Plots
+## Scatter Plot
 
-A **scatter plot** shows individual data points without connecting them with lines.
-Use `plt.scatter(x, y)` instead of `plt.plot()`.
+Un **scatter plot** mostra singoli punti di dati senza collegarli con linee.
+Usa `plt.scatter(x, y)` invece di `plt.plot()`.
 
-Scatter plots are ideal for showing relationships between two variables — for example, height vs. weight, or study hours vs. test score.
+Gli scatter plot sono ideali per mostrare le relazioni tra due variabili — per esempio, altezza vs peso, o ore di studio vs punteggio al test.
 
 ```python
 import matplotlib.pyplot as plt
@@ -184,13 +184,13 @@ plt.grid(True)
 plt.show()
 ```
 
-The `s=` parameter controls dot size (default is 20).
-The `color=` parameter accepts color names (`"red"`, `"blue"`, `"green"`) or hex codes (`"#FF6600"`).
+Il parametro `s=` controlla la dimensione dei punti (il default è 20).
+Il parametro `color=` accetta nomi di colore (`"red"`, `"blue"`, `"green"`) o codici esadecimali (`"#FF6600"`).
 
-## Bar Charts
+## Grafici a Barre
 
-`plt.bar(x_labels, heights)` creates a **vertical bar chart**.
-Bar charts are best for comparing discrete categories — scores by student, revenue by month, etc.
+`plt.bar(x_labels, heights)` crea un **grafico a barre verticale**.
+I grafici a barre sono i migliori per confrontare categorie discrete — punteggi per studente, entrate per mese, ecc.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -226,13 +226,13 @@ for subj, score in zip(subjects, scores):
 print(f"Average: {sum(scores)/len(scores):.1f}")`);
 </script>
 
-`plt.grid(axis="y")` adds grid lines only on the y-axis — a common style for bar charts.
+`plt.grid(axis="y")` aggiunge le linee della griglia solo sull'asse y — uno stile comune per i grafici a barre.
 
-## Histograms
+## Istogrammi
 
-A **histogram** shows the distribution of a set of numbers — how many values fall in each range (called a "bin").
+Un **istogramma** mostra la distribuzione di un insieme di numeri — quanti valori rientrano in ogni intervallo (chiamato "bin").
 
-`plt.hist(data, bins=10)` automatically divides the data into `bins` equal-width groups and draws bars showing the count in each group.
+`plt.hist(data, bins=10)` divide automaticamente i dati in `bins` gruppi di uguale larghezza e disegna barre che mostrano il conteggio in ogni gruppo.
 
 ```python
 import matplotlib.pyplot as plt
@@ -251,9 +251,9 @@ plt.ylabel("Number of People")
 plt.show()
 ```
 
-## Saving Figures with `savefig()`
+## Salvare le Figure con `savefig()`
 
-Instead of `plt.show()`, call `plt.savefig("filename.png")` to save the chart to a file.
+Invece di `plt.show()`, chiama `plt.savefig("filename.png")` per salvare il grafico in un file.
 
 ```python
 plt.plot(x, y)
@@ -261,13 +261,13 @@ plt.title("My Chart")
 plt.savefig("chart.png", dpi=150)   # 150 dots-per-inch, good for screen
 ```
 
-Supported formats include `.png`, `.jpg`, `.pdf`, and `.svg`.
-Call `savefig()` before `plt.show()` — `show()` resets the figure.
+I formati supportati includono `.png`, `.jpg`, `.pdf`, e `.svg`.
+Chiama `savefig()` prima di `plt.show()` — `show()` resetta la figura.
 
-## Subplots — Multiple Charts Side by Side
+## Sottografici — Più Grafici Fianco a Fianco
 
-`plt.subplots(rows, cols)` creates a grid of charts (called **axes**).
-It returns the `fig` (the whole canvas) and an array of `ax` objects — one per chart position.
+`plt.subplots(rows, cols)` crea una griglia di grafici (chiamati **assi**, axes).
+Restituisce il `fig` (l'intero canvas) e un array di oggetti `ax` — uno per posizione del grafico.
 
 ```python
 fig, axes = plt.subplots(1, 2, figsize=(10, 4))
@@ -282,14 +282,14 @@ plt.tight_layout()   # prevent charts from overlapping
 plt.show()
 ```
 
-Notice: when using subplots, use `ax.set_title()` (not `plt.title()`) and `ax.set_xlabel()` (not `plt.xlabel()`).
+Nota: quando usi i sottografici, usa `ax.set_title()` (non `plt.title()`) e `ax.set_xlabel()` (non `plt.xlabel()`).
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Fix the Bar Chart"
+!!! mascot-thinking "Il Tuo Turno — Correggi il Grafico a Barre"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below tries to make a bar chart but is missing the axis labels and title.
-    Add `plt.title()`, `plt.xlabel()`, and `plt.ylabel()` to complete it!
+    Il codice sotto cerca di fare un grafico a barre ma mancano le etichette degli assi e il titolo.
+    Aggiungi `plt.title()`, `plt.xlabel()`, e `plt.ylabel()` per completarlo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -320,31 +320,31 @@ for month, amount in zip(months, sales):
     print(f"  {month}: {amount} units")`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Change the line chart colors by adding the `color=` parameter: `plt.plot(x, y, color="red")`.
-   **You'll know it worked when** the line appears in the color you chose.
+1. Cambia i colori del grafico a linee aggiungendo il parametro `color=`: `plt.plot(x, y, color="red")`.
+   **Saprai che ha funzionato quando** la linea appare nel colore che hai scelto.
 
-2. Add a `marker="o"` parameter to `plt.plot()` to show dots at each data point.
-   **You'll know it worked when** circles appear at every x, y coordinate.
+2. Aggiungi un parametro `marker="o"` a `plt.plot()` per mostrare dei punti a ogni coordinata dei dati.
+   **Saprai che ha funzionato quando** appaiono cerchi a ogni coordinata x, y.
 
-3. Create a horizontal bar chart using `plt.barh(subjects, scores)` instead of `plt.bar()`.
-   **You'll know it worked when** bars grow horizontally instead of vertically.
+3. Crea un grafico a barre orizzontale usando `plt.barh(subjects, scores)` invece di `plt.bar()`.
+   **Saprai che ha funzionato quando** le barre crescono orizzontalmente invece che verticalmente.
 
-4. Generate a list of 100 numbers using a list comprehension with `(i % 10)` and plot a histogram with `bins=10`.
-   **You'll know it worked when** you see a flat distribution — every bin has about the same height.
+4. Genera una lista di 100 numeri usando una list comprehension con `(i % 10)` e disegna un istogramma con `bins=10`.
+   **Saprai che ha funzionato quando** vedi una distribuzione piatta — ogni bin ha circa la stessa altezza.
 
-5. Use `plt.subplots(2, 1)` to stack two charts vertically: a line chart on top and a bar chart below.
-   **You'll know it worked when** both charts appear in the same figure, stacked.
+5. Usa `plt.subplots(2, 1)` per impilare due grafici verticalmente: un grafico a linee in alto e un grafico a barre sotto.
+   **Saprai che ha funzionato quando** entrambi i grafici appaiono nella stessa figura, impilati.
 
-!!! mascot-celebration "Data Visualizer!"
+!!! mascot-celebration "Visualizzatore di Dati!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've turned raw numbers into charts that tell stories!
-    Line plots, scatter plots, bar charts, histograms, and subplots — these are the bread and butter of every data scientist.
-    The next chapter takes you into NumPy, where you'll learn to crunch large amounts of numerical data at lightning speed. Let's keep coding!
+    Hai trasformato numeri grezzi in grafici che raccontano storie!
+    Grafici a linee, scatter plot, grafici a barre, istogrammi, e sottografici — questi sono il pane quotidiano di ogni data scientist.
+    Il prossimo capitolo ti porta in NumPy, dove imparerai a elaborare grandi quantità di dati numerici a velocità fulminea. Continuiamo a programmare!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)
