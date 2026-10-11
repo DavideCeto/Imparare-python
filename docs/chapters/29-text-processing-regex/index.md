@@ -1,28 +1,28 @@
 ---
-title: Text Processing and Regular Expressions
-description: Learn regular expressions — search, findall, split, sub, character classes, quantifiers, groups, and compiled patterns
+title: Elaborazione del Testo ed Espressioni Regolari
+description: Impara le espressioni regolari — search, findall, split, sub, le classi di caratteri, i quantificatori, i gruppi, e i pattern compilati
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 14:50:00
 version: 0.09
 ---
 
-# Text Processing and Regular Expressions
+# Elaborazione del Testo ed Espressioni Regolari
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Write basic **regular expressions** to match patterns in text
-- Use `re.search()`, `re.findall()`, `re.split()`, and `re.sub()` to search and transform text
-- Build patterns using character classes, quantifiers, anchors, and groups
-- Use **raw strings** (`r"..."`) to avoid backslash confusion
+- Scrivere **espressioni regolari** di base per far corrispondere pattern nel testo
+- Usare `re.search()`, `re.findall()`, `re.split()`, e `re.sub()` per cercare e trasformare il testo
+- Costruire pattern usando classi di caratteri, quantificatori, ancore, e gruppi
+- Usare le **stringhe raw** (`r"..."`) per evitare confusione con le barre inverse
 
-Regular expressions (regex) are a mini-language for describing text patterns.
-With a single regex, you can find phone numbers, validate email addresses, or extract data from thousands of lines of text.
+Le espressioni regolari (regex) sono un mini-linguaggio per descrivere pattern di testo.
+Con una singola regex, puoi trovare numeri di telefono, validare indirizzi email, o estrarre dati da migliaia di righe di testo.
 
-!!! mascot-welcome "Welcome to Chapter 29!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 29!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Regular expressions look scary at first — but once you learn the building blocks, they're incredibly powerful.
-    One line of regex can do what would take 20 lines of string methods.
-    Let's decode the mystery! Let's code it together!
+    Le espressioni regolari sembrano spaventose all'inizio — ma una volta che imparerai i blocchi costitutivi, sono incredibilmente potenti.
+    Una riga di regex può fare quello che richiederebbe 20 righe di metodi delle stringhe.
+    Decifriamo il mistero! Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -30,24 +30,24 @@ With a single regex, you can find phone numbers, validate email addresses, or ex
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## The `re` Module
+## Il Modulo `re`
 
-Import Python's regex module with `import re`.
+Importa il modulo delle regex di Python con `import re`.
 
-The core functions are:
+Le funzioni principali sono:
 
-| Function | Returns | Use when |
+| Funzione | Restituisce | Usala quando |
 |----------|---------|---------|
-| `re.search(pattern, text)` | Match object or `None` | Check if pattern appears anywhere |
-| `re.findall(pattern, text)` | List of all matches | Get every occurrence |
-| `re.split(pattern, text)` | List of pieces | Split text by a pattern |
-| `re.sub(pattern, replacement, text)` | New string | Replace matches |
+| `re.search(pattern, text)` | Oggetto match o `None` | Controlli se il pattern appare ovunque |
+| `re.findall(pattern, text)` | Lista di tutte le corrispondenze | Vuoi ogni occorrenza |
+| `re.split(pattern, text)` | Lista di pezzi | Vuoi dividere il testo in base a un pattern |
+| `re.sub(pattern, replacement, text)` | Nuova stringa | Vuoi sostituire le corrispondenze |
 
-## Raw Strings
+## Stringhe Raw
 
-Regex patterns use backslashes a lot — `\d`, `\w`, `\s`.
-In regular Python strings, `\d` is treated as a special escape sequence.
-To avoid confusion, always write regex patterns as **raw strings** by putting `r` before the quote: `r"\d"`.
+I pattern regex usano molto le barre inverse — `\d`, `\w`, `\s`.
+Nelle normali stringhe Python, `\d` viene trattato come una sequenza di escape speciale.
+Per evitare confusione, scrivi sempre i pattern regex come **stringhe raw** mettendo `r` prima della virgoletta: `r"\d"`.
 
 ```python
 # Without raw string: Python interprets \n as newline
@@ -57,46 +57,46 @@ pattern = "\n"   # newline character
 pattern = r"\n"  # the two characters backslash + n
 ```
 
-**Rule: always use `r"..."` for regex patterns.**
+**Regola: usa sempre `r"..."` per i pattern regex.**
 
-## Basic Pattern Elements
+## Elementi di Base del Pattern
 
-Before we write real patterns, here are the building blocks:
+Prima di scrivere veri pattern, ecco i blocchi costitutivi:
 
-| Pattern | Matches |
+| Pattern | Corrisponde a |
 |---------|---------|
-| `.` | Any single character (except newline) |
-| `\d` | A digit (0–9) |
-| `\w` | A word character (letter, digit, underscore) |
-| `\s` | A whitespace character (space, tab, newline) |
-| `\D` | Not a digit |
-| `\W` | Not a word character |
-| `\S` | Not whitespace |
-| `^` | Start of the string |
-| `$` | End of the string |
+| `.` | Qualsiasi carattere singolo (eccetto il ritorno a capo) |
+| `\d` | Una cifra (0–9) |
+| `\w` | Un carattere di parola (lettera, cifra, underscore) |
+| `\s` | Un carattere di spazio bianco (spazio, tab, ritorno a capo) |
+| `\D` | Non una cifra |
+| `\W` | Non un carattere di parola |
+| `\S` | Non uno spazio bianco |
+| `^` | Inizio della stringa |
+| `$` | Fine della stringa |
 
-## Quantifiers
+## Quantificatori
 
-Quantifiers control how many times a pattern element repeats:
+I quantificatori controllano quante volte si ripete un elemento del pattern:
 
-| Quantifier | Meaning | Example |
+| Quantificatore | Significato | Esempio |
 |-----------|---------|---------|
-| `*` | 0 or more times | `\d*` — zero or more digits |
-| `+` | 1 or more times | `\d+` — one or more digits |
-| `?` | 0 or 1 times | `\d?` — optional digit |
-| `{n}` | Exactly n times | `\d{3}` — exactly 3 digits |
-| `{n,m}` | Between n and m times | `\d{2,4}` — 2 to 4 digits |
+| `*` | 0 o più volte | `\d*` — zero o più cifre |
+| `+` | 1 o più volte | `\d+` — una o più cifre |
+| `?` | 0 o 1 volta | `\d?` — cifra opzionale |
+| `{n}` | Esattamente n volte | `\d{3}` — esattamente 3 cifre |
+| `{n,m}` | Tra n e m volte | `\d{2,4}` — da 2 a 4 cifre |
 
-## `re.search()` — Find First Match
+## `re.search()` — Trova la Prima Corrispondenza
 
-`re.search(pattern, text)` scans through `text` looking for the first location where the pattern matches.
-It returns a **match object** if found, or `None` if not.
+`re.search(pattern, text)` scorre `text` cercando la prima posizione dove il pattern corrisponde.
+Restituisce un **oggetto match** se trovato, oppure `None` se non trovato.
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below searches for a phone number pattern in different strings.
-    Which strings do you think will match the pattern `\d{3}-\d{4}`?
-    Make your guess — then run it!
+    Il codice sotto cerca un pattern di numero di telefono in diverse stringhe.
+    Quali stringhe pensi che corrisponderanno al pattern `\d{3}-\d{4}`?
+    Fai la tua previsione — poi eseguilo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -130,11 +130,11 @@ for t in texts:
         print(f"No match in: {t!r}")`);
 </script>
 
-`match.group()` returns the text that was matched.
+`match.group()` restituisce il testo che è stato trovato.
 
-## `re.findall()` — Find All Matches
+## `re.findall()` — Trova Tutte le Corrispondenze
 
-`re.findall(pattern, text)` returns a **list** of every non-overlapping match.
+`re.findall(pattern, text)` restituisce una **lista** di ogni corrispondenza non sovrapposta.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -162,35 +162,35 @@ words = re.findall(r"[A-Za-z]+", text)
 print("Words found:", words)`);
 </script>
 
-### See It: The Regex Match Lab
+### Guardalo: Il Laboratorio di Corrispondenza Regex
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The lab below starts with the pattern `\d{3}-\d{4}`. Read the chips under
-    the pattern box, then predict: **which pieces of the sample text will
-    light up — and how many matches will findall report?**
+    Il laboratorio sotto inizia con il pattern `\d{3}-\d{4}`. Leggi i chip sotto
+    il riquadro del pattern, poi prevedi: **quali parti del testo di esempio si
+    illumineranno — e quante corrispondenze segnalerà findall?**
 
 <iframe src="../../sims/regex-match-lab/main.html" height="372" width="100%" scrolling="no"></iframe>
 
-[Explore the Regex Match Lab MicroSim](../../sims/regex-match-lab/index.md){ .md-button }
+[Esplora il MicroSim Regex Match Lab](../../sims/regex-match-lab/index.md){ .md-button }
 
-Now experiment: delete the `-` from the pattern and watch the matches change instantly. Try each preset button, then build your own pattern one character at a time. The chip strip always translates your pattern into plain English — regex stops being magic once you can read it aloud.
+Ora sperimenta: elimina il `-` dal pattern e guarda le corrispondenze cambiare istantaneamente. Prova ogni pulsante preset, poi costruisci il tuo proprio pattern un carattere alla volta. La striscia dei chip traduce sempre il tuo pattern in inglese semplice — la regex smette di essere magica una volta che riesci a leggerla ad alta voce.
 
-## Character Classes
+## Classi di Caratteri
 
-A **character class** is a set of characters in square brackets. It matches any single character in the set.
+Una **classe di caratteri** è un insieme di caratteri tra parentesi quadre. Corrisponde a qualsiasi singolo carattere nell'insieme.
 
-| Pattern | Matches |
+| Pattern | Corrisponde a |
 |---------|---------|
-| `[aeiou]` | Any lowercase vowel |
-| `[A-Z]` | Any uppercase letter |
-| `[a-z]` | Any lowercase letter |
-| `[0-9]` | Any digit (same as `\d`) |
-| `[^aeiou]` | Any character that is NOT a vowel |
+| `[aeiou]` | Qualsiasi vocale minuscola |
+| `[A-Z]` | Qualsiasi lettera maiuscola |
+| `[a-z]` | Qualsiasi lettera minuscola |
+| `[0-9]` | Qualsiasi cifra (come `\d`) |
+| `[^aeiou]` | Qualsiasi carattere che NON è una vocale |
 
-## `re.split()` — Split by Pattern
+## `re.split()` — Dividi in Base al Pattern
 
-`re.split(pattern, text)` splits text wherever the pattern matches — like `str.split()` but with regex power.
+`re.split(pattern, text)` divide il testo ovunque il pattern corrisponda — come `str.split()` ma con il potere della regex.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -219,9 +219,9 @@ words = re.split(r"\\s+", text)
 print("Words:", words)`);
 </script>
 
-## `re.sub()` — Substitute Matches
+## `re.sub()` — Sostituisci le Corrispondenze
 
-`re.sub(pattern, replacement, text)` replaces every match with the replacement string.
+`re.sub(pattern, replacement, text)` sostituisce ogni corrispondenza con la stringa di sostituzione.
 
 ```python
 import re
@@ -235,10 +235,10 @@ normalized = re.sub(r"\s+", " ", "too   many    spaces")
 print(normalized)   # "too many spaces"
 ```
 
-## Anchors: Start and End
+## Ancore: Inizio e Fine
 
-`^` matches the start of the string.
-`$` matches the end.
+`^` corrisponde all'inizio della stringa.
+`$` corrisponde alla fine.
 
 ```python
 # Matches only if string starts with "Hello":
@@ -250,9 +250,9 @@ if re.search(r"\d$", text):
     print("Ends with a digit")
 ```
 
-## Alternation with `|`
+## Alternanza con `|`
 
-`|` means "or" — match either the left or the right pattern.
+`|` significa "oppure" — corrisponde al pattern di sinistra o a quello di destra.
 
 ```python
 import re
@@ -262,9 +262,9 @@ matches = re.findall(pattern, "I have a cat, a dog, and a rabbit.")
 print(matches)   # ['cat', 'dog', 'rabbit']
 ```
 
-## Groups with Parentheses
+## Gruppi con le Parentesi
 
-Parentheses `()` create a **group** — they let you capture specific parts of a match.
+Le parentesi `()` creano un **gruppo** — ti permettono di catturare parti specifiche di una corrispondenza.
 
 ```python
 import re
@@ -311,10 +311,10 @@ for email in emails:
         print(f"Invalid: {email!r}")`);
 </script>
 
-## Escaping Special Characters
+## Escape dei Caratteri Speciali
 
-Some characters have special meaning in regex: `.`, `*`, `+`, `?`, `(`, `)`, `[`, `]`, `{`, `}`, `^`, `$`, `|`, `\`.
-To match them literally, escape them with a backslash: `\.` matches a literal dot.
+Alcuni caratteri hanno un significato speciale nella regex: `.`, `*`, `+`, `?`, `(`, `)`, `[`, `]`, `{`, `}`, `^`, `$`, `|`, `\`.
+Per farli corrispondere letteralmente, fai l'escape con una barra inversa: `\.` corrisponde a un punto letterale.
 
 ```python
 # Match a literal dot (not "any character"):
@@ -322,9 +322,9 @@ re.findall(r"\d+\.\d+", "3.14 and 2.71 and hello.world")
 # → ['3.14', '2.71']
 ```
 
-## Compiled Regex Patterns
+## Pattern Regex Compilati
 
-If you use the same pattern many times, **compile** it first for better performance:
+Se usi lo stesso pattern molte volte, **compilalo** prima per una migliore prestazione:
 
 ```python
 import re
@@ -335,12 +335,12 @@ for text in many_strings:
     matches = digit_pattern.findall(text)   # use repeatedly
 ```
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Extract Phone Numbers"
+!!! mascot-thinking "Il Tuo Turno — Estrai i Numeri di Telefono"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below should extract all phone numbers from the text.
-    The pattern only matches 3-digit numbers. Fix the pattern to match the full format `NNN-NNN-NNNN`!
+    Il codice sotto dovrebbe estrarre tutti i numeri di telefono dal testo.
+    Il pattern corrisponde solo a numeri di 3 cifre. Correggi il pattern per corrispondere al formato completo `NNN-NNN-NNNN`!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -365,31 +365,31 @@ phones = re.findall(r"\\d{3}", text)
 print("Found:", phones)`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Use `re.findall(r"\b\w{5}\b", text)` to find all 5-letter words in a sentence. `\b` is a word boundary.
-   **You'll know it worked when** you see only 5-letter words.
+1. Usa `re.findall(r"\b\w{5}\b", text)` per trovare tutte le parole di 5 lettere in una frase. `\b` è un confine di parola.
+   **Saprai che ha funzionato quando** vedi solo parole di 5 lettere.
 
-2. Use `re.sub(r"\b\d+\b", "NUM", "I have 3 cats and 12 birds")` to replace all numbers with "NUM".
-   **You'll know it worked when** you see `"I have NUM cats and NUM birds"`.
+2. Usa `re.sub(r"\b\d+\b", "NUM", "I have 3 cats and 12 birds")` per sostituire tutti i numeri con "NUM".
+   **Saprai che ha funzionato quando** vedi `"I have NUM cats and NUM birds"`.
 
-3. Validate a password: at least 8 characters, at least one digit. Use `re.search(r"^.{8,}$", pw)` and `re.search(r"\d", pw)`.
-   **You'll know it worked when** `"abc12345"` passes and `"abc123"` fails (too short).
+3. Valida una password: almeno 8 caratteri, almeno una cifra. Usa `re.search(r"^.{8,}$", pw)` e `re.search(r"\d", pw)`.
+   **Saprai che ha funzionato quando** `"abc12345"` passa e `"abc123"` fallisce (troppo corta).
 
-4. Use `re.split(r"\s*,\s*", "Alice , Bob,  Carol, Dave")` to split a comma-separated list ignoring extra spaces.
-   **You'll know it worked when** you see four clean names.
+4. Usa `re.split(r"\s*,\s*", "Alice , Bob,  Carol, Dave")` per dividere una lista separata da virgole ignorando gli spazi extra.
+   **Saprai che ha funzionato quando** vedi quattro nomi puliti.
 
-5. Compile the pattern `r"\d{4}"` and use it to find all 4-digit years in a sentence about history.
-   **You'll know it worked when** you see a list of years.
+5. Compila il pattern `r"\d{4}"` e usalo per trovare tutti gli anni di 4 cifre in una frase sulla storia.
+   **Saprai che ha funzionato quando** vedi una lista di anni.
 
-!!! mascot-celebration "Regex Wizard!"
+!!! mascot-celebration "Mago delle Regex!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Regular expressions are a superpower — one pattern can search through millions of lines of text!
-    They appear in web scraping, data validation, log analysis, and almost every text processing task.
-    You've just added a serious tool to your programmer toolbox. Let's keep coding!
+    Le espressioni regolari sono un superpotere — un singolo pattern può cercare attraverso milioni di righe di testo!
+    Appaiono nel web scraping, nella validazione dei dati, nell'analisi dei log, e in quasi ogni compito di elaborazione del testo.
+    Hai appena aggiunto uno strumento serio alla tua cassetta degli attrezzi da programmatore. Continuiamo a programmare!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)

@@ -1,10 +1,10 @@
-# Quiz: Text Processing and Regular Expressions
+# Quiz: Elaborazione del Testo ed Espressioni Regolari
 
-Test your understanding of regular expressions, the re module, pattern elements, quantifiers, and text substitution with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione delle espressioni regolari, del modulo re, degli elementi del pattern, dei quantificatori, e della sostituzione del testo con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What Python module provides regular expression functions?
+#### 1. Quale modulo Python fornisce le funzioni per le espressioni regolari?
 
 <div class="upper-alpha" markdown>
 1. `import regex`
@@ -13,152 +13,152 @@ Test your understanding of regular expressions, the re module, pattern elements,
 4. `import text`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Python's standard library includes the `re` module for regular expressions. Import it with `import re`. The main functions are `re.search()`, `re.findall()`, `re.split()`, and `re.sub()`. Regular expressions are patterns you write to search, match, split, or replace text in powerful ways that would take many lines of string methods to replicate.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. La libreria standard di Python include il modulo `re` per le espressioni regolari. Importalo con `import re`. Le funzioni principali sono `re.search()`, `re.findall()`, `re.split()`, e `re.sub()`. Le espressioni regolari sono pattern che scrivi per cercare, far corrispondere, dividere, o sostituire il testo in modi potenti che richiederebbero molte righe di metodi delle stringhe per essere replicati.
 
     **Concept Tested:** re Module
 
 ---
 
-#### 2. Why should you use raw strings (`r"..."`) for regex patterns?
+#### 2. Perché dovresti usare le stringhe raw (`r"..."`) per i pattern regex?
 
 <div class="upper-alpha" markdown>
-1. Raw strings run faster because Python skips the string parser
-2. Raw strings prevent Python from interpreting backslashes as escape sequences, so regex characters like `\d` are passed literally to the regex engine
-3. Raw strings are required for multi-line patterns to work correctly
-4. Raw strings automatically make the pattern case-insensitive
+1. Le stringhe raw girano più velocemente perché Python salta l'analizzatore di stringhe
+2. Le stringhe raw impediscono a Python di interpretare le barre inverse come sequenze di escape, così caratteri regex come `\d` vengono passati letteralmente al motore regex
+3. Le stringhe raw sono richieste perché i pattern multilinea funzionino correttamente
+4. Le stringhe raw rendono automaticamente il pattern senza distinzione tra maiuscole e minuscole
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Regex patterns use many backslash sequences: `\d` for digit, `\w` for word character, `\s` for whitespace. In a normal Python string, backslash starts escape sequences (`\n` = newline). A raw string (`r"..."`) tells Python not to process backslashes, so `r"\d"` passes `\d` literally to the regex engine. Always use `r"..."` for regex patterns.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. I pattern regex usano molte sequenze con barra inversa: `\d` per cifra, `\w` per carattere di parola, `\s` per spazio bianco. In una normale stringa Python, la barra inversa inizia sequenze di escape (`\n` = ritorno a capo). Una stringa raw (`r"..."`) dice a Python di non elaborare le barre inverse, così `r"\d"` passa `\d` letteralmente al motore regex. Usa sempre `r"..."` per i pattern regex.
 
     **Concept Tested:** Raw Strings for Regex
 
 ---
 
-#### 3. What does the regex pattern `\d` match?
+#### 3. A cosa corrisponde il pattern regex `\d`?
 
 <div class="upper-alpha" markdown>
-1. Any letter (a-z or A-Z)
-2. Any whitespace character (space, tab, newline)
-3. Any single digit (0-9)
-4. Any word character (letter, digit, or underscore)
+1. Qualsiasi lettera (a-z o A-Z)
+2. Qualsiasi carattere di spazio bianco (spazio, tab, ritorno a capo)
+3. Qualsiasi singola cifra (0-9)
+4. Qualsiasi carattere di parola (lettera, cifra, o underscore)
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `\d` matches any single digit character from 0 to 9. To match a word character (letters, digits, underscore), use `\w`. To match whitespace, use `\s`. The uppercase versions (`\D`, `\W`, `\S`) match the opposite — anything that is NOT a digit, word character, or whitespace, respectively.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `\d` corrisponde a qualsiasi singolo carattere cifra da 0 a 9. Per far corrispondere un carattere di parola (lettere, cifre, underscore), usa `\w`. Per far corrispondere uno spazio bianco, usa `\s`. Le versioni maiuscole (`\D`, `\W`, `\S`) corrispondono all'opposto — qualsiasi cosa che NON sia rispettivamente una cifra, un carattere di parola, o uno spazio bianco.
 
     **Concept Tested:** Pattern Elements
 
 ---
 
-#### 4. What does `re.search(r"\d{3}-\d{4}", "Call 555-1234!")` return?
+#### 4. Cosa restituisce `re.search(r"\d{3}-\d{4}", "Call 555-1234!")`?
 
 <div class="upper-alpha" markdown>
 1. `True`
-2. The string `"555-1234"`
-3. A match object (because the pattern was found in the text)
-4. `None` (because the text is not entirely a phone number)
+2. La stringa `"555-1234"`
+3. Un oggetto match (perché il pattern è stato trovato nel testo)
+4. `None` (perché il testo non è interamente un numero di telefono)
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `re.search()` returns a **match object** if the pattern is found anywhere in the text, or `None` if not found. It does not return a simple boolean or the matched text directly. To get the actual matched string, call `.group()` on the match object: `match.group()` would return `"555-1234"`.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `re.search()` restituisce un **oggetto match** se il pattern viene trovato ovunque nel testo, oppure `None` se non trovato. Non restituisce un semplice booleano o il testo trovato direttamente. Per ottenere la stringa effettivamente trovata, chiama `.group()` sull'oggetto match: `match.group()` restituirebbe `"555-1234"`.
 
     **Concept Tested:** re.search()
 
 ---
 
-#### 5. What does the quantifier `+` mean in a regex pattern?
+#### 5. Cosa significa il quantificatore `+` in un pattern regex?
 
 <div class="upper-alpha" markdown>
-1. Match the preceding element exactly one time
-2. Match the preceding element one or more times
-3. Match the preceding element zero or one time (making it optional)
-4. Match the preceding element zero or more times
+1. Fa corrispondere l'elemento precedente esattamente una volta
+2. Fa corrispondere l'elemento precedente una o più volte
+3. Fa corrispondere l'elemento precedente zero o una volta (rendendolo opzionale)
+4. Fa corrispondere l'elemento precedente zero o più volte
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. The `+` quantifier means "one or more times" — the preceding element must appear at least once. For example, `\d+` matches one or more digits: it matches `"5"`, `"42"`, `"1000"` but NOT an empty string. Compare: `*` means zero or more (can be absent), `?` means zero or one (optional), `{n}` means exactly n times.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Il quantificatore `+` significa "una o più volte" — l'elemento precedente deve apparire almeno una volta. Per esempio, `\d+` corrisponde a una o più cifre: corrisponde a `"5"`, `"42"`, `"1000"` ma NON a una stringa vuota. Confronta: `*` significa zero o più (può essere assente), `?` significa zero o una (opzionale), `{n}` significa esattamente n volte.
 
     **Concept Tested:** Quantifiers
 
 ---
 
-#### 6. What does `re.findall(r"\d+", "I have 3 cats and 12 fish")` return?
+#### 6. Cosa restituisce `re.findall(r"\d+", "I have 3 cats and 12 fish")`?
 
 <div class="upper-alpha" markdown>
-1. `"3"` (only the first number found)
+1. `"3"` (solo il primo numero trovato)
 2. `None`
-3. `["3", "12"]` (a list of all matches)
-4. `2` (the count of matches)
+3. `["3", "12"]` (una lista di tutte le corrispondenze)
+4. `2` (il conteggio delle corrispondenze)
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `re.findall()` returns a list of all non-overlapping matches as strings. For `\d+` (one or more digits) applied to `"I have 3 cats and 12 fish"`, it finds `"3"` and `"12"` and returns them as `["3", "12"]`. Unlike `re.search()` which stops at the first match, `findall()` collects all occurrences.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `re.findall()` restituisce una lista di tutte le corrispondenze non sovrapposte come stringhe. Per `\d+` (una o più cifre) applicato a `"I have 3 cats and 12 fish"`, trova `"3"` e `"12"` e le restituisce come `["3", "12"]`. A differenza di `re.search()` che si ferma alla prima corrispondenza, `findall()` raccoglie tutte le occorrenze.
 
     **Concept Tested:** re.findall()
 
 ---
 
-#### 7. What does `re.sub(r"\s+", "-", "hello world  foo")` produce?
+#### 7. Cosa produce `re.sub(r"\s+", "-", "hello world  foo")`?
 
 <div class="upper-alpha" markdown>
-1. `"hello world  foo"` (unchanged, because sub only works with exact matches)
+1. `"hello world  foo"` (invariata, perché sub funziona solo con corrispondenze esatte)
 2. `"hello-world-foo"`
 3. `["hello", "world", "foo"]`
-4. `"hello-world  foo"` (only the first match is replaced)
+4. `"hello-world  foo"` (viene sostituita solo la prima corrispondenza)
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `re.sub(pattern, replacement, text)` replaces all matches of the pattern with the replacement string. `\s+` matches one or more whitespace characters. The single space between "hello" and "world" and the double space between "world" and "foo" are both replaced by `"-"`, giving `"hello-world-foo"`. By default, `re.sub()` replaces all occurrences.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `re.sub(pattern, replacement, text)` sostituisce tutte le corrispondenze del pattern con la stringa di sostituzione. `\s+` corrisponde a uno o più caratteri di spazio bianco. Lo spazio singolo tra "hello" e "world" e il doppio spazio tra "world" e "foo" vengono entrambi sostituiti con `"-"`, dando `"hello-world-foo"`. Per default, `re.sub()` sostituisce tutte le occorrenze.
 
     **Concept Tested:** re.sub()
 
 ---
 
-#### 8. What does the `^` anchor do in a regex pattern?
+#### 8. Cosa fa l'ancora `^` in un pattern regex?
 
 <div class="upper-alpha" markdown>
-1. Matches any character except newline
-2. Marks the end of the pattern to match
-3. Makes the pattern case-insensitive
-4. Requires the pattern to match at the start of the string
+1. Corrisponde a qualsiasi carattere eccetto il ritorno a capo
+2. Segna la fine del pattern da far corrispondere
+3. Rende il pattern senza distinzione tra maiuscole e minuscole
+4. Richiede che il pattern corrisponda all'inizio della stringa
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. The `^` anchor asserts that the match must occur at the beginning of the string. For example, `r"^\d"` matches strings that start with a digit. Without `^`, `re.search(r"\d", text)` finds a digit anywhere in the text. The `$` anchor similarly requires the match to be at the end of the string. Together, `^...$` matches the entire string.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. L'ancora `^` afferma che la corrispondenza deve verificarsi all'inizio della stringa. Per esempio, `r"^\d"` corrisponde a stringhe che iniziano con una cifra. Senza `^`, `re.search(r"\d", text)` trova una cifra ovunque nel testo. L'ancora `$` richiede in modo simile che la corrispondenza sia alla fine della stringa. Insieme, `^...$` corrisponde all'intera stringa.
 
     **Concept Tested:** Anchors
 
 ---
 
-#### 9. What does `re.split(r",\s*", "apples, oranges,bananas,  grapes")` return?
+#### 9. Cosa restituisce `re.split(r",\s*", "apples, oranges,bananas,  grapes")`?
 
 <div class="upper-alpha" markdown>
-1. `"apples oranges bananas grapes"` (all commas removed)
+1. `"apples oranges bananas grapes"` (tutte le virgole rimosse)
 2. `["apples", "oranges", "bananas", "grapes"]`
 3. `["apples, oranges", "bananas,  grapes"]`
-4. `4` (the number of items)
+4. `4` (il numero di elementi)
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `re.split(pattern, text)` splits the text at every match of the pattern, returning a list of the pieces. The pattern `r",\s*"` matches a comma followed by zero or more whitespace characters, handling all the different spacing styles around commas. The result is a clean list: `["apples", "oranges", "bananas", "grapes"]`.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `re.split(pattern, text)` divide il testo a ogni corrispondenza del pattern, restituendo una lista dei pezzi. Il pattern `r",\s*"` corrisponde a una virgola seguita da zero o più caratteri di spazio bianco, gestendo tutti i diversi stili di spaziatura attorno alle virgole. Il risultato è una lista pulita: `["apples", "oranges", "bananas", "grapes"]`.
 
     **Concept Tested:** re.split()
 
 ---
 
-#### 10. What does the `.` character match in a regular expression?
+#### 10. A cosa corrisponde il carattere `.` in un'espressione regolare?
 
 <div class="upper-alpha" markdown>
-1. Only a literal period character
-2. Any single character except a newline
-3. Any digit or letter (but not punctuation)
-4. Zero or more of the preceding character
+1. Solo a un carattere punto letterale
+2. A qualsiasi singolo carattere eccetto un ritorno a capo
+3. A qualsiasi cifra o lettera (ma non alla punteggiatura)
+4. A zero o più del carattere precedente
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. In a regex, `.` is a wildcard that matches any single character except a newline (`\n`). For example, `r"c.t"` would match `"cat"`, `"cut"`, `"c4t"`, and `"c!t"`. To match a literal period, escape it: `r"\."`. The quantifiers `*` and `+` control repetition — they are not matched by `.`.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. In una regex, `.` è un carattere jolly che corrisponde a qualsiasi singolo carattere eccetto un ritorno a capo (`\n`). Per esempio, `r"c.t"` corrisponderebbe a `"cat"`, `"cut"`, `"c4t"`, e `"c!t"`. Per far corrispondere un punto letterale, fai l'escape: `r"\."`. I quantificatori `*` e `+` controllano la ripetizione — non corrispondono a `.`.
 
     **Concept Tested:** Pattern Elements
 
