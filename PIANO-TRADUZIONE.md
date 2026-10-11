@@ -68,6 +68,8 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
   alla nav: "Elaborazione del Testo ed Espressioni Regolari")
 - `docs/chapters/30-algorithms-data-structures/` (index, references, quiz — titolo
   allineato alla nav: "Algoritmi e Strutture Dati")
+- `docs/chapters/31-advanced-functions-oop/` (index, references, quiz — titolo allineato
+  alla nav: "Funzioni Avanzate e OOP")
 - `docs/glossary.md` (tutte le 338 voci, intestazioni `####` verificate 338/338 rispetto
   all'originale)
 
@@ -189,12 +191,12 @@ Fase 0 chiusa: i file skill (`skills/python-lab-generator/SKILL.md` e
 quindi non serve alcun ripristino. Decisioni della sezione 2 fissate il 2026-10-03.
 
 Fase 1 completata (pagine di ingresso, `docs/glossary.md`, nav di `mkdocs.yml` per le
-sezioni coperte). Fase 2 in corso: Capitoli 1-30 tradotti.
+sezioni coperte). Fase 2 in corso: Capitoli 1-31 tradotti.
 
-Prossimo: continuare la Fase 2 dal Capitolo 31 (`docs/chapters/31-advanced-functions-oop/`),
+Prossimo: continuare la Fase 2 dal Capitolo 32 (`docs/chapters/32-data-visualization-matplotlib/`),
 un capitolo alla volta (`index.md` + `references.md` + `quiz.md`). La nav di `mkdocs.yml`
 per tutti i 38 capitoli è già tradotta dalla Fase 1 — controllare sempre l'etichetta nav
-esistente e allineare il titolo H1/front matter a quella (vedi nota sui Capitoli 15-30),
+esistente e allineare il titolo H1/front matter a quella (vedi nota sui Capitoli 15-31),
 invece di tradurre il titolo da zero.
 
 Nota di qualità: durante la traduzione del Capitolo 5 è stato trovato e corretto un

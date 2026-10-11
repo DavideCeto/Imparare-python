@@ -1,90 +1,90 @@
-# Quiz: Advanced Functions and OOP
+# Quiz: Funzioni Avanzate e OOP
 
-Test your understanding of map(), filter(), any(), all(), custom exceptions, properties, dunder methods, and object composition with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione di map(), filter(), any(), all(), delle eccezioni personalizzate, delle proprietà, dei metodi dunder, e della composizione di oggetti con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What does `map(square, [1, 2, 3, 4])` do?
+#### 1. Cosa fa `map(square, [1, 2, 3, 4])`?
 
 <div class="upper-alpha" markdown>
-1. Returns the sum of all squares
-2. Returns a sorted list of squares
-3. Applies the `square` function to every item and returns an iterator of the results
-4. Filters the list to only include numbers that are perfect squares
+1. Restituisce la somma di tutti i quadrati
+2. Restituisce una lista ordinata di quadrati
+3. Applica la funzione `square` a ogni elemento e restituisce un iteratore dei risultati
+4. Filtra la lista per includere solo numeri che sono quadrati perfetti
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `map(function, iterable)` applies the function to every element and returns a map object (iterator). Wrap it with `list()` to get a list: `list(map(square, [1, 2, 3, 4]))` gives `[1, 4, 9, 16]`. `map()` is a functional programming tool — often replaced by list comprehensions in modern Python, but still useful and concise.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `map(function, iterable)` applica la funzione a ogni elemento e restituisce un oggetto map (iteratore). Racchiudilo con `list()` per ottenere una lista: `list(map(square, [1, 2, 3, 4]))` dà `[1, 4, 9, 16]`. `map()` è uno strumento di programmazione funzionale — spesso sostituito dalle list comprehension nel Python moderno, ma ancora utile e conciso.
 
     **Concept Tested:** map()
 
 ---
 
-#### 2. What does `filter(is_even, [1, 2, 3, 4, 5, 6])` return?
+#### 2. Cosa restituisce `filter(is_even, [1, 2, 3, 4, 5, 6])`?
 
 <div class="upper-alpha" markdown>
-1. The count of even numbers: `3`
-2. A filter object (iterator) yielding only the items where `is_even` returns `True`
-3. The first even number found: `2`
-4. A list of odd numbers: `[1, 3, 5]`
+1. Il conteggio dei numeri pari: `3`
+2. Un oggetto filter (iteratore) che produce solo gli elementi dove `is_even` restituisce `True`
+3. Il primo numero pari trovato: `2`
+4. Una lista di numeri dispari: `[1, 3, 5]`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `filter(function, iterable)` returns a filter object (iterator) that yields only items for which the function returns `True`. Wrap with `list()` to get a list: `list(filter(is_even, [1,2,3,4,5,6]))` gives `[2, 4, 6]`. Like `map()`, `filter()` is lazy — it processes items one at a time as needed.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `filter(function, iterable)` restituisce un oggetto filter (iteratore) che produce solo gli elementi per cui la funzione restituisce `True`. Racchiudi con `list()` per ottenere una lista: `list(filter(is_even, [1,2,3,4,5,6]))` dà `[2, 4, 6]`. Come `map()`, `filter()` è lazy — elabora gli elementi uno alla volta secondo necessità.
 
     **Concept Tested:** filter()
 
 ---
 
-#### 3. What does `any([False, False, True, False])` return?
+#### 3. Cosa restituisce `any([False, False, True, False])`?
 
 <div class="upper-alpha" markdown>
-1. `False` (not all items are True)
-2. `1` (the count of True items)
-3. `True` (at least one item is truthy)
-4. `[True]` (a list of only the truthy items)
+1. `False` (non tutti gli elementi sono True)
+2. `1` (il conteggio degli elementi True)
+3. `True` (almeno un elemento è truthy)
+4. `[True]` (una lista di solo gli elementi truthy)
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `any(iterable)` returns `True` if at least one item in the iterable is truthy. It short-circuits — as soon as it finds one truthy item, it stops and returns `True` without checking the rest. `all(iterable)` returns `True` only if every item is truthy, and short-circuits on the first falsy item.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `any(iterable)` restituisce `True` se almeno un elemento nell'iterabile è truthy. Fa corto circuito — non appena trova un elemento truthy, si ferma e restituisce `True` senza controllare il resto. `all(iterable)` restituisce `True` solo se ogni elemento è truthy, e fa corto circuito al primo elemento falsy.
 
     **Concept Tested:** any() and all()
 
 ---
 
-#### 4. What does `ord("A")` return?
+#### 4. Cosa restituisce `ord("A")`?
 
 <div class="upper-alpha" markdown>
-1. The string `"a"` (lowercase version)
-2. `1` (A is the 1st letter of the alphabet)
-3. `"A1"` (letter and its position combined)
-4. `65` (the ASCII/Unicode integer code for capital A)
+1. La stringa `"a"` (versione minuscola)
+2. `1` (A è la 1ª lettera dell'alfabeto)
+3. `"A1"` (lettera e la sua posizione combinate)
+4. `65` (il codice intero ASCII/Unicode per A maiuscola)
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. `ord(character)` returns the integer Unicode (ASCII) code for a character. `ord("A")` is `65`, `ord("B")` is `66`, and so on. The reverse function is `chr(integer)`: `chr(65)` returns `"A"`. These are useful for implementing ciphers, character math, or generating sequences of characters in a loop.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. `ord(character)` restituisce il codice intero Unicode (ASCII) per un carattere. `ord("A")` è `65`, `ord("B")` è `66`, e così via. La funzione inversa è `chr(integer)`: `chr(65)` restituisce `"A"`. Sono utili per implementare cifrari, matematica sui caratteri, o generare sequenze di caratteri in un ciclo.
 
     **Concept Tested:** chr() and ord()
 
 ---
 
-#### 5. What does `dir(math)` show you?
+#### 5. Cosa ti mostra `dir(math)`?
 
 <div class="upper-alpha" markdown>
-1. The source code of the math module
-2. A list of all attributes and methods available on the math module
-3. The documentation for every math function
-4. The location of the math module file on disk
+1. Il codice sorgente del modulo math
+2. Una lista di tutti gli attributi e i metodi disponibili sul modulo math
+3. La documentazione per ogni funzione math
+4. La posizione del file del modulo math sul disco
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `dir(obj)` returns a list of all attributes and methods available on an object or module. `dir(math)` shows all functions available in the `math` module (like `sqrt`, `sin`, `pi`, `factorial`, etc.). For detailed documentation on one function, use `help(math.sqrt)`. Together, `dir()` and `help()` are essential tools for exploring unfamiliar modules.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `dir(obj)` restituisce una lista di tutti gli attributi e i metodi disponibili su un oggetto o modulo. `dir(math)` mostra tutte le funzioni disponibili nel modulo `math` (come `sqrt`, `sin`, `pi`, `factorial`, ecc.). Per la documentazione dettagliata su una funzione, usa `help(math.sqrt)`. Insieme, `dir()` e `help()` sono strumenti essenziali per esplorare moduli non familiari.
 
     **Concept Tested:** dir() and help()
 
 ---
 
-#### 6. How do you create a custom exception class in Python?
+#### 6. Come crei una classe di eccezione personalizzata in Python?
 
 <div class="upper-alpha" markdown>
 1. `def CustomError(): raise Exception`
@@ -93,72 +93,72 @@ Test your understanding of map(), filter(), any(), all(), custom exceptions, pro
 4. `CustomError = Exception("custom message")`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Custom exception classes are created by subclassing `Exception` (or a more specific built-in exception like `ValueError`). The simplest form is `class MyError(Exception): pass`. You can also override `__init__()` to add custom attributes or messages. Callers can catch your custom exception specifically with `except MyError:`, making error handling much more precise.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Le classi di eccezione personalizzate si creano facendo una sottoclasse di `Exception` (o un'eccezione built-in più specifica come `ValueError`). La forma più semplice è `class MyError(Exception): pass`. Puoi anche sovrascrivere `__init__()` per aggiungere attributi o messaggi personalizzati. Chi chiama può catturare la tua eccezione personalizzata specificamente con `except MyError:`, rendendo la gestione degli errori molto più precisa.
 
     **Concept Tested:** Custom Exception Classes
 
 ---
 
-#### 7. What is the `@property` decorator used for?
+#### 7. Per cosa si usa il decorator `@property`?
 
 <div class="upper-alpha" markdown>
-1. To make a method run automatically when the class is imported
-2. To turn a method into an attribute that can be read without calling it with parentheses, while allowing you to add validation logic
-3. To prevent the method from being inherited by subclasses
-4. To mark a method as a class variable rather than an instance method
+1. Per far girare automaticamente un metodo quando la classe viene importata
+2. Per trasformare un metodo in un attributo che può essere letto senza chiamarlo con le parentesi, permettendoti di aggiungere logica di validazione
+3. Per impedire che il metodo venga ereditato dalle sottoclassi
+4. Per segnare un metodo come variabile di classe invece che come metodo di istanza
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. The `@property` decorator lets you define a method that is accessed like an attribute — `obj.temperature` instead of `obj.temperature()`. You can add a corresponding `@temperature.setter` to run validation code when the value is assigned. This gives you clean attribute syntax while keeping control over how values are get and set.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Il decorator `@property` ti permette di definire un metodo che viene accesso come un attributo — `obj.temperature` invece di `obj.temperature()`. Puoi aggiungere un corrispondente `@temperature.setter` per eseguire codice di validazione quando il valore viene assegnato. Questo ti dà una sintassi degli attributi pulita mantenendo il controllo su come i valori vengono letti e impostati.
 
     **Concept Tested:** @property Decorator
 
 ---
 
-#### 8. What is a dunder method (also called a magic method) in Python?
+#### 8. Cos'è un metodo dunder (chiamato anche metodo magico) in Python?
 
 <div class="upper-alpha" markdown>
-1. A method that can only be called once per program run
-2. A method starting and ending with double underscores that Python calls automatically in response to specific operations like printing or arithmetic
-3. A method hidden from `dir()` and inaccessible to the programmer
-4. A method that runs in a separate thread for better performance
+1. Un metodo che può essere chiamato solo una volta per esecuzione del programma
+2. Un metodo che inizia e finisce con doppio underscore che Python chiama automaticamente in risposta a operazioni specifiche come la stampa o l'aritmetica
+3. Un metodo nascosto da `dir()` e inaccessibile al programmatore
+4. Un metodo che gira in un thread separato per migliori prestazioni
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Dunder methods (double-underscore methods) like `__init__`, `__str__`, `__add__`, and `__len__` are called automatically by Python in response to operations. `__str__` is called by `print()`, `__add__` is called by the `+` operator, and `__len__` is called by `len()`. Defining them on your class customizes how Python's built-in operations work with your objects.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. I metodi dunder (metodi con doppio underscore) come `__init__`, `__str__`, `__add__`, e `__len__` vengono chiamati automaticamente da Python in risposta a operazioni. `__str__` viene chiamato da `print()`, `__add__` viene chiamato dall'operatore `+`, e `__len__` viene chiamato da `len()`. Definirli sulla tua classe personalizza come funzionano le operazioni built-in di Python con i tuoi oggetti.
 
     **Concept Tested:** Dunder Methods
 
 ---
 
-#### 9. What is object composition?
+#### 9. Cos'è la composizione di oggetti?
 
 <div class="upper-alpha" markdown>
-1. Using multiple inheritance to combine features from several parent classes
-2. Building complex objects by containing simpler objects as attributes, instead of using inheritance
-3. Combining two lists of objects into one
-4. Compressing an object's data to save memory
+1. Usare l'eredità multipla per combinare caratteristiche da diverse classi genitore
+2. Costruire oggetti complessi contenendo oggetti più semplici come attributi, invece di usare l'eredità
+3. Combinare due liste di oggetti in una
+4. Comprimere i dati di un oggetto per risparmiare memoria
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Composition is the "has-a" relationship: a `Car` object *has* an `Engine` object and a `Wheel` object as attributes. This is different from inheritance (the "is-a" relationship). Composition is often preferred over deep inheritance hierarchies because it is more flexible and easier to change — you can swap out the engine component without changing the car's interface.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. La composizione è la relazione "ha-un" (has-a): un oggetto `Car` *ha* un oggetto `Engine` e un oggetto `Wheel` come attributi. Questo è diverso dall'eredità (la relazione "è-un", is-a). La composizione è spesso preferita alle profonde gerarchie di eredità perché è più flessibile e più facile da cambiare — puoi sostituire il componente motore senza cambiare l'interfaccia dell'auto.
 
     **Concept Tested:** Object Composition
 
 ---
 
-#### 10. What does `all([True, True, True, False])` return?
+#### 10. Cosa restituisce `all([True, True, True, False])`?
 
 <div class="upper-alpha" markdown>
-1. `True` (most items are True)
-2. `False` (not every item is True)
-3. `3` (the count of True items)
-4. `[True, True, True]` (the truthy items)
+1. `True` (la maggior parte degli elementi sono True)
+2. `False` (non ogni elemento è True)
+3. `3` (il conteggio degli elementi True)
+4. `[True, True, True]` (gli elementi truthy)
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `all(iterable)` returns `True` only if every item in the iterable is truthy. Since the list `[True, True, True, False]` contains a `False`, `all()` returns `False`. It short-circuits — the moment it finds the first falsy item, it stops and returns `False` without checking the remaining items.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `all(iterable)` restituisce `True` solo se ogni elemento nell'iterabile è truthy. Dato che la lista `[True, True, True, False]` contiene un `False`, `all()` restituisce `False`. Fa corto circuito — nel momento in cui trova il primo elemento falsy, si ferma e restituisce `False` senza controllare gli elementi rimanenti.
 
     **Concept Tested:** any() and all()
 

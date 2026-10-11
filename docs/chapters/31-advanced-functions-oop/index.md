@@ -1,27 +1,27 @@
 ---
-title: Advanced Functions and OOP
-description: Round out your functional-programming and OOP skills with map, filter, dir, help, custom exceptions, @property, dunder methods, and object composition
+title: Funzioni Avanzate e OOP
+description: Completa le tue competenze di programmazione funzionale e OOP con map, filter, dir, help, le eccezioni personalizzate, @property, i metodi dunder, e la composizione di oggetti
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 15:10:00
 version: 0.09
 ---
 
-# Advanced Functions and OOP
+# Funzioni Avanzate e OOP
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Use `map()`, `filter()`, `any()`, `all()`, `chr()`, `ord()`, `dir()`, and `help()` effectively
-- Create **custom exception classes** and use exception chaining
-- Define **properties** with `@property` and use **dunder methods** to customize object behavior
-- Apply **object composition** to build complex objects from simpler ones
+- Usare `map()`, `filter()`, `any()`, `all()`, `chr()`, `ord()`, `dir()`, e `help()` efficacemente
+- Creare **classi di eccezione personalizzate** e usare il concatenamento delle eccezioni
+- Definire **proprietà** con `@property` e usare i **metodi dunder** per personalizzare il comportamento degli oggetti
+- Applicare la **composizione di oggetti** per costruire oggetti complessi da oggetti più semplici
 
-This chapter fills in the remaining advanced tools from Python's functional and OOP toolkit.
+Questo capitolo completa gli strumenti avanzati rimanenti del set di strumenti funzionale e OOP di Python.
 
-!!! mascot-welcome "Welcome to Chapter 31!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 31!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    This is where your Python skills reach professional level!
-    Custom exceptions, properties, dunder methods — these are the tools that separate beginner code from expert code.
-    Let's level up! Let's code it together!
+    È qui che le tue competenze Python raggiungono il livello professionale!
+    Eccezioni personalizzate, proprietà, metodi dunder — questi sono gli strumenti che separano il codice da principiante dal codice da esperto.
+    Saliamo di livello! Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -29,9 +29,9 @@ This chapter fills in the remaining advanced tools from Python's functional and 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## `map()` and `filter()` with Named Functions
+## `map()` e `filter()` con Funzioni Nominate
 
-You saw `map()` and `filter()` with lambdas in Chapter 22. They work just as well with named functions:
+Hai visto `map()` e `filter()` con le lambda nel Capitolo 22. Funzionano altrettanto bene con funzioni nominate:
 
 ```python
 def is_even(n):
@@ -45,14 +45,14 @@ evens   = list(filter(is_even, numbers))   # [2, 4, 6]
 squares = list(map(square, numbers))       # [1, 4, 9, 16, 25, 36]
 ```
 
-This style is more readable than lambdas for complex logic.
+Questo stile è più leggibile delle lambda per la logica complessa.
 
-## `any()` and `all()`
+## `any()` e `all()`
 
-`any(iterable)` returns `True` if at least one item is truthy.
-`all(iterable)` returns `True` if every item is truthy.
+`any(iterable)` restituisce `True` se almeno un elemento è truthy.
+`all(iterable)` restituisce `True` se ogni elemento è truthy.
 
-Both short-circuit — they stop as soon as the answer is known.
+Entrambi fanno corto circuito — si fermano non appena la risposta è conosciuta.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -78,10 +78,10 @@ words = ["hello", "world", "Python"]
 print("Any starts with 'P'?", any(w.startswith("P") for w in words))`);
 </script>
 
-## `chr()` and `ord()` — Characters and ASCII Codes
+## `chr()` e `ord()` — Caratteri e Codici ASCII
 
-`ord(character)` converts a character to its ASCII (Unicode) integer code.
-`chr(integer)` does the reverse — converts an integer to its character.
+`ord(character)` converte un carattere nel suo codice intero ASCII (Unicode).
+`chr(integer)` fa il contrario — converte un intero nel suo carattere.
 
 ```python
 print(ord("A"))   # 65
@@ -123,12 +123,12 @@ def encrypt(text, shift=3):
 print(encrypt("Hello, World!"))`);
 </script>
 
-## `dir()` and `help()` — Exploring Objects
+## `dir()` e `help()` — Esplorare gli Oggetti
 
-`dir(obj)` returns a list of all attributes and methods available on `obj`.
-`help(obj)` prints detailed documentation.
+`dir(obj)` restituisce una lista di tutti gli attributi e i metodi disponibili su `obj`.
+`help(obj)` stampa la documentazione dettagliata.
 
-These are your best friends when exploring an unfamiliar module or object:
+Questi sono i tuoi migliori amici quando esplori un modulo o un oggetto non familiare:
 
 ```python
 import math
@@ -136,18 +136,18 @@ print(dir(math))         # see all math functions
 help(math.sqrt)          # full docs for sqrt
 ```
 
-## `id()` and `hash()`
+## `id()` e `hash()`
 
-`id(obj)` returns the unique memory address of an object.
-Two variables with the same `id` are the same object — not just equal, but literally the same in memory.
+`id(obj)` restituisce l'indirizzo di memoria unico di un oggetto.
+Due variabili con lo stesso `id` sono lo stesso oggetto — non solo uguali, ma letteralmente lo stesso in memoria.
 
-`hash(obj)` returns a hash value (an integer fingerprint). Dictionaries use hashes for fast lookups.
-Only immutable objects (strings, numbers, tuples) can be hashed.
+`hash(obj)` restituisce un valore hash (un'impronta digitale intera). I dizionari usano gli hash per ricerche rapide.
+Solo gli oggetti immutabili (stringhe, numeri, tuple) possono essere hashati.
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below compares `is` vs `==` for strings. Will the small strings share the same id?
-    Make your guess — then run it!
+    Il codice sotto confronta `is` vs `==` per le stringhe. Le stringhe piccole condivideranno lo stesso id?
+    Fai la tua previsione — poi eseguilo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -175,10 +175,10 @@ print("id(b):", id(b))
 print("id(c):", id(c))`);
 </script>
 
-## Custom Exception Classes
+## Classi di Eccezione Personalizzate
 
-You can create your own exception types by subclassing `Exception`.
-Custom exceptions make your error messages much clearer to users of your code.
+Puoi creare i tuoi propri tipi di eccezione facendo una sottoclasse di `Exception`.
+Le eccezioni personalizzate rendono i tuoi messaggi di errore molto più chiari per chi usa il tuo codice.
 
 ```python
 class InvalidAgeError(ValueError):
@@ -221,10 +221,10 @@ for s in [85, 110, -5, 0, 100]:
         print(f"Error: {e}")`);
 </script>
 
-## Static Methods
+## Metodi Statici
 
-A **static method** belongs to the class but doesn't need access to `self` (the instance).
-Decorate it with `@staticmethod`. Use it for utility functions that logically belong to the class.
+Un **metodo statico** appartiene alla classe ma non ha bisogno di accedere a `self` (l'istanza).
+Decoralo con `@staticmethod`. Usalo per funzioni di utilità che logicamente appartengono alla classe.
 
 ```python
 class Temperature:
@@ -239,10 +239,10 @@ class Temperature:
 print(Temperature.celsius_to_fahrenheit(100))   # 212.0
 ```
 
-## Properties with `@property`
+## Proprietà con `@property`
 
-A **property** lets you define a method that behaves like an attribute.
-This lets you add validation or computation to attribute access without changing the interface.
+Una **proprietà** ti permette di definire un metodo che si comporta come un attributo.
+Questo ti permette di aggiungere validazione o calcolo all'accesso degli attributi senza cambiare l'interfaccia.
 
 ```python
 class Circle:
@@ -269,12 +269,12 @@ print(c.area)     # computed property
 c.radius = 10     # calls the setter (validates!)
 ```
 
-## Dunder Methods Overview
+## Panoramica dei Metodi Dunder
 
-**Dunder methods** (also called "magic methods") are special methods with double underscores on both sides.
-You've already seen `__init__` and `__str__`. There are many more:
+I **metodi dunder** (chiamati anche "metodi magici") sono metodi speciali con doppio underscore su entrambi i lati.
+Hai già visto `__init__` e `__str__`. Ce ne sono molti altri:
 
-| Method | Called when |
+| Metodo | Chiamato quando |
 |--------|------------|
 | `__len__(self)` | `len(obj)` |
 | `__add__(self, other)` | `obj + other` |
@@ -284,13 +284,13 @@ You've already seen `__init__` and `__str__`. There are many more:
 | `__iter__(self)` | `for x in obj` |
 | `__getitem__(self, key)` | `obj[key]` |
 
-By implementing dunders, your custom classes work naturally with Python operators and built-in functions.
+Implementando i dunder, le tue classi personalizzate funzionano naturalmente con gli operatori di Python e le funzioni built-in.
 
-## Object Composition
+## Composizione di Oggetti
 
-**Object composition** means building a complex object from simpler objects — storing instances of one class inside another.
+La **composizione di oggetti** significa costruire un oggetto complesso a partire da oggetti più semplici — memorizzando istanze di una classe dentro un'altra.
 
-This is often better than deep inheritance hierarchies:
+Questo è spesso meglio delle profonde gerarchie di eredità:
 
 ```python
 class Engine:
@@ -313,18 +313,18 @@ car = Car("Python GT", 300)
 car.drive()
 ```
 
-!!! mascot-tip "Composition over Inheritance"
+!!! mascot-tip "Composizione invece di Eredità"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    Professional Python developers prefer composition over deep inheritance.
-    Instead of `ElectricCar(Car(Vehicle))`, build `ElectricCar` with an `engine` attribute.
-    It's easier to change individual parts without breaking unrelated code.
+    Gli sviluppatori Python professionisti preferiscono la composizione alle profonde gerarchie di eredità.
+    Invece di `ElectricCar(Car(Vehicle))`, costruisci `ElectricCar` con un attributo `engine`.
+    È più facile cambiare singole parti senza rompere codice non collegato.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add a Dunder Method"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi un Metodo Dunder"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The `Bag` class below stores items, but `len(bag)` doesn't work yet.
-    Add the `__len__` dunder method so `len(bag)` returns the number of items!
+    La classe `Bag` sotto memorizza elementi, ma `len(bag)` non funziona ancora.
+    Aggiungi il metodo dunder `__len__` così che `len(bag)` restituisca il numero di elementi!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -358,30 +358,30 @@ print("Items:", bag.items)
 print("Count:", len(bag))   # this will fail until you add __len__`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Use `any()` to check if any string in a list has more than 10 characters.
-   **You'll know it worked when** the result is `True` or `False` based on the actual lengths.
+1. Usa `any()` per controllare se qualche stringa in una lista ha più di 10 caratteri.
+   **Saprai che ha funzionato quando** il risultato è `True` o `False` in base alle lunghezze effettive.
 
-2. Write a Caesar cipher decryption function (shift by -3 instead of +3). Encrypt then decrypt "Hello".
-   **You'll know it worked when** you get back the original "Hello".
+2. Scrivi una funzione di decrittazione del cifrario di Cesare (spostamento di -3 invece di +3). Cripta poi decripta "Hello".
+   **Saprai che ha funzionato quando** ottieni di nuovo l'originale "Hello".
 
-3. Add `__add__` to the `Bag` class so `bag1 + bag2` returns a new Bag with all items from both.
-   **You'll know it worked when** `len(bag1 + bag2)` equals `len(bag1) + len(bag2)`.
+3. Aggiungi `__add__` alla classe `Bag` così che `bag1 + bag2` restituisca un nuovo Bag con tutti gli elementi di entrambi.
+   **Saprai che ha funzionato quando** `len(bag1 + bag2)` è uguale a `len(bag1) + len(bag2)`.
 
-4. Add `@property area` to a `Rectangle` class. Ensure it recomputes every time width or height changes.
-   **You'll know it worked when** changing `r.width = 10` updates `r.area` automatically.
+4. Aggiungi `@property area` a una classe `Rectangle`. Assicurati che venga ricalcolata ogni volta che width o height cambia.
+   **Saprai che ha funzionato quando** cambiare `r.width = 10` aggiorna automaticamente `r.area`.
 
-5. Create a `Stack` class using composition (it has a `list` attribute) with `push`, `pop`, `peek`, and `__len__`.
-   **You'll know it worked when** all four operations work as expected.
+5. Crea una classe `Stack` usando la composizione (ha un attributo `list`) con `push`, `pop`, `peek`, e `__len__`.
+   **Saprai che ha funzionato quando** tutte e quattro le operazioni funzionano come previsto.
 
-!!! mascot-celebration "Python Expert!"
+!!! mascot-celebration "Esperto Python!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've reached the advanced Python tier! Custom exceptions, properties, dunders, and composition are tools used by professional Python developers every day.
-    The last chapters take you into data science and machine learning territory. Let's keep coding!
+    Hai raggiunto il livello avanzato di Python! Eccezioni personalizzate, proprietà, dunder, e composizione sono strumenti usati ogni giorno dagli sviluppatori Python professionisti.
+    Gli ultimi capitoli ti portano nel territorio della data science e del machine learning. Continuiamo a programmare!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)
