@@ -1,154 +1,154 @@
-# Quiz: Recursion and Fractals
+# Quiz: Ricorsione e Frattali
 
-Test your understanding of recursion, base cases, lambda functions, and the call stack with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione della ricorsione, dei casi base, delle funzioni lambda, e dello stack delle chiamate con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What is recursion in Python?
+#### 1. Cos'è la ricorsione in Python?
 
 <div class="upper-alpha" markdown>
-1. A loop that repeats a fixed number of times
-2. A function that calls itself to solve a smaller version of the same problem
-3. A method that reverses a list or string
-4. A way of importing functions from another file
+1. Un ciclo che si ripete un numero fisso di volte
+2. Una funzione che chiama sé stessa per risolvere una versione più piccola dello stesso problema
+3. Un metodo che inverte una lista o una stringa
+4. Un modo di importare funzioni da un altro file
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Recursion is when a function calls itself. Each call works on a smaller or simpler version of the problem, until it reaches a stopping point (the base case) and begins returning values back up the chain. Think of Russian nesting dolls — each contains a smaller version of itself, all the way down to the tiny solid one at the center.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. La ricorsione è quando una funzione chiama sé stessa. Ogni chiamata lavora su una versione più piccola o più semplice del problema, finché non raggiunge un punto di arresto (il caso base) e inizia a restituire valori lungo la catena. Pensa alle bambole russe matrioska — ognuna contiene una versione più piccola di sé stessa, fino a quella minuscola e solida al centro.
 
     **Concept Tested:** Recursion Concept
 
 ---
 
-#### 2. What is a base case in a recursive function?
+#### 2. Cos'è un caso base in una funzione ricorsiva?
 
 <div class="upper-alpha" markdown>
-1. The first time the function is called from the main program
-2. A variable that counts how many times the function has called itself
-3. The condition that stops the recursion and returns a value without calling the function again
-4. The deepest level of indentation inside the function
+1. La prima volta che la funzione viene chiamata dal programma principale
+2. Una variabile che conta quante volte la funzione ha chiamato sé stessa
+3. La condizione che ferma la ricorsione e restituisce un valore senza chiamare di nuovo la funzione
+4. Il livello di indentazione più profondo dentro la funzione
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. The base case is what prevents a recursive function from calling itself forever. It is a condition that, when true, returns a value directly instead of making another recursive call. Without a base case, Python would call the function indefinitely until it raises a `RecursionError` (maximum recursion depth exceeded).
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Il caso base è ciò che impedisce a una funzione ricorsiva di chiamare sé stessa per sempre. È una condizione che, quando vera, restituisce un valore direttamente invece di fare un'altra chiamata ricorsiva. Senza un caso base, Python chiamerebbe la funzione indefinitamente finché non genera un `RecursionError` (profondità massima di ricorsione superata).
 
     **Concept Tested:** Base Case
 
 ---
 
-#### 3. What does `factorial(5)` return if `factorial(n)` returns `n * factorial(n-1)` with a base case of `factorial(1) = 1`?
+#### 3. Cosa restituisce `factorial(5)` se `factorial(n)` restituisce `n * factorial(n-1)` con un caso base di `factorial(1) = 1`?
 
 <div class="upper-alpha" markdown>
 1. `15` (5 + 4 + 3 + 2 + 1)
 2. `120` (5 × 4 × 3 × 2 × 1)
-3. `25` (5 squared)
-4. `5` (just the input)
+3. `25` (5 al quadrato)
+4. `5` (solo l'input)
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `factorial(5)` expands as: `5 * factorial(4)` → `5 * 4 * factorial(3)` → `5 * 4 * 3 * factorial(2)` → `5 * 4 * 3 * 2 * factorial(1)` → `5 * 4 * 3 * 2 * 1 = 120`. Factorial (n!) multiplies all positive integers up to n together.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `factorial(5)` si espande come: `5 * factorial(4)` → `5 * 4 * factorial(3)` → `5 * 4 * 3 * factorial(2)` → `5 * 4 * 3 * 2 * factorial(1)` → `5 * 4 * 3 * 2 * 1 = 120`. Il fattoriale (n!) moltiplica tutti gli interi positivi fino a n.
 
     **Concept Tested:** Recursive Factorial
 
 ---
 
-#### 4. What happens if a recursive function has no base case?
+#### 4. Cosa succede se una funzione ricorsiva non ha un caso base?
 
 <div class="upper-alpha" markdown>
-1. Python automatically adds a base case when n reaches 0
-2. The function runs exactly 1,000 times and then stops
-3. Python raises a `RecursionError` when the call stack gets too deep
-4. The function returns `None` after the first call
+1. Python aggiunge automaticamente un caso base quando n raggiunge 0
+2. La funzione gira esattamente 1.000 volte e poi si ferma
+3. Python genera un `RecursionError` quando lo stack delle chiamate diventa troppo profondo
+4. La funzione restituisce `None` dopo la prima chiamata
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Without a base case, the function keeps calling itself indefinitely. Python limits the call stack to about 1,000 nested calls by default. When that limit is exceeded, Python raises `RecursionError: maximum recursion depth exceeded`. Always make sure your recursive function has a base case that will eventually be reached.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Senza un caso base, la funzione continua a chiamare sé stessa indefinitamente. Python limita lo stack delle chiamate a circa 1.000 chiamate annidate per default. Quando quel limite viene superato, Python genera `RecursionError: maximum recursion depth exceeded`. Assicurati sempre che la tua funzione ricorsiva abbia un caso base che verrà raggiunto alla fine.
 
     **Concept Tested:** Base Case
 
 ---
 
-#### 5. What is the call stack in the context of recursion?
+#### 5. Cos'è lo stack delle chiamate nel contesto della ricorsione?
 
 <div class="upper-alpha" markdown>
-1. A list of all function names defined in the program
-2. The memory Python uses to save the current state of each function call while waiting for inner calls to return
-3. The output printed by each recursive call in order
-4. A built-in Python structure that limits loops to 1,000 iterations
+1. Una lista di tutti i nomi delle funzioni definite nel programma
+2. La memoria che Python usa per salvare lo stato attuale di ogni chiamata di funzione mentre aspetta che le chiamate interne tornino
+3. L'output stampato da ogni chiamata ricorsiva in ordine
+4. Una struttura built-in di Python che limita i cicli a 1.000 iterazioni
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Each time a function calls itself recursively, Python saves the current state (local variables, where it left off) on the call stack. When the base case is reached, Python works back up the stack, resuming each saved state in reverse order. The call stack grows with each recursive call and shrinks as calls return.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Ogni volta che una funzione chiama sé stessa ricorsivamente, Python salva lo stato attuale (variabili locali, dove si è interrotta) sullo stack delle chiamate. Quando viene raggiunto il caso base, Python risale lo stack, riprendendo ogni stato salvato in ordine inverso. Lo stack delle chiamate cresce con ogni chiamata ricorsiva e si riduce quando le chiamate tornano.
 
     **Concept Tested:** Call Stack
 
 ---
 
-#### 6. What is a lambda function in Python?
+#### 6. Cos'è una funzione lambda in Python?
 
 <div class="upper-alpha" markdown>
-1. A function that takes a list as its only argument
-2. A function defined inside another function
-3. A small, one-line anonymous function written with the `lambda` keyword
-4. A function that automatically recurses until a base case is found
+1. Una funzione che prende una lista come unico argomento
+2. Una funzione definita dentro un'altra funzione
+3. Una piccola funzione anonima su una riga scritta con la parola chiave `lambda`
+4. Una funzione che fa automaticamente ricorsione finché non trova un caso base
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. A lambda is a compact anonymous function: `lambda parameters: expression`. For example, `square = lambda x: x * x` creates a one-line function that squares its input. Lambdas are especially useful when you need a short function to pass as an argument to another function (like `sorted()` with a `key=` argument).
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Una lambda è una funzione anonima compatta: `lambda parametri: espressione`. Per esempio, `square = lambda x: x * x` crea una funzione su una riga che eleva al quadrato il suo input. Le lambda sono particolarmente utili quando hai bisogno di una funzione breve da passare come argomento a un'altra funzione (come `sorted()` con un argomento `key=`).
 
     **Concept Tested:** Lambda Functions
 
 ---
 
-#### 7. What does `lambda a, b: a + b` do?
+#### 7. Cosa fa `lambda a, b: a + b`?
 
 <div class="upper-alpha" markdown>
-1. Creates a function that returns the larger of `a` and `b`
-2. Creates an anonymous function that takes two arguments and returns their sum
-3. Creates a list with elements `a` and `b` added together
-4. Raises an error because lambda functions can only take one argument
+1. Crea una funzione che restituisce il più grande tra `a` e `b`
+2. Crea una funzione anonima che prende due argomenti e restituisce la loro somma
+3. Crea una lista con gli elementi `a` e `b` sommati insieme
+4. Genera un errore perché le funzioni lambda possono prendere solo un argomento
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `lambda a, b: a + b` creates an anonymous function with two parameters `a` and `b` that returns their sum. Lambda functions can take any number of parameters. This lambda is equivalent to `def add(a, b): return a + b`, just written more compactly on one line.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `lambda a, b: a + b` crea una funzione anonima con due parametri `a` e `b` che restituisce la loro somma. Le funzioni lambda possono prendere qualsiasi numero di parametri. Questa lambda equivale a `def add(a, b): return a + b`, solo scritta più compattamente su una riga.
 
     **Concept Tested:** Lambda Functions
 
 ---
 
-#### 8. Why is recursion especially well-suited to drawing fractals?
+#### 8. Perché la ricorsione è particolarmente adatta a disegnare i frattali?
 
 <div class="upper-alpha" markdown>
-1. Fractals are too large to fit in a for loop
-2. Fractals have a self-similar structure — each part looks like a smaller version of the whole — which maps naturally to recursive function calls
-3. The turtle library only works with recursive functions
-4. Fractals require exactly 1,000 iterations, which is Python's recursion limit
+1. I frattali sono troppo grandi per entrare in un ciclo for
+2. I frattali hanno una struttura autosimile — ogni parte sembra una versione più piccola del tutto — che corrisponde naturalmente alle chiamate di funzione ricorsive
+3. La libreria turtle funziona solo con le funzioni ricorsive
+4. I frattali richiedono esattamente 1.000 iterazioni, che è il limite di ricorsione di Python
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Fractals are self-similar — a branch on a fractal tree looks like a smaller version of the whole tree, which looks like a smaller version, and so on. This mirrors the structure of recursion perfectly: draw a branch, then call the same function to draw smaller branches at the tip, until the branches become too small to see (the base case).
+??? question "Mostra risposta"
+    La risposta corretta è **B**. I frattali sono autosimili — un ramo su un albero frattale sembra una versione più piccola dell'intero albero, che sembra una versione più piccola, e così via. Questo rispecchia perfettamente la struttura della ricorsione: disegna un ramo, poi chiama la stessa funzione per disegnare rami più piccoli alla punta, finché i rami non diventano troppo piccoli da vedere (il caso base).
 
     **Concept Tested:** Fractal Tree
 
 ---
 
-#### 9. What does the recursive `countdown(n)` function do differently from a `for` loop countdown?
+#### 9. Cosa fa diversamente la funzione ricorsiva `countdown(n)` rispetto a un conto alla rovescia con ciclo `for`?
 
 <div class="upper-alpha" markdown>
-1. A recursive countdown is always faster than a for loop
-2. A recursive countdown can handle negative numbers but a for loop cannot
-3. A recursive countdown calls itself with a smaller value on each step, using the call stack rather than a loop counter
-4. They are identical — recursion and loops always produce the same code
+1. Un conto alla rovescia ricorsivo è sempre più veloce di un ciclo for
+2. Un conto alla rovescia ricorsivo può gestire numeri negativi ma un ciclo for no
+3. Un conto alla rovescia ricorsivo chiama sé stesso con un valore più piccolo a ogni passo, usando lo stack delle chiamate invece di un contatore di ciclo
+4. Sono identici — la ricorsione e i cicli producono sempre lo stesso codice
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. A recursive countdown calls itself with `n - 1` on each call, relying on the call stack to keep track of where it is. A for loop uses a counter variable managed by the loop structure. Both achieve the same result, but they use different mechanisms. For loops are often more efficient and clear for simple counting; recursion shines when the problem has a naturally recursive structure.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Un conto alla rovescia ricorsivo chiama sé stesso con `n - 1` a ogni chiamata, affidandosi allo stack delle chiamate per tenere traccia di dove si trova. Un ciclo for usa una variabile contatore gestita dalla struttura del ciclo. Entrambi ottengono lo stesso risultato, ma usano meccanismi diversi. I cicli for sono spesso più efficienti e chiari per il conteggio semplice; la ricorsione risplende quando il problema ha una struttura naturalmente ricorsiva.
 
     **Concept Tested:** Recursion Concept
 
 ---
 
-#### 10. Which of the following correctly defines a lambda that doubles its input?
+#### 10. Quale delle seguenti definisce correttamente una lambda che raddoppia il suo input?
 
 <div class="upper-alpha" markdown>
 1. `lambda: x * 2`
@@ -157,8 +157,8 @@ Test your understanding of recursion, base cases, lambda functions, and the call
 4. `lambda x => x * 2`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. The correct lambda syntax is `lambda parameters: expression`. `lambda x: x * 2` creates a function that takes one argument `x` and returns `x * 2`. Option A is missing the parameter `x`. Option B mixes `def` and `lambda` syntax incorrectly. Option D uses `=>` which is not valid Python (it is used in JavaScript).
+??? question "Mostra risposta"
+    La risposta corretta è **C**. La sintassi corretta della lambda è `lambda parametri: espressione`. `lambda x: x * 2` crea una funzione che prende un argomento `x` e restituisce `x * 2`. L'opzione A manca del parametro `x`. L'opzione B mescola la sintassi di `def` e `lambda` in modo scorretto. L'opzione D usa `=>` che non è Python valido (si usa in JavaScript).
 
     **Concept Tested:** Lambda Functions
 

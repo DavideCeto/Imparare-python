@@ -1,27 +1,27 @@
 ---
-title: Recursion and Fractals
-description: Discover recursion — functions that call themselves — with base cases, call stacks, lambdas, and a beautiful recursive fractal tree
+title: Ricorsione e Frattali
+description: Scopri la ricorsione — funzioni che chiamano sé stesse — con i casi base, gli stack di chiamate, le lambda, e un bellissimo albero frattale ricorsivo
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 14:00:00
 version: 0.09
 ---
 
-# Recursion and Fractals
+# Ricorsione e Frattali
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Explain what **recursion** is and why every recursive function needs a **base case**
-- Trace through a simple recursive function step by step
-- Write a **lambda** (one-line anonymous function) and pass functions as arguments
-- Build a recursive **fractal tree** using turtle graphics
+- Spiegare cos'è la **ricorsione** e perché ogni funzione ricorsiva ha bisogno di un **caso base**
+- Seguire passo passo una semplice funzione ricorsiva
+- Scrivere una **lambda** (funzione anonima su una riga) e passare funzioni come argomenti
+- Costruire un **albero frattale** ricorsivo usando la grafica turtle
 
-Recursion is one of the most mind-bending ideas in programming — a function that calls itself.
-Once you understand it, you'll see fractals in a completely new way.
+La ricorsione è una delle idee più sorprendenti della programmazione — una funzione che chiama sé stessa.
+Una volta che la capisci, vedrai i frattali in un modo completamente nuovo.
 
-!!! mascot-welcome "Welcome to Chapter 24!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 24!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Recursion sounds scary, but it's really just a function that knows how to break a big problem into a smaller version of the same problem.
-    Let's start simple, then build something beautiful. Let's code it together!
+    La ricorsione suona spaventosa, ma è davvero solo una funzione che sa come scomporre un problema grande in una versione più piccola dello stesso problema.
+    Iniziamo in modo semplice, poi costruiamo qualcosa di bellissimo. Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -29,15 +29,15 @@ Once you understand it, you'll see fractals in a completely new way.
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## The Recursion Concept
+## Il Concetto di Ricorsione
 
-**Recursion** happens when a function calls itself.
-Think about Russian nesting dolls — each doll contains a smaller version of itself, all the way down to the tiny solid one at the center.
+La **ricorsione** succede quando una funzione chiama sé stessa.
+Pensa alle bambole russe matrioska — ogni bambola contiene una versione più piccola di sé stessa, fino a quella minuscola e solida al centro.
 
-The solid doll at the center is the **base case** — the point where the function stops calling itself.
-Without a base case, the function would call itself forever (or until Python runs out of stack space and raises a `RecursionError`).
+La bambola solida al centro è il **caso base** — il punto dove la funzione si ferma e non chiama più sé stessa.
+Senza un caso base, la funzione chiamerebbe sé stessa per sempre (o finché Python non finisce lo spazio dello stack e genera un `RecursionError`).
 
-The simplest recursive example is counting down:
+L'esempio ricorsivo più semplice è il conto alla rovescia:
 
 ```python
 def countdown(n):
@@ -72,29 +72,29 @@ initCmLab('', `def countdown(n):
 countdown(5)`);
 </script>
 
-## The Base Case
+## Il Caso Base
 
-Every recursive function **must** have a base case.
-The base case is the condition that stops the recursion and returns a value without calling the function again.
+Ogni funzione ricorsiva **deve** avere un caso base.
+Il caso base è la condizione che ferma la ricorsione e restituisce un valore senza chiamare di nuovo la funzione.
 
-If you forget the base case, Python eventually raises `RecursionError: maximum recursion depth exceeded` after about 1000 nested calls.
+Se dimentichi il caso base, Python alla fine genera `RecursionError: maximum recursion depth exceeded` dopo circa 1000 chiamate annidate.
 
-A well-designed recursive function:
-1. Checks for the base case first
-2. Makes the recursive call with a *smaller* or *simpler* version of the input
+Una funzione ricorsiva ben progettata:
+1. Controlla prima il caso base
+2. Fa la chiamata ricorsiva con una versione *più piccola* o *più semplice* dell'input
 
-## Recursion Depth and the Call Stack
+## La Profondità della Ricorsione e lo Stack delle Chiamate
 
-Each time a function calls itself, Python saves the current state in memory (the **call stack**).
-This means recursion uses memory — and Python limits the stack to about 1,000 levels deep by default.
+Ogni volta che una funzione chiama sé stessa, Python salva lo stato attuale in memoria (lo **stack delle chiamate**, call stack).
+Questo significa che la ricorsione usa memoria — e Python limita lo stack a circa 1.000 livelli di profondità per default.
 
-For most student programs this is plenty. But for very deep recursion (like large fractals), you may need to reduce the depth.
+Per la maggior parte dei programmi degli studenti questo è più che sufficiente. Ma per ricorsioni molto profonde (come grandi frattali), potresti aver bisogno di ridurre la profondità.
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The recursive `factorial` function below computes `n!` (n factorial).
-    What do you think `factorial(5)` returns? Remember: `5! = 5 × 4 × 3 × 2 × 1`.
-    Make your guess — then run it!
+    La funzione ricorsiva `factorial` sotto calcola `n!` (n fattoriale).
+    Cosa pensi che restituisca `factorial(5)`? Ricorda: `5! = 5 × 4 × 3 × 2 × 1`.
+    Fai la tua previsione — poi eseguilo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -120,26 +120,26 @@ print("7! =", factorial(7))
 print("10! =", factorial(10))`);
 </script>
 
-Were you right? `5! = 120`. Tracing it: `5 * factorial(4)` → `5 * 4 * factorial(3)` → ... → `5 * 4 * 3 * 2 * 1`.
+Avevi indovinato? `5! = 120`. Seguendolo passo passo: `5 * factorial(4)` → `5 * 4 * factorial(3)` → ... → `5 * 4 * 3 * 2 * 1`.
 
-### See It: The Call Stack in Action
+### Guardalo: Lo Stack delle Chiamate in Azione
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Every recursive call gets its own **frame** on a stack, each remembering
-    its own `n`. For `factorial(4)`, predict: **how tall will the tower of
-    frames get before it starts coming back down?** Step through and count!
+    Ogni chiamata ricorsiva ottiene il suo proprio **frame** su uno stack, ognuno
+    ricordando il suo `n`. Per `factorial(4)`, prevedi: **quanto alta diventerà la torre
+    di frame prima che inizi a scendere di nuovo?** Esegui passo passo e conta!
 
 <iframe src="../../sims/recursion-call-stack/main.html" height="562" width="100%" scrolling="no"></iframe>
 
-[Explore the Recursion Call Stack MicroSim](../../sims/recursion-call-stack/index.md){ .md-button }
+[Esplora il MicroSim Recursion Call Stack](../../sims/recursion-call-stack/index.md){ .md-button }
 
-Watch the two phases: frames pile **up** with paused multiplications (`4 × ?`) until the gold base case, then the answers flow back **down** as each frame finishes its math. Then pick **Missing Base Case** from the dropdown to see exactly why every recursive function needs a stopping rule.
+Guarda le due fasi: i frame si accumulano **verso l'alto** con moltiplicazioni in pausa (`4 × ?`) finché non raggiungono il caso base dorato, poi le risposte scorrono di nuovo **verso il basso** mentre ogni frame finisce il suo calcolo. Poi scegli **Missing Base Case** dal menu a tendina per vedere esattamente perché ogni funzione ricorsiva ha bisogno di una regola di arresto.
 
-## Lambda Functions
+## Funzioni Lambda
 
-A **lambda** is a tiny anonymous function written on one line.
-The syntax is: `lambda parameters: expression`.
+Una **lambda** è una piccola funzione anonima scritta su una riga.
+La sintassi è: `lambda parametri: espressione`.
 
 ```python
 square = lambda x: x * x
@@ -149,13 +149,13 @@ add = lambda a, b: a + b
 print(add(3, 4))   # 7
 ```
 
-Lambdas are most useful when you need a short function as an argument to another function, like `sorted(key=...)` or `map()`.
+Le lambda sono più utili quando hai bisogno di una funzione breve come argomento per un'altra funzione, come `sorted(key=...)` o `map()`.
 
-## Functions as Arguments
+## Funzioni come Argomenti
 
-In Python, functions are **first-class objects** — you can pass them as arguments to other functions.
+In Python, le funzioni sono **oggetti di prima classe** — puoi passarle come argomenti ad altre funzioni.
 
-Before we try this, note what it means: when a function takes another function as a parameter, the outer function can call it on any input without knowing what it does in advance.
+Prima di provarlo, nota cosa significa: quando una funzione prende un'altra funzione come parametro, la funzione esterna può chiamarla su qualsiasi input senza sapere in anticipo cosa fa.
 
 ```python
 def apply(func, value):
@@ -166,11 +166,11 @@ print(apply(str.upper, "hi")) # "HI"
 print(apply(lambda x: x**2, 5))  # 25
 ```
 
-## Nested Functions
+## Funzioni Annidate
 
-You can define a function inside another function. The inner function can access variables from the outer function.
+Puoi definire una funzione dentro un'altra funzione. La funzione interna può accedere alle variabili della funzione esterna.
 
-The **`nonlocal` keyword** lets an inner function modify a variable from its enclosing (outer) function — similar to how `global` lets a function modify a global variable.
+La **parola chiave `nonlocal`** permette a una funzione interna di modificare una variabile dalla sua funzione (esterna) racchiudente — in modo simile a come `global` permette a una funzione di modificare una variabile globale.
 
 ```python
 def make_counter():
@@ -189,17 +189,17 @@ print(counter())   # 2
 print(counter())   # 3
 ```
 
-## Fractals with Recursion and Turtle
+## Frattali con Ricorsione e Turtle
 
-A **fractal** is a pattern that repeats itself at smaller and smaller scales.
-Recursive functions are perfect for drawing fractals because each branch is a smaller version of the whole.
+Un **frattale** è un pattern che si ripete a scale sempre più piccole.
+Le funzioni ricorsive sono perfette per disegnare i frattali perché ogni ramo è una versione più piccola dell'intero.
 
-The **fractal tree** works like this: draw a trunk, then at the top of the trunk, draw two branches at angles — and each branch is a smaller tree.
+L'**albero frattale** funziona così: disegna un tronco, poi in cima al tronco, disegna due rami ad angoli diversi — e ogni ramo è un albero più piccolo.
 
-Before the code, the key parameters are:
-- `length` — length of the current branch
-- `angle` — how far each branch spreads left and right
-- When `length < 5`, stop drawing (base case)
+Prima del codice, i parametri chiave sono:
+- `length` — lunghezza del ramo attuale
+- `angle` — quanto si allarga ogni ramo a sinistra e a destra
+- Quando `length < 5`, smetti di disegnare (caso base)
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -239,31 +239,31 @@ draw_tree(80, 25)
 t.hideturtle()`);
 </script>
 
-Try changing the angle from `25` to `35` or `15` to see how it changes the tree's shape!
+Prova a cambiare l'angolo da `25` a `35` oppure a `15` per vedere come cambia la forma dell'albero!
 
-!!! mascot-tip "The Magic of Backtracking"
+!!! mascot-tip "La Magia del Backtracking"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    Notice `t.backward(length)` at the end of `draw_tree`. This is the turtle going back to where it started *before* it drew the current branch.
-    Without this, the turtle would wander off. Backtracking is what makes recursive drawing work — always return the turtle to where you found it.
+    Nota `t.backward(length)` alla fine di `draw_tree`. Questo è la tartaruga che torna a dove era partita *prima* di disegnare il ramo attuale.
+    Senza questo, la tartaruga vagherebbe via. Il backtracking è ciò che fa funzionare il disegno ricorsivo — riporta sempre la tartaruga a dove l'hai trovata.
 
-### See It: Sculpt a Fractal with Sliders
+### Guardalo: Scolpisci un Frattale con gli Slider
 
-Editing the turtle code and re-running works, but sliders reveal how *sensitive* a fractal is to its parameters. In the explorer below, every recursion level has its own color — the brown trunk is level 0, and the greenest twigs are the deepest calls. Before you drag anything, predict: **what happens to the "recursive calls" counter each time you raise the depth by 1?**
+Modificare il codice della tartaruga e rieseguire funziona, ma gli slider rivelano quanto è *sensibile* un frattale ai suoi parametri. Nell'esploratore sotto, ogni livello di ricorsione ha il suo colore — il tronco marrone è il livello 0, e i rametti più verdi sono le chiamate più profonde. Prima di trascinare qualcosa, prevedi: **cosa succede al contatore "recursive calls" ogni volta che aumenti la profondità di 1?**
 
 <iframe src="../../sims/fractal-tree-explorer/main.html" height="552" width="100%" scrolling="no"></iframe>
 
-[Explore the Fractal Tree Explorer MicroSim](../../sims/fractal-tree-explorer/index.md){ .md-button }
+[Esplora il MicroSim Fractal Tree Explorer](../../sims/fractal-tree-explorer/index.md){ .md-button }
 
-Roughly doubles every time — that is the two-recursive-calls pattern you just wrote in `draw_tree`. When you find a tree you love, click **Snapshot**, keep exploring, and compare against the gray ghost. Can you design a weeping willow? A tumbleweed?
+Raddoppia circa ogni volta — questo è il pattern delle due chiamate ricorsive che hai appena scritto in `draw_tree`. Quando trovi un albero che ti piace, clicca **Snapshot**, continua a esplorare, e confronta con il fantasma grigio. Riesci a progettare un salice piangente? Un tumbleweed?
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add Color to the Fractal Tree"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi Colore all'Albero Frattale"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The fractal tree draws in the default color. Modify the `draw_tree` function so that:
-    - Branches with `length >= 40` are drawn in `"brown"` (trunk/main branches)
-    - Shorter branches (length < 40) are drawn in `"green"` (leaves)
-    Add a `t.pencolor()` call at the start of the function to set the color based on length.
+    L'albero frattale si disegna nel colore predefinito. Modifica la funzione `draw_tree` così che:
+    - I rami con `length >= 40` siano disegnati in `"brown"` (tronco/rami principali)
+    - I rami più corti (length < 40) siano disegnati in `"green"` (foglie)
+    Aggiungi una chiamata `t.pencolor()` all'inizio della funzione per impostare il colore in base alla lunghezza.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -302,32 +302,32 @@ draw_tree(80, 25)
 t.hideturtle()`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Change the `0.7` multiplier in `draw_tree` to `0.6`. The tree will branch faster.
-   **You'll know it worked when** the tree is shorter and bushier.
+1. Cambia il moltiplicatore `0.7` in `draw_tree` in `0.6`. L'albero si ramificherà più velocemente.
+   **Saprai che ha funzionato quando** l'albero è più corto e più cespuglioso.
 
-2. Change the angle from `25` to `40`.
-   **You'll know it worked when** the branches spread out much wider.
+2. Cambia l'angolo da `25` a `40`.
+   **Saprai che ha funzionato quando** i rami si allargano molto di più.
 
-3. Write a recursive function `sum_list(lst)` that adds up all items in a list without using Python's `sum()`.
-   **You'll know it worked when** `sum_list([1, 2, 3, 4, 5])` returns `15`.
+3. Scrivi una funzione ricorsiva `sum_list(lst)` che somma tutti gli elementi di una lista senza usare `sum()` di Python.
+   **Saprai che ha funzionato quando** `sum_list([1, 2, 3, 4, 5])` restituisce `15`.
 
-4. Write a recursive function `reverse_string(s)` that reverses a string.
-   Base case: if `len(s) <= 1`, return `s`. Otherwise return `reverse_string(s[1:]) + s[0]`.
-   **You'll know it worked when** `reverse_string("hello")` returns `"olleh"`.
+4. Scrivi una funzione ricorsiva `reverse_string(s)` che inverte una stringa.
+   Caso base: se `len(s) <= 1`, restituisci `s`. Altrimenti restituisci `reverse_string(s[1:]) + s[0]`.
+   **Saprai che ha funzionato quando** `reverse_string("hello")` restituisce `"olleh"`.
 
-5. Use a lambda with `sorted()` to sort `["banana", "apple", "fig", "kiwi"]` by string length.
-   **You'll know it worked when** shorter words appear first.
+5. Usa una lambda con `sorted()` per ordinare `["banana", "apple", "fig", "kiwi"]` per la lunghezza della stringa.
+   **Saprai che ha funzionato quando** le parole più corte appaiono prima.
 
-!!! mascot-celebration "Recursion Master!"
+!!! mascot-celebration "Maestro della Ricorsione!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've grasped one of the most powerful and beautiful ideas in all of programming!
-    Recursion, fractals, lambdas, and functions-as-arguments — these concepts appear in professional code every day.
-    Next up: object-oriented programming! Let's keep coding!
+    Hai capito una delle idee più potenti e belle di tutta la programmazione!
+    Ricorsione, frattali, lambda, e funzioni-come-argomenti — questi concetti appaiono nel codice professionale ogni giorno.
+    Il prossimo passo: la programmazione orientata agli oggetti! Continuiamo a programmare!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)
