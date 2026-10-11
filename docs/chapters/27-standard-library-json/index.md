@@ -1,28 +1,28 @@
 ---
-title: Standard Library and JSON
-description: Explore Python's standard library — custom modules, json, sys, os, collections, itertools, datetime — and learn to read/write JSON files
+title: Libreria Standard e JSON
+description: Esplora la libreria standard di Python — moduli personalizzati, json, sys, os, collections, itertools, datetime — e impara a leggere/scrivere file JSON
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 14:30:00
 version: 0.09
 ---
 
-# Standard Library and JSON
+# Libreria Standard e JSON
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Create your own Python module and use the `__name__ == "__main__"` guard
-- Load and save data in **JSON format** using `json.loads()`, `json.dumps()`, `json.load()`, and `json.dump()`
-- Use key standard library modules: `sys`, `os`, `collections`, `itertools`, and `datetime`
-- Check whether a file exists and handle file paths with `os.path`
+- Creare il tuo proprio modulo Python e usare il guardiano `__name__ == "__main__"`
+- Caricare e salvare dati in **formato JSON** usando `json.loads()`, `json.dumps()`, `json.load()`, e `json.dump()`
+- Usare i moduli chiave della libreria standard: `sys`, `os`, `collections`, `itertools`, e `datetime`
+- Controllare se un file esiste e gestire i percorsi dei file con `os.path`
 
-Python ships with a massive library of ready-to-use modules.
-This chapter explores the most useful ones and teaches you how to organize your own code into modules.
+Python viene fornito con un'enorme libreria di moduli pronti all'uso.
+Questo capitolo esplora i più utili e ti insegna come organizzare il tuo codice in moduli.
 
-!!! mascot-welcome "Welcome to Chapter 27!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 27!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    The Python standard library is like a huge toolbox — it comes free with every Python installation.
-    Today we'll explore the most useful tools and learn to work with JSON, the universal data format of the web.
-    Let's code it together!
+    La libreria standard di Python è come un'enorme cassetta degli attrezzi — viene gratis con ogni installazione di Python.
+    Oggi esploreremo gli strumenti più utili e imparerai a lavorare con JSON, il formato di dati universale del web.
+    Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -30,12 +30,12 @@ This chapter explores the most useful ones and teaches you how to organize your 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## Creating Custom Modules
+## Creare Moduli Personalizzati
 
-A **module** is just a `.py` file that contains functions and variables you want to reuse.
-Any Python file can be imported by another file in the same directory.
+Un **modulo** è semplicemente un file `.py` che contiene funzioni e variabili che vuoi riutilizzare.
+Qualsiasi file Python può essere importato da un altro file nella stessa cartella.
 
-Suppose you create `mymath.py`:
+Supponi di creare `mymath.py`:
 
 ```python
 # mymath.py
@@ -48,19 +48,19 @@ def circle_circumference(r):
     return 2 * PI * r
 ```
 
-Then in your main program:
+Poi nel tuo programma principale:
 
 ```python
 import mymath
 print(mymath.circle_area(5))
 ```
 
-## The `__name__ == "__main__"` Guard
+## Il Guardiano `__name__ == "__main__"`
 
-When Python imports a module, it runs all the code at the top level.
-This can cause problems if your module contains test code you only want to run directly — not when imported.
+Quando Python importa un modulo, esegue tutto il codice al livello più alto.
+Questo può causare problemi se il tuo modulo contiene codice di test che vuoi eseguire solo direttamente — non quando viene importato.
 
-The **`__name__ == "__main__"` guard** wraps test code so it only runs when the file is executed directly:
+Il **guardiano `__name__ == "__main__"`** racchiude il codice di test così che giri solo quando il file viene eseguito direttamente:
 
 ```python
 # mymath.py
@@ -73,19 +73,19 @@ if __name__ == "__main__":
     print("Testing circle_area:", circle_area(5))
 ```
 
-Always put test code and script logic inside this guard in module files.
+Metti sempre il codice di test e la logica dello script dentro questo guardiano nei file dei moduli.
 
-## The `sys` Module
+## Il Modulo `sys`
 
-The `sys` module gives you information about the Python interpreter itself.
+Il modulo `sys` ti dà informazioni sull'interprete Python stesso.
 
-| Attribute/Function | What it provides |
+| Attributo/Funzione | Cosa fornisce |
 |-------------------|-----------------|
-| `sys.path` | List of directories Python searches for modules |
-| `sys.version` | Python version string |
-| `sys.argv` | Command-line arguments passed to the script |
-| `sys.exit()` | Exits the program immediately |
-| `sys.stdin`, `sys.stdout` | Standard input/output streams |
+| `sys.path` | Lista delle cartelle dove Python cerca i moduli |
+| `sys.version` | Stringa della versione di Python |
+| `sys.argv` | Argomenti della riga di comando passati allo script |
+| `sys.exit()` | Esce immediatamente dal programma |
+| `sys.stdin`, `sys.stdout` | Stream di input/output standard |
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -108,21 +108,21 @@ print("Platform:", sys.platform)
 print("Module search paths (first 2):", sys.path[:2])`);
 </script>
 
-## The `os` Module and File Path Handling
+## Il Modulo `os` e la Gestione dei Percorsi dei File
 
-The `os` module lets Python talk to the operating system — creating directories, listing files, working with file paths.
+Il modulo `os` permette a Python di parlare con il sistema operativo — creando cartelle, elencando file, lavorando con i percorsi dei file.
 
-`os.path` is the sub-module for file path operations.
-Before we try them, here are the key functions:
+`os.path` è il sottomodulo per le operazioni sui percorsi dei file.
+Prima di provarle, ecco le funzioni chiave:
 
-| Function | Purpose |
-|----------|---------|
-| `os.getcwd()` | Get current working directory |
-| `os.listdir(path)` | List files in a directory |
-| `os.path.exists(path)` | Check if a file/folder exists |
-| `os.path.join(a, b)` | Join path parts safely (works on Windows and Mac) |
-| `os.path.basename(path)` | Get just the filename from a path |
-| `os.path.dirname(path)` | Get just the directory part |
+| Funzione | Scopo |
+|----------|-------|
+| `os.getcwd()` | Ottiene la cartella di lavoro attuale |
+| `os.listdir(path)` | Elenca i file in una cartella |
+| `os.path.exists(path)` | Controlla se un file/cartella esiste |
+| `os.path.join(a, b)` | Unisce le parti di un percorso in sicurezza (funziona su Windows e Mac) |
+| `os.path.basename(path)` | Ottiene solo il nome del file da un percorso |
+| `os.path.dirname(path)` | Ottiene solo la parte della cartella |
 
 ```python
 import os
@@ -132,10 +132,10 @@ print(os.path.exists("notes.txt"))          # True or False
 print(os.path.join("folder", "file.txt"))   # "folder/file.txt"
 ```
 
-## JSON — The Universal Data Format
+## JSON — Il Formato di Dati Universale
 
-**JSON** (JavaScript Object Notation) is a text format for storing structured data.
-It looks almost exactly like Python dictionaries and lists:
+**JSON** (JavaScript Object Notation) è un formato di testo per memorizzare dati strutturati.
+Assomiglia quasi esattamente ai dizionari e alle liste di Python:
 
 ```json
 {
@@ -146,30 +146,30 @@ It looks almost exactly like Python dictionaries and lists:
 }
 ```
 
-JSON is used everywhere — web APIs, configuration files, databases, and data exchange between programs.
-Python's `json` module converts between JSON strings and Python objects.
+JSON si usa ovunque — API web, file di configurazione, database, e scambio di dati tra programmi.
+Il modulo `json` di Python converte tra stringhe JSON e oggetti Python.
 
-| Python type | JSON type |
+| Tipo Python | Tipo JSON |
 |-------------|-----------|
-| `dict` | object `{}` |
+| `dict` | oggetto `{}` |
 | `list` | array `[]` |
-| `str` | string `""` |
-| `int`, `float` | number |
+| `str` | stringa `""` |
+| `int`, `float` | numero |
 | `True`/`False` | `true`/`false` |
 | `None` | `null` |
 
-## `json.loads()` and `json.dumps()`
+## `json.loads()` e `json.dumps()`
 
-Two functions convert between JSON text and Python objects:
+Due funzioni convertono tra testo JSON e oggetti Python:
 
-- `json.loads(text)` — **loads** JSON from a string into Python objects ("loads" = load string)
-- `json.dumps(obj)` — **dumps** Python objects to a JSON string ("dumps" = dump string)
+- `json.loads(text)` — **carica** JSON da una stringa in oggetti Python ("loads" = load string)
+- `json.dumps(obj)` — **scarica** oggetti Python in una stringa JSON ("dumps" = dump string)
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below converts a JSON string to a Python dictionary, then back to JSON.
-    Will the two JSON strings look identical? Are there any formatting differences?
-    Make your guess — then run it!
+    Il codice sotto converte una stringa JSON in un dizionario Python, poi di nuovo in JSON.
+    Le due stringhe JSON sembreranno identiche? Ci sono differenze di formattazione?
+    Fai la tua previsione — poi eseguilo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -202,24 +202,24 @@ print("\\nUpdated JSON:")
 print(new_json)`);
 </script>
 
-`indent=2` makes the JSON human-readable with 2-space indentation.
+`indent=2` rende il JSON leggibile dall'uomo con un'indentazione di 2 spazi.
 
-### See It: The Type Mapper
+### Guardalo: Il Mappatore dei Tipi
 
-JSON looks almost exactly like Python — which is exactly why it trips people up. In the mapper below, edit the JSON on the left and watch what `json.loads()` builds on the right. Before you touch it, predict: **what do JSON's `true` and `null` become in Python?**
+JSON assomiglia quasi esattamente a Python — che è esattamente il motivo per cui inganna le persone. Nel mappatore sotto, modifica il JSON a sinistra e guarda cosa costruisce `json.loads()` a destra. Prima di toccarlo, prevedi: **cosa diventano in Python `true` e `null` di JSON?**
 
 <iframe src="../../sims/json-python-mapper/main.html" height="442" width="100%" scrolling="no"></iframe>
 
-[Explore the JSON to Python Type Mapper MicroSim](../../sims/json-python-mapper/index.md){ .md-button }
+[Esplora il MicroSim JSON to Python Type Mapper](../../sims/json-python-mapper/index.md){ .md-button }
 
-Click **The tricky trio** preset to see all three famous differences at once, then try both **Broken** presets — single quotes and trailing commas are legal in Python but crash JSON parsing. Hover any colored value on the right to see its type names in both worlds.
+Clicca il preset **The tricky trio** per vedere tutte e tre le famose differenze in una volta, poi prova entrambi i preset **Broken** — le virgolette singole e le virgole finali sono legali in Python ma fanno andare in crash l'analisi JSON. Passa il mouse su qualsiasi valore colorato a destra per vedere i nomi dei suoi tipi in entrambi i mondi.
 
-## Reading and Writing JSON from Files
+## Leggere e Scrivere JSON da File
 
-`json.load(file)` reads JSON directly from an open file.
-`json.dump(data, file)` writes JSON directly to an open file.
+`json.load(file)` legge JSON direttamente da un file aperto.
+`json.dump(data, file)` scrive JSON direttamente su un file aperto.
 
-These require a real Python environment (Thonny, VS Code) because they need actual disk access.
+Questi richiedono un vero ambiente Python (Thonny, VS Code) perché hanno bisogno di un vero accesso al disco.
 
 ```python
 import json
@@ -236,7 +236,7 @@ with open("game.json") as f:
 print(loaded["high_score"])   # 1500
 ```
 
-In the Skulpt lab below we use `json.dumps()` → `json.loads()` to demonstrate the same round-trip without needing a file on disk.
+Nel laboratorio Skulpt sotto usiamo `json.dumps()` → `json.loads()` per mostrare lo stesso andirivieni senza bisogno di un file sul disco.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -272,14 +272,14 @@ print("Players:", loaded["players"])
 print("High score:", loaded["high_score"])`);
 </script>
 
-## The `collections` Module
+## Il Modulo `collections`
 
-`collections` provides specialized container types:
+`collections` fornisce tipi di contenitori specializzati:
 
-- `Counter` — count how many times each item appears
-- `defaultdict` — a dict that creates default values automatically
-- `OrderedDict` — a dict that remembers insertion order (less needed since Python 3.7)
-- `deque` — a double-ended queue that's faster than a list for adding/removing from both ends
+- `Counter` — conta quante volte appare ogni elemento
+- `defaultdict` — un dict che crea valori predefiniti automaticamente
+- `OrderedDict` — un dict che ricorda l'ordine di inserimento (meno necessario da Python 3.7)
+- `deque` — una coda a doppia estremità che è più veloce di una lista per aggiungere/rimuovere da entrambe le estremità
 
 ```python
 from collections import Counter
@@ -291,9 +291,9 @@ print(count["apple"])    # 3
 print(count.most_common(2))  # [('apple', 3), ('banana', 2)]
 ```
 
-## The `datetime` Module
+## Il Modulo `datetime`
 
-`datetime` provides date and time objects:
+`datetime` fornisce oggetti di data e ora:
 
 ```python
 from datetime import datetime, date
@@ -306,14 +306,14 @@ today = date.today()
 print(today)
 ```
 
-## The `itertools` Module
+## Il Modulo `itertools`
 
-`itertools` provides efficient tools for working with iterators:
+`itertools` fornisce strumenti efficienti per lavorare con gli iteratori:
 
-- `itertools.chain(a, b)` — join two iterables end-to-end
-- `itertools.combinations(seq, r)` — all r-length combinations
-- `itertools.permutations(seq, r)` — all r-length permutations
-- `itertools.cycle(seq)` — repeat a sequence forever
+- `itertools.chain(a, b)` — unisce due iterabili uno dopo l'altro
+- `itertools.combinations(seq, r)` — tutte le combinazioni di lunghezza r
+- `itertools.permutations(seq, r)` — tutte le permutazioni di lunghezza r
+- `itertools.cycle(seq)` — ripete una sequenza per sempre
 
 ```python
 from itertools import combinations
@@ -323,12 +323,12 @@ pairs = list(combinations(players, 2))
 print(pairs)   # [('A','B'), ('A','C'), ('A','D'), ('B','C'), ('B','D'), ('C','D')]
 ```
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Use Counter"
+!!! mascot-thinking "Il Tuo Turno — Usa Counter"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below counts words in a sentence, but uses the manual `dict.get()` pattern from Chapter 21.
-    Replace it with `Counter` from the `collections` module to count the same words in fewer lines!
+    Il codice sotto conta le parole in una frase, ma usa il pattern manuale `dict.get()` del Capitolo 21.
+    Sostituiscilo con `Counter` dal modulo `collections` per contare le stesse parole in meno righe!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -356,31 +356,31 @@ print(word_count)
 print("Most common:", max(word_count, key=word_count.get))`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Use `json.dumps({"active": True, "count": None}, indent=2)`. Print the result and notice how Python's `True` and `None` become JSON's `true` and `null`.
-   **You'll know it worked when** you see `true` and `null` in the output.
+1. Usa `json.dumps({"active": True, "count": None}, indent=2)`. Stampa il risultato e nota come `True` e `None` di Python diventano `true` e `null` di JSON.
+   **Saprai che ha funzionato quando** vedi `true` e `null` nell'output.
 
-2. Use `Counter` to find the most common character in the string `"mississippi"`.
-   **You'll know it worked when** you see `"i"` is the most common with count 4.
+2. Usa `Counter` per trovare il carattere più comune nella stringa `"mississippi"`.
+   **Saprai che ha funzionato quando** vedi che `"i"` è il più comune con un conteggio di 4.
 
-3. Use `json.loads()` to parse `'[1, 2, 3, 4, 5]'` (a JSON array) into a Python list, then print its sum.
-   **You'll know it worked when** you see `15`.
+3. Usa `json.loads()` per analizzare `'[1, 2, 3, 4, 5]'` (un array JSON) in una lista Python, poi stampa la sua somma.
+   **Saprai che ha funzionato quando** vedi `15`.
 
-4. Use `datetime.now().strftime("%A")` to print today's day of the week.
-   **You'll know it worked when** you see the current weekday name.
+4. Usa `datetime.now().strftime("%A")` per stampare il giorno della settimana di oggi.
+   **Saprai che ha funzionato quando** vedi il nome del giorno della settimana attuale.
 
-5. Use `itertools.combinations("ABCD", 2)` to list all 6 two-letter combinations.
-   **You'll know it worked when** you see 6 tuples.
+5. Usa `itertools.combinations("ABCD", 2)` per elencare tutte le 6 combinazioni di due lettere.
+   **Saprai che ha funzionato quando** vedi 6 tuple.
 
-!!! mascot-celebration "Standard Library Pro!"
+!!! mascot-celebration "Professionista della Libreria Standard!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've explored Python's vast standard library and mastered JSON — the language of the web!
-    These tools will appear in virtually every real-world Python project you work on.
-    You're thinking like a professional developer now. Let's keep coding!
+    Hai esplorato la vasta libreria standard di Python e padroneggiato JSON — il linguaggio del web!
+    Questi strumenti appariranno praticamente in ogni progetto Python del mondo reale su cui lavorerai.
+    Stai pensando come uno sviluppatore professionista ora. Continuiamo a programmare!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)

@@ -1,164 +1,164 @@
-# Quiz: Standard Library and JSON
+# Quiz: Libreria Standard e JSON
 
-Test your understanding of Python modules, JSON data, the sys and os modules, and the collections module with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione dei moduli Python, dei dati JSON, dei moduli sys e os, e del modulo collections con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What is a Python module?
+#### 1. Cos'è un modulo Python?
 
 <div class="upper-alpha" markdown>
-1. A built-in function like `print()` or `len()`
-2. A `.py` file containing functions, variables, and classes that can be imported and reused
-3. A special comment that tells Python to load extra features
-4. A folder containing multiple Python programs
+1. Una funzione built-in come `print()` o `len()`
+2. Un file `.py` contenente funzioni, variabili, e classi che possono essere importate e riutilizzate
+3. Un commento speciale che dice a Python di caricare funzionalità extra
+4. Una cartella contenente più programmi Python
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. A module is simply a `.py` file. Any Python file can be a module — you write functions and variables in it, then use `import module_name` in another file to access them. Python also ships with many pre-built modules (the standard library) like `math`, `random`, `os`, `sys`, and `json`.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Un modulo è semplicemente un file `.py`. Qualsiasi file Python può essere un modulo — ci scrivi funzioni e variabili, poi usi `import nome_modulo` in un altro file per accedervi. Python viene anche fornito con molti moduli pre-costruiti (la libreria standard) come `math`, `random`, `os`, `sys`, e `json`.
 
     **Concept Tested:** Custom Modules
 
 ---
 
-#### 2. What does the `if __name__ == "__main__":` guard do?
+#### 2. Cosa fa il guardiano `if __name__ == "__main__":`?
 
 <div class="upper-alpha" markdown>
-1. It makes the program run faster by skipping imports
-2. It checks whether the module has been imported before
-3. It ensures the indented block runs only when the file is executed directly, not when it is imported
-4. It defines the entry point for a web server
+1. Fa girare il programma più velocemente saltando gli import
+2. Controlla se il modulo è già stato importato prima
+3. Assicura che il blocco indentato giri solo quando il file viene eseguito direttamente, non quando viene importato
+4. Definisce il punto di ingresso per un server web
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. When Python runs a file directly, `__name__` equals `"__main__"`. When a file is imported as a module, `__name__` equals the module's filename. The guard `if __name__ == "__main__":` is used to put test code or script logic that should only run when you execute the file directly — not when another program imports it.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. Quando Python esegue un file direttamente, `__name__` è uguale a `"__main__"`. Quando un file viene importato come modulo, `__name__` è uguale al nome del file del modulo. Il guardiano `if __name__ == "__main__":` si usa per mettere il codice di test o la logica dello script che dovrebbe girare solo quando esegui il file direttamente — non quando un altro programma lo importa.
 
     **Concept Tested:** __name__ Guard
 
 ---
 
-#### 3. What does `sys.argv` contain?
+#### 3. Cosa contiene `sys.argv`?
 
 <div class="upper-alpha" markdown>
-1. The list of all modules currently imported into the program
-2. The command-line arguments passed to the Python script when it was run
-3. A list of all functions defined in the program
-4. The Python interpreter's version and platform information
+1. La lista di tutti i moduli attualmente importati nel programma
+2. Gli argomenti della riga di comando passati allo script Python quando è stato eseguito
+3. Una lista di tutte le funzioni definite nel programma
+4. La versione dell'interprete Python e le informazioni sulla piattaforma
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `sys.argv` is a list of strings representing the command-line arguments. `sys.argv[0]` is always the script name itself. If you run `python my_script.py hello 42`, then `sys.argv` equals `["my_script.py", "hello", "42"]`. This allows programs to accept configuration from the command line without using `input()`.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `sys.argv` è una lista di stringhe che rappresentano gli argomenti della riga di comando. `sys.argv[0]` è sempre il nome dello script stesso. Se esegui `python my_script.py hello 42`, allora `sys.argv` è uguale a `["my_script.py", "hello", "42"]`. Questo permette ai programmi di accettare configurazioni dalla riga di comando senza usare `input()`.
 
     **Concept Tested:** sys Module
 
 ---
 
-#### 4. What does `os.path.exists("data.txt")` return?
+#### 4. Cosa restituisce `os.path.exists("data.txt")`?
 
 <div class="upper-alpha" markdown>
-1. The full path to `data.txt` on your computer
-2. `True` if the file or folder exists, `False` if it does not
-3. The file size in bytes
-4. The date and time when the file was last modified
+1. Il percorso completo a `data.txt` sul tuo computer
+2. `True` se il file o la cartella esiste, `False` se non esiste
+3. La dimensione del file in byte
+4. La data e l'ora dell'ultima modifica del file
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `os.path.exists(path)` checks whether a file or directory exists at the given path and returns `True` or `False`. This is useful before trying to open a file — you can check first to avoid a `FileNotFoundError`. The `os.path` sub-module has many other useful functions like `os.path.join()` and `os.path.basename()`.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `os.path.exists(path)` controlla se un file o una directory esiste al percorso dato e restituisce `True` o `False`. Questo è utile prima di provare ad aprire un file — puoi controllare prima per evitare un `FileNotFoundError`. Il sottomodulo `os.path` ha molte altre funzioni utili come `os.path.join()` e `os.path.basename()`.
 
     **Concept Tested:** os Module
 
 ---
 
-#### 5. What is JSON?
+#### 5. Cos'è JSON?
 
 <div class="upper-alpha" markdown>
-1. A Python-specific binary format for saving program data
-2. A text format for storing structured data that looks like Python dictionaries and lists
-3. A type of encrypted file used for storing passwords securely
-4. A database language similar to SQL
+1. Un formato binario specifico di Python per salvare i dati del programma
+2. Un formato di testo per memorizzare dati strutturati che assomiglia ai dizionari e alle liste di Python
+3. Un tipo di file cifrato usato per memorizzare le password in sicurezza
+4. Un linguaggio di database simile a SQL
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. JSON (JavaScript Object Notation) is a lightweight text format for structured data. It uses curly braces `{}` for objects (like Python dictionaries), square brackets `[]` for arrays (like Python lists), and `true`/`false`/`null` for booleans and None. JSON is the most common format for web APIs and configuration files, and Python's `json` module makes it easy to read and write.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. JSON (JavaScript Object Notation) è un formato di testo leggero per i dati strutturati. Usa le parentesi graffe `{}` per gli oggetti (come i dizionari Python), le parentesi quadre `[]` per gli array (come le liste Python), e `true`/`false`/`null` per i booleani e None. JSON è il formato più comune per le API web e i file di configurazione, e il modulo `json` di Python lo rende facile da leggere e scrivere.
 
     **Concept Tested:** JSON Format
 
 ---
 
-#### 6. What does `json.loads('{"x": 1}')` return?
+#### 6. Cosa restituisce `json.loads('{"x": 1}')`?
 
 <div class="upper-alpha" markdown>
-1. The string `'{"x": 1}'` unchanged
-2. A Python dictionary `{"x": 1}`
-3. A Python list `[{"x": 1}]`
-4. An error because JSON requires double quotes around keys
+1. La stringa `'{"x": 1}'` invariata
+2. Un dizionario Python `{"x": 1}`
+3. Una lista Python `[{"x": 1}]`
+4. Un errore perché JSON richiede le virgolette doppie attorno alle chiavi
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `json.loads(text)` parses a JSON string and returns the equivalent Python object. `{"x": 1}` in JSON becomes a Python `dict`. The function name "loads" stands for "load string." JSON uses double quotes for strings, which is valid Python when the string is inside single quotes. The result is a native Python dictionary you can use like any other.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `json.loads(text)` analizza una stringa JSON e restituisce l'oggetto Python equivalente. `{"x": 1}` in JSON diventa un `dict` Python. Il nome della funzione "loads" sta per "load string". JSON usa le virgolette doppie per le stringhe, il che è Python valido quando la stringa è dentro virgolette singole. Il risultato è un dizionario Python nativo che puoi usare come qualsiasi altro.
 
     **Concept Tested:** json.loads()
 
 ---
 
-#### 7. What does `json.dumps({"name": "Alice", "age": 14})` do?
+#### 7. Cosa fa `json.dumps({"name": "Alice", "age": 14})`?
 
 <div class="upper-alpha" markdown>
-1. Saves the dictionary directly to a file named `Alice.json`
-2. Prints the dictionary to the console in JSON format
-3. Converts the Python dictionary to a JSON-formatted string
-4. Loads the dictionary from a JSON file
+1. Salva il dizionario direttamente in un file chiamato `Alice.json`
+2. Stampa il dizionario sulla console in formato JSON
+3. Converte il dizionario Python in una stringa in formato JSON
+4. Carica il dizionario da un file JSON
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `json.dumps(obj)` converts a Python object (dict, list, number, string, bool, or None) into a JSON-formatted string. The name "dumps" stands for "dump string." To save JSON to a file, use `json.dump(obj, file_object)` instead. `json.dumps()` is useful when you need a JSON string in memory, for example to send over a network.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `json.dumps(obj)` converte un oggetto Python (dict, list, numero, stringa, bool, o None) in una stringa in formato JSON. Il nome "dumps" sta per "dump string". Per salvare JSON in un file, usa invece `json.dump(obj, file_object)`. `json.dumps()` è utile quando hai bisogno di una stringa JSON in memoria, per esempio per inviarla su una rete.
 
     **Concept Tested:** json.dumps()
 
 ---
 
-#### 8. What Python type does JSON `true` map to?
+#### 8. A quale tipo Python corrisponde `true` di JSON?
 
 <div class="upper-alpha" markdown>
-1. The string `"true"`
-2. The integer `1`
-3. The Python boolean `True`
-4. The Python value `None`
+1. La stringa `"true"`
+2. L'intero `1`
+3. Il booleano Python `True`
+4. Il valore Python `None`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. JSON uses lowercase `true` and `false` for booleans; Python uses capitalized `True` and `False`. When `json.loads()` encounters `true` in JSON, it converts it to Python's `True`. Similarly, JSON `false` becomes Python `False`, and JSON `null` becomes Python `None`.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. JSON usa `true` e `false` minuscoli per i booleani; Python usa `True` e `False` con la maiuscola. Quando `json.loads()` incontra `true` in JSON, lo converte nel `True` di Python. In modo simile, `false` di JSON diventa `False` di Python, e `null` di JSON diventa `None` di Python.
 
     **Concept Tested:** JSON Type Mapping
 
 ---
 
-#### 9. What does `os.path.join("folder", "file.txt")` produce?
+#### 9. Cosa produce `os.path.join("folder", "file.txt")`?
 
 <div class="upper-alpha" markdown>
-1. `"folder file.txt"` (with a space)
-2. `"folder/file.txt"` on Mac/Linux or `"folder\file.txt"` on Windows, using the correct separator for the operating system
-3. Always `"folder/file.txt"` regardless of operating system
-4. An error because you cannot join paths without a leading slash
+1. `"folder file.txt"` (con uno spazio)
+2. `"folder/file.txt"` su Mac/Linux oppure `"folder\file.txt"` su Windows, usando il separatore corretto per il sistema operativo
+3. Sempre `"folder/file.txt"` indipendentemente dal sistema operativo
+4. Un errore perché non puoi unire i percorsi senza una barra iniziale
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `os.path.join()` builds a file path using the correct separator for the current operating system — forward slash `/` on Mac and Linux, backslash `\` on Windows. Never manually concatenate path strings with `"/"` because your code will break on Windows. Always use `os.path.join()` for portable, cross-platform path construction.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `os.path.join()` costruisce un percorso di file usando il separatore corretto per il sistema operativo attuale — barra `/` su Mac e Linux, backslash `\` su Windows. Non concatenare mai manualmente le stringhe dei percorsi con `"/"` perché il tuo codice si romperebbe su Windows. Usa sempre `os.path.join()` per costruire percorsi portabili e multipiattaforma.
 
     **Concept Tested:** os.path
 
 ---
 
-#### 10. What is the difference between `json.loads()`/`json.dumps()` and `json.load()`/`json.dump()`?
+#### 10. Qual è la differenza tra `json.loads()`/`json.dumps()` e `json.load()`/`json.dump()`?
 
 <div class="upper-alpha" markdown>
-1. `loads`/`dumps` are faster; `load`/`dump` produce better formatted output
-2. `loads`/`dumps` work with strings; `load`/`dump` work with file objects
-3. `loads` reads one line; `load` reads the entire file
-4. They are identical — the extra `s` is just an alias
+1. `loads`/`dumps` sono più veloci; `load`/`dump` producono un output meglio formattato
+2. `loads`/`dumps` funzionano con le stringhe; `load`/`dump` funzionano con gli oggetti file
+3. `loads` legge una riga; `load` legge l'intero file
+4. Sono identici — la `s` extra è solo un alias
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `json.loads(text)` parses from a string; `json.dumps(obj)` serializes to a string. `json.load(file)` reads JSON directly from an open file object; `json.dump(obj, file)` writes JSON directly to an open file object. Use the `s` versions (loads/dumps) for in-memory strings; use the no-`s` versions (load/dump) when working with files.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `json.loads(text)` analizza da una stringa; `json.dumps(obj)` serializza in una stringa. `json.load(file)` legge JSON direttamente da un oggetto file aperto; `json.dump(obj, file)` scrive JSON direttamente su un oggetto file aperto. Usa le versioni con la `s` (loads/dumps) per le stringhe in memoria; usa le versioni senza `s` (load/dump) quando lavori con i file.
 
     **Concept Tested:** json Module Functions
 
