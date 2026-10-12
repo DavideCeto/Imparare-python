@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Sunflower Seed Spiral
+# Spirale dei Semi di Girasole
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Use the golden angle (≈ 137.5°) to place dots in a sunflower spiral pattern
-- Understand why the golden angle produces optimal packing
-- Calculate dot positions using `r = sqrt(n)` and angle `n * 137.5°`
+- Usare l'angolo d'oro (≈ 137,5°) per posizionare punti in un pattern a spirale di girasole
+- Capire perché l'angolo d'oro produce un impacchettamento ottimale
+- Calcolare le posizioni dei punti usando `r = sqrt(n)` e angolo `n * 137,5°`
 
-The seeds in a real sunflower head are arranged by the golden angle — 137.508°. This lab reproduces that spiral exactly. The same packing appears in pinecones, pineapples, and artichokes.
+I semi in una vera testa di girasole sono disposti dall'angolo d'oro — 137,508°. Questo laboratorio riproduce esattamente quella spirale. Lo stesso impacchettamento appare nelle pigne, negli ananas, e nei carciofi.
 
-!!! mascot-welcome "Welcome to the Sunflower!"
+!!! mascot-welcome "Benvenuto al Girasole!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Sunflowers discovered the golden angle millions of years before mathematicians did.
-    It packs the most seeds into the smallest space — nature's optimal packing algorithm!
-    Let's code it together!
+    I girasoli hanno scoperto l'angolo d'oro milioni di anni prima dei matematici.
+    Impacchetta il maggior numero di semi nel minor spazio — l'algoritmo di impacchettamento ottimale della natura!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-Seed `n` is placed at polar coordinates `r = scale * sqrt(n)`, angle `n * golden_angle`. Converting to x, y: `x = r * cos(angle)`, `y = r * sin(angle)`. The colors cycle through a sunny palette for each "arm" of the spiral.
+Il seme `n` è posizionato a coordinate polari `r = scale * sqrt(n)`, angolo `n * golden_angle`. Convertendo in x, y: `x = r * cos(angle)`, `y = r * sin(angle)`. I colori scorrono attraverso una tavolozza solare per ogni "braccio" della spirale.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -47,13 +47,13 @@ for n in range(200):
     monty.dot(int(size), colors[n % len(colors)])
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    200 dots placed one at a time, each rotated exactly 137.5° from the last.
-    Will they form a spiral, a grid, or something that looks like a real sunflower?
-    Make your guess — then click Run to find out!
+    200 punti posizionati uno alla volta, ognuno ruotato esattamente di 137,5° dal precedente.
+    Formeranno una spirale, una griglia, o qualcosa che sembra un vero girasole?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -97,29 +97,29 @@ for n in range(200):
     monty.dot(int(size), colors[n % len(colors)])`);
 </script>
 
-A **real sunflower pattern** — you can see the clockwise and counter-clockwise spirals that sunflowers are famous for. Were you right?
+Un **vero pattern di girasole** — puoi vedere le spirali in senso orario e antiorario per cui i girasoli sono famosi. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`math.sqrt(n)` for the radius spreads seeds evenly outward — without it all seeds would cluster near the edge. The golden angle 137.508° is the most "irrational" angle possible, meaning no seed ever lands directly in front of a previous one. This ensures maximum spread and minimum wasted space.
+`math.sqrt(n)` per il raggio distribuisce i semi uniformemente verso l'esterno — senza di esso tutti i semi si raggrupperebbero vicino al bordo. L'angolo d'oro 137,508° è l'angolo più "irrazionale" possibile, significando che nessun seme atterra mai direttamente davanti a uno precedente. Questo garantisce la massima diffusione e il minimo spazio sprecato.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `golden_angle = 137.508` | The golden angle — creates optimal packing |
-| `r = scale * math.sqrt(n)` | Spread seeds outward at a uniform rate |
-| `x = r * math.cos(angle)` | Convert polar → x coordinate |
-| `y = r * math.sin(angle)` | Convert polar → y coordinate |
-| `size = max(2, 8 - r/20)` | Larger dots at center, smaller at edge |
+| `golden_angle = 137.508` | L'angolo d'oro — crea un impacchettamento ottimale |
+| `r = scale * math.sqrt(n)` | Distribuisce i semi verso l'esterno a un ritmo uniforme |
+| `x = r * math.cos(angle)` | Converte polare → coordinata x |
+| `y = r * math.sin(angle)` | Converte polare → coordinata y |
+| `size = max(2, 8 - r/20)` | Punti più grandi al centro, più piccoli al bordo |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Try a Different Angle"
+!!! mascot-thinking "Il Tuo Turno — Prova un Angolo Diverso"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `golden_angle = 137.508` to `golden_angle = 138`.
-    Predict what will happen to the packing — better or worse than the golden angle?
-    Run it to compare!
+    Cambia `golden_angle = 137.508` in `golden_angle = 138`.
+    Prevedi cosa succederà all'impacchettamento — migliore o peggiore dell'angolo d'oro?
+    Eseguilo per confrontare!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -157,20 +157,20 @@ for n in range(200):
     monty.dot(int(size), colors[n % len(colors)])`);
 </script>
 
-At 138°, the seeds cluster into radial spokes — the packing is worse than 137.508°! The golden angle truly is special: even a tiny change produces visible clustering.
+A 138°, i semi si raggruppano in raggi radiali — l'impacchettamento è peggiore di 137,508°! L'angolo d'oro è davvero speciale: anche un piccolo cambiamento produce un raggruppamento visibile.
 
-## Experiments
+## Esperimenti
 
-1. **Try 90°.** Change to `golden_angle = 90`. You'll know it worked when only 4 spokes appear (every 4th seed lands in the same direction).
+1. **Prova 90°.** Cambia in `golden_angle = 90`. Saprai che ha funzionato quando appaiono solo 4 raggi (ogni 4° seme atterra nella stessa direzione).
 
-2. **Use 400 seeds.** Change `range(200)` to `range(400)`. You'll know it worked when the spiral extends much further and looks denser.
+2. **Usa 400 semi.** Cambia `range(200)` in `range(400)`. Saprai che ha funzionato quando la spirale si estende molto più lontano e sembra più densa.
 
-3. **Use a single color.** Replace the colors list with just `'forestgreen'`. You'll know it worked when all dots are the same color.
+3. **Usa un colore singolo.** Sostituisci la lista dei colori con solo `'forestgreen'`. Saprai che ha funzionato quando tutti i punti sono dello stesso colore.
 
-4. **Try the exact golden ratio angle.** The golden ratio φ ≈ 1.618; the golden angle = 360° × (1 − 1/φ) ≈ 222.5°. Try this value and see if it differs from 137.508°.
+4. **Prova l'angolo esatto della sezione aurea.** La sezione aurea φ ≈ 1,618; l'angolo d'oro = 360° × (1 − 1/φ) ≈ 222,5°. Prova questo valore e vedi se differisce da 137,508°.
 
-!!! mascot-celebration "Nature's Algorithm!"
+!!! mascot-celebration "L'Algoritmo della Natura!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You coded the same packing algorithm nature uses in sunflowers, pinecones, and galaxies!
-    The golden angle appears everywhere in biology because it maximizes resource efficiency.
-    Up next: **Spider Web** — concentric rings connected by radial threads.
+    Hai programmato lo stesso algoritmo di impacchettamento che la natura usa in girasoli, pigne, e galassie!
+    L'angolo d'oro appare ovunque in biologia perché massimizza l'efficienza delle risorse.
+    Prossimo: **Ragnatela** — anelli concentrici collegati da fili radiali.

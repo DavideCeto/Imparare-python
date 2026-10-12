@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Galaxy Spiral Arms
+# Bracci a Spirale della Galassia
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Model galaxy spiral arms using logarithmic spirals offset by 180°
-- Scatter star dots along spiral arms with random offsets
-- Use different dot sizes and colors to simulate star brightness
+- Modellare i bracci a spirale di una galassia usando spirali logaritmiche distanziate di 180°
+- Disperdere punti stellari lungo i bracci a spirale con offset casuali
+- Usare dimensioni e colori di punto diversi per simulare la luminosità stellare
 
-A two-armed spiral galaxy with scattered star dots forming the arms, a dense central bulge, and background stars. The arms follow logarithmic spirals, just like the Milky Way.
+Una galassia a spirale a due bracci con punti stellari dispersi che formano i bracci, un rigonfiamento centrale denso, e stelle di sfondo. I bracci seguono spirali logaritmiche, proprio come la Via Lattea.
 
-!!! mascot-welcome "Welcome to the Galaxy!"
+!!! mascot-welcome "Benvenuto alla Galassia!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Galaxies like the Milky Way have spiral arms that follow logarithmic curves.
-    In this lab you'll build a mini galaxy using that same math!
-    Let's code it together!
+    Galassie come la Via Lattea hanno bracci a spirale che seguono curve logaritmiche.
+    In questo laboratorio costruirai una mini galassia usando quella stessa matematica!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-For each arm, place dots at positions `r = scale * exp(b * theta)` for theta from 0 to 3π. The second arm is offset by π (180°). Each star dot gets a random scatter from its ideal position. The center bulge is a dense cluster of dots at small radii.
+Per ogni braccio, posiziona punti a posizioni `r = scale * exp(b * theta)` per theta da 0 a 3π. Il secondo braccio è distanziato di π (180°). Ogni punto stellare ottiene una dispersione casuale dalla sua posizione ideale. Il rigonfiamento centrale è un ammasso denso di punti a piccoli raggi.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -65,13 +65,13 @@ for _ in range(80):
     monty.dot(1, 'lightgray')
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Each arm has 300 dots scattered around a logarithmic spiral.
-    Will the arms look like tight curves or spread-out clouds of stars?
-    Make your guess — then click Run to find out!
+    Ogni braccio ha 300 punti dispersi attorno a una spirale logaritmica.
+    I bracci sembreranno curve strette o nuvole diffuse di stelle?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -133,27 +133,27 @@ for _ in range(80):
     monty.dot(1, 'lightgray')`);
 </script>
 
-**Spread-out clouds** — the Gaussian scatter makes the arms look like fuzzy bands rather than thin lines, just like real galaxy photos. Were you right?
+**Nuvole diffuse** — la dispersione Gaussiana fa sembrare i bracci come fasce sfocate invece di linee sottili, proprio come le vere foto di galassie. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`random.gauss(0, 4)` adds Gaussian (bell-curve) random scatter. Most stars are near the ideal spiral, but a few stray far. The central bulge uses `random.gauss(0, 20)` — a tighter cluster.
+`random.gauss(0, 4)` aggiunge una dispersione casuale Gaussiana (a campana). La maggior parte delle stelle è vicina alla spirale ideale, ma alcune si allontanano. Il rigonfiamento centrale usa `random.gauss(0, 20)` — un ammasso più compatto.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `b = 0.25` | Spiral tightness parameter |
-| `math.exp(b * theta)` | Logarithmic spiral — grows exponentially |
-| `offset = arm * math.pi` | Rotate second arm by 180° |
-| `random.gauss(0, 4)` | Gaussian scatter around the spiral path |
+| `b = 0.25` | Parametro di strettezza della spirale |
+| `math.exp(b * theta)` | Spirale logaritmica — cresce esponenzialmente |
+| `offset = arm * math.pi` | Ruota il secondo braccio di 180° |
+| `random.gauss(0, 4)` | Dispersione Gaussiana attorno al percorso della spirale |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add a Third Arm"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi un Terzo Braccio"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `range(2)` to `range(3)` and `offset = arm * math.pi` to `offset = arm * 2 * math.pi / 3`.
-    A three-armed galaxy! What angle offset does each arm need?
+    Cambia `range(2)` in `range(3)` e `offset = arm * math.pi` in `offset = arm * 2 * math.pi / 3`.
+    Una galassia a tre bracci! Quale offset di angolo serve a ogni braccio?
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -202,20 +202,20 @@ for _ in range(200):
     monty.dot(random.choice([2, 3, 4]), 'white')`);
 </script>
 
-Three arms at 120° spacing — like the Triangulum Galaxy, which actually has this structure!
+Tre bracci distanziati di 120° — come la Galassia del Triangolo, che in realtà ha questa struttura!
 
-## Experiments
+## Esperimenti
 
-1. **Change the scatter.** Change `random.gauss(0, 4)` to `random.gauss(0, 10)`. You'll know it worked when the arms look fuzzier and more diffuse.
+1. **Cambia la dispersione.** Cambia `random.gauss(0, 4)` in `random.gauss(0, 10)`. Saprai che ha funzionato quando i bracci sembrano più sfocati e diffusi.
 
-2. **Tighter spiral.** Change `b = 0.25` to `b = 0.4`. You'll know it worked when the arms wind more steeply inward.
+2. **Spirale più stretta.** Cambia `b = 0.25` in `b = 0.4`. Saprai che ha funzionato quando i bracci si avvolgono più ripidamente verso l'interno.
 
-3. **Larger galaxy.** Change `12` to `8` and `range(300)` to `range(500)`. You'll know it worked when the arms extend further and have more stars.
+3. **Galassia più grande.** Cambia `12` in `8` e `range(300)` in `range(500)`. Saprai che ha funzionato quando i bracci si estendono più lontano e hanno più stelle.
 
-4. **Color by distance.** Make inner stars yellow and outer stars blue — hotter stars near the center, cooler at the edge. You'll know it worked when the color gradient follows the arms.
+4. **Colora per distanza.** Rendi le stelle interne gialle e quelle esterne blu — stelle più calde vicino al centro, più fredde al bordo. Saprai che ha funzionato quando il gradiente di colore segue i bracci.
 
-!!! mascot-celebration "You Built a Galaxy!"
+!!! mascot-celebration "Hai Costruito una Galassia!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You modeled spiral galaxy arms with logarithmic spirals and Gaussian scatter!
-    Real astrophysicists use the same mathematical models to map the Milky Way.
-    Up next: **Ripple Waves** — concentric rings that simulate water ripples.
+    Hai modellato i bracci di una galassia a spirale con spirali logaritmiche e dispersione Gaussiana!
+    I veri astrofisici usano gli stessi modelli matematici per mappare la Via Lattea.
+    Prossimo: **Onde Concentriche** — anelli concentrici che simulano increspature d'acqua.

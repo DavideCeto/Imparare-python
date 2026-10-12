@@ -2,28 +2,28 @@
 hide:
     - toc
 ---
-# Spider Web
+# Ragnatela
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Draw radial spokes from the center using angles spaced 30° apart
-- Connect the spokes with concentric polygonal rings using `goto()`
-- Combine two loop types (radial and ring) to build a complete web
+- Disegnare raggi radiali dal centro usando angoli distanziati di 30°
+- Collegare i raggi con anelli poligonali concentrici usando `goto()`
+- Combinare due tipi di ciclo (radiale e anulare) per costruire una ragnatela completa
 
-A realistic-looking spider web with 12 radial threads and 6 concentric rings — all drawn with `goto()` using polar coordinates converted to x, y.
+Una ragnatela realistica con 12 fili radiali e 6 anelli concentrici — tutti disegnati con `goto()` usando coordinate polari convertite in x, y.
 
-!!! mascot-welcome "Welcome to the Spider Web!"
+!!! mascot-welcome "Benvenuto alla Ragnatela!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    A spider web uses two geometric ideas: radial lines and concentric rings.
-    This lab draws both using `goto()` and the math of circles!
-    Let's code it together!
+    Una ragnatela usa due idee geometriche: linee radiali e anelli concentrici.
+    Questo laboratorio disegna entrambi usando `goto()` e la matematica dei cerchi!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-**Spokes**: for each of 12 angles (0°, 30°, 60°, … 330°), draw a line from the center to radius 120.
-**Rings**: for each ring radius (20, 40, 60, 80, 100, 120), visit all 12 spoke intersection points and connect them.
+**Raggi**: per ciascuno dei 12 angoli (0°, 30°, 60°, … 330°), disegna una linea dal centro al raggio 120.
+**Anelli**: per ogni raggio di anello (20, 40, 60, 80, 100, 120), visita tutti i 12 punti di intersezione dei raggi e collegali.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -63,12 +63,12 @@ monty.pendown()
 monty.dot(10, 'black')
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    We draw 12 spokes and 6 rings. How many polygon sides will each ring have?
-    Make your guess — then click Run to find out!
+    Disegniamo 12 raggi e 6 anelli. Quanti lati di poligono avrà ogni anello?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -127,27 +127,27 @@ monty.pendown()
 monty.dot(10, 'black')`);
 </script>
 
-Each ring is a **12-sided polygon** — one side per spoke. With 12 spokes equally spaced, each side spans 30°. Were you right?
+Ogni anello è un **poligono a 12 lati** — un lato per raggio. Con 12 raggi equamente spaziati, ogni lato si estende per 30°. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`angles[1:] + [angles[0]]` visits all 12 spokes then returns to the first — closing each ring polygon. `r * math.cos(rad), r * math.sin(rad)` converts polar (r, angle) to Cartesian (x, y).
+`angles[1:] + [angles[0]]` visita tutti i 12 raggi poi ritorna al primo — chiudendo ogni poligono anulare. `r * math.cos(rad), r * math.sin(rad)` converte polare (r, angle) in cartesiano (x, y).
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `angles = [i * 360 / n_spokes for i in range(n_spokes)]` | 12 equally spaced spoke angles |
-| `r = ring * max_r / n_rings` | Ring radius increases evenly outward |
-| `angles[1:] + [angles[0]]` | Visit all spokes, then close the ring |
-| `math.cos(rad), math.sin(rad)` | Convert angle to x, y offset |
+| `angles = [i * 360 / n_spokes for i in range(n_spokes)]` | 12 angoli di raggio equamente spaziati |
+| `r = ring * max_r / n_rings` | Il raggio dell'anello cresce uniformemente verso l'esterno |
+| `angles[1:] + [angles[0]]` | Visita tutti i raggi, poi chiudi l'anello |
+| `math.cos(rad), math.sin(rad)` | Convertono l'angolo in offset x, y |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add More Spokes"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi Più Raggi"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `n_spokes = 12` to `n_spokes = 8`. How many polygon sides will each ring have?
-    Predict, then run it to check!
+    Cambia `n_spokes = 12` in `n_spokes = 8`. Quanti lati di poligono avrà ogni anello?
+    Prevedi, poi eseguilo per controllare!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -200,20 +200,20 @@ monty.pendown()
 monty.dot(10, 'black')`);
 </script>
 
-8 spokes → 8-sided octagonal rings — each ring is now an octagon instead of a 12-sided polygon.
+8 raggi → anelli ottagonali a 8 lati — ogni anello è ora un ottagono invece di un poligono a 12 lati.
 
-## Experiments
+## Esperimenti
 
-1. **Add a spider.** After drawing, place a filled circle at `(30, 30)` using `monty.dot(20, 'black')`. You'll know it worked when a spider appears on the web.
+1. **Aggiungi un ragno.** Dopo il disegno, posiziona un cerchio riempito a `(30, 30)` usando `monty.dot(20, 'black')`. Saprai che ha funzionato quando un ragno appare sulla ragnatela.
 
-2. **Use concentric circles instead of polygons.** Replace the ring-drawing code with `monty.circle(r)` at each ring radius. You'll know it worked when the rings look round.
+2. **Usa cerchi concentrici invece di poligoni.** Sostituisci il codice di disegno degli anelli con `monty.circle(r)` a ogni raggio di anello. Saprai che ha funzionato quando gli anelli sembrano rotondi.
 
-3. **Color the rings.** Create a list of ring colors and use `monty.pencolor(ring_colors[ring])`. You'll know it worked when each ring is a different color.
+3. **Colora gli anelli.** Crea una lista di colori per anello e usa `monty.pencolor(ring_colors[ring])`. Saprai che ha funzionato quando ogni anello è di un colore diverso.
 
-4. **Make the web asymmetric.** Instead of equal spacing, use non-uniform angles. You'll know it worked when the web looks irregular like a real spider web.
+4. **Rendi la ragnatela asimmetrica.** Invece di una spaziatura uniforme, usa angoli non uniformi. Saprai che ha funzionato quando la ragnatela sembra irregolare come una vera ragnatela.
 
-!!! mascot-celebration "Eight-Legged Geometry!"
+!!! mascot-celebration "Geometria a Otto Zampe!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You drew a spider web using only polar coordinates and `goto()`!
-    The combination of radial and ring structures appears everywhere in nature and engineering.
-    Up next: **Lightning Bolt** — recursive jagged zigzag.
+    Hai disegnato una ragnatela usando solo coordinate polari e `goto()`!
+    La combinazione di strutture radiali e anulari appare ovunque in natura e ingegneria.
+    Prossimo: **Fulmine** — zigzag frastagliato ricorsivo.

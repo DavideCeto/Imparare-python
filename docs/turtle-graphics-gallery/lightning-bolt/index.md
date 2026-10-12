@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Lightning Bolt
+# Fulmine
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Use recursion to split a straight line into a jagged zigzag
-- Understand how branching recursion creates natural-looking electricity shapes
-- Control depth and displacement to vary the jaggedness of the bolt
+- Usare la ricorsione per dividere una linea retta in uno zigzag frastagliato
+- Capire come la ricorsione ramificata crea forme simili all'elettricità in natura
+- Controllare la profondità e lo spostamento per variare la frastagliatezza del fulmine
 
-A simulated lightning bolt drawn by recursively replacing each straight segment with a bent, zigzagged version. The result is an irregular, branching shape that closely mimics real lightning.
+Un fulmine simulato disegnato sostituendo ricorsivamente ogni segmento retto con una versione curvata e a zigzag. Il risultato è una forma irregolare e ramificata che imita strettamente un vero fulmine.
 
-!!! mascot-welcome "Welcome to the Lightning Bolt!"
+!!! mascot-welcome "Benvenuto al Fulmine!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Real lightning follows the path of least electrical resistance.
-    The result looks random — but it has a recursive pattern we can code!
-    Let's code it together!
+    Il vero fulmine segue il percorso di minima resistenza elettrica.
+    Il risultato sembra casuale — ma ha un pattern ricorsivo che possiamo programmare!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-`lightning(x1, y1, x2, y2, depth)` splits the segment into two halves with the midpoint displaced sideways by a random amount. At depth 0, just draw the segment. At each depth, the displacement shrinks, creating self-similar jaggedness.
+`lightning(x1, y1, x2, y2, depth)` divide il segmento in due metà con il punto medio spostato lateralmente di una quantità casuale. Alla profondità 0, disegna semplicemente il segmento. A ogni profondità, lo spostamento si restringe, creando una frastagliatezza auto-simile.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -58,13 +58,13 @@ def lightning(x1, y1, x2, y2, depth):
 lightning(-50, 150, 50, -150, 5)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    We start with a vertical line and split it 5 levels deep.
-    Will the result look like a straight line, a zigzag, or real lightning?
-    Make your guess — then click Run to find out!
+    Iniziamo con una linea verticale e la dividiamo per 5 livelli di profondità.
+    Il risultato sembrerà una linea retta, uno zigzag, o un vero fulmine?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -119,28 +119,28 @@ def lightning(x1, y1, x2, y2, depth):
 lightning(-50, 150, 50, -150, 5)`);
 </script>
 
-A jagged **lightning bolt** — the recursive displacement creates the irregular, branching shape. Were you right?
+Un **fulmine frastagliato** — lo spostamento ricorsivo crea la forma irregolare e ramificata. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-The perpendicular vector `(-dy, dx)` is perpendicular to `(dx, dy)` — rotating 90°. Multiplying by `0.3` limits displacement to 30% of the segment length. `random.uniform(-1, 1)` picks a random side. The recursion makes each sub-segment equally jagged.
+Il vettore perpendicolare `(-dy, dx)` è perpendicolare a `(dx, dy)` — una rotazione di 90°. Moltiplicare per `0,3` limita lo spostamento al 30% della lunghezza del segmento. `random.uniform(-1, 1)` sceglie un lato casuale. La ricorsione rende ogni sotto-segmento altrettanto frastagliato.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `if depth == 0` | Base case: draw the segment |
-| `mx, my = midpoint` | Find the midpoint to displace |
-| `perp_x = -dy * 0.3` | Perpendicular displacement direction |
-| `random.uniform(-1, 1)` | Random side and amount |
-| `pensize(max(1, depth))` | Thicker lines at lower depth (main bolt) |
+| `if depth == 0` | Caso base: disegna il segmento |
+| `mx, my = midpoint` | Trova il punto medio da spostare |
+| `perp_x = -dy * 0.3` | Direzione dello spostamento perpendicolare |
+| `random.uniform(-1, 1)` | Lato casuale e quantità |
+| `pensize(max(1, depth))` | Linee più spesse a profondità minore (fulmine principale) |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Change the Depth"
+!!! mascot-thinking "Il Tuo Turno — Cambia la Profondità"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `depth=5` to `depth=3`. The bolt will have fewer bends.
-    Then try `depth=7`. Predict what changes at each depth!
+    Cambia `depth=5` in `depth=3`. Il fulmine avrà meno pieghe.
+    Poi prova `depth=7`. Prevedi cosa cambia a ogni profondità!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -189,20 +189,20 @@ def lightning(x1, y1, x2, y2, depth):
 lightning(-50, 150, 50, -150, 7)`);
 </script>
 
-Depth 7 produces a much more detailed, realistic bolt with tiny jags everywhere.
+La profondità 7 produce un fulmine molto più dettagliato e realistico con piccole frastagliature ovunque.
 
-## Experiments
+## Esperimenti
 
-1. **Remove the seed.** Delete `random.seed(7)`. Every run produces a different bolt. You'll know it worked when the bolt changes each time.
+1. **Rimuovi il seme.** Elimina `random.seed(7)`. Ogni esecuzione produce un fulmine diverso. Saprai che ha funzionato quando il fulmine cambia ogni volta.
 
-2. **Draw multiple bolts.** Call `lightning()` three times with different x-starting positions. You'll know it worked when three separate bolts appear.
+2. **Disegna più fulmini.** Chiama `lightning()` tre volte con posizioni x di partenza diverse. Saprai che ha funzionato quando appaiono tre fulmini separati.
 
-3. **Change the bolt color to white.** Change `monty.pencolor('yellow')` to `monty.pencolor('white')`. You'll know it worked when the bolt looks like a real storm photo.
+3. **Cambia il colore del fulmine in bianco.** Cambia `monty.pencolor('yellow')` in `monty.pencolor('white')`. Saprai che ha funzionato quando il fulmine sembra una vera foto di tempesta.
 
-4. **Increase displacement.** Change `0.3` to `0.6`. You'll know it worked when the bolt has wider, more dramatic bends.
+4. **Aumenta lo spostamento.** Cambia `0.3` in `0.6`. Saprai che ha funzionato quando il fulmine ha pieghe più larghe e drammatiche.
 
-!!! mascot-celebration "Electrifying!"
+!!! mascot-celebration "Elettrizzante!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You used recursive displacement to simulate lightning — the same algorithm used in
-    computer game terrain generation and movie visual effects!
-    Up next: **Galaxy Spiral Arms** — Archimedean and logarithmic spirals with dot clouds.
+    Hai usato lo spostamento ricorsivo per simulare il fulmine — lo stesso algoritmo usato nella
+    generazione di terreni nei videogiochi e negli effetti visivi dei film!
+    Prossimo: **Bracci a Spirale della Galassia** — spirali di Archimede e logaritmiche con nuvole di punti.
