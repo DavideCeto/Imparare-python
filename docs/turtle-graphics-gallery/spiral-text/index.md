@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Spiral Text
+# Testo a Spirale
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Use `turtle.write()` to place text at computed positions
-- Place characters along a spiral path using polar coordinates
-- Understand how `setheading()` makes each character face the right direction
+- Usare `turtle.write()` per posizionare testo a posizioni calcolate
+- Posizionare caratteri lungo un percorso a spirale usando coordinate polari
+- Capire come `setheading()` fa rivolgere ogni carattere nella direzione giusta
 
-Each character of a message is placed along an outward spiral, rotated to face tangentially along the curve. The result is text that winds around the center like a snail shell.
+Ogni carattere di un messaggio è posizionato lungo una spirale verso l'esterno, ruotato per essere rivolto tangenzialmente lungo la curva. Il risultato è un testo che si avvolge attorno al centro come un guscio di chiocciola.
 
-!!! mascot-welcome "Welcome to Spiral Text!"
+!!! mascot-welcome "Benvenuto al Testo a Spirale!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    `turtle.write()` can place any text at the turtle's current position.
-    This lab combines that with spiral math to spell out a message in a spiral!
-    Let's code it together!
+    `turtle.write()` può posizionare qualsiasi testo alla posizione attuale della tartaruga.
+    Questo laboratorio combina questo con la matematica della spirale per scrivere un messaggio in una spirale!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-Place characters of a message one at a time. For character `i`, the spiral radius grows with `i` and the angle advances by a fixed step. `setheading()` aligns each character tangentially to the spiral direction.
+Posiziona i caratteri di un messaggio uno alla volta. Per il carattere `i`, il raggio della spirale cresce con `i` e l'angolo avanza di un passo fisso. `setheading()` allinea ogni carattere tangenzialmente alla direzione della spirale.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -49,13 +49,13 @@ for i, ch in enumerate(message):
     monty.write(ch, font=('Arial', 10, 'bold'))
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Each character is placed at increasing radius and rotated to face the spiral direction.
-    Will the characters look like a readable spiral, or just scattered letters?
-    Make your guess — then click Run to find out!
+    Ogni carattere è posizionato a un raggio crescente e ruotato per essere rivolto verso la direzione della spirale.
+    I caratteri sembreranno una spirale leggibile, o solo lettere disperse?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -101,27 +101,27 @@ for i, ch in enumerate(message):
     monty.write(ch, font=('Arial', 10, 'bold'))`);
 </script>
 
-The message **spirals outward** — each character faces tangentially to the spiral curve. Were you right?
+Il messaggio **si avvolge verso l'esterno** — ogni carattere è rivolto tangenzialmente alla curva della spirale. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`heading = (i * angle_step + 90) % 360` adds 90° to the radial direction because `setheading(0)` points right (radial direction). Adding 90° makes the turtle face tangentially (along the spiral). `math.cos(angle)`, `math.sin(angle)` converts polar to Cartesian for positioning.
+`heading = (i * angle_step + 90) % 360` aggiunge 90° alla direzione radiale perché `setheading(0)` punta a destra (direzione radiale). Aggiungere 90° fa rivolgere la tartaruga tangenzialmente (lungo la spirale). `math.cos(angle)`, `math.sin(angle)` converte da polare a cartesiano per il posizionamento.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `enumerate(message)` | Gives both index `i` and character `ch` |
-| `r = r_start + i * r_step` | Radius grows linearly — Archimedean spiral |
-| `heading = (i * angle_step + 90) % 360` | Tangential direction — perpendicular to radius |
-| `monty.write(ch, font=...)` | Place single character at turtle's position |
+| `enumerate(message)` | Dà sia l'indice `i` sia il carattere `ch` |
+| `r = r_start + i * r_step` | Il raggio cresce linearmente — spirale di Archimede |
+| `heading = (i * angle_step + 90) % 360` | Direzione tangenziale — perpendicolare al raggio |
+| `monty.write(ch, font=...)` | Posiziona un singolo carattere alla posizione della tartaruga |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Change the Message"
+!!! mascot-thinking "Il Tuo Turno — Cambia il Messaggio"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change the message to your name repeated several times.
-    Predict: will the spiral look different with a shorter or longer message?
+    Cambia il messaggio con il tuo nome ripetuto più volte.
+    Prevedi: la spirale sembrerà diversa con un messaggio più corto o più lungo?
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -163,20 +163,20 @@ for i, ch in enumerate(message):
     monty.write(ch, font=('Arial', 10, 'bold'))`);
 </script>
 
-Rainbow-colored spiral text — each character gets a cycling color for a more festive effect.
+Testo a spirale colorato come l'arcobaleno — ogni carattere ottiene un colore ciclico per un effetto più festivo.
 
-## Experiments
+## Esperimenti
 
-1. **Tighter spiral.** Decrease `angle_step` to 10. You'll know it worked when more revolutions of the spiral fit in the canvas.
+1. **Spirale più stretta.** Diminuisci `angle_step` a 10. Saprai che ha funzionato quando più rivoluzioni della spirale entrano nel canvas.
 
-2. **Larger font.** Change `font=('Arial', 10, 'bold')` to `font=('Arial', 14, 'bold')` and increase `r_step = 4`. You'll know it worked when larger letters appear.
+2. **Carattere più grande.** Cambia `font=('Arial', 10, 'bold')` in `font=('Arial', 14, 'bold')` e aumenta `r_step = 4`. Saprai che ha funzionato quando appaiono lettere più grandi.
 
-3. **Logarithmic spiral.** Replace `r = r_start + i * r_step` with `r = 10 * math.exp(0.06 * i)`. You'll know it worked when the characters space out faster near the outside.
+3. **Spirale logaritmica.** Sostituisci `r = r_start + i * r_step` con `r = 10 * math.exp(0.06 * i)`. Saprai che ha funzionato quando i caratteri si spaziano più velocemente vicino all'esterno.
 
-4. **Reverse the spiral.** Change `angle_step` to negative. You'll know it worked when the spiral winds clockwise instead of counter-clockwise.
+4. **Inverti la spirale.** Cambia `angle_step` in negativo. Saprai che ha funzionato quando la spirale si avvolge in senso orario invece che antiorario.
 
-!!! mascot-celebration "Typography in Motion!"
+!!! mascot-celebration "Tipografia in Movimento!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You combined polar coordinates with `turtle.write()` to create spiral text!
-    This technique is used in logo design and artistic typography.
-    Up next: **Seven-Segment Display** — digital numbers from line segments.
+    Hai combinato coordinate polari con `turtle.write()` per creare testo a spirale!
+    Questa tecnica è usata nel design dei loghi e nella tipografia artistica.
+    Prossimo: **Display a Sette Segmenti** — numeri digitali da segmenti di linea.

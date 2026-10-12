@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Clock Face
+# Quadrante dell'Orologio
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Draw a clock face with tick marks and hour numbers
-- Convert hours, minutes, and seconds into angles for clock hands
-- Use `setheading()` to point each hand at the correct angle
+- Disegnare un quadrante di orologio con tacche e numeri delle ore
+- Convertire ore, minuti, e secondi in angoli per le lancette dell'orologio
+- Usare `setheading()` per puntare ogni lancetta all'angolo corretto
 
-A complete analog clock face — outer ring with 60 tick marks, 12 numbered hours, and three hands (hour, minute, second) drawn at computed angles.
+Un quadrante di orologio analogico completo — anello esterno con 60 tacche, 12 ore numerate, e tre lancette (ore, minuti, secondi) disegnate ad angoli calcolati.
 
-!!! mascot-welcome "Welcome to the Clock Face!"
+!!! mascot-welcome "Benvenuto al Quadrante dell'Orologio!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    An analog clock is a math problem: convert time into angles!
-    The minute hand moves `6° per minute`, the hour hand moves `0.5° per minute`.
-    Let's compute it and draw it!
+    Un orologio analogico è un problema matematico: convertire il tempo in angoli!
+    La lancetta dei minuti si muove di `6° per minuto`, la lancetta delle ore si muove di `0,5° per minuto`.
+    Calcoliamolo e disegniamolo!
 
-## How It Works
+## Come Funziona
 
-Angles for hands: `second_angle = 90 - seconds * 6`, `minute_angle = 90 - minutes * 6 - seconds * 0.1`, `hour_angle = 90 - hours * 30 - minutes * 0.5`. A `draw_hand(angle, length, width)` function draws a hand at the given angle.
+Angoli per le lancette: `second_angle = 90 - seconds * 6`, `minute_angle = 90 - minutes * 6 - seconds * 0.1`, `hour_angle = 90 - hours * 30 - minutes * 0.5`. Una funzione `draw_hand(angle, length, width)` disegna una lancetta all'angolo dato.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -76,13 +76,13 @@ draw_hand(sec_angle, 110, 'red', 1)
 monty.penup(); monty.goto(0, 0); monty.dot(8, 'black')
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code sets `hours=10, minutes=10, seconds=30`.
-    Before running, look at an analog clock and imagine where the hands should point.
-    Make your prediction — then click Run!
+    Il codice imposta `hours=10, minutes=10, seconds=30`.
+    Prima di eseguire, guarda un orologio analogico e immagina dove dovrebbero puntare le lancette.
+    Fai la tua previsione — poi clicca Esegui!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -156,30 +156,30 @@ draw_hand(sec_angle, 110, 'red', 1)
 monty.penup(); monty.goto(0, 0); monty.dot(8, 'black')`);
 </script>
 
-A clock showing **10:10:30** — the hour hand between 10 and 11 (already past the 10), minute hand at 2 (10 minutes), second hand at 3 (30 seconds). Were you right?
+Un orologio che mostra **10:10:30** — la lancetta delle ore tra 10 e 11 (già passata le 10), la lancetta dei minuti a 2 (10 minuti), la lancetta dei secondi a 3 (30 secondi). Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Clock angles:
-- Each **second** = 6° clockwise = −6° in turtle angle
-- Each **minute** = 6° clockwise; the second also moves the minute hand slightly (0.1° per second)
-- Each **hour** = 30° clockwise; the minute also moves the hour hand (0.5° per minute)
+Angoli dell'orologio:
+- Ogni **secondo** = 6° in senso orario = −6° nell'angolo turtle
+- Ogni **minuto** = 6° in senso orario; il secondo muove anche leggermente la lancetta dei minuti (0,1° per secondo)
+- Ogni **ora** = 30° in senso orario; il minuto muove anche la lancetta delle ore (0,5° per minuto)
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `sec_angle = 90 - seconds * 6` | 0s = 12 o'clock = 90°, each second = −6° |
-| `min_angle = 90 - minutes*6 - seconds*0.1` | Minute hand moves smoothly |
-| `hr_angle = 90 - hours*30 - minutes*0.5` | Hour hand moves between hours |
-| `i % 5 == 0` | Every 5th tick is a long hour tick |
+| `sec_angle = 90 - seconds * 6` | 0s = ore 12 = 90°, ogni secondo = −6° |
+| `min_angle = 90 - minutes*6 - seconds*0.1` | La lancetta dei minuti si muove fluidamente |
+| `hr_angle = 90 - hours*30 - minutes*0.5` | La lancetta delle ore si muove tra le ore |
+| `i % 5 == 0` | Ogni 5ª tacca è una tacca lunga dell'ora |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Change the Time"
+!!! mascot-thinking "Il Tuo Turno — Cambia l'Ora"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change to `hours=3, minutes=45, seconds=0`.
-    Before running, visualize where each hand will point. Then run to verify!
+    Cambia in `hours=3, minutes=45, seconds=0`.
+    Prima di eseguire, visualizza dove punterà ogni lancetta. Poi esegui per verificare!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -244,20 +244,20 @@ draw_hand(sec_angle, 110, 'red', 1)
 monty.penup(); monty.goto(0, 0); monty.dot(8, 'navy')`);
 </script>
 
-3:45:00 — the minute hand at 9, the hour hand 3/4 of the way between 3 and 4 (because 45 minutes = 3/4 of the way to the next hour).
+Ore 3:45:00 — la lancetta dei minuti a 9, la lancetta delle ore a 3/4 del percorso tra 3 e 4 (perché 45 minuti = 3/4 del percorso verso l'ora successiva).
 
-## Experiments
+## Esperimenti
 
-1. **Display your current time.** Use Python's `datetime` module: `import datetime; now = datetime.datetime.now()` then `hours = now.hour % 12; minutes = now.minute; seconds = now.second`. You'll know it worked when the clock shows the actual current time.
+1. **Mostra l'ora attuale.** Usa il modulo `datetime` di Python: `import datetime; now = datetime.datetime.now()` poi `hours = now.hour % 12; minutes = now.minute; seconds = now.second`. Saprai che ha funzionato quando l'orologio mostra l'ora reale attuale.
 
-2. **Add a colored clock face.** Draw a filled circle in a light color behind the tick marks. You'll know it worked when the clock has a colored background.
+2. **Aggiungi un quadrante colorato.** Disegna un cerchio riempito di un colore chiaro dietro le tacche. Saprai che ha funzionato quando l'orologio ha uno sfondo colorato.
 
-3. **Make the hands colored.** Use different colors for hour, minute, and second hands. You'll know it worked when each hand is visually distinct.
+3. **Rendi colorate le lancette.** Usa colori diversi per le lancette di ore, minuti, e secondi. Saprai che ha funzionato quando ogni lancetta è visivamente distinta.
 
-4. **Add Roman numerals.** Replace the number labels with Roman numerals. You'll know it worked when `I`, `II`, `III`... appear around the clock.
+4. **Aggiungi numeri romani.** Sostituisci le etichette numeriche con numeri romani. Saprai che ha funzionato quando `I`, `II`, `III`... appaiono attorno all'orologio.
 
-!!! mascot-celebration "Tick Tock!"
+!!! mascot-celebration "Tic Tac!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You built a working analog clock face from scratch using angle math!
-    The same `angle = 90 - n * step` formula works for any clock-like display.
-    Up next: **Spirograph Drawer** — interactive spirograph with changing parameters.
+    Hai costruito un quadrante di orologio analogico funzionante da zero usando la matematica degli angoli!
+    La stessa formula `angle = 90 - n * step` funziona per qualsiasi display simile a un orologio.
+    Prossimo: **Disegnatore di Spirografi** — spirografo interattivo con parametri cambianti.

@@ -159,6 +159,11 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
   pre-esistente nell'originale inglese, non una corruzione testuale; tradotta
   fedelmente senza correggerla, a differenza del blocco duplicato illeggibile
   trovato in `honeycomb-grid/index.md`)
+- `clock-face/`, `spirograph-drawer/`, `spiral-text/`, `seven-segment/`,
+  `circular-badge/` (nono batch — nota: `spirograph-drawer/index.md` ha un
+  altro rimando finale pre-esistente inconsistente, "Up next: Category 11",
+  mentre il file successivo reale nella nav è `spiral-text/`; tradotto
+  fedelmente senza correggerlo, stessa logica del batch precedente)
 
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
@@ -294,11 +299,12 @@ cuore didattico del libro.
 `double-helix-spiral/`, `fibonacci-spiral/`, `spiral-of-spirals/`, `pentagon-spiral/`,
 `koch-snowflake/`, `sierpinski-triangle/`, `fractal-tree/`, `l-system-plant/`,
 `turtle-maze/`, `parametric-surface/`, `linden-snowflakes/`, `generative-art/`,
-`bouncing-ball/` (42 di ~102 file/unità).
+`bouncing-ball/`, `clock-face/`, `spirograph-drawer/`, `spiral-text/`,
+`seven-segment/`, `circular-badge/` (47 di ~102 file/unità).
 
-Prossimo: continuare la Fase 4 in ordine di nav con `clock-face/`,
-`spirograph-drawer/`, `spiral-text/`, `seven-segment/`, `circular-badge/`, e così
-via attraverso i restanti ~61 singoli laboratori della galleria.
+Prossimo: continuare la Fase 4 in ordine di nav con `block-letters/`,
+`rotating-squares/`, `cafe-wall/`, `moire-pattern/`, `riley-waves/`, e così
+via attraverso i restanti ~56 singoli laboratori della galleria.
 
 Dopo la Fase 4: Fasi 5-9 (MicroSims, Teacher's Guide, Jupyter/Advanced, Learning Graph,
 Trinket Labs — quest'ultima di priorità minima/da valutare se tradurre affatto, vedi

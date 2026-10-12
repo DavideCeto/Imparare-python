@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Seven-Segment Display
+# Display a Sette Segmenti
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Represent each digit as a bitmask of which of 7 segments are "on"
-- Draw horizontal and vertical line segments at computed positions
-- Display a multi-digit number using a dictionary of segment patterns
+- Rappresentare ogni cifra come una maschera di bit di quali dei 7 segmenti sono "accesi"
+- Disegnare segmenti di linea orizzontali e verticali a posizioni calcolate
+- Visualizzare un numero a più cifre usando un dizionario di pattern di segmento
 
-A seven-segment display like those on digital clocks and calculators. Each digit is encoded as a pattern of 7 binary flags — one per segment. A drawing function reads the flags and draws the lit segments.
+Un display a sette segmenti come quelli sugli orologi digitali e le calcolatrici. Ogni cifra è codificata come un pattern di 7 flag binari — uno per segmento. Una funzione di disegno legge i flag e disegna i segmenti accesi.
 
-!!! mascot-welcome "Welcome to the Seven-Segment Display!"
+!!! mascot-welcome "Benvenuto al Display a Sette Segmenti!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Digital clocks use seven-segment displays — each digit is just 7 on/off switches!
-    This lab builds a dictionary-driven display renderer in Python.
-    Let's code it together!
+    Gli orologi digitali usano display a sette segmenti — ogni cifra è solo 7 interruttori on/off!
+    Questo laboratorio costruisce un renderer di display guidato da dizionario in Python.
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-Each digit is stored as a tuple of 7 booleans: `(top, top-left, top-right, middle, bot-left, bot-right, bottom)`. A `draw_digit(n, x, y)` function checks each flag and draws the corresponding line segment.
+Ogni cifra è memorizzata come una tupla di 7 booleani: `(top, top-left, top-right, middle, bot-left, bot-right, bottom)`. Una funzione `draw_digit(n, x, y)` controlla ogni flag e disegna il segmento di linea corrispondente.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -61,13 +61,13 @@ for i, ch in enumerate(number):
     draw_digit(ch, start_x + i * (w + 10), -h/2)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Each digit is encoded as 7 flags — the code looks up the pattern for each character.
-    Will it look like a real digital display, or just scattered lines?
-    Make your guess — then click Run to find out!
+    Ogni cifra è codificata come 7 flag — il codice cerca il pattern per ogni carattere.
+    Sembrerà un vero display digitale, o solo linee disperse?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -125,29 +125,29 @@ for i, ch in enumerate(number):
     draw_digit(ch, start_x + i * (w + 10), -h/2)`);
 </script>
 
-A **real-looking digital display** — the segment patterns produce recognizable digits. Were you right?
+Un **display digitale realistico** — i pattern di segmento producono cifre riconoscibili. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-The `segments` dictionary maps each digit character to a 7-tuple. The positions:
-- **s[0]**: top horizontal, **s[1]**: upper-left vertical, **s[2]**: upper-right vertical
-- **s[3]**: middle horizontal, **s[4]**: lower-left vertical, **s[5]**: lower-right vertical, **s[6]**: bottom horizontal
+Il dizionario `segments` mappa ogni carattere cifra a una 7-tupla. Le posizioni:
+- **s[0]**: orizzontale in alto, **s[1]**: verticale in alto a sinistra, **s[2]**: verticale in alto a destra
+- **s[3]**: orizzontale al centro, **s[4]**: verticale in basso a sinistra, **s[5]**: verticale in basso a destra, **s[6]**: orizzontale in basso
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `segments = {'0': (1,1,1,0,1,1,1), ...}` | Dictionary: digit → 7 segment flags |
-| `s = segments.get(ch, (0,)*7)` | Look up the pattern, default to all off |
-| `if s[0]: seg_line(...)` | Draw only segments that are on |
-| `start_x = -(len(number)*(w+10))/2` | Center the display |
+| `segments = {'0': (1,1,1,0,1,1,1), ...}` | Dizionario: cifra → 7 flag di segmento |
+| `s = segments.get(ch, (0,)*7)` | Cerca il pattern, predefinito tutti spenti |
+| `if s[0]: seg_line(...)` | Disegna solo i segmenti che sono accesi |
+| `start_x = -(len(number)*(w+10))/2` | Centra il display |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Display the Year You Were Born"
+!!! mascot-thinking "Il Tuo Turno — Mostra l'Anno della Tua Nascita"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `number = "2026"` to the year you were born.
-    Predict which digit shapes will appear — then run it to check!
+    Cambia `number = "2026"` con l'anno in cui sei nato.
+    Prevedi quali forme di cifra appariranno — poi eseguilo per controllare!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -199,20 +199,20 @@ for i, ch in enumerate(number):
     draw_digit(ch, start_x + i * (w + 10), -h/2)`);
 </script>
 
-Green digits 1-5 displayed in sequence — each digit's unique segment pattern is clearly visible.
+Cifre verdi 1-5 visualizzate in sequenza — il pattern di segmento unico di ogni cifra è chiaramente visibile.
 
-## Experiments
+## Esperimenti
 
-1. **Draw a clock.** Display `"12:30"` by adding a colon character (two dots). You'll know it worked when a time display appears.
+1. **Disegna un orologio.** Visualizza `"12:30"` aggiungendo un carattere due punti (due puntini). Saprai che ha funzionato quando appare un display orario.
 
-2. **Animate a counter.** Use a loop to display 0 through 9 one at a time. You'll know it worked when the display cycles through digits.
+2. **Anima un contatore.** Usa un ciclo per visualizzare da 0 a 9 uno alla volta. Saprai che ha funzionato quando il display scorre tra le cifre.
 
-3. **Make the display larger.** Change `w, h = 30, 50` to `w, h = 50, 80`. You'll know it worked when much bigger digits appear.
+3. **Rendi il display più grande.** Cambia `w, h = 30, 50` in `w, h = 50, 80`. Saprai che ha funzionato quando appaiono cifre molto più grandi.
 
-4. **Add dim background segments.** Draw all 7 segments in dark gray before drawing the active ones. You'll know it worked when the inactive segments appear as faint shadows.
+4. **Aggiungi segmenti di sfondo fiochi.** Disegna tutti i 7 segmenti in grigio scuro prima di disegnare quelli attivi. Saprai che ha funzionato quando i segmenti inattivi appaiono come ombre tenui.
 
-!!! mascot-celebration "Digital Numbers!"
+!!! mascot-celebration "Numeri Digitali!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You built a working seven-segment display renderer!
-    This is exactly how ATMs, gas pumps, and alarm clocks display numbers.
-    Up next: **Circular Name Badge** — text arranged in a circle.
+    Hai costruito un renderer funzionante per display a sette segmenti!
+    È esattamente così che i bancomat, le pompe di benzina, e le sveglie visualizzano i numeri.
+    Prossimo: **Distintivo Circolare con Nome** — testo disposto in cerchio.

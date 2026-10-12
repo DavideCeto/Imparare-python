@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Spirograph Drawer
+# Disegnatore di Spirografi
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Draw a family of hypotrochoid curves that animate one after another
-- Use a list of parameter sets to create a sequence of different Spirograph patterns
-- Understand how changing `R`, `r`, and `d` produces completely different shapes
+- Disegnare una famiglia di curve ipotrocoidi che si animano una dopo l'altra
+- Usare una lista di insiemi di parametri per creare una sequenza di diversi pattern Spirografo
+- Capire come cambiare `R`, `r`, e `d` produce forme completamente diverse
 
-A Spirograph drawer that cycles through 6 different parameter sets, drawing each one in a different color to build up a layered display of overlapping hypotrochoid curves.
+Un disegnatore di Spirografi che scorre tra 6 diversi insiemi di parametri, disegnando ognuno in un colore diverso per costruire un display stratificato di curve ipotrocoidi sovrapposte.
 
-!!! mascot-welcome "Welcome to the Spirograph Drawer!"
+!!! mascot-welcome "Benvenuto al Disegnatore di Spirografi!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    In this lab the Spirograph draws itself — cycling through 6 different
-    parameter sets automatically, building up a layered display!
-    Let's code it together!
+    In questo laboratorio lo Spirografo si disegna da solo — scorrendo automaticamente tra 6 diversi
+    insiemi di parametri, costruendo un display stratificato!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-A list of `(R, r, d, color)` tuples defines 6 Spirograph parameter sets. The outer loop iterates through them; the inner loop draws each hypotrochoid. `tracer(0)` and `update()` keep the animation smooth.
+Una lista di tuple `(R, r, d, color)` definisce 6 insiemi di parametri Spirografo. Il ciclo esterno le scorre; il ciclo interno disegna ogni ipotrocoide. `tracer(0)` e `update()` mantengono l'animazione fluida.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -63,13 +63,13 @@ for R, r, d, color in params:
     screen.update()
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Six different parameter sets in six different colors.
-    Will the curves overlap neatly, or will they create a chaotic jumble?
-    Make your guess — then click Run to find out!
+    Sei diversi insiemi di parametri in sei colori diversi.
+    Le curve si sovrapporranno ordinatamente, o creeranno un disordine caotico?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -129,28 +129,28 @@ for R, r, d, color in params:
     screen.update()`);
 </script>
 
-Six colorful Spirograph curves, each with a different shape, building up a layered composition. Were you right about the overlap?
+Sei curve Spirografo colorate, ognuna con una forma diversa, che costruiscono una composizione stratificata. Avevi indovinato sulla sovrapposizione?
 
-## How It Works
+## Come Funziona
 
-Each `(R, r, d)` triple produces a completely unique curve. Because all curves are drawn from the same center, they overlap like layers in a painting. The `if i % 50 == 0: screen.update()` updates the display every 50 points to show the drawing progress.
+Ogni tripletta `(R, r, d)` produce una curva completamente unica. Poiché tutte le curve sono disegnate dallo stesso centro, si sovrappongono come strati in un dipinto. `if i % 50 == 0: screen.update()` aggiorna il display ogni 50 punti per mostrare il progresso del disegno.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `params = [...]` | List of `(R, r, d, color)` tuples |
-| `for R, r, d, color in params` | Unpack each parameter set |
-| `if i % 50 == 0: screen.update()` | Show progress every 50 steps |
-| `screen.tracer(0)` | Manual control over screen refresh |
+| `params = [...]` | Lista di tuple `(R, r, d, color)` |
+| `for R, r, d, color in params` | Spacchetta ogni insieme di parametri |
+| `if i % 50 == 0: screen.update()` | Mostra il progresso ogni 50 passi |
+| `screen.tracer(0)` | Controllo manuale sull'aggiornamento dello schermo |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Design Your Own Set"
+!!! mascot-thinking "Il Tuo Turno — Progetta il Tuo Insieme"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Replace the `params` list with 3 parameter sets of your own choosing.
-    Try to make curves that each have different numbers of loops (R/r ratio determines it).
-    What ratios will you pick?
+    Sostituisci la lista `params` con 3 insiemi di parametri di tua scelta.
+    Prova a fare curve che abbiano ognuna un numero diverso di anelli (il rapporto R/r lo determina).
+    Quali rapporti scegli?
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -201,20 +201,20 @@ for R, r, d, color in params:
     screen.update()`);
 </script>
 
-With the same `R=120` and `d=80` but different `r` values (40, 24, 15), the three curves have 3, 5, and 8 loops respectively — matching `R/r`.
+Con lo stesso `R=120` e `d=80` ma valori `r` diversi (40, 24, 15), le tre curve hanno rispettivamente 3, 5, e 8 anelli — corrispondendo a `R/r`.
 
-## Experiments
+## Esperimenti
 
-1. **Add more curves.** Extend `params` to 10 entries. You'll know it worked when a denser, more colorful composition appears.
+1. **Aggiungi più curve.** Estendi `params` a 10 voci. Saprai che ha funzionato quando appare una composizione più densa e colorata.
 
-2. **Use pastel colors.** Replace the colors with lighter shades. You'll know it worked when the overlapping curves produce a softer appearance.
+2. **Usa colori pastello.** Sostituisci i colori con tonalità più chiare. Saprai che ha funzionato quando le curve sovrapposte producono un aspetto più dolce.
 
-3. **Clear and redraw.** Add `screen.clearscreen()` between curves — only one at a time. You'll know it worked when each curve appears alone before the next one.
+3. **Pulisci e ridisegna.** Aggiungi `screen.clearscreen()` tra le curve — una alla volta. Saprai che ha funzionato quando ogni curva appare da sola prima della successiva.
 
-4. **Vary the step count.** Use more steps for higher `R/r` ratios. You'll know it worked when complex curves look smoother.
+4. **Varia il conteggio dei passi.** Usa più passi per rapporti `R/r` più alti. Saprai che ha funzionato quando le curve complesse sembrano più lisciate.
 
-!!! mascot-celebration "Art Machine!"
+!!! mascot-celebration "Macchina dell'Arte!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Your code generates art automatically from a list of parameters — an art machine!
-    This is the essence of generative art: code that produces visuals from rules.
-    Up next: **Category 11 — Advanced Patterns!**
+    Il tuo codice genera arte automaticamente da una lista di parametri — una macchina dell'arte!
+    Questa è l'essenza dell'arte generativa: codice che produce immagini da regole.
+    Prossimo: **Categoria 11 — Pattern Avanzati!**
