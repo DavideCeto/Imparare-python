@@ -2,31 +2,31 @@
 hide:
     - toc
 ---
-# Color Wheel Wedges
+# Spicchi della Ruota dei Colori
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Divide 360° into equal wedge angles using `360 / n`
-- Draw filled pie-slice shapes using `begin_fill()` with forward and turn commands
-- Understand how the 12 hues of the color wheel relate to each other
+- Dividere 360° in angoli di spicchio uguali usando `360 / n`
+- Disegnare forme a fetta di torta riempite usando `begin_fill()` con comandi avanti e rotazione
+- Capire come le 12 tonalità della ruota dei colori si relazionano tra loro
 
-Twelve filled wedges radiate from the center, each one a different hue —
-red, orange, yellow, green, blue, violet, and all the steps between.
+Dodici spicchi riempiti si irradiano dal centro, ognuno di una tonalità diversa —
+rosso, arancione, giallo, verde, blu, viola, e tutti i passaggi intermedi.
 
-!!! mascot-welcome "Welcome to the Color Wheel!"
+!!! mascot-welcome "Benvenuto alla Ruota dei Colori!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    In this lab you'll discover how to draw filled pie slices and how all 12 pure hues
-    fit perfectly around a circle. Let's code it together!
+    In questo laboratorio scoprirai come disegnare fette di torta riempite e come tutte le 12 tonalità pure
+    si adattano perfettamente attorno a un cerchio. Programmiamo insieme!
 
-## How the Wedges Work
+## Come Funzionano gli Spicchi
 
-Each wedge is a triangle: two long sides from the center and a short arc closing the tip.
-We approximate the arc by drawing several small forward steps while turning slightly.
+Ogni spicchio è un triangolo: due lati lunghi dal centro e un breve arco che chiude la punta.
+Approssimiamo l'arco disegnando diversi piccoli passi avanti mentre giriamo leggermente.
 
-The 12 hues used are the standard color wheel: `red`, `orange`, `yellow`, `chartreuse`,
+Le 12 tonalità usate sono la ruota dei colori standard: `red`, `orange`, `yellow`, `chartreuse`,
 `green`, `springgreen`, `cyan`, `deepskyblue`, `blue`, `purple`, `magenta`, `deeppink`.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -55,12 +55,12 @@ for hue in hues:
     monty.left(30)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Each wedge spans `360 / 12 = 30°`. How many wedges will fit in a full circle?
-    Make your guess — then click Run to find out!
+    Ogni spicchio si estende per `360 / 12 = 30°`. Quanti spicchi entreranno in un cerchio completo?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -108,40 +108,40 @@ for hue in hues:
     monty.left(30)`);
 </script>
 
-Exactly **12 wedges** — one per hue, each 30°, summing to 360°. Were you right?
+Esattamente **12 spicchi** — uno per tonalità, ognuno di 30°, per un totale di 360°. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Each wedge is drawn as a filled, triangle-like slice: go out along one edge, trace the small arc that rounds the rim, then come back along the other edge to the center.
+Ogni spicchio è disegnato come una fetta riempita simile a un triangolo: esce lungo un lato, traccia il piccolo arco che arrotonda il bordo, poi torna lungo l'altro lato verso il centro.
 
-Two turns at the end do the important work. `monty.left(180 - wedge)` undoes the turning Monty built up while drawing the slice, pointing him back along the direction he started this wedge in. Then `monty.left(30)` — the line that makes the wheel actually spread out — rotates him one wedge angle so the next slice is drawn 30° further around. Twelve slices × 30° = 360°, one full circle.
+Due rotazioni alla fine fanno il lavoro importante. `monty.left(180 - wedge)` annulla la rotazione che Monty ha accumulato disegnando la fetta, riportandolo a puntare nella direzione in cui ha iniziato questo spicchio. Poi `monty.left(30)` — la riga che fa davvero espandere la ruota — lo ruota di un angolo di spicchio così la fetta successiva viene disegnata 30° più avanti. Dodici fette × 30° = 360°, un cerchio completo.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `hues = [...]` | List of 12 standard color wheel hues |
-| `wedge = 360 / 12` | Each slice spans 30° |
-| `monty.forward(radius)` | Draw the first edge of the wedge outward |
-| `for _ in range(6)` | Approximate the rim arc with 6 short forward+turn steps |
-| `monty.forward(radius)` | Draw the second edge back to center |
-| `monty.left(180 - wedge)` | Undo the slice's turning, back to its starting direction |
-| `monty.left(30)` | Rotate one wedge (30°) to the next slice |
+| `hues = [...]` | Lista delle 12 tonalità standard della ruota dei colori |
+| `wedge = 360 / 12` | Ogni fetta si estende per 30° |
+| `monty.forward(radius)` | Disegna il primo lato dello spicchio verso l'esterno |
+| `for _ in range(6)` | Approssima l'arco del bordo con 6 piccoli passi avanti+rotazione |
+| `monty.forward(radius)` | Disegna il secondo lato di ritorno al centro |
+| `monty.left(180 - wedge)` | Annulla la rotazione della fetta, tornando alla sua direzione di partenza |
+| `monty.left(30)` | Ruota di uno spicchio (30°) verso la fetta successiva |
 
-## A Shorter Way: Using `circle()`
+## Un Modo Più Breve: Usare `circle()`
 
-Drawing the rim with six tiny `forward`/`left` steps showed us *how* an arc is
-built. But Python turtles also have a built-in `circle()` command that draws an
-arc for us: `monty.circle(radius, wedge)` curves through `wedge` degrees along a
-circle of the given radius. That single line replaces the whole inner loop —
-**everything else stays exactly the same**, including the two turns that rotate
-Monty to the next slice.
+Disegnare il bordo con sei piccoli passi `forward`/`left` ci ha mostrato *come*
+viene costruito un arco. Ma le tartarughe Python hanno anche un comando integrato
+`circle()` che disegna un arco per noi: `monty.circle(radius, wedge)` curva
+attraverso `wedge` gradi lungo un cerchio del raggio dato. Quell'unica riga
+sostituisce l'intero ciclo interno — **tutto il resto rimane esattamente lo
+stesso**, incluse le due rotazioni che girano Monty verso la fetta successiva.
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    This program is shorter, but it does the same job. Will it draw the **same**
-    12-color wheel, a smaller one, or a completely different shape?
-    Predict, then click Run.
+    Questo programma è più corto, ma fa lo stesso lavoro. Disegnerà la **stessa**
+    ruota a 12 colori, una più piccola, o una forma completamente diversa?
+    Prevedi, poi clicca Esegui.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -181,19 +181,20 @@ for hue in hues:
     monty.left(30)`);
 </script>
 
-Same wheel, fewer lines! Because `circle()` lands Monty exactly on the rim, this
-version even returns precisely to the center on every slice. Use whichever method
-you like — the hand-drawn loop when you want to *see* the arc being built, and
-`circle()` when you just want a clean curve in one line.
+Stessa ruota, meno righe! Poiché `circle()` fa atterrare Monty esattamente sul
+bordo, questa versione ritorna persino precisamente al centro a ogni fetta.
+Usa il metodo che preferisci — il ciclo disegnato a mano quando vuoi *vedere*
+l'arco mentre viene costruito, e `circle()` quando vuoi solo una curva pulita
+in una riga.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — One Variable Controls the Wheel"
+!!! mascot-thinking "Il Tuo Turno — Una Variabile Controlla la Ruota"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    This version stores the slice count in a variable, `wedges`, and computes
-    `angle = 360 / wedges` from it — so one number sets the wedge width, the rim,
-    and the rotation together. Predict what the wheel will look like with
-    `wedges = 5`, then run it to find out!
+    Questa versione memorizza il conteggio delle fette in una variabile, `wedges`, e
+    calcola `angle = 360 / wedges` da essa — così un numero imposta la larghezza
+    dello spicchio, il bordo, e la rotazione insieme. Prevedi come sarà la ruota con
+    `wedges = 5`, poi eseguila per scoprirlo!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -235,18 +236,18 @@ for hue in hues:
     monty.left(angle)`);
 </script>
 
-Run it: `wedges = 5` makes each slice 72°, and five slices already fill the circle — so the sixth color (magenta) laps the wheel and paints over the first (red), leaving five visible slices. Pulling the count into a variable makes re-scaling easy: `angle = 360 / wedges` drives the wedge width, the `circle(radius, angle)` rim, and the `monty.left(angle)` turn all at once. Keep `wedges` equal to the number of colors in `hues` and every hue gets its own clean slice.
+Eseguilo: `wedges = 5` rende ogni fetta di 72°, e cinque fette riempiono già il cerchio — così il sesto colore (magenta) fa il giro della ruota e si sovrappone al primo (rosso), lasciando visibili cinque fette. Portare il conteggio in una variabile rende facile il riscalaggio: `angle = 360 / wedges` guida la larghezza dello spicchio, il bordo di `circle(radius, angle)`, e la rotazione `monty.left(angle)` tutti in una volta. Mantieni `wedges` uguale al numero di colori in `hues` e ogni tonalità ottiene la sua fetta netta.
 
-## Experiments
+## Esperimenti
 
-1. **Try 8 wedges.** Use 8 colors, change `360 / 12` to `360 / 8`, adjust the inner arc to 4 steps × 11.25°, and change the closing rotation to `monty.left(45)`. You'll know it worked when 8 equal slices fill the circle.
+1. **Prova 8 spicchi.** Usa 8 colori, cambia `360 / 12` in `360 / 8`, adatta l'arco interno a 4 passi × 11,25°, e cambia la rotazione finale in `monty.left(45)`. Saprai che ha funzionato quando 8 fette uguali riempiono il cerchio.
 
-2. **Tilt the whole wheel.** Add a single `monty.left(15)` line just before the `for` loop. You'll know it worked when the entire wheel is rotated 15° but still closes into a full circle.
+2. **Inclina tutta la ruota.** Aggiungi una singola riga `monty.left(15)` subito prima del ciclo `for`. Saprai che ha funzionato quando l'intera ruota è ruotata di 15° ma si chiude ancora in un cerchio completo.
 
-3. **Shrink alternate wedges.** Use `for i, hue in enumerate(hues):`, then set `r = radius` for even `i` and `r = radius // 2` for odd `i`. Use `r` in both `forward(...)` lines and in the arc step `forward(r * 0.1)`. You'll know it worked when long and short wedges alternate around the wheel.
+3. **Riduci gli spicchi alterni.** Usa `for i, hue in enumerate(hues):`, poi imposta `r = radius` per `i` pari e `r = radius // 2` per `i` dispari. Usa `r` in entrambe le righe `forward(...)` e nel passo dell'arco `forward(r * 0.1)`. Saprai che ha funzionato quando spicchi lunghi e corti si alternano attorno alla ruota.
 
-!!! mascot-celebration "Spectacular!"
+!!! mascot-celebration "Spettacolare!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You drew all 12 hues of the color wheel and learned how `360 / n` divides
-    a circle into any number of equal slices. Artists use this same wheel every day!
-    Up next: **Pentagon Chain** to practice the polygon angle formula.
+    Hai disegnato tutte le 12 tonalità della ruota dei colori e imparato come `360 / n` divide
+    un cerchio in qualsiasi numero di fette uguali. Gli artisti usano questa stessa ruota ogni giorno!
+    Prossimo: **Catena di Pentagoni** per esercitarti con la formula dell'angolo del poligono.

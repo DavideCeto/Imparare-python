@@ -2,35 +2,35 @@
 hide:
     - toc
 ---
-# Checkerboard Grid
+# Griglia a Scacchiera
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Use **nested `for` loops** to iterate over rows and columns
-- Compute the (x, y) position of each square from its row and column index
-- Choose a color based on whether `row + col` is even or odd
+- Usare **cicli `for` annidati** per iterare su righe e colonne
+- Calcolare la posizione (x, y) di ogni quadrato dal suo indice di riga e colonna
+- Scegliere un colore in base a se `row + col` è pari o dispari
 
-An 8×8 grid of black and white squares fills the canvas — just like a chessboard —
-built entirely from loops and arithmetic, not hard-coded coordinates.
+Una griglia 8×8 di quadrati neri e bianchi riempie il canvas — proprio come una scacchiera —
+costruita interamente con cicli e aritmetica, non coordinate scritte a mano.
 
-!!! mascot-welcome "Welcome to the Checkerboard!"
+!!! mascot-welcome "Benvenuto alla Scacchiera!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    In this lab you'll learn how two loops — one for rows, one for columns — can place
-    64 squares on the screen with just a few lines of code.
-    Let's code it together!
+    In questo laboratorio imparerai come due cicli — uno per le righe, uno per le colonne — possono
+    posizionare 64 quadrati sullo schermo con solo poche righe di codice.
+    Programmiamo insieme!
 
-## How the Grid Works
+## Come Funziona la Griglia
 
-The outer loop counts **rows** (0–7, top to bottom). The inner loop counts **columns** (0–7, left to right).
-For each combination, the position is:
+Il ciclo esterno conta le **righe** (0–7, dall'alto al basso). Il ciclo interno conta le **colonne** (0–7, da sinistra a destra).
+Per ogni combinazione, la posizione è:
 
-- `x = -160 + col * 40` — starts at the left, shifts right by 40px per column
-- `y = 160 - row * 40` — starts at the top, shifts down by 40px per row
+- `x = -160 + col * 40` — inizia a sinistra, si sposta a destra di 40px per colonna
+- `y = 160 - row * 40` — inizia in alto, si sposta in basso di 40px per riga
 
-The color alternates because `(row + col) % 2` is `0` on even squares and `1` on odd squares —
-exactly like the black and white pattern of a chessboard.
+Il colore alterna perché `(row + col) % 2` è `0` sui quadrati pari e `1` sui quadrati dispari —
+esattamente come il pattern nero e bianco di una scacchiera.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -56,13 +56,13 @@ for row in range(8):
         monty.end_fill()
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The top-left square is at row=0, col=0. `(0 + 0) % 2 = 0` → black.
-    What color is the square at row=2, col=3?
-    Work it out, then click Run to check!
+    Il quadrato in alto a sinistra è a row=0, col=0. `(0 + 0) % 2 = 0` → nero.
+    Di che colore è il quadrato a row=2, col=3?
+    Calcolalo, poi clicca Esegui per controllare!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -107,33 +107,33 @@ for row in range(8):
         monty.end_fill()`);
 </script>
 
-`(2 + 3) % 2 = 1` → **white**. Were you right?
+`(2 + 3) % 2 = 1` → **bianco**. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-The innermost `for _ in range(4)` draws one square: forward 40, turn right 90°, four times.
-(The `_` is a throwaway variable name used when you don't need the loop counter.)
+Il `for _ in range(4)` più interno disegna un quadrato: avanti 40, gira a destra 90°, quattro volte.
+(Il `_` è un nome di variabile usa-e-getta usato quando non hai bisogno del contatore del ciclo.)
 
-Before each square, `monty.goto(x, y)` jumps to the correct position with the pen up — without
-this, Monty would drag lines across the canvas between squares.
+Prima di ogni quadrato, `monty.goto(x, y)` salta alla posizione corretta con la penna alzata — senza
+questo, Monty tirerebbe linee attraverso il canvas tra i quadrati.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `for row in range(8)` | Outer loop — 8 rows top to bottom |
-| `for col in range(8)` | Inner loop — 8 columns left to right |
-| `x = -160 + col * size` | Column 0 starts at x = -160; each column is 40px to the right |
-| `y = 160 - row * size` | Row 0 starts at y = 160; each row is 40px lower |
-| `(row + col) % 2` | 0 on even sum → black; 1 on odd sum → white |
-| `for _ in range(4)` | Draw the four sides of a square |
+| `for row in range(8)` | Ciclo esterno — 8 righe dall'alto al basso |
+| `for col in range(8)` | Ciclo interno — 8 colonne da sinistra a destra |
+| `x = -160 + col * size` | La colonna 0 inizia a x = -160; ogni colonna è 40px a destra |
+| `y = 160 - row * size` | La riga 0 inizia a y = 160; ogni riga è 40px più in basso |
+| `(row + col) % 2` | 0 su somma pari → nero; 1 su somma dispari → bianco |
+| `for _ in range(4)` | Disegna i quattro lati di un quadrato |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Spot the Bug!"
+!!! mascot-warning "Trova il Bug!"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    The program below draws all 64 squares **black** — no alternating pattern!
-    Fix the one line that decides the color so the chessboard pattern appears.
+    Il programma sotto disegna tutti i 64 quadrati **neri** — nessun pattern alternato!
+    Correggi l'unica riga che decide il colore così appaia il pattern a scacchiera.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -172,20 +172,20 @@ for row in range(8):
         monty.end_fill()`);
 </script>
 
-Replace `color = 'black'` with `color = 'black' if (row + col) % 2 == 0 else 'white'`.
+Sostituisci `color = 'black'` con `color = 'black' if (row + col) % 2 == 0 else 'white'`.
 
-## Experiments
+## Esperimenti
 
-1. **Make it colorful.** Replace `'black'` and `'white'` with `'navy'` and `'gold'`. You'll know it worked when the board shows two bold colors instead of grayscale.
+1. **Rendilo colorato.** Sostituisci `'black'` e `'white'` con `'navy'` e `'gold'`. Saprai che ha funzionato quando la scacchiera mostra due colori vivaci invece della scala di grigi.
 
-2. **Resize the squares.** Change `size = 40` to `size = 30`. The board stays 8×8 but is smaller. Try adjusting the x/y formulas to keep it centered. You'll know it worked when all 64 squares still appear.
+2. **Ridimensiona i quadrati.** Cambia `size = 40` in `size = 30`. La scacchiera resta 8×8 ma è più piccola. Prova ad adattare le formule x/y per mantenerla centrata. Saprai che ha funzionato quando tutti i 64 quadrati appaiono ancora.
 
-3. **Go bigger.** Change `range(8)` to `range(10)` in both loops and adjust starting positions. You'll know it worked when you have a 10×10 grid (100 squares).
+3. **Diventa più grande.** Cambia `range(8)` in `range(10)` in entrambi i cicli e adatta le posizioni di partenza. Saprai che ha funzionato quando hai una griglia 10×10 (100 quadrati).
 
-4. **Use random colors.** Add `import random` and replace the color line with `color = random.choice(['red','blue','green','purple','orange'])`. You'll know it worked when each square is a different random color.
+4. **Usa colori casuali.** Aggiungi `import random` e sostituisci la riga del colore con `color = random.choice(['red','blue','green','purple','orange'])`. Saprai che ha funzionato quando ogni quadrato è di un colore casuale diverso.
 
-!!! mascot-celebration "Excellent Work!"
+!!! mascot-celebration "Lavoro Eccellente!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You mastered nested loops, coordinate arithmetic, and modulo-based color selection —
-    three of the most powerful tools in all of programming!
-    Up next: **Diagonal Stripe Field** to explore line drawing with `setheading()`.
+    Hai padroneggiato cicli annidati, aritmetica delle coordinate, e scelta del colore basata sul modulo —
+    tre dei più potenti strumenti in tutta la programmazione!
+    Prossimo: **Campo di Strisce Diagonali** per esplorare il disegno di linee con `setheading()`.

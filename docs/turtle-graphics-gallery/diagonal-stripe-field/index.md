@@ -2,40 +2,40 @@
 hide:
     - toc
 ---
-# Diagonal Stripe Field
+# Campo di Strisce Diagonali
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Use `setheading()` to point the turtle in any compass direction
-- Translate a loop counter into a starting coordinate to space shapes evenly
-- Use `penup()` and `pendown()` to reposition without drawing
+- Usare `setheading()` per puntare la tartaruga in qualsiasi direzione della bussola
+- Tradurre un contatore di ciclo in una coordinata di partenza per spaziare le forme uniformemente
+- Usare `penup()` e `pendown()` per riposizionarsi senza disegnare
 
-Thirty parallel diagonal lines stripe the canvas from bottom-left to top-right,
-alternating teal and coral like a bold piece of fabric.
+Trenta linee diagonali parallele attraversano il canvas dal basso-sinistra all'alto-destra,
+alternando verde acqua e corallo come un audace pezzo di tessuto.
 
-!!! mascot-welcome "Welcome to the Diagonal Stripe Field!"
+!!! mascot-welcome "Benvenuto al Campo di Strisce Diagonali!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    In this lab you'll learn how to aim the turtle at any angle and draw long lines
-    across the entire canvas. One formula turns a loop counter into a starting position.
-    Let's code it together!
+    In questo laboratorio imparerai come puntare la tartaruga a qualsiasi angolo e disegnare linee lunghe
+    attraverso tutto il canvas. Una formula trasforma un contatore di ciclo in una posizione di partenza.
+    Programmiamo insieme!
 
-## How the Stripes Work
+## Come Funzionano le Strisce
 
-Each stripe is a diagonal line drawn at a 45° angle. The turtle:
-1. Lifts the pen and jumps to a starting position along the bottom edge
-2. Aims at exactly 45° with `setheading(45)`
-3. Draws a long line across the canvas
+Ogni striscia è una linea diagonale disegnata a un angolo di 45°. La tartaruga:
+1. Alza la penna e salta a una posizione di partenza lungo il bordo inferiore
+2. Punta esattamente a 45° con `setheading(45)`
+3. Disegna una lunga linea attraverso il canvas
 
-The starting x position is computed as `-300 + i * 20` — so stripe 0 starts at x = -300,
-stripe 1 at x = -280, stripe 2 at x = -260, and so on, spacing them 20 pixels apart.
+La posizione x di partenza è calcolata come `-300 + i * 20` — così la striscia 0 inizia a x = -300,
+la striscia 1 a x = -280, la striscia 2 a x = -260, e così via, spaziandole di 20 pixel.
 
-!!! mascot-tip "setheading() vs right()"
+!!! mascot-tip "setheading() contro right()"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    `right(n)` turns **relative** to where Monty is already facing.
-    `setheading(n)` sets an **absolute** compass heading: 0° = East, 90° = North, 45° = North-East.
-    Use `setheading()` when you always want the exact same angle, regardless of prior turns.
+    `right(n)` gira in modo **relativo** a dove Monty è già rivolto.
+    `setheading(n)` imposta una direzione **assoluta** della bussola: 0° = Est, 90° = Nord, 45° = Nord-Est.
+    Usa `setheading()` quando vuoi sempre lo stesso identico angolo, indipendentemente dalle rotazioni precedenti.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -55,12 +55,12 @@ for i in range(30):
     monty.forward(500)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    There are 30 stripes and 2 colors alternating. How many **teal** stripes will appear?
-    Make your guess — then click Run to find out!
+    Ci sono 30 strisce e 2 colori che si alternano. Quante strisce **verde acqua** appariranno?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -99,30 +99,30 @@ for i in range(30):
     monty.forward(500)`);
 </script>
 
-30 ÷ 2 = **15 teal** stripes (and 15 coral). Were you right?
+30 ÷ 2 = **15 strisce verde acqua** (e 15 corallo). Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`monty.goto(-300 + i * 20, -250)` is the key line. When `i = 0` the turtle starts at `(-300, -250)` — the lower-left corner. Each increment of `i` shifts the starting x position 20 pixels to the right, spreading the stripes evenly.
+`monty.goto(-300 + i * 20, -250)` è la riga chiave. Quando `i = 0` la tartaruga inizia a `(-300, -250)` — l'angolo in basso a sinistra. Ogni incremento di `i` sposta la posizione x di partenza di 20 pixel a destra, distribuendo le strisce uniformemente.
 
-`setheading(45)` is called inside the loop to reset the angle each time, because the previous `forward(500)` leaves Monty pointing in the same direction, but it's good practice to set it explicitly.
+`setheading(45)` viene chiamato dentro il ciclo per reimpostare l'angolo ogni volta, perché il precedente `forward(500)` lascia Monty rivolto nella stessa direzione, ma è buona pratica impostarlo esplicitamente.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `monty.pensize(3)` | Thicker lines so stripes are clearly visible |
-| `colors[i % 2]` | Alternates teal (even i) and coral (odd i) |
-| `monty.goto(-300 + i * 20, -250)` | Positions each stripe 20px to the right of the last |
-| `monty.setheading(45)` | Points Monty exactly North-East for a 45° diagonal |
-| `monty.forward(500)` | Draws a long diagonal line across the canvas |
+| `monty.pensize(3)` | Linee più spesse così le strisce sono chiaramente visibili |
+| `colors[i % 2]` | Alterna verde acqua (i pari) e corallo (i dispari) |
+| `monty.goto(-300 + i * 20, -250)` | Posiziona ogni striscia 20px a destra dell'ultima |
+| `monty.setheading(45)` | Punta Monty esattamente a Nord-Est per una diagonale a 45° |
+| `monty.forward(500)` | Disegna una lunga linea diagonale attraverso il canvas |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add the Heading"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi la Direzione"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below draws 30 lines but they all go horizontally — no diagonal!
-    Add **one line** after `monty.pendown()` to make every stripe go at 45°.
+    Il programma sotto disegna 30 linee ma vanno tutte orizzontalmente — nessuna diagonale!
+    Aggiungi **una riga** dopo `monty.pendown()` per far andare ogni striscia a 45°.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -155,20 +155,20 @@ for i in range(30):
     monty.forward(500)`);
 </script>
 
-The missing line is `monty.setheading(45)` — heading 45° points exactly North-East.
+La riga mancante è `monty.setheading(45)` — la direzione 45° punta esattamente a Nord-Est.
 
-## Experiments
+## Esperimenti
 
-1. **Change the angle.** Replace `setheading(45)` with `setheading(60)`. Stripes get steeper. Try `setheading(30)` for a shallower angle. You'll know it worked when the stripes visibly tilt.
+1. **Cambia l'angolo.** Sostituisci `setheading(45)` con `setheading(60)`. Le strisce diventano più inclinate. Prova `setheading(30)` per un angolo più dolce. Saprai che ha funzionato quando le strisce si inclinano visibilmente.
 
-2. **Change stripe spacing.** Replace `i * 20` with `i * 10`. Stripes are denser. You'll know it worked when the lines nearly overlap.
+2. **Cambia la spaziatura delle strisce.** Sostituisci `i * 20` con `i * 10`. Le strisce sono più dense. Saprai che ha funzionato quando le linee quasi si sovrappongono.
 
-3. **Add more colors.** Change `colors` to `['teal', 'coral', 'gold']` and `i % 2` to `i % 3`. You'll know it worked when three colors cycle across the stripes.
+3. **Aggiungi più colori.** Cambia `colors` in `['teal', 'coral', 'gold']` e `i % 2` in `i % 3`. Saprai che ha funzionato quando tre colori scorrono attraverso le strisce.
 
-4. **Vary the line width.** Replace `monty.pensize(3)` with `monty.pensize(1 + i // 5)`. Early stripes are thin, later ones thick. You'll know it worked when the stripe widths visibly grow.
+4. **Varia la larghezza della linea.** Sostituisci `monty.pensize(3)` con `monty.pensize(1 + i // 5)`. Le prime strisce sono sottili, quelle successive spesse. Saprai che ha funzionato quando le larghezze delle strisce crescono visibilmente.
 
-!!! mascot-celebration "Wonderful Work!"
+!!! mascot-celebration "Lavoro Meraviglioso!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You learned to combine `goto()`, `setheading()`, and a loop counter formula
-    to tile an entire canvas with diagonal lines — a technique used in every graphics program!
-    Up next: **Dotted Grid** to explore the `dot()` command and size mapping.
+    Hai imparato a combinare `goto()`, `setheading()`, e una formula sul contatore del ciclo
+    per tassellare un intero canvas con linee diagonali — una tecnica usata in ogni programma grafico!
+    Prossimo: **Griglia di Punti** per esplorare il comando `dot()` e la mappatura delle dimensioni.

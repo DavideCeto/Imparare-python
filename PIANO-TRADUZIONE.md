@@ -128,6 +128,8 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
   previsione, laboratorio Skulpt, spiegazione, tabella, verifica di apprendimento,
   esperimenti, mascot-celebration con rimando "Prossimo" al laboratorio successivo —
   i rimandi "Up next" tradotti come "Prossimo" e mantenuti coerenti con l'ordine della nav)
+- `checkerboard-grid/`, `diagonal-stripe-field/`, `dotted-grid/`, `color-wheel-wedges/`,
+  `pentagon-chain/` (secondo batch di singoli laboratori)
 
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
@@ -254,11 +256,12 @@ cuore didattico del libro.
 
 **FASE 4 IN CORSO — Turtle Graphics Gallery.** Tradotti finora: nav di `mkdocs.yml`,
 `pattern-ideas.md`, `index.md` (root), `rainbow-square-spiral/`, `pinwheel-of-triangles/`,
-`nested-circles/`, `starburst/` (7 di ~102 file/unità).
+`nested-circles/`, `starburst/`, `checkerboard-grid/`, `diagonal-stripe-field/`,
+`dotted-grid/`, `color-wheel-wedges/`, `pentagon-chain/` (12 di ~102 file/unità).
 
-Prossimo: continuare la Fase 4 in ordine di nav con `checkerboard-grid/`,
-`diagonal-stripe-field/`, `dotted-grid/`, `color-wheel-wedges/`, `pentagon-chain/`, e così
-via attraverso i restanti ~96 singoli laboratori della galleria.
+Prossimo: continuare la Fase 4 in ordine di nav con `overlapping-squares/`,
+`flower-petal-function/`, `honeycomb-grid/`, `city-skyline/`, `snowflake-arms/`, e così
+via attraverso i restanti ~91 singoli laboratori della galleria.
 
 Dopo la Fase 4: Fasi 5-9 (MicroSims, Teacher's Guide, Jupyter/Advanced, Learning Graph,
 Trinket Labs — quest'ultima di priorità minima/da valutare se tradurre affatto, vedi

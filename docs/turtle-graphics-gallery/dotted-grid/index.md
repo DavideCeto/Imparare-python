@@ -2,35 +2,35 @@
 hide:
     - toc
 ---
-# Dotted Grid
+# Griglia di Punti
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Place dots at every intersection of a grid using nested loops
-- Use `dot()` to draw a filled circle in one line
-- Map a loop variable to a visual property (dot size) to add depth
+- Posizionare punti a ogni intersezione di una griglia usando cicli annidati
+- Usare `dot()` per disegnare un cerchio riempito in una riga
+- Mappare una variabile di ciclo a una proprietà visiva (dimensione del punto) per aggiungere profondità
 
-One hundred steel-blue dots fill a 10×10 grid. Each row of dots grows a little
-larger, so the bottom looks heavier and closer — a simple trick for creating depth.
+Cento punti blu acciaio riempiono una griglia 10×10. Ogni riga di punti cresce un po'
+più grande, così il fondo sembra più pesante e vicino — un semplice trucco per creare profondità.
 
-!!! mascot-welcome "Welcome to the Dotted Grid!"
+!!! mascot-welcome "Benvenuto alla Griglia di Punti!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    In this lab you'll discover `dot()` — turtle's one-line circle command —
-    and see how mapping a loop variable to size adds a sense of perspective to a grid.
-    Let's code it together!
+    In questo laboratorio scoprirai `dot()` — il comando cerchio in una riga di turtle —
+    e vedrai come mappare una variabile di ciclo alla dimensione aggiunge un senso di prospettiva a una griglia.
+    Programmiamo insieme!
 
-## How the Grid Works
+## Come Funziona la Griglia
 
-Two nested loops step through every (row, col) pair from (0,0) to (9,9).
-The position of each dot is:
+Due cicli annidati scorrono attraverso ogni coppia (row, col) da (0,0) a (9,9).
+La posizione di ogni punto è:
 
-- `x = -180 + col * 40` — 10 columns, 40 pixels apart, centered on the canvas
-- `y = 180 - row * 40` — 10 rows, 40 pixels apart, top to bottom
+- `x = -180 + col * 40` — 10 colonne, 40 pixel di distanza, centrate sul canvas
+- `y = 180 - row * 40` — 10 righe, 40 pixel di distanza, dall'alto al basso
 
-The dot size is `4 + row * 2`: row 0 → size 4, row 9 → size 22.
-Larger dots toward the bottom give the illusion of a flat surface receding upward.
+La dimensione del punto è `4 + row * 2`: riga 0 → dimensione 4, riga 9 → dimensione 22.
+Punti più grandi verso il basso danno l'illusione di una superficie piatta che si allontana verso l'alto.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -48,12 +48,12 @@ for row in range(10):
         monty.dot(dot_size, 'steelblue')
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The grid is 10 columns × 10 rows. How many dots will be drawn in total?
-    Make your guess — then click Run to find out!
+    La griglia è 10 colonne × 10 righe. Quanti punti verranno disegnati in totale?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -90,33 +90,33 @@ for row in range(10):
         monty.dot(dot_size, 'steelblue')`);
 </script>
 
-10 × 10 = **100 dots**. Were you right?
+10 × 10 = **100 punti**. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`monty.dot(size, color)` draws a filled circle centered at the turtle's current position — no `begin_fill()` needed.
+`monty.dot(size, color)` disegna un cerchio riempito centrato sulla posizione attuale della tartaruga — nessun `begin_fill()` necessario.
 
-`monty.penup()` before `goto()` is essential here. Without it, Monty would drag a line from dot to dot across every row.
+`monty.penup()` prima di `goto()` è essenziale qui. Senza, Monty tirerebbe una linea da punto a punto attraverso ogni riga.
 
-The size formula `4 + row * 2` is a **linear mapping** — it converts the row index (0–9) into a pixel size (4–22). This pattern of converting one number range to another appears constantly in data visualization.
+La formula della dimensione `4 + row * 2` è una **mappatura lineare** — convertono l'indice di riga (0–9) in una dimensione in pixel (4–22). Questo pattern di conversione di un intervallo di numeri in un altro appare costantemente nella visualizzazione dei dati.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `for row in range(10)` | Outer loop — 10 rows |
-| `for col in range(10)` | Inner loop — 10 columns |
-| `x = -180 + col * 40` | x position: left-to-right, 40px apart |
-| `y = 180 - row * 40` | y position: top-to-bottom, 40px apart |
-| `dot_size = 4 + row * 2` | Dots grow 2px larger each row |
-| `monty.dot(dot_size, 'steelblue')` | Draw a filled circle in one line |
+| `for row in range(10)` | Ciclo esterno — 10 righe |
+| `for col in range(10)` | Ciclo interno — 10 colonne |
+| `x = -180 + col * 40` | Posizione x: da sinistra a destra, distanti 40px |
+| `y = 180 - row * 40` | Posizione y: dall'alto al basso, distanti 40px |
+| `dot_size = 4 + row * 2` | I punti crescono di 2px a ogni riga |
+| `monty.dot(dot_size, 'steelblue')` | Disegna un cerchio riempito in una riga |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add Size Variation"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi Variazione di Dimensione"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below draws 100 dots but they are all the same small size — no depth effect!
-    Fix the `dot_size` line so the dots grow larger toward the bottom of the grid.
+    Il programma sotto disegna 100 punti ma sono tutti della stessa piccola dimensione — nessun effetto di profondità!
+    Correggi la riga `dot_size` così i punti crescano più grandi verso il fondo della griglia.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -147,20 +147,20 @@ for row in range(10):
         monty.dot(dot_size, 'steelblue')`);
 </script>
 
-Change `dot_size = 4` to `dot_size = 4 + row * 2` to make each row 2 pixels larger than the row above.
+Cambia `dot_size = 4` in `dot_size = 4 + row * 2` per rendere ogni riga 2 pixel più grande della riga sopra.
 
-## Experiments
+## Esperimenti
 
-1. **Map size to column instead of row.** Change `dot_size = 4 + row * 2` to `dot_size = 4 + col * 2`. You'll know it worked when dots grow larger left-to-right instead of top-to-bottom.
+1. **Mappa la dimensione alla colonna invece che alla riga.** Cambia `dot_size = 4 + row * 2` in `dot_size = 4 + col * 2`. Saprai che ha funzionato quando i punti crescono più grandi da sinistra a destra invece che dall'alto al basso.
 
-2. **Change the color.** Replace `'steelblue'` with `'tomato'` or `'mediumseagreen'`. You'll know it worked when the dot color changes across the grid.
+2. **Cambia il colore.** Sostituisci `'steelblue'` con `'tomato'` o `'mediumseagreen'`. Saprai che ha funzionato quando il colore del punto cambia attraverso la griglia.
 
-3. **Color by row.** Create `colors = ['navy', 'royalblue', 'steelblue', 'cornflowerblue', 'skyblue', 'lightblue', 'lightyellow', 'yellow', 'orange', 'red']` and use `colors[row]` as the color. You'll know it worked when each row has a distinct color.
+3. **Colora per riga.** Crea `colors = ['navy', 'royalblue', 'steelblue', 'cornflowerblue', 'skyblue', 'lightblue', 'lightyellow', 'yellow', 'orange', 'red']` e usa `colors[row]` come colore. Saprai che ha funzionato quando ogni riga ha un colore distinto.
 
-4. **Shrink the gap.** Change `col * 40` and `row * 40` to `col * 20` and `row * 20` — and increase the range to 20. You'll know it worked when 400 tiny dots fill the canvas.
+4. **Riduci lo spazio.** Cambia `col * 40` e `row * 40` in `col * 20` e `row * 20` — e aumenta l'intervallo a 20. Saprai che ha funzionato quando 400 piccolissimi punti riempiono il canvas.
 
-!!! mascot-celebration "Fantastic Work!"
+!!! mascot-celebration "Lavoro Fantastico!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You used `dot()`, nested loops, and a size formula to create a grid with visual depth —
-    the same technique used in data visualizations to encode a third variable as dot size!
-    Up next: **Color Wheel Wedges** — dividing the circle into 12 slices of pure hue.
+    Hai usato `dot()`, cicli annidati, e una formula sulla dimensione per creare una griglia con profondità visiva —
+    la stessa tecnica usata nelle visualizzazioni di dati per codificare una terza variabile come dimensione del punto!
+    Prossimo: **Spicchi della Ruota dei Colori** — dividere il cerchio in 12 fette di tonalità pura.
