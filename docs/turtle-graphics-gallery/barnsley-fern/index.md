@@ -2,33 +2,33 @@
 hide:
     - toc
 ---
-# Barnsley Fern
+# Felce di Barnsley
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Use probability-weighted random choice to apply one of four transformations per step
-- Plot thousands of points with `dot()` to build up an image gradually
-- Understand Iterated Function Systems (IFS) — how a few affine transforms create natural shapes
+- Usare la scelta casuale pesata per probabilità per applicare una delle quattro trasformazioni per passo
+- Tracciare migliaia di punti con `dot()` per costruire gradualmente un'immagine
+- Capire i Sistemi di Funzioni Iterate (IFS) — come alcune trasformazioni affini creano forme naturali
 
-After plotting 5000 random points, a photorealistic fern leaf emerges from pure mathematics. No drawing loops, no branches — just four transformations and probability.
+Dopo aver tracciato 5000 punti casuali, emerge una foglia di felce fotorealistica dalla pura matematica. Nessun ciclo di disegno, nessun ramo — solo quattro trasformazioni e probabilità.
 
-!!! mascot-welcome "Welcome to the Barnsley Fern!"
+!!! mascot-welcome "Benvenuto alla Felce di Barnsley!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Michael Barnsley discovered in 1988 that you can generate realistic leaf shapes
-    from just four simple mathematical transformations applied randomly.
-    This lab shows you how! Let's code it together!
+    Michael Barnsley scoprì nel 1988 che puoi generare forme di foglie realistiche
+    da sole quattro semplici trasformazioni matematiche applicate casualmente.
+    Questo laboratorio ti mostra come! Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-Four transformations are applied randomly, each chosen with a fixed probability:
-1. **Stem** (1% chance): `(x, y) → (0, 0.16y)`
-2. **Small leaflets** (7%): `(x, y) → (0.85x + 0.04y, -0.04x + 0.85y + 1.6)`
-3. **Left frond** (7%): `(x, y) → (0.2x - 0.26y, 0.23x + 0.22y + 1.6)`
-4. **Right frond** (85%): `(x, y) → (-0.15x + 0.28y, 0.26x + 0.24y + 0.44)`
+Quattro trasformazioni sono applicate casualmente, ognuna scelta con una probabilità fissa:
+1. **Gambo** (1% di probabilità): `(x, y) → (0, 0.16y)`
+2. **Foglioline piccole** (7%): `(x, y) → (0.85x + 0.04y, -0.04x + 0.85y + 1.6)`
+3. **Fronda sinistra** (7%): `(x, y) → (0.2x - 0.26y, 0.23x + 0.22y + 1.6)`
+4. **Fronda destra** (85%): `(x, y) → (-0.15x + 0.28y, 0.26x + 0.24y + 0.44)`
 
-Starting at `(0, 0)`, apply a random transformation, plot the point, repeat 5000 times.
+Iniziando a `(0, 0)`, applica una trasformazione casuale, traccia il punto, ripeti 5000 volte.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -60,13 +60,13 @@ for _ in range(5000):
     monty.dot(2, 'forestgreen')
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    5000 random points placed one at a time — will they look random and scattered,
-    or will a recognizable shape emerge?
-    Make your guess — then click Run to find out! (This will take a moment.)
+    5000 punti casuali posizionati uno alla volta — sembreranno casuali e dispersi,
+    o emergerà una forma riconoscibile?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo! (Ci vorrà un momento.)
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -117,29 +117,29 @@ for _ in range(5000):
     monty.dot(2, 'forestgreen')`);
 </script>
 
-A **photorealistic fern leaf** emerges from random points — no chaos, just probability revealing the attractor. Were you right?
+Una **foglia di felce fotorealistica** emerge da punti casuali — nessun caos, solo la probabilità che rivela l'attrattore. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-The four transformations together form an **Iterated Function System (IFS)**. The 5000 points converge to the "strange attractor" of the system — the set of points that stays invariant under these transformations. Because the transformations encode the self-similar structure of a fern, the attractor looks like a fern.
+Le quattro trasformazioni insieme formano un **Sistema di Funzioni Iterate (IFS)**. I 5000 punti convergono verso l'"attrattore strano" del sistema — l'insieme di punti che resta invariante sotto queste trasformazioni. Poiché le trasformazioni codificano la struttura auto-simile di una felce, l'attrattore sembra una felce.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `random.seed(42)` | Same seed → same "random" sequence each run |
-| `r = random.random()` | Choose a transformation by probability |
-| `0.01 / 0.85 / 0.07 / 0.07` | Probabilities of the four transformations |
-| `scale = 35` | Scale factor: IFS coords are -3 to 3 → canvas coords |
-| `dot(2, 'forestgreen')` | Plot one tiny green dot |
+| `random.seed(42)` | Stesso seme → stessa sequenza "casuale" a ogni esecuzione |
+| `r = random.random()` | Scegli una trasformazione per probabilità |
+| `0.01 / 0.85 / 0.07 / 0.07` | Probabilità delle quattro trasformazioni |
+| `scale = 35` | Fattore di scala: le coordinate IFS sono da -3 a 3 → coordinate del canvas |
+| `dot(2, 'forestgreen')` | Traccia un piccolo punto verde |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Change the Leaf Color"
+!!! mascot-thinking "Il Tuo Turno — Cambia il Colore della Foglia"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `'forestgreen'` to `'mediumseagreen'` for the main color.
-    Then add a second pass with `dot(1, 'limegreen')` to add bright highlights.
-    Run it twice and compare the colors!
+    Cambia `'forestgreen'` in `'mediumseagreen'` per il colore principale.
+    Poi aggiungi un secondo passaggio con `dot(1, 'limegreen')` per aggiungere luci brillanti.
+    Eseguilo due volte e confronta i colori!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -185,20 +185,20 @@ for i in range(5000):
     monty.dot(2, color)`);
 </script>
 
-Coloring by y-position gives the fern a natural gradient — darker at the base, brighter at the tip — mimicking how real leaves look in sunlight.
+Colorare per posizione y dà alla felce un gradiente naturale — più scuro alla base, più brillante alla punta — imitando come sembrano le vere foglie alla luce del sole.
 
-## Experiments
+## Esperimenti
 
-1. **Double the points.** Change `range(5000)` to `range(10000)`. The fern fills in more densely. You'll know it worked when there are fewer gaps in the leaf.
+1. **Raddoppia i punti.** Cambia `range(5000)` in `range(10000)`. La felce si riempie più densamente. Saprai che ha funzionato quando ci sono meno spazi vuoti nella foglia.
 
-2. **Use a different seed.** Change `random.seed(42)` to `random.seed(7)`. The exact fern pattern changes but the overall shape stays the same.
+2. **Usa un seme diverso.** Cambia `random.seed(42)` in `random.seed(7)`. Il pattern esatto della felce cambia ma la forma generale resta la stessa.
 
-3. **Change the dot size.** Try `dot(3, 'forestgreen')`. Larger dots fill in faster but look coarser. You'll know it worked when the fern is thicker.
+3. **Cambia la dimensione del punto.** Prova `dot(3, 'forestgreen')`. Punti più grandi si riempiono più velocemente ma sembrano più grossolani. Saprai che ha funzionato quando la felce è più spessa.
 
-4. **Print the first point.** Add `print(f"First point: {x:.3f}, {y:.3f}")` inside the loop after the first iteration. You'll know it worked when you see the first transformed coordinate.
+4. **Stampa il primo punto.** Aggiungi `print(f"First point: {x:.3f}, {y:.3f}")` dentro il ciclo dopo la prima iterazione. Saprai che ha funzionato quando vedi la prima coordinata trasformata.
 
-!!! mascot-celebration "Nature From Numbers!"
+!!! mascot-celebration "Natura dai Numeri!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You grew a fern from four lines of math and a random number generator!
-    Iterated Function Systems are used in image compression and procedural art.
-    Up next: **Anti-Koch Snowflake** — bumping inward instead of outward.
+    Hai fatto crescere una felce da quattro righe di matematica e un generatore di numeri casuali!
+    I Sistemi di Funzioni Iterate sono usati nella compressione delle immagini e nell'arte procedurale.
+    Prossimo: **Fiocco di Neve Anti-Koch** — sporgere verso l'interno invece che verso l'esterno.

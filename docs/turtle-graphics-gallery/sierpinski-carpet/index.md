@@ -2,29 +2,29 @@
 hide:
     - toc
 ---
-# Sierpiński Carpet
+# Tappeto di Sierpiński
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Write an 8-way recursive function (not 2 or 3 — eight!)
-- Understand how a 9-subdivision with one center hole creates the Sierpiński Carpet
-- Calculate how much of the original area remains at each depth level
+- Scrivere una funzione ricorsiva a 8 vie (non 2 o 3 — otto!)
+- Capire come una suddivisione a 9 con un buco centrale crea il Tappeto di Sierpiński
+- Calcolare quanta dell'area originale resta a ogni livello di profondità
 
-A square divided into 9 equal sub-squares, the center removed, then each of the 8 remaining sub-squares subdivided again — to 4 levels. The lattice of holes becomes denser with each level.
+Un quadrato diviso in 9 sotto-quadrati uguali, il centro rimosso, poi ciascuno degli 8 sotto-quadrati rimanenti suddiviso di nuovo — per 4 livelli. Il reticolo di buchi diventa più denso a ogni livello.
 
-!!! mascot-welcome "Welcome to the Sierpiński Carpet!"
+!!! mascot-welcome "Benvenuto al Tappeto di Sierpiński!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    The Sierpiński Triangle split triangles into 3. Now we split squares into 9
-    and remove the center — giving 8 recursive calls per level!
-    Let's code it together!
+    Il Triangolo di Sierpiński divideva i triangoli in 3. Ora dividiamo i quadrati in 9
+    e rimuoviamo il centro — dando 8 chiamate ricorsive per livello!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-`carpet(x, y, size, depth)` draws a filled square. If `depth > 0`, divide the square into a 3×3 grid and recurse on the 8 non-center sub-squares. The center sub-square is left empty (white background).
+`carpet(x, y, size, depth)` disegna un quadrato riempito. Se `depth > 0`, divide il quadrato in una griglia 3×3 e ricorre sugli 8 sotto-quadrati non centrali. Il sotto-quadrato centrale è lasciato vuoto (sfondo bianco).
 
-The 8 positions: all 9 grid positions minus (1, 1) — the center.
+Le 8 posizioni: tutte le 9 posizioni della griglia meno (1, 1) — il centro.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -58,13 +58,13 @@ def carpet(x, y, size, depth):
 carpet(-160, -160, 320, 4)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    At depth 4, the remaining filled fraction is `(8/9)^4 ≈ 62%` of the original area.
-    Will the carpet look mostly filled-in, or mostly holes?
-    Make your guess — then click Run to find out!
+    Alla profondità 4, la frazione riempita rimanente è `(8/9)^4 ≈ 62%` dell'area originale.
+    Il tappeto sembrerà principalmente riempito, o principalmente buchi?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -117,30 +117,30 @@ def carpet(x, y, size, depth):
 carpet(-160, -160, 320, 4)`);
 </script>
 
-**Mostly filled-in** — `(8/9)^4 ≈ 62%` remains at depth 4, so more than half the area is still colored. But the holes are clearly visible at multiple scales. Were you right?
+**Principalmente riempito** — rimane `(8/9)^4 ≈ 62%` alla profondità 4, quindi più della metà dell'area è ancora colorata. Ma i buchi sono chiaramente visibili a più scale. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`for row in range(3): for col in range(3)` generates all 9 sub-square positions. `if row == 1 and col == 1: continue` skips the center. The remaining 8 get recursive calls.
+`for row in range(3): for col in range(3)` genera tutte le 9 posizioni dei sotto-quadrati. `if row == 1 and col == 1: continue` salta il centro. I restanti 8 ottengono chiamate ricorsive.
 
-At depth `n`, the remaining area fraction is `(8/9)^n`. As depth → ∞, this approaches 0 — the Sierpiński Carpet has zero area but infinite boundary length.
+Alla profondità `n`, la frazione di area rimanente è `(8/9)^n`. Mentre la profondità → ∞, questo si avvicina a 0 — il Tappeto di Sierpiński ha area zero ma lunghezza del confine infinita.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `third = size / 3` | Divide the square into thirds |
-| `for row, col in range(3), range(3)` | Generate all 9 sub-square positions |
-| `if row==1 and col==1: continue` | Skip the center — the defining hole |
-| `carpet(x + col*third, y + row*third, ...)` | Recurse on each of the 8 sub-squares |
+| `third = size / 3` | Divide il quadrato in terzi |
+| `for row, col in range(3), range(3)` | Genera tutte le 9 posizioni dei sotto-quadrati |
+| `if row==1 and col==1: continue` | Salta il centro — il buco distintivo |
+| `carpet(x + col*third, y + row*third, ...)` | Ricorre su ciascuno degli 8 sotto-quadrati |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Try Depth 3"
+!!! mascot-thinking "Il Tuo Turno — Prova la Profondità 3"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `depth=4` to `depth=3`. The remaining area is `(8/9)^3 ≈ 70%`.
-    Count the visible center holes at each level — how many are there at depth 3?
-    Predict (1 + 8 + 64 = ?) then check!
+    Cambia `depth=4` in `depth=3`. L'area rimanente è `(8/9)^3 ≈ 70%`.
+    Conta i buchi centrali visibili a ogni livello — quanti ce ne sono alla profondità 3?
+    Prevedi (1 + 8 + 64 = ?) poi controlla!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -187,20 +187,20 @@ def carpet(x, y, size, depth):
 carpet(-160, -160, 320, 3)`);
 </script>
 
-`1 + 8 + 64 = 73` holes at depth 3 — one big center hole, 8 medium holes, 64 small holes.
+`1 + 8 + 64 = 73` buchi alla profondità 3 — un grande buco centrale, 8 buchi medi, 64 piccoli buchi.
 
-## Experiments
+## Esperimenti
 
-1. **Use warm colors.** Replace the blues with `['darkred', 'orangered', 'orange', 'gold', 'lightyellow']`. You'll know it worked when the carpet turns orange/red.
+1. **Usa colori caldi.** Sostituisci i blu con `['darkred', 'orangered', 'orange', 'gold', 'lightyellow']`. Saprai che ha funzionato quando il tappeto diventa arancione/rosso.
 
-2. **Skip a different cell.** Change `if row == 1 and col == 1` to `if row == 0 and col == 0` (skip the bottom-left). You'll know it worked when holes appear in the corners instead of centers.
+2. **Salta una cella diversa.** Cambia `if row == 1 and col == 1` in `if row == 0 and col == 0` (salta in basso a sinistra). Saprai che ha funzionato quando i buchi appaiono negli angoli invece che al centro.
 
-3. **Skip two cells.** Add an extra `or (row == 0 and col == 2)` condition. You'll know it worked when two types of holes appear.
+3. **Salta due celle.** Aggiungi una condizione extra `or (row == 0 and col == 2)`. Saprai che ha funzionato quando appaiono due tipi di buchi.
 
-4. **Try depth 5.** Much slower but more detailed. You'll know it worked when you see tiny square holes at multiple scales.
+4. **Prova la profondità 5.** Molto più lento ma più dettagliato. Saprai che ha funzionato quando vedi piccoli buchi quadrati a più scale.
 
-!!! mascot-celebration "Eight-Way Recursion!"
+!!! mascot-celebration "Ricorsione a Otto Vie!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You used 8 recursive calls — more than any previous fractal in this gallery!
-    As depth → ∞, the carpet has zero area but is still "measurably" 2D.
-    Up next: **Barnsley Fern** — a fractal drawn by random transformations.
+    Hai usato 8 chiamate ricorsive — più di qualsiasi frattale precedente in questa galleria!
+    Mentre la profondità → ∞, il tappeto ha area zero ma è ancora "misurabilmente" 2D.
+    Prossimo: **Felce di Barnsley** — un frattale disegnato da trasformazioni casuali.

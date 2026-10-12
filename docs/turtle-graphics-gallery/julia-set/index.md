@@ -2,28 +2,28 @@
 hide:
     - toc
 ---
-# Julia Set Pixel Art
+# Pixel Art dell'Insieme di Julia
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Modify the Mandelbrot iteration to compute a Julia set by swapping `z` and `c`
-- Understand how changing one complex constant `c` produces dramatically different shapes
-- Compare connected vs. disconnected Julia sets (Fatou dust)
+- Modificare l'iterazione di Mandelbrot per calcolare un insieme di Julia scambiando `z` e `c`
+- Capire come cambiare una costante complessa `c` produce forme drammaticamente diverse
+- Confrontare insiemi di Julia connessi contro disconnessi (polvere di Fatou)
 
-The Julia set for `c = -0.7 + 0.27i` — a connected, swirling shape sometimes called the "Douady rabbit." Change `c` and the whole shape transforms; some values give spirals, others give dust.
+L'insieme di Julia per `c = -0,7 + 0,27i` — una forma connessa e avvolgente a volte chiamata il "coniglio di Douady". Cambia `c` e l'intera forma si trasforma; alcuni valori danno spirali, altri danno polvere.
 
-!!! mascot-welcome "Welcome to the Julia Set!"
+!!! mascot-welcome "Benvenuto all'Insieme di Julia!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    In the Mandelbrot set, `c` changes for each pixel and `z` starts at 0.
-    In a Julia set, `c` is **fixed** and `z` starts at each pixel's position.
-    Swapping these two roles gives an entirely different fractal!
-    Let's code it together!
+    Nell'insieme di Mandelbrot, `c` cambia per ogni pixel e `z` inizia a 0.
+    In un insieme di Julia, `c` è **fisso** e `z` inizia alla posizione di ogni pixel.
+    Scambiare questi due ruoli dà un frattale completamente diverso!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-For each pixel `(px, py)`, set `z = (pixel's complex position)` and `c = -0.7 + 0.27j` (fixed). Repeatedly apply `z = z² + c`. Color by escape time. The set of points that never escape is the Julia set.
+Per ogni pixel `(px, py)`, imposta `z = (posizione complessa del pixel)` e `c = -0,7 + 0,27j` (fisso). Applica ripetutamente `z = z² + c`. Colora per tempo di fuga. L'insieme di punti che non fugge mai è l'insieme di Julia.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -56,13 +56,13 @@ for py in range(rows):
         monty.dot(pixel + 1, colors[color_idx])
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The Julia set for `c = -0.7 + 0.27i` is a connected blob with a swirling boundary.
-    Will it look more like the Mandelbrot, or completely different?
-    Make your guess — then click Run to find out!
+    L'insieme di Julia per `c = -0,7 + 0,27i` è una macchia connessa con un confine avvolgente.
+    Sembrerà più simile a Mandelbrot, o completamente diverso?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -114,32 +114,32 @@ for py in range(rows):
         monty.dot(pixel + 1, colors[color_idx])`);
 </script>
 
-The Julia set looks very **different** from the Mandelbrot — it's a symmetric, swirling connected shape. Were you right?
+L'insieme di Julia sembra molto **diverso** da Mandelbrot — è una forma simmetrica, avvolgente, e connessa. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-The key difference from Mandelbrot:
-- **Mandelbrot**: `z = 0`, `c = pixel_position` — tests each point as a parameter
-- **Julia**: `z = pixel_position`, `c = fixed` — tests each point as an initial value
+La differenza chiave da Mandelbrot:
+- **Mandelbrot**: `z = 0`, `c = posizione_pixel` — testa ogni punto come parametro
+- **Julia**: `z = posizione_pixel`, `c = fisso` — testa ogni punto come valore iniziale
 
-The Julia set is connected if and only if `c` is inside the Mandelbrot set.
+L'insieme di Julia è connesso se e solo se `c` è dentro l'insieme di Mandelbrot.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `c = complex(-0.7, 0.27)` | Fixed parameter — determines the Julia shape |
-| `z = complex(zr, zi)` | Starting value = current pixel position |
-| `z = z * z + c` | Same iteration as Mandelbrot — but `c` never changes |
-| `zr = -1.5 + px * 3.0 / cols` | Map pixel to complex z-plane x-coordinate |
+| `c = complex(-0.7, 0.27)` | Parametro fisso — determina la forma di Julia |
+| `z = complex(zr, zi)` | Valore iniziale = posizione attuale del pixel |
+| `z = z * z + c` | Stessa iterazione di Mandelbrot — ma `c` non cambia mai |
+| `zr = -1.5 + px * 3.0 / cols` | Mappa il pixel alla coordinata x del piano z complesso |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Try a Different c Value"
+!!! mascot-thinking "Il Tuo Turno — Prova un Valore c Diverso"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `c = complex(-0.7, 0.27)` to `c = complex(0.285, 0.01)`.
-    Each `c` value creates a completely different Julia set. Predict whether it'll look
-    similar or very different — then run it to explore!
+    Cambia `c = complex(-0.7, 0.27)` in `c = complex(0.285, 0.01)`.
+    Ogni valore di `c` crea un insieme di Julia completamente diverso. Prevedi se sembrerà
+    simile o molto diverso — poi eseguilo per esplorare!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -185,20 +185,20 @@ for py in range(rows):
         monty.dot(pixel + 1, colors[color_idx])`);
 </script>
 
-`c = 0.285 + 0.01i` is very close to the edge of the Mandelbrot set — the resulting Julia set has a feathery, spiraling boundary.
+`c = 0,285 + 0,01i` è molto vicino al bordo dell'insieme di Mandelbrot — l'insieme di Julia risultante ha un confine piumato e a spirale.
 
-## Experiments
+## Esperimenti
 
-1. **Try `c = complex(-0.4, 0.6)`.** This creates a "dragon" shape. You'll know it worked when you see a jagged, asymmetric form.
+1. **Prova `c = complex(-0.4, 0.6)`.** Questo crea una forma "a dragone". Saprai che ha funzionato quando vedi una forma frastagliata e asimmetrica.
 
-2. **Try `c = complex(0.0, 1.0)`.** This is outside the Mandelbrot set — the Julia set becomes "Fatou dust" (disconnected scattered points). You'll know it worked when most pixels are colored, not black.
+2. **Prova `c = complex(0.0, 1.0)`.** Questo è fuori dall'insieme di Mandelbrot — l'insieme di Julia diventa "polvere di Fatou" (punti dispersi disconnessi). Saprai che ha funzionato quando la maggior parte dei pixel è colorata, non nera.
 
-3. **Higher max_iter.** Change `max_iter = 50`. More iterations reveal finer boundary detail. You'll know it worked when the transition between colors is smoother.
+3. **max_iter più alto.** Cambia `max_iter = 50`. Più iterazioni rivelano un dettaglio del confine più fine. Saprai che ha funzionato quando la transizione tra i colori è più fluida.
 
-4. **Widen the view.** Change `zr = -2.0 + px * 4.0 / cols` and `zi = -1.67 + py * 3.33 / rows`. You'll know it worked when the full Julia set fits in the frame.
+4. **Allarga la vista.** Cambia `zr = -2.0 + px * 4.0 / cols` e `zi = -1.67 + py * 3.33 / rows`. Saprai che ha funzionato quando l'intero insieme di Julia entra nella cornice.
 
-!!! mascot-celebration "Two Fractals, One Rule!"
+!!! mascot-celebration "Due Frattali, Una Regola!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    The Mandelbrot and Julia sets use *exactly the same iteration* — just with z and c swapped!
-    That tiny change gives you an infinite family of different fractals from one formula.
-    Up next: **Sierpiński Carpet** — 8-way recursive subdivision.
+    Gli insiemi di Mandelbrot e Julia usano *esattamente la stessa iterazione* — solo con z e c scambiati!
+    Quel piccolo cambiamento ti dà una famiglia infinita di frattali diversi da un'unica formula.
+    Prossimo: **Tappeto di Sierpiński** — suddivisione ricorsiva a 8 vie.

@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Mandelbrot Pixel Art
+# Pixel Art di Mandelbrot
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Use complex number arithmetic in Python to test Mandelbrot membership
-- Draw a raster image by placing colored dots on a grid using `dot()`
-- Understand what "escape time" means and how it produces color gradients
+- Usare l'aritmetica dei numeri complessi in Python per verificare l'appartenenza a Mandelbrot
+- Disegnare un'immagine raster posizionando punti colorati su una griglia usando `dot()`
+- Capire cosa significa "tempo di fuga" e come produce gradienti di colore
 
-A low-resolution pixel art version of the Mandelbrot set — one of the most famous mathematical objects ever discovered. Each pixel's color tells you how quickly the Mandelbrot iteration "escapes" to infinity, or (black) whether it stays bounded forever.
+Una versione pixel art a bassa risoluzione dell'insieme di Mandelbrot — uno degli oggetti matematici più famosi mai scoperti. Il colore di ogni pixel ti dice quanto velocemente l'iterazione di Mandelbrot "fugge" all'infinito, o (nero) se rimane limitata per sempre.
 
-!!! mascot-welcome "Welcome to the Mandelbrot Set!"
+!!! mascot-welcome "Benvenuto all'Insieme di Mandelbrot!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    The Mandelbrot set looks infinitely complex but is computed from a single rule:
-    `z = z² + c`. Apply it repeatedly and ask: does `z` escape or stay close to zero?
-    Let's code it together!
+    L'insieme di Mandelbrot sembra infinitamente complesso ma è calcolato da una singola regola:
+    `z = z² + c`. Applicala ripetutamente e chiedi: `z` fugge o resta vicino a zero?
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-For each pixel `(px, py)` in a grid, we compute a complex number `c` in the range `[-2.5, 1] × [-1.25, 1.25]`. Then we repeatedly apply `z = z² + c` starting from `z = 0`. If `|z| > 2`, the point has "escaped" — we color it by how many steps it took. If it never escapes after `max_iter` steps, it's in the Mandelbrot set and colored black.
+Per ogni pixel `(px, py)` in una griglia, calcoliamo un numero complesso `c` nell'intervallo `[-2.5, 1] × [-1.25, 1.25]`. Poi applichiamo ripetutamente `z = z² + c` iniziando da `z = 0`. Se `|z| > 2`, il punto è "fuggito" — lo coloriamo in base a quanti passi ci sono voluti. Se non fugge mai dopo `max_iter` passi, è nell'insieme di Mandelbrot e colorato di nero.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -54,13 +54,13 @@ for py in range(rows):
         monty.dot(pixel + 1, colors[color_idx])
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The Mandelbrot set is the **black** region — points that never escape.
-    Will it look like a rough blob, or a recognizable shape?
-    Make your guess — then click Run to find out! (This one is slow — be patient!)
+    L'insieme di Mandelbrot è la regione **nera** — punti che non fuggono mai.
+    Sembrerà una macchia irregolare, o una forma riconoscibile?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo! (Questo è lento — sii paziente!)
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -111,28 +111,28 @@ for py in range(rows):
         monty.dot(pixel + 1, colors[color_idx])`);
 </script>
 
-Even at low resolution, the **cardioid** (heart-like) main body and the round bulge to its left are recognizable. Were you right?
+Anche a bassa risoluzione, il **cardioide** (a forma di cuore) corpo principale e il rigonfiamento rotondo alla sua sinistra sono riconoscibili. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`complex(cr, ci)` creates a complex number `c = cr + ci·i`. The key iteration `z = z * z + c` computes `z²` using Python's built-in complex multiplication — no trigonometry needed! `abs(z)` gives `√(real² + imag²)`, the distance from the origin.
+`complex(cr, ci)` crea un numero complesso `c = cr + ci·i`. L'iterazione chiave `z = z * z + c` calcola `z²` usando la moltiplicazione complessa integrata di Python — nessuna trigonometria necessaria! `abs(z)` dà `√(real² + imag²)`, la distanza dall'origine.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `cr = -2.5 + px * 3.5 / cols` | Map pixel column to real axis position |
-| `ci = -1.25 + py * 2.5 / rows` | Map pixel row to imaginary axis position |
-| `z = z * z + c` | The Mandelbrot iteration |
-| `while abs(z) <= 2` | Stop when z escapes radius 2 |
-| `count` | Number of iterations = escape time = color |
+| `cr = -2.5 + px * 3.5 / cols` | Mappa la colonna del pixel alla posizione sull'asse reale |
+| `ci = -1.25 + py * 2.5 / rows` | Mappa la riga del pixel alla posizione sull'asse immaginario |
+| `z = z * z + c` | L'iterazione di Mandelbrot |
+| `while abs(z) <= 2` | Si ferma quando z fugge dal raggio 2 |
+| `count` | Numero di iterazioni = tempo di fuga = colore |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Zoom Into the Bulge"
+!!! mascot-thinking "Il Tuo Turno — Zoom nel Rigonfiamento"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change the range to zoom in: `cr = -1.5 + px * 0.5 / cols` and `ci = -0.5 + py * 1.0 / rows`.
-    Predict what the zoomed region will look like — then run it to explore!
+    Cambia l'intervallo per fare zoom: `cr = -1.5 + px * 0.5 / cols` e `ci = -0.5 + py * 1.0 / rows`.
+    Prevedi come sembrerà la regione con lo zoom — poi eseguilo per esplorare!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -177,21 +177,21 @@ for py in range(rows):
         monty.dot(pixel + 1, colors[color_idx])`);
 </script>
 
-Zooming in reveals more detail in the boundary region — small bulges appear that look just like the main shape. This self-similarity at every zoom level is the defining property of a fractal!
+Fare zoom rivela più dettagli nella regione di confine — appaiono piccoli rigonfiamenti che sembrano proprio come la forma principale. Questa auto-similarità a ogni livello di zoom è la proprietà distintiva di un frattale!
 
-## Experiments
+## Esperimenti
 
-1. **Increase resolution.** Change `cols = 80` and `rows = 66` with `pixel = 4`. More detail, slower. You'll know it worked when the main body has sharper edges.
+1. **Aumenta la risoluzione.** Cambia `cols = 80` e `rows = 66` con `pixel = 4`. Più dettaglio, più lento. Saprai che ha funzionato quando il corpo principale ha bordi più netti.
 
-2. **More colors.** Extend the `colors` list to 20 entries with a full rainbow. You'll know it worked when the boundary region shows more color bands.
+2. **Più colori.** Estendi la lista `colors` a 20 voci con un arcobaleno completo. Saprai che ha funzionato quando la regione di confine mostra più fasce di colore.
 
-3. **Increase max_iter.** Change `max_iter = 50`. Points near the boundary need more iterations to escape. You'll know it worked when the boundary detail improves.
+3. **Aumenta max_iter.** Cambia `max_iter = 50`. I punti vicino al confine hanno bisogno di più iterazioni per fuggire. Saprai che ha funzionato quando il dettaglio del confine migliora.
 
-4. **Try a different zoom.** Use `cr = -0.75 + px * 0.02 / cols` and `ci = -0.1 + py * 0.02 / rows` to zoom into the "seahorse valley". You'll know it worked when you see a miniature Mandelbrot shape.
+4. **Prova uno zoom diverso.** Usa `cr = -0.75 + px * 0.02 / cols` e `ci = -0.1 + py * 0.02 / rows` per fare zoom nella "valle dei cavallucci marini". Saprai che ha funzionato quando vedi una forma di Mandelbrot in miniatura.
 
-!!! mascot-celebration "Math Meets Art!"
+!!! mascot-celebration "La Matematica Incontra l'Arte!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You computed one of the most famous mathematical objects in history using
-    `z = z*z + c` — just one line of code! The Mandelbrot set is infinitely complex
-    yet emerges from the simplest possible iteration.
-    Up next: **Julia Set** — the Mandelbrot's cousin.
+    Hai calcolato uno degli oggetti matematici più famosi della storia usando
+    `z = z*z + c` — solo una riga di codice! L'insieme di Mandelbrot è infinitamente complesso
+    eppure emerge dall'iterazione più semplice possibile.
+    Prossimo: **Pixel Art dell'Insieme di Julia** — il cugino di Mandelbrot.

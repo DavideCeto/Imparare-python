@@ -183,6 +183,12 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
   "strette" in `six-fold-mandala/index.md` prima del commit; `ripple-waves/`
   chiude Natura e Scienza, gli altri quattro aprono la categoria "Simmetria e
   Tassellatura")
+- `islamic-star/`, `mandelbrot-pixel-art/`, `julia-set/`, `sierpinski-carpet/`,
+  `barnsley-fern/` (quattordicesimo batch — `barnsley-fern/index.md` tradotto
+  dal contenuto inglese già letto all'inizio della Fase 4 come file campione,
+  senza bisogno di rileggerlo; `islamic-star/` chiude Simmetria e Tassellatura,
+  gli altri quattro aprono la categoria "Frattali" nel raggruppamento reale
+  della nav — diverso dall'ordine di `pattern-ideas.md`)
 
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
@@ -324,11 +330,13 @@ cuore didattico del libro.
 `lissajous-figure/`, `rose-curve/`, `spirograph/`, `butterfly-curve/`,
 `epicycloid-star/`, `sunflower-spiral/`, `spider-web/`, `lightning-bolt/`,
 `galaxy-spiral/`, `ripple-waves/`, `four-fold-doodle/`, `six-fold-mandala/`,
-`mirror-butterfly/`, `truchet-tiles/` (67 di ~102 file/unità).
+`mirror-butterfly/`, `truchet-tiles/`, `islamic-star/`, `mandelbrot-pixel-art/`,
+`julia-set/`, `sierpinski-carpet/`, `barnsley-fern/` (72 di ~102 file/unità).
 
-Prossimo: continuare la Fase 4 in ordine di nav con `islamic-star/`,
-`mandelbrot-pixel-art/`, `julia-set/`, `sierpinski-carpet/`, `barnsley-fern/`,
-e così via attraverso i restanti ~36 singoli laboratori della galleria.
+Prossimo: continuare la Fase 4 in ordine di nav con `anti-koch/` (già letto
+come file campione, da tradurre), `pythagorean-tree/`, `t-square-fractal/`,
+`levy-c-curve/`, `gosper-curve/`, e così via attraverso i restanti ~30
+singoli laboratori della galleria.
 
 Dopo la Fase 4: Fasi 5-9 (MicroSims, Teacher's Guide, Jupyter/Advanced, Learning Graph,
 Trinket Labs — quest'ultima di priorità minima/da valutare se tradurre affatto, vedi

@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Islamic Geometric Star Pattern
+# Stella Geometrica Islamica
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Construct an 8-pointed star using only straight lines and 45° angles
-- Tile the star pattern across a grid using translation (offset by fixed amounts)
-- Understand how Islamic geometric art uses exact angle rules
+- Costruire una stella a 8 punte usando solo linee rette e angoli di 45°
+- Tassellare il pattern della stella attraverso una griglia usando la traslazione (offset per quantità fisse)
+- Capire come l'arte geometrica islamica usa regole angolari esatte
 
-A repeating pattern of 8-pointed stars and cross shapes — the kind found in mosque tile work and Persian manuscripts — built entirely from straight line segments at 45° angles.
+Un pattern ripetuto di stelle a 8 punte e forme a croce — il tipo trovato nei lavori di piastrelle delle moschee e nei manoscritti persiani — costruito interamente da segmenti di linea retta ad angoli di 45°.
 
-!!! mascot-welcome "Welcome to the Islamic Star!"
+!!! mascot-welcome "Benvenuto alla Stella Islamica!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Islamic geometric art uses only ruler and compass — no freehand curves.
-    This lab builds one of the most common patterns: the 8-pointed star grid!
-    Let's code it together!
+    L'arte geometrica islamica usa solo riga e compasso — nessuna curva a mano libera.
+    Questo laboratorio costruisce uno dei pattern più comuni: la griglia di stelle a 8 punte!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-An 8-pointed star is drawn as two overlapping squares rotated 45° from each other, both centered on the same point. A function `star8(cx, cy, size, color)` draws one star at a given center. The outer loop tiles the stars in a grid, offsetting each star by a fixed spacing.
+Una stella a 8 punte è disegnata come due quadrati sovrapposti ruotati di 45° l'uno dall'altro, entrambi centrati sullo stesso punto. Una funzione `star8(cx, cy, size, color)` disegna una stella a un centro dato. Il ciclo esterno tassella le stelle in una griglia, spostando ogni stella di una spaziatura fissa.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -53,13 +53,13 @@ for row in range(-2, 3):
         star8(cx, cy, 30, color)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Two squares rotated 45° from each other form an 8-pointed star.
-    Will the tiled stars connect at their points, or will there be gaps?
-    Make your guess — then click Run to find out!
+    Due quadrati ruotati di 45° l'uno dall'altro formano una stella a 8 punte.
+    Le stelle tassellate si collegheranno alle loro punte, o ci saranno spazi vuoti?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -109,28 +109,28 @@ for row in range(-2, 3):
         star8(cx, cy, 30, color)`);
 </script>
 
-The stars form a repeating grid pattern — like Islamic tile work. Were you right about the gaps?
+Le stelle formano un pattern a griglia ripetuto — come i lavori di piastrelle islamiche. Avevi indovinato sugli spazi vuoti?
 
-## How It Works
+## Come Funziona
 
-An 8-pointed star is two squares rotated 45° from each other, sharing the same center. The `for angle_offset in [0, 45]` loop draws each square in sequence. Before drawing, the turtle walks from the center `(cx, cy)` out to the square's starting corner: `setheading(angle_offset - 135)` points it toward the corner, and `forward(size)` steps out to it. Because both squares are positioned from the same center, their overlap forms a symmetric 8-pointed star.
+Una stella a 8 punte è due quadrati ruotati di 45° l'uno dall'altro, che condividono lo stesso centro. Il ciclo `for angle_offset in [0, 45]` disegna ogni quadrato in sequenza. Prima di disegnare, la tartaruga cammina dal centro `(cx, cy)` fino all'angolo di partenza del quadrato: `setheading(angle_offset - 135)` la punta verso l'angolo, e `forward(size)` fa i passi per arrivarci. Poiché entrambi i quadrati sono posizionati dallo stesso centro, la loro sovrapposizione forma una stella simmetrica a 8 punte.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `for angle_offset in [0, 45]` | Draw two squares — one rotated 45° from the other |
-| `setheading(angle_offset - 135)` then `forward(size)` | Walk from the star's center to the square's starting corner |
-| `size * 1.4` | Side length adjusted so the two squares create points |
-| `spacing = 90` | Distance between star centers |
-| `(row + col) % 2` | Alternate colors in checkerboard pattern |
+| `for angle_offset in [0, 45]` | Disegna due quadrati — uno ruotato di 45° dall'altro |
+| `setheading(angle_offset - 135)` poi `forward(size)` | Cammina dal centro della stella all'angolo di partenza del quadrato |
+| `size * 1.4` | Lunghezza del lato adattata così i due quadrati creano punte |
+| `spacing = 90` | Distanza tra i centri delle stelle |
+| `(row + col) % 2` | Alterna i colori in pattern a scacchiera |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Change Spacing"
+!!! mascot-thinking "Il Tuo Turno — Cambia la Spaziatura"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `spacing = 90` to `spacing = 60`. Will the stars overlap, spread apart, or touch perfectly?
-    Predict, then run it to find out!
+    Cambia `spacing = 90` in `spacing = 60`. Le stelle si sovrapporranno, si separeranno, o si toccheranno perfettamente?
+    Prevedi, poi eseguilo per scoprirlo!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -174,20 +174,20 @@ for row in range(-2, 3):
         star8(cx, cy, 30, color)`);
 </script>
 
-At `spacing = 60` the stars touch perfectly at their points, and the leftover space between them forms the cross shapes seen in real Islamic tile work.
+A `spacing = 60` le stelle si toccano perfettamente alle loro punte, e lo spazio rimanente tra di esse forma le forme a croce viste nei veri lavori di piastrelle islamiche.
 
-## Experiments
+## Esperimenti
 
-1. **Fill the stars.** Add `begin_fill()` before and `end_fill()` after the inner loop. You'll know it worked when the star outlines are filled in.
+1. **Riempi le stelle.** Aggiungi `begin_fill()` prima ed `end_fill()` dopo il ciclo interno. Saprai che ha funzionato quando i contorni delle stelle sono riempiti.
 
-2. **Use gold and navy.** Change the color list to `['navy', 'gold']`. You'll know it worked when the checkerboard alternates navy and gold stars.
+2. **Usa oro e navy.** Cambia la lista dei colori in `['navy', 'gold']`. Saprai che ha funzionato quando la scacchiera alterna stelle navy e oro.
 
-3. **Bigger stars.** Change `size = 30` to `size = 40`. You'll know it worked when the stars are larger and the spacing between them decreases.
+3. **Stelle più grandi.** Cambia `size = 30` in `size = 40`. Saprai che ha funzionato quando le stelle sono più grandi e la spaziatura tra loro diminuisce.
 
-4. **Try a single centered star.** Remove the outer loops and call `star8(0, 0, 80, 'darkred')`. You'll know it worked when one large 8-pointed star fills the screen.
+4. **Prova una singola stella centrata.** Rimuovi i cicli esterni e chiama `star8(0, 0, 80, 'darkred')`. Saprai che ha funzionato quando una grande stella a 8 punte riempie lo schermo.
 
-!!! mascot-celebration "Pattern Complete!"
+!!! mascot-celebration "Pattern Completato!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You recreated a 1000-year-old pattern used in mosques and palaces!
-    Geometric art proves that math and beauty are not opposites — they're the same thing.
-    Up next: **Category 6 — Nature and Science patterns!**
+    Hai ricreato un pattern di 1000 anni usato in moschee e palazzi!
+    L'arte geometrica dimostra che la matematica e la bellezza non sono opposti — sono la stessa cosa.
+    Prossimo: **Categoria 6 — Pattern di Natura e Scienza!**
