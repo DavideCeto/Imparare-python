@@ -2,30 +2,30 @@
 hide:
     - toc
 ---
-# Spirograph
+# Spirografo
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Plot a hypotrochoid (inner rolling circle) using parametric equations
-- Understand how `R`, `r`, and `d` control the petal and loop count
-- See how the ratio `R/r` determines when the curve closes
+- Tracciare un ipotrocoide (cerchio che rotola all'interno) usando equazioni parametriche
+- Capire come `R`, `r`, e `d` controllano il conteggio di petali e anelli
+- Vedere come il rapporto `R/r` determina quando la curva si chiude
 
-A Spirograph pattern — the curves made by a rolling circle inside a larger circle. Changing the three parameters `R` (outer radius), `r` (inner radius), and `d` (pen distance from center) produces hundreds of different patterns.
+Un pattern Spirografo — le curve fatte da un cerchio che rotola dentro un cerchio più grande. Cambiare i tre parametri `R` (raggio esterno), `r` (raggio interno), e `d` (distanza della penna dal centro) produce centinaia di pattern diversi.
 
-!!! mascot-welcome "Welcome to the Spirograph!"
+!!! mascot-welcome "Benvenuto allo Spirografo!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Spirographs were a famous toy in the 1970s — now you can code one!
-    A small circle rolls inside a big circle, with a pen attached to the small circle.
-    The result: beautiful looping curves called hypotrochoids. Let's code it!
+    Gli Spirografi erano un giocattolo famoso negli anni '70 — ora puoi programmarne uno!
+    Un piccolo cerchio rotola dentro un cerchio grande, con una penna attaccata al piccolo cerchio.
+    Il risultato: belle curve ad anello chiamate ipotrocoidi. Programmiamolo!
 
-## How It Works
+## Come Funziona
 
 `x(t) = (R-r)*cos(t) + d*cos((R-r)/r * t)`
 `y(t) = (R-r)*sin(t) - d*sin((R-r)/r * t)`
 
-`R` is the outer circle radius, `r` the inner, `d` the pen offset from the inner center.
+`R` è il raggio del cerchio esterno, `r` quello interno, `d` l'offset della penna dal centro interno.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -55,12 +55,12 @@ for i in range(steps + 1):
         monty.goto(x, y)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    `R/r = 130/50 = 2.6`. The curve loops `R/r` times — approximately how many petals?
-    Make your guess — then click Run to find out!
+    `R/r = 130/50 = 2,6`. La curva si avvolge `R/r` volte — quanti petali approssimativamente?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -108,28 +108,28 @@ for i in range(steps + 1):
         monty.goto(x, y)`);
 </script>
 
-A looping Spirograph curve — the inner circle rolls around 2.6 times for each full orbit, creating overlapping loops. Were you right?
+Una curva Spirografo ad anelli — il cerchio interno rotola 2,6 volte per ogni orbita completa, creando anelli sovrapposti. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-When `R/r` is a ratio of small integers (like 5/2), the curve closes perfectly after a small number of loops. When it's not a simple fraction, the curve takes many loops to close — or never closes at all.
+Quando `R/r` è un rapporto di piccoli interi (come 5/2), la curva si chiude perfettamente dopo un piccolo numero di anelli. Quando non è una frazione semplice, la curva impiega molti anelli per chiudersi — o non si chiude mai del tutto.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `R = 130` | Outer circle radius |
-| `r = 50` | Inner rolling circle radius |
-| `d = 90` | Pen distance from inner center |
-| `(R-r)*cos(t) + d*cos(...)` | Parametric x position |
-| `steps * r` | More loops for larger inner circles |
+| `R = 130` | Raggio del cerchio esterno |
+| `r = 50` | Raggio del cerchio interno rotolante |
+| `d = 90` | Distanza della penna dal centro interno |
+| `(R-r)*cos(t) + d*cos(...)` | Posizione x parametrica |
+| `steps * r` | Più anelli per cerchi interni più grandi |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Use Exact Integers"
+!!! mascot-thinking "Il Tuo Turno — Usa Interi Esatti"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change to `R=100, r=40, d=70`. This gives `R/r = 5/2` exactly — a ratio of small integers.
-    The curve should close perfectly after 2 orbits and have 5 petals. Predict and run!
+    Cambia in `R=100, r=40, d=70`. Questo dà `R/r = 5/2` esattamente — un rapporto di piccoli interi.
+    La curva dovrebbe chiudersi perfettamente dopo 2 orbite e avere 5 petali. Prevedi ed esegui!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -171,20 +171,20 @@ for i in range(steps + 1):
         monty.goto(x, y)`);
 </script>
 
-`R/r = 100/40 = 5/2` → a perfect 5-petaled hypotrochoid that closes cleanly after 2 orbits.
+`R/r = 100/40 = 5/2` → un perfetto ipotrocoide a 5 petali che si chiude ordinatamente dopo 2 orbite.
 
-## Experiments
+## Esperimenti
 
-1. **Try R=120, r=30 (ratio 4:1).** You'll know it worked when a 4-lobed curve appears.
+1. **Prova R=120, r=30 (rapporto 4:1).** Saprai che ha funzionato quando appare una curva a 4 lobi.
 
-2. **Change d to a very small value.** Try `d = 10`. You'll know it worked when the curve looks almost circular.
+2. **Cambia d a un valore molto piccolo.** Prova `d = 10`. Saprai che ha funzionato quando la curva sembra quasi circolare.
 
-3. **Change d larger than r.** Try `d = 120` with the original parameters. You'll know it worked when the inner loops become larger.
+3. **Cambia d più grande di r.** Prova `d = 120` con i parametri originali. Saprai che ha funzionato quando gli anelli interni diventano più grandi.
 
-4. **Try an epitrochoid** (circle rolling outside). Change `(R - r)` to `(R + r)` in the formula. You'll know it worked when a different style of looped curve appears.
+4. **Prova un epitrocoide** (cerchio che rotola all'esterno). Cambia `(R - r)` in `(R + r)` nella formula. Saprai che ha funzionato quando appare uno stile diverso di curva ad anello.
 
-!!! mascot-celebration "Spirograph Complete!"
+!!! mascot-celebration "Spirografo Completo!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You coded the math behind a real toy from the 1970s!
-    These curves are called hypotrochoids — they're used in engineering to design
-    Wankel rotary engines. Up next: **Butterfly Curve** — a trigonometric classic.
+    Hai programmato la matematica dietro un vero giocattolo degli anni '70!
+    Queste curve si chiamano ipotrocoidi — sono usate nell'ingegneria per progettare
+    i motori rotativi Wankel. Prossimo: **Curva a Farfalla** — un classico trigonometrico.

@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Lissajous Figure
+# Figura di Lissajous
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Plot a Lissajous figure using `x = A*sin(a*t + δ)`, `y = B*sin(b*t)`
-- Understand how the ratio `a:b` controls the number of loops
-- Explore how changing phase shift `δ` rotates and reshapes the figure
+- Tracciare una figura di Lissajous usando `x = A*sin(a*t + δ)`, `y = B*sin(b*t)`
+- Capire come il rapporto `a:b` controlla il numero di anelli
+- Esplorare come cambiare lo spostamento di fase `δ` ruota e rimodella la figura
 
-Lissajous figures are the curves traced by a point whose x and y coordinates oscillate sinusoidally at different frequencies. They appear on oscilloscopes and in sound visualization.
+Le figure di Lissajous sono le curve tracciate da un punto le cui coordinate x e y oscillano sinusoidalmente a frequenze diverse. Appaiono sugli oscilloscopi e nella visualizzazione del suono.
 
-!!! mascot-welcome "Welcome to Lissajous Figures!"
+!!! mascot-welcome "Benvenuto alle Figure di Lissajous!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Lissajous figures are named after Jules Antoine Lissajous, who studied them in 1857.
-    They show up in physics, music, and even logo designs!
-    Let's code one together!
+    Le figure di Lissajous sono chiamate così da Jules Antoine Lissajous, che le studiò nel 1857.
+    Appaiono in fisica, musica, e persino nei design dei loghi!
+    Programmiamone una insieme!
 
-## How It Works
+## Come Funziona
 
-For each time step `t` from 0 to 2π, compute `x = A * sin(a*t + delta)` and `y = B * sin(b*t)`. Moving the turtle to `(x, y)` traces out the figure. The ratio `a/b` determines the shape.
+Per ogni passo temporale `t` da 0 a 2π, calcola `x = A * sin(a*t + delta)` e `y = B * sin(b*t)`. Muovere la tartaruga a `(x, y)` traccia la figura. Il rapporto `a/b` determina la forma.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -51,13 +51,13 @@ for i in range(steps + 1):
         monty.goto(x, y)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    With `a=3, b=2` (ratio 3:2), the figure should have `a` loops in one direction and `b` in the other.
-    Count the loops — how many will there be along x? Along y?
-    Make your guess — then click Run to find out!
+    Con `a=3, b=2` (rapporto 3:2), la figura dovrebbe avere `a` anelli in una direzione e `b` nell'altra.
+    Conta gli anelli — quanti ce ne saranno lungo x? Lungo y?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -105,27 +105,27 @@ for i in range(steps + 1):
         monty.goto(x, y)`);
 </script>
 
-**3 loops along x, 2 loops along y** — the curve crosses itself at 3 × 2 = 6 points. Were you right?
+**3 anelli lungo x, 2 anelli lungo y** — la curva si incrocia in 3 × 2 = 6 punti. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`a:b = 3:2` means x oscillates 3 times for every 2 oscillations of y. Where `a` and `b` are integers with no common factor, the curve is closed. `delta` shifts the x phase — changing it from `π/4` to `0` produces a figure-8, while `π/2` produces an ellipse-like shape.
+`a:b = 3:2` significa che x oscilla 3 volte per ogni 2 oscillazioni di y. Dove `a` e `b` sono interi senza fattore comune, la curva è chiusa. `delta` sposta la fase x — cambiarla da `π/4` a `0` produce una figura a 8, mentre `π/2` produce una forma simile a un'ellisse.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `A, B = 160, 130` | Amplitude (size) in x and y |
-| `a, b = 3, 2` | Frequency ratio — controls loop count |
-| `delta = math.pi / 4` | Phase shift — rotates the figure |
-| `A * math.sin(a * t + delta)` | x oscillates at frequency `a` |
+| `A, B = 160, 130` | Ampiezza (dimensione) in x e y |
+| `a, b = 3, 2` | Rapporto di frequenza — controlla il numero di anelli |
+| `delta = math.pi / 4` | Spostamento di fase — ruota la figura |
+| `A * math.sin(a * t + delta)` | x oscilla alla frequenza `a` |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Change the Ratio"
+!!! mascot-thinking "Il Tuo Turno — Cambia il Rapporto"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `a, b = 3, 2` to `a, b = 5, 4`. How many crossings will appear?
-    The formula is: crossings = a × b. Predict it, then run!
+    Cambia `a, b = 3, 2` in `a, b = 5, 4`. Quanti incroci appariranno?
+    La formula è: incroci = a × b. Prevedilo, poi esegui!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -167,20 +167,20 @@ for i in range(steps + 1):
         monty.goto(x, y)`);
 </script>
 
-`a=5, b=4` → 5×4 = 20 crossings — a much more complex, ornate figure.
+`a=5, b=4` → 5×4 = 20 incroci — una figura molto più complessa e ornata.
 
-## Experiments
+## Esperimenti
 
-1. **Try a=1, b=1.** Set `delta=0` too. The result should be a diagonal line (degenerate case). Try `delta=pi/2` for an ellipse. You'll know it worked when a simple shape appears.
+1. **Prova a=1, b=1.** Imposta anche `delta=0`. Il risultato dovrebbe essere una linea diagonale (caso degenere). Prova `delta=pi/2` per un'ellisse. Saprai che ha funzionato quando appare una forma semplice.
 
-2. **Draw multiple figures.** Use a loop over different values of `a` and `b` with different colors. You'll know it worked when several Lissajous figures overlap.
+2. **Disegna più figure.** Usa un ciclo su valori diversi di `a` e `b` con colori diversi. Saprai che ha funzionato quando più figure di Lissajous si sovrappongono.
 
-3. **Animate the phase.** In a loop, increase `delta` slowly and redraw. You'll know it worked when the figure appears to rotate.
+3. **Anima la fase.** In un ciclo, aumenta `delta` lentamente e ridisegna. Saprai che ha funzionato quando la figura sembra ruotare.
 
-4. **Try non-integer ratios.** Use `a, b = 3, 2.1`. The figure won't quite close — it'll precess slowly. You'll know it worked when the curve fills a region instead of forming a closed loop.
+4. **Prova rapporti non interi.** Usa `a, b = 3, 2.1`. La figura non si chiuderà del tutto — precederà lentamente. Saprai che ha funzionato quando la curva riempie una regione invece di formare un anello chiuso.
 
-!!! mascot-celebration "Oscilloscope Art!"
+!!! mascot-celebration "Arte da Oscilloscopio!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You coded a Lissajous figure — the same patterns that appear on oscilloscopes
-    when two sine waves are fed to the x and y inputs!
-    Up next: **Rose Curve** — petals from a single polar equation.
+    Hai programmato una figura di Lissajous — gli stessi pattern che appaiono sugli oscilloscopi
+    quando due onde sinusoidali vengono inviate agli ingressi x e y!
+    Prossimo: **Curva a Rosa** — petali da una singola equazione polare.

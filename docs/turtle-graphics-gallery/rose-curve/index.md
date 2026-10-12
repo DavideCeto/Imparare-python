@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Rose Curve
+# Curva a Rosa
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Plot a rose curve using `r = cos(k * theta)` in polar coordinates
-- Understand how odd `k` gives `k` petals and even `k` gives `2k` petals
-- Convert polar `(r, theta)` to Cartesian `(x, y)` for plotting
+- Tracciare una curva a rosa usando `r = cos(k * theta)` in coordinate polari
+- Capire come un `k` dispari dà `k` petali e un `k` pari dà `2k` petali
+- Convertire polare `(r, theta)` in cartesiano `(x, y)` per il tracciamento
 
-A flower-like curve made from the simple equation `r = cos(k*θ)`. Changing `k` changes the petal count — odd `k` gives `k` petals, even `k` gives `2k` petals.
+Una curva simile a un fiore fatta dalla semplice equazione `r = cos(k*θ)`. Cambiare `k` cambia il conteggio dei petali — un `k` dispari dà `k` petali, un `k` pari dà `2k` petali.
 
-!!! mascot-welcome "Welcome to the Rose Curve!"
+!!! mascot-welcome "Benvenuto alla Curva a Rosa!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    One short equation produces these petal patterns: `r = cos(k * theta)`.
-    Math at its most beautiful — a whole flower from three characters!
-    Let's code it together!
+    Un'equazione breve produce questi pattern a petalo: `r = cos(k * theta)`.
+    La matematica nella sua forma più bella — un intero fiore da tre caratteri!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-For theta from 0 to 2π (or 4π for even k), compute `r = scale * cos(k * theta)`. Convert to Cartesian: `x = r * cos(theta)`, `y = r * sin(theta)`. Connect the points to trace the petals.
+Per theta da 0 a 2π (o 4π per k pari), calcola `r = scale * cos(k * theta)`. Converti in cartesiano: `x = r * cos(theta)`, `y = r * sin(theta)`. Collega i punti per tracciare i petali.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -55,12 +55,12 @@ for i in range(steps + 1):
         monty.goto(x, y)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    With `k=5` (odd), the rule says we get `k` petals. How many petals is that?
-    Make your guess — then click Run to find out!
+    Con `k=5` (dispari), la regola dice che otteniamo `k` petali. Quanti petali sono?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -107,28 +107,28 @@ for i in range(steps + 1):
         monty.goto(x, y)`);
 </script>
 
-**5 petals** — odd k gives exactly k petals. Were you right?
+**5 petali** — un k dispari dà esattamente k petali. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-When `cos(k*theta) < 0`, `r` is negative, which in polar coordinates places the point 180° opposite. This doubles back through the center creating the petal shapes. For even `k`, the 180° reflection creates an additional set of petals.
+Quando `cos(k*theta) < 0`, `r` è negativo, che in coordinate polari posiziona il punto 180° opposto. Questo ripassa attraverso il centro creando le forme a petalo. Per un `k` pari, la riflessione a 180° crea un insieme aggiuntivo di petali.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `r = scale * math.cos(k * theta)` | Polar equation of the rose curve |
-| `x = r * math.cos(theta)` | Convert polar r, theta to x |
-| `y = r * math.sin(theta)` | Convert polar r, theta to y |
-| `k = 5` | Odd: 5 petals; try k=4 for 8 petals |
+| `r = scale * math.cos(k * theta)` | Equazione polare della curva a rosa |
+| `x = r * math.cos(theta)` | Converte r, theta polari in x |
+| `y = r * math.sin(theta)` | Converte r, theta polari in y |
+| `k = 5` | Dispari: 5 petali; prova k=4 per 8 petali |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Try k=4 (even)"
+!!! mascot-thinking "Il Tuo Turno — Prova k=4 (pari)"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `k = 5` to `k = 4`. Even k gives 2k petals — so how many petals will appear?
-    Also change range to `range(steps * 2)` and divide by `steps * 2` for even k.
-    Predict, then run it!
+    Cambia `k = 5` in `k = 4`. Un k pari dà 2k petali — quindi quanti petali appariranno?
+    Cambia anche l'intervallo in `range(steps * 2)` e dividi per `steps * 2` per k pari.
+    Prevedi, poi eseguilo!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -169,20 +169,20 @@ for i in range(steps + 1):
         monty.goto(x, y)`);
 </script>
 
-`k=4` → 8 petals (2×4). Even-k rose curves need theta to go from 0 to 4π to complete all petals.
+`k=4` → 8 petali (2×4). Le curve a rosa con k pari hanno bisogno che theta vada da 0 a 4π per completare tutti i petali.
 
-## Experiments
+## Esperimenti
 
-1. **Try k=3.** You'll know it worked when 3 petals appear in a triangle arrangement.
+1. **Prova k=3.** Saprai che ha funzionato quando 3 petali appaiono in una disposizione a triangolo.
 
-2. **Use `sin` instead of `cos`.** Replace `math.cos(k * theta)` with `math.sin(k * theta)`. You'll know it worked when the petals rotate 90°/k.
+2. **Usa `sin` invece di `cos`.** Sostituisci `math.cos(k * theta)` con `math.sin(k * theta)`. Saprai che ha funzionato quando i petali ruotano di 90°/k.
 
-3. **Draw all odd k from 1 to 9.** Use a loop and different colors. You'll know it worked when 5 overlapping rose curves appear.
+3. **Disegna tutti i k dispari da 1 a 9.** Usa un ciclo e colori diversi. Saprai che ha funzionato quando appaiono 5 curve a rosa sovrapposte.
 
-4. **Fill the petals.** Call `begin_fill()` and `end_fill()` around the drawing loop. You'll know it worked when the petals are filled in.
+4. **Riempi i petali.** Chiama `begin_fill()` ed `end_fill()` attorno al ciclo di disegno. Saprai che ha funzionato quando i petali sono riempiti.
 
-!!! mascot-celebration "Blooming with Math!"
+!!! mascot-celebration "Fiorendo con la Matematica!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    One equation — `r = cos(k*theta)` — draws all these flower patterns!
-    This is the beauty of polar coordinates: complex shapes from simple equations.
-    Up next: **Spirograph** — rolling circles inside circles.
+    Un'equazione — `r = cos(k*theta)` — disegna tutti questi pattern floreali!
+    Questa è la bellezza delle coordinate polari: forme complesse da equazioni semplici.
+    Prossimo: **Spirografo** — cerchi che rotolano dentro cerchi.

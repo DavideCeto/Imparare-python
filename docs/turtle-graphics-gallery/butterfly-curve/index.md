@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Butterfly Curve
+# Curva a Farfalla
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Plot the Temple H. Fay butterfly curve using its parametric polar equation
-- Understand how `exp(cos(t))` and `cos(4t)` combine to create the wing shapes
-- See how a single parametric equation can produce organic, complex shapes
+- Tracciare la curva a farfalla di Temple H. Fay usando la sua equazione polare parametrica
+- Capire come `exp(cos(t))` e `cos(4t)` si combinano per creare le forme delle ali
+- Vedere come una singola equazione parametrica può produrre forme organiche e complesse
 
-The butterfly curve is a famous parametric curve discovered by Temple H. Fay in 1989. Its polar equation `r = exp(cos t) - 2cos(4t) + sin⁵(t/12)` generates a shape that uncannily resembles butterfly wings.
+La curva a farfalla è una famosa curva parametrica scoperta da Temple H. Fay nel 1989. La sua equazione polare `r = exp(cos t) - 2cos(4t) + sin⁵(t/12)` genera una forma che assomiglia incredibilmente ad ali di farfalla.
 
-!!! mascot-welcome "Welcome to the Butterfly Curve!"
+!!! mascot-welcome "Benvenuto alla Curva a Farfalla!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    This curve was discovered in 1989 by Temple H. Fay.
-    One equation makes a butterfly — math and art in perfect harmony!
-    Let's code it together!
+    Questa curva fu scoperta nel 1989 da Temple H. Fay.
+    Un'equazione fa una farfalla — matematica e arte in perfetta armonia!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-For t from 0 to 12π, compute `r = exp(cos(t)) - 2*cos(4*t) + sin(t/12)^5`. Then convert polar to Cartesian: `x = scale * r * cos(t)`, `y = scale * r * sin(t)`. The many-lobed result needs 12π to complete.
+Per t da 0 a 12π, calcola `r = exp(cos(t)) - 2*cos(4*t) + sin(t/12)^5`. Poi converti da polare a cartesiano: `x = scale * r * cos(t)`, `y = scale * r * sin(t)`. Il risultato con molti lobi ha bisogno di 12π per completarsi.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -50,13 +50,13 @@ for i in range(steps + 1):
         monty.goto(x, y)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The formula mixes `exp(cos(t))` with `cos(4t)`.
-    Will the result look like wings, a star, or something completely different?
-    Make your guess — then click Run to find out!
+    La formula mescola `exp(cos(t))` con `cos(4t)`.
+    Il risultato sembrerà ali, una stella, o qualcosa di completamente diverso?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -103,28 +103,28 @@ for i in range(steps + 1):
         monty.goto(x, y)`);
 </script>
 
-**Butterfly wings** — the `exp(cos t)` term creates the large lobes while `cos(4t)` adds smaller oscillations that form the wing details. Were you right?
+**Ali di farfalla** — il termine `exp(cos t)` crea i grandi lobi mentre `cos(4t)` aggiunge piccole oscillazioni che formano i dettagli delle ali. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`exp(cos(t))` oscillates between `exp(-1) ≈ 0.37` and `exp(1) ≈ 2.72`. The subtracted `2*cos(4*t)` can make `r` negative, adding interior details. The `sin(t/12)^5` term creates the wing-tip elongation by varying slowly over the 12π range.
+`exp(cos(t))` oscilla tra `exp(-1) ≈ 0,37` e `exp(1) ≈ 2,72`. Il termine sottratto `2*cos(4*t)` può rendere `r` negativo, aggiungendo dettagli interni. Il termine `sin(t/12)^5` crea l'allungamento delle punte delle ali variando lentamente attraverso l'intervallo di 12π.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `math.exp(math.cos(t))` | Main lobe — oscillates between 0.37 and 2.72 |
-| `2 * math.cos(4 * t)` | Subtracts 4 oscillations — creates wing detail |
-| `math.sin(t / 12) ** 5` | Slowly varying term — elongates wing tips |
-| `12 * math.pi` | Full sweep for the curve to close |
+| `math.exp(math.cos(t))` | Lobo principale — oscilla tra 0,37 e 2,72 |
+| `2 * math.cos(4 * t)` | Sottrae 4 oscillazioni — crea il dettaglio delle ali |
+| `math.sin(t / 12) ** 5` | Termine che varia lentamente — allunga le punte delle ali |
+| `12 * math.pi` | Giro completo per far chiudere la curva |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Remove One Term"
+!!! mascot-thinking "Il Tuo Turno — Rimuovi un Termine"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Remove `math.sin(t / 12) ** 5` from the formula (set it to 0).
-    How does the curve change without that term?
-    Predict, then run it!
+    Rimuovi `math.sin(t / 12) ** 5` dalla formula (impostalo a 0).
+    Come cambia la curva senza quel termine?
+    Prevedi, poi eseguilo!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -164,20 +164,20 @@ for i in range(steps + 1):
         monty.goto(x, y)`);
 </script>
 
-Without `sin(t/12)^5`, the curve is more symmetric — two equal lobes instead of the elongated wing-tip shape.
+Senza `sin(t/12)^5`, la curva è più simmetrica — due lobi uguali invece della forma allungata della punta dell'ala.
 
-## Experiments
+## Esperimenti
 
-1. **Change scale.** Try `scale = 70`. You'll know it worked when the curve is larger.
+1. **Cambia la scala.** Prova `scale = 70`. Saprai che ha funzionato quando la curva è più grande.
 
-2. **Increase steps.** Try `steps = 5000`. You'll know it worked when the curve is smoother.
+2. **Aumenta i passi.** Prova `steps = 5000`. Saprai che ha funzionato quando la curva è più lisciata.
 
-3. **Use `cos(4t)` coefficient 3 instead of 2.** The inner lobes will change. You'll know it worked when the wing detail looks different.
+3. **Usa il coefficiente 3 invece di 2 per `cos(4t)`.** I lobi interni cambieranno. Saprai che ha funzionato quando il dettaglio dell'ala sembra diverso.
 
-4. **Plot the curve in multiple colors.** Break the loop into segments of `steps//6` points each and change the color for each segment. You'll know it worked when different parts of the curve have different colors.
+4. **Traccia la curva in più colori.** Dividi il ciclo in segmenti di `steps//6` punti ciascuno e cambia il colore per ogni segmento. Saprai che ha funzionato quando parti diverse della curva hanno colori diversi.
 
-!!! mascot-celebration "Beautiful Math!"
+!!! mascot-celebration "Matematica Bellissima!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You coded one of the most elegant parametric curves in mathematics!
-    The butterfly curve shows how `exp`, `cos`, and `sin` can conspire to make art.
-    Up next: **Epicycloid Star** — circles rolling outside circles.
+    Hai programmato una delle curve parametriche più eleganti della matematica!
+    La curva a farfalla mostra come `exp`, `cos`, e `sin` possano congiurare per fare arte.
+    Prossimo: **Stella Epicicloidale** — cerchi che rotolano all'esterno di cerchi.
