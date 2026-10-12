@@ -2,31 +2,31 @@
 hide:
     - toc
 ---
-# Mountain Range
+# Catena Montuosa
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Write a `mountain(x, peak_y, width, color)` function using `goto()` waypoints
-- Layer function calls from back to front to create a sense of depth
-- Use color value (dark vs light) to signal distance — a key technique in art
+- Scrivere una funzione `mountain(x, peak_y, width, color)` usando punti di passaggio `goto()`
+- Stratificare chiamate di funzione dal retro al fronte per creare un senso di profondità
+- Usare il valore del colore (scuro contro chiaro) per segnalare la distanza — una tecnica chiave nell'arte
 
-Three layered mountain ranges recede into a sky gradient — the far peaks are pale
-and cool, the near peaks are deep blue, creating depth with nothing but color.
+Tre catene montuose stratificate si allontanano in un gradiente di cielo — i picchi lontani sono pallidi
+e freddi, i picchi vicini sono blu profondo, creando profondità con nient'altro che il colore.
 
-!!! mascot-welcome "Welcome to the Mountain Range!"
+!!! mascot-welcome "Benvenuto alla Catena Montuosa!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Artists have known for centuries that distant objects look lighter and cooler.
-    In this lab you'll use the same trick in code to create a landscape with depth!
-    Let's code it together!
+    Gli artisti sanno da secoli che gli oggetti distanti sembrano più chiari e più freddi.
+    In questo laboratorio userai lo stesso trucco nel codice per creare un paesaggio con profondità!
+    Programmiamo insieme!
 
-## How the Depth Works
+## Come Funziona la Profondità
 
-We draw three mountain layers in order: **background first, foreground last**.
-Each layer uses a progressively darker, more saturated blue.
-Since fills are opaque, each front layer partially covers the layers behind it,
-naturally creating the illusion of distance.
+Disegniamo tre strati di montagne in ordine: **sfondo prima, primo piano ultimo**.
+Ogni strato usa un blu progressivamente più scuro e più saturo.
+Poiché i riempimenti sono opachi, ogni strato anteriore copre parzialmente gli strati dietro di esso,
+creando naturalmente l'illusione della distanza.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -60,12 +60,12 @@ mountain( 160,  130, 350, 'cornflowerblue')
 mountain( -30,   60, 260, 'navy')
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The mountains are drawn back-to-front. Which color will appear in the very foreground?
-    Scan the function calls and make your guess — then click Run to find out!
+    Le montagne sono disegnate dal retro al fronte. Quale colore apparirà in primissimo piano?
+    Scorri le chiamate di funzione e fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -116,31 +116,31 @@ mountain( 160,  130, 350, 'cornflowerblue')
 mountain( -30,   60, 260, 'navy')`);
 </script>
 
-The **navy** foreground mountain is drawn last and appears closest. Were you right?
+La montagna **navy** in primo piano è disegnata ultima e appare più vicina. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`mountain()` draws a filled triangle using three `goto()` calls: left base → peak → right base.
-The base y-coordinate is always `-190` (bottom of canvas) so all mountains share a common ground line.
+`mountain()` disegna un triangolo riempito usando tre chiamate `goto()`: base sinistra → vetta → base destra.
+La coordinata y della base è sempre `-190` (fondo del canvas) così tutte le montagne condividono una linea di terreno comune.
 
-The sky rectangle is drawn before the mountains so it serves as the background layer — any later fill will appear on top of it.
+Il rettangolo del cielo è disegnato prima delle montagne così serve come strato di sfondo — qualsiasi riempimento successivo apparirà sopra di esso.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `monty.goto(x - width//2, -190)` | Left base of the mountain triangle |
-| `monty.goto(x, peak_y)` | The peak — highest point of the triangle |
-| `monty.goto(x + width//2, -190)` | Right base — closes the triangle |
-| Draw order: back → front | Later draws appear on top (closer to viewer) |
-| Lighter color = more distant | Atmospheric perspective trick |
+| `monty.goto(x - width//2, -190)` | Base sinistra del triangolo della montagna |
+| `monty.goto(x, peak_y)` | La vetta — punto più alto del triangolo |
+| `monty.goto(x + width//2, -190)` | Base destra — chiude il triangolo |
+| Ordine di disegno: retro → fronte | I disegni successivi appaiono sopra (più vicini all'osservatore) |
+| Colore più chiaro = più distante | Trucco della prospettiva atmosferica |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add a Snow Cap"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi una Cima Innevata"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Add a **small white triangle** on top of the navy foreground mountain to simulate snow.
-    Call `mountain()` one more time with a smaller width, higher `peak_y`, and `'white'` color.
+    Aggiungi un **piccolo triangolo bianco** sopra la montagna navy in primo piano per simulare la neve.
+    Chiama `mountain()` un'altra volta con una larghezza minore, `peak_y` più alto, e colore `'white'`.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -183,20 +183,20 @@ mountain( -30,   60, 260, 'navy')
 # ADD ONE CALL: white snow cap on the navy mountain (x=-30, peak slightly higher, narrow width)`);
 </script>
 
-Add `mountain(-30, 70, 80, 'white')` — a narrow white triangle overlapping the top of the navy peak.
+Aggiungi `mountain(-30, 70, 80, 'white')` — un triangolo bianco stretto che si sovrappone alla cima del picco navy.
 
-## Experiments
+## Esperimenti
 
-1. **Add a sunset sky.** Change the sky color from `'lightsteelblue'` to `'darkorange'`. You'll know it worked when the scene looks like dusk.
+1. **Aggiungi un cielo al tramonto.** Cambia il colore del cielo da `'lightsteelblue'` a `'darkorange'`. Saprai che ha funzionato quando la scena sembra crepuscolare.
 
-2. **Add a tree line.** Before the foreground mountain, add a row of small dark-green triangles across the base. You'll know it worked when a forest silhouette appears at the mountain's foot.
+2. **Aggiungi una linea di alberi.** Prima della montagna in primo piano, aggiungi una fila di piccoli triangoli verde scuro attraverso la base. Saprai che ha funzionato quando una sagoma di foresta appare ai piedi della montagna.
 
-3. **Make taller mountains.** Change `peak_y = 170` for the background range to `220`. You'll know it worked when the back mountains tower above the canvas top.
+3. **Fai montagne più alte.** Cambia `peak_y = 170` per la catena di sfondo in `220`. Saprai che ha funzionato quando le montagne di sfondo torreggiano sopra la cima del canvas.
 
-4. **Add a lake.** Draw a filled blue ellipse at the bottom center after all mountains. You'll know it worked when a body of water appears in the foreground.
+4. **Aggiungi un lago.** Disegna un'ellisse blu riempita al centro basso dopo tutte le montagne. Saprai che ha funzionato quando appare uno specchio d'acqua in primo piano.
 
-!!! mascot-celebration "Beautiful Work!"
+!!! mascot-celebration "Lavoro Bellissimo!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You used layered drawing, color value, and function calls to create a landscape
-    with real visual depth — an artist's technique implemented in pure Python!
-    Up next: **Archimedean Spiral** — how a growing step length creates a perfect spiral.
+    Hai usato disegno a strati, valore di colore, e chiamate di funzione per creare un paesaggio
+    con vera profondità visiva — una tecnica da artista implementata in puro Python!
+    Prossimo: **Spirale Quadrata di Archimede** — come una lunghezza di passo crescente crea una spirale perfetta.

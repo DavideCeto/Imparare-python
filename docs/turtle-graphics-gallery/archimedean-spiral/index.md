@@ -2,30 +2,30 @@
 hide:
     - toc
 ---
-# Archimedean Square Spiral
+# Spirale Quadrata di Archimede
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Create a spiral by increasing the forward step by a fixed amount each iteration
-- Understand why a fixed turn angle plus a growing step produces a spiral
-- See how changing one number dramatically transforms the shape
+- Creare una spirale aumentando il passo avanti di una quantità fissa a ogni iterazione
+- Capire perché un angolo di rotazione fisso più un passo crescente produce una spirale
+- Vedere come cambiare un numero trasforma drammaticamente la forma
 
-A tight square spiral unwinds outward from the center — two hundred short segments,
-each slightly longer than the last, all turning exactly 90° to trace a perfect square path.
+Una spirale quadrata stretta si svolge verso l'esterno dal centro — duecento brevi segmenti,
+ognuno leggermente più lungo del precedente, tutti girando esattamente di 90° per tracciare un percorso quadrato perfetto.
 
-!!! mascot-welcome "Welcome to the Archimedean Spiral!"
+!!! mascot-welcome "Benvenuto alla Spirale di Archimede!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    No trigonometry needed here — just one loop and one growing variable.
-    The spiral emerges from the simplest possible rule: go forward a little more each time!
-    Let's code it together!
+    Nessuna trigonometria necessaria qui — solo un ciclo e una variabile crescente.
+    La spirale emerge dalla regola più semplice possibile: vai avanti un po' più ogni volta!
+    Programmiamo insieme!
 
-## How the Spiral Works
+## Come Funziona la Spirale
 
-Each step: move forward by `step` pixels, turn 90°, then increase `step` by a small amount.
-Because the step grows a little each time, each side of the "square" is slightly longer
-than the one before — so the path spirals outward instead of closing back on itself.
+Ogni passo: muoviti avanti di `step` pixel, gira di 90°, poi aumenta `step` di una piccola quantità.
+Poiché il passo cresce un po' ogni volta, ogni lato del "quadrato" è leggermente più lungo
+del precedente — così il percorso si avvolge verso l'esterno invece di chiudersi su se stesso.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -41,12 +41,12 @@ for i in range(200):
     step += 1.5
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The turtle turns exactly 90° every step. Will the path look like a square, a spiral, or something else?
-    Make your guess — then click Run to find out!
+    La tartaruga gira esattamente di 90° ogni passo. Il percorso sembrerà un quadrato, una spirale, o qualcos'altro?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -81,30 +81,30 @@ for i in range(200):
     step += 1.5`);
 </script>
 
-Both! It looks like a **square spiral** — the 90° turn gives it square corners, while the growing step length makes it spiral outward. Were you right?
+Entrambi! Sembra una **spirale quadrata** — la rotazione di 90° gli dà angoli squadrati, mentre la lunghezza del passo crescente la fa avvolgere verso l'esterno. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`step += 1.5` is the key. If `step` never changed, the turtle would draw the same square over and over in the same place. The tiny increment each iteration means each "side" is 1.5 pixels longer than the last — enough to push the path outward by a consistent amount per revolution.
+`step += 1.5` è la chiave. Se `step` non cambiasse mai, la tartaruga disegnerebbe lo stesso quadrato ripetutamente nello stesso posto. Il piccolo incremento a ogni iterazione significa che ogni "lato" è 1,5 pixel più lungo del precedente — abbastanza per spingere il percorso verso l'esterno di una quantità costante per rivoluzione.
 
-This is an **Archimedean spiral**: one where the distance between successive loops is constant.
+Questa è una **spirale di Archimede**: una dove la distanza tra giri successivi è costante.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `step = 2` | Starting side length — very short at first |
-| `monty.forward(step)` | Draw one segment of the current length |
-| `monty.right(90)` | Fixed 90° turn gives the square character |
-| `step += 1.5` | Grow the step — the source of the spiral |
-| `range(200)` | 200 steps = 50 full "squares" (4 sides each) |
+| `step = 2` | Lunghezza del lato di partenza — molto corta all'inizio |
+| `monty.forward(step)` | Disegna un segmento della lunghezza attuale |
+| `monty.right(90)` | La rotazione fissa di 90° dà il carattere quadrato |
+| `step += 1.5` | Fa crescere il passo — la fonte della spirale |
+| `range(200)` | 200 passi = 50 "quadrati" completi (4 lati ciascuno) |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Spot the Bug!"
+!!! mascot-warning "Trova il Bug!"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    The program below draws a square over and over in the same place — no spiral!
-    Find and fix the bug so the path spirals outward.
+    Il programma sotto disegna un quadrato ripetutamente nello stesso posto — nessuna spirale!
+    Trova e correggi il bug così il percorso si avvolga verso l'esterno.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -132,20 +132,20 @@ for i in range(200):
     monty.right(90)`);
 </script>
 
-Add `step += 1.5` as the last line inside the loop so the step grows with each iteration.
+Aggiungi `step += 1.5` come ultima riga dentro il ciclo così il passo cresce a ogni iterazione.
 
-## Experiments
+## Esperimenti
 
-1. **Try a triangular spiral.** Change `right(90)` to `right(120)`. You'll know it worked when the spiral has three-sided corners instead of four.
+1. **Prova una spirale triangolare.** Cambia `right(90)` in `right(120)`. Saprai che ha funzionato quando la spirale ha angoli a tre lati invece di quattro.
 
-2. **Try a hexagonal spiral.** Change `right(90)` to `right(60)`. You'll know it worked when the spiral has six-sided corners.
+2. **Prova una spirale esagonale.** Cambia `right(90)` in `right(60)`. Saprai che ha funzionato quando la spirale ha angoli a sei lati.
 
-3. **Speed up the growth.** Change `step += 1.5` to `step += 3`. The spiral spreads out much faster. You'll know it worked when the loops are further apart.
+3. **Accelera la crescita.** Cambia `step += 1.5` in `step += 3`. La spirale si allarga molto più velocemente. Saprai che ha funzionato quando i giri sono più distanti tra loro.
 
-4. **Start bigger.** Change `step = 2` to `step = 20`. The spiral starts already expanded and hits the canvas edge in fewer turns. You'll know it worked when the first few loops are already wide.
+4. **Inizia più grande.** Cambia `step = 2` in `step = 20`. La spirale inizia già espansa e raggiunge il bordo del canvas in meno giri. Saprai che ha funzionato quando i primi giri sono già larghi.
 
-!!! mascot-celebration "Wonderful Work!"
+!!! mascot-celebration "Lavoro Meraviglioso!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You made a spiral with just three lines inside a loop — no math beyond addition!
-    Try changing the turn angle and watch the spiral transform completely.
-    Up next: **Rainbow Line Spiral** — adding color banding to the spiral.
+    Hai fatto una spirale con solo tre righe dentro un ciclo — nessuna matematica oltre l'addizione!
+    Prova a cambiare l'angolo di rotazione e guarda la spirale trasformarsi completamente.
+    Prossimo: **Spirale di Linee Arcobaleno** — aggiungere fasce di colore alla spirale.

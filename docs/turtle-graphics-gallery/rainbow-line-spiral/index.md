@@ -2,33 +2,33 @@
 hide:
     - toc
 ---
-# Rainbow Line Spiral
+# Spirale di Linee Arcobaleno
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Add color cycling to a growing spiral using `i % len(colors)`
-- See how the banding interval interacts with the spiral's period
-- Understand why the same modulo pattern works for both colors and shapes
+- Aggiungere un ciclo di colori a una spirale crescente usando `i % len(colors)`
+- Vedere come l'intervallo di fasciatura interagisce con il periodo della spirale
+- Capire perché lo stesso pattern modulo funziona sia per i colori che per le forme
 
-The Archimedean square spiral returns — this time each segment is colored by cycling
-through six rainbow hues. The color bands march diagonally across the arms of the spiral.
+La spirale quadrata di Archimede ritorna — questa volta ogni segmento è colorato scorrendo
+attraverso sei tonalità arcobaleno. Le fasce di colore marciano diagonalmente attraverso i bracci della spirale.
 
-!!! mascot-welcome "Welcome to the Rainbow Line Spiral!"
+!!! mascot-welcome "Benvenuto alla Spirale di Linee Arcobaleno!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    In this lab you'll add just two extra lines to the spiral from the previous lab
-    and transform a monochrome pattern into a full rainbow. That's the power of `%`!
-    Let's code it together!
+    In questo laboratorio aggiungerai solo due righe extra alla spirale del laboratorio precedente
+    e trasformerai un pattern monocromatico in un arcobaleno completo. Questo è il potere di `%`!
+    Programmiamo insieme!
 
-## How the Rainbow Works
+## Come Funziona l'Arcobaleno
 
-The only additions to the Archimedean spiral are:
-1. A `colors` list with six hues
-2. `monty.color(colors[i % 6])` inside the loop — one line
+Le uniche aggiunte alla spirale di Archimede sono:
+1. Una lista `colors` con sei tonalità
+2. `monty.color(colors[i % 6])` dentro il ciclo — una riga
 
-Because each revolution of the spiral has 4 segments and the colors cycle every 6 segments,
-the color boundaries cut diagonally across the spiral arms rather than aligning with corners.
+Poiché ogni rivoluzione della spirale ha 4 segmenti e i colori scorrono ogni 6 segmenti,
+i confini di colore tagliano diagonalmente attraverso i bracci della spirale invece di allinearsi con gli angoli.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -46,12 +46,12 @@ for i in range(200):
     step += 1.5
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    There are 6 colors and 200 segments. How many times will the full color sequence repeat?
-    (Hint: 200 ÷ 6 = ?) Make your guess — then click Run to find out!
+    Ci sono 6 colori e 200 segmenti. Quante volte si ripeterà l'intera sequenza di colori?
+    (Suggerimento: 200 ÷ 6 = ?) Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -88,30 +88,30 @@ for i in range(200):
     step += 1.5`);
 </script>
 
-200 ÷ 6 = 33 full cycles with 2 segments left over — so the full rainbow appears **33 times**, each one a little larger than the last. Were you right?
+200 ÷ 6 = 33 cicli completi con 2 segmenti rimanenti — così l'arcobaleno completo appare **33 volte**, ognuno un po' più grande del precedente. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`colors[i % 6]` maps the loop counter `i` to a color index: 0→red, 1→orange, 2→yellow, 3→green, 4→blue, 5→violet, 0→red again. The pattern repeats every 6 steps regardless of how high `i` gets.
+`colors[i % 6]` mappa il contatore del ciclo `i` a un indice di colore: 0→rosso, 1→arancione, 2→giallo, 3→verde, 4→blu, 5→viola, 0→rosso di nuovo. Il pattern si ripete ogni 6 passi non importa quanto grande diventi `i`.
 
-Because the spiral has 4-sided symmetry but the color period is 6, the diagonal color stripes cross the square corners at different points on each revolution — creating a visually complex pattern from very simple math.
+Poiché la spirale ha simmetria a 4 lati ma il periodo del colore è 6, le strisce diagonali di colore attraversano gli angoli del quadrato in punti diversi a ogni rivoluzione — creando un pattern visivamente complesso da una matematica molto semplice.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `colors = [...]` | Six rainbow hues |
-| `i % 6` | Maps any integer to 0–5 to index the color list |
-| `monty.color(colors[i % 6])` | Change color each segment |
-| All other lines | Identical to the Archimedean spiral |
+| `colors = [...]` | Sei tonalità arcobaleno |
+| `i % 6` | Mappa qualsiasi intero a 0–5 per indicizzare la lista di colori |
+| `monty.color(colors[i % 6])` | Cambia colore a ogni segmento |
+| Tutte le altre righe | Identiche alla spirale di Archimede |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Change the Color Period"
+!!! mascot-thinking "Il Tuo Turno — Cambia il Periodo del Colore"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    What happens when the color period matches the spiral period?
-    Change `i % 6` to `i % 4`. With 4 colors and 4-sided corners, the colors will align with the corners.
-    Predict what it will look like — then run it to check!
+    Cosa succede quando il periodo del colore corrisponde al periodo della spirale?
+    Cambia `i % 6` in `i % 4`. Con 4 colori e angoli a 4 lati, i colori si allineeranno con gli angoli.
+    Prevedi come sembrerà — poi eseguilo per controllare!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -142,20 +142,20 @@ for i in range(200):
     step += 1.5`);
 </script>
 
-With `i % 4` and a 90° square spiral, each color occupies exactly one side per revolution — creating four clean diagonal stripes aligned with the spiral arms.
+Con `i % 4` e una spirale quadrata a 90°, ogni colore occupa esattamente un lato per rivoluzione — creando quattro strisce diagonali nette allineate con i bracci della spirale.
 
-## Experiments
+## Esperimenti
 
-1. **Try 2 colors.** Change to `['red', 'blue']` and `i % 2`. You'll know it worked when the spiral alternates red and blue segment by segment.
+1. **Prova 2 colori.** Cambia in `['red', 'blue']` e `i % 2`. Saprai che ha funzionato quando la spirale alterna rosso e blu segmento per segmento.
 
-2. **Try 12 colors.** Use the full 12-hue color wheel list from the **Color Wheel Wedges** lab. You'll know it worked when tighter, more varied rainbow bands appear.
+2. **Prova 12 colori.** Usa l'intera lista di 12 tonalità della ruota dei colori dal laboratorio **Spicchi della Ruota dei Colori**. Saprai che ha funzionato quando appaiono fasce arcobaleno più strette e più varie.
 
-3. **Change to a triangular spiral.** Keep the rainbow colors and change `right(90)` to `right(120)`. You'll know it worked when the spiral has triangular corners with diagonal rainbow bands.
+3. **Cambia in una spirale triangolare.** Mantieni i colori arcobaleno e cambia `right(90)` in `right(120)`. Saprai che ha funzionato quando la spirale ha angoli triangolari con fasce arcobaleno diagonali.
 
-4. **Color by revolution.** Replace `i % 6` with `(i // 4) % 6`. Now all four segments of each revolution share the same color. You'll know it worked when solid-color square rings appear.
+4. **Colora per rivoluzione.** Sostituisci `i % 6` con `(i // 4) % 6`. Ora tutti i quattro segmenti di ogni rivoluzione condividono lo stesso colore. Saprai che ha funzionato quando appaiono anelli quadrati a colore solido.
 
-!!! mascot-celebration "Fantastic Work!"
+!!! mascot-celebration "Lavoro Fantastico!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You discovered that `i % n` and `i // n` give you two different ways to map time to color —
-    segment-by-segment vs revolution-by-revolution. Same spiral, completely different look!
-    Up next: **Hexagonal Spiral** — changing one angle transforms the whole shape.
+    Hai scoperto che `i % n` e `i // n` ti danno due modi diversi di mappare il tempo al colore —
+    segmento per segmento contro rivoluzione per rivoluzione. Stessa spirale, aspetto completamente diverso!
+    Prossimo: **Spirale Esagonale** — cambiare un angolo trasforma l'intera forma.

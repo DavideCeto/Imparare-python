@@ -2,28 +2,28 @@
 hide:
     - toc
 ---
-# Triangular Spiral
+# Spirale Triangolare
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Use `right(120)` to create a triangular spiral with sharp equilateral corners
-- Color each third of the spiral a different warm color using integer division
-- Understand how `i // n` groups segments into color bands rather than cycling segment-by-segment
+- Usare `right(120)` per creare una spirale triangolare con angoli equilateri netti
+- Colorare ogni terzo della spirale di un colore caldo diverso usando la divisione intera
+- Capire come `i // n` raggruppa i segmenti in fasce di colore invece di scorrere segmento per segmento
 
-Three warm color bands — red, orange, and gold — sweep outward along the arms of a tight triangular spiral. Change one number and the entire character of the shape changes.
+Tre fasce di colore caldo — rosso, arancione, e oro — si estendono verso l'esterno lungo i bracci di una spirale triangolare stretta. Cambia un numero e l'intero carattere della forma cambia.
 
-!!! mascot-welcome "Welcome to the Triangular Spiral!"
+!!! mascot-welcome "Benvenuto alla Spirale Triangolare!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    We've seen square spirals (90°) and hexagonal spirals (60°). Now push the angle further —
-    120° gives the sharpest corners yet. Let's code it together!
+    Abbiamo visto spirali quadrate (90°) e spirali esagonali (60°). Ora spingiamo l'angolo ancora più oltre —
+    120° dà gli angoli più netti finora. Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-An equilateral triangle has interior angles of 60° and **exterior angles of 120°** (360° ÷ 3 = 120°). Turning 120° at every step gives the spiral triangular corners.
+Un triangolo equilatero ha angoli interni di 60° e **angoli esterni di 120°** (360° ÷ 3 = 120°). Girare di 120° a ogni passo dà alla spirale angoli triangolari.
 
-For coloring, `(i // 60) % 3` divides the 180-step loop into three equal thirds and picks a color for each third. Integer division (`//`) groups segments together instead of cycling one-by-one.
+Per la colorazione, `(i // 60) % 3` divide il ciclo di 180 passi in tre terzi uguali e sceglie un colore per ogni terzo. La divisione intera (`//`) raggruppa i segmenti insieme invece di scorrere uno per uno.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -41,13 +41,13 @@ for i in range(180):
     step += 1.5
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The square spiral had 4 sides per revolution and the hexagonal had 6.
-    How many sides per revolution does the triangular spiral have?
-    Make your guess — then click Run to find out!
+    La spirale quadrata aveva 4 lati per rivoluzione e quella esagonale ne aveva 6.
+    Quanti lati per rivoluzione ha la spirale triangolare?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -84,28 +84,28 @@ for i in range(180):
     step += 1.5`);
 </script>
 
-**3 sides** per revolution — one per 120° turn. The spiral makes crisp triangular corners. Were you right?
+**3 lati** per rivoluzione — uno per ogni rotazione di 120°. La spirale forma angoli triangolari netti. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`(i // 60) % 3` works like this: for the first 60 steps, `i // 60 = 0`, so color 0 (crimson). For steps 60–119, `i // 60 = 1`, so color 1 (orange). For steps 120–179, color 2 (gold). This creates solid bands along the spiral arms rather than segment-by-segment flickering.
+`(i // 60) % 3` funziona così: per i primi 60 passi, `i // 60 = 0`, quindi colore 0 (crimson). Per i passi 60–119, `i // 60 = 1`, quindi colore 1 (arancione). Per i passi 120–179, colore 2 (oro). Questo crea fasce solide lungo i bracci della spirale invece di sfarfallio segmento per segmento.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `colors = [...]` | Three warm hues — one per third of the loop |
-| `(i // 60) % 3` | Groups 60 segments into each color band |
-| `monty.right(120)` | Triangular corner — 360° ÷ 3 = 120° |
-| `step += 1.5` | Grow the step each segment |
-| `range(180)` | 180 steps = 60 full "triangles" (3 sides each) |
+| `colors = [...]` | Tre tonalità calde — una per ogni terzo del ciclo |
+| `(i // 60) % 3` | Raggruppa 60 segmenti in ogni fascia di colore |
+| `monty.right(120)` | Angolo triangolare — 360° ÷ 3 = 120° |
+| `step += 1.5` | Fa crescere il passo a ogni segmento |
+| `range(180)` | 180 passi = 60 "triangoli" completi (3 lati ciascuno) |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Switch to Per-Segment Colors"
+!!! mascot-thinking "Il Tuo Turno — Passa ai Colori per Segmento"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `(i // 60) % 3` to `i % 3`. Now each individual segment cycles through
-    the three colors. Predict how it will look different — then run it to check!
+    Cambia `(i // 60) % 3` in `i % 3`. Ora ogni singolo segmento scorre attraverso
+    i tre colori. Prevedi come sarà diverso l'aspetto — poi eseguilo per controllare!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -136,20 +136,20 @@ for i in range(180):
     step += 1.5`);
 </script>
 
-With `i % 3`, each side of each tiny triangle gets its own color — creating a striped, segment-by-segment pattern. The `i // 60` version gives broader color bands across entire spiral arms.
+Con `i % 3`, ogni lato di ogni piccolo triangolo ottiene il proprio colore — creando un pattern a righe, segmento per segmento. La versione `i // 60` dà fasce di colore più ampie attraverso interi bracci della spirale.
 
-## Experiments
+## Esperimenti
 
-1. **Try 4 colors with `i // 45`.** Use `['red','orange','gold','yellow']` and `(i // 45) % 4`. You'll know it worked when the spiral has four distinct color regions.
+1. **Prova 4 colori con `i // 45`.** Usa `['red','orange','gold','yellow']` e `(i // 45) % 4`. Saprai che ha funzionato quando la spirale ha quattro regioni di colore distinte.
 
-2. **Make it spin the other way.** Change `right(120)` to `left(120)`. You'll know it worked when the spiral winds in the opposite direction.
+2. **Falla girare nell'altra direzione.** Cambia `right(120)` in `left(120)`. Saprai che ha funzionato quando la spirale si avvolge nella direzione opposta.
 
-3. **Double the growth speed.** Change `step += 1.5` to `step += 3`. The gaps between arms widen dramatically. You'll know it worked when only 2–3 revolutions fit on screen.
+3. **Raddoppia la velocità di crescita.** Cambia `step += 1.5` in `step += 3`. Gli spazi tra i bracci si allargano drammaticamente. Saprai che ha funzionato quando solo 2–3 rivoluzioni entrano sullo schermo.
 
-4. **Start from a large step.** Change `step = 2` to `step = 40`. The spiral begins already expanded. You'll know it worked when the first few loops are already wide.
+4. **Inizia da un passo grande.** Cambia `step = 2` in `step = 40`. La spirale inizia già espansa. Saprai che ha funzionato quando i primi giri sono già larghi.
 
-!!! mascot-celebration "Sharp Thinking!"
+!!! mascot-celebration "Pensiero Acuto!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You discovered two ways to color a spiral: `i % n` for segment-by-segment patterns,
-    and `i // n` for broad color bands. The same trick works in any loop!
-    Up next: **Inward Collapsing Spiral** — spiraling to a point instead of growing outward.
+    Hai scoperto due modi per colorare una spirale: `i % n` per pattern segmento per segmento,
+    e `i // n` per fasce di colore ampie. Lo stesso trucco funziona in qualsiasi ciclo!
+    Prossimo: **Spirale che Collassa verso l'Interno** — avvolgersi verso un punto invece di crescere verso l'esterno.

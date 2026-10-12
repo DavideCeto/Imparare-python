@@ -2,28 +2,28 @@
 hide:
     - toc
 ---
-# Hexagonal Spiral
+# Spirale Esagonale
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Change one number (the turn angle) to transform a square spiral into a hexagonal one
-- Color segments with a blue-to-green gradient by cycling a color list
-- Understand why 60° produces hexagonal corners while 90° produces square ones
+- Cambiare un numero (l'angolo di rotazione) per trasformare una spirale quadrata in una esagonale
+- Colorare i segmenti con un gradiente da blu a verde scorrendo una lista di colori
+- Capire perché 60° produce angoli esagonali mentre 90° produce angoli quadrati
 
-One parameter change — turning 60° instead of 90° — transforms the familiar square spiral into a graceful hexagonal one. Each segment is tinted in a cool blue-to-green gradient that cycles outward as the spiral grows.
+Un cambiamento di parametro — girare di 60° invece di 90° — trasforma la familiare spirale quadrata in una elegante spirale esagonale. Ogni segmento è tinto in un fresco gradiente da blu a verde che scorre verso l'esterno mentre la spirale cresce.
 
-!!! mascot-welcome "Welcome to the Hexagonal Spiral!"
+!!! mascot-welcome "Benvenuto alla Spirale Esagonale!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    In the last two labs you saw a square spiral. Now we change just ONE number and watch
-    the whole shape transform. Let's code it together!
+    Negli ultimi due laboratori hai visto una spirale quadrata. Ora cambiamo solo UN numero e guardiamo
+    l'intera forma trasformarsi. Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-A regular hexagon has six sides. At each corner, the turtle turns the **exterior angle** of a hexagon: `360 / 6 = 60°`. Because we also grow the step length each iteration, the path spirals outward rather than closing into a hexagon.
+Un esagono regolare ha sei lati. A ogni angolo, la tartaruga gira dell'**angolo esterno** di un esagono: `360 / 6 = 60°`. Poiché facciamo anche crescere la lunghezza del passo a ogni iterazione, il percorso si avvolge verso l'esterno invece di chiudersi in un esagono.
 
-The color list has seven hues from deep navy through cyan to green. `i % len(colors)` maps each segment index to a color, cycling continuously as the spiral grows.
+La lista di colori ha sette tonalità dal navy profondo attraverso il ciano fino al verde. `i % len(colors)` mappa ogni indice di segmento a un colore, scorrendo continuamente mentre la spirale cresce.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -42,13 +42,13 @@ for i in range(240):
     step += 0.8
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The square spiral used `right(90)`. This one uses `right(60)`.
-    Will the corners look sharper or more rounded than the square spiral?
-    Make your guess — then click Run to find out!
+    La spirale quadrata usava `right(90)`. Questa usa `right(60)`.
+    Gli angoli sembreranno più netti o più arrotondati della spirale quadrata?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -86,30 +86,30 @@ for i in range(240):
     step += 0.8`);
 </script>
 
-The corners are **less sharp** — 60° turns are gentler than 90° turns, giving the spiral a rounder, more flowing appearance. Were you right?
+Gli angoli sono **meno netti** — le rotazioni di 60° sono più dolci delle rotazioni di 90°, dando alla spirale un aspetto più rotondo e fluido. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`right(60)` creates hexagonal corners because 60° is the exterior angle of a regular hexagon (360° ÷ 6 = 60°). The growing `step` prevents the path from closing into a hexagon — instead it spirals outward one ring at a time.
+`right(60)` crea angoli esagonali perché 60° è l'angolo esterno di un esagono regolare (360° ÷ 6 = 60°). Il `step` crescente impedisce al percorso di chiudersi in un esagono — invece si avvolge verso l'esterno un anello alla volta.
 
-`colors[i % len(colors)]` uses `len(colors)` instead of hardcoding `7`. This is good practice: if you add or remove a color, the modulo automatically adjusts.
+`colors[i % len(colors)]` usa `len(colors)` invece di scrivere a mano `7`. Questa è buona pratica: se aggiungi o rimuovi un colore, il modulo si adatta automaticamente.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `colors = [...]` | Seven-hue navy-to-green gradient |
-| `i % len(colors)` | Maps segment index to color list — works for any list length |
-| `monty.right(60)` | Hexagonal corner — `360 / 6 = 60°` |
-| `step += 0.8` | Grow the step — source of the spiral |
-| `range(240)` | 240 steps = 40 full "hexagons" (6 sides each) |
+| `colors = [...]` | Gradiente a sette tonalità da navy a verde |
+| `i % len(colors)` | Mappa l'indice del segmento alla lista di colori — funziona per qualsiasi lunghezza di lista |
+| `monty.right(60)` | Angolo esagonale — `360 / 6 = 60°` |
+| `step += 0.8` | Fa crescere il passo — fonte della spirale |
+| `range(240)` | 240 passi = 40 "esagoni" completi (6 lati ciascuno) |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Spot the Bug!"
+!!! mascot-warning "Trova il Bug!"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    The program below draws the same hexagon over and over in the same place — no spiral!
-    Find the missing line and add it so the path spirals outward.
+    Il programma sotto disegna lo stesso esagono ripetutamente nello stesso posto — nessuna spirale!
+    Trova la riga mancante e aggiungila così il percorso si avvolga verso l'esterno.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -140,20 +140,20 @@ for i in range(240):
     monty.right(60)`);
 </script>
 
-Add `step += 0.8` as the last line inside the loop — without it, every segment is the same length and the path just traces the same hexagon repeatedly.
+Aggiungi `step += 0.8` come ultima riga dentro il ciclo — senza di essa, ogni segmento è della stessa lunghezza e il percorso traccia semplicemente lo stesso esagono ripetutamente.
 
-## Experiments
+## Esperimenti
 
-1. **Try a pentagon spiral.** Change `right(60)` to `right(72)` (360/5). You'll know it worked when the spiral has five-sided corners instead of six.
+1. **Prova una spirale pentagonale.** Cambia `right(60)` in `right(72)` (360/5). Saprai che ha funzionato quando la spirale ha angoli a cinque lati invece di sei.
 
-2. **Try a triangle spiral.** Change `right(60)` to `right(120)` (360/3). You'll know it worked when the corners become sharp 120° turns.
+2. **Prova una spirale triangolare.** Cambia `right(60)` in `right(120)` (360/3). Saprai che ha funzionato quando gli angoli diventano rotazioni nette di 120°.
 
-3. **Speed up the growth.** Change `step += 0.8` to `step += 2`. The loops spread out faster. You'll know it worked when there are fewer, more widely spaced rings.
+3. **Accelera la crescita.** Cambia `step += 0.8` in `step += 2`. I giri si allargano più velocemente. Saprai che ha funzionato quando ci sono meno anelli, più distanziati.
 
-4. **Switch to warm colors.** Replace the `colors` list with `['darkred', 'red', 'orangered', 'orange', 'gold', 'yellow', 'lightyellow']`. You'll know it worked when the spiral shifts from fiery red through yellow.
+4. **Passa a colori caldi.** Sostituisci la lista `colors` con `['darkred', 'red', 'orangered', 'orange', 'gold', 'yellow', 'lightyellow']`. Saprai che ha funzionato quando la spirale passa da un rosso ardente attraverso il giallo.
 
-!!! mascot-celebration "Excellent Work!"
+!!! mascot-celebration "Lavoro Eccellente!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You discovered that **one number** — the turn angle — determines the polygon shape of a spiral.
-    Change 60° → 90° → 120° and watch the whole pattern transform!
-    Up next: **Triangular Spiral** — pushing the turn angle even further.
+    Hai scoperto che **un numero** — l'angolo di rotazione — determina la forma poligonale di una spirale.
+    Cambia 60° → 90° → 120° e guarda l'intero pattern trasformarsi!
+    Prossimo: **Spirale Triangolare** — spingere l'angolo di rotazione ancora più oltre.

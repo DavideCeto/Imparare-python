@@ -141,6 +141,9 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
 - `polka-dot-canvas/`, `brick-wall/`, `stars-different-sizes/`, `traffic-light/`,
   `fish-school/` (quarto batch — corretto un refuso "metter" → "mettere" in
   `traffic-light/index.md` prima del commit)
+- `mountain-range/`, `archimedean-spiral/`, `rainbow-line-spiral/`, `hexagonal-spiral/`,
+  `triangular-spiral/` (quinto batch — corretto un refuso "alignate" → "allineate" in
+  `rainbow-line-spiral/index.md` prima del commit)
 
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
@@ -271,11 +274,12 @@ cuore didattico del libro.
 `dotted-grid/`, `color-wheel-wedges/`, `pentagon-chain/`, `overlapping-squares/`,
 `flower-petal-function/`, `honeycomb-grid/`, `city-skyline/`, `snowflake-arms/`,
 `polka-dot-canvas/`, `brick-wall/`, `stars-different-sizes/`, `traffic-light/`,
-`fish-school/` (22 di ~102 file/unità).
+`fish-school/`, `mountain-range/`, `archimedean-spiral/`, `rainbow-line-spiral/`,
+`hexagonal-spiral/`, `triangular-spiral/` (27 di ~102 file/unità).
 
-Prossimo: continuare la Fase 4 in ordine di nav con `mountain-range/`,
-`archimedean-spiral/`, `rainbow-line-spiral/`, `hexagonal-spiral/`,
-`triangular-spiral/`, e così via attraverso i restanti ~81 singoli laboratori
+Prossimo: continuare la Fase 4 in ordine di nav con `inward-spiral/`,
+`logarithmic-spiral/`, `double-helix-spiral/`, `fibonacci-spiral/`,
+`spiral-of-spirals/`, e così via attraverso i restanti ~76 singoli laboratori
 della galleria.
 
 Dopo la Fase 4: Fasi 5-9 (MicroSims, Teacher's Guide, Jupyter/Advanced, Learning Graph,
