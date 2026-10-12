@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Bouncing Ball
+# Pallina che Rimbalza
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Animate a turtle by updating its position in a loop using velocity variables
-- Reverse velocity when the ball hits a wall (`vx = -vx`)
-- Use `turtle.tracer(0)` and `turtle.update()` for smooth animation
+- Animare una tartaruga aggiornando la sua posizione in un ciclo usando variabili di velocità
+- Invertire la velocità quando la pallina colpisce un muro (`vx = -vx`)
+- Usare `turtle.tracer(0)` e `turtle.update()` per un'animazione fluida
 
-A colored ball bounces around inside a rectangular boundary. Each frame, the ball moves by its velocity, and when it hits a wall, the velocity component reverses — simulating elastic collision.
+Una pallina colorata rimbalza dentro un confine rettangolare. A ogni fotogramma, la pallina si muove della sua velocità, e quando colpisce un muro, la componente di velocità si inverte — simulando una collisione elastica.
 
-!!! mascot-welcome "Welcome to Bouncing Ball!"
+!!! mascot-welcome "Benvenuto alla Pallina che Rimbalza!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    This is your first **animated** turtle program — the turtle moves continuously
-    inside a loop, and you see smooth motion on screen!
-    Let's code it together!
+    Questo è il tuo primo programma turtle **animato** — la tartaruga si muove continuamente
+    dentro un ciclo, e vedi un movimento fluido sullo schermo!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-Two variables `vx` and `vy` store the ball's velocity. Each step: `x += vx`, `y += vy`. If `x` hits the wall bounds, `vx = -vx` (reverse horizontal direction). If `y` hits the bounds, `vy = -vy`. `turtle.tracer(0)` turns off auto-drawing so we control when to refresh the screen.
+Due variabili `vx` e `vy` memorizzano la velocità della pallina. Ogni passo: `x += vx`, `y += vy`. Se `x` raggiunge i limiti del muro, `vx = -vx` (inverte la direzione orizzontale). Se `y` raggiunge i limiti, `vy = -vy`. `turtle.tracer(0)` disattiva il disegno automatico così controlliamo quando aggiornare lo schermo.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -50,13 +50,13 @@ for _ in range(400):
     screen.update()
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The ball starts at (0,0) with velocity (3,2).
-    After bouncing off all four walls many times, will it return to (0,0)?
-    Make your guess — then click Run to find out!
+    La pallina inizia a (0,0) con velocità (3,2).
+    Dopo aver rimbalzato su tutti i quattro muri molte volte, tornerà a (0,0)?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -113,27 +113,27 @@ for _ in range(400):
     screen.update()`);
 </script>
 
-The ball bounces around the box — reversing direction whenever it hits a wall. Were you right about returning to the origin?
+La pallina rimbalza attorno alla scatola — invertendo direzione ogni volta che colpisce un muro. Avevi indovinato sul ritorno all'origine?
 
-## How It Works
+## Come Funziona
 
-`screen.tracer(0)` tells turtle not to draw automatically after each command. `screen.update()` forces a single screen redraw. This gives smooth animation instead of flicker. The ball's position `(x, y)` is updated each step, and the boundary check `x > boundary` detects wall collisions.
+`screen.tracer(0)` dice a turtle di non disegnare automaticamente dopo ogni comando. `screen.update()` forza un singolo ridisegno dello schermo. Questo dà un'animazione fluida invece di sfarfallio. La posizione `(x, y)` della pallina è aggiornata a ogni passo, e il controllo dei limiti `x > boundary` rileva le collisioni con i muri.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `screen.tracer(0)` | Disable auto-update for smooth animation |
-| `vx, vy = 3, 2` | Initial velocity vector |
-| `if x > boundary: vx = -vx` | Reverse x velocity on wall hit |
-| `screen.update()` | Redraw the screen (one frame) |
+| `screen.tracer(0)` | Disabilita l'aggiornamento automatico per un'animazione fluida |
+| `vx, vy = 3, 2` | Vettore di velocità iniziale |
+| `if x > boundary: vx = -vx` | Inverte la velocità x alla collisione con il muro |
+| `screen.update()` | Ridisegna lo schermo (un fotogramma) |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add a Trail"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi una Traccia"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Add `ball.pendown()` before the loop to leave a trail.
-    The ball's path will trace out a geometric pattern — predict what it looks like!
+    Aggiungi `ball.pendown()` prima del ciclo per lasciare una traccia.
+    Il percorso della pallina traccerà un pattern geometrico — prevedi come sembrerà!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -178,20 +178,20 @@ for _ in range(600):
     screen.update()`);
 </script>
 
-The trail traces out a Lissajous-like figure! With vx=5, vy=3 (ratio 5:3), the path eventually returns to its starting point after tracing a complex geometric pattern.
+La traccia disegna una figura simile a Lissajous! Con vx=5, vy=3 (rapporto 5:3), il percorso alla fine ritorna al suo punto di partenza dopo aver tracciato un pattern geometrico complesso.
 
-## Experiments
+## Esperimenti
 
-1. **Make the ball leave a color trail.** Change the color each time a wall is hit. You'll know it worked when the trail changes color at each bounce.
+1. **Fai lasciare una traccia colorata alla pallina.** Cambia il colore ogni volta che un muro viene colpito. Saprai che ha funzionato quando la traccia cambia colore a ogni rimbalzo.
 
-2. **Two balls.** Create a second turtle `ball2` with a different starting velocity. You'll know it worked when two balls bounce independently.
+2. **Due palline.** Crea una seconda tartaruga `ball2` con una velocità di partenza diversa. Saprai che ha funzionato quando due palline rimbalzano indipendentemente.
 
-3. **Speed up over time.** Add `vx *= 1.002; vy *= 1.002` each step. You'll know it worked when the ball gradually bounces faster.
+3. **Accelera nel tempo.** Aggiungi `vx *= 1.002; vy *= 1.002` a ogni passo. Saprai che ha funzionato quando la pallina rimbalza gradualmente più velocemente.
 
-4. **Gravity simulation.** Add `vy -= 0.1` each step and set `if y < -boundary: vy = abs(vy) * 0.9`. You'll know it worked when the ball falls and bounces like gravity.
+4. **Simulazione di gravità.** Aggiungi `vy -= 0.1` a ogni passo e imposta `if y < -boundary: vy = abs(vy) * 0.9`. Saprai che ha funzionato quando la pallina cade e rimbalza come per gravità.
 
-!!! mascot-celebration "Animated!"
+!!! mascot-celebration "Animato!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You wrote your first animation loop — position, velocity, collision detection!
-    These are the building blocks of every physics-based video game.
-    Up next: **Clock Face** — animated hands that show the current time.
+    Hai scritto il tuo primo ciclo di animazione — posizione, velocità, rilevamento di collisione!
+    Questi sono i mattoni fondamentali di ogni videogioco basato sulla fisica.
+    Prossimo: **Quadrante dell'Orologio** — lancette animate che mostrano l'ora attuale.

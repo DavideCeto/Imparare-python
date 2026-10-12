@@ -151,6 +151,14 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
   gli altri quattro iniziano la categoria 4 "Frattali e Ricorsione"; il laboratorio
   della galleria `fractal-tree/` è un file diverso e più articolato rispetto a
   `docs/python-labs/12-fractal-tree.md` già tradotto in Fase 3, non un duplicato)
+- `turtle-maze/`, `parametric-surface/`, `linden-snowflakes/`, `generative-art/`,
+  `bouncing-ball/` (ottavo batch — nota: la pagina inglese `generative-art/index.md`
+  dichiara nel celebration finale "you made it through all 100 patterns", ma
+  nell'ordine reale della nav ci sono ancora decine di laboratori dopo questo
+  (animazione, tipografia, illusioni ottiche, ecc.) — è un'incongruenza editoriale
+  pre-esistente nell'originale inglese, non una corruzione testuale; tradotta
+  fedelmente senza correggerla, a differenza del blocco duplicato illeggibile
+  trovato in `honeycomb-grid/index.md`)
 
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
@@ -284,12 +292,13 @@ cuore didattico del libro.
 `fish-school/`, `mountain-range/`, `archimedean-spiral/`, `rainbow-line-spiral/`,
 `hexagonal-spiral/`, `triangular-spiral/`, `inward-spiral/`, `logarithmic-spiral/`,
 `double-helix-spiral/`, `fibonacci-spiral/`, `spiral-of-spirals/`, `pentagon-spiral/`,
-`koch-snowflake/`, `sierpinski-triangle/`, `fractal-tree/`, `l-system-plant/`
-(37 di ~102 file/unità).
+`koch-snowflake/`, `sierpinski-triangle/`, `fractal-tree/`, `l-system-plant/`,
+`turtle-maze/`, `parametric-surface/`, `linden-snowflakes/`, `generative-art/`,
+`bouncing-ball/` (42 di ~102 file/unità).
 
-Prossimo: continuare la Fase 4 in ordine di nav con `turtle-maze/`,
-`parametric-surface/`, `linden-snowflakes/`, `generative-art/`, `bouncing-ball/`, e così
-via attraverso i restanti ~66 singoli laboratori della galleria.
+Prossimo: continuare la Fase 4 in ordine di nav con `clock-face/`,
+`spirograph-drawer/`, `spiral-text/`, `seven-segment/`, `circular-badge/`, e così
+via attraverso i restanti ~61 singoli laboratori della galleria.
 
 Dopo la Fase 4: Fasi 5-9 (MicroSims, Teacher's Guide, Jupyter/Advanced, Learning Graph,
 Trinket Labs — quest'ultima di priorità minima/da valutare se tradurre affatto, vedi

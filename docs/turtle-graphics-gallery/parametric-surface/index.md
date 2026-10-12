@@ -2,28 +2,28 @@
 hide:
     - toc
 ---
-# Parametric Surface Projection
+# Proiezione di Superficie Parametrica
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Define a 3D surface with parametric equations `x(u,v)`, `y(u,v)`, `z(u,v)`
-- Project 3D coordinates onto 2D using isometric or perspective projection
-- Draw a wireframe mesh by connecting adjacent surface points
+- Definire una superficie 3D con equazioni parametriche `x(u,v)`, `y(u,v)`, `z(u,v)`
+- Proiettare coordinate 3D su 2D usando una proiezione isometrica o in prospettiva
+- Disegnare una mesh wireframe collegando punti adiacenti della superficie
 
-A 3D parametric surface — a saddle, torus, or wave — projected onto the 2D canvas using isometric projection. The wireframe mesh shows the surface's shape and curvature without shading.
+Una superficie parametrica 3D — una sella, un toro, o un'onda — proiettata sul canvas 2D usando la proiezione isometrica. La mesh wireframe mostra la forma e la curvatura della superficie senza ombreggiatura.
 
-!!! mascot-welcome "Welcome to 3D Projection!"
+!!! mascot-welcome "Benvenuto alla Proiezione 3D!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    3D graphics start here: compute x, y, z for every point on a surface,
-    then project onto 2D by combining the three coordinates.
-    This is the foundation of all 3D rendering!
-    Let's code it together!
+    La grafica 3D inizia qui: calcola x, y, z per ogni punto su una superficie,
+    poi proietta su 2D combinando le tre coordinate.
+    Questa è la base di tutto il rendering 3D!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-For a saddle surface: `x = u`, `y = v`, `z = u^2 - v^2`. Project to screen: `sx = (x - y) * cos30`, `sy = (x + y) * sin30 + z`. Draw grid lines by connecting adjacent points in both the u and v directions.
+Per una superficie a sella: `x = u`, `y = v`, `z = u^2 - v^2`. Proietta sullo schermo: `sx = (x - y) * cos30`, `sy = (x + y) * sin30 + z`. Disegna le linee della griglia collegando punti adiacenti sia nella direzione u sia in quella v.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -72,13 +72,13 @@ for j in range(n):
             monty.goto(pts[i][j])
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    A saddle surface has the equation `z = u² - v²` — it curves up in one direction and down in the other.
-    Will the projection show a clear saddle shape, or will it look flat?
-    Make your guess — then click Run to find out!
+    Una superficie a sella ha l'equazione `z = u² - v²` — si curva verso l'alto in una direzione e verso il basso nell'altra.
+    La proiezione mostrerà una forma di sella chiara, o sembrerà piatta?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -148,27 +148,27 @@ for j in range(n):
             monty.goto(pts[i][j])`);
 </script>
 
-A clear **3D saddle shape** — the surface curves upward in one diagonal direction and downward in the other. Were you right?
+Una chiara **forma a sella 3D** — la superficie si curva verso l'alto in una direzione diagonale e verso il basso nell'altra. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Isometric projection combines x, y, z into two screen coordinates: `sx = (x - y) * cos(30°)` and `sy = (x + y) * sin(30°) + z`. The 30° angles create the "cabinet" isometric view. Drawing grid lines in both u and v directions produces the wireframe mesh.
+La proiezione isometrica combina x, y, z in due coordinate dello schermo: `sx = (x - y) * cos(30°)` e `sy = (x + y) * sin(30°) + z`. Gli angoli di 30° creano la vista isometrica a "gabinetto". Disegnare linee della griglia sia nella direzione u sia in quella v produce la mesh wireframe.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `u = (i - n/2) / (n/4)` | Map grid index to real-valued parameter |
-| `z = (u*u - v*v) * scale / 2` | Saddle surface equation |
-| `sx = (x - y) * cos30` | Isometric x projection |
-| `sy = (x + y) * sin30 + z` | Isometric y projection with z height |
+| `u = (i - n/2) / (n/4)` | Mappa l'indice della griglia a un parametro a valore reale |
+| `z = (u*u - v*v) * scale / 2` | Equazione della superficie a sella |
+| `sx = (x - y) * cos30` | Proiezione isometrica x |
+| `sy = (x + y) * sin30 + z` | Proiezione isometrica y con altezza z |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Change to a Wave Surface"
+!!! mascot-thinking "Il Tuo Turno — Cambia in una Superficie Ondulata"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `z = (u*u - v*v) * scale / 2` to `z = scale * math.sin(u) * math.cos(v)`.
-    This is a wave surface — predict what it will look like!
+    Cambia `z = (u*u - v*v) * scale / 2` in `z = scale * math.sin(u) * math.cos(v)`.
+    Questa è una superficie ondulata — prevedi come apparirà!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -230,20 +230,20 @@ for j in range(n):
             monty.goto(pts[i][j])`);
 </script>
 
-A wave surface — undulating peaks and valleys like a frozen ocean wave!
+Una superficie ondulata — picchi e valli ondulate come un'onda oceanica congelata!
 
-## Experiments
+## Esperimenti
 
-1. **Try a sphere.** Use `x = scale*sin(u)*cos(v)`, `y = scale*sin(u)*sin(v)`, `z = scale*cos(u)` with u from 0 to π and v from 0 to 2π. You'll know it worked when a sphere wireframe appears.
+1. **Prova una sfera.** Usa `x = scale*sin(u)*cos(v)`, `y = scale*sin(u)*sin(v)`, `z = scale*cos(u)` con u da 0 a π e v da 0 a 2π. Saprai che ha funzionato quando appare un wireframe sferico.
 
-2. **Change the projection angle.** Replace 30° with 45°. You'll know it worked when the surface looks from a different viewpoint.
+2. **Cambia l'angolo di proiezione.** Sostituisci 30° con 45°. Saprai che ha funzionato quando la superficie si vede da un punto di vista diverso.
 
-3. **Increase density.** Change `n = 20`. You'll know it worked when the wireframe is denser with more grid lines.
+3. **Aumenta la densità.** Cambia `n = 20`. Saprai che ha funzionato quando il wireframe è più denso con più linee della griglia.
 
-4. **Try a torus.** `x = (R + r*cos(v))*cos(u)`, `y = (R + r*cos(v))*sin(u)`, `z = r*sin(v)`. You'll know it worked when a donut shape appears.
+4. **Prova un toro.** `x = (R + r*cos(v))*cos(u)`, `y = (R + r*cos(v))*sin(u)`, `z = r*sin(v)`. Saprai che ha funzionato quando appare una forma a ciambella.
 
-!!! mascot-celebration "3D from 2D!"
+!!! mascot-celebration "3D dal 2D!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You projected a 3D parametric surface onto 2D using isometric math!
-    This is the foundation of every 3D game engine and CAD software.
-    Up next: **Lindenmayer Snowflake Collection** — multiple L-system snowflakes.
+    Hai proiettato una superficie parametrica 3D su 2D usando la matematica isometrica!
+    Questa è la base di ogni motore di gioco 3D e software CAD.
+    Prossimo: **Collezione di Fiocchi di Neve di Lindenmayer** — più fiocchi di neve a sistema-L.

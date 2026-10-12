@@ -2,33 +2,33 @@
 hide:
     - toc
 ---
-# Generative Art Loop
+# Ciclo di Arte Generativa
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Combine multiple turtle techniques — spirals, color cycling, polar coordinates — into one flowing program
-- Use a parameter loop to automatically generate a family of related images
-- Understand generative art: code that produces unique visual output governed by rules
+- Combinare più tecniche della tartaruga — spirali, ciclo di colori, coordinate polari — in un unico programma fluido
+- Usare un ciclo di parametri per generare automaticamente una famiglia di immagini correlate
+- Capire l'arte generativa: codice che produce output visivo unico governato da regole
 
-The grand finale of the gallery — a generative art loop that combines spirals, color cycling, golden-angle placement, and parametric curves to produce a unique, complex composition each time the seed changes.
+Il gran finale della galleria — un ciclo di arte generativa che combina spirali, ciclo di colori, posizionamento ad angolo d'oro, e curve parametriche per produrre una composizione unica e complessa ogni volta che il seme cambia.
 
-!!! mascot-welcome "Welcome to the Generative Art Loop!"
+!!! mascot-welcome "Benvenuto al Ciclo di Arte Generativa!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    You've made it to the final lab in the gallery!
-    This program combines every technique from the gallery into one composition.
-    Every seed produces a different artwork — let's code the art machine!
+    Sei arrivato all'ultimo laboratorio della galleria!
+    Questo programma combina ogni tecnica della galleria in un'unica composizione.
+    Ogni seme produce un'opera d'arte diversa — programmiamo la macchina dell'arte!
 
-## How It Works
+## Come Funziona
 
-The program runs three layers:
+Il programma esegue tre strati:
 
-1. **Golden spiral dots** — 300 colored dots placed by the golden angle
-2. **Parametric rose** — a rose curve overlaid in semi-transparent white
-3. **Nested spirals** — 6 mini-spirals at positions computed from the rose curve
+1. **Punti a spirale dorata** — 300 punti colorati posizionati secondo l'angolo d'oro
+2. **Rosa parametrica** — una curva a rosa sovrapposta in bianco semi-trasparente
+3. **Spirali annidate** — 6 mini-spirali in posizioni calcolate dalla curva a rosa
 
-Together they form a complex, layered composition.
+Insieme formano una composizione complessa e stratificata.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -87,13 +87,13 @@ for arm in range(6):
         monty.dot(2, palette[arm])
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Three layers — golden dots, a rose curve, and 6 mini-spirals — all centered together.
-    Will the layers look separate and cluttered, or will they combine into a unified image?
-    Make your guess — then click Run to find out!
+    Tre strati — punti dorati, una curva a rosa, e 6 mini-spirali — tutti centrati insieme.
+    Gli strati sembreranno separati e disordinati, o si combineranno in un'immagine unificata?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -172,28 +172,28 @@ for arm in range(6):
         monty.dot(2, palette[arm])`);
 </script>
 
-A **complex layered composition** — the three layers interweave to form a unified artwork. Were you right?
+Una **composizione complessa e stratificata** — i tre strati si intrecciano per formare un'opera d'arte unificata. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-The golden dots fill the background with color texture. The rose curve provides structural geometry. The mini-spirals add focal points at the rose's petal positions. When all three layers share the same center and coordinate system, they naturally compose together.
+I punti dorati riempiono lo sfondo con texture di colore. La curva a rosa fornisce geometria strutturale. Le mini-spirali aggiungono punti focali nelle posizioni dei petali della rosa. Quando tutti e tre gli strati condividono lo stesso centro e sistema di coordinate, si compongono naturalmente insieme.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `golden = 137.508` | Golden angle — optimally spaced dots |
-| `math.cos(k * theta)` | Rose curve — 5 petals at k=5 |
-| `arm * 60` | Six arms at 60° spacing |
-| `palette[n % len(palette)]` | Cycling color assignment |
+| `golden = 137.508` | Angolo d'oro — punti spaziati in modo ottimale |
+| `math.cos(k * theta)` | Curva a rosa — 5 petali con k=5 |
+| `arm * 60` | Sei bracci spaziati di 60° |
+| `palette[n % len(palette)]` | Assegnazione di colore ciclica |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Change the Seed"
+!!! mascot-thinking "Il Tuo Turno — Cambia il Seme"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `seed = 7` to `seed = 99`.
-    Predict: which part of the composition will change? (Not all three layers use `random`!)
-    Run it to find out which layers are deterministic and which are random.
+    Cambia `seed = 7` in `seed = 99`.
+    Prevedi: quale parte della composizione cambierà? (Non tutti e tre gli strati usano `random`!)
+    Eseguilo per scoprire quali strati sono deterministici e quali sono casuali.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -263,20 +263,20 @@ for arm in range(7):
         monty.dot(2, palette[arm % len(palette)])`);
 </script>
 
-Blue palette, 7-petaled rose, 7 spiral arms — a completely different but equally structured composition.
+Tavolozza blu, rosa a 7 petali, 7 bracci a spirale — una composizione completamente diversa ma ugualmente strutturata.
 
-## Experiments
+## Esperimenti
 
-1. **Use a dark background.** Add `turtle.bgcolor('black')` and change the palette to bright colors. You'll know it worked when the dots glow against the dark background.
+1. **Usa uno sfondo scuro.** Aggiungi `turtle.bgcolor('black')` e cambia la tavolozza in colori brillanti. Saprai che ha funzionato quando i punti brillano contro lo sfondo scuro.
 
-2. **Try k=8 for the rose.** Change `k = 5` to `k = 8`. Remember: even k gives 2k petals = 16 petals! You'll know it worked when a more complex rose appears.
+2. **Prova k=8 per la rosa.** Cambia `k = 5` in `k = 8`. Ricorda: un k pari dà 2k petali = 16 petali! Saprai che ha funzionato quando appare una rosa più complessa.
 
-3. **Add a fourth layer.** Add a Lissajous figure drawn over the top in white. You'll know it worked when a third kind of curve joins the composition.
+3. **Aggiungi un quarto strato.** Aggiungi una figura di Lissajous disegnata sopra in bianco. Saprai che ha funzionato quando un terzo tipo di curva si aggiunge alla composizione.
 
-4. **Loop through seeds 1–6.** Clear the screen between seeds and draw six variants automatically. You'll know it worked when 6 different compositions are generated in sequence.
+4. **Cicla attraverso i semi 1–6.** Pulisci lo schermo tra i semi e disegna sei varianti automaticamente. Saprai che ha funzionato quando 6 composizioni diverse sono generate in sequenza.
 
-!!! mascot-celebration "You Completed the Gallery!"
+!!! mascot-celebration "Hai Completato la Galleria!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You made it through all 100 turtle graphics patterns — from a simple square spiral
-    to a layered generative artwork! You've learned loops, functions, recursion, fractals,
-    parametric math, L-systems, and so much more. Keep coding — the canvas is infinite!
+    Sei arrivato in fondo a tutti i 100 pattern di grafica turtle — da una semplice spirale quadrata
+    a un'opera d'arte generativa stratificata! Hai imparato cicli, funzioni, ricorsione, frattali,
+    matematica parametrica, sistemi-L, e molto altro. Continua a programmare — il canvas è infinito!
