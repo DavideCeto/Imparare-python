@@ -1,22 +1,22 @@
-# Changing Colors with If-Else
+# Cambiare Colori con If-Else
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Write an `if/else` statement to make a choice in your code
-- Use the modulo operator `%` to test whether a number is odd or even
-- Draw a square with alternating red and blue sides
+- Scrivere un'istruzione `if/else` per fare una scelta nel tuo codice
+- Usare l'operatore modulo `%` per verificare se un numero è dispari o pari
+- Disegnare un quadrato con lati rossi e blu che si alternano
 
-What if you want the turtle to draw some sides in red and others in blue — automatically? An `if/else` statement makes a choice every time the loop runs, so each side can be a different color without any extra work from you.
+Cosa succede se vuoi che la tartaruga disegni alcuni lati in rosso e altri in blu — automaticamente? Un'istruzione `if/else` fa una scelta ogni volta che il ciclo gira, così ogni lato può essere di un colore diverso senza nessun lavoro extra da parte tua.
 
-!!! mascot-welcome "Welcome to This Lesson!"
+!!! mascot-welcome "Benvenuto a Questa Lezione!"
     ![Monty waving welcome](../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Loops repeat, but what if you need something to be *different* on some repetitions?
-    That's what `if/else` is for! Today you'll teach Monty to pick colors automatically.
-    Let's code it together!
+    I cicli si ripetono, ma cosa succede se hai bisogno che qualcosa sia *diverso* in alcune ripetizioni?
+    È per questo che esiste `if/else`! Oggi insegnerai a Monty a scegliere i colori automaticamente.
+    Programmiamo insieme!
 
-## If-Else: Making Choices
+## If-Else: Fare Scelte
 
-An **if/else** statement runs one block of code when a condition is true and a different block when it's false:
+Un'istruzione **if/else** esegue un blocco di codice quando una condizione è vera e un blocco diverso quando è falsa:
 
 ```python
 if condition:
@@ -25,16 +25,16 @@ else:
     # runs when condition is False
 ```
 
-To alternate colors every other side, you need to know whether the loop counter `i` is **odd** or **even**. The **modulo operator** `%` gives you the remainder after division. `i % 2` is:
-- `0` when `i` is even (0, 2, 4, …)
-- `1` when `i` is odd (1, 3, 5, …)
+Per alternare i colori ogni altro lato, devi sapere se il contatore del ciclo `i` è **dispari** o **pari**. L'**operatore modulo** `%` ti dà il resto dopo la divisione. `i % 2` è:
+- `0` quando `i` è pari (0, 2, 4, …)
+- `1` quando `i` è dispari (1, 3, 5, …)
 
-!!! mascot-tip "Scratch Bridge"
+!!! mascot-tip "Ponte Scratch"
     ![Monty with a tip](../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch you used the **"If … then / else"** block to make a choice.
-    In Python, `if condition:` / `else:` does exactly the same thing — just written as text!
+    In Scratch hai usato il blocco **"Se … allora / altrimenti"** per fare una scelta.
+    In Python, `if condition:` / `else:` fa esattamente la stessa cosa — solo scritta come testo!
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -53,15 +53,15 @@ for i in range(4):
     monty.right(angle)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    `i` goes 0, 1, 2, 3. Which values make `i % 2 == 0` true?
-    Will the first side be red or blue? Make your guess — then click Run!
+    `i` va 0, 1, 2, 3. Quali valori rendono vero `i % 2 == 0`?
+    Il primo lato sarà rosso o blu? Fai la tua previsione — poi clicca Esegui!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see the result right on this page.
-No account needed — everything runs in your browser.
+Modifica il codice sotto e clicca **Esegui** per vedere il risultato direttamente su questa pagina.
+Nessun account necessario — tutto gira nel tuo browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -99,37 +99,37 @@ for i in range(4):
     monty.right(angle)`);
 </script>
 
-Were you right? When `i` is 0 or 2, `i % 2 == 0` is true, so those sides are red. When `i` is 1 or 3, it's false, so those sides are blue — alternating all the way around the square.
+Avevi indovinato? Quando `i` è 0 o 2, `i % 2 == 0` è vero, quindi quei lati sono rossi. Quando `i` è 1 o 3, è falso, quindi quei lati sono blu — alternandosi tutto intorno al quadrato.
 
-## How It Works
+## Come Funziona
 
-The loop counter `i` starts at 0. On each repetition the `if` condition is checked: is `i % 2` equal to 0? If yes, the color becomes red. If no, the color becomes blue. After the `if/else` block, `forward` and `right` always run — they're at the same indentation level as the `if`, not inside either branch.
+Il contatore del ciclo `i` inizia a 0. A ogni ripetizione viene controllata la condizione `if`: `i % 2` è uguale a 0? Se sì, il colore diventa rosso. Se no, il colore diventa blu. Dopo il blocco `if/else`, `forward` e `right` girano sempre — sono allo stesso livello di indentazione dell'`if`, non dentro nessuno dei due rami.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `for i in range(4):` | Repeats 4 times; `i` is 0, 1, 2, then 3 |
-| `if i % 2 == 0:` | True when `i` is even (0, 2); false when `i` is odd (1, 3) |
-| `    monty.color('red')` | Runs only when the condition is true (indented 8 spaces — inside the `if`) |
-| `else:` | What to do when the condition is false |
-| `    monty.color('blue')` | Runs only when the condition is false |
-| `monty.forward(distance)` | Always runs — at the same level as `if`, not inside either branch |
+| `for i in range(4):` | Si ripete 4 volte; `i` è 0, 1, 2, poi 3 |
+| `if i % 2 == 0:` | Vero quando `i` è pari (0, 2); falso quando `i` è dispari (1, 3) |
+| `    monty.color('red')` | Gira solo quando la condizione è vera (indentata di 8 spazi — dentro l'`if`) |
+| `else:` | Cosa fare quando la condizione è falsa |
+| `    monty.color('blue')` | Gira solo quando la condizione è falsa |
+| `monty.forward(distance)` | Gira sempre — allo stesso livello dell'`if`, non dentro nessuno dei due rami |
 
-!!! mascot-warning "Indentation Is the Key"
+!!! mascot-warning "L'Indentazione È la Chiave"
     ![Monty warning](../img/mascot/warning.png){ class="mascot-admonition-img" }
-    Lines inside the `if` branch need 8 spaces (4 for the loop + 4 for the if).
-    Lines inside the `else` branch also need 8 spaces.
-    `monty.forward(distance)` needs only 4 (it's in the loop but not in either branch).
-    Mix these up and the wrong lines will be inside the wrong blocks!
+    Le righe dentro il ramo `if` hanno bisogno di 8 spazi (4 per il ciclo + 4 per l'if).
+    Le righe dentro il ramo `else` hanno bisogno anch'esse di 8 spazi.
+    `monty.forward(distance)` ha bisogno solo di 4 (è nel ciclo ma non in nessuno dei due rami).
+    Confondi questi e le righe sbagliate saranno nei blocchi sbagliati!
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add the Missing Lines"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi le Righe Mancanti"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below draws a hexagon where every **third** side should be green
-    and the other sides should be orange. The condition uses `i % 3 == 0`.
-    Add the **two missing color lines** — one inside the `if` and one inside the `else`!
+    Il programma sotto disegna un esagono dove ogni **terzo** lato dovrebbe essere verde
+    e gli altri lati dovrebbero essere arancioni. La condizione usa `i % 3 == 0`.
+    Aggiungi le **due righe di colore mancanti** — una dentro l'`if` e una dentro l'`else`!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -163,27 +163,27 @@ for i in range(sides):
     monty.right(angle)`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes to the original alternating-color square. Predict first!
+Prova questi cambiamenti al quadrato con colori alternati originale. Prevedi prima!
 
-1. Swap the colors — put `'blue'` in the `if` branch and `'red'` in the `else` branch.
-   **You'll know it worked when** the first side is blue instead of red.
+1. Scambia i colori — metti `'blue'` nel ramo `if` e `'red'` nel ramo `else`.
+   **Saprai che ha funzionato quando** il primo lato è blu invece di rosso.
 
-2. Change `monty.color('red')` to `monty.pensize(6)` (remove the `color` line and add `pensize`).
-   **You'll know it worked when** alternating sides are thick while the others stay thin.
+2. Cambia `monty.color('red')` in `monty.pensize(6)` (rimuovi la riga `color` e aggiungi `pensize`).
+   **Saprai che ha funzionato quando** i lati alternati sono spessi mentre gli altri restano fini.
 
-3. Change `range(4)` to `range(6)` and `angle` to `60` to draw a hexagon.
-   **You'll know it worked when** you see a 6-sided shape with alternating colors.
+3. Cambia `range(4)` in `range(6)` e `angle` in `60` per disegnare un esagono.
+   **Saprai che ha funzionato quando** vedi una forma a 6 lati con colori alternati.
 
-4. Change the condition from `i % 2 == 0` to `i > 1`.
-   **You'll know it worked when** the first two sides are one color and the last two are another.
+4. Cambia la condizione da `i % 2 == 0` a `i > 1`.
+   **Saprai che ha funzionato quando** i primi due lati sono di un colore e gli ultimi due di un altro.
 
-5. Add a third color: use `elif i % 3 == 1:` between the `if` and `else` blocks.
-   **You'll know it worked when** sides cycle through three colors.
+5. Aggiungi un terzo colore: usa `elif i % 3 == 1:` tra i blocchi `if` ed `else`.
+   **Saprai che ha funzionato quando** i lati scorrono attraverso tre colori.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You can now make decisions inside a loop — that's the combination most real programs are built on!
-    Next up: you'll create your own *functions* to organize your drawing code.
-    Let's code it together!
+    Ora puoi prendere decisioni dentro un ciclo — questa è la combinazione su cui si basano la maggior parte dei programmi reali!
+    Il prossimo passo: creerai le tue proprie *funzioni* per organizzare il tuo codice di disegno.
+    Programmiamo insieme!

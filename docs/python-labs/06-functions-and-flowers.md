@@ -1,22 +1,22 @@
-# Functions and Flowers
+# Funzioni e Fiori
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Define your own function with `def` and call it by name
-- Call a function multiple times from inside a loop
-- Build a flower drawing by repeating a `petal()` function
+- Definire la tua propria funzione con `def` e chiamarla per nome
+- Chiamare una funzione più volte da dentro un ciclo
+- Costruire un disegno di fiore ripetendo una funzione `petal()`
 
-What if you could give a chunk of code a name and run it whenever you want — just by saying the name? That's what a **function** is. In this lab you'll define a `petal()` function and call it in a loop to grow a full flower on the canvas.
+Cosa succede se potessi dare un nome a un pezzo di codice ed eseguirlo quando vuoi — semplicemente dicendo il nome? Questo è cos'è una **funzione**. In questo laboratorio definirai una funzione `petal()` e la chiamerai in un ciclo per far crescere un fiore completo sul canvas.
 
-!!! mascot-welcome "Welcome to This Lesson!"
+!!! mascot-welcome "Benvenuto a Questa Lezione!"
     ![Monty waving welcome](../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Functions are the secret to writing code that's short, clear, and easy to reuse.
-    Today we're going to grow a flower together — one petal at a time!
-    Let's code it together!
+    Le funzioni sono il segreto per scrivere codice che è corto, chiaro, e facile da riutilizzare.
+    Oggi faremo crescere un fiore insieme — un petalo alla volta!
+    Programmiamo insieme!
 
-## Defining a Function
+## Definire una Funzione
 
-A **function** is a block of code you write once and can run as many times as you want by calling its name. You create one with `def`:
+Una **funzione** è un blocco di codice che scrivi una volta e puoi eseguire quante volte vuoi chiamando il suo nome. La crei con `def`:
 
 ```python
 def petal():
@@ -28,14 +28,14 @@ def petal():
     monty.right(120)
 ```
 
-This function draws one triangle — one petal. To use it, call `petal()`. To draw four petals, call it four times (or put it in a loop).
+Questa funzione disegna un triangolo — un petalo. Per usarla, chiama `petal()`. Per disegnare quattro petali, chiamala quattro volte (o metti la chiamata in un ciclo).
 
-!!! mascot-tip "Scratch Bridge"
+!!! mascot-tip "Ponte Scratch"
     ![Monty with a tip](../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch you used **"My Blocks"** to define a custom block and then drag it where you needed it.
-    In Python, `def petal():` defines the block, and `petal()` is how you use it — every time you call it, the whole function runs!
+    In Scratch hai usato **"I Miei Blocchi"** per definire un blocco personalizzato e poi trascinarlo dove ne avevi bisogno.
+    In Python, `def petal():` definisce il blocco, e `petal()` è come lo usi — ogni volta che lo chiami, l'intera funzione gira!
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -64,16 +64,16 @@ monty.forward(120)
 monty.hideturtle()
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    `petal()` is called 4 times, and each petal rotates 90 degrees from the last.
-    What do you think the full drawing will look like — a flower, a pinwheel, something else?
-    Make your guess — then click Run!
+    `petal()` viene chiamata 4 volte, e ogni petalo ruota di 90 gradi dall'ultimo.
+    Come pensi che apparirà il disegno completo — un fiore, una girandola, qualcos'altro?
+    Fai la tua previsione — poi clicca Esegui!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see the result right on this page.
-No account needed — everything runs in your browser.
+Modifica il codice sotto e clicca **Esegui** per vedere il risultato direttamente su questa pagina.
+Nessun account necessario — tutto gira nel tuo browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -121,32 +121,32 @@ monty.forward(120)
 monty.hideturtle()`);
 </script>
 
-Were you right? Four filled pink triangles arranged around a center with a green stem — a flower!
+Avevi indovinato? Quattro triangoli rosa riempiti disposti attorno a un centro con uno stelo verde — un fiore!
 
-## How It Works
+## Come Funziona
 
-`def petal():` creates the function but doesn't run it yet. The code inside it stays idle until you call `petal()`. When the `for i in range(4):` loop runs, it calls `petal()` four times. Each call draws one triangle and then rotates the turtle 90 degrees so the next petal points in a new direction.
+`def petal():` crea la funzione ma non la esegue ancora. Il codice dentro di essa resta inattivo finché non chiami `petal()`. Quando gira il ciclo `for i in range(4):`, chiama `petal()` quattro volte. Ogni chiamata disegna un triangolo e poi ruota la tartaruga di 90 gradi così il petalo successivo punta in una nuova direzione.
 
-`begin_fill()` and `end_fill()` paint the inside of whatever shape the turtle traces between those two calls. `hideturtle()` removes the turtle cursor at the end for a cleaner result.
+`begin_fill()` ed `end_fill()` colorano l'interno di qualsiasi forma la tartaruga tracci tra quelle due chiamate. `hideturtle()` rimuove il cursore della tartaruga alla fine per un risultato più pulito.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `def petal():` | Defines a function called `petal` — code here runs when `petal()` is called |
-| `monty.begin_fill()` | Starts recording the path for filling |
-| `monty.color('pink')` | Sets the fill and outline color to pink |
-| `for i in range(3):` | Loops 3 times inside the function to draw each triangle side |
-| `monty.end_fill()` | Fills the enclosed area with the current color |
-| `monty.right(90)` | Rotates 90° so the next petal faces a new direction |
-| `for i in range(4): petal()` | Calls the function 4 times to draw 4 petals |
+| `def petal():` | Definisce una funzione chiamata `petal` — il codice qui gira quando `petal()` viene chiamata |
+| `monty.begin_fill()` | Inizia a registrare il percorso per il riempimento |
+| `monty.color('pink')` | Imposta il colore di riempimento e del contorno su rosa |
+| `for i in range(3):` | Si ripete 3 volte dentro la funzione per disegnare ogni lato del triangolo |
+| `monty.end_fill()` | Riempie l'area racchiusa con il colore attuale |
+| `monty.right(90)` | Ruota di 90° così il petalo successivo guarda in una nuova direzione |
+| `for i in range(4): petal()` | Chiama la funzione 4 volte per disegnare 4 petali |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Spot the Bug!"
+!!! mascot-warning "Trova il Bug!"
     ![Monty warning](../img/mascot/warning.png){ class="mascot-admonition-img" }
-    The program below tries to draw 4 petals, but only one appears before the program stops.
-    The function is never called inside the loop. Can you find and fix the problem?
+    Il programma sotto cerca di disegnare 4 petali, ma solo uno appare prima che il programma si fermi.
+    La funzione non viene mai chiamata dentro il ciclo. Riesci a trovare e correggere il problema?
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -182,27 +182,27 @@ for i in range(4):
     pass  # bug: petal() is never called here!`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes to the flower code. Predict first, then run!
+Prova questi cambiamenti al codice del fiore. Prevedi prima, poi esegui!
 
-1. Change `monty.color('pink')` to `monty.color('yellow')`.
-   **You'll know it worked when** the petals are yellow instead of pink.
+1. Cambia `monty.color('pink')` in `monty.color('yellow')`.
+   **Saprai che ha funzionato quando** i petali sono gialli invece di rosa.
 
-2. Change `for i in range(4): petal()` to `for i in range(6): petal()` and the rotation inside `petal` to `monty.right(60)`.
-   **You'll know it worked when** you see 6 petals instead of 4.
+2. Cambia `for i in range(4): petal()` in `for i in range(6): petal()` e la rotazione dentro `petal` in `monty.right(60)`.
+   **Saprai che ha funzionato quando** vedi 6 petali invece di 4.
 
-3. Change `distance = 80` to `distance = 120`.
-   **You'll know it worked when** the petals are noticeably larger.
+3. Cambia `distance = 80` in `distance = 120`.
+   **Saprai che ha funzionato quando** i petali sono notevolmente più grandi.
 
-4. Add an `if/else` inside `petal()` so it alternates between `'pink'` and `'purple'` using `i % 2`.
-   **You'll know it worked when** the petals alternate colors. (Hint: you'll need to pass `i` to the function.)
+4. Aggiungi un `if/else` dentro `petal()` così che alterni tra `'pink'` e `'purple'` usando `i % 2`.
+   **Saprai che ha funzionato quando** i petali alternano i colori. (Suggerimento: dovrai passare `i` alla funzione.)
 
-5. Change the stem direction: replace `monty.right(45)` with `monty.left(45)`.
-   **You'll know it worked when** the stem grows upward-left instead of downward-right.
+5. Cambia la direzione dello stelo: sostituisci `monty.right(45)` con `monty.left(45)`.
+   **Saprai che ha funzionato quando** lo stelo cresce verso l'alto-sinistra invece che verso il basso-destra.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You defined your first function and used it to build something beautiful!
-    In the next lab you'll give your functions *parameters* so the same function can draw
-    different things depending on what you pass in. Let's code it together!
+    Hai definito la tua prima funzione e l'hai usata per costruire qualcosa di bellissimo!
+    Nel prossimo laboratorio darai alle tue funzioni dei *parametri* così la stessa funzione può disegnare
+    cose diverse in base a cosa le passi. Programmiamo insieme!

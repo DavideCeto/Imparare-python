@@ -1,22 +1,22 @@
-# Function Parameters: Drawing Squares Anywhere
+# Parametri delle Funzioni: Disegnare Quadrati Ovunque
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Add **parameters** to a function so callers can pass in values
-- Call the same function multiple times with different colors and positions
-- Use `penup()` and `goto()` to reposition the turtle without drawing
+- Aggiungere **parametri** a una funzione così chi la chiama può passare dei valori
+- Chiamare la stessa funzione più volte con colori e posizioni diverse
+- Usare `penup()` e `goto()` per riposizionare la tartaruga senza disegnare
 
-One function can do many different things if you give it **parameters** — inputs it receives from the caller. In this lab, you'll write a `square()` function that accepts a color and a position, then call it four times to paint four different-colored squares around the canvas.
+Una funzione può fare molte cose diverse se le dai dei **parametri** — input che riceve da chi la chiama. In questo laboratorio, scriverai una funzione `square()` che accetta un colore e una posizione, poi la chiamerai quattro volte per dipingere quattro quadrati di colore diverso attorno al canvas.
 
-!!! mascot-welcome "Welcome to This Lesson!"
+!!! mascot-welcome "Benvenuto a Questa Lezione!"
     ![Monty waving welcome](../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    You already know how to define a function. Today you'll make functions that can take instructions!
-    A function with parameters is like a vending machine — you press a button (pass in a value)
-    and get exactly what you asked for. Let's code it together!
+    Sai già come definire una funzione. Oggi farai funzioni che possono ricevere istruzioni!
+    Una funzione con parametri è come una macchina distributrice — premi un bottone (passi un valore)
+    e ottieni esattamente quello che hai chiesto. Programmiamo insieme!
 
-## Parameters: Inputs for Functions
+## Parametri: Input per le Funzioni
 
-A **parameter** is a variable inside a function's parentheses that receives a value when the function is called:
+Un **parametro** è una variabile dentro le parentesi di una funzione che riceve un valore quando la funzione viene chiamata:
 
 ```python
 def square(my_color, x, y):
@@ -25,9 +25,9 @@ def square(my_color, x, y):
     ...
 ```
 
-When you call `square('red', -50, 80)`, Python sets `my_color = 'red'`, `x = -50`, and `y = 80` automatically — no extra assignment needed.
+Quando chiami `square('red', -50, 80)`, Python imposta `my_color = 'red'`, `x = -50`, e `y = 80` automaticamente — nessuna assegnazione extra necessaria.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -55,16 +55,16 @@ square('blue',    20, -20)
 monty.hideturtle()
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    `square()` is called four times with four different colors and four different positions.
-    How many squares will appear on the canvas, and where will they be?
-    Make your guess — then click Run!
+    `square()` viene chiamata quattro volte con quattro colori diversi e quattro posizioni diverse.
+    Quanti quadrati appariranno sul canvas, e dove saranno?
+    Fai la tua previsione — poi clicca Esegui!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see the result right on this page.
-No account needed — everything runs in your browser.
+Modifica il codice sotto e clicca **Esegui** per vedere il risultato direttamente su questa pagina.
+Nessun account necessario — tutto gira nel tuo browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -111,35 +111,35 @@ square('blue',    20, -20)
 monty.hideturtle()`);
 </script>
 
-Were you right? Four filled squares in a 2×2 grid — red and orange on top, green and blue on the bottom.
+Avevi indovinato? Quattro quadrati riempiti in una griglia 2×2 — rosso e arancione in alto, verde e blu in basso.
 
-## How It Works
+## Come Funziona
 
-`penup()` lifts the pen so no line appears while the turtle travels to the new position. `goto(x, y)` moves the turtle to that exact coordinate. `pendown()` lowers the pen so drawing resumes. This penup/goto/pendown pattern is how you start any shape at a specific location.
+`penup()` alza la penna così non appare nessuna linea mentre la tartaruga viaggia verso la nuova posizione. `goto(x, y)` muove la tartaruga a quella coordinata esatta. `pendown()` abbassa la penna così il disegno riprende. Questo pattern penup/goto/pendown è come inizi qualsiasi forma a una posizione specifica.
 
-Each time `square()` is called with different arguments, Python creates fresh copies of `my_color`, `x`, and `y` inside the function — the previous call's values are gone. The function uses them, finishes, and waits to be called again.
+Ogni volta che `square()` viene chiamata con argomenti diversi, Python crea nuove copie di `my_color`, `x`, e `y` dentro la funzione — i valori della chiamata precedente sono spariti. La funzione li usa, finisce, e aspetta di essere chiamata di nuovo.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `def square(my_color, x, y):` | Defines `square` with 3 parameters: color, horizontal position, vertical position |
-| `monty.penup()` | Lifts the pen — no line drawn while moving |
-| `monty.goto(x, y)` | Moves the turtle to coordinates `(x, y)` |
-| `monty.pendown()` | Lowers the pen — drawing resumes |
-| `square('red', -80, 80)` | Calls the function: `my_color='red'`, `x=-80`, `y=80` |
+| `def square(my_color, x, y):` | Definisce `square` con 3 parametri: colore, posizione orizzontale, posizione verticale |
+| `monty.penup()` | Alza la penna — nessuna linea disegnata mentre si muove |
+| `monty.goto(x, y)` | Muove la tartaruga alle coordinate `(x, y)` |
+| `monty.pendown()` | Abbassa la penna — il disegno riprende |
+| `square('red', -80, 80)` | Chiama la funzione: `my_color='red'`, `x=-80`, `y=80` |
 
-!!! mascot-tip "The Canvas Grid"
+!!! mascot-tip "La Griglia del Canvas"
     ![Monty with a tip](../img/mascot/tip.png){ class="mascot-admonition-img" }
-    The canvas center is `(0, 0)`. Positive `x` goes right, negative goes left.
-    Positive `y` goes up, negative goes down. So `(-80, 80)` is upper-left and `(20, -20)` is lower-right.
+    Il centro del canvas è `(0, 0)`. `x` positiva va a destra, negativa va a sinistra.
+    `y` positiva va in alto, negativa va in basso. Quindi `(-80, 80)` è in alto a sinistra e `(20, -20)` è in basso a destra.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add a Fifth Square"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi un Quinto Quadrato"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below draws four squares using the `square()` function.
-    Add **one line** at the bottom to draw a fifth purple square centered at `(-30, 30)`.
+    Il codice sotto disegna quattro quadrati usando la funzione `square()`.
+    Aggiungi **una riga** in fondo per disegnare un quinto quadrato viola centrato a `(-30, 30)`.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -181,27 +181,27 @@ square('blue',    20, -20)
 monty.hideturtle()`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes to the four-squares code. Predict first, then run!
+Prova questi cambiamenti al codice dei quattro quadrati. Prevedi prima, poi esegui!
 
-1. Change `size = 60` to `size = 40`.
-   **You'll know it worked when** all four squares are smaller.
+1. Cambia `size = 60` in `size = 40`.
+   **Saprai che ha funzionato quando** tutti e quattro i quadrati sono più piccoli.
 
-2. Add a fourth parameter `my_size` to the function definition, and use it in `forward(my_size)` instead of `forward(size)`. Then pass different sizes in each call.
-   **You'll know it worked when** the four squares are all different sizes.
+2. Aggiungi un quarto parametro `my_size` alla definizione della funzione, e usalo in `forward(my_size)` invece di `forward(size)`. Poi passa dimensioni diverse in ogni chiamata.
+   **Saprai che ha funzionato quando** i quattro quadrati sono tutti di dimensioni diverse.
 
-3. Add `monty.pensize(3)` inside the function, before the loop.
-   **You'll know it worked when** all four squares have a thicker outline.
+3. Aggiungi `monty.pensize(3)` dentro la funzione, prima del ciclo.
+   **Saprai che ha funzionato quando** tutti e quattro i quadrati hanno un contorno più spesso.
 
-4. Change the `range(4)` inside the function to `range(3)` and `angle` to `120`.
-   **You'll know it worked when** you see four filled triangles instead of squares.
+4. Cambia il `range(4)` dentro la funzione in `range(3)` e `angle` in `120`.
+   **Saprai che ha funzionato quando** vedi quattro triangoli riempiti invece di quadrati.
 
-5. Use a `for` loop to call `square()` six times with colors from a list.
-   **You'll know it worked when** six shapes appear across the canvas.
+5. Usa un ciclo `for` per chiamare `square()` sei volte con colori da una lista.
+   **Saprai che ha funzionato quando** sei forme appaiono attraverso il canvas.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Parameters make functions flexible — write once, use everywhere with different values.
-    In the next lab you'll meet the `random` library and let Python choose colors and positions for you!
-    Let's code it together!
+    I parametri rendono le funzioni flessibili — scrivi una volta, usa ovunque con valori diversi.
+    Nel prossimo laboratorio incontrerai la libreria `random` e lascerai che Python scelga colori e posizioni per te!
+    Programmiamo insieme!
