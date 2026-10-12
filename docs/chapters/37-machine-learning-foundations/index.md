@@ -1,28 +1,28 @@
 ---
-title: Machine Learning Foundations
-description: Understand supervised vs unsupervised learning, train/val/test splits, overfitting, and build a first neural network with Keras on the MNIST dataset
+title: Fondamenti di Machine Learning
+description: Capisci l'apprendimento supervisionato vs non supervisionato, le divisioni train/val/test, l'overfitting, e costruisci una prima rete neurale con Keras sul dataset MNIST
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 16:10:00
 version: 0.09
 ---
 
-# Machine Learning Foundations
+# Fondamenti di Machine Learning
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Explain the difference between **supervised** and **unsupervised** learning
-- Describe **training, validation, and test** splits and why all three matter
-- Define **overfitting** and explain how to detect it
-- Understand the basic components of a **neural network**: layers, activations, loss functions, and optimizers
-- Read and understand a simple Keras model for classifying handwritten digits
+- Spiegare la differenza tra apprendimento **supervisionato** e **non supervisionato**
+- Descrivere le divisioni **training, validation, e test** e perché tutte e tre contano
+- Definire l'**overfitting** e spiegare come rilevarlo
+- Capire i componenti di base di una **rete neurale**: layer, attivazioni, funzioni di loss, e optimizer
+- Leggere e capire un semplice modello Keras per classificare cifre scritte a mano
 
-Machine learning (ML) is a way of teaching computers to recognize patterns by showing them examples — instead of writing rules by hand. It powers image recognition, spam filters, recommendation engines, and large language models.
+Il machine learning (ML) è un modo di insegnare ai computer a riconoscere i pattern mostrando loro esempi — invece di scrivere regole a mano. Alimenta il riconoscimento delle immagini, i filtri antispam, i motori di raccomandazione, e i grandi modelli linguistici.
 
-!!! mascot-welcome "Welcome to Chapter 37!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 37!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Machine learning is one of the most exciting areas in computer science — and with Python, it's surprisingly approachable!
-    This chapter gives you the vocabulary and concepts you need to understand and build real ML systems.
-    Let's explore! Let's code it together!
+    Il machine learning è una delle aree più eccitanti dell'informatica — e con Python, è sorprendentemente accessibile!
+    Questo capitolo ti dà il vocabolario e i concetti di cui hai bisogno per capire e costruire veri sistemi di ML.
+    Esploriamo! Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -30,45 +30,45 @@ Machine learning (ML) is a way of teaching computers to recognize patterns by sh
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## What is Machine Learning?
+## Cos'è il Machine Learning?
 
-Traditional programming: **you write the rules**.
+Programmazione tradizionale: **scrivi tu le regole**.
 ```
 Input: image of a dog
 Rules: if has fur AND four legs AND tail → output "dog"
 ```
 
-Machine learning: **you show examples, the computer learns the rules**.
+Machine learning: **mostri esempi, il computer impara le regole**.
 ```
 Training data: 50,000 labeled images (dog / cat / bird)
 ML algorithm: finds patterns in pixels that distinguish each class
 Result: model that predicts the class of new, unseen images
 ```
 
-The "learning" happens during **training** — a process of repeatedly adjusting the model's internal numbers (called **parameters** or **weights**) to reduce errors.
+L'"apprendimento" succede durante il **training** — un processo di aggiustamento ripetuto dei numeri interni del modello (chiamati **parametri** o **pesi**, weights) per ridurre gli errori.
 
-## Supervised vs Unsupervised Learning
+## Apprendimento Supervisionato vs Non Supervisionato
 
-**Supervised learning** trains on labeled examples — each input comes with the correct answer.
+L'**apprendimento supervisionato** si allena su esempi etichettati — ogni input viene con la risposta corretta.
 
-- Input: photo of a handwritten "3"
-- Label: the digit 3
-- Goal: learn to predict the correct digit for any new photo
+- Input: foto di un "3" scritto a mano
+- Etichetta: la cifra 3
+- Obiettivo: imparare a predire la cifra corretta per qualsiasi nuova foto
 
-Examples: image classification, spam detection, medical diagnosis, price prediction
+Esempi: classificazione delle immagini, rilevamento dello spam, diagnosi medica, previsione dei prezzi
 
-**Unsupervised learning** finds patterns in data without labels.
+L'**apprendimento non supervisionato** trova pattern nei dati senza etichette.
 
-- Input: 10,000 customer purchase records (no categories)
-- Goal: discover natural groupings (clusters) in the data
+- Input: 10.000 registri di acquisto dei clienti (nessuna categoria)
+- Obiettivo: scoprire raggruppamenti naturali (cluster) nei dati
 
-Examples: customer segmentation, anomaly detection, topic modeling, data compression
+Esempi: segmentazione dei clienti, rilevamento di anomalie, modellazione di argomenti, compressione dei dati
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below simulates a very simple "classifier" that predicts pass/fail from a test score.
-    Before you run it — what threshold do you think will give the best accuracy on the test set?
-    Make your guess, then run it!
+    Il codice sotto simula un "classificatore" molto semplice che predice pass/fail da un punteggio del test.
+    Prima di eseguirlo — quale soglia pensi che darà la migliore accuratezza sul set di test?
+    Fai la tua previsione, poi eseguilo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -104,87 +104,87 @@ for threshold in [50, 60, 65, 70, 80]:
     print(f"Threshold {threshold}: accuracy = {acc:.0%}")`);
 </script>
 
-## The MNIST Dataset
+## Il Dataset MNIST
 
-**MNIST** (Modified National Institute of Standards and Technology) is the "Hello, World!" of machine learning.
-It contains 70,000 grayscale images of handwritten digits (0–9), each 28×28 pixels.
+**MNIST** (Modified National Institute of Standards and Technology) è il "Hello, World!" del machine learning.
+Contiene 70.000 immagini in scala di grigi di cifre scritte a mano (0–9), ognuna di 28×28 pixel.
 
-- 60,000 training images
-- 10,000 test images
+- 60.000 immagini di training
+- 10.000 immagini di test
 
-Every pixel is a number from 0 (black) to 255 (white).
-A 28×28 image is a grid of 784 numbers — this becomes a vector of 784 inputs to a neural network.
+Ogni pixel è un numero da 0 (nero) a 255 (bianco).
+Un'immagine 28×28 è una griglia di 784 numeri — questo diventa un vettore di 784 input per una rete neurale.
 
-## Train / Validation / Test Splits
+## Divisioni Train / Validation / Test
 
-Before training a model, you split your data into three separate sets:
+Prima di allenare un modello, divide i tuoi dati in tre insiemi separati:
 
-| Set | Purpose | Typical size |
+| Insieme | Scopo | Dimensione tipica |
 |-----|---------|-------------|
-| **Training** | The model learns from these examples | 70–80% |
-| **Validation** | Check performance during training; tune settings | 10–15% |
-| **Test** | Final evaluation on unseen data — used ONCE | 10–15% |
+| **Training** | Il modello impara da questi esempi | 70–80% |
+| **Validation** | Controlla le prestazioni durante il training; ottimizza le impostazioni | 10–15% |
+| **Test** | Valutazione finale su dati non visti — usata UNA SOLA VOLTA | 10–15% |
 
-**Why three sets?**
+**Perché tre insiemi?**
 
-- The model never trains on test data — so test accuracy is an honest measure of real-world performance
-- Validation helps you catch overfitting *before* you touch the test set
+- Il modello non si allena mai sui dati di test — quindi l'accuratezza del test è una misura onesta delle prestazioni nel mondo reale
+- Il validation ti aiuta a catturare l'overfitting *prima* che tu tocchi il set di test
 
-**A critical rule:** Never look at your test set until you're completely done with all model tuning. Peeking and re-tuning based on test results is "cheating" — your model will appear to generalize better than it actually does.
+**Una regola fondamentale:** Non guardare mai il tuo set di test finché non hai completamente finito con tutta l'ottimizzazione del modello. Sbirciare e riottimizzare in base ai risultati del test è "barare" — il tuo modello sembrerà generalizzare meglio di quanto effettivamente faccia.
 
 ## Overfitting
 
-**Overfitting** happens when a model memorizes the training data instead of learning the underlying pattern.
-It performs very well on training data but poorly on new, unseen examples.
+L'**overfitting** succede quando un modello memorizza i dati di training invece di imparare il pattern sottostante.
+Si comporta molto bene sui dati di training ma male su nuovi esempi non visti.
 
-Think of a student who memorizes every question from last year's exam exactly, without understanding the material. They'll ace the old test but fail on new questions.
+Pensa a uno studente che memorizza esattamente ogni domanda dell'esame dell'anno scorso, senza capire la materia. Andrà benissimo sul vecchio test ma fallirà sulle nuove domande.
 
-Signs of overfitting:
-- Training accuracy: 99%
-- Validation accuracy: 65%
-- Large gap between the two numbers
+Segnali di overfitting:
+- Accuratezza di training: 99%
+- Accuratezza di validation: 65%
+- Grande divario tra i due numeri
 
-Fixes for overfitting:
-- More training data
-- **Dropout** — randomly disable some neurons during training (covered in Chapter 38)
-- Simpler model (fewer layers, smaller layers)
-- **Regularization** — penalty for large weights
+Correzioni per l'overfitting:
+- Più dati di training
+- **Dropout** — disabilita casualmente alcuni neuroni durante il training (trattato nel Capitolo 38)
+- Modello più semplice (meno layer, layer più piccoli)
+- **Regularization** (regolarizzazione) — penalità per pesi grandi
 
-## Neural Networks — Key Vocabulary
+## Reti Neurali — Vocabolario Chiave
 
-Before reading Keras code, here are the key terms:
+Prima di leggere il codice Keras, ecco i termini chiave:
 
-- **Neuron** — a single computing unit that takes inputs, multiplies by weights, adds a bias, and applies an activation function
-- **Layer** — a group of neurons that all receive the same inputs and produce outputs together
-- **Dense layer** — every neuron connects to every neuron in the previous layer (also called "fully connected")
-- **Activation function** — a non-linear function applied to each neuron's output; without it, stacking layers would be no more powerful than one layer
-- **Weight / parameter** — a number the model adjusts during training to reduce errors; a typical model has thousands to billions of weights
-- **Loss function** — measures how wrong the model's predictions are; training tries to minimize this value
-- **Optimizer** — the algorithm that adjusts weights to reduce the loss
-- **Epoch** — one complete pass through all the training data
+- **Neurone** — una singola unità di calcolo che prende input, li moltiplica per i pesi, aggiunge un bias, e applica una funzione di attivazione
+- **Layer** — un gruppo di neuroni che ricevono tutti gli stessi input e producono output insieme
+- **Dense layer** — ogni neurone si connette a ogni neurone del layer precedente (chiamato anche "fully connected")
+- **Funzione di attivazione** — una funzione non lineare applicata all'output di ogni neurone; senza di essa, impilare i layer non sarebbe più potente di un solo layer
+- **Peso / parametro** (weight) — un numero che il modello aggiusta durante il training per ridurre gli errori; un modello tipico ha da migliaia a miliardi di pesi
+- **Funzione di loss** — misura quanto sono sbagliate le previsioni del modello; il training cerca di minimizzare questo valore
+- **Optimizer** — l'algoritmo che aggiusta i pesi per ridurre la loss
+- **Epoch** — un passaggio completo attraverso tutti i dati di training
 
-## The `relu` and `softmax` Activations
+## Le Attivazioni `relu` e `softmax`
 
-Two activations appear in almost every classification network:
+Due attivazioni appaiono in quasi ogni rete di classificazione:
 
 **ReLU** (Rectified Linear Unit): `f(x) = max(0, x)`
-- Output is 0 for negative inputs, x for positive inputs
-- Used in hidden layers; introduces non-linearity cheaply
+- L'output è 0 per gli input negativi, x per gli input positivi
+- Usata nei layer nascosti; introduce non-linearità a basso costo
 
-**Softmax**: converts a vector of numbers into probabilities that sum to 1.0
-- Used in the final output layer for multi-class classification
-- Output: `[0.02, 0.85, 0.01, ..., 0.05]` means "85% confident this is digit 1"
+**Softmax**: converte un vettore di numeri in probabilità che sommano a 1.0
+- Usata nel layer di output finale per la classificazione multi-classe
+- Output: `[0.02, 0.85, 0.01, ..., 0.05]` significa "85% sicuro che sia la cifra 1"
 
-## Building a Keras Model for MNIST
+## Costruire un Modello Keras per MNIST
 
-**Keras** is a high-level neural network library that runs on top of TensorFlow.
-Install with:
+**Keras** è una libreria di reti neurali di alto livello che gira sopra TensorFlow.
+Installala con:
 
 ```bash
 pip install tensorflow
 ```
 
-Here is a complete model to classify MNIST digits:
+Ecco un modello completo per classificare le cifre MNIST:
 
 ```python
 import tensorflow as tf
@@ -219,11 +219,11 @@ test_loss, test_acc = model.evaluate(x_test, y_test)
 print(f"Test accuracy: {test_acc:.2%}")
 ```
 
-This model typically achieves **97–98% accuracy** on MNIST — correctly classifying about 9,700 of 10,000 test images.
+Questo modello raggiunge tipicamente **97–98% di accuratezza** su MNIST — classificando correttamente circa 9.700 delle 10.000 immagini di test.
 
-## Understanding the Model Layer by Layer
+## Capire il Modello Layer per Layer
 
-Let's walk through the architecture:
+Percorriamo l'architettura:
 
 ```
 Input: 28×28 image (784 pixels)
@@ -237,7 +237,7 @@ Dense(10, softmax): (10,)  — one output per digit class (0–9)
 Output: [0.01, 0.02, 0.95, ...] — probabilities for digits 0–9
 ```
 
-Total parameters: ~101,632 — small by modern standards, yet powerful enough for MNIST.
+Parametri totali: ~101.632 — piccolo per gli standard moderni, ma abbastanza potente per MNIST.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -284,32 +284,32 @@ print(f"Sum of probabilities: {sum(probs):.6f}")
 print(f"Predicted class: {probs.index(max(probs))}")`);
 </script>
 
-## Batch Size and Epochs
+## Dimensione del Batch ed Epoch
 
-Two key training settings:
+Due impostazioni chiave del training:
 
-**Batch size**: how many training examples the model processes before updating its weights.
-- Batch size 32 means "process 32 images, compute average error, update weights" — then repeat
-- Smaller batches → noisier but faster updates; larger batches → smoother but slower updates
-- Common choices: 32, 64, 128
+**Dimensione del batch (batch size)**: quanti esempi di training il modello elabora prima di aggiornare i suoi pesi.
+- Dimensione del batch 32 significa "elabora 32 immagini, calcola l'errore medio, aggiorna i pesi" — poi ripeti
+- Batch più piccoli → aggiornamenti più rumorosi ma più veloci; batch più grandi → aggiornamenti più fluidi ma più lenti
+- Scelte comuni: 32, 64, 128
 
-**Epochs**: how many times the model sees the entire training dataset.
-- 1 epoch = one full pass through 60,000 images (in batches)
-- 5 epochs = 5 full passes (300,000 batches total for MNIST with batch size 32)
-- Too few epochs → model underfits; too many epochs → model overfits
+**Epoch**: quante volte il modello vede l'intero dataset di training.
+- 1 epoch = un passaggio completo attraverso 60.000 immagini (in batch)
+- 5 epoch = 5 passaggi completi (300.000 batch in totale per MNIST con dimensione del batch 32)
+- Troppi pochi epoch → il modello fa underfitting; troppi epoch → il modello fa overfitting
 
-!!! mascot-tip "The Adam Optimizer"
+!!! mascot-tip "L'Optimizer Adam"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    `"adam"` (Adaptive Moment Estimation) is the default optimizer for most beginners because it automatically adjusts the learning rate for each parameter.
-    Other optimizers include SGD (stochastic gradient descent) and RMSprop.
-    When in doubt, start with Adam — it works well in a wide range of tasks.
+    `"adam"` (Adaptive Moment Estimation) è l'optimizer predefinito per la maggior parte dei principianti perché aggiusta automaticamente il learning rate per ogni parametro.
+    Altri optimizer includono SGD (stochastic gradient descent) e RMSprop.
+    In caso di dubbio, inizia con Adam — funziona bene in un'ampia gamma di compiti.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Implement Accuracy"
+!!! mascot-thinking "Il Tuo Turno — Implementa l'Accuratezza"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below has a stub for an `accuracy()` function.
-    Implement it: count how many predictions match their true labels, and return the fraction correct!
+    Il codice sotto ha uno stub per una funzione `accuracy()`.
+    Implementala: conta quante previsioni corrispondono alle loro etichette vere, e restituisci la frazione corretta!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -337,31 +337,31 @@ acc = accuracy(preds, labels)
 print(f"Accuracy: {acc:.0%}")   # should be 80% (8 out of 10 correct)`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. In the threshold classifier, try `threshold = 63`. Does it improve accuracy?
-   **You'll know it worked when** you see whether the accuracy changes.
+1. Nel classificatore a soglia, prova `threshold = 63`. Migliora l'accuratezza?
+   **Saprai che ha funzionato quando** vedi se l'accuratezza cambia.
 
-2. Extend the `dense_neuron` function to handle negative inputs correctly: what does ReLU output for -2.0?
-   **You'll know it worked when** negative inputs give 0, not a negative number.
+2. Estendi la funzione `dense_neuron` per gestire correttamente gli input negativi: cosa produce ReLU per -2.0?
+   **Saprai che ha funzionato quando** gli input negativi danno 0, non un numero negativo.
 
-3. Compute the softmax of `[1, 1, 1]`. All inputs are equal — what do the probabilities sum to, and what is each?
-   **You'll know it worked when** all three probabilities equal 0.333.
+3. Calcola il softmax di `[1, 1, 1]`. Tutti gli input sono uguali — a cosa sommano le probabilità, e quanto vale ciascuna?
+   **Saprai che ha funzionato quando** tutte e tre le probabilità sono uguali a 0.333.
 
-4. Research: look up "confusion matrix" and describe what it shows that simple accuracy doesn't.
-   **You'll know it worked when** you can explain what the rows and columns represent.
+4. Ricerca: cerca "matrice di confusione" (confusion matrix) e descrivi cosa mostra che la semplice accuratezza non mostra.
+   **Saprai che ha funzionato quando** riesci a spiegare cosa rappresentano le righe e le colonne.
 
-5. Think of two real-world problems: one that needs supervised learning and one that needs unsupervised. Describe what the training data would look like for each.
-   **You'll know it worked when** you can articulate what "label" means (or doesn't) for each problem.
+5. Pensa a due problemi del mondo reale: uno che ha bisogno dell'apprendimento supervisionato e uno che ha bisogno di quello non supervisionato. Descrivi come sarebbero i dati di training per ciascuno.
+   **Saprai che ha funzionato quando** riesci ad articolare cosa significa (o non significa) "etichetta" per ciascun problema.
 
-!!! mascot-celebration "Machine Learning Pioneer!"
+!!! mascot-celebration "Pioniere del Machine Learning!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You now understand the vocabulary, math, and structure of machine learning!
-    Supervised vs unsupervised, train/val/test splits, overfitting, layers, activations, loss functions — you've got the full picture.
-    One more chapter: Convolutional Neural Networks — the architecture that revolutionized computer vision. Let's keep coding!
+    Ora capisci il vocabolario, la matematica, e la struttura del machine learning!
+    Supervisionato vs non supervisionato, divisioni train/val/test, overfitting, layer, attivazioni, funzioni di loss — hai il quadro completo.
+    Un altro capitolo: le Reti Neurali Convoluzionali — l'architettura che ha rivoluzionato la visione artificiale. Continuiamo a programmare!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)
