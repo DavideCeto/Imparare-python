@@ -1,28 +1,28 @@
 ---
-title: Computational Thinking and Best Practices
-description: Master the habits of expert programmers — decomposition, abstraction, DRY, meaningful names, refactoring, test-driven thinking, and pair programming
+title: Pensiero Computazionale e Buone Pratiche
+description: Padroneggia le abitudini dei programmatori esperti — scomposizione, astrazione, DRY, nomi significativi, refactoring, pensiero test-driven, e pair programming
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 16:00:00
 version: 0.09
 ---
 
-# Computational Thinking and Best Practices
+# Pensiero Computazionale e Buone Pratiche
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Apply the four pillars of **computational thinking**: decomposition, pattern recognition, abstraction, algorithm design
-- Follow **DRY** (Don't Repeat Yourself) and **modularity** principles
-- Write **meaningful names** and useful comments
-- Describe **test-driven thinking** and how to debug systematically
-- Understand **version control** and **pair programming**
+- Applicare i quattro pilastri del **pensiero computazionale**: scomposizione, riconoscimento dei pattern, astrazione, design degli algoritmi
+- Seguire i principi **DRY** (Don't Repeat Yourself) e di **modularità**
+- Scrivere **nomi significativi** e commenti utili
+- Descrivere il **pensiero test-driven** e come fare debug in modo sistematico
+- Capire il **controllo di versione** e il **pair programming**
 
-Writing code that works is only half the job. Expert programmers write code that works *and* is easy to read, change, and share with others. This chapter collects the habits that separate good programmers from great ones.
+Scrivere codice che funziona è solo metà del lavoro. I programmatori esperti scrivono codice che funziona *e* che è facile da leggere, cambiare, e condividere con altri. Questo capitolo raccoglie le abitudini che separano i buoni programmatori da quelli eccellenti.
 
-!!! mascot-welcome "Welcome to Chapter 36!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 36!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    You've learned Python's tools — now it's time to learn how to *think* like a programmer.
-    The habits in this chapter will make every future project smoother and more enjoyable.
-    Let's level up! Let's code it together!
+    Hai imparato gli strumenti di Python — ora è il momento di imparare come *pensare* da programmatore.
+    Le abitudini di questo capitolo renderanno ogni progetto futuro più fluido e più piacevole.
+    Saliamo di livello! Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -30,24 +30,24 @@ Writing code that works is only half the job. Expert programmers write code that
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## Computational Thinking — Four Pillars
+## Pensiero Computazionale — Quattro Pilastri
 
-**Computational thinking** is a problem-solving framework that lets you tackle any complex problem with a computer.
-It has four key skills:
+Il **pensiero computazionale** è un framework per risolvere problemi che ti permette di affrontare qualsiasi problema complesso con un computer.
+Ha quattro competenze chiave:
 
-| Pillar | Meaning | Example |
+| Pilastro | Significato | Esempio |
 |--------|---------|---------|
-| **Decomposition** | Break a big problem into smaller ones | "Build a quiz app" → "Store questions", "Ask user", "Check answer", "Track score" |
-| **Pattern Recognition** | Spot similarities and repetition | All quiz questions have: text, choices, correct answer |
-| **Abstraction** | Focus on essential details; hide unnecessary ones | A function `ask_question(q)` hides the input/output details |
-| **Algorithm Design** | Write a clear, step-by-step solution | "While questions remain: ask one, record answer, check result" |
+| **Scomposizione** | Scomponi un grande problema in problemi più piccoli | "Costruisci un'app di quiz" → "Memorizza le domande", "Chiedi all'utente", "Controlla la risposta", "Traccia il punteggio" |
+| **Riconoscimento dei Pattern** | Individua somiglianze e ripetizioni | Ogni domanda del quiz ha: testo, scelte, risposta corretta |
+| **Astrazione** | Concentrati sui dettagli essenziali; nascondi quelli non necessari | Una funzione `ask_question(q)` nasconde i dettagli di input/output |
+| **Design degli Algoritmi** | Scrivi una soluzione chiara, passo dopo passo | "Finché restano domande: chiedine una, registra la risposta, controlla il risultato" |
 
-These four skills aren't Python-specific — they apply to any programming language, any field, any problem.
+Queste quattro competenze non sono specifiche di Python — si applicano a qualsiasi linguaggio di programmazione, qualsiasi campo, qualsiasi problema.
 
-## Decomposition in Practice
+## La Scomposizione in Pratica
 
-A common beginner mistake is trying to write an entire program at once.
-**Decomposition** means breaking the problem down first, then coding one piece at a time.
+Un errore comune dei principianti è provare a scrivere un intero programma in una volta.
+La **scomposizione** significa prima scomporre il problema, poi programmare un pezzo alla volta.
 
 ```
 Problem: Build a word guessing game
@@ -62,7 +62,7 @@ Problem: Build a word guessing game
 └── Announce win or loss
 ```
 
-Each leaf in this tree is small enough to code in a single function.
+Ogni foglia di questo albero è abbastanza piccola da essere programmata in una singola funzione.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -100,18 +100,18 @@ print("Solved?", is_solved(secret, guessed))`);
 
 ## DRY — Don't Repeat Yourself
 
-The **DRY principle** says: every piece of knowledge should have exactly one representation in your code.
+Il **principio DRY** dice: ogni pezzo di conoscenza dovrebbe avere esattamente una rappresentazione nel tuo codice.
 
-If the same logic appears in two places, a bug fix or change must be made twice — and it's easy to update one and forget the other.
+Se la stessa logica appare in due punti, una correzione di bug o un cambiamento deve essere fatto due volte — ed è facile aggiornare uno e dimenticare l'altro.
 
-**Wet code (repeating yourself):**
+**Codice wet (ripeti te stesso):**
 ```python
 score1 = max(0, min(100, score1))
 score2 = max(0, min(100, score2))
 score3 = max(0, min(100, score3))
 ```
 
-**Dry code (one function does the job):**
+**Codice dry (una funzione fa il lavoro):**
 ```python
 def clamp(value):
     return max(0, min(100, value))
@@ -121,22 +121,22 @@ score2 = clamp(score2)
 score3 = clamp(score3)
 ```
 
-Even better — apply it to a list:
+Ancora meglio — applicalo a una lista:
 ```python
 scores = [clamp(s) for s in scores]
 ```
 
-## Modularity
+## Modularità
 
-**Modularity** means organizing code into independent, reusable units (functions, classes, modules).
-A well-structured program has many small functions, each doing one thing clearly.
+La **modularità** significa organizzare il codice in unità indipendenti e riutilizzabili (funzioni, classi, moduli).
+Un programma ben strutturato ha molte piccole funzioni, ognuna che fa una cosa chiaramente.
 
-**Signs your function is NOT modular:**
-- It's longer than 20-30 lines
-- Its name contains "and" (e.g., `validate_and_save`)
-- It does I/O and computation together
+**Segnali che la tua funzione NON è modulare:**
+- È più lunga di 20-30 righe
+- Il suo nome contiene "and" (ad es. `validate_and_save`)
+- Fa I/O e calcoli insieme
 
-**Refactor into smaller pieces:**
+**Fai il refactor in pezzi più piccoli:**
 
 ```python
 # Before: one long function
@@ -157,24 +157,24 @@ def process(data):
     return sorted(deduplicate(clean(data)))
 ```
 
-## Meaningful Names
+## Nomi Significativi
 
-Variable and function names are your most powerful documentation tool.
-A reader who can't run the code should still understand it from the names alone.
+I nomi delle variabili e delle funzioni sono il tuo strumento di documentazione più potente.
+Un lettore che non può eseguire il codice dovrebbe comunque capirlo solo dai nomi.
 
-| Bad | Better | Why |
+| Cattivo | Migliore | Perché |
 |-----|--------|-----|
-| `x` | `elapsed_seconds` | Describes the meaning |
-| `lst` | `student_names` | Describes the content |
-| `do_thing()` | `calculate_average()` | Describes what it returns |
-| `check(x)` | `is_valid_email(text)` | Describes what it checks |
-| `n` | `num_retries` | No mental translation needed |
+| `x` | `elapsed_seconds` | Descrive il significato |
+| `lst` | `student_names` | Descrive il contenuto |
+| `do_thing()` | `calculate_average()` | Descrive cosa restituisce |
+| `check(x)` | `is_valid_email(text)` | Descrive cosa controlla |
+| `n` | `num_retries` | Nessuna traduzione mentale necessaria |
 
-**Rule for booleans:** name them as a yes/no question — `is_logged_in`, `has_errors`, `can_retry`.
+**Regola per i booleani:** nominali come una domanda sì/no — `is_logged_in`, `has_errors`, `can_retry`.
 
-## When to Comment
+## Quando Commentare
 
-Comments explain the **why**, not the **what**. Well-named code already tells you what — comments tell you why that was the right choice.
+I commenti spiegano il **perché**, non il **cosa**. Il codice ben nominato ti dice già cosa — i commenti ti dicono perché quella fosse la scelta giusta.
 
 ```python
 # BAD: repeats what the code says
@@ -186,13 +186,13 @@ for row in rows[1:]:
     process(row)
 ```
 
-Write no comment if the code is self-explanatory.
-Write a comment when a future reader (including future-you) would wonder "why did they do it that way?"
+Non scrivere nessun commento se il codice si spiega da solo.
+Scrivi un commento quando un futuro lettore (incluso il futuro te stesso) si chiederebbe "perché l'hanno fatto in quel modo?"
 
-!!! mascot-tip "The Rule of Three"
+!!! mascot-tip "La Regola del Tre"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    If you write the same logic once — keep it. Twice — add a comment noting the pattern. Three times — pull it into a function.
-    This is called the "rule of three" and it stops you from over-abstracting before you're sure the pattern is real.
+    Se scrivi la stessa logica una volta — lasciala così. Due volte — aggiungi un commento che nota il pattern. Tre volte — estraila in una funzione.
+    Questo si chiama la "regola del tre" e ti impedisce di astrarre troppo presto prima di essere sicuro che il pattern sia reale.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -225,10 +225,10 @@ for s in test_scores:
     print(f"  {s:4d} → clamped={clamp(s):3d}, grade={letter_grade(s)}")`);
 </script>
 
-## Pseudocode and Algorithm Design
+## Pseudocodice e Design degli Algoritmi
 
-**Pseudocode** is a step-by-step description of an algorithm written in plain English, not a real programming language.
-It lets you plan before you code — and catches problems before you've spent time writing syntax.
+Lo **pseudocodice** è una descrizione passo dopo passo di un algoritmo scritta in inglese semplice, non in un vero linguaggio di programmazione.
+Ti permette di pianificare prima di programmare — e cattura i problemi prima che tu abbia passato tempo a scrivere la sintassi.
 
 ```
 ALGORITHM: Find the most frequent word
@@ -243,17 +243,17 @@ ALGORITHM: Find the most frequent word
 6. Return that key and its count
 ```
 
-Only then do you translate to Python. The algorithm is clear — the coding is just transcription.
+Solo dopo traduci in Python. L'algoritmo è chiaro — la programmazione è solo trascrizione.
 
-## Test-Driven Thinking
+## Pensiero Test-Driven
 
-Professional developers write **tests** before (or alongside) code.
-Even if you're not writing formal test functions, think in terms of tests:
+Gli sviluppatori professionisti scrivono i **test** prima (o insieme) al codice.
+Anche se non scrivi funzioni di test formali, pensa in termini di test:
 
-1. **What should the function return for a normal input?**
-2. **What should it do with empty input?**
-3. **What should it do with invalid input?**
-4. **What's the edge case?** (Empty list, zero, negative number, very long string)
+1. **Cosa dovrebbe restituire la funzione per un input normale?**
+2. **Cosa dovrebbe fare con un input vuoto?**
+3. **Cosa dovrebbe fare con un input non valido?**
+4. **Qual è il caso limite?** (Lista vuota, zero, numero negativo, stringa molto lunga)
 
 ```python
 def word_frequency(text):
@@ -303,37 +303,37 @@ word, count = most_common(freq)
 print(f"Most common: '{word}' ({count} times)")`);
 </script>
 
-## Debugging Strategies
+## Strategie di Debug
 
-When code doesn't work, resist the urge to change things randomly until it "magically" works.
-Use a systematic approach:
+Quando il codice non funziona, resisti all'impulso di cambiare le cose a caso finché non funziona "magicamente".
+Usa un approccio sistematico:
 
-1. **Read the traceback** — the bottom line is the error; work up to find where it came from
-2. **Print the state** — add `print()` statements just before the error to see what the variables actually contain
-3. **Simplify** — replace complex expressions with simpler ones until the bug disappears
-4. **Rubber duck debugging** — explain your code out loud, line by line, to an imaginary listener; the bug often reveals itself
-5. **Search the error message** — copy the error text into a search engine; someone has seen it before
+1. **Leggi il traceback** — l'ultima riga è l'errore; risali per trovare da dove viene
+2. **Stampa lo stato** — aggiungi istruzioni `print()` subito prima dell'errore per vedere cosa contengono davvero le variabili
+3. **Semplifica** — sostituisci le espressioni complesse con quelle più semplici finché il bug non scompare
+4. **Debug della papera di gomma** (rubber duck debugging) — spiega il tuo codice ad alta voce, riga per riga, a un ascoltatore immaginario; il bug spesso si rivela da solo
+5. **Cerca il messaggio di errore** — copia il testo dell'errore in un motore di ricerca; qualcuno lo ha già visto prima
 
 ## Refactoring
 
-**Refactoring** means improving code structure without changing what it does.
-It's normal to write messy code first, then refactor once the program works.
+Il **refactoring** significa migliorare la struttura del codice senza cambiare cosa fa.
+È normale scrivere prima codice disordinato, poi fare il refactor una volta che il programma funziona.
 
-Common refactoring moves:
-- Extract a repeated block into a named function
-- Rename a variable to be more descriptive
-- Replace a long chain of `if/elif` with a dictionary lookup
-- Split a long function into two smaller ones
+Mosse di refactoring comuni:
+- Estrarre un blocco ripetuto in una funzione nominata
+- Rinominare una variabile per renderla più descrittiva
+- Sostituire una lunga catena di `if/elif` con una ricerca in un dizionario
+- Dividere una lunga funzione in due più piccole
 
-## Version Control with Git
+## Controllo di Versione con Git
 
-**Git** is the standard tool for tracking changes to code over time.
-Even working alone, git lets you:
-- Go back to any previous version of your project
-- See exactly what changed between versions
-- Work on risky experiments without fear of breaking working code
+**Git** è lo strumento standard per tracciare i cambiamenti al codice nel tempo.
+Anche lavorando da solo, git ti permette di:
+- Tornare a qualsiasi versione precedente del tuo progetto
+- Vedere esattamente cosa è cambiato tra le versioni
+- Lavorare su esperimenti rischiosi senza paura di rompere il codice funzionante
 
-The basic workflow:
+Il flusso di lavoro di base:
 
 ```bash
 git init              # start tracking a project
@@ -344,21 +344,21 @@ git log               # see history of commits
 
 ## Pair Programming
 
-**Pair programming** means two people work on one computer — one person types (the "driver"), one person reviews and suggests (the "navigator").
+Il **pair programming** significa che due persone lavorano su un computer — una persona scrive (il "driver"), una persona rivede e suggerisce (il "navigator").
 
-Research shows that pair programming:
-- Catches bugs before they're committed
-- Spreads knowledge between teammates
-- Produces cleaner code on the first try
+La ricerca mostra che il pair programming:
+- Cattura i bug prima che vengano committati
+- Diffonde la conoscenza tra i compagni di squadra
+- Produce codice più pulito al primo tentativo
 
-Even practicing pair programming with a classmate for 20 minutes builds better habits.
+Anche praticare il pair programming con un compagno di classe per 20 minuti costruisce abitudini migliori.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Refactor This Code"
+!!! mascot-thinking "Il Tuo Turno — Fai il Refactor di Questo Codice"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below works but violates DRY — the grade calculation logic is repeated three times.
-    Refactor it into a single `letter_grade(score)` function and use it in all three places!
+    Il codice sotto funziona ma viola il DRY — la logica di calcolo del voto è ripetuta tre volte.
+    Fai il refactor in una singola funzione `letter_grade(score)` e usala in tutti e tre i punti!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -398,30 +398,30 @@ print(f"Score 2: {score2} → {grade2}")
 print(f"Score 3: {score3} → {grade3}")`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Apply the four computational thinking pillars to "Write a program that sorts a list of names alphabetically." Write out the decomposition as comments before coding.
-   **You'll know it worked when** you have clear sub-steps before any Python code.
+1. Applica i quattro pilastri del pensiero computazionale a "Scrivi un programma che ordina una lista di nomi alfabeticamente." Scrivi la scomposizione come commenti prima di programmare.
+   **Saprai che ha funzionato quando** hai sotto-passaggi chiari prima di qualsiasi codice Python.
 
-2. Refactor the `word_frequency` + `most_common` functions into a single `analyze_text(text)` function that returns a dict with both `"frequencies"` and `"top_word"` keys.
-   **You'll know it worked when** `analyze_text("cat cat dog")["top_word"]` returns `"cat"`.
+2. Fai il refactor delle funzioni `word_frequency` + `most_common` in una singola funzione `analyze_text(text)` che restituisce un dict con sia la chiave `"frequencies"` sia `"top_word"`.
+   **Saprai che ha funzionato quando** `analyze_text("cat cat dog")["top_word"]` restituisce `"cat"`.
 
-3. Write a `safe_divide(a, b)` function that returns `a / b` normally, but returns `None` (not an error) when `b == 0`. Write at least 3 test cases.
-   **You'll know it worked when** all three test cases print the expected result.
+3. Scrivi una funzione `safe_divide(a, b)` che restituisce `a / b` normalmente, ma restituisce `None` (non un errore) quando `b == 0`. Scrivi almeno 3 casi di test.
+   **Saprai che ha funzionato quando** tutti e tre i casi di test stampano il risultato previsto.
 
-4. Take any function you wrote in an earlier chapter and rename all variables to be more descriptive. Does it feel more readable?
-   **You'll know it worked when** the function reads almost like English without comments.
+4. Prendi qualsiasi funzione che hai scritto in un capitolo precedente e rinomina tutte le variabili per renderle più descrittive. Sembra più leggibile?
+   **Saprai che ha funzionato quando** la funzione si legge quasi come l'inglese senza commenti.
 
-5. Find a partner and try pair programming: one person types the solution to experiment 3 while the other reads it aloud and suggests improvements.
-   **You'll know it worked when** you discover at least one improvement through the discussion.
+5. Trova un compagno e prova il pair programming: una persona scrive la soluzione dell'esperimento 3 mentre l'altra lo legge ad alta voce e suggerisce miglioramenti.
+   **Saprai che ha funzionato quando** scopri almeno un miglioramento attraverso la discussione.
 
-!!! mascot-celebration "Expert Programmer Mindset Unlocked!"
+!!! mascot-celebration "Mentalità da Programmatore Esperto Sbloccata!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You now think like a professional programmer — with decomposition, abstraction, DRY code, meaningful names, and systematic debugging in your toolkit.
-    Two chapters remain: machine learning and neural networks. The frontier of computer science is right ahead! Let's keep coding!
+    Ora pensi come un programmatore professionista — con scomposizione, astrazione, codice DRY, nomi significativi, e debug sistematico nella tua cassetta degli attrezzi.
+    Restano due capitoli: machine learning e reti neurali. La frontiera dell'informatica è proprio davanti! Continuiamo a programmare!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)

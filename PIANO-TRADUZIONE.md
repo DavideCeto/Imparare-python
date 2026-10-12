@@ -79,6 +79,10 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
 - `docs/chapters/35-advanced-turtle-event-driven/` (index, references, quiz — titolo
   allineato alla nav: "Turtle Avanzata e Programmazione Guidata da Eventi"; percorsi
   immagine verificati dopo l'incidente del Capitolo 34)
+- `docs/chapters/36-computational-thinking-best-practices/` (index, references, quiz —
+  titolo allineato alla nav: "Pensiero Computazionale e Buone Pratiche"; corretta
+  un'inconsistenza dove "Abstraction" era rimasto non tradotto mentre gli altri tre
+  pilastri del pensiero computazionale erano già in italiano)
 - `docs/glossary.md` (tutte le 338 voci, intestazioni `####` verificate 338/338 rispetto
   all'originale)
 
@@ -200,17 +204,19 @@ Fase 0 chiusa: i file skill (`skills/python-lab-generator/SKILL.md` e
 quindi non serve alcun ripristino. Decisioni della sezione 2 fissate il 2026-10-03.
 
 Fase 1 completata (pagine di ingresso, `docs/glossary.md`, nav di `mkdocs.yml` per le
-sezioni coperte). Fase 2 in corso: Capitoli 1-35 tradotti.
+sezioni coperte). Fase 2 in corso: Capitoli 1-36 tradotti.
 
-Prossimo: continuare la Fase 2 dal Capitolo 36 (`docs/chapters/36-computational-thinking-best-practices/`),
-un capitolo alla volta (`index.md` + `references.md` + `quiz.md`). La nav di `mkdocs.yml`
-per tutti i 38 capitoli è già tradotta dalla Fase 1 — controllare sempre l'etichetta nav
-esistente e allineare il titolo H1/front matter a quella (vedi nota sui Capitoli 15-35),
-invece di tradurre il titolo da zero. Nota di qualità: nel Capitolo 34 un errore di
-battitura ha temporaneamente corrotto il percorso di un'immagine mascotte
-(`thinking.png` → `thinking.img-admonition`) prima della verifica — controllare sempre
-con `grep '!\[.*\]('` che tutti i percorsi immagine restino intatti dopo la traduzione
-(fatto anche per il Capitolo 35, nessun problema trovato).
+Prossimo: continuare la Fase 2 dal Capitolo 37 (`docs/chapters/37-machine-learning-foundations/`),
+un capitolo alla volta (`index.md` + `references.md` + `quiz.md`). Solo il Capitolo 38
+resterà dopo. La nav di `mkdocs.yml` per tutti i 38 capitoli è già tradotta dalla Fase 1
+— controllare sempre l'etichetta nav esistente e allineare il titolo H1/front matter a
+quella (vedi nota sui Capitoli 15-36), invece di tradurre il titolo da zero. Note di
+qualità: (1) controllare sempre con `grep '!\[.*\]('` che tutti i percorsi immagine
+restino intatti dopo la traduzione (vedi incidente Capitolo 34); (2) quando un capitolo
+elenca più "pilastri"/termini paralleli in una tabella o lista (vedi Capitolo 36,
+"Abstraction" lasciato non tradotto per errore mentre gli altri tre pilastri erano in
+italiano), controllare con `grep -ni` che tutte le occorrenze del termine inglese siano
+state tradotte in modo consistente, non solo la prima.
 
 Nota di qualità: durante la traduzione del Capitolo 5 è stato trovato e corretto un
 bug pre-esistente nell'originale inglese `docs/chapters/05-drawing-with-turtle/quiz.md`
