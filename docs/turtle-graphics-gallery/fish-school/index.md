@@ -2,35 +2,35 @@
 hide:
     - toc
 ---
-# Fish School
+# Banco di Pesci
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Write a `fish(x, y, size)` function that draws a recognizable animal shape
-- Understand how one function with different arguments creates visual variation
-- Combine `circle()` arcs, triangles, and dots to build a fish with a body, tail fin, and eye
+- Scrivere una funzione `fish(x, y, size)` che disegna una forma animale riconoscibile
+- Capire come una funzione con argomenti diversi crea variazione visiva
+- Combinare archi `circle()`, triangoli, e punti per costruire un pesce con corpo, pinna caudale, e occhio
 
-A dozen blue fish of varied sizes swim leftward across the canvas in a loosely grouped school — each one drawn by the same function.
+Una dozzina di pesci blu di dimensioni variate nuotano verso sinistra attraverso il canvas in un banco liberamente raggruppato — ognuno disegnato dalla stessa funzione.
 
-!!! mascot-welcome "Welcome to the Fish School!"
+!!! mascot-welcome "Benvenuto al Banco di Pesci!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    In this lab you'll see how a single function can generate an entire school of fish —
-    each one slightly different in size and position but built from the same code.
-    Let's code it together!
+    In questo laboratorio vedrai come una singola funzione può generare un intero banco di pesci —
+    ognuno leggermente diverso in dimensione e posizione ma costruito dallo stesso codice.
+    Programmiamo insieme!
 
-## How the Fish Works
+## Come Funziona il Pesce
 
-Each fish is built from three parts:
+Ogni pesce è costruito da tre parti:
 
-1. A **body**: a pointed oval made of two `circle()` arcs that meet at the nose and the tail
-2. A **tail fin**: a small filled triangle attached at the back of the body
-3. An **eye**: a white dot with a black pupil, near the nose
+1. Un **corpo**: un ovale a punta fatto di due archi `circle()` che si incontrano al naso e alla coda
+2. Una **pinna caudale**: un piccolo triangolo riempito attaccato dietro il corpo
+3. Un **occhio**: un punto bianco con una pupilla nera, vicino al naso
 
-The turtle starts at the fish's nose (the left tip), sweeps one arc along the belly to the
-tail point, turns, and sweeps a second arc along the back to return to the nose. Then it
-jumps to the tail point to draw the triangle fin, and finally stamps two dots for the eye.
+La tartaruga inizia al naso del pesce (la punta sinistra), traccia un arco lungo la pancia fino al
+punto della coda, gira, e traccia un secondo arco lungo il dorso per ritornare al naso. Poi
+salta al punto della coda per disegnare la pinna triangolare, e infine timbra due punti per l'occhio.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -74,13 +74,13 @@ for _ in range(12):
     fish(x, y, size)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The body is drawn with **two** `monty.circle(size, 120)` arcs.
-    Will the finished body be a full circle, a half circle, or a pointed oval?
-    Make your guess, then run it to find out!
+    Il corpo è disegnato con **due** archi `monty.circle(size, 120)`.
+    Il corpo finito sarà un cerchio completo, un semicerchio, o un ovale a punta?
+    Fai la tua previsione, poi eseguilo per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -143,40 +143,40 @@ for _ in range(12):
     fish(x, y, size)`);
 </script>
 
-The two arcs meet in sharp points at the nose and the tail — a **pointed oval**, just the
-right shape for a fish body. Were you right?
+I due archi si incontrano in punte nette al naso e alla coda — un **ovale a punta**, esattamente
+la forma giusta per il corpo di un pesce. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Each `circle(size, 120)` call draws a 120° arc — one curved side of the body. The turtle
-starts at the nose heading `-60` degrees so the first arc bows downward along the belly and
-lands exactly on the tail point. `left(60)` aims the turtle for the second arc, which bows
-upward along the back and returns exactly to the nose. Two arcs, one closed shape.
+Ogni chiamata a `circle(size, 120)` disegna un arco di 120° — un lato curvo del corpo. La tartaruga
+inizia al naso puntando a `-60` gradi così il primo arco si curva verso il basso lungo la pancia e
+atterra esattamente sul punto della coda. `left(60)` punta la tartaruga per il secondo arco, che si curva
+verso l'alto lungo il dorso e ritorna esattamente al naso. Due archi, una forma chiusa.
 
-The tail fin is a triangle drawn with three `goto()` calls: from the tail point out to two
-corners behind the fish and back. Because it sits between `begin_fill()` and `end_fill()`,
-it comes out solid.
+La pinna caudale è un triangolo disegnato con tre chiamate a `goto()`: dal punto della coda verso due
+angoli dietro il pesce e ritorno. Poiché si trova tra `begin_fill()` ed `end_fill()`,
+viene fuori solida.
 
-Finally, `dot()` draws a filled circle at the turtle's position — a big white dot with a
-smaller black dot on top makes a simple eye. The eye is what makes the fish come alive!
+Infine, `dot()` disegna un cerchio riempito alla posizione della tartaruga — un grande punto bianco con
+un punto nero più piccolo sopra fa un semplice occhio. L'occhio è ciò che fa sembrare vivo il pesce!
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `monty.setheading(-60)` | Aim the turtle so the first arc curves along the belly |
-| `monty.circle(size, 120)` | Draw a 120° arc — one curved side of the body |
-| `monty.left(60)` | Turn at the tail point so the second arc curves back along the top |
-| Three `monty.goto(...)` calls | Draw the triangle tail fin behind the body |
-| `monty.dot(size // 3, 'white')` | Stamp the white of the eye near the nose |
-| `random.randint(15, 45)` | Random size for each fish |
+| `monty.setheading(-60)` | Punta la tartaruga così il primo arco si curva lungo la pancia |
+| `monty.circle(size, 120)` | Disegna un arco di 120° — un lato curvo del corpo |
+| `monty.left(60)` | Gira al punto della coda così il secondo arco si curva indietro lungo la parte superiore |
+| Tre chiamate `monty.goto(...)` | Disegna la pinna caudale triangolare dietro il corpo |
+| `monty.dot(size // 3, 'white')` | Timbra il bianco dell'occhio vicino al naso |
+| `random.randint(15, 45)` | Dimensione casuale per ogni pesce |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Color Each Fish Differently"
+!!! mascot-thinking "Il Tuo Turno — Colora Ogni Pesce Diversamente"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    All the fish are the same `'steelblue'`. Add a `color` parameter to `fish()` and use it
-    to fill each fish with a random color from a list. Update the function definition and the call.
+    Tutti i pesci sono dello stesso `'steelblue'`. Aggiungi un parametro `color` a `fish()` e usalo
+    per riempire ogni pesce con un colore casuale da una lista. Aggiorna la definizione della funzione e la chiamata.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -236,21 +236,21 @@ for _ in range(12):
     fish(x, y, size, c)`);
 </script>
 
-The updated `fish()` takes `color` as a fourth argument and passes it to `monty.color()` as
-the fill color, while the outline stays `'midnightblue'`.
+Il `fish()` aggiornato prende `color` come quarto argomento e lo passa a `monty.color()` come
+colore di riempimento, mentre il contorno resta `'midnightblue'`.
 
-## Experiments
+## Esperimenti
 
-1. **Add a blue background.** Before the loop, draw a large filled light-blue rectangle as the ocean. You'll know it worked when the fish swim against a blue background.
+1. **Aggiungi uno sfondo blu.** Prima del ciclo, disegna un grande rettangolo riempito azzurro chiaro come l'oceano. Saprai che ha funzionato quando i pesci nuotano contro uno sfondo blu.
 
-2. **Make a single giant fish.** Remove the loop and call `fish(-100, 0, 80)` directly. You'll know it worked when one large fish fills the canvas.
+2. **Fai un singolo pesce gigante.** Rimuovi il ciclo e chiama `fish(-100, 0, 80)` direttamente. Saprai che ha funzionato quando un grande pesce riempie il canvas.
 
-3. **Add a dorsal fin.** Inside `fish()`, after the tail fin, draw a small triangle on top of the body: `goto(x + size * 0.6, y + size * 0.4)`, then fill a triangle through `(x + size * 0.85, y + size * 0.85)` and `(x + size * 1.2, y + size * 0.4)`. You'll know it worked when each fish has a fin on its back.
+3. **Aggiungi una pinna dorsale.** Dentro `fish()`, dopo la pinna caudale, disegna un piccolo triangolo sopra il corpo: `goto(x + size * 0.6, y + size * 0.4)`, poi riempi un triangolo attraverso `(x + size * 0.85, y + size * 0.85)` e `(x + size * 1.2, y + size * 0.4)`. Saprai che ha funzionato quando ogni pesce ha una pinna sul dorso.
 
-4. **Grow the school.** Change `range(12)` to `range(25)`. You'll know it worked when the water gets crowded — do any fish overlap?
+4. **Fai crescere il banco.** Cambia `range(12)` in `range(25)`. Saprai che ha funzionato quando l'acqua diventa affollata — qualche pesce si sovrappone?
 
-!!! mascot-celebration "Splendid Work!"
+!!! mascot-celebration "Lavoro Splendido!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You built an entire underwater scene from one function called 12 times!
-    One function, infinite variation — that's the magic of parameterized code.
-    Up next: **Mountain Range** — layering shapes to create depth.
+    Hai costruito un'intera scena sottomarina da una funzione chiamata 12 volte!
+    Una funzione, infinita variazione — questa è la magia del codice parametrizzato.
+    Prossimo: **Catena Montuosa** — stratificare forme per creare profondità.

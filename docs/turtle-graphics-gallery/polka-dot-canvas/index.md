@@ -2,30 +2,30 @@
 hide:
     - toc
 ---
-# Polka Dot Canvas
+# Canvas a Pois
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Import the `random` module and call `random.randint()` and `random.choice()`
-- Use a fixed `random.seed()` to make results reproducible
-- Write a simple dot-drawing function and call it many times
+- Importare il modulo `random` e chiamare `random.randint()` e `random.choice()`
+- Usare un `random.seed()` fisso per rendere i risultati riproducibili
+- Scrivere una semplice funzione di disegno di punti e chiamarla molte volte
 
-Two hundred colorful dots scattered across the canvas — each one a random size,
-color, and position — creating a cheerful, unpredictable canvas every time.
+Duecento punti colorati disseminati attraverso il canvas — ognuno di dimensione,
+colore, e posizione casuali — creando un canvas allegro e imprevedibile ogni volta.
 
-!!! mascot-welcome "Welcome to the Polka Dot Canvas!"
+!!! mascot-welcome "Benvenuto al Canvas a Pois!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    In this lab you'll meet Python's `random` module — a treasure chest of tools
-    for making programs that behave differently every run!
-    Let's code it together!
+    In questo laboratorio conoscerai il modulo `random` di Python — uno scrigno di strumenti
+    per fare programmi che si comportano diversamente a ogni esecuzione!
+    Programmiamo insieme!
 
-## How Randomness Works
+## Come Funziona la Casualità
 
-`random.randint(a, b)` returns a random whole number between `a` and `b` (inclusive).
-`random.choice(list)` picks one random item from a list.
-`random.seed(n)` fixes the starting point so you always get the same "random" sequence — useful for reproducible demos.
+`random.randint(a, b)` restituisce un numero intero casuale tra `a` e `b` (inclusi).
+`random.choice(list)` sceglie un elemento casuale da una lista.
+`random.seed(n)` fissa il punto di partenza così ottieni sempre la stessa sequenza "casuale" — utile per demo riproducibili.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -47,13 +47,13 @@ for _ in range(80):
     monty.dot(r, c)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    `random.seed(42)` is set before the loop. If you click Reset and Run again,
-    will the dots appear in the **same** positions or **different** positions?
-    Make your guess — then click Run twice to find out!
+    `random.seed(42)` è impostato prima del ciclo. Se clicchi Reset ed Esegui di nuovo,
+    i punti appariranno nelle **stesse** posizioni o in posizioni **diverse**?
+    Fai la tua previsione — poi clicca Esegui due volte per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -94,30 +94,30 @@ for _ in range(80):
     monty.dot(r, c)`);
 </script>
 
-The dots appear in the **same** positions every run — because `random.seed(42)` resets the sequence to the same starting point. Were you right?
+I punti appaiono nelle **stesse** posizioni a ogni esecuzione — perché `random.seed(42)` reimposta la sequenza allo stesso punto di partenza. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`random.seed(42)` doesn't make things less random — it just determines *which* random sequence you get. Change `42` to any other number and you'll get a completely different (but still reproducible) pattern.
+`random.seed(42)` non rende le cose meno casuali — determina solo *quale* sequenza casuale ottieni. Cambia `42` in qualsiasi altro numero e otterrai un pattern completamente diverso (ma ancora riproducibile).
 
-`for _ in range(80)` uses `_` as the loop variable because we don't actually need the counter — we're just repeating 80 times.
+`for _ in range(80)` usa `_` come variabile di ciclo perché in realtà non abbiamo bisogno del contatore — stiamo solo ripetendo 80 volte.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `import random` | Load Python's random number module |
-| `random.seed(42)` | Fix the random sequence for reproducibility |
-| `random.randint(-280, 280)` | Random integer from -280 to 280 inclusive |
-| `random.choice(colors)` | Pick one item from the list at random |
-| `monty.dot(r, c)` | Draw a filled circle of radius `r` in color `c` |
+| `import random` | Carica il modulo dei numeri casuali di Python |
+| `random.seed(42)` | Fissa la sequenza casuale per la riproducibilità |
+| `random.randint(-280, 280)` | Intero casuale da -280 a 280 incluso |
+| `random.choice(colors)` | Sceglie un elemento casuale dalla lista |
+| `monty.dot(r, c)` | Disegna un cerchio riempito di raggio `r` nel colore `c` |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Spot the Bug!"
+!!! mascot-warning "Trova il Bug!"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    The program below draws dots but they all appear at the same position!
-    Find and fix the bug — the x and y coordinates should be random, not fixed.
+    Il programma sotto disegna punti ma appaiono tutti nella stessa posizione!
+    Trova e correggi il bug — le coordinate x e y dovrebbero essere casuali, non fisse.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -152,20 +152,20 @@ for _ in range(50):
     monty.dot(r, c)`);
 </script>
 
-Replace `x = 0` with `x = random.randint(-280, 280)` and `y = 0` with `y = random.randint(-200, 200)`.
+Sostituisci `x = 0` con `x = random.randint(-280, 280)` e `y = 0` con `y = random.randint(-200, 200)`.
 
-## Experiments
+## Esperimenti
 
-1. **Remove the seed.** Delete `random.seed(42)`. Now each run produces a different pattern. You'll know it worked when clicking Run twice gives different arrangements.
+1. **Rimuovi il seme.** Elimina `random.seed(42)`. Ora ogni esecuzione produce un pattern diverso. Saprai che ha funzionato quando cliccare Esegui due volte dà disposizioni diverse.
 
-2. **Change the seed.** Try `random.seed(99)` or `random.seed(1)`. Each seed produces its own unique pattern. You'll know it worked when the dots rearrange completely.
+2. **Cambia il seme.** Prova `random.seed(99)` o `random.seed(1)`. Ogni seme produce il proprio pattern unico. Saprai che ha funzionato quando i punti si riorganizzano completamente.
 
-3. **Make all dots the same size but random color.** Change `r = random.randint(8, 40)` to `r = 20`. You'll know it worked when the dots are uniform in size but colorful.
+3. **Rendi tutti i punti della stessa dimensione ma di colore casuale.** Cambia `r = random.randint(8, 40)` in `r = 20`. Saprai che ha funzionato quando i punti sono uniformi in dimensione ma colorati.
 
-4. **Double the count.** Change `range(80)` to `range(160)`. You'll know it worked when the canvas is much more densely packed with dots.
+4. **Raddoppia il conteggio.** Cambia `range(80)` in `range(160)`. Saprai che ha funzionato quando il canvas è molto più densamente riempito di punti.
 
-!!! mascot-celebration "Wonderful Work!"
+!!! mascot-celebration "Lavoro Meraviglioso!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You unlocked the power of randomness in Python — and learned that "random" doesn't have
-    to mean "uncontrolled." Seeds give you the best of both worlds!
-    Up next: **Brick Wall** — tiling a surface with a function and offset rows.
+    Hai sbloccato il potere della casualità in Python — e imparato che "casuale" non deve
+    significare "incontrollato." I semi ti danno il meglio di entrambi i mondi!
+    Prossimo: **Muro di Mattoni** — tassellare una superficie con una funzione e righe a offset.

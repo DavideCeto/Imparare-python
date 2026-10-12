@@ -2,30 +2,30 @@
 hide:
     - toc
 ---
-# Stars of Different Sizes
+# Stelle di Diverse Dimensioni
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Draw a 5-pointed star using the **144° exterior angle** trick
-- Write a `star(x, y, size, color)` function with four parameters
-- Scatter multiple stars across the canvas using `random`
+- Disegnare una stella a 5 punte usando il trucco dell'**angolo esterno di 144°**
+- Scrivere una funzione `star(x, y, size, color)` con quattro parametri
+- Disperdere più stelle attraverso il canvas usando `random`
 
-Fifteen gold and red stars of various sizes are scattered across a dark canvas,
-each one drawn with the same five-line trick — a perfect polygon shortcut.
+Quindici stelle oro e rosse di varie dimensioni sono disperse su un canvas scuro,
+ognuna disegnata con lo stesso trucco a cinque righe — una perfetta scorciatoia poligonale.
 
-!!! mascot-welcome "Welcome to Stars of Different Sizes!"
+!!! mascot-welcome "Benvenuto a Stelle di Diverse Dimensioni!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Did you know you can draw a 5-pointed star by turning 144° at each point?
-    In this lab you'll learn why, then scatter stars of different sizes across the canvas!
-    Let's code it together!
+    Sapevi che puoi disegnare una stella a 5 punte girando di 144° a ogni punta?
+    In questo laboratorio imparerai perché, poi disperderai stelle di diverse dimensioni attraverso il canvas!
+    Programmiamo insieme!
 
-## How the Star Works
+## Come Funziona la Stella
 
-A 5-pointed star's exterior angle is **144°** (not the usual polygon `360 / 5 = 72°`).
-This is because the star skips over one vertex each time, so the effective angle is `2 × 72° = 144°`.
-Five sides × 144° = 720° = two full rotations — which is exactly how a star point works geometrically.
+L'angolo esterno di una stella a 5 punte è **144°** (non il solito `360 / 5 = 72°` del poligono).
+Questo perché la stella salta un vertice ogni volta, così l'angolo effettivo è `2 × 72° = 144°`.
+Cinque lati × 144° = 720° = due rotazioni complete — che è esattamente come funziona geometricamente la punta di una stella.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -57,13 +57,13 @@ for _ in range(15):
     star(x, y, size, c)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The `star()` function draws 5 lines and turns 144° each time.
-    5 × 144° = 720°. That's **two** full rotations. Will the turtle end up facing the same direction it started?
-    Make your guess — then click Run to find out!
+    La funzione `star()` disegna 5 linee e gira di 144° ogni volta.
+    5 × 144° = 720°. Sono **due** rotazioni complete. La tartaruga finirà rivolta nella stessa direzione in cui ha iniziato?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -113,35 +113,35 @@ for _ in range(15):
     star(x, y, size, c)`);
 </script>
 
-Yes — 720° = 2 full turns, so the turtle ends up facing exactly the same direction it started. Were you right?
+Sì — 720° = 2 rotazioni complete, così la tartaruga finisce rivolta esattamente nella direzione in cui ha iniziato. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-The `star()` function uses `goto(x, y)` to jump to the star's first point, then draws 5 lines of `size` pixels, turning 144° right after each one.
+La funzione `star()` usa `goto(x, y)` per saltare al primo punto della stella, poi disegna 5 linee di `size` pixel, girando di 144° a destra dopo ognuna.
 
-Because 5 × 144° = 720° (exactly two full circles), the last line lands the turtle back at the start facing the original direction — closing the star perfectly without any extra math.
+Poiché 5 × 144° = 720° (esattamente due cerchi completi), l'ultima linea fa atterrare la tartaruga di nuovo all'inizio rivolta nella direzione originale — chiudendo la stella perfettamente senza nessuna matematica extra.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `def star(x, y, size, color)` | Four-parameter function: position, size, and color |
-| `monty.goto(x, y)` | Jump to the star's starting point |
-| `for _ in range(5)` | Draw 5 points of the star |
-| `monty.right(144)` | 144° = the exterior angle of a 5-pointed star |
-| `random.randint(20, 100)` | Random size between 20 and 100 pixels |
+| `def star(x, y, size, color)` | Funzione a quattro parametri: posizione, dimensione, e colore |
+| `monty.goto(x, y)` | Salta al punto di partenza della stella |
+| `for _ in range(5)` | Disegna 5 punte della stella |
+| `monty.right(144)` | 144° = l'angolo esterno di una stella a 5 punte |
+| `random.randint(20, 100)` | Dimensione casuale tra 20 e 100 pixel |
 
-!!! mascot-tip "Why 144°?"
+!!! mascot-tip "Perché 144°?"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    A regular pentagon has exterior angle 72°. A star skips one vertex each step,
-    so the angle doubles: 2 × 72° = **144°**. For a 6-pointed star the angle would be 2 × 60° = 120°.
+    Un pentagono regolare ha angolo esterno 72°. Una stella salta un vertice ogni passo,
+    così l'angolo raddoppia: 2 × 72° = **144°**. Per una stella a 6 punte l'angolo sarebbe 2 × 60° = 120°.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Spot the Bug!"
+!!! mascot-warning "Trova il Bug!"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    The program below draws shapes but they look like pentagons, not stars!
-    Find and fix the one wrong number in the `star()` function.
+    Il programma sotto disegna forme ma sembrano pentagoni, non stelle!
+    Trova e correggi l'unico numero sbagliato nella funzione `star()`.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -184,20 +184,20 @@ for _ in range(10):
     star(x, y, size, random.choice(colors))`);
 </script>
 
-Change `monty.right(72)` to `monty.right(144)` — 72° draws a regular pentagon; 144° draws a star.
+Cambia `monty.right(72)` in `monty.right(144)` — 72° disegna un pentagono regolare; 144° disegna una stella.
 
-## Experiments
+## Esperimenti
 
-1. **Draw a 6-pointed star.** Change `range(5)` to `range(6)` and `right(144)` to `right(120)`. You'll know it worked when a Star of David shape appears.
+1. **Disegna una stella a 6 punte.** Cambia `range(5)` in `range(6)` e `right(144)` in `right(120)`. Saprai che ha funzionato quando appare una forma a Stella di David.
 
-2. **Make a night sky.** Add a background first: draw a large filled black rectangle before calling the star loop. You'll know it worked when the stars glow against a dark background.
+2. **Fai un cielo notturno.** Aggiungi prima uno sfondo: disegna un grande rettangolo nero riempito prima di chiamare il ciclo delle stelle. Saprai che ha funzionato quando le stelle brillano contro uno sfondo scuro.
 
-3. **All the same size.** Change `random.randint(20, 100)` to a fixed `60`. You'll know it worked when all stars are uniform in size but still scattered randomly.
+3. **Tutte della stessa dimensione.** Cambia `random.randint(20, 100)` in un valore fisso `60`. Saprai che ha funzionato quando tutte le stelle sono uniformi in dimensione ma ancora disperse casualmente.
 
-4. **Overlapping stars.** Remove `random.seed(7)` and increase the count to `range(30)`. Each run creates a unique star field. You'll know it worked when no two runs look the same.
+4. **Stelle sovrapposte.** Rimuovi `random.seed(7)` e aumenta il conteggio a `range(30)`. Ogni esecuzione crea un campo stellare unico. Saprai che ha funzionato quando due esecuzioni non si assomigliano mai.
 
-!!! mascot-celebration "Stellar Work!"
+!!! mascot-celebration "Lavoro Stellare!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You learned the 144° star trick, wrote a four-parameter function, and used `random`
-    to scatter shapes across the canvas. You're thinking like a real creative coder!
-    Up next: **Traffic Light Stack** — decomposing a real-world object into drawing primitives.
+    Hai imparato il trucco della stella a 144°, scritto una funzione a quattro parametri, e usato `random`
+    per disperdere forme attraverso il canvas. Stai pensando come un vero programmatore creativo!
+    Prossimo: **Semaforo** — decomporre un oggetto del mondo reale in primitive di disegno.

@@ -2,30 +2,30 @@
 hide:
     - toc
 ---
-# Traffic Light Stack
+# Semaforo
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Break a real-world object into drawing primitives (rectangle + circles)
-- Write a `light(y, color)` function and call it three times to assemble a scene
-- Position shapes vertically using a y-coordinate argument
+- Scomporre un oggetto del mondo reale in primitive di disegno (rettangolo + cerchi)
+- Scrivere una funzione `light(y, color)` e chiamarla tre volte per assemblare una scena
+- Posizionare forme verticalmente usando un argomento di coordinata y
 
-A classic three-light traffic signal stands on screen — red on top, amber in the middle,
-green at the bottom — built from one rectangle and three function calls.
+Un classico semaforo a tre luci si erge sullo schermo — rosso in alto, giallo nel mezzo,
+verde in basso — costruito da un rettangolo e tre chiamate di funzione.
 
-!!! mascot-welcome "Welcome to the Traffic Light!"
+!!! mascot-welcome "Benvenuto al Semaforo!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Every complex drawing is really just simple shapes stacked together.
-    In this lab you'll decompose a traffic light into primitives and assemble it with functions!
-    Let's code it together!
+    Ogni disegno complesso è in realtà solo forme semplici impilate insieme.
+    In questo laboratorio decomporrai un semaforo in primitive e lo assemblerai con funzioni!
+    Programmiamo insieme!
 
-## How the Light Works
+## Come Funziona il Semaforo
 
-The housing is a tall dark rectangle drawn first. Then `light(y, color)` draws one filled
-circle at vertical position `y`. Three calls to `light()` with different y values and colors
-stack the three signals inside the housing.
+L'alloggiamento è un alto rettangolo scuro disegnato prima. Poi `light(y, color)` disegna un
+cerchio riempito alla posizione verticale `y`. Tre chiamate a `light()` con valori y e colori diversi
+impilano i tre segnali dentro l'alloggiamento.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -55,12 +55,12 @@ light(  0,  'orange')
 light(-100, 'green')
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    `light(y, color)` draws a dot at `(0, y - 25)`. Why subtract 25?
-    Think about where `dot()` is centered before clicking Run — then check your answer!
+    `light(y, color)` disegna un punto a `(0, y - 25)`. Perché sottrarre 25?
+    Pensa a dove è centrato `dot()` prima di cliccare Esegui — poi controlla la tua risposta!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -109,30 +109,30 @@ light(  0,  'orange')
 light(-100, 'green')`);
 </script>
 
-`dot()` is centered at the turtle's position. Subtracting 25 (half the dot diameter of 50) nudges the center to align visually with the y value passed in. Were you right?
+`dot()` è centrato sulla posizione della tartaruga. Sottrarre 25 (metà del diametro del punto di 50) sposta il centro per allinearsi visivamente con il valore y passato. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Drawing the housing rectangle **first** ensures it appears behind the lights. Because fills are opaque, the colored dots drawn afterward appear on top of the gray rectangle — correct layering without any extra tricks.
+Disegnare il rettangolo dell'alloggiamento **prima** assicura che appaia dietro le luci. Poiché i riempimenti sono opachi, i punti colorati disegnati dopo appaiono sopra il rettangolo grigio — stratificazione corretta senza nessun trucco extra.
 
-The `rect()` helper reuses the same `for side in [w, h, w, h]` pattern seen in the brick wall and skyline labs — once you learn a pattern, it works everywhere.
+L'aiutante `rect()` riutilizza lo stesso pattern `for side in [w, h, w, h]` visto nei laboratori del muro di mattoni e dello skyline — una volta che imparai un pattern, funziona ovunque.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `rect(x, y, w, h, color)` | Draw a filled rectangle — reusable for any box shape |
-| `rect(-35, -140, 70, 290, 'dimgray')` | The housing: 70px wide, 290px tall |
-| `def light(y, color)` | Draw one signal dot at the given y position |
-| `monty.dot(50, color)` | Filled circle of diameter 50 at current position |
-| `light(100, 'red')` | Top light (highest y = highest on screen) |
+| `rect(x, y, w, h, color)` | Disegna un rettangolo riempito — riutilizzabile per qualsiasi forma a scatola |
+| `rect(-35, -140, 70, 290, 'dimgray')` | L'alloggiamento: 70px di larghezza, 290px di altezza |
+| `def light(y, color)` | Disegna un punto segnale alla posizione y data |
+| `monty.dot(50, color)` | Cerchio riempito di diametro 50 alla posizione attuale |
+| `light(100, 'red')` | Luce superiore (y più alto = più in alto sullo schermo) |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add a Fourth Signal"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi un Quarto Segnale"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Some railway signals have a **fourth** white light at the very bottom.
-    Add one more `light()` call to put a white dot at `y = -180`, and extend the housing to fit.
+    Alcuni segnali ferroviari hanno una **quarta** luce bianca in fondo.
+    Aggiungi un'altra chiamata a `light()` per mettere un punto bianco a `y = -180`, ed estendi l'alloggiamento per adattarsi.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -176,20 +176,20 @@ light(-50, 'green')
 # ADD ONE LINE: white light at y = -150`);
 </script>
 
-Add `light(-150, 'white')` as the last line.
+Aggiungi `light(-150, 'white')` come ultima riga.
 
-## Experiments
+## Esperimenti
 
-1. **Make a pedestrian signal.** Replace the three colored lights with two — `light(60, 'red')` and `light(-60, 'green')`. Make the housing taller and narrower. You'll know it worked when a walk/don't-walk signal appears.
+1. **Fai un semaforo pedonale.** Sostituisci le tre luci colorate con due — `light(60, 'red')` e `light(-60, 'green')`. Rendi l'alloggiamento più alto e stretto. Saprai che ha funzionato quando appare un segnale cammina/non camminare.
 
-2. **Add a pole.** Before drawing the housing, draw a thin tall gray rectangle from the bottom of the housing to the bottom of the canvas. You'll know it worked when the traffic light appears mounted on a pole.
+2. **Aggiungi un palo.** Prima di disegnare l'alloggiamento, disegna un rettangolo grigio sottile e alto dal fondo dell'alloggiamento al fondo del canvas. Saprai che ha funzionato quando il semaforo appare montato su un palo.
 
-3. **Add glow rings.** Before each `dot()` call, draw a slightly larger dot in a lighter shade of the same color. You'll know it worked when each light appears to have a halo.
+3. **Aggiungi anelli di luminescenza.** Prima di ogni chiamata a `dot()`, disegna un punto leggermente più grande in una tonalità più chiara dello stesso colore. Saprai che ha funzionato quando ogni luce sembra avere un'aureola.
 
-4. **Show only one active light.** Change two of the light colors to `'darkgray'` so only one is "on". You'll know it worked when two lights are dim and one is bright.
+4. **Mostra solo una luce attiva.** Cambia due dei colori delle luci in `'darkgray'` così solo una è "accesa". Saprai che ha funzionato quando due luci sono spente e una è luminosa.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You decomposed a real-world object into layers of primitives and assembled it
-    with functions — the exact workflow used by every UI designer and game artist!
-    Up next: **Fish School** — drawing a creature shape with a function.
+    Hai decomposto un oggetto del mondo reale in strati di primitive e l'hai assemblato
+    con funzioni — esattamente il flusso di lavoro usato da ogni designer UI e artista di videogiochi!
+    Prossimo: **Banco di Pesci** — disegnare la forma di una creatura con una funzione.

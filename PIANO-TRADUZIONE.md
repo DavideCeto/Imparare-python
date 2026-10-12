@@ -138,6 +138,9 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
   Offset:", e una sezione "Alternative Package Options" fuori tema che consiglia
   librerie esterne. Escluso dalla traduzione italiana, come già fatto per il bug
   del Capitolo 5; il bug resta nell'originale inglese, da segnalare separatamente)
+- `polka-dot-canvas/`, `brick-wall/`, `stars-different-sizes/`, `traffic-light/`,
+  `fish-school/` (quarto batch — corretto un refuso "metter" → "mettere" in
+  `traffic-light/index.md` prima del commit)
 
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
@@ -266,12 +269,14 @@ cuore didattico del libro.
 `pattern-ideas.md`, `index.md` (root), `rainbow-square-spiral/`, `pinwheel-of-triangles/`,
 `nested-circles/`, `starburst/`, `checkerboard-grid/`, `diagonal-stripe-field/`,
 `dotted-grid/`, `color-wheel-wedges/`, `pentagon-chain/`, `overlapping-squares/`,
-`flower-petal-function/`, `honeycomb-grid/`, `city-skyline/`, `snowflake-arms/`
-(17 di ~102 file/unità).
+`flower-petal-function/`, `honeycomb-grid/`, `city-skyline/`, `snowflake-arms/`,
+`polka-dot-canvas/`, `brick-wall/`, `stars-different-sizes/`, `traffic-light/`,
+`fish-school/` (22 di ~102 file/unità).
 
-Prossimo: continuare la Fase 4 in ordine di nav con `polka-dot-canvas/`,
-`brick-wall/`, `stars-different-sizes/`, `traffic-light/`, `fish-school/`, e così
-via attraverso i restanti ~86 singoli laboratori della galleria.
+Prossimo: continuare la Fase 4 in ordine di nav con `mountain-range/`,
+`archimedean-spiral/`, `rainbow-line-spiral/`, `hexagonal-spiral/`,
+`triangular-spiral/`, e così via attraverso i restanti ~81 singoli laboratori
+della galleria.
 
 Dopo la Fase 4: Fasi 5-9 (MicroSims, Teacher's Guide, Jupyter/Advanced, Learning Graph,
 Trinket Labs — quest'ultima di priorità minima/da valutare se tradurre affatto, vedi

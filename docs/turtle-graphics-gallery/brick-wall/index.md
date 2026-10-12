@@ -2,30 +2,30 @@
 hide:
     - toc
 ---
-# Brick Wall
+# Muro di Mattoni
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Write a `brick()` function and call it from nested loops
-- Apply the **offset row** pattern to stagger alternate rows
-- Use `pencolor` and `fillcolor` separately to add outlines to filled shapes
+- Scrivere una funzione `brick()` e chiamarla da cicli annidati
+- Applicare il pattern delle **righe con offset** per scalare le righe alterne
+- Usare `pencolor` e `fillcolor` separatamente per aggiungere contorni a forme riempite
 
-Eight rows of warm red-brown bricks fill the canvas, each row staggered
-by half a brick — just like a real wall laid by a bricklayer.
+Otto righe di mattoni rosso-marrone caldo riempiono il canvas, ogni riga scalata
+di metà mattone — proprio come un vero muro posato da un muratore.
 
-!!! mascot-welcome "Welcome to the Brick Wall!"
+!!! mascot-welcome "Benvenuto al Muro di Mattoni!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Brick laying has a secret: alternate rows are shifted by half a brick so cracks don't line up
-    and the wall stays strong. You'll code that same pattern right now!
-    Let's code it together!
+    La posa dei mattoni ha un segreto: le righe alterne sono spostate di metà mattone così le crepe
+    non si allineano e il muro resta forte. Programmerai subito questo stesso pattern!
+    Programmiamo insieme!
 
-## How the Wall Works
+## Come Funziona il Muro
 
-The `brick(x, y, w, h, color)` function draws one filled rectangle with a dark outline.
-The offset pattern: if `row % 2 == 1` (an odd row), shift the starting x by half a brick width.
-This staggers the rows so each brick spans the joint of two bricks below it.
+La funzione `brick(x, y, w, h, color)` disegna un rettangolo riempito con un contorno scuro.
+Il pattern dell'offset: se `row % 2 == 1` (una riga dispari), sposta la x di partenza di metà larghezza di un mattone.
+Questo scala le righe così ogni mattone attraversa la giunzione di due mattoni sotto di esso.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -56,13 +56,13 @@ for row in range(8):
         brick(x, y, bw - 3, bh - 3, colors[(row + col) % 3])
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Odd rows (`row % 2 == 1`) are shifted right by `bw // 2 = 35` pixels.
-    Will the bricks in row 1 (odd) line up with the joints in row 0, or with the middles of row 0's bricks?
-    Make your guess — then click Run to find out!
+    Le righe dispari (`row % 2 == 1`) sono spostate a destra di `bw // 2 = 35` pixel.
+    I mattoni della riga 1 (dispari) si allineeranno con le giunzioni della riga 0, o con i centri dei mattoni della riga 0?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -112,30 +112,30 @@ for row in range(8):
         brick(x, y, bw - 3, bh - 3, colors[(row + col) % 3])`);
 </script>
 
-Row 1's bricks line up with the **middles** of row 0's bricks — that's what makes it a proper offset bond. Were you right?
+I mattoni della riga 1 si allineano con i **centri** dei mattoni della riga 0 — questo è ciò che lo rende un vero legame a offset. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`monty.fillcolor(color)` and `monty.pencolor('black')` set the fill and outline colors independently. This is how you draw filled shapes with a visible border — `monty.color(c)` sets both to the same color, but `fillcolor`/`pencolor` let you separate them.
+`monty.fillcolor(color)` e `monty.pencolor('black')` impostano i colori di riempimento e contorno indipendentemente. Questo è come disegni forme riempite con un bordo visibile — `monty.color(c)` imposta entrambi allo stesso colore, ma `fillcolor`/`pencolor` ti permettono di separarli.
 
-`offset = bw // 2 if row % 2 == 1 else 0` is Python's **ternary expression**: a compact `if/else` on one line. It reads: "set offset to half a brick if the row is odd, otherwise zero."
+`offset = bw // 2 if row % 2 == 1 else 0` è l'**espressione ternaria** di Python: un `if/else` compatto su una riga. Si legge: "imposta offset a metà mattone se la riga è dispari, altrimenti zero."
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `monty.fillcolor(color)` | Set fill color separately from outline |
-| `monty.pencolor('black')` | Set outline color to black |
-| `offset = bw // 2 if row % 2 == 1 else 0` | Ternary: offset odd rows by half a brick |
-| `for side in [w, h, w, h]` | Draw four sides in one loop |
-| `colors[(row + col) % 3]` | Cycle three brick shades across the wall |
+| `monty.fillcolor(color)` | Imposta il colore di riempimento separatamente dal contorno |
+| `monty.pencolor('black')` | Imposta il colore del contorno su nero |
+| `offset = bw // 2 if row % 2 == 1 else 0` | Ternario: sposta le righe dispari di metà mattone |
+| `for side in [w, h, w, h]` | Disegna quattro lati in un ciclo |
+| `colors[(row + col) % 3]` | Scorre tre tonalità di mattone attraverso il muro |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Spot the Bug!"
+!!! mascot-warning "Trova il Bug!"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    The program below draws a grid of bricks but they are NOT staggered — all rows line up!
-    Fix the one line that computes the offset so alternate rows shift by half a brick width.
+    Il programma sotto disegna una griglia di mattoni ma NON sono scalati — tutte le righe si allineano!
+    Correggi l'unica riga che calcola l'offset così le righe alterne si spostino di metà larghezza di un mattone.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -178,20 +178,20 @@ for row in range(8):
         brick(x, y, bw - 3, bh - 3, 'firebrick')`);
 </script>
 
-Change `offset = 0` to `offset = bw // 2 if row % 2 == 1 else 0`.
+Cambia `offset = 0` in `offset = bw // 2 if row % 2 == 1 else 0`.
 
-## Experiments
+## Esperimenti
 
-1. **Change brick colors.** Replace `['firebrick','brown','darkred']` with `['lightyellow','beige','wheat']` for a light stone wall. You'll know it worked when the wall color changes completely.
+1. **Cambia i colori dei mattoni.** Sostituisci `['firebrick','brown','darkred']` con `['lightyellow','beige','wheat']` per un muro di pietra chiara. Saprai che ha funzionato quando il colore del muro cambia completamente.
 
-2. **Make taller bricks.** Change `bh = 28` to `bh = 40`. You'll know it worked when there are fewer rows of taller bricks.
+2. **Fai mattoni più alti.** Cambia `bh = 28` in `bh = 40`. Saprai che ha funzionato quando ci sono meno righe di mattoni più alti.
 
-3. **Try running-bond offset.** Change the offset to `bw // 3` for a different pattern called running bond. You'll know it worked when the stagger is one-third of a brick instead of one-half.
+3. **Prova l'offset a legame corrente.** Cambia l'offset in `bw // 3` per un pattern diverso chiamato legame corrente. Saprai che ha funzionato quando lo scalamento è un terzo di mattone invece di metà.
 
-4. **Add mortar.** Change `bh - 3` to `bh - 5` and `bw - 3` to `bw - 6`. The larger gaps show more "mortar" between bricks. You'll know it worked when the dark gaps become wider.
+4. **Aggiungi la malta.** Cambia `bh - 3` in `bh - 5` e `bw - 3` in `bw - 6`. Gli spazi più grandi mostrano più "malta" tra i mattoni. Saprai che ha funzionato quando gli spazi scuri diventano più larghi.
 
-!!! mascot-celebration "Incredible Work!"
+!!! mascot-celebration "Lavoro Incredibile!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You coded a brick wall complete with offset rows, separate fill and outline colors,
-    and a three-shade color cycle — that's real craft in Python!
-    Up next: **Stars of Different Sizes** — the geometry of a 5-pointed star.
+    Hai programmato un muro di mattoni completo con righe a offset, colori di riempimento e contorno separati,
+    e un ciclo di tre tonalità di colore — questa è vera maestria in Python!
+    Prossimo: **Stelle di Diverse Dimensioni** — la geometria di una stella a 5 punte.
