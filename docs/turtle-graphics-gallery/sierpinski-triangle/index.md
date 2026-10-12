@@ -2,33 +2,33 @@
 hide:
     - toc
 ---
-# Sierpiński Triangle
+# Triangolo di Sierpiński
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Write a recursive function that draws a triangle and subdivides it into three smaller triangles
-- Understand why the "holes" in a Sierpiński triangle are never filled — they are the recursion's center gap
-- See how depth controls how many levels of self-similar holes appear
+- Scrivere una funzione ricorsiva che disegna un triangolo e lo suddivide in tre triangoli più piccoli
+- Capire perché i "buchi" in un triangolo di Sierpiński non vengono mai riempiti — sono lo spazio centrale della ricorsione
+- Vedere come la profondità controlla quanti livelli di buchi auto-simili appaiono
 
-A triangle made entirely of triangles — each containing smaller triangles, each containing even smaller ones. The middle of every triangle stays empty, creating a fractal lattice of infinite holes.
+Un triangolo fatto interamente di triangoli — ognuno contenente triangoli più piccoli, ognuno contenente altri ancora più piccoli. Il centro di ogni triangolo resta vuoto, creando un reticolo frattale di buchi infiniti.
 
-!!! mascot-welcome "Welcome to the Sierpiński Triangle!"
+!!! mascot-welcome "Benvenuto al Triangolo di Sierpiński!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    The Sierpiński Triangle is one of the most famous shapes in all of mathematics.
-    It looks complicated but emerges from a beautifully simple recursive rule.
-    Let's code it together!
+    Il Triangolo di Sierpiński è una delle forme più famose in tutta la matematica.
+    Sembra complicato ma emerge da una regola ricorsiva meravigliosamente semplice.
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-`sierpinski(x, y, size, depth)` draws a filled equilateral triangle at `(x, y)`.
-If `depth > 0`, it recursively draws three half-size triangles at the three corners of the current triangle. The center gap is never drawn — it's naturally left empty.
+`sierpinski(x, y, size, depth)` disegna un triangolo equilatero riempito a `(x, y)`.
+Se `depth > 0`, disegna ricorsivamente tre triangoli di metà dimensione ai tre angoli del triangolo attuale. Lo spazio centrale non viene mai disegnato — resta naturalmente vuoto.
 
-Three corner positions:
-- Bottom-left: `(x, y)`
-- Bottom-right: `(x + size, y)`
-- Top: `(x + size/2, y + size * sqrt(3)/2)`
+Tre posizioni d'angolo:
+- In basso a sinistra: `(x, y)`
+- In basso a destra: `(x + size, y)`
+- In alto: `(x + size/2, y + size * sqrt(3)/2)`
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -66,13 +66,13 @@ monty.pendown()
 sierpinski(-160, -140, 320, 5)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    At depth 5, how many tiny triangles will be drawn?
-    (Hint: at depth 0 it's 1, at depth 1 it's 3, at depth 2 it's 9 …)
-    Make your guess — then click Run to find out!
+    Alla profondità 5, quanti piccoli triangoli verranno disegnati?
+    (Suggerimento: alla profondità 0 è 1, alla profondità 1 è 3, alla profondità 2 è 9 …)
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -126,30 +126,30 @@ def sierpinski(x, y, size, depth):
 sierpinski(-160, -140, 320, 5)`);
 </script>
 
-At depth 5, `3^5 = 243` solid triangles are drawn. Were you right?
+Alla profondità 5, vengono disegnati `3^5 = 243` triangoli solidi. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-The function draws the full outer triangle first (in the current depth's color), then recursively draws three smaller triangles at the corners. Each new call overwrites the corners — the center gap is never covered because there's no fourth recursive call for the center.
+La funzione disegna prima il triangolo esterno completo (nel colore della profondità attuale), poi disegna ricorsivamente tre triangoli più piccoli agli angoli. Ogni nuova chiamata sovrascrive gli angoli — lo spazio centrale non viene mai coperto perché non c'è una quarta chiamata ricorsiva per il centro.
 
-Different depths get different colors — darker blues for deeper (smaller) triangles — creating a visible color gradient from outer to inner.
+Profondità diverse ottengono colori diversi — blu più scuri per triangoli più profondi (più piccoli) — creando un gradiente di colore visibile dall'esterno all'interno.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `colors[min(depth, len(colors)-1)]` | Map depth to a color — deeper = lighter |
-| `if depth > 0:` | Base case check — stop at depth 0 |
-| `half = size / 2` | Sub-triangles are half the parent size |
-| Three `sierpinski()` calls | Recurse on bottom-left, bottom-right, top corners |
-| No call for center | The center gap stays empty — that's the fractal hole |
+| `colors[min(depth, len(colors)-1)]` | Mappa la profondità a un colore — più profondo = più chiaro |
+| `if depth > 0:` | Controllo del caso base — ferma alla profondità 0 |
+| `half = size / 2` | I sotto-triangoli sono metà della dimensione del genitore |
+| Tre chiamate `sierpinski()` | Ricorre sugli angoli in basso a sinistra, in basso a destra, in alto |
+| Nessuna chiamata per il centro | Lo spazio centrale resta vuoto — questo è il buco frattale |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Reduce to Depth 3"
+!!! mascot-thinking "Il Tuo Turno — Riduci alla Profondità 3"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `depth=5` to `depth=3`. How many triangles will be drawn? (3^3 = ?)
-    Make your prediction, then run it to count the visible holes.
+    Cambia `depth=5` in `depth=3`. Quanti triangoli verranno disegnati? (3^3 = ?)
+    Fai la tua previsione, poi eseguila per contare i buchi visibili.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -197,20 +197,20 @@ def sierpinski(x, y, size, depth):
 sierpinski(-160, -140, 320, 3)`);
 </script>
 
-At depth 3: `3^3 = 27` triangles and `(3^3 - 1)/2 = 13` visible holes. The structure is already clearly self-similar.
+Alla profondità 3: `3^3 = 27` triangoli e `(3^3 - 1)/2 = 13` buchi visibili. La struttura è già chiaramente auto-simile.
 
-## Experiments
+## Esperimenti
 
-1. **Use warm colors.** Change `colors` to `['darkred', 'red', 'orange', 'gold', 'yellow', 'white']`. You'll know it worked when the triangle shifts to warm tones.
+1. **Usa colori caldi.** Cambia `colors` in `['darkred', 'red', 'orange', 'gold', 'yellow', 'white']`. Saprai che ha funzionato quando il triangolo passa a tonalità calde.
 
-2. **Try a very deep depth.** Change to `depth=7`. It will be slow but extremely detailed. You'll know it worked when the inner triangles are pixel-sized.
+2. **Prova una profondità molto profonda.** Cambia in `depth=7`. Sarà lento ma estremamente dettagliato. Saprai che ha funzionato quando i triangoli interni sono della dimensione di un pixel.
 
-3. **Remove the fill.** Instead of `begin_fill()`/`end_fill()`, just draw the outline. You'll know it worked when you see only the edges of each triangle.
+3. **Rimuovi il riempimento.** Invece di `begin_fill()`/`end_fill()`, disegna solo il contorno. Saprai che ha funzionato quando vedi solo i bordi di ogni triangolo.
 
-4. **Invert: draw the gaps.** Draw only triangles where `depth == 0`, using white fill everywhere else as background. You'll know it worked when the pattern looks like the classic "holes" version.
+4. **Inverti: disegna gli spazi vuoti.** Disegna solo i triangoli dove `depth == 0`, usando riempimento bianco ovunque altro come sfondo. Saprai che ha funzionato quando il pattern sembra la classica versione "a buchi".
 
-!!! mascot-celebration "Recursive Mastery!"
+!!! mascot-celebration "Maestria Ricorsiva!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You built a fractal with infinite holes from a three-line recursive rule!
-    Notice how `3^depth` triangles appear — the power of exponential recursion.
-    Up next: **Fractal Tree** — branching recursion that looks just like a real tree.
+    Hai costruito un frattale con buchi infiniti da una regola ricorsiva di tre righe!
+    Nota come appaiono `3^depth` triangoli — il potere della ricorsione esponenziale.
+    Prossimo: **Albero Frattale** — ricorsione ramificata che sembra proprio un vero albero.

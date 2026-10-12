@@ -2,35 +2,35 @@
 hide:
     - toc
 ---
-# Fractal Tree
+# Albero Frattale
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Write a binary recursive function that grows a tree with two branches per node
-- Use depth to control both branch length and color (brown trunk, green leaves)
-- Understand why the turtle must go backward after each branch to return to the fork
+- Scrivere una funzione ricorsiva binaria che fa crescere un albero con due rami per nodo
+- Usare la profondità per controllare sia la lunghezza del ramo sia il colore (tronco marrone, foglie verdi)
+- Capire perché la tartaruga deve andare indietro dopo ogni ramo per tornare alla diramazione
 
-A tree that looks like it grew naturally — thick brown trunk splitting into thinner branches, ending in bright green leaf tips. Five levels of binary recursion create over 30 distinct branches.
+Un albero che sembra crescere naturalmente — tronco marrone spesso che si divide in rami più sottili, finendo in punte di foglie verde brillante. Cinque livelli di ricorsione binaria creano più di 30 rami distinti.
 
-!!! mascot-welcome "Welcome to the Fractal Tree!"
+!!! mascot-welcome "Benvenuto all'Albero Frattale!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Every tree you've ever seen is a fractal — a trunk that splits into branches
-    that split into smaller branches. This lab codes exactly that rule!
-    Let's code it together!
+    Ogni albero che hai mai visto è un frattale — un tronco che si divide in rami
+    che si dividono in rami più piccoli. Questo laboratorio programma esattamente questa regola!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
 `tree(branch_len, depth)`:
-1. If `branch_len < 5`, stop (base case)
-2. Draw a branch of the current length (brown if deep, green near tips)
-3. Turn left 25°, recurse with `branch_len * 0.7`
-4. Turn right 50°, recurse with `branch_len * 0.7`
-5. Turn left 25° (return to original heading)
-6. Go **backward** the same length (return to the fork point)
+1. Se `branch_len < 5`, fermati (caso base)
+2. Disegna un ramo della lunghezza attuale (marrone se profondo, verde vicino alle punte)
+3. Gira a sinistra di 25°, ricorri con `branch_len * 0.7`
+4. Gira a destra di 50°, ricorri con `branch_len * 0.7`
+5. Gira a sinistra di 25° (ritorna alla direzione originale)
+6. Vai **all'indietro** della stessa lunghezza (ritorna al punto di diramazione)
 
-Step 6 is the key: the turtle must retrace the branch so the next recursive call starts from the correct position.
+Il passo 6 è la chiave: la tartaruga deve ripercorrere il ramo così la chiamata ricorsiva successiva inizia dalla posizione corretta.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -65,12 +65,12 @@ monty.pendown()
 tree(100, 7)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Each branch splits into two that are 70% as long. After 7 levels, how many
-    leaf tips will there be? (Hint: 2^7 = ?) Make your guess — then click Run!
+    Ogni ramo si divide in due che sono lunghi il 70%. Dopo 7 livelli, quante
+    punte di foglie ci saranno? (Suggerimento: 2^7 = ?) Fai la tua previsione — poi clicca Esegui!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -124,30 +124,30 @@ monty.pendown()
 tree(100, 7)`);
 </script>
 
-`2^7 = 128` potential leaf tips — though some are cut off by the `< 5` base case. Were you right?
+`2^7 = 128` potenziali punte di foglie — anche se alcune sono tagliate dal caso base `< 5`. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`monty.backward(branch_len)` is the "undo" step: after recursing into both sub-branches, the turtle returns to where it started so the parent call can continue correctly. Without this step, the turtle would be stuck at a leaf tip and the tree would look scrambled.
+`monty.backward(branch_len)` è il passo di "annullamento": dopo aver ricorso in entrambi i sotto-rami, la tartaruga ritorna dove ha iniziato così la chiamata genitrice può continuare correttamente. Senza questo passo, la tartaruga rimarrebbe bloccata su una punta di foglia e l'albero sembrerebbe disordinato.
 
-`branch_len * 0.7` shrinks each branch to 70% of its parent. After 7 generations: `100 × 0.7^7 ≈ 8` pixels — still above the `5` threshold, so all branches draw.
+`branch_len * 0.7` restringe ogni ramo al 70% del suo genitore. Dopo 7 generazioni: `100 × 0.7^7 ≈ 8` pixel — ancora sopra la soglia di `5`, così tutti i rami vengono disegnati.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `if branch_len < 5: return` | Base case — stop when branches get too small |
-| `monty.forward(branch_len)` | Draw the current branch |
-| `monty.left(25)` then recurse | Draw the left sub-branch |
-| `monty.right(50)` then recurse | Draw the right sub-branch (50° right = 25° right of center) |
-| `monty.backward(branch_len)` | Return turtle to the fork point |
+| `if branch_len < 5: return` | Caso base — ferma quando i rami diventano troppo piccoli |
+| `monty.forward(branch_len)` | Disegna il ramo attuale |
+| `monty.left(25)` poi ricorre | Disegna il sotto-ramo sinistro |
+| `monty.right(50)` poi ricorre | Disegna il sotto-ramo destro (50° a destra = 25° a destra del centro) |
+| `monty.backward(branch_len)` | Riporta la tartaruga al punto di diramazione |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Change the Branch Angle"
+!!! mascot-thinking "Il Tuo Turno — Cambia l'Angolo del Ramo"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change the branch angle from 25° to 40°. How will the tree's shape change —
-    wider and bushier, or narrower and taller? Predict, then run!
+    Cambia l'angolo del ramo da 25° a 40°. Come cambierà la forma dell'albero —
+    più largo e cespuglioso, o più stretto e alto? Prevedi, poi esegui!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -192,20 +192,20 @@ monty.pendown()
 tree(100, 7)`);
 </script>
 
-With 40° branch angles the tree is much **wider and bushier** — spread low like an oak rather than reaching up like a pine. Larger angle = wider spread.
+Con angoli di ramo a 40° l'albero è molto **più largo e cespuglioso** — si estende basso come una quercia invece di allungarsi verso l'alto come un pino. Angolo più grande = estensione più larga.
 
-## Experiments
+## Esperimenti
 
-1. **Make a pine tree.** Use 15° branch angles instead of 25°. You'll know it worked when the tree is narrow and tall like a conifer.
+1. **Fai un pino.** Usa angoli di ramo di 15° invece di 25°. Saprai che ha funzionato quando l'albero è stretto e alto come una conifera.
 
-2. **Slow the shrink rate.** Change `0.7` to `0.85`. Branches shrink more slowly, creating a denser tree. You'll know it worked when there are many more thin branches at the tips.
+2. **Riduci la velocità di restringimento.** Cambia `0.7` in `0.85`. I rami si restringono più lentamente, creando un albero più denso. Saprai che ha funzionato quando ci sono molti più rami sottili alle punte.
 
-3. **Add a trunk.** Before calling `tree(100, 7)`, add `monty.pensize(6); monty.pencolor('saddlebrown'); monty.forward(40)` then call `tree(100, 7)`, then `monty.backward(40)`. You'll know it worked when the tree has a thick base trunk section.
+3. **Aggiungi un tronco.** Prima di chiamare `tree(100, 7)`, aggiungi `monty.pensize(6); monty.pencolor('saddlebrown'); monty.forward(40)` poi chiama `tree(100, 7)`, poi `monty.backward(40)`. Saprai che ha funzionato quando l'albero ha una sezione di tronco di base spessa.
 
-4. **Color by depth.** Pass `depth` into the function and color leaves bright green only when `depth == 0`. You'll know it worked when only the very tips are colored differently.
+4. **Colora per profondità.** Passa `depth` nella funzione e colora le foglie verde brillante solo quando `depth == 0`. Saprai che ha funzionato quando solo le punte estreme sono colorate diversamente.
 
-!!! mascot-celebration "You Grew a Tree with Code!"
+!!! mascot-celebration "Hai Fatto Crescere un Albero con il Codice!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Every tree in the real world follows a similar rule — trunk splits to branches,
-    branches split to twigs, twigs to leaves. Recursion is nature's favorite algorithm!
-    Up next: **Dragon Curve** — a fractal that folds like a piece of paper.
+    Ogni albero nel mondo reale segue una regola simile — il tronco si divide in rami,
+    i rami si dividono in rametti, i rametti in foglie. La ricorsione è l'algoritmo preferito dalla natura!
+    Prossimo: **Curva del Dragone** — un frattale che si piega come un foglio di carta.

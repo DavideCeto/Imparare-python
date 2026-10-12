@@ -146,6 +146,11 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
   `rainbow-line-spiral/index.md` prima del commit)
 - `inward-spiral/`, `logarithmic-spiral/`, `double-helix-spiral/`, `fibonacci-spiral/`,
   `spiral-of-spirals/` (sesto batch — chiude la categoria 3 "Spirali" della galleria)
+- `pentagon-spiral/`, `koch-snowflake/`, `sierpinski-triangle/`, `fractal-tree/`,
+  `l-system-plant/` (settimo batch — `pentagon-spiral/` chiude la categoria 3,
+  gli altri quattro iniziano la categoria 4 "Frattali e Ricorsione"; il laboratorio
+  della galleria `fractal-tree/` è un file diverso e più articolato rispetto a
+  `docs/python-labs/12-fractal-tree.md` già tradotto in Fase 3, non un duplicato)
 
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
@@ -278,11 +283,13 @@ cuore didattico del libro.
 `polka-dot-canvas/`, `brick-wall/`, `stars-different-sizes/`, `traffic-light/`,
 `fish-school/`, `mountain-range/`, `archimedean-spiral/`, `rainbow-line-spiral/`,
 `hexagonal-spiral/`, `triangular-spiral/`, `inward-spiral/`, `logarithmic-spiral/`,
-`double-helix-spiral/`, `fibonacci-spiral/`, `spiral-of-spirals/` (32 di ~102 file/unità).
+`double-helix-spiral/`, `fibonacci-spiral/`, `spiral-of-spirals/`, `pentagon-spiral/`,
+`koch-snowflake/`, `sierpinski-triangle/`, `fractal-tree/`, `l-system-plant/`
+(37 di ~102 file/unità).
 
-Prossimo: continuare la Fase 4 in ordine di nav con `pentagon-spiral/`,
-`koch-snowflake/`, `sierpinski-triangle/`, `fractal-tree/`, `l-system-plant/`, e così
-via attraverso i restanti ~71 singoli laboratori della galleria.
+Prossimo: continuare la Fase 4 in ordine di nav con `turtle-maze/`,
+`parametric-surface/`, `linden-snowflakes/`, `generative-art/`, `bouncing-ball/`, e così
+via attraverso i restanti ~66 singoli laboratori della galleria.
 
 Dopo la Fase 4: Fasi 5-9 (MicroSims, Teacher's Guide, Jupyter/Advanced, Learning Graph,
 Trinket Labs — quest'ultima di priorità minima/da valutare se tradurre affatto, vedi

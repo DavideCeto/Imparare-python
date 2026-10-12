@@ -2,35 +2,35 @@
 hide:
     - toc
 ---
-# Koch Snowflake
+# Fiocco di Neve di Koch
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Write a recursive function that replaces every line segment with four smaller segments
-- Understand what a "base case" is and why it stops the recursion
-- See how applying one simple rule repeatedly creates infinite complexity
+- Scrivere una funzione ricorsiva che sostituisce ogni segmento di linea con quattro segmenti più piccoli
+- Capire cos'è un "caso base" e perché ferma la ricorsione
+- Vedere come applicare una regola semplice ripetutamente crea complessità infinita
 
-A six-pointed snowflake with jagged crystalline edges — each edge is itself made of smaller jagged edges, which are made of even smaller ones. Three levels of recursion and a simple rule: bump every segment into a triangular notch.
+Un fiocco di neve a sei punte con bordi cristallini frastagliati — ogni bordo è a sua volta fatto di bordi frastagliati più piccoli, che sono fatti di altri ancora più piccoli. Tre livelli di ricorsione e una regola semplice: fai sporgere ogni segmento in una tacca triangolare.
 
-!!! mascot-welcome "Welcome to the Koch Snowflake!"
+!!! mascot-welcome "Benvenuto al Fiocco di Neve di Koch!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    The Koch snowflake is one of the most famous fractals. It has infinite perimeter
-    but finite area — impossible to imagine, but easy to code!
-    Let's code it together!
+    Il fiocco di neve di Koch è uno dei frattali più famosi. Ha perimetro infinito
+    ma area finita — impossibile da immaginare, ma facile da programmare!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-The Koch rule for a single line segment of length `n`:
-1. Draw a line of length `n/3`
-2. Turn left 60°, draw `n/3`
-3. Turn right 120°, draw `n/3`
-4. Turn left 60°, draw `n/3`
+La regola di Koch per un singolo segmento di linea di lunghezza `n`:
+1. Disegna una linea di lunghezza `n/3`
+2. Gira a sinistra di 60°, disegna `n/3`
+3. Gira a destra di 120°, disegna `n/3`
+4. Gira a sinistra di 60°, disegna `n/3`
 
-At each level, every segment becomes four segments one-third the size. After 4 levels, the edges look smooth and crystalline.
+A ogni livello, ogni segmento diventa quattro segmenti di un terzo della dimensione. Dopo 4 livelli, i bordi sembrano lisciati e cristallini.
 
-The snowflake is drawn by calling this rule three times, turning 120° between calls to form an equilateral triangle base.
+Il fiocco di neve è disegnato chiamando questa regola tre volte, girando di 120° tra le chiamate per formare una base di triangolo equilatero.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -61,14 +61,14 @@ for _ in range(3):
     monty.right(120)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    At depth 0, `koch(n, 0)` just draws a straight line.
-    At depth 1, each segment has a triangular bump.
-    At depth 4, will the edges look smooth or jagged?
-    Make your guess — then click Run to find out!
+    Alla profondità 0, `koch(n, 0)` disegna semplicemente una linea retta.
+    Alla profondità 1, ogni segmento ha una protuberanza triangolare.
+    Alla profondità 4, i bordi sembreranno lisciati o frastagliati?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -118,36 +118,36 @@ for _ in range(3):
     monty.right(120)`);
 </script>
 
-**Jagged** but beautiful — the edges have a crystalline, snowflake-like appearance. Were you right?
+**Frastagliati** ma bellissimi — i bordi hanno un aspetto cristallino, simile a un fiocco di neve. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Each call to `koch(n, depth)` with `depth > 0` makes **four recursive calls** to itself with `depth - 1`. When `depth` finally reaches 0, the function just draws a line and returns. This is the **base case** — without it, the recursion would never stop.
+Ogni chiamata a `koch(n, depth)` con `depth > 0` fa **quattro chiamate ricorsive** a se stessa con `depth - 1`. Quando `depth` finalmente raggiunge 0, la funzione disegna semplicemente una linea e ritorna. Questo è il **caso base** — senza di esso, la ricorsione non si fermerebbe mai.
 
-The total number of line segments drawn is 4^depth: at depth 4 that's 4^4 = **256 segments** per side, or **768 segments** for the whole snowflake.
+Il numero totale di segmenti di linea disegnati è 4^depth: alla profondità 4 questo è 4^4 = **256 segmenti** per lato, o **768 segmenti** per l'intero fiocco di neve.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `if depth == 0: monty.forward(n)` | Base case: draw a line and stop recursing |
-| `n3 = n / 3` | Each recursive segment is one-third the size |
-| `monty.left(60)` | Turn to form the triangular bump's left side |
-| `monty.right(120)` | Turn to form the bump's right side (two 60° turns = 120°) |
-| Four `koch()` calls | Replace one segment with four |
+| `if depth == 0: monty.forward(n)` | Caso base: disegna una linea e ferma la ricorsione |
+| `n3 = n / 3` | Ogni segmento ricorsivo è un terzo della dimensione |
+| `monty.left(60)` | Gira per formare il lato sinistro della protuberanza triangolare |
+| `monty.right(120)` | Gira per formare il lato destro della protuberanza (due rotazioni di 60° = 120°) |
+| Quattro chiamate `koch()` | Sostituisce un segmento con quattro |
 
-!!! mascot-tip "What is Recursion?"
+!!! mascot-tip "Cos'è la Ricorsione?"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    **Recursion** means a function that calls itself. The trick is the **base case** —
-    a condition that stops the calls. Without a base case, the function would call itself
-    forever (and Python would stop it with a `RecursionError`).
+    La **ricorsione** significa una funzione che chiama se stessa. Il trucco è il **caso base** —
+    una condizione che ferma le chiamate. Senza un caso base, la funzione si chiamerebbe
+    per sempre (e Python la fermerebbe con un `RecursionError`).
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Try Depth 2"
+!!! mascot-thinking "Il Tuo Turno — Prova la Profondità 2"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `depth=4` to `depth=2` in the `koch()` calls.
-    Predict how much simpler the snowflake edges will look — then run it to check!
+    Cambia `depth=4` in `depth=2` nelle chiamate a `koch()`.
+    Prevedi quanto più semplici sembreranno i bordi del fiocco di neve — poi eseguilo per controllare!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -191,20 +191,20 @@ for _ in range(3):
     monty.right(120)`);
 </script>
 
-At depth 2, each edge has only `4^2 = 16` segments — you can clearly see the individual triangular bumps on each bumpy bump.
+Alla profondità 2, ogni bordo ha solo `4^2 = 16` segmenti — puoi vedere chiaramente le singole protuberanze triangolari su ogni protuberanza bitorzoluta.
 
-## Experiments
+## Esperimenti
 
-1. **Try depth 1.** Just one round of bumping — three big triangular notches per side. You'll know it worked when you see a star of David shape.
+1. **Prova la profondità 1.** Solo un giro di protuberanze — tre grandi tacche triangolari per lato. Saprai che ha funzionato quando vedi una forma a stella di David.
 
-2. **Add fill.** Before the loop, add `monty.fillcolor('lightblue')` and `monty.begin_fill()`. After the loop, add `monty.end_fill()`. You'll know it worked when the snowflake is filled with light blue.
+2. **Aggiungi il riempimento.** Prima del ciclo, aggiungi `monty.fillcolor('lightblue')` e `monty.begin_fill()`. Dopo il ciclo, aggiungi `monty.end_fill()`. Saprai che ha funzionato quando il fiocco di neve è riempito di azzurro chiaro.
 
-3. **Change the color.** Try `pencolor('white')` with a dark background: add `turtle.bgcolor('navy')` before creating `monty`. You'll know it worked when you see a white snowflake on blue.
+3. **Cambia il colore.** Prova `pencolor('white')` con uno sfondo scuro: aggiungi `turtle.bgcolor('navy')` prima di creare `monty`. Saprai che ha funzionato quando vedi un fiocco di neve bianco su blu.
 
-4. **Draw just one edge.** Replace the `for` loop with a single `koch(300, 4)` call. You'll know it worked when you see just one Koch curve instead of the full triangle.
+4. **Disegna solo un bordo.** Sostituisci il ciclo `for` con una singola chiamata `koch(300, 4)`. Saprai che ha funzionato quando vedi solo una curva di Koch invece del triangolo completo.
 
-!!! mascot-celebration "Your First Fractal!"
+!!! mascot-celebration "Il Tuo Primo Frattale!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You just drew infinite complexity from a 4-line recursive rule!
-    The Koch snowflake has infinite perimeter — every time you zoom in, there are more bumps.
-    Up next: **Sierpiński Triangle** — the other iconic fractal.
+    Hai appena disegnato complessità infinita da una regola ricorsiva di 4 righe!
+    Il fiocco di neve di Koch ha perimetro infinito — ogni volta che zoomi, ci sono più protuberanze.
+    Prossimo: **Triangolo di Sierpiński** — l'altro frattale iconico.

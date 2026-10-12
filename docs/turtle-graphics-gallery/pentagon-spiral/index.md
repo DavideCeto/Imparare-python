@@ -2,29 +2,29 @@
 hide:
     - toc
 ---
-# Color-Banded Pentagon Spiral
+# Spirale Pentagonale a Fasce Colorate
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Create a pentagon spiral using `right(72)` — the exterior angle of a regular pentagon
-- Produce diagonal color bands by choosing a banding interval that doesn't divide evenly into the pentagon period
-- Predict how the period of banding interacts with the polygon period to create visual patterns
+- Creare una spirale pentagonale usando `right(72)` — l'angolo esterno di un pentagono regolare
+- Produrre fasce di colore diagonali scegliendo un intervallo di fasciatura che non divide esattamente il periodo del pentagono
+- Prevedere come il periodo della fasciatura interagisce con il periodo del poligono per creare pattern visivi
 
-A pentagon spiral with five-sided corners — colored in bands of five hues that cut diagonally across the arms because 5 colors × 5-sided spiral = aligned bands, while non-multiple intervals create diagonal stripes.
+Una spirale pentagonale con angoli a cinque lati — colorata in fasce di cinque tonalità che tagliano diagonalmente attraverso i bracci perché 5 colori × spirale a 5 lati = fasce allineate, mentre intervalli non multipli creano strisce diagonali.
 
-!!! mascot-welcome "Welcome to the Pentagon Spiral!"
+!!! mascot-welcome "Benvenuto alla Spirale Pentagonale!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    This lab is the last in our spiral series — and it brings together everything:
-    polygon angles, color banding with `i // n`, and the interaction between two periods.
-    Let's code it together!
+    Questo laboratorio è l'ultimo della nostra serie di spirali — e riunisce tutto:
+    angoli dei poligoni, fasciatura dei colori con `i // n`, e l'interazione tra due periodi.
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-A regular pentagon has **5 sides** with exterior angles of 360° ÷ 5 = **72°**. Turning 72° each step creates a pentagon spiral.
+Un pentagono regolare ha **5 lati** con angoli esterni di 360° ÷ 5 = **72°**. Girare di 72° a ogni passo crea una spirale pentagonale.
 
-For color bands, `(i // 5) % 5` changes color every 5 steps — matching the pentagon period exactly. This makes each band align with one full spiral side. Try `(i // 7) % 5` instead and the bands shift diagonally!
+Per le fasce di colore, `(i // 5) % 5` cambia colore ogni 5 passi — corrispondendo esattamente al periodo del pentagono. Questo fa allineare ogni fascia con un lato intero della spirale. Prova `(i // 7) % 5` invece e le fasce si spostano diagonalmente!
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -42,13 +42,13 @@ for i in range(250):
     step += 1.2
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The color changes every 5 steps and the pentagon has 5 sides per revolution.
-    Will the color bands align with the spiral arms, or cut diagonally across them?
-    Make your guess — then click Run to find out!
+    Il colore cambia ogni 5 passi e il pentagono ha 5 lati per rivoluzione.
+    Le fasce di colore si allineeranno con i bracci della spirale, o li taglieranno diagonalmente?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -85,27 +85,27 @@ for i in range(250):
     step += 1.2`);
 </script>
 
-The bands **align** with the arms — each arm is a single color because the band period (5) matches the polygon period (5). Were you right?
+Le fasce **si allineano** con i bracci — ogni braccio è di un colore unico perché il periodo della fascia (5) corrisponde al periodo del poligono (5). Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-When the color band interval evenly divides the polygon period, colors align with sides. When they don't match — for example, using 7 steps per color band on a 5-sided spiral — the bands appear to cut diagonally across the arms, creating the visual effect of diagonal stripes.
+Quando l'intervallo della fascia di colore divide esattamente il periodo del poligono, i colori si allineano con i lati. Quando non corrispondono — per esempio, usando 7 passi per fascia di colore su una spirale a 5 lati — le fasce sembrano tagliare diagonalmente attraverso i bracci, creando l'effetto visivo di strisce diagonali.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `right(72)` | Pentagon exterior angle: 360° ÷ 5 = 72° |
-| `(i // 5) % 5` | Change color every 5 segments; cycle through 5 colors |
-| `step += 1.2` | Grow step — source of the spiral |
-| `range(250)` | 250 steps = 50 "pentagon" revolutions (5 sides each) |
+| `right(72)` | Angolo esterno del pentagono: 360° ÷ 5 = 72° |
+| `(i // 5) % 5` | Cambia colore ogni 5 segmenti; scorre tra 5 colori |
+| `step += 1.2` | Fa crescere il passo — fonte della spirale |
+| `range(250)` | 250 passi = 50 rivoluzioni "pentagono" (5 lati ciascuna) |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Create Diagonal Bands"
+!!! mascot-thinking "Il Tuo Turno — Crea Fasce Diagonali"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `i // 5` to `i // 7`. Now the color period (7) doesn't divide evenly into the
-    pentagon period (5). Predict how the bands will change — then run it to check!
+    Cambia `i // 5` in `i // 7`. Ora il periodo del colore (7) non divide esattamente il
+    periodo del pentagono (5). Prevedi come cambieranno le fasce — poi eseguilo per controllare!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -136,20 +136,20 @@ for i in range(250):
     step += 1.2`);
 </script>
 
-With `i // 7`, the color boundaries no longer align with the pentagon corners — they cut across the arms at a diagonal, producing a striped weave effect across the spiral.
+Con `i // 7`, i confini di colore non si allineano più con gli angoli del pentagono — tagliano attraverso i bracci diagonalmente, producendo un effetto di tessitura a righe attraverso la spirale.
 
-## Experiments
+## Esperimenti
 
-1. **Try `i // 3`.** Three steps per band is shorter than one pentagon side (5 steps). You'll know it worked when colors change within each arm, creating a finer striped pattern.
+1. **Prova `i // 3`.** Tre passi per fascia è più corto di un lato del pentagono (5 passi). Saprai che ha funzionato quando i colori cambiano dentro ogni braccio, creando un pattern a righe più fine.
 
-2. **Use 3 colors instead of 5.** Change the list to `['crimson', 'gold', 'royalblue']` and `% 5` to `% 3`. You'll know it worked when only three colors appear, cycling in a non-aligned pattern.
+2. **Usa 3 colori invece di 5.** Cambia la lista in `['crimson', 'gold', 'royalblue']` e `% 5` in `% 3`. Saprai che ha funzionato quando appaiono solo tre colori, scorrendo in un pattern non allineato.
 
-3. **Make it hexagonal.** Change `right(72)` to `right(60)` and `range(250)` to `range(300)`. You'll know it worked when corners become less sharp.
+3. **Rendila esagonale.** Cambia `right(72)` in `right(60)` e `range(250)` in `range(300)`. Saprai che ha funzionato quando gli angoli diventano meno netti.
 
-4. **Increase band width.** Change `i // 5` to `i // 15`. Each color occupies 3 full pentagon sides. You'll know it worked when the color bands are much wider.
+4. **Aumenta la larghezza della fascia.** Cambia `i // 5` in `i // 15`. Ogni colore occupa 3 lati interi del pentagono. Saprai che ha funzionato quando le fasce di colore sono molto più larghe.
 
-!!! mascot-celebration "Category Complete!"
+!!! mascot-celebration "Categoria Completata!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've mastered all 10 spiral patterns — from simple square to logarithmic to double helix!
-    Each spiral used the same core idea but with subtle variations that transformed the result.
-    Up next: **Category 4 — Fractals and Recursion!**
+    Hai padroneggiato tutti i 10 pattern a spirale — da quadrato semplice a logaritmico a doppia elica!
+    Ogni spirale usava la stessa idea fondamentale ma con variazioni sottili che trasformavano il risultato.
+    Prossimo: **Categoria 4 — Frattali e Ricorsione!**

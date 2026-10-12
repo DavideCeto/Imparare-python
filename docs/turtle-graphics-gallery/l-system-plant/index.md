@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# L-System Plant
+# Pianta a Sistema-L
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Apply Lindenmayer system (L-system) rules to expand a string over multiple generations
-- Interpret an L-system string as turtle drawing commands: `F` = forward, `+/-` = turn, `[/]` = branch
-- Understand how `[` and `]` implement a position stack to create branching structures
+- Applicare regole del sistema di Lindenmayer (sistema-L) per espandere una stringa su più generazioni
+- Interpretare una stringa del sistema-L come comandi di disegno della tartaruga: `F` = avanti, `+/-` = gira, `[/]` = ramifica
+- Capire come `[` e `]` implementano uno stack di posizione per creare strutture ramificate
 
-An L-system plant grows from a one-character seed string. Applying rewriting rules for 5 generations produces a long string of turtle commands that draws a realistic-looking plant with branches, leaves, and stems.
+Una pianta a sistema-L cresce da una stringa seme di un carattere. Applicare le regole di riscrittura per 5 generazioni produce una lunga stringa di comandi della tartaruga che disegna una pianta realistica con rami, foglie, e steli.
 
-!!! mascot-welcome "Welcome to the L-System Plant!"
+!!! mascot-welcome "Benvenuto alla Pianta a Sistema-L!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    In 1968, biologist Aristid Lindenmayer invented L-systems to model how plants grow.
-    The core idea: a short string of rules expands into complex branching structures!
-    Let's code one together!
+    Nel 1968, il biologo Aristid Lindenmayer inventò i sistemi-L per modellare come crescono le piante.
+    L'idea fondamentale: una breve stringa di regole si espande in strutture ramificate complesse!
+    Programmiamone uno insieme!
 
-## How It Works
+## Come Funziona
 
-Start with axiom `"F"`. Apply rules `{'F': 'FF', 'X': 'F+[[X]-X]-F[-FX]+X'}` for 5 generations. Interpret the result: `F`=forward, `+`=left 25°, `-`=right 25°, `[`=push state, `]`=pop state.
+Inizia con l'assioma `"F"`. Applica le regole `{'F': 'FF', 'X': 'F+[[X]-X]-F[-FX]+X'}` per 5 generazioni. Interpreta il risultato: `F`=avanti, `+`=sinistra 25°, `-`=destra 25°, `[`=salva lo stato, `]`=ripristina lo stato.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -67,13 +67,13 @@ for ch in sentence:
         monty.pendown()
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The L-system rules expand for 5 generations. One short rule produces a long string.
-    Will the result look like a geometric pattern, or an actual plant?
-    Make your guess — then click Run to find out!
+    Le regole del sistema-L si espandono per 5 generazioni. Una breve regola produce una lunga stringa.
+    Il risultato sembrerà un pattern geometrico, o una pianta vera?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -136,27 +136,27 @@ for ch in sentence:
         monty.pendown()`);
 </script>
 
-A **branching plant** — the rules produce a fractal-like botanical structure with a central trunk and nested branches. Were you right?
+Una **pianta ramificata** — le regole producono una struttura botanica simile a un frattale con un tronco centrale e rami annidati. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`[` pushes the current turtle position and heading onto a stack. `]` pops them back, returning the turtle to where it branched. This stack-based approach is how all branching L-systems work — no recursion needed!
+`[` salva la posizione e la direzione attuali della tartaruga in uno stack. `]` le ripristina, riportando la tartaruga dove si è ramificata. Questo approccio basato su stack è come funzionano tutti i sistemi-L ramificati — nessuna ricorsione necessaria!
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `rules.get(ch, ch)` | If no rule for `ch`, keep it unchanged |
-| `stack.append((pos, heading))` | Save turtle state at branch point |
-| `stack.pop()` | Restore turtle state after sub-branch |
-| `for _ in range(5)` | 5 generations of rule application |
+| `rules.get(ch, ch)` | Se non c'è regola per `ch`, lascialo invariato |
+| `stack.append((pos, heading))` | Salva lo stato della tartaruga al punto di ramificazione |
+| `stack.pop()` | Ripristina lo stato della tartaruga dopo il sotto-ramo |
+| `for _ in range(5)` | 5 generazioni di applicazione della regola |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Change the Angle"
+!!! mascot-thinking "Il Tuo Turno — Cambia l'Angolo"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `angle = 25` to `angle = 40`. Will the plant look wider, narrower, or the same?
-    Predict, then run it!
+    Cambia `angle = 25` in `angle = 40`. La pianta sembrerà più larga, più stretta, o uguale?
+    Prevedi, poi eseguila!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -213,20 +213,20 @@ for ch in sentence:
         monty.pendown()`);
 </script>
 
-At 40°, the plant is **wider** — branches spread further from the central axis, making a bushier appearance.
+A 40°, la pianta è **più larga** — i rami si estendono più lontano dall'asse centrale, creando un aspetto più cespuglioso.
 
-## Experiments
+## Esperimenti
 
-1. **Try 4 generations.** Change `range(5)` to `range(4)`. You'll know it worked when a smaller, simpler plant appears.
+1. **Prova 4 generazioni.** Cambia `range(5)` in `range(4)`. Saprai che ha funzionato quando appare una pianta più piccola e più semplice.
 
-2. **Use green for leaves.** After drawing each `F`, check if the next character is `X` and color that segment green. You'll know it worked when leaf branches are green.
+2. **Usa il verde per le foglie.** Dopo aver disegnato ogni `F`, controlla se il carattere successivo è `X` e colora quel segmento verde. Saprai che ha funzionato quando i rami delle foglie sono verdi.
 
-3. **Try a different L-system.** Change the rules to `{'F': 'F[+F]F[-F][F]'}` with `axiom = 'F'` and `range(4)`. You'll know it worked when a completely different plant shape appears.
+3. **Prova un sistema-L diverso.** Cambia le regole in `{'F': 'F[+F]F[-F][F]'}` con `axiom = 'F'` e `range(4)`. Saprai che ha funzionato quando appare una forma di pianta completamente diversa.
 
-4. **Vary step by depth.** Track how many `[` brackets are open and use `step / (depth + 1)`. You'll know it worked when deeper branches are shorter, like a real tree.
+4. **Varia il passo in base alla profondità.** Traccia quante parentesi `[` sono aperte e usa `step / (depth + 1)`. Saprai che ha funzionato quando i rami più profondi sono più corti, come un vero albero.
 
-!!! mascot-celebration "A Forest of Rules!"
+!!! mascot-celebration "Una Foresta di Regole!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You implemented a Lindenmayer system — one of the most powerful models of biological growth!
-    L-systems also generate Koch curves, Sierpiński triangles, and many other fractals.
-    Up next: **Turtle Maze Generator** — recursive maze using wall carving.
+    Hai implementato un sistema di Lindenmayer — uno dei modelli più potenti della crescita biologica!
+    I sistemi-L generano anche curve di Koch, triangoli di Sierpiński, e molti altri frattali.
+    Prossimo: **Generatore di Labirinti con la Turtle** — labirinto ricorsivo con scavo dei muri.
