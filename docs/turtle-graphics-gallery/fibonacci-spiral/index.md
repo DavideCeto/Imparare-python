@@ -2,34 +2,34 @@
 hide:
     - toc
 ---
-# Fibonacci Spiral
+# Spirale di Fibonacci
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Generate the Fibonacci sequence in code and use its values as arc radii
-- Build a spiral from quarter-circle arcs that pivot 90° at each step
-- Understand why the Fibonacci sequence appears in seashells, sunflowers, and pine cones
+- Generare la sequenza di Fibonacci nel codice e usare i suoi valori come raggi degli archi
+- Costruire una spirale da archi a quarto di cerchio che pivotano di 90° a ogni passo
+- Capire perché la sequenza di Fibonacci appare nelle conchiglie, nei girasoli, e nelle pigne
 
-Quarter-circle arcs of radii 1, 1, 2, 3, 5, 8, 13, 21, 34, and 55 tile together perfectly — each arc pivoting 90° into the next. The famous golden-ratio spiral emerges from the simplest number sequence.
+Archi a quarto di cerchio di raggi 1, 1, 2, 3, 5, 8, 13, 21, 34, e 55 si tassellano insieme perfettamente — ogni arco pivota di 90° nel successivo. La famosa spirale della sezione aurea emerge dalla sequenza numerica più semplice.
 
-!!! mascot-welcome "Welcome to the Fibonacci Spiral!"
+!!! mascot-welcome "Benvenuto alla Spirale di Fibonacci!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Fibonacci numbers appear everywhere in nature — the spirals in a sunflower head,
-    the chambers of a nautilus shell, the arrangement of pine cone scales.
-    In this lab you'll build the spiral yourself! Let's code it together!
+    I numeri di Fibonacci appaiono ovunque in natura — le spirali nella testa di un girasole,
+    le camere di una conchiglia di nautilus, la disposizione delle squame di una pigna.
+    In questo laboratorio costruirai la spirale tu stesso! Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-The Fibonacci sequence starts 1, 1 and each new number is the sum of the two before it: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 …
+La sequenza di Fibonacci inizia con 1, 1 e ogni nuovo numero è la somma dei due precedenti: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 …
 
-Each step:
-1. Draw a quarter-circle arc with the current Fibonacci number as the radius
-2. Turn left 90° so the next arc starts from the correct corner
-3. Advance to the next Fibonacci number
+Ogni passo:
+1. Disegna un arco a quarto di cerchio con il numero di Fibonacci attuale come raggio
+2. Gira a sinistra di 90° così l'arco successivo inizia dall'angolo corretto
+3. Avanza al numero di Fibonacci successivo
 
-The arcs all fit together because each radius equals the sum of the previous two — which is exactly how the tiling squares fit.
+Gli archi si incastrano tutti insieme perché ogni raggio è uguale alla somma dei due precedenti — che è esattamente come si incastrano i quadrati della tassellatura.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -48,13 +48,13 @@ for i in range(10):
     a, b = b, a + b
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The first arc has radius 1 (× 4 scale = 4 pixels). The last has radius 55 (× 4 = 220 pixels).
-    Will all 10 arcs fit on the screen, or will the last one go off the edge?
-    Make your guess — then click Run to find out!
+    Il primo arco ha raggio 1 (× 4 scala = 4 pixel). L'ultimo ha raggio 55 (× 4 = 220 pixel).
+    Tutti i 10 archi entreranno sullo schermo, o l'ultimo uscirà dal bordo?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -92,35 +92,35 @@ for i in range(10):
     a, b = b, a + b`);
 </script>
 
-With `scale = 4`, the largest arc has radius 220 pixels and **just fits** on a standard turtle canvas. Were you right?
+Con `scale = 4`, l'arco più grande ha raggio di 220 pixel ed **entra giusto giusto** in un canvas turtle standard. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`a, b = b, a + b` is a simultaneous assignment that advances the Fibonacci sequence in one line. After the assignment, the old `b` becomes the new `a`, and the new `b` is the sum.
+`a, b = b, a + b` è un'assegnazione simultanea che fa avanzare la sequenza di Fibonacci in una riga. Dopo l'assegnazione, il vecchio `b` diventa il nuovo `a`, e il nuovo `b` è la somma.
 
-`monty.circle(a * scale, 90)` draws exactly one quarter-circle (90°). The turtle ends up 90° rotated from where it started — positioned perfectly for the next arc.
+`monty.circle(a * scale, 90)` disegna esattamente un quarto di cerchio (90°). La tartaruga finisce ruotata di 90° da dove ha iniziato — posizionata perfettamente per l'arco successivo.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `a, b = 1, 1` | Start with the first two Fibonacci numbers |
-| `monty.circle(a * scale, 90)` | Draw a quarter arc — radius = Fibonacci number × scale |
-| `a, b = b, a + b` | Advance: new a = old b, new b = old a + old b |
-| `scale = 4` | Multiplier to make the spiral fill the canvas |
+| `a, b = 1, 1` | Inizia con i primi due numeri di Fibonacci |
+| `monty.circle(a * scale, 90)` | Disegna un arco a quarto di cerchio — raggio = numero di Fibonacci × scala |
+| `a, b = b, a + b` | Avanza: nuovo a = vecchio b, nuovo b = vecchio a + vecchio b |
+| `scale = 4` | Moltiplicatore per far riempire la spirale al canvas |
 
-!!! mascot-tip "The Golden Ratio"
+!!! mascot-tip "La Sezione Aurea"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    As the Fibonacci sequence grows, the ratio of consecutive terms (e.g. 55/34 = 1.617…)
-    gets closer and closer to φ ≈ 1.618 — the **golden ratio**. That's why the Fibonacci
-    spiral looks so similar to the true golden spiral found in nature!
+    Mentre la sequenza di Fibonacci cresce, il rapporto di termini consecutivi (es. 55/34 = 1,617…)
+    si avvicina sempre più a φ ≈ 1,618 — la **sezione aurea**. Ecco perché la spirale di Fibonacci
+    sembra così simile alla vera spirale aurea trovata in natura!
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Spot the Bug!"
+!!! mascot-warning "Trova il Bug!"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    The program below draws arcs that all have the same radius — no spiral!
-    Find the bug and fix it so each arc uses the correct Fibonacci radius.
+    Il programma sotto disegna archi che hanno tutti lo stesso raggio — nessuna spirale!
+    Trova il bug e correggilo così ogni arco usi il raggio di Fibonacci corretto.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -152,20 +152,20 @@ for i in range(10):
     a, b = b, a + b`);
 </script>
 
-Change `monty.circle(scale, 90)` to `monty.circle(a * scale, 90)` — the radius must be `a * scale` so each arc uses the current Fibonacci number.
+Cambia `monty.circle(scale, 90)` in `monty.circle(a * scale, 90)` — il raggio deve essere `a * scale` così ogni arco usa il numero di Fibonacci attuale.
 
-## Experiments
+## Esperimenti
 
-1. **Draw more arcs.** Change `range(10)` to `range(12)` and extend the `colors` list. You'll know it worked when two extra arcs appear (but they may go off the edge!).
+1. **Disegna più archi.** Cambia `range(10)` in `range(12)` ed estendi la lista `colors`. Saprai che ha funzionato quando appaiono due archi extra (ma potrebbero uscire dal bordo!).
 
-2. **Change the scale.** Try `scale = 2` or `scale = 6`. You'll know it worked when the spiral shrinks or grows to fit the canvas differently.
+2. **Cambia la scala.** Prova `scale = 2` o `scale = 6`. Saprai che ha funzionato quando la spirale si restringe o cresce per adattarsi diversamente al canvas.
 
-3. **Draw only the arcs, no color.** Replace `monty.color(colors[i])` with `monty.pencolor('black')`. You'll know it worked when the spiral is a clean black curve.
+3. **Disegna solo gli archi, senza colore.** Sostituisci `monty.color(colors[i])` con `monty.pencolor('black')`. Saprai che ha funzionato quando la spirale è una curva nera pulita.
 
-4. **Use semicircles.** Change `90` to `180` in `circle()`. Each Fibonacci segment becomes a half-circle. You'll know it worked when the curve looks very different.
+4. **Usa semicerchi.** Cambia `90` in `180` in `circle()`. Ogni segmento di Fibonacci diventa un semicerchio. Saprai che ha funzionato quando la curva sembra molto diversa.
 
-!!! mascot-celebration "You Found the Golden Spiral!"
+!!! mascot-celebration "Hai Trovato la Spirale Aurea!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    The Fibonacci sequence is one of the most famous patterns in mathematics and nature.
-    Now you know it's just: `a, b = b, a + b` — repeated over and over!
-    Up next: **Spiral of Spirals** — arranging many small spirals in a circle.
+    La sequenza di Fibonacci è uno dei pattern più famosi nella matematica e in natura.
+    Ora sai che è solo: `a, b = b, a + b` — ripetuto ancora e ancora!
+    Prossimo: **Spirale di Spirali** — disporre molte piccole spirali in un cerchio.

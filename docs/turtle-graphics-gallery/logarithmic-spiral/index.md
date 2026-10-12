@@ -2,34 +2,34 @@
 hide:
     - toc
 ---
-# Colored Logarithmic Spiral
+# Spirale Logaritmica Colorata
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Use `math.cos()` and `math.sin()` to convert polar coordinates to Cartesian `(x, y)` positions
-- Draw a curve by plotting many points with `goto()` instead of using `forward()` and `right()`
-- Color each segment by its angular position using `angle % 360` to cycle through hues
+- Usare `math.cos()` e `math.sin()` per convertire coordinate polari in posizioni cartesiane `(x, y)`
+- Disegnare una curva tracciando molti punti con `goto()` invece di usare `forward()` e `right()`
+- Colorare ogni segmento in base alla sua posizione angolare usando `angle % 360` per scorrere tra le tonalità
 
-A smooth, continuously curving spiral — no straight segments or corners. Each revolution of the spiral is colored by cycling through red, orange, yellow, green, blue, and violet, so the arms glow like a rainbow ribbon.
+Una spirale lisciata e continuamente curva — nessun segmento retto o angolo. Ogni rivoluzione della spirale è colorata scorrendo attraverso rosso, arancione, giallo, verde, blu, e viola, così i bracci brillano come un nastro arcobaleno.
 
-!!! mascot-welcome "Welcome to the Logarithmic Spiral!"
+!!! mascot-welcome "Benvenuto alla Spirale Logaritmica!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Until now, every spiral was made of straight line segments. This one is different —
-    we use math functions to compute exact positions, giving a truly smooth curve.
-    Let's code it together!
+    Finora, ogni spirale era fatta di segmenti di linea retta. Questa è diversa —
+    usiamo funzioni matematiche per calcolare posizioni esatte, dando una curva veramente lisciata.
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-A logarithmic spiral in polar coordinates is `r = a · e^(b·θ)` — the radius grows exponentially as the angle increases. We convert each polar point `(r, θ)` to Cartesian `(x, y)` using:
+Una spirale logaritmica in coordinate polari è `r = a · e^(b·θ)` — il raggio cresce esponenzialmente mentre l'angolo aumenta. Convertiamo ogni punto polare `(r, θ)` in cartesiano `(x, y)` usando:
 
 ```
 x = r · cos(θ)
 y = r · sin(θ)
 ```
 
-Then `goto(x, y)` moves the turtle to that point. With small angle steps and the pen down, this traces a smooth curve.
+Poi `goto(x, y)` muove la tartaruga a quel punto. Con piccoli passi angolari e la penna abbassata, questo traccia una curva lisciata.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -54,13 +54,13 @@ for i in range(600):
     monty.pendown()
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    We multiply `r` by 30 to scale the spiral to fit the canvas.
-    Will the spiral look smooth or jagged? (Each step is only 0.05 radians.)
-    Make your guess — then click Run to find out!
+    Moltiplichiamo `r` per 30 per scalare la spirale e farla entrare nel canvas.
+    La spirale sembrerà lisciata o frastagliata? (Ogni passo è di solo 0,05 radianti.)
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -104,34 +104,34 @@ for i in range(600):
     monty.pendown()`);
 </script>
 
-**Smooth** — each 0.05-radian step is small enough that the eye can't detect the individual line segments. Were you right?
+**Lisciata** — ogni passo di 0,05 radianti è abbastanza piccolo che l'occhio non può rilevare i singoli segmenti di linea. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`math.exp(b * theta)` is the exponential function — the radius grows slowly at first and accelerates outward. Multiplying by `30` scales the result to fill the canvas. `math.degrees(theta) % 360` converts radians to degrees and uses modulo to cycle through 0–360 regardless of how many revolutions we've made.
+`math.exp(b * theta)` è la funzione esponenziale — il raggio cresce lentamente all'inizio e accelera verso l'esterno. Moltiplicare per `30` scala il risultato per riempire il canvas. `math.degrees(theta) % 360` converte i radianti in gradi e usa il modulo per scorrere tra 0–360 non importa quante rivoluzioni abbiamo fatto.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `theta = i * 0.05` | Angle in radians; 0.05 rad per step for smoothness |
-| `r = a * math.exp(b * theta)` | Radius grows exponentially — logarithmic spiral formula |
-| `x = r * math.cos(theta) * 30` | Convert polar to Cartesian x, scaled to canvas |
-| `y = r * math.sin(theta) * 30` | Convert polar to Cartesian y, scaled to canvas |
-| `math.degrees(theta) % 360 / 60` | Map angle to color index: one color per 60° |
+| `theta = i * 0.05` | Angolo in radianti; 0,05 rad per passo per la fluidità |
+| `r = a * math.exp(b * theta)` | Il raggio cresce esponenzialmente — formula della spirale logaritmica |
+| `x = r * math.cos(theta) * 30` | Converte polare in x cartesiano, scalato al canvas |
+| `y = r * math.sin(theta) * 30` | Converte polare in y cartesiano, scalato al canvas |
+| `math.degrees(theta) % 360 / 60` | Mappa l'angolo a un indice di colore: un colore ogni 60° |
 
-!!! mascot-tip "Polar and Cartesian Coordinates"
+!!! mascot-tip "Coordinate Polari e Cartesiane"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    **Polar** coordinates describe a point by `(r, θ)` — distance from origin and angle.
-    **Cartesian** coordinates use `(x, y)` — horizontal and vertical distances.
-    Converting between them is one of the most useful tricks in computational graphics!
+    Le coordinate **polari** descrivono un punto con `(r, θ)` — distanza dall'origine e angolo.
+    Le coordinate **cartesiane** usano `(x, y)` — distanze orizzontale e verticale.
+    Convertire tra le due è uno dei trucchi più utili nella grafica computazionale!
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Spot the Bug!"
+!!! mascot-warning "Trova il Bug!"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    The program below draws a straight line instead of a spiral — the radius never changes!
-    Find and fix the bug.
+    Il programma sotto disegna una linea retta invece di una spirale — il raggio non cambia mai!
+    Trova e correggi il bug.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -169,21 +169,21 @@ for i in range(600):
     monty.pendown()`);
 </script>
 
-Change `r = a` to `r = a * math.exp(b * theta)` — without the exponential growth, the radius stays constant and the turtle traces a fixed-radius circle instead of a spiral.
+Cambia `r = a` in `r = a * math.exp(b * theta)` — senza la crescita esponenziale, il raggio resta costante e la tartaruga traccia un cerchio a raggio fisso invece di una spirale.
 
-## Experiments
+## Esperimenti
 
-1. **Make it grow faster.** Change `b = 0.15` to `b = 0.25`. The spiral widens much faster. You'll know it worked when fewer revolutions fit on the canvas.
+1. **Falla crescere più velocemente.** Cambia `b = 0.15` in `b = 0.25`. La spirale si allarga molto più velocemente. Saprai che ha funzionato quando meno rivoluzioni entrano sul canvas.
 
-2. **Make it grow slower.** Change `b = 0.15` to `b = 0.07`. More revolutions pack tightly together. You'll know it worked when the arms are much closer together.
+2. **Falla crescere più lentamente.** Cambia `b = 0.15` in `b = 0.07`. Più rivoluzioni si compattano strettamente insieme. Saprai che ha funzionato quando i bracci sono molto più vicini tra loro.
 
-3. **Remove the color.** Replace the `pencolor()` line with `monty.pencolor('black')`. You'll know it worked when the spiral is a single clean black curve.
+3. **Rimuovi il colore.** Sostituisci la riga `pencolor()` con `monty.pencolor('black')`. Saprai che ha funzionato quando la spirale è un'unica curva nera pulita.
 
-4. **Double the resolution.** Change `i * 0.05` to `i * 0.025` and `range(600)` to `range(1200)`. The curve gets even smoother. You'll know it worked when you can't see any corner at all.
+4. **Raddoppia la risoluzione.** Cambia `i * 0.05` in `i * 0.025` e `range(600)` in `range(1200)`. La curva diventa ancora più lisciata. Saprai che ha funzionato quando non riesci a vedere nessun angolo.
 
-!!! mascot-celebration "Mathematical!"
+!!! mascot-celebration "Matematico!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You used `math.cos()` and `math.sin()` — the foundation of all computer graphics —
-    to convert polar coordinates into pixel positions. This is how video games, maps,
-    and simulations place objects in space!
-    Up next: **Double Helix Spiral** — two interleaved spirals in a single loop.
+    Hai usato `math.cos()` e `math.sin()` — la base di tutta la grafica computerizzata —
+    per convertire coordinate polari in posizioni di pixel. Così funzionano i videogiochi, le mappe,
+    e le simulazioni per posizionare oggetti nello spazio!
+    Prossimo: **Spirale a Doppia Elica** — due spirali interlacciate in un singolo ciclo.

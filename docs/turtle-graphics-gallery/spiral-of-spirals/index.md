@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Spiral of Spirals
+# Spirale di Spirali
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Write a reusable `mini_spiral(x, y, facing)` function that draws a small spiral
-- Arrange multiple spiral instances in a circle using `math.cos()` and `math.sin()`
-- Understand how a micro-pattern repeated at macro scale creates fractal-like complexity
+- Scrivere una funzione riutilizzabile `mini_spiral(x, y, facing)` che disegna una piccola spirale
+- Disporre più istanze di spirale in un cerchio usando `math.cos()` e `math.sin()`
+- Capire come un micro-pattern ripetuto a scala macro crea complessità simile a un frattale
 
-Twelve small square spirals are arranged in a ring, each one rotated to face outward from the center. From a distance the whole arrangement looks like a single rotating burst.
+Dodici piccole spirali quadrate sono disposte in un anello, ognuna ruotata per guardare verso l'esterno dal centro. Da lontano l'intera disposizione sembra un singolo scoppio rotante.
 
-!!! mascot-welcome "Welcome to the Spiral of Spirals!"
+!!! mascot-welcome "Benvenuto alla Spirale di Spirali!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    This lab combines two ideas: the spiral you already know and the rotation-around-a-circle
-    trick from the pinwheel. Together they create something much richer than either alone.
-    Let's code it together!
+    Questo laboratorio combina due idee: la spirale che già conosci e il trucco della rotazione-attorno-a-un-cerchio
+    dalla girandola. Insieme creano qualcosa di molto più ricco di entrambe da sole.
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-A `mini_spiral()` function draws a small 30-step square spiral at a given `(x, y)` position and starting `heading`. The outer loop places 12 of these spirals evenly around a circle of radius 150, each one facing outward (heading = angle from center).
+Una funzione `mini_spiral()` disegna una piccola spirale quadrata di 30 passi a una data posizione `(x, y)` e direzione iniziale `heading`. Il ciclo esterno posiziona 12 di queste spirali uniformemente attorno a un cerchio di raggio 150, ognuna rivolta verso l'esterno (heading = angolo dal centro).
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -54,13 +54,13 @@ for i in range(12):
     mini_spiral(x, y, angle, colors[i])
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Each small spiral starts facing outward from the center.
-    Will the 12 small spirals overlap each other, or will they stay separate?
-    Make your guess — then click Run to find out!
+    Ogni piccola spirale inizia rivolta verso l'esterno dal centro.
+    Le 12 piccole spirali si sovrapporranno tra loro, o resteranno separate?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -111,30 +111,30 @@ for i in range(12):
     mini_spiral(x, y, angle, colors[i])`);
 </script>
 
-The spirals mostly **stay separate** — each one starts 30 segments long and grows inward toward the center gap. Were you right?
+Le spirali per la maggior parte **restano separate** — ognuna inizia lunga 30 segmenti e cresce verso l'interno verso lo spazio centrale. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`setheading(angle)` makes each spiral face outward — the heading equals the angle around the circle. This is because the position angle and the outward-facing angle are the same number when measured from the East direction.
+`setheading(angle)` fa sì che ogni spirale sia rivolta verso l'esterno — la direzione è uguale all'angolo attorno al cerchio. Questo perché l'angolo di posizione e l'angolo rivolto verso l'esterno sono lo stesso numero quando misurati dalla direzione Est.
 
-The outer loop generates coordinates with `x = r·cos(angle)`, `y = r·sin(angle)` — the standard polar-to-Cartesian conversion.
+Il ciclo esterno genera le coordinate con `x = r·cos(angle)`, `y = r·sin(angle)` — la conversione standard da polare a cartesiano.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `def mini_spiral(x, y, facing, color)` | Reusable function: draws one small spiral |
-| `monty.setheading(facing)` | Point each spiral outward from the center |
-| `radius = 150` | Distance from center to each spiral's start |
-| `angle = i * 30` | 12 spirals × 30° = full 360° circle |
-| `x = radius * math.cos(math.radians(angle))` | Polar to Cartesian x |
+| `def mini_spiral(x, y, facing, color)` | Funzione riutilizzabile: disegna una piccola spirale |
+| `monty.setheading(facing)` | Punta ogni spirale verso l'esterno dal centro |
+| `radius = 150` | Distanza dal centro all'inizio di ogni spirale |
+| `angle = i * 30` | 12 spirali × 30° = cerchio completo di 360° |
+| `x = radius * math.cos(math.radians(angle))` | Da polare a cartesiano x |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Change the Ring Size"
+!!! mascot-thinking "Il Tuo Turno — Cambia la Dimensione dell'Anello"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    What happens if you change `radius = 150` to `radius = 80`?
-    Predict whether the spirals will overlap — then run it to check!
+    Cosa succede se cambi `radius = 150` in `radius = 80`?
+    Prevedi se le spirali si sovrapporranno — poi eseguilo per controllare!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -179,20 +179,20 @@ for i in range(12):
     mini_spiral(x, y, angle, colors[i])`);
 </script>
 
-With `radius = 80` the spirals overlap significantly in the center — the smaller ring packs them tighter than the spirals' own size, creating a dense, tangled core.
+Con `radius = 80` le spirali si sovrappongono significativamente al centro — l'anello più piccolo le compatta più stretto della dimensione propria delle spirali, creando un nucleo denso e aggrovigliato.
 
-## Experiments
+## Esperimenti
 
-1. **Try 6 spirals.** Change `range(12)` to `range(6)` and `i * 30` to `i * 60`. You'll know it worked when only six spirals appear, spaced further apart.
+1. **Prova 6 spirali.** Cambia `range(12)` in `range(6)` e `i * 30` in `i * 60`. Saprai che ha funzionato quando appaiono solo sei spirali, più distanziate.
 
-2. **Make all spirals the same color.** Remove the `colors` parameter and hard-code `monty.color('navy')`. You'll know it worked when all spirals are the same deep blue.
+2. **Rendi tutte le spirali dello stesso colore.** Rimuovi il parametro `colors` e scrivi a mano `monty.color('navy')`. Saprai che ha funzionato quando tutte le spirali sono dello stesso blu profondo.
 
-3. **Face inward.** Change `mini_spiral(x, y, angle, ...)` to `mini_spiral(x, y, angle + 180, ...)`. Each spiral now faces toward the center. You'll know it worked when the spirals grow inward instead of outward.
+3. **Rivolgile verso l'interno.** Cambia `mini_spiral(x, y, angle, ...)` in `mini_spiral(x, y, angle + 180, ...)`. Ora ogni spirale è rivolta verso il centro. Saprai che ha funzionato quando le spirali crescono verso l'interno invece che verso l'esterno.
 
-4. **Use hexagonal mini-spirals.** Change `right(90)` inside `mini_spiral` to `right(60)`. You'll know it worked when each small spiral has hexagonal corners.
+4. **Usa mini-spirali esagonali.** Cambia `right(90)` dentro `mini_spiral` in `right(60)`. Saprai che ha funzionato quando ogni piccola spirale ha angoli esagonali.
 
-!!! mascot-celebration "Meta-Spirals!"
+!!! mascot-celebration "Meta-Spirali!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You arranged micro-patterns into a macro-pattern using the same circle math
-    from the pinwheel. This "pattern of patterns" idea is a core concept in fractal design!
-    Up next: **Color-Banded Pentagon Spiral** — the last spiral in this category.
+    Hai disposto micro-pattern in un macro-pattern usando la stessa matematica del cerchio
+    dalla girandola. Questa idea di "pattern di pattern" è un concetto fondamentale nel design frattale!
+    Prossimo: **Spirale Pentagonale a Fasce Colorate** — l'ultima spirale in questa categoria.

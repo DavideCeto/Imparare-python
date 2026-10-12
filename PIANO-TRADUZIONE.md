@@ -144,6 +144,8 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
 - `mountain-range/`, `archimedean-spiral/`, `rainbow-line-spiral/`, `hexagonal-spiral/`,
   `triangular-spiral/` (quinto batch — corretto un refuso "alignate" → "allineate" in
   `rainbow-line-spiral/index.md` prima del commit)
+- `inward-spiral/`, `logarithmic-spiral/`, `double-helix-spiral/`, `fibonacci-spiral/`,
+  `spiral-of-spirals/` (sesto batch — chiude la categoria 3 "Spirali" della galleria)
 
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
@@ -275,12 +277,12 @@ cuore didattico del libro.
 `flower-petal-function/`, `honeycomb-grid/`, `city-skyline/`, `snowflake-arms/`,
 `polka-dot-canvas/`, `brick-wall/`, `stars-different-sizes/`, `traffic-light/`,
 `fish-school/`, `mountain-range/`, `archimedean-spiral/`, `rainbow-line-spiral/`,
-`hexagonal-spiral/`, `triangular-spiral/` (27 di ~102 file/unità).
+`hexagonal-spiral/`, `triangular-spiral/`, `inward-spiral/`, `logarithmic-spiral/`,
+`double-helix-spiral/`, `fibonacci-spiral/`, `spiral-of-spirals/` (32 di ~102 file/unità).
 
-Prossimo: continuare la Fase 4 in ordine di nav con `inward-spiral/`,
-`logarithmic-spiral/`, `double-helix-spiral/`, `fibonacci-spiral/`,
-`spiral-of-spirals/`, e così via attraverso i restanti ~76 singoli laboratori
-della galleria.
+Prossimo: continuare la Fase 4 in ordine di nav con `pentagon-spiral/`,
+`koch-snowflake/`, `sierpinski-triangle/`, `fractal-tree/`, `l-system-plant/`, e così
+via attraverso i restanti ~71 singoli laboratori della galleria.
 
 Dopo la Fase 4: Fasi 5-9 (MicroSims, Teacher's Guide, Jupyter/Advanced, Learning Graph,
 Trinket Labs — quest'ultima di priorità minima/da valutare se tradurre affatto, vedi

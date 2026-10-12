@@ -2,26 +2,26 @@
 hide:
     - toc
 ---
-# Inward Collapsing Spiral
+# Spirale che Collassa verso l'Interno
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Create a spiral that converges to a point by decreasing the step length each iteration
-- Color segments from bright blue at the outside to white at the center using a fade list
-- Understand the difference between increasing sequences (outward) and decreasing sequences (inward)
+- Creare una spirale che converge a un punto diminuendo la lunghezza del passo a ogni iterazione
+- Colorare i segmenti dal blu brillante all'esterno al bianco al centro usando una lista di dissolvenza
+- Capire la differenza tra sequenze crescenti (verso l'esterno) e sequenze decrescenti (verso l'interno)
 
-Instead of growing outward, this spiral collapses inward — starting wide and converging to a near-invisible point at the center. Segments fade from deep blue on the outside to near-white as the spiral tightens to a point.
+Invece di crescere verso l'esterno, questa spirale collassa verso l'interno — iniziando larga e convergendo a un punto quasi invisibile al centro. I segmenti sfumano da blu profondo all'esterno a quasi bianco mentre la spirale si stringe verso un punto.
 
-!!! mascot-welcome "Welcome to the Inward Spiral!"
+!!! mascot-welcome "Benvenuto alla Spirale verso l'Interno!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    All the spirals so far grew outward. Now we run the same idea in reverse —
-    start big and shrink toward zero. Let's code it together!
+    Tutte le spirali finora sono crescite verso l'esterno. Ora eseguiamo la stessa idea al contrario —
+    inizia grande e restringiti verso zero. Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-The step starts large (at `200`) and decreases by a small amount each iteration. When `step` reaches 0 the path has converged to a point. A color list fades from dark blue through lighter shades to near-white, so the outer segments look bolder and the inner ones fade away.
+Il passo inizia grande (a `200`) e diminuisce di una piccola quantità a ogni iterazione. Quando `step` raggiunge 0 il percorso è convergito a un punto. Una lista di colori sfuma dal blu scuro attraverso tonalità più chiare fino a quasi bianco, così i segmenti esterni sembrano più audaci e quelli interni svaniscono.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -42,13 +42,13 @@ while step > 1:
     i += 1
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The step starts at 200 and decreases by 1 each iteration. The loop uses `right(91)` —
-    slightly more than 90°. Will the spiral wind clockwise or counterclockwise?
-    Make your guess — then click Run to find out!
+    Il passo inizia a 200 e diminuisce di 1 a ogni iterazione. Il ciclo usa `right(91)` —
+    leggermente più di 90°. La spirale si avvolgerà in senso orario o antiorario?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -88,30 +88,30 @@ while step > 1:
     i += 1`);
 </script>
 
-The spiral winds **clockwise** because `right()` turns clockwise. The 91° angle — just 1° past a right angle — makes the path drift slightly so the loops don't overlap exactly. Were you right?
+La spirale si avvolge **in senso orario** perché `right()` gira in senso orario. L'angolo di 91° — solo 1° oltre un angolo retto — fa deviare leggermente il percorso così i giri non si sovrappongono esattamente. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`while step > 1` runs until the step becomes too small to matter. Each iteration `step -= 1` shrinks the path segment — opposite of `step += n` in the outward spirals.
+`while step > 1` gira finché il passo non diventa troppo piccolo per avere importanza. A ogni iterazione `step -= 1` restringe il segmento del percorso — l'opposto di `step += n` nelle spirali verso l'esterno.
 
-`min(i // 25, len(colors) - 1)` maps iteration index to a color but clamps it so we never go past the last color in the list, even if the loop runs longer than expected.
+`min(i // 25, len(colors) - 1)` mappa l'indice dell'iterazione a un colore ma lo limita così non andiamo mai oltre l'ultimo colore nella lista, anche se il ciclo gira più del previsto.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `step = 200` | Start with a long segment |
-| `while step > 1` | Keep going until segments are tiny |
-| `step -= 1` | Shrink by 1 pixel each step — creates the inward spiral |
-| `right(91)` | Slightly more than 90° — prevents loops from sitting exactly on top of each other |
-| `min(i // 25, len(colors) - 1)` | Advance color every 25 steps, clamped at the list end |
+| `step = 200` | Inizia con un segmento lungo |
+| `while step > 1` | Continua finché i segmenti non sono minuscoli |
+| `step -= 1` | Si restringe di 1 pixel a ogni passo — crea la spirale verso l'interno |
+| `right(91)` | Leggermente più di 90° — impedisce ai giri di sovrapporsi esattamente |
+| `min(i // 25, len(colors) - 1)` | Avanza il colore ogni 25 passi, limitato alla fine della lista |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Change the Convergence Rate"
+!!! mascot-thinking "Il Tuo Turno — Cambia il Tasso di Convergenza"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The spiral currently decreases by 1 per step. Change `step -= 1` to `step -= 2`.
-    Predict how the spiral will change — then run it to see if you were right!
+    La spirale attualmente diminuisce di 1 per passo. Cambia `step -= 1` in `step -= 2`.
+    Prevedi come cambierà la spirale — poi eseguila per vedere se avevi ragione!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -145,20 +145,20 @@ while step > 1:
     i += 1`);
 </script>
 
-With `step -= 2` the spiral converges twice as fast — it reaches the center in half the steps, so there are fewer revolutions and the loops are spaced further apart.
+Con `step -= 2` la spirale converge due volte più velocemente — raggiunge il centro in metà dei passi, così ci sono meno rivoluzioni e i giri sono spaziati più distanti.
 
-## Experiments
+## Esperimenti
 
-1. **Try `right(89)`.** One degree less than 90° winds the spiral in the opposite rotational direction. You'll know it worked when the loops tilt the other way.
+1. **Prova `right(89)`.** Un grado in meno di 90° avvolge la spirale nella direzione di rotazione opposta. Saprai che ha funzionato quando i giri si inclinano dall'altra parte.
 
-2. **Start even larger.** Change `step = 200` to `step = 300`. More revolutions fit before convergence. You'll know it worked when the spiral takes up more of the canvas.
+2. **Inizia ancora più grande.** Cambia `step = 200` in `step = 300`. Più rivoluzioni entrano prima della convergenza. Saprai che ha funzionato quando la spirale occupa più del canvas.
 
-3. **Use warm colors.** Replace the blues with `['darkred', 'red', 'orangered', 'orange', 'gold', 'yellow', 'lightyellow', 'white']`. You'll know it worked when the spiral shifts from deep red to pale yellow.
+3. **Usa colori caldi.** Sostituisci i blu con `['darkred', 'red', 'orangered', 'orange', 'gold', 'yellow', 'lightyellow', 'white']`. Saprai che ha funzionato quando la spirale passa da rosso profondo a giallo pallido.
 
-4. **Make it hexagonal.** Change `right(91)` to `right(61)`. You'll know it worked when the corners look more rounded.
+4. **Rendila esagonale.** Cambia `right(91)` in `right(61)`. Saprai che ha funzionato quando gli angoli sembrano più arrotondati.
 
-!!! mascot-celebration "Brilliant!"
+!!! mascot-celebration "Brillante!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You saw the same spiral rule work in both directions — outward AND inward —
-    just by switching `+=` to `-=`. Convergence is just divergence in reverse!
-    Up next: **Colored Logarithmic Spiral** — using trigonometry to draw a truly curved spiral.
+    Hai visto la stessa regola della spirale funzionare in entrambe le direzioni — verso l'esterno E verso l'interno —
+    solo cambiando `+=` in `-=`. La convergenza è solo divergenza al contrario!
+    Prossimo: **Spirale Logaritmica Colorata** — usare la trigonometria per disegnare una spirale veramente curva.
