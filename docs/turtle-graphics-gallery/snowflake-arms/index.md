@@ -2,30 +2,30 @@
 hide:
     - toc
 ---
-# Snowflake Arms
+# Bracci del Fiocco di Neve
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Write an `arm()` function that draws one branch with side twigs
-- Use a loop with `left(60)` to repeat the arm six times around a center
-- Recognize how six-fold symmetry is built from one repeated unit
+- Scrivere una funzione `arm()` che disegna un ramo con rametti laterali
+- Usare un ciclo con `left(60)` per ripetere il braccio sei volte attorno a un centro
+- Riconoscere come la simmetria a sei pieghe è costruita da un'unità ripetuta
 
-Six identical arms radiate from the center, each with two smaller side branches —
-a crystalline snowflake that grows from a single reusable function.
+Sei bracci identici si irradiano dal centro, ognuno con due rami laterali più piccoli —
+un fiocco di neve cristallino che cresce da una singola funzione riutilizzabile.
 
-!!! mascot-welcome "Welcome to the Snowflake Arms!"
+!!! mascot-welcome "Benvenuto ai Bracci del Fiocco di Neve!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Real snowflakes have six-fold symmetry — every arm is identical.
-    In this lab you'll draw one arm as a function and call it six times to build the whole crystal!
-    Let's code it together!
+    I veri fiocchi di neve hanno simmetria a sei pieghe — ogni braccio è identico.
+    In questo laboratorio disegnerai un braccio come funzione e la chiamerai sei volte per costruire tutto il cristallo!
+    Programmiamo insieme!
 
-## How the Snowflake Works
+## Come Funziona il Fiocco di Neve
 
-The `arm(length)` function draws one arm: out from center, adds two small side branches,
-then returns to center. Calling it 6 times with `left(60)` between each call
-(6 × 60° = 360°) assembles the full snowflake.
+La funzione `arm(length)` disegna un braccio: esce dal centro, aggiunge due piccoli rami laterali,
+poi ritorna al centro. Chiamarla 6 volte con `left(60)` tra ogni chiamata
+(6 × 60° = 360°) assembla il fiocco di neve completo.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -50,12 +50,12 @@ for i in range(6):
     monty.left(60)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    After calling `arm()` and then `left(60)`, six times, how many total degrees has Monty turned?
-    Make your guess — then click Run to find out!
+    Dopo aver chiamato `arm()` e poi `left(60)`, sei volte, quanti gradi totali ha girato Monty?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -99,36 +99,36 @@ for i in range(6):
     monty.left(60)`);
 </script>
 
-6 × 60° = **360°** — a full rotation, ending exactly where Monty started. Were you right?
+6 × 60° = **360°** — una rotazione completa, finendo esattamente dove Monty ha iniziato. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Inside `arm()`, the turtle goes out, adds side branches at ±45°, and comes back:
-- `forward(length)` — draw the main arm
-- `left(45)` then `forward/backward` — draw the left twig
-- `right(90)` then `forward/backward` — draw the right twig
-- `left(45)` then `backward(length)` — return to center, facing original direction
+Dentro `arm()`, la tartaruga esce, aggiunge rami laterali a ±45°, e ritorna:
+- `forward(length)` — disegna il braccio principale
+- `left(45)` poi `forward/backward` — disegna il rametto sinistro
+- `right(90)` poi `forward/backward` — disegna il rametto destro
+- `left(45)` poi `backward(length)` — ritorna al centro, rivolto nella direzione originale
 
-The function returns the turtle to its **exact starting state** — same position, same heading.
-This is essential for the loop to work: each call to `arm()` leaves Monty ready for the next `left(60)`.
+La funzione riporta la tartaruga al suo **stato iniziale esatto** — stessa posizione, stessa direzione.
+Questo è essenziale per far funzionare il ciclo: ogni chiamata ad `arm()` lascia Monty pronto per il prossimo `left(60)`.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `def arm(length)` | One snowflake arm — main branch plus two side twigs |
-| `monty.left(45)` | Turn 45° to draw the left twig |
-| `monty.right(90)` | Turn 90° (past center) to draw the right twig |
-| `monty.left(45)` | Return to original heading |
-| `monty.backward(length)` | Return to center of snowflake |
-| `monty.left(60)` | Rotate 60° — 6 × 60° = 360° for full snowflake |
+| `def arm(length)` | Un braccio del fiocco di neve — ramo principale più due rametti laterali |
+| `monty.left(45)` | Gira di 45° per disegnare il rametto sinistro |
+| `monty.right(90)` | Gira di 90° (oltre il centro) per disegnare il rametto destro |
+| `monty.left(45)` | Ritorna alla direzione originale |
+| `monty.backward(length)` | Ritorna al centro del fiocco di neve |
+| `monty.left(60)` | Ruota di 60° — 6 × 60° = 360° per il fiocco di neve completo |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add More Twig Levels"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi Più Livelli di Rametti"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The `arm()` function below is missing the **right** twig — only the left twig is drawn!
-    Add the **two missing lines** inside `arm()` to draw the matching right twig.
+    Alla funzione `arm()` sotto manca il rametto **destro** — viene disegnato solo quello sinistro!
+    Aggiungi le **due righe mancanti** dentro `arm()` per disegnare il rametto destro corrispondente.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -164,20 +164,20 @@ for i in range(6):
     monty.left(60)`);
 </script>
 
-Add `monty.right(90)` then `monty.forward(length / 3)` then `monty.backward(length / 3)` — mirroring the left twig but turning right instead.
+Aggiungi `monty.right(90)` poi `monty.forward(length / 3)` poi `monty.backward(length / 3)` — rispecchiando il rametto sinistro ma girando a destra invece.
 
-## Experiments
+## Esperimenti
 
-1. **Change the twig angle.** Replace `left(45)` and `right(90)` with `left(30)` and `right(60)`. You'll know it worked when the twigs are narrower, making the snowflake look more spiky.
+1. **Cambia l'angolo dei rametti.** Sostituisci `left(45)` e `right(90)` con `left(30)` e `right(60)`. Saprai che ha funzionato quando i rametti sono più stretti, rendendo il fiocco di neve più spinoso.
 
-2. **Make a 4-armed snowflake.** Change `range(6)` to `range(4)` and `left(60)` to `left(90)`. You'll know it worked when the snowflake has four arms at 90° angles like a plus sign.
+2. **Fai un fiocco di neve a 4 bracci.** Cambia `range(6)` in `range(4)` e `left(60)` in `left(90)`. Saprai che ha funzionato quando il fiocco di neve ha quattro bracci ad angoli di 90° come un segno più.
 
-3. **Color each arm differently.** Move `monty.color(...)` inside the loop, cycling through `['steelblue','white','lightblue']`. You'll know it worked when each arm is a different shade.
+3. **Colora ogni braccio diversamente.** Sposta `monty.color(...)` dentro il ciclo, scorrendo attraverso `['steelblue','white','lightblue']`. Saprai che ha funzionato quando ogni braccio è di una tonalità diversa.
 
-4. **Add tiny end twigs.** Inside `arm()`, before `backward(length)`, add smaller side branches at `length / 2` position. You'll know it worked when each arm has two sets of twigs.
+4. **Aggiungi piccoli rametti finali.** Dentro `arm()`, prima di `backward(length)`, aggiungi rami laterali più piccoli alla posizione `length / 2`. Saprai che ha funzionato quando ogni braccio ha due set di rametti.
 
-!!! mascot-celebration "Beautiful Work!"
+!!! mascot-celebration "Lavoro Bellissimo!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You built a six-fold symmetric snowflake from a single arm function —
-    the same principle used in all symmetric design, from logos to mandalas!
-    Up next: **Polka Dot Canvas** — scattering hundreds of colorful dots with `random`.
+    Hai costruito un fiocco di neve a simmetria sei pieghe da una singola funzione braccio —
+    lo stesso principio usato in tutto il design simmetrico, dai loghi ai mandala!
+    Prossimo: **Canvas a Pois** — disperdere centinaia di punti colorati con `random`.

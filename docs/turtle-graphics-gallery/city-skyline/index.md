@@ -2,31 +2,31 @@
 hide:
     - toc
 ---
-# City Skyline
+# Skyline Urbano
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Write a `building()` function with multiple parameters
-- Compose a scene from many function calls with different arguments
-- Draw windows with nested loops inside a drawing function
+- Scrivere una funzione `building()` con più parametri
+- Comporre una scena da molte chiamate di funzione con argomenti diversi
+- Disegnare finestre con cicli annidati dentro una funzione di disegno
 
-Ten skyscrapers of varied heights and shades line up across the canvas,
-their yellow windows glowing against the dark silhouettes.
+Dieci grattacieli di altezze e tonalità variate si allineano attraverso il canvas,
+le loro finestre gialle che brillano contro le sagome scure.
 
-!!! mascot-welcome "Welcome to the City Skyline!"
+!!! mascot-welcome "Benvenuto allo Skyline Urbano!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    In this lab you'll write one function that draws an entire building — walls and windows —
-    then call it 10 times to build a full city. Let's code it together!
+    In questo laboratorio scriverai una funzione che disegna un intero edificio — mura e finestre —
+    poi la chiamerai 10 volte per costruire una città completa. Programmiamo insieme!
 
-## How the Scene Works
+## Come Funziona la Scena
 
-The `building(x, w, h, color)` function draws one filled rectangle at position `x`,
-with width `w`, height `h`, and fill `color`. Then it loops to add yellow window dots.
+La funzione `building(x, w, h, color)` disegna un rettangolo riempito nella posizione `x`,
+con larghezza `w`, altezza `h`, e riempimento `color`. Poi cicla per aggiungere punti gialli per le finestre.
 
-After defining the function once, we call it 10 times with different arguments —
-each call produces a completely different skyscraper.
+Dopo aver definito la funzione una volta, la chiamiamo 10 volte con argomenti diversi —
+ogni chiamata produce un grattacielo completamente diverso.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -59,13 +59,13 @@ for d in data:
     building(*d)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The `building()` function is called 10 times, each with different `h` (height) values.
-    Which building will be the tallest — the first one drawn or the last?
-    Scan the data list and make your guess — then click Run to find out!
+    La funzione `building()` viene chiamata 10 volte, ognuna con valori `h` (altezza) diversi.
+    Quale edificio sarà il più alto — il primo disegnato o l'ultimo?
+    Scorri la lista dei dati e fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -117,30 +117,30 @@ for d in data:
     building(*d)`);
 </script>
 
-The tallest building has `h=200` — that's the 4th entry at `x=-115`. Were you right?
+L'edificio più alto ha `h=200` — è la 4ª voce a `x=-115`. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`for side in [w, h, w, h]` is a clever loop over a list of lengths: right side, top, left side, bottom — drawing the rectangle without hard-coding four separate `forward` calls.
+`for side in [w, h, w, h]` è un ciclo intelligente su una lista di lunghezze: lato destro, in alto, lato sinistro, in basso — disegnando il rettangolo senza scrivere a mano quattro chiamate `forward` separate.
 
-`building(*d)` uses the **unpacking operator** `*` to spread a tuple `(x, w, h, color)` into four separate arguments, so you don't have to type `building(d[0], d[1], d[2], d[3])`.
+`building(*d)` usa l'**operatore di spacchettamento** `*` per distribuire una tupla `(x, w, h, color)` in quattro argomenti separati, così non devi scrivere `building(d[0], d[1], d[2], d[3])`.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `def building(x, w, h, color)` | Function with four parameters: position, width, height, color |
-| `for side in [w, h, w, h]` | Draw four sides in one loop using a list |
-| `h // 35` | Integer division: number of window rows that fit |
-| `w // 20` | Number of window columns that fit |
-| `building(*d)` | Unpack tuple `d` into function arguments |
+| `def building(x, w, h, color)` | Funzione con quattro parametri: posizione, larghezza, altezza, colore |
+| `for side in [w, h, w, h]` | Disegna quattro lati in un ciclo usando una lista |
+| `h // 35` | Divisione intera: numero di righe di finestre che entrano |
+| `w // 20` | Numero di colonne di finestre che entrano |
+| `building(*d)` | Spacchetta la tupla `d` negli argomenti della funzione |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add a Rooftop"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi un Tetto"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The `building()` function below draws walls and windows but has no rooftop detail.
-    Add **two lines** after `end_fill()` to draw a thin red rectangle (`height = 10`) across the roof.
+    La funzione `building()` sotto disegna muri e finestre ma non ha nessun dettaglio sul tetto.
+    Aggiungi **due righe** dopo `end_fill()` per disegnare un sottile rettangolo rosso (`height = 10`) attraverso il tetto.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -183,20 +183,20 @@ building(30, 60, 120, 'dimgray')
 building(110, 70, 180, 'darkslategray')`);
 </script>
 
-After `end_fill()` add: `monty.penup(); monty.goto(x, -180+h)` then draw a red filled `w × 10` rectangle.
+Dopo `end_fill()` aggiungi: `monty.penup(); monty.goto(x, -180+h)` poi disegna un rettangolo rosso riempito `w × 10`.
 
-## Experiments
+## Esperimenti
 
-1. **Add a sky.** Before calling any buildings, draw a large dark-blue filled rectangle covering the whole canvas background. You'll know it worked when the skyline sits against a night sky.
+1. **Aggiungi un cielo.** Prima di chiamare qualsiasi edificio, disegna un grande rettangolo riempito blu scuro che copre tutto lo sfondo del canvas. Saprai che ha funzionato quando lo skyline si trova contro un cielo notturno.
 
-2. **Add a moon.** After the sky, add `monty.penup(); monty.goto(100, 100); monty.dot(60, 'lightyellow')`. You'll know it worked when a glowing circle appears above the skyline.
+2. **Aggiungi una luna.** Dopo il cielo, aggiungi `monty.penup(); monty.goto(100, 100); monty.dot(60, 'lightyellow')`. Saprai che ha funzionato quando un cerchio luminoso appare sopra lo skyline.
 
-3. **Change the window color.** Replace `'yellow'` with `'white'`. You'll know it worked when the windows look like fluorescent office lights.
+3. **Cambia il colore delle finestre.** Sostituisci `'yellow'` con `'white'`. Saprai che ha funzionato quando le finestre sembrano luci fluorescenti da ufficio.
 
-4. **Make a wider city.** Add 5 more buildings to the `data` list. You'll know it worked when the skyline extends further across the canvas.
+4. **Fai una città più larga.** Aggiungi altri 5 edifici alla lista `data`. Saprai che ha funzionato quando lo skyline si estende più lontano attraverso il canvas.
 
-!!! mascot-celebration "Fantastic Work!"
+!!! mascot-celebration "Lavoro Fantastico!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You composed an entire scene from a single reusable function!
-    That's exactly how game engines, CAD tools, and map renderers work under the hood.
-    Up next: **Snowflake Arms** — using a function to build six-fold symmetry.
+    Hai composto un'intera scena da una singola funzione riutilizzabile!
+    È esattamente così che funzionano i motori di gioco, gli strumenti CAD, e i renderer di mappe dietro le quinte.
+    Prossimo: **Bracci del Fiocco di Neve** — usare una funzione per costruire simmetria a sei pieghe.

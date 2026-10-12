@@ -2,32 +2,32 @@
 hide:
     - toc
 ---
-# Overlapping Squares
+# Quadrati Sovrapposti
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Offset shapes diagonally to create deliberate overlap
-- Understand how **draw order** controls which shape appears on top
-- Plan a color sequence so overlapping areas look intentional
+- Spostare forme diagonalmente per creare una sovrapposizione intenzionale
+- Capire come l'**ordine di disegno** controlla quale forma appare sopra
+- Pianificare una sequenza di colori così le aree sovrapposte sembrino intenzionali
 
-Eight large squares, each shifted 25 pixels diagonally from the last, fan out
-in a cascade of color — each new square partially covering the one before it.
+Otto grandi quadrati, ognuno spostato di 25 pixel in diagonale dal precedente, si apre a ventaglio
+in una cascata di colore — ogni nuovo quadrato copre parzialmente quello precedente.
 
-!!! mascot-welcome "Welcome to Overlapping Squares!"
+!!! mascot-welcome "Benvenuto ai Quadrati Sovrapposti!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    In this lab you'll learn how to place the same shape in slightly different positions
-    and use fill color and draw order to make the overlaps look beautiful.
-    Let's code it together!
+    In questo laboratorio imparerai come posizionare la stessa forma in posizioni leggermente diverse
+    e usare il colore di riempimento e l'ordine di disegno per far sembrare belle le sovrapposizioni.
+    Programmiamo insieme!
 
-## How the Overlap Works
+## Come Funziona la Sovrapposizione
 
-Each square starts 25 pixels further right and 25 pixels further down than the previous one.
-Because turtle fills are **opaque**, each new square covers part of the previous one —
-the last square drawn always appears on top.
+Ogni quadrato inizia 25 pixel più a destra e 25 pixel più in basso del precedente.
+Poiché i riempimenti di turtle sono **opachi**, ogni nuovo quadrato copre parte del precedente —
+l'ultimo quadrato disegnato appare sempre sopra.
 
-A gradient of colors (dark to light) makes each layer visually distinct.
+Un gradiente di colori (dal scuro al chiaro) rende ogni strato visivamente distinto.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -52,13 +52,13 @@ for i in range(8):
     monty.end_fill()
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The squares are drawn from `i=0` (darkest, navy) to `i=7` (lightest, aliceblue).
-    Which square will appear **on top** — the darkest or the lightest?
-    Make your guess — then click Run to find out!
+    I quadrati sono disegnati da `i=0` (il più scuro, navy) a `i=7` (il più chiaro, aliceblue).
+    Quale quadrato apparirà **sopra** — il più scuro o il più chiaro?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -102,31 +102,31 @@ for i in range(8):
     monty.end_fill()`);
 </script>
 
-The **lightest** square (aliceblue, drawn last) sits on top. Were you right?
+Il quadrato **più chiaro** (aliceblue, disegnato ultimo) si trova sopra. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`monty.goto(-200 + i * offset, 100 - i * offset)` positions each square's top-left corner.
-As `i` increases, x increases (moving right) and y decreases (moving down), creating the diagonal cascade.
+`monty.goto(-200 + i * offset, 100 - i * offset)` posiziona l'angolo in alto a sinistra di ogni quadrato.
+Mentre `i` aumenta, x aumenta (spostandosi a destra) e y diminuisce (spostandosi in basso), creando la cascata diagonale.
 
-The `colors` list goes from darkest to lightest. Since the lightest is drawn last and on top, the darkest corners peek out from beneath — creating a staircase of color visible at the edges.
+La lista `colors` va dal più scuro al più chiaro. Poiché il più chiaro è disegnato ultimo e sopra, gli angoli più scuri sbirciano da sotto — creando una scalinata di colore visibile ai bordi.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `offset = 25` | Each square shifts 25px right and 25px down |
-| `goto(-200 + i*offset, 100 - i*offset)` | Diagonal staircase positioning |
-| `colors[i]` | A blue gradient from dark navy to near-white |
-| `for _ in range(4)` | Draw the four sides of one square |
+| `offset = 25` | Ogni quadrato si sposta di 25px a destra e 25px in basso |
+| `goto(-200 + i*offset, 100 - i*offset)` | Posizionamento a scalinata diagonale |
+| `colors[i]` | Un gradiente di blu dal navy scuro al quasi bianco |
+| `for _ in range(4)` | Disegna i quattro lati di un quadrato |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Reverse the Stack"
+!!! mascot-thinking "Il Tuo Turno — Inverti la Pila"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below draws squares but in the wrong order — the darkest square ends up
-    on top, covering the lighter ones. Fix the loop so the lightest square is drawn last.
-    Hint: reverse the list or the range.
+    Il programma sotto disegna i quadrati ma nell'ordine sbagliato — il quadrato più scuro finisce
+    sopra, coprendo quelli più chiari. Correggi il ciclo così il quadrato più chiaro sia disegnato ultimo.
+    Suggerimento: inverti la lista o l'intervallo.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -164,20 +164,20 @@ for i in range(7, -1, -1):
     monty.end_fill()`);
 </script>
 
-Change `range(7, -1, -1)` back to `range(8)` — lightest (index 7) should be drawn last, appearing on top.
+Cambia `range(7, -1, -1)` di nuovo in `range(8)` — il più chiaro (indice 7) dovrebbe essere disegnato ultimo, apparendo sopra.
 
-## Experiments
+## Esperimenti
 
-1. **Use warm colors.** Replace the blue gradient with `['darkred','firebrick','red','tomato','coral','lightsalmon','mistyrose','white']`. You'll know it worked when the cascade glows warm red.
+1. **Usa colori caldi.** Sostituisci il gradiente blu con `['darkred','firebrick','red','tomato','coral','lightsalmon','mistyrose','white']`. Saprai che ha funzionato quando la cascata brilla di rosso caldo.
 
-2. **Increase the offset.** Change `offset = 25` to `offset = 40`. Squares separate further apart. You'll know it worked when larger portions of each square are visible.
+2. **Aumenta l'offset.** Cambia `offset = 25` in `offset = 40`. I quadrati si separano maggiormente. Saprai che ha funzionato quando porzioni più grandi di ogni quadrato sono visibili.
 
-3. **Overlap in the opposite direction.** Change `i * offset` to `-i * offset` in the x formula. The cascade goes left instead of right. You'll know it worked when the lightest square is at the lower-left.
+3. **Sovrapponi nella direzione opposta.** Cambia `i * offset` in `-i * offset` nella formula x. La cascata va a sinistra invece che a destra. Saprai che ha funzionato quando il quadrato più chiaro è in basso a sinistra.
 
-4. **Use rotated squares.** Inside the inner loop, replace `monty.right(90)` with `monty.right(90 + i)` to add a slight rotation to later squares. You'll know it worked when the squares tilt progressively.
+4. **Usa quadrati ruotati.** Dentro il ciclo interno, sostituisci `monty.right(90)` con `monty.right(90 + i)` per aggiungere una leggera rotazione ai quadrati successivi. Saprai che ha funzionato quando i quadrati si inclinano progressivamente.
 
-!!! mascot-celebration "Excellent Work!"
+!!! mascot-celebration "Lavoro Eccellente!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've explored draw order, gradients, and offset positioning —
-    the same principles that every game and animation uses to layer graphics on screen!
-    Up next: **Flower with Petal Function** to discover the power of reusable functions.
+    Hai esplorato l'ordine di disegno, i gradienti, e il posizionamento con offset —
+    gli stessi principi che ogni gioco e animazione usa per stratificare la grafica sullo schermo!
+    Prossimo: **Fiore con Funzione Petalo** per scoprire il potere delle funzioni riutilizzabili.

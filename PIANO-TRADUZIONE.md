@@ -130,6 +130,14 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
   i rimandi "Up next" tradotti come "Prossimo" e mantenuti coerenti con l'ordine della nav)
 - `checkerboard-grid/`, `diagonal-stripe-field/`, `dotted-grid/`, `color-wheel-wedges/`,
   `pentagon-chain/` (secondo batch di singoli laboratori)
+- `overlapping-squares/`, `flower-petal-function/`, `honeycomb-grid/`, `city-skyline/`,
+  `snowflake-arms/` (terzo batch — trovato un bug pre-esistente nell'originale inglese
+  `honeycomb-grid/index.md`: dopo la sezione "Learning Check" c'è un blocco di
+  contenuto corrotto/duplicato — un secondo esempio di codice non coerente con lo
+  stile della lezione, frasi concatenate senza spazi tipo "How the Math WorksThe
+  Offset:", e una sezione "Alternative Package Options" fuori tema che consiglia
+  librerie esterne. Escluso dalla traduzione italiana, come già fatto per il bug
+  del Capitolo 5; il bug resta nell'originale inglese, da segnalare separatamente)
 
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
@@ -257,11 +265,13 @@ cuore didattico del libro.
 **FASE 4 IN CORSO — Turtle Graphics Gallery.** Tradotti finora: nav di `mkdocs.yml`,
 `pattern-ideas.md`, `index.md` (root), `rainbow-square-spiral/`, `pinwheel-of-triangles/`,
 `nested-circles/`, `starburst/`, `checkerboard-grid/`, `diagonal-stripe-field/`,
-`dotted-grid/`, `color-wheel-wedges/`, `pentagon-chain/` (12 di ~102 file/unità).
+`dotted-grid/`, `color-wheel-wedges/`, `pentagon-chain/`, `overlapping-squares/`,
+`flower-petal-function/`, `honeycomb-grid/`, `city-skyline/`, `snowflake-arms/`
+(17 di ~102 file/unità).
 
-Prossimo: continuare la Fase 4 in ordine di nav con `overlapping-squares/`,
-`flower-petal-function/`, `honeycomb-grid/`, `city-skyline/`, `snowflake-arms/`, e così
-via attraverso i restanti ~91 singoli laboratori della galleria.
+Prossimo: continuare la Fase 4 in ordine di nav con `polka-dot-canvas/`,
+`brick-wall/`, `stars-different-sizes/`, `traffic-light/`, `fish-school/`, e così
+via attraverso i restanti ~86 singoli laboratori della galleria.
 
 Dopo la Fase 4: Fasi 5-9 (MicroSims, Teacher's Guide, Jupyter/Advanced, Learning Graph,
 Trinket Labs — quest'ultima di priorità minima/da valutare se tradurre affatto, vedi

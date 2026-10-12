@@ -2,30 +2,30 @@
 hide:
     - toc
 ---
-# Flower with Petal Function
+# Fiore con Funzione Petalo
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Define a function that draws one petal and call it multiple times
-- Pass **parameters** to a function to control size and color
-- Use rotation between function calls to assemble a symmetric flower
+- Definire una funzione che disegna un petalo e chiamarla più volte
+- Passare **parametri** a una funzione per controllare dimensione e colore
+- Usare la rotazione tra le chiamate di funzione per assemblare un fiore simmetrico
 
-Eight petals — each a pair of arcs — radiate from the center, cycling
-through warm pink and magenta tones to form a blooming flower.
+Otto petali — ognuno una coppia di archi — si irradiano dal centro, scorrendo
+attraverso tonalità calde di rosa e magenta per formare un fiore in boccio.
 
-!!! mascot-welcome "Welcome to the Flower with Petal Function!"
+!!! mascot-welcome "Benvenuto al Fiore con Funzione Petalo!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    In this lab you'll write a `petal()` function once and call it 8 times.
-    That's the power of functions — write it once, reuse it forever!
-    Let's code it together!
+    In questo laboratorio scriverai una funzione `petal()` una volta e la chiamerai 8 volte.
+    Questo è il potere delle funzioni — scrivila una volta, riutilizzala per sempre!
+    Programmiamo insieme!
 
-## How the Flower Works
+## Come Funziona il Fiore
 
-The `petal(size, color)` function draws one petal using two `circle()` arcs facing opposite directions.
-After each petal, the turtle rotates 45° so the next petal points in a new direction.
-8 petals × 45° = 360° — a full flower.
+La funzione `petal(size, color)` disegna un petalo usando due archi `circle()` rivolti in direzioni opposte.
+Dopo ogni petalo, la tartaruga ruota di 45° così il petalo successivo punta in una nuova direzione.
+8 petali × 45° = 360° — un fiore completo.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -50,13 +50,13 @@ for i in range(8):
     monty.left(45)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The loop calls `petal()` 8 times, rotating 45° between each call.
-    8 × 45° = 360°. How many petals will appear in the finished flower?
-    Make your guess — then click Run to find out!
+    Il ciclo chiama `petal()` 8 volte, ruotando di 45° tra ogni chiamata.
+    8 × 45° = 360°. Quanti petali appariranno nel fiore finito?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -100,33 +100,33 @@ for i in range(8):
     monty.left(45)`);
 </script>
 
-Exactly **8 petals**, one per call. Were you right?
+Esattamente **8 petali**, uno per chiamata. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`monty.circle(size, 60)` draws only a 60° arc of a circle — the second argument is the arc angle.
-Two 60° arcs facing opposite directions form a leaf-shaped petal.
-The two `left(120)` turns are the geometry that closes the petal back at the starting point.
+`monty.circle(size, 60)` disegna solo un arco di 60° di un cerchio — il secondo argomento è l'angolo dell'arco.
+Due archi di 60° rivolti in direzioni opposte formano un petalo a forma di foglia.
+Le due rotazioni `left(120)` sono la geometria che chiude il petalo tornando al punto di partenza.
 
-The `def petal(size, color):` function definition happens once before the loop.
-Inside the loop, `petal(80, colors[i])` is the **call** — it runs all the code inside the function with `size=80` and `color=colors[i]`.
+La definizione della funzione `def petal(size, color):` avviene una volta prima del ciclo.
+Dentro il ciclo, `petal(80, colors[i])` è la **chiamata** — esegue tutto il codice dentro la funzione con `size=80` e `color=colors[i]`.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `def petal(size, color):` | Define a reusable petal-drawing function |
-| `monty.circle(size, 60)` | Draw a 60° arc of a circle of the given radius |
-| `monty.left(120)` | Turn to face the opposite arc direction |
-| `petal(80, colors[i])` | Call the function with specific size and color |
-| `monty.left(45)` | Rotate 45° so the next petal points in a new direction |
+| `def petal(size, color):` | Definisce una funzione riutilizzabile per disegnare un petalo |
+| `monty.circle(size, 60)` | Disegna un arco di 60° di un cerchio del raggio dato |
+| `monty.left(120)` | Gira per rivolgersi nella direzione opposta dell'arco |
+| `petal(80, colors[i])` | Chiama la funzione con dimensione e colore specifici |
+| `monty.left(45)` | Ruota di 45° così il petalo successivo punta in una nuova direzione |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add the Rotation"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi la Rotazione"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below draws 8 petals but they all point in the same direction — all stacked up!
-    Add **one line** inside the loop, after calling `petal()`, to rotate 45° before the next petal.
+    Il programma sotto disegna 8 petali ma puntano tutti nella stessa direzione — tutti sovrapposti!
+    Aggiungi **una riga** dentro il ciclo, dopo aver chiamato `petal()`, per ruotare di 45° prima del petalo successivo.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -164,20 +164,20 @@ for i in range(8):
     # ADD ONE LINE HERE to rotate 45° before the next petal`);
 </script>
 
-The missing line is `monty.left(45)` — 8 petals × 45° = 360°, a complete flower.
+La riga mancante è `monty.left(45)` — 8 petali × 45° = 360°, un fiore completo.
 
-## Experiments
+## Esperimenti
 
-1. **Change the petal count.** Use `range(6)` and `monty.left(60)`. You'll know it worked when 6 petals form a simpler flower shape.
+1. **Cambia il numero di petali.** Usa `range(6)` e `monty.left(60)`. Saprai che ha funzionato quando 6 petali formano una forma di fiore più semplice.
 
-2. **Make larger petals.** Call `petal(120, colors[i])` instead of `petal(80, ...)`. You'll know it worked when the petals extend further from the center.
+2. **Fai petali più grandi.** Chiama `petal(120, colors[i])` invece di `petal(80, ...)`. Saprai che ha funzionato quando i petali si estendono più lontano dal centro.
 
-3. **Use a green stem.** Before the loop, add `monty.color('green'); monty.pensize(4); monty.goto(0, -150); monty.penup()`. You'll know it worked when a thick green line appears below the flower.
+3. **Usa uno stelo verde.** Prima del ciclo, aggiungi `monty.color('green'); monty.pensize(4); monty.goto(0, -150); monty.penup()`. Saprai che ha funzionato quando appare una linea verde spessa sotto il fiore.
 
-4. **Add a yellow center.** After the loop, add `monty.penup(); monty.goto(0, -20); monty.dot(40, 'yellow')`. You'll know it worked when a yellow circle appears at the center of the petals.
+4. **Aggiungi un centro giallo.** Dopo il ciclo, aggiungi `monty.penup(); monty.goto(0, -20); monty.dot(40, 'yellow')`. Saprai che ha funzionato quando appare un cerchio giallo al centro dei petali.
 
-!!! mascot-celebration "Beautiful Work!"
+!!! mascot-celebration "Lavoro Bellissimo!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You wrote your first parameterized function and called it in a loop —
-    that's the foundation of all reusable code in programming!
-    Up next: **Honeycomb Grid** to see functions and tiling in action.
+    Hai scritto la tua prima funzione parametrizzata e l'hai chiamata in un ciclo —
+    questa è la base di tutto il codice riutilizzabile nella programmazione!
+    Prossimo: **Griglia a Nido d'Ape** per vedere funzioni e tassellatura in azione.

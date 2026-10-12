@@ -2,31 +2,31 @@
 hide:
     - toc
 ---
-# Honeycomb Grid
+# Griglia a Nido d'Ape
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Write a `hexagon(x, y, size)` function and call it from nested loops
-- Understand the **offset row** pattern for tiling hexagons
-- See why hexagons tile the plane perfectly while squares leave gaps
+- Scrivere una funzione `hexagon(x, y, size)` e chiamarla da cicli annidati
+- Capire il pattern delle **righe con offset** per tassellare gli esagoni
+- Vedere perché gli esagoni tassellano il piano perfettamente mentre i quadrati lasciano spazi
 
-Dozens of filled hexagons tile the canvas in alternating yellow and orange — a perfect honeycomb just like a beehive.
+Decine di esagoni riempiti tassellano il canvas alternando giallo e arancione — un nido d'ape perfetto proprio come un alveare.
 
-!!! mascot-welcome "Welcome to the Honeycomb!"
+!!! mascot-welcome "Benvenuto al Nido d'Ape!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Hexagons are special: they tile the plane perfectly with no gaps or overlaps.
-    In this lab you'll discover how to place them using a neat offset-row trick.
-    Let's code it together!
+    Gli esagoni sono speciali: tassellano il piano perfettamente senza spazi o sovrapposizioni.
+    In questo laboratorio scoprirai come posizionarli usando un ordinato trucco a righe con offset.
+    Programmiamo insieme!
 
-## How the Tiling Works
+## Come Funziona la Tassellatura
 
-Each hexagon is drawn by a function. The key to tiling is offset rows:
-- Odd rows shift right by half a hexagon width
-- The vertical spacing between rows is the hexagon's height × 0.75
+Ogni esagono è disegnato da una funzione. La chiave per la tassellatura sono le righe con offset:
+- Le righe dispari si spostano a destra di metà larghezza di un esagono
+- La spaziatura verticale tra le righe è l'altezza dell'esagono × 0,75
 
-The hexagon height is `size * 2` (vertex-to-vertex) and width is `size * sqrt(3)` (flat-to-flat, approximately `size * 1.732`).
+L'altezza dell'esagono è `size * 2` (da vertice a vertice) e la larghezza è `size * sqrt(3)` (da lato piatto a lato piatto, circa `size * 1.732`).
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -60,13 +60,13 @@ for row in range(7):
         hexagon(x, y, size, colors[(row + col) % 2])
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    A hexagon has 6 sides. The exterior angle at each corner is `360 / 6 = 60°`.
-    After drawing all 6 sides, how many total degrees has Monty turned?
-    Make your guess — then click Run to find out!
+    Un esagono ha 6 lati. L'angolo esterno a ogni angolo è `360 / 6 = 60°`.
+    Dopo aver disegnato tutti i 6 lati, quanti gradi totali ha girato Monty?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -119,32 +119,32 @@ for row in range(7):
         hexagon(x, y, size, colors[(row + col) % 2])`);
 </script>
 
-6 × 60° = **360°** — a full rotation, just like every regular polygon. Were you right?
+6 × 60° = **360°** — una rotazione completa, proprio come ogni poligono regolare. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-The `hexagon()` function uses `setheading(30)` so each hexagon starts at a 30° angle, producing a **pointy-top** hexagon. Resetting the heading at the start of every call is essential — you never know what angle Monty is at when the function is called.
+La funzione `hexagon()` usa `setheading(30)` così ogni esagono inizia a un angolo di 30°, producendo un esagono **con la punta in alto**. Reimpostare la direzione all'inizio di ogni chiamata è essenziale — non sai mai a che angolo si trovi Monty quando la funzione viene chiamata.
 
-The offset formula `col_w / 2 if row % 2 == 1 else 0` shifts odd rows right by half the hex width, staggering them so each hexagon nestles into the gap between two hexagons in the row above.
+La formula dell'offset `col_w / 2 if row % 2 == 1 else 0` sposta le righe dispari a destra di metà della larghezza dell'esagono, scalandole così ogni esagono si incastra nello spazio tra due esagoni nella riga sopra.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `def hexagon(x, y, size, color)` | Reusable function: draws one hexagon at position (x,y) |
-| `monty.setheading(30)` | Start at 30° to draw a pointy-top hexagon — critical for correct tiling |
-| `monty.left(60)` | Exterior angle of a hexagon (360/6) |
-| `h = size * 2` | Height of a pointy-top hexagon (vertex to vertex) |
-| `col_w = size * math.sqrt(3)` | Width of a pointy-top hexagon (flat edge to flat edge) |
-| `offset = col_w / 2 if row % 2 == 1 else 0` | Odd rows shift right by half the hex width |
-| `y = 150 - row * h * 0.75` | Rows overlap by 25% of height so hexagons interlock |
+| `def hexagon(x, y, size, color)` | Funzione riutilizzabile: disegna un esagono alla posizione (x,y) |
+| `monty.setheading(30)` | Inizia a 30° per disegnare un esagono con la punta in alto — critico per la tassellatura corretta |
+| `monty.left(60)` | Angolo esterno di un esagono (360/6) |
+| `h = size * 2` | Altezza di un esagono con la punta in alto (da vertice a vertice) |
+| `col_w = size * math.sqrt(3)` | Larghezza di un esagono con la punta in alto (da lato piatto a lato piatto) |
+| `offset = col_w / 2 if row % 2 == 1 else 0` | Le righe dispari si spostano a destra di metà larghezza dell'esagono |
+| `y = 150 - row * h * 0.75` | Le righe si sovrappongono del 25% dell'altezza così gli esagoni si incastrano |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Spot the Bug!"
+!!! mascot-warning "Trova il Bug!"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    The program below draws hexagons but they don't tile — there are gaps and overlaps!
-    The row offset formula is wrong. Fix it so odd rows shift by exactly `size` pixels.
+    Il programma sotto disegna esagoni ma non tassellano — ci sono spazi vuoti e sovrapposizioni!
+    La formula dell'offset di riga è sbagliata. Correggila così le righe dispari si spostino esattamente di `size` pixel.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -191,84 +191,20 @@ for row in range(7):
         hexagon(x, y, size, colors[(row + col) % 2])`);
 </script>
 
-Change `col_w` to `col_w / 2` in the offset line — the shift should be half the hex width, not the full width.
+Cambia `col_w` in `col_w / 2` nella riga dell'offset — lo spostamento dovrebbe essere metà della larghezza dell'esagono, non la larghezza intera.
 
+## Esperimenti
 
-```python
-import math
-import turtle
+1. **Cambia i colori.** Usa `['royalblue', 'navy']` per un nido d'ape blu. Saprai che ha funzionato quando i colori cambiano ma la tassellatura resta perfetta.
 
+2. **Rendi gli esagoni più grandi.** Cambia `size = 30` in `size = 45` e riduci gli intervalli di riga/colonna. Saprai che ha funzionato quando meno esagoni, più grandi, tassellano il canvas.
 
-def draw_hexagon(size):
-    """Draws a single regular hexagon."""
-    for _ in range(6):
-        turtle.forward(size)
-        turtle.left(60)
+3. **Rimuovi il riempimento.** Elimina le righe `begin_fill()` e `end_fill()` dalla funzione. Saprai che ha funzionato quando il nido d'ape mostra solo i contorni.
 
+4. **Colora solo per riga.** Cambia `colors[(row + col) % 2]` in `colors[row % 2]`. Tutte le celle in una riga diventano dello stesso colore. Saprai che ha funzionato quando appaiono fasce orizzontali di colore alternato.
 
-def draw_honeycomb(rows, cols, size):
-    """Draws a grid of hexagons offset to form a honeycomb pattern."""
-    # Calculate geometric spacing based on hexagon properties
-    w = size * math.sqrt(3)  # Width of the hexagon
-    h = size * 1.5  # Vertical distance to the next row
-
-    for r in range(rows):
-        for c in range(cols):
-            # Calculate the starting X position
-            x = c * w
-            # Offset every odd row to the right by half a hexagon width
-            if r % 2 == 1:
-                x += w / 2
-
-            # Calculate the starting Y position
-            y = r * h
-
-            # Move turtle to the cell position without drawing
-            turtle.penup()
-            turtle.goto(x, y)
-            turtle.pendown()
-
-            # Render the hexagon
-            draw_hexagon(size)
-
-
-# Main setup
-if __name__ == "__main__":
-    # Optimize drawing speed
-    turtle.speed(0)
-    turtle.delay(0)
-
-    # Configuration: Rows, Columns, Edge Size
-    draw_honeycomb(rows=6, cols=8, size=30)
-
-    # Keep window open
-    turtle.hideturtle()
-    turtle.done()
-```
-
-## How the Math WorksThe Offset: 
-Hexagons cannot sit directly on top of each other in a standard grid. By using if r % 2 == 1: x += w / 2, we shift every odd row slightly to the right so it nests perfectly inside the valleys of the even row.Vertical Distance: The vertical step size (size * 1.5) ensures that rows overlap perfectly without crashing into each other or leaving spaces.
-
-## Alternative Package Options
-
-If you are building a specific type of application, specialized libraries can save you from writing the grid math manually:
-
-## For Games & Simulation
-
-Use the Red Blob Games Hex Grid Guide coordinate logic, or use the hexy library to manage neighbor tracking and axial coordinates easily.For Data Visualization: Use matplotlib.pyplot.hexbin() to quickly turn data coordinates into a beautiful hexagonal heatmap layout.For GIS & Maps: Look into h3-pandas or geohexgrid to map geographic coordinates directly onto a global honeycomb grid.
-
-## Experiments
-
-1. **Change the colors.** Use `['royalblue', 'navy']` for a blue honeycomb. You'll know it worked when the colors change but the tiling stays perfect.
-
-2. **Make the hexagons bigger.** Change `size = 30` to `size = 45` and reduce the row/col ranges. You'll know it worked when fewer, larger hexagons tile the canvas.
-
-3. **Remove the fill.** Delete the `begin_fill()` and `end_fill()` lines from the function. You'll know it worked when the honeycomb shows only outlines.
-
-4. **Color by row only.** Change `colors[(row + col) % 2]` to `colors[row % 2]`. All cells in a row become the same color. You'll know it worked when horizontal bands of alternating color appear.
-
-!!! mascot-celebration "Incredible Work!"
+!!! mascot-celebration "Lavoro Incredibile!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You built a full tiling engine with a function, nested loops, and offset-row geometry!
-    Bees figured out this pattern millions of years ago — and now you know the math behind it.
-    Up next: **City Skyline** — composing a scene from reusable building functions.
+    Hai costruito un motore di tassellatura completo con una funzione, cicli annidati, e geometria a righe con offset!
+    Le api hanno scoperto questo pattern milioni di anni fa — e ora conosci la matematica dietro di esso.
+    Prossimo: **Skyline Urbano** — comporre una scena da funzioni riutilizzabili per edifici.
