@@ -1,39 +1,39 @@
-# Turtle Commands
+# Comandi Turtle
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Move a turtle forward, backward, and in any direction using `forward()`, `back()`, `left()`, and `right()`
-- Change the pen color and line thickness with `color()` and `pensize()`
-- Change the turtle's icon using `shape()`
+- Muovere una tartaruga avanti, indietro, e in qualsiasi direzione usando `forward()`, `back()`, `left()`, e `right()`
+- Cambiare il colore della penna e lo spessore della linea con `color()` e `pensize()`
+- Cambiare l'icona della tartaruga usando `shape()`
 
-Every turtle program starts with the same three setup lines, and then you give the turtle a sequence of commands — move here, turn that way, draw this color. In this lab you'll try the most important commands and see exactly what each one does.
+Ogni programma con la tartaruga inizia con le stesse tre righe di configurazione, e poi dai alla tartaruga una sequenza di comandi — muoviti qui, girati di là, disegna di questo colore. In questo laboratorio proverai i comandi più importanti e vedrai esattamente cosa fa ciascuno.
 
-!!! mascot-welcome "Welcome to This Lesson!"
+!!! mascot-welcome "Benvenuto a Questa Lezione!"
     ![Monty waving welcome](../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Hi, I'm Monty! I live inside your browser and I draw whatever you tell me to.
-    In this lesson you'll learn the commands that make me move, turn, and change color.
-    Let's code it together!
+    Ciao, sono Monty! Vivo dentro il tuo browser e disegno qualsiasi cosa tu mi dica.
+    In questa lezione imparerai i comandi che mi fanno muovere, girare, e cambiare colore.
+    Programmiamo insieme!
 
-## Moving and Turning
+## Muoversi e Girare
 
-The turtle starts at the center of the canvas, facing right. Four commands control movement:
+La tartaruga inizia al centro del canvas, girata verso destra. Quattro comandi controllano il movimento:
 
-- `forward(n)` — walk forward `n` steps, drawing a line
-- `back(n)` — walk backward `n` steps, drawing a line
-- `left(n)` — turn left `n` degrees (counter-clockwise)
-- `right(n)` — turn right `n` degrees (clockwise)
+- `forward(n)` — camminare avanti di `n` passi, disegnando una linea
+- `back(n)` — camminare indietro di `n` passi, disegnando una linea
+- `left(n)` — girare a sinistra di `n` gradi (senso antiorario)
+- `right(n)` — girare a destra di `n` gradi (senso orario)
 
-Two commands control the pen:
+Due comandi controllano la penna:
 
-- `color('name')` — set the drawing color (try `'red'`, `'blue'`, `'green'`, `'orange'`)
-- `pensize(n)` — set the line thickness; `1` is thin, `10` is chunky
+- `color('name')` — imposta il colore di disegno (prova `'red'`, `'blue'`, `'green'`, `'orange'`)
+- `pensize(n)` — imposta lo spessore della linea; `1` è fine, `10` è grosso
 
-!!! mascot-tip "Scratch Bridge"
+!!! mascot-tip "Ponte Scratch"
     ![Monty with a tip](../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch you used **"Move 10 steps"**, **"Turn ↻ degrees"**, and **"Set pen color"**.
-    `forward()`, `right()`, and `color()` do exactly the same things in Python!
+    In Scratch hai usato **"Muovi di 10 passi"**, **"Gira ↻ gradi"**, e **"Imposta il colore della penna"**.
+    `forward()`, `right()`, e `color()` fanno esattamente le stesse cose in Python!
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -53,15 +53,15 @@ monty.color('green')
 monty.forward(100)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The turtle draws three line segments. What color will each segment be?
-    Make your guess — then click Run to find out!
+    La tartaruga disegna tre segmenti di linea. Di che colore sarà ciascun segmento?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see the result right on this page.
-No account needed — everything runs in your browser.
+Modifica il codice sotto e clicca **Esegui** per vedere il risultato direttamente su questa pagina.
+Nessun account necessario — tutto gira nel tuo browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -100,34 +100,34 @@ monty.color('green')
 monty.forward(100)`);
 </script>
 
-Were you right? The turtle draws a blue segment, turns right, draws a red segment, turns right again, and finishes with a green segment — an upside-down U shape in three colors.
+Avevi indovinato? La tartaruga disegna un segmento blu, gira a destra, disegna un segmento rosso, gira a destra di nuovo, e finisce con un segmento verde — una forma a U rovesciata in tre colori.
 
-**If you see a red error message:** Check that every command ends with `()` and that the color name is inside quotes — `'blue'` not `blue`.
+**Se vedi un messaggio di errore rosso:** Controlla che ogni comando finisca con `()` e che il nome del colore sia tra virgolette — `'blue'` non `blue`.
 
-## How It Works
+## Come Funziona
 
-The turtle starts facing right. Each `color()` call sets the pen color for every line drawn after it — until you call `color()` again. `right(90)` rotates the turtle 90 degrees clockwise, making it face downward after the first turn.
+La tartaruga inizia girata verso destra. Ogni chiamata a `color()` imposta il colore della penna per ogni linea disegnata dopo di essa — finché non chiami di nuovo `color()`. `right(90)` ruota la tartaruga di 90 gradi in senso orario, facendola girare verso il basso dopo la prima svolta.
 
-The `shape('turtle')` call on line 3 changes the cursor icon from a plain arrow to a turtle shape. You can also try `'arrow'`, `'circle'`, `'square'`, or `'classic'`.
+La chiamata `shape('turtle')` alla riga 3 cambia l'icona del cursore da una semplice freccia a una forma di tartaruga. Puoi anche provare `'arrow'`, `'circle'`, `'square'`, o `'classic'`.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `import turtle` | Loads the turtle graphics library |
-| `monty = turtle.Turtle()` | Creates a turtle and names it `monty` |
-| `monty.shape('turtle')` | Sets the cursor to a turtle icon |
-| `monty.pensize(3)` | Makes the line 3 pixels thick |
-| `monty.color('blue')` | Sets the pen color to blue |
-| `monty.forward(100)` | Moves 100 steps forward, drawing a line |
-| `monty.right(90)` | Rotates 90 degrees clockwise |
+| `import turtle` | Carica la libreria di grafica turtle |
+| `monty = turtle.Turtle()` | Crea una tartaruga e la chiama `monty` |
+| `monty.shape('turtle')` | Imposta il cursore come icona a forma di tartaruga |
+| `monty.pensize(3)` | Rende la linea spessa 3 pixel |
+| `monty.color('blue')` | Imposta il colore della penna su blu |
+| `monty.forward(100)` | Si muove di 100 passi avanti, disegnando una linea |
+| `monty.right(90)` | Ruota di 90 gradi in senso orario |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add the Missing Line"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi la Riga Mancante"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below should draw a green line going right, then a blue line going down.
-    But both lines come out the same color! Add **one line** after `monty.right(90)` to fix it.
+    Il programma sotto dovrebbe disegnare una linea verde che va a destra, poi una linea blu che va in giù.
+    Ma entrambe le linee escono dello stesso colore! Aggiungi **una riga** dopo `monty.right(90)` per correggerlo.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -156,26 +156,26 @@ monty.right(90)
 monty.forward(100)`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Change `monty.shape('turtle')` to `monty.shape('circle')`.
-   **You'll know it worked when** the cursor is a filled circle instead of a turtle icon.
+1. Cambia `monty.shape('turtle')` in `monty.shape('circle')`.
+   **Saprai che ha funzionato quando** il cursore è un cerchio riempito invece di un'icona a forma di tartaruga.
 
-2. Change `monty.pensize(3)` to `monty.pensize(10)`.
-   **You'll know it worked when** all three lines are noticeably thicker.
+2. Cambia `monty.pensize(3)` in `monty.pensize(10)`.
+   **Saprai che ha funzionato quando** tutte e tre le linee sono notevolmente più spesse.
 
-3. Add `monty.back(50)` after the last `forward(100)`.
-   **You'll know it worked when** the turtle backs up, leaving a green line on top of the existing green segment.
+3. Aggiungi `monty.back(50)` dopo l'ultimo `forward(100)`.
+   **Saprai che ha funzionato quando** la tartaruga torna indietro, lasciando una linea verde sopra il segmento verde esistente.
 
-4. Add `monty.left(90)` instead of `monty.right(90)` for both turns.
-   **You'll know it worked when** the shape curves upward instead of downward.
+4. Aggiungi `monty.left(90)` invece di `monty.right(90)` per entrambe le svolte.
+   **Saprai che ha funzionato quando** la forma curva verso l'alto invece che verso il basso.
 
-5. Add `monty.hideturtle()` as the very last line.
-   **You'll know it worked when** the turtle icon disappears, leaving a clean drawing.
+5. Aggiungi `monty.hideturtle()` come ultimissima riga.
+   **Saprai che ha funzionato quando** l'icona della tartaruga scompare, lasciando un disegno pulito.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've learned the core turtle commands — the building blocks of every drawing in this course!
-    Try the experiments above to explore what else Monty can do. Let's code it together!
+    Hai imparato i comandi principali della tartaruga — i blocchi costitutivi di ogni disegno in questo corso!
+    Prova gli esperimenti sopra per esplorare cosa altro può fare Monty. Programmiamo insieme!

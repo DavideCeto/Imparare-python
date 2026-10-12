@@ -1,37 +1,37 @@
-# Variables for Your Drawing
+# Variabili per il Tuo Disegno
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Store a number in a variable and use it in your code
-- Change the size of a square by editing just one line
-- Explain why variables make programs easier to modify
+- Memorizzare un numero in una variabile e usarlo nel tuo codice
+- Cambiare la dimensione di un quadrato modificando solo una riga
+- Spiegare perché le variabili rendono i programmi più facili da modificare
 
-In the simple square lesson, the numbers `100` and `90` appeared eight times each. If you wanted a bigger square you had to change eight lines. **Variables** let you write the number once and use it everywhere — change the variable and the whole drawing changes.
+Nella lezione del quadrato semplice, i numeri `100` e `90` apparivano otto volte ciascuno. Se volevi un quadrato più grande dovevi cambiare otto righe. Le **variabili** ti permettono di scrivere il numero una volta e usarlo ovunque — cambia la variabile e cambia tutto il disegno.
 
-!!! mascot-welcome "Welcome to This Lesson!"
+!!! mascot-welcome "Benvenuto a Questa Lezione!"
     ![Monty waving welcome](../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Ready to make your code smarter? Today I'll show you how variables work —
-    and why every programmer uses them. Let's code it together!
+    Pronto a rendere più intelligente il tuo codice? Oggi ti mostrerò come funzionano le variabili —
+    e perché ogni programmatore le usa. Programmiamo insieme!
 
-## What Is a Variable?
+## Cos'è una Variabile?
 
-A **variable** is a named box that holds a value. You create one by writing a name, an equals sign, and the value:
+Una **variabile** è una scatola con un nome che contiene un valore. La crei scrivendo un nome, un segno di uguale, e il valore:
 
 ```python
 distance = 100
 ```
 
-After this line, Python remembers that `distance` equals `100`. Whenever you write `distance` later in your code, Python uses `100` in its place.
+Dopo questa riga, Python ricorda che `distance` è uguale a `100`. Ogni volta che scrivi `distance` più avanti nel tuo codice, Python usa `100` al suo posto.
 
-Give variables descriptive names — `distance` is much clearer than `d` or `x`.
+Dai alle variabili nomi descrittivi — `distance` è molto più chiaro di `d` o `x`.
 
-!!! mascot-tip "Scratch Bridge"
+!!! mascot-tip "Ponte Scratch"
     ![Monty with a tip](../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch you used the **"Set [distance] to 100"** block in the Variables drawer.
-    In Python, `distance = 100` does exactly the same thing: it creates a variable called
-    `distance` and stores the value `100` in it.
+    In Scratch hai usato il blocco **"Imposta [distance] a 100"** nel cassetto Variabili.
+    In Python, `distance = 100` fa esattamente la stessa cosa: crea una variabile chiamata
+    `distance` e ci memorizza dentro il valore `100`.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -54,15 +54,15 @@ monty.forward(distance)
 monty.right(angle)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The turtle uses `distance` for every `forward()` call and `angle` for every `right()` call.
-    What shape will it draw? Make your guess — then click Run to find out!
+    La tartaruga usa `distance` per ogni chiamata `forward()` e `angle` per ogni chiamata `right()`.
+    Quale forma disegnerà? Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see Monty draw right on this page.
-No account needed — everything runs in your browser.
+Modifica il codice sotto e clicca **Esegui** per vedere Monty disegnare direttamente su questa pagina.
+Nessun account necessario — tutto gira nel tuo browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -104,35 +104,35 @@ monty.forward(distance)
 monty.right(angle)`);
 </script>
 
-Were you right? With `angle = 90`, each turn is a quarter-circle, so the turtle draws a perfect square.
+Avevi indovinato? Con `angle = 90`, ogni svolta è un quarto di cerchio, quindi la tartaruga disegna un quadrato perfetto.
 
-**If you see a red error message:** Check that your variable name is spelled exactly the same everywhere — `distance` and `Distance` are two different names in Python.
+**Se vedi un messaggio di errore rosso:** Controlla che il nome della tua variabile sia scritto esattamente nello stesso modo ovunque — `distance` e `Distance` sono due nomi diversi in Python.
 
-## How It Works
+## Come Funziona
 
-Python reads the file from top to bottom. When it reaches `distance = 100`, it stores the value `100` in memory under the name `distance`. Every time it later sees `forward(distance)`, it looks up that stored value and uses it — just like reading a note you left yourself.
+Python legge il file dall'alto verso il basso. Quando raggiunge `distance = 100`, memorizza il valore `100` in memoria sotto il nome `distance`. Ogni volta che vede dopo `forward(distance)`, cerca quel valore memorizzato e lo usa — proprio come leggere un appunto che hai lasciato a te stesso.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `distance = 100` | Creates a variable named `distance` and stores `100` in it |
-| `angle = 90` | Creates a variable named `angle` and stores `90` in it |
-| `monty.forward(distance)` | Moves forward 100 steps (reads the variable's value) |
-| `monty.right(angle)` | Turns 90 degrees right (reads the variable's value) |
+| `distance = 100` | Crea una variabile chiamata `distance` e ci memorizza dentro `100` |
+| `angle = 90` | Crea una variabile chiamata `angle` e ci memorizza dentro `90` |
+| `monty.forward(distance)` | Si muove avanti di 100 passi (legge il valore della variabile) |
+| `monty.right(angle)` | Gira a destra di 90 gradi (legge il valore della variabile) |
 
-!!! mascot-warning "Common Mistake: Typo in Variable Name"
+!!! mascot-warning "Errore Comune: Errore di Battitura nel Nome della Variabile"
     ![Monty warning](../img/mascot/warning.png){ class="mascot-admonition-img" }
-    If you write `distanse` on one line and `distance` on another, Python treats them as two
-    different variables — and the second one has no value yet. You'll see a `NameError`.
-    Python is case-sensitive too: `Distance` ≠ `distance`.
+    Se scrivi `distanse` su una riga e `distance` su un'altra, Python le tratta come due
+    variabili diverse — e la seconda non ha ancora nessun valore. Vedrai un `NameError`.
+    Python distingue anche tra maiuscole e minuscole: `Distance` ≠ `distance`.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Spot the Bug!"
+!!! mascot-warning "Trova il Bug!"
     ![Monty warning](../img/mascot/warning.png){ class="mascot-admonition-img" }
-    The program below should draw a square, but it crashes with a `NameError`.
-    There's a typo in one variable name. Can you find it and fix it?
+    Il programma sotto dovrebbe disegnare un quadrato, ma va in crash con un `NameError`.
+    C'è un errore di battitura in un nome di variabile. Riesci a trovarlo e correggerlo?
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -168,27 +168,27 @@ monty.forward(distance)
 monty.right(angle)`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes to the code above. Predict what will happen first, then run it to check!
+Prova questi cambiamenti al codice sopra. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Change `distance = 100` to `distance = 150`.
-   **You'll know it worked when** the square is noticeably larger than before.
+1. Cambia `distance = 100` in `distance = 150`.
+   **Saprai che ha funzionato quando** il quadrato è notevolmente più grande di prima.
 
-2. Change `distance = 100` to `distance = 40`.
-   **You'll know it worked when** the square is about half as big.
+2. Cambia `distance = 100` in `distance = 40`.
+   **Saprai che ha funzionato quando** il quadrato è circa la metà.
 
-3. Change `angle = 90` to `angle = 120` and reduce the four pairs to three pairs of `forward`/`right`.
-   **You'll know it worked when** you see a triangle instead of a square.
+3. Cambia `angle = 90` in `angle = 120` e riduci le quattro coppie a tre coppie di `forward`/`right`.
+   **Saprai che ha funzionato quando** vedi un triangolo invece di un quadrato.
 
-4. Add `monty.color('purple')` just before the first `forward` line.
-   **You'll know it worked when** all four sides of the square are purple.
+4. Aggiungi `monty.color('purple')` appena prima della prima riga `forward`.
+   **Saprai che ha funzionato quando** tutti e quattro i lati del quadrato sono viola.
 
-5. Add a third variable: `monty.pensize(thickness)` and set `thickness = 5` at the top.
-   **You'll know it worked when** the lines are noticeably thicker, and you can change `thickness` in one place to affect all four sides.
+5. Aggiungi una terza variabile: `monty.pensize(thickness)` e imposta `thickness = 5` in cima.
+   **Saprai che ha funzionato quando** le linee sono notevolmente più spesse, e puoi cambiare `thickness` in un solo posto per influenzare tutti e quattro i lati.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've unlocked variables — one of the most powerful ideas in all of programming!
-    In the next lab you'll combine variables with a `for` loop so you don't have to
-    repeat those four lines at all. Let's code it together!
+    Hai sbloccato le variabili — una delle idee più potenti in tutta la programmazione!
+    Nel prossimo laboratorio combinerai le variabili con un ciclo `for` così non dovrai
+    ripetere affatto quelle quattro righe. Programmiamo insieme!

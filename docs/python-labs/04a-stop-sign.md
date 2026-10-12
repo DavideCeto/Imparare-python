@@ -1,26 +1,26 @@
-# Drawing a Stop Sign
+# Disegnare un Segnale di Stop
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Use variables to store the color, size, and number of sides of a shape
-- Use a `for` loop to draw any regular polygon without repeating code
-- Fill a shape with color using `begin_fill()` and `end_fill()`
+- Usare le variabili per memorizzare il colore, la dimensione, e il numero di lati di una forma
+- Usare un ciclo `for` per disegnare qualsiasi poligono regolare senza ripetere codice
+- Riempire una forma con il colore usando `begin_fill()` ed `end_fill()`
 
-A stop sign is an octagon — a regular 8-sided polygon. Instead of writing eight
-`forward`/`right` pairs by hand, you'll use a loop and a formula to draw it in just
-a few lines.
+Un segnale di stop è un ottagono — un poligono regolare a 8 lati. Invece di scrivere a mano otto
+coppie `forward`/`right`, userai un ciclo e una formula per disegnarlo in solo
+poche righe.
 
-!!! mascot-welcome "Welcome to This Lesson!"
+!!! mascot-welcome "Benvenuto a Questa Lezione!"
     ![Monty waving welcome](../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Ready to level up? In this lesson we're going to draw a real stop sign —
-    red fill, white STOP text, and everything. A `for` loop is going to do all the
-    heavy lifting for us. Let's code it together!
+    Pronto a salire di livello? In questa lezione disegneremo un vero segnale di stop —
+    riempimento rosso, testo STOP bianco, e tutto il resto. Un ciclo `for` farà tutto
+    il lavoro pesante per noi. Programmiamo insieme!
 
-## Using Variables for Shape Properties
+## Usare le Variabili per le Proprietà della Forma
 
-When you store the size and color in **variables**, changing the whole drawing is as easy
-as editing one line. A **variable** is a named box that holds a value — give it a
-descriptive name so the code is easy to read.
+Quando memorizzi la dimensione e il colore in **variabili**, cambiare l'intero disegno è facile
+quanto modificare una riga. Una **variabile** è una scatola con un nome che contiene un valore — dalle un nome
+descrittivo così il codice è facile da leggere.
 
 ```python
 distance = 50   # length of each side
@@ -28,26 +28,26 @@ sides = 8       # number of sides (8 = octagon)
 my_color = "red"
 ```
 
-The turn angle for any regular polygon follows a simple formula: divide 360 by the number
-of sides. For an octagon: 360 ÷ 8 = 45 degrees.
+L'angolo di svolta per qualsiasi poligono regolare segue una formula semplice: dividi 360 per il numero
+di lati. Per un ottagono: 360 ÷ 8 = 45 gradi.
 
-!!! mascot-tip "Scratch Bridge"
+!!! mascot-tip "Ponte Scratch"
     ![Monty with a tip](../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch you used **variables** in the Variables drawer — `set [distance] to 50`.
-    In Python, `distance = 50` does exactly the same thing: it creates a variable named
-    `distance` and stores the value 50 in it.
+    In Scratch hai usato le **variabili** nel cassetto Variabili — `imposta [distance] a 50`.
+    In Python, `distance = 50` fa esattamente la stessa cosa: crea una variabile chiamata
+    `distance` e ci memorizza dentro il valore 50.
 
-## Filling a Shape with Color
+## Riempire una Forma con il Colore
 
-Two commands work as a pair to paint the inside of any shape:
+Due comandi lavorano in coppia per colorare l'interno di qualsiasi forma:
 
-- `begin_fill()` — tells the turtle "start remembering the path"
-- `end_fill()` — tells the turtle "now fill in everything inside that path"
+- `begin_fill()` — dice alla tartaruga "inizia a ricordare il percorso"
+- `end_fill()` — dice alla tartaruga "adesso riempi tutto dentro quel percorso"
 
-Everything drawn between those two calls gets filled with the current color. If you
-forget either one, the fill won't appear.
+Tutto ciò che viene disegnato tra queste due chiamate viene riempito con il colore attuale. Se
+ne dimentichi una delle due, il riempimento non apparirà.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -79,16 +79,16 @@ monty.color('white')
 monty.write('STOP', font=("Arial", 30, "normal"))
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Look at the line `for i in range(sides):` — and remember that `sides = 8`.
-    How many times will the loop repeat? And what color will the inside of the shape be?
-    Make your guesses — then click Run!
+    Guarda la riga `for i in range(sides):` — e ricorda che `sides = 8`.
+    Quante volte si ripeterà il ciclo? E di che colore sarà l'interno della forma?
+    Fai le tue previsioni — poi clicca Esegui!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to draw the stop sign right on this page.
-No account needed — everything runs in your browser.
+Modifica il codice sotto e clicca **Esegui** per disegnare il segnale di stop direttamente su questa pagina.
+Nessun account necessario — tutto gira nel tuo browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -139,44 +139,44 @@ monty.color('white')
 monty.write('STOP', font=("Arial", 30, "normal"))`);
 </script>
 
-Were you right? The loop runs **8 times** (once for each side of the octagon) and the
-inside fills with red because `my_color = "red"` was set before `begin_fill()`.
+Avevi indovinato? Il ciclo gira **8 volte** (una per ogni lato dell'ottagono) e
+l'interno si riempie di rosso perché `my_color = "red"` è stato impostato prima di `begin_fill()`.
 
-## How It Works
+## Come Funziona
 
-The turn angle formula `360 / sides` is the secret: the exterior angles of any regular
-polygon always add up to exactly 360 degrees. Divide by the number of sides and you get
-the angle for one corner.
+La formula dell'angolo di svolta `360 / sides` è il segreto: gli angoli esterni di qualsiasi poligono
+regolare sommano sempre esattamente a 360 gradi. Dividi per il numero di lati e ottieni
+l'angolo per un angolo.
 
-`goto(-50, 100)` moves the turtle to a starting corner without drawing — `penup()` lifts
-the pen first so no line appears. `pendown()` lowers it again before drawing begins.
+`goto(-50, 100)` muove la tartaruga a un angolo di partenza senza disegnare — `penup()` alza
+prima la penna così non appare nessuna linea. `pendown()` la riabbassa prima che inizi il disegno.
 
-`hideturtle()` removes the turtle icon when drawing is finished so it doesn't cover the artwork.
+`hideturtle()` rimuove l'icona della tartaruga quando il disegno è finito così non coprirà l'opera.
 
-`write('STOP', font=...)` places text at the turtle's current position using the
-specified font family, size, and style.
+`write('STOP', font=...)` posiziona del testo nella posizione attuale della tartaruga usando la
+famiglia di font, la dimensione, e lo stile specificati.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `distance = 50` | Length of each side in pixels |
-| `sides = 8` | Number of sides — change this to get a different polygon |
-| `angle = 360 / sides` | Turn angle — the formula works for any regular polygon |
-| `my_color = "red"` | Stores the color in a variable so it's easy to change |
-| `penup() / goto() / pendown()` | Move to start position without drawing a line |
-| `begin_fill() / end_fill()` | Fill everything drawn between them with the current color |
-| `for i in range(sides):` | Repeat the loop body once for each side |
-| `hideturtle()` | Hides the turtle cursor when drawing is done |
-| `write('STOP', font=...)` | Writes text at the turtle's current position |
+| `distance = 50` | Lunghezza di ogni lato in pixel |
+| `sides = 8` | Numero di lati — cambialo per ottenere un poligono diverso |
+| `angle = 360 / sides` | Angolo di svolta — la formula funziona per qualsiasi poligono regolare |
+| `my_color = "red"` | Memorizza il colore in una variabile così è facile da cambiare |
+| `penup() / goto() / pendown()` | Si muove alla posizione di partenza senza disegnare una linea |
+| `begin_fill() / end_fill()` | Riempie tutto ciò che viene disegnato tra di loro con il colore attuale |
+| `for i in range(sides):` | Ripete il corpo del ciclo una volta per ogni lato |
+| `hideturtle()` | Nasconde il cursore della tartaruga quando il disegno è finito |
+| `write('STOP', font=...)` | Scrive del testo nella posizione attuale della tartaruga |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Spot the Bug!"
+!!! mascot-warning "Trova il Bug!"
     ![Monty warning](../img/mascot/warning.png){ class="mascot-admonition-img" }
-    The program below should draw a filled red octagon, but when you run it the shape
-    has no fill — just an outline. One line is in the wrong place. Can you find it and
-    fix it?
+    Il programma sotto dovrebbe disegnare un ottagono rosso riempito, ma quando lo esegui la forma
+    non ha riempimento — solo un contorno. Una riga è nel posto sbagliato. Riesci a trovarla e
+    correggerla?
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -215,27 +215,27 @@ monty.end_fill()
 monty.hideturtle()`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes to the stop sign code above. Predict what will happen first, then run it!
+Prova questi cambiamenti al codice del segnale di stop sopra. Prevedi cosa succederà prima, poi eseguilo!
 
-1. Change `my_color = "red"` to `"blue"`.
-   **You'll know it worked when** the octagon fills with blue instead of red.
+1. Cambia `my_color = "red"` in `"blue"`.
+   **Saprai che ha funzionato quando** l'ottagono si riempie di blu invece di rosso.
 
-2. Change `distance = 50` to `80`.
-   **You'll know it worked when** the stop sign is noticeably larger.
+2. Cambia `distance = 50` in `80`.
+   **Saprai che ha funzionato quando** il segnale di stop è notevolmente più grande.
 
-3. Change `sides = 8` to `6` — and also update `angle = 360 / sides` stays the same (it recalculates automatically).
-   **You'll know it worked when** you see a filled hexagon instead of an octagon.
+3. Cambia `sides = 8` in `6` — e nota che `angle = 360 / sides` resta uguale (si ricalcola automaticamente).
+   **Saprai che ha funzionato quando** vedi un esagono riempito invece di un ottagono.
 
-4. Change `'STOP'` to your own word.
-   **You'll know it worked when** your word appears on the sign in white.
+4. Cambia `'STOP'` con la tua propria parola.
+   **Saprai che ha funzionato quando** la tua parola appare sul segnale in bianco.
 
-5. Change `monty.color('white')` (the text color) to `'yellow'`.
-   **You'll know it worked when** the text on the sign turns yellow. Can you still read it easily?
+5. Cambia `monty.color('white')` (il colore del testo) in `'yellow'`.
+   **Saprai che ha funzionato quando** il testo sul segnale diventa giallo. Riesci ancora a leggerlo facilmente?
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You drew a stop sign using variables, a loop, and fill commands — that's serious Python!
-    Try changing `sides` to 3 or 5 and see what signs you can invent.
-    Let's code it together!
+    Hai disegnato un segnale di stop usando variabili, un ciclo, e comandi di riempimento — Python sul serio!
+    Prova a cambiare `sides` a 3 o 5 e guarda quali segnali puoi inventare.
+    Programmiamo insieme!

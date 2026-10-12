@@ -1,22 +1,22 @@
-# Drawing Polygons with Loops
+# Disegnare Poligoni con i Cicli
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Use `for i in range(n):` to repeat a block of code `n` times
-- Draw any regular polygon by changing just two variables
-- Explain why a loop is better than writing the same lines over and over
+- Usare `for i in range(n):` per ripetere un blocco di codice `n` volte
+- Disegnare qualsiasi poligono regolare cambiando solo due variabili
+- Spiegare perché un ciclo è meglio che scrivere le stesse righe ancora e ancora
 
-Drawing a square in the last lesson required eight lines — four `forward()` calls and four `right()` calls. A `for` loop does that in two lines. Better yet, change one variable and you instantly get a pentagon, hexagon, or any polygon you like.
+Disegnare un quadrato nella lezione precedente richiedeva otto righe — quattro chiamate `forward()` e quattro chiamate `right()`. Un ciclo `for` fa questo in due righe. Ancora meglio, cambia una variabile e ottieni istantaneamente un pentagono, un esagono, o qualsiasi poligono tu voglia.
 
-!!! mascot-welcome "Welcome to This Lesson!"
+!!! mascot-welcome "Benvenuto a Questa Lezione!"
     ![Monty waving welcome](../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Here's a secret every programmer knows: if you're copying and pasting the same line,
-    there's a better way. Today I'll show you the `for` loop — it's Monty's favorite shortcut.
-    Let's code it together!
+    Ecco un segreto che ogni programmatore conosce: se stai copiando e incollando la stessa riga,
+    c'è un modo migliore. Oggi ti mostrerò il ciclo `for` — è la scorciatoia preferita di Monty.
+    Programmiamo insieme!
 
-## The For Loop
+## Il Ciclo For
 
-A **for loop** is a block of code that runs a set number of times. Here's the pattern:
+Un **ciclo for** è un blocco di codice che gira un numero fissato di volte. Ecco il pattern:
 
 ```python
 for i in range(4):
@@ -24,18 +24,18 @@ for i in range(4):
     monty.right(90)
 ```
 
-`range(4)` counts from 0 to 3, so the indented block runs **4 times**. The variable `i` tracks which repetition you're on — but for drawing polygons, you don't even need to use `i`.
+`range(4)` conta da 0 a 3, quindi il blocco indentato gira **4 volte**. La variabile `i` traccia a quale ripetizione sei — ma per disegnare poligoni, non hai nemmeno bisogno di usare `i`.
 
-The **turn angle** for any regular polygon follows one rule: divide 360 by the number of sides.
-An octagon has 8 sides: 360 ÷ 8 = 45 degrees. A hexagon: 360 ÷ 6 = 60 degrees.
+L'**angolo di svolta** per qualsiasi poligono regolare segue una regola: dividi 360 per il numero di lati.
+Un ottagono ha 8 lati: 360 ÷ 8 = 45 gradi. Un esagono: 360 ÷ 6 = 60 gradi.
 
-!!! mascot-tip "Scratch Bridge"
+!!! mascot-tip "Ponte Scratch"
     ![Monty with a tip](../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch you used the **"Repeat 4"** block to run commands a set number of times.
-    In Python, `for i in range(4):` does exactly the same thing — and the indented lines
-    beneath it are the commands that repeat!
+    In Scratch hai usato il blocco **"Ripeti 4"** per eseguire comandi un numero fissato di volte.
+    In Python, `for i in range(4):` fa esattamente la stessa cosa — e le righe indentate
+    sotto di esso sono i comandi che si ripetono!
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -50,15 +50,15 @@ for i in range(sides):
     monty.right(angle)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    `sides = 6` and `angle = 360 / 6`. How many sides will the shape have, and what shape is that?
-    Make your guess — then click Run to find out!
+    `sides = 6` e `angle = 360 / 6`. Quanti lati avrà la forma, e qual è quella forma?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see the result right on this page.
-No account needed — everything runs in your browser.
+Modifica il codice sotto e clicca **Esegui** per vedere il risultato direttamente su questa pagina.
+Nessun account necessario — tutto gira nel tuo browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -92,35 +92,35 @@ for i in range(sides):
     monty.right(angle)`);
 </script>
 
-Were you right? Six sides, each at 60 degrees — a perfect hexagon!
+Avevi indovinato? Sei lati, ognuno a 60 gradi — un esagono perfetto!
 
-**If you see a red error message:** Check that the two lines inside the loop are indented by exactly 4 spaces. Python uses indentation to know which lines belong inside the loop.
+**Se vedi un messaggio di errore rosso:** Controlla che le due righe dentro il ciclo siano indentate esattamente di 4 spazi. Python usa l'indentazione per sapere quali righe appartengono dentro il ciclo.
 
-## How It Works
+## Come Funziona
 
-`for i in range(sides):` tells Python to count from 0 up to (but not including) `sides`. Each count is one repetition of the indented block. The angle formula `360 / sides` always gives the correct exterior turn for a regular polygon — it's a mathematical fact that the exterior angles of any convex polygon add up to exactly 360 degrees.
+`for i in range(sides):` dice a Python di contare da 0 fino a (ma non includendo) `sides`. Ogni conteggio è una ripetizione del blocco indentato. La formula dell'angolo `360 / sides` dà sempre la svolta esterna corretta per un poligono regolare — è un fatto matematico che gli angoli esterni di qualsiasi poligono convesso sommano esattamente a 360 gradi.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `sides = 6` | Number of sides — change this to get a different polygon |
-| `angle = 360 / sides` | Calculates the correct turn angle for this polygon |
-| `for i in range(sides):` | Repeats the indented block once for each side |
-| `    monty.forward(80)` | Draws one side (80 steps long); the 4-space indent makes it part of the loop |
-| `    monty.right(angle)` | Turns the correct amount at each corner |
+| `sides = 6` | Numero di lati — cambialo per ottenere un poligono diverso |
+| `angle = 360 / sides` | Calcola l'angolo di svolta corretto per questo poligono |
+| `for i in range(sides):` | Ripete il blocco indentato una volta per ogni lato |
+| `    monty.forward(80)` | Disegna un lato (lungo 80 passi); l'indentazione di 4 spazi lo rende parte del ciclo |
+| `    monty.right(angle)` | Gira della quantità corretta a ogni angolo |
 
-!!! mascot-warning "Common Mistake: Forgetting the Colon"
+!!! mascot-warning "Errore Comune: Dimenticare i Due Punti"
     ![Monty warning](../img/mascot/warning.png){ class="mascot-admonition-img" }
-    The `for` line must end with a colon `:` and the lines inside must be indented.
-    If you forget either one, Python will show a `SyntaxError`. Check both before you search further!
+    La riga `for` deve finire con due punti `:` e le righe dentro devono essere indentate.
+    Se ne dimentichi uno dei due, Python mostrerà un `SyntaxError`. Controlla entrambi prima di cercare oltre!
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add the Missing Line"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi la Riga Mancante"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below is trying to draw a pentagon (5 sides), but `angle` is never calculated —
-    so Python doesn't know how far to turn. Add **one line** to calculate the angle!
+    Il programma sotto cerca di disegnare un pentagono (5 lati), ma `angle` non viene mai calcolato —
+    quindi Python non sa quanto girare. Aggiungi **una riga** per calcolare l'angolo!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -148,27 +148,27 @@ for i in range(sides):
     monty.right(angle)`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes to the hexagon code. Predict first, then run!
+Prova questi cambiamenti al codice dell'esagono. Prevedi prima, poi esegui!
 
-1. Change `sides = 6` to `sides = 3`.
-   **You'll know it worked when** you see a triangle.
+1. Cambia `sides = 6` in `sides = 3`.
+   **Saprai che ha funzionato quando** vedi un triangolo.
 
-2. Change `sides = 6` to `sides = 8`.
-   **You'll know it worked when** you see an octagon (8 equal sides).
+2. Cambia `sides = 6` in `sides = 8`.
+   **Saprai che ha funzionato quando** vedi un ottagono (8 lati uguali).
 
-3. Change `sides = 6` to `sides = 36`.
-   **You'll know it worked when** the polygon looks almost like a circle.
+3. Cambia `sides = 6` in `sides = 36`.
+   **Saprai che ha funzionato quando** il poligono sembra quasi un cerchio.
 
-4. Change `monty.forward(80)` to `monty.forward(120)`.
-   **You'll know it worked when** the hexagon is larger and may extend to the edge of the canvas.
+4. Cambia `monty.forward(80)` in `monty.forward(120)`.
+   **Saprai che ha funzionato quando** l'esagono è più grande e potrebbe estendersi fino al bordo del canvas.
 
-5. Add `monty.color('purple')` and `monty.pensize(4)` before the loop.
-   **You'll know it worked when** a thick purple polygon appears.
+5. Aggiungi `monty.color('purple')` e `monty.pensize(4)` prima del ciclo.
+   **Saprai che ha funzionato quando** appare un poligono viola spesso.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    One `for` loop, infinite polygons — you've unlocked a superpower!
-    In the next lab you'll use `if/else` inside a loop to make each side a different color.
-    Let's code it together!
+    Un ciclo `for`, poligoni infiniti — hai sbloccato un superpotere!
+    Nel prossimo laboratorio userai `if/else` dentro un ciclo per rendere ogni lato di un colore diverso.
+    Programmiamo insieme!

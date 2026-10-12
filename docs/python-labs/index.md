@@ -1,144 +1,144 @@
-# Python Labs
+# Laboratori Python
 
-Interactive Python labs that run directly in your browser — no account or install needed.
-Each lab uses Skulpt to run real Python code with turtle graphics right on the page.
+Laboratori Python interattivi che girano direttamente nel tuo browser — nessun account o installazione necessaria.
+Ogni laboratorio usa Skulpt per eseguire vero codice Python con la grafica turtle direttamente sulla pagina.
 
 <div class="grid cards" markdown>
 
--   **Turtle Commands**
+-   **Comandi Turtle**
 
     ---
 
-    Learn the core commands that move, turn, and color the turtle — the building blocks of every drawing in this course.
+    Impara i comandi principali che muovono, girano, e colorano la tartaruga — i blocchi costitutivi di ogni disegno in questo corso.
 
-    [:octicons-arrow-right-24: Open Lab](01-turtle-commands.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](01-turtle-commands.md)
 
--   **Drawing a Square**
-
-    ---
-
-    Give the turtle its first drawing commands and watch a square appear using `forward()` and `right()`.
-
-    [:octicons-arrow-right-24: Open Lab](02-simple-square.md)
-
--   **Variables for Your Drawing**
+-   **Disegnare un Quadrato**
 
     ---
 
-    Store distance and angle in variables so you can resize the whole square by changing just one number.
+    Dai alla tartaruga i suoi primi comandi di disegno e guarda apparire un quadrato usando `forward()` e `right()`.
 
-    [:octicons-arrow-right-24: Open Lab](03-variables.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](02-simple-square.md)
 
--   **Drawing Polygons with Loops**
-
-    ---
-
-    Use a `for` loop and the 360/sides angle formula to draw any regular polygon with just 9 lines of code.
-
-    [:octicons-arrow-right-24: Open Lab](04-loops.md)
-
--   **Drawing a Stop Sign**
+-   **Variabili per il Tuo Disegno**
 
     ---
 
-    Combine variables, a `for` loop, and `begin_fill()` / `end_fill()` to draw a filled red octagon with STOP text.
+    Memorizza la distanza e l'angolo in variabili così puoi ridimensionare l'intero quadrato cambiando un solo numero.
 
-    [:octicons-arrow-right-24: Open Lab](04a-stop-sign.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](03-variables.md)
 
--   **Changing Colors with If-Else**
-
-    ---
-
-    Use `if/else` and the modulo operator `%` to draw a square with automatically alternating side colors.
-
-    [:octicons-arrow-right-24: Open Lab](05-conditionals.md)
-
--   **Functions and Flowers**
+-   **Disegnare Poligoni con i Cicli**
 
     ---
 
-    Define a `petal()` function and call it in a loop to grow a full flower on the canvas.
+    Usa un ciclo `for` e la formula dell'angolo 360/lati per disegnare qualsiasi poligono regolare con solo 9 righe di codice.
 
-    [:octicons-arrow-right-24: Open Lab](06-functions-and-flowers.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](04-loops.md)
 
--   **Function Parameters: Four Colored Squares**
-
-    ---
-
-    Add color and position parameters to a `square()` function and call it to place shapes anywhere on the canvas.
-
-    [:octicons-arrow-right-24: Open Lab](07-function-parameters.md)
-
--   **Random Circles**
+-   **Disegnare un Segnale di Stop**
 
     ---
 
-    Use `random.randint()` to scatter 10 colorful circles at unpredictable positions — a different picture every run.
+    Combina variabili, un ciclo `for`, e `begin_fill()` / `end_fill()` per disegnare un ottagono rosso riempito con il testo STOP.
 
-    [:octicons-arrow-right-24: Open Lab](08-random-circles.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](04a-stop-sign.md)
 
--   **Color Lists**
-
-    ---
-
-    Create a list of colors, access items by index, and loop through the whole palette to paint a rainbow row of circles.
-
-    [:octicons-arrow-right-24: Open Lab](08-color-lists.md)
-
--   **Random Stars**
+-   **Cambiare Colori con If-Else**
 
     ---
 
-    Write a `star()` function and call it with random positions, sizes, and colors to fill the canvas with star art.
+    Usa `if/else` e l'operatore modulo `%` per disegnare un quadrato con colori dei lati che si alternano automaticamente.
 
-    [:octicons-arrow-right-24: Open Lab](08b-random-stars.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](05-conditionals.md)
 
--   **Reading Output and Error Messages**
-
-    ---
-
-    Learn to tell apart black output and red errors, and use `print()` checkpoints to hunt down bugs.
-
-    [:octicons-arrow-right-24: Open Lab](10-debugging.md)
-
--   **Getting Input from the User**
+-   **Funzioni e Fiori**
 
     ---
 
-    Use `input()` and `int()` to let the user decide how many shapes to draw while the program is running.
+    Definisci una funzione `petal()` e chiamala in un ciclo per far crescere un fiore completo sul canvas.
 
-    [:octicons-arrow-right-24: Open Lab](11-user-input.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](06-functions-and-flowers.md)
 
--   **Fractal Tree with Recursion**
-
-    ---
-
-    Write a function that calls itself to draw a branching tree — each branch spawning two smaller branches.
-
-    [:octicons-arrow-right-24: Open Lab](12-fractal-tree.md)
-
--   **Hex Colors and Styled Text**
+-   **Parametri delle Funzioni: Quattro Quadrati Colorati**
 
     ---
 
-    Use six-digit hex codes to access millions of colors and write bold, italic, and large text on the canvas.
+    Aggiungi parametri di colore e posizione a una funzione `square()` e chiamala per posizionare forme ovunque sul canvas.
 
-    [:octicons-arrow-right-24: Open Lab](14-hex-colors.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](07-function-parameters.md)
 
--   **Plotting a Sine Wave**
-
-    ---
-
-    Import `math`, loop through x values, and use `goto()` to plot a smooth sine curve across the canvas.
-
-    [:octicons-arrow-right-24: Open Lab](15-sine-wave.md)
-
--   **Responding to Mouse Clicks**
+-   **Cerchi Casuali**
 
     ---
 
-    Register a click handler with `onscreenclick()` and draw a colored circle wherever the user clicks.
+    Usa `random.randint()` per disperdere 10 cerchi colorati in posizioni imprevedibili — un'immagine diversa a ogni esecuzione.
 
-    [:octicons-arrow-right-24: Open Lab](17-mouse-clicks.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](08-random-circles.md)
+
+-   **Liste di Colori**
+
+    ---
+
+    Crea una lista di colori, accedi agli elementi per indice, e scorri l'intera tavolozza per dipingere una riga arcobaleno di cerchi.
+
+    [:octicons-arrow-right-24: Apri il Laboratorio](08-color-lists.md)
+
+-   **Stelle Casuali**
+
+    ---
+
+    Scrivi una funzione `star()` e chiamala con posizioni, dimensioni, e colori casuali per riempire il canvas di arte a stelle.
+
+    [:octicons-arrow-right-24: Apri il Laboratorio](08b-random-stars.md)
+
+-   **Leggere l'Output e i Messaggi di Errore**
+
+    ---
+
+    Impara a distinguere l'output nero dagli errori rossi, e usa i checkpoint con `print()` per dare la caccia ai bug.
+
+    [:octicons-arrow-right-24: Apri il Laboratorio](10-debugging.md)
+
+-   **Ottenere Input dall'Utente**
+
+    ---
+
+    Usa `input()` e `int()` per far decidere all'utente quante forme disegnare mentre il programma è in esecuzione.
+
+    [:octicons-arrow-right-24: Apri il Laboratorio](11-user-input.md)
+
+-   **Albero Frattale con la Ricorsione**
+
+    ---
+
+    Scrivi una funzione che chiama sé stessa per disegnare un albero ramificato — ogni ramo genera due rami più piccoli.
+
+    [:octicons-arrow-right-24: Apri il Laboratorio](12-fractal-tree.md)
+
+-   **Colori Esadecimali e Testo Stilizzato**
+
+    ---
+
+    Usa codici esadecimali a sei cifre per accedere a milioni di colori e scrivi testo grassetto, corsivo, e grande sul canvas.
+
+    [:octicons-arrow-right-24: Apri il Laboratorio](14-hex-colors.md)
+
+-   **Disegnare un'Onda Sinusoidale**
+
+    ---
+
+    Importa `math`, scorri i valori x, e usa `goto()` per disegnare una curva sinusoidale morbida attraverso il canvas.
+
+    [:octicons-arrow-right-24: Apri il Laboratorio](15-sine-wave.md)
+
+-   **Rispondere ai Clic del Mouse**
+
+    ---
+
+    Registra un gestore di clic con `onscreenclick()` e disegna un cerchio colorato ovunque l'utente clicchi.
+
+    [:octicons-arrow-right-24: Apri il Laboratorio](17-mouse-clicks.md)
 
 </div>

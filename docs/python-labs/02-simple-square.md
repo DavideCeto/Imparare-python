@@ -1,38 +1,38 @@
-# Drawing a Square
+# Disegnare un Quadrato
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Move the turtle forward and turn it using `forward()` and `right()`
-- Explain what the numbers inside `forward(100)` and `right(90)` control
-- Draw a square by repeating the same two commands four times
+- Muovere la tartaruga avanti e girarla usando `forward()` e `right()`
+- Spiegare cosa controllano i numeri dentro `forward(100)` e `right(90)`
+- Disegnare un quadrato ripetendo gli stessi due comandi quattro volte
 
-The turtle starts in the center of the canvas and draws lines as it moves —
-like a pen attached to a robot. In this lesson you'll give it your first
-drawing commands and watch a square appear.
+La tartaruga inizia al centro del canvas e disegna linee mentre si muove —
+come una penna attaccata a un robot. In questa lezione le darai i tuoi primi
+comandi di disegno e guarderai apparire un quadrato.
 
-!!! mascot-welcome "Welcome to This Lesson!"
+!!! mascot-welcome "Benvenuto a Questa Lezione!"
     ![Monty waving welcome](../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Hi, I'm Monty! I'm a Python snake, and today I'm going to teach you how to
-    make me draw a square on the screen. It's easier than you think —
-    let's code it together!
+    Ciao, sono Monty! Sono un serpente Python, e oggi ti insegnerò come
+    farmi disegnare un quadrato sullo schermo. È più facile di quanto pensi —
+    programmiamo insieme!
 
-## Moving and Turning
+## Muoversi e Girare
 
-The two most important turtle commands are `forward()` and `right()`.
+I due comandi più importanti della tartaruga sono `forward()` e `right()`.
 
-`forward(100)` tells the turtle to walk **forward** 100 steps, drawing a line as it goes.
-The number inside the parentheses is called a **parameter** — it controls how much the
-command does. Here, `100` sets how long each side of the square will be.
+`forward(100)` dice alla tartaruga di camminare **avanti** di 100 passi, disegnando una linea mentre procede.
+Il numero dentro le parentesi si chiama **parametro** — controlla quanto fa il comando.
+Qui, `100` imposta quanto sarà lungo ogni lato del quadrato.
 
-`right(90)` tells the turtle to **turn right** 90 degrees without drawing anything.
-The number 90 is a quarter-turn — exactly the angle at each corner of a square.
+`right(90)` dice alla tartaruga di **girare a destra** di 90 gradi senza disegnare nulla.
+Il numero 90 è un quarto di giro — esattamente l'angolo a ogni angolo di un quadrato.
 
-!!! mascot-tip "Scratch Bridge"
+!!! mascot-tip "Ponte Scratch"
     ![Monty with a tip](../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch you used the **"Move 10 steps"** block and the **"Turn ↻ 15 degrees"** block.
-    In Python, `forward(100)` and `right(90)` do exactly the same things — just written differently!
+    In Scratch hai usato il blocco **"Muovi di 10 passi"** e il blocco **"Gira ↻ di 15 gradi"**.
+    In Python, `forward(100)` e `right(90)` fanno esattamente le stesse cose — solo scritte in modo diverso!
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -52,15 +52,15 @@ monty.forward(100)
 monty.right(90)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Before you click Run, count the `forward` commands in the code above.
-    How many sides will the turtle draw? Make your guess — then find out!
+    Prima di cliccare Esegui, conta i comandi `forward` nel codice sopra.
+    Quanti lati disegnerà la tartaruga? Fai la tua previsione — poi scoprilo!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see Monty draw right on this page.
-No account needed — everything runs in your browser.
+Modifica il codice sotto e clicca **Esegui** per vedere Monty disegnare direttamente su questa pagina.
+Nessun account necessario — tutto gira nel tuo browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -99,40 +99,40 @@ monty.forward(100)
 monty.right(90)`);
 </script>
 
-Were you right? The turtle draws **4 sides** — one for each `forward()` + `right()` pair — making a perfect square.
+Avevi indovinato? La tartaruga disegna **4 lati** — uno per ogni coppia `forward()` + `right()` — creando un quadrato perfetto.
 
-**If you see a red error message:** Check your spelling — Python is case-sensitive,
-so `Forward(100)` won't work but `forward(100)` will.
-Make sure you have parentheses `()` around every number.
+**Se vedi un messaggio di errore rosso:** Controlla l'ortografia — Python distingue tra maiuscole e minuscole,
+quindi `Forward(100)` non funzionerà ma `forward(100)` sì.
+Assicurati di avere le parentesi `()` attorno a ogni numero.
 
-## How It Works
+## Come Funziona
 
-The turtle starts in the center of the canvas facing right.
-Each `forward(100)` moves it 100 steps in the direction it is currently facing.
-Each `right(90)` rotates it 90 degrees clockwise — a quarter turn.
-After four forward-and-turn pairs the turtle is back where it started: a perfect square.
+La tartaruga inizia al centro del canvas girata verso destra.
+Ogni `forward(100)` la muove di 100 passi nella direzione in cui è attualmente girata.
+Ogni `right(90)` la ruota di 90 gradi in senso orario — un quarto di giro.
+Dopo quattro coppie avanti-e-gira la tartaruga torna dove è partita: un quadrato perfetto.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `import turtle` | Loads the turtle graphics library |
-| `monty = turtle.Turtle()` | Creates a turtle and names it `monty` |
-| `monty.shape('turtle')` | Shows the turtle icon instead of a plain arrow |
-| `monty.forward(100)` | Moves 100 steps forward, drawing a line |
-| `monty.right(90)` | Turns 90 degrees clockwise (one corner of a square) |
+| `import turtle` | Carica la libreria di grafica turtle |
+| `monty = turtle.Turtle()` | Crea una tartaruga e la chiama `monty` |
+| `monty.shape('turtle')` | Mostra l'icona a forma di tartaruga invece di una semplice freccia |
+| `monty.forward(100)` | Si muove di 100 passi avanti, disegnando una linea |
+| `monty.right(90)` | Gira di 90 gradi in senso orario (un angolo di un quadrato) |
 
-!!! mascot-warning "Common Mistake: Wrong Turn Angle"
+!!! mascot-warning "Errore Comune: Angolo di Svolta Sbagliato"
     ![Monty warning](../img/mascot/warning.png){ class="mascot-admonition-img" }
-    If you change `right(90)` to `right(100)` the corners won't close and you won't get a square!
-    A square needs *exactly* 90-degree turns. Try it and see what shape you get instead.
+    Se cambi `right(90)` in `right(100)` gli angoli non si chiuderanno e non otterrai un quadrato!
+    Un quadrato ha bisogno di svolte di *esattamente* 90 gradi. Provalo e guarda quale forma ottieni invece.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Complete the Triangle"
+!!! mascot-thinking "Il Tuo Turno — Completa il Triangolo"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    A triangle has 3 sides. Each corner of an equilateral triangle turns 120 degrees.
-    The program below is missing **one line**. Add it so Monty draws a complete triangle!
+    Un triangolo ha 3 lati. Ogni angolo di un triangolo equilatero gira di 120 gradi.
+    Al programma sotto manca **una riga**. Aggiungila così che Monty disegni un triangolo completo!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -163,29 +163,29 @@ monty.forward(100)
 monty.right(120)`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes to the square code above. Predict what will happen first, then run it to check!
+Prova questi cambiamenti al codice del quadrato sopra. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Change `100` to `150` in all four `forward` calls.
-   **You'll know it worked when** the square is noticeably larger than before.
+1. Cambia `100` in `150` in tutte e quattro le chiamate `forward`.
+   **Saprai che ha funzionato quando** il quadrato è notevolmente più grande di prima.
 
-2. Change all four `right(90)` calls to `right(120)` and remove one `forward`/`right` pair (leaving only three).
-   **You'll know it worked when** you see a triangle instead of a square.
+2. Cambia tutte e quattro le chiamate `right(90)` in `right(120)` e rimuovi una coppia `forward`/`right` (lasciandone solo tre).
+   **Saprai che ha funzionato quando** vedi un triangolo invece di un quadrato.
 
-3. Add `monty.color('red')` on the line just before the first `forward`.
-   **You'll know it worked when** all four sides of the square are red instead of black.
+3. Aggiungi `monty.color('red')` alla riga appena prima del primo `forward`.
+   **Saprai che ha funzionato quando** tutti e quattro i lati del quadrato sono rossi invece di neri.
 
-4. Add `monty.speed(1)` after `monty.shape('turtle')` to slow Monty way down.
-   **You'll know it worked when** you can watch him draw each side one at a time.
+4. Aggiungi `monty.speed(1)` dopo `monty.shape('turtle')` per rallentare molto Monty.
+   **Saprai che ha funzionato quando** puoi guardarlo disegnare un lato alla volta.
 
-5. Try drawing two squares side by side: after the four pairs, add
-   `monty.penup()`, then `monty.forward(150)`, then `monty.pendown()`,
-   then repeat the four `forward`/`right` pairs again.
-   **You'll know it worked when** you see two separate squares on the canvas.
+5. Prova a disegnare due quadrati fianco a fianco: dopo le quattro coppie, aggiungi
+   `monty.penup()`, poi `monty.forward(150)`, poi `monty.pendown()`,
+   poi ripeti di nuovo le quattro coppie `forward`/`right`.
+   **Saprai che ha funzionato quando** vedi due quadrati separati sul canvas.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You just wrote your first turtle drawing program — and it works!
-    In the next lesson you'll learn how to use a `for` loop so you don't have to
-    repeat those four lines over and over. Let's code it together!
+    Hai appena scritto il tuo primo programma di disegno con la tartaruga — e funziona!
+    Nella prossima lezione imparerai a usare un ciclo `for` così non dovrai
+    ripetere quelle quattro righe ancora e ancora. Programmiamo insieme!
