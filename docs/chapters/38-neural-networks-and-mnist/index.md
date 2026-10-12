@@ -1,29 +1,29 @@
 ---
-title: Neural Networks and MNIST
-description: Build a Convolutional Neural Network (CNN) to classify MNIST digits — and get an overview of RNNs, LSTMs, and autoencoders
+title: Reti Neurali e MNIST
+description: Costruisci una Rete Neurale Convoluzionale (CNN) per classificare le cifre MNIST — e ottieni una panoramica di RNN, LSTM, e autoencoder
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 16:20:00
 version: 0.09
 ---
 
-# Neural Networks and MNIST
+# Reti Neurali e MNIST
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Explain what makes a **Convolutional Neural Network (CNN)** different from a dense network
-- Understand **Conv2D**, **MaxPooling2D**, **Flatten**, and **Dropout** layers
-- Read and write a complete Keras CNN model
-- Use `model.compile()`, `model.fit()`, `model.evaluate()`, and `model.predict()`
-- Describe at a high level: **RNNs**, **LSTMs**, and **autoencoders**
+- Spiegare cosa rende una **Rete Neurale Convoluzionale (CNN)** diversa da una rete densa
+- Capire i layer **Conv2D**, **MaxPooling2D**, **Flatten**, e **Dropout**
+- Leggere e scrivere un modello CNN Keras completo
+- Usare `model.compile()`, `model.fit()`, `model.evaluate()`, e `model.predict()`
+- Descrivere ad alto livello: **RNN**, **LSTM**, e **autoencoder**
 
-Dense networks from Chapter 37 treat an image as a flat vector — losing all spatial information.
-Convolutional networks keep the 2-D structure of images and look for **local patterns** like edges, corners, and shapes. This is why CNNs are the dominant architecture for image recognition.
+Le reti dense del Capitolo 37 trattano un'immagine come un vettore piatto — perdendo tutte le informazioni spaziali.
+Le reti convoluzionali mantengono la struttura 2-D delle immagini e cercano **pattern locali** come bordi, angoli, e forme. Questo è il motivo per cui le CNN sono l'architettura dominante per il riconoscimento delle immagini.
 
-!!! mascot-welcome "Welcome to Chapter 38!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 38!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Welcome to the final chapter of *Beginning Python*!
-    You've come from printing "Hello, World!" all the way to building AI that reads handwritten digits.
-    Let's finish strong! Let's code it together!
+    Benvenuto/a all'ultimo capitolo di *Beginning Python*!
+    Sei arrivato da stampare "Hello, World!" fino a costruire un'IA che legge cifre scritte a mano.
+    Finiamo alla grande! Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -31,39 +31,39 @@ Convolutional networks keep the 2-D structure of images and look for **local pat
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## Why Convolutions?
+## Perché le Convoluzioni?
 
-A dense network that takes a 28×28 image flattens it to 784 numbers — it completely discards the fact that pixel (3, 5) is next to pixel (3, 6).
+Una rete densa che prende un'immagine 28×28 la appiattisce in 784 numeri — scarta completamente il fatto che il pixel (3, 5) è vicino al pixel (3, 6).
 
-A **convolutional** layer slides a small filter (called a **kernel**) across the image.
-The kernel detects local patterns — a 3×3 kernel can detect a horizontal edge, a diagonal, or a corner.
-Multiple kernels at the same layer detect different features simultaneously.
+Un layer **convoluzionale** fa scorrere un piccolo filtro (chiamato **kernel**) attraverso l'immagine.
+Il kernel rileva pattern locali — un kernel 3×3 può rilevare un bordo orizzontale, una diagonale, o un angolo.
+Più kernel nello stesso layer rilevano caratteristiche diverse simultaneamente.
 
-This gives CNNs two huge advantages:
-- **Parameter efficiency** — one kernel is shared across the whole image (vs dense where every pixel has its own weight for every neuron)
-- **Translation invariance** — a kernel that detects a "7" shape in the top-left also recognizes it in the bottom-right, because the same kernel scans everywhere
+Questo dà alle CNN due enormi vantaggi:
+- **Efficienza dei parametri** — un kernel è condiviso attraverso tutta l'immagine (contro il denso dove ogni pixel ha il proprio peso per ogni neurone)
+- **Invarianza alla traslazione** — un kernel che rileva la forma di un "7" in alto a sinistra lo riconosce anche in basso a destra, perché lo stesso kernel scansiona ovunque
 
-## Key CNN Layer Types
+## Tipi Chiave di Layer CNN
 
-Before reading Keras code, here are the four new layer types in this chapter:
+Prima di leggere il codice Keras, ecco i quattro nuovi tipi di layer di questo capitolo:
 
-| Layer | Purpose |
+| Layer | Scopo |
 |-------|---------|
-| `Conv2D(filters, kernel_size, activation)` | Slide `filters` kernels of size `kernel_size×kernel_size` across the image |
-| `MaxPooling2D(pool_size)` | Shrink the spatial dimensions by taking the max in each region |
-| `Dropout(rate)` | Randomly set `rate` fraction of neurons to zero during training — fights overfitting |
-| `Flatten()` | Convert 2-D feature maps to a 1-D vector before the dense layers |
+| `Conv2D(filters, kernel_size, activation)` | Fa scorrere `filters` kernel di dimensione `kernel_size×kernel_size` attraverso l'immagine |
+| `MaxPooling2D(pool_size)` | Riduce le dimensioni spaziali prendendo il massimo in ogni regione |
+| `Dropout(rate)` | Imposta casualmente a zero una frazione `rate` di neuroni durante il training — combatte l'overfitting |
+| `Flatten()` | Converte le mappe di caratteristiche 2-D in un vettore 1-D prima dei layer densi |
 
-A **filter** (or feature map) is the output of one kernel applied to the full image.
-`Conv2D(32, (3,3))` creates 32 different 3×3 kernels — producing 32 feature maps.
+Un **filtro** (o mappa di caratteristiche, feature map) è l'output di un kernel applicato all'intera immagine.
+`Conv2D(32, (3,3))` crea 32 kernel 3×3 diversi — producendo 32 mappe di caratteristiche.
 
-`MaxPooling2D((2,2))` divides the image into 2×2 blocks and keeps only the maximum value in each block — halving the width and height.
+`MaxPooling2D((2,2))` divide l'immagine in blocchi 2×2 e mantiene solo il valore massimo in ogni blocco — dimezzando larghezza e altezza.
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below simulates one step of Max Pooling on a tiny 4×4 grid.
-    If the pool size is 2×2, how many output values do you expect?
-    Make your guess — then run it!
+    Il codice sotto simula un passo di Max Pooling su una piccola griglia 4×4.
+    Se la dimensione del pool è 2×2, quanti valori di output ti aspetti?
+    Fai la tua previsione — poi eseguilo!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -116,24 +116,24 @@ for row in pooled:
 print(f"Output size: {len(pooled)}x{len(pooled[0])}")`);
 </script>
 
-## Dropout — Fighting Overfitting
+## Dropout — Combattere l'Overfitting
 
-**Dropout** is a simple but powerful regularization technique.
+**Dropout** è una tecnica di regolarizzazione semplice ma potente.
 
-During each training step, Dropout randomly sets a fraction of neurons' outputs to zero.
-With `Dropout(0.5)`, half the neurons are randomly silenced each time — so the network can't rely on any single neuron.
+Durante ogni passo di training, Dropout imposta casualmente a zero l'output di una frazione di neuroni.
+Con `Dropout(0.5)`, metà dei neuroni viene silenziata casualmente ogni volta — così la rete non può fare affidamento su nessun singolo neurone.
 
-This forces the network to learn **redundant representations** — multiple ways to detect the same feature.
-At inference time (prediction), Dropout is automatically disabled and all neurons participate.
+Questo forza la rete a imparare **rappresentazioni ridondanti** — più modi per rilevare la stessa caratteristica.
+Al momento dell'inferenza (previsione), Dropout viene automaticamente disabilitato e tutti i neuroni partecipano.
 
 ```python
 keras.layers.Dropout(0.5)   # randomly zero out 50% of inputs during training
 keras.layers.Dropout(0.25)  # gentler — zero out 25%
 ```
 
-## A Complete CNN for MNIST
+## Una CNN Completa per MNIST
 
-Here is a full CNN that achieves **~99% accuracy** on MNIST:
+Ecco una CNN completa che raggiunge **~99% di accuratezza** su MNIST:
 
 ```python
 import tensorflow as tf
@@ -168,18 +168,18 @@ model.compile(
 model.summary()   # print layer-by-layer shape info
 ```
 
-## Understanding `model.compile()`
+## Capire `model.compile()`
 
-`model.compile()` sets three key training choices:
+`model.compile()` imposta tre scelte chiave per il training:
 
-- **optimizer** — how weights are updated (e.g., `"adam"`, `"sgd"`)
-- **loss** — what to minimize during training
-  - `"sparse_categorical_crossentropy"` — for integer class labels (e.g., 0, 1, 2, …, 9)
-  - `"categorical_crossentropy"` — for one-hot encoded labels
-  - `"binary_crossentropy"` — for two-class (yes/no) problems
-- **metrics** — what to track but not optimize (e.g., `"accuracy"`)
+- **optimizer** — come vengono aggiornati i pesi (ad es., `"adam"`, `"sgd"`)
+- **loss** — cosa minimizzare durante il training
+  - `"sparse_categorical_crossentropy"` — per etichette di classe intere (ad es., 0, 1, 2, …, 9)
+  - `"categorical_crossentropy"` — per etichette codificate one-hot
+  - `"binary_crossentropy"` — per problemi a due classi (sì/no)
+- **metrics** — cosa tracciare ma non ottimizzare (ad es., `"accuracy"`)
 
-## Training with `model.fit()`
+## Allenare con `model.fit()`
 
 ```python
 history = model.fit(
@@ -190,10 +190,10 @@ history = model.fit(
 )
 ```
 
-`model.fit()` returns a `history` object.
-`history.history` is a dict with keys `"accuracy"`, `"val_accuracy"`, `"loss"`, `"val_loss"`.
+`model.fit()` restituisce un oggetto `history`.
+`history.history` è un dict con le chiavi `"accuracy"`, `"val_accuracy"`, `"loss"`, `"val_loss"`.
 
-You can plot training curves to visualize overfitting:
+Puoi disegnare le curve di training per visualizzare l'overfitting:
 
 ```python
 import matplotlib.pyplot as plt
@@ -205,16 +205,16 @@ plt.title("Training Curves")
 plt.show()
 ```
 
-## Evaluating with `model.evaluate()`
+## Valutare con `model.evaluate()`
 
 ```python
 test_loss, test_acc = model.evaluate(x_test, y_test)
 print(f"Test accuracy: {test_acc:.2%}")   # e.g., "99.15%"
 ```
 
-Call this **once**, at the very end, on data the model has never seen.
+Chiamalo **una sola volta**, alla fine, su dati che il modello non ha mai visto.
 
-## Making Predictions with `model.predict()`
+## Fare Previsioni con `model.predict()`
 
 ```python
 predictions = model.predict(x_test[:10])   # probabilities for first 10 images
@@ -223,8 +223,8 @@ print("Predicted:", predicted_classes)
 print("True labels:", y_test[:10])
 ```
 
-`predictions` is an array of shape `(10, 10)` — 10 images, each with 10 class probabilities.
-`.argmax(axis=1)` picks the index of the highest probability for each image.
+`predictions` è un array di forma `(10, 10)` — 10 immagini, ognuna con 10 probabilità di classe.
+`.argmax(axis=1)` sceglie l'indice della probabilità più alta per ogni immagine.
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -268,74 +268,74 @@ for i, (logits, true) in enumerate(zip(raw_outputs, true_labels)):
     print(f"  {status} True={true}, Pred={pred}, Confidence={conf:.1%}")`);
 </script>
 
-## Feature Extraction
+## Estrazione delle Caratteristiche
 
-A trained CNN isn't just a digit classifier — its **intermediate layers** have learned meaningful visual features:
+Una CNN allenata non è solo un classificatore di cifre — i suoi **layer intermedi** hanno imparato caratteristiche visive significative:
 
-- Early Conv2D layers: detect edges and corners
-- Middle Conv2D layers: detect curves and simple shapes
-- Later layers: detect digit-specific features
+- I primi layer Conv2D: rilevano bordi e angoli
+- I layer Conv2D intermedi: rilevano curve e forme semplici
+- I layer successivi: rilevano caratteristiche specifiche delle cifre
 
-**Transfer learning** exploits this: take a CNN pre-trained on millions of images, cut off the last few layers, and attach new layers trained on your smaller dataset. The pre-trained features transfer to the new task.
+Il **transfer learning** sfrutta questo: prendi una CNN pre-allenata su milioni di immagini, tagli via gli ultimi layer, e attacchi nuovi layer allenati sul tuo dataset più piccolo. Le caratteristiche pre-allenate si trasferiscono al nuovo compito.
 
-This is why a model trained on ImageNet (1.3M photos) can be quickly adapted to classify medical X-rays, satellite images, or art styles — with only hundreds of new labeled examples.
+Questo è il motivo per cui un modello allenato su ImageNet (1,3M di foto) può essere adattato rapidamente per classificare radiografie medicali, immagini satellitari, o stili artistici — con solo centinaia di nuovi esempi etichettati.
 
-## Other Neural Network Architectures
+## Altre Architetture di Reti Neurali
 
-### Recurrent Neural Networks (RNNs)
+### Reti Neurali Ricorrenti (RNN)
 
-**RNNs** process sequences — text, audio, time series — one step at a time.
-Each step produces a **hidden state** that is passed to the next step, giving the network memory of the past.
+Le **RNN** elaborano sequenze — testo, audio, serie temporali — un passo alla volta.
+Ogni passo produce uno **stato nascosto** (hidden state) che viene passato al passo successivo, dando alla rete una memoria del passato.
 
 ```python
 keras.layers.SimpleRNN(64)
 ```
 
-RNNs struggle with long sequences because the gradient signal weakens across many time steps (the "vanishing gradient" problem).
+Le RNN hanno difficoltà con le sequenze lunghe perché il segnale del gradiente si debilita attraverso molti passi temporali (il problema del "vanishing gradient").
 
 ### Long Short-Term Memory (LSTM)
 
-**LSTMs** are a special type of RNN with gating mechanisms that let them remember or forget information over long sequences.
-They are the standard choice for language modeling, speech recognition, and time series forecasting.
+Le **LSTM** sono un tipo speciale di RNN con meccanismi di gating che le permettono di ricordare o dimenticare informazioni su sequenze lunghe.
+Sono la scelta standard per la modellazione del linguaggio, il riconoscimento vocale, e la previsione delle serie temporali.
 
 ```python
 keras.layers.LSTM(128)
 ```
 
-### Autoencoders
+### Autoencoder
 
-An **autoencoder** learns to compress data into a small representation (the **bottleneck**) and then reconstruct the original.
+Un **autoencoder** impara a comprimere i dati in una piccola rappresentazione (il **bottleneck**) e poi a ricostruire l'originale.
 
 ```
 Input (784 pixels) → Encoder → Bottleneck (32 values) → Decoder → Reconstructed image
 ```
 
-Applications: anomaly detection, denoising, generative art, data compression.
+Applicazioni: rilevamento di anomalie, denoising, arte generativa, compressione dei dati.
 
-## Putting It All Together — The CNN Shape Journey
+## Mettere Tutto Insieme — Il Viaggio della Forma nella CNN
 
-The table below traces the data shape through the CNN for a single 28×28 MNIST image:
+La tabella sotto traccia la forma dei dati attraverso la CNN per una singola immagine MNIST 28×28:
 
-| Layer | Output Shape | Parameters |
+| Layer | Forma dell'Output | Parametri |
 |-------|-------------|------------|
 | Input | (28, 28, 1) | 0 |
 | Conv2D(32, 3×3) | (26, 26, 32) | 320 |
 | MaxPooling2D | (13, 13, 32) | 0 |
-| Conv2D(64, 3×3) | (11, 11, 64) | 18,496 |
+| Conv2D(64, 3×3) | (11, 11, 64) | 18.496 |
 | MaxPooling2D | (5, 5, 64) | 0 |
-| Flatten | (1,600,) | 0 |
-| Dense(128) | (128,) | 204,928 |
+| Flatten | (1.600,) | 0 |
+| Dense(128) | (128,) | 204.928 |
 | Dropout(0.5) | (128,) | 0 |
-| Dense(10) | (10,) | 1,290 |
+| Dense(10) | (10,) | 1.290 |
 
-Total parameters: **225,034** — much more efficient than a dense-only model of similar depth.
+Parametri totali: **225.034** — molto più efficiente di un modello solo-denso di profondità simile.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Count the Parameters"
+!!! mascot-thinking "Il Tuo Turno — Conta i Parametri"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    A `Dense(64)` layer following a `Flatten()` layer with 1,600 inputs has 1,600 × 64 weights plus 64 bias values.
-    Write a function that computes the parameter count for a Dense layer from its input size and neuron count!
+    Un layer `Dense(64)` che segue un layer `Flatten()` con 1.600 input ha 1.600 × 64 pesi più 64 valori di bias.
+    Scrivi una funzione che calcola il conteggio dei parametri per un layer Dense dalla sua dimensione di input e numero di neuroni!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -378,31 +378,31 @@ print("-" * 36)
 print(f"{'Total':<22} {total:>12,}")`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Modify the max pooling simulation to use a 3×3 pool size on a 6×6 grid. What is the output size?
-   **You'll know it worked when** you see a 2×2 output.
+1. Modifica la simulazione del max pooling per usare una dimensione del pool 3×3 su una griglia 6×6. Qual è la dimensione dell'output?
+   **Saprai che ha funzionato quando** vedi un output 2×2.
 
-2. In the prediction simulator, change the last row's logits so they favor class 5 more strongly.
-   **You'll know it worked when** the confidence for class 5 exceeds 70%.
+2. Nel simulatore di previsioni, cambia i logit dell'ultima riga così che favoriscano più fortemente la classe 5.
+   **Saprai che ha funzionato quando** la confidenza per la classe 5 supera il 70%.
 
-3. Implement `min_pool_2d` (same as `max_pool_2d` but using `min` instead of `max`). How do the outputs differ from max pooling on the same input?
-   **You'll know it worked when** you see that min pooling keeps darker (smaller) values.
+3. Implementa `min_pool_2d` (come `max_pool_2d` ma usando `min` invece di `max`). Come differiscono gli output dal max pooling sullo stesso input?
+   **Saprai che ha funzionato quando** vedi che il min pooling mantiene i valori più scuri (più piccoli).
 
-4. Compute the parameter count for a `Dense(256)` layer following a `Dense(128)` layer.
-   **You'll know it worked when** you get 128 × 256 + 256 = 33,024.
+4. Calcola il conteggio dei parametri per un layer `Dense(256)` che segue un layer `Dense(128)`.
+   **Saprai che ha funzionato quando** ottieni 128 × 256 + 256 = 33.024.
 
-5. Research: look up "GPT" or "BERT" and describe in 2-3 sentences how they differ from the CNN described in this chapter.
-   **You'll know it worked when** you can explain: what kind of data they process and what architecture they use.
+5. Ricerca: cerca "GPT" o "BERT" e descrivi in 2-3 frasi come differiscono dalla CNN descritta in questo capitolo.
+   **Saprai che ha funzionato quando** riesci a spiegare: che tipo di dati elaborano e quale architettura usano.
 
-!!! mascot-celebration "You Did It — Python Graduate!"
+!!! mascot-celebration "Ce l'Hai Fatta — Diplomato in Python!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You have completed all 38 chapters of *Beginning Python*!
-    You started with a turtle drawing a square and finished by building an AI that reads handwritten digits with 99% accuracy.
-    You are no longer a beginner — you are a Python programmer. Go build something amazing!
+    Hai completato tutti i 38 capitoli di *Beginning Python*!
+    Hai iniziato stampando un quadrato con la tartaruga e hai finito costruendo un'IA che legge cifre scritte a mano con il 99% di accuratezza.
+    Non sei più un principiante — sei un programmatore Python. Vai a costruire qualcosa di straordinario!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)

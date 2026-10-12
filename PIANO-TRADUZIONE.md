@@ -87,6 +87,11 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
   allineato alla nav: "Fondamenti di Machine Learning"; corretti due refusi di
   coniugazione verbale introdotti durante la traduzione — "imparo"/"convertí" invece
   di "impara"/"converte" alla terza persona)
+- `docs/chapters/38-neural-networks-and-mnist/` (index, references, quiz — titolo
+  allineato alla nav: "Reti Neurali e MNIST"; ULTIMO capitolo — Fase 2 completa, tutti
+  i 38 capitoli tradotti; "Beginning Python" lasciato non tradotto perché è il titolo
+  proprio del libro originale, come già stabilito in `docs/about.md`/`docs/index.md`;
+  corretti altri due refusi di coniugazione alla terza persona prima del commit)
 - `docs/glossary.md` (tutte le 338 voci, intestazioni `####` verificate 338/338 rispetto
   all'originale)
 
@@ -207,24 +212,28 @@ Fase 0 chiusa: i file skill (`skills/python-lab-generator/SKILL.md` e
 `references/content-rules.md`) risultano intatti (nessuna modifica rispetto a `main`),
 quindi non serve alcun ripristino. Decisioni della sezione 2 fissate il 2026-10-03.
 
-Fase 1 completata (pagine di ingresso, `docs/glossary.md`, nav di `mkdocs.yml` per le
-sezioni coperte). Fase 2 in corso: Capitoli 1-37 tradotti.
+**FASE 2 COMPLETA — tutti i 38 capitoli tradotti (Capitoli 1-38).** Questo chiude il
+cuore didattico del libro.
 
-Prossimo e ultimo capitolo della Fase 2: il Capitolo 38
-(`docs/chapters/38-neural-networks-and-mnist/`) — `index.md` + `references.md` +
-`quiz.md`. Dopo il Capitolo 38, la Fase 2 (38 capitoli) è completa; passare alla Fase 3
-(Python Labs, `docs/python-labs/`, ~19 file) secondo la tabella delle fasi (sezione 3 di
-questo documento). La nav di `mkdocs.yml` per tutti i 38 capitoli è già tradotta dalla
-Fase 1 — controllare sempre l'etichetta nav esistente e allineare il titolo H1/front
-matter a quella (vedi nota sui Capitoli 15-37), invece di tradurre il titolo da zero.
-Note di qualità accumulate durante la Fase 2, da continuare ad applicare: (1)
-controllare sempre con `grep '!\[.*\]('` che tutti i percorsi immagine restino intatti
-dopo la traduzione (vedi incidente Capitolo 34); (2) quando un capitolo elenca più
-termini paralleli (pilastri, categorie) in una tabella o lista, controllare con
-`grep -ni` che tutte le occorrenze del termine inglese siano state tradotte in modo
-consistente, non solo la prima (vedi Capitolo 36); (3) rileggere le frasi con verbi alla
-terza persona singolare per refusi di coniugazione (es. "imparo"/"convertí" invece di
-"impara"/"converte" — capitato più volte nei Capitoli 32-37).
+Prossimo: avviare la Fase 3 — Python Labs (`docs/python-labs/`, ~19 file), secondo la
+tabella delle fasi (sezione 3 di questo documento). Dopo la Fase 3: Fase 4 (Turtle
+Graphics Gallery, ~102 file, candidato per traduzione semi-automatica), poi Fasi 5-9
+(MicroSims, Teacher's Guide, Jupyter/Advanced, Learning Graph, Trinket Labs — quest'ultima
+di priorità minima/da valutare se tradurre affatto, vedi sezione 3).
+
+Note di qualità accumulate durante la Fase 2, da continuare ad applicare nelle fasi
+successive: (1) controllare sempre con `grep '!\[.*\]('` (o pattern equivalente per il
+formato del file) che tutti i percorsi immagine restino intatti dopo la traduzione (vedi
+incidente Capitolo 34); (2) quando un file elenca più termini paralleli (pilastri,
+categorie) in una tabella o lista, controllare con `grep -ni` che tutte le occorrenze del
+termine inglese siano state tradotte in modo consistente, non solo la prima (vedi
+Capitolo 36); (3) rileggere le frasi con verbi alla terza persona singolare per refusi di
+coniugazione (es. "imparo"/"convertí" invece di "impara"/"converte" — capitato più volte
+nei Capitoli 32-38); (4) per contenuti che hanno un `references.md` con formattazione
+leggermente diversa dal pattern standard (es. link finale extra, riga `---` finale),
+preservare quella particolarità invece di normalizzarla (vedi Capitoli 23 e 38); (5) nomi
+propri/titoli di libri come "Beginning Python" restano non tradotti, per coerenza con le
+pagine di ingresso già tradotte in Fase 1.
 
 Nota di qualità: durante la traduzione del Capitolo 5 è stato trovato e corretto un
 bug pre-esistente nell'originale inglese `docs/chapters/05-drawing-with-turtle/quiz.md`

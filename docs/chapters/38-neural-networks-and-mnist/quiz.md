@@ -1,164 +1,164 @@
-# Quiz: Neural Networks and MNIST
+# Quiz: Reti Neurali e MNIST
 
-Test your understanding of Convolutional Neural Networks, Conv2D, MaxPooling, Dropout, Flatten, and Keras model training with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione delle Reti Neurali Convoluzionali, di Conv2D, MaxPooling, Dropout, Flatten, e del training dei modelli Keras con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What is the main advantage of a Convolutional Neural Network (CNN) over a dense network for image data?
+#### 1. Qual è il vantaggio principale di una Rete Neurale Convoluzionale (CNN) rispetto a una rete densa per i dati immagine?
 
 <div class="upper-alpha" markdown>
-1. CNNs train faster because they have fewer total parameters to update
-2. CNNs preserve the 2-D spatial structure of images and detect local patterns like edges and corners, regardless of where they appear
-3. CNNs can process color images; dense networks can only handle grayscale
-4. CNNs do not require labeled training data, unlike dense networks
+1. Le CNN si allenano più velocemente perché hanno meno parametri totali da aggiornare
+2. Le CNN preservano la struttura spaziale 2-D delle immagini e rilevano pattern locali come bordi e angoli, indipendentemente da dove appaiono
+3. Le CNN possono elaborare immagini a colori; le reti dense possono gestire solo la scala di grigi
+4. Le CNN non richiedono dati di training etichettati, a differenza delle reti dense
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Dense networks flatten an image to a 1-D vector, losing all spatial relationships between pixels. CNNs slide filter kernels across the 2-D image to detect local patterns (edges, corners, shapes). The same kernel detects a pattern wherever it appears — a "7" in the top-left and bottom-right are recognized by the same kernel. This is called translation invariance.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Le reti dense appiattiscono un'immagine in un vettore 1-D, perdendo tutte le relazioni spaziali tra i pixel. Le CNN fanno scorrere i kernel dei filtri attraverso l'immagine 2-D per rilevare pattern locali (bordi, angoli, forme). Lo stesso kernel rileva un pattern ovunque appaia — un "7" in alto a sinistra e in basso a destra vengono riconosciuti dallo stesso kernel. Questo si chiama invarianza alla traslazione.
 
     **Concept Tested:** CNN vs Dense Networks
 
 ---
 
-#### 2. What does a `Conv2D(32, (3,3))` layer do?
+#### 2. Cosa fa un layer `Conv2D(32, (3,3))`?
 
 <div class="upper-alpha" markdown>
-1. Creates a dense layer with 32 neurons and 3×3 connections
-2. Splits the image into 32 blocks each of size 3×3
-3. Slides 32 different 3×3 kernel filters across the image, producing 32 feature maps
-4. Compresses the image to a 32×32 pixel resolution
+1. Crea un layer denso con 32 neuroni e 3×3 connessioni
+2. Divide l'immagine in 32 blocchi ognuno di dimensione 3×3
+3. Fa scorrere 32 diversi filtri kernel 3×3 attraverso l'immagine, producendo 32 mappe di caratteristiche
+4. Comprime l'immagine a una risoluzione di 32×32 pixel
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `Conv2D(filters, kernel_size)` creates `filters` learnable kernels, each of size `kernel_size × kernel_size`. Each kernel slides across the entire input and produces one feature map. `Conv2D(32, (3,3))` produces 32 feature maps — each detecting a different visual pattern (horizontal edges, curves, corners, etc.).
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `Conv2D(filters, kernel_size)` crea `filters` kernel apprendibili, ognuno di dimensione `kernel_size × kernel_size`. Ogni kernel scorre attraverso l'intero input e produce una mappa di caratteristiche. `Conv2D(32, (3,3))` produce 32 mappe di caratteristiche — ognuna rilevando un pattern visivo diverso (bordi orizzontali, curve, angoli, ecc.).
 
     **Concept Tested:** Conv2D Layer
 
 ---
 
-#### 3. What does `MaxPooling2D((2,2))` do to a feature map?
+#### 3. Cosa fa `MaxPooling2D((2,2))` a una mappa di caratteristiche?
 
 <div class="upper-alpha" markdown>
-1. Applies a 2×2 convolution filter to find edges
-2. Doubles the width and height of the feature map for higher resolution
-3. Divides the feature map into 2×2 blocks and keeps only the maximum value in each block, halving the width and height
-4. Averages the values in each 2×2 block instead of taking the maximum
+1. Applica un filtro di convoluzione 2×2 per trovare i bordi
+2. Raddoppia la larghezza e l'altezza della mappa di caratteristiche per una risoluzione più alta
+3. Divide la mappa di caratteristiche in blocchi 2×2 e mantiene solo il valore massimo in ogni blocco, dimezzando larghezza e altezza
+4. Fa la media dei valori in ogni blocco 2×2 invece di prendere il massimo
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. MaxPooling divides the feature map into non-overlapping blocks of the given size and keeps the maximum value from each block. `MaxPooling2D((2,2))` on a 24×24 feature map produces a 12×12 feature map. This reduces computational cost and creates a degree of position invariance — small shifts in the input produce the same pooling output.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. MaxPooling divide la mappa di caratteristiche in blocchi non sovrapposti della dimensione data e mantiene il valore massimo di ogni blocco. `MaxPooling2D((2,2))` su una mappa di caratteristiche 24×24 produce una mappa di caratteristiche 12×12. Questo riduce il costo computazionale e crea un certo grado di invarianza di posizione — piccoli spostamenti nell'input producono lo stesso output di pooling.
 
     **Concept Tested:** MaxPooling2D
 
 ---
 
-#### 4. What does the `Flatten()` layer do in a CNN?
+#### 4. Cosa fa il layer `Flatten()` in una CNN?
 
 <div class="upper-alpha" markdown>
-1. Normalizes all pixel values to be between 0 and 1
-2. Converts the 2-D feature maps from convolutional layers into a single 1-D vector for the dense layers
-3. Flattens the learning rate to a constant value during training
-4. Removes all zero values from the feature maps to reduce memory
+1. Normalizza tutti i valori dei pixel per essere tra 0 e 1
+2. Converte le mappe di caratteristiche 2-D dai layer convoluzionali in un singolo vettore 1-D per i layer densi
+3. Appiattisce il learning rate a un valore costante durante il training
+4. Rimuove tutti i valori zero dalle mappe di caratteristiche per ridurre la memoria
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. After convolutional and pooling layers, the data is still 2-D (or higher-dimensional). Dense layers require 1-D input. `Flatten()` reshapes the multi-dimensional tensor into a 1-D vector without changing any values. For example, a 5×5×64 output becomes a vector of length 5×5×64 = 1,600 values.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Dopo i layer convoluzionali e di pooling, i dati sono ancora 2-D (o a dimensionalità più alta). I layer densi richiedono input 1-D. `Flatten()` riforma il tensore multidimensionale in un vettore 1-D senza cambiare nessun valore. Per esempio, un output 5×5×64 diventa un vettore di lunghezza 5×5×64 = 1.600 valori.
 
     **Concept Tested:** Flatten Layer
 
 ---
 
-#### 5. What does `Dropout(0.5)` do during training?
+#### 5. Cosa fa `Dropout(0.5)` durante il training?
 
 <div class="upper-alpha" markdown>
-1. Drops 50% of the training examples each epoch to speed up training
-2. Randomly sets 50% of neuron outputs to zero during each training step, forcing the network to learn redundant representations and reducing overfitting
-3. Reduces the learning rate by 50% after each epoch
-4. Keeps only the top 50% of neurons by weight magnitude
+1. Scarta il 50% degli esempi di training ogni epoch per velocizzare il training
+2. Imposta casualmente a zero il 50% degli output dei neuroni durante ogni passo di training, forzando la rete a imparare rappresentazioni ridondanti e riducendo l'overfitting
+3. Riduce il learning rate del 50% dopo ogni epoch
+4. Mantiene solo il 50% superiore dei neuroni per grandezza del peso
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Dropout randomly silences (sets to zero) a fraction of neurons during each training step. With `Dropout(0.5)`, 50% of neurons are randomly disabled each time. This prevents the network from relying too heavily on any single neuron, forcing it to develop multiple independent pathways for detecting each feature. At prediction time, Dropout is automatically disabled and all neurons are active.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Dropout silenzia casualmente (imposta a zero) una frazione di neuroni durante ogni passo di training. Con `Dropout(0.5)`, il 50% dei neuroni viene disabilitato casualmente ogni volta. Questo impedisce alla rete di fare troppo affidamento su un singolo neurone, forzandola a sviluppare più percorsi indipendenti per rilevare ogni caratteristica. Al momento della previsione, Dropout viene automaticamente disabilitato e tutti i neuroni sono attivi.
 
     **Concept Tested:** Dropout
 
 ---
 
-#### 6. What does `model.compile()` configure?
+#### 6. Cosa configura `model.compile()`?
 
 <div class="upper-alpha" markdown>
-1. The number of layers and neurons in the model
-2. The optimizer (how weights update), the loss function (what to minimize), and the metrics to track
-3. The hardware (CPU vs GPU) that will be used for training
-4. The input and output shape that the model expects
+1. Il numero di layer e neuroni nel modello
+2. L'optimizer (come si aggiornano i pesi), la funzione di loss (cosa minimizzare), e le metriche da tracciare
+3. L'hardware (CPU vs GPU) che verrà usato per il training
+4. La forma di input e output che il modello si aspetta
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `model.compile()` sets up three key training choices before you can call `model.fit()`: (1) the optimizer — how the model updates weights (e.g., `"adam"`, `"sgd"`); (2) the loss function — what measure of wrongness to minimize; and (3) metrics to monitor but not optimize (e.g., `"accuracy"`). You must compile before training.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `model.compile()` imposta tre scelte chiave di training prima che tu possa chiamare `model.fit()`: (1) l'optimizer — come il modello aggiorna i pesi (ad es., `"adam"`, `"sgd"`); (2) la funzione di loss — quale misura di errore minimizzare; e (3) le metriche da monitorare ma non ottimizzare (ad es., `"accuracy"`). Devi compilare prima di allenare.
 
     **Concept Tested:** model.compile()
 
 ---
 
-#### 7. What does `model.fit()` do?
+#### 7. Cosa fa `model.fit()`?
 
 <div class="upper-alpha" markdown>
-1. Checks whether the model's architecture matches the input data shape
-2. Predicts labels for new, unseen data
-3. Trains the model by running the optimizer to minimize the loss over the training data for a given number of epochs
-4. Saves the trained model weights to a file
+1. Controlla se l'architettura del modello corrisponde alla forma dei dati di input
+2. Predice le etichette per dati nuovi e non visti
+3. Allena il modello eseguendo l'optimizer per minimizzare la loss sui dati di training per un dato numero di epoch
+4. Salva i pesi del modello allenato in un file
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `model.fit(x_train, y_train, epochs=10)` runs the training loop: for each epoch, it passes all training examples through the model, computes the loss, and runs the optimizer to update the weights. It returns a history object containing the loss and metrics for each epoch. Use `validation_split=0.1` to monitor validation accuracy during training.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `model.fit(x_train, y_train, epochs=10)` esegue il ciclo di training: per ogni epoch, passa tutti gli esempi di training attraverso il modello, calcola la loss, ed esegue l'optimizer per aggiornare i pesi. Restituisce un oggetto history contenente la loss e le metriche per ogni epoch. Usa `validation_split=0.1` per monitorare l'accuratezza di validation durante il training.
 
     **Concept Tested:** model.fit()
 
 ---
 
-#### 8. What does the batch_size parameter in `model.fit()` control?
+#### 8. Cosa controlla il parametro batch_size in `model.fit()`?
 
 <div class="upper-alpha" markdown>
-1. The total number of training examples to use for training
-2. The number of training examples processed together before the model updates its weights
-3. The number of layers to train in parallel
-4. The size of the images in pixels that the model can accept
+1. Il numero totale di esempi di training da usare per il training
+2. Il numero di esempi di training elaborati insieme prima che il modello aggiorni i suoi pesi
+3. Il numero di layer da allenare in parallelo
+4. La dimensione in pixel delle immagini che il modello può accettare
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `batch_size` determines how many training examples are grouped together for each weight update. A batch size of 64 means the model processes 64 examples, computes the average loss, then updates weights once. Smaller batches give noisier but more frequent updates; larger batches give smoother but less frequent updates. Common values are 32, 64, and 128.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `batch_size` determina quanti esempi di training vengono raggruppati insieme per ogni aggiornamento dei pesi. Una dimensione del batch di 64 significa che il modello elabora 64 esempi, calcola la loss media, poi aggiorna i pesi una volta. Batch più piccoli danno aggiornamenti più rumorosi ma più frequenti; batch più grandi danno aggiornamenti più fluidi ma meno frequenti. Valori comuni sono 32, 64, e 128.
 
     **Concept Tested:** Training with model.fit()
 
 ---
 
-#### 9. What is translation invariance in CNNs?
+#### 9. Cos'è l'invarianza alla traslazione nelle CNN?
 
 <div class="upper-alpha" markdown>
-1. The ability to translate (shift) the output predictions to different languages
-2. A kernel learned in the training set that does not work on the test set
-3. The property that the same feature detector (kernel) can recognize a pattern regardless of where it appears in the image
-4. Converting pixel coordinates from one coordinate system to another
+1. La capacità di tradurre (spostare) le previsioni di output in lingue diverse
+2. Un kernel imparato nel set di training che non funziona sul set di test
+3. La proprietà per cui lo stesso rilevatore di caratteristiche (kernel) può riconoscere un pattern indipendentemente da dove appare nell'immagine
+4. Convertire le coordinate dei pixel da un sistema di coordinate a un altro
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. Translation invariance means a CNN can recognize a feature — like the curve at the top of a "6" — whether it appears in the top-left or bottom-right of the image. This is because the same learned kernel is shared and scanned across the entire image. Dense networks lack this property: each position in the image has independent weights, so the network must separately learn each position.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. L'invarianza alla traslazione significa che una CNN può riconoscere una caratteristica — come la curva in cima a un "6" — che appaia in alto a sinistra o in basso a destra dell'immagine. Questo perché lo stesso kernel imparato viene condiviso e scansionato attraverso l'intera immagine. Le reti dense non hanno questa proprietà: ogni posizione nell'immagine ha pesi indipendenti, quindi la rete deve imparare separatamente ogni posizione.
 
     **Concept Tested:** CNN Properties
 
 ---
 
-#### 10. What are RNNs (Recurrent Neural Networks) used for?
+#### 10. Per cosa si usano le RNN (Reti Neurali Ricorrenti)?
 
 <div class="upper-alpha" markdown>
-1. Processing grid-structured data like images with local filters
-2. Sequential data where order matters — like text, speech, time series, and stock prices
-3. Generating images from text descriptions
-4. Clustering unlabeled data into groups automatically
+1. Elaborare dati strutturati a griglia come le immagini con filtri locali
+2. Dati sequenziali dove l'ordine conta — come testo, voce, serie temporali, e prezzi delle azioni
+3. Generare immagini da descrizioni testuali
+4. Raggruppare automaticamente dati non etichettati in gruppi
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Recurrent Neural Networks (RNNs) process sequences where the order matters. Unlike dense or CNN layers, RNNs maintain hidden state — a "memory" that carries information from earlier in the sequence to later steps. This makes them well-suited for natural language processing, speech recognition, time-series forecasting, and music generation. LSTMs (Long Short-Term Memory) are an improved version of RNNs that handle longer sequences.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Le Reti Neurali Ricorrenti (RNN) elaborano sequenze dove l'ordine conta. A differenza dei layer densi o CNN, le RNN mantengono uno stato nascosto — una "memoria" che porta informazioni dall'inizio della sequenza ai passi successivi. Questo le rende adatte all'elaborazione del linguaggio naturale, al riconoscimento vocale, alla previsione delle serie temporali, e alla generazione musicale. Le LSTM (Long Short-Term Memory) sono una versione migliorata delle RNN che gestiscono sequenze più lunghe.
 
     **Concept Tested:** RNNs and LSTMs
 
