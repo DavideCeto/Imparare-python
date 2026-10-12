@@ -1,21 +1,21 @@
 ---
-title: Text-Only Skulpt Example
-description: Demonstrates the text-only Skulpt lab layout where the drawing area is hidden and the editor fills the full content width.
+title: Esempio Skulpt Solo Testo
+description: Mostra il layout del laboratorio Skulpt solo testo dove l'area di disegno è nascosta e l'editor riempie l'intera larghezza del contenuto.
 ---
 
-# Text-Only Skulpt Example
+# Esempio Skulpt Solo Testo
 
-This page demonstrates the **text-only** Skulpt lab template.
-No turtle drawing area appears — the code editor and output panel fill the entire content width.
-Use this template for programs that only use `print()` and text output, with no turtle graphics.
+Questa pagina mostra il template del laboratorio Skulpt **solo testo**.
+Non appare nessuna area di disegno della tartaruga — l'editor di codice e il pannello di output riempiono l'intera larghezza del contenuto.
+Usa questo template per programmi che usano solo `print()` e output di testo, senza grafica turtle.
 
-## How It Works
+## Come Funziona
 
-Add `class="skulpt-text-only"` to the outer `skulpt-lab` div.
-The canvas container is hidden by CSS, but the `turtle-target` element remains in the DOM
-so `runSkulpt()` can still initialise without errors.
+Aggiungi `class="skulpt-text-only"` al div `skulpt-lab` esterno.
+Il contenitore del canvas è nascosto dal CSS, ma l'elemento `turtle-target` resta nel DOM
+così `runSkulpt()` può ancora inizializzarsi senza errori.
 
-## Example 1 — Print Statements
+## Esempio 1 — Istruzioni Print
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -45,7 +45,7 @@ for i in range(1, 6):
     print(i, "squared =", i * i)`);
 </script>
 
-## Example 2 — User-Defined Function
+## Esempio 2 — Funzione Definita dall'Utente
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -70,9 +70,9 @@ greet("Grace", "Hopper")
 greet("Alan", "Turing")`);
 </script>
 
-## HTML Template
+## Template HTML
 
-Copy this block and replace the code inside the `<textarea>` for any text-only lab:
+Copia questo blocco e sostituisci il codice dentro il `<textarea>` per qualsiasi laboratorio solo testo:
 
 ```html
 <div class="cm-lab cm-text-only">
@@ -95,11 +95,11 @@ print("Hello!")`);
 </script>
 ```
 
-For a second lab on the same page, use the `-2` suffix on all IDs and `runSkulpt('-2')` / `resetSkulpt('-2')` on the buttons (same convention as the drawing labs).
+Per un secondo laboratorio sulla stessa pagina, usa il suffisso `-2` su tutti gli ID e `runSkulpt('-2')` / `resetSkulpt('-2')` sui bottoni (stessa convenzione dei laboratori di disegno).
 
-## Contrast: Drawing Lab Template
+## Confronto: Template del Laboratorio di Disegno
 
-For programs that use turtle graphics, omit the `skulpt-text-only` class and the canvas appears as normal:
+Per programmi che usano la grafica turtle, ometti la classe `skulpt-text-only` e il canvas appare normalmente:
 
 ```html
 <div class="cm-lab">

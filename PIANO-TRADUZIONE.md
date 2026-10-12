@@ -109,6 +109,9 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
   allineati alla nav: "Leggere gli errori", "Input dell'utente", "Albero frattale")
 - `14-hex-colors.md`, `15-sine-wave.md`, `17-mouse-clicks.md` (quinto batch — titoli
   allineati alla nav: "Colori esadecimali", "Onda sinusoidale", "Click del mouse")
+- `text-only-example.md` (sesto batch — pagina tecnica di riferimento per autori di
+  contenuti, non è nella nav di `mkdocs.yml`; front matter `title`/`description`
+  tradotti). **FASE 3 COMPLETA — tutti i 19 file di Python Labs tradotti.**
 
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
@@ -230,16 +233,12 @@ quindi non serve alcun ripristino. Decisioni della sezione 2 fissate il 2026-10-
 **FASE 2 COMPLETA — tutti i 38 capitoli tradotti (Capitoli 1-38).** Questo chiude il
 cuore didattico del libro.
 
-**FASE 3 IN CORSO — Python Labs.** Tradotti finora: `index.md`, `01-turtle-commands.md`,
-`02-square.md`, `03-variables.md`, `04-loops.md`, `04a-stop-sign.md`, `05-conditionals.md`,
-`06-functions-and-flowers.md`, `07-function-parameters.md`, `08-random-circles.md`,
-`08-color-lists.md`, `08b-random-stars.md`, `10-debugging.md`, `11-user-input.md`,
-`12-fractal-tree.md`, `14-hex-colors.md`, `15-sine-wave.md`, `17-mouse-clicks.md`
-(18 di ~19 file).
+**FASE 3 COMPLETA — tutti i 19 file di Python Labs tradotti** (`index.md` +
+17 lezioni numerate + `text-only-example.md`).
 
-Prossimo: continuare la Fase 3 con `text-only-example.md` (ultimo file, non ancora
-letto/verificato). Dopo la Fase 3: Fase 4 (Turtle Graphics Gallery, ~102 file, candidato
-per traduzione semi-automatica), poi Fasi 5-9 (MicroSims, Teacher's Guide, Jupyter/
+Prossimo: avviare la Fase 4 — Turtle Graphics Gallery (`docs/turtle-graphics-gallery/`,
+~102 file, candidato per traduzione semi-automatica con QA, secondo la tabella delle
+fasi in sezione 3). Dopo la Fase 4: Fasi 5-9 (MicroSims, Teacher's Guide, Jupyter/
 Advanced, Learning Graph, Trinket Labs — quest'ultima di priorità minima/da valutare se
 tradurre affatto, vedi sezione 3).
 
