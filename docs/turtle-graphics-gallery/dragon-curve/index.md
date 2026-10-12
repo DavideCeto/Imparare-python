@@ -2,30 +2,30 @@
 hide:
     - toc
 ---
-# Dragon Curve
+# Curva del Dragone
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Build the Dragon Curve by repeatedly folding a list of turns
-- Understand how a sequence of L/R turns encodes a fractal path
-- See how list manipulation can replace recursive calls for some fractals
+- Costruire la Curva del Dragone piegando ripetutamente una lista di rotazioni
+- Capire come una sequenza di rotazioni S/D codifica un percorso frattale
+- Vedere come la manipolazione di liste può sostituire le chiamate ricorsive per alcuni frattali
 
-The Dragon Curve — or Heighway Dragon — looks like a folded strip of paper unfolded and laid flat. After 12 folds, the path winds and fills space in a beautiful, never-crossing pattern.
+La Curva del Dragone — o Dragone di Heighway — sembra una striscia di carta piegata e poi distesa. Dopo 12 piegature, il percorso si avvolge e riempie lo spazio in un bellissimo pattern che non si incrocia mai.
 
-!!! mascot-welcome "Welcome to the Dragon Curve!"
+!!! mascot-welcome "Benvenuto alla Curva del Dragone!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    The Dragon Curve appears on the chapter headings of the book *Jurassic Park*!
-    In this lab you'll build it by simulating paper folding with a list. Let's code it together!
+    La Curva del Dragone appare sulle intestazioni dei capitoli del libro *Jurassic Park*!
+    In questo laboratorio la costruirai simulando la piegatura della carta con una lista. Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-Imagine folding a strip of paper in half repeatedly, always folding right. When you unfold it, you see a sequence of left (L) and right (R) creases. The Dragon Curve is what you get when you draw those creases as 90° turns.
+Immagina di piegare a metà ripetutamente una striscia di carta, sempre piegando a destra. Quando la distendi, vedi una sequenza di pieghe sinistra (S) e destra (D). La Curva del Dragone è ciò che ottieni quando disegni quelle pieghe come rotazioni di 90°.
 
-The folding rule: take the current sequence, add an 'R', then append the reversed + inverted sequence.
+La regola della piegatura: prendi la sequenza attuale, aggiungi una 'D', poi aggiungi la sequenza invertita + capovolta.
 
-After 12 folds, you have `2^12 - 1 = 4095` turns.
+Dopo 12 piegature, hai `2^12 - 1 = 4095` rotazioni.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -53,12 +53,12 @@ for t in turns:
 monty.forward(step)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    After 12 folds, will the path cross itself, or will it somehow avoid self-intersection?
-    The Dragon Curve has a surprising property — make your guess then run to find out!
+    Dopo 12 piegature, il percorso si incrocerà, o in qualche modo eviterà l'auto-intersezione?
+    La Curva del Dragone ha una proprietà sorprendente — fai la tua previsione poi esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -105,28 +105,28 @@ for t in turns:
 monty.forward(step)`);
 </script>
 
-The Dragon Curve **never crosses itself** — the path fills space without any two segments overlapping. Were you right?
+La Curva del Dragone **non si incrocia mai** — il percorso riempie lo spazio senza che due segmenti si sovrappongano. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-The folding rule doubles the list each iteration. After fold `n`, the list has `2^n - 1` entries. The new middle element is always 'R' (the most recent fold direction). The right half is the old list reversed and inverted (L↔R) — that's what the folded half looks like from the unfolded end.
+La regola della piegatura raddoppia la lista a ogni iterazione. Dopo la piegatura `n`, la lista ha `2^n - 1` voci. Il nuovo elemento centrale è sempre 'D' (la direzione di piegatura più recente). La metà destra è la vecchia lista invertita e capovolta (S↔D) — questo è ciò che sembra la metà piegata vista dall'estremità distesa.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `turns = ['R']` | Start with one fold |
-| `turns + ['R'] + [...]` | Append the fold marker and the flipped-reversed old sequence |
-| `('L' if t == 'R' else 'R')` | Invert each turn: L becomes R, R becomes L |
-| `reversed(turns)` | Read the old sequence backward (the other side of the fold) |
-| `if t == 'R': right(90)` | Translate turn list to turtle moves |
+| `turns = ['R']` | Inizia con una piegatura |
+| `turns + ['R'] + [...]` | Aggiunge il marcatore di piegatura e la vecchia sequenza invertita e capovolta |
+| `('L' if t == 'R' else 'R')` | Inverte ogni rotazione: S diventa D, D diventa S |
+| `reversed(turns)` | Legge la vecchia sequenza al contrario (l'altro lato della piegatura) |
+| `if t == 'R': right(90)` | Traduce la lista di rotazioni in movimenti della tartaruga |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Reduce to 8 Folds"
+!!! mascot-thinking "Il Tuo Turno — Riduci a 8 Piegature"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `range(12)` to `range(8)`. How many turns will the path have?
-    (Hint: `2^8 - 1 = ?`). Predict, then run to check!
+    Cambia `range(12)` in `range(8)`. Quante rotazioni avrà il percorso?
+    (Suggerimento: `2^8 - 1 = ?`). Prevedi, poi esegui per controllare!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -167,20 +167,20 @@ for t in turns:
 monty.forward(step)`);
 </script>
 
-8 folds → `2^8 - 1 = 255` turns. The shape is recognizably dragon-like but simpler than 12 folds.
+8 piegature → `2^8 - 1 = 255` rotazioni. La forma è riconoscibilmente simile a un dragone ma più semplice di 12 piegature.
 
-## Experiments
+## Esperimenti
 
-1. **Use a larger step.** Change `step = 4` to `step = 6`. The curve fills more canvas. You'll know it worked when the dragon shape is larger.
+1. **Usa un passo più grande.** Cambia `step = 4` in `step = 6`. La curva riempie più canvas. Saprai che ha funzionato quando la forma del dragone è più grande.
 
-2. **Color by position.** Add a color list and `monty.pencolor(colors[i % len(colors)])` inside the loop. You'll know it worked when the path is multicolored.
+2. **Colora per posizione.** Aggiungi una lista di colori e `monty.pencolor(colors[i % len(colors)])` dentro il ciclo. Saprai che ha funzionato quando il percorso è multicolore.
 
-3. **Try 15 folds.** Change to `range(15)` (slower but more detailed). You'll know it worked when you see a much denser, more space-filling curve.
+3. **Prova 15 piegature.** Cambia in `range(15)` (più lento ma più dettagliato). Saprai che ha funzionato quando vedi una curva molto più densa e che riempie più spazio.
 
-4. **Print the first 10 turns.** Add `print(turns[:10])` before the drawing loop. You'll know it worked when you see the sequence `['R', 'R', 'L', 'R', 'R', 'L', 'L', 'R', 'R', 'R']`.
+4. **Stampa le prime 10 rotazioni.** Aggiungi `print(turns[:10])` prima del ciclo di disegno. Saprai che ha funzionato quando vedi la sequenza `['R', 'R', 'L', 'R', 'R', 'L', 'L', 'R', 'R', 'R']`.
 
-!!! mascot-celebration "A Paper Dragon in Code!"
+!!! mascot-celebration "Un Dragone di Carta nel Codice!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You built a fractal using **list manipulation** instead of recursion — a completely
-    different approach to the same idea! Both encode the same self-similar structure.
-    Up next: **Hilbert Curve** — a space-filling curve using mutual recursion.
+    Hai costruito un frattale usando la **manipolazione di liste** invece della ricorsione — un approccio
+    completamente diverso alla stessa idea! Entrambi codificano la stessa struttura auto-simile.
+    Prossimo: **Curva di Hilbert** — una curva che riempie lo spazio usando la ricorsione mutua.

@@ -197,6 +197,8 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
   starting with the Sunflower Seed Spiral", mentre il file reale successivo
   nella nav è `dragon-curve/` — tradotto fedelmente senza correggerlo, stessa
   logica delle incongruenze precedenti)
+- `dragon-curve/`, `hilbert-curve/`, `cantor-dust/`, `kaleidoscope-slice/`,
+  `pinwheel-tiling/` (sedicesimo batch — nessun problema trovato)
 
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
@@ -340,12 +342,13 @@ cuore didattico del libro.
 `galaxy-spiral/`, `ripple-waves/`, `four-fold-doodle/`, `six-fold-mandala/`,
 `mirror-butterfly/`, `truchet-tiles/`, `islamic-star/`, `mandelbrot-pixel-art/`,
 `julia-set/`, `sierpinski-carpet/`, `barnsley-fern/`, `anti-koch/`,
-`pythagorean-tree/`, `t-square-fractal/`, `levy-c-curve/`, `gosper-curve/`
-(77 di ~102 file/unità).
+`pythagorean-tree/`, `t-square-fractal/`, `levy-c-curve/`, `gosper-curve/`,
+`dragon-curve/`, `hilbert-curve/`, `cantor-dust/`, `kaleidoscope-slice/`,
+`pinwheel-tiling/` (82 di ~102 file/unità).
 
-Prossimo: continuare la Fase 4 in ordine di nav con `dragon-curve/`,
-`hilbert-curve/`, `cantor-dust/`, `kaleidoscope-slice/`, `pinwheel-tiling/`,
-e così via attraverso i restanti ~25 singoli laboratori della galleria.
+Prossimo: continuare la Fase 4 in ordine di nav con `escher-fish/`,
+`voronoi-regions/`, `penrose-rhombus/`, `river-delta/`, `coral-branch/`,
+e così via attraverso i restanti ~20 singoli laboratori della galleria.
 
 Dopo la Fase 4: Fasi 5-9 (MicroSims, Teacher's Guide, Jupyter/Advanced, Learning Graph,
 Trinket Labs — quest'ultima di priorità minima/da valutare se tradurre affatto, vedi

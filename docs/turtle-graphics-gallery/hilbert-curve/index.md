@@ -2,32 +2,32 @@
 hide:
     - toc
 ---
-# Hilbert Curve
+# Curva di Hilbert
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Implement a space-filling curve using two mutually recursive functions
-- Understand what "space-filling" means — a curve that visits every point in a region
-- See how two functions can call each other back and forth (mutual recursion)
+- Implementare una curva che riempie lo spazio usando due funzioni mutuamente ricorsive
+- Capire cosa significa "riempire lo spazio" — una curva che visita ogni punto di una regione
+- Vedere come due funzioni possono chiamarsi a vicenda avanti e indietro (ricorsione mutua)
 
-A continuous curve that fills an entire square region without crossing itself. At depth 5, the Hilbert Curve visits `4^5 = 1024` tiny squares — leaving no gaps.
+Una curva continua che riempie un'intera regione quadrata senza incrociarsi. Alla profondità 5, la Curva di Hilbert visita `4^5 = 1024` piccoli quadrati — senza lasciare spazi vuoti.
 
-!!! mascot-welcome "Welcome to the Hilbert Curve!"
+!!! mascot-welcome "Benvenuto alla Curva di Hilbert!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    David Hilbert discovered this space-filling curve in 1891. It's used today
-    in database indexing, image processing, and fractal antennas!
-    Let's code it together!
+    David Hilbert scoprì questa curva che riempie lo spazio nel 1891. È usata oggi
+    nell'indicizzazione di database, nell'elaborazione delle immagini, e nelle antenne frattali!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-Two functions — `hilbert_a()` and `hilbert_b()` — each produce one "U" shape. They call each other to fill the space recursively:
+Due funzioni — `hilbert_a()` e `hilbert_b()` — producono ognuna una forma a "U". Si chiamano a vicenda per riempire lo spazio ricorsivamente:
 
-- `hilbert_a(n)`: turn left, call B, forward, call A, turn right, forward, call A, turn left, forward, call B, turn right
-- `hilbert_b(n)`: turn right, call A, forward, call B, turn left, forward, call B, turn right, forward, call A, turn left
+- `hilbert_a(n)`: gira a sinistra, chiama B, avanti, chiama A, gira a destra, avanti, chiama A, gira a sinistra, avanti, chiama B, gira a destra
+- `hilbert_b(n)`: gira a destra, chiama A, avanti, chiama B, gira a sinistra, avanti, chiama B, gira a destra, avanti, chiama A, gira a sinistra
 
-The `n` parameter controls depth — at depth 0, only `forward()` is drawn, no turns. This prevents infinite recursion.
+Il parametro `n` controlla la profondità — alla profondità 0, viene disegnato solo `forward()`, nessuna rotazione. Questo impedisce la ricorsione infinita.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -75,13 +75,13 @@ monty.pendown()
 hilbert_a(5)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    A "space-filling" curve visits every point in a region.
-    Will the curve look like a grid of U-shapes, or like a single winding path?
-    Make your guess — then click Run to find out!
+    Una curva "che riempie lo spazio" visita ogni punto di una regione.
+    La curva sembrerà una griglia di forme a U, o un singolo percorso avvolgente?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -148,30 +148,30 @@ monty.pendown()
 hilbert_a(5)`);
 </script>
 
-A **single winding path** that fills the square — every cell visited exactly once, never crossing itself. Were you right?
+Un **singolo percorso avvolgente** che riempie il quadrato — ogni cella visitata esattamente una volta, senza mai incrociarsi. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`hilbert_a` and `hilbert_b` call each other — this is **mutual recursion**. Each function produces a U-shape oriented differently, and together they fill the whole square.
+`hilbert_a` e `hilbert_b` si chiamano a vicenda — questa è la **ricorsione mutua**. Ogni funzione produce una forma a U orientata diversamente, e insieme riempiono tutto il quadrato.
 
-At depth `n`, the curve has `4^n` segments. At depth 5, that's `4^5 = 1024` tiny squares visited.
+Alla profondità `n`, la curva ha `4^n` segmenti. Alla profondità 5, sono `4^5 = 1024` piccoli quadrati visitati.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `if n == 0: return` | Base case — stop recursing |
-| `hilbert_a` calls `hilbert_b` | Mutual recursion — each function needs the other |
-| `monty.left(90)` / `right(90)` | Orientation turns between U-shapes |
-| `monty.forward(step)` | Connect adjacent U-shapes |
-| `step = 6` | Size of each unit segment |
+| `if n == 0: return` | Caso base — ferma la ricorsione |
+| `hilbert_a` chiama `hilbert_b` | Ricorsione mutua — ogni funzione ha bisogno dell'altra |
+| `monty.left(90)` / `right(90)` | Rotazioni di orientamento tra le forme a U |
+| `monty.forward(step)` | Collega forme a U adiacenti |
+| `step = 6` | Dimensione di ogni segmento unitario |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Try Depth 3"
+!!! mascot-thinking "Il Tuo Turno — Prova la Profondità 3"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `hilbert_a(5)` to `hilbert_a(3)`. How many cells will be visited?
-    (`4^3 = ?`). Predict, then run it to see the simpler structure clearly.
+    Cambia `hilbert_a(5)` in `hilbert_a(3)`. Quante celle verranno visitate?
+    (`4^3 = ?`). Prevedi, poi eseguilo per vedere chiaramente la struttura più semplice.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -232,20 +232,20 @@ monty.pendown()
 hilbert_a(3)`);
 </script>
 
-Depth 3 with `step = 40` makes each U-shape large enough to see clearly — you can trace the path from one end to the other.
+La profondità 3 con `step = 40` rende ogni forma a U abbastanza grande da vedere chiaramente — puoi tracciare il percorso da un'estremità all'altra.
 
-## Experiments
+## Esperimenti
 
-1. **Change the color.** Try `pencolor('crimson')`. You'll know it worked when the curve turns red.
+1. **Cambia il colore.** Prova `pencolor('crimson')`. Saprai che ha funzionato quando la curva diventa rossa.
 
-2. **Add color by step.** Use a counter variable and `pencolor(colors[counter % len(colors)])` inside the step. You'll know it worked when the curve is multicolored.
+2. **Aggiungi colore per passo.** Usa una variabile contatore e `pencolor(colors[counter % len(colors)])` dentro il passo. Saprai che ha funzionato quando la curva è multicolore.
 
-3. **Try depth 4.** Change back to `step = 12` and `hilbert_a(4)`. You'll know it worked when you see a denser grid-filling pattern.
+3. **Prova la profondità 4.** Torna a `step = 12` e `hilbert_a(4)`. Saprai che ha funzionato quando vedi un pattern a griglia più denso.
 
-4. **Draw only hilbert_b.** Call `hilbert_b(4)` instead of `hilbert_a(4)`. You'll know it worked when you see a slightly different orientation of the same space-filling curve.
+4. **Disegna solo hilbert_b.** Chiama `hilbert_b(4)` invece di `hilbert_a(4)`. Saprai che ha funzionato quando vedi un orientamento leggermente diverso della stessa curva che riempie lo spazio.
 
-!!! mascot-celebration "Space Filled!"
+!!! mascot-celebration "Spazio Riempito!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You used **mutual recursion** — two functions calling each other — to build
-    one of the most famous curves in mathematics. It's used in real GPS systems!
-    Up next: **Cantor Dust** — a fractal made of gaps instead of lines.
+    Hai usato la **ricorsione mutua** — due funzioni che si chiamano a vicenda — per costruire
+    una delle curve più famose della matematica. È usata nei veri sistemi GPS!
+    Prossimo: **Polvere di Cantor** — un frattale fatto di spazi vuoti invece di linee.

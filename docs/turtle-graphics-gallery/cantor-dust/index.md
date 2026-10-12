@@ -2,30 +2,30 @@
 hide:
     - toc
 ---
-# Cantor Dust
+# Polvere di Cantor
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Draw the Cantor set by recursively removing the middle third of each line segment
-- Understand how area shrinks to zero while structure remains — the paradox of Cantor dust
-- Use a recursive function with both position (`x`) and width (`w`) parameters
+- Disegnare l'insieme di Cantor rimuovendo ricorsivamente il terzo centrale di ogni segmento di linea
+- Capire come l'area si riduce a zero mentre la struttura rimane — il paradosso della polvere di Cantor
+- Usare una funzione ricorsiva con parametri sia di posizione (`x`) sia di larghezza (`w`)
 
-Six levels of Cantor set lines — each row has twice as many segments as the row above, but each segment is one-third as long. By row 6, every segment is nearly invisible, yet the structure is mathematically infinite.
+Sei livelli di linee dell'insieme di Cantor — ogni riga ha il doppio dei segmenti della riga sopra, ma ogni segmento è un terzo lungo. Alla riga 6, ogni segmento è quasi invisibile, eppure la struttura è matematicamente infinita.
 
-!!! mascot-welcome "Welcome to Cantor Dust!"
+!!! mascot-welcome "Benvenuto alla Polvere di Cantor!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Georg Cantor proved in 1883 that you can have a set with infinitely many points
-    but zero total length. This pattern shows you how!
-    Let's code it together!
+    Georg Cantor dimostrò nel 1883 che puoi avere un insieme con infiniti punti
+    ma lunghezza totale zero. Questo pattern ti mostra come!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
 `cantor(x, y, w, depth)`:
-- Draw a horizontal line from `(x, y)` to `(x+w, y)`
-- If `depth > 0`: recurse on the left third `(x, y - 20, w/3, depth-1)` and right third `(x + 2*w/3, y - 20, w/3, depth-1)`
-- The middle third is **never drawn** — that's the gap
+- Disegna una linea orizzontale da `(x, y)` a `(x+w, y)`
+- Se `depth > 0`: ricorri sul terzo sinistro `(x, y - 20, w/3, depth-1)` e sul terzo destro `(x + 2*w/3, y - 20, w/3, depth-1)`
+- Il terzo centrale **non viene mai disegnato** — quello è lo spazio vuoto
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -48,13 +48,13 @@ def cantor(x, y, w, depth):
 cantor(-250, 200, 500, 5)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Each row has twice as many lines as the previous one.
-    After 5 levels, how many tiny line segments will there be on the bottom row?
-    (Hint: 2^5 = ?) Make your guess — then click Run to find out!
+    Ogni riga ha il doppio delle linee della precedente.
+    Dopo 5 livelli, quanti piccoli segmenti di linea ci saranno nella riga inferiore?
+    (Suggerimento: 2^5 = ?) Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -96,28 +96,28 @@ def cantor(x, y, w, depth):
 cantor(-250, 200, 500, 5)`);
 </script>
 
-`2^5 = 32` segments on the bottom row — each only `500 / 3^5 ≈ 2` pixels wide. Were you right?
+`2^5 = 32` segmenti nella riga inferiore — ognuno largo solo `500 / 3^5 ≈ 2` pixel. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-The total length of all segments at level `n` is `(2/3)^n` of the original length. At level 5, that's `(2/3)^5 ≈ 13%` remaining. As depth → ∞, the total length → 0. Yet an infinite number of points remain — that's **Cantor Dust**.
+La lunghezza totale di tutti i segmenti al livello `n` è `(2/3)^n` della lunghezza originale. Al livello 5, rimane circa il `(2/3)^5 ≈ 13%`. Mentre la profondità → ∞, la lunghezza totale → 0. Eppure un numero infinito di punti rimane — questa è la **Polvere di Cantor**.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `monty.forward(w)` | Draw the current segment |
-| `if depth > 0:` | Base case: stop at depth 0 |
-| `cantor(x, y-30, w/3, depth-1)` | Left-third sub-segment, one row lower |
-| `cantor(x + 2*w/3, y-30, w/3, depth-1)` | Right-third sub-segment |
-| Middle third | Never drawn — the defining gap |
+| `monty.forward(w)` | Disegna il segmento attuale |
+| `if depth > 0:` | Caso base: si ferma alla profondità 0 |
+| `cantor(x, y-30, w/3, depth-1)` | Sotto-segmento del terzo sinistro, una riga più in basso |
+| `cantor(x + 2*w/3, y-30, w/3, depth-1)` | Sotto-segmento del terzo destro |
+| Terzo centrale | Non viene mai disegnato — lo spazio vuoto distintivo |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Spot the Bug!"
+!!! mascot-warning "Trova il Bug!"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    The program below draws all three thirds instead of removing the middle one.
-    Find and remove the line that draws the middle segment.
+    Il programma sotto disegna tutti e tre i terzi invece di rimuovere quello centrale.
+    Trova e rimuovi la riga che disegna il segmento centrale.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -153,20 +153,20 @@ def cantor(x, y, w, depth):
 cantor(-250, 200, 500, 4)`);
 </script>
 
-Remove the middle `cantor(x + w/3, y-30, w/3, depth-1)` call — that's the middle third that the Cantor Set never draws.
+Rimuovi la chiamata centrale `cantor(x + w/3, y-30, w/3, depth-1)` — quello è il terzo centrale che l'Insieme di Cantor non disegna mai.
 
-## Experiments
+## Esperimenti
 
-1. **Remove the first third instead.** Change the two recursive calls so you always draw the middle and right thirds. You'll know it worked when the gaps are on the left instead of the center.
+1. **Rimuovi il primo terzo invece.** Cambia le due chiamate ricorsive così disegni sempre il terzo centrale e quello destro. Saprai che ha funzionato quando gli spazi vuoti sono a sinistra invece che al centro.
 
-2. **Use different spacing.** Change `y - 30` to `y - 20`. Rows will be closer together. You'll know it worked when the 6 rows fit more compactly.
+2. **Usa una spaziatura diversa.** Cambia `y - 30` in `y - 20`. Le righe saranno più vicine. Saprai che ha funzionato quando le 6 righe entrano più compattamente.
 
-3. **Color by level.** The current code uses `depth` for color — the first row is darkest. Try reversing: use `6 - depth` as the color index. You'll know it worked when the deepest rows are darker.
+3. **Colora per livello.** Il codice attuale usa `depth` per il colore — la prima riga è la più scura. Prova a invertire: usa `6 - depth` come indice del colore. Saprai che ha funzionato quando le righe più profonde sono più scure.
 
-4. **Draw vertical Cantor.** Rotate the turtle 90° and use `y` positioning instead of `x`. You'll know it worked when the gaps appear vertically.
+4. **Disegna Cantor verticale.** Ruota la tartaruga di 90° e usa il posizionamento `y` invece di `x`. Saprai che ha funzionato quando gli spazi vuoti appaiono verticalmente.
 
-!!! mascot-celebration "Into the Dust!"
+!!! mascot-celebration "Dentro la Polvere!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You visualized Cantor's paradox: infinite points, zero length!
-    The Cantor Set is the foundation of modern analysis and measure theory.
-    Up next: **Pythagorean Tree** — squares growing from squares growing from squares.
+    Hai visualizzato il paradosso di Cantor: punti infiniti, lunghezza zero!
+    L'Insieme di Cantor è il fondamento dell'analisi moderna e della teoria della misura.
+    Prossimo: **Albero di Pitagora** — quadrati che crescono da quadrati che crescono da quadrati.

@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Pinwheel Tiling
+# Tassellatura a Girandola
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Store a triangle as three corner points and split it using vertex arithmetic
-- Use recursion-style repeated subdivision to turn 4 triangles into 500
-- Color shapes by their orientation using `atan2`
+- Memorizzare un triangolo come tre punti d'angolo e dividerlo usando l'aritmetica dei vertici
+- Usare una suddivisione ripetuta in stile ricorsivo per trasformare 4 triangoli in 500
+- Colorare le forme in base al loro orientamento usando `atan2`
 
-The pinwheel tiling, discovered by Charles Radin and John Conway, is built from a single humble shape: a right triangle with legs 1 and 2 (and hypotenuse √5). Every triangle splits into 5 smaller copies of itself, those split into 5 more, and so on forever. The amazing part: as you keep splitting, the triangles end up pointing in infinitely many different directions — the pattern never settles into a repeating wallpaper.
+La tassellatura a girandola, scoperta da Charles Radin e John Conway, è costruita da una singola forma umile: un triangolo rettangolo con cateti 1 e 2 (e ipotenusa √5). Ogni triangolo si divide in 5 copie più piccole di se stesso, quelle si dividono in altre 5, e così via per sempre. La parte sorprendente: mentre continui a dividere, i triangoli finiscono per puntare in infinite direzioni diverse — il pattern non si assesta mai in una carta da parati ripetuta.
 
-!!! mascot-welcome "Welcome to the Pinwheel!"
+!!! mascot-welcome "Benvenuto alla Girandola!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    One triangle shape. One splitting rule. Apply it again and again
-    and you get a tiling that mathematicians proved NEVER repeats.
-    Let's build three rounds of it right now!
+    Una forma di triangolo. Una regola di divisione. Applicala ancora e ancora
+    e ottieni una tassellatura che i matematici hanno dimostrato NON si ripete MAI.
+    Costruiamo subito tre cicli di questa!
 
-## How It Works
+## Come Funziona
 
-Each triangle is stored as three corner points `[a, b, c]` with the right angle at `b`. The `subdivide` function finds the point `h` that sits 80% of the way along the hypotenuse from `a` to `c`, plus three midpoints — and uses them to cut the triangle into exactly 5 smaller 1:2 right triangles. We run subdivision 3 times on 4 starting triangles, then fill each little triangle with a color chosen from the direction it points.
+Ogni triangolo è memorizzato come tre punti d'angolo `[a, b, c]` con l'angolo retto in `b`. La funzione `subdivide` trova il punto `h` che si trova all'80% del percorso lungo l'ipotenusa da `a` a `c`, più tre punti medi — e li usa per tagliare il triangolo in esattamente 5 triangoli rettangoli 1:2 più piccoli. Eseguiamo la suddivisione 3 volte su 4 triangoli di partenza, poi riempiamo ogni piccolo triangolo con un colore scelto dalla direzione verso cui punta.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -54,13 +54,13 @@ for level in range(levels):
     tris = new
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    We start with 4 big triangles, and every round of subdivision replaces
-    each triangle with 5 smaller ones. After 3 rounds, how many little
-    triangles will be on screen? (Hint: 4 × 5 × 5 × 5.) Guess, then run it!
+    Iniziamo con 4 grandi triangoli, e ogni ciclo di suddivisione sostituisce
+    ogni triangolo con 5 più piccoli. Dopo 3 cicli, quanti piccoli
+    triangoli saranno sullo schermo? (Suggerimento: 4 × 5 × 5 × 5.) Indovina, poi esegui!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -128,28 +128,28 @@ for t in tris:
     monty.end_fill()`);
 </script>
 
-**500 triangles** — 4 × 5³. Were you right? Notice how the top half (built from mirrored starting triangles) even picks up different colors, because its triangles point in different directions.
+**500 triangoli** — 4 × 5³. Avevi indovinato? Nota come la metà superiore (costruita da triangoli di partenza rispecchiati) riceve persino colori diversi, perché i suoi triangoli puntano in direzioni diverse.
 
-## How It Works
+## Come Funziona
 
-The key to the subdivision is the point `h`, the foot of the altitude dropped from the right-angle corner `b` onto the hypotenuse. For a 1:2 right triangle, `h` always sits exactly 80% of the way from `a` to `c` — that single fact splits off one perfect small copy (`[b, h, c]`). The leftover piece is a double-size copy, which the three midpoints slice into 4 more. Because the small copies are tilted by the odd angle `atan(1/2) ≈ 26.57°` (not a "nice" divisor of 360°), repeated subdivision keeps creating brand-new directions — that's what makes the pinwheel tiling aperiodic.
+La chiave della suddivisione è il punto `h`, il piede dell'altezza abbassata dall'angolo retto `b` sull'ipotenusa. Per un triangolo rettangolo 1:2, `h` si trova sempre esattamente all'80% del percorso da `a` a `c` — questo singolo fatto separa una perfetta piccola copia (`[b, h, c]`). Il pezzo rimanente è una copia di dimensione doppia, che i tre punti medi tagliano in altri 4. Poiché le piccole copie sono inclinate dell'angolo irregolare `atan(1/2) ≈ 26,57°` (non un divisore "bello" di 360°), la suddivisione ripetuta continua a creare direzioni completamente nuove — questo è ciò che rende la tassellatura a girandola aperiodica.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `h = [a[0] + 0.8 * (c[0] - a[0]), ...]` | Finds the split point 80% along the hypotenuse |
-| `return [[b, h, c], ...]` | Replaces one triangle with its 5 smaller copies |
-| `new.extend(subdivide(t))` | Collects all the pieces from this round of splitting |
-| `ang = math.degrees(math.atan2(...))` | Measures which direction a triangle points, for coloring |
+| `h = [a[0] + 0.8 * (c[0] - a[0]), ...]` | Trova il punto di divisione all'80% dell'ipotenusa |
+| `return [[b, h, c], ...]` | Sostituisce un triangolo con le sue 5 copie più piccole |
+| `new.extend(subdivide(t))` | Raccoglie tutti i pezzi di questo ciclo di divisione |
+| `ang = math.degrees(math.atan2(...))` | Misura in quale direzione punta un triangolo, per la colorazione |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Go One Level Deeper"
+!!! mascot-thinking "Il Tuo Turno — Vai un Livello più in Profondità"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    This version starts from just ONE big triangle and subdivides only
-    `levels = 2` times, so you can see the 5-way split clearly.
-    Change it to `levels = 3`. How many triangles will 1 × 5 × 5 × 5 give you?
+    Questa versione inizia da UN solo grande triangolo e suddivide solo
+    `levels = 2` volte, così puoi vedere chiaramente la divisione a 5 vie.
+    Cambia in `levels = 3`. Quanti triangoli ti darà 1 × 5 × 5 × 5?
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -208,21 +208,21 @@ for t in tris:
     monty.end_fill()`);
 </script>
 
-`levels = 3` gives **125 triangles** (5 × 5 × 5). Each extra level multiplies the count by 5 and shrinks every side by a factor of √5.
+`levels = 3` dà **125 triangoli** (5 × 5 × 5). Ogni livello extra moltiplica il conteggio per 5 e restringe ogni lato di un fattore √5.
 
-## Experiments
+## Esperimenti
 
-1. **Zoom back out.** In the first lab, change `levels = 3` to `levels = 2`. You'll know it worked when only 100 chunky triangles fill the square and you can trace each 5-way split by eye.
+1. **Allontana lo zoom.** Nel primo laboratorio, cambia `levels = 3` in `levels = 2`. Saprai che ha funzionato quando solo 100 grossi triangoli riempiono il quadrato e puoi tracciare a occhio ogni divisione a 5 vie.
 
-2. **New paint set.** Replace `'gold'` with `'crimson'` and `'royalblue'` with `'midnightblue'`. You'll know it worked when those colors swap everywhere in the mosaic at once.
+2. **Nuovo set di colori.** Sostituisci `'gold'` con `'crimson'` e `'royalblue'` con `'midnightblue'`. Saprai che ha funzionato quando quei colori si scambiano ovunque nel mosaico contemporaneamente.
 
-3. **Finer color buckets.** Change `(idx // 60) % 6` to `(idx // 30) % 6`. You'll know it worked when neighboring triangles that used to share a color split into different ones — you're now sorting directions into 30° bins.
+3. **Secchi di colore più fini.** Cambia `(idx // 60) % 6` in `(idx // 30) % 6`. Saprai che ha funzionato quando i triangoli vicini che prima condividevano un colore si dividono in colori diversi — adesso stai ordinando le direzioni in secchi di 30°.
 
-4. **Half the sky.** Delete the last two starting triangles from the `tris` list. You'll know it worked when only the bottom rectangle is tiled and the top half of the canvas stays white.
+4. **Metà del cielo.** Elimina gli ultimi due triangoli di partenza dalla lista `tris`. Saprai che ha funzionato quando solo il rettangolo inferiore è tassellato e la metà superiore del canvas resta bianca.
 
-!!! mascot-celebration "Five Copies, Forever!"
+!!! mascot-celebration "Cinque Copie, per Sempre!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You just built a genuinely aperiodic tiling — 500 triangles from one
-    splitting rule and a little vertex arithmetic. Mathematicians needed
-    the 1990s to find this one; you drew it in a browser!
-    Up next: **Escher-Style Fish Tile** — shape a fish so perfectly that copies of it lock together with no gaps.
+    Hai appena costruito una tassellatura genuinamente aperiodica — 500 triangoli da una
+    regola di divisione e un po' di aritmetica dei vertici. I matematici hanno avuto bisogno
+    degli anni '90 per trovarla; tu l'hai disegnata in un browser!
+    Prossimo: **Piastrella di Pesci in Stile Escher** — sagomare un pesce così perfettamente che le sue copie si incastrano senza spazi vuoti.

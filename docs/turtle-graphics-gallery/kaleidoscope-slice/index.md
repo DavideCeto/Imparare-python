@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Kaleidoscope Slice
+# Fetta di Caleidoscopio
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Build a whole pattern by repeating one "slice" at different rotation angles
-- Mirror alternate copies by flipping the angle inside each slice
-- Convert a radius and an angle into `(x, y)` with `cos` and `sin`
+- Costruire un pattern completo ripetendo una "fetta" a diversi angoli di rotazione
+- Rispecchiare le copie alterne invertendo l'angolo dentro ogni fetta
+- Convertire un raggio e un angolo in `(x, y)` con `cos` e `sin`
 
-A real kaleidoscope uses mirrors to bounce one small wedge of colored glass into a full circle of symmetry. This program does the same thing with math: it draws one 30° slice made of four filled shapes, then repeats it 12 times around the center — mirroring every other copy so the edges line up like a reflection.
+Un vero caleidoscopio usa specchi per far rimbalzare un piccolo cuneo di vetro colorato in un cerchio completo di simmetria. Questo programma fa la stessa cosa con la matematica: disegna una fetta di 30° fatta di quattro forme riempite, poi la ripete 12 volte attorno al centro — rispecchiando ogni altra copia così i bordi si allineano come una riflessione.
 
-!!! mascot-welcome "Welcome to the Kaleidoscope!"
+!!! mascot-welcome "Benvenuto al Caleidoscopio!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Here's a secret: we only design ONE tiny slice of this pattern.
-    Rotation and reflection do all the rest of the work.
-    That's the magic trick behind every kaleidoscope!
+    Ecco un segreto: progettiamo SOLO UNA piccola fetta di questo pattern.
+    La rotazione e la riflessione fanno tutto il resto del lavoro.
+    Questo è il trucco magico dietro ogni caleidoscopio!
 
-## How It Works
+## Come Funziona
 
-Each shape in the slice is stored as a list of `(radius, angle)` pairs measured from the center. To draw the slice at rotation `base`, we add `base` to every angle, then convert to screen coordinates with `x = r * cos(a)` and `y = r * sin(a)`. For mirrored copies we use `base + wedge - off` instead of `base + off`, which flips the slice like a reflection in a mirror.
+Ogni forma nella fetta è memorizzata come una lista di coppie `(raggio, angolo)` misurate dal centro. Per disegnare la fetta alla rotazione `base`, aggiungiamo `base` a ogni angolo, poi convertiamo in coordinate dello schermo con `x = r * cos(a)` e `y = r * sin(a)`. Per le copie rispecchiate usiamo `base + wedge - off` invece di `base + off`, che ribalta la fetta come una riflessione in uno specchio.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -68,13 +68,13 @@ for i in range(sections):
         draw_slice(i * wedge, -1)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The loop runs 12 times, and each slice contains exactly one gold triangle.
-    How many gold triangles will you count in the finished pattern?
-    Make your guess, then click Run!
+    Il ciclo gira 12 volte, e ogni fetta contiene esattamente un triangolo dorato.
+    Quanti triangoli dorati conterai nel pattern finito?
+    Fai la tua previsione, poi clicca Esegui!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -144,28 +144,28 @@ monty.dot(30, 'gold')
 monty.dot(16, 'crimson')`);
 </script>
 
-**12 gold triangles** — one per slice, because the loop calls `draw_slice` twelve times. Were you right?
+**12 triangoli dorati** — uno per fetta, perché il ciclo chiama `draw_slice` dodici volte. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Look closely at where two slices meet: the pattern on one side is a mirror image of the other. That happens because odd-numbered slices use `base + wedge - off`, which measures angles backwards from the far edge of the wedge. Without that flip you would get plain rotation (like a pinwheel); with it you get true kaleidoscope symmetry, where every boundary between slices acts like a mirror line.
+Guarda attentamente dove due fette si incontrano: il pattern su un lato è un'immagine speculare dell'altro. Questo succede perché le fette con numero dispari usano `base + wedge - off`, che misura gli angoli all'indietro dal bordo lontano del cuneo. Senza quel ribaltamento otterresti una semplice rotazione (come una girandola); con esso ottieni la vera simmetria caleidoscopica, dove ogni confine tra le fette agisce come una linea speculare.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `wedge = 360 / sections` | Splits the circle into 12 equal 30° wedges |
-| `ang = base + off` | Rotates a point into slice number `i` |
-| `ang = base + wedge - off` | Same point, but flipped — a mirror reflection |
-| `corners.append((r * math.cos(a), r * math.sin(a)))` | Converts radius + angle into an `(x, y)` position |
+| `wedge = 360 / sections` | Divide il cerchio in 12 cunei uguali di 30° |
+| `ang = base + off` | Ruota un punto nella fetta numero `i` |
+| `ang = base + wedge - off` | Stesso punto, ma ribaltato — una riflessione speculare |
+| `corners.append((r * math.cos(a), r * math.sin(a)))` | Converte raggio + angolo in una posizione `(x, y)` |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Find the Bug"
+!!! mascot-warning "Trova il Bug"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    This program is supposed to draw all 12 slices, but almost the whole
-    kaleidoscope is missing! Look carefully at the two `draw_slice` calls
-    inside the loop. Can you spot what never changes — and fix it?
+    Questo programma dovrebbe disegnare tutte le 12 fette, ma manca quasi
+    tutto il caleidoscopio! Guarda attentamente le due chiamate a `draw_slice`
+    dentro il ciclo. Riesci a individuare cosa non cambia mai — e a correggerlo?
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -229,20 +229,20 @@ monty.dot(30, 'gold')
 monty.dot(16, 'crimson')`);
 </script>
 
-The bug: both calls pass `wedge` as the base angle, so every slice lands in the same spot. Change them to `draw_slice(i * wedge, 1)` and `draw_slice(i * wedge, -1)` and the full circle of 12 slices returns.
+Il bug: entrambe le chiamate passano `wedge` come angolo base, così ogni fetta finisce nello stesso punto. Cambiale in `draw_slice(i * wedge, 1)` e `draw_slice(i * wedge, -1)` e il cerchio completo di 12 fette ritorna.
 
-## Experiments
+## Esperimenti
 
-1. **Try 8 sections.** Change `sections = 12` to `sections = 8`. The wedge grows to 45° automatically. You'll know it worked when the pattern has 8 arms with small gaps between them.
+1. **Prova 8 sezioni.** Cambia `sections = 12` in `sections = 8`. Il cuneo cresce automaticamente a 45°. Saprai che ha funzionato quando il pattern ha 8 bracci con piccoli spazi tra loro.
 
-2. **Recolor the glass.** Change `'crimson'` to `'limegreen'` and `'royalblue'` to `'deeppink'`. You'll know it worked when the big darts change color in every one of the 12 slices at once.
+2. **Ricolora il vetro.** Cambia `'crimson'` in `'limegreen'` e `'royalblue'` in `'deeppink'`. Saprai che ha funzionato quando i grandi dardi cambiano colore in tutte le 12 fette contemporaneamente.
 
-3. **Redesign one shape.** In the `'darkorchid'` shape, change the radius `185` to `120`. You'll know it worked when the purple points pull in closer to the center all around the wheel.
+3. **Riprogetta una forma.** Nella forma `'darkorchid'`, cambia il raggio `185` in `120`. Saprai che ha funzionato quando i punti viola si avvicinano al centro attorno a tutta la ruota.
 
-4. **Break the mirror.** Change `draw_slice(i * wedge, -1)` to `draw_slice(i * wedge, 1)` so every copy uses the same direction. You'll know it worked when the pattern stops reflecting and starts spinning — it becomes a pinwheel instead of a kaleidoscope.
+4. **Rompi lo specchio.** Cambia `draw_slice(i * wedge, -1)` in `draw_slice(i * wedge, 1)` così ogni copia usa la stessa direzione. Saprai che ha funzionato quando il pattern smette di riflettersi e inizia a girare — diventa una girandola invece di un caleidoscopio.
 
-!!! mascot-celebration "One Slice, Twelve Reflections!"
+!!! mascot-celebration "Una Fetta, Dodici Riflessioni!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You designed one 30° wedge and let rotation + reflection build the rest.
-    That's exactly how symmetry works in snowflakes, mandalas, and real kaleidoscopes.
-    Up next: **Pinwheel Tiling** — a triangle that tiles the plane by endlessly splitting into five copies of itself.
+    Hai progettato un cuneo di 30° e hai lasciato che rotazione + riflessione costruissero il resto.
+    È esattamente così che funziona la simmetria nei fiocchi di neve, nei mandala, e nei veri caleidoscopi.
+    Prossimo: **Tassellatura a Girandola** — un triangolo che tassella il piano dividendosi infinitamente in cinque copie di se stesso.
