@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Bridget Riley Waves
+# Onde di Bridget Riley
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Draw a series of parallel sine wave curves with varying amplitude
-- Create a visual illusion of a rippling surface using only static lines
-- Control the wave shape with frequency and amplitude parameters
+- Disegnare una serie di curve a onda sinusoidale parallele con ampiezza variabile
+- Creare un'illusione visiva di una superficie ondulata usando solo linee statiche
+- Controllare la forma dell'onda con parametri di frequenza e ampiezza
 
-Inspired by Op Art painter Bridget Riley, this pattern draws rows of black undulating sine curves on a white background. The varying amplitude makes some parts of the canvas appear to bulge and recede.
+Ispirato alla pittrice Op Art Bridget Riley, questo pattern disegna righe di curve sinusoidali nere ondulate su uno sfondo bianco. L'ampiezza variabile fa sembrare che alcune parti del canvas si rigonfino e si ritirino.
 
-!!! mascot-welcome "Welcome to Bridget Riley Waves!"
+!!! mascot-welcome "Benvenuto alle Onde di Bridget Riley!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Bridget Riley is a British artist who creates patterns that seem to move.
-    Her 1960s paintings use only black and white, yet they appear to vibrate!
-    Let's code her wave patterns!
+    Bridget Riley è un'artista britannica che crea pattern che sembrano muoversi.
+    I suoi dipinti degli anni '60 usano solo bianco e nero, eppure sembrano vibrare!
+    Programmiamo i suoi pattern d'onda!
 
-## How It Works
+## Come Funziona
 
-Draw many horizontal sine curves at evenly spaced y positions. Each curve has the same x-frequency. The amplitude of each curve varies — largest in the center, tapering toward the edges. This creates the illusion of a bulging or rippling surface.
+Disegna molte curve sinusoidali orizzontali a posizioni y uniformemente spaziate. Ogni curva ha la stessa frequenza x. L'ampiezza di ogni curva varia — massima al centro, che si assottiglia verso i bordi. Questo crea l'illusione di una superficie che si rigonfia o ondeggia.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -57,13 +57,13 @@ for row in range(n_waves):
     monty.penup()
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The center rows have larger amplitude than the edge rows.
-    Will this create a flat pattern, or will the center appear to bulge outward?
-    Make your guess — then click Run to find out!
+    Le righe centrali hanno un'ampiezza maggiore delle righe ai bordi.
+    Questo creerà un pattern piatto, o il centro sembrerà rigonfiarsi verso l'esterno?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -117,28 +117,28 @@ for row in range(n_waves):
     monty.penup()`);
 </script>
 
-The center **appears to bulge** — the larger amplitude waves in the middle create the illusion of a 3D surface. Were you right?
+Il centro **sembra rigonfiarsi** — le onde di ampiezza maggiore nel mezzo creano l'illusione di una superficie 3D. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`center_distance = abs(row - n_waves/2) / (n_waves/2)` ranges from 0 (center) to 1 (edges). The amplitude `max_amp * (1 - center_distance^2)` follows a parabolic shape — maximum at center, tapering to near-zero at edges. This gradient creates the bulge illusion.
+`center_distance = abs(row - n_waves/2) / (n_waves/2)` va da 0 (centro) a 1 (bordi). L'ampiezza `max_amp * (1 - center_distance^2)` segue una forma parabolica — massima al centro, che si assottiglia a quasi zero ai bordi. Questo gradiente crea l'illusione del rigonfiamento.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `center_distance` | How far this row is from center (0=center, 1=edge) |
-| `amp = max_amp * (1 - center_distance^2)` | Parabolic amplitude — large center, small edges |
-| `amp * math.sin(freq * 2 * pi * i / steps)` | Sine wave at this row's amplitude |
-| `freq = 3` | Number of complete wave cycles per row |
+| `center_distance` | Quanto è lontana questa riga dal centro (0=centro, 1=bordo) |
+| `amp = max_amp * (1 - center_distance^2)` | Ampiezza parabolica — grande al centro, piccola ai bordi |
+| `amp * math.sin(freq * 2 * pi * i / steps)` | Onda sinusoidale all'ampiezza di questa riga |
+| `freq = 3` | Numero di cicli d'onda completi per riga |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Try More Waves"
+!!! mascot-thinking "Il Tuo Turno — Prova Più Onde"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `n_waves = 18` to `n_waves = 30` and `freq = 5`.
-    More waves with higher frequency — will the illusion be stronger or different?
-    Predict, then run it!
+    Cambia `n_waves = 18` in `n_waves = 30` e `freq = 5`.
+    Più onde con frequenza più alta — l'illusione sarà più forte o diversa?
+    Prevedi, poi eseguila!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -186,20 +186,20 @@ for row in range(n_waves):
     monty.penup()`);
 </script>
 
-More waves and higher frequency creates a denser, more vibrating appearance — very much like Riley's original paintings.
+Più onde e frequenza più alta creano un aspetto più denso e vibrante — molto simile ai dipinti originali di Riley.
 
-## Experiments
+## Esperimenti
 
-1. **Use a linear amplitude instead of parabolic.** Change to `amp = max_amp * (1 - center_distance)`. You'll know it worked when the amplitude tapers linearly rather than parabolically.
+1. **Usa un'ampiezza lineare invece di parabolica.** Cambia in `amp = max_amp * (1 - center_distance)`. Saprai che ha funzionato quando l'ampiezza si assottiglia linearmente invece che parabolicamente.
 
-2. **Add phase shifts.** Add `+ row * 0.2` to the sine argument. You'll know it worked when the waves shift diagonally instead of perfectly aligned.
+2. **Aggiungi spostamenti di fase.** Aggiungi `+ row * 0.2` all'argomento del seno. Saprai che ha funzionato quando le onde si spostano diagonalmente invece di essere perfettamente allineate.
 
-3. **Vary the frequency.** Use `freq = 2 + row / 3` so inner rows have higher frequency. You'll know it worked when the wave frequency changes from row to row.
+3. **Varia la frequenza.** Usa `freq = 2 + row / 3` così le righe interne hanno frequenza più alta. Saprai che ha funzionato quando la frequenza dell'onda cambia da riga a riga.
 
-4. **Use two colors.** Fill areas above the wave with black and below with white. You'll know it worked when alternating black and white bands appear.
+4. **Usa due colori.** Riempi le aree sopra l'onda di nero e sotto di bianco. Saprai che ha funzionato quando appaiono fasce nere e bianche alternate.
 
-!!! mascot-celebration "Vibrating with Math!"
+!!! mascot-celebration "Vibrante di Matematica!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You coded Op Art inspired by Bridget Riley!
-    These patterns were designed in the 1960s using ruler and compass — now you can code them.
-    Up next: **Expanding Hexagons** — concentric hexagonal rings.
+    Hai programmato Op Art ispirata a Bridget Riley!
+    Questi pattern furono progettati negli anni '60 usando riga e compasso — ora puoi programmarli.
+    Prossimo: **Esagoni in Espansione** — anelli esagonali concentrici.

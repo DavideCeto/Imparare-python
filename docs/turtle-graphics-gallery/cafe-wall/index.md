@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Café Wall Illusion
+# Illusione del Muro del Caffè
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Draw a café wall pattern where each row of tiles is offset by half a tile
-- Understand why the mortar lines appear to converge even though they are parallel
-- Use nested loops to build a tiled grid with alternating row offsets
+- Disegnare un pattern a muro del caffè dove ogni riga di tessere è spostata di metà tessera
+- Capire perché le linee di malta sembrano convergere anche se sono parallele
+- Usare cicli annidati per costruire una griglia tassellata con offset di riga alternati
 
-The Café Wall Illusion was first noticed on a café in Bristol, England. Rows of black and white tiles with thin gray mortar lines between them — every mortar line is perfectly horizontal and parallel, yet they appear to slant!
+L'Illusione del Muro del Caffè fu notata per la prima volta su un caffè a Bristol, in Inghilterra. Righe di tessere nere e bianche con sottili linee di malta grigie tra di esse — ogni linea di malta è perfettamente orizzontale e parallela, eppure sembrano inclinate!
 
-!!! mascot-welcome "Welcome to the Café Wall Illusion!"
+!!! mascot-welcome "Benvenuto all'Illusione del Muro del Caffè!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    In 1979, a researcher named Richard Gregory noticed this illusion on the tiles
-    of a café wall in Bristol. The mortar lines are perfectly parallel — but look slanted!
-    Let's code it together and see if it tricks your eyes too!
+    Nel 1979, un ricercatore chiamato Richard Gregory notò questa illusione sulle tessere
+    di un muro di un caffè a Bristol. Le linee di malta sono perfettamente parallele — ma sembrano inclinate!
+    Programmiamolo insieme e vediamo se inganna anche i tuoi occhi!
 
-## How It Works
+## Come Funziona
 
-Draw a grid of black and white rectangles. Odd rows are shifted right by half a tile width. Between rows, draw a thin gray horizontal mortar line. The offset tiles + mortar color creates the illusion of diverging lines.
+Disegna una griglia di rettangoli neri e bianchi. Le righe dispari sono spostate a destra di metà larghezza di una tessera. Tra le righe, disegna una sottile linea di malta grigia orizzontale. Le tessere con offset + il colore della malta creano l'illusione di linee divergenti.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -63,13 +63,13 @@ for row in range(rows):
 filled_rect(ox - tile_w, oy + rows * (tile_h + mortar), (cols + 2) * tile_w, mortar, 'gray')
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Every gray mortar line is drawn perfectly horizontal — the code guarantees it.
-    Will they still look slanted after you add the black and white tiles?
-    Make your guess — then click Run to find out!
+    Ogni linea di malta grigia è disegnata perfettamente orizzontale — il codice lo garantisce.
+    Sembreranno ancora inclinate dopo aver aggiunto le tessere nere e bianche?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -129,27 +129,27 @@ for row in range(rows):
 filled_rect(ox - tile_w, oy + rows * (tile_h + mortar), (cols + 2) * tile_w, mortar, 'gray')`);
 </script>
 
-The gray lines **appear to slant** even though the code draws them perfectly horizontal! Were you right?
+Le linee grigie **sembrano inclinate** anche se il codice le disegna perfettamente orizzontali! Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-The gray mortar color sits between the dark and light tiles. Your visual system judges line position relative to local contrast. When the black and white tiles on either side of a mortar line are offset, the edge contrast makes the mortar appear to tilt toward the darker side.
+Il colore grigio della malta si trova tra le tessere scure e quelle chiare. Il tuo sistema visivo giudica la posizione della linea in base al contrasto locale. Quando le tessere nere e bianche su entrambi i lati di una linea di malta sono spostate, il contrasto del bordo fa sembrare che la malta si inclini verso il lato più scuro.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `offset = (row % 2) * (tile_w / 2)` | Alternate rows shifted by half a tile |
-| `mortar = 3` | Thin gray strips between rows — the key to the illusion |
-| `'black' if (col+row)%2==0 else 'white'` | Checkerboard coloring within each row |
-| `filled_rect(...)` | Helper to draw a filled rectangle |
+| `offset = (row % 2) * (tile_w / 2)` | Le righe alterne sono spostate di metà tessera |
+| `mortar = 3` | Strisce grigie sottili tra le righe — la chiave dell'illusione |
+| `'black' if (col+row)%2==0 else 'white'` | Colorazione a scacchiera dentro ogni riga |
+| `filled_rect(...)` | Aiutante per disegnare un rettangolo riempito |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Change the Mortar Color"
+!!! mascot-thinking "Il Tuo Turno — Cambia il Colore della Malta"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `'gray'` in the mortar lines to `'black'`. Will the illusion disappear or change?
-    The illusion requires a mortar color between black and white. What do you predict?
+    Cambia `'gray'` nelle linee di malta in `'black'`. L'illusione scomparirà o cambierà?
+    L'illusione richiede un colore di malta tra il nero e il bianco. Cosa prevedi?
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -203,20 +203,20 @@ for row in range(rows):
 filled_rect(ox - tile_w, oy + rows * (tile_h + mortar), (cols + 2) * tile_w, mortar, 'black')`);
 </script>
 
-With black mortar, the illusion weakens considerably — the mortar blends with the black tiles and loses its role as the "middle ground" element that creates the apparent tilt.
+Con la malta nera, l'illusione si attenua considerevolmente — la malta si fonde con le tessere nere e perde il suo ruolo di elemento "intermedio" che crea l'inclinazione apparente.
 
-## Experiments
+## Esperimenti
 
-1. **Increase mortar thickness.** Change `mortar = 3` to `mortar = 8`. You'll know it worked when the gray strips are much wider.
+1. **Aumenta lo spessore della malta.** Cambia `mortar = 3` in `mortar = 8`. Saprai che ha funzionato quando le strisce grigie sono molto più larghe.
 
-2. **Try colored tiles.** Replace `'black'` with `'navy'` and `'white'` with `'lightyellow'`. You'll know it worked when colored tiles appear — does the illusion still work?
+2. **Prova tessere colorate.** Sostituisci `'black'` con `'navy'` e `'white'` con `'lightyellow'`. Saprai che ha funzionato quando appaiono tessere colorate — l'illusione funziona ancora?
 
-3. **Remove the row offset.** Change `offset = (row % 2) * (tile_w / 2)` to `offset = 0`. You'll know it worked when the illusion disappears — all tiles align.
+3. **Rimuovi l'offset di riga.** Cambia `offset = (row % 2) * (tile_w / 2)` in `offset = 0`. Saprai che ha funzionato quando l'illusione scompare — tutte le tessere si allineano.
 
-4. **Vary the offset amount.** Try `offset = (row % 2) * (tile_w / 3)` or `tile_w / 4`. You'll know it worked when a different strength of illusion appears.
+4. **Varia la quantità di offset.** Prova `offset = (row % 2) * (tile_w / 3)` o `tile_w / 4`. Saprai che ha funzionato quando appare una forza diversa dell'illusione.
 
-!!! mascot-celebration "Your Brain Was Tricked Again!"
+!!! mascot-celebration "Il Tuo Cervello È Stato Ingannato di Nuovo!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    The café wall illusion teaches us that perception isn't just about what's there —
-    it's about local contrast and context. Perfectly parallel lines look slanted!
-    Up next: **Moiré Pattern** — two grids overlapping to create beating patterns.
+    L'illusione del muro del caffè ci insegna che la percezione non riguarda solo ciò che c'è —
+    riguarda il contrasto locale e il contesto. Linee perfettamente parallele sembrano inclinate!
+    Prossimo: **Motivo Moiré** — due griglie sovrapposte che creano pattern di battimento.

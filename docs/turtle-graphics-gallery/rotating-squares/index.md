@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Rotating Squares Illusion
+# Illusione dei Quadrati Rotanti
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Draw concentric squares that each rotate slightly from the last
-- Understand how a small per-square rotation creates a strong spinning illusion
-- Control the illusion strength by varying the rotation step
+- Disegnare quadrati concentrici che ognuno ruota leggermente dal precedente
+- Capire come una piccola rotazione per quadrato crea una forte illusione di rotazione
+- Controllare la forza dell'illusione variando il passo di rotazione
 
-Concentric squares, each rotated a few degrees from the previous one — but perfectly static. The human visual system interprets the gradual rotation as actual spinning motion. This is the "rotating squares" optical illusion.
+Quadrati concentrici, ognuno ruotato di pochi gradi dal precedente — ma perfettamente statici. Il sistema visivo umano interpreta la rotazione graduale come un movimento rotatorio reale. Questa è l'illusione ottica dei "quadrati rotanti".
 
-!!! mascot-welcome "Welcome to the Rotating Squares Illusion!"
+!!! mascot-welcome "Benvenuto all'Illusione dei Quadrati Rotanti!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Your brain sees motion where there is none — pure static geometry!
-    This is one of the most famous geometric optical illusions in Op Art.
-    Let's code it together!
+    Il tuo cervello vede movimento dove non ce n'è — pura geometria statica!
+    Questa è una delle illusioni ottiche geometriche più famose dell'Op Art.
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-Draw 20 concentric squares. Each square is rotated 5° more than the previous one. The squares also shrink inward by a fixed amount. The combination of rotation + shrinkage creates the illusion of a spiral/spinning motion.
+Disegna 20 quadrati concentrici. Ogni quadrato è ruotato di 5° in più del precedente. I quadrati si restringono anche verso l'interno di una quantità fissa. La combinazione di rotazione + restringimento crea l'illusione di un movimento a spirale/rotante.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -53,13 +53,13 @@ for i in range(n_squares):
         monty.left(90)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Each square is rotated 5° more than the last — they're all stationary.
-    Will this look like a stack of squares, or will it appear to be spinning?
-    Make your guess — then click Run to find out!
+    Ogni quadrato è ruotato di 5° in più del precedente — sono tutti stazionari.
+    Sembrerà una pila di quadrati, o apparirà ruotante?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -110,27 +110,27 @@ for i in range(n_squares):
         monty.left(90)`);
 </script>
 
-The image **appears to spin** — but it's completely static. Were you right? The illusion is strongest when you look slightly to the side of the image.
+L'immagine **sembra girare** — ma è completamente statica. Avevi indovinato? L'illusione è più forte quando guardi leggermente al fianco dell'immagine.
 
-## How It Works
+## Come Funziona
 
-Each square's corner is found by going forward from the center at 45° (diagonal) and then turning to draw the square. The illusion works because our visual system extrapolates motion from the gradual rotation gradient — it "reads" the progression of angles as a time sequence rather than a spatial arrangement.
+L'angolo di ogni quadrato viene trovato andando avanti dal centro a 45° (diagonale) e poi girando per disegnare il quadrato. L'illusione funziona perché il nostro sistema visivo estrapola il movimento dal gradiente di rotazione graduale — "legge" la progressione degli angoli come una sequenza temporale invece che una disposizione spaziale.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `angle = i * rot_step` | Each square rotated 5° more than the last |
-| `setheading(angle + 135)` | Start drawing from correct corner |
-| `size - i * 7` | Squares shrink as they approach center |
-| `forward(size * sqrt(2) / 2)` | Distance to corner along diagonal |
+| `angle = i * rot_step` | Ogni quadrato ruotato di 5° in più del precedente |
+| `setheading(angle + 135)` | Inizia a disegnare dall'angolo corretto |
+| `size - i * 7` | I quadrati si restringono mentre si avvicinano al centro |
+| `forward(size * sqrt(2) / 2)` | Distanza fino all'angolo lungo la diagonale |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Make It Spin Faster"
+!!! mascot-thinking "Il Tuo Turno — Falla Girare Più Velocemente"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `rot_step = 5` to `rot_step = 10`. Will the illusion of spinning be stronger or weaker?
-    Predict, then run to find out!
+    Cambia `rot_step = 5` in `rot_step = 10`. L'illusione di rotazione sarà più forte o più debole?
+    Prevedi, poi esegui per scoprirlo!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -175,20 +175,20 @@ for i in range(n_squares):
         monty.left(90)`);
 </script>
 
-`rot_step = 10` creates a more chaotic-looking arrangement that may look like faster spinning to some viewers.
+`rot_step = 10` crea una disposizione che sembra più caotica e può apparire come una rotazione più veloce ad alcuni osservatori.
 
-## Experiments
+## Esperimenti
 
-1. **Try rot_step = 45.** The squares alternate between two orientations. You'll know it worked when you see only two overlapping orientations.
+1. **Prova rot_step = 45.** I quadrati alternano tra due orientamenti. Saprai che ha funzionato quando vedi solo due orientamenti sovrapposti.
 
-2. **Use black and white alternating.** Set colors to `['black', 'white']`. You'll know it worked when the high contrast makes the illusion even stronger.
+2. **Usa nero e bianco alternati.** Imposta i colori su `['black', 'white']`. Saprai che ha funzionato quando l'alto contrasto rende l'illusione ancora più forte.
 
-3. **Use hexagons instead of squares.** Change the inner loop to draw 6 sides of length `size/1.5` with `left(60)`. You'll know it worked when hexagons appear.
+3. **Usa esagoni invece di quadrati.** Cambia il ciclo interno per disegnare 6 lati di lunghezza `size/1.5` con `left(60)`. Saprai che ha funzionato quando appaiono esagoni.
 
-4. **Draw both clockwise and counter-clockwise.** Run the loop twice — once with `rot_step = 5` and once with `-5`. You'll know it worked when two counter-rotating spiral illusions appear.
+4. **Disegna sia in senso orario sia antiorario.** Esegui il ciclo due volte — una con `rot_step = 5` e una con `-5`. Saprai che ha funzionato quando appaiono due illusioni a spirale che girano in direzioni opposte.
 
-!!! mascot-celebration "Your Brain Was Tricked!"
+!!! mascot-celebration "Il Tuo Cervello È Stato Ingannato!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You built a genuine optical illusion entirely from static squares!
-    Op Art (Optical Art) uses math and geometry to fool the visual system.
-    Up next: **Café Wall Illusion** — parallel horizontal lines that look slanted.
+    Hai costruito una vera illusione ottica interamente da quadrati statici!
+    L'Op Art (Arte Ottica) usa la matematica e la geometria per ingannare il sistema visivo.
+    Prossimo: **Illusione del Muro del Caffè** — linee orizzontali parallele che sembrano inclinate.

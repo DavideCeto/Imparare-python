@@ -164,6 +164,10 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
   altro rimando finale pre-esistente inconsistente, "Up next: Category 11",
   mentre il file successivo reale nella nav è `spiral-text/`; tradotto
   fedelmente senza correggerlo, stessa logica del batch precedente)
+- `block-letters/`, `rotating-squares/`, `cafe-wall/`, `moire-pattern/`,
+  `riley-waves/` (decimo batch — corretto un refuso "stretate" → "strette" in
+  `moire-pattern/index.md` prima del commit; apre la categoria "Illusioni
+  Ottiche e Op Art")
 
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
@@ -300,11 +304,12 @@ cuore didattico del libro.
 `koch-snowflake/`, `sierpinski-triangle/`, `fractal-tree/`, `l-system-plant/`,
 `turtle-maze/`, `parametric-surface/`, `linden-snowflakes/`, `generative-art/`,
 `bouncing-ball/`, `clock-face/`, `spirograph-drawer/`, `spiral-text/`,
-`seven-segment/`, `circular-badge/` (47 di ~102 file/unità).
+`seven-segment/`, `circular-badge/`, `block-letters/`, `rotating-squares/`,
+`cafe-wall/`, `moire-pattern/`, `riley-waves/` (52 di ~102 file/unità).
 
-Prossimo: continuare la Fase 4 in ordine di nav con `block-letters/`,
-`rotating-squares/`, `cafe-wall/`, `moire-pattern/`, `riley-waves/`, e così
-via attraverso i restanti ~56 singoli laboratori della galleria.
+Prossimo: continuare la Fase 4 in ordine di nav con `expanding-hexagons/`,
+`lissajous-figure/`, `rose-curve/`, `spirograph/`, `butterfly-curve/`, e così
+via attraverso i restanti ~51 singoli laboratori della galleria.
 
 Dopo la Fase 4: Fasi 5-9 (MicroSims, Teacher's Guide, Jupyter/Advanced, Learning Graph,
 Trinket Labs — quest'ultima di priorità minima/da valutare se tradurre affatto, vedi

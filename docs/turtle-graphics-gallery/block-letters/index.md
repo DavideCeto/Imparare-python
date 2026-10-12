@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Name in Block Letters
+# Nome in Lettere Blocco
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Store letter shapes as lists of stroke waypoints and draw them with `goto()`
-- Build a mini font and render any word using your letter definitions
-- Understand how vector fonts work — shapes defined as coordinate paths
+- Memorizzare forme di lettere come liste di punti di passaggio di tratto e disegnarle con `goto()`
+- Costruire un mini font e renderizzare qualsiasi parola usando le tue definizioni di lettera
+- Capire come funzionano i font vettoriali — forme definite come percorsi di coordinate
 
-Each letter of a name is drawn as a series of line "strokes" — lists of `(x, y)` waypoints. Moving the pen along the strokes draws the letter outline. This is how early computer fonts worked.
+Ogni lettera di un nome è disegnata come una serie di "tratti" di linea — liste di punti di passaggio `(x, y)`. Muovere la penna lungo i tratti disegna il contorno della lettera. Così funzionavano i primi font dei computer.
 
-!!! mascot-welcome "Welcome to Block Letters!"
+!!! mascot-welcome "Benvenuto alle Lettere Blocco!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Before TrueType fonts existed, computers drew letters this way — as stored lists of line segments.
-    This lab builds a mini stroke-based font from scratch!
-    Let's code it together!
+    Prima che esistessero i font TrueType, i computer disegnavano le lettere così — come liste memorizzate di segmenti di linea.
+    Questo laboratorio costruisce un mini font basato su tratti da zero!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-Each letter is defined as a list of strokes; each stroke is a list of `(x, y)` waypoints in a 0–1 coordinate box. A `draw_letter(ch, ox, oy, scale)` function scales and translates the waypoints and draws each stroke.
+Ogni lettera è definita come una lista di tratti; ogni tratto è una lista di punti di passaggio `(x, y)` in un riquadro di coordinate 0–1. Una funzione `draw_letter(ch, ox, oy, scale)` scala e trasla i punti di passaggio e disegna ogni tratto.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -60,13 +60,13 @@ for i, ch in enumerate(word):
     draw_letter(ch, ox + i * (scale + gap), -scale/2, scale)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The font dictionary has 6 letters — each defined as a list of stroke paths.
-    Will the word "PYTHON" look like readable block letters, or jumbled lines?
-    Make your guess — then click Run to find out!
+    Il dizionario del font ha 6 lettere — ognuna definita come una lista di percorsi di tratto.
+    La parola "PYTHON" sembrerà lettere blocco leggibili, o linee confuse?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -123,28 +123,28 @@ for i, ch in enumerate(word):
     draw_letter(ch, ox + i * (scale + gap), -scale/2, scale)`);
 </script>
 
-**Readable block letters** — each letter drawn from its waypoint strokes. Were you right?
+**Lettere blocco leggibili** — ogni lettera disegnata dai suoi tratti di punti di passaggio. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-The font stores each letter as "strokes" (lists of waypoints in unit coordinates 0–1). `draw_letter()` scales them by `scale` and shifts by `ox, oy`. This is exactly how PostScript and SVG fonts work — just with more waypoints per letter.
+Il font memorizza ogni lettera come "tratti" (liste di punti di passaggio in coordinate unitarie 0–1). `draw_letter()` li scala di `scale` e li sposta di `ox, oy`. Questo è esattamente come funzionano i font PostScript e SVG — solo con più punti di passaggio per lettera.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `font = {'P': [[...], ...], ...}` | Dictionary: letter → list of strokes |
-| `font.get(ch.upper(), [])` | Look up strokes, default to empty |
-| `ox + stroke[0][0]*scale` | Scale x from 0–1 range to pixel range |
-| `gap = 12` | Spacing between letters |
+| `font = {'P': [[...], ...], ...}` | Dizionario: lettera → lista di tratti |
+| `font.get(ch.upper(), [])` | Cerca i tratti, predefinito vuoto |
+| `ox + stroke[0][0]*scale` | Scala x dall'intervallo 0–1 all'intervallo in pixel |
+| `gap = 12` | Spaziatura tra le lettere |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add a New Letter"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi una Nuova Lettera"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Add an `'A'` entry to the `font` dictionary.
-    `'A'` has two slanted lines and a crossbar.
-    Add it and change the word to include `'A'` — can you define the strokes correctly?
+    Aggiungi una voce `'A'` al dizionario `font`.
+    `'A'` ha due linee inclinate e una traversa.
+    Aggiungila e cambia la parola per includere `'A'` — riesci a definire correttamente i tratti?
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -196,20 +196,20 @@ for i, ch in enumerate(word):
     draw_letter(ch, ox + i * (scale + gap), -scale/2, scale)`);
 </script>
 
-The `'A'` is defined with two slanted strokes and a crossbar — readable block letter style!
+La `'A'` è definita con due tratti inclinati e una traversa — stile lettera blocco leggibile!
 
-## Experiments
+## Esperimenti
 
-1. **Add more letters.** Define `'E'`, `'I'`, `'L'`, `'F'`, `'Z'` using horizontal and vertical lines. You'll know it worked when you can spell new words.
+1. **Aggiungi più lettere.** Definisci `'E'`, `'I'`, `'L'`, `'F'`, `'Z'` usando linee orizzontali e verticali. Saprai che ha funzionato quando puoi scrivere nuove parole.
 
-2. **Add fill.** For closed letters like `'O'`, call `begin_fill()` and `end_fill()` around each closed stroke. You'll know it worked when the letter interior is filled.
+2. **Aggiungi il riempimento.** Per lettere chiuse come `'O'`, chiama `begin_fill()` e `end_fill()` attorno a ogni tratto chiuso. Saprai che ha funzionato quando l'interno della lettera è riempito.
 
-3. **Make rainbow letters.** Assign a different color to each letter. You'll know it worked when each letter in the word is a different color.
+3. **Fai lettere arcobaleno.** Assegna un colore diverso a ogni lettera. Saprai che ha funzionato quando ogni lettera della parola è di un colore diverso.
 
-4. **Scale by character position.** Make early letters small and later letters larger by varying `scale`. You'll know it worked when the word appears to grow in size from left to right.
+4. **Scala in base alla posizione del carattere.** Rendi le prime lettere piccole e quelle successive più grandi variando `scale`. Saprai che ha funzionato quando la parola sembra crescere di dimensione da sinistra a destra.
 
-!!! mascot-celebration "You Built a Font!"
+!!! mascot-celebration "Hai Costruito un Font!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You stored letter shapes as data and rendered them with `goto()` — the same
-    principle used by PostScript fonts and SVG text rendering.
-    Up next: **Category 10 — Animation patterns!**
+    Hai memorizzato forme di lettere come dati e le hai renderizzate con `goto()` — lo stesso
+    principio usato dai font PostScript e dal rendering del testo SVG.
+    Prossimo: **Categoria 10 — Pattern di Animazione!**
