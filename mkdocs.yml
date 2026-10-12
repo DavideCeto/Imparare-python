@@ -190,109 +190,109 @@ nav:
     - 15. Onda sinusoidale: python-labs/15-sine-wave.md
     - 17. Click del mouse: python-labs/17-mouse-clicks.md
 
-  - Turtle Graphics Gallery:
-    - Gallery: turtle-graphics-gallery/index.md
-    - Pattern Ideas: turtle-graphics-gallery/pattern-ideas.md
-    - Rainbow Square Spiral: turtle-graphics-gallery/rainbow-square-spiral/index.md
-    - Pinwheel of Triangles: turtle-graphics-gallery/pinwheel-of-triangles/index.md
-    - Nested Circles: turtle-graphics-gallery/nested-circles/index.md
-    - Starburst: turtle-graphics-gallery/starburst/index.md
-    - Checkerboard Grid: turtle-graphics-gallery/checkerboard-grid/index.md
-    - Diagonal Stripe Field: turtle-graphics-gallery/diagonal-stripe-field/index.md
-    - Dotted Grid: turtle-graphics-gallery/dotted-grid/index.md
-    - Color Wheel Wedges: turtle-graphics-gallery/color-wheel-wedges/index.md
-    - Pentagon Chain: turtle-graphics-gallery/pentagon-chain/index.md
-    - Overlapping Squares: turtle-graphics-gallery/overlapping-squares/index.md
-    - Flower with Petal Function: turtle-graphics-gallery/flower-petal-function/index.md
-    - Honeycomb Grid: turtle-graphics-gallery/honeycomb-grid/index.md
-    - City Skyline: turtle-graphics-gallery/city-skyline/index.md
-    - Snowflake Arms: turtle-graphics-gallery/snowflake-arms/index.md
-    - Polka Dot Canvas: turtle-graphics-gallery/polka-dot-canvas/index.md
-    - Brick Wall: turtle-graphics-gallery/brick-wall/index.md
-    - Stars of Different Sizes: turtle-graphics-gallery/stars-different-sizes/index.md
-    - Traffic Light Stack: turtle-graphics-gallery/traffic-light/index.md
-    - Fish School: turtle-graphics-gallery/fish-school/index.md
-    - Mountain Range: turtle-graphics-gallery/mountain-range/index.md
-    - Archimedean Square Spiral: turtle-graphics-gallery/archimedean-spiral/index.md
-    - Rainbow Line Spiral: turtle-graphics-gallery/rainbow-line-spiral/index.md
-    - Hexagonal Spiral: turtle-graphics-gallery/hexagonal-spiral/index.md
-    - Triangular Spiral: turtle-graphics-gallery/triangular-spiral/index.md
-    - Inward Collapsing Spiral: turtle-graphics-gallery/inward-spiral/index.md
-    - Colored Logarithmic Spiral: turtle-graphics-gallery/logarithmic-spiral/index.md
-    - Double Helix Spiral: turtle-graphics-gallery/double-helix-spiral/index.md
-    - Fibonacci Spiral: turtle-graphics-gallery/fibonacci-spiral/index.md
-    - Spiral of Spirals: turtle-graphics-gallery/spiral-of-spirals/index.md
-    - Color-Banded Pentagon Spiral: turtle-graphics-gallery/pentagon-spiral/index.md
-    - Koch Snowflake: turtle-graphics-gallery/koch-snowflake/index.md
-    - Sierpinski Triangle: turtle-graphics-gallery/sierpinski-triangle/index.md
-    - Fractal Tree: turtle-graphics-gallery/fractal-tree/index.md
-    - L-System Plant: turtle-graphics-gallery/l-system-plant/index.md
-    - Turtle Maze Generator: turtle-graphics-gallery/turtle-maze/index.md
-    - Parametric Surface Projection: turtle-graphics-gallery/parametric-surface/index.md
-    - Lindenmayer Snowflake Collection: turtle-graphics-gallery/linden-snowflakes/index.md
-    - Generative Art Loop: turtle-graphics-gallery/generative-art/index.md
-    - Bouncing Ball: turtle-graphics-gallery/bouncing-ball/index.md
-    - Clock Face: turtle-graphics-gallery/clock-face/index.md
-    - Spirograph Drawer: turtle-graphics-gallery/spirograph-drawer/index.md
-    - Spiral Text: turtle-graphics-gallery/spiral-text/index.md
-    - Seven-Segment Display: turtle-graphics-gallery/seven-segment/index.md
-    - Circular Name Badge: turtle-graphics-gallery/circular-badge/index.md
-    - Name in Block Letters: turtle-graphics-gallery/block-letters/index.md
-    - Rotating Squares Illusion: turtle-graphics-gallery/rotating-squares/index.md
-    - Café Wall Illusion: turtle-graphics-gallery/cafe-wall/index.md
-    - Moiré Pattern: turtle-graphics-gallery/moire-pattern/index.md
-    - Bridget Riley Waves: turtle-graphics-gallery/riley-waves/index.md
-    - Expanding Hexagons: turtle-graphics-gallery/expanding-hexagons/index.md
-    - Lissajous Figure: turtle-graphics-gallery/lissajous-figure/index.md
-    - Rose Curve: turtle-graphics-gallery/rose-curve/index.md
-    - Spirograph: turtle-graphics-gallery/spirograph/index.md
-    - Butterfly Curve: turtle-graphics-gallery/butterfly-curve/index.md
-    - Epicycloid Star: turtle-graphics-gallery/epicycloid-star/index.md
-    - Sunflower Seed Spiral: turtle-graphics-gallery/sunflower-spiral/index.md
-    - Spider Web: turtle-graphics-gallery/spider-web/index.md
-    - Lightning Bolt: turtle-graphics-gallery/lightning-bolt/index.md
-    - Galaxy Spiral Arms: turtle-graphics-gallery/galaxy-spiral/index.md
-    - Ripple Waves: turtle-graphics-gallery/ripple-waves/index.md
-    - Four-Fold Symmetric Doodle: turtle-graphics-gallery/four-fold-doodle/index.md
-    - Six-Fold Mandala: turtle-graphics-gallery/six-fold-mandala/index.md
-    - Mirror Butterfly: turtle-graphics-gallery/mirror-butterfly/index.md
-    - Truchet Tiles: turtle-graphics-gallery/truchet-tiles/index.md
-    - Islamic Geometric Star: turtle-graphics-gallery/islamic-star/index.md
-    - Mandelbrot Pixel Art: turtle-graphics-gallery/mandelbrot-pixel-art/index.md
-    - Julia Set Pixel Art: turtle-graphics-gallery/julia-set/index.md
-    - Sierpinski Carpet: turtle-graphics-gallery/sierpinski-carpet/index.md
-    - Barnsley Fern: turtle-graphics-gallery/barnsley-fern/index.md
-    - Anti-Koch Snowflake: turtle-graphics-gallery/anti-koch/index.md
-    - Pythagorean Tree: turtle-graphics-gallery/pythagorean-tree/index.md
-    - T-Square Fractal: turtle-graphics-gallery/t-square-fractal/index.md
-    - Levy C Curve: turtle-graphics-gallery/levy-c-curve/index.md
-    - Gosper Curve: turtle-graphics-gallery/gosper-curve/index.md
-    - Dragon Curve: turtle-graphics-gallery/dragon-curve/index.md
-    - Hilbert Curve: turtle-graphics-gallery/hilbert-curve/index.md
-    - Cantor Dust: turtle-graphics-gallery/cantor-dust/index.md
-    - Kaleidoscope Slice: turtle-graphics-gallery/kaleidoscope-slice/index.md
-    - Pinwheel Tiling: turtle-graphics-gallery/pinwheel-tiling/index.md
-    - Escher-Style Fish Tile: turtle-graphics-gallery/escher-fish/index.md
-    - Voronoi Color Regions: turtle-graphics-gallery/voronoi-regions/index.md
-    - Penrose Rhombus Tiling: turtle-graphics-gallery/penrose-rhombus/index.md
-    - River Delta: turtle-graphics-gallery/river-delta/index.md
-    - Coral Branch: turtle-graphics-gallery/coral-branch/index.md
-    - Leaf Venation: turtle-graphics-gallery/leaf-venation/index.md
-    - DNA Double Helix: turtle-graphics-gallery/dna-helix/index.md
-    - Topographic Map: turtle-graphics-gallery/topographic-map/index.md
-    - Epitrochoid: turtle-graphics-gallery/epitrochoid/index.md
-    - Superellipse: turtle-graphics-gallery/superellipse/index.md
-    - Cassini Oval: turtle-graphics-gallery/cassini-oval/index.md
-    - Fermat's Spiral: turtle-graphics-gallery/fermat-spiral/index.md
-    - Astroid: turtle-graphics-gallery/astroid/index.md
-    - Mach Bands: turtle-graphics-gallery/mach-bands/index.md
-    - Vasarely Sphere: turtle-graphics-gallery/vasarely-sphere/index.md
-    - Scintillating Grid: turtle-graphics-gallery/scintillating-grid/index.md
-    - Impossible Triangle: turtle-graphics-gallery/impossible-triangle/index.md
-    - Concentric Ring Pulsation: turtle-graphics-gallery/ring-pulsation/index.md
-    - Binary Tree Name: turtle-graphics-gallery/binary-tree-name/index.md
-    - Turtle Chase: turtle-graphics-gallery/turtle-chase/index.md
-    - Reaction-Diffusion Pattern: turtle-graphics-gallery/reaction-diffusion/index.md
+  - Galleria della Grafica Turtle:
+    - Galleria: turtle-graphics-gallery/index.md
+    - Idee per i Pattern: turtle-graphics-gallery/pattern-ideas.md
+    - Spirale di Quadrati Arcobaleno: turtle-graphics-gallery/rainbow-square-spiral/index.md
+    - Girandola di Triangoli: turtle-graphics-gallery/pinwheel-of-triangles/index.md
+    - Cerchi Annidati: turtle-graphics-gallery/nested-circles/index.md
+    - Raggiera a Stella: turtle-graphics-gallery/starburst/index.md
+    - Griglia a Scacchiera: turtle-graphics-gallery/checkerboard-grid/index.md
+    - Campo di Strisce Diagonali: turtle-graphics-gallery/diagonal-stripe-field/index.md
+    - Griglia di Punti: turtle-graphics-gallery/dotted-grid/index.md
+    - Spicchi della Ruota dei Colori: turtle-graphics-gallery/color-wheel-wedges/index.md
+    - Catena di Pentagoni: turtle-graphics-gallery/pentagon-chain/index.md
+    - Quadrati Sovrapposti: turtle-graphics-gallery/overlapping-squares/index.md
+    - Fiore con Funzione Petalo: turtle-graphics-gallery/flower-petal-function/index.md
+    - Griglia a Nido d'Ape: turtle-graphics-gallery/honeycomb-grid/index.md
+    - Skyline Urbano: turtle-graphics-gallery/city-skyline/index.md
+    - Bracci del Fiocco di Neve: turtle-graphics-gallery/snowflake-arms/index.md
+    - Canvas a Pois: turtle-graphics-gallery/polka-dot-canvas/index.md
+    - Muro di Mattoni: turtle-graphics-gallery/brick-wall/index.md
+    - Stelle di Diverse Dimensioni: turtle-graphics-gallery/stars-different-sizes/index.md
+    - Semaforo: turtle-graphics-gallery/traffic-light/index.md
+    - Banco di Pesci: turtle-graphics-gallery/fish-school/index.md
+    - Catena Montuosa: turtle-graphics-gallery/mountain-range/index.md
+    - Spirale Quadrata di Archimede: turtle-graphics-gallery/archimedean-spiral/index.md
+    - Spirale di Linee Arcobaleno: turtle-graphics-gallery/rainbow-line-spiral/index.md
+    - Spirale Esagonale: turtle-graphics-gallery/hexagonal-spiral/index.md
+    - Spirale Triangolare: turtle-graphics-gallery/triangular-spiral/index.md
+    - Spirale che Collassa verso l'Interno: turtle-graphics-gallery/inward-spiral/index.md
+    - Spirale Logaritmica Colorata: turtle-graphics-gallery/logarithmic-spiral/index.md
+    - Spirale a Doppia Elica: turtle-graphics-gallery/double-helix-spiral/index.md
+    - Spirale di Fibonacci: turtle-graphics-gallery/fibonacci-spiral/index.md
+    - Spirale di Spirali: turtle-graphics-gallery/spiral-of-spirals/index.md
+    - Spirale Pentagonale a Fasce Colorate: turtle-graphics-gallery/pentagon-spiral/index.md
+    - Fiocco di Neve di Koch: turtle-graphics-gallery/koch-snowflake/index.md
+    - Triangolo di Sierpiński: turtle-graphics-gallery/sierpinski-triangle/index.md
+    - Albero Frattale: turtle-graphics-gallery/fractal-tree/index.md
+    - Pianta a Sistema-L: turtle-graphics-gallery/l-system-plant/index.md
+    - Generatore di Labirinti con la Turtle: turtle-graphics-gallery/turtle-maze/index.md
+    - Proiezione di Superficie Parametrica: turtle-graphics-gallery/parametric-surface/index.md
+    - Collezione di Fiocchi di Neve di Lindenmayer: turtle-graphics-gallery/linden-snowflakes/index.md
+    - Ciclo di Arte Generativa: turtle-graphics-gallery/generative-art/index.md
+    - Pallina che Rimbalza: turtle-graphics-gallery/bouncing-ball/index.md
+    - Quadrante dell'Orologio: turtle-graphics-gallery/clock-face/index.md
+    - Disegnatore di Spirografi: turtle-graphics-gallery/spirograph-drawer/index.md
+    - Testo a Spirale: turtle-graphics-gallery/spiral-text/index.md
+    - Display a Sette Segmenti: turtle-graphics-gallery/seven-segment/index.md
+    - Distintivo Circolare con Nome: turtle-graphics-gallery/circular-badge/index.md
+    - Nome in Lettere Blocco: turtle-graphics-gallery/block-letters/index.md
+    - Illusione dei Quadrati Rotanti: turtle-graphics-gallery/rotating-squares/index.md
+    - Illusione del Muro del Caffè: turtle-graphics-gallery/cafe-wall/index.md
+    - Motivo Moiré: turtle-graphics-gallery/moire-pattern/index.md
+    - Onde di Bridget Riley: turtle-graphics-gallery/riley-waves/index.md
+    - Esagoni in Espansione: turtle-graphics-gallery/expanding-hexagons/index.md
+    - Figura di Lissajous: turtle-graphics-gallery/lissajous-figure/index.md
+    - Curva a Rosa: turtle-graphics-gallery/rose-curve/index.md
+    - Spirografo: turtle-graphics-gallery/spirograph/index.md
+    - Curva a Farfalla: turtle-graphics-gallery/butterfly-curve/index.md
+    - Stella Epicicloidale: turtle-graphics-gallery/epicycloid-star/index.md
+    - Spirale dei Semi di Girasole: turtle-graphics-gallery/sunflower-spiral/index.md
+    - Ragnatela: turtle-graphics-gallery/spider-web/index.md
+    - Fulmine: turtle-graphics-gallery/lightning-bolt/index.md
+    - Bracci a Spirale della Galassia: turtle-graphics-gallery/galaxy-spiral/index.md
+    - Onde Concentriche: turtle-graphics-gallery/ripple-waves/index.md
+    - Scarabocchio a Simmetria Quadrupla: turtle-graphics-gallery/four-fold-doodle/index.md
+    - Mandala a Simmetria Sestupla: turtle-graphics-gallery/six-fold-mandala/index.md
+    - Farfalla a Specchio: turtle-graphics-gallery/mirror-butterfly/index.md
+    - Piastrelle di Truchet: turtle-graphics-gallery/truchet-tiles/index.md
+    - Stella Geometrica Islamica: turtle-graphics-gallery/islamic-star/index.md
+    - Pixel Art di Mandelbrot: turtle-graphics-gallery/mandelbrot-pixel-art/index.md
+    - Pixel Art dell'Insieme di Julia: turtle-graphics-gallery/julia-set/index.md
+    - Tappeto di Sierpiński: turtle-graphics-gallery/sierpinski-carpet/index.md
+    - Felce di Barnsley: turtle-graphics-gallery/barnsley-fern/index.md
+    - Fiocco di Neve Anti-Koch: turtle-graphics-gallery/anti-koch/index.md
+    - Albero di Pitagora: turtle-graphics-gallery/pythagorean-tree/index.md
+    - Frattale a T-Square: turtle-graphics-gallery/t-square-fractal/index.md
+    - Curva C di Lévy: turtle-graphics-gallery/levy-c-curve/index.md
+    - Curva di Gosper: turtle-graphics-gallery/gosper-curve/index.md
+    - Curva del Dragone: turtle-graphics-gallery/dragon-curve/index.md
+    - Curva di Hilbert: turtle-graphics-gallery/hilbert-curve/index.md
+    - Polvere di Cantor: turtle-graphics-gallery/cantor-dust/index.md
+    - Fetta di Caleidoscopio: turtle-graphics-gallery/kaleidoscope-slice/index.md
+    - Tassellatura a Girandola: turtle-graphics-gallery/pinwheel-tiling/index.md
+    - Piastrella di Pesci in Stile Escher: turtle-graphics-gallery/escher-fish/index.md
+    - Regioni Colorate di Voronoi: turtle-graphics-gallery/voronoi-regions/index.md
+    - Tassellatura a Rombi di Penrose: turtle-graphics-gallery/penrose-rhombus/index.md
+    - Delta del Fiume: turtle-graphics-gallery/river-delta/index.md
+    - Ramo di Corallo: turtle-graphics-gallery/coral-branch/index.md
+    - Nervatura della Foglia: turtle-graphics-gallery/leaf-venation/index.md
+    - Doppia Elica del DNA: turtle-graphics-gallery/dna-helix/index.md
+    - Mappa Topografica: turtle-graphics-gallery/topographic-map/index.md
+    - Epitrocoide: turtle-graphics-gallery/epitrochoid/index.md
+    - Superellisse: turtle-graphics-gallery/superellipse/index.md
+    - Ovale di Cassini: turtle-graphics-gallery/cassini-oval/index.md
+    - Spirale di Fermat: turtle-graphics-gallery/fermat-spiral/index.md
+    - Astroide: turtle-graphics-gallery/astroid/index.md
+    - Bande di Mach: turtle-graphics-gallery/mach-bands/index.md
+    - Sfera di Vasarely: turtle-graphics-gallery/vasarely-sphere/index.md
+    - Griglia Scintillante: turtle-graphics-gallery/scintillating-grid/index.md
+    - Triangolo Impossibile: turtle-graphics-gallery/impossible-triangle/index.md
+    - Pulsazione di Anelli Concentrici: turtle-graphics-gallery/ring-pulsation/index.md
+    - Nome ad Albero Binario: turtle-graphics-gallery/binary-tree-name/index.md
+    - Caccia tra Tartarughe: turtle-graphics-gallery/turtle-chase/index.md
+    - Motivo di Reazione-Diffusione: turtle-graphics-gallery/reaction-diffusion/index.md
 
   - Jupyter Notebooks:
     - List of Notebooks: jupyter/index.md
