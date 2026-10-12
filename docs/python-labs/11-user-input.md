@@ -1,41 +1,41 @@
-# Getting Input from the User
+# Ottenere Input dall'Utente
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Use `input()` to pause a program and ask the user a question
-- Convert text input to an integer with `int()` so you can use it as a number
-- Draw a shape whose size or count changes based on what the user types
+- Usare `input()` per sospendere un programma e fare una domanda all'utente
+- Convertire l'input di testo in un intero con `int()` così puoi usarlo come numero
+- Disegnare una forma la cui dimensione o conteggio cambia in base a ciò che l'utente digita
 
-Every program you've written so far runs the same way every time. `input()` changes that — it pauses the program, displays a prompt, and waits for the user to type something before continuing. Whatever the user types becomes a value your program can use.
+Ogni programma che hai scritto finora gira allo stesso modo ogni volta. `input()` cambia questo — sospende il programma, mostra un prompt, e aspetta che l'utente digiti qualcosa prima di continuare. Qualsiasi cosa l'utente digiti diventa un valore che il tuo programma può usare.
 
-!!! mascot-welcome "Welcome to This Lesson!"
+!!! mascot-welcome "Benvenuto a Questa Lezione!"
     ![Monty waving welcome](../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    What if *you* could tell Monty how many shapes to draw — while the program is running?
-    That's what user input does! Let's code it together!
+    Cosa succederebbe se *tu* potessi dire a Monty quante forme disegnare — mentre il programma gira?
+    Questo è ciò che fa l'input dell'utente! Programmiamo insieme!
 
-## The `input()` Function
+## La Funzione `input()`
 
-`input("prompt text")` displays a message in the output box and waits. When the user types something and presses Enter, `input()` returns what they typed — always as a **string** (text).
+`input("testo del prompt")` mostra un messaggio nella casella di output e aspetta. Quando l'utente digita qualcosa e preme Invio, `input()` restituisce ciò che ha digitato — sempre come **stringa** (testo).
 
-If you need a number, wrap `input()` with `int()` to convert the string:
+Se hai bisogno di un numero, racchiudi `input()` con `int()` per convertire la stringa:
 
 ```python
 answer = input("How many circles? ")
 count = int(answer)
 ```
 
-Or combine them on one line:
+Oppure combinali su una riga:
 
 ```python
 count = int(input("How many circles? "))
 ```
 
-!!! mascot-tip "Scratch Bridge"
+!!! mascot-tip "Ponte Scratch"
     ![Monty with a tip](../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch you used the **"Ask ___ and wait"** block, which stored the answer in the `answer` variable.
-    In Python, `input("question")` does the same thing — it asks, waits, and returns the answer!
+    In Scratch hai usato il blocco **"Chiedi ___ e aspetta"**, che memorizzava la risposta nella variabile `answer`.
+    In Python, `input("domanda")` fa la stessa cosa — chiede, aspetta, e restituisce la risposta!
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -61,16 +61,16 @@ for i in range(count):
 monty.hideturtle()
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    When you click Run, a prompt will appear asking how many circles to draw.
-    If you type `5`, how many circles will appear? What if you type `0`?
-    Make your guess — then click Run and find out!
+    Quando clicchi Esegui, apparirà un prompt che chiede quanti cerchi disegnare.
+    Se digiti `5`, quanti cerchi appariranno? E se digiti `0`?
+    Fai la tua previsione — poi clicca Esegui e scoprilo!
 
-## Try It Now
+## Provalo Ora
 
-Click **Run**, type a number in the output box when prompted, then press Enter.
-No account needed — everything runs in your browser.
+Clicca **Esegui**, digita un numero nella casella di output quando richiesto, poi premi Invio.
+Nessun account necessario — tutto gira nel tuo browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -115,36 +115,36 @@ for i in range(count):
 monty.hideturtle()`);
 </script>
 
-Were you right? The program drew exactly as many circles as you typed — the loop runs `count` times, using `i % len(colors)` to cycle through the color list without going out of range.
+Avevi indovinato? Il programma ha disegnato esattamente tanti cerchi quanti ne hai digitati — il ciclo gira `count` volte, usando `i % len(colors)` per scorrere la lista di colori senza uscire dall'intervallo.
 
-## How It Works
+## Come Funziona
 
-`input()` always returns a **string** — even if the user types `5`, Python stores `"5"` (text), not `5` (number). Calling `int()` on it converts `"5"` to the integer `5`. Only after that can you use it in `range(count)`.
+`input()` restituisce sempre una **stringa** — anche se l'utente digita `5`, Python memorizza `"5"` (testo), non `5` (numero). Chiamare `int()` su di essa converte `"5"` nell'intero `5`. Solo dopo puoi usarlo in `range(count)`.
 
-`i % len(colors)` is the remainder when `i` is divided by the number of colors. This cycles the index back to 0 when `i` reaches the end of the list — so you can draw more circles than there are colors without an `IndexError`.
+`i % len(colors)` è il resto quando `i` viene diviso per il numero di colori. Questo fa ripartire l'indice da 0 quando `i` raggiunge la fine della lista — così puoi disegnare più cerchi di quanti colori ci siano senza un `IndexError`.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `input("prompt")` | Displays the prompt and waits for the user to type and press Enter |
-| `int(...)` | Converts the returned string to an integer |
-| `count = int(input(...))` | Combines both steps in one line |
-| `i % len(colors)` | Cycles through color indexes without going out of bounds |
+| `input("prompt")` | Mostra il prompt e aspetta che l'utente digiti e prema Invio |
+| `int(...)` | Converte la stringa restituita in un intero |
+| `count = int(input(...))` | Combina entrambi i passi in una riga |
+| `i % len(colors)` | Scorre gli indici dei colori senza uscire dall'intervallo |
 
-!!! mascot-warning "Always Convert to int"
+!!! mascot-warning "Converti Sempre in int"
     ![Monty warning](../img/mascot/warning.png){ class="mascot-admonition-img" }
-    If you forget `int()` and try to use the input directly in `range(count)`, you'll get a
+    Se ti dimentichi `int()` e provi a usare l'input direttamente in `range(count)`, otterrai un
     `TypeError: 'str' object cannot be interpreted as an integer`.
-    `input()` always returns a string — you must convert it if you need a number.
+    `input()` restituisce sempre una stringa — devi convertirla se hai bisogno di un numero.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Ask for the Radius Too"
+!!! mascot-thinking "Il Tuo Turno — Chiedi Anche il Raggio"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below asks for the number of circles but always draws them with radius 20.
-    Add **one line** to also ask the user for the radius, store it in `radius`, and use it
-    in `monty.circle(radius)` instead of `monty.circle(20)`.
+    Il programma sotto chiede il numero di cerchi ma li disegna sempre con raggio 20.
+    Aggiungi **una riga** per chiedere anche il raggio all'utente, memorizzalo in `radius`, e usalo
+    in `monty.circle(radius)` invece di `monty.circle(20)`.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -184,27 +184,27 @@ for i in range(count):
 monty.hideturtle()`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Remember to type a value in the prompt when you click Run!
+Prova questi cambiamenti. Ricordati di digitare un valore nel prompt quando clicchi Esegui!
 
-1. Ask the user for the radius instead of counting circles — use `radius = int(input("Circle radius? "))` and draw one circle with that radius.
-   **You'll know it worked when** typing different numbers produces circles of different sizes.
+1. Chiedi all'utente il raggio invece di contare i cerchi — usa `radius = int(input("Circle radius? "))` e disegna un cerchio con quel raggio.
+   **Saprai che ha funzionato quando** digitare numeri diversi produce cerchi di dimensioni diverse.
 
-2. Ask for a color name: `my_color = input("Pen color? ")` and use `monty.color(my_color)` before the loop.
-   **You'll know it worked when** typing `'blue'` gives blue circles and `'green'` gives green ones.
+2. Chiedi un nome di colore: `my_color = input("Pen color? ")` e usa `monty.color(my_color)` prima del ciclo.
+   **Saprai che ha funzionato quando** digitare `'blue'` dà cerchi blu e `'green'` dà cerchi verdi.
 
-3. Try typing a decimal like `3.5` at the prompt with `int()`. Notice the `ValueError`.
-   Now change `int()` to `float()` so decimals are accepted.
-   **You'll know it worked when** typing `3.5` no longer crashes the program.
+3. Prova a digitare un decimale come `3.5` al prompt con `int()`. Nota il `ValueError`.
+   Ora cambia `int()` in `float()` così i decimali sono accettati.
+   **Saprai che ha funzionato quando** digitare `3.5` non blocca più il programma.
 
-4. Add a `print()` at the end that says how many circles were drawn: `print("Drew", count, "circles!")`.
-   **You'll know it worked when** that message appears in the output box after the drawing finishes.
+4. Aggiungi una `print()` alla fine che dice quanti cerchi sono stati disegnati: `print("Drew", count, "circles!")`.
+   **Saprai che ha funzionato quando** quel messaggio appare nella casella di output dopo che il disegno è finito.
 
-5. Ask for the number of sides per shape. Use the answer to draw polygons instead of circles.
-   **You'll know it worked when** typing `3` draws triangles, `4` draws squares, etc.
+5. Chiedi il numero di lati per forma. Usa la risposta per disegnare poligoni invece di cerchi.
+   **Saprai che ha funzionato quando** digitare `3` disegna triangoli, `4` disegna quadrati, ecc.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Your programs can now talk to the user and change their behavior on the fly —
-    that's what makes software feel *alive*! Let's code it together!
+    I tuoi programmi possono ora parlare con l'utente e cambiare il loro comportamento al volo —
+    è questo che fa sembrare il software *vivo*! Programmiamo insieme!

@@ -1,24 +1,24 @@
-# Fractal Tree with Recursion
+# Albero Frattale con la Ricorsione
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Explain what **recursion** means — a function that calls itself
-- Trace how a recursive function stops using a base case
-- Draw a branching tree where each branch spawns two smaller branches
+- Spiegare cosa significa **ricorsione** — una funzione che chiama se stessa
+- Tracciare come una funzione ricorsiva si ferma usando un caso base
+- Disegnare un albero ramificato dove ogni ramo genera due rami più piccoli
 
-A **fractal** is a pattern that repeats itself at smaller and smaller scales. The most beautiful fractals in nature — trees, ferns, coastlines — are built exactly this way. In this lab you'll write a function that draws a branch, then calls *itself* twice to draw two smaller branches at the tip, and so on until the branches are too small to see.
+Un **frattale** è un pattern che si ripete a scale sempre più piccole. I frattali più belli in natura — alberi, felci, coste — sono costruiti esattamente così. In questo laboratorio scriverai una funzione che disegna un ramo, poi chiama *se stessa* due volte per disegnare due rami più piccoli alla punta, e così via finché i rami non sono troppo piccoli per essere visti.
 
-!!! mascot-welcome "Welcome to This Lesson!"
+!!! mascot-welcome "Benvenuto a Questa Lezione!"
     ![Monty waving welcome](../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Recursion is one of the most magical ideas in computer science.
-    When you understand it, you'll see it everywhere — from math to nature to art.
-    Let's code it together!
+    La ricorsione è una delle idee più magiche dell'informatica.
+    Quando la capisci, la vedrai ovunque — dalla matematica alla natura all'arte.
+    Programmiamo insieme!
 
-## What Is Recursion?
+## Cos'è la Ricorsione?
 
-**Recursion** is when a function calls itself. Without a stopping condition, it would call itself forever — so every recursive function needs a **base case**: a condition where it stops and returns without calling itself again.
+La **ricorsione** è quando una funzione chiama se stessa. Senza una condizione di arresto, si chiamerebbe per sempre — quindi ogni funzione ricorsiva ha bisogno di un **caso base**: una condizione in cui si ferma e ritorna senza chiamarsi di nuovo.
 
-Here is the pattern:
+Ecco il pattern:
 
 ```python
 def draw_branch(size, level):
@@ -30,9 +30,9 @@ def draw_branch(size, level):
     monty.backward(size)
 ```
 
-Each call passes a *smaller* `size` and a *lower* `level`. When `level` reaches 0, the recursion stops.
+Ogni chiamata passa una `size` *più piccola* e un `level` *più basso*. Quando `level` raggiunge 0, la ricorsione si ferma.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -64,16 +64,16 @@ draw_branch(80, 4)
 monty.hideturtle()
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The function starts with `level = 4` and calls itself with `level - 1` each time.
-    How many levels of branching will the tree have? Will it look more like a real tree or a geometric pattern?
-    Make your guess — then click Run!
+    La funzione inizia con `level = 4` e chiama se stessa con `level - 1` ogni volta.
+    Quanti livelli di ramificazione avrà l'albero? Sembrerà più un albero vero o un pattern geometrico?
+    Fai la tua previsione — poi clicca Esegui!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see the result right on this page.
-No account needed — everything runs in your browser.
+Modifica il codice sotto e clicca **Esegui** per vedere il risultato direttamente su questa pagina.
+Nessun account necessario — tutto gira nel tuo browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -124,37 +124,37 @@ draw_branch(80, 4)
 monty.hideturtle()`);
 </script>
 
-Were you right? A branching tree with brown trunk, narrowing branches, and green tips at the leaves — all from one short function calling itself!
+Avevi indovinato? Un albero ramificato con tronco marrone, rami che si assottigliano, e punte verdi alle foglie — tutto da una breve funzione che chiama se stessa!
 
-## How It Works
+## Come Funziona
 
-`draw_branch(80, 4)` draws an 80-step trunk, then calls itself twice with `size * 0.65` (shrinking each branch by 35%) and `level - 1`. Each of those calls draws a smaller branch and calls *itself* again — until `level` reaches 0, at which point the function just returns. Then every function call backtracks with `backward(size)` to restore the turtle to where the branch started.
+`draw_branch(80, 4)` disegna un tronco di 80 passi, poi chiama se stessa due volte con `size * 0.65` (restringendo ogni ramo del 35%) e `level - 1`. Ognuna di quelle chiamate disegna un ramo più piccolo e chiama *se stessa* di nuovo — finché `level` raggiunge 0, momento in cui la funzione semplicemente ritorna. Poi ogni chiamata di funzione ripercorre il percorso indietro con `backward(size)` per ripristinare la tartaruga dove il ramo era iniziato.
 
-`pensize(max(level, 1))` makes trunk lines thick and tip lines thin — thicker at higher levels, but always at least 1 pixel.
+`pensize(max(level, 1))` rende le righe del tronco spesse e quelle delle punte sottili — più spesse ai livelli alti, ma sempre almeno 1 pixel.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `if level == 0: return` | Base case — stops recursion when branches are too small |
-| `monty.forward(size)` | Draws the current branch |
-| `monty.right(25)` | Angles right before drawing the right sub-branch |
-| `draw_branch(size * 0.65, level - 1)` | Recursive call — draws a smaller branch |
-| `monty.left(50)` | Swings left to draw the left sub-branch |
-| `monty.backward(size)` | Retraces the current branch so the caller's turtle position is restored |
+| `if level == 0: return` | Caso base — ferma la ricorsione quando i rami sono troppo piccoli |
+| `monty.forward(size)` | Disegna il ramo attuale |
+| `monty.right(25)` | Angola a destra prima di disegnare il sotto-ramo destro |
+| `draw_branch(size * 0.65, level - 1)` | Chiamata ricorsiva — disegna un ramo più piccolo |
+| `monty.left(50)` | Gira a sinistra per disegnare il sotto-ramo sinistro |
+| `monty.backward(size)` | Ripercorre il ramo attuale così la posizione della tartaruga del chiamante viene ripristinata |
 
-!!! mascot-encourage "Recursion Feels Tricky at First!"
+!!! mascot-encourage "La Ricorsione Sembra Difficile all'Inizio!"
     ![Monty encouraging](../img/mascot/encouraging.png){ class="mascot-admonition-img" }
-    It's normal if you don't fully understand recursion the first time you see it.
-    The key insight: each function call handles *one branch*, and it trusts the smaller
-    calls to handle the rest. Try changing `level` from 4 to 2 to see a simpler version!
+    È normale non capire completamente la ricorsione la prima volta che la vedi.
+    L'intuizione chiave: ogni chiamata di funzione gestisce *un ramo*, e si fida delle chiamate
+    più piccole per gestire il resto. Prova a cambiare `level` da 4 a 2 per vedere una versione più semplice!
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Spot the Bug!"
+!!! mascot-warning "Trova il Bug!"
     ![Monty warning](../img/mascot/warning.png){ class="mascot-admonition-img" }
-    The program below tries to draw a fractal tree, but the base case is wrong —
-    it stops too early so only the trunk appears. Can you find and fix the condition?
+    Il programma sotto cerca di disegnare un albero frattale, ma il caso base è sbagliato —
+    si ferma troppo presto così appare solo il tronco. Riesci a trovare e correggere la condizione?
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -195,27 +195,27 @@ draw_branch(80, 4)
 monty.hideturtle()`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes to the fractal tree code. Predict first, then run!
+Prova questi cambiamenti al codice dell'albero frattale. Prevedi prima, poi esegui!
 
-1. Change `draw_branch(80, 4)` to `draw_branch(80, 3)`.
-   **You'll know it worked when** the tree has fewer levels and looks simpler.
+1. Cambia `draw_branch(80, 4)` in `draw_branch(80, 3)`.
+   **Saprai che ha funzionato quando** l'albero ha meno livelli e sembra più semplice.
 
-2. Change the branch angle: replace both `25` values with `35`.
-   **You'll know it worked when** the tree is wider and flatter.
+2. Cambia l'angolo dei rami: sostituisci entrambi i valori `25` con `35`.
+   **Saprai che ha funzionato quando** l'albero è più largo e più piatto.
 
-3. Change `size * 0.65` to `size * 0.5` so branches shrink by half each time.
-   **You'll know it worked when** the tree is taller and more symmetrical.
+3. Cambia `size * 0.65` in `size * 0.5` così i rami si restringono della metà ogni volta.
+   **Saprai che ha funzionato quando** l'albero è più alto e più simmetrico.
 
-4. Change `draw_branch(80, 4)` to `draw_branch(80, 5)`.
-   **You'll know it worked when** the tree has denser, more intricate leaf clusters.
+4. Cambia `draw_branch(80, 4)` in `draw_branch(80, 5)`.
+   **Saprai che ha funzionato quando** l'albero ha grappoli di foglie più densi e intricati.
 
-5. Replace the `colors` list entries with `'darkgreen'` and `'forestgreen'` for the leaf levels.
-   **You'll know it worked when** the outer tips of the tree are a deeper green.
+5. Sostituisci le voci della lista `colors` con `'darkgreen'` e `'forestgreen'` per i livelli delle foglie.
+   **Saprai che ha funzionato quando** le punte esterne dell'albero sono di un verde più profondo.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You wrote a recursive function — one of the most powerful patterns in all of programming!
-    Real artists and scientists use exactly this technique to generate trees, snowflakes, and mountains.
-    Let's code it together!
+    Hai scritto una funzione ricorsiva — uno dei pattern più potenti in tutta la programmazione!
+    Artisti e scienziati veri usano esattamente questa tecnica per generare alberi, fiocchi di neve, e montagne.
+    Programmiamo insieme!

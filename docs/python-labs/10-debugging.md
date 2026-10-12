@@ -1,26 +1,26 @@
-# Reading Output and Error Messages
+# Leggere l'Output e i Messaggi di Errore
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Tell the difference between normal output and an error message just by its color
-- Read what an error message says to figure out where your program went wrong
-- Use `print()` checkpoints to narrow down exactly which line caused a crash
+- Distinguere l'output normale da un messaggio di errore solo dal colore
+- Leggere cosa dice un messaggio di errore per capire dove il tuo programma è andato storto
+- Usare dei checkpoint con `print()` per individuare esattamente quale riga ha causato un crash
 
-When your Python program runs, two kinds of text can appear in the output box.
-**Normal output** — anything printed with `print()` — appears in black.
-**Error messages** — produced when Python finds a problem — appear in red.
-The color makes it easy to see at a glance whether your program finished successfully or crashed.
+Quando il tuo programma Python gira, due tipi di testo possono apparire nella casella di output.
+L'**output normale** — qualsiasi cosa stampata con `print()` — appare in nero.
+I **messaggi di errore** — prodotti quando Python trova un problema — appaiono in rosso.
+Il colore rende facile vedere a colpo d'occhio se il tuo programma è terminato con successo o si è bloccato.
 
-!!! mascot-welcome "Welcome to This Lesson!"
+!!! mascot-welcome "Benvenuto a Questa Lezione!"
     ![Monty waving welcome](../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Every programmer sees error messages — even professional ones!
-    Learning to read them calmly is one of the most useful skills you'll build.
-    Let's code it together!
+    Ogni programmatore vede messaggi di errore — anche quelli professionisti!
+    Imparare a leggerli con calma è una delle abilità più utili che costruirai.
+    Programmiamo insieme!
 
-## Normal Output: Everything Goes Right
+## Output Normale: Tutto Va Bene
 
-When a program runs without any problems, every `print()` call produces a line of black text in the output box.
-Run the program below and look at the output — all black, no red.
+Quando un programma gira senza nessun problema, ogni chiamata a `print()` produce una riga di testo nero nella casella di output.
+Esegui il programma sotto e guarda l'output — tutto nero, niente rosso.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -54,19 +54,19 @@ print("Total:", total)
 print("Program finished successfully!")`);
 </script>
 
-All five lines print in black — the program ran from top to bottom without any problems.
+Tutte e cinque le righe si stampano in nero — il programma è girato dall'inizio alla fine senza nessun problema.
 
-## Error Output: Something Went Wrong
+## Output di Errore: Qualcosa È Andato Storto
 
-Now look at what happens when Python hits a problem partway through a program.
-The program below prints two lines successfully, then tries to use a variable called `high_score` that was never created.
-Python cannot continue, so it stops and reports the error.
+Ora guarda cosa succede quando Python incontra un problema a metà di un programma.
+Il programma sotto stampa due righe con successo, poi cerca di usare una variabile chiamata `high_score` che non è mai stata creata.
+Python non può continuare, quindi si ferma e segnala l'errore.
 
-!!! mascot-thinking "What Will the Output Look Like?"
+!!! mascot-thinking "Come Pensi che Sarà l'Output?"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Before you click Run, count the `print()` calls in the program below.
-    How many lines of output do you think will appear — and what color will each one be?
-    Make your prediction, then click Run!
+    Prima di cliccare Esegui, conta le chiamate a `print()` nel programma sotto.
+    Quante righe di output pensi che appariranno — e di che colore sarà ciascuna?
+    Fai la tua previsione, poi clicca Esegui!
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -94,44 +94,44 @@ print("High score:", high_score)
 print("This line never runs.")`);
 </script>
 
-Were you right?
-Two black lines appeared for the two successful `print()` calls.
-Then a red error message appeared — Python stopped when it hit the broken line.
-The last `print()` never ran at all because the program crashed before it got there.
+Avevi indovinato?
+Due righe nere sono apparse per le due chiamate a `print()` andate a buon fine.
+Poi un messaggio di errore rosso è apparso — Python si è fermato quando ha raggiunto la riga rotta.
+L'ultima `print()` non è mai girata perché il programma si è bloccato prima di arrivarci.
 
-## How to Read a NameError
+## Come Leggere un NameError
 
-The red message says something like:
+Il messaggio rosso dice qualcosa come:
 
 ```
 NameError: name 'high_score' is not defined on line 8
 ```
 
-Here is what each part means:
+Ecco cosa significa ogni parte:
 
-| Part | Meaning |
+| Parte | Significato |
 |------|---------|
-| `NameError` | The type of error — Python found a name it doesn't recognise |
-| `'high_score'` | The exact variable name Python couldn't find |
-| `on line 8` | The line number where the crash happened |
+| `NameError` | Il tipo di errore — Python ha trovato un nome che non riconosce |
+| `'high_score'` | Il nome esatto della variabile che Python non è riuscito a trovare |
+| `on line 8` | Il numero della riga dove è avvenuto il crash |
 
-To fix this error you have two choices:
+Per correggere questo errore hai due scelte:
 
-1. **Create the variable before you use it** — add `high_score = 100` somewhere above line 8.
-2. **Remove or fix the broken line** — if `high_score` shouldn't be there, delete it.
+1. **Crea la variabile prima di usarla** — aggiungi `high_score = 100` da qualche parte sopra la riga 8.
+2. **Rimuovi o correggi la riga rotta** — se `high_score` non dovrebbe esserci, eliminala.
 
-!!! mascot-tip "The Black Lines Are Your Clues"
+!!! mascot-tip "Le Righe Nere Sono i Tuoi Indizi"
     ![Monty with a tip](../img/mascot/tip.png){ class="mascot-admonition-img" }
-    When a program crashes, look at the last black line in the output — that tells you the most recent thing that worked. The error happened somewhere between that line and the next `print()` you expected. Use this as your starting point when hunting for the bug!
+    Quando un programma si blocca, guarda l'ultima riga nera nell'output — quella ti dice la cosa più recente che ha funzionato. L'errore è avvenuto da qualche parte tra quella riga e la `print()` successiva che ti aspettavi. Usa questo come punto di partenza quando cerchi il bug!
 
-## Using Print Checkpoints to Find Bugs
+## Usare i Checkpoint con Print per Trovare i Bug
 
-Professional programmers often add temporary `print()` calls to trace exactly where a program stops.
-Each one says "I made it this far."
-When you see the last black checkpoint and then a red error, you know the crash happened between those two points.
+I programmatori professionisti spesso aggiungono chiamate temporanee a `print()` per tracciare esattamente dove un programma si ferma.
+Ognuna dice "sono arrivato fin qui."
+Quando vedi l'ultimo checkpoint nero e poi un errore rosso, sai che il crash è avvenuto tra quei due punti.
 
-Here is the same broken program with checkpoints added.
-Notice how the checkpoints help you pinpoint the problem line more precisely:
+Ecco lo stesso programma rotto con i checkpoint aggiunti.
+Nota come i checkpoint ti aiutano a individuare la riga del problema con più precisione:
 
 <div class="cm-lab cm-text-only">
   <div class="cm-editor-wrap">
@@ -162,33 +162,33 @@ print("Checkpoint 3: total calculated:", total)
 print("Checkpoint 4: all done!")`);
 </script>
 
-All four checkpoints print in black — the program is healthy.
-Now remove the `#` from in front of `print("High score:", high_score)` and run it again.
-Checkpoint 3 will be the last black line, and the red error will appear right after it —
-telling you the crash happened between Checkpoint 3 and Checkpoint 4.
+Tutti e quattro i checkpoint si stampano in nero — il programma è sano.
+Ora rimuovi il `#` davanti a `print("High score:", high_score)` ed eseguilo di nuovo.
+Il Checkpoint 3 sarà l'ultima riga nera, e l'errore rosso apparirà subito dopo —
+dicendoti che il crash è avvenuto tra il Checkpoint 3 e il Checkpoint 4.
 
-!!! mascot-warning "Red Doesn't Mean Failure — It Means Information"
+!!! mascot-warning "Il Rosso Non Significa Fallimento — Significa Informazione"
     ![Monty warning](../img/mascot/warning.png){ class="mascot-admonition-img" }
-    A red error message is not a sign that you are bad at coding. It is Python telling you exactly what went wrong and where. Read it carefully — it almost always contains the line number and the name of whatever Python couldn't find. The message is your friend!
+    Un messaggio di errore rosso non è un segno che sei scarso nella programmazione. È Python che ti dice esattamente cosa è andato storto e dove. Leggilo attentamente — contiene quasi sempre il numero di riga e il nome di qualsiasi cosa Python non sia riuscito a trovare. Il messaggio è tuo amico!
 
-## Experiments
+## Esperimenti
 
-Try these changes. For each one, predict the output color pattern before you run!
+Prova questi cambiamenti. Per ciascuno, prevedi il pattern di colore dell'output prima di eseguire!
 
-1. In Lab 2, add `high_score = 500` on a new line above `print("High score:", high_score)`.
-   **You'll know it worked when** all output is black and "High score: 500" appears.
+1. Nel Laboratorio 2, aggiungi `high_score = 500` su una nuova riga sopra `print("High score:", high_score)`.
+   **Saprai che ha funzionato quando** tutto l'output è nero e "High score: 500" appare.
 
-2. In Lab 2, change `score = 42` to `score = "forty-two"` (a word instead of a number).
-   Then change `print("Score:", score)` to `print("Score + 1:", score + 1)`.
-   **You'll know it worked when** you see a red `TypeError` — Python can't add a word and a number.
+2. Nel Laboratorio 2, cambia `score = 42` in `score = "forty-two"` (una parola invece di un numero).
+   Poi cambia `print("Score:", score)` in `print("Score + 1:", score + 1)`.
+   **Saprai che ha funzionato quando** vedi un `TypeError` rosso — Python non può addizionare una parola e un numero.
 
-3. In Lab 3, remove the `#` from the broken line and run it.
-   Count the black checkpoint lines in the output.
-   **You'll know it worked when** you can identify which checkpoint was last and explain why Checkpoint 4 never appeared.
+3. Nel Laboratorio 3, rimuovi il `#` dalla riga rotta ed eseguila.
+   Conta le righe di checkpoint nere nell'output.
+   **Saprai che ha funzionato quando** riesci a identificare quale checkpoint è stato l'ultimo e spiegare perché il Checkpoint 4 non è mai apparso.
 
-4. In Lab 1, rename `total` to `final_total` in the calculation but leave `print("Total:", total)` unchanged.
-   **You'll know it worked when** a red `NameError` for `total` appears after the first three black lines.
+4. Nel Laboratorio 1, rinomina `total` in `final_total` nel calcolo ma lascia `print("Total:", total)` invariato.
+   **Saprai che ha funzionato quando** un `NameError` rosso per `total` appare dopo le prime tre righe nere.
 
-!!! mascot-celebration "You Can Read Error Messages!"
+!!! mascot-celebration "Sai Leggere i Messaggi di Errore!"
     ![Monty celebrating](../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Black means success, red means "look here." You now know how to read both — and how to use print checkpoints to hunt down a bug. That's real debugging skill! Let's code it together!
+    Nero significa successo, rosso significa "guarda qui." Ora sai come leggere entrambi — e come usare i checkpoint con print per dare la caccia a un bug. Questa è vera abilità di debugging! Programmiamo insieme!
