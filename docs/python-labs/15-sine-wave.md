@@ -1,27 +1,27 @@
-# Plotting a Sine Wave
+# Tracciare un'Onda Sinusoidale
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Import the `math` library and use `math.sin()` to calculate sine values
-- Use a `for` loop with `goto()` to plot a mathematical function across the canvas
-- Adjust the amplitude and color of the wave by changing two variables
+- Importare la libreria `math` e usare `math.sin()` per calcolare valori seno
+- Usare un ciclo `for` con `goto()` per tracciare una funzione matematica attraverso il canvas
+- Modificare l'ampiezza e il colore dell'onda cambiando due variabili
 
-Turtle graphics aren't just for shapes — you can use them to **plot math functions**. The turtle visits hundreds of points along the x-axis, calculates the y-value for each, and connects them with `goto()`. The result looks like a graph, drawn live.
+Le grafiche turtle non servono solo per le forme — puoi usarle per **tracciare funzioni matematiche**. La tartaruga visita centinaia di punti lungo l'asse x, calcola il valore y per ciascuno, e li collega con `goto()`. Il risultato sembra un grafico, disegnato dal vivo.
 
-!!! mascot-welcome "Welcome to This Lesson!"
+!!! mascot-welcome "Benvenuto a Questa Lezione!"
     ![Monty waving welcome](../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Did you know Python can draw math? Today you'll plot a sine wave — the shape of ocean waves,
-    sound, and light — right in the browser. Let's code it together!
+    Sapevi che Python può disegnare la matematica? Oggi traccerai un'onda sinusoidale — la forma delle onde dell'oceano,
+    del suono, e della luce — direttamente nel browser. Programmiamo insieme!
 
-## The Sine Function
+## La Funzione Seno
 
-The **sine function** `math.sin(angle)` takes an angle in **radians** and returns a value between -1 and 1. A full sine wave goes from 0 up to 1, back down through 0 to -1, and back up to 0 — a smooth S-shaped curve.
+La **funzione seno** `math.sin(angolo)` prende un angolo in **radianti** e restituisce un valore tra -1 e 1. Un'onda sinusoidale completa va da 0 fino a 1, torna giù attraverso 0 fino a -1, e torna su a 0 — una curva lisciata a forma di S.
 
-Two steps to plot it with turtle:
-1. Loop `x` from -180 to 180
-2. Convert `x` to radians with `math.radians(x)`, then call `math.sin()` to get `y`
-3. Multiply `y` by an **amplitude** (like 80) to scale it up to canvas size
-4. Use `goto(x, y * amplitude)` to move the turtle
+Due passi per tracciarla con turtle:
+1. Scorri `x` da -180 a 180
+2. Converti `x` in radianti con `math.radians(x)`, poi chiama `math.sin()` per ottenere `y`
+3. Moltiplica `y` per un'**ampiezza** (come 80) per scalarla alla dimensione del canvas
+4. Usa `goto(x, y * amplitude)` per muovere la tartaruga
 
 ```python
 import math
@@ -30,7 +30,7 @@ for x in range(-180, 180):
     monty.goto(x, y * 80)
 ```
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -55,16 +55,16 @@ for x in range(-180, 180):
 monty.hideturtle()
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The turtle will visit 360 points from x = -180 to x = 179 and draw a line through all of them.
-    What shape do you expect to see? Will it look smooth or jagged?
-    Make your guess — then click Run!
+    La tartaruga visiterà 360 punti da x = -180 a x = 179 e disegnerà una linea attraverso tutti.
+    Che forma ti aspetti di vedere? Sembrerà liscia o frastagliata?
+    Fai la tua previsione — poi clicca Esegui!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see the result right on this page.
-No account needed — everything runs in your browser.
+Modifica il codice sotto e clicca **Esegui** per vedere il risultato direttamente su questa pagina.
+Nessun account necessario — tutto gira nel tuo browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -108,38 +108,38 @@ for x in range(-180, 180):
 monty.hideturtle()`);
 </script>
 
-Were you right? A smooth S-curve stretching across the canvas — one full cycle of the sine function, scaled to 80 pixels tall.
+Avevi indovinato? Una curva a S liscia distesa attraverso il canvas — un ciclo completo della funzione seno, scalata a 80 pixel di altezza.
 
-## How It Works
+## Come Funziona
 
-`math.radians(x)` converts degrees to radians (the unit `math.sin()` expects). The returned value is between -1 and 1, so multiplying by `amplitude` (80) stretches it to ±80 pixels — a visible wave.
+`math.radians(x)` converte i gradi in radianti (l'unità che `math.sin()` si aspetta). Il valore restituito è tra -1 e 1, quindi moltiplicarlo per `amplitude` (80) lo allunga a ±80 pixel — un'onda visibile.
 
-Starting with `penup()` and `goto(-180, 0)` positions the turtle at the left edge of the wave without drawing a line there first. Then `pendown()` starts the wave at exactly x = -180.
+Iniziare con `penup()` e `goto(-180, 0)` posiziona la tartaruga sul bordo sinistro dell'onda senza disegnare prima una linea lì. Poi `pendown()` fa iniziare l'onda esattamente a x = -180.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `import math` | Loads the math library (provides `sin`, `cos`, `radians`, etc.) |
-| `amplitude = 80` | Controls how tall the wave is — larger = taller |
-| `math.radians(x)` | Converts degrees to radians (required by `math.sin`) |
-| `math.sin(...)` | Returns a value between -1 and 1 for that angle |
-| `y * amplitude` | Scales the value to canvas coordinates |
-| `monty.goto(x, y * amplitude)` | Moves the turtle to the next point on the curve |
+| `import math` | Carica la libreria matematica (fornisce `sin`, `cos`, `radians`, ecc.) |
+| `amplitude = 80` | Controlla quanto è alta l'onda — più grande = più alta |
+| `math.radians(x)` | Converte i gradi in radianti (richiesto da `math.sin`) |
+| `math.sin(...)` | Restituisce un valore tra -1 e 1 per quell'angolo |
+| `y * amplitude` | Scala il valore alle coordinate del canvas |
+| `monty.goto(x, y * amplitude)` | Muove la tartaruga al punto successivo sulla curva |
 
-!!! mascot-tip "Try math.cos() Too"
+!!! mascot-tip "Prova Anche math.cos()"
     ![Monty with a tip](../img/mascot/tip.png){ class="mascot-admonition-img" }
-    Replace `math.sin` with `math.cos` and see how the wave shifts.
-    The cosine wave is identical in shape to sine but shifted left by 90 degrees —
-    so instead of starting at 0 it starts at its peak!
+    Sostituisci `math.sin` con `math.cos` e guarda come si sposta l'onda.
+    L'onda coseno è identica in forma al seno ma spostata a sinistra di 90 gradi —
+    quindi invece di iniziare a 0 inizia al suo picco!
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Draw Two Waves"
+!!! mascot-thinking "Il Tuo Turno — Disegna Due Onde"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below draws one sine wave. Add **four lines** after the first loop ends to:
-    lift the pen (`penup`), go back to `(-180, 0)`, lower the pen (`pendown`),
-    and draw a second loop in `'red'` using `math.cos` instead of `math.sin`.
+    Il programma sotto disegna un'onda sinusoidale. Aggiungi **quattro righe** dopo che finisce il primo ciclo per:
+    alzare la penna (`penup`), tornare a `(-180, 0)`, abbassare la penna (`pendown`),
+    e disegnare un secondo ciclo in `'red'` usando `math.cos` invece di `math.sin`.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -177,27 +177,27 @@ for x in range(-180, 180):
 monty.hideturtle()`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes to the sine wave code. Predict first, then run!
+Prova questi cambiamenti al codice dell'onda sinusoidale. Prevedi prima, poi esegui!
 
-1. Change `amplitude = 80` to `amplitude = 160`.
-   **You'll know it worked when** the wave is twice as tall and the peaks nearly reach the top of the canvas.
+1. Cambia `amplitude = 80` in `amplitude = 160`.
+   **Saprai che ha funzionato quando** l'onda è il doppio alta e i picchi arrivano quasi alla cima del canvas.
 
-2. Change `amplitude = 80` to `amplitude = 30`.
-   **You'll know it worked when** the wave is much flatter — almost a straight line.
+2. Cambia `amplitude = 80` in `amplitude = 30`.
+   **Saprai che ha funzionato quando** l'onda è molto più piatta — quasi una linea retta.
 
-3. Replace `math.sin` with `math.cos`.
-   **You'll know it worked when** the wave starts at its peak (y = amplitude) instead of at zero.
+3. Sostituisci `math.sin` con `math.cos`.
+   **Saprai che ha funzionato quando** l'onda inizia al suo picco (y = amplitude) invece che a zero.
 
-4. Change `range(-180, 180)` to `range(-360, 360, 2)` (step by 2).
-   **You'll know it worked when** you see two full cycles of the wave across the canvas.
+4. Cambia `range(-180, 180)` in `range(-360, 360, 2)` (passo di 2).
+   **Saprai che ha funzionato quando** vedi due cicli completi dell'onda attraverso il canvas.
 
-5. Multiply the radians by `2` before passing to `math.sin`: `math.sin(math.radians(x) * 2)`.
-   **You'll know it worked when** the wave completes two full cycles in the same x range.
+5. Moltiplica i radianti per `2` prima di passarli a `math.sin`: `math.sin(math.radians(x) * 2)`.
+   **Saprai che ha funzionato quando** l'onda completa due cicli completi nello stesso intervallo di x.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You plotted a mathematical function with turtle — you're writing the kind of code scientists
-    and engineers use to visualize data! Try combining sin and cos in the same loop for interesting patterns.
-    Let's code it together!
+    Hai tracciato una funzione matematica con turtle — stai scrivendo lo stesso tipo di codice che scienziati
+    e ingegneri usano per visualizzare dati! Prova a combinare sin e cos nello stesso ciclo per pattern interessanti.
+    Programmiamo insieme!

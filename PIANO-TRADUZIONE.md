@@ -107,6 +107,8 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
   prima del commit)
 - `10-debugging.md`, `11-user-input.md`, `12-fractal-tree.md` (quarto batch — titoli
   allineati alla nav: "Leggere gli errori", "Input dell'utente", "Albero frattale")
+- `14-hex-colors.md`, `15-sine-wave.md`, `17-mouse-clicks.md` (quinto batch — titoli
+  allineati alla nav: "Colori esadecimali", "Onda sinusoidale", "Click del mouse")
 
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
@@ -232,13 +234,14 @@ cuore didattico del libro.
 `02-square.md`, `03-variables.md`, `04-loops.md`, `04a-stop-sign.md`, `05-conditionals.md`,
 `06-functions-and-flowers.md`, `07-function-parameters.md`, `08-random-circles.md`,
 `08-color-lists.md`, `08b-random-stars.md`, `10-debugging.md`, `11-user-input.md`,
-`12-fractal-tree.md` (15 di ~19 file).
+`12-fractal-tree.md`, `14-hex-colors.md`, `15-sine-wave.md`, `17-mouse-clicks.md`
+(18 di ~19 file).
 
-Prossimo: continuare la Fase 3 con `14-hex-colors.md`, poi `15-sine-wave.md`,
-`17-mouse-clicks.md`, `text-only-example.md`. Dopo la Fase 3: Fase 4 (Turtle Graphics
-Gallery, ~102 file, candidato per traduzione semi-automatica), poi Fasi 5-9 (MicroSims,
-Teacher's Guide, Jupyter/Advanced, Learning Graph, Trinket Labs — quest'ultima di
-priorità minima/da valutare se tradurre affatto, vedi sezione 3).
+Prossimo: continuare la Fase 3 con `text-only-example.md` (ultimo file, non ancora
+letto/verificato). Dopo la Fase 3: Fase 4 (Turtle Graphics Gallery, ~102 file, candidato
+per traduzione semi-automatica), poi Fasi 5-9 (MicroSims, Teacher's Guide, Jupyter/
+Advanced, Learning Graph, Trinket Labs — quest'ultima di priorità minima/da valutare se
+tradurre affatto, vedi sezione 3).
 
 Note di qualità accumulate durante la Fase 2, da continuare ad applicare nelle fasi
 successive: (1) controllare sempre con `grep '!\[.*\]('` (o pattern equivalente per il

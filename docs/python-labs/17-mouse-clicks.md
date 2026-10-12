@@ -1,21 +1,21 @@
-# Responding to Mouse Clicks
+# Rispondere ai Click del Mouse
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Register a function as a click handler using `screen.onscreenclick()`
-- Use the `x` and `y` arguments your handler receives to draw at the click location
-- Build a program that responds to the user in real time
+- Registrare una funzione come gestore di click usando `screen.onscreenclick()`
+- Usare gli argomenti `x` e `y` che il tuo gestore riceve per disegnare nella posizione del click
+- Costruire un programma che risponde all'utente in tempo reale
 
-Every program so far runs from top to bottom and then stops. **Event-driven programs** are different — they set up a handler function and then *wait*. When the user clicks the canvas, the handler is called with the exact coordinates of the click. Your code then decides what to draw there.
+Ogni programma fin qui gira dall'inizio alla fine e poi si ferma. I **programmi guidati da eventi** sono diversi — impostano una funzione gestore e poi *aspettano*. Quando l'utente clicca sul canvas, il gestore viene chiamato con le coordinate esatte del click. Il tuo codice poi decide cosa disegnare lì.
 
-!!! mascot-welcome "Welcome to This Lesson!"
+!!! mascot-welcome "Benvenuto a Questa Lezione!"
     ![Monty waving welcome](../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Click anywhere on the canvas and a shape appears — that's an event-driven program!
-    Today you'll make Monty respond to wherever you click. Let's code it together!
+    Clicca ovunque sul canvas e appare una forma — questo è un programma guidato da eventi!
+    Oggi farai rispondere Monty a dove clicchi. Programmiamo insieme!
 
-## Event Handlers
+## Gestori di Eventi
 
-An **event handler** is a function you write and then *register* with the screen. Python calls it automatically whenever the event occurs — you don't call it yourself:
+Un **gestore di eventi** è una funzione che scrivi e poi *registri* con lo schermo. Python la chiama automaticamente ogni volta che l'evento accade — non la chiami tu stesso:
 
 ```python
 def on_click(x, y):
@@ -27,9 +27,9 @@ screen = turtle.Screen()
 screen.onscreenclick(on_click)
 ```
 
-`screen.onscreenclick(on_click)` tells Python: "when someone clicks the canvas, call `on_click` with the click coordinates." Your function receives `x` and `y` automatically.
+`screen.onscreenclick(on_click)` dice a Python: "quando qualcuno clicca sul canvas, chiama `on_click` con le coordinate del click." La tua funzione riceve `x` e `y` automaticamente.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -60,16 +60,16 @@ def on_click(x, y):
 screen.onscreenclick(on_click)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    After you click Run, the canvas waits for your clicks.
-    Each click draws a circle at that position. What do you think happens to the color each time you click?
-    Make your guess — then click Run and try clicking the canvas!
+    Dopo aver cliccato Esegui, il canvas aspetta i tuoi click.
+    Ogni click disegna un cerchio in quella posizione. Cosa pensi succeda al colore ogni volta che clicchi?
+    Fai la tua previsione — poi clicca Esegui e prova a cliccare sul canvas!
 
-## Try It Now
+## Provalo Ora
 
-Click **Run**, then click anywhere on the drawing canvas to place a circle there.
-No account needed — everything runs in your browser.
+Clicca **Esegui**, poi clicca ovunque sul canvas di disegno per posizionare un cerchio lì.
+Nessun account necessario — tutto gira nel tuo browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -118,36 +118,36 @@ def on_click(x, y):
 screen.onscreenclick(on_click)`);
 </script>
 
-Were you right? Each click draws a filled circle at exactly that spot, cycling through red, orange, green, blue, purple, and pink — the color advances with every click.
+Avevi indovinato? Ogni click disegna un cerchio riempito esattamente in quel punto, scorrendo attraverso rosso, arancione, verde, blu, viola, e rosa — il colore avanza con ogni click.
 
-## How It Works
+## Come Funziona
 
-`screen.onscreenclick(on_click)` registers your function. Each time the canvas is clicked, Python calls `on_click(x, y)` with the pixel coordinates of the click. Your function then goes to that location and draws.
+`screen.onscreenclick(on_click)` registra la tua funzione. Ogni volta che il canvas viene cliccato, Python chiama `on_click(x, y)` con le coordinate in pixel del click. La tua funzione poi va a quella posizione e disegna.
 
-`click_count` is stored as a **list with one item** (`[0]`) rather than a plain variable. This is a Python scoping trick: plain variables inside a nested function can't be updated directly — but list items can. `click_count[0] += 1` increments the counter safely.
+`click_count` è memorizzato come una **lista con un elemento** (`[0]`) invece che una variabile semplice. Questo è un trucco di scoping di Python: le variabili semplici dentro una funzione annidata non possono essere aggiornate direttamente — ma gli elementi di una lista sì. `click_count[0] += 1` incrementa il contatore in modo sicuro.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `screen = turtle.Screen()` | Gets a handle to the drawing window |
-| `screen.onscreenclick(on_click)` | Registers `on_click` as the function to call on each canvas click |
-| `def on_click(x, y):` | The handler — `x` and `y` are provided automatically by the screen |
-| `click_count = [0]` | A counter stored in a list so it can be updated inside the handler |
-| `click_count[0] % len(colors)` | Cycles through the color list with each click |
+| `screen = turtle.Screen()` | Ottiene un riferimento alla finestra di disegno |
+| `screen.onscreenclick(on_click)` | Registra `on_click` come la funzione da chiamare a ogni click sul canvas |
+| `def on_click(x, y):` | Il gestore — `x` e `y` sono forniti automaticamente dallo schermo |
+| `click_count = [0]` | Un contatore memorizzato in una lista così può essere aggiornato dentro il gestore |
+| `click_count[0] % len(colors)` | Scorre la lista dei colori a ogni click |
 
-!!! mascot-tip "The x, y Come Free"
+!!! mascot-tip "La x, y Arrivano Gratis"
     ![Monty with a tip](../img/mascot/tip.png){ class="mascot-admonition-img" }
-    You never call `on_click()` yourself — the screen calls it for you and fills in `x` and `y`
-    automatically. Your job is just to decide what to draw at those coordinates!
+    Non chiami mai `on_click()` tu stesso — lo schermo la chiama per te e compila `x` e `y`
+    automaticamente. Il tuo compito è solo decidere cosa disegnare in quelle coordinate!
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Draw Stars Instead of Circles"
+!!! mascot-thinking "Il Tuo Turno — Disegna Stelle Invece di Cerchi"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below draws a circle on every click. Change the drawing code inside `on_click`
-    so it draws a **five-pointed star** at the click position instead.
-    Hint: a star uses `for i in range(5): forward(30); right(144)`.
+    Il programma sotto disegna un cerchio a ogni click. Cambia il codice di disegno dentro `on_click`
+    così disegna una **stella a cinque punte** nella posizione del click invece.
+    Suggerimento: una stella usa `for i in range(5): forward(30); right(144)`.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -191,27 +191,27 @@ def on_click(x, y):
 screen.onscreenclick(on_click)`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes to the click-to-draw code. Predict first, then test!
+Prova questi cambiamenti al codice del click-per-disegnare. Prevedi prima, poi prova!
 
-1. Change `monty.circle(20)` to `monty.circle(random.randint(10, 40))` (add `import random` at the top).
-   **You'll know it worked when** each click produces a circle of a random size.
+1. Cambia `monty.circle(20)` in `monty.circle(random.randint(10, 40))` (aggiungi `import random` in cima).
+   **Saprai che ha funzionato quando** ogni click produce un cerchio di dimensione casuale.
 
-2. Change `screen.bgcolor('lightyellow')` to `screen.bgcolor('black')` and add bright colors to the list.
-   **You'll know it worked when** the circles look like colorful bubbles on a dark background.
+2. Cambia `screen.bgcolor('lightyellow')` in `screen.bgcolor('black')` e aggiungi colori brillanti alla lista.
+   **Saprai che ha funzionato quando** i cerchi sembrano bolle colorate su uno sfondo scuro.
 
-3. After `on_click` runs, add `monty.write(str(click_count[0]), font=("Arial", 12, "normal"))` to number each circle.
-   **You'll know it worked when** a number appears next to each circle showing the order it was clicked.
+3. Dopo che `on_click` gira, aggiungi `monty.write(str(click_count[0]), font=("Arial", 12, "normal"))` per numerare ogni cerchio.
+   **Saprai che ha funzionato quando** un numero appare vicino a ogni cerchio mostrando l'ordine in cui è stato cliccato.
 
-4. Change `monty.circle(20)` to a small polygon: `for i in range(6): monty.forward(20); monty.right(60)`.
-   **You'll know it worked when** clicking places hexagons instead of circles.
+4. Cambia `monty.circle(20)` in un piccolo poligono: `for i in range(6): monty.forward(20); monty.right(60)`.
+   **Saprai che ha funzionato quando** cliccare posiziona esagoni invece di cerchi.
 
-5. Add `if click_count[0] >= 5: return` at the very start of `on_click` to limit clicks to 5.
-   **You'll know it worked when** clicks after the fifth one have no effect.
+5. Aggiungi `if click_count[0] >= 5: return` all'inizio di `on_click` per limitare i click a 5.
+   **Saprai che ha funzionato quando** i click dopo il quinto non hanno nessun effetto.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've written an event-driven program — the same pattern used in every button, menu, and
-    game in the world. Every click, tap, and keypress works exactly like this under the hood!
-    Let's code it together!
+    Hai scritto un programma guidato da eventi — lo stesso pattern usato in ogni bottone, menu, e
+    gioco nel mondo. Ogni click, tap, e pressione di tasto funziona esattamente così sotto il cofano!
+    Programmiamo insieme!

@@ -1,47 +1,47 @@
-# Hex Colors and Styled Text
+# Colori Esadecimali e Testo Stilizzato
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Set a turtle color using a **hex color code** like `'#FF5733'`
-- Use `turtle.Screen().bgcolor()` to paint the canvas background
-- Write styled text on the canvas with a specific font, size, and weight
+- Impostare il colore di una tartaruga usando un **codice colore esadecimale** come `'#FF5733'`
+- Usare `turtle.Screen().bgcolor()` per colorare lo sfondo del canvas
+- Scrivere testo stilizzato sul canvas con un carattere, dimensione, e peso specifici
 
-Color names like `'red'` and `'blue'` are convenient, but they only give you a few dozen choices. **Hex color codes** give you access to more than 16 million colors — every shade imaginable — using a six-digit code that looks like `#FF5733`.
+I nomi di colore come `'red'` e `'blue'` sono comodi, ma ti danno solo poche dozzine di scelte. I **codici colore esadecimali** ti danno accesso a più di 16 milioni di colori — ogni tonalità immaginabile — usando un codice a sei cifre che appare come `#FF5733`.
 
-!!! mascot-welcome "Welcome to This Lesson!"
+!!! mascot-welcome "Benvenuto a Questa Lezione!"
     ![Monty waving welcome](../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Ready to paint with millions of colors? Today you'll learn the color codes that designers
-    and web developers use every day — and draw a colorful greeting card with styled text!
-    Let's code it together!
+    Pronto a dipingere con milioni di colori? Oggi imparerai i codici colore che designer
+    e sviluppatori web usano ogni giorno — e disegnerai un biglietto di auguri colorato con testo stilizzato!
+    Programmiamo insieme!
 
-## Hex Color Codes
+## Codici Colore Esadecimali
 
-A **hex color code** starts with `#` followed by six characters — each a digit from 0–9 or a letter from A–F. The six characters come in three pairs, controlling how much **red**, **green**, and **blue** light to mix:
+Un **codice colore esadecimale** inizia con `#` seguito da sei caratteri — ciascuno una cifra da 0–9 o una lettera da A–F. I sei caratteri sono in tre coppie, che controllano quanta luce **rossa**, **verde**, e **blu** mescolare:
 
 ```
 # RR GG BB
   FF 57 33   →  lots of red, some green, a little blue  →  a warm orange-red
 ```
 
-- `#FF0000` — pure red (full red, no green, no blue)
-- `#00FF00` — pure green
-- `#0000FF` — pure blue
-- `#FFFFFF` — white (all three at maximum)
-- `#000000` — black (all three at zero)
+- `#FF0000` — rosso puro (rosso al massimo, niente verde, niente blu)
+- `#00FF00` — verde puro
+- `#0000FF` — blu puro
+- `#FFFFFF` — bianco (tutti e tre al massimo)
+- `#000000` — nero (tutti e tre a zero)
 
-You can use a tool like [coolors.co](https://coolors.co) or Google "hex color picker" to find any color you want.
+Puoi usare uno strumento come [coolors.co](https://coolors.co) o cercare su Google "hex color picker" per trovare qualsiasi colore desideri.
 
-## Styled Text
+## Testo Stilizzato
 
-`monty.write()` draws text at the turtle's current position. Add a `font` argument to control the typeface, size, and style:
+`monty.write()` disegna del testo nella posizione attuale della tartaruga. Aggiungi un argomento `font` per controllare il carattere, la dimensione, e lo stile:
 
 ```python
 monty.write("Hello!", font=("Arial", 40, "bold"))
 ```
 
-The three values in `font` are: **font name**, **size in points**, and **style** (`"normal"`, `"bold"`, or `"italic"`).
+I tre valori in `font` sono: **nome del carattere**, **dimensione in punti**, e **stile** (`"normal"`, `"bold"`, o `"italic"`).
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -67,16 +67,16 @@ monty.color('#00C9A7')
 monty.write("Let's code!", font=("Arial", 24, "italic"))
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The background is `'#1A1A2E'` — a very dark blue. The text colors are bright hex codes.
-    What do you think the contrast will look like? Will the text be easy to read?
-    Make your guess — then click Run!
+    Lo sfondo è `'#1A1A2E'` — un blu molto scuro. I colori del testo sono codici esadecimali brillanti.
+    Come pensi che apparirà il contrasto? Il testo sarà facile da leggere?
+    Fai la tua previsione — poi clicca Esegui!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see the result right on this page.
-No account needed — everything runs in your browser.
+Modifica il codice sotto e clicca **Esegui** per vedere il risultato direttamente su questa pagina.
+Nessun account necessario — tutto gira nel tuo browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -121,36 +121,36 @@ monty.color('#00C9A7')
 monty.write("Let's code!", font=("Arial", 24, "italic"))`);
 </script>
 
-Were you right? Dark navy background with vivid red, orange, and teal text — the contrast makes the colors pop in a way that named colors rarely achieve.
+Avevi indovinato? Sfondo blu notte scuro con testo rosso, arancione, e verde acqua vivaci — il contrasto fa risaltare i colori in un modo che i colori con nome raramente raggiungono.
 
-## How It Works
+## Come Funziona
 
-`turtle.Screen()` gives you a handle to the drawing window itself. `bgcolor()` paints the background before any turtle drawing happens — so everything you draw appears on top of it.
+`turtle.Screen()` ti dà un riferimento alla finestra di disegno stessa. `bgcolor()` colora lo sfondo prima che avvenga qualsiasi disegno della tartaruga — così tutto ciò che disegni appare sopra di esso.
 
-`monty.hideturtle()` removes the cursor icon entirely so the text stands alone without a turtle shape in the corner.
+`monty.hideturtle()` rimuove completamente l'icona del cursore così il testo resta da solo senza una forma di tartaruga nell'angolo.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `turtle.Screen()` | Gets a handle to the drawing window |
-| `screen.bgcolor('#1A1A2E')` | Paints the canvas background with a hex color |
-| `monty.hideturtle()` | Hides the turtle icon — useful for text-only drawings |
-| `monty.goto(-120, 60)` | Moves the text cursor to that position |
-| `monty.write("Hello,", font=("Arial", 48, "bold"))` | Writes text in 48-point bold Arial |
+| `turtle.Screen()` | Ottiene un riferimento alla finestra di disegno |
+| `screen.bgcolor('#1A1A2E')` | Colora lo sfondo del canvas con un colore esadecimale |
+| `monty.hideturtle()` | Nasconde l'icona della tartaruga — utile per disegni di solo testo |
+| `monty.goto(-120, 60)` | Muove il cursore del testo a quella posizione |
+| `monty.write("Hello,", font=("Arial", 48, "bold"))` | Scrive testo in Arial grassetto da 48 punti |
 
-!!! mascot-tip "Finding the Perfect Color"
+!!! mascot-tip "Trovare il Colore Perfetto"
     ![Monty with a tip](../img/mascot/tip.png){ class="mascot-admonition-img" }
-    Search Google for **"hex color picker"** and you'll see a color wheel — click any color and copy
-    the `#RRGGBB` code it shows. Paste it directly into your Python string!
+    Cerca su Google **"hex color picker"** e vedrai una ruota dei colori — clicca qualsiasi colore e copia
+    il codice `#RRGGBB` che mostra. Incollalo direttamente nella tua stringa Python!
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Design Your Own Card"
+!!! mascot-thinking "Il Tuo Turno — Progetta il Tuo Biglietto"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below sets up a background but writes only one line of text.
-    Add **two more** `write()` calls with different hex colors and positions to complete
-    a three-line greeting card. Choose your own colors using a hex color picker!
+    Il programma sotto imposta uno sfondo ma scrive solo una riga di testo.
+    Aggiungi **altre due** chiamate a `write()` con colori esadecimali e posizioni diverse per completare
+    un biglietto di auguri a tre righe. Scegli i tuoi colori usando un selettore di colori esadecimali!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -183,27 +183,27 @@ monty.write("Hello, Coder!", font=("Arial", 36, "bold"))
 # Add two more write() lines here with different colors and positions`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes to the greeting card code. Predict first, then run!
+Prova questi cambiamenti al codice del biglietto di auguri. Prevedi prima, poi esegui!
 
-1. Change `screen.bgcolor('#1A1A2E')` to `screen.bgcolor('#FFFFFF')` (white).
-   **You'll know it worked when** the background turns white — now check if the text is still readable.
+1. Cambia `screen.bgcolor('#1A1A2E')` in `screen.bgcolor('#FFFFFF')` (bianco).
+   **Saprai che ha funzionato quando** lo sfondo diventa bianco — ora controlla se il testo è ancora leggibile.
 
-2. Change one font style from `"bold"` to `"italic"`.
-   **You'll know it worked when** that word appears slanted instead of thick.
+2. Cambia uno stile di carattere da `"bold"` a `"italic"`.
+   **Saprai che ha funzionato quando** quella parola appare inclinata invece che spessa.
 
-3. Change a font size from `48` to `72`.
-   **You'll know it worked when** the text is noticeably larger and may extend off-screen.
+3. Cambia una dimensione di carattere da `48` a `72`.
+   **Saprai che ha funzionato quando** il testo è notevolmente più grande e potrebbe estendersi fuori dallo schermo.
 
-4. Use `'Times New Roman'` as the font name for one line.
-   **You'll know it worked when** that line has a serif typeface instead of the default sans-serif.
+4. Usa `'Times New Roman'` come nome del carattere per una riga.
+   **Saprai che ha funzionato quando** quella riga ha un carattere con grazie invece del sans-serif predefinito.
 
-5. Add a filled rectangle behind the text using `begin_fill()`, `end_fill()`, and a loop to draw four sides — then use `hideturtle()` and write the text on top.
-   **You'll know it worked when** the text appears inside a colored box.
+5. Aggiungi un rettangolo riempito dietro il testo usando `begin_fill()`, `end_fill()`, e un ciclo per disegnare quattro lati — poi usa `hideturtle()` e scrivi il testo sopra.
+   **Saprai che ha funzionato quando** il testo appare dentro una scatola colorata.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You unlocked 16 million colors and styled text — the building blocks of digital design!
-    In the next lab you'll use math functions to plot a sine wave across the canvas.
-    Let's code it together!
+    Hai sbloccato 16 milioni di colori e testo stilizzato — i mattoni fondamentali del design digitale!
+    Nel prossimo laboratorio userai funzioni matematiche per tracciare un'onda sinusoidale attraverso il canvas.
+    Programmiamo insieme!
