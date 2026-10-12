@@ -113,6 +113,22 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
   contenuti, non è nella nav di `mkdocs.yml`; front matter `title`/`description`
   tradotti). **FASE 3 COMPLETA — tutti i 19 file di Python Labs tradotti.**
 
+**Fase 4 — Turtle Graphics Gallery** (`docs/turtle-graphics-gallery/`, ~102 file), in corso:
+
+- Etichette di navigazione in `mkdocs.yml` tradotte per l'intera sezione (header +
+  Galleria + Idee per i Pattern + 100 titoli dei singoli pattern), in un unico passaggio,
+  così i titoli dei file successivi si allineano alla nav come già fatto nelle Fasi 2-3
+- `pattern-ideas.md` (catalogo delle 100 idee di pattern in 11 categorie — solo prosa,
+  nessun blocco di codice; corretto un refuso "abstract" → "astratta" prima del commit)
+- `index.md` (griglia di card della galleria con tutti i 100 pattern — titoli riusati
+  identici a quelli già stabiliti nella nav di `mkdocs.yml` per coerenza)
+- `rainbow-square-spiral/`, `pinwheel-of-triangles/`, `nested-circles/`, `starburst/`
+  (primo batch di singoli laboratori — stesso schema delle Fasi 2-3: front matter con
+  `hide: toc`, obiettivi di apprendimento, mascot-welcome, codice di esempio, domanda di
+  previsione, laboratorio Skulpt, spiegazione, tabella, verifica di apprendimento,
+  esperimenti, mascot-celebration con rimando "Prossimo" al laboratorio successivo —
+  i rimandi "Up next" tradotti come "Prossimo" e mantenuti coerenti con l'ordine della nav)
+
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
 (nessuna modifica rispetto a `main`), quindi il problema dei placeholder rotti
@@ -236,11 +252,17 @@ cuore didattico del libro.
 **FASE 3 COMPLETA — tutti i 19 file di Python Labs tradotti** (`index.md` +
 17 lezioni numerate + `text-only-example.md`).
 
-Prossimo: avviare la Fase 4 — Turtle Graphics Gallery (`docs/turtle-graphics-gallery/`,
-~102 file, candidato per traduzione semi-automatica con QA, secondo la tabella delle
-fasi in sezione 3). Dopo la Fase 4: Fasi 5-9 (MicroSims, Teacher's Guide, Jupyter/
-Advanced, Learning Graph, Trinket Labs — quest'ultima di priorità minima/da valutare se
-tradurre affatto, vedi sezione 3).
+**FASE 4 IN CORSO — Turtle Graphics Gallery.** Tradotti finora: nav di `mkdocs.yml`,
+`pattern-ideas.md`, `index.md` (root), `rainbow-square-spiral/`, `pinwheel-of-triangles/`,
+`nested-circles/`, `starburst/` (7 di ~102 file/unità).
+
+Prossimo: continuare la Fase 4 in ordine di nav con `checkerboard-grid/`,
+`diagonal-stripe-field/`, `dotted-grid/`, `color-wheel-wedges/`, `pentagon-chain/`, e così
+via attraverso i restanti ~96 singoli laboratori della galleria.
+
+Dopo la Fase 4: Fasi 5-9 (MicroSims, Teacher's Guide, Jupyter/Advanced, Learning Graph,
+Trinket Labs — quest'ultima di priorità minima/da valutare se tradurre affatto, vedi
+sezione 3).
 
 Note di qualità accumulate durante la Fase 2, da continuare ad applicare nelle fasi
 successive: (1) controllare sempre con `grep '!\[.*\]('` (o pattern equivalente per il

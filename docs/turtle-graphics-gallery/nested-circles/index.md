@@ -2,32 +2,32 @@
 hide:
     - toc
 ---
-# Nested Circles
+# Cerchi Annidati
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Use `circle()` to draw circles of different sizes
-- Use `goto()` to reposition the turtle between shapes
-- Understand why **drawing order** matters when shapes overlap
+- Usare `circle()` per disegnare cerchi di dimensioni diverse
+- Usare `goto()` per riposizionare la tartaruga tra le forme
+- Capire perché l'**ordine di disegno** è importante quando le forme si sovrappongono
 
-Twenty concentric rings alternating cyan and navy pulse outward from the center
-like a ripple frozen in time.
+Venti anelli concentrici che alternano ciano e blu navy pulsano verso l'esterno dal centro
+come un'increspatura congelata nel tempo.
 
-!!! mascot-welcome "Welcome to Nested Circles!"
+!!! mascot-welcome "Benvenuto ai Cerchi Annidati!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    In this lab you'll draw circles from biggest to smallest, each one covering the last.
-    The rings you see are the slivers of color peeking out from behind smaller circles.
-    Let's code it together!
+    In questo laboratorio disegnerai cerchi dal più grande al più piccolo, ognuno che copre il precedente.
+    Gli anelli che vedi sono le fette di colore che sbirciano da dietro i cerchi più piccoli.
+    Programmiamo insieme!
 
-## How the Rings Work
+## Come Funzionano gli Anelli
 
-`monty.circle(radius)` draws a circle, but the turtle starts at the **bottom** of the circle, not the center.
-To keep all circles centered on the same point, we use `monty.goto(0, -radius)` before each circle —
-placing the turtle `radius` pixels *below* the center.
+`monty.circle(radius)` disegna un cerchio, ma la tartaruga inizia dal **fondo** del cerchio, non dal centro.
+Per mantenere tutti i cerchi centrati sullo stesso punto, usiamo `monty.goto(0, -radius)` prima di ogni cerchio —
+posizionando la tartaruga `radius` pixel *sotto* il centro.
 
-We draw from **largest to smallest** so that each new circle neatly covers the middle of the previous one, leaving only a thin ring of the earlier color visible at the edge.
+Disegniamo dal **più grande al più piccolo** così che ogni nuovo cerchio ricopra ordinatamente il centro del precedente, lasciando visibile solo un sottile anello del colore precedente al bordo.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -48,13 +48,13 @@ for i in range(19, -1, -1):
     monty.end_fill()
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The loop counts down: i = 19, 18, 17 … 1, 0.
-    The very last circle drawn (i = 0) sits right in the center — will it be **navy** or **cyan**?
-    Make your guess — then click Run to find out!
+    Il ciclo conta alla rovescia: i = 19, 18, 17 … 1, 0.
+    L'ultimo cerchio disegnato (i = 0) si trova proprio al centro — sarà **navy** o **ciano**?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -94,32 +94,32 @@ for i in range(19, -1, -1):
     monty.end_fill()`);
 </script>
 
-`i = 0` → `0 % 2 = 0` → `colors[0]` → **navy**. The bullseye center is always navy. Were you right?
+`i = 0` → `0 % 2 = 0` → `colors[0]` → **navy**. Il centro del bersaglio è sempre navy. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`range(19, -1, -1)` counts down from 19 to 0 — the three arguments are start, stop (exclusive), and step. A step of -1 counts backwards.
+`range(19, -1, -1)` conta alla rovescia da 19 a 0 — i tre argomenti sono inizio, fine (esclusa), e passo. Un passo di -1 conta all'indietro.
 
-Each iteration computes `radius = 10 + i * 15`, so the radii are 295, 280, 265 … 25, 10 pixels. `colors[i % 2]` picks navy when `i` is even and cyan when `i` is odd, creating the alternating rings.
+Ogni iterazione calcola `radius = 10 + i * 15`, quindi i raggi sono 295, 280, 265 … 25, 10 pixel. `colors[i % 2]` sceglie navy quando `i` è pari e ciano quando `i` è dispari, creando gli anelli alternati.
 
-The critical line is `monty.goto(0, -radius)` — without it, every circle would start from wherever the last one ended, scattering circles randomly across the canvas.
+La riga critica è `monty.goto(0, -radius)` — senza di essa, ogni cerchio inizierebbe da dove è finito l'ultimo, disperdendo i cerchi casualmente attraverso il canvas.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `range(19, -1, -1)` | Count down from 19 to 0 (inclusive) |
-| `radius = 10 + i * 15` | Each ring is 15 pixels wider than the next inner one |
-| `colors[i % 2]` | Alternates between index 0 (navy) and index 1 (cyan) |
-| `monty.goto(0, -radius)` | Move to the bottom of the circle so it is centered at the origin |
-| `monty.circle(radius)` | Draw a full circle with the given radius |
+| `range(19, -1, -1)` | Conta alla rovescia da 19 a 0 (incluso) |
+| `radius = 10 + i * 15` | Ogni anello è 15 pixel più largo del successivo interno |
+| `colors[i % 2]` | Alterna tra indice 0 (navy) e indice 1 (ciano) |
+| `monty.goto(0, -radius)` | Si muove al fondo del cerchio così è centrato all'origine |
+| `monty.circle(radius)` | Disegna un cerchio completo con il raggio dato |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Fix the Centering"
+!!! mascot-thinking "Il Tuo Turno — Correggi la Centratura"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below draws 20 circles but they all start from the same spot — a messy spiral!
-    Add **one line** inside the loop (after `monty.penup()`) to center each circle at the origin.
+    Il programma sotto disegna 20 cerchi ma iniziano tutti dallo stesso punto — una spirale confusa!
+    Aggiungi **una riga** dentro il ciclo (dopo `monty.penup()`) per centrare ogni cerchio all'origine.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -153,20 +153,20 @@ for i in range(19, -1, -1):
     monty.end_fill()`);
 </script>
 
-The missing line is `monty.goto(0, -radius)` — it repositions the turtle at the bottom of each circle so the center is always at the origin.
+La riga mancante è `monty.goto(0, -radius)` — riposiziona la tartaruga al fondo di ogni cerchio così il centro è sempre all'origine.
 
-## Experiments
+## Esperimenti
 
-1. **Flip the loop direction.** Change `range(19, -1, -1)` to `range(20)`. Now you draw smallest-first. You'll know it worked when the rings look the same but Monty draws them inside-out.
+1. **Inverti la direzione del ciclo.** Cambia `range(19, -1, -1)` in `range(20)`. Ora disegni prima il più piccolo. Saprai che ha funzionato quando gli anelli sembrano uguali ma Monty li disegna dall'interno verso l'esterno.
 
-2. **Change the ring gap.** Replace `i * 15` with `i * 10`. Rings are closer together. Try `i * 25` for wider rings. You'll know it worked when the number of visible rings changes.
+2. **Cambia lo spazio tra gli anelli.** Sostituisci `i * 15` con `i * 10`. Gli anelli sono più vicini tra loro. Prova `i * 25` per anelli più larghi. Saprai che ha funzionato quando il numero di anelli visibili cambia.
 
-3. **Try three colors.** Change `colors` to `['navy', 'cyan', 'white']` and use `i % 3`. You'll know it worked when you see a three-tone bullseye pattern.
+3. **Prova tre colori.** Cambia `colors` in `['navy', 'cyan', 'white']` e usa `i % 3`. Saprai che ha funzionato quando vedi un pattern a bersaglio a tre tonalità.
 
-4. **Make an ellipse.** Replace `monty.circle(radius)` with `monty.circle(radius, steps=60)` — turtle's `circle()` can approximate an ellipse by stretching with `monty.shapesize()` first. You'll know it worked when the rings are no longer perfectly round.
+4. **Fai un'ellisse.** Sostituisci `monty.circle(radius)` con `monty.circle(radius, steps=60)` — il `circle()` di turtle può approssimare un'ellisse allungando prima con `monty.shapesize()`. Saprai che ha funzionato quando gli anelli non sono più perfettamente rotondi.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You used counting-down loops, `goto()` for precise positioning, and draw order to build
-    a perfect bullseye — all core skills for any drawing program.
-    Up next: **Starburst** — radiating lines from a single center point.
+    Hai usato cicli che contano alla rovescia, `goto()` per un posizionamento preciso, e l'ordine di disegno per costruire
+    un bersaglio perfetto — tutte abilità fondamentali per qualsiasi programma di disegno.
+    Prossimo: **Raggiera a Stella** — linee che si irradiano da un singolo punto centrale.

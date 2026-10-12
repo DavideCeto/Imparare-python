@@ -2,38 +2,38 @@
 hide:
     - toc
 ---
-# Pinwheel of Triangles
+# Girandola di Triangoli
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Draw any regular polygon using a loop and the `360 / sides` angle formula
-- Repeat a shape around a center point to build radial symmetry
-- Use `begin_fill()` and `end_fill()` to fill shapes with color
+- Disegnare qualsiasi poligono regolare usando un ciclo e la formula dell'angolo `360 / sides`
+- Ripetere una forma attorno a un punto centrale per costruire simmetria radiale
+- Usare `begin_fill()` e `end_fill()` per riempire forme con il colore
 
-Draw 12 equilateral triangles, each one rotated 30° from the last.
-Gold and dark-red blades fan out from the center like the spokes of a spinning wheel.
+Disegna 12 triangoli equilateri, ognuno ruotato di 30° dal precedente.
+Pale oro e rosso scuro si aprono a ventaglio dal centro come i raggi di una ruota che gira.
 
-!!! mascot-welcome "Welcome to the Pinwheel of Triangles!"
+!!! mascot-welcome "Benvenuto alla Girandola di Triangoli!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    In this lab you'll draw one triangle at a time, rotating 30° between each one.
-    Twelve triangles × 30° = a full 360° circle — and one stunning pinwheel!
-    Let's code it together!
+    In questo laboratorio disegnerai un triangolo alla volta, ruotando di 30° tra ognuno.
+    Dodici triangoli × 30° = un cerchio completo di 360° — e una girandola straordinaria!
+    Programmiamo insieme!
 
-## How the Pinwheel Works
+## Come Funziona la Girandola
 
-Every equilateral triangle has three equal angles of 60°.
-To draw one with turtle graphics you turn **120°** at each corner (the *exterior* angle — the supplement of 60°).
-After three sides the turtle is back exactly where it started, facing the same direction.
+Ogni triangolo equilatero ha tre angoli uguali di 60°.
+Per disegnarne uno con la grafica turtle giri di **120°** a ogni angolo (l'angolo *esterno* — il supplemento di 60°).
+Dopo tre lati la tartaruga è tornata esattamente dove ha iniziato, rivolta nella stessa direzione.
 
-Then `monty.right(30)` spins Monty 30° clockwise before the next triangle.
-After 12 triangles, 12 × 30° = 360° — a full rotation — so every blade fans out evenly.
+Poi `monty.right(30)` fa girare Monty di 30° in senso orario prima del triangolo successivo.
+Dopo 12 triangoli, 12 × 30° = 360° — una rotazione completa — così ogni pala si apre a ventaglio uniformemente.
 
-!!! mascot-tip "The Magic Formula"
+!!! mascot-tip "La Formula Magica"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    To spread **n** copies of any shape evenly around a center point, rotate `360 / n` degrees between copies.
-    Here n = 12, so `360 / 12 = 30`. Try changing 12 to 6 or 8 and see what happens!
+    Per distribuire **n** copie di qualsiasi forma uniformemente attorno a un punto centrale, ruota di `360 / n` gradi tra le copie.
+    Qui n = 12, quindi `360 / 12 = 30`. Prova a cambiare 12 in 6 o 8 e vedi cosa succede!
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -55,13 +55,13 @@ for i in range(12):
 monty.hideturtle()
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    There are 2 colors in the list and 12 triangles to draw.
-    How many gold triangles will appear in the finished pinwheel?
-    Make your guess — then click Run to find out!
+    Ci sono 2 colori nella lista e 12 triangoli da disegnare.
+    Quanti triangoli oro appariranno nella girandola finita?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -102,39 +102,39 @@ for i in range(12):
 monty.hideturtle()`);
 </script>
 
-Exactly **6 gold** and 6 dark-red triangles — because `i % 2` alternates 0 and 1 for each of the 12 iterations. Were you right?
+Esattamente **6 oro** e 6 rosso scuro — perché `i % 2` alterna 0 e 1 per ciascuna delle 12 iterazioni. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-The program has two nested loops. The **outer loop** (`for i in range(12)`) repeats 12 times — once per triangle blade. The **inner loop** (`for j in range(3)`) draws the three sides of each triangle.
+Il programma ha due cicli annidati. Il **ciclo esterno** (`for i in range(12)`) si ripete 12 volte — una per ogni pala del triangolo. Il **ciclo interno** (`for j in range(3)`) disegna i tre lati di ogni triangolo.
 
-Inside the outer loop:
-- `monty.color(colors[i % 2])` picks gold when `i` is even, dark-red when `i` is odd
-- `monty.begin_fill()` / `monty.end_fill()` sandwich the inner loop to fill the triangle solid
-- `monty.right(30)` rotates Monty 30° clockwise *after* each complete triangle so the next blade fans outward
+Dentro il ciclo esterno:
+- `monty.color(colors[i % 2])` sceglie oro quando `i` è pari, rosso scuro quando `i` è dispari
+- `monty.begin_fill()` / `monty.end_fill()` racchiudono il ciclo interno per riempire il triangolo in modo solido
+- `monty.right(30)` ruota Monty di 30° in senso orario *dopo* ogni triangolo completo così la pala successiva si apre verso l'esterno
 
-The key insight is that after three `forward` + `left(120)` steps, the turtle lands *exactly* back at the center facing the original direction. The rotation happens *between* triangles, not inside them.
+L'intuizione chiave è che dopo tre passi `forward` + `left(120)`, la tartaruga atterra *esattamente* al centro rivolta nella direzione originale. La rotazione avviene *tra* i triangoli, non al loro interno.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `colors = ['gold', 'darkred']` | Two-color list to alternate blade colors |
-| `size = 120` | Side length of each triangle in pixels |
-| `for i in range(12)` | Draw 12 blades — one per loop iteration |
-| `colors[i % 2]` | `i % 2` is 0 or 1, cycling the two colors |
-| `monty.begin_fill()` | Start recording the shape to fill |
-| `for j in range(3)` | Draw 3 sides — one equilateral triangle |
-| `monty.left(120)` | Turn at each corner (exterior angle of equilateral triangle) |
-| `monty.end_fill()` | Fill the completed triangle with the current color |
-| `monty.right(30)` | Rotate 30° (= 360° ÷ 12) before the next blade |
+| `colors = ['gold', 'darkred']` | Lista di due colori per alternare i colori delle pale |
+| `size = 120` | Lunghezza del lato di ogni triangolo in pixel |
+| `for i in range(12)` | Disegna 12 pale — una per iterazione del ciclo |
+| `colors[i % 2]` | `i % 2` è 0 o 1, alternando i due colori |
+| `monty.begin_fill()` | Inizia a registrare la forma da riempire |
+| `for j in range(3)` | Disegna 3 lati — un triangolo equilatero |
+| `monty.left(120)` | Gira a ogni angolo (angolo esterno del triangolo equilatero) |
+| `monty.end_fill()` | Riempie il triangolo completato con il colore attuale |
+| `monty.right(30)` | Ruota di 30° (= 360° ÷ 12) prima della pala successiva |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add the Missing Rotation"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi la Rotazione Mancante"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below draws 12 triangles but they all stack on top of each other — no pinwheel!
-    Add **one line** at the end of the outer loop to spread the blades evenly around the center.
+    Il programma sotto disegna 12 triangoli ma si sovrappongono tutti — nessuna girandola!
+    Aggiungi **una riga** alla fine del ciclo esterno per distribuire le pale uniformemente attorno al centro.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -169,24 +169,24 @@ for i in range(12):
 monty.hideturtle()`);
 </script>
 
-The missing line is `monty.right(30)` — 360° divided by 12 blades = 30° per step.
+La riga mancante è `monty.right(30)` — 360° diviso 12 pale = 30° per passo.
 
-## Experiments
+## Esperimenti
 
-Try these changes in the **Try It Now** editor above:
+Prova questi cambiamenti nell'editor **Provalo Ora** sopra:
 
-1. **Change the number of blades.** Replace `range(12)` with `range(6)` and `monty.right(30)` with `monty.right(60)`. You'll know it worked when you see a 6-bladed pinwheel with wider gaps between blades.
+1. **Cambia il numero di pale.** Sostituisci `range(12)` con `range(6)` e `monty.right(30)` con `monty.right(60)`. Saprai che ha funzionato quando vedi una girandola a 6 pale con spazi più larghi tra le pale.
 
-2. **Try three colors.** Change `colors` to `['gold', 'darkred', 'navy']`. With 3 colors and 12 blades, the pattern repeats every 3 blades. You'll know it worked when you see four groups of three differently colored triangles.
+2. **Prova tre colori.** Cambia `colors` in `['gold', 'darkred', 'navy']`. Con 3 colori e 12 pale, il pattern si ripete ogni 3 pale. Saprai che ha funzionato quando vedi quattro gruppi di tre triangoli di colore diverso.
 
-3. **Make the blades bigger or smaller.** Change `size = 120` to `size = 80` or `size = 160`. You'll know it worked when the triangles are noticeably shorter or longer.
+3. **Rendi le pale più grandi o più piccole.** Cambia `size = 120` in `size = 80` o `size = 160`. Saprai che ha funzionato quando i triangoli sono notevolmente più corti o più lunghi.
 
-4. **Turn left instead of right between blades.** Replace `monty.right(30)` with `monty.left(30)`. You'll know it worked when the pinwheel looks identical — can you figure out why?
+4. **Gira a sinistra invece di destra tra le pale.** Sostituisci `monty.right(30)` con `monty.left(30)`. Saprai che ha funzionato quando la girandola sembra identica — riesci a capire perché?
 
-5. **Draw pentagons instead of triangles.** Change the inner loop to `range(5)` and `monty.left(120)` to `monty.left(72)`. You'll know it worked when each blade is a five-sided polygon instead of a triangle.
+5. **Disegna pentagoni invece di triangoli.** Cambia il ciclo interno in `range(5)` e `monty.left(120)` in `monty.left(72)`. Saprai che ha funzionato quando ogni pala è un poligono a cinque lati invece di un triangolo.
 
-!!! mascot-celebration "Excellent Work!"
+!!! mascot-celebration "Lavoro Eccellente!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You used the `360 / n` formula, nested loops, and filled shapes to build a spinning pinwheel!
-    The same rotation trick works for any shape — try it with squares, pentagons, or hexagons.
-    Up next: **Nested Circles** to explore a completely different kind of repetition.
+    Hai usato la formula `360 / n`, cicli annidati, e forme riempite per costruire una girandola che gira!
+    Lo stesso trucco di rotazione funziona per qualsiasi forma — provalo con quadrati, pentagoni, o esagoni.
+    Prossimo: **Cerchi Annidati** per esplorare un tipo di ripetizione completamente diverso.

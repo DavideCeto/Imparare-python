@@ -2,33 +2,33 @@
 hide:
     - toc
 ---
-# Starburst
+# Raggiera a Stella
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Draw lines radiating outward from a single center point
-- Cycle through a color list using the modulo operator
-- Calculate how many lines are needed to fill a full 360° rotation
+- Disegnare linee che si irradiano verso l'esterno da un singolo punto centrale
+- Scorrere una lista di colori usando l'operatore modulo
+- Calcolare quante linee servono per riempire una rotazione completa di 360°
 
-Thirty-six lines burst outward from the center, shifting in color from yellow to orange
-to red — like sunbeams caught mid-explosion.
+Trentasei linee esplodono verso l'esterno dal centro, cambiando colore da giallo ad arancione
+a rosso — come raggi di sole catturati a metà esplosione.
 
-!!! mascot-welcome "Welcome to the Starburst!"
+!!! mascot-welcome "Benvenuto alla Raggiera a Stella!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    In this lab you'll draw a line, back up to center, turn, and repeat — 36 times.
-    The trick is that `forward` and `backward` together act like a two-way spoke.
-    Let's code it together!
+    In questo laboratorio disegnerai una linea, torni al centro, girerai, e ripeterai — 36 volte.
+    Il trucco è che `forward` e `backward` insieme agiscono come un raggio a due vie.
+    Programmiamo insieme!
 
-## How the Burst Works
+## Come Funziona la Raggiera
 
-The turtle starts at the center. Each iteration:
-1. Draws a line of length 150 outward (`forward`)
-2. Returns to the center (`backward` the same distance)
-3. Turns 10° clockwise (`right(10)`) before the next spoke
+La tartaruga inizia al centro. Ogni iterazione:
+1. Disegna una linea di lunghezza 150 verso l'esterno (`forward`)
+2. Ritorna al centro (`backward` della stessa distanza)
+3. Gira di 10° in senso orario (`right(10)`) prima del raggio successivo
 
-After 36 spokes: 36 × 10° = 360° — exactly one full rotation, filling the circle completely.
+Dopo 36 raggi: 36 × 10° = 360° — esattamente una rotazione completa, riempiendo completamente il cerchio.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -46,12 +46,12 @@ for i in range(36):
     monty.right(10)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    There are 3 colors and 36 spokes. How many **red** spokes will appear in the finished starburst?
-    Make your guess — then click Run to find out!
+    Ci sono 3 colori e 36 raggi. Quanti raggi **rossi** appariranno nella raggiera finita?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -88,33 +88,33 @@ for i in range(36):
     monty.right(10)`);
 </script>
 
-36 ÷ 3 = **12 red spokes** (and 12 yellow, 12 orange). Were you right?
+36 ÷ 3 = **12 raggi rossi** (e 12 gialli, 12 arancioni). Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`forward(length)` moves Monty out from the center along the current heading.
-`backward(length)` brings Monty back to exactly the same starting point.
-`right(10)` rotates the heading 10° clockwise so the next spoke points in a new direction.
+`forward(length)` muove Monty verso l'esterno dal centro lungo la direzione attuale.
+`backward(length)` riporta Monty esattamente allo stesso punto di partenza.
+`right(10)` ruota la direzione di 10° in senso orario così il raggio successivo punta in una nuova direzione.
 
-The color cycles because `i % 3` produces 0, 1, 2, 0, 1, 2, … regardless of how large `i` grows.
+Il colore scorre perché `i % 3` produce 0, 1, 2, 0, 1, 2, … non importa quanto grande diventi `i`.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `colors = ['yellow', 'orange', 'red']` | Three-color gradient from warm to hot |
-| `length = 150` | Length of each spoke in pixels |
-| `monty.color(colors[i % 3])` | Cycles through the three colors evenly |
-| `monty.forward(length)` | Draws the spoke outward |
-| `monty.backward(length)` | Returns to center — no `penup()` needed |
-| `monty.right(10)` | 10° turn × 36 iterations = 360° full circle |
+| `colors = ['yellow', 'orange', 'red']` | Gradiente a tre colori dal caldo al rovente |
+| `length = 150` | Lunghezza di ogni raggio in pixel |
+| `monty.color(colors[i % 3])` | Scorre uniformemente tra i tre colori |
+| `monty.forward(length)` | Disegna il raggio verso l'esterno |
+| `monty.backward(length)` | Ritorna al centro — nessun `penup()` necessario |
+| `monty.right(10)` | Rotazione di 10° × 36 iterazioni = cerchio completo di 360° |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Spot the Bug!"
+!!! mascot-warning "Trova il Bug!"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    The program below draws spokes but they don't fill the full circle — there's a gap!
-    Find and fix the one wrong number so all 36 spokes spread evenly around 360°.
+    Il programma sotto disegna i raggi ma non riempiono il cerchio completo — c'è uno spazio vuoto!
+    Trova e correggi l'unico numero sbagliato così tutti i 36 raggi si distribuiscono uniformemente attorno ai 360°.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -145,20 +145,20 @@ for i in range(36):
     monty.right(5)`);
 </script>
 
-`right(5)` × 36 = only 180° — half a circle. Change it to `right(10)` for a full 360°.
+`right(5)` × 36 = solo 180° — metà cerchio. Cambialo in `right(10)` per un 360° completo.
 
-## Experiments
+## Esperimenti
 
-1. **Change spoke count.** Replace `range(36)` with `range(72)` and `right(10)` with `right(5)`. You'll know it worked when twice as many thinner spokes fill the circle.
+1. **Cambia il numero di raggi.** Sostituisci `range(36)` con `range(72)` e `right(10)` con `right(5)`. Saprai che ha funzionato quando il doppio di raggi più sottili riempiono il cerchio.
 
-2. **Use more colors.** Change `colors` to `['yellow', 'gold', 'orange', 'darkorange', 'red', 'darkred']` and `i % 3` to `i % 6`. You'll know it worked when the gradient has six distinct color bands.
+2. **Usa più colori.** Cambia `colors` in `['yellow', 'gold', 'orange', 'darkorange', 'red', 'darkred']` e `i % 3` in `i % 6`. Saprai che ha funzionato quando il gradiente ha sei fasce di colore distinte.
 
-3. **Make spokes different lengths.** Replace `length = 150` with `length = 50 + i * 3`. Early spokes are short; later ones are long. You'll know it worked when the starburst looks like a teardrop.
+3. **Rendi i raggi di lunghezze diverse.** Sostituisci `length = 150` con `length = 50 + i * 3`. I primi raggi sono corti; quelli successivi sono lunghi. Saprai che ha funzionato quando la raggiera sembra una lacrima.
 
-4. **Draw only every other spoke.** Add `if i % 2 == 0:` before the `forward` line (and indent the next two lines). You'll know it worked when only 18 spokes appear with gaps between them.
+4. **Disegna solo ogni altro raggio.** Aggiungi `if i % 2 == 0:` prima della riga `forward` (e indenta le due righe successive). Saprai che ha funzionato quando appaiono solo 18 raggi con spazi tra loro.
 
-!!! mascot-celebration "Brilliant Work!"
+!!! mascot-celebration "Lavoro Brillante!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You used forward + backward to draw spokes, modulo for color cycling, and math
-    to prove that 36 × 10° = 360°. That's geometry AND Python in one program!
-    Up next: **Checkerboard Grid** to explore nested loops and coordinate arithmetic.
+    Hai usato avanti + indietro per disegnare raggi, il modulo per il ciclo dei colori, e la matematica
+    per dimostrare che 36 × 10° = 360°. Questa è geometria E Python in un unico programma!
+    Prossimo: **Griglia a Scacchiera** per esplorare cicli annidati e aritmetica delle coordinate.

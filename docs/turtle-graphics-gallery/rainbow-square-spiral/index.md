@@ -2,33 +2,33 @@
 hide:
     - toc
 ---
-# Rainbow Square Spiral
+# Spirale di Quadrati Arcobaleno
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Use a `for` loop to repeat a drawing step many times
-- Cycle through a list of colors using the `%` (modulo) operator
-- See how adding a tiny rotation each time creates a dramatic spiral effect
+- Usare un ciclo `for` per ripetere un passo di disegno molte volte
+- Scorrere una lista di colori usando l'operatore `%` (modulo)
+- Vedere come aggiungere una piccola rotazione ogni volta crea un effetto spirale drammatico
 
-Draw a square, turn a little, draw a slightly larger square — and repeat.
-After 36 squares you get a glowing color tunnel that spins right off the screen.
+Disegna un quadrato, gira un po', disegna un quadrato un po' più grande — e ripeti.
+Dopo 36 quadrati ottieni un tunnel di colore luminoso che gira fuori dallo schermo.
 
-!!! mascot-welcome "Welcome to the Rainbow Square Spiral!"
+!!! mascot-welcome "Benvenuto alla Spirale di Quadrati Arcobaleno!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    In this lab you'll use a loop to draw 36 squares, rotating a little each time.
-    Tiny changes — just 10 degrees and 8 pixels — add up to something spectacular.
-    Let's code it together!
+    In questo laboratorio userai un ciclo per disegnare 36 quadrati, ruotando un po' ogni volta.
+    Piccoli cambiamenti — solo 10 gradi e 8 pixel — si accumulano in qualcosa di spettacolare.
+    Programmiamo insieme!
 
-## How the Spiral Works
+## Come Funziona la Spirale
 
-Each time through the loop, Monty draws one square and then:
+Ogni volta che il ciclo gira, Monty disegna un quadrato e poi:
 
-1. **Rotates** 10 degrees to the right (so the next square is slightly turned)
-2. **Grows** the side length by 8 pixels (so the next square is slightly larger)
+1. **Ruota** di 10 gradi a destra (così il quadrato successivo è leggermente girato)
+2. **Cresce** la lunghezza del lato di 8 pixel (così il quadrato successivo è leggermente più grande)
 
-After 36 repetitions, those tiny changes stack into a full 360-degree rotation and a square that is nearly 300 pixels wide — starting from just 20.
+Dopo 36 ripetizioni, quei piccoli cambiamenti si accumulano in una rotazione completa di 360 gradi e un quadrato che è largo quasi 300 pixel — partendo da appena 20.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -50,13 +50,13 @@ for i in range(36):
 monty.hideturtle()
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The outer loop runs 36 times and there are 6 colors in the list.
-    How many times will each color appear in the finished spiral?
-    Make your guess — then click Run to find out!
+    Il ciclo esterno gira 36 volte e ci sono 6 colori nella lista.
+    Quante volte apparirà ogni colore nella spirale finita?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -97,46 +97,46 @@ for i in range(36):
 monty.hideturtle()`);
 </script>
 
-Each color appears exactly **6 times** — because 36 ÷ 6 = 6, and `i % 6` cycles through 0 → 1 → 2 → 3 → 4 → 5 → 0 → 1 → … Were you right?
+Ogni colore appare esattamente **6 volte** — perché 36 ÷ 6 = 6, e `i % 6` scorre tra 0 → 1 → 2 → 3 → 4 → 5 → 0 → 1 → … Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-The program uses **two nested loops**. The outer loop (`for i in range(36)`) runs once per square. The inner loop (`for j in range(4)`) draws the four sides of each square: forward, turn 90°, forward, turn 90°, and so on.
+Il programma usa **due cicli annidati**. Il ciclo esterno (`for i in range(36)`) gira una volta per ogni quadrato. Il ciclo interno (`for j in range(4)`) disegna i quattro lati di ogni quadrato: avanti, gira 90°, avanti, gira 90°, e così via.
 
-After the inner loop finishes one square, the outer loop does two more things before starting the next square:
+Dopo che il ciclo interno finisce un quadrato, il ciclo esterno fa altre due cose prima di iniziare il quadrato successivo:
 
-- `monty.right(10)` — turns Monty 10 degrees, so the next square is slightly rotated
-- `side += 8` — makes the next square 8 pixels wider on each side
+- `monty.right(10)` — ruota Monty di 10 gradi, così il quadrato successivo è leggermente ruotato
+- `side += 8` — rende il quadrato successivo 8 pixel più largo su ogni lato
 
-The color is chosen with `colors[i % len(colors)]`. The `%` operator gives the **remainder** after dividing, so `i % 6` always produces a number from 0 to 5, cycling the list no matter how big `i` gets.
+Il colore è scelto con `colors[i % len(colors)]`. L'operatore `%` dà il **resto** dopo la divisione, così `i % 6` produce sempre un numero da 0 a 5, scorrendo la lista non importa quanto grande diventi `i`.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `monty.speed(0)` | Maximum speed — no animation delay |
-| `colors = [...]` | A list of 6 color names to cycle through |
-| `side = 20` | Starting side length of the first (smallest) square |
-| `for i in range(36)` | Repeat the square-drawing block 36 times |
-| `colors[i % len(colors)]` | Pick the color at position `i mod 6`, cycling the list |
-| `for j in range(4)` | Draw 4 sides to make one square |
-| `monty.right(90)` | Turn at each corner of the square |
-| `monty.right(10)` | Rotate 10° before the next square — creates the spiral |
-| `side += 8` | Grow the square by 8 pixels each iteration |
+| `monty.speed(0)` | Velocità massima — nessun ritardo di animazione |
+| `colors = [...]` | Una lista di 6 nomi di colore da scorrere |
+| `side = 20` | Lunghezza del lato iniziale del primo (più piccolo) quadrato |
+| `for i in range(36)` | Ripete il blocco di disegno del quadrato 36 volte |
+| `colors[i % len(colors)]` | Sceglie il colore alla posizione `i mod 6`, scorrendo la lista |
+| `for j in range(4)` | Disegna 4 lati per fare un quadrato |
+| `monty.right(90)` | Gira a ogni angolo del quadrato |
+| `monty.right(10)` | Ruota di 10° prima del quadrato successivo — crea la spirale |
+| `side += 8` | Fa crescere il quadrato di 8 pixel a ogni iterazione |
 
-!!! mascot-tip "What Is Modulo?"
+!!! mascot-tip "Cos'è il Modulo?"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    The `%` operator gives you the **remainder** of division.
-    `7 % 3` is `1` (7 ÷ 3 = 2 remainder 1).
-    It's the perfect tool for cycling through a list — the index always stays in bounds!
+    L'operatore `%` ti dà il **resto** della divisione.
+    `7 % 3` è `1` (7 ÷ 3 = 2 resto 1).
+    È lo strumento perfetto per scorrere una lista — l'indice rimane sempre nei limiti!
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Complete the Spiral"
+!!! mascot-thinking "Il Tuo Turno — Completa la Spirale"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below draws the squares but all in the same color — boring!
-    Add **one line** inside the outer loop to make each square use the next color in the list.
-    Hint: look at how `colors` and `i` are used in the sample above.
+    Il programma sotto disegna i quadrati ma tutti dello stesso colore — che noia!
+    Aggiungi **una riga** dentro il ciclo esterno per far usare a ogni quadrato il colore successivo nella lista.
+    Suggerimento: guarda come sono usati `colors` e `i` nell'esempio sopra.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -170,25 +170,25 @@ for i in range(36):
 monty.hideturtle()`);
 </script>
 
-The missing line is `monty.color(colors[i % len(colors)])` — place it right after the `for i` line.
+La riga mancante è `monty.color(colors[i % len(colors)])` — posizionala subito dopo la riga `for i`.
 
-## Experiments
+## Esperimenti
 
-Try these changes in the **Try It Now** editor above:
+Prova questi cambiamenti nell'editor **Provalo Ora** sopra:
 
-1. **Change the number of squares.** Replace `range(36)` with `range(72)`. How does the spiral change? You'll know it worked when the spiral wraps around twice as far.
+1. **Cambia il numero di quadrati.** Sostituisci `range(36)` con `range(72)`. Come cambia la spirale? Saprai che ha funzionato quando la spirale si avvolge due volte più lontano.
 
-2. **Change the rotation angle.** Replace `monty.right(10)` with `monty.right(5)`. Now 36 squares only cover 180 degrees. What happens to the shape? You'll know it worked when the spiral opens into a fan instead of a closed tunnel.
+2. **Cambia l'angolo di rotazione.** Sostituisci `monty.right(10)` con `monty.right(5)`. Ora 36 quadrati coprono solo 180 gradi. Cosa succede alla forma? Saprai che ha funzionato quando la spirale si apre a ventaglio invece di un tunnel chiuso.
 
-3. **Change the growth rate.** Replace `side += 8` with `side += 4`. The spiral gets tighter. What does `side += 16` do? You'll know it worked when the squares expand much more quickly to the edges of the canvas.
+3. **Cambia la velocità di crescita.** Sostituisci `side += 8` con `side += 4`. La spirale diventa più stretta. Cosa fa `side += 16`? Saprai che ha funzionato quando i quadrati si espandono molto più rapidamente ai bordi del canvas.
 
-4. **Reverse the spiral direction.** Change `monty.right(10)` to `monty.left(10)`. You'll know it worked when the spiral winds in the opposite direction.
+4. **Inverti la direzione della spirale.** Cambia `monty.right(10)` in `monty.left(10)`. Saprai che ha funzionato quando la spirale si avvolge nella direzione opposta.
 
-5. **Add more colors.** Add `'pink'` and `'brown'` to the colors list. With 8 colors and 36 squares, each color appears only 4–5 times. Does the spiral look different with more stripes? You'll know it worked when you can count more than 6 distinct color bands.
+5. **Aggiungi più colori.** Aggiungi `'pink'` e `'brown'` alla lista dei colori. Con 8 colori e 36 quadrati, ogni colore appare solo 4–5 volte. La spirale sembra diversa con più strisce? Saprai che ha funzionato quando puoi contare più di 6 fasce di colore distinte.
 
-!!! mascot-celebration "Spectacular Work!"
+!!! mascot-celebration "Lavoro Spettacolare!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You just used nested loops, a color list, the modulo operator, and a growing variable
-    to produce a dazzling rainbow tunnel — all in under 20 lines of code!
-    Up next: try the **Pinwheel of Triangles** to see how the same rotation idea
-    works with a completely different shape.
+    Hai appena usato cicli annidati, una lista di colori, l'operatore modulo, e una variabile crescente
+    per produrre un tunnel arcobaleno sbalorditivo — tutto in meno di 20 righe di codice!
+    Prossimo: prova la **Girandola di Triangoli** per vedere come la stessa idea
+    di rotazione funziona con una forma completamente diversa.
