@@ -1,656 +1,656 @@
-# Turtle Graphics Pattern Ideas
+# Idee per Pattern di Grafica Turtle
 
-This gallery collects 100 pattern ideas to inspire students to push their Python skills further.
-Each pattern is chosen because it teaches a concept — loops, functions, recursion, color math,
-or geometry — not just because it looks pretty. Browse the categories, pick something that
-catches your eye, and challenge yourself to code it.
-
----
-
-## Category 1 — Basic Loops and Repetition
-
-### 1. Rainbow Square Spiral
-
-Draw a square, turn slightly, draw a slightly larger square, repeat 36 times.
-Each square is a different color cycling through red, orange, yellow, green, blue, and violet.
-The result looks like a square tunnel of color spinning into the center.
-Teaches: `for` loops, color lists, and how a tiny angle change creates dramatic visual rotation.
-
-### 2. Pinwheel of Triangles
-
-Draw 12 equilateral triangles arranged in a circle, each rotated 30° from the last.
-Alternate colors between gold and dark red to create contrast between blades.
-Teaches: how to repeat a shape around a center point using a loop and `right(360/n)`.
-
-### 3. Nested Circles
-
-Draw 20 concentric circles starting at radius 10 and growing by 15 pixels each iteration.
-Color them with alternating cyan and navy so they appear to pulse outward.
-Teaches: `range()` with a step, `circle()`, and how to lift the pen and reposition between circles.
-
-### 4. Starburst
-
-From the center, draw 36 lines of equal length pointing outward, each rotated 10° from the last.
-Color each line a shade that shifts from yellow at the top to orange to red at the bottom.
-Teaches: computing color index from loop counter, radial symmetry.
-
-### 5. Checkerboard Grid
-
-Draw an 8×8 grid of filled squares alternating black and white like a chessboard.
-Use nested `for` loops to iterate rows and columns, computing x/y position mathematically.
-Teaches: nested loops, coordinate arithmetic, and `begin_fill()` / `end_fill()`.
-
-### 6. Diagonal Stripe Field
-
-Fill the canvas with 30 parallel diagonal lines, each 5 pixels apart, running from bottom-left to top-right.
-Alternate line colors between teal and coral.
-Teaches: translating a loop counter into a starting coordinate, pen-up repositioning.
-
-### 7. Dotted Grid
-
-Place a filled circle (dot) at every intersection of a 10×10 grid spaced 40 pixels apart.
-Vary dot size based on row number — dots grow larger toward the bottom.
-Teaches: nested loops, `dot()`, and mapping a loop variable to a visual property.
-
-### 8. Color Wheel Wedges
-
-Divide the canvas into 12 pie-slice wedges, each filled with one color of the HSL color wheel.
-Use `begin_fill()` and `end_fill()` with triangle-style geometry to draw each wedge.
-Teaches: dividing 360° into equal parts, how the 12 hues relate to each other.
-
-### 9. Pentagon Chain
-
-Draw 10 pentagons in a horizontal row, each touching the next at one corner.
-Fill alternating pentagons with purple and gold.
-Teaches: computing the exterior angle of a regular polygon (`360 / sides`), horizontal positioning.
-
-### 10. Overlapping Transparent Squares
-
-Draw 8 large squares offset diagonally by 20 pixels each, with each fill color slightly different.
-Since turtle fills are opaque, carefully order the draw sequence so overlaps look intentional.
-Teaches: draw order, fill color planning, offset positioning.
+Questa galleria raccoglie 100 idee di pattern per ispirare gli studenti a spingere oltre le loro abilità Python.
+Ogni pattern è scelto perché insegna un concetto — cicli, funzioni, ricorsione, matematica dei colori,
+o geometria — non solo perché è bello da vedere. Scorri le categorie, scegli qualcosa che
+catturi il tuo occhio, e sfida te stesso a programmarlo.
 
 ---
 
-## Category 2 — Functions and Reuse
+## Categoria 1 — Cicli di Base e Ripetizione
 
-### 11. Flower with Petal Function
+### 1. Spirale di Quadrati Arcobaleno
 
-Write a `petal(size, color)` function that draws one rounded petal using two arcs.
-Call it 8 times in a loop, rotating 45° between each call, to assemble a full flower.
-Teaches: defining and calling functions with parameters, how small reusable units compose.
+Disegna un quadrato, gira leggermente, disegna un quadrato un po' più grande, ripeti 36 volte.
+Ogni quadrato è di un colore diverso che scorre tra rosso, arancione, giallo, verde, blu, e viola.
+Il risultato sembra un tunnel quadrato di colore che gira verso il centro.
+Insegna: cicli `for`, liste di colori, e come un piccolo cambiamento di angolo crea una rotazione visiva drammatica.
 
-### 12. Honeycomb Grid
+### 2. Girandola di Triangoli
 
-Write a `hexagon(x, y, size)` function, then call it in a nested loop to tile the canvas with hexagons.
-Alternate row offsets by half a hexagon width to create a true honeycomb packing.
-Teaches: function parameters, offset grid math, and why hexagons tile perfectly.
+Disegna 12 triangoli equilateri disposti in cerchio, ognuno ruotato di 30° dal precedente.
+Alterna i colori tra oro e rosso scuro per creare contrasto tra le pale.
+Insegna: come ripetere una forma attorno a un punto centrale usando un ciclo e `right(360/n)`.
 
-### 13. City Skyline
+### 3. Cerchi Annidati
 
-Write `building(x, width, height, color)` to draw one rectangular skyscraper with windows.
-Call it 10 times with varied arguments to build a silhouette skyline across the bottom of the canvas.
-Teaches: functions with multiple parameters, how to compose a scene from reusable parts.
+Disegna 20 cerchi concentrici iniziando con raggio 10 e crescendo di 15 pixel a ogni iterazione.
+Coloralli con ciano e blu navy alternati così sembrano pulsare verso l'esterno.
+Insegna: `range()` con un passo, `circle()`, e come alzare la penna e riposizionarsi tra i cerchi.
 
-### 14. Snowflake Arms
+### 4. Raggiera a Stella
 
-Write `arm(length, levels)` to draw one branch of a snowflake (a line with two smaller side branches).
-Call it 6 times rotating 60° between calls to form the full six-armed snowflake.
-Teaches: decomposing a symmetric shape into one arm plus rotation, function reuse.
+Dal centro, disegna 36 linee di uguale lunghezza che puntano verso l'esterno, ognuna ruotata di 10° dalla precedente.
+Colora ogni linea con una tonalità che passa da giallo in alto a arancione a rosso in basso.
+Insegna: calcolare l'indice del colore dal contatore del ciclo, simmetria radiale.
 
-### 15. Polka Dot Canvas
+### 5. Griglia a Scacchiera
 
-Write `dot(x, y, radius, color)` and call it with random positions and random colors 200 times.
-Teaches: writing a simple drawing function, using `random.randint()` for placement and color choice.
+Disegna una griglia 8×8 di quadrati riempiti alternando nero e bianco come una scacchiera.
+Usa cicli `for` annidati per iterare righe e colonne, calcolando la posizione x/y matematicamente.
+Insegna: cicli annidati, aritmetica delle coordinate, e `begin_fill()` / `end_fill()`.
 
-### 16. Brick Wall
+### 6. Campo di Strisce Diagonali
 
-Write `brick(x, y, w, h, color)` to draw one filled rectangle with a thin dark border.
-Call it in a nested loop, offsetting alternate rows by half a brick width.
-Teaches: the offset row pattern, how a small function hides repetitive drawing detail.
+Riempi il canvas con 30 linee diagonali parallele, distanti 5 pixel l'una dall'altra, che vanno dal basso-sinistra all'alto-destra.
+Alterna i colori delle linee tra verde acqua e corallo.
+Insegna: tradurre un contatore di ciclo in una coordinata di partenza, riposizionamento con penna alzata.
 
-### 17. Stars of Different Sizes
+### 7. Griglia di Punti
 
-Write `star(x, y, size, color)` that draws a 5-pointed star using the 144° turn method.
-Call it 15 times with sizes ranging from 20 to 120 pixels at random positions.
-Teaches: parameterized functions, the geometry of a 5-pointed star (144° exterior angle).
+Posiziona un cerchio riempito (punto) a ogni intersezione di una griglia 10×10 spaziata di 40 pixel.
+Varia la dimensione del punto in base al numero di riga — i punti crescono verso il basso.
+Insegna: cicli annidati, `dot()`, e mappare una variabile di ciclo a una proprietà visiva.
 
-### 18. Traffic Light Stack
+### 8. Spicchi della Ruota dei Colori
 
-Write `light(y, color)` to draw one circle in the correct color and position.
-Call it three times to assemble a traffic light inside a dark rectangle.
-Teaches: decomposing a real-world object into drawing primitives and positioning by function argument.
+Divide il canvas in 12 spicchi a fetta di torta, ognuno riempito con un colore della ruota dei colori HSL.
+Usa `begin_fill()` e `end_fill()` con geometria in stile triangolo per disegnare ogni spicchio.
+Insegna: dividere 360° in parti uguali, come le 12 tonalità si relazionano tra loro.
 
-### 19. Fish School
+### 9. Catena di Pentagoni
 
-Write `fish(x, y, size, direction)` that draws a simple fish shape (body ellipse + triangle tail).
-Call it 20 times with slightly varied positions and sizes for a school of fish swimming left.
-Teaches: how one function with different arguments creates variation, visual storytelling.
+Disegna 10 pentagoni in una riga orizzontale, ognuno a contatto con il successivo in un angolo.
+Riempi i pentagoni alternati con viola e oro.
+Insegna: calcolare l'angolo esterno di un poligono regolare (`360 / sides`), posizionamento orizzontale.
 
-### 20. Mountain Range
+### 10. Quadrati Trasparenti Sovrapposti
 
-Write `mountain(x, peak_y, width, color)` that draws a filled triangle.
-Layer three calls with progressively lighter blue-grays to suggest foreground, midground, and background peaks.
-Teaches: layering draw calls for depth, how color value (dark vs light) signals distance.
-
----
-
-## Category 3 — Spirals
-
-### 21. Archimedean Square Spiral
-
-Move forward by an increasing distance each step, turning exactly 90° each time.
-After 200 steps the turtle traces a tight square spiral expanding outward.
-Teaches: how a fixed turn angle plus increasing forward distance creates a spiral without trigonometry.
-
-### 22. Rainbow Line Spiral
-
-Same as #21 but color each segment by cycling through 6 colors.
-The rainbow banding makes each revolution visually distinct.
-Teaches: how `i % len(colors)` maps a loop counter to a color list index.
-
-### 23. Hexagonal Spiral
-
-Turn 60° instead of 90° for a hexagonal spiral.
-Use a blue-to-green gradient to color segments.
-Teaches: how the turn angle alone determines the spiral's polygon shape.
-
-### 24. Triangular Spiral
-
-Turn 120° for a triangular spiral.
-Color each third of the spiral a different warm color.
-Teaches: 120° = equilateral triangle corner, how three-fold symmetry emerges.
-
-### 25. Inward Collapsing Spiral
-
-Start with a large step length and decrease it each iteration until it reaches 1.
-The turtle spirals inward to a point at the center.
-Teaches: decreasing sequences, the visual effect of convergence.
-
-### 26. Colored Logarithmic Spiral
-
-Use trigonometry (`cos`, `sin`) to position the turtle along a logarithmic spiral curve.
-Color each segment by its angle position in the 0–360° cycle.
-Teaches: importing `math`, using `goto(x, y)` to draw curves via point-by-point plotting.
-
-### 27. Double Helix Spiral
-
-Draw two interleaved spirals starting 180° apart, one in blue and one in red.
-Both expand at the same rate so they never intersect.
-Teaches: running two drawing sequences in a single loop, phase offset.
-
-### 28. Fibonacci Spiral
-
-Draw quarter-circle arcs of radii 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 in sequence.
-Each arc pivots 90° to follow the Fibonacci rectangle tiling.
-Teaches: the Fibonacci sequence, how a mathematical sequence produces a natural-looking curve.
-
-### 29. Spiral of Spirals
-
-Draw 12 small square spirals arranged in a circle, each rotated so it faces outward from the center.
-Teaches: composing a macro-shape from repeated micro-shapes, nested loops.
-
-### 30. Color-Banded Pentagon Spiral
-
-Spiral with a 72° turn (pentagon) and change color every 5 steps.
-Distinct color bands march outward in diagonal stripes across the spiral arms.
-Teaches: how the choice of banding interval interacts with the polygon period.
+Disegna 8 grandi quadrati spostati diagonalmente di 20 pixel ciascuno, con ogni colore di riempimento leggermente diverso.
+Poiché i riempimenti di turtle sono opachi, ordina attentamente la sequenza di disegno così le sovrapposizioni sembrano intenzionali.
+Insegna: ordine di disegno, pianificazione del colore di riempimento, posizionamento con offset.
 
 ---
 
-## Category 4 — Fractals and Recursion
+## Categoria 2 — Funzioni e Riutilizzo
 
-### 31. Koch Snowflake
+### 11. Fiore con Funzione Petalo
 
-Replace every straight line segment with four segments that form a triangular bump outward.
-Repeat this replacement recursively 4 times to get the classic snowflake edge.
-Teaches: the core fractal idea — replace a rule with itself at a smaller scale.
+Scrivi una funzione `petal(size, color)` che disegna un petalo arrotondato usando due archi.
+Chiamala 8 volte in un ciclo, ruotando di 45° tra ogni chiamata, per assemblare un fiore completo.
+Insegna: definire e chiamare funzioni con parametri, come piccole unità riutilizzabili si compongono.
 
-### 32. Sierpiński Triangle
+### 12. Griglia a Nido d'Ape
 
-Draw a triangle, then recursively draw three half-size triangles at each corner.
-Stop at depth 5. Fill the outer triangles and leave the center gaps empty.
-Teaches: recursion with a depth limit, how self-similar holes create a fractal.
+Scrivi una funzione `hexagon(x, y, size)`, poi chiamala in un ciclo annidato per tassellare il canvas con esagoni.
+Alterna gli offset delle righe di mezza larghezza di esagono per creare un vero impacchettamento a nido d'ape.
+Insegna: parametri delle funzioni, matematica della griglia con offset, e perché gli esagoni tassellano perfettamente.
 
-### 33. Fractal Tree
+### 13. Skyline Urbano
 
-Draw a trunk, then split into two branches angled ±25°, each 70% of the parent's length.
-Recurse until branches are shorter than 5 pixels.
-Teaches: binary recursion, the base case, how branching angle and ratio control the tree's look.
+Scrivi `building(x, width, height, color)` per disegnare un grattacielo rettangolare con finestre.
+Chiamala 10 volte con argomenti variati per costruire una sagoma di skyline attraverso il fondo del canvas.
+Insegna: funzioni con più parametri, come comporre una scena da parti riutilizzabili.
 
-### 34. Dragon Curve
+### 14. Bracci del Fiocco di Neve
 
-Build the Dragon Curve by folding a strip of paper in half repeatedly (in code).
-After 12 folds, unfold the sequence of left/right turns and draw them.
-Teaches: list manipulation to encode a recursive sequence, then replaying it as turtle moves.
+Scrivi `arm(length, levels)` per disegnare un ramo di un fiocco di neve (una linea con due rami laterali più piccoli).
+Chiamala 6 volte ruotando di 60° tra le chiamate per formare il fiocco di neve completo a sei bracci.
+Insegna: decomporre una forma simmetrica in un braccio più rotazione, riutilizzo delle funzioni.
 
-### 35. Hilbert Curve
+### 15. Canvas a Pois
 
-Implement the Hilbert space-filling curve with a recursive function for each of the four L-system rules.
-At depth 5 it fills a square region completely without crossing itself.
-Teaches: L-systems, mutual recursion (four functions calling each other).
+Scrivi `dot(x, y, radius, color)` e chiamala con posizioni e colori casuali 200 volte.
+Insegna: scrivere una semplice funzione di disegno, usare `random.randint()` per il posizionamento e la scelta del colore.
 
-### 36. Cantor Dust
+### 16. Muro di Mattoni
 
-Draw a horizontal line, then draw two lines at one-third the length on the next level, skipping the middle third.
-Repeat 6 levels downward, spacing each level a fixed distance below the previous.
-Teaches: the triadic Cantor set, recursion that reduces by a ratio, visual self-similarity.
+Scrivi `brick(x, y, w, h, color)` per disegnare un rettangolo riempito con un bordo scuro sottile.
+Chiamala in un ciclo annidato, spostando le righe alternate di metà larghezza di un mattone.
+Insegna: il pattern delle righe con offset, come una piccola funzione nasconde il dettaglio ripetitivo del disegno.
 
-### 37. Pythagorean Tree
+### 17. Stelle di Diverse Dimensioni
 
-Draw a square, then on the top edge grow two smaller squares rotated to form a right triangle.
-Recurse on each new square until size is below 5 pixels.
-Color squares from brown (trunk) to green (leaves) by depth.
-Teaches: geometric recursion, using depth to drive color transition.
+Scrivi `star(x, y, size, color)` che disegna una stella a 5 punte usando il metodo della rotazione a 144°.
+Chiamala 15 volte con dimensioni da 20 a 120 pixel in posizioni casuali.
+Insegna: funzioni parametrizzate, la geometria di una stella a 5 punte (angolo esterno di 144°).
 
-### 38. T-Square Fractal
+### 18. Semaforo
 
-Draw a square at the center. At each corner, draw a square half the size rotated 45°.
-Repeat 5 levels deep. The overlapping squares create a striking geometric weave.
-Teaches: corner-anchored recursion, four recursive calls per level.
+Scrivi `light(y, color)` per disegnare un cerchio nel colore e posizione corretti.
+Chiamala tre volte per assemblare un semaforo dentro un rettangolo scuro.
+Insegna: decomporre un oggetto del mondo reale in primitive di disegno e posizionamento tramite argomento della funzione.
 
-### 39. Lévy C Curve
+### 19. Banco di Pesci
 
-Replace each segment with two segments at 45° angles (like an upward bump).
-After 12 iterations, the segments pack into a shape resembling a dragon's wing.
-Teaches: a different fractal replacement rule, how 45° produces a qualitatively different shape than 60°.
+Scrivi `fish(x, y, size, direction)` che disegna una semplice forma di pesce (corpo a ellisse + coda a triangolo).
+Chiamala 20 volte con posizioni e dimensioni leggermente variate per un banco di pesci che nuota a sinistra.
+Insegna: come una funzione con argomenti diversi crea variazione, narrazione visiva.
 
-### 40. Gosper Curve (Flowsnake)
+### 20. Catena Montuosa
 
-Use the Gosper L-system replacement rules to draw a curve that tiles the plane.
-After 4 iterations it fills a hexagonal region with a beautiful winding path.
-Teaches: L-system string rewriting, translating a character sequence into turtle commands.
-
-### 41. Mandelbrot Pixel Art
-
-For each pixel in a grid, test whether the Mandelbrot iteration escapes.
-Color the pixel by how many iterations it took to escape (or black if it never does).
-This is slow in Python but teaches complex number arithmetic and iteration.
-Teaches: complex numbers, escape-time coloring, nested loops for raster graphics.
-
-### 42. Julia Set Pixel Art
-
-Like the Mandelbrot but with a fixed complex constant c.
-Different values of c produce dramatically different filled shapes — some connected, some dust.
-Teaches: how changing one parameter transforms the fractal, parameter exploration.
-
-### 43. Sierpiński Carpet
-
-Divide a square into 9 equal sub-squares, remove the center, then recurse on the 8 remaining.
-At depth 4, the remaining filled area is a lattice of square holes in holes.
-Teaches: 8-way recursion (not 2-way), how area shrinks as 8/9 per level.
-
-### 44. Barnsley Fern
-
-Apply one of four affine transformations chosen randomly at each step, plot the resulting point.
-After 50,000 points, a photorealistic fern leaf emerges from pure math.
-Teaches: iterated function systems (IFS), probability-weighted random choice, scatter plotting with `dot()`.
-
-### 45. Snowflake Variation — Anti-Koch
-
-Instead of bumping outward, bump inward on every other iteration.
-The result alternates between spiky and notched edges as depth increases.
-Teaches: alternating rule application, how small rule changes create radically different shapes.
+Scrivi `mountain(x, peak_y, width, color)` che disegna un triangolo riempito.
+Sovrapponi tre chiamate con grigio-blu progressivamente più chiari per suggerire picchi in primo piano, piano medio, e sfondo.
+Insegna: sovrapporre chiamate di disegno per la profondità, come il valore del colore (scuro contro chiaro) segnala la distanza.
 
 ---
 
-## Category 5 — Symmetry and Tiling
+## Categoria 3 — Spirali
 
-### 46. Four-Fold Symmetric Doodle
+### 21. Spirale Quadrata di Archimede
 
-Record every turtle move in a list. After drawing one quadrant, replay the list
-rotated 90°, 180°, and 270° to produce a four-fold symmetric pattern automatically.
-Teaches: recording commands as data, replaying with transformation.
+Muoviti avanti di una distanza crescente a ogni passo, girando esattamente di 90° ogni volta.
+Dopo 200 passi la tartaruga traccia una spirale quadrata stretta che si espande verso l'esterno.
+Insegna: come un angolo di rotazione fisso più una distanza crescente creano una spirale senza trigonometria.
 
-### 47. Six-Fold Mandala
+### 22. Spirale di Linee Arcobaleno
 
-Draw one-sixth of a mandala pattern, then stamp it 5 more times rotating 60° each time.
-Teaches: how 360/6 = 60° gives six-fold symmetry, function-based mandala construction.
+Come il #21 ma colora ogni segmento scorrendo attraverso 6 colori.
+Le fasce arcobaleno rendono ogni rivoluzione visivamente distinta.
+Insegna: come `i % len(colors)` mappa un contatore di ciclo a un indice della lista di colori.
 
-### 48. Mirror Butterfly
+### 23. Spirale Esagonale
 
-Draw the right wing of a butterfly as a freehand curve using `goto()` waypoints.
-Mirror it by negating the x coordinates for the left wing.
-Teaches: bilateral symmetry via x-negation, using coordinate lists.
+Gira di 60° invece di 90° per una spirale esagonale.
+Usa un gradiente da blu a verde per colorare i segmenti.
+Insegna: come l'angolo di rotazione da solo determina la forma poligonale della spirale.
 
-### 49. Kaleidoscope Slice
+### 24. Spirale Triangolare
 
-Draw a random angular slice with filled shapes and bright colors.
-Rotate and mirror it 12 times to create a 12-section kaleidoscope.
-Teaches: combining rotation (30°) and reflection (x-flip) to build radial symmetry.
+Gira di 120° per una spirale triangolare.
+Colora ogni terzo della spirale con un colore caldo diverso.
+Insegna: 120° = angolo di un triangolo equilatero, come emerge la simmetria a tre pieghe.
 
-### 50. Pinwheel Tiling
+### 25. Spirale che Collassa verso l'Interno
 
-Tile the canvas with the Penrose pinwheel tiling (triangles split into 5 smaller triangles).
-Color triangles based on their orientation angle modulo 5.
-Teaches: aperiodic tiling, recursion for tile subdivision.
+Inizia con una lunghezza di passo grande e diminuiscila a ogni iterazione finché non raggiunge 1.
+La tartaruga si avvolge verso l'interno fino a un punto al centro.
+Insegna: sequenze decrescenti, l'effetto visivo della convergenza.
 
-### 51. Escher-Style Fish Tile
+### 26. Spirale Logaritmica Colorata
 
-Define a single fish shape using waypoints.
-Translate and rotate copies so each fish's head fits into the neighboring fish's tail.
-Teaches: how Escher-style tessellations work — each tile is shaped to fit its neighbors.
+Usa la trigonometria (`cos`, `sin`) per posizionare la tartaruga lungo una curva a spirale logaritmica.
+Colora ogni segmento in base alla sua posizione angolare nel ciclo 0–360°.
+Insegna: importare `math`, usare `goto(x, y)` per disegnare curve tramite tracciamento punto per punto.
 
-### 52. Voronoi Color Regions
+### 27. Spirale a Doppia Elica
 
-Place 15 random seed points. For each pixel in a grid, color it based on which seed it is closest to.
-Teaches: distance formula, nearest-neighbor classification, pixel-by-pixel raster drawing.
+Disegna due spirali interlacciate che iniziano a 180° di distanza, una in blu e una in rosso.
+Entrambe si espandono alla stessa velocità così non si intersecano mai.
+Insegna: eseguire due sequenze di disegno in un singolo ciclo, offset di fase.
 
-### 53. Truchet Tiles
+### 28. Spirale di Fibonacci
 
-Fill a grid with tiles each containing either a `/` arc or a `\` arc, chosen randomly.
-The arcs connect across tile boundaries to form wandering river-like paths.
-Teaches: randomized tiling, how local random choices produce global structure.
+Disegna archi a quarto di cerchio di raggi 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 in sequenza.
+Ogni arco pivota di 90° per seguire la tassellatura del rettangolo di Fibonacci.
+Insegna: la sequenza di Fibonacci, come una sequenza matematica produce una curva che sembra naturale.
 
-### 54. Penrose Rhombus Tiling
+### 29. Spirale di Spirali
 
-Recursively subdivide two types of rhombus (thick and thin) following Penrose deflation rules.
-Color thick rhombuses gold and thin ones blue.
-Teaches: two-rule recursive subdivision, aperiodic geometry.
+Disegna 12 piccole spirali quadrate disposte in cerchio, ognuna ruotata così da guardare verso l'esterno dal centro.
+Insegna: comporre una macro-forma da micro-forme ripetute, cicli annidati.
 
-### 55. Islamic Geometric Star Pattern
+### 30. Spirale Pentagonale a Fasce Colorate
 
-Construct a repeating pattern of 8-pointed stars and cross shapes found in Islamic tile work.
-Use only straight lines and 45° angles.
-Teaches: exact geometric construction from angle rules, repetition via translation.
-
----
-
-## Category 6 — Nature and Science
-
-### 56. Sunflower Seed Spiral
-
-Place 500 seeds using the golden angle (≈137.5°) — each seed one golden angle further around.
-Distance from center grows as the square root of the seed index.
-The seeds automatically arrange into the Fibonacci spiral arms seen in real sunflowers.
-Teaches: the golden angle, why Fibonacci numbers appear in nature, `math.sqrt()`.
-
-### 57. Spider Web
-
-Draw 8 radial spokes from the center. Then draw concentric rings connecting the spokes,
-spacing them in a logarithmic progression so inner rings are closer together.
-Teaches: mixing radial and concentric structure, logarithmic spacing.
-
-### 58. Lightning Bolt
-
-Recursively displace the midpoint of a line segment up or down by a random amount,
-then recurse on each half. After 7 levels, the jagged result looks like lightning.
-Teaches: midpoint displacement, how randomness combined with recursion creates organic shapes.
-
-### 59. River Delta
-
-Start at the top with one wide line. At each step, randomly split into two thinner branches.
-Branches that go off-screen are pruned. The result resembles a river delta or tree root.
-Teaches: random branching with pruning, how stochastic recursion differs from deterministic.
-
-### 60. Coral Branch
-
-Use a recursive branching function but allow 1–3 random sub-branches per node (not always 2).
-Vary branch angle randomly within ±40°. Color from dark red (base) to pink (tips).
-Teaches: variable-arity recursion, random angle variation, color-by-depth gradient.
-
-### 61. Galaxy Spiral Arms
-
-Draw four logarithmic spiral arms offset 90° from each other.
-Scatter star dots along each arm and add a bright central core cluster.
-Teaches: log spirals, point-scatter around a curve using `random.gauss()` for natural spread.
-
-### 62. Leaf Venation
-
-Draw a central vein, then branch smaller veins off it, then smaller veins off those.
-Each vein curves slightly outward from the leaf edge inward.
-Teaches: biological branching structure, curved lines via small forward+turn steps.
-
-### 63. DNA Double Helix Side View
-
-Plot two sine waves offset by 180° as point sequences. Connect rungs between them every 10 points.
-Color one strand blue and one red.
-Teaches: `math.sin()`, parametric plotting, how a phase offset creates the helix appearance.
-
-### 64. Ripple Waves
-
-Draw concentric ellipses centered at three different points.
-Where ellipses overlap, the visual interference creates wave interference patterns.
-Teaches: multiple centers, how ellipses differ from circles, visual superposition.
-
-### 65. Topographic Map
-
-Draw closed concentric irregular curves (slightly perturbed circles) at increasing radii.
-Color bands between contours from green (low) to brown (high) to white (peak).
-Teaches: contour coloring, how elevation maps use color bands.
+Spirale con una rotazione di 72° (pentagono) e cambia colore ogni 5 passi.
+Fasce di colore distinte marciano verso l'esterno in strisce diagonali attraverso i bracci della spirale.
+Insegna: come la scelta dell'intervallo di fasciatura interagisce con il periodo del poligono.
 
 ---
 
-## Category 7 — Mathematical Curves
+## Categoria 4 — Frattali e Ricorsione
 
-### 66. Lissajous Figure
+### 31. Fiocco di Neve di Koch
 
-Plot `x = A·sin(a·t + δ)` and `y = B·sin(b·t)` for t from 0 to 2π using `goto()`.
-Try ratios a:b of 1:2, 2:3, 3:4 to see how the ratio controls the loop count.
-Teaches: parametric equations, `math.sin()`, how frequency ratio determines curve shape.
+Sostituisci ogni segmento di linea retta con quattro segmenti che formano una protuberanza triangolare verso l'esterno.
+Ripeti questa sostituzione ricorsivamente 4 volte per ottenere il classico bordo a fiocco di neve.
+Insegna: l'idea fondamentale del frattale — sostituire una regola con se stessa a una scala più piccola.
 
-### 67. Rose Curve (Rhodonea)
+### 32. Triangolo di Sierpiński
 
-Plot `r = cos(k·θ)` in polar coordinates, converting each point to `(x, y)` for `goto()`.
-With k=3 you get 3 petals; k=4 gives 8 petals (the petal count rule is n or 2n depending on k).
-Teaches: polar-to-Cartesian conversion, how the parameter k changes petal count.
+Disegna un triangolo, poi disegna ricorsivamente tre triangoli di metà dimensione a ogni angolo.
+Fermati alla profondità 5. Riempi i triangoli esterni e lascia vuoti gli spazi centrali.
+Insegna: ricorsione con un limite di profondità, come i buchi auto-simili creano un frattale.
 
-### 68. Spirograph (Hypotrochoid)
+### 33. Albero Frattale
 
-Plot the curve traced by a pen in a small disk rolling inside a larger disk.
-Parameters r (inner radius), R (outer radius), and d (pen distance) control the pattern.
-Teaches: parametric curves, how three parameters create infinite variety.
+Disegna un tronco, poi dividilo in due rami angolati di ±25°, ognuno al 70% della lunghezza del genitore.
+Ricorri finché i rami non sono più corti di 5 pixel.
+Insegna: ricorsione binaria, il caso base, come l'angolo di ramificazione e il rapporto controllano l'aspetto dell'albero.
 
-### 69. Epitrochoid (Outer Spirograph)
+### 34. Curva del Dragone
 
-Same as the hypotrochoid but the small disk rolls on the outside of the large disk.
-Produces flower-like loops rather than inward curves.
-Teaches: comparing inner vs outer rolling, the sign difference in the parametric formula.
+Costruisci la Curva del Dragone piegando a metà ripetutamente una striscia di carta (nel codice).
+Dopo 12 piegature, spiega la sequenza di rotazioni sinistra/destra e disegnala.
+Insegna: manipolazione di liste per codificare una sequenza ricorsiva, poi riprodurla come movimenti della tartaruga.
 
-### 70. Butterfly Curve (Temple H. Fay)
+### 35. Curva di Hilbert
 
-Plot the trigonometric butterfly curve in polar form.
-The curve traces a shape with four wing-like lobes.
-Teaches: more complex polar equations, how transcendental functions create organic shapes.
+Implementa la curva che riempie lo spazio di Hilbert con una funzione ricorsiva per ciascuna delle quattro regole del sistema-L.
+Alla profondità 5 riempie completamente una regione quadrata senza incrociarsi.
+Insegna: sistemi-L, ricorsione mutua (quattro funzioni che si chiamano a vicenda).
 
-### 71. Superellipse (Lamé Curve)
+### 36. Polvere di Cantor
 
-Plot `|x/a|^n + |y/b|^n = 1` for various values of n.
-n=2 is an ellipse; n=4 is a rounded rectangle; n=0.5 produces a star shape.
-Teaches: how changing one exponent morphs a shape continuously, parametric families.
+Disegna una linea orizzontale, poi disegna due linee a un terzo della lunghezza al livello successivo, saltando il terzo centrale.
+Ripeti per 6 livelli verso il basso, spaziando ogni livello a una distanza fissa sotto il precedente.
+Insegna: l'insieme triadico di Cantor, ricorsione che si riduce di un rapporto, auto-similarità visiva.
 
-### 72. Cassini Oval
+### 37. Albero di Pitagora
 
-Plot the set of points where the product of distances to two fixed foci equals a constant.
-When the constant equals the inter-focus distance, the oval becomes a figure-eight (lemniscate).
-Teaches: distance formula, how changing one constant creates a topological change.
+Disegna un quadrato, poi sul lato superiore fai crescere due quadrati più piccoli ruotati per formare un triangolo rettangolo.
+Ricorri su ogni nuovo quadrato finché la dimensione non è sotto i 5 pixel.
+Colora i quadrati da marrone (tronco) a verde (foglie) in base alla profondità.
+Insegna: ricorsione geometrica, usare la profondità per guidare la transizione di colore.
 
-### 73. Fermat's Spiral
+### 38. Frattale a T-Square
 
-Plot `r = ±√θ` in polar coordinates for θ from 0 to 8π.
-Two arms (one for + and one for −) wind outward from the origin symmetrically.
-Teaches: square root scaling, how ± creates mirrored arms.
+Disegna un quadrato al centro. A ogni angolo, disegna un quadrato di metà dimensione ruotato di 45°.
+Ripeti per 5 livelli di profondità. I quadrati sovrapposti creano un intreccio geometrico sorprendente.
+Insegna: ricorsione ancorata agli angoli, quattro chiamate ricorsive per livello.
 
-### 74. Epicycloid Star
+### 39. Curva C di Lévy
 
-Plot a point on the rim of a circle rolling around the outside of another circle.
-When the ratio of radii is an integer n, you get a star with n points.
-Teaches: epicycloids, how an integer ratio creates a closed, star-pointed curve.
+Sostituisci ogni segmento con due segmenti ad angoli di 45° (come una protuberanza verso l'alto).
+Dopo 12 iterazioni, i segmenti si compattano in una forma che ricorda l'ala di un dragone.
+Insegna: una diversa regola di sostituzione frattale, come 45° produce una forma qualitativamente diversa da 60°.
 
-### 75. Astroid (Four-Cusped Hypocycloid)
+### 40. Curva di Gosper (Flowsnake)
 
-Roll a circle of radius R/4 inside a circle of radius R.
-The traced point draws a four-cusped astroid — a shape like a puffy square with pinched corners.
-Teaches: hypocycloids, parametric form `x = R·cos³(t)`, `y = R·sin³(t)`.
+Usa le regole di sostituzione del sistema-L di Gosper per disegnare una curva che tassella il piano.
+Dopo 4 iterazioni riempie una regione esagonale con un bellissimo percorso avvolgente.
+Insegna: riscrittura di stringhe del sistema-L, tradurre una sequenza di caratteri in comandi della tartaruga.
 
----
+### 41. Pixel Art di Mandelbrot
 
-## Category 8 — Optical Illusions and Op Art
+Per ogni pixel in una griglia, verifica se l'iterazione di Mandelbrot fugge all'infinito.
+Colora il pixel in base a quante iterazioni ci sono volute per fuggire (o nero se non fugge mai).
+Questo è lento in Python ma insegna l'aritmetica dei numeri complessi e l'iterazione.
+Insegna: numeri complessi, colorazione a tempo di fuga, cicli annidati per la grafica raster.
 
-### 76. Rotating Squares Illusion
+### 42. Pixel Art dell'Insieme di Julia
 
-Draw concentric squares, alternating their corner orientation by 5° each level.
-The static image appears to spiral or rotate when viewed.
-Teaches: how orientation change creates kinetic illusion, the importance of alternating contrast.
+Come il Mandelbrot ma con una costante complessa c fissa.
+Valori diversi di c producono forme riempite drammaticamente diverse — alcune connesse, alcune polvere.
+Insegna: come cambiare un parametro trasforma il frattale, esplorazione dei parametri.
 
-### 77. Café Wall Illusion
+### 43. Tappeto di Sierpiński
 
-Draw horizontal rows of black and white rectangles offset by half a unit each row,
-with thin gray mortar lines between rows.
-The rows appear slanted even though they are perfectly horizontal.
-Teaches: the role of context (mortar color) in perceptual illusion, precise grid drawing.
+Divide un quadrato in 9 sotto-quadrati uguali, rimuovi il centro, poi ricorri sugli 8 rimanenti.
+Alla profondità 4, l'area riempita rimanente è un reticolo di buchi dentro buchi.
+Insegna: ricorsione a 8 vie (non a 2 vie), come l'area si riduce dell'8/9 per livello.
 
-### 78. Mach Bands
+### 44. Felce di Barnsley
 
-Draw a series of filled rectangles in increasing shades of gray.
-The human eye perceives dark and light bands at the edges even though each rectangle is uniform.
-Teaches: drawing gradient approximations with discrete bands, color value arithmetic.
+Applica una delle quattro trasformazioni affini scelte casualmente a ogni passo, traccia il punto risultante.
+Dopo 50.000 punti, emerge una foglia di felce fotorealistica dalla pura matematica.
+Insegna: sistemi di funzioni iterate (IFS), scelta casuale pesata per probabilità, tracciamento a dispersione con `dot()`.
 
-### 79. Moiré Pattern
+### 45. Variazione del Fiocco di Neve — Anti-Koch
 
-Draw two identical sets of closely spaced parallel lines, one slightly rotated from the other.
-The interference creates a visible beating pattern of bands.
-Teaches: how two regular patterns with slightly different spacing or angle create a third emergent pattern.
-
-### 80. Vasarely Sphere
-
-Draw a grid of circles but shrink and shift them toward the center to create the illusion of a sphere bulging from the canvas.
-Teaches: how distorting a regular grid can convey three-dimensional curvature.
-
-### 81. Bridget Riley Waves
-
-Draw 40 horizontal sine waves stacked vertically, each shifted slightly in phase from the one above.
-Use high-contrast black and white.
-Teaches: `math.sin()` for wave generation, how phase shift creates the flowing op-art motion effect.
-
-### 82. Expanding Hexagons
-
-Draw hexagons that grow from tiny to large radiating outward from the center.
-Alternate black and white fill so the pattern pulsates.
-Teaches: size-driven repetition, how alternating contrast amplifies the expansion illusion.
-
-### 83. Scintillating Grid
-
-Draw a grid of dark rectangles with lighter intersections.
-The eye perceives phantom dark dots flickering at the intersections.
-Teaches: precise grid placement, how local contrast drives global perceptual effects.
-
-### 84. Impossible Triangle (Penrose Triangle)
-
-Construct the Penrose triangle using three isometric parallelograms drawn in three shades of gray.
-The local joins look valid but the global shape is geometrically impossible.
-Teaches: how isometric perspective is constructed, how shading implies depth.
-
-### 85. Concentric Ring Pulsation
-
-Draw rings alternating between a warm and cool hue with decreasing width as they approach the center.
-The rings appear to vibrate or pulse due to simultaneous contrast between warm and cool.
-Teaches: warm/cool color contrast, concentric ring construction.
+Invece di sporgere verso l'esterno, sporgi verso l'interno a ogni altra iterazione.
+Il risultato alterna tra bordi spinosi e intaccati man mano che la profondità aumenta.
+Insegna: applicazione alternata della regola, come piccoli cambiamenti di regola creano forme radicalmente diverse.
 
 ---
 
-## Category 9 — Typography and Text Art
+## Categoria 5 — Simmetria e Tassellatura
 
-### 86. Spiral Text
+### 46. Scarabocchio a Simmetria Quadrupla
 
-Print a word or message character by character along a spiral path using `write()`.
-Each letter is placed at the current turtle position, which advances along the spiral.
-Teaches: using `write()` for text rendering, combining motion with text placement.
+Registra ogni movimento della tartaruga in una lista. Dopo aver disegnato un quadrante, riproduci la lista
+ruotata di 90°, 180°, e 270° per produrre automaticamente un pattern a simmetria quadrupla.
+Insegna: registrare comandi come dati, riprodurli con trasformazione.
 
-### 87. Name in Block Letters
+### 47. Mandala a Simmetria Sestupla
 
-Draw each letter of a name as a turtle drawing composed of line segments.
-Build a `letter_H()`, `letter_A()`, etc. function for each needed letter.
-Teaches: decomposing complex shapes into line primitives, function-per-character architecture.
+Disegna un sesto di un pattern a mandala, poi stampalo altre 5 volte ruotando di 60° ogni volta.
+Insegna: come 360/6 = 60° dà simmetria a sei pieghe, costruzione del mandala basata su funzioni.
 
-### 88. Seven-Segment Display
+### 48. Farfalla a Specchio
 
-Simulate a seven-segment LED display for digits 0–9.
-Each segment is a filled rectangle; a digit is drawn by turning segments on or off.
-Teaches: boolean masking to select which segments to draw, encoding digits as bit patterns.
+Disegna l'ala destra di una farfalla come una curva a mano libera usando punti di passaggio con `goto()`.
+Rifletti negando le coordinate x per l'ala sinistra.
+Insegna: simmetria bilaterale tramite negazione di x, usare liste di coordinate.
 
-### 89. Circular Name Badge
+### 49. Fetta di Caleidoscopio
 
-Arrange letters of a word around the circumference of a circle using `goto()` and rotation math.
-Each letter is rotated to face radially outward.
-Teaches: placing text at computed positions, rotating the turtle before writing.
+Disegna una fetta angolare casuale con forme riempite e colori vivaci.
+Ruota e rifletti 12 volte per creare un caleidoscopio a 12 sezioni.
+Insegna: combinare rotazione (30°) e riflessione (inversione x) per costruire simmetria radiale.
 
-### 90. Binary Tree Name
+### 50. Tassellatura a Girandola
 
-Encode a name as a binary sequence (ASCII) and draw it as a vertical binary tree,
-left branch for 0 and right branch for 1.
-Teaches: binary representation of text, visualizing data structures as drawings.
+Tassella il canvas con la tassellatura a girandola di Penrose (triangoli divisi in 5 triangoli più piccoli).
+Colora i triangoli in base al loro angolo di orientamento modulo 5.
+Insegna: tassellatura aperiodica, ricorsione per la suddivisione delle tessere.
 
----
+### 51. Piastrella di Pesci in Stile Escher
 
-## Category 10 — Animation and Interactive
+Definisci una singola forma di pesce usando punti di passaggio.
+Trasla e ruota le copie così che la testa di ogni pesce si incastri nella coda del pesce vicino.
+Insegna: come funzionano le tassellature in stile Escher — ogni tessera è sagomata per incastrarsi con le vicine.
 
-### 91. Bouncing Ball
+### 52. Regioni Colorate di Voronoi
 
-Move a dot across the screen and reverse its direction when it reaches the canvas edge.
-Use `ontimer()` to redraw each frame.
-Teaches: velocity variables, boundary collision detection, the animation loop pattern.
+Posiziona 15 punti seme casuali. Per ogni pixel in una griglia, coloralo in base a quale seme gli è più vicino.
+Insegna: formula della distanza, classificazione per vicino più prossimo, disegno raster pixel per pixel.
 
-### 92. Clock Face
+### 53. Piastrelle di Truchet
 
-Draw a clock face with hour and minute hands that update each second.
-Use `ontimer()` and `time.localtime()` to compute hand angles from the current time.
-Teaches: real-time updates, converting time to angles (hour × 30°, minute × 6°).
+Riempi una griglia con tessere ognuna contenente un arco `/` o un arco `\`, scelto casualmente.
+Gli archi si collegano attraverso i confini delle tessere per formare percorsi serpeggianti simili a fiumi.
+Insegna: tassellatura randomizzata, come scelte casuali locali producono struttura globale.
 
-### 93. Turtle Chase
+### 54. Tassellatura a Rombi di Penrose
 
-One turtle chases another. The prey moves in a random walk; the predator always turns toward the prey.
-Teaches: two-turtle programs, computing the heading toward a target point using `math.atan2()`.
+Suddividi ricorsivamente due tipi di rombo (spesso e sottile) seguendo le regole di deflazione di Penrose.
+Colora i rombi spessi d'oro e quelli sottili di blu.
+Insegna: suddivisione ricorsiva a due regole, geometria aperiodica.
 
-### 94. Spirograph Drawer
+### 55. Pattern a Stella Geometrica Islamica
 
-Accept user mouse clicks to set the inner radius, outer radius, and pen offset.
-Draw the resulting hypotrochoid each time the user clicks.
-Teaches: `onscreenclick()`, interactive parameter input, recomputing a drawing on demand.
-
-### 95. Reaction-Diffusion Pattern
-
-Simulate a simple Gray-Scott reaction-diffusion system on a pixel grid.
-At each step, update each cell based on its neighbors. Color by concentration.
-Slow but produces organic-looking spots and stripes like animal skin patterns.
-Teaches: grid simulation, neighbor-based update rules, how complexity emerges from simple local rules.
+Costruisci un pattern ripetuto di stelle a 8 punte e forme a croce trovate nei lavori di piastrelle islamiche.
+Usa solo linee rette e angoli di 45°.
+Insegna: costruzione geometrica esatta da regole angolari, ripetizione tramite traslazione.
 
 ---
 
-## Category 11 — Advanced Challenges
+## Categoria 6 — Natura e Scienza
 
-### 96. L-System Plant
+### 56. Spirale dei Semi di Girasole
 
-Implement a general L-system engine: a starting axiom, a set of rewrite rules, and an iteration count.
-Apply it to Prusinkiewicz's plant L-systems to grow realistic branching plants.
-Teaches: string rewriting, building a general interpreter, the power of generalized rule engines.
+Posiziona 500 semi usando l'angolo d'oro (≈137,5°) — ogni seme un angolo d'oro più avanti.
+La distanza dal centro cresce come la radice quadrata dell'indice del seme.
+I semi si dispongono automaticamente nei bracci a spirale di Fibonacci visti nei girasoli reali.
+Insegna: l'angolo d'oro, perché i numeri di Fibonacci appaiono in natura, `math.sqrt()`.
 
-### 97. Turtle Maze Generator
+### 57. Ragnatela
 
-Use a recursive backtracker algorithm to generate a perfect maze on a grid.
-Draw the walls as turtle line segments.
-Teaches: depth-first search, using a stack (or recursion) for maze generation, grid data structures.
+Disegna 8 raggi radiali dal centro. Poi disegna anelli concentrici che collegano i raggi,
+spaziandoli in una progressione logaritmica così gli anelli interni sono più vicini tra loro.
+Insegna: mescolare struttura radiale e concentrica, spaziatura logaritmica.
 
-### 98. Parametric Surface Projection
+### 58. Fulmine
 
-Compute 3D points on a parametric surface (sphere, torus, saddle) and project them onto 2D
-using a simple orthographic or isometric projection.
-Draw the wireframe grid of UV lines.
-Teaches: 3D-to-2D projection math, parametric surfaces, wireframe rendering.
+Sposta ricorsivamente il punto medio di un segmento di linea verso l'alto o il basso di una quantità casuale,
+poi ricorri su ciascuna metà. Dopo 7 livelli, il risultato frastagliato sembra un fulmine.
+Insegna: spostamento del punto medio, come la casualità combinata con la ricorsione crea forme organiche.
 
-### 99. Lindenmayer Snowflake Collection
+### 59. Delta del Fiume
 
-Implement five different L-system fractals (Koch, Lévy, Gosper, Dragon, Peano) in a single program
-with a menu to choose which one to draw.
-Teaches: organizing multiple algorithms behind a unified interface, code reuse across related systems.
+Inizia in alto con una linea larga. A ogni passo, dividi casualmente in due rami più sottili.
+I rami che vanno fuori schermo vengono eliminati. Il risultato ricorda un delta di fiume o una radice d'albero.
+Insegna: ramificazione casuale con potatura, come la ricorsione stocastica differisce da quella deterministica.
 
-### 100. Generative Art Loop
+### 60. Ramo di Corallo
 
-Write a program that generates a different abstract composition each run using a controlled random seed.
-The user can enter a seed number to reproduce any favorite composition.
-Teaches: `random.seed()`, reproducible randomness, the concept of a generative design space.
+Usa una funzione di ramificazione ricorsiva ma permetti 1–3 sotto-rami casuali per nodo (non sempre 2).
+Varia l'angolo del ramo casualmente entro ±40°. Colora da rosso scuro (base) a rosa (punte).
+Insegna: ricorsione ad arità variabile, variazione casuale dell'angolo, gradiente di colore per profondità.
+
+### 61. Bracci a Spirale della Galassia
+
+Disegna quattro bracci a spirale logaritmica distanziati di 90° l'uno dall'altro.
+Disperdi punti stellari lungo ogni braccio e aggiungi un ammasso centrale luminoso.
+Insegna: spirali logaritmiche, dispersione di punti attorno a una curva usando `random.gauss()` per una diffusione naturale.
+
+### 62. Nervatura della Foglia
+
+Disegna una vena centrale, poi dirama vene più piccole da essa, poi vene ancora più piccole da quelle.
+Ogni vena curva leggermente verso l'esterno dal bordo della foglia verso l'interno.
+Insegna: struttura di ramificazione biologica, linee curve tramite piccoli passi avanti+rotazione.
+
+### 63. Doppia Elica del DNA Vista di Lato
+
+Traccia due onde sinusoidali distanziate di 180° come sequenze di punti. Collega i pioli tra loro ogni 10 punti.
+Colora un filamento blu e uno rosso.
+Insegna: `math.sin()`, tracciamento parametrico, come un offset di fase crea l'aspetto dell'elica.
+
+### 64. Onde Concentriche
+
+Disegna ellissi concentriche centrate su tre punti diversi.
+Dove le ellissi si sovrappongono, l'interferenza visiva crea pattern di interferenza d'onda.
+Insegna: più centri, come le ellissi differiscono dai cerchi, sovrapposizione visiva.
+
+### 65. Mappa Topografica
+
+Disegna curve concentriche irregolari chiuse (cerchi leggermente perturbati) a raggi crescenti.
+Colora le fasce tra i contorni da verde (basso) a marrone (alto) a bianco (picco).
+Insegna: colorazione dei contorni, come le mappe di elevazione usano le fasce di colore.
 
 ---
 
-*These 100 patterns range from beginner (categories 1–2) to advanced (categories 9–11).
-Start where the challenge feels just slightly beyond your comfort zone — that is where the learning happens.*
+## Categoria 7 — Curve Matematiche
+
+### 66. Figura di Lissajous
+
+Traccia `x = A·sin(a·t + δ)` e `y = B·sin(b·t)` per t da 0 a 2π usando `goto()`.
+Prova i rapporti a:b di 1:2, 2:3, 3:4 per vedere come il rapporto controlla il numero di cicli.
+Insegna: equazioni parametriche, `math.sin()`, come il rapporto di frequenza determina la forma della curva.
+
+### 67. Curva a Rosa (Rhodonea)
+
+Traccia `r = cos(k·θ)` in coordinate polari, convertendo ogni punto in `(x, y)` per `goto()`.
+Con k=3 ottieni 3 petali; k=4 dà 8 petali (la regola del conteggio dei petali è n o 2n a seconda di k).
+Insegna: conversione da polare a cartesiano, come il parametro k cambia il conteggio dei petali.
+
+### 68. Spirografo (Ipotrocoide)
+
+Traccia la curva descritta da una penna in un disco piccolo che rotola dentro un disco più grande.
+I parametri r (raggio interno), R (raggio esterno), e d (distanza della penna) controllano il pattern.
+Insegna: curve parametriche, come tre parametri creano infinita varietà.
+
+### 69. Epitrocoide (Spirografo Esterno)
+
+Come l'ipotrocoide ma il disco piccolo rotola all'esterno del disco grande.
+Produce anelli simili a fiori invece di curve verso l'interno.
+Insegna: confrontare rotolamento interno contro esterno, la differenza di segno nella formula parametrica.
+
+### 70. Curva a Farfalla (Temple H. Fay)
+
+Traccia la curva trigonometrica a farfalla in forma polare.
+La curva traccia una forma con quattro lobi simili ad ali.
+Insegna: equazioni polari più complesse, come le funzioni trascendenti creano forme organiche.
+
+### 71. Superellisse (Curva di Lamé)
+
+Traccia `|x/a|^n + |y/b|^n = 1` per vari valori di n.
+n=2 è un'ellisse; n=4 è un rettangolo arrotondato; n=0,5 produce una forma a stella.
+Insegna: come cambiare un esponente trasforma continuamente una forma, famiglie parametriche.
+
+### 72. Ovale di Cassini
+
+Traccia l'insieme di punti dove il prodotto delle distanze da due fuochi fissi è uguale a una costante.
+Quando la costante è uguale alla distanza tra i fuochi, l'ovale diventa una figura a otto (lemniscata).
+Insegna: formula della distanza, come cambiare una costante crea un cambiamento topologico.
+
+### 73. Spirale di Fermat
+
+Traccia `r = ±√θ` in coordinate polari per θ da 0 a 8π.
+Due bracci (uno per + e uno per −) si avvolgono verso l'esterno dall'origine simmetricamente.
+Insegna: scala della radice quadrata, come ± crea bracci speculari.
+
+### 74. Stella Epicicloidale
+
+Traccia un punto sul bordo di un cerchio che rotola attorno all'esterno di un altro cerchio.
+Quando il rapporto dei raggi è un intero n, ottieni una stella con n punte.
+Insegna: epicicloidi, come un rapporto intero crea una curva chiusa a punte stellari.
+
+### 75. Astroide (Ipocicloide a Quattro Cuspidi)
+
+Fai rotolare un cerchio di raggio R/4 dentro un cerchio di raggio R.
+Il punto tracciato disegna un astroide a quattro cuspidi — una forma come un quadrato gonfio con angoli pizzicati.
+Insegna: ipocicloidi, forma parametrica `x = R·cos³(t)`, `y = R·sin³(t)`.
+
+---
+
+## Categoria 8 — Illusioni Ottiche e Op Art
+
+### 76. Illusione dei Quadrati Rotanti
+
+Disegna quadrati concentrici, alternando il loro orientamento d'angolo di 5° a ogni livello.
+L'immagine statica appare ruotare o girare quando viene osservata.
+Insegna: come il cambiamento di orientamento crea un'illusione cinetica, l'importanza del contrasto alternato.
+
+### 77. Illusione del Muro del Caffè
+
+Disegna righe orizzontali di rettangoli neri e bianchi spostati di mezza unità a ogni riga,
+con linee di malta grigie sottili tra le righe.
+Le righe appaiono inclinate anche se sono perfettamente orizzontali.
+Insegna: il ruolo del contesto (colore della malta) nell'illusione percettiva, disegno preciso della griglia.
+
+### 78. Bande di Mach
+
+Disegna una serie di rettangoli riempiti in tonalità di grigio crescenti.
+L'occhio umano percepisce bande scure e chiare ai bordi anche se ogni rettangolo è uniforme.
+Insegna: disegnare approssimazioni di gradiente con bande discrete, aritmetica del valore di colore.
+
+### 79. Motivo Moiré
+
+Disegna due insiemi identici di linee parallele strettamente spaziate, uno leggermente ruotato rispetto all'altro.
+L'interferenza crea un visibile pattern di battimento di fasce.
+Insegna: come due pattern regolari con spaziatura o angolo leggermente diversi creano un terzo pattern emergente.
+
+### 80. Sfera di Vasarely
+
+Disegna una griglia di cerchi ma restringili e spostali verso il centro per creare l'illusione di una sfera che si gonfia fuori dal canvas.
+Insegna: come distorcere una griglia regolare può comunicare curvatura tridimensionale.
+
+### 81. Onde di Bridget Riley
+
+Disegna 40 onde sinusoidali orizzontali impilate verticalmente, ognuna leggermente spostata in fase rispetto a quella sopra.
+Usa bianco e nero ad alto contrasto.
+Insegna: `math.sin()` per generare onde, come lo spostamento di fase crea l'effetto di movimento fluido dell'op-art.
+
+### 82. Esagoni in Espansione
+
+Disegna esagoni che crescono da minuscoli a grandi irradiandosi verso l'esterno dal centro.
+Alterna riempimento nero e bianco così il pattern pulsa.
+Insegna: ripetizione guidata dalla dimensione, come il contrasto alternato amplifica l'illusione di espansione.
+
+### 83. Griglia Scintillante
+
+Disegna una griglia di rettangoli scuri con intersezioni più chiare.
+L'occhio percepisce punti scuri fantasma che tremolano alle intersezioni.
+Insegna: posizionamento preciso della griglia, come il contrasto locale guida gli effetti percettivi globali.
+
+### 84. Triangolo Impossibile (Triangolo di Penrose)
+
+Costruisci il triangolo di Penrose usando tre parallelogrammi isometrici disegnati in tre tonalità di grigio.
+Le giunzioni locali sembrano valide ma la forma globale è geometricamente impossibile.
+Insegna: come viene costruita la prospettiva isometrica, come l'ombreggiatura implica profondità.
+
+### 85. Pulsazione di Anelli Concentrici
+
+Disegna anelli che alternano tra una tonalità calda e una fredda con larghezza decrescente mentre si avvicinano al centro.
+Gli anelli appaiono vibrare o pulsare a causa del contrasto simultaneo tra caldo e freddo.
+Insegna: contrasto di colore caldo/freddo, costruzione di anelli concentrici.
+
+---
+
+## Categoria 9 — Tipografia e Arte del Testo
+
+### 86. Testo a Spirale
+
+Stampa una parola o un messaggio carattere per carattere lungo un percorso a spirale usando `write()`.
+Ogni lettera è posizionata alla posizione attuale della tartaruga, che avanza lungo la spirale.
+Insegna: usare `write()` per il rendering del testo, combinare movimento con posizionamento del testo.
+
+### 87. Nome in Lettere Blocco
+
+Disegna ogni lettera di un nome come un disegno della tartaruga composto da segmenti di linea.
+Costruisci una funzione `letter_H()`, `letter_A()`, ecc. per ogni lettera necessaria.
+Insegna: decomporre forme complesse in primitive di linea, architettura una-funzione-per-carattere.
+
+### 88. Display a Sette Segmenti
+
+Simula un display LED a sette segmenti per le cifre 0–9.
+Ogni segmento è un rettangolo riempito; una cifra viene disegnata accendendo o spegnendo i segmenti.
+Insegna: mascheramento booleano per selezionare quali segmenti disegnare, codificare le cifre come pattern di bit.
+
+### 89. Distintivo Circolare con Nome
+
+Disponi le lettere di una parola attorno alla circonferenza di un cerchio usando `goto()` e matematica della rotazione.
+Ogni lettera è ruotata per guardare radialmente verso l'esterno.
+Insegna: posizionare il testo in posizioni calcolate, ruotare la tartaruga prima di scrivere.
+
+### 90. Nome ad Albero Binario
+
+Codifica un nome come una sequenza binaria (ASCII) e disegnalo come un albero binario verticale,
+ramo sinistro per 0 e ramo destro per 1.
+Insegna: rappresentazione binaria del testo, visualizzare strutture di dati come disegni.
+
+---
+
+## Categoria 10 — Animazione e Interattività
+
+### 91. Pallina che Rimbalza
+
+Muovi un punto attraverso lo schermo e inverti la sua direzione quando raggiunge il bordo del canvas.
+Usa `ontimer()` per ridisegnare ogni fotogramma.
+Insegna: variabili di velocità, rilevamento di collisione con i confini, il pattern del ciclo di animazione.
+
+### 92. Quadrante dell'Orologio
+
+Disegna un quadrante di orologio con lancette delle ore e dei minuti che si aggiornano ogni secondo.
+Usa `ontimer()` e `time.localtime()` per calcolare gli angoli delle lancette dall'ora attuale.
+Insegna: aggiornamenti in tempo reale, convertire il tempo in angoli (ora × 30°, minuto × 6°).
+
+### 93. Caccia tra Tartarughe
+
+Una tartaruga ne insegue un'altra. La preda si muove con una camminata casuale; il predatore si gira sempre verso la preda.
+Insegna: programmi con due tartarughe, calcolare la direzione verso un punto obiettivo usando `math.atan2()`.
+
+### 94. Disegnatore di Spirografi
+
+Accetta i click del mouse dell'utente per impostare il raggio interno, il raggio esterno, e l'offset della penna.
+Disegna l'ipotrocoide risultante ogni volta che l'utente clicca.
+Insegna: `onscreenclick()`, input interattivo di parametri, ricalcolare un disegno su richiesta.
+
+### 95. Motivo di Reazione-Diffusione
+
+Simula un semplice sistema di reazione-diffusione Gray-Scott su una griglia di pixel.
+A ogni passo, aggiorna ogni cella in base ai suoi vicini. Colora in base alla concentrazione.
+Lento ma produce macchie e strisce di aspetto organico come i pattern della pelle animale.
+Insegna: simulazione su griglia, regole di aggiornamento basate sui vicini, come la complessità emerge da semplici regole locali.
+
+---
+
+## Categoria 11 — Sfide Avanzate
+
+### 96. Pianta a Sistema-L
+
+Implementa un motore generale di sistema-L: un assioma iniziale, un insieme di regole di riscrittura, e un conteggio di iterazioni.
+Applicalo ai sistemi-L delle piante di Prusinkiewicz per far crescere piante ramificate realistiche.
+Insegna: riscrittura di stringhe, costruire un interprete generale, la potenza dei motori a regole generalizzate.
+
+### 97. Generatore di Labirinti con la Turtle
+
+Usa un algoritmo di backtracking ricorsivo per generare un labirinto perfetto su una griglia.
+Disegna i muri come segmenti di linea della tartaruga.
+Insegna: ricerca in profondità, usare uno stack (o la ricorsione) per la generazione di labirinti, strutture di dati a griglia.
+
+### 98. Proiezione di Superficie Parametrica
+
+Calcola punti 3D su una superficie parametrica (sfera, toro, sella) e proiettali su 2D
+usando una semplice proiezione ortografica o isometrica.
+Disegna la griglia wireframe delle linee UV.
+Insegna: matematica della proiezione da 3D a 2D, superfici parametriche, rendering wireframe.
+
+### 99. Collezione di Fiocchi di Neve di Lindenmayer
+
+Implementa cinque diversi frattali a sistema-L (Koch, Lévy, Gosper, Dragone, Peano) in un singolo programma
+con un menu per scegliere quale disegnare.
+Insegna: organizzare più algoritmi dietro un'interfaccia unificata, riutilizzo del codice tra sistemi correlati.
+
+### 100. Ciclo di Arte Generativa
+
+Scrivi un programma che genera una composizione astratta diversa a ogni esecuzione usando un seme casuale controllato.
+L'utente può inserire un numero seme per riprodurre qualsiasi composizione preferita.
+Insegna: `random.seed()`, casualità riproducibile, il concetto di uno spazio di design generativo.
+
+---
+
+*Questi 100 pattern vanno da principiante (categorie 1–2) ad avanzato (categorie 9–11).
+Inizia da dove la sfida sembra appena oltre la tua zona di comfort — è lì che avviene l'apprendimento.*
