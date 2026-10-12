@@ -95,6 +95,17 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
 - `docs/glossary.md` (tutte le 338 voci, intestazioni `####` verificate 338/338 rispetto
   all'originale)
 
+**Fase 3 — Python Labs** (`docs/python-labs/`), in corso:
+
+- `docs/python-labs/index.md` (griglia di card con titoli/descrizioni dei 17 laboratori)
+- `01-turtle-commands.md`, `02-square.md`, `03-variables.md`, `04-loops.md`,
+  `04a-stop-sign.md` (primo batch)
+- `05-conditionals.md`, `06-functions-and-flowers.md`, `07-function-parameters.md`
+  (secondo batch)
+- `08-random-circles.md`, `08-color-lists.md`, `08b-random-stars.md` (terzo batch —
+  corretto un refuso di coniugazione "scegle" → "sceglie" in `08b-random-stars.md`
+  prima del commit)
+
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
 (nessuna modifica rispetto a `main`), quindi il problema dei placeholder rotti
@@ -215,11 +226,17 @@ quindi non serve alcun ripristino. Decisioni della sezione 2 fissate il 2026-10-
 **FASE 2 COMPLETA — tutti i 38 capitoli tradotti (Capitoli 1-38).** Questo chiude il
 cuore didattico del libro.
 
-Prossimo: avviare la Fase 3 — Python Labs (`docs/python-labs/`, ~19 file), secondo la
-tabella delle fasi (sezione 3 di questo documento). Dopo la Fase 3: Fase 4 (Turtle
-Graphics Gallery, ~102 file, candidato per traduzione semi-automatica), poi Fasi 5-9
-(MicroSims, Teacher's Guide, Jupyter/Advanced, Learning Graph, Trinket Labs — quest'ultima
-di priorità minima/da valutare se tradurre affatto, vedi sezione 3).
+**FASE 3 IN CORSO — Python Labs.** Tradotti finora: `index.md`, `01-turtle-commands.md`,
+`02-square.md`, `03-variables.md`, `04-loops.md`, `04a-stop-sign.md`, `05-conditionals.md`,
+`06-functions-and-flowers.md`, `07-function-parameters.md`, `08-random-circles.md`,
+`08-color-lists.md`, `08b-random-stars.md` (12 di ~19 file).
+
+Prossimo: continuare la Fase 3 con `10-debugging.md`, poi `11-user-input.md`,
+`12-fractal-tree.md`, `14-hex-colors.md`, `15-sine-wave.md`, `17-mouse-clicks.md`,
+`text-only-example.md`. Dopo la Fase 3: Fase 4 (Turtle Graphics Gallery, ~102 file,
+candidato per traduzione semi-automatica), poi Fasi 5-9 (MicroSims, Teacher's Guide,
+Jupyter/Advanced, Learning Graph, Trinket Labs — quest'ultima di priorità minima/da
+valutare se tradurre affatto, vedi sezione 3).
 
 Note di qualità accumulate durante la Fase 2, da continuare ad applicare nelle fasi
 successive: (1) controllare sempre con `grep '!\[.*\]('` (o pattern equivalente per il

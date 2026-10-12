@@ -1,37 +1,37 @@
-# Random Circles
+# Cerchi Casuali
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Import the `random` library and generate random integers with `randint()`
-- Use random numbers to place a turtle at an unpredictable position
-- Draw a canvas full of colorful circles that look different every time you run the program
+- Importare la libreria `random` e generare interi casuali con `randint()`
+- Usare numeri casuali per posizionare una tartaruga in una posizione imprevedibile
+- Disegnare un canvas pieno di cerchi colorati che sembrano diversi ogni volta che esegui il programma
 
-So far every program you've written produces the exact same drawing every time. The `random` library changes that — it generates numbers that are unpredictable, so each run of your program is a surprise.
+Finora ogni programma che hai scritto produce esattamente lo stesso disegno ogni volta. La libreria `random` cambia questo — genera numeri imprevedibili, così ogni esecuzione del tuo programma è una sorpresa.
 
-!!! mascot-welcome "Welcome to This Lesson!"
+!!! mascot-welcome "Benvenuto a Questa Lezione!"
     ![Monty waving welcome](../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    What if you could make a program that draws something different every single time you run it?
-    That's the magic of randomness — and today I'm going to show you how!
-    Let's code it together!
+    Cosa succederebbe se potessi fare un programma che disegna qualcosa di diverso ogni singola volta che lo esegui?
+    Questa è la magia della casualità — e oggi ti mostrerò come fare!
+    Programmiamo insieme!
 
-## Generating Random Numbers
+## Generare Numeri Casuali
 
-To use random numbers, you first need to **import** the `random` library — just like you import `turtle`. Then use `randint(min, max)` to get a random whole number between `min` and `max` (both inclusive):
+Per usare i numeri casuali, devi prima **importare** la libreria `random` — proprio come importi `turtle`. Poi usa `randint(min, max)` per ottenere un numero intero casuale tra `min` e `max` (entrambi inclusi):
 
 ```python
 import random
 x = random.randint(-150, 150)
 ```
 
-Each time this line runs, `x` gets a different value somewhere between -150 and 150.
+Ogni volta che questa riga gira, `x` ottiene un valore diverso tra -150 e 150.
 
-!!! mascot-tip "Scratch Bridge"
+!!! mascot-tip "Ponte Scratch"
     ![Monty with a tip](../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch you used the **"Pick random 1 to 10"** block.
-    In Python, `random.randint(1, 10)` does exactly the same thing — picks a random whole number
-    in that range each time it runs!
+    In Scratch hai usato il blocco **"Scegli numero a caso da 1 a 10"**.
+    In Python, `random.randint(1, 10)` fa esattamente la stessa cosa — scegli un numero intero casuale
+    in quell'intervallo ogni volta che gira!
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -58,16 +58,16 @@ for i in range(10):
 monty.hideturtle()
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The loop runs 10 times, picking a new random position and color each time.
-    How many circles will appear? Will they always be in the same spots?
-    Make your guess — then click Run twice to see what changes!
+    Il ciclo gira 10 volte, scegliendo una nuova posizione e colore casuali ogni volta.
+    Quanti cerchi appariranno? Saranno sempre negli stessi posti?
+    Fai la tua previsione — poi clicca Esegui due volte per vedere cosa cambia!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see the result right on this page.
-No account needed — everything runs in your browser.
+Modifica il codice sotto e clicca **Esegui** per vedere il risultato direttamente su questa pagina.
+Nessun account necessario — tutto gira nel tuo browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -113,36 +113,36 @@ for i in range(10):
 monty.hideturtle()`);
 </script>
 
-Were you right? Ten colorful circles scatter across the canvas in random positions — and clicking Run again produces a completely different arrangement!
+Avevi indovinato? Dieci cerchi colorati si disperdono attraverso il canvas in posizioni casuali — e cliccando di nuovo Esegui si produce una disposizione completamente diversa!
 
-## How It Works
+## Come Funziona
 
-`random.randint(-150, 150)` returns a different integer each time — Python uses a pseudorandom algorithm that produces unpredictable-looking numbers. `goto(x, y)` jumps the turtle to that position, and `circle(10)` draws a circle with a radius of 10 steps around the current position.
+`random.randint(-150, 150)` restituisce un intero diverso ogni volta — Python usa un algoritmo pseudocasuale che produce numeri che sembrano imprevedibili. `goto(x, y)` fa saltare la tartaruga a quella posizione, e `circle(10)` disegna un cerchio con un raggio di 10 passi attorno alla posizione attuale.
 
-`speed(10)` sets the turtle to maximum drawing speed so the circles appear quickly instead of crawling into place.
+`speed(10)` imposta la tartaruga alla velocità massima di disegno così i cerchi appaiono velocemente invece di muoversi lentamente in posizione.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `import random` | Loads the random number library |
-| `random.randint(-150, 150)` | Returns a random integer between -150 and 150 (inclusive) |
-| `monty.speed(10)` | Sets drawing speed to maximum (10 = fastest) |
-| `colors[random.randint(0, 5)]` | Picks a random index from 0 to 5 to select a color from the list |
-| `monty.circle(10)` | Draws a circle with radius 10 at the current position |
+| `import random` | Carica la libreria dei numeri casuali |
+| `random.randint(-150, 150)` | Restituisce un intero casuale tra -150 e 150 (inclusi) |
+| `monty.speed(10)` | Imposta la velocità di disegno al massimo (10 = più veloce) |
+| `colors[random.randint(0, 5)]` | Sceglie un indice casuale da 0 a 5 per selezionare un colore dalla lista |
+| `monty.circle(10)` | Disegna un cerchio con raggio 10 nella posizione attuale |
 
-!!! mascot-warning "Index Out of Range"
+!!! mascot-warning "Indice Fuori Intervallo"
     ![Monty warning](../img/mascot/warning.png){ class="mascot-admonition-img" }
-    If your `colors` list has 6 items (indexes 0–5), then `randint(0, 6)` can produce index 6 — which doesn't exist!
-    Always use `randint(0, len(colors) - 1)` or `randint(0, 5)` when the list has 6 items.
+    Se la tua lista `colors` ha 6 elementi (indici 0–5), allora `randint(0, 6)` può produrre l'indice 6 — che non esiste!
+    Usa sempre `randint(0, len(colors) - 1)` oppure `randint(0, 5)` quando la lista ha 6 elementi.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Make the Circles Bigger"
+!!! mascot-thinking "Il Tuo Turno — Rendi i Cerchi Più Grandi"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below draws 10 random circles but they're all the same tiny size.
-    Add **one line** inside the loop to pick a random radius between `5` and `25`,
-    store it in a variable called `radius`, and use it in `monty.circle(radius)`.
+    Il programma sotto disegna 10 cerchi casuali ma sono tutti della stessa dimensione minuscola.
+    Aggiungi **una riga** dentro il ciclo per scegliere un raggio casuale tra `5` e `25`,
+    memorizzalo in una variabile chiamata `radius`, e usalo in `monty.circle(radius)`.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -182,27 +182,27 @@ for i in range(10):
 monty.hideturtle()`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict first, then run and compare!
+Prova questi cambiamenti. Prevedi prima, poi esegui e confronta!
 
-1. Change `range(10)` to `range(30)`.
-   **You'll know it worked when** 30 circles fill the canvas instead of 10.
+1. Cambia `range(10)` in `range(30)`.
+   **Saprai che ha funzionato quando** 30 cerchi riempiono il canvas invece di 10.
 
-2. Change `randint(-150, 150)` to `randint(-50, 50)` for both `x` and `y`.
-   **You'll know it worked when** all the circles cluster near the center of the canvas.
+2. Cambia `randint(-150, 150)` in `randint(-50, 50)` sia per `x` sia per `y`.
+   **Saprai che ha funzionato quando** tutti i cerchi si raggruppano vicino al centro del canvas.
 
-3. Add `'gold'`, `'cyan'`, and `'brown'` to the `colors` list, and update `randint(0, 5)` to match the new list length.
-   **You'll know it worked when** you occasionally see gold, cyan, or brown circles.
+3. Aggiungi `'gold'`, `'cyan'`, e `'brown'` alla lista `colors`, e aggiorna `randint(0, 5)` per corrispondere alla nuova lunghezza della lista.
+   **Saprai che ha funzionato quando** vedi occasionalmente cerchi dorati, ciano, o marroni.
 
-4. Change `monty.circle(10)` to `monty.circle(random.randint(5, 25))`.
-   **You'll know it worked when** the circles vary in size, some tiny and some large.
+4. Cambia `monty.circle(10)` in `monty.circle(random.randint(5, 25))`.
+   **Saprai che ha funzionato quando** i cerchi variano in dimensione, alcuni minuscoli e alcuni grandi.
 
-5. Change the number of circles drawn by storing the count in a variable `num_circles = 20` at the top and using it in `range(num_circles)`.
-   **You'll know it worked when** changing `num_circles` in one place controls how many appear.
+5. Cambia il numero di cerchi disegnati memorizzando il conteggio in una variabile `num_circles = 20` in cima e usandola in `range(num_circles)`.
+   **Saprai che ha funzionato quando** cambiare `num_circles` in un solo posto controlla quanti ne appaiono.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Every run is a unique piece of art — that's the power of randomness!
-    In the next lab you'll learn more about lists and how to loop through them directly.
-    Let's code it together!
+    Ogni esecuzione è un'opera d'arte unica — questo è il potere della casualità!
+    Nel prossimo laboratorio imparerai di più sulle liste e come scorrerle direttamente.
+    Programmiamo insieme!

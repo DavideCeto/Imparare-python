@@ -1,21 +1,21 @@
-# Random Stars
+# Stelle Casuali
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Write a function that draws a five-pointed star using `forward()` and `right(144)`
-- Call that function with random positions, sizes, and colors from a list
-- Combine functions, lists, and randomness in one program
+- Scrivere una funzione che disegna una stella a cinque punte usando `forward()` e `right(144)`
+- Chiamare quella funzione con posizioni, dimensioni e colori casuali da una lista
+- Combinare funzioni, liste e casualità in un unico programma
 
-Five-pointed stars have a secret: the turtle always turns **144 degrees** and draws 5 spokes. In this lab you'll write a `star()` function, scatter it at random positions, and let Python pick the colors — so every run produces a new piece of star art.
+Le stelle a cinque punte hanno un segreto: la tartaruga gira sempre di **144 gradi** e disegna 5 raggi. In questo laboratorio scriverai una funzione `star()`, la disperderai in posizioni casuali, e lascerai che Python scelga i colori — così ogni esecuzione produce una nuova opera d'arte stellare.
 
-!!! mascot-welcome "Welcome to This Lesson!"
+!!! mascot-welcome "Benvenuto a Questa Lezione!"
     ![Monty waving welcome](../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Stars, colors, and randomness — all in one program! This lab puts together everything you've
-    learned so far: functions, lists, loops, and `random`. Let's code it together!
+    Stelle, colori, e casualità — tutto in un unico programma! Questo laboratorio metterà insieme tutto ciò che
+    hai imparato finora: funzioni, liste, cicli, e `random`. Programmiamo insieme!
 
-## Drawing a Star
+## Disegnare una Stella
 
-A five-pointed star uses a special angle: the turtle draws a spoke, turns **144 degrees** right, draws another spoke — and repeating this 5 times closes the star perfectly. The spoke length controls the star's size.
+Una stella a cinque punte usa un angolo speciale: la tartaruga disegna un raggio, gira **144 gradi** a destra, disegna un altro raggio — e ripetere questo 5 volte chiude la stella perfettamente. La lunghezza del raggio controlla la dimensione della stella.
 
 ```python
 def star(x, y, size):
@@ -29,7 +29,7 @@ def star(x, y, size):
     monty.end_fill()
 ```
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -61,16 +61,16 @@ for i in range(8):
 monty.hideturtle()
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The loop runs 8 times and each call picks a random position, size, and color.
-    How many stars will appear? Will they be the same size? Click Run twice — do you get the same picture?
-    Make your guess — then find out!
+    Il ciclo gira 8 volte e ogni chiamata sceglie una posizione, dimensione, e colore casuali.
+    Quante stelle appariranno? Saranno della stessa dimensione? Clicca Esegui due volte — ottieni la stessa immagine?
+    Fai la tua previsione — poi scoprilo!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see the result right on this page.
-No account needed — everything runs in your browser.
+Modifica il codice sotto e clicca **Esegui** per vedere il risultato direttamente su questa pagina.
+Nessun account necessario — tutto gira nel tuo browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -121,35 +121,35 @@ for i in range(8):
 monty.hideturtle()`);
 </script>
 
-Were you right? Eight filled stars — each a different random color and size, scattered across the canvas. Click Reset then Run again and you'll get a brand-new arrangement every time!
+Avevi indovinato? Otto stelle riempite — ognuna di un colore e una dimensione casuali diversi, disperse attraverso il canvas. Clicca Reset e poi Esegui di nuovo e otterrai una disposizione completamente nuova ogni volta!
 
-## How It Works
+## Come Funziona
 
-The key to the star shape is `right(144)`. Because 144 × 5 = 720 = 2 × 360, the turtle makes exactly two full rotations while tracing the five spokes, ending up where it started. Any other angle and the shape won't close into a star.
+La chiave della forma della stella è `right(144)`. Poiché 144 × 5 = 720 = 2 × 360, la tartaruga fa esattamente due rotazioni complete mentre traccia i cinque raggi, finendo dove ha iniziato. Qualsiasi altro angolo e la forma non si chiuderà in una stella.
 
-`len(colors) - 1` computes the last valid index of the list dynamically, so adding or removing colors from the list automatically adjusts the random range — no need to update the number by hand.
+`len(colors) - 1` calcola l'ultimo indice valido della lista dinamicamente, così aggiungere o rimuovere colori dalla lista aggiorna automaticamente l'intervallo casuale — senza bisogno di aggiornare il numero a mano.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `for i in range(5): forward(size); right(144)` | Draws the 5 spokes of the star |
-| `right(144)` | The magic star angle — 5 × 144 = 720° = two full rotations |
-| `random.randint(0, len(colors) - 1)` | Picks a random valid index into the colors list |
-| `size = random.randint(20, 50)` | Picks a random star size between 20 and 50 steps |
+| `for i in range(5): forward(size); right(144)` | Disegna i 5 raggi della stella |
+| `right(144)` | L'angolo magico della stella — 5 × 144 = 720° = due rotazioni complete |
+| `random.randint(0, len(colors) - 1)` | Sceglie un indice valido casuale nella lista dei colori |
+| `size = random.randint(20, 50)` | Sceglie una dimensione casuale della stella tra 20 e 50 passi |
 
-!!! mascot-warning "Stars That Don't Close"
+!!! mascot-warning "Stelle Che Non Si Chiudono"
     ![Monty warning](../img/mascot/warning.png){ class="mascot-admonition-img" }
-    If you change `right(144)` to any other angle, the 5-spoke loop won't bring the turtle
-    back to its start — and the star won't close. Try `right(150)` and see what happens!
+    Se cambi `right(144)` in qualsiasi altro angolo, il ciclo a 5 raggi non riporterà la tartaruga
+    al suo punto di partenza — e la stella non si chiuderà. Prova `right(150)` e vedi cosa succede!
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add a Background Color"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi un Colore di Sfondo"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below draws random stars but the background is plain white.
-    Add **one line** right after creating `monty` to set the screen background color to `'navy'`.
-    Hint: use `turtle.Screen().bgcolor('navy')`.
+    Il programma sotto disegna stelle casuali ma lo sfondo è bianco semplice.
+    Aggiungi **una riga** subito dopo aver creato `monty` per impostare il colore di sfondo dello schermo su `'navy'`.
+    Suggerimento: usa `turtle.Screen().bgcolor('navy')`.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -194,27 +194,27 @@ for i in range(10):
 monty.hideturtle()`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes to the random-stars code. Predict first, then run!
+Prova questi cambiamenti al codice delle stelle casuali. Prevedi prima, poi esegui!
 
-1. Change `range(8)` to `range(20)`.
-   **You'll know it worked when** 20 stars crowd the canvas.
+1. Cambia `range(8)` in `range(20)`.
+   **Saprai che ha funzionato quando** 20 stelle affollano il canvas.
 
-2. Change `random.randint(20, 50)` for `size` to `random.randint(10, 80)`.
-   **You'll know it worked when** stars range from tiny to very large.
+2. Cambia `random.randint(20, 50)` per `size` in `random.randint(10, 80)`.
+   **Saprai che ha funzionato quando** le stelle variano da minuscole a molto grandi.
 
-3. Change `range(5)` to `range(6)` and `right(144)` to `right(120)` inside the function.
-   **You'll know it worked when** you see 6-pointed Stars of David instead of 5-pointed stars.
+3. Cambia `range(5)` in `range(6)` e `right(144)` in `right(120)` dentro la funzione.
+   **Saprai che ha funzionato quando** vedi Stelle di David a 6 punte invece di stelle a 5 punte.
 
-4. Add `monty.pensize(2)` inside the `star` function to give each star a visible outline.
-   **You'll know it worked when** each star has a thin border.
+4. Aggiungi `monty.pensize(2)` dentro la funzione `star` per dare a ogni stella un contorno visibile.
+   **Saprai che ha funzionato quando** ogni stella ha un bordo fine.
 
-5. Remove `begin_fill()` and `end_fill()` from the function.
-   **You'll know it worked when** you see outline-only stars instead of filled ones.
+5. Rimuovi `begin_fill()` ed `end_fill()` dalla funzione.
+   **Saprai che ha funzionato quando** vedi stelle solo di contorno invece che riempite.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You combined functions, lists, loops, and randomness into one creative program —
-    that's real Python programming! In the next lab you'll learn how to get input from the user.
-    Let's code it together!
+    Hai combinato funzioni, liste, cicli, e casualità in un unico programma creativo —
+    questa è vera programmazione Python! Nel prossimo laboratorio imparerai come ottenere input dall'utente.
+    Programmiamo insieme!

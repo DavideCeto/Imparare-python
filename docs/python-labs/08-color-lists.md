@@ -1,27 +1,27 @@
-# Color Lists
+# Liste di Colori
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Create a list of color strings and access items by index number
-- Loop through every item in a list using `for color in my_list:`
-- Draw a row of colored shapes by iterating over a color list
+- Creare una lista di stringhe di colore e accedere agli elementi per numero di indice
+- Scorrere ogni elemento di una lista usando `for color in my_list:`
+- Disegnare una riga di forme colorate iterando su una lista di colori
 
-A **list** is an ordered collection of values. In Python you write it with square brackets. Lists are perfect for storing a palette of colors and then painting shapes one by one through the whole palette.
+Una **lista** è una collezione ordinata di valori. In Python la scrivi con le parentesi quadre. Le liste sono perfette per memorizzare una tavolozza di colori e poi dipingere forme una per una attraverso l'intera tavolozza.
 
-!!! mascot-welcome "Welcome to This Lesson!"
+!!! mascot-welcome "Benvenuto a Questa Lezione!"
     ![Monty waving welcome](../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    What if you could tell Monty: "here are ten colors — paint one circle for each"?
-    That's exactly what lists let you do! Let's code it together!
+    Cosa succederebbe se potessi dire a Monty: "ecco dieci colori — dipingi un cerchio per ciascuno"?
+    Questo è esattamente ciò che ti permettono di fare le liste! Programmiamo insieme!
 
-## Creating and Using a List
+## Creare e Usare una Lista
 
-A **list** stores multiple values in one variable, separated by commas inside square brackets:
+Una **lista** memorizza più valori in una variabile, separati da virgole dentro parentesi quadre:
 
 ```python
 colors = ['red', 'orange', 'yellow', 'green', 'blue']
 ```
 
-Access any item by its **index** — its position in the list, counting from 0:
+Accedi a qualsiasi elemento tramite il suo **indice** — la sua posizione nella lista, contando da 0:
 
 ```python
 colors[0]   # 'red'
@@ -29,20 +29,20 @@ colors[2]   # 'yellow'
 colors[4]   # 'blue'
 ```
 
-To do something with *every* item, use a `for` loop directly over the list:
+Per fare qualcosa con *ogni* elemento, usa un ciclo `for` direttamente sulla lista:
 
 ```python
 for color in colors:
     # 'color' is each item in turn
 ```
 
-!!! mascot-tip "Scratch Bridge"
+!!! mascot-tip "Ponte Scratch"
     ![Monty with a tip](../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch you used the **List** block with numbered slots (item 1, item 2, …).
-    In Python, lists use the same idea — but counting starts at **0**, not 1.
-    So `colors[0]` is what Scratch calls "item 1 of colors".
+    In Scratch hai usato il blocco **Lista** con slot numerati (elemento 1, elemento 2, …).
+    In Python, le liste usano la stessa idea — ma il conteggio inizia a **0**, non a 1.
+    Quindi `colors[0]` è ciò che Scratch chiama "elemento 1 di colors".
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -67,16 +67,16 @@ for color in colors:
 monty.hideturtle()
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The list has 7 colors and the loop runs once per color.
-    How many circles will appear, and what order will the colors go in?
-    Make your guess — then click Run!
+    La lista ha 7 colori e il ciclo gira una volta per colore.
+    Quanti cerchi appariranno, e in quale ordine andranno i colori?
+    Fai la tua previsione — poi clicca Esegui!
 
-## Try It Now
+## Provalo Ora
 
-Edit the code below and click **Run** to see the result right on this page.
-No account needed — everything runs in your browser.
+Modifica il codice sotto e clicca **Esegui** per vedere il risultato direttamente su questa pagina.
+Nessun account necessario — tutto gira nel tuo browser.
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -120,37 +120,37 @@ for color in colors:
 monty.hideturtle()`);
 </script>
 
-Were you right? Seven filled circles spread in a row, each painted a different color from the list — a rainbow palette!
+Avevi indovinato? Sette cerchi riempiti distribuiti in riga, ognuno dipinto di un colore diverso dalla lista — una tavolozza arcobaleno!
 
-## How It Works
+## Come Funziona
 
-`for color in colors:` is a **for-each loop** — on each repetition, `color` is automatically set to the next item in the list. The first time through it's `'red'`, then `'orange'`, and so on until the list is exhausted.
+`for color in colors:` è un **ciclo for-each** — a ogni ripetizione, `color` viene automaticamente impostato all'elemento successivo nella lista. La prima volta è `'red'`, poi `'orange'`, e così via finché la lista non si esaurisce.
 
-`forward(45)` moves the turtle 45 steps to the right after each circle so the next one appears beside it without overlapping.
+`forward(45)` muove la tartaruga di 45 passi a destra dopo ogni cerchio così il successivo appare affianco senza sovrapporsi.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `colors = ['red', …]` | Creates a list of color strings |
-| `colors[0]` | Accesses the first item (`'red'`); indexes start at 0 |
-| `for color in colors:` | Loops once for each item; `color` holds the current item |
-| `monty.goto(-150, 0)` | Moves to the left side of the canvas as the starting point |
-| `monty.forward(45)` | Shifts right 45 steps before drawing the next circle |
+| `colors = ['red', …]` | Crea una lista di stringhe di colore |
+| `colors[0]` | Accede al primo elemento (`'red'`); gli indici iniziano da 0 |
+| `for color in colors:` | Gira una volta per ogni elemento; `color` contiene l'elemento attuale |
+| `monty.goto(-150, 0)` | Si muove sul lato sinistro del canvas come punto di partenza |
+| `monty.forward(45)` | Si sposta a destra di 45 passi prima di disegnare il cerchio successivo |
 
-!!! mascot-warning "Index Out of Range"
+!!! mascot-warning "Indice Fuori Intervallo"
     ![Monty warning](../img/mascot/warning.png){ class="mascot-admonition-img" }
-    If your list has 7 items, valid indexes are 0–6. Trying `colors[7]` causes an
-    `IndexError` — Python can't find item 7 because it doesn't exist.
-    Use `len(colors)` to find out how many items are in a list.
+    Se la tua lista ha 7 elementi, gli indici validi sono 0–6. Provare `colors[7]` causa un
+    `IndexError` — Python non può trovare l'elemento 7 perché non esiste.
+    Usa `len(colors)` per scoprire quanti elementi ci sono in una lista.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Draw Squares Instead"
+!!! mascot-thinking "Il Tuo Turno — Disegna Quadrati Invece"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below is supposed to draw a row of small filled squares (not circles),
-    but the loop body is incomplete. Add **two lines** inside the loop — a `for` loop
-    that draws four sides — so each color becomes a filled square instead of a circle.
+    Il programma sotto dovrebbe disegnare una riga di piccoli quadrati riempiti (non cerchi),
+    ma il corpo del ciclo è incompleto. Aggiungi **due righe** dentro il ciclo — un ciclo `for`
+    che disegna quattro lati — così ogni colore diventa un quadrato riempito invece di un cerchio.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -187,27 +187,27 @@ for color in colors:
 monty.hideturtle()`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes to the color-circles code. Predict first, then run!
+Prova questi cambiamenti al codice dei cerchi colorati. Prevedi prima, poi esegui!
 
-1. Add `'gold'` and `'brown'` to the end of the `colors` list.
-   **You'll know it worked when** two extra circles appear to the right of the original seven.
+1. Aggiungi `'gold'` e `'brown'` alla fine della lista `colors`.
+   **Saprai che ha funzionato quando** due cerchi extra appaiono a destra dei sette originali.
 
-2. Change `monty.circle(20)` to `monty.circle(15)` and `monty.forward(45)` to `monty.forward(35)`.
-   **You'll know it worked when** the circles are smaller and tighter together.
+2. Cambia `monty.circle(20)` in `monty.circle(15)` e `monty.forward(45)` in `monty.forward(35)`.
+   **Saprai che ha funzionato quando** i cerchi sono più piccoli e più vicini tra loro.
 
-3. Print the length of the list: add `print(len(colors))` after the list definition and before the loop.
-   **You'll know it worked when** `7` (or your new count) appears in the output box below the editor.
+3. Stampa la lunghezza della lista: aggiungi `print(len(colors))` dopo la definizione della lista e prima del ciclo.
+   **Saprai che ha funzionato quando** `7` (o il tuo nuovo conteggio) appare nella casella di output sotto l'editor.
 
-4. Access a single color by index: add `print(colors[3])` after the list definition.
-   **You'll know it worked when** `green` appears in the output (it's at index 3).
+4. Accedi a un singolo colore per indice: aggiungi `print(colors[3])` dopo la definizione della lista.
+   **Saprai che ha funzionato quando** `green` appare nell'output (è all'indice 3).
 
-5. Try a `for` loop using an index: replace `for color in colors:` with `for i in range(len(colors)):` and then use `colors[i]` instead of `color`.
-   **You'll know it worked when** the output looks the same — this is an alternative way to iterate.
+5. Prova un ciclo `for` usando un indice: sostituisci `for color in colors:` con `for i in range(len(colors)):` e poi usa `colors[i]` invece di `color`.
+   **Saprai che ha funzionato quando** l'output sembra lo stesso — questo è un modo alternativo di iterare.
 
-!!! mascot-celebration "Great Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Lists let you store whole collections of data and loop through them automatically!
-    In the next lab you'll combine lists with random numbers and functions to draw random stars.
-    Let's code it together!
+    Le liste ti permettono di memorizzare intere collezioni di dati e scorrerle automaticamente!
+    Nel prossimo laboratorio combinerai le liste con i numeri casuali e le funzioni per disegnare stelle casuali.
+    Programmiamo insieme!
