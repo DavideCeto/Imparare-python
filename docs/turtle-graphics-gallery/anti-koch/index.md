@@ -2,31 +2,31 @@
 hide:
     - toc
 ---
-# Anti-Koch Snowflake
+# Fiocco di Neve Anti-Koch
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Modify the Koch rule to bump inward instead of outward on alternate levels
-- See how one sign change in a fractal rule produces dramatically different shapes
-- Understand the concept of rule alternation in recursive systems
+- Modificare la regola di Koch per sporgere verso l'interno invece che verso l'esterno a livelli alterni
+- Vedere come un cambio di segno in una regola frattale produce forme drammaticamente diverse
+- Capire il concetto di alternanza delle regole nei sistemi ricorsivi
 
-While the Koch snowflake always bumps outward, the Anti-Koch alternates: even depths bump out, odd depths bump in. The result is a shape with both spiky tips and concave notches.
+Mentre il fiocco di neve di Koch sporge sempre verso l'esterno, l'Anti-Koch alterna: le profondità pari sporgono verso l'esterno, quelle dispari sporgono verso l'interno. Il risultato è una forma con sia punte appuntite sia tacche concave.
 
-!!! mascot-welcome "Welcome to the Anti-Koch Snowflake!"
+!!! mascot-welcome "Benvenuto al Fiocco di Neve Anti-Koch!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    You've seen the Koch curve bump outward at every level. What if we flipped the
-    direction on every other level? One sign change gives a completely different fractal!
-    Let's code it together!
+    Hai visto la curva di Koch sporgere verso l'esterno a ogni livello. Cosa succederebbe se
+    invertissimo la direzione a ogni altro livello? Un cambio di segno dà un frattale completamente diverso!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
 `antikoch(n, depth, direction)`:
-- `direction = 1` → bump **outward** (left 60°, left 60°, left 60°, then right 120° between)
-- `direction = -1` → bump **inward** (the angles are negated)
+- `direction = 1` → sporge **verso l'esterno** (sinistra 60°, sinistra 60°, sinistra 60°, poi destra 120° tra l'una e l'altra)
+- `direction = -1` → sporge **verso l'interno** (gli angoli sono negati)
 
-On each recursive call, `direction` flips: `direction * -1`.
+A ogni chiamata ricorsiva, `direction` si inverte: `direction * -1`.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -57,13 +57,13 @@ for _ in range(3):
     monty.right(120)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The standard Koch always bumps outward, giving a purely spiky shape.
-    The Anti-Koch alternates directions. Will it look more rounded, or more jagged?
-    Make your guess — then click Run to find out!
+    Il Koch standard sporge sempre verso l'esterno, dando una forma puramente appuntita.
+    L'Anti-Koch alterna le direzioni. Sembrerà più arrotondato, o più frastagliato?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -113,28 +113,28 @@ for _ in range(3):
     monty.right(120)`);
 </script>
 
-The alternating bumps create a shape with both inward notches AND outward spikes — **more complex** than the pure Koch because both directions appear. Were you right?
+Le sporgenze alternate creano una forma con sia tacche verso l'interno SIA punte verso l'esterno — **più complessa** del puro Koch perché entrambe le direzioni appaiono. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`60 * direction` makes the turn angle positive (left) when `direction = 1` and negative (right = inward) when `direction = -1`. Passing `-direction` to each recursive call flips the direction at every level, so even-depth segments bump one way and odd-depth segments bump the other.
+`60 * direction` rende l'angolo di rotazione positivo (sinistra) quando `direction = 1` e negativo (destra = verso l'interno) quando `direction = -1`. Passare `-direction` a ogni chiamata ricorsiva inverte la direzione a ogni livello, così i segmenti a profondità pari sporgono in un modo e quelli a profondità dispari sporgono nell'altro.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `direction` parameter | 1 = bump outward, -1 = bump inward |
-| `monty.left(60 * direction)` | Positive direction = left; negative = right |
-| `antikoch(n3, depth-1, -direction)` | Flip direction at each recursive level |
-| Same structure as Koch | The bump shape is identical — just mirrored |
+| Parametro `direction` | 1 = sporge verso l'esterno, -1 = sporge verso l'interno |
+| `monty.left(60 * direction)` | Direzione positiva = sinistra; negativa = destra |
+| `antikoch(n3, depth-1, -direction)` | Inverte la direzione a ogni livello ricorsivo |
+| Stessa struttura di Koch | La forma della sporgenza è identica — solo rispecchiata |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Always Bump Inward"
+!!! mascot-thinking "Il Tuo Turno — Sporgi Sempre verso l'Interno"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    What if you never flipped — always passed `-1` as direction?
-    Change `antikoch(300, 4, 1)` to `antikoch(300, 4, -1)` and the initial direction to always inward.
-    Predict how it differs from the standard Koch — then run it!
+    Cosa succederebbe se non invertissi mai — passando sempre `-1` come direzione?
+    Cambia `antikoch(300, 4, 1)` in `antikoch(300, 4, -1)` e la direzione iniziale sempre verso l'interno.
+    Prevedi come differisce dal Koch standard — poi eseguilo!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -178,20 +178,20 @@ for _ in range(3):
     monty.right(120)`);
 </script>
 
-Always-inward bumps (`direction = -1` throughout) creates a Koch snowflake that grows **inward** — the bumps notch into the triangle instead of radiating outward.
+Le sporgenze sempre verso l'interno (`direction = -1` ovunque) creano un fiocco di neve di Koch che cresce **verso l'interno** — le sporgenze si intaccano nel triangolo invece di irradiarsi verso l'esterno.
 
-## Experiments
+## Esperimenti
 
-1. **Compare side by side.** Run the standard Koch first (left(60), right(120), left(60)) then the Anti-Koch. You'll know it worked when you can see both shapes.
+1. **Confronta fianco a fianco.** Esegui prima il Koch standard (left(60), right(120), left(60)) poi l'Anti-Koch. Saprai che ha funzionato quando puoi vedere entrambe le forme.
 
-2. **Depth 2 comparison.** Try both with `depth=2` to see the bumps clearly. You'll know it worked when individual bumps and notches are visible.
+2. **Confronto a profondità 2.** Prova entrambi con `depth=2` per vedere chiaramente le sporgenze. Saprai che ha funzionato quando sporgenze e tacche individuali sono visibili.
 
-3. **Change the color.** Try `pencolor('darkcyan')`. You'll know it worked when the curve turns teal.
+3. **Cambia il colore.** Prova `pencolor('darkcyan')`. Saprai che ha funzionato quando la curva diventa verde acqua.
 
-4. **Fill the snowflake.** Add `begin_fill()` before the loop and `end_fill()` after. You'll know it worked when the interior is filled.
+4. **Riempi il fiocco di neve.** Aggiungi `begin_fill()` prima del ciclo e `end_fill()` dopo. Saprai che ha funzionato quando l'interno è riempito.
 
-!!! mascot-celebration "Category 4 Complete!"
+!!! mascot-celebration "Categoria 4 Completata!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've completed 15 fractal patterns — Koch, Sierpiński, Dragon, Hilbert, Barnsley, and more!
-    Fractals show that infinite complexity emerges from simple recursive rules.
-    Up next: **Category 5 — Symmetry and Tiling!**
+    Hai completato 15 pattern frattali — Koch, Sierpiński, Dragone, Hilbert, Barnsley, e altro!
+    I frattali dimostrano che la complessità infinita emerge da semplici regole ricorsive.
+    Prossimo: **Categoria 5 — Simmetria e Tassellatura!**

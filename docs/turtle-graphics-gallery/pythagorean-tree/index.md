@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Pythagorean Tree
+# Albero di Pitagora
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Draw a fractal based on the Pythagorean theorem using recursive squares
-- Color squares by depth — brown at the base, green at the leaves
-- Understand how a geometric theorem becomes a visual fractal
+- Disegnare un frattale basato sul teorema di Pitagora usando quadrati ricorsivi
+- Colorare i quadrati per profondità — marrone alla base, verde alle foglie
+- Capire come un teorema geometrico diventa un frattale visivo
 
-A tree of squares: each square spawns two smaller squares on its top edge, arranged as a right triangle. Brown base squares transition to bright green leaf squares across 7 recursive levels.
+Un albero di quadrati: ogni quadrato genera due quadrati più piccoli sul suo lato superiore, disposti come un triangolo rettangolo. I quadrati marroni alla base passano a quadrati foglia verde brillante attraverso 7 livelli ricorsivi.
 
-!!! mascot-welcome "Welcome to the Pythagorean Tree!"
+!!! mascot-welcome "Benvenuto all'Albero di Pitagora!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    The Pythagorean theorem says `a² + b² = c²` for a right triangle.
-    This fractal makes that theorem *visible* — the two smaller squares literally ARE `a²` and `b²`!
-    Let's code it together!
+    Il teorema di Pitagora dice `a² + b² = c²` per un triangolo rettangolo.
+    Questo frattale rende quel teorema *visibile* — i due quadrati più piccoli SONO letteralmente `a²` e `b²`!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-`pytree(x, y, w, angle, depth)` draws a square of width `w` at position `(x, y)` facing `angle`. Then it recursively draws two smaller squares on the top edge — left at angle `+45°`, right at angle `-45°` — each with width `w * cos(45°) ≈ w * 0.707`.
+`pytree(x, y, w, angle, depth)` disegna un quadrato di larghezza `w` alla posizione `(x, y)` rivolto verso `angle`. Poi disegna ricorsivamente due quadrati più piccoli sul lato superiore — sinistra all'angolo `+45°`, destra all'angolo `-45°` — ognuno con larghezza `w * cos(45°) ≈ w * 0,707`.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -62,13 +62,13 @@ def pytree(x, y, w, angle, depth):
 pytree(-30, -200, 60, 90, 0)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The squares shrink by `cos(45°) ≈ 0.707` each level. After 7 levels,
-    how small will the leaf squares be? (Hint: `60 × 0.707^7 ≈ ?`)
-    Make your guess — then click Run to find out!
+    I quadrati si restringono di `cos(45°) ≈ 0,707` a ogni livello. Dopo 7 livelli,
+    quanto piccoli saranno i quadrati foglia? (Suggerimento: `60 × 0,707^7 ≈ ?`)
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -126,27 +126,27 @@ def pytree(x, y, w, angle, depth):
 pytree(-30, -200, 60, 90, 0)`);
 </script>
 
-After 7 levels: `60 × 0.707^7 ≈ 3.7` pixels — right at the `w > 4` threshold. Were you right?
+Dopo 7 livelli: `60 × 0,707^7 ≈ 3,7` pixel — esattamente alla soglia `w > 4`. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Each recursion reduces `w` by `cos(45°) ≈ 0.707`. The key geometric fact: when you build a right isoceles triangle on the top of a square of side `w`, each of the two new squares has side `w × cos(45°)`. And `cos²(45°) + cos²(45°) = 0.5 + 0.5 = 1` — that's the Pythagorean theorem in geometric form!
+Ogni ricorsione riduce `w` di `cos(45°) ≈ 0,707`. Il fatto geometrico chiave: quando costruisci un triangolo isoscele rettangolo sulla cima di un quadrato di lato `w`, ognuno dei due nuovi quadrati ha lato `w × cos(45°)`. E `cos²(45°) + cos²(45°) = 0,5 + 0,5 = 1` — questo è il teorema di Pitagora in forma geometrica!
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `draw_square(x, y, w, angle, color)` | Draw one filled square in the tree |
-| `w2 = w * cos(45°)` | Sub-squares are √2/2 ≈ 70.7% the parent size |
-| `depth + 1` | Track depth for color selection and stopping |
-| `if depth < 7 and w > 4:` | Two stopping conditions: max depth OR too small |
+| `draw_square(x, y, w, angle, color)` | Disegna un quadrato riempito nell'albero |
+| `w2 = w * cos(45°)` | I sotto-quadrati sono √2/2 ≈ 70,7% della dimensione del genitore |
+| `depth + 1` | Traccia la profondità per la scelta del colore e l'arresto |
+| `if depth < 7 and w > 4:` | Due condizioni di arresto: profondità massima O troppo piccolo |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Use a Non-Equal Right Triangle"
+!!! mascot-thinking "Il Tuo Turno — Usa un Triangolo Rettangolo Non Uguale"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change the two branch angles from `±45°` to `+30°` (left) and `-60°` (right).
-    The tree will lean asymmetrically. Predict which way — then run to check!
+    Cambia i due angoli di ramificazione da `±45°` a `+30°` (sinistra) e `-60°` (destra).
+    L'albero si inclinerà asimmetricamente. Prevedi da quale parte — poi eseguilo per controllare!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -199,20 +199,20 @@ def pytree(x, y, w, angle, depth):
 pytree(-30, -200, 60, 90, 0)`);
 </script>
 
-With `30°/60°` angles the left branches are longer than the right ones — the tree leans to the left and looks more natural, like a windswept tree.
+Con angoli `30°/60°` i rami sinistri sono più lunghi dei destri — l'albero si inclina a sinistra e sembra più naturale, come un albero battuto dal vento.
 
-## Experiments
+## Esperimenti
 
-1. **Symmetric but smaller.** Change both angle offsets to `30°`. You'll know it worked when the tree is taller and narrower.
+1. **Simmetrico ma più piccolo.** Cambia entrambi gli offset d'angolo a `30°`. Saprai che ha funzionato quando l'albero è più alto e più stretto.
 
-2. **Remove the fill.** Change `begin_fill()`/`end_fill()` to just drawing the outline (remove those calls). You'll know it worked when you see just the outlines of squares.
+2. **Rimuovi il riempimento.** Cambia `begin_fill()`/`end_fill()` in solo disegnare il contorno (rimuovi quelle chiamate). Saprai che ha funzionato quando vedi solo i contorni dei quadrati.
 
-3. **More depth.** Change `depth < 7` to `depth < 9`. The leaf squares become very small. You'll know it worked when the tree is much denser at the tips.
+3. **Più profondità.** Cambia `depth < 7` in `depth < 9`. I quadrati foglia diventano molto piccoli. Saprai che ha funzionato quando l'albero è molto più denso alle punte.
 
-4. **Autumn colors.** Change the `leaf_colors` list to `['saddlebrown', 'sienna', 'peru', 'chocolate', 'darkorange', 'orange', 'gold', 'yellow']`. You'll know it worked when the tree has autumn tones.
+4. **Colori autunnali.** Cambia la lista `leaf_colors` in `['saddlebrown', 'sienna', 'peru', 'chocolate', 'darkorange', 'orange', 'gold', 'yellow']`. Saprai che ha funzionato quando l'albero ha tonalità autunnali.
 
-!!! mascot-celebration "Theorem Visualized!"
+!!! mascot-celebration "Teorema Visualizzato!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You turned `a² + b² = c²` into a living, growing tree — geometry made visible!
-    Each pair of child squares literally represents the two terms of the Pythagorean theorem.
-    Up next: **T-Square Fractal** — corners spawning corners.
+    Hai trasformato `a² + b² = c²` in un albero vivo e crescente — geometria resa visibile!
+    Ogni coppia di quadrati figli rappresenta letteralmente i due termini del teorema di Pitagora.
+    Prossimo: **Frattale a T-Square** — angoli che generano angoli.

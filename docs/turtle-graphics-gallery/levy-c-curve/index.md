@@ -2,31 +2,31 @@
 hide:
     - toc
 ---
-# Lévy C Curve
+# Curva C di Lévy
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Implement the Lévy C Curve using the same recursive structure as the Koch curve but with 45° angles
-- Compare how different replacement angles produce completely different fractal shapes
-- Understand how a fractal can tile the plane — the Lévy curve packs into itself perfectly
+- Implementare la Curva C di Lévy usando la stessa struttura ricorsiva della curva di Koch ma con angoli di 45°
+- Confrontare come angoli di sostituzione diversi producono forme frattali completamente diverse
+- Capire come un frattale può tassellare il piano — la curva di Lévy si incastra perfettamente in se stessa
 
-Each line segment is replaced by two equal segments forming a right-angled peak. After 14 iterations, the curve packs into a shape resembling a dragon's wing or a crinkled leaf.
+Ogni segmento di linea è sostituito da due segmenti uguali che formano un picco ad angolo retto. Dopo 14 iterazioni, la curva si compatta in una forma che ricorda l'ala di un dragone o una foglia increspata.
 
-!!! mascot-welcome "Welcome to the Lévy C Curve!"
+!!! mascot-welcome "Benvenuto alla Curva C di Lévy!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    You already know the Koch curve uses 60° bumps. The Lévy C uses 45° bumps —
-    one small change that produces a completely different, tile-able fractal!
-    Let's code it together!
+    Già sai che la curva di Koch usa protuberanze di 60°. La Lévy C usa protuberanze di 45° —
+    un piccolo cambiamento che produce un frattale completamente diverso e tassellabile!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
 `levy(n, depth)`:
-- If `depth == 0`: draw a line of length `n`
-- Otherwise: turn left 45°, recurse with `n / √2`, turn right 90°, recurse with `n / √2`, turn left 45°
+- Se `depth == 0`: disegna una linea di lunghezza `n`
+- Altrimenti: gira a sinistra di 45°, ricorri con `n / √2`, gira a destra di 90°, ricorri con `n / √2`, gira a sinistra di 45°
 
-The key difference from Koch: both recursive calls go in the **same direction**, making an upward peak. The angle is 45° instead of 60°.
+La differenza chiave da Koch: entrambe le chiamate ricorsive vanno nella **stessa direzione**, creando un picco verso l'alto. L'angolo è 45° invece di 60°.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -53,13 +53,13 @@ monty.pendown()
 levy(320, 14)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The Koch curve bumps outward in a triangle. The Lévy uses 45° bumps.
-    Will the overall shape look more like a snowflake or a cloud?
-    Make your guess — then click Run to find out!
+    La curva di Koch sporge verso l'esterno in un triangolo. La Lévy usa protuberanze di 45°.
+    La forma generale sembrerà più un fiocco di neve o una nuvola?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -105,30 +105,30 @@ monty.pendown()
 levy(320, 14)`);
 </script>
 
-More like a **cloud or wing** — the asymmetric 45° packing creates an irregular silhouette rather than a symmetric snowflake. Were you right?
+Più simile a una **nuvola o ala** — il compattamento asimmetrico a 45° crea una sagoma irregolare invece di un fiocco di neve simmetrico. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Each segment becomes two segments of length `n / √2`. Since `(n/√2)^2 + (n/√2)^2 = n^2`, the two sub-segments form a right isoceles triangle with hypotenuse `n` — the original segment length is preserved geometrically.
+Ogni segmento diventa due segmenti di lunghezza `n / √2`. Poiché `(n/√2)^2 + (n/√2)^2 = n^2`, i due sotto-segmenti formano un triangolo isoscele rettangolo con ipotenusa `n` — la lunghezza del segmento originale è preservata geometricamente.
 
-The repeated peak replacements pack densely without crossing — the Lévy C curve tiles the plane when copies are placed correctly.
+Le ripetute sostituzioni a picco si compattano densamente senza incrociarsi — la curva C di Lévy tassella il piano quando le copie sono posizionate correttamente.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `n / math.sqrt(2)` | Sub-segment length by Pythagorean theorem |
-| `monty.left(45)` | First rotation — forms the left leg of the peak |
-| `monty.right(90)` | Turn between the two sub-segments |
-| `monty.left(45)` | Restore original heading after the peak |
-| `depth == 0` | Base case: draw a raw segment |
+| `n / math.sqrt(2)` | Lunghezza del sotto-segmento dal teorema di Pitagora |
+| `monty.left(45)` | Prima rotazione — forma il lato sinistro del picco |
+| `monty.right(90)` | Gira tra i due sotto-segmenti |
+| `monty.left(45)` | Ripristina la direzione originale dopo il picco |
+| `depth == 0` | Caso base: disegna un segmento puro |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Try Depth 8"
+!!! mascot-thinking "Il Tuo Turno — Prova la Profondità 8"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `levy(320, 14)` to `levy(320, 8)`. The curve will be much less detailed.
-    Predict what it will look like at only 8 levels of substitution — then run it!
+    Cambia `levy(320, 14)` in `levy(320, 8)`. La curva sarà molto meno dettagliata.
+    Prevedi come sembrerà con solo 8 livelli di sostituzione — poi eseguilo!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -168,20 +168,20 @@ monty.pendown()
 levy(320, 8)`);
 </script>
 
-At depth 8 you can clearly see the individual V-shapes before they pack together. The full shape is recognizable but coarser.
+Alla profondità 8 puoi vedere chiaramente le singole forme a V prima che si compattino insieme. La forma completa è riconoscibile ma più grossolana.
 
-## Experiments
+## Esperimenti
 
-1. **Change the color.** Try `pencolor('darkviolet')`. You'll know it worked when the curve turns purple.
+1. **Cambia il colore.** Prova `pencolor('darkviolet')`. Saprai che ha funzionato quando la curva diventa viola.
 
-2. **Use Koch comparison.** Try the Koch rule (`left(60)`, no `right`, etc.) on the same starting length to compare. You'll know it worked when you see the Koch shape instead.
+2. **Usa il confronto con Koch.** Prova la regola di Koch (`left(60)`, nessun `right`, ecc.) sulla stessa lunghezza di partenza per confrontare. Saprai che ha funzionato quando vedi la forma di Koch invece.
 
-3. **Thicker pen.** Add `monty.pensize(2)` before the levy call. You'll know it worked when the curve lines are thicker and easier to see.
+3. **Penna più spessa.** Aggiungi `monty.pensize(2)` prima della chiamata a levy. Saprai che ha funzionato quando le linee della curva sono più spesse e più facili da vedere.
 
-4. **Flip the curve.** Start facing South (`monty.setheading(270)`) and adjust the starting position. You'll know it worked when the curve hangs downward like a stalactite.
+4. **Ribalta la curva.** Inizia rivolto verso Sud (`monty.setheading(270)`) e adatta la posizione di partenza. Saprai che ha funzionato quando la curva pende verso il basso come una stalattite.
 
-!!! mascot-celebration "Fractal Wings!"
+!!! mascot-celebration "Ali Frattali!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You changed one angle (60° → 45°) and got a completely different fractal!
-    That's the power of parametric thinking — small changes, huge impact.
-    Up next: **Gosper Curve** — a fractal that tiles hexagonal space.
+    Hai cambiato un angolo (60° → 45°) e ottenuto un frattale completamente diverso!
+    Questo è il potere del pensiero parametrico — piccoli cambiamenti, grande impatto.
+    Prossimo: **Curva di Gosper** — un frattale che tassella lo spazio esagonale.

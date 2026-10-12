@@ -2,34 +2,34 @@
 hide:
     - toc
 ---
-# Gosper Curve (Flowsnake)
+# Curva di Gosper (Flowsnake)
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Implement an L-system: a set of string rewriting rules applied repeatedly
-- Translate a string of characters into turtle commands
-- Understand why the Gosper Curve is called a "flowsnake" — it tiles hexagonal space
+- Implementare un sistema-L: un insieme di regole di riscrittura di stringhe applicate ripetutamente
+- Tradurre una stringa di caratteri in comandi della tartaruga
+- Capire perché la Curva di Gosper è chiamata "flowsnake" — tassella lo spazio esagonale
 
-A beautiful winding curve that fills a hexagonal region — the Gosper Curve, also called the "flowsnake." Built from just two string rewriting rules applied four times.
+Una bellissima curva avvolgente che riempie una regione esagonale — la Curva di Gosper, chiamata anche "flowsnake". Costruita da solo due regole di riscrittura di stringhe applicate quattro volte.
 
-!!! mascot-welcome "Welcome to the Gosper Curve!"
+!!! mascot-welcome "Benvenuto alla Curva di Gosper!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    The Gosper Curve is built with an **L-system** — a string that rewrites itself.
-    It's the same technique used to model real plant growth in computer graphics!
-    Let's code it together!
+    La Curva di Gosper è costruita con un **sistema-L** — una stringa che riscrive se stessa.
+    È la stessa tecnica usata per modellare la vera crescita delle piante nella grafica computerizzata!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-Start with the string `'A'`. Apply these rewriting rules repeatedly:
+Inizia con la stringa `'A'`. Applica queste regole di riscrittura ripetutamente:
 - `A` → `A-B--B+A++AA+B-`
 - `B` → `+A-BB--B-A++A+B`
 
-After 4 iterations, translate the result into turtle moves:
-- `A` or `B` → `forward(step)`
+Dopo 4 iterazioni, traduci il risultato in movimenti della tartaruga:
+- `A` o `B` → `forward(step)`
 - `+` → `left(60)`
 - `-` → `right(60)`
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -69,13 +69,13 @@ for c in instructions:
         monty.right(60)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The rewriting doubles the string length several times. After 4 iterations,
-    how many characters long will the string be approximately?
-    (Each A and B expands to 15 characters.) Make your guess — then click Run!
+    La riscrittura raddoppia la lunghezza della stringa più volte. Dopo 4 iterazioni,
+    quanti caratteri lunga sarà approssimativamente la stringa?
+    (Ogni A e B si espande in 15 caratteri.) Fai la tua previsione — poi clicca Esegui!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -134,30 +134,30 @@ for c in instructions:
         monty.right(60)`);
 </script>
 
-After 4 iterations the string has thousands of characters — and the curve fills a hexagonal region. Were you right about the count?
+Dopo 4 iterazioni la stringa ha migliaia di caratteri — e la curva riempie una regione esagonale. Avevi indovinato sul conteggio?
 
-## How It Works
+## Come Funziona
 
-An **L-system** (Lindenmayer system) replaces characters in a string using rewriting rules. The string represents a program for the turtle. The key insight: when the replacement rules are designed correctly, the resulting shape tiles space without gaps or overlaps.
+Un **sistema-L** (sistema di Lindenmayer) sostituisce caratteri in una stringa usando regole di riscrittura. La stringa rappresenta un programma per la tartaruga. L'intuizione chiave: quando le regole di sostituzione sono progettate correttamente, la forma risultante tassella lo spazio senza spazi vuoti o sovrapposizioni.
 
-The Gosper Curve's hexagonal boundary tiles the plane — seven Gosper curves can be arranged to form a larger Gosper Curve!
+Il confine esagonale della Curva di Gosper tassella il piano — sette Curve di Gosper possono essere disposte per formare una Curva di Gosper più grande!
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `s = 'A'` | Initial axiom |
-| `if c == 'A': new += '...'` | Apply the A rewriting rule |
-| `if c == 'B': new += '...'` | Apply the B rewriting rule |
-| `if c in 'AB': forward(step)` | Both A and B are "draw forward" commands |
-| `+` and `-` | Turn left or right 60° |
+| `s = 'A'` | Assioma iniziale |
+| `if c == 'A': new += '...'` | Applica la regola di riscrittura A |
+| `if c == 'B': new += '...'` | Applica la regola di riscrittura B |
+| `if c in 'AB': forward(step)` | Sia A sia B sono comandi "disegna avanti" |
+| `+` e `-` | Gira a sinistra o a destra di 60° |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Try 3 Iterations"
+!!! mascot-thinking "Il Tuo Turno — Prova 3 Iterazioni"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `gosper(4)` to `gosper(3)` and `step = 5` to `step = 10`.
-    The curve will be coarser but faster to draw. Predict how the shape will look simpler.
+    Cambia `gosper(4)` in `gosper(3)` e `step = 5` in `step = 10`.
+    La curva sarà più grossolana ma più veloce da disegnare. Prevedi come sembrerà più semplice la forma.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -210,20 +210,20 @@ for c in instructions:
         monty.right(60)`);
 </script>
 
-At 3 iterations the hexagonal boundary is clearly visible and the internal winding path has fewer loops.
+A 3 iterazioni il confine esagonale è chiaramente visibile e il percorso interno avvolgente ha meno anelli.
 
-## Experiments
+## Esperimenti
 
-1. **Print the string.** Add `print(instructions[:50])` before the drawing loop. You'll know it worked when you see the start of the L-system string.
+1. **Stampa la stringa.** Aggiungi `print(instructions[:50])` prima del ciclo di disegno. Saprai che ha funzionato quando vedi l'inizio della stringa del sistema-L.
 
-2. **Change the color.** Try `pencolor('forestgreen')`. You'll know it worked when the flowsnake turns green.
+2. **Cambia il colore.** Prova `pencolor('forestgreen')`. Saprai che ha funzionato quando il flowsnake diventa verde.
 
-3. **Try 5 iterations.** Change to `gosper(5)` with `step = 3`. More detailed but slower. You'll know it worked when the curve is much denser.
+3. **Prova 5 iterazioni.** Cambia in `gosper(5)` con `step = 3`. Più dettagliato ma più lento. Saprai che ha funzionato quando la curva è molto più densa.
 
-4. **Count the draw steps.** Add a counter and `print(counter)` after the loop. You'll know it worked when you see how many forward steps the turtle takes.
+4. **Conta i passi di disegno.** Aggiungi un contatore e `print(counter)` dopo il ciclo. Saprai che ha funzionato quando vedi quanti passi avanti fa la tartaruga.
 
-!!! mascot-celebration "L-Systems Unlocked!"
+!!! mascot-celebration "Sistemi-L Sbloccati!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You mastered L-systems — the same technique used to model real plant growth!
-    Any fractal with a string-rewriting rule can be drawn this way.
-    Up next: **Category 5 — Symmetry and Tiling**, starting with the Sunflower Seed Spiral.
+    Hai padroneggiato i sistemi-L — la stessa tecnica usata per modellare la vera crescita delle piante!
+    Qualsiasi frattale con una regola di riscrittura di stringhe può essere disegnato in questo modo.
+    Prossimo: **Categoria 5 — Simmetria e Tassellatura**, iniziando con la Spirale dei Semi di Girasole.

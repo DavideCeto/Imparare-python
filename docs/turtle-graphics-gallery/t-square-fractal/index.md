@@ -2,33 +2,33 @@
 hide:
     - toc
 ---
-# T-Square Fractal
+# Frattale a T-Square
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Draw a fractal where each square spawns four half-sized squares at its corners
-- Understand why four recursive calls create an intricate overlapping weave
-- See how alternating fill colors and depth create a layered visual effect
+- Disegnare un frattale dove ogni quadrato genera quattro quadrati di metà dimensione ai suoi angoli
+- Capire perché quattro chiamate ricorsive creano un intricato intreccio sovrapposto
+- Vedere come colori di riempimento alterni e profondità creano un effetto visivo stratificato
 
-A central square sprouts four smaller squares at its corners, each of which sprouts four more — to 5 levels deep. The overlapping geometry creates a striking tiled weave of light and dark.
+Un quadrato centrale fa germogliare quattro quadrati più piccoli ai suoi angoli, ognuno dei quali ne fa germogliare altri quattro — fino a 5 livelli di profondità. La geometria sovrapposta crea un intreccio tassellato sorprendente di luce e ombra.
 
-!!! mascot-welcome "Welcome to the T-Square Fractal!"
+!!! mascot-welcome "Benvenuto al Frattale a T-Square!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    The T-Square is different from the tree fractals — every branch splits into FOUR
-    smaller branches! The result fills the canvas completely with overlapping squares.
-    Let's code it together!
+    Il T-Square è diverso dai frattali ad albero — ogni ramo si divide in QUATTRO
+    rami più piccoli! Il risultato riempie completamente il canvas con quadrati sovrapposti.
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-`tsquare(cx, cy, size, depth)` draws a square centered at `(cx, cy)`. If `depth > 0`, it recursively draws four squares of `size/2` at the four corners.
+`tsquare(cx, cy, size, depth)` disegna un quadrato centrato su `(cx, cy)`. Se `depth > 0`, disegna ricorsivamente quattro quadrati di `size/2` ai quattro angoli.
 
-Corner positions:
-- Top-left: `(cx - size/2, cy + size/2)`
-- Top-right: `(cx + size/2, cy + size/2)`
-- Bottom-left: `(cx - size/2, cy - size/2)`
-- Bottom-right: `(cx + size/2, cy - size/2)`
+Posizioni degli angoli:
+- In alto a sinistra: `(cx - size/2, cy + size/2)`
+- In alto a destra: `(cx + size/2, cy + size/2)`
+- In basso a sinistra: `(cx - size/2, cy - size/2)`
+- In basso a destra: `(cx + size/2, cy - size/2)`
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -61,13 +61,13 @@ def tsquare(cx, cy, size, depth):
 tsquare(0, 0, 280, 5)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    At each level, 4 new squares appear. After 5 levels, how many total squares
-    will have been drawn? (Hint: 1 + 4 + 16 + 64 + 256 + 1024 = ?)
-    Make your guess — then click Run to find out!
+    A ogni livello, appaiono 4 nuovi quadrati. Dopo 5 livelli, quanti quadrati totali
+    saranno stati disegnati? (Suggerimento: 1 + 4 + 16 + 64 + 256 + 1024 = ?)
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -119,30 +119,30 @@ def tsquare(cx, cy, size, depth):
 tsquare(0, 0, 280, 5)`);
 </script>
 
-`1 + 4 + 16 + 64 + 256 + 1024 = 1365` total squares drawn. Were you right?
+`1 + 4 + 16 + 64 + 256 + 1024 = 1365` quadrati totali disegnati. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Later (deeper) squares draw on top of earlier ones. Because the deepest squares are the lightest color (white), they appear as bright highlights on the darker background squares. This creates the layered depth effect.
+I quadrati successivi (più profondi) si disegnano sopra quelli precedenti. Poiché i quadrati più profondi sono del colore più chiaro (bianco), appaiono come luci brillanti sui quadrati di sfondo più scuri. Questo crea l'effetto di profondità stratificato.
 
-The four corner positions `(±half, ±half)` are computed with a list comprehension over `[(-half, half), (half, half), (-half, -half), (half, -half)]` — much cleaner than four separate calls.
+Le quattro posizioni d'angolo `(±half, ±half)` sono calcolate con una list comprehension su `[(-half, half), (half, half), (-half, -half), (half, -half)]` — molto più chiaro di quattro chiamate separate.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `draw_square(cx, cy, size, color)` | Draw one centered square |
-| `half = size / 2` | Sub-squares are half the parent size |
-| `for dx, dy in [...]` | Loop over four corner offsets |
-| `tsquare(cx + dx, cy + dy, half, depth - 1)` | Recurse at each corner |
-| Color list | Deeper = lighter — creates the layered visual |
+| `draw_square(cx, cy, size, color)` | Disegna un quadrato centrato |
+| `half = size / 2` | I sotto-quadrati sono metà della dimensione del genitore |
+| `for dx, dy in [...]` | Cicla sui quattro offset d'angolo |
+| `tsquare(cx + dx, cy + dy, half, depth - 1)` | Ricorre a ogni angolo |
+| Lista di colori | Più profondo = più chiaro — crea l'aspetto visivo stratificato |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Try Depth 3"
+!!! mascot-thinking "Il Tuo Turno — Prova la Profondità 3"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `depth=5` to `depth=3`. How many total squares will be drawn?
-    (1 + 4 + 16 + 64 = ?). Predict, then run to see the simpler structure.
+    Cambia `depth=5` in `depth=3`. Quanti quadrati totali verranno disegnati?
+    (1 + 4 + 16 + 64 = ?). Prevedi, poi esegui per vedere la struttura più semplice.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -188,20 +188,20 @@ def tsquare(cx, cy, size, depth):
 tsquare(0, 0, 280, 3)`);
 </script>
 
-`1 + 4 + 16 + 64 = 85` squares — much faster to draw and clearly shows the hierarchical corner structure.
+`1 + 4 + 16 + 64 = 85` quadrati — molto più rapido da disegnare e mostra chiaramente la struttura angolare gerarchica.
 
-## Experiments
+## Esperimenti
 
-1. **Use warm colors.** Change the `colors` list to `['darkred', 'red', 'orange', 'gold', 'yellow', 'white']`. You'll know it worked when the fractal turns warm.
+1. **Usa colori caldi.** Cambia la lista `colors` in `['darkred', 'red', 'orange', 'gold', 'yellow', 'white']`. Saprai che ha funzionato quando il frattale diventa caldo.
 
-2. **Use a size-3 starting square.** Change `tsquare(0, 0, 280, 5)` to `tsquare(0, 0, 240, 6)`. More depth but smaller. You'll know it worked when the fractal is denser.
+2. **Usa un quadrato di partenza di dimensione diversa.** Cambia `tsquare(0, 0, 280, 5)` in `tsquare(0, 0, 240, 6)`. Più profondità ma più piccolo. Saprai che ha funzionato quando il frattale è più denso.
 
-3. **Try 3-way splits.** Recurse only on 3 corners instead of 4 (remove one from the list). You'll know it worked when the pattern becomes asymmetric.
+3. **Prova divisioni a 3 vie.** Ricorri solo su 3 angoli invece di 4 (rimuovine uno dalla lista). Saprai che ha funzionato quando il pattern diventa asimmetrico.
 
-4. **Outline only.** Remove `begin_fill()` and `end_fill()`. You'll know it worked when only the square edges are drawn.
+4. **Solo contorno.** Rimuovi `begin_fill()` ed `end_fill()`. Saprai che ha funzionato quando sono disegnati solo i bordi dei quadrati.
 
-!!! mascot-celebration "Four Corners of Infinity!"
+!!! mascot-celebration "Quattro Angoli d'Infinito!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You discovered how four recursive calls — one per corner — create a pattern
-    that completely tiles the plane. That's the power of 4-ary recursion!
-    Up next: **Lévy C Curve** — a fractal that builds a dragon's wing.
+    Hai scoperto come quattro chiamate ricorsive — una per angolo — creano un pattern
+    che tassella completamente il piano. Questo è il potere della ricorsione a 4 vie!
+    Prossimo: **Curva C di Lévy** — un frattale che costruisce l'ala di un dragone.
