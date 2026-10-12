@@ -1,1111 +1,1111 @@
-# Turtle Graphics Gallery
+# Galleria della Grafica Turtle
 
-Browse these examples to see what turtle graphics can do.
-Each pattern is runnable in your browser — click the link to open the interactive lab.
+Scorri questi esempi per vedere cosa può fare la grafica turtle.
+Ogni pattern è eseguibile nel tuo browser — clicca il link per aprire il laboratorio interattivo.
 
 <div class="grid cards" markdown>
 
--   **Rainbow Square Spiral**
+-   **Spirale di Quadrati Arcobaleno**
 
     ---
 
-    ![Rainbow Square Spiral](./rainbow-square-spiral/screen-image.png)
+    ![Spirale di Quadrati Arcobaleno](./rainbow-square-spiral/screen-image.png)
 
-    Draw a square, rotate 10°, draw a larger square — repeat 36 times.
-    Colors cycle through red, orange, yellow, green, blue, and violet.
-    Teaches: `for` loops, color lists, and the modulo operator.
+    Disegna un quadrato, ruota di 10°, disegna un quadrato più grande — ripeti 36 volte.
+    I colori scorrono attraverso rosso, arancione, giallo, verde, blu, e viola.
+    Insegna: cicli `for`, liste di colori, e l'operatore modulo.
 
-    [:octicons-arrow-right-24: Open Lab](./rainbow-square-spiral/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./rainbow-square-spiral/index.md)
 
--   **Pinwheel of Triangles**
+-   **Girandola di Triangoli**
 
     ---
 
-    ![Pinwheel of Triangles](./pinwheel-of-triangles/screen-image.png)
+    ![Girandola di Triangoli](./pinwheel-of-triangles/screen-image.png)
 
-    Draw 12 equilateral triangles, each rotated 30° from the last.
-    Gold and dark-red blades fan out from the center like a spinning wheel.
-    Teaches: the `360 / n` rotation formula, `begin_fill()`, and radial symmetry.
+    Disegna 12 triangoli equilateri, ognuno ruotato di 30° dal precedente.
+    Pale oro e rosso scuro si aprono a ventaglio dal centro come una ruota che gira.
+    Insegna: la formula di rotazione `360 / n`, `begin_fill()`, e la simmetria radiale.
 
-    [:octicons-arrow-right-24: Open Lab](./pinwheel-of-triangles/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./pinwheel-of-triangles/index.md)
 
--   **Nested Circles**
+-   **Cerchi Annidati**
 
     ---
 
-    ![Nested Circles](./nested-circles/screen-image.png)
+    ![Cerchi Annidati](./nested-circles/screen-image.png)
 
-    Twenty concentric rings alternating cyan and navy pulse outward from the center.
-    Teaches: `circle()`, `goto()` for centering, and why drawing order matters.
+    Venti anelli concentrici che alternano ciano e blu navy pulsano verso l'esterno dal centro.
+    Insegna: `circle()`, `goto()` per centrare, e perché l'ordine di disegno è importante.
 
-    [:octicons-arrow-right-24: Open Lab](./nested-circles/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./nested-circles/index.md)
 
--   **Starburst**
+-   **Raggiera a Stella**
 
     ---
 
-    ![Starburst](./starburst/screen-image.png)
+    ![Raggiera a Stella](./starburst/screen-image.png)
 
-    Thirty-six spokes burst from the center, cycling yellow → orange → red.
-    Teaches: forward + backward as a spoke, color cycling with modulo, and 360° math.
+    Trentasei raggi esplodono dal centro, scorrendo da giallo → arancione → rosso.
+    Insegna: avanti + indietro come un raggio, ciclo di colori con il modulo, e matematica a 360°.
 
-    [:octicons-arrow-right-24: Open Lab](./starburst/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./starburst/index.md)
 
--   **Checkerboard Grid**
+-   **Griglia a Scacchiera**
 
     ---
 
-    ![Checkerboard Grid](./checkerboard-grid/screen-image.png)
+    ![Griglia a Scacchiera](./checkerboard-grid/screen-image.png)
 
-    An 8×8 chessboard built entirely from nested loops and coordinate arithmetic.
-    Teaches: nested `for` loops, position formulas, and `(row + col) % 2` for alternation.
+    Una scacchiera 8×8 costruita interamente con cicli annidati e aritmetica delle coordinate.
+    Insegna: cicli `for` annidati, formule di posizione, e `(row + col) % 2` per l'alternanza.
 
-    [:octicons-arrow-right-24: Open Lab](./checkerboard-grid/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./checkerboard-grid/index.md)
 
--   **Diagonal Stripe Field**
+-   **Campo di Strisce Diagonali**
 
     ---
 
-    ![Diagonal Stripe Field](./diagonal-stripe-field/screen-image.png)
+    ![Campo di Strisce Diagonali](./diagonal-stripe-field/screen-image.png)
 
-    Thirty parallel diagonal lines alternate teal and coral across the canvas.
-    Teaches: `setheading()` for absolute angles, spacing stripes with a loop counter formula.
+    Trenta linee diagonali parallele alternano verde acqua e corallo attraverso il canvas.
+    Insegna: `setheading()` per angoli assoluti, spaziare le strisce con una formula sul contatore del ciclo.
 
-    [:octicons-arrow-right-24: Open Lab](./diagonal-stripe-field/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./diagonal-stripe-field/index.md)
 
--   **Dotted Grid**
+-   **Griglia di Punti**
 
     ---
 
-    ![Dotted Grid](./dotted-grid/screen-image.png)
+    ![Griglia di Punti](./dotted-grid/screen-image.png)
 
-    A 10×10 grid of dots that grow larger toward the bottom, creating an illusion of depth.
-    Teaches: `dot()`, nested loops, and mapping a loop variable to a visual property.
+    Una griglia 10×10 di punti che crescono più grandi verso il basso, creando un'illusione di profondità.
+    Insegna: `dot()`, cicli annidati, e mappare una variabile di ciclo a una proprietà visiva.
 
-    [:octicons-arrow-right-24: Open Lab](./dotted-grid/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./dotted-grid/index.md)
 
--   **Color Wheel Wedges**
+-   **Spicchi della Ruota dei Colori**
 
     ---
 
-    ![Color Wheel Wedges](./color-wheel-wedges/screen-image.png)
+    ![Spicchi della Ruota dei Colori](./color-wheel-wedges/screen-image.png)
 
-    Twelve pie-slice wedges fill the circle with every hue of the color wheel.
-    Teaches: `360 / n` wedge angles, arc approximation, and iterating a color list.
+    Dodici spicchi a fetta di torta riempiono il cerchio con ogni tonalità della ruota dei colori.
+    Insegna: angoli di spicchio `360 / n`, approssimazione dell'arco, e iterare una lista di colori.
 
-    [:octicons-arrow-right-24: Open Lab](./color-wheel-wedges/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./color-wheel-wedges/index.md)
 
--   **Pentagon Chain**
+-   **Catena di Pentagoni**
 
     ---
 
-    ![Pentagon Chain](./pentagon-chain/screen-image.png)
+    ![Catena di Pentagoni](./pentagon-chain/screen-image.png)
 
-    Ten pentagons march in a row, alternating purple and gold, corner-to-corner.
-    Teaches: the `360 / sides` exterior angle formula and chaining shapes horizontally.
+    Dieci pentagoni marciano in riga, alternando viola e oro, angolo per angolo.
+    Insegna: la formula dell'angolo esterno `360 / sides` e concatenare forme orizzontalmente.
 
-    [:octicons-arrow-right-24: Open Lab](./pentagon-chain/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./pentagon-chain/index.md)
 
--   **Overlapping Squares**
+-   **Quadrati Sovrapposti**
 
     ---
 
-    ![Overlapping Squares](./overlapping-squares/screen-image.png)
+    ![Quadrati Sovrapposti](./overlapping-squares/screen-image.png)
 
-    Eight squares offset diagonally cascade from dark navy to near-white.
-    Teaches: draw order, diagonal offset positioning, and color gradient planning.
+    Otto quadrati spostati diagonalmente si susseguono dal blu navy scuro al quasi bianco.
+    Insegna: ordine di disegno, posizionamento con offset diagonale, e pianificazione del gradiente di colore.
 
-    [:octicons-arrow-right-24: Open Lab](./overlapping-squares/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./overlapping-squares/index.md)
 
--   **Flower with Petal Function**
+-   **Fiore con Funzione Petalo**
 
     ---
 
-    ![Flower with Petal Function](./flower-petal-function/screen-image.png)
+    ![Fiore con Funzione Petalo](./flower-petal-function/screen-image.png)
 
-    Eight petals assembled by calling a `petal(size, color)` function in a loop.
-    Teaches: defining and calling parameterized functions, arc-based petal geometry.
+    Otto petali assemblati chiamando una funzione `petal(size, color)` in un ciclo.
+    Insegna: definire e chiamare funzioni parametrizzate, geometria dei petali basata su archi.
 
-    [:octicons-arrow-right-24: Open Lab](./flower-petal-function/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./flower-petal-function/index.md)
 
--   **Honeycomb Grid**
+-   **Griglia a Nido d'Ape**
 
     ---
 
-    ![Honeycomb Grid](./honeycomb-grid/screen-image.png)
+    ![Griglia a Nido d'Ape](./honeycomb-grid/screen-image.png)
 
-    Dozens of hexagons tile the canvas perfectly in gold and orange.
-    Teaches: `hexagon()` functions, offset-row tiling math, and why hexagons tile perfectly.
+    Decine di esagoni tassellano perfettamente il canvas in oro e arancione.
+    Insegna: funzioni `hexagon()`, matematica della tassellatura con righe a offset, e perché gli esagoni tassellano perfettamente.
 
-    [:octicons-arrow-right-24: Open Lab](./honeycomb-grid/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./honeycomb-grid/index.md)
 
--   **City Skyline**
+-   **Skyline Urbano**
 
     ---
 
-    ![City Skyline](./city-skyline/screen-image.png)
+    ![Skyline Urbano](./city-skyline/screen-image.png)
 
-    Ten skyscrapers of varied heights fill a night skyline with glowing windows.
-    Teaches: multi-parameter functions, composing a scene from repeated calls, nested loops.
+    Dieci grattacieli di altezze variate riempiono uno skyline notturno con finestre illuminate.
+    Insegna: funzioni con più parametri, comporre una scena da chiamate ripetute, cicli annidati.
 
-    [:octicons-arrow-right-24: Open Lab](./city-skyline/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./city-skyline/index.md)
 
--   **Snowflake Arms**
+-   **Bracci del Fiocco di Neve**
 
     ---
 
-    ![Snowflake Arms](./snowflake-arms/screen-image.png)
+    ![Bracci del Fiocco di Neve](./snowflake-arms/screen-image.png)
 
-    Six identical arms with side twigs form a crystalline snowflake.
-    Teaches: `arm()` function, returning turtle to its start state, six-fold symmetry.
+    Sei bracci identici con rametti laterali formano un fiocco di neve cristallino.
+    Insegna: la funzione `arm()`, riportare la tartaruga al suo stato iniziale, simmetria a sei pieghe.
 
-    [:octicons-arrow-right-24: Open Lab](./snowflake-arms/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./snowflake-arms/index.md)
 
--   **Polka Dot Canvas**
+-   **Canvas a Pois**
 
     ---
 
-    ![Polka Dot Canvas](./polka-dot-canvas/screen-image.png)
+    ![Canvas a Pois](./polka-dot-canvas/screen-image.png)
 
-    Eighty colorful dots scattered at random sizes and positions across the canvas.
-    Teaches: `random.randint()`, `random.choice()`, `random.seed()` for reproducibility.
+    Ottanta punti colorati dispersi a dimensioni e posizioni casuali attraverso il canvas.
+    Insegna: `random.randint()`, `random.choice()`, `random.seed()` per la riproducibilità.
 
-    [:octicons-arrow-right-24: Open Lab](./polka-dot-canvas/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./polka-dot-canvas/index.md)
 
--   **Brick Wall**
+-   **Muro di Mattoni**
 
     ---
 
-    ![Brick Wall](./brick-wall/screen-image.png)
+    ![Muro di Mattoni](./brick-wall/screen-image.png)
 
-    Eight rows of staggered red-brown bricks with dark mortar lines.
-    Teaches: `fillcolor`/`pencolor` separation, the offset-row tiling pattern, ternary expressions.
+    Otto righe di mattoni rosso-marrone disposti a scalare con linee di malta scure.
+    Insegna: separazione `fillcolor`/`pencolor`, il pattern di tassellatura a righe con offset, espressioni ternarie.
 
-    [:octicons-arrow-right-24: Open Lab](./brick-wall/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./brick-wall/index.md)
 
--   **Stars of Different Sizes**
+-   **Stelle di Diverse Dimensioni**
 
     ---
 
-    ![Stars of Different Sizes](./stars-different-sizes/screen-image.png)
+    ![Stelle di Diverse Dimensioni](./stars-different-sizes/screen-image.png)
 
-    Fifteen gold and red stars scattered across a dark background at random sizes.
-    Teaches: the 144° star angle, four-parameter functions, and random scatter.
+    Quindici stelle oro e rosse disperse su uno sfondo scuro a dimensioni casuali.
+    Insegna: l'angolo stellare di 144°, funzioni a quattro parametri, e dispersione casuale.
 
-    [:octicons-arrow-right-24: Open Lab](./stars-different-sizes/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./stars-different-sizes/index.md)
 
--   **Traffic Light Stack**
+-   **Semaforo**
 
     ---
 
-    ![Traffic Light Stack](./traffic-light/screen-image.png)
+    ![Semaforo](./traffic-light/screen-image.png)
 
-    A three-signal traffic light assembled from one rectangle and three dot calls.
-    Teaches: decomposing real objects into primitives, layered draw order, positional parameters.
+    Un semaforo a tre luci assemblato da un rettangolo e tre chiamate a dot.
+    Insegna: decomporre oggetti reali in primitive, ordine di disegno a strati, parametri posizionali.
 
-    [:octicons-arrow-right-24: Open Lab](./traffic-light/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./traffic-light/index.md)
 
--   **Fish School**
+-   **Banco di Pesci**
 
     ---
 
-    ![Fish School](./fish-school/screen-image.png)
+    ![Banco di Pesci](./fish-school/screen-image.png)
 
-    Fifteen blue fish of varied sizes swim through a deep blue ocean.
-    Teaches: building creature shapes from arc + triangle, parameter-driven variation.
+    Quindici pesci blu di varie dimensioni nuotano in un oceano blu profondo.
+    Insegna: costruire forme di creature da arco + triangolo, variazione guidata dai parametri.
 
-    [:octicons-arrow-right-24: Open Lab](./fish-school/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./fish-school/index.md)
 
--   **Mountain Range**
+-   **Catena Montuosa**
 
     ---
 
-    ![Mountain Range](./mountain-range/screen-image.png)
+    ![Catena Montuosa](./mountain-range/screen-image.png)
 
-    Three layers of mountains recede into a pale sky using color value for depth.
-    Teaches: back-to-front layering, `goto()` waypoints, atmospheric perspective with color.
+    Tre strati di montagne si allontanano in un cielo pallido usando il valore del colore per la profondità.
+    Insegna: stratificazione dal retro al fronte, punti di passaggio con `goto()`, prospettiva atmosferica con il colore.
 
-    [:octicons-arrow-right-24: Open Lab](./mountain-range/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./mountain-range/index.md)
 
--   **Archimedean Square Spiral**
+-   **Spirale Quadrata di Archimede**
 
     ---
 
-    ![Archimedean Square Spiral](./archimedean-spiral/screen-image.png)
+    ![Spirale Quadrata di Archimede](./archimedean-spiral/screen-image.png)
 
-    A square spiral that grows outward using nothing but a fixed turn and a growing step.
-    Teaches: how `step += n` creates a spiral, the effect of changing the turn angle.
+    Una spirale quadrata che cresce verso l'esterno usando solo una rotazione fissa e un passo crescente.
+    Insegna: come `step += n` crea una spirale, l'effetto del cambiamento dell'angolo di rotazione.
 
-    [:octicons-arrow-right-24: Open Lab](./archimedean-spiral/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./archimedean-spiral/index.md)
 
--   **Rainbow Line Spiral**
+-   **Spirale di Linee Arcobaleno**
 
     ---
 
-    ![Rainbow Line Spiral](./rainbow-line-spiral/screen-image.png)
+    ![Spirale di Linee Arcobaleno](./rainbow-line-spiral/screen-image.png)
 
-    The Archimedean spiral revisited — each segment colored by cycling six rainbow hues.
-    Teaches: `i % len(colors)` for color cycling, how period mismatch creates diagonal banding.
+    La spirale di Archimede rivisitata — ogni segmento colorato scorrendo attraverso sei tonalità arcobaleno.
+    Insegna: `i % len(colors)` per il ciclo di colori, come il disallineamento di periodo crea fasce diagonali.
 
-    [:octicons-arrow-right-24: Open Lab](./rainbow-line-spiral/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./rainbow-line-spiral/index.md)
 
 
--   **L-System Plant**
+-   **Pianta a Sistema-L**
 
     ---
 
-    ![L-System Plant](./l-system-plant/screen-image.png)
+    ![Pianta a Sistema-L](./l-system-plant/screen-image.png)
 
-    Lindenmayer rules expand a single character into a branching plant over 5 generations.
-    Teaches: L-systems, string rewriting, bracket stack for branching, depth-first growth.
+    Le regole di Lindenmayer espandono un singolo carattere in una pianta ramificata in 5 generazioni.
+    Insegna: sistemi-L, riscrittura di stringhe, stack a parentesi per la ramificazione, crescita in profondità.
 
-    [:octicons-arrow-right-24: Open Lab](./l-system-plant/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./l-system-plant/index.md)
 
--   **Turtle Maze Generator**
+-   **Generatore di Labirinti con la Turtle**
 
     ---
 
-    ![Turtle Maze Generator](./turtle-maze/screen-image.png)
+    ![Generatore di Labirinti con la Turtle](./turtle-maze/screen-image.png)
 
-    Recursive backtracker DFS generates a perfect maze by carving walls in a grid.
-    Teaches: 2D grids, depth-first search, recursion, wall carving with sets.
+    Un backtracker ricorsivo DFS genera un labirinto perfetto scavando muri in una griglia.
+    Insegna: griglie 2D, ricerca in profondità, ricorsione, scavare muri con gli insiemi.
 
-    [:octicons-arrow-right-24: Open Lab](./turtle-maze/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./turtle-maze/index.md)
 
--   **Parametric Surface Projection**
+-   **Proiezione di Superficie Parametrica**
 
     ---
 
-    ![Parametric Surface Projection](./parametric-surface/screen-image.png)
+    ![Proiezione di Superficie Parametrica](./parametric-surface/screen-image.png)
 
-    3D saddle surface projected onto 2D with isometric coordinates and wireframe mesh.
-    Teaches: parametric surfaces, isometric projection, `x(u,v)` `y(u,v)` `z(u,v)`.
+    Superficie 3D a sella proiettata su 2D con coordinate isometriche e mesh wireframe.
+    Insegna: superfici parametriche, proiezione isometrica, `x(u,v)` `y(u,v)` `z(u,v)`.
 
-    [:octicons-arrow-right-24: Open Lab](./parametric-surface/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./parametric-surface/index.md)
 
--   **Lindenmayer Snowflake Collection**
+-   **Collezione di Fiocchi di Neve di Lindenmayer**
 
     ---
 
-    ![Lindenmayer Snowflake Collection](./linden-snowflakes/screen-image.png)
+    ![Collezione di Fiocchi di Neve di Lindenmayer](./linden-snowflakes/screen-image.png)
 
-    Six L-system rule sets — Koch, Sierpiński, hex, dragon, quadratic, plant — in a grid.
-    Teaches: universal L-system interpreter, data-driven rendering, comparative fractals.
+    Sei insiemi di regole del sistema-L — Koch, Sierpiński, hex, dragone, quadratico, pianta — in una griglia.
+    Insegna: interprete universale del sistema-L, rendering guidato dai dati, frattali comparativi.
 
-    [:octicons-arrow-right-24: Open Lab](./linden-snowflakes/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./linden-snowflakes/index.md)
 
--   **Generative Art Loop**
+-   **Ciclo di Arte Generativa**
 
     ---
 
-    ![Generative Art Loop](./generative-art/screen-image.png)
+    ![Ciclo di Arte Generativa](./generative-art/screen-image.png)
 
-    Golden spiral dots + rose curve + mini-spirals = layered generative composition.
-    Teaches: combining techniques, seed-based generation, layered composition design.
+    Punti a spirale dorata + curva a rosa + mini-spirali = composizione generativa a strati.
+    Insegna: combinare tecniche, generazione basata su seme, design di composizione a strati.
 
-    [:octicons-arrow-right-24: Open Lab](./generative-art/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./generative-art/index.md)
 
--   **Bouncing Ball**
+-   **Pallina che Rimbalza**
 
     ---
 
-    ![Bouncing Ball](./bouncing-ball/screen-image.png)
+    ![Pallina che Rimbalza](./bouncing-ball/screen-image.png)
 
-    Animated ball bouncing inside a box — velocity, position, wall collision detection.
-    Teaches: animation loop, `tracer(0)`, `update()`, velocity reversal on collision.
+    Pallina animata che rimbalza dentro una scatola — velocità, posizione, rilevamento di collisione con le pareti.
+    Insegna: ciclo di animazione, `tracer(0)`, `update()`, inversione della velocità alla collisione.
 
-    [:octicons-arrow-right-24: Open Lab](./bouncing-ball/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./bouncing-ball/index.md)
 
--   **Clock Face**
+-   **Quadrante dell'Orologio**
 
     ---
 
-    ![Clock Face](./clock-face/screen-image.png)
+    ![Quadrante dell'Orologio](./clock-face/screen-image.png)
 
-    Analog clock with tick marks and three hands computed from hours/minutes/seconds.
-    Teaches: angle math for clock hands, tick mark placement, `setheading`.
+    Orologio analogico con tacche e tre lancette calcolate da ore/minuti/secondi.
+    Insegna: matematica degli angoli per le lancette, posizionamento delle tacche, `setheading`.
 
-    [:octicons-arrow-right-24: Open Lab](./clock-face/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./clock-face/index.md)
 
--   **Spirograph Drawer**
+-   **Disegnatore di Spirografi**
 
     ---
 
-    ![Spirograph Drawer](./spirograph-drawer/screen-image.png)
+    ![Disegnatore di Spirografi](./spirograph-drawer/screen-image.png)
 
-    Six overlapping hypotrochoid curves drawn sequentially in different colors.
-    Teaches: parameter lists, animation with `tracer(0)`, layered generative art.
+    Sei curve ipotrocoidi sovrapposte disegnate in sequenza in colori diversi.
+    Insegna: liste di parametri, animazione con `tracer(0)`, arte generativa a strati.
 
-    [:octicons-arrow-right-24: Open Lab](./spirograph-drawer/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./spirograph-drawer/index.md)
 
--   **Spiral Text**
+-   **Testo a Spirale**
 
     ---
 
-    ![Spiral Text](./spiral-text/screen-image.png)
+    ![Testo a Spirale](./spiral-text/screen-image.png)
 
-    Characters placed along a spiral using polar coordinates and `turtle.write()`.
-    Teaches: `enumerate`, polar coordinates, `setheading`, text placement.
+    Caratteri posizionati lungo una spirale usando coordinate polari e `turtle.write()`.
+    Insegna: `enumerate`, coordinate polari, `setheading`, posizionamento del testo.
 
-    [:octicons-arrow-right-24: Open Lab](./spiral-text/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./spiral-text/index.md)
 
--   **Seven-Segment Display**
+-   **Display a Sette Segmenti**
 
     ---
 
-    ![Seven-Segment Display](./seven-segment/screen-image.png)
+    ![Display a Sette Segmenti](./seven-segment/screen-image.png)
 
-    Digits rendered from a dictionary of 7 on/off segment flags — like a digital clock.
-    Teaches: dictionaries, bitmasks, conditional drawing, data-driven rendering.
+    Cifre rese da un dizionario di 7 flag di segmento acceso/spento — come un orologio digitale.
+    Insegna: dizionari, bitmask, disegno condizionale, rendering guidato dai dati.
 
-    [:octicons-arrow-right-24: Open Lab](./seven-segment/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./seven-segment/index.md)
 
--   **Circular Name Badge**
+-   **Distintivo Circolare con Nome**
 
     ---
 
-    ![Circular Name Badge](./circular-badge/screen-image.png)
+    ![Distintivo Circolare con Nome](./circular-badge/screen-image.png)
 
-    Text arranged around a circle like a coin or official seal.
-    Teaches: angular text placement, `setheading`, circular geometry, `write()`.
+    Testo disposto attorno a un cerchio come una moneta o un sigillo ufficiale.
+    Insegna: posizionamento angolare del testo, `setheading`, geometria circolare, `write()`.
 
-    [:octicons-arrow-right-24: Open Lab](./circular-badge/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./circular-badge/index.md)
 
--   **Name in Block Letters**
+-   **Nome in Lettere Blocco**
 
     ---
 
-    ![Name in Block Letters](./block-letters/screen-image.png)
+    ![Nome in Lettere Blocco](./block-letters/screen-image.png)
 
-    Letters defined as stroke waypoints and rendered with `goto()` — a vector font.
-    Teaches: dictionaries of coordinates, `goto()` rendering, font data structures.
+    Lettere definite come punti di passaggio di tratto e rese con `goto()` — un font vettoriale.
+    Insegna: dizionari di coordinate, rendering con `goto()`, strutture di dati per font.
 
-    [:octicons-arrow-right-24: Open Lab](./block-letters/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./block-letters/index.md)
 
--   **Rotating Squares Illusion**
+-   **Illusione dei Quadrati Rotanti**
 
     ---
 
-    ![Rotating Squares Illusion](./rotating-squares/screen-image.png)
+    ![Illusione dei Quadrati Rotanti](./rotating-squares/screen-image.png)
 
-    Concentric squares each rotated 5° more — static geometry that appears to spin.
-    Teaches: nested loops, angle offset, Op Art illusions, `sqrt(2)` geometry.
+    Quadrati concentrici ognuno ruotato di 5° in più — geometria statica che sembra girare.
+    Insegna: cicli annidati, offset angolare, illusioni Op Art, geometria di `sqrt(2)`.
 
-    [:octicons-arrow-right-24: Open Lab](./rotating-squares/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./rotating-squares/index.md)
 
--   **Café Wall Illusion**
+-   **Illusione del Muro del Caffè**
 
     ---
 
-    ![Café Wall Illusion](./cafe-wall/screen-image.png)
+    ![Illusione del Muro del Caffè](./cafe-wall/screen-image.png)
 
-    Offset rows of black/white tiles make perfectly horizontal gray lines look slanted.
-    Teaches: tile grids, row offset, filled rectangles, perception vs reality.
+    Righe sfalsate di tessere bianche/nere fanno sembrare inclinate linee grigie perfettamente orizzontali.
+    Insegna: griglie di tessere, offset di riga, rettangoli riempiti, percezione contro realtà.
 
-    [:octicons-arrow-right-24: Open Lab](./cafe-wall/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./cafe-wall/index.md)
 
--   **Moiré Pattern**
+-   **Motivo Moiré**
 
     ---
 
-    ![Moiré Pattern](./moire-pattern/screen-image.png)
+    ![Motivo Moiré](./moire-pattern/screen-image.png)
 
-    Two sets of parallel lines at slightly different angles create beating interference.
-    Teaches: line grids, angle rotation, Moiré period formula, parametric lines.
+    Due insiemi di linee parallele ad angoli leggermente diversi creano interferenza a battimento.
+    Insegna: griglie di linee, rotazione angolare, formula del periodo Moiré, linee parametriche.
 
-    [:octicons-arrow-right-24: Open Lab](./moire-pattern/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./moire-pattern/index.md)
 
--   **Bridget Riley Waves**
+-   **Onde di Bridget Riley**
 
     ---
 
-    ![Bridget Riley Waves](./riley-waves/screen-image.png)
+    ![Onde di Bridget Riley](./riley-waves/screen-image.png)
 
-    Parallel sine curves with parabolic amplitude — static lines that appear to ripple.
-    Teaches: sine waves, amplitude gradients, Op Art, `math.sin`.
+    Curve sinusoidali parallele con ampiezza parabolica — linee statiche che sembrano ondeggiare.
+    Insegna: onde sinusoidali, gradienti di ampiezza, Op Art, `math.sin`.
 
-    [:octicons-arrow-right-24: Open Lab](./riley-waves/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./riley-waves/index.md)
 
--   **Expanding Hexagons**
+-   **Esagoni in Espansione**
 
     ---
 
-    ![Expanding Hexagons](./expanding-hexagons/screen-image.png)
+    ![Esagoni in Espansione](./expanding-hexagons/screen-image.png)
 
-    Concentric hexagons alternating 0° and 30° with color gradient — hexagonal tunnel illusion.
-    Teaches: hexagon geometry, rotation alternation, color gradients, depth illusions.
+    Esagoni concentrici che alternano 0° e 30° con gradiente di colore — illusione di tunnel esagonale.
+    Insegna: geometria degli esagoni, alternanza di rotazione, gradienti di colore, illusioni di profondità.
 
-    [:octicons-arrow-right-24: Open Lab](./expanding-hexagons/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./expanding-hexagons/index.md)
 
--   **Lissajous Figure**
+-   **Figura di Lissajous**
 
     ---
 
-    ![Lissajous Figure](./lissajous-figure/screen-image.png)
+    ![Figura di Lissajous](./lissajous-figure/screen-image.png)
 
-    `x=A*sin(a*t+δ), y=B*sin(b*t)` — frequency ratio controls loop count.
-    Teaches: parametric equations, `math.sin`, oscilloscope math.
+    `x=A*sin(a*t+δ), y=B*sin(b*t)` — il rapporto di frequenza controlla il numero di cicli.
+    Insegna: equazioni parametriche, `math.sin`, matematica dell'oscilloscopio.
 
-    [:octicons-arrow-right-24: Open Lab](./lissajous-figure/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./lissajous-figure/index.md)
 
--   **Rose Curve**
+-   **Curva a Rosa**
 
     ---
 
-    ![Rose Curve](./rose-curve/screen-image.png)
+    ![Curva a Rosa](./rose-curve/screen-image.png)
 
-    `r = cos(k*theta)` in polar coordinates — odd k gives k petals, even k gives 2k.
-    Teaches: polar equations, polar-to-Cartesian conversion, petal counting rules.
+    `r = cos(k*theta)` in coordinate polari — k dispari dà k petali, k pari dà 2k.
+    Insegna: equazioni polari, regole di conteggio dei petali.
 
-    [:octicons-arrow-right-24: Open Lab](./rose-curve/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./rose-curve/index.md)
 
--   **Spirograph**
+-   **Spirografo**
 
     ---
 
-    ![Spirograph](./spirograph/screen-image.png)
+    ![Spirografo](./spirograph/screen-image.png)
 
-    Hypotrochoid: a point on a small circle rolling inside a larger one.
-    Teaches: parametric equations, `R`, `r`, `d` parameters, closed curve conditions.
+    Ipotrocoide: un punto su un cerchio piccolo che rotola dentro uno più grande.
+    Insegna: equazioni parametriche, parametri `R`, `r`, `d`, condizioni di curva chiusa.
 
-    [:octicons-arrow-right-24: Open Lab](./spirograph/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./spirograph/index.md)
 
--   **Butterfly Curve**
+-   **Curva a Farfalla**
 
     ---
 
-    ![Butterfly Curve](./butterfly-curve/screen-image.png)
+    ![Curva a Farfalla](./butterfly-curve/screen-image.png)
 
-    `r = exp(cos t) - 2cos(4t) + sin⁵(t/12)` — complex shapes from one equation.
-    Teaches: `math.exp`, combining trig terms, 12π periodic curves.
+    `r = exp(cos t) - 2cos(4t) + sin⁵(t/12)` — forme complesse da un'unica equazione.
+    Insegna: `math.exp`, combinare termini trigonometrici, curve periodiche a 12π.
 
-    [:octicons-arrow-right-24: Open Lab](./butterfly-curve/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./butterfly-curve/index.md)
 
--   **Epicycloid Star**
+-   **Stella Epicicloidale**
 
     ---
 
-    ![Epicycloid Star](./epicycloid-star/screen-image.png)
+    ![Stella Epicicloidale](./epicycloid-star/screen-image.png)
 
-    Small circle rolling outside a large one — `R/r` integer gives that many cusps.
-    Teaches: epicycloid parametric equations, cusp geometry, star construction.
+    Cerchio piccolo che rotola all'esterno di uno grande — un `R/r` intero dà quel numero di cuspidi.
+    Insegna: equazioni parametriche degli epicicloidi, geometria delle cuspidi, costruzione di stelle.
 
-    [:octicons-arrow-right-24: Open Lab](./epicycloid-star/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./epicycloid-star/index.md)
 
--   **Sunflower Seed Spiral**
+-   **Spirale dei Semi di Girasole**
 
     ---
 
-    ![Sunflower Seed Spiral](./sunflower-spiral/screen-image.png)
+    ![Spirale dei Semi di Girasole](./sunflower-spiral/screen-image.png)
 
-    Golden angle (137.5°) places dots like seeds in a real sunflower head.
-    Teaches: polar coordinates, `math.sqrt`, `math.exp`, and Fibonacci packing.
+    L'angolo d'oro (137,5°) posiziona i punti come i semi nella testa di un vero girasole.
+    Insegna: coordinate polari, `math.sqrt`, `math.exp`, e impacchettamento di Fibonacci.
 
-    [:octicons-arrow-right-24: Open Lab](./sunflower-spiral/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./sunflower-spiral/index.md)
 
--   **Spider Web**
+-   **Ragnatela**
 
     ---
 
-    ![Spider Web](./spider-web/screen-image.png)
+    ![Ragnatela](./spider-web/screen-image.png)
 
-    12 radial spokes and 6 concentric rings drawn with polar coordinates and `goto()`.
-    Teaches: radial + ring geometry, polar-to-Cartesian conversion, nested loops.
+    12 raggi radiali e 6 anelli concentrici disegnati con coordinate polari e `goto()`.
+    Insegna: geometria radiale + anulare, conversione da polare a cartesiano, cicli annidati.
 
-    [:octicons-arrow-right-24: Open Lab](./spider-web/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./spider-web/index.md)
 
--   **Lightning Bolt**
+-   **Fulmine**
 
     ---
 
-    ![Lightning Bolt](./lightning-bolt/screen-image.png)
+    ![Fulmine](./lightning-bolt/screen-image.png)
 
-    Recursive midpoint displacement turns a straight line into a jagged bolt.
-    Teaches: recursion, perpendicular vectors, Gaussian randomness.
+    Lo spostamento ricorsivo del punto medio trasforma una linea retta in un fulmine frastagliato.
+    Insegna: ricorsione, vettori perpendicolari, casualità Gaussiana.
 
-    [:octicons-arrow-right-24: Open Lab](./lightning-bolt/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./lightning-bolt/index.md)
 
--   **Galaxy Spiral Arms**
+-   **Bracci a Spirale della Galassia**
 
     ---
 
-    ![Galaxy Spiral Arms](./galaxy-spiral/screen-image.png)
+    ![Bracci a Spirale della Galassia](./galaxy-spiral/screen-image.png)
 
-    Two logarithmic spiral arms with Gaussian scatter simulate the Milky Way.
-    Teaches: `math.exp`, Gaussian scatter with `random.gauss`, dot placement.
+    Due bracci a spirale logaritmica con dispersione Gaussiana simulano la Via Lattea.
+    Insegna: `math.exp`, dispersione Gaussiana con `random.gauss`, posizionamento dei punti.
 
-    [:octicons-arrow-right-24: Open Lab](./galaxy-spiral/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./galaxy-spiral/index.md)
 
--   **Ripple Waves**
+-   **Onde Concentriche**
 
     ---
 
-    ![Ripple Waves](./ripple-waves/screen-image.png)
+    ![Onde Concentriche](./ripple-waves/screen-image.png)
 
-    Three sets of concentric rings from different centers create water-ripple interference.
-    Teaches: functions with parameters, `circle()`, pensize for wave strength.
+    Tre insiemi di anelli concentrici da centri diversi creano interferenza simile a increspature d'acqua.
+    Insegna: funzioni con parametri, `circle()`, pensize per la forza dell'onda.
 
-    [:octicons-arrow-right-24: Open Lab](./ripple-waves/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./ripple-waves/index.md)
 
--   **Four-Fold Symmetric Doodle**
+-   **Scarabocchio a Simmetria Quadrupla**
 
     ---
 
-    ![Four-Fold Symmetric Doodle](./four-fold-doodle/screen-image.png)
+    ![Scarabocchio a Simmetria Quadrupla](./four-fold-doodle/screen-image.png)
 
-    Record turtle moves as data, replay them rotated 90°, 180°, 270° — instant symmetry.
-    Teaches: commands as data, replay with transformation, four-fold rotation.
+    Registra i movimenti della tartaruga come dati, riproducili ruotati di 90°, 180°, 270° — simmetria istantanea.
+    Insegna: comandi come dati, riproduzione con trasformazione, rotazione a quattro pieghe.
 
-    [:octicons-arrow-right-24: Open Lab](./four-fold-doodle/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./four-fold-doodle/index.md)
 
--   **Six-Fold Mandala**
+-   **Mandala a Simmetria Sestupla**
 
     ---
 
-    ![Six-Fold Mandala](./six-fold-mandala/screen-image.png)
+    ![Mandala a Simmetria Sestupla](./six-fold-mandala/screen-image.png)
 
-    One mandala section drawn and rotated 60° six times to create a full mandala.
-    Teaches: `360/6 = 60°`, petal arcs with `circle()`, radial composition.
+    Una sezione di mandala disegnata e ruotata di 60° sei volte per creare un mandala completo.
+    Insegna: `360/6 = 60°`, archi a petalo con `circle()`, composizione radiale.
 
-    [:octicons-arrow-right-24: Open Lab](./six-fold-mandala/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./six-fold-mandala/index.md)
 
--   **Mirror Butterfly**
+-   **Farfalla a Specchio**
 
     ---
 
-    ![Mirror Butterfly](./mirror-butterfly/screen-image.png)
+    ![Farfalla a Specchio](./mirror-butterfly/screen-image.png)
 
-    Right wing drawn from waypoints, left wing mirrored by negating x-coordinates.
-    Teaches: `(-x, y)` reflection, list comprehension for coordinate transforms.
+    Ala destra disegnata da punti di passaggio, ala sinistra riflessa negando le coordinate x.
+    Insegna: riflessione `(-x, y)`, list comprehension per trasformazioni di coordinate.
 
-    [:octicons-arrow-right-24: Open Lab](./mirror-butterfly/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./mirror-butterfly/index.md)
 
--   **Truchet Tiles**
+-   **Piastrelle di Truchet**
 
     ---
 
-    ![Truchet Tiles](./truchet-tiles/screen-image.png)
+    ![Piastrelle di Truchet](./truchet-tiles/screen-image.png)
 
-    Random arc tiles that form continuous winding paths through local random choices.
-    Teaches: emergence, `random.choice`, and how local rules create global structure.
+    Tessere ad arco casuali che formano percorsi continui e serpeggianti attraverso scelte casuali locali.
+    Insegna: emergenza, `random.choice`, e come regole locali creano struttura globale.
 
-    [:octicons-arrow-right-24: Open Lab](./truchet-tiles/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./truchet-tiles/index.md)
 
--   **Islamic Geometric Star**
+-   **Stella Geometrica Islamica**
 
     ---
 
-    ![Islamic Geometric Star](./islamic-star/screen-image.png)
+    ![Stella Geometrica Islamica](./islamic-star/screen-image.png)
 
-    8-pointed stars tiled in a grid — two overlapping squares rotated 45° from each other.
-    Teaches: exact geometric construction, grid tiling, checkerboard color alternation.
+    Stelle a 8 punte tassellate in una griglia — due quadrati sovrapposti ruotati di 45° l'uno dall'altro.
+    Insegna: costruzione geometrica esatta, tassellatura a griglia, alternanza di colore a scacchiera.
 
-    [:octicons-arrow-right-24: Open Lab](./islamic-star/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./islamic-star/index.md)
 
--   **Mandelbrot Pixel Art**
+-   **Pixel Art di Mandelbrot**
 
     ---
 
-    ![Mandelbrot Pixel Art](./mandelbrot-pixel-art/screen-image.png)
+    ![Pixel Art di Mandelbrot](./mandelbrot-pixel-art/screen-image.png)
 
-    Pixel-art Mandelbrot set colored by escape time using `dot()` on a grid.
-    Teaches: complex number iteration, escape-time coloring, raster graphics.
+    Pixel art dell'insieme di Mandelbrot colorata per tempo di fuga usando `dot()` su una griglia.
+    Insegna: iterazione di numeri complessi, colorazione a tempo di fuga, grafica raster.
 
-    [:octicons-arrow-right-24: Open Lab](./mandelbrot-pixel-art/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./mandelbrot-pixel-art/index.md)
 
--   **Julia Set Pixel Art**
+-   **Pixel Art dell'Insieme di Julia**
 
     ---
 
-    ![Julia Set Pixel Art](./julia-set/screen-image.png)
+    ![Pixel Art dell'Insieme di Julia](./julia-set/screen-image.png)
 
-    The Mandelbrot's cousin — same iteration, fixed `c`, different starting `z` per pixel.
-    Teaches: IFS concepts, how swapping z and c gives infinite fractal variety.
+    Il cugino di Mandelbrot — stessa iterazione, `c` fisso, diverso `z` di partenza per pixel.
+    Insegna: concetti IFS, come scambiare z e c dà infinita varietà frattale.
 
-    [:octicons-arrow-right-24: Open Lab](./julia-set/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./julia-set/index.md)
 
--   **Sierpiński Carpet**
+-   **Tappeto di Sierpiński**
 
     ---
 
-    ![Sierpiński Carpet](./sierpinski-carpet/screen-image.png)
+    ![Tappeto di Sierpiński](./sierpinski-carpet/screen-image.png)
 
-    9-subdivision of a square with the center removed, recursed 4 levels deep.
-    Teaches: 8-way recursion, `(8/9)^n` area shrinkage, center-hole removal.
+    Suddivisione in 9 di un quadrato con il centro rimosso, ricorsa 4 livelli in profondità.
+    Insegna: ricorsione a 8 vie, riduzione dell'area `(8/9)^n`, rimozione del buco centrale.
 
-    [:octicons-arrow-right-24: Open Lab](./sierpinski-carpet/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./sierpinski-carpet/index.md)
 
--   **Barnsley Fern**
+-   **Felce di Barnsley**
 
     ---
 
-    ![Barnsley Fern](./barnsley-fern/screen-image.png)
+    ![Felce di Barnsley](./barnsley-fern/screen-image.png)
 
-    A photorealistic fern leaf from 5000 random-transformation dot placements.
-    Teaches: Iterated Function Systems, probability-weighted choice, scatter plots.
+    Una foglia di felce fotorealistica da 5000 posizionamenti di punti con trasformazione casuale.
+    Insegna: sistemi di funzioni iterate, scelta casuale pesata per probabilità, grafici a dispersione.
 
-    [:octicons-arrow-right-24: Open Lab](./barnsley-fern/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./barnsley-fern/index.md)
 
--   **Anti-Koch Snowflake**
+-   **Fiocco di Neve Anti-Koch**
 
     ---
 
-    ![Anti-Koch Snowflake](./anti-koch/screen-image.png)
+    ![Fiocco di Neve Anti-Koch](./anti-koch/screen-image.png)
 
-    Koch snowflake variant where bumps alternate inward and outward at each depth level.
-    Teaches: rule alternation, sign changes in recursive turn angles.
+    Variante del fiocco di neve di Koch dove le protuberanze alternano verso l'interno e l'esterno a ogni livello di profondità.
+    Insegna: alternanza delle regole, cambi di segno negli angoli di rotazione ricorsivi.
 
-    [:octicons-arrow-right-24: Open Lab](./anti-koch/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./anti-koch/index.md)
 
--   **Pythagorean Tree**
+-   **Albero di Pitagora**
 
     ---
 
-    ![Pythagorean Tree](./pythagorean-tree/screen-image.png)
+    ![Albero di Pitagora](./pythagorean-tree/screen-image.png)
 
-    Squares growing from squares — the Pythagorean theorem made visible as a fractal.
-    Teaches: geometric recursion, depth-driven color, `a² + b² = c²` visually.
+    Quadrati che crescono da quadrati — il teorema di Pitagora rende visibile un frattale.
+    Insegna: ricorsione geometrica, colore guidato dalla profondità, `a² + b² = c²` visivamente.
 
-    [:octicons-arrow-right-24: Open Lab](./pythagorean-tree/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./pythagorean-tree/index.md)
 
--   **T-Square Fractal**
+-   **Frattale a T-Square**
 
     ---
 
-    ![T-Square Fractal](./t-square-fractal/screen-image.png)
+    ![Frattale a T-Square](./t-square-fractal/screen-image.png)
 
-    A central square sprouts four half-sized squares at each corner, five levels deep.
-    Teaches: quaternary recursion, 4-ary recursion, layered draw order.
+    Un quadrato centrale fa germogliare quattro quadrati di metà dimensione a ogni angolo, cinque livelli in profondità.
+    Insegna: ricorsione quaternaria, ricorsione a 4 vie, ordine di disegno a strati.
 
-    [:octicons-arrow-right-24: Open Lab](./t-square-fractal/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./t-square-fractal/index.md)
 
--   **Lévy C Curve**
+-   **Curva C di Lévy**
 
     ---
 
-    ![Lévy C Curve](./levy-c-curve/screen-image.png)
+    ![Curva C di Lévy](./levy-c-curve/screen-image.png)
 
-    A Koch-style fractal with 45° bumps that packs into a wing-like shape.
-    Teaches: comparing fractal rules, `n / √2` segment sizing, plane-tiling curves.
+    Un frattale in stile Koch con protuberanze a 45° che si compatta in una forma simile a un'ala.
+    Insegna: confrontare regole frattali, dimensionamento dei segmenti `n / √2`, curve che tassellano il piano.
 
-    [:octicons-arrow-right-24: Open Lab](./levy-c-curve/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./levy-c-curve/index.md)
 
--   **Gosper Curve**
+-   **Curva di Gosper**
 
     ---
 
-    ![Gosper Curve](./gosper-curve/screen-image.png)
+    ![Curva di Gosper](./gosper-curve/screen-image.png)
 
-    The "flowsnake" — an L-system fractal that tiles hexagonal space.
-    Teaches: string rewriting, L-systems, translating characters to turtle commands.
+    Il "flowsnake" — un frattale a sistema-L che tassella lo spazio esagonale.
+    Insegna: riscrittura di stringhe, sistemi-L, tradurre caratteri in comandi della tartaruga.
 
-    [:octicons-arrow-right-24: Open Lab](./gosper-curve/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./gosper-curve/index.md)
 
--   **Dragon Curve**
+-   **Curva del Dragone**
 
     ---
 
-    ![Dragon Curve](./dragon-curve/screen-image.png)
+    ![Curva del Dragone](./dragon-curve/screen-image.png)
 
-    The Heighway Dragon — a self-avoiding fractal built by simulating paper folding with a list.
-    Teaches: list manipulation for fractals, L/R turn encoding, never-crossing paths.
+    Il Dragone di Heighway — un frattale auto-evitante costruito simulando la piegatura della carta con una lista.
+    Insegna: manipolazione di liste per frattali, codifica delle rotazioni S/D, percorsi che non si incrociano mai.
 
-    [:octicons-arrow-right-24: Open Lab](./dragon-curve/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./dragon-curve/index.md)
 
--   **Hilbert Curve**
+-   **Curva di Hilbert**
 
     ---
 
-    ![Hilbert Curve](./hilbert-curve/screen-image.png)
+    ![Curva di Hilbert](./hilbert-curve/screen-image.png)
 
-    A space-filling curve that visits every cell in a grid without crossing itself.
-    Teaches: mutual recursion, `4^n` cells at depth `n`, and space-filling geometry.
+    Una curva che riempie lo spazio e visita ogni cella di una griglia senza incrociarsi.
+    Insegna: ricorsione mutua, `4^n` celle alla profondità `n`, e geometria che riempie lo spazio.
 
-    [:octicons-arrow-right-24: Open Lab](./hilbert-curve/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./hilbert-curve/index.md)
 
--   **Cantor Dust**
+-   **Polvere di Cantor**
 
     ---
 
-    ![Cantor Dust](./cantor-dust/screen-image.png)
+    ![Polvere di Cantor](./cantor-dust/screen-image.png)
 
-    Six rows of lines, each removing the middle third — infinite points, zero total length.
-    Teaches: binary recursion, the `(2/3)^n` shrinking ratio, Cantor's paradox.
+    Sei righe di linee, ognuna rimuove il terzo centrale — punti infiniti, lunghezza totale zero.
+    Insegna: ricorsione binaria, il rapporto di riduzione `(2/3)^n`, il paradosso di Cantor.
 
-    [:octicons-arrow-right-24: Open Lab](./cantor-dust/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./cantor-dust/index.md)
 
--   **Fractal Tree**
+-   **Albero Frattale**
 
     ---
 
-    ![Fractal Tree](./fractal-tree/screen-image.png)
+    ![Albero Frattale](./fractal-tree/screen-image.png)
 
-    A binary recursive tree with a thick brown trunk fading to green leaf tips.
-    Teaches: binary recursion, `backward()` to return to fork points, depth-driven styling.
+    Un albero ricorsivo binario con un tronco marrone spesso che sfuma verso punte di foglie verdi.
+    Insegna: ricorsione binaria, `backward()` per tornare ai punti di diramazione, stile guidato dalla profondità.
 
-    [:octicons-arrow-right-24: Open Lab](./fractal-tree/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./fractal-tree/index.md)
 
--   **Sierpiński Triangle**
+-   **Triangolo di Sierpiński**
 
     ---
 
-    ![Sierpiński Triangle](./sierpinski-triangle/screen-image.png)
+    ![Triangolo di Sierpiński](./sierpinski-triangle/screen-image.png)
 
-    A triangle made of triangles made of triangles — the iconic self-similar fractal.
-    Teaches: ternary recursion, base cases, and how depth controls fractal detail.
+    Un triangolo fatto di triangoli fatto di triangoli — l'iconico frattale auto-simile.
+    Insegna: ricorsione ternaria, casi base, e come la profondità controlla il dettaglio del frattale.
 
-    [:octicons-arrow-right-24: Open Lab](./sierpinski-triangle/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./sierpinski-triangle/index.md)
 
--   **Koch Snowflake**
+-   **Fiocco di Neve di Koch**
 
     ---
 
-    ![Koch Snowflake](./koch-snowflake/screen-image.png)
+    ![Fiocco di Neve di Koch](./koch-snowflake/screen-image.png)
 
-    A classic fractal snowflake built by recursively bumping every line segment outward.
-    Teaches: recursion, base cases, and how one rule repeated creates infinite complexity.
+    Un classico fiocco di neve frattale costruito facendo sporgere ricorsivamente ogni segmento di linea.
+    Insegna: ricorsione, casi base, e come una regola ripetuta crea complessità infinita.
 
-    [:octicons-arrow-right-24: Open Lab](./koch-snowflake/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./koch-snowflake/index.md)
 
--   **Color-Banded Pentagon Spiral**
+-   **Spirale Pentagonale a Fasce Colorate**
 
     ---
 
-    ![Color-Banded Pentagon Spiral](./pentagon-spiral/screen-image.png)
+    ![Spirale Pentagonale a Fasce Colorate](./pentagon-spiral/screen-image.png)
 
-    A five-sided spiral colored in bands that align — or cut diagonally — across the arms.
-    Teaches: `right(72)`, `i // n` banding, and how period mismatch creates diagonal stripes.
+    Una spirale a cinque lati colorata in fasce che si allineano — o tagliano diagonalmente — attraverso i bracci.
+    Insegna: `right(72)`, fasciatura `i // n`, e come il disallineamento di periodo crea strisce diagonali.
 
-    [:octicons-arrow-right-24: Open Lab](./pentagon-spiral/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./pentagon-spiral/index.md)
 
--   **Spiral of Spirals**
+-   **Spirale di Spirali**
 
     ---
 
-    ![Spiral of Spirals](./spiral-of-spirals/screen-image.png)
+    ![Spirale di Spirali](./spiral-of-spirals/screen-image.png)
 
-    Twelve small square spirals arranged in a ring, each facing outward from the center.
-    Teaches: reusable functions, `cos`/`sin` placement, and pattern-of-patterns composition.
+    Dodici piccole spirali quadrate disposte in un anello, ognuna rivolta verso l'esterno dal centro.
+    Insegna: funzioni riutilizzabili, posizionamento con `cos`/`sin`, e composizione di pattern-di-pattern.
 
-    [:octicons-arrow-right-24: Open Lab](./spiral-of-spirals/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./spiral-of-spirals/index.md)
 
--   **Fibonacci Spiral**
+-   **Spirale di Fibonacci**
 
     ---
 
-    ![Fibonacci Spiral](./fibonacci-spiral/screen-image.png)
+    ![Spirale di Fibonacci](./fibonacci-spiral/screen-image.png)
 
-    Ten colored quarter-circle arcs — radii 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 — tile perfectly.
-    Teaches: the Fibonacci sequence, `a, b = b, a + b`, and the golden ratio.
+    Dieci archi colorati a quarto di cerchio — raggi 1, 1, 2, 3, 5, 8, 13, 21, 34, 55 — che si tassellano perfettamente.
+    Insegna: la sequenza di Fibonacci, `a, b = b, a + b`, e la sezione aurea.
 
-    [:octicons-arrow-right-24: Open Lab](./fibonacci-spiral/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./fibonacci-spiral/index.md)
 
--   **Double Helix Spiral**
+-   **Spirale a Doppia Elica**
 
     ---
 
-    ![Double Helix Spiral](./double-helix-spiral/screen-image.png)
+    ![Spirale a Doppia Elica](./double-helix-spiral/screen-image.png)
 
-    Two interleaved spirals — red and blue — winding outward together from one loop.
-    Teaches: `i % 2` alternation, phase offset, and how one loop draws two patterns.
+    Due spirali interlacciate — rossa e blu — che si avvolgono verso l'esterno insieme da un singolo ciclo.
+    Insegna: alternanza `i % 2`, offset di fase, e come un singolo ciclo disegna due pattern.
 
-    [:octicons-arrow-right-24: Open Lab](./double-helix-spiral/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./double-helix-spiral/index.md)
 
--   **Colored Logarithmic Spiral**
+-   **Spirale Logaritmica Colorata**
 
     ---
 
-    ![Colored Logarithmic Spiral](./logarithmic-spiral/screen-image.png)
+    ![Spirale Logaritmica Colorata](./logarithmic-spiral/screen-image.png)
 
-    A smooth, continuously curved spiral colored by angle — built with `cos()` and `sin()`.
-    Teaches: polar-to-Cartesian conversion, `math.exp()`, and `goto()` for smooth curves.
+    Una spirale liscia e continuamente curva colorata in base all'angolo — costruita con `cos()` e `sin()`.
+    Insegna: conversione da polare a cartesiano, `math.exp()`, e `goto()` per curve lisce.
 
-    [:octicons-arrow-right-24: Open Lab](./logarithmic-spiral/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./logarithmic-spiral/index.md)
 
--   **Inward Collapsing Spiral**
+-   **Spirale che Collassa verso l'Interno**
 
     ---
 
-    ![Inward Collapsing Spiral](./inward-spiral/screen-image.png)
+    ![Spirale che Collassa verso l'Interno](./inward-spiral/screen-image.png)
 
-    A spiral that starts large and converges to a point, fading from deep blue to white.
-    Teaches: decreasing sequences, `while` loops, and visual convergence.
+    Una spirale che inizia grande e converge a un punto, sfumando da blu profondo a bianco.
+    Insegna: sequenze decrescenti, cicli `while`, e convergenza visiva.
 
-    [:octicons-arrow-right-24: Open Lab](./inward-spiral/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./inward-spiral/index.md)
 
--   **Triangular Spiral**
+-   **Spirale Triangolare**
 
     ---
 
-    ![Triangular Spiral](./triangular-spiral/screen-image.png)
+    ![Spirale Triangolare](./triangular-spiral/screen-image.png)
 
-    A warm red-orange-gold spiral with sharp 120° triangular corners.
-    Teaches: `i // n` for color bands vs `i % n` for segment cycling.
+    Una spirale calda rosso-arancione-oro con angoli triangolari netti a 120°.
+    Insegna: `i // n` per le fasce di colore contro `i % n` per il ciclo dei segmenti.
 
-    [:octicons-arrow-right-24: Open Lab](./triangular-spiral/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./triangular-spiral/index.md)
 
--   **Hexagonal Spiral**
+-   **Spirale Esagonale**
 
     ---
 
-    ![Hexagonal Spiral](./hexagonal-spiral/screen-image.png)
+    ![Spirale Esagonale](./hexagonal-spiral/screen-image.png)
 
-    A blue-to-green spiral with hexagonal corners — one number change from the square spiral.
-    Teaches: how the turn angle alone determines a spiral's polygon shape.
+    Una spirale da blu a verde con angoli esagonali — un numero cambiato rispetto alla spirale quadrata.
+    Insegna: come l'angolo di rotazione da solo determina la forma poligonale di una spirale.
 
-    [:octicons-arrow-right-24: Open Lab](./hexagonal-spiral/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./hexagonal-spiral/index.md)
 
--   **Kaleidoscope Slice**
+-   **Fetta di Caleidoscopio**
 
     ---
 
-    ![Kaleidoscope Slice](./kaleidoscope-slice/screen-image.png)
+    ![Fetta di Caleidoscopio](./kaleidoscope-slice/screen-image.png)
 
-    A 12-section kaleidoscope wheel of gold, crimson, and orchid darts — every other slice a mirror image of its neighbor.
-    Teaches: combining rotation and reflection to build radial symmetry from one 30° slice.
+    Una ruota caleidoscopica a 12 sezioni di dardi oro, cremisi, e orchidea — ogni altra fetta è un'immagine speculare della vicina.
+    Insegna: combinare rotazione e riflessione per costruire simmetria radiale da una singola fetta di 30°.
 
-    [:octicons-arrow-right-24: Open Lab](./kaleidoscope-slice/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./kaleidoscope-slice/index.md)
 
--   **Pinwheel Tiling**
+-   **Tassellatura a Girandola**
 
     ---
 
-    ![Pinwheel Tiling](./pinwheel-tiling/screen-image.png)
+    ![Tassellatura a Girandola](./pinwheel-tiling/screen-image.png)
 
-    The Conway–Radin pinwheel dissection fills the square with 500 tiny right triangles colored by the direction each points.
-    Teaches: aperiodic tiling and recursion — every triangle splits into 5 smaller copies of itself.
+    La dissezione a girandola di Conway–Radin riempie il quadrato con 500 piccolissimi triangoli rettangoli colorati in base alla direzione verso cui ognuno punta.
+    Insegna: tassellatura aperiodica e ricorsione — ogni triangolo si divide in 5 copie più piccole di se stesso.
 
-    [:octicons-arrow-right-24: Open Lab](./pinwheel-tiling/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./pinwheel-tiling/index.md)
 
--   **Escher-Style Fish Tile**
+-   **Piastrella di Pesci in Stile Escher**
 
     ---
 
-    ![Escher-Style Fish Tile](./escher-fish/screen-image.png)
+    ![Piastrella di Pesci in Stile Escher](./escher-fish/screen-image.png)
 
-    A 4×4 school of coral and sea-green fish whose noses, tails, backs, and bellies lock together with zero gaps.
-    Teaches: how Escher tessellations work — every bump out of one edge is a matching notch in the opposite edge.
+    Un banco 4×4 di pesci corallo e verde mare i cui musi, code, dorsi, e pance si incastrano senza spazi vuoti.
+    Insegna: come funzionano le tassellature di Escher — ogni protuberanza fuori da un bordo è una tacca corrispondente nel bordo opposto.
 
-    [:octicons-arrow-right-24: Open Lab](./escher-fish/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./escher-fish/index.md)
 
--   **Voronoi Color Regions**
+-   **Regioni Colorate di Voronoi**
 
     ---
 
-    ![Voronoi Color Regions](./voronoi-regions/screen-image.png)
+    ![Regioni Colorate di Voronoi](./voronoi-regions/screen-image.png)
 
-    Twelve seed points carve the canvas into a stained-glass map of colored territories.
-    Teaches: the distance formula, nearest-neighbor classification, and raster drawing with `dot()`.
+    Dodici punti seme scolpiscono il canvas in una mappa a vetrata colorata di territori.
+    Insegna: la formula della distanza, classificazione per vicino più prossimo, e disegno raster con `dot()`.
 
-    [:octicons-arrow-right-24: Open Lab](./voronoi-regions/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./voronoi-regions/index.md)
 
--   **Penrose Rhombus Tiling**
+-   **Tassellatura a Rombi di Penrose**
 
     ---
 
-    ![Penrose Rhombus Tiling](./penrose-rhombus/screen-image.png)
+    ![Tassellatura a Rombi di Penrose](./penrose-rhombus/screen-image.png)
 
-    A sun of ten golden triangles deflates into gold thick and royal-blue thin rhombi with perfect five-fold symmetry.
-    Teaches: two-rule recursive subdivision, the golden ratio, and why the pattern never repeats.
+    Un sole di dieci triangoli dorati si deflaziona in rombi spessi oro e sottili blu reale con perfetta simmetria a cinque pieghe.
+    Insegna: suddivisione ricorsiva a due regole, la sezione aurea, e perché il pattern non si ripete mai.
 
-    [:octicons-arrow-right-24: Open Lab](./penrose-rhombus/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./penrose-rhombus/index.md)
 
--   **River Delta**
+-   **Delta del Fiume**
 
     ---
 
-    ![River Delta](./river-delta/screen-image.png)
+    ![Delta del Fiume](./river-delta/screen-image.png)
 
-    A wide navy river fans out into dozens of ever-thinner sky-blue streams across a sandy canvas.
-    Teaches: stochastic branching with pruning and `random.seed()` for repeatable randomness.
+    Un ampio fiume blu navy si allarga in decine di ruscelli azzurri sempre più sottili attraverso un canvas sabbioso.
+    Insegna: ramificazione stocastica con potatura e `random.seed()` per una casualità riproducibile.
 
-    [:octicons-arrow-right-24: Open Lab](./river-delta/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./river-delta/index.md)
 
--   **Coral Branch**
+-   **Ramo di Corallo**
 
     ---
 
-    ![Coral Branch](./coral-branch/screen-image.png)
+    ![Ramo di Corallo](./coral-branch/screen-image.png)
 
-    A dark red trunk bursts into a randomly forking fan that fades through crimson to a cloud of pale pink tips.
-    Teaches: variable-arity recursion, random angle variation, and color-by-depth gradients.
+    Un tronco rosso scuro esplode in un ventaglio di ramificazioni casuali che sfuma attraverso il cremisi verso una nuvola di punte rosa pallido.
+    Insegna: ricorsione ad arità variabile, variazione casuale dell'angolo, e gradienti di colore per profondità.
 
-    [:octicons-arrow-right-24: Open Lab](./coral-branch/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./coral-branch/index.md)
 
--   **Leaf Venation**
+-   **Nervatura della Foglia**
 
     ---
 
-    ![Leaf Venation](./leaf-venation/screen-image.png)
+    ![Nervatura della Foglia](./leaf-venation/screen-image.png)
 
-    A filled pale-green leaf with a thick central vein, curving secondary veins, and tiny tertiary veins off each one.
-    Teaches: biological branching structure and smooth curves from small forward+turn steps.
+    Una foglia verde pallido riempita con una vena centrale spessa, vene secondarie curve, e piccole vene terziarie da ciascuna.
+    Insegna: struttura di ramificazione biologica e curve lisce da piccoli passi avanti+rotazione.
 
-    [:octicons-arrow-right-24: Open Lab](./leaf-venation/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./leaf-venation/index.md)
 
--   **DNA Double Helix**
+-   **Doppia Elica del DNA**
 
     ---
 
-    ![DNA Double Helix](./dna-helix/screen-image.png)
+    ![Doppia Elica del DNA](./dna-helix/screen-image.png)
 
-    Two bold sine waves — royal blue and crimson, offset by 180° — joined by gray rungs that shrink at each crossing.
-    Teaches: `math.sin()`, parametric plotting, and how a phase offset creates the helix illusion.
+    Due audaci onde sinusoidali — blu reale e cremisi, sfasate di 180° — unite da pioli grigi che si restringono a ogni incrocio.
+    Insegna: `math.sin()`, tracciamento parametrico, e come un offset di fase crea l'illusione dell'elica.
 
-    [:octicons-arrow-right-24: Open Lab](./dna-helix/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./dna-helix/index.md)
 
--   **Topographic Map**
+-   **Mappa Topografica**
 
     ---
 
-    ![Topographic Map](./topographic-map/screen-image.png)
+    ![Mappa Topografica](./topographic-map/screen-image.png)
 
-    Nested wobbly contour rings paint an island from dark green shores through brown slopes to a white summit.
-    Teaches: polar plotting, sine-perturbed radii, and outside-in filled elevation bands.
+    Anelli di contorno ondulati annidati dipingono un'isola da coste verde scuro attraverso pendii marroni fino a una cima bianca.
+    Insegna: tracciamento polare, raggi perturbati da seno, e fasce di elevazione riempite dall'esterno verso l'interno.
 
-    [:octicons-arrow-right-24: Open Lab](./topographic-map/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./topographic-map/index.md)
 
--   **Epitrochoid**
+-   **Epitrocoide**
 
     ---
 
-    ![Epitrochoid](./epitrochoid/screen-image.png)
+    ![Epitrocoide](./epitrochoid/screen-image.png)
 
-    Five rainbow loops traced by a pen on a circle rolling around the outside of a bigger circle.
-    Teaches: outer vs. inner rolling — one sign change separates this from the Spirograph.
+    Cinque anelli arcobaleno tracciati da una penna su un cerchio che rotola attorno all'esterno di un cerchio più grande.
+    Insegna: rotolamento esterno contro interno — un solo cambio di segno separa questo dallo Spirografo.
 
-    [:octicons-arrow-right-24: Open Lab](./epitrochoid/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./epitrochoid/index.md)
 
--   **Superellipse**
+-   **Superellisse**
 
     ---
 
-    ![Superellipse](./superellipse/screen-image.png)
+    ![Superellisse](./superellipse/screen-image.png)
 
-    A pointy star, a circle, and a rounded "squircle" — all from one equation with different exponents.
-    Teaches: how a single exponent morphs a shape continuously through a parametric family.
+    Una stella a punte, un cerchio, e uno "squircle" arrotondato — tutti da un'unica equazione con esponenti diversi.
+    Insegna: come un singolo esponente trasforma continuamente una forma attraverso una famiglia parametrica.
 
-    [:octicons-arrow-right-24: Open Lab](./superellipse/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./superellipse/index.md)
 
--   **Cassini Oval**
+-   **Ovale di Cassini**
 
     ---
 
-    ![Cassini Oval](./cassini-oval/screen-image.png)
+    ![Ovale di Cassini](./cassini-oval/screen-image.png)
 
-    A peanut-shaped oval, a figure-eight lemniscate, and two separate lobes — all from a constant product of distances to two foci.
-    Teaches: the distance-product rule and how one constant changes a curve's topology.
+    Un ovale a forma di arachide, una lemniscata a forma di otto, e due lobi separati — tutti da un prodotto costante di distanze da due fuochi.
+    Insegna: la regola del prodotto delle distanze e come una costante cambia la topologia di una curva.
 
-    [:octicons-arrow-right-24: Open Lab](./cassini-oval/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./cassini-oval/index.md)
 
--   **Fermat's Spiral**
+-   **Spirale di Fermat**
 
     ---
 
-    ![Fermat's Spiral](./fermat-spiral/screen-image.png)
+    ![Spirale di Fermat](./fermat-spiral/screen-image.png)
 
-    Two mirrored arms, crimson and blue, wind outward with rings that pack tighter as they grow.
-    Teaches: square-root scaling with `math.sqrt()` and how the ± sign creates mirrored arms.
+    Due bracci speculari, cremisi e blu, si avvolgono verso l'esterno con anelli che si impacchettano sempre più strettamente man mano che crescono.
+    Insegna: scala della radice quadrata con `math.sqrt()` e come il segno ± crea bracci speculari.
 
-    [:octicons-arrow-right-24: Open Lab](./fermat-spiral/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./fermat-spiral/index.md)
 
--   **Astroid**
+-   **Astroide**
 
     ---
 
-    ![Astroid](./astroid/screen-image.png)
+    ![Astroide](./astroid/screen-image.png)
 
-    A four-cusped crimson star overlaid on silver string art — forty sliding-ladder segments whose envelope outlines the curve.
-    Teaches: hypocycloids, the cos³/sin³ parametric form, and curve envelopes.
+    Una stella cremisi a quattro cuspidi sovrapposta su un'arte a fili argentata — quaranta segmenti a scala scorrevole il cui involucro delinea la curva.
+    Insegna: ipocicloidi, la forma parametrica cos³/sin³, e gli involucri di curve.
 
-    [:octicons-arrow-right-24: Open Lab](./astroid/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./astroid/index.md)
 
--   **Mach Bands**
+-   **Bande di Mach**
 
     ---
 
-    ![Mach Bands](./mach-bands/screen-image.png)
+    ![Bande di Mach](./mach-bands/screen-image.png)
 
-    Ten flat gray rectangles step from near-black to near-white, yet phantom stripes appear at every edge.
-    Teaches: building hex color strings from a loop counter and perceptual edge enhancement.
+    Dieci rettangoli grigi uniformi passano da quasi-nero a quasi-bianco, eppure strisce fantasma appaiono a ogni bordo.
+    Insegna: costruire stringhe di colore esadecimali da un contatore di ciclo e il miglioramento percettivo dei bordi.
 
-    [:octicons-arrow-right-24: Open Lab](./mach-bands/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./mach-bands/index.md)
 
--   **Vasarely Sphere**
+-   **Sfera di Vasarely**
 
     ---
 
-    ![Vasarely Sphere](./vasarely-sphere/screen-image.png)
+    ![Sfera di Vasarely](./vasarely-sphere/screen-image.png)
 
-    A grid of navy dots swells near the center into a sphere bulging out of the flat page, op-art style.
-    Teaches: distorting a regular grid with a radial function and mapping distance to size.
+    Una griglia di punti blu navy si rigonfia vicino al centro in una sfera che sporge dalla pagina piatta, in stile op-art.
+    Insegna: distorcere una griglia regolare con una funzione radiale e mappare la distanza alla dimensione.
 
-    [:octicons-arrow-right-24: Open Lab](./vasarely-sphere/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./vasarely-sphere/index.md)
 
--   **Scintillating Grid**
+-   **Griglia Scintillante**
 
     ---
 
-    ![Scintillating Grid](./scintillating-grid/screen-image.png)
+    ![Griglia Scintillante](./scintillating-grid/screen-image.png)
 
-    Gray streets cross a dark background with white dots at each crossing — and phantom black dots flicker where you aren't looking.
-    Teaches: precise grid placement and how local contrast drives global perception.
+    Strade grigie attraversano uno sfondo scuro con punti bianchi a ogni incrocio — e punti neri fantasma tremolano dove non stai guardando.
+    Insegna: posizionamento preciso della griglia e come il contrasto locale guida la percezione globale.
 
-    [:octicons-arrow-right-24: Open Lab](./scintillating-grid/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./scintillating-grid/index.md)
 
--   **Impossible Triangle**
+-   **Triangolo Impossibile**
 
     ---
 
-    ![Impossible Triangle](./impossible-triangle/screen-image.png)
+    ![Triangolo Impossibile](./impossible-triangle/screen-image.png)
 
-    The Penrose triangle woven from three L-shaped beams, each seamlessly in front of the next all the way around.
-    Teaches: coordinate lists, point rotation with sin/cos, and how shading fakes 3-D.
+    Il triangolo di Penrose intrecciato da tre travi a forma di L, ognuna senza soluzione di continuità davanti alla successiva lungo tutto il giro.
+    Insegna: liste di coordinate, rotazione dei punti con seno/coseno, e come l'ombreggiatura falsifica il 3D.
 
-    [:octicons-arrow-right-24: Open Lab](./impossible-triangle/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./impossible-triangle/index.md)
 
--   **Concentric Ring Pulsation**
+-   **Pulsazione di Anelli Concentrici**
 
     ---
 
-    ![Concentric Ring Pulsation](./ring-pulsation/screen-image.png)
+    ![Pulsazione di Anelli Concentrici](./ring-pulsation/screen-image.png)
 
-    A bull's-eye of orange, blue, crimson, and teal rings that squeeze thinner toward the center and appear to shimmer.
-    Teaches: warm/cool color contrast and filled-circle layering, largest to smallest.
+    Un bersaglio di anelli arancione, blu, cremisi, e verde acqua che si stringono sempre più verso il centro e sembrano scintillare.
+    Insegna: contrasto di colore caldo/freddo e stratificazione di cerchi riempiti, dal più grande al più piccolo.
 
-    [:octicons-arrow-right-24: Open Lab](./ring-pulsation/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./ring-pulsation/index.md)
 
--   **Binary Tree Name**
+-   **Nome ad Albero Binario**
 
     ---
 
-    ![Binary Tree Name](./binary-tree-name/screen-image.png)
+    ![Nome ad Albero Binario](./binary-tree-name/screen-image.png)
 
-    Each letter of a name traces its own colored path down a binary tree — left for 0, right for 1 — landing on its own leaf.
-    Teaches: `ord()`, extracting binary bits with `//` and `%`, and visualizing data as a drawing.
+    Ogni lettera di un nome traccia il proprio percorso colorato lungo un albero binario — sinistra per 0, destra per 1 — atterrando sulla propria foglia.
+    Insegna: `ord()`, estrarre bit binari con `//` e `%`, e visualizzare i dati come disegno.
 
-    [:octicons-arrow-right-24: Open Lab](./binary-tree-name/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./binary-tree-name/index.md)
 
--   **Turtle Chase**
+-   **Caccia tra Tartarughe**
 
     ---
 
-    ![Turtle Chase](./turtle-chase/screen-image.png)
+    ![Caccia tra Tartarughe](./turtle-chase/screen-image.png)
 
-    A red hunter turtle chases a randomly wandering green prey, re-aiming every frame until "Caught!"
-    Teaches: two-turtle programs, `math.atan2()` targeting, and animation frame loops.
+    Una tartaruga cacciatrice rossa insegue una preda verde che vaga casualmente, ri-mirando ogni fotogramma finché non la "Cattura!"
+    Insegna: programmi con due tartarughe, mira con `math.atan2()`, e cicli di fotogrammi di animazione.
 
-    [:octicons-arrow-right-24: Open Lab](./turtle-chase/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./turtle-chase/index.md)
 
--   **Reaction-Diffusion Pattern**
+-   **Motivo di Reazione-Diffusione**
 
     ---
 
-    ![Reaction-Diffusion Pattern](./reaction-diffusion/screen-image.png)
+    ![Motivo di Reazione-Diffusione](./reaction-diffusion/screen-image.png)
 
-    Four seed squares grow into organic blobs and stripes — the Gray-Scott chemistry behind animal-skin patterns.
-    Teaches: grid simulation with lists, neighbor-based update rules, and emergence.
+    Quattro quadrati seme crescono in macchie e strisce organiche — la chimica Gray-Scott dietro i pattern della pelle animale.
+    Insegna: simulazione su griglia con liste, regole di aggiornamento basate sui vicini, ed emergenza.
 
-    [:octicons-arrow-right-24: Open Lab](./reaction-diffusion/index.md)
+    [:octicons-arrow-right-24: Apri il Laboratorio](./reaction-diffusion/index.md)
 
 </div>
