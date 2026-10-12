@@ -1,28 +1,28 @@
 ---
-title: Advanced Turtle and Event-Driven Programming
-description: Build interactive programs with turtle's onscreenclick, onkey, and timer events — and understand the event-driven programming model
+title: Turtle Avanzata e Programmazione Guidata da Eventi
+description: Costruisci programmi interattivi con gli eventi onscreenclick, onkey, e timer della turtle — e capisci il modello di programmazione guidata da eventi
 generated_by: claude skill chapter-content-generator
 date: 2026-06-28 15:50:00
 version: 0.09
 ---
 
-# Advanced Turtle and Event-Driven Programming
+# Turtle Avanzata e Programmazione Guidata da Eventi
 
-By the end of this lesson you'll be able to:
+Alla fine di questa lezione sarai in grado di:
 
-- Explain the **event-driven programming model** and how it differs from sequential programs
-- Use `turtle.onscreenclick()` to respond to mouse clicks
-- Use `turtle.onkey()` and `turtle.listen()` to respond to keyboard presses
-- Use `turtle.ontimer()` to create repeating animation loops
-- Build a small interactive drawing program using events
+- Spiegare il **modello di programmazione guidata da eventi** e come differisce dai programmi sequenziali
+- Usare `turtle.onscreenclick()` per rispondere ai clic del mouse
+- Usare `turtle.onkey()` e `turtle.listen()` per rispondere alla pressione dei tasti
+- Usare `turtle.ontimer()` per creare cicli di animazione ripetuti
+- Costruire un piccolo programma di disegno interattivo usando gli eventi
 
-Every game, app, and website uses **event-driven programming** — code that waits for something to happen (a click, a keypress, a timer) and then responds. This chapter teaches you how to build programs that react in real time.
+Ogni gioco, app, e sito web usa la **programmazione guidata da eventi** — codice che aspetta che succeda qualcosa (un clic, una pressione di tasto, un timer) e poi risponde. Questo capitolo ti insegna come costruire programmi che reagiscono in tempo reale.
 
-!!! mascot-welcome "Welcome to Chapter 35!"
+!!! mascot-welcome "Benvenuto/a al Capitolo 35!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    This is where your programs start feeling alive — responding to your mouse and keyboard in real time!
-    Event-driven programming is the foundation of every game and interactive app.
-    Let's make things move! Let's code it together!
+    È qui che i tuoi programmi iniziano a sentirsi vivi — rispondendo al tuo mouse e alla tastiera in tempo reale!
+    La programmazione guidata da eventi è la base di ogni gioco e app interattiva.
+    Facciamo muovere le cose! Programmiamo insieme!
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -30,12 +30,12 @@ Every game, app, and website uses **event-driven programming** — code that wai
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
 <script src="../../js/codemirror-lab.js"></script>
 
-## The Event-Driven Model
+## Il Modello Guidato da Eventi
 
-In **sequential programs**, code runs top to bottom — each line executes after the previous one finishes.
+Nei **programmi sequenziali**, il codice gira dall'alto verso il basso — ogni riga si esegue dopo che la precedente finisce.
 
-In **event-driven programs**, the program starts an **event loop** that waits and watches.
-When an **event** occurs (mouse click, key press, timer tick), the loop calls a **callback function** you registered for that event.
+Nei **programmi guidati da eventi**, il programma avvia un **ciclo di eventi** (event loop) che aspetta e osserva.
+Quando si verifica un **evento** (clic del mouse, pressione di un tasto, scatto di un timer), il ciclo chiama una **funzione di callback** che hai registrato per quell'evento.
 
 ```
 [Register callbacks]  →  [Start event loop]  →  [Wait]
@@ -47,26 +47,26 @@ When an **event** occurs (mouse click, key press, timer tick), the loop calls a 
                                                [Wait]
 ```
 
-You don't control *when* events fire — you just write the functions that handle them.
+Non controlli *quando* scattano gli eventi — scrivi solo le funzioni che li gestiscono.
 
-## Three Key Concepts
+## Tre Concetti Chiave
 
-Before we write interactive turtle code, here are three terms you'll see throughout this chapter:
+Prima di scrivere codice turtle interattivo, ecco tre termini che vedrai in tutto questo capitolo:
 
-- **Event** — something that happens: a mouse click, key press, or timer expiring
-- **Callback** — the function you write to handle the event; you pass it as an argument
-- **Event loop** — the ongoing loop inside `turtle.mainloop()` that watches for events and calls callbacks
+- **Evento** — qualcosa che succede: un clic del mouse, la pressione di un tasto, o la scadenza di un timer
+- **Callback** — la funzione che scrivi per gestire l'evento; la passi come argomento
+- **Ciclo di eventi** (event loop) — il ciclo continuo dentro `turtle.mainloop()` che osserva gli eventi e chiama i callback
 
-## Mouse Click Events with `onscreenclick()`
+## Eventi di Clic del Mouse con `onscreenclick()`
 
-`turtle.onscreenclick(callback)` registers a function to be called every time the user clicks on the turtle canvas.
+`turtle.onscreenclick(callback)` registra una funzione da chiamare ogni volta che l'utente clicca sul canvas della turtle.
 
-The callback receives the x and y coordinates of the click as arguments.
+Il callback riceve le coordinate x e y del clic come argomenti.
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below draws a dot wherever the user clicks. But before you run it — how does the program know where the click happened?
-    Think about how the callback receives the coordinates, then run it to see!
+    Il codice sotto disegna un punto ovunque l'utente clicchi. Ma prima di eseguirlo — come sa il programma dove è successo il clic?
+    Pensa a come il callback riceve le coordinate, poi eseguilo per scoprirlo!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -101,15 +101,15 @@ screen.onscreenclick(on_click)
 screen.mainloop()`);
 </script>
 
-`t.dot(size, color)` draws a filled circle of the given diameter at the turtle's current position.
-Click anywhere on the canvas — a dot appears at each click location!
+`t.dot(size, color)` disegna un cerchio riempito del diametro dato nella posizione attuale della turtle.
+Clicca ovunque sul canvas — appare un punto a ogni posizione cliccata!
 
-## Keyboard Events with `onkey()` and `listen()`
+## Eventi della Tastiera con `onkey()` e `listen()`
 
-`screen.onkey(callback, key)` registers a callback for a specific key.
-`screen.listen()` tells the screen to start paying attention to keyboard events — you must call this before keyboard events will work.
+`screen.onkey(callback, key)` registra un callback per un tasto specifico.
+`screen.listen()` dice allo screen di iniziare a prestare attenzione agli eventi della tastiera — devi chiamarlo prima che gli eventi della tastiera funzionino.
 
-Key name strings include `"Up"`, `"Down"`, `"Left"`, `"Right"`, `"space"`, `"Return"`, and single letters like `"a"`.
+Le stringhe dei nomi dei tasti includono `"Up"`, `"Down"`, `"Left"`, `"Right"`, `"space"`, `"Return"`, e singole lettere come `"a"`.
 
 ```python
 import turtle
@@ -179,13 +179,13 @@ screen.listen()
 screen.mainloop()`);
 </script>
 
-Use the arrow keys to steer the turtle around the canvas!
+Usa le freccette per guidare la turtle attorno al canvas!
 
-## Timer Events with `ontimer()`
+## Eventi Timer con `ontimer()`
 
-`screen.ontimer(callback, delay_ms)` calls `callback` once after `delay_ms` milliseconds.
+`screen.ontimer(callback, delay_ms)` chiama `callback` una volta dopo `delay_ms` millisecondi.
 
-The key technique for animation loops is **re-registering the timer inside the callback** — so it fires again and again:
+La tecnica chiave per i cicli di animazione è **ri-registrare il timer dentro il callback** — così scatta ancora e ancora:
 
 ```python
 def animate():
@@ -197,7 +197,7 @@ animate()   # start the loop
 screen.mainloop()
 ```
 
-This creates a smooth animation running at about 20 frames per second (1000 ÷ 50ms = 20 fps).
+Questo crea un'animazione fluida che gira a circa 20 fotogrammi al secondo (1000 ÷ 50ms = 20 fps).
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -241,10 +241,10 @@ draw_step()
 screen.mainloop()`);
 </script>
 
-## Combining Events — Interactive Art
+## Combinare gli Eventi — Arte Interattiva
 
-The real power of event-driven programming emerges when you combine multiple event types.
-The example below lets you draw with the mouse and clear with the spacebar:
+Il vero potere della programmazione guidata da eventi emerge quando combini più tipi di eventi.
+L'esempio sotto ti permette di disegnare con il mouse e pulire con la barra spaziatrice:
 
 ```python
 import turtle
@@ -282,27 +282,27 @@ screen.listen()
 screen.mainloop()
 ```
 
-## The Event-Driven vs Sequential Comparison
+## Il Confronto tra Guidato da Eventi e Sequenziale
 
-| Feature | Sequential | Event-Driven |
+| Caratteristica | Sequenziale | Guidato da Eventi |
 |---------|-----------|--------------|
-| Execution flow | Top to bottom, predictable | Waits for events, unpredictable order |
-| User interaction | Limited (input() only) | Real-time (mouse, keyboard, timer) |
-| Typical use | Scripts, calculations | Games, GUIs, apps |
-| Complexity | Low | Medium — requires callback thinking |
+| Flusso di esecuzione | Dall'alto verso il basso, prevedibile | Aspetta gli eventi, ordine imprevedibile |
+| Interazione con l'utente | Limitata (solo input()) | In tempo reale (mouse, tastiera, timer) |
+| Uso tipico | Script, calcoli | Giochi, GUI, app |
+| Complessità | Bassa | Media — richiede il pensiero a callback |
 
-!!! mascot-tip "Callbacks Are Just Functions"
+!!! mascot-tip "I Callback Sono Solo Funzioni"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    The hardest part of event-driven programming is trusting the callback pattern.
-    You write the function. You register it. The system calls it when the event fires.
-    You don't call it yourself — that's the event loop's job. Think of it like setting a phone alarm: you set it once, then it rings when the time comes.
+    La parte più difficile della programmazione guidata da eventi è fidarsi del pattern del callback.
+    Scrivi la funzione. La registri. Il sistema la chiama quando scatta l'evento.
+    Non la chiami tu stesso — quello è il compito del ciclo di eventi. Pensalo come impostare una sveglia sul telefono: la imposti una volta, poi suona quando arriva il momento.
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add a Color Changer"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi un Cambia Colore"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code below draws dots on click, but all dots are the same color.
-    Add a key event so pressing `"c"` cycles through a list of colors with each press!
+    Il codice sotto disegna punti al clic, ma tutti i punti sono dello stesso colore.
+    Aggiungi un evento tasto così che premere `"c"` scorra tra una lista di colori a ogni pressione!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -343,31 +343,31 @@ screen.listen()
 screen.mainloop()`);
 </script>
 
-## Experiments
+## Esperimenti
 
-Try these changes. Predict what will happen first, then run it to check!
+Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Change the timer delay in the spiral lab from `20` to `5`. Does the animation get faster or slower?
-   **You'll know it worked when** you see the spiral build at a noticeably different speed.
+1. Cambia il ritardo del timer nel laboratorio della spirale da `20` a `5`. L'animazione diventa più veloce o più lenta?
+   **Saprai che ha funzionato quando** vedi la spirale costruirsi a una velocità notevolmente diversa.
 
-2. Add an `"r"` key binding that calls `t.color("red")` — pressing R changes the turtle's draw color to red.
-   **You'll know it worked when** pressing R switches the draw color.
+2. Aggiungi un collegamento al tasto `"r"` che chiama `t.color("red")` — premere R cambia il colore di disegno della turtle in rosso.
+   **Saprai che ha funzionato quando** premere R cambia il colore di disegno.
 
-3. Register a click callback that uses `t.write()` to stamp the click coordinates at each click location.
-   **You'll know it worked when** `"(x, y)"` labels appear at every click spot.
+3. Registra un callback di clic che usa `t.write()` per timbrare le coordinate del clic a ogni posizione cliccata.
+   **Saprai che ha funzionato quando** le etichette `"(x, y)"` appaiono a ogni punto cliccato.
 
-4. Modify the spiral to stop after 300 steps (instead of 200) and add a reset function on `"s"` that clears and restarts from step 0.
-   **You'll know it worked when** pressing `s` clears and restarts the spiral.
+4. Modifica la spirale per fermarsi dopo 300 passi (invece di 200) e aggiungi una funzione di reset su `"s"` che pulisce e riparte dal passo 0.
+   **Saprai che ha funzionato quando** premere `s` pulisce e riavvia la spirale.
 
-5. Create a "bouncing ball" — a circle that moves diagonally using a timer and reverses direction when it hits the canvas edges.
-   **You'll know it worked when** the ball bounces around the canvas indefinitely.
+5. Crea una "pallina che rimbalza" — un cerchio che si muove in diagonale usando un timer e inverte direzione quando colpisce i bordi del canvas.
+   **Saprai che ha funzionato quando** la pallina rimbalza indefinitamente nel canvas.
 
-!!! mascot-celebration "Event-Driven Programmer!"
+!!! mascot-celebration "Programmatore Guidato da Eventi!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You've built programs that respond to the real world — clicks, key presses, and timed animations!
-    Event-driven programming is the foundation of every game, app, and website UI.
-    Two chapters to go — and they take you into the exciting world of AI and machine learning! Let's keep coding!
+    Hai costruito programmi che rispondono al mondo reale — clic, pressioni di tasti, e animazioni temporizzate!
+    La programmazione guidata da eventi è la base di ogni gioco, app, e interfaccia utente di siti web.
+    Restano due capitoli — e ti portano nell'eccitante mondo dell'IA e del machine learning! Continuiamo a programmare!
 
-[Take the Chapter Review Quiz](./quiz.md)
+[Fai il Quiz di Ripasso del Capitolo](./quiz.md)
 
-[See Annotated References](./references.md)
+[Vedi i Riferimenti Annotati](./references.md)

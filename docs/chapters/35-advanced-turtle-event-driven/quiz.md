@@ -1,164 +1,164 @@
-# Quiz: Advanced Turtle and Event-Driven Programming
+# Quiz: Turtle Avanzata e Programmazione Guidata da Eventi
 
-Test your understanding of the event-driven model, callbacks, mouse events, keyboard events, and timer-based animation with these questions. Click "Show Answer" to reveal the correct answer and explanation.
+Verifica la tua comprensione del modello guidato da eventi, dei callback, degli eventi del mouse, degli eventi della tastiera, e dell'animazione basata su timer con queste domande. Clicca su "Mostra risposta" per rivelare la risposta corretta e la spiegazione.
 
 ---
 
-#### 1. What is the main difference between sequential and event-driven programming?
+#### 1. Qual è la differenza principale tra la programmazione sequenziale e quella guidata da eventi?
 
 <div class="upper-alpha" markdown>
-1. Sequential programs use functions; event-driven programs do not
-2. Sequential programs run code top to bottom line by line; event-driven programs wait for events and respond to them with callback functions
-3. Sequential programs are slower; event-driven programs run in parallel
-4. Sequential programs use loops; event-driven programs use if/else statements instead
+1. I programmi sequenziali usano funzioni; quelli guidati da eventi no
+2. I programmi sequenziali eseguono il codice dall'alto verso il basso riga per riga; quelli guidati da eventi aspettano gli eventi e rispondono con funzioni di callback
+3. I programmi sequenziali sono più lenti; quelli guidati da eventi girano in parallelo
+4. I programmi sequenziali usano i cicli; quelli guidati da eventi usano invece le istruzioni if/else
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. Sequential programs execute each line in order from top to bottom and then finish. Event-driven programs start an event loop that waits indefinitely. When an event occurs (a mouse click, key press, or timer tick), the loop calls the registered callback function. The program does not know in advance when or how many times events will fire.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. I programmi sequenziali eseguono ogni riga in ordine dall'alto verso il basso e poi finiscono. I programmi guidati da eventi avviano un ciclo di eventi che aspetta indefinitamente. Quando si verifica un evento (un clic del mouse, una pressione di tasto, o uno scatto del timer), il ciclo chiama la funzione di callback registrata. Il programma non sa in anticipo quando o quante volte scatteranno gli eventi.
 
     **Concept Tested:** Event-Driven Model
 
 ---
 
-#### 2. What is a callback function in event-driven programming?
+#### 2. Cos'è una funzione di callback nella programmazione guidata da eventi?
 
 <div class="upper-alpha" markdown>
-1. A function that calls itself (recursion)
-2. A function you write that is passed as an argument and called automatically when a specific event occurs
-3. A function that checks whether an event has occurred and returns True or False
-4. A function that cancels all pending events when called
+1. Una funzione che chiama sé stessa (ricorsione)
+2. Una funzione che scrivi che viene passata come argomento e chiamata automaticamente quando si verifica un evento specifico
+3. Una funzione che controlla se si è verificato un evento e restituisce True o False
+4. Una funzione che annulla tutti gli eventi in sospeso quando viene chiamata
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. A callback is a function you define and pass to an event registration function. You do not call it yourself — the event loop calls it automatically when the corresponding event fires. For example, `screen.onscreenclick(my_function)` registers `my_function` as the callback for mouse clicks, and the event system calls it with the click coordinates.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Un callback è una funzione che definisci e passi a una funzione di registrazione di eventi. Non la chiami tu stesso — il ciclo di eventi la chiama automaticamente quando scatta l'evento corrispondente. Per esempio, `screen.onscreenclick(my_function)` registra `my_function` come callback per i clic del mouse, e il sistema di eventi la chiama con le coordinate del clic.
 
     **Concept Tested:** Callback Functions
 
 ---
 
-#### 3. What does `screen.onscreenclick(callback)` do?
+#### 3. Cosa fa `screen.onscreenclick(callback)`?
 
 <div class="upper-alpha" markdown>
-1. Makes the turtle move to wherever the user clicks on the screen
-2. Pauses the program and waits until the user clicks before continuing
-3. Registers a callback function to be called with the x, y coordinates each time the user clicks on the canvas
-4. Detects single vs double clicks and calls different functions
+1. Fa muovere la turtle ovunque l'utente clicchi sullo schermo
+2. Pausa il programma e aspetta che l'utente clicchi prima di continuare
+3. Registra una funzione di callback da chiamare con le coordinate x, y ogni volta che l'utente clicca sul canvas
+4. Rileva i clic singoli contro quelli doppi e chiama funzioni diverse
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `screen.onscreenclick(callback)` registers a function to handle mouse clicks on the turtle canvas. When the user clicks, Python calls `callback(x, y)` automatically, where `x` and `y` are the coordinates in turtle coordinate space (center is 0, 0). You can then use those coordinates to draw, move the turtle, or trigger any other action.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `screen.onscreenclick(callback)` registra una funzione per gestire i clic del mouse sul canvas della turtle. Quando l'utente clicca, Python chiama automaticamente `callback(x, y)`, dove `x` e `y` sono le coordinate nello spazio delle coordinate della turtle (il centro è 0, 0). Puoi poi usare quelle coordinate per disegnare, muovere la turtle, o innescare qualsiasi altra azione.
 
     **Concept Tested:** onscreenclick()
 
 ---
 
-#### 4. What does `screen.listen()` do, and why must you call it?
+#### 4. Cosa fa `screen.listen()`, e perché devi chiamarlo?
 
 <div class="upper-alpha" markdown>
-1. It plays audio through the computer's speakers when keys are pressed
-2. It enables the turtle canvas to receive keyboard events — without it, keyboard callbacks are ignored
-3. It starts recording all events to a log file for debugging
-4. It makes the turtle face the direction of the most recent keypress
+1. Riproduce audio attraverso gli altoparlanti del computer quando vengono premuti i tasti
+2. Permette al canvas della turtle di ricevere eventi della tastiera — senza di esso, i callback della tastiera vengono ignorati
+3. Inizia a registrare tutti gli eventi in un file di log per il debug
+4. Fa girare la turtle nella direzione dell'ultima pressione di tasto
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `screen.listen()` tells the turtle screen to direct keyboard input to the event system. Without calling it first, `screen.onkey()` callbacks will be registered but never triggered — keyboard events are simply ignored. Always call `screen.listen()` after setting up your keyboard callbacks and before `screen.mainloop()`.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `screen.listen()` dice allo screen della turtle di dirigere l'input della tastiera al sistema di eventi. Senza chiamarlo prima, i callback di `screen.onkey()` verranno registrati ma non scatteranno mai — gli eventi della tastiera vengono semplicemente ignorati. Chiama sempre `screen.listen()` dopo aver configurato i tuoi callback della tastiera e prima di `screen.mainloop()`.
 
     **Concept Tested:** keyboard events and listen()
 
 ---
 
-#### 5. What arguments does the callback receive from `screen.onscreenclick(callback)`?
+#### 5. Quali argomenti riceve il callback da `screen.onscreenclick(callback)`?
 
 <div class="upper-alpha" markdown>
-1. No arguments — you check `screen.last_click` to get the position
-2. The x and y coordinates of the click in turtle coordinate space
-3. The mouse button number (1 for left, 2 for right)
-4. A tuple of `(x, y, button, timestamp)` for the click
+1. Nessun argomento — controlli `screen.last_click` per ottenere la posizione
+2. Le coordinate x e y del clic nello spazio delle coordinate della turtle
+3. Il numero del pulsante del mouse (1 per sinistro, 2 per destro)
+4. Una tupla di `(x, y, button, timestamp)` per il clic
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. The callback function must accept two parameters: `x` and `y` — the click coordinates in turtle coordinate space where (0,0) is the center of the screen. Define your callback as `def on_click(x, y):` and the event system fills them in automatically when the user clicks.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. La funzione di callback deve accettare due parametri: `x` e `y` — le coordinate del clic nello spazio delle coordinate della turtle dove (0,0) è il centro dello schermo. Definisci il tuo callback come `def on_click(x, y):` e il sistema di eventi li riempie automaticamente quando l'utente clicca.
 
     **Concept Tested:** onscreenclick()
 
 ---
 
-#### 6. What does `screen.ontimer(callback, milliseconds)` do?
+#### 6. Cosa fa `screen.ontimer(callback, milliseconds)`?
 
 <div class="upper-alpha" markdown>
-1. Pauses the program for the given number of milliseconds
-2. Measures how many milliseconds a function takes to run
-3. Calls the callback function repeatedly every N milliseconds forever
-4. Calls the callback function once after the specified delay in milliseconds
+1. Pausa il programma per il numero dato di millisecondi
+2. Misura quanti millisecondi impiega una funzione per girare
+3. Chiama la funzione di callback ripetutamente ogni N millisecondi per sempre
+4. Chiama la funzione di callback una volta dopo il ritardo specificato in millisecondi
 </div>
 
-??? question "Show Answer"
-    The correct answer is **D**. `screen.ontimer(callback, ms)` calls the callback function once after `ms` milliseconds. To create a repeating animation loop, the callback must re-register itself by calling `screen.ontimer(callback, ms)` again at the end of each call. This is the standard pattern for turtle animation: update position, draw, then schedule the next call.
+??? question "Mostra risposta"
+    La risposta corretta è **D**. `screen.ontimer(callback, ms)` chiama la funzione di callback una volta dopo `ms` millisecondi. Per creare un ciclo di animazione ripetuto, il callback deve ri-registrarsi chiamando di nuovo `screen.ontimer(callback, ms)` alla fine di ogni chiamata. Questo è il pattern standard per l'animazione con la turtle: aggiorna la posizione, disegna, poi pianifica la chiamata successiva.
 
     **Concept Tested:** ontimer()
 
 ---
 
-#### 7. What does `screen.mainloop()` do in a turtle event-driven program?
+#### 7. Cosa fa `screen.mainloop()` in un programma turtle guidato da eventi?
 
 <div class="upper-alpha" markdown>
-1. Runs the main Python loop that processes list operations
-2. Starts the event loop that keeps the window open and dispatches events to callbacks
-3. Iterates over all registered turtles and moves them one step
-4. Prints a summary of all events that occurred during the program
+1. Esegue il ciclo principale di Python che elabora le operazioni sulle liste
+2. Avvia il ciclo di eventi che mantiene aperta la finestra e distribuisce gli eventi ai callback
+3. Itera su tutte le turtle registrate e le muove di un passo
+4. Stampa un riepilogo di tutti gli eventi che si sono verificati durante il programma
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. `screen.mainloop()` starts the turtle event loop. It keeps the window open, watches for events (clicks, keypresses, timers), and calls the appropriate callback functions when events fire. Without `mainloop()`, the window would close immediately after setup. This call blocks — code after it does not run until the window is closed.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. `screen.mainloop()` avvia il ciclo di eventi della turtle. Mantiene aperta la finestra, osserva gli eventi (clic, pressioni di tasti, timer), e chiama le funzioni di callback appropriate quando scattano gli eventi. Senza `mainloop()`, la finestra si chiuderebbe immediatamente dopo la configurazione. Questa chiamata blocca — il codice dopo di essa non gira finché la finestra non viene chiusa.
 
     **Concept Tested:** Event Loop
 
 ---
 
-#### 8. How do you register a callback for pressing the Up arrow key?
+#### 8. Come registri un callback per la pressione del tasto freccia Su?
 
 <div class="upper-alpha" markdown>
 1. `screen.onkey("Up", go_forward)`
-2. `screen.onkeypress(go_forward, 38)` (using the key code for Up)
+2. `screen.onkeypress(go_forward, 38)` (usando il codice tasto per Up)
 3. `screen.onkey(go_forward, "Up")`
 4. `turtle.listen_key("Up", go_forward)`
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. The correct syntax is `screen.onkey(callback, key_name)` — the callback function first, then the key name string. Key name strings for arrow keys are `"Up"`, `"Down"`, `"Left"`, `"Right"`. For letter keys, use the letter itself: `"w"`. For other keys: `"space"`, `"Return"`, `"Escape"`. Remember to call `screen.listen()` for key events to work.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. La sintassi corretta è `screen.onkey(callback, key_name)` — prima la funzione di callback, poi la stringa del nome del tasto. Le stringhe dei nomi per i tasti freccia sono `"Up"`, `"Down"`, `"Left"`, `"Right"`. Per i tasti lettera, usa la lettera stessa: `"w"`. Per altri tasti: `"space"`, `"Return"`, `"Escape"`. Ricorda di chiamare `screen.listen()` perché gli eventi dei tasti funzionino.
 
     **Concept Tested:** onkey()
 
 ---
 
-#### 9. What is an event loop?
+#### 9. Cos'è un ciclo di eventi?
 
 <div class="upper-alpha" markdown>
-1. A for loop that iterates over a list of events one time
-2. A recurring loop that waits for events to occur and calls the corresponding callback functions
-3. A special type of while loop that only runs when there is user input
-4. The main program that creates event objects and dispatches them manually
+1. Un ciclo for che itera su una lista di eventi una volta
+2. Un ciclo ricorrente che aspetta che si verifichino gli eventi e chiama le funzioni di callback corrispondenti
+3. Un tipo speciale di ciclo while che gira solo quando c'è input dell'utente
+4. Il programma principale che crea oggetti evento e li distribuisce manualmente
 </div>
 
-??? question "Show Answer"
-    The correct answer is **B**. An event loop is an ongoing loop maintained by the framework (turtle's `mainloop()`, in this case) that continuously checks for events. When an event occurs, the loop identifies which callback was registered for that event and calls it. After the callback finishes, the loop returns to waiting. This is the foundation of all interactive applications — games, GUIs, and web apps all use event loops.
+??? question "Mostra risposta"
+    La risposta corretta è **B**. Un ciclo di eventi è un ciclo continuo mantenuto dal framework (il `mainloop()` della turtle, in questo caso) che controlla continuamente gli eventi. Quando si verifica un evento, il ciclo identifica quale callback è stato registrato per quell'evento e lo chiama. Dopo che il callback finisce, il ciclo torna ad aspettare. Questa è la base di tutte le applicazioni interattive — giochi, GUI, e app web usano tutti cicli di eventi.
 
     **Concept Tested:** Event Loop
 
 ---
 
-#### 10. What does `t.dot(20, "steelblue")` do?
+#### 10. Cosa fa `t.dot(20, "steelblue")`?
 
 <div class="upper-alpha" markdown>
-1. Changes the turtle's pen color to steelblue
-2. Draws a circle outline with diameter 20 in steelblue
-3. Draws a filled circle (dot) with diameter 20 pixels in steelblue at the turtle's current position
-4. Moves the turtle 20 pixels toward steelblue coordinates
+1. Cambia il colore della penna della turtle in steelblue
+2. Disegna il contorno di un cerchio con diametro 20 in steelblue
+3. Disegna un cerchio riempito (punto) con diametro 20 pixel in steelblue nella posizione attuale della turtle
+4. Muove la turtle di 20 pixel verso le coordinate steelblue
 </div>
 
-??? question "Show Answer"
-    The correct answer is **C**. `t.dot(size, color)` draws a filled circle of the specified diameter at the turtle's current position. It does not move the turtle. This is useful in event-driven programs where you want to stamp a dot at a click location: `t.goto(x, y)` then `t.dot(20, "steelblue")`. The dot is drawn immediately without needing separate `begin_fill()` / `end_fill()` calls.
+??? question "Mostra risposta"
+    La risposta corretta è **C**. `t.dot(size, color)` disegna un cerchio riempito del diametro specificato nella posizione attuale della turtle. Non muove la turtle. Questo è utile nei programmi guidati da eventi dove vuoi timbrare un punto in una posizione cliccata: `t.goto(x, y)` poi `t.dot(20, "steelblue")`. Il punto viene disegnato immediatamente senza bisogno di chiamate separate a `begin_fill()` / `end_fill()`.
 
     **Concept Tested:** turtle.dot()
 
