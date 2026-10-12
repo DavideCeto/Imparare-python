@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Four-Fold Symmetric Doodle
+# Scarabocchio a Simmetria Quadrupla
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Record turtle commands as data in a list and replay them
-- Apply a 90° rotation to a list of recorded moves to create four-fold symmetry
-- Understand the difference between recording commands and executing them immediately
+- Registrare comandi della tartaruga come dati in una lista e riprodurli
+- Applicare una rotazione di 90° a una lista di movimenti registrati per creare simmetria quadrupla
+- Capire la differenza tra registrare comandi ed eseguirli immediatamente
 
-One quadrant of a geometric doodle is recorded, then replayed three more times at 90°, 180°, and 270° rotations — automatically producing perfect four-fold rotational symmetry.
+Un quadrante di uno scarabocchio geometrico è registrato, poi riprodotto altre tre volte con rotazioni di 90°, 180°, e 270° — producendo automaticamente una perfetta simmetria rotazionale quadrupla.
 
-!!! mascot-welcome "Welcome to the Four-Fold Doodle!"
+!!! mascot-welcome "Benvenuto allo Scarabocchio a Simmetria Quadrupla!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    This lab teaches a powerful programming idea: **recording actions as data**.
-    Draw once, replay four times with different rotations — instant symmetry!
-    Let's code it together!
+    Questo laboratorio insegna un'idea di programmazione potente: **registrare le azioni come dati**.
+    Disegna una volta, riproduci quattro volte con rotazioni diverse — simmetria istantanea!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-We store moves as a list of tuples: `('forward', 40)`, `('left', 60)`, etc. After building the list, we replay it four times, rotating 90° between each replay. This guarantees perfect four-fold symmetry regardless of what moves are in the list.
+Memorizziamo i movimenti come una lista di tuple: `('forward', 40)`, `('left', 60)`, ecc. Dopo aver costruito la lista, la riproduciamo quattro volte, ruotando di 90° tra ogni riproduzione. Questo garantisce una perfetta simmetria quadrupla indipendentemente dai movimenti presenti nella lista.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -53,13 +53,13 @@ for rotation in range(4):
             monty.right(val)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Each of the 4 replays starts facing a different direction: 0°, 90°, 180°, 270°.
-    Will the four colored replays look like four independent doodles, or will they form one symmetric pattern?
-    Make your guess — then click Run to find out!
+    Ognuna delle 4 riproduzioni inizia rivolta in una direzione diversa: 0°, 90°, 180°, 270°.
+    Le quattro riproduzioni colorate sembreranno quattro scarabocchi indipendenti, o formeranno un pattern simmetrico?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -109,27 +109,27 @@ for rotation in range(4):
             monty.right(val)`);
 </script>
 
-One **symmetric pattern** — the four colored arms are rotations of each other, meeting at the center to form a cohesive design. Were you right?
+Un **pattern simmetrico** — i quattro bracci colorati sono rotazioni l'uno dell'altro, incontrandosi al centro per formare un design coerente. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`monty.setheading(rotation * 90)` is the key. Before each replay, the turtle is sent to the origin facing a new direction. From the turtle's perspective, every replay feels identical — but because the starting heading rotates, the result rotates too.
+`monty.setheading(rotation * 90)` è la chiave. Prima di ogni riproduzione, la tartaruga viene inviata all'origine rivolta in una nuova direzione. Dal punto di vista della tartaruga, ogni riproduzione sembra identica — ma poiché la direzione di partenza ruota, anche il risultato ruota.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `moves = [...]` | Record commands as a list of (command, value) tuples |
-| `monty.setheading(rotation * 90)` | Rotate starting direction for each replay |
-| `for cmd, val in moves` | Unpack each recorded move |
-| `colors[rotation]` | Different color per rotation |
+| `moves = [...]` | Registra i comandi come una lista di tuple (comando, valore) |
+| `monty.setheading(rotation * 90)` | Ruota la direzione iniziale per ogni riproduzione |
+| `for cmd, val in moves` | Spacchetta ogni movimento registrato |
+| `colors[rotation]` | Colore diverso per ogni rotazione |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add More Moves"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi Più Movimenti"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Add 3 more moves to the `moves` list — any combination of forward/left/right.
-    Predict how the symmetry will change (it will stay four-fold!), then run it.
+    Aggiungi 3 movimenti in più alla lista `moves` — qualsiasi combinazione di avanti/sinistra/destra.
+    Prevedi come cambierà la simmetria (resterà quadrupla!), poi eseguila.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -174,20 +174,20 @@ for rotation in range(4):
             monty.right(val)`);
 </script>
 
-No matter what you put in `moves`, the result is always four-fold symmetric — the rotation mechanism guarantees it.
+Non importa cosa metti in `moves`, il risultato è sempre a simmetria quadrupla — il meccanismo di rotazione lo garantisce.
 
-## Experiments
+## Esperimenti
 
-1. **Six-fold symmetry.** Change `range(4)` to `range(6)` and `rotation * 90` to `rotation * 60`. You'll know it worked when 6 arms appear.
+1. **Simmetria a sei pieghe.** Cambia `range(4)` in `range(6)` e `rotation * 90` in `rotation * 60`. Saprai che ha funzionato quando appaiono 6 bracci.
 
-2. **Monochrome.** Use `'black'` for all colors. You'll know it worked when all arms are the same color, making the symmetry even more obvious.
+2. **Monocromo.** Usa `'black'` per tutti i colori. Saprai che ha funzionato quando tutti i bracci sono dello stesso colore, rendendo la simmetria ancora più evidente.
 
-3. **Draw with pen up partway.** Add `('penup', 0)` and `('pendown', 0)` entries and handle them in the replay loop. You'll know it worked when some moves create dashes.
+3. **Disegna con penna alzata a metà.** Aggiungi voci `('penup', 0)` e `('pendown', 0)` e gestiscile nel ciclo di riproduzione. Saprai che ha funzionato quando alcuni movimenti creano trattini.
 
-4. **Random moves.** Generate moves with `random.choice` and `random.randint`. You'll know it worked when a different symmetric pattern appears each run.
+4. **Movimenti casuali.** Genera movimenti con `random.choice` e `random.randint`. Saprai che ha funzionato quando appare un pattern simmetrico diverso a ogni esecuzione.
 
-!!! mascot-celebration "Commands as Data!"
+!!! mascot-celebration "Comandi come Dati!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You learned a powerful idea: storing actions as data so you can replay them
-    with transformations. This technique is used in undo/redo systems and animation!
-    Up next: **Six-Fold Mandala** — extending to 6-fold symmetry.
+    Hai imparato un'idea potente: memorizzare azioni come dati così puoi riprodurle
+    con trasformazioni. Questa tecnica è usata nei sistemi di annulla/ripeti e nell'animazione!
+    Prossimo: **Mandala a Simmetria Sestupla** — estendendo a simmetria a 6 pieghe.

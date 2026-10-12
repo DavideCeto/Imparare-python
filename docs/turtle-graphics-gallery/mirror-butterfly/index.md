@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Mirror Butterfly
+# Farfalla a Specchio
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Create bilateral symmetry by negating the x-coordinates of a list of waypoints
-- Draw the right wing of a butterfly using `goto()` waypoints, then mirror it automatically
-- Understand how `(x, y) → (-x, y)` produces a perfect mirror reflection
+- Creare simmetria bilaterale negando le coordinate x di una lista di punti di passaggio
+- Disegnare l'ala destra di una farfalla usando punti di passaggio `goto()`, poi rifletterla automaticamente
+- Capire come `(x, y) → (-x, y)` produce una perfetta riflessione a specchio
 
-A colorful butterfly built from two coordinate lists — the right wing drawn from waypoints, the left wing created automatically by negating all x-coordinates. One list, two wings.
+Una farfalla colorata costruita da due liste di coordinate — l'ala destra disegnata da punti di passaggio, l'ala sinistra creata automaticamente negando tutte le coordinate x. Una lista, due ali.
 
-!!! mascot-welcome "Welcome to the Mirror Butterfly!"
+!!! mascot-welcome "Benvenuto alla Farfalla a Specchio!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Every butterfly has bilateral (mirror) symmetry — the left wing is exactly
-    the mirror of the right. In code, mirroring is just one character: a minus sign!
-    Let's code it together!
+    Ogni farfalla ha simmetria bilaterale (a specchio) — l'ala sinistra è esattamente
+    lo specchio della destra. Nel codice, rispecchiare è solo un carattere: un segno meno!
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-The right wing is defined as a list of `(x, y)` waypoints. To get the left wing, we create a new list where every `x` is negated: `(-x, y)`. We draw both wings using `goto()` and `begin_fill()`/`end_fill()`.
+L'ala destra è definita come una lista di punti di passaggio `(x, y)`. Per ottenere l'ala sinistra, creiamo una nuova lista dove ogni `x` è negata: `(-x, y)`. Disegniamo entrambe le ali usando `goto()` e `begin_fill()`/`end_fill()`.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -60,13 +60,13 @@ monty.setheading(90)
 monty.forward(200)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The left wing is created with `(-x, y)`. Will it look like a perfect mirror of the right,
-    or will it look upside down?
-    Make your guess — then click Run to find out!
+    L'ala sinistra è creata con `(-x, y)`. Sembrerà un perfetto specchio della destra,
+    o sembrerà sottosopra?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -123,29 +123,29 @@ monty.setheading(90)
 monty.forward(200)`);
 </script>
 
-A **perfect mirror** — negating x flips the shape left-to-right without changing top-to-bottom. Were you right?
+Uno **specchio perfetto** — negare x ribalta la forma da sinistra a destra senza cambiare dall'alto in basso. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`[(-x, y) for x, y in right_wing]` is a list comprehension that transforms every coordinate pair. The `-` before `x` flips horizontally. The `y` stays the same so there's no vertical flip.
+`[(-x, y) for x, y in right_wing]` è una list comprehension che trasforma ogni coppia di coordinate. Il `-` davanti a `x` ribalta orizzontalmente. La `y` resta invariata così non c'è ribaltamento verticale.
 
-The black body is drawn as a vertical line from tail to head using `setheading(90)` (straight up) and `forward(200)`.
+Il corpo nero è disegnato come una linea verticale dalla coda alla testa usando `setheading(90)` (dritto verso l'alto) e `forward(200)`.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `right_wing = [(x,y), ...]` | Waypoints defining the right wing shape |
-| `[(-x, y) for x, y in right_wing]` | Mirror: negate all x-coordinates |
-| `monty.goto(x, y)` | Move turtle to each waypoint, drawing as it goes |
-| `begin_fill()` / `end_fill()` | Fill the wing shape |
+| `right_wing = [(x,y), ...]` | Punti di passaggio che definiscono la forma dell'ala destra |
+| `[(-x, y) for x, y in right_wing]` | Specchio: nega tutte le coordinate x |
+| `monty.goto(x, y)` | Muove la tartaruga a ogni punto di passaggio, disegnando mentre va |
+| `begin_fill()` / `end_fill()` | Riempie la forma dell'ala |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Flip Vertically Instead"
+!!! mascot-thinking "Il Tuo Turno — Rifletti Verticalmente Invece"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `(-x, y)` to `(x, -y)` to flip vertically instead of horizontally.
-    Predict what the result will look like — then run it to check!
+    Cambia `(-x, y)` in `(x, -y)` per rifletterlo verticalmente invece che orizzontalmente.
+    Prevedi come sembrerà il risultato — poi eseguilo per controllare!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -188,20 +188,20 @@ draw_wing(right_wing, 'darkorange')
 draw_wing(bottom_wing, 'royalblue')`);
 </script>
 
-`(x, -y)` flips top-to-bottom — the bottom wing is the vertical reflection of the right wing, in a different color to distinguish them.
+`(x, -y)` ribalta dall'alto verso il basso — l'ala inferiore è il riflesso verticale dell'ala destra, in un colore diverso per distinguerle.
 
-## Experiments
+## Esperimenti
 
-1. **Add wing markings.** After drawing the filled wings, add a smaller `right_inner` list with fewer points and draw it with `pencolor('black')` and no fill. You'll know it worked when the wings have outlines.
+1. **Aggiungi segni sull'ala.** Dopo aver disegnato le ali riempite, aggiungi una lista `right_inner` più piccola con meno punti e disegnala con `pencolor('black')` senza riempimento. Saprai che ha funzionato quando le ali hanno contorni.
 
-2. **Change the body.** Replace the straight line body with a series of dots in decreasing size. You'll know it worked when the body looks segmented.
+2. **Cambia il corpo.** Sostituisci il corpo a linea retta con una serie di punti di dimensione decrescente. Saprai che ha funzionato quando il corpo sembra segmentato.
 
-3. **Use 4 wings.** Also draw `left_wing` and `bottom_wing` to make a four-winged dragonfly. You'll know it worked when four wings radiate from the center.
+3. **Usa 4 ali.** Disegna anche `left_wing` e `bottom_wing` per fare una libellula a quattro ali. Saprai che ha funzionato quando quattro ali si irradiano dal centro.
 
-4. **Add antennas.** After the body, draw two thin lines from the top of the body curving outward. You'll know it worked when the butterfly has antennas.
+4. **Aggiungi antenne.** Dopo il corpo, disegna due linee sottili dalla cima del corpo che curvano verso l'esterno. Saprai che ha funzionato quando la farfalla ha antenne.
 
-!!! mascot-celebration "Beautiful Symmetry!"
+!!! mascot-celebration "Bellissima Simmetria!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You used `(-x, y)` to create perfect bilateral symmetry — the same math used
-    in computer animation to mirror a character's left and right sides!
-    Up next: **Truchet Tiles** — random tiles that form unexpected global patterns.
+    Hai usato `(-x, y)` per creare una perfetta simmetria bilaterale — la stessa matematica usata
+    nell'animazione computerizzata per rispecchiare i lati sinistro e destro di un personaggio!
+    Prossimo: **Piastrelle di Truchet** — tessere casuali che formano pattern globali inaspettati.

@@ -178,6 +178,11 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
   `galaxy-spiral/index.md`, prima dei rispettivi commit; `epicycloid-star/`
   chiude le Curve Matematiche, gli altri quattro aprono la categoria "Natura
   e Scienza")
+- `ripple-waves/`, `four-fold-doodle/`, `six-fold-mandala/`, `mirror-butterfly/`,
+  `truchet-tiles/` (tredicesimo batch — corretto un refuso "stretate" →
+  "strette" in `six-fold-mandala/index.md` prima del commit; `ripple-waves/`
+  chiude Natura e Scienza, gli altri quattro aprono la categoria "Simmetria e
+  Tassellatura")
 
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
@@ -318,11 +323,12 @@ cuore didattico del libro.
 `cafe-wall/`, `moire-pattern/`, `riley-waves/`, `expanding-hexagons/`,
 `lissajous-figure/`, `rose-curve/`, `spirograph/`, `butterfly-curve/`,
 `epicycloid-star/`, `sunflower-spiral/`, `spider-web/`, `lightning-bolt/`,
-`galaxy-spiral/` (62 di ~102 file/unità).
+`galaxy-spiral/`, `ripple-waves/`, `four-fold-doodle/`, `six-fold-mandala/`,
+`mirror-butterfly/`, `truchet-tiles/` (67 di ~102 file/unità).
 
-Prossimo: continuare la Fase 4 in ordine di nav con `ripple-waves/`,
-`four-fold-doodle/`, `six-fold-mandala/`, `mirror-butterfly/`, `truchet-tiles/`,
-e così via attraverso i restanti ~41 singoli laboratori della galleria.
+Prossimo: continuare la Fase 4 in ordine di nav con `islamic-star/`,
+`mandelbrot-pixel-art/`, `julia-set/`, `sierpinski-carpet/`, `barnsley-fern/`,
+e così via attraverso i restanti ~36 singoli laboratori della galleria.
 
 Dopo la Fase 4: Fasi 5-9 (MicroSims, Teacher's Guide, Jupyter/Advanced, Learning Graph,
 Trinket Labs — quest'ultima di priorità minima/da valutare se tradurre affatto, vedi

@@ -2,31 +2,31 @@
 hide:
     - toc
 ---
-# Truchet Tiles
+# Piastrelle di Truchet
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Fill a grid with randomly oriented arc tiles using `random.choice`
-- Understand how local random choices create unexpected global structure
-- See how two tile orientations with matching arc endpoints form continuous winding paths
+- Riempire una griglia con tessere ad arco orientate casualmente usando `random.choice`
+- Capire come le scelte casuali locali creano struttura globale inaspettata
+- Vedere come due orientamenti di tessera con estremità di arco corrispondenti formano percorsi continui avvolgenti
 
-A grid of square tiles, each containing either a `/` arc or a `\` arc chosen randomly. Because arcs from adjacent tiles connect at their shared edges, the random placement forms wandering river-like paths that wind across the whole canvas.
+Una griglia di tessere quadrate, ognuna contenente un arco `/` o un arco `\` scelto casualmente. Poiché gli archi delle tessere adiacenti si collegano ai loro bordi condivisi, il posizionamento casuale forma percorsi simili a fiumi vaganti che si avvolgono attraverso tutto il canvas.
 
-!!! mascot-welcome "Welcome to Truchet Tiles!"
+!!! mascot-welcome "Benvenuto alle Piastrelle di Truchet!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Each tile is chosen randomly — yet the paths they form look designed!
-    This is emergence: complex global patterns from simple local random choices.
-    Let's code it together!
+    Ogni tessera è scelta casualmente — eppure i percorsi che formano sembrano progettati!
+    Questa è l'emergenza: pattern globali complessi da semplici scelte casuali locali.
+    Programmiamo insieme!
 
-## How It Works
+## Come Funziona
 
-Each tile is a square of size `s`. Two orientations:
-- **Type A**: arc from bottom-left corner to top-right corner (quarter circle at bottom-left, then top-right)
-- **Type B**: arc from top-left corner to bottom-right corner
+Ogni tessera è un quadrato di dimensione `s`. Due orientamenti:
+- **Tipo A**: arco dall'angolo in basso a sinistra all'angolo in alto a destra (quarto di cerchio in basso a sinistra, poi in alto a destra)
+- **Tipo B**: arco dall'angolo in alto a sinistra all'angolo in basso a destra
 
-At each grid position, randomly choose A or B and draw the two arcs.
+A ogni posizione della griglia, scegli casualmente A o B e disegna i due archi.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -73,12 +73,12 @@ for row in range(rows):
         tile(ox + col * s, oy + row * s, t)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Each tile is chosen randomly. Will the arcs form isolated curves, or connected paths?
-    Make your guess — then click Run to find out!
+    Ogni tessera è scelta casualmente. Gli archi formeranno curve isolate, o percorsi collegati?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -144,28 +144,28 @@ for row in range(rows):
         tile(ox + col * s, oy + row * s, t)`);
 </script>
 
-**Connected winding paths** — the arcs join at tile edges to form continuous curves that wander across the canvas. Were you right?
+**Percorsi collegati e avvolgenti** — gli archi si uniscono ai bordi delle tessere per formare curve continue che vagano attraverso il canvas. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Both tile types place arcs with endpoints at the midpoints of the tile's edges. Because all tiles use the same edge midpoints, arcs from adjacent tiles always connect — no matter which orientation is chosen. The random choice just determines which two pairs of edge midpoints are connected by each tile's arcs.
+Entrambi i tipi di tessera posizionano archi con estremità ai punti medi dei bordi della tessera. Poiché tutte le tessere usano gli stessi punti medi dei bordi, gli archi delle tessere adiacenti si collegano sempre — indipendentemente dall'orientamento scelto. La scelta casuale determina solo quali due paia di punti medi dei bordi sono collegati dagli archi di ogni tessera.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `random.seed(5)` | Reproducible randomness — same pattern each run |
-| `random.choice(['A', 'B'])` | Choose orientation for each tile |
-| `circle(s/2, 90)` | Quarter circle arc with radius half the tile size |
-| `setheading(angle)` | Position turtle to start arc from the correct corner |
+| `random.seed(5)` | Casualità riproducibile — stesso pattern a ogni esecuzione |
+| `random.choice(['A', 'B'])` | Scegli l'orientamento per ogni tessera |
+| `circle(s/2, 90)` | Arco a quarto di cerchio con raggio metà della dimensione della tessera |
+| `setheading(angle)` | Posiziona la tartaruga per iniziare l'arco dall'angolo corretto |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Change the Seed"
+!!! mascot-thinking "Il Tuo Turno — Cambia il Seme"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Change `random.seed(5)` to `random.seed(42)`.
-    The tile pattern will change but the paths will still wind continuously.
-    Run it and compare the two patterns!
+    Cambia `random.seed(5)` in `random.seed(42)`.
+    Il pattern delle tessere cambierà ma i percorsi continueranno ad avvolgersi senza interruzioni.
+    Eseguilo e confronta i due pattern!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -225,20 +225,20 @@ for row in range(rows):
         tile(ox + col * s, oy + row * s, t)`);
 </script>
 
-A completely different arrangement of winding paths — but still all connected, proving the property holds for any seed.
+Una disposizione completamente diversa di percorsi avvolgenti — ma tutti ancora collegati, dimostrando che la proprietà vale per qualsiasi seme.
 
-## Experiments
+## Esperimenti
 
-1. **Add a background grid.** Before placing tiles, draw gray grid lines. You'll know it worked when the tile boundaries are visible.
+1. **Aggiungi una griglia di sfondo.** Prima di posizionare le tessere, disegna linee di griglia grigie. Saprai che ha funzionato quando i confini delle tessere sono visibili.
 
-2. **Make the arcs thicker.** Change `pensize(2)` to `pensize(4)`. You'll know it worked when the paths look bolder.
+2. **Rendi gli archi più spessi.** Cambia `pensize(2)` in `pensize(4)`. Saprai che ha funzionato quando i percorsi sembrano più marcati.
 
-3. **Use two colors.** Color type A arcs red and type B arcs blue. You'll know it worked when you can visually distinguish the two orientations.
+3. **Usa due colori.** Colora gli archi di tipo A rossi e quelli di tipo B blu. Saprai che ha funzionato quando puoi distinguere visivamente i due orientamenti.
 
-4. **Remove the seed.** Delete `random.seed(5)`. Every run will produce a different pattern. You'll know it worked when the pattern changes each time you click Run.
+4. **Rimuovi il seme.** Elimina `random.seed(5)`. Ogni esecuzione produrrà un pattern diverso. Saprai che ha funzionato quando il pattern cambia ogni volta che clicchi Esegui.
 
-!!! mascot-celebration "Emergence!"
+!!! mascot-celebration "Emergenza!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You created complex structure from random local choices — that's emergence!
-    Truchet tiles were designed by Sébastien Truchet in 1704 — and they still surprise people today.
-    Up next: **Islamic Geometric Star Pattern** — precise construction from angle rules.
+    Hai creato struttura complessa da scelte casuali locali — questa è l'emergenza!
+    Le piastrelle di Truchet furono progettate da Sébastien Truchet nel 1704 — e sorprendono ancora le persone oggi.
+    Prossimo: **Stella Geometrica Islamica** — costruzione precisa da regole angolari.

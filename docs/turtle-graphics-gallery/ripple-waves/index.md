@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Ripple Waves
+# Onde Concentriche
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Draw concentric ellipses to simulate water ripples from multiple drop points
-- Use fading colors to give a sense of wave strength decreasing with distance
-- Combine multiple ripple sources that overlap and create interference patterns
+- Disegnare ellissi concentriche per simulare increspature d'acqua da più punti di caduta
+- Usare colori sfumati per dare un senso di forza dell'onda che diminuisce con la distanza
+- Combinare più fonti di increspature che si sovrappongono e creano pattern di interferenza
 
-Three concentric ring systems centered at different points — like three pebbles dropped into water. Where rings overlap, they create subtle interference patterns.
+Tre sistemi di anelli concentrici centrati in punti diversi — come tre ciottoli lanciati nell'acqua. Dove gli anelli si sovrappongono, creano sottili pattern di interferenza.
 
-!!! mascot-welcome "Welcome to Ripple Waves!"
+!!! mascot-welcome "Benvenuto alle Onde Concentriche!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Drop a pebble in still water and watch the rings expand outward.
-    Drop three pebbles and see the rings interfere with each other!
-    Let's code the wave math together!
+    Lancia un ciottolo in acqua calma e guarda gli anelli espandersi verso l'esterno.
+    Lancia tre ciottoli e guarda gli anelli interferire tra loro!
+    Programmiamo insieme la matematica delle onde!
 
-## How It Works
+## Come Funziona
 
-`ripple(cx, cy, n_rings, max_r, color)` draws `n_rings` concentric circles from a center. Pensize decreases with each ring (outer rings are thinner — less energy). Three ripple centers are placed at different positions.
+`ripple(cx, cy, n_rings, max_r, color)` disegna `n_rings` cerchi concentrici da un centro. La dimensione della penna diminuisce con ogni anello (gli anelli esterni sono più sottili — meno energia). Tre centri di increspatura sono posizionati in punti diversi.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -46,12 +46,12 @@ ripple(60, 40, 7, 80, 'deepskyblue')
 ripple(0, -60, 6, 70, 'steelblue')
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Three ripple centers at different positions — will their rings overlap or stay separate?
-    Make your guess — then click Run to find out!
+    Tre centri di increspatura in posizioni diverse — i loro anelli si sovrapporranno o resteranno separati?
+    Fai la tua previsione — poi clicca Esegui per scoprirlo!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -94,27 +94,27 @@ ripple(60, 40, 7, 80, 'deepskyblue')
 ripple(0, -60, 6, 70, 'steelblue')`);
 </script>
 
-The rings **overlap** where the ripple systems meet — creating a visual interference pattern at their boundaries. Were you right?
+Gli anelli **si sovrappongono** dove i sistemi di increspatura si incontrano — creando un pattern di interferenza visivo ai loro confini. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`goto(cx, cy - r)` moves to the bottom of each circle before drawing it. `circle(r)` draws the full circle. Thicker pensize for inner rings simulates more wave energy near the source.
+`goto(cx, cy - r)` si muove al fondo di ogni cerchio prima di disegnarlo. `circle(r)` disegna il cerchio completo. La dimensione maggiore della penna per gli anelli interni simula più energia d'onda vicino alla fonte.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `r = i * max_r / n_rings` | Ring radii evenly spaced from center to max |
-| `strength = n_rings - i + 1` | Inner rings are stronger (higher number) |
-| `pensize(max(1, strength//3))` | Thicker lines for inner, stronger rings |
-| `goto(cx, cy - r)` | Position turtle at bottom of circle |
+| `r = i * max_r / n_rings` | Raggi degli anelli uniformemente spaziati dal centro al massimo |
+| `strength = n_rings - i + 1` | Gli anelli interni sono più forti (numero più alto) |
+| `pensize(max(1, strength//3))` | Linee più spesse per gli anelli interni, più forti |
+| `goto(cx, cy - r)` | Posiziona la tartaruga al fondo del cerchio |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add a Fourth Ripple"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi una Quarta Increspatura"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Add a fourth `ripple()` call at a position of your choice with `'navy'` color.
-    Where will it overlap most with the existing rings?
+    Aggiungi una quarta chiamata a `ripple()` in una posizione a tua scelta con colore `'navy'`.
+    Dove si sovrapporrà di più con gli anelli esistenti?
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -152,20 +152,20 @@ ripple(0, -60, 6, 70, 'steelblue')
 ripple(-30, 60, 5, 60, 'navy')`);
 </script>
 
-Four overlapping ripple systems — more interference regions where the rings cross.
+Quattro sistemi di increspatura sovrapposti — più regioni di interferenza dove gli anelli si incrociano.
 
-## Experiments
+## Esperimenti
 
-1. **Change ring spacing.** Replace evenly spaced rings with `r = max_r * (i / n_rings) ** 2` — squared spacing means rings bunch up near the center. You'll know it worked when inner rings are denser.
+1. **Cambia la spaziatura degli anelli.** Sostituisci gli anelli uniformemente spaziati con `r = max_r * (i / n_rings) ** 2` — la spaziatura al quadrato fa raggrupparsi gli anelli vicino al centro. Saprai che ha funzionato quando gli anelli interni sono più densi.
 
-2. **Animate the ripple.** Draw rings in reverse order (outermost first) to create an animation effect. You'll know it worked when the rings appear to expand outward.
+2. **Anima l'increspatura.** Disegna gli anelli in ordine inverso (il più esterno prima) per creare un effetto di animazione. Saprai che ha funzionato quando gli anelli sembrano espandersi verso l'esterno.
 
-3. **Use colored rings.** Give each ring a slightly different shade — inner rings darker, outer lighter. You'll know it worked when there's a gradient from center to edge.
+3. **Usa anelli colorati.** Dai a ogni anello una tonalità leggermente diversa — anelli interni più scuri, esterni più chiari. Saprai che ha funzionato quando c'è un gradiente dal centro al bordo.
 
-4. **One giant ripple.** Call `ripple(0, 0, 15, 170, 'teal')` once. You'll know it worked when 15 rings fill nearly the entire canvas.
+4. **Un'increspatura gigante.** Chiama `ripple(0, 0, 15, 170, 'teal')` una volta. Saprai che ha funzionato quando 15 anelli riempiono quasi tutto il canvas.
 
-!!! mascot-celebration "Making Waves!"
+!!! mascot-celebration "Facendo Onde!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You simulated water ripples with concentric circles and pensize fading!
-    The same math models sound waves, light waves, and even radio transmission patterns.
-    Up next: **Category 7 — Mathematical Curves!**
+    Hai simulato increspature d'acqua con cerchi concentrici e sfumatura della dimensione della penna!
+    La stessa matematica modella le onde sonore, le onde luminose, e persino i pattern di trasmissione radio.
+    Prossimo: **Categoria 7 — Curve Matematiche!**
