@@ -2,27 +2,28 @@
 hide:
     - toc
 ---
-# River Delta
+# Delta del Fiume
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Grow a branching river with `random.randint()` and `random.uniform()`
-- Prune branches that get too thin or flow off the canvas
-- Use `random.seed()` to make a random drawing repeat exactly
+- Far crescere un fiume che si dirama usando `random.randint()` e `random.uniform()`
+- Potare i rami che diventano troppo sottili o che escono dal canvas
+- Usare `random.seed()` per far ripetere esattamente un disegno casuale
 
-A wide river enters at the top of the canvas and fans out into dozens of thinner and thinner streams, just like a real river delta meeting the sea. Every run of the program *could* be different — but `random.seed()` locks in one particular delta so you can study it.
+Un fiume largo entra dalla parte alta del canvas e si apre a ventaglio in decine di ruscelli sempre più sottili, proprio come un vero delta fluviale che incontra il mare. Ogni esecuzione del programma *potrebbe* essere diversa — ma `random.seed()` blocca un particolare delta così puoi studiarlo.
 
-!!! mascot-welcome "Welcome to the River Delta!"
+!!! mascot-welcome "Benvenuto al Delta del Fiume!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Rivers don't follow a formula — they wander and split at random.
-    In this lab you'll use Python's `random` module to grow a delta
-    the same way nature does: one branching decision at a time!
+    I fiumi non seguono una formula — vagano e si dividono a caso.
+    In questo laboratorio userai il modulo `random` di Python per far
+    crescere un delta nello stesso modo in cui lo fa la natura: una decisione
+    di ramificazione alla volta!
 
-## How It Works
+## Come Funziona
 
-The program keeps a list of active branches, each with a position, direction, and width. Every step, each branch randomly splits into 1 or 2 children with a small random change of direction; splitting makes the children thinner. Branches that get thinner than 1 pixel or flow off the canvas are pruned (removed from the list) — that is what makes the delta fade out naturally.
+Il programma mantiene una lista di rami attivi, ognuno con una posizione, una direzione e una larghezza. A ogni passo, ogni ramo si divide a caso in 1 o 2 figli con un piccolo cambiamento casuale di direzione; la divisione rende i figli più sottili. I rami che diventano più sottili di 1 pixel o che escono dal canvas vengono potati (rimossi dalla lista) — è questo che fa sfumare il delta in modo naturale.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -83,14 +84,14 @@ for step in range(44):
     branches = new_branches[:40]
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The river starts 10 pixels wide, every split multiplies a branch's
-    width by 0.8, and branches thinner than 1 pixel disappear.
-    Do you think the delta will still be flowing when it reaches the
-    bottom half of the canvas? Make your guess, then click Run!
+    Il fiume inizia largo 10 pixel, ogni divisione moltiplica la larghezza di
+    un ramo per 0,8, e i rami più sottili di 1 pixel scompaiono.
+    Pensi che il delta starà ancora scorrendo quando raggiungerà la metà
+    inferiore del canvas? Fai la tua previsione, poi clicca Esegui!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -170,29 +171,29 @@ for step in range(44):
     branches = new_branches[:40]`);
 </script>
 
-Yes — the thinnest `deepskyblue` streams make it deep into the bottom half before they fade below 1 pixel. Were you right?
+Sì — i ruscelli più sottili in `deepskyblue` arrivano in profondità nella metà inferiore prima di sfumare sotto 1 pixel. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-This is *stochastic* (random) branching, and it works differently from the deterministic fractals like Fractal Tree. There, every branch splits exactly the same way, so the result is perfectly predictable. Here, `random.randint(1, 2)` decides how many children each branch gets and `random.uniform(-22, 22)` bends each child a little, so no two lineages look alike. Pruning — the `continue` that skips branches which are too thin or out of bounds — is what stops the randomness from running wild. Because `random.seed(42)` starts the random-number generator at a fixed point, the same "random" choices happen every run.
+Questa è ramificazione *stocastica* (casuale), e funziona diversamente dai frattali deterministici come l'Albero Frattale. Lì, ogni ramo si divide esattamente nello stesso modo, quindi il risultato è perfettamente prevedibile. Qui, `random.randint(1, 2)` decide quanti figli ottiene ogni ramo e `random.uniform(-22, 22)` piega leggermente ogni figlio, così nessuna lineage somiglia a un'altra. La potatura — il `continue` che salta i rami troppo sottili o fuori dai limiti — è ciò che impedisce alla casualità di scorrere senza controllo. Poiché `random.seed(42)` avvia il generatore di numeri casuali da un punto fisso, le stesse scelte "casuali" avvengono a ogni esecuzione.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `random.seed(42)` | Locks in the random sequence so every run draws the same delta |
-| `kids = random.randint(1, 2)` | Each branch randomly continues (1) or splits in two (2) |
-| `if nw < 1 or abs(nx) > 195 or ny < -195:` | Prunes branches that are too thin or off the canvas |
-| `branches = new_branches[:40]` | The children become the active branches for the next step (capped at 40) |
+| `random.seed(42)` | Blocca la sequenza casuale così ogni esecuzione disegna lo stesso delta |
+| `kids = random.randint(1, 2)` | Ogni ramo continua a caso (1) o si divide in due (2) |
+| `if nw < 1 or abs(nx) > 195 or ny < -195:` | Pota i rami troppo sottili o fuori dal canvas |
+| `branches = new_branches[:40]` | I figli diventano i rami attivi per il passo successivo (limitati a 40) |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add the Missing Line"
+!!! mascot-thinking "Il Tuo Turno — Aggiungi la Riga Mancante"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below never replaces the old branches with the new ones,
-    so the river never grows past its first segments!
-    Add `branches = new_branches[:40]` as the last line of the
-    `for step` loop (indented four spaces) and run it again.
+    Il programma sotto non sostituisce mai i vecchi rami con quelli nuovi,
+    quindi il fiume non cresce mai oltre i suoi primi segmenti!
+    Aggiungi `branches = new_branches[:40]` come ultima riga del
+    ciclo `for step` (indentata di quattro spazi) ed eseguilo di nuovo.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -266,22 +267,22 @@ for step in range(44):
     # add the missing line here`);
 </script>
 
-Without that line, `branches` stays stuck at the starting segment, so the program just re-draws short stubs at the top 44 times. With it, each generation of children becomes the next generation of parents — and the delta flows.
+Senza quella riga, `branches` resta bloccato al segmento di partenza, quindi il programma si limita a ridisegnare brevi monconi in alto 44 volte. Con essa, ogni generazione di figli diventa la generazione successiva di genitori — e il delta scorre.
 
-## Experiments
+## Esperimenti
 
-1. **Change the seed.** Try `random.seed(7)` or your lucky number. You'll know it worked when a completely different delta appears — same rules, new river.
+1. **Cambia il seme.** Prova `random.seed(7)` o il tuo numero fortunato. Saprai che ha funzionato quando appare un delta completamente diverso — stesse regole, nuovo fiume.
 
-2. **Force a split every step.** Change `random.randint(1, 2)` to `random.randint(2, 2)`. You'll know it worked when the delta becomes short and bushy — always splitting makes streams thin out much faster.
+2. **Forza una divisione a ogni passo.** Cambia `random.randint(1, 2)` in `random.randint(2, 2)`. Saprai che ha funzionato quando il delta diventa corto e cespuglioso — dividersi sempre fa assottigliare i ruscelli molto più in fretta.
 
-3. **Start with a mightier river.** Change the starting width `10.0` to `14.0`. You'll know it worked when the streams survive longer and the delta reaches farther down the canvas.
+3. **Inizia con un fiume più potente.** Cambia la larghezza iniziale `10.0` in `14.0`. Saprai che ha funzionato quando i ruscelli sopravvivono più a lungo e il delta raggiunge più in basso sul canvas.
 
-4. **Let it wander more.** Change `random.uniform(-22, 22)` to `random.uniform(-40, 40)`. You'll know it worked when the streams zigzag wildly instead of flowing mostly straight down.
+4. **Lascialo vagare di più.** Cambia `random.uniform(-22, 22)` in `random.uniform(-40, 40)`. Saprai che ha funzionato quando i ruscelli zigzagano selvaggiamente invece di scorrere quasi dritti verso il basso.
 
-!!! mascot-celebration "You Grew a River!"
+!!! mascot-celebration "Hai Fatto Crescere un Fiume!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You just used randomness *with rules* — split, thin, prune — to grow
-    something that looks alive. That's how nature builds deltas, lightning,
-    and blood vessels too!
-    Up next: **Coral Branch** — recursive branching with random twists and
-    colors that fade from deep red to pink.
+    Hai appena usato la casualità *con regole* — divisione, assottigliamento, potatura — per far
+    crescere qualcosa che sembra vivo. È così che la natura costruisce delta, fulmini,
+    e anche vasi sanguigni!
+    Prossimo: **Ramo di Corallo** — ramificazione recursiva con torsioni casuali e
+    colori che sfumano dal rosso profondo al rosa.

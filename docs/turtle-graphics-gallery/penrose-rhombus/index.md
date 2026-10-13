@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Penrose Rhombus Tiling
+# Tassellatura a Rombi di Penrose
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Use complex numbers as 2D points to do geometry with plain arithmetic
-- Apply two recursive subdivision rules (thin → 2 pieces, thick → 3 pieces)
-- Explain why the golden ratio makes this tiling never repeat
+- Usare i numeri complessi come punti 2D per fare geometria con l'aritmetica semplice
+- Applicare due regole di suddivisione ricorsiva (sottile → 2 pezzi, spesso → 3 pezzi)
+- Spiegare perché il rapporto aureo fa in modo che questa tassellatura non si ripeta mai
 
-In the 1970s, Roger Penrose discovered two rhombus shapes — one thick, one thin — that can tile a floor forever without the pattern ever repeating. This program builds his famous P3 tiling by "deflation": start with a sun of 10 golden triangles around the center, then repeatedly split every triangle into smaller golden triangles using the golden ratio φ ≈ 1.618. Four rounds later, gold and blue rhombi bloom into stars and suns across the whole canvas.
+Negli anni '70, Roger Penrose scoprì due forme di rombo — una spessa, una sottile — che possono tassellare un pavimento per sempre senza che il pattern si ripeta mai. Questo programma costruisce la sua famosa tassellatura P3 per "deflazione": inizia con un sole di 10 triangoli aurei attorno al centro, poi suddivide ripetutamente ogni triangolo in triangoli aurei più piccoli usando il rapporto aureo φ ≈ 1,618. Quattro cicli dopo, rombi dorati e blu fioriscono in stelle e soli su tutto il canvas.
 
-!!! mascot-welcome "Welcome to the Tiling That Never Repeats!"
+!!! mascot-welcome "Benvenuto alla Tassellatura Che Non si Ripete Mai!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Two rhombus shapes, two splitting rules, one magic number: φ.
-    Slide this pattern in any direction and it will NEVER line up
-    with itself. Let's grow it from ten triangles!
+    Due forme di rombo, due regole di divisione, un numero magico: φ.
+    Fai scorrere questo pattern in qualsiasi direzione e NON si allineerà
+    mai con se stesso. Facciamolo crescere da dieci triangoli!
 
-## How It Works
+## Come Funziona
 
-Every triangle is stored as `[kind, a, b, c]` where the corners are complex numbers — `complex(x, y)` acts like a 2D point, and `a + (b - a) / phi` finds the point that cuts side `ab` in the golden ratio. A *thin* half-rhombus splits into 2 smaller triangles; a *thick* one splits into 3. After subdividing 4 times, we fill each triangle (thick = gold, thin = royal blue) and then trace only the two outer edges `c → a → b`, so each pair of triangles displays as one complete rhombus.
+Ogni triangolo è memorizzato come `[kind, a, b, c]` dove gli angoli sono numeri complessi — `complex(x, y)` agisce come un punto 2D, e `a + (b - a) / phi` trova il punto che divide il lato `ab` secondo il rapporto aureo. Un mezzo-rombo *sottile* si divide in 2 triangoli più piccoli; uno *spesso* si divide in 3. Dopo aver suddiviso 4 volte, riempiamo ogni triangolo (spesso = oro, sottile = blu reale) e poi tracciamo solo i due lati esterni `c → a → b`, così ogni coppia di triangoli appare come un unico rombo completo.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -60,13 +60,13 @@ for level in range(levels):
     triangles = new
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Every round, each thin triangle becomes 2 pieces but each thick one
-    becomes 3. After 4 rounds of that, which color do you think will cover
-    more of the picture — gold (thick) or royal blue (thin)? Guess, then run!
+    Ogni ciclo, ogni triangolo sottile diventa 2 pezzi ma ogni triangolo spesso
+    diventa 3. Dopo 4 cicli di questo, quale colore pensi che coprirà di più
+    l'immagine — oro (spesso) o blu reale (sottile)? Indovina, poi esegui!
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -145,29 +145,29 @@ for kind, a, b, c in triangles:
     monty.goto(b.real, b.imag)`);
 </script>
 
-**Gold wins.** After 4 rounds there are 210 thick half-rhombi and only 130 thin ones — and each thick rhombus is fatter too. (Fun fact: the thick-to-thin ratio approaches exactly φ as you keep subdividing.) Were you right?
+**Vince l'oro.** Dopo 4 cicli ci sono 210 mezzi-rombi spessi e solo 130 sottili — e ogni rombo spesso è anche più "grasso". (Curiosità: il rapporto spesso-sottile si avvicina esattamente a φ man mano che continui a suddividere.) Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-The two triangle kinds are the halves of Penrose's two rhombi: the thin rhombus (36° corners) and the thick rhombus (72° corners). Golden-ratio cuts like `a + (b - a) / phi` split each one into perfect smaller copies — that only works because a golden triangle's sides are in ratio φ : φ : 1. Because φ is irrational, the numbers of thick and thin tiles can never settle into a neat whole-number ratio, so no shifted copy of the pattern can ever match itself: the tiling is aperiodic. Notice the 5-fold symmetry everywhere — the "forbidden symmetry" that ordinary repeating wallpapers can't have. When scientists found this same 5-fold pattern frozen in a metal alloy in 1982 (they named them quasicrystals), it won Dan Shechtman the Nobel Prize.
+I due tipi di triangolo sono le metà dei due rombi di Penrose: il rombo sottile (angoli di 36°) e il rombo spesso (angoli di 72°). I tagli al rapporto aureo come `a + (b - a) / phi` dividono ognuno in copie più piccole perfette — funziona solo perché i lati di un triangolo aureo sono in rapporto φ : φ : 1. Poiché φ è irrazionale, i numeri di tessere spesse e sottili non possono mai assestarsi in un rapporto ordinato di numeri intieri, quindi nessuna copia spostata del pattern può mai corrispondere a se stessa: la tassellatura è aperiodica. Nota la simmetria a 5 punte ovunque — la "simmetria proibita" che le normali carte da parati ripetute non possono avere. Quando gli scienziati trovarono questo stesso pattern a 5 punte congelato in una lega metallica nel 1982 (li chiamarono quasicristalli), valse a Dan Shechtman il Premio Nobel.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `phi = (1 + math.sqrt(5)) / 2` | The golden ratio, 1.618... — the engine of the whole tiling |
-| `b = complex(math.cos(a1), math.sin(a1)) * 195` | Places a corner on a circle using a complex number as an (x, y) point |
-| `p = a + (b - a) / phi` | Cuts the side `ab` at the golden ratio point |
-| `new.append(['thick', p, c, a])` | Adds one of the smaller triangles that replaces the old one |
+| `phi = (1 + math.sqrt(5)) / 2` | Il rapporto aureo, 1,618... — il motore di tutta la tassellatura |
+| `b = complex(math.cos(a1), math.sin(a1)) * 195` | Posiziona un angolo su un cerchio usando un numero complesso come punto (x, y) |
+| `p = a + (b - a) / phi` | Taglia il lato `ab` nel punto del rapporto aureo |
+| `new.append(['thick', p, c, a])` | Aggiunge uno dei triangoli più piccoli che sostituisce quello vecchio |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Deflate Deeper"
+!!! mascot-thinking "Il Tuo Turno — Deflaziona più in Profondità"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    This version stops at `levels = 2`, so you can still see the ten big
-    wedges of the starting sun. Change it to `levels = 4`.
-    Each round shrinks the rhombi by a factor of φ — will the pattern
-    at the center still look like a sun when you're done?
+    Questa versione si ferma a `levels = 2`, così puoi ancora vedere i dieci grandi
+    spicchi del sole di partenza. Cambialo in `levels = 4`.
+    Ogni ciclo restringe i rombi di un fattore φ — il pattern al centro
+    sembrerà ancora un sole quando avrai finito?
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -240,21 +240,21 @@ for kind, a, b, c in triangles:
     monty.goto(b.real, b.imag)`);
 </script>
 
-Yes — a smaller sun of ten gold rhombi survives at the very center, now ringed by blue stars. Deflation shrinks the pattern but the sun motif keeps reappearing at every scale.
+Sì — un sole più piccolo di dieci rombi dorati sopravvive esattamente al centro, ora circondato da stelle blu. La deflazione restringe il pattern ma il motivo del sole continua a riapparire a ogni scala.
 
-## Experiments
+## Esperimenti
 
-1. **One more round.** In the first lab, change `levels = 4` to `levels = 5` (give it a few seconds — that's 890 triangles). You'll know it worked when the rhombi shrink again and new five-pointed stars appear that weren't visible before.
+1. **Un ciclo in più.** Nel primo laboratorio, cambia `levels = 4` in `levels = 5` (aspetta qualche secondo — sono 890 triangoli). Saprai che ha funzionato quando i rombi si restringono di nuovo e appaiono nuove stelle a cinque punte che prima non erano visibili.
 
-2. **Night mode.** Swap the colors: make thin `'gold'` and thick `'midnightblue'`. You'll know it worked when the tiling flips to mostly dark with golden star outlines.
+2. **Modalità notturna.** Scambia i colori: rendi il sottile `'gold'` e lo spesso `'midnightblue'`. Saprai che ha funzionato quando la tassellatura si ribalta in prevalenza scura con contorni di stelle dorate.
 
-3. **Show the hidden triangles.** In the edge-drawing loop at the bottom, add `monty.goto(c.real, c.imag)` as a final line inside the loop. You'll know it worked when a seam appears across each rhombus, revealing the two triangles it is really made of.
+3. **Mostra i triangoli nascosti.** Nel ciclo di disegno dei bordi in fondo, aggiungi `monty.goto(c.real, c.imag)` come riga finale dentro il ciclo. Saprai che ha funzionato quando appare una cucitura attraverso ogni rombo, rivelando i due triangoli di cui è realmente fatto.
 
-4. **Shrink the sun.** Change both `* 195` to `* 120`. You'll know it worked when the whole decagon pulls toward the center with white space around it.
+4. **Restringi il sole.** Cambia entrambi i `* 195` in `* 120`. Saprai che ha funzionato quando l'intero decagono si ritira verso il centro con spazio bianco intorno.
 
-!!! mascot-celebration "Forbidden Symmetry Unlocked!"
+!!! mascot-celebration "Simmetria Proibita Sbloccata!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Two shapes, two rules, and the golden ratio — and you drew a pattern
-    that never repeats, with the 5-fold symmetry crystals were never
-    supposed to have. Penrose proved it; you programmed it!
-    Browse the **Turtle Graphics Gallery** for your next challenge!
+    Due forme, due regole, e il rapporto aureo — e hai disegnato un pattern
+    che non si ripete mai, con la simmetria a 5 punte che i cristalli non
+    avrebbero mai dovuto avere. Penrose lo dimostrò; tu lo hai programmato!
+    Sfoglia la **Galleria della Grafica Turtle** per la tua prossima sfida!

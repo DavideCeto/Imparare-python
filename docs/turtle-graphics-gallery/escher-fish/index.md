@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Escher-Style Fish Tile
+# Piastrella di Pesci in Stile Escher
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Store a shape outline as a list of `(x, y)` waypoints
-- Explain the tessellation rule: whatever bumps OUT of one edge must notch IN on the opposite edge
-- Tile a shape across the screen by translation, alternating two colors
+- Memorizzare un contorno di forma come lista di punti `(x, y)`
+- Spiegare la regola della tassellatura: qualunque protuberanza ESCE da un lato deve diventare un'intaccatura ENTRA sul lato opposto
+- Tassellare una forma sullo schermo per traslazione, alternando due colori
 
-The artist M.C. Escher filled entire walls with lizards, birds, and fish that lock together with no gaps and no overlaps. His secret was simple and brilliant: start with a shape that tiles (like a rectangle), and every time you push a bump out of one edge, carve the exact same bump into the opposite edge. This program builds a fish that way — its nose is the bump, its tail is the matching notch — then stamps 16 copies in a perfect interlocking school.
+L'artista M.C. Escher riempiva intere pareti con lucertole, uccelli e pesci che si incastrano senza spazi vuoti e senza sovrapposizioni. Il suo segreto era semplice e brillante: iniziare con una forma che tassella (come un rettangolo), e ogni volta che spingi una protuberanza fuori da un lato, scavare la stessa identica protuberanza nel lato opposto. Questo programma costruisce un pesce in questo modo — il suo naso è la protuberanza, la sua coda è l'intaccatura corrispondente — poi stampa 16 copie in un banco perfettamente incastrato.
 
-!!! mascot-welcome "Welcome to the Fish Factory!"
+!!! mascot-welcome "Benvenuto alla Fabbrica dei Pesci!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Escher's fish look impossible to design — but they start as a plain
-    rectangle! Bend the left edge into a nose, cut the same shape from the
-    right edge as a tail, and the copies snap together like puzzle pieces.
+    I pesci di Escher sembrano impossibili da progettare — ma iniziano come un
+    semplice rettangolo! Pieghi il lato sinistro in un naso, tagli la stessa forma
+    dal lato destro come coda, e le copie si incastrano come pezzi di un puzzle.
 
-## How It Works
+## Come Funziona
 
-The fish outline is a list of waypoints tracing an 80×50 rectangle whose edges have been reshaped in matching pairs. The left-edge nose points `(-14, 35), (-6, 25), (-14, 15)` reappear on the right edge shifted by exactly `+80`: `(66, 35), (74, 25), (66, 15)`. The bottom-edge belly dip at `(40, -8)` reappears on the top edge shifted by `+50` as `(40, 42)`. Because every bump matches a notch one tile-width away, copies placed every 80 pixels across and 50 pixels up fit with zero gaps.
+Il contorno del pesce è una lista di punti che traccia un rettangolo 80×50 i cui lati sono stati rimodellati in coppie corrispondenti. Il naso sul lato sinistro ai punti `(-14, 35), (-6, 25), (-14, 15)` riappare sul lato destro spostato esattamente di `+80`: `(66, 35), (74, 25), (66, 15)`. L'incavo del ventre sul lato inferiore in `(40, -8)` riappare sul lato superiore spostato di `+50` come `(40, 42)`. Poiché ogni protuberanza corrisponde a un'intaccatura a distanza di una tassella, le copie posizionate ogni 80 pixel in orizzontale e 50 pixel in verticale si incastrano senza spazi vuoti.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -60,13 +60,13 @@ for row in range(4):
             draw_fish(x, y, 'lightseagreen')
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The color is picked by `(row + col) % 2` — a checkerboard rule.
-    Will the fish directly ABOVE a coral fish be coral or sea-green?
-    Decide, then run the program and check one column.
+    Il colore viene scelto da `(row + col) % 2` — una regola a scacchiera.
+    Il pesce direttamente SOPRA un pesce corallo sarà corallo o verde mare?
+    Decidi, poi esegui il programma e controlla una colonna.
 
-## Try It Now
+## Provalo Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -123,29 +123,29 @@ for row in range(4):
             draw_fish(x, y, 'lightseagreen')`);
 </script>
 
-**Sea-green** — moving up one row changes `row + col` from even to odd (or odd to even), so the color always flips. Were you right?
+**Verde mare** — salendo di una riga, `row + col` passa da pari a dispari (o da dispari a pari), quindi il colore si inverte sempre. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Check the interlocking for yourself with coordinates. The fish at column `c` draws its tail notch at absolute points `c*80 + (66, 15)`, `c*80 + (74, 25)`, `c*80 + (66, 35)`. Its right-hand neighbor starts at `(c+1)*80` and draws its nose at `(c+1)*80 - 14 = c*80 + 66` and `(c+1)*80 - 6 = c*80 + 74` — the *identical* points, traversed the other way. One fish's tail water is the next fish's nose. The same trick, shifted by 50 instead of 80, makes each fish's arched back cradle the belly of the fish above it.
+Verifica tu stesso l'incastro con le coordinate. Il pesce alla colonna `c` disegna l'intaccatura della sua coda ai punti assoluti `c*80 + (66, 15)`, `c*80 + (74, 25)`, `c*80 + (66, 35)`. Il suo vicino a destra inizia a `(c+1)*80` e disegna il suo naso a `(c+1)*80 - 14 = c*80 + 66` e `(c+1)*80 - 6 = c*80 + 74` — gli *stessi identici* punti, percorsi nella direzione opposta. L'acqua della coda di un pesce è il naso del pesce successivo. Lo stesso trucco, spostato di 50 invece di 80, fa in modo che la schiena arcuata di ogni pesce culli il ventre del pesce sopra di lui.
 
-## Explanation Table
+## Tabella delle Spiegazioni
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `outline = [(0, 0), (25, 0), (40, -8), ...]` | The fish shape as waypoints around a modified rectangle |
-| `(-14, 35), (-6, 25), (-14, 15)` | The nose bump — exactly matches the tail notch 80 px to the right |
-| `monty.goto(x + px, y + py)` | Translates every waypoint to this fish's grid position |
-| `if (row + col) % 2 == 0:` | Checkerboard rule that alternates the two fill colors |
+| `outline = [(0, 0), (25, 0), (40, -8), ...]` | La forma del pesce come punti attorno a un rettangolo modificato |
+| `(-14, 35), (-6, 25), (-14, 15)` | La protuberanza del naso — corrisponde esattamente all'intaccatura della coda 80 px a destra |
+| `monty.goto(x + px, y + py)` | Trasla ogni punto alla posizione nella griglia di questo pesce |
+| `if (row + col) % 2 == 0:` | Regola a scacchiera che alterna i due colori di riempimento |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Find the Bug"
+!!! mascot-warning "Trova il Bug"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    Someone bent this fish's tail too deep, and now there are white
-    diamond-shaped gaps in the school — Escher would not approve!
-    Compare the tail waypoints with the nose waypoints. One number
-    breaks the "bump equals notch shifted by 80" rule. Fix it!
+    Qualcuno ha piegato troppo in profondità la coda di questo pesce, e ora ci sono
+    spazi vuoti bianchi a forma di diamante nel banco — Escher non approverebbe!
+    Confronta i punti della coda con i punti del naso. Un numero rompe
+    la regola "protuberanza uguale intaccatura spostata di 80". Correggilo!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -196,21 +196,21 @@ for row in range(4):
             draw_fish(x, y, 'lightseagreen')`);
 </script>
 
-The tail's middle waypoint is `(60, 25)`, but the nose's middle waypoint is `(-6, 25)`, and `-6 + 80 = 74`. Change `(60, 25)` back to `(74, 25)` and the white diamonds vanish — bump and notch match again.
+Il punto centrale della coda è `(60, 25)`, ma il punto centrale del naso è `(-6, 25)`, e `-6 + 80 = 74`. Cambia `(60, 25)` di nuovo in `(74, 25)` e i diamanti bianchi scompaiono — protuberanza e intaccatura corrispondono di nuovo.
 
-## Experiments
+## Esperimenti
 
-1. **New school colors.** Change `'coral'` to `'gold'` and `'lightseagreen'` to `'slateblue'`. You'll know it worked when the checkerboard of fish switches to the new pair everywhere.
+1. **Nuovi colori per il banco.** Cambia `'coral'` in `'gold'` e `'lightseagreen'` in `'slateblue'`. Saprai che ha funzionato quando la scacchiera di pesci passa alla nuova coppia ovunque.
 
-2. **Longer nose.** Change both nose points `(-14, 35)` and `(-14, 15)` to `(-24, 35)` and `(-24, 15)`, AND the matching tail points `(66, 35)` and `(66, 15)` to `(56, 35)` and `(56, 15)`. You'll know it worked when every fish gets a pointier face and the school still has zero gaps.
+2. **Naso più lungo.** Cambia entrambi i punti del naso `(-14, 35)` e `(-14, 15)` in `(-24, 35)` e `(-24, 15)`, E i punti corrispondenti della coda `(66, 35)` e `(66, 15)` in `(56, 35)` e `(56, 15)`. Saprai che ha funzionato quando ogni pesce ottiene una faccia più aguzza e il banco continua ad avere zero spazi vuoti.
 
-3. **Bigger eye.** Change `monty.dot(7, 'black')` to `monty.dot(11, 'black')` and the white dot from `3` to `5`. You'll know it worked when all 16 fish look wide awake.
+3. **Occhio più grande.** Cambia `monty.dot(7, 'black')` in `monty.dot(11, 'black')` e il punto bianco da `3` a `5`. Saprai che ha funzionato quando tutti e 16 i pesci sembrano bene svegli.
 
-4. **Deeper belly.** Change the belly point `(40, -8)` to `(40, -16)` and the back point `(40, 42)` to `(40, 34)`. You'll know it worked when the fish look plumper and each row still nests perfectly into the row above.
+4. **Ventre più profondo.** Cambia il punto del ventre `(40, -8)` in `(40, -16)` e il punto della schiena `(40, 42)` in `(40, 34)`. Saprai che ha funzionato quando i pesci sembrano più paffuti e ogni riga continua a incastrarsi perfettamente nella riga sopra.
 
-!!! mascot-celebration "You Out-Tiled Escher!"
+!!! mascot-celebration "Hai Tassellato Meglio di Escher!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Now you know the tessellation secret: every bump OUT must be a matching
-    notch IN on the opposite edge. With that one rule you can turn rectangles
-    into fish, birds, lizards — anything!
-    Up next: **Voronoi Color Regions** — color the whole canvas by which seed point is closest.
+    Ora conosci il segreto della tassellatura: ogni protuberanza che ESCE deve essere
+    un'intaccatura corrispondente che ENTRA sul lato opposto. Con questa unica regola puoi
+    trasformare rettangoli in pesci, uccelli, lucertole — qualsiasi cosa!
+    Prossimo: **Regioni Colorate di Voronoi** — colora l'intero canvas in base a quale punto seme è più vicino.
