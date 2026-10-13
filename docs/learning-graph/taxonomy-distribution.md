@@ -1,14 +1,14 @@
-# Taxonomy Distribution Report
+# Report sulla Distribuzione della Tassonomia
 
-## Overview
+## Panoramica
 
-- **Total Concepts**: 450
-- **Number of Taxonomies**: 14
-- **Average Concepts per Taxonomy**: 32.1
+- **Concetti Totali**: 450
+- **Numero di Tassonomie**: 14
+- **Media di Concetti per Tassonomia**: 32.1
 
-## Distribution Summary
+## Riepilogo della Distribuzione
 
-| Category | TaxonomyID | Count | Percentage | Status |
+| Categoria | TaxonomyID | Conteggio | Percentuale | Stato |
 |----------|-----------|-------|------------|--------|
 | COL | COL | 68 | 15.1% | ✅ |
 | VIZ | VIZ | 63 | 14.0% | ✅ |
@@ -23,9 +23,9 @@
 | FIO | FIO | 16 | 3.6% | ✅ |
 | TXT | TXT | 14 | 3.1% | ✅ |
 | ERR | ERR | 14 | 3.1% | ✅ |
-| SYN | SYN | 10 | 2.2% | ℹ️ Under |
+| SYN | SYN | 10 | 2.2% | ℹ️ Sotto |
 
-## Visual Distribution
+## Distribuzione Visiva
 
 ```
 COL             ███████  68 ( 15.1%)
@@ -44,24 +44,24 @@ ERR             █  14 (  3.1%)
 SYN             █  10 (  2.2%)
 ```
 
-## Balance Analysis
+## Analisi del Bilanciamento
 
-### ✅ No Over-Represented Categories
+### ✅ Nessuna Categoria Sovra-Rappresentata
 
-All categories are under the 30% threshold. Good balance!
+Tutte le categorie sono sotto la soglia del 30%. Buon bilanciamento!
 
-### ℹ️ Under-Represented Categories (<3%)
+### ℹ️ Categorie Sotto-Rappresentate (<3%)
 
-- **SYN** (SYN): 10 concepts (2.2%)
-  - *Note*: Small categories are acceptable for specialized topics
+- **SYN** (SYN): 10 concetti (2.2%)
+  - *Nota*: Categorie piccole sono accettabili per argomenti specializzati
 
-## Category Details
+## Dettagli delle Categorie
 
 ### COL (COL)
 
-**Count**: 68 concepts (15.1%)
+**Conteggio**: 68 concetti (15.1%)
 
-**Concepts**:
+**Concetti**:
 
 - 137. List Type
 - 138. Creating a List
@@ -78,13 +78,13 @@ All categories are under the 30% threshold. Good balance!
 - 149. Iterating over a List
 - 150. Nested Lists
 - 151. List Comprehensions
-- *...and 53 more*
+- *...e altri 53*
 
 ### VIZ (VIZ)
 
-**Count**: 63 concepts (14.0%)
+**Conteggio**: 63 concetti (14.0%)
 
-**Concepts**:
+**Concetti**:
 
 - 305. import turtle
 - 306. turtle.Turtle() Object
@@ -101,13 +101,13 @@ All categories are under the 30% threshold. Good balance!
 - 317. Hiding and Showing Turtle
 - 318. Writing Text with turtle.write()
 - 319. Clearing and Resetting
-- *...and 48 more*
+- *...e altri 48*
 
 ### Advanced Topics (ADV)
 
-**Count**: 61 concepts (13.6%)
+**Conteggio**: 61 concetti (13.6%)
 
-**Concepts**:
+**Concetti**:
 
 - 386. Machine Learning Overview
 - 387. Supervised vs Unsupervised Learning
@@ -124,13 +124,13 @@ All categories are under the 30% threshold. Good balance!
 - 398. model.evaluate() Testing
 - 399. model.predict() Inference
 - 400. Categorical Crossentropy Loss
-- *...and 46 more*
+- *...e altri 46*
 
 ### DAT (DAT)
 
-**Count**: 55 concepts (12.2%)
+**Conteggio**: 55 concetti (12.2%)
 
-**Concepts**:
+**Concetti**:
 
 - 31. Variable Definition and Assignment
 - 32. Variable Naming Rules
@@ -147,13 +147,13 @@ All categories are under the 30% threshold. Good balance!
 - 43. Division Returns Float
 - 44. Integer Division Operator
 - 45. Modulo Operator
-- *...and 40 more*
+- *...e altri 40*
 
 ### MOD (MOD)
 
-**Count**: 36 concepts (8.0%)
+**Conteggio**: 36 concetti (8.0%)
 
-**Concepts**:
+**Concetti**:
 
 - 205. import Statement
 - 206. from...import Specific Names
@@ -170,13 +170,13 @@ All categories are under the 30% threshold. Good balance!
 - 217. random.shuffle()
 - 218. random.seed()
 - 219. random.random() Float
-- *...and 21 more*
+- *...e altri 21*
 
 ### CTL (CTL)
 
-**Count**: 29 concepts (6.4%)
+**Conteggio**: 29 concetti (6.4%)
 
-**Concepts**:
+**Concetti**:
 
 - 86. input() Function
 - 87. Prompting the User
@@ -193,13 +193,13 @@ All categories are under the 30% threshold. Good balance!
 - 98. Truthiness in Conditions
 - 99. Compound Conditions
 - 100. for Loop over Sequence
-- *...and 14 more*
+- *...e altri 14*
 
 ### FUN (FUN)
 
-**Count**: 22 concepts (4.9%)
+**Conteggio**: 22 concetti (4.9%)
 
-**Concepts**:
+**Concetti**:
 
 - 115. Defining a Function with def
 - 116. Calling a Function
@@ -216,13 +216,13 @@ All categories are under the 30% threshold. Good balance!
 - 127. Pure Functions vs Side Effects
 - 128. Recursion Concept
 - 129. Recursion Base Case
-- *...and 7 more*
+- *...e altri 7*
 
 ### ALG (ALG)
 
-**Count**: 22 concepts (4.9%)
+**Conteggio**: 22 concetti (4.9%)
 
-**Concepts**:
+**Concetti**:
 
 - 364. Abstract Data Types Overview
 - 365. Stack LIFO Structure
@@ -239,13 +239,13 @@ All categories are under the 30% threshold. Good balance!
 - 376. Sorting Algorithms Overview
 - 377. Bubble Sort
 - 378. Selection Sort
-- *...and 7 more*
+- *...e altri 7*
 
 ### ENV (ENV)
 
-**Count**: 20 concepts (4.4%)
+**Conteggio**: 20 concetti (4.4%)
 
-**Concepts**:
+**Concetti**:
 
 - 1. Python Interpreter Overview
 - 2. Python 2 vs Python 3
@@ -262,13 +262,13 @@ All categories are under the 30% threshold. Good balance!
 - 13. Installing Python Locally
 - 14. Running Scripts from Terminal
 - 15. Python REPL Shell
-- *...and 5 more*
+- *...e altri 5*
 
 ### OOP (OOP)
 
-**Count**: 20 concepts (4.4%)
+**Conteggio**: 20 concetti (4.4%)
 
-**Concepts**:
+**Concetti**:
 
 - 285. Objects and Classes Overview
 - 286. Attributes of an Object
@@ -285,13 +285,13 @@ All categories are under the 30% threshold. Good balance!
 - 297. __repr__() Developer Representation
 - 298. Subclasses and Method Overriding
 - 299. super() Function
-- *...and 5 more*
+- *...e altri 5*
 
 ### FIO (FIO)
 
-**Count**: 16 concepts (3.6%)
+**Conteggio**: 16 concetti (3.6%)
 
-**Concepts**:
+**Concetti**:
 
 - 255. open() Function
 - 256. File Modes r w a b
@@ -308,13 +308,13 @@ All categories are under the 30% threshold. Good balance!
 - 267. Reading JSON from File
 - 268. Writing JSON to File
 - 269. File Path Handling
-- *...and 1 more*
+- *...e altri 1*
 
 ### TXT (TXT)
 
-**Count**: 14 concepts (3.1%)
+**Conteggio**: 14 concetti (3.1%)
 
-**Concepts**:
+**Concetti**:
 
 - 241. re Module Import
 - 242. re.search() First Match
@@ -333,9 +333,9 @@ All categories are under the 30% threshold. Good balance!
 
 ### ERR (ERR)
 
-**Count**: 14 concepts (3.1%)
+**Conteggio**: 14 concetti (3.1%)
 
-**Concepts**:
+**Concetti**:
 
 - 271. Syntax vs Runtime vs Logic Errors
 - 272. Common Exception Types
@@ -354,9 +354,9 @@ All categories are under the 30% threshold. Good balance!
 
 ### SYN (SYN)
 
-**Count**: 10 concepts (2.2%)
+**Conteggio**: 10 concetti (2.2%)
 
-**Concepts**:
+**Concetti**:
 
 - 21. print() Function
 - 22. Single-Line Comments
@@ -369,19 +369,19 @@ All categories are under the 30% threshold. Good balance!
 - 29. Statement vs Expression
 - 30. Whitespace Rules
 
-## Recommendations
+## Raccomandazioni
 
-- ✅ **Excellent balance**: Categories are evenly distributed (spread: 12.9%)
-- ✅ **MISC category minimal**: Good categorization specificity
+- ✅ **Bilanciamento eccellente**: Le categorie sono distribuite uniformemente (scarto: 12.9%)
+- ✅ **Categoria MISC minima**: Buona specificità di categorizzazione
 
-### Educational Use Recommendations
+### Raccomandazioni per l'Uso Didattico
 
-- Use taxonomy categories for color-coding in graph visualizations
-- Design curriculum modules based on taxonomy groupings
-- Create filtered views for focused learning paths
-- Use categories for assessment organization
-- Enable navigation by topic area in interactive tools
+- Usa le categorie della tassonomia per la colorazione nelle visualizzazioni del grafo
+- Progetta moduli del curriculum basati sui raggruppamenti della tassonomia
+- Crea viste filtrate per percorsi di apprendimento mirati
+- Usa le categorie per l'organizzazione delle valutazioni
+- Abilita la navigazione per area tematica negli strumenti interattivi
 
 ---
 
-*Report generated by learning-graph-reports/taxonomy_distribution.py*
+*Report generato da learning-graph-reports/taxonomy_distribution.py*
