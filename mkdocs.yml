@@ -330,16 +330,16 @@ nav:
     - Controlling mouseclicks: trinket/17-controlling-mouseclicks.md
     - Other examples: trinket/examples.md
  
-  - Learning Graph:
-    - Introduction: learning-graph/index.md
-    - Course Description Assessment: learning-graph/course-description-assessment.md
-    - Concept List v1: learning-graph/concept-list-v1.md
-    - Concept List: learning-graph/concept-list.md
-    - Graph Quality Analysis: learning-graph/quality-metrics.md
-    - Concept Taxonomy: learning-graph/concept-taxonomy.md
-    - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
-    - Mascot Style Guide: learning-graph/mascot-test.md
-    - FAQ Quality Report: learning-graph/faq-quality-report.md
+  - Grafo di Apprendimento:
+    - Introduzione: learning-graph/index.md
+    - Valutazione della Descrizione del Corso: learning-graph/course-description-assessment.md
+    - Elenco dei Concetti v1: learning-graph/concept-list-v1.md
+    - Elenco dei Concetti: learning-graph/concept-list.md
+    - Analisi della Qualità del Grafo: learning-graph/quality-metrics.md
+    - Tassonomia dei Concetti: learning-graph/concept-taxonomy.md
+    - Report sulla Distribuzione della Tassonomia: learning-graph/taxonomy-distribution.md
+    - Guida di Stile della Mascotte: learning-graph/mascot-test.md
+    - Report sulla Qualità delle FAQ: learning-graph/faq-quality-report.md
 
   - MicroSims:
     - Elenco dei MicroSims: sims/index.md
