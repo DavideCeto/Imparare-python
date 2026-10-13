@@ -199,6 +199,16 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
   logica delle incongruenze precedenti)
 - `dragon-curve/`, `hilbert-curve/`, `cantor-dust/`, `kaleidoscope-slice/`,
   `pinwheel-tiling/` (sedicesimo batch — nessun problema trovato)
+- `escher-fish/`, `voronoi-regions/`, `penrose-rhombus/`, `river-delta/`
+  (diciassettesimo batch — trovati già tradotti e non committati in una
+  sessione precedente; verificato codice/percorsi immagine intatti con
+  `git diff` prima del commit)
+- `coral-branch/`, `leaf-venation/`, `dna-helix/`, `topographic-map/`,
+  `epitrochoid/` (diciottesimo batch — nota: il celebration finale di
+  `topographic-map/index.md` non ha un rimando "Up next" al laboratorio
+  successivo ma un generico "Browse the Turtle Graphics Gallery", a
+  differenza degli altri file; tradotto fedelmente senza correggerlo,
+  stessa logica delle incongruenze editoriali già documentate sopra)
 
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
@@ -344,11 +354,17 @@ cuore didattico del libro.
 `julia-set/`, `sierpinski-carpet/`, `barnsley-fern/`, `anti-koch/`,
 `pythagorean-tree/`, `t-square-fractal/`, `levy-c-curve/`, `gosper-curve/`,
 `dragon-curve/`, `hilbert-curve/`, `cantor-dust/`, `kaleidoscope-slice/`,
-`pinwheel-tiling/` (82 di ~102 file/unità).
+`pinwheel-tiling/`, `escher-fish/`, `voronoi-regions/`, `penrose-rhombus/`,
+`river-delta/`, `coral-branch/`, `leaf-venation/`, `dna-helix/`,
+`topographic-map/`, `epitrochoid/` (91 di ~102 file/unità).
 
-Prossimo: continuare la Fase 4 in ordine di nav con `escher-fish/`,
-`voronoi-regions/`, `penrose-rhombus/`, `river-delta/`, `coral-branch/`,
-e così via attraverso i restanti ~20 singoli laboratori della galleria.
+Prossimo: continuare la Fase 4 in ordine di nav con `superellipse/`,
+`cassini-oval/`, `fermat-spiral/`, `astroid/`, `mach-bands/`, e così via
+attraverso i restanti ~11 singoli laboratori della galleria (vedi l'ordine
+completo in `mkdocs.yml`: superellipse, cassini-oval, fermat-spiral,
+astroid, mach-bands, vasarely-sphere, scintillating-grid,
+impossible-triangle, ring-pulsation, binary-tree-name, turtle-chase,
+reaction-diffusion — 12 file, non 11, a chiudere la Fase 4).
 
 Dopo la Fase 4: Fasi 5-9 (MicroSims, Teacher's Guide, Jupyter/Advanced, Learning Graph,
 Trinket Labs — quest'ultima di priorità minima/da valutare se tradurre affatto, vedi
