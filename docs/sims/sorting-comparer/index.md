@@ -1,6 +1,6 @@
 ---
-title: Sorting Algorithm Comparer
-description: Step bubble, selection, and insertion sort one comparison at a time, or race bubble vs insertion side by side with live operation counters.
+title: Comparatore di Algoritmi di Ordinamento
+description: Esegui passo-passo bubble, selection e insertion sort un confronto alla volta, o fai gareggiare bubble contro insertion fianco a fianco con contatori di operazioni dal vivo.
 image: /sims/sorting-comparer/sorting-comparer.png
 og:image: /sims/sorting-comparer/sorting-comparer.png
 twitter:image: /sims/sorting-comparer/sorting-comparer.png
@@ -9,47 +9,50 @@ social:
 quality_score: 93
 ---
 
-# Sorting Algorithm Comparer
+# Comparatore di Algoritmi di Ordinamento
 
 <iframe src="main.html" height="542" width="100%" scrolling="no"></iframe>
 
-[Run the Sorting Algorithm Comparer MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui il Comparatore di Algoritmi di Ordinamento a Schermo Intero](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Modifica nell'Editor p5.js](https://editor.p5js.org/)
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-Bubble, selection, and insertion sort differ only in their compare-and-swap
-choreography — invisible in code, obvious on a bar chart. Each Step
-highlights the pair being compared (amber) and flashes swaps (coral), with
-live comparison and swap counters. **Race** mode runs bubble and insertion
-sort side by side on *identical* data, turning "which sort is better?" into
-an experiment: switch the data preset to nearly sorted or reversed and watch
-the winner change.
+Bubble, selection e insertion sort differiscono solo nella loro
+coreografia di confronto-e-scambio — invisibile nel codice, ovvia su un
+grafico a barre. Ogni Passo evidenzia la coppia in confronto (ambra) e fa
+lampeggiare gli scambi (corallo), con contatori dal vivo di confronti e
+scambi. La modalità **Gara** esegue bubble e insertion sort fianco a
+fianco sugli *stessi* dati, trasformando "quale ordinamento è migliore?"
+in un esperimento: cambia il preset dei dati in quasi ordinato o invertito
+e guarda il vincitore cambiare.
 
-**Learning objective:** The student will be able to compare how bubble,
-selection, and insertion sort rearrange the same data and judge which does
-less work for a given input.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di confrontare
+come bubble, selection e insertion sort riordinano gli stessi dati e di
+giudicare quale fa meno lavoro per un dato input.
 
-- **Bloom's Taxonomy (2001):** Analyze → Evaluate — *compare, organize,
-  judge*
-- **Interaction pattern:** step-through per comparison with a side-by-side
-  race mode and data presets
+- **Tassonomia di Bloom (2001):** Analizzare → Valutare — *confrontare,
+  organizzare, giudicare*
+- **Pattern di interazione:** esecuzione passo-passo per confronto con una
+  modalità gara fianco a fianco e preset di dati
 
-## How to Use
+## Come Usarlo
 
-1. Step through **Bubble Sort** on random data and narrate its signature
-   move: big values bubble to the right.
-2. Compare with **Selection Sort** (hunts the minimum) and **Insertion
-   Sort** (slides each value into place).
-3. Pick **Race — Bubble vs Insertion**, Auto-play, and note both operation
-   totals.
-4. Change the data to **nearly sorted** and race again — insertion sort
-   wins big. Try **reversed** for the worst case.
+1. Esegui passo-passo **Bubble Sort** su dati casuali e narra la sua mossa
+   distintiva: i valori grandi risalgono verso destra come bolle.
+2. Confronta con **Selection Sort** (cerca il minimo) e **Insertion Sort**
+   (inserisce ogni valore al suo posto scorrendo).
+3. Scegli **Gara — Bubble contro Insertion**, Auto-play, e nota entrambi i
+   totali delle operazioni.
+4. Cambia i dati in **quasi ordinati** e fai gareggiare di nuovo —
+   insertion sort vince alla grande. Prova **invertiti** per il caso
+   peggiore.
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/sorting-comparer/main.html"
@@ -58,37 +61,41 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapter 30 (Algorithms and Data Structures)
+Scuola primaria superiore e scuola media (10-14 anni), Capitolo 30 (Algoritmi e strutture dati)
 
-### Duration
+### Durata
 
-15 minutes
+15 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- Lists and loops (Chapters 7 and 15-16)
-- The chapter's bubble/selection/insertion sort code
+- Liste e cicli (Capitoli 7 e 15-16)
+- Il codice del capitolo per bubble/selection/insertion sort
 
-### Activities
+### Attività
 
-1. **Choreography naming** (5 min): Students step each algorithm and write
-   one sentence describing its move pattern.
-2. **Prediction race** (5 min): Before each race, students bet on a winner
-   and predict the operation counts within 20%.
-3. **Data matters** (4 min): Students find the data preset where bubble
-   sort does the LEAST work and explain why.
+1. **Nomina la coreografia** (5 min): Gli studenti eseguono passo-passo
+   ogni algoritmo e scrivono una frase che descrive il suo pattern di
+   movimento.
+2. **Gara di previsione** (5 min): Prima di ogni gara, gli studenti
+   scommettono su un vincitore e prevedono i conteggi delle operazioni
+   entro il 20%.
+3. **I dati contano** (4 min): Gli studenti trovano il preset di dati in
+   cui bubble sort fa MENO lavoro e spiegano perché.
 
-### Assessment
+### Verifica
 
-- Student matches each algorithm to its visual signature
-- Student can explain why nearly-sorted data favors insertion sort
-- Student can state what the comparison counter measures and why it matters
+- Lo studente abbina ogni algoritmo alla sua firma visiva
+- Lo studente sa spiegare perché i dati quasi ordinati favoriscono
+  insertion sort
+- Lo studente sa indicare cosa misura il contatore dei confronti e perché
+  conta
 
-## References
+## Riferimenti
 
-1. [Wikipedia — Sorting algorithm](https://en.wikipedia.org/wiki/Sorting_algorithm) — overview of the classic algorithms
-2. [p5.js](https://p5js.org/) — the JavaScript library used to build this MicroSim
+1. [Wikipedia — Sorting algorithm](https://en.wikipedia.org/wiki/Sorting_algorithm) — panoramica degli algoritmi classici
+2. [p5.js](https://p5js.org/) — la libreria JavaScript usata per costruire questo MicroSim

@@ -1,6 +1,6 @@
 ---
-title: Search Race
-description: Pick a target and step linear and binary search side by side - linear plods left to right while binary discards half the shelf per check.
+title: Gara di Ricerca
+description: Scegli un bersaglio ed esegui passo-passo la ricerca lineare e binaria fianco a fianco - lineare avanza faticosamente da sinistra a destra mentre binaria scarta metà scaffale a ogni controllo.
 image: /sims/search-race/search-race.png
 og:image: /sims/search-race/search-race.png
 twitter:image: /sims/search-race/search-race.png
@@ -9,46 +9,50 @@ social:
 quality_score: 93
 ---
 
-# Search Race
+# Gara di Ricerca
 
 <iframe src="main.html" height="522" width="100%" scrolling="no"></iframe>
 
-[Run the Search Race MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui la Gara di Ricerca a Schermo Intero](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Modifica nell'Editor p5.js](https://editor.p5js.org/)
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-Big-O is abstract until you feel it. This race runs linear and binary search
-on the same shelf of 31 numbered boxes: linear checks box after box while
-binary checks the middle and grays out the discarded half — 31 → 15 → 7 →
-3 → 1. Per-lane check counters quantify the gap, odd targets are absent on
-purpose (both searches must discover that), and the **shuffled shelf
-(trap!)** preset delivers the chapter's key justification: binary search can
-miss a value that is right there, because halving only works on sorted data.
+Il Big-O è astratto finché non lo senti. Questa gara esegue la ricerca
+lineare e binaria sullo stesso scaffale di 31 scatole numerate: lineare
+controlla scatola dopo scatola mentre binaria controlla il centro e
+oscura la metà scartata — 31 → 15 → 7 → 3 → 1. I contatori di controlli
+per corsia quantificano il divario, i bersagli dispari sono assenti di
+proposito (entrambe le ricerche devono scoprirlo), e il preset
+**scaffale mescolato (trappola!)** offre la giustificazione chiave del
+capitolo: la ricerca binaria può perdere un valore che è proprio lì,
+perché dimezzare funziona solo su dati ordinati.
 
-**Learning objective:** The student will be able to compare the number of
-checks linear and binary search need and justify why binary search requires
-sorted data.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di confrontare
+il numero di controlli necessari alla ricerca lineare e binaria e di
+giustificare perché la ricerca binaria richiede dati ordinati.
 
-- **Bloom's Taxonomy (2001):** Analyze → Evaluate — *compare, test,
-  justify*
-- **Interaction pattern:** pick a target, then step or auto-play both
-  searches side by side
+- **Tassonomia di Bloom (2001):** Analizzare → Valutare — *confrontare,
+  testare, giustificare*
+- **Pattern di interazione:** scegli un bersaglio, poi esegui passo-passo o
+  auto-play entrambe le ricerche fianco a fianco
 
-## How to Use
+## Come Usarlo
 
-1. Predict both check counts for target 24, then Step and compare.
-2. Slide the target to 62 (the last box): linear needs 31 checks, binary
-   still needs only 5.
-3. Pick an odd target like 33 — it is not on the shelf. How does each
-   search find out?
-4. Switch to the **shuffled shelf (trap!)** and watch binary search get
-   lost.
+1. Prevedi entrambi i conteggi di controlli per il bersaglio 24, poi fai
+   Passo e confronta.
+2. Sposta il bersaglio a 62 (l'ultima scatola): lineare richiede 31
+   controlli, binaria ne richiede ancora solo 5.
+3. Scegli un bersaglio dispari come 33 — non è sullo scaffale. Come lo
+   scopre ciascuna ricerca?
+4. Passa allo **scaffale mescolato (trappola!)** e guarda la ricerca
+   binaria perdersi.
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/search-race/main.html"
@@ -57,39 +61,43 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapter 30 (Algorithms and Data Structures)
+Scuola primaria superiore e scuola media (10-14 anni), Capitolo 30 (Algoritmi e strutture dati)
 
-### Duration
+### Durata
 
-10-15 minutes
+10-15 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- Lists and indexing (Chapters 15-16)
-- The chapter's binary_search function
+- Liste e indicizzazione (Capitoli 15-16)
+- La funzione binary_search del capitolo
 
-### Activities
+### Attività
 
-1. **Worst case hunt** (4 min): Students find the target that makes linear
-   search work hardest, then the one that makes binary work hardest —
-   binary's worst case is still only 5 checks.
-2. **Halving chant** (3 min): Step binary search while the class calls out
-   the shrinking range: 31, 15, 7, 3, 1.
-3. **The trap** (5 min): On the shuffled shelf, students find a target that
-   binary search misses, then explain the failure in one sentence.
+1. **Caccia al caso peggiore** (4 min): Gli studenti trovano il bersaglio
+   che fa lavorare di più la ricerca lineare, poi quello che fa lavorare
+   di più quella binaria — il caso peggiore di quella binaria è comunque
+   solo 5 controlli.
+2. **Canto del dimezzamento** (3 min): Esegui passo-passo la ricerca
+   binaria mentre la classe scandisce l'intervallo che si restringe: 31,
+   15, 7, 3, 1.
+3. **La trappola** (5 min): Sullo scaffale mescolato, gli studenti trovano
+   un bersaglio che la ricerca binaria manca, poi spiegano il fallimento
+   in una frase.
 
-### Assessment
+### Verifica
 
-- Student predicts binary search's maximum checks for 31 boxes (5) and for
-  ~1000 boxes (about 10)
-- Student can explain why binary search requires sorted data using the trap
-- Student can state which search to choose for unsorted data
+- Lo studente prevede il numero massimo di controlli della ricerca
+  binaria per 31 scatole (5) e per ~1000 scatole (circa 10)
+- Lo studente sa spiegare perché la ricerca binaria richiede dati
+  ordinati usando la trappola
+- Lo studente sa indicare quale ricerca scegliere per dati non ordinati
 
-## References
+## Riferimenti
 
-1. [Wikipedia — Binary search](https://en.wikipedia.org/wiki/Binary_search) — the algorithm and its history
-2. [p5.js](https://p5js.org/) — the JavaScript library used to build this MicroSim
+1. [Wikipedia — Binary search](https://en.wikipedia.org/wiki/Binary_search) — l'algoritmo e la sua storia
+2. [p5.js](https://p5js.org/) — la libreria JavaScript usata per costruire questo MicroSim

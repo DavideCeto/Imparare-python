@@ -1,6 +1,6 @@
 ---
-title: Regex Match Lab
-description: Type a pattern, watch every match highlight live in the sample text, and read the pattern as plain-English chips.
+title: Laboratorio di Corrispondenze Regex
+description: Digita un pattern, guarda ogni corrispondenza illuminarsi dal vivo nel testo campione, e leggi il pattern come gettoni in inglese semplice.
 image: /sims/regex-match-lab/regex-match-lab.png
 og:image: /sims/regex-match-lab/regex-match-lab.png
 twitter:image: /sims/regex-match-lab/regex-match-lab.png
@@ -9,44 +9,49 @@ social:
 quality_score: 95
 ---
 
-# Regex Match Lab
+# Laboratorio di Corrispondenze Regex
 
 <iframe src="main.html" height="372" width="100%" scrolling="no"></iframe>
 
-[Run the Regex Match Lab MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui il Laboratorio di Corrispondenze Regex a Schermo Intero](./main.html){ .md-button .md-button--primary }
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-Regular expressions are a language of invisible rules, and beginners cannot
-tell which part of the pattern matched which characters. This lab closes the
-gap two ways at once: every keystroke in the pattern box re-highlights all
-matches in the sample text (with a live `re.findall` result line), and a
-chip strip translates the pattern into plain English — `\d` "a digit 0-9",
-`{3}` "3 times", `-` "the character -". Preset buttons cover the chapter's
-core elements: escapes, quantifiers, character classes, and alternation.
+Le espressioni regolari sono un linguaggio di regole invisibili, e i
+principianti non riescono a dire quale parte del pattern corrisponde a
+quali caratteri. Questo laboratorio colma il divario in due modi
+contemporaneamente: ogni battitura nella casella del pattern riaccende
+tutte le corrispondenze nel testo campione (con una riga di risultato
+`re.findall` dal vivo), e una striscia di gettoni traduce il pattern in
+inglese semplice — `\d` "una cifra 0-9", `{3}` "3 volte", `-` "il
+carattere -". I pulsanti preset coprono gli elementi fondamentali del
+capitolo: escape, quantificatori, classi di caratteri e alternanza.
 
-**Learning objective:** The student will be able to test a regular
-expression against sample text and attribute each match to the pattern
-element that produced it.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di testare
+un'espressione regolare contro un testo campione e di attribuire ogni
+corrispondenza all'elemento del pattern che l'ha prodotta.
 
-- **Bloom's Taxonomy (2001):** Apply → Analyze — *use, test, deconstruct*
-- **Interaction pattern:** live pattern editor with a plain-English
-  explainer strip
-- **Library:** custom HTML (no charting library needed)
+- **Tassonomia di Bloom (2001):** Applicare → Analizzare — *usare,
+  testare, scomporre*
+- **Pattern di interazione:** editor del pattern dal vivo con una striscia
+  esplicativa in inglese semplice
+- **Libreria:** HTML personalizzato (nessuna libreria di grafici
+  necessaria)
 
-## How to Use
+## Come Usarlo
 
-1. Read the chips for the starting pattern `\d{3}-\d{4}` aloud, predict the
-   matches, then check the highlights.
-2. Delete one character from the pattern at a time and watch which matches
-   survive.
-3. Try every preset: `\d+`, `[A-Z]\w+`, `cat|dog`, and `\w+ing`.
-4. Build your own: can you write a pattern that matches only "sleeping" and
-   "singing" but not "ing"?
+1. Leggi ad alta voce i gettoni per il pattern iniziale `\d{3}-\d{4}`,
+   prevedi le corrispondenze, poi controlla le evidenziazioni.
+2. Elimina un carattere alla volta dal pattern e osserva quali
+   corrispondenze sopravvivono.
+3. Prova ogni preset: `\d+`, `[A-Z]\w+`, `cat|dog` e `\w+ing`.
+4. Costruisci il tuo: riesci a scrivere un pattern che corrisponda solo a
+   "sleeping" e "singing" ma non a "ing"?
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/regex-match-lab/main.html"
@@ -55,37 +60,41 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapter 29 (Text Processing and Regular Expressions)
+Scuola primaria superiore e scuola media (10-14 anni), Capitolo 29 (Elaborazione del testo ed espressioni regolari)
 
-### Duration
+### Durata
 
-10-15 minutes
+10-15 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- Strings and raw strings (Chapters 8 and 29)
-- re.findall() (Chapter 29)
+- Stringhe e stringhe raw (Capitoli 8 e 29)
+- re.findall() (Capitolo 29)
 
-### Activities
+### Attività
 
-1. **Read-aloud drill** (4 min): For each preset, students read the chip
-   strip aloud before looking at the highlights, then verify.
-2. **One-character experiments** (4 min): Students change `{3}` to `{2}` in
-   the phone pattern and explain the result.
-3. **Pattern golf** (5 min): Challenge — match all three "-ing" words with
-   the shortest possible pattern.
+1. **Esercizio di lettura ad alta voce** (4 min): Per ogni preset, gli
+   studenti leggono ad alta voce la striscia di gettoni prima di guardare
+   le evidenziazioni, poi verificano.
+2. **Esperimenti a un carattere** (4 min): Gli studenti cambiano `{3}` in
+   `{2}` nel pattern del telefono e spiegano il risultato.
+3. **Golf del pattern** (5 min): Sfida — fai corrispondere tutte e tre le
+   parole "-ing" con il pattern più corto possibile.
 
-### Assessment
+### Verifica
 
-- Student can translate a chapter-scope pattern into plain English
-- Student predicts findall's match count for a given pattern and text
-- Student writes a working pattern for a described target (e.g., "every capitalized word")
+- Lo studente sa tradurre in inglese semplice un pattern del livello del
+  capitolo
+- Lo studente prevede il numero di corrispondenze di findall per un dato
+  pattern e testo
+- Lo studente scrive un pattern funzionante per un bersaglio descritto
+  (es. "ogni parola con la maiuscola")
 
-## References
+## Riferimenti
 
-1. [Python Documentation — re module](https://docs.python.org/3/library/re.html) — official regular expression documentation
-2. [Python HOWTO — Regular Expression HOWTO](https://docs.python.org/3/howto/regex.html) — a gentler official guide
+1. [Python Documentation — re module](https://docs.python.org/3/library/re.html) — documentazione ufficiale delle espressioni regolari
+2. [Python HOWTO — Regular Expression HOWTO](https://docs.python.org/3/howto/regex.html) — una guida ufficiale più accessibile

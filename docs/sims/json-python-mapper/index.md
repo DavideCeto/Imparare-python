@@ -1,6 +1,6 @@
 ---
-title: JSON to Python Type Mapper
-description: Edit JSON on the left and watch the Python objects it becomes on the right, with true/True, null/None, and every type pairing color-coded.
+title: Mappatore dei Tipi da JSON a Python
+description: Modifica il JSON a sinistra e guarda gli oggetti Python che diventa a destra, con true/True, null/None, e ogni abbinamento di tipo colorato.
 image: /sims/json-python-mapper/json-python-mapper.png
 og:image: /sims/json-python-mapper/json-python-mapper.png
 twitter:image: /sims/json-python-mapper/json-python-mapper.png
@@ -9,44 +9,50 @@ social:
 quality_score: 95
 ---
 
-# JSON to Python Type Mapper
+# Mappatore dei Tipi da JSON a Python
 
 <iframe src="main.html" height="442" width="100%" scrolling="no"></iframe>
 
-[Run the JSON to Python Type Mapper MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui il Mappatore dei Tipi da JSON a Python a Schermo Intero](./main.html){ .md-button .md-button--primary }
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-JSON looks deceptively like Python, so the differences (`true` vs `True`,
-`null` vs `None`, double-quotes-only, no trailing commas) cause silent
-confusion. This two-pane mapper makes the conversion visible: edit JSON on
-the left and the Python object `json.loads()` would build re-renders live on
-the right, with every type pairing color-coded and hover tooltips naming
-both types. Two deliberately broken presets show the classic JSON mistakes
-with friendly explanations instead of cryptic parser errors.
+Il JSON sembra ingannevolmente simile a Python, quindi le differenze
+(`true` contro `True`, `null` contro `None`, solo virgolette doppie,
+niente virgole finali) causano confusione silenziosa. Questo mappatore a
+due pannelli rende visibile la conversione: modifica il JSON a sinistra e
+l'oggetto Python che `json.loads()` costruirebbe si ridisegna dal vivo a
+destra, con ogni abbinamento di tipo colorato e tooltip al passaggio del
+mouse che nominano entrambi i tipi. Due preset deliberatamente rotti
+mostrano i classici errori JSON con spiegazioni amichevoli invece di
+criptici errori del parser.
 
-**Learning objective:** The student will be able to convert values between
-JSON text and Python objects and identify the type mapping in each
-direction.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di convertire
+valori tra testo JSON e oggetti Python e di identificare la mappatura dei
+tipi in ciascuna direzione.
 
-- **Bloom's Taxonomy (2001):** Understand → Apply — *interpret, convert,
-  classify*
-- **Interaction pattern:** live two-pane editing with per-type color coding
-- **Library:** custom HTML (no charting library needed)
+- **Tassonomia di Bloom (2001):** Comprendere → Applicare — *interpretare,
+  convertire, classificare*
+- **Pattern di interazione:** modifica dal vivo a due pannelli con codifica
+  a colori per tipo
+- **Libreria:** HTML personalizzato (nessuna libreria di grafici necessaria)
 
-## How to Use
+## Come Usarlo
 
-1. Predict what `true` and `null` become, then check the **The tricky
-   trio** preset.
-2. Edit the left pane: add a new key, change a number to a decimal, nest a
-   list — the right pane follows every keystroke.
-3. Try both **Broken** presets and read the friendly explanation of why
-   JSON refuses what Python would accept.
-4. Hover the colored values on the right to read the type pairing.
+1. Prevedi cosa diventano `true` e `null`, poi controlla il preset **Il
+   trio insidioso**.
+2. Modifica il pannello sinistro: aggiungi una nuova chiave, cambia un
+   numero in un decimale, annida una lista — il pannello destro segue ogni
+   battitura.
+3. Prova entrambi i preset **Rotti** e leggi la spiegazione amichevole del
+   perché JSON rifiuta ciò che Python accetterebbe.
+4. Passa il mouse sui valori colorati a destra per leggere l'abbinamento
+   di tipo.
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/json-python-mapper/main.html"
@@ -55,37 +61,39 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapter 27 (Standard Library and JSON)
+Scuola primaria superiore e scuola media (10-14 anni), Capitolo 27 (Libreria standard e JSON)
 
-### Duration
+### Durata
 
-10 minutes
+10 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- Dictionaries and lists (Chapters 15 and 21)
-- json.loads() and json.dumps() (Chapter 27)
+- Dizionari e liste (Capitoli 15 e 21)
+- json.loads() e json.dumps() (Capitolo 27)
 
-### Activities
+### Attività
 
-1. **Trio drill** (3 min): Students write the Python equivalents of `true`,
-   `false`, and `null` from memory, then verify with the preset.
-2. **Build a record** (4 min): Students write JSON describing themselves
-   (name, age, hobbies list) and confirm the Python types on the right.
-3. **Bug hunt** (3 min): Using the broken presets, students state the one
-   edit that fixes each error.
+1. **Esercizio del trio** (3 min): Gli studenti scrivono a memoria gli
+   equivalenti Python di `true`, `false` e `null`, poi verificano con il
+   preset.
+2. **Costruisci un record** (4 min): Gli studenti scrivono JSON che
+   descrive se stessi (nome, età, lista di hobby) e confermano i tipi
+   Python a destra.
+3. **Caccia ai bug** (3 min): Usando i preset rotti, gli studenti indicano
+   l'unica modifica che corregge ogni errore.
 
-### Assessment
+### Verifica
 
-- Student converts a JSON snippet to its Python literal on paper
-- Student can name the two JSON rules that Python does not share
-- Student can explain why JSON keys are always strings
+- Lo studente converte su carta un frammento JSON nel suo letterale Python
+- Lo studente sa nominare le due regole JSON che Python non condivide
+- Lo studente sa spiegare perché le chiavi JSON sono sempre stringhe
 
-## References
+## Riferimenti
 
-1. [Python Documentation — json module](https://docs.python.org/3/library/json.html) — official documentation with the full conversion table
-2. [json.org](https://www.json.org/json-en.html) — the JSON standard
+1. [Python Documentation — json module](https://docs.python.org/3/library/json.html) — documentazione ufficiale con la tabella completa di conversione
+2. [json.org](https://www.json.org/json-en.html) — lo standard JSON
