@@ -565,14 +565,42 @@ dallo scope, vedi nota sopra.
 nomi delle categorie di tassonomia lasciati in inglese ovunque (vedi nota
 sopra); `book-metrics.md`/`chapter-metrics.md` esclusi (orfani, stale).
 
-Con questo si chiudono tutte le fasi di priorità Alta/Media. Resta solo
-la Fase 9 (Trinket Labs, 23 file, priorità Minima — la nav originale la
-marca già come "(deprecated)").
+Con questo si chiudono tutte le fasi di priorità Alta/Media.
 
-Prossimo: decidere con l'utente se affrontare la Fase 9 (Trinket Labs)
-o considerare il piano di traduzione sostanzialmente completo così
-com'è, vista la priorità minima/deprecata di quella sezione (vedi
-sezione 3).
+**FASE 9 (Trinket Labs, 23 file) SALTATA DELIBERATAMENTE — decisione
+dell'utente (2026-10-13).** La sezione era già segnata a priorità minima
+e la sua stessa nav originale la marca "(deprecated)"; l'utente ha
+confermato esplicitamente di non volerla tradurre e considera il manuale
+completo così com'è.
+
+## 6. Stato finale del progetto (2026-10-13)
+
+**Il piano di traduzione è considerato completo.** Tradotte le Fasi 1–8
+(pagine di ingresso, 38 capitoli, Python Labs, Turtle Graphics Gallery,
+MicroSims, Teacher's Guide, Jupyter/Advanced Python, Learning Graph).
+Fase 9 (Trinket Labs) saltata su decisione esplicita dell'utente.
+
+File/sezioni rimasti volutamente in inglese o esclusi dallo scope, con
+motivazione già documentata sopra:
+- `docs/trinket/` (Trinket Labs, deprecato) — intera sezione, Fase 9
+- `docs/sims/microsim-ideas.md` — documento di pianificazione interno
+- `docs/learning-graph/book-metrics.md`, `chapter-metrics.md` — report
+  auto-generati orfani e già obsoleti
+- Notebook Jupyter orfani non collegati alla nav (`02-draw-box.ipynb`,
+  `canvas-test.ipynb`, `Python_Introduction.ipynb`,
+  `variables-and-strings.ipynb`)
+- Nomi dei 450 concetti e delle 14 categorie di tassonomia in
+  `docs/learning-graph/` — restano in inglese ovunque perché sono le
+  chiavi esatte usate da `learning-graph.json`/`.csv` e dal
+  Visualizzatore del Grafo
+- Tutti i file `.py`, `.json`, `.csv` di dati/script in tutto il
+  progetto — mai toccati, per definizione
+- UI chrome dei laboratori (pulsanti Run/Pause/Resume/Reset) — in
+  inglese ovunque, per decisione 2
+
+Se in futuro si vorrà riprendere la Fase 9 o rivalutare uno dei punti
+sopra, questo documento resta la guida di riferimento: le regole
+semantiche in sezione 1 e le decisioni in sezione 2 restano valide.
 
 Note di qualità accumulate durante la Fase 2, da continuare ad applicare nelle fasi
 successive: (1) controllare sempre con `grep '!\[.*\]('` (o pattern equivalente per il
