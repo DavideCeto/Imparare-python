@@ -1,147 +1,159 @@
-# Adding Custom Python Labs to the Textbook
+# Aggiungere Laboratori Python Personalizzati al Manuale
 
-This guide explains how to add new interactive Python labs to the textbook,
-what tools are available to generate them, and how to choose the right
-execution environment for your students.
+Questa guida spiega come aggiungere nuovi laboratori Python interattivi al
+manuale, quali strumenti sono disponibili per generarli, e come scegliere
+l'ambiente di esecuzione giusto per i tuoi studenti.
 
 ---
 
-## Two Skills for Generating Labs
+## Due Skill per Generare Laboratori
 
-This textbook uses Claude Code skills to generate consistent, well-structured
-lab pages.  Two skills are available:
+Questo manuale usa le skill di Claude Code per generare pagine di
+laboratorio coerenti e ben strutturate. Sono disponibili due skill:
 
-### The Skulpt Lab Skill
+### La Skill del Laboratorio Skulpt
 
-The `chapter-content-generator` skill (and the broader textbook content pipeline)
-generates labs using **Skulpt** — a Python interpreter compiled to JavaScript
-that runs entirely inside the student's web browser.
+La skill `chapter-content-generator` (e la più ampia pipeline di contenuti
+del manuale) genera laboratori usando **Skulpt** — un interprete Python
+compilato in JavaScript che viene eseguito interamente dentro il browser
+web dello studente.
 
-- No installation required on student machines
-- Works on Chromebooks, tablets, and locked-down school computers
-- Labs are part of the published textbook and can be shared with any teacher
-  who has the URL
-- Turtle graphics renders inline next to the code editor
-- Fully offline once the page is loaded (no server, no account)
+- Nessuna installazione richiesta sulle macchine degli studenti
+- Funziona su Chromebook, tablet e computer scolastici bloccati
+- I laboratori fanno parte del manuale pubblicato e possono essere
+  condivisi con qualsiasi insegnante che abbia l'URL
+- La grafica turtle si rende in linea accanto all'editor di codice
+- Completamente offline una volta caricata la pagina (nessun server,
+  nessun account)
 
-### The Docker Python Lab Skill
+### La Skill del Laboratorio Python Docker
 
-The `docker-python-lab` skill generates labs that run real Python code inside
-an isolated Docker container on the teacher's or student's local machine.
+La skill `docker-python-lab` genera laboratori che eseguono vero codice
+Python dentro un container Docker isolato sulla macchina locale
+dell'insegnante o dello studente.
 
-To invoke it, type:
+Per richiamarla, digita:
 
 ```
 /docker-python-lab
 ```
 
-Claude will generate the HTML lab block, check that the shared CSS and
-JavaScript files exist, and verify that `mkdocs.yml` is wired up correctly.
-The student clicks **Run** in the browser, the code travels to a local service
-on port 5001, runs in a fresh container, and the output comes back in about
-300 milliseconds (after the first cold-start run).
+Claude genererà il blocco HTML del laboratorio, verificherà che i file CSS
+e JavaScript condivisi esistano, e verificherà che `mkdocs.yml` sia
+collegato correttamente. Lo studente clicca **Run** nel browser, il codice
+viaggia verso un servizio locale sulla porta 5001, viene eseguito in un
+container nuovo, e l'output torna in circa 300 millisecondi (dopo la prima
+esecuzione a freddo).
 
 ---
 
-## Strongly Recommended: Keep Things Simple with Skulpt
+## Fortemente Raccomandato: Mantieni le Cose Semplici con Skulpt
 
-Before reaching for Docker or a local Python install, consider the advantages
-of staying with Skulpt for chapters 1–18:
+Prima di ricorrere a Docker o a un'installazione Python locale, considera i
+vantaggi di restare con Skulpt per i capitoli 1–18:
 
-**Skulpt labs travel with the textbook.**
-A Skulpt lab is just a `<textarea>` and some HTML in a Markdown file.  It lives
-in the GitHub repository alongside the lesson text.  When you share a link to
-a page, the lab comes with it — no setup, no port numbers, no "make sure the
-service is running."
+**I laboratori Skulpt viaggiano con il manuale.**
+Un laboratorio Skulpt è solo una `<textarea>` e un po' di HTML in un file
+Markdown. Vive nel repository GitHub insieme al testo della lezione.
+Quando condividi un link a una pagina, il laboratorio viene con essa —
+nessuna configurazione, nessun numero di porta, nessun "assicurati che il
+servizio sia in esecuzione".
 
-**Every student has the same environment.**
-There is no version mismatch, no missing library, no "it works on my machine"
-moment.  Skulpt always runs Python 3 with the standard turtle module, identically
-on every device.
+**Ogni studente ha lo stesso ambiente.**
+Non c'è incompatibilità di versione, nessuna libreria mancante, nessun
+momento "funziona sulla mia macchina". Skulpt esegue sempre Python 3 con il
+modulo turtle standard, in modo identico su ogni dispositivo.
 
-**Skulpt removes the largest barrier to entry.**
-For students aged 10–14 who are trying Python for the first time, the cognitive
-load of installing software, managing environments, and troubleshooting PATH
-issues is enormous.  Skulpt lets them write and run code in the same session
-they learn what a variable is.
+**Skulpt rimuove la barriera d'ingresso più grande.**
+Per studenti di 10-14 anni che provano Python per la prima volta, il
+carico cognitivo di installare software, gestire ambienti e risolvere
+problemi di PATH è enorme. Skulpt permette loro di scrivere ed eseguire
+codice nella stessa sessione in cui imparano cos'è una variabile.
 
-**Skulpt labs can be contributed back.**
-Because they are plain Markdown files, any teacher can submit a pull request
-to add a new Skulpt lab to the shared textbook repository.  A Docker lab
-requires the receiving teacher to also run the local service, which breaks
-the "open the link and teach" workflow.
+**I laboratori Skulpt possono essere contribuiti indietro.**
+Poiché sono semplici file Markdown, qualsiasi insegnante può inviare una
+pull request per aggiungere un nuovo laboratorio Skulpt al repository
+condiviso del manuale. Un laboratorio Docker richiede che anche
+l'insegnante ricevente esegua il servizio locale, il che rompe il flusso
+di lavoro "apri il link e insegna".
 
-**When Skulpt is not enough**, the nine options below describe progressively
-more powerful (and more complex) alternatives.
+**Quando Skulpt non basta**, le nove opzioni qui sotto descrivono
+alternative progressivamente più potenti (e più complesse).
 
 ---
 
-## Nine Options for Running Python
+## Nove Opzioni per Eseguire Python
 
-Use this table to match the right execution environment to your teaching context:
+Usa questa tabella per abbinare l'ambiente di esecuzione giusto al tuo
+contesto didattico:
 
-| # | Option | Best for | Complexity |
+| # | Opzione | Ideale per | Complessità |
 |---|--------|----------|------------|
-| 1 | **Skulpt (in-browser)** | All beginners, shared textbook labs | None |
-| 2 | **Local Python install** | Students with their own computers | Low |
-| 3 | **Python virtual environment (venv)** | Intermediate projects with dependencies | Medium |
-| 4 | **Conda virtual environment** | Data science, ML, scientific computing | Medium |
-| 5 | **Docker container** | Reproducible environments, server-side code | High |
-| 6 | **Thonny IDE** | New students moving to local development | Low |
-| 7 | **VS Code** | Students ready for professional tooling | Medium |
-| 8 | **Jupyter Notebook / Lab** | Data science, visualisation, narrative code | Medium |
-| 9 | **Another IDE** | Any other editor or environment | Varies |
+| 1 | **Skulpt (nel browser)** | Tutti i principianti, laboratori condivisi del manuale | Nessuna |
+| 2 | **Installazione Python locale** | Studenti con il proprio computer | Bassa |
+| 3 | **Ambiente virtuale Python (venv)** | Progetti intermedi con dipendenze | Media |
+| 4 | **Ambiente virtuale Conda** | Data science, ML, calcolo scientifico | Media |
+| 5 | **Container Docker** | Ambienti riproducibili, codice lato server | Alta |
+| 6 | **IDE Thonny** | Nuovi studenti che passano allo sviluppo locale | Bassa |
+| 7 | **VS Code** | Studenti pronti per strumenti professionali | Media |
+| 8 | **Jupyter Notebook / Lab** | Data science, visualizzazione, codice narrativo | Media |
+| 9 | **Un altro IDE** | Qualsiasi altro editor o ambiente | Variabile |
 
 ---
 
-### Option 1 — Skulpt (In-Browser Python)
+### Opzione 1 — Skulpt (Python nel Browser)
 
-**What it is:** Python compiled to JavaScript, running entirely in the browser
-with no server or install.
+**Cos'è:** Python compilato in JavaScript, eseguito interamente nel browser
+senza server né installazione.
 
-**Use when:** Teaching chapters 1–18 of this textbook, running a coding club
-on Chromebooks or school-managed devices, sharing labs with other teachers,
-or demonstrating Python to a group where you cannot control every machine.
+**Quando usarla:** Per insegnare i capitoli 1–18 di questo manuale, per
+gestire un coding club su Chromebook o dispositivi gestiti dalla scuola,
+per condividere laboratori con altri insegnanti, o per dimostrare Python a
+un gruppo dove non puoi controllare ogni macchina.
 
-**How to add a lab:** Use the `chapter-content-generator` skill or write the
-Skulpt HTML block directly.  See the existing labs in `docs/chapters/` for
-the exact format.
+**Come aggiungere un laboratorio:** Usa la skill `chapter-content-generator`
+o scrivi direttamente il blocco HTML di Skulpt. Vedi i laboratori esistenti
+in `docs/chapters/` per il formato esatto.
 
-**Limitations:** No file I/O, no third-party packages (`numpy`, `pandas`,
-`requests`, etc.), no `input()` from the terminal.  Turtle graphics and basic
-math/string/list operations work perfectly.
-
----
-
-### Option 2 — Local Python Install (System Python)
-
-**What it is:** Python installed directly on the student's operating system,
-run from a terminal with `python3 script.py`.
-
-**Use when:** Students have personal laptops and are ready to move beyond
-Skulpt.  See `docs/chapters/28-python-dev-tools/index.md` for the
-installation and environment guide already in this textbook.
-
-**How to add a lab:** Write a static code block (```` ```python ````) in the
-Markdown page.  Students copy the code into a local file and run it in their
-terminal.
-
-**Limitations:** Python version, PATH configuration, and installed packages
-vary by machine.  Expect to spend 10–20 minutes troubleshooting per student
-on setup day.  The [XKCD "Python environments"](https://www.explainxkcd.com/wiki/index.php/1987:_Python_Environment) comic on the installing-Python
-page is not entirely a joke.
+**Limitazioni:** Nessun I/O su file, nessun pacchetto di terze parti
+(`numpy`, `pandas`, `requests`, ecc.), nessun `input()` da terminale. La
+grafica turtle e le operazioni di base su matematica/stringhe/liste
+funzionano perfettamente.
 
 ---
 
-### Option 3 — Python Virtual Environment (`venv`)
+### Opzione 2 — Installazione Python Locale (Python di Sistema)
 
-**What it is:** A lightweight, isolated Python environment created with
-`python3 -m venv` that keeps each project's packages separate.
+**Cos'è:** Python installato direttamente sul sistema operativo dello
+studente, eseguito da un terminale con `python3 script.py`.
 
-**Use when:** A project needs specific package versions (e.g., `matplotlib
-3.8`) without affecting the system Python or other projects.
+**Quando usarla:** Quando gli studenti hanno laptop personali e sono pronti
+ad andare oltre Skulpt. Vedi `docs/chapters/28-python-dev-tools/index.md`
+per la guida all'installazione e all'ambiente già presente in questo
+manuale.
 
-**Quick start:**
+**Come aggiungere un laboratorio:** Scrivi un blocco di codice statico
+(```` ```python ````) nella pagina Markdown. Gli studenti copiano il codice
+in un file locale e lo eseguono nel loro terminale.
+
+**Limitazioni:** La versione di Python, la configurazione del PATH e i
+pacchetti installati variano da macchina a macchina. Aspettati di passare
+10–20 minuti a risolvere problemi per studente nel giorno della
+configurazione. Il fumetto [XKCD "Python environments"](https://www.explainxkcd.com/wiki/index.php/1987:_Python_Environment)
+nella pagina sull'installazione di Python non è del tutto uno scherzo.
+
+---
+
+### Opzione 3 — Ambiente Virtuale Python (`venv`)
+
+**Cos'è:** Un ambiente Python leggero e isolato creato con
+`python3 -m venv` che mantiene separati i pacchetti di ogni progetto.
+
+**Quando usarla:** Quando un progetto richiede versioni specifiche di
+pacchetti (es. `matplotlib 3.8`) senza influenzare il Python di sistema o
+altri progetti.
+
+**Avvio rapido:**
 ```sh
 python3 -m venv .venv
 source .venv/bin/activate        # macOS / Linux
@@ -149,218 +161,239 @@ source .venv/bin/activate        # macOS / Linux
 pip install matplotlib pandas
 ```
 
-**Use when:** Intermediate students beginning to install third-party libraries.
-Teach `venv` before `pip install` so students develop the habit of isolating
-dependencies from the start.
+**Quando usarla:** Studenti intermedi che iniziano a installare librerie di
+terze parti. Insegna `venv` prima di `pip install` così gli studenti
+sviluppano fin dall'inizio l'abitudine di isolare le dipendenze.
 
-**Limitations:** Students must remember to activate the environment in every
-new terminal session.  Forgetting is the #1 source of "it worked yesterday"
-bugs.
+**Limitazioni:** Gli studenti devono ricordarsi di attivare l'ambiente in
+ogni nuova sessione del terminale. Dimenticarlo è la causa numero 1 dei bug
+"funzionava ieri".
 
 ---
 
-### Option 4 — Conda Virtual Environment (Preferred for Data Science)
+### Opzione 4 — Ambiente Virtuale Conda (Preferito per la Data Science)
 
-**What it is:** Anaconda or Miniconda's environment manager, which handles
-both Python versions and compiled binary packages (NumPy, SciPy, PyTorch, etc.)
-in a single tool.
+**Cos'è:** Il gestore di ambienti di Anaconda o Miniconda, che gestisce sia
+le versioni di Python che i pacchetti binari compilati (NumPy, SciPy,
+PyTorch, ecc.) in un unico strumento.
 
-**Use when:** Teaching data science, machine learning, image processing, or any
-topic that requires scientific computing libraries.  Conda resolves binary
-dependencies that `pip` sometimes cannot.
+**Quando usarlo:** Per insegnare data science, machine learning,
+elaborazione delle immagini, o qualsiasi argomento che richieda librerie di
+calcolo scientifico. Conda risolve dipendenze binarie che `pip` a volte non
+riesce a risolvere.
 
-**Quick start:**
+**Avvio rapido:**
 ```sh
 conda create -n coderdojo python=3.11
 conda activate coderdojo
 conda install numpy matplotlib scikit-learn
 ```
 
-**Why it is preferred for data science:** `pip install numpy` can fail on
-Windows or Apple Silicon if the C compiler toolchain is missing.  `conda install
-numpy` always provides a pre-compiled binary that just works.
+**Perché è preferito per la data science:** `pip install numpy` può
+fallire su Windows o Apple Silicon se manca la toolchain del compilatore
+C. `conda install numpy` fornisce sempre un binario pre-compilato che
+funziona e basta.
 
-**Limitations:** Miniconda is a ~60 MB download.  The `conda` command is slower
-than `pip`.  Students sometimes confuse `conda activate` with system Python.
-
----
-
-### Option 5 — Docker Container
-
-**What it is:** Python running inside an isolated container via
-`scripts/run-python-docker.sh`.  Students edit code in the browser and click
-**Run**; the code executes in a fresh container and the output returns in ~300 ms
-(after the first cold-start run of ~5 seconds).
-
-**Use when:** You want a reproducible, sandboxed environment for intermediate
-or advanced students without asking them to install Python or manage environments.
-Also useful for topics where you want to demonstrate that the same code runs
-identically for every student regardless of their OS.
-
-**How to add a lab:** Use the `/docker-python-lab` skill.  The skill generates
-the HTML lab block, creates the shared CSS and JavaScript files if they do not
-exist, and checks `mkdocs.yml`.
-
-**Limitations:** Requires Docker Desktop installed and running on the local
-machine (or the teacher's machine if projecting).  The service (`run-python-docker.sh`)
-must be running in a separate terminal while students use the page.  No turtle
-graphics.  No `input()`.  Packages beyond the Python standard library require
-a custom Docker image.
-
-**Sharability:** Docker labs in the published textbook only work for readers who
-have the service running locally — they will see "Cannot connect to the Python
-Docker service" otherwise.  This is the primary reason Skulpt is preferred for
-shared textbook content.
+**Limitazioni:** Miniconda è un download di ~60 MB. Il comando `conda` è
+più lento di `pip`. Gli studenti a volte confondono `conda activate` con
+il Python di sistema.
 
 ---
 
-### Option 6 — Thonny IDE (Preferred for New Students Moving to Local Python)
+### Opzione 5 — Container Docker
 
-**What it is:** A free, beginner-friendly Python IDE designed specifically for
-learning.  It has a built-in Python interpreter, a step-through debugger that
-highlights each line as it runs, and a variable inspector that shows every
-variable's current value.
+**Cos'è:** Python eseguito dentro un container isolato tramite
+`scripts/run-python-docker.sh`. Gli studenti modificano il codice nel
+browser e cliccano **Run**; il codice viene eseguito in un container nuovo
+e l'output torna in ~300 ms (dopo la prima esecuzione a freddo di ~5
+secondi).
 
-**Download:** [thonny.org](https://thonny.org) — works on Windows, macOS,
-and Linux, including Raspberry Pi OS (pre-installed).
+**Quando usarlo:** Quando vuoi un ambiente riproducibile e isolato per
+studenti intermedi o avanzati senza chiedere loro di installare Python o
+gestire ambienti. Utile anche per argomenti dove vuoi dimostrare che lo
+stesso codice viene eseguito in modo identico per ogni studente
+indipendentemente dal loro sistema operativo.
 
-**Use when:** Students are ready to leave Skulpt and write Python on their own
-computer for the first time.  Thonny's debugger is unmatched for building
-mental models of how loops and functions work.
+**Come aggiungere un laboratorio:** Usa la skill `/docker-python-lab`. La
+skill genera il blocco HTML del laboratorio, crea i file CSS e JavaScript
+condivisi se non esistono, e controlla `mkdocs.yml`.
 
-**Why it is preferred over VS Code for beginners:** Thonny installs Python
-automatically alongside the IDE — no separate Python download, no PATH setup,
-no terminal.  A student can go from zero to running their first script in
-under five minutes.
+**Limitazioni:** Richiede Docker Desktop installato e in esecuzione sulla
+macchina locale (o sulla macchina dell'insegnante se in proiezione). Il
+servizio (`run-python-docker.sh`) deve essere in esecuzione in un
+terminale separato mentre gli studenti usano la pagina. Nessuna grafica
+turtle. Nessun `input()`. I pacchetti oltre la libreria standard di Python
+richiedono un'immagine Docker personalizzata.
 
-**Limitations:** Thonny is intentionally simple.  It does not have Git
-integration, extensions, or the language-server features that professional
-developers rely on.  Students who outgrow it will migrate naturally to VS Code.
+**Condivisibilità:** I laboratori Docker nel manuale pubblicato
+funzionano solo per i lettori che hanno il servizio in esecuzione
+localmente — altrimenti vedranno "Cannot connect to the Python Docker
+service". Questa è la ragione principale per cui Skulpt è preferito per i
+contenuti condivisi del manuale.
 
 ---
 
-### Option 7 — VS Code
+### Opzione 6 — IDE Thonny (Preferito per i Nuovi Studenti che Passano a Python Locale)
 
-**What it is:** Microsoft's free, professional-grade code editor with a rich
-Python extension, integrated terminal, Git support, and Copilot integration.
+**Cos'è:** Un IDE Python gratuito e adatto ai principianti, progettato
+specificamente per l'apprendimento. Ha un interprete Python integrato, un
+debugger passo-passo che evidenzia ogni riga mentre viene eseguita, e un
+ispettore di variabili che mostra il valore attuale di ogni variabile.
+
+**Download:** [thonny.org](https://thonny.org) — funziona su Windows,
+macOS e Linux, incluso Raspberry Pi OS (pre-installato).
+
+**Quando usarlo:** Quando gli studenti sono pronti a lasciare Skulpt e a
+scrivere Python sul proprio computer per la prima volta. Il debugger di
+Thonny è impareggiabile per costruire modelli mentali di come funzionano
+cicli e funzioni.
+
+**Perché è preferito a VS Code per i principianti:** Thonny installa
+Python automaticamente insieme all'IDE — nessun download separato di
+Python, nessuna configurazione del PATH, nessun terminale. Uno studente
+può passare da zero all'esecuzione del suo primo script in meno di cinque
+minuti.
+
+**Limitazioni:** Thonny è volutamente semplice. Non ha integrazione con
+Git, estensioni, o le funzionalità di language-server su cui fanno
+affidamento gli sviluppatori professionisti. Gli studenti che lo superano
+migreranno naturalmente verso VS Code.
+
+---
+
+### Opzione 7 — VS Code
+
+**Cos'è:** L'editor di codice gratuito e di livello professionale di
+Microsoft, con una ricca estensione Python, terminale integrato, supporto
+Git e integrazione con Copilot.
 
 **Download:** [code.visualstudio.com](https://code.visualstudio.com)
 
-**Use when:** Students have completed the beginning Python curriculum and are
-ready to work on multi-file projects, use Git, or prepare for a coding internship
-or competition.
+**Quando usarlo:** Quando gli studenti hanno completato il curriculum
+Python per principianti e sono pronti a lavorare su progetti multi-file, a
+usare Git, o a prepararsi per uno stage di programmazione o una
+competizione.
 
-**Setup checklist:**
-1. Install VS Code
-2. Install the **Python** extension (Microsoft)
-3. Select the correct Python interpreter (`Ctrl+Shift+P` → "Python: Select Interpreter")
-4. Open the integrated terminal and run `python --version` to verify
+**Lista di controllo per la configurazione:**
+1. Installa VS Code
+2. Installa l'estensione **Python** (Microsoft)
+3. Seleziona l'interprete Python corretto (`Ctrl+Shift+P` → "Python:
+   Select Interpreter")
+4. Apri il terminale integrato ed esegui `python --version` per
+   verificare
 
-**Limitations:** More initial setup than Thonny.  Students unfamiliar with
-the terminal may struggle with interpreter selection and virtual environment
-activation inside VS Code.
+**Limitazioni:** Più configurazione iniziale rispetto a Thonny. Gli
+studenti che non conoscono il terminale potrebbero avere difficoltà con la
+selezione dell'interprete e l'attivazione dell'ambiente virtuale dentro
+VS Code.
 
 ---
 
-### Option 8 — Jupyter Notebook / Lab
+### Opzione 8 — Jupyter Notebook / Lab
 
-**What it is:** A browser-based interactive computing environment where code,
-output, visualisations, and explanatory text live together in a single
-*notebook* (`.ipynb`) file.  Jupyter Notebook is the classic single-document
-interface; Jupyter Lab is the modern multi-panel successor.
+**Cos'è:** Un ambiente di calcolo interattivo basato sul browser dove
+codice, output, visualizzazioni e testo esplicativo convivono in un unico
+file *notebook* (`.ipynb`). Jupyter Notebook è l'interfaccia classica a
+documento singolo; Jupyter Lab è il successore moderno multi-pannello.
 
-**Install:**
+**Installazione:**
 ```sh
 pip install jupyterlab        # or: conda install jupyterlab
 jupyter lab                   # opens in your default browser
 ```
 
-**Use when:**
-- Teaching data science, statistics, or machine learning — the inline charts
-  and cell-by-cell execution make it easy to explore data step by step.
-- Students need to submit work that includes both code *and* written
-  explanations of results (common in science classes).
-- Demonstrating NumPy, Pandas, Matplotlib, or Scikit-learn, where seeing the
-  output immediately below each cell accelerates understanding.
-- Running the advanced chapters of this textbook (MNIST digit prediction,
-  stock ticker analysis) — see `docs/jupyter/` for the Jupyter-specific labs
-  already included.
+**Quando usarlo:**
+- Per insegnare data science, statistica o machine learning — i grafici
+  in linea e l'esecuzione cella per cella rendono facile esplorare i dati
+  passo dopo passo.
+- Gli studenti devono consegnare lavori che includano sia codice *che*
+  spiegazioni scritte dei risultati (comune nelle classi di scienze).
+- Per dimostrare NumPy, Pandas, Matplotlib o Scikit-learn, dove vedere
+  l'output subito sotto ogni cella accelera la comprensione.
+- Per eseguire i capitoli avanzati di questo manuale (previsione delle
+  cifre MNIST, analisi di titoli azionari) — vedi `docs/jupyter/` per i
+  laboratori specifici per Jupyter già inclusi.
 
-**Why it deserves its own option:** Jupyter is fundamentally different from a
-traditional IDE.  Code runs in *cells*, not as a single script from top to
-bottom.  Students can re-run individual cells, keep intermediate results in
-memory, and mix `print()` output with `matplotlib` plots in a single view.
-That interactivity is a superpower for data exploration but can confuse
-students who are still learning that programs run line by line.
+**Perché merita una sua opzione:** Jupyter è fondamentalmente diverso da
+un IDE tradizionale. Il codice viene eseguito in *celle*, non come un
+singolo script dall'inizio alla fine. Gli studenti possono rieseguire
+celle singole, mantenere risultati intermedi in memoria, e mescolare
+l'output di `print()` con grafici `matplotlib` in un'unica vista. Quella
+interattività è un superpotere per l'esplorazione dei dati ma può
+confondere gli studenti che stanno ancora imparando che i programmi
+vengono eseguiti riga per riga.
 
-**Google Colab variant:** If students do not want to install anything, Google
-Colab (`colab.research.google.com`) provides a cloud-hosted Jupyter environment
-with free GPU access — ideal for the ML chapters.  Requires a Google account
-and an internet connection.
+**Variante Google Colab:** Se gli studenti non vogliono installare nulla,
+Google Colab (`colab.research.google.com`) fornisce un ambiente Jupyter
+ospitato nel cloud con accesso gratuito alla GPU — ideale per i capitoli
+di ML. Richiede un account Google e una connessione internet.
 
-**Limitations:** Notebooks are not great for teaching program structure —
-students can run cells out of order and end up with hidden state bugs that are
-hard to reproduce.  Not suitable for turtle graphics.  Not a good first
-environment for absolute beginners.
-
----
-
-### Option 9 — Another IDE
-
-**What it is:** Any other editor — PyCharm, Spyder, Mu Editor, Replit, etc.
-
-**Use when:** A specific tool is already in use at your school, or a student
-has a strong preference.  The Python code in this textbook is standard and
-runs in any environment.
-
-**Notes for specific tools:**
-
-- **PyCharm** — powerful professional IDE with excellent debugger and refactoring
-  tools; Community Edition is free.  Better suited to experienced students than
-  to beginners.
-- **Spyder** — a scientific Python IDE bundled with Anaconda; similar to MATLAB's
-  layout with a variable explorer panel.  Good for data science students already
-  using Conda.
-- **Mu Editor** — similar simplicity to Thonny; designed for MicroPython and
-  Raspberry Pi projects.  Good for hardware/electronics electives.
-- **Replit** — browser-based like Skulpt but requires an account and internet
-  connection.  Useful when students need a persistent file system or more
-  packages than Skulpt supports, but do not have admin rights on school machines.
+**Limitazioni:** I notebook non sono ottimi per insegnare la struttura dei
+programmi — gli studenti possono eseguire le celle fuori ordine e finire
+con bug di stato nascosto difficili da riprodurre. Non adatto alla
+grafica turtle. Non è un buon primo ambiente per principianti assoluti.
 
 ---
 
-## Decision Guide
+### Opzione 9 — Un Altro IDE
+
+**Cos'è:** Qualsiasi altro editor — PyCharm, Spyder, Mu Editor, Replit,
+ecc.
+
+**Quando usarlo:** Quando uno strumento specifico è già in uso nella tua
+scuola, o uno studente ha una forte preferenza. Il codice Python in questo
+manuale è standard e viene eseguito in qualsiasi ambiente.
+
+**Note per strumenti specifici:**
+
+- **PyCharm** — potente IDE professionale con eccellente debugger e
+  strumenti di refactoring; la Community Edition è gratuita. Più adatto a
+  studenti esperti che a principianti.
+- **Spyder** — un IDE Python scientifico incluso con Anaconda; layout
+  simile a MATLAB con un pannello esploratore di variabili. Buono per
+  studenti di data science che già usano Conda.
+- **Mu Editor** — semplicità simile a Thonny; progettato per progetti
+  MicroPython e Raspberry Pi. Buono per materie opzionali di
+  hardware/elettronica.
+- **Replit** — basato sul browser come Skulpt ma richiede un account e
+  una connessione internet. Utile quando gli studenti hanno bisogno di un
+  file system persistente o più pacchetti di quelli che Skulpt supporta,
+  ma non hanno diritti da amministratore sulle macchine scolastiche.
+
+---
+
+## Guida alla Decisione
 
 ```
-Does the lab need turtle graphics or run in the shared textbook?
-  └─ YES → Use Skulpt (Option 1)
+Il laboratorio ha bisogno della grafica turtle o viene eseguito nel manuale condiviso?
+  └─ SÌ → Usa Skulpt (Opzione 1)
 
-Does the lab need third-party packages (numpy, matplotlib, requests)?
-  ├─ Data science / ML / visualisation → Use Jupyter + Conda (Options 8 + 4)
-  └─ General packages only             → Use venv (Option 3)
+Il laboratorio ha bisogno di pacchetti di terze parti (numpy, matplotlib, requests)?
+  ├─ Data science / ML / visualizzazione → Usa Jupyter + Conda (Opzioni 8 + 4)
+  └─ Solo pacchetti generali                → Usa venv (Opzione 3)
 
-Is this a student's first time running Python locally?
-  └─ YES → Use Thonny (Option 6)
+È la prima volta che lo studente esegue Python localmente?
+  └─ SÌ → Usa Thonny (Opzione 6)
 
-Do you need a fully reproducible sandbox with no student setup?
-  └─ YES → Use Docker (Option 5)
+Hai bisogno di una sandbox pienamente riproducibile senza configurazione per lo studente?
+  └─ SÌ → Usa Docker (Opzione 5)
 
-Is the student writing narrative code (code + explanation + charts)?
-  └─ YES → Use Jupyter (Option 8)
+Lo studente sta scrivendo codice narrativo (codice + spiegazione + grafici)?
+  └─ SÌ → Usa Jupyter (Opzione 8)
 
-Is the student ready for professional tools / multi-file projects?
-  └─ YES → Use VS Code (Option 7)
+Lo studente è pronto per strumenti professionali / progetti multi-file?
+  └─ SÌ → Usa VS Code (Opzione 7)
 ```
 
 ---
 
-## Summary
+## Riepilogo
 
-For the vast majority of lessons in this textbook — especially chapters 1–18 —
-**Skulpt is the right choice**.  It requires nothing from students, travels with
-every link you share, and keeps the focus on learning Python rather than on
-configuring tools.
+Per la grande maggioranza delle lezioni in questo manuale — specialmente i
+capitoli 1–18 — **Skulpt è la scelta giusta**. Non richiede nulla dagli
+studenti, viaggia con ogni link che condividi, e mantiene il focus
+sull'imparare Python invece che sul configurare strumenti.
 
-Reserve the more powerful options for the intermediate and advanced sections,
-where the topic itself (file I/O, data science, APIs) genuinely requires a
-local Python environment.
+Riserva le opzioni più potenti alle sezioni intermedie e avanzate, dove
+l'argomento stesso (I/O su file, data science, API) richiede genuinamente
+un ambiente Python locale.
