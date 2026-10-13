@@ -231,6 +231,37 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
 tradotti** (nav di `mkdocs.yml`, `pattern-ideas.md`, `index.md` root, e
 tutti i singoli laboratori).
 
+**FASE 5 COMPLETA — tutte le 31 pagine lato lettore dei MicroSims
+tradotte** (nav di `mkdocs.yml`, `docs/sims/index.md` — la griglia di
+card della galleria —, `docs/sims/graph-viewer/index.md`, e tutti i 30
+singoli MicroSim). Decisioni prese durante questa fase:
+
+- I **nomi dei MicroSim** (es. "Code Stepper" → "Esecutore di Codice
+  Passo-Passo") sono stati tradotti in italiano, per coerenza con la
+  convenzione già stabilita per titoli di capitoli, laboratori Python e
+  pattern della Turtle Graphics Gallery — non sono nomi di prodotto fissi
+  come "Skulpt" o "CodeMirror", ma titoli descrittivi come "Rainbow
+  Square Spiral". Tradotti ovunque: nav di `mkdocs.yml`, titoli H1 e
+  `title:` nel front matter di ogni pagina, titoli delle card nella
+  galleria `sims/index.md`.
+- Un titolo con `:` al suo interno (`Unit Circle Degrees and Radians`)
+  è stato reso con una lineetta — `Cerchio Unitario — Gradi e Radianti`
+  — invece dei due punti, perché un `:` in un valore di nav YAML lo fa
+  interpretare come una mappatura annidata e rompe `mkdocs.yml` (validato
+  con `python3 -c "import yaml; yaml.safe_load(...)"` prima e dopo la
+  correzione).
+- Front matter YAML di ogni pagina: solo `title`/`description` tradotti;
+  `image`, `og:image`, `twitter:image`, `social.cards`, `quality_score`
+  lasciati invariati (metadati di generazione/social, non prosa).
+- **`docs/sims/microsim-ideas.md` (904 righe) escluso dalla Fase 5.** È un
+  documento di pianificazione interno per chi genera nuovi MicroSim (non
+  è nella nav, stato "draft-for-review", e il suo testo introduttivo è
+  disallineato con lo stato reale del repo — dice "no sims have been
+  generated yet" mentre tutti i 30 MicroSim esistono già). Trattato come
+  i log di `logs/` o `CONTENT-GENERATION-GUIDELINES.md`: materiale per
+  chi mantiene il libro, non contenuto per il lettore. Da rivalutare se
+  l'utente lo richiede esplicitamente.
+
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
 (nessuna modifica rispetto a `main`), quindi il problema dei placeholder rotti
@@ -383,12 +414,25 @@ cuore didattico del libro.
 `binary-tree-name/`, `turtle-chase/`, `reaction-diffusion/`
 (102 di 102 file/unità — **FASE 4 COMPLETA**).
 
-Prossimo: iniziare la Fase 5 (MicroSims — solo le pagine `index.md`
-descrittive in `docs/sims/*/`, non il codice JS delle app, vedi
-decisione 3 nella sezione 2).
+**FASE 5 COMPLETA.** Tradotte 31 pagine: nav di `mkdocs.yml` (sezione
+MicroSims), `docs/sims/index.md`, `docs/sims/graph-viewer/index.md`, e
+tutti i 30 singoli MicroSim (`boolean-logic-lab`, `code-stepper`,
+`control-flow-explorer`, `dice-roll-histogram`, `dictionary-key-lookup`,
+`expression-evaluator`, `for-loop-stepper`, `fractal-tree-explorer`,
+`function-call-flow`, `graph-traversal-explorer`, `inheritance-explorer`,
+`json-python-mapper`, `list-index-explorer`, `modulo-clock`,
+`object-instance-inspector`, `range-explorer`, `recursion-call-stack`,
+`regex-match-lab`, `rgb-color-mixer`, `scope-inspector`, `search-race`,
+`set-operations-venn`, `sine-wave-explorer`, `sorting-comparer`,
+`stack-queue-simulator`, `string-slicer`, `turtle-state-inspector`,
+`unit-circle-radians`, `variable-memory-model`, `while-loop-stepper`).
+`docs/sims/microsim-ideas.md` escluso dallo scope (vedi nota sopra).
 
-Dopo la Fase 5: Fasi 6-9 (Teacher's Guide, Jupyter/Advanced, Learning Graph,
-Trinket Labs — quest'ultima di priorità minima/da valutare se tradurre affatto, vedi
+Prossimo: iniziare la Fase 6 (Teacher's Guide, `docs/teachers-guide/`,
+14 file secondo il conteggio originale del piano — vedi sezione 3).
+
+Dopo la Fase 6: Fasi 7-9 (Jupyter/Advanced, Learning Graph, Trinket Labs —
+quest'ultima di priorità minima/da valutare se tradurre affatto, vedi
 sezione 3).
 
 Note di qualità accumulate durante la Fase 2, da continuare ad applicare nelle fasi
