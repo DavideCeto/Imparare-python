@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Coral Branch
+# Ramo di Corallo
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Write a recursive function where each call spawns a *random* number of new calls
-- Vary branch angles randomly with `random.uniform(-40, 40)`
-- Shift colors from dark red at the base to pale pink at the tips using depth
+- Scrivere una funzione recursiva dove ogni chiamata genera un numero *casuale* di nuove chiamate
+- Variare gli angoli dei rami casualmente con `random.uniform(-40, 40)`
+- Spostare i colori dal rosso scuro alla base al rosa pallido alle punte usando la profondità
 
-A single dark red trunk rises from the sea floor and bursts into a fan of branches — some nodes sprout one branch, some two, some three — ending in a cloud of pale pink tips. This is recursion like the Fractal Tree, but with nature's randomness mixed in.
+Un singolo tronco rosso scuro si alza dal fondo del mare ed esplode in un ventaglio di rami — alcuni nodi fanno germinare un ramo, alcuni due, alcuni tre — finendo in una nuvola di punte rosa pallido. Questa è ricorsione come nell'Albero Frattale, ma con la casualità della natura mescolata dentro.
 
-!!! mascot-welcome "Welcome to the Coral Reef!"
+!!! mascot-welcome "Benvenuto alla Barriera Corallina!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Real coral never branches perfectly evenly — every fork is a little
-    different. In this lab your recursive function will roll the dice at
-    every branch, just like coral growing in the ocean!
+    Il corallo vero non si dirama mai in modo perfettamente uniforme — ogni
+    bivio è un po' diverso. In questo laboratorio la tua funzione recursiva
+    tirerà i dadi a ogni ramo, proprio come il corallo che cresce nell'oceano!
 
-## How It Works
+## Come Funziona
 
-The `branch` function draws one segment, then calls `random.randint(1, 3)` to decide how many sub-branches to spawn — this is called *variable-arity* recursion because the number of recursive calls varies. Each child turns a random amount between -40° and +40° and is a bit shorter than its parent. The `depth` parameter counts how many levels deep we are, and it picks both the pen size (thick at the base, thin at the tips) and the color from a dark-red-to-pink list.
+La funzione `branch` disegna un segmento, poi chiama `random.randint(1, 3)` per decidere quanti sotto-rami generare — questa si chiama ricorsione ad *arità variabile* perché il numero di chiamate recursive varia. Ogni figlio gira di una quantità casuale tra -40° e +40° ed è un po' più corto del suo genitore. Il parametro `depth` conta a quanti livelli di profondità siamo, e sceglie sia la dimensione della penna (spessa alla base, sottile alle punte) sia il colore da una lista che va dal rosso scuro al rosa.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -55,14 +55,14 @@ def branch(x, y, heading, length, depth):
 branch(0, -185, 90, 95, 0)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    This program is full of random choices, but it starts with
-    `random.seed(8)`. If you click Run twice in a row, will you get
-    the **same coral both times or a different one each time**?
-    Make your guess, then run it twice to check!
+    Questo programma è pieno di scelte casuali, ma inizia con
+    `random.seed(8)`. Se clicchi Esegui due volte di fila, otterrai
+    **lo stesso corallo entrambe le volte o uno diverso ogni volta**?
+    Fai la tua ipotesi, poi eseguilo due volte per controllare!
 
-## Try It Now
+## Prova Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -114,29 +114,29 @@ def branch(x, y, heading, length, depth):
 branch(0, -185, 90, 95, 0)`);
 </script>
 
-The same coral, every time — `random.seed(8)` restarts the random-number generator at the exact same spot, so every "random" choice repeats. Were you right?
+Lo stesso corallo, ogni volta — `random.seed(8)` riavvia il generatore di numeri casuali esattamente dallo stesso punto, quindi ogni scelta "casuale" si ripete. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Compare this to the Fractal Tree, where every branch always splits into exactly 2 children at fixed angles. Here `kids = random.randint(1, 3)` makes the *arity* (number of recursive calls) random: a node with 1 child makes a long straggly arm, while a node with 3 children makes a dense fan. The color gradient is driven entirely by `depth`: at depth 0 the trunk uses `colors[0]` ('darkred'), and each level deeper moves one step along the list toward 'mistyrose'. Pen size does the same trick in reverse with `8 - depth`, so the coral is thick where it's dark and delicate where it's pale.
+Confronta questo con l'Albero Frattale, dove ogni ramo si divide sempre esattamente in 2 figli ad angoli fissi. Qui `kids = random.randint(1, 3)` rende l'*arità* (numero di chiamate recursive) casuale: un nodo con 1 figlio crea un braccio lungo e spelacchiato, mentre un nodo con 3 figli crea un ventaglio denso. Il gradiente di colore è guidato interamente dalla `depth`: alla profondità 0 il tronco usa `colors[0]` ('darkred'), e ogni livello più profondo avanza di un passo nella lista verso 'mistyrose'. La dimensione della penna fa lo stesso trucco al contrario con `8 - depth`, così il corallo è spesso dove è scuro e delicato dove è pallido.
 
-## Explanation Table
+## Tabella Esplicativa
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `kids = random.randint(1, 3)` | Each node spawns 1, 2, or 3 sub-branches — variable-arity recursion |
-| `turn = random.uniform(-40, 40)` | Each child bends a random amount within ±40° |
-| `monty.pencolor(colors[depth])` | Deeper levels use lighter colors: dark red base, pink tips |
-| `if depth >= 8 or length < 3:` | The base case — stops the recursion so it can't go on forever |
+| `kids = random.randint(1, 3)` | Ogni nodo genera 1, 2 o 3 sotto-rami — ricorsione ad arità variabile |
+| `turn = random.uniform(-40, 40)` | Ogni figlio si piega di una quantità casuale entro ±40° |
+| `monty.pencolor(colors[depth])` | I livelli più profondi usano colori più chiari: base rosso scuro, punte rosa |
+| `if depth >= 8 or length < 3:` | Il caso base — ferma la ricorsione così non può andare avanti per sempre |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Grow a Fuller Coral"
+!!! mascot-thinking "Tocca a Te — Fai Crescere un Corallo Più Folto"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    In the program below, `random.randint(1, 3)` has been changed to
-    `random.randint(2, 3)`, so every node spawns **at least two**
-    sub-branches. Will this coral be fuller or scrawnier than before?
-    Predict, then run it!
+    Nel programma qui sotto, `random.randint(1, 3)` è stato cambiato in
+    `random.randint(2, 3)`, così ogni nodo genera **almeno due**
+    sotto-rami. Questo corallo sarà più folto o più scarno di prima?
+    Fai una previsione, poi eseguilo!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -182,21 +182,22 @@ def branch(x, y, heading, length, depth):
 branch(0, -185, 90, 95, 0)`);
 </script>
 
-Much fuller — guaranteeing at least 2 children at every node roughly doubles the branches at each level, so the pink canopy becomes a dense cloud.
+Molto più folto — garantire almeno 2 figli a ogni nodo raddoppia più o meno i rami a ogni livello, così la chioma rosa diventa una nuvola densa.
 
-## Experiments
+## Esperimenti
 
-1. **Roll new dice.** Change `random.seed(8)` to another number and run a few times. You'll know it worked when each seed grows its own unique coral.
+1. **Tira nuovi dadi.** Cambia `random.seed(8)` con un altro numero ed esegui un po' di volte. Saprai che ha funzionato quando ogni seme fa crescere il suo corallo unico.
 
-2. **Calm the water.** Change `random.uniform(-40, 40)` to `random.uniform(-15, 15)`. You'll know it worked when the coral grows straighter and more tree-like instead of sprawling sideways.
+2. **Calma l'acqua.** Cambia `random.uniform(-40, 40)` in `random.uniform(-15, 15)`. Saprai che ha funzionato quando il corallo cresce più dritto e simile a un albero invece di espandersi lateralmente.
 
-3. **Stretch the branches.** Change `length * 0.72` to `length * 0.78`. You'll know it worked when the coral grows taller and lankier, reaching higher up the canvas.
+3. **Allunga i rami.** Cambia `length * 0.72` in `length * 0.78`. Saprai che ha funzionato quando il corallo cresce più alto e slanciato, raggiungendo più in alto sul canvas.
 
-4. **Make a sun coral.** Replace the color list with `['darkorange', 'orange', 'gold', 'yellow', 'khaki', 'lightyellow', 'ivory', 'white']`. You'll know it worked when the coral glows orange at the base and white at the tips.
+4. **Crea un corallo di sole.** Sostituisci la lista di colori con `['darkorange', 'orange', 'gold', 'yellow', 'khaki', 'lightyellow', 'ivory', 'white']`. Saprai che ha funzionato quando il corallo brilla arancione alla base e bianco alle punte.
 
-!!! mascot-celebration "A Reef of Your Own!"
+!!! mascot-celebration "Una Barriera Tutta Tua!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Recursion plus randomness equals life-like shapes — you just proved it!
-    Every seed value is a different coral waiting to be discovered.
-    Up next: **Leaf Venation** — draw a leaf and give it a realistic
-    skeleton of veins, three levels deep.
+    Ricorsione più casualità è uguale a forme simili a quelle della vita —
+    l'hai appena dimostrato! Ogni valore di seme è un corallo diverso che
+    aspetta di essere scoperto. Prossimo: **Nervatura della Foglia** —
+    disegna una foglia e dalle uno scheletro realistico di venature,
+    profondo tre livelli.

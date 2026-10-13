@@ -2,32 +2,33 @@
 hide:
     - toc
 ---
-# Epitrochoid
+# Epitrocoide
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Plot an epitrochoid — the curve traced by a pen on a circle rolling *outside* a bigger circle
-- Explain how the sign difference between `(R + r)` and `(R - r)` separates outer rolling from inner rolling
-- Predict the number of loops from the ratio `R / r`
+- Tracciare un'epitrocoide — la curva lasciata da una penna su un cerchio che rotola *all'esterno* di un cerchio più grande
+- Spiegare come la differenza di segno tra `(R + r)` e `(R - r)` separa il rotolamento esterno da quello interno
+- Prevedere il numero di anelli dal rapporto `R / r`
 
-A small circle of radius `r` rolls around the *outside* of a big circle of radius `R`, with a pen attached at distance `d` from the small circle's center. The pen traces flower-like loops called an epitrochoid — the outside-rolling cousin of the Spirograph's hypotrochoid.
+Un piccolo cerchio di raggio `r` rotola intorno all'*esterno* di un grande cerchio di raggio `R`, con una penna attaccata a distanza `d` dal centro del cerchio piccolo. La penna traccia anelli simili a fiori chiamati epitrocoide — il cugino a rotolamento esterno dell'ipotrocoide dello Spirografo.
 
-!!! mascot-welcome "Welcome to the Epitrochoid!"
+!!! mascot-welcome "Benvenuto all'Epitrocoide!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    In the Spirograph lab a circle rolled around the *inside* of a ring.
-    This time the little circle rolls around the *outside* — and just two
-    sign changes in the math flip the whole pattern inside out!
+    Nel laboratorio dello Spirografo un cerchio rotolava intorno
+    all'*interno* di un anello. Questa volta il cerchio piccolo rotola
+    intorno all'*esterno* — e solo due cambi di segno nella matematica
+    ribaltano l'intero pattern!
 
-## How It Works
+## Come Funziona
 
-At time `t`, the small circle's center sits at distance `R + r` from the origin (the two circles touch, so their centers are one big radius plus one small radius apart). The pen swings around that moving center, giving:
+Al tempo `t`, il centro del cerchio piccolo si trova a distanza `R + r` dall'origine (i due cerchi si toccano, quindi i loro centri sono separati da un raggio grande più un raggio piccolo). La penna oscilla intorno a quel centro mobile, dando:
 
 `x = (R + r) * cos(t) - d * cos((R + r) / r * t)`
 `y = (R + r) * sin(t) - d * sin((R + r) / r * t)`
 
-Compare with the Spirograph (hypotrochoid): inner rolling uses `(R - r)` and `+ d` in the `x` line. That sign difference is the entire distinction between rolling inside and rolling outside. The curve makes `R / r` loops before it closes.
+Confronta con lo Spirografo (ipotrocoide): il rotolamento interno usa `(R - r)` e `+ d` nella riga `x`. Quella differenza di segno è l'intera distinzione tra rotolare dentro e rotolare fuori. La curva forma `R / r` anelli prima di chiudersi.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -56,12 +57,12 @@ for i in range(steps + 1):
         monty.goto(x, y)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The curve makes `R / r` loops before it closes. With `R = 100` and `r = 20`,
-    how many loops will you see? Make your guess, then click Run!
+    La curva forma `R / r` anelli prima di chiudersi. Con `R = 100` e
+    `r = 20`, quanti anelli vedrai? Fai la tua ipotesi, poi clicca Esegui!
 
-## Try It Now
+## Prova Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -109,29 +110,30 @@ for i in range(steps + 1):
         monty.goto(x, y)`);
 </script>
 
-**5 loops** — `R / r = 100 / 20 = 5`, and each loop gets its own color. Were you right?
+**5 anelli** — `R / r = 100 / 20 = 5`, e ogni anello ottiene il suo colore. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Every time the small circle rolls once around its own center, the pen swings out and back — that swing is one loop. Rolling around the outside of the big circle takes exactly `R / r = 5` of those swings, so the curve closes after 5 loops. The pen distance `d` controls how dramatic each loop is: `d` bigger than `r` gives big open loops, `d` smaller than `r` gives gentle bumps, and `d` equal to `r` gives sharp points (that special case is called an epicycloid).
+Ogni volta che il cerchio piccolo rotola una volta intorno al proprio centro, la penna oscilla fuori e dentro — quella oscillazione è un anello. Rotolare intorno all'esterno del cerchio grande richiede esattamente `R / r = 5` di quelle oscillazioni, quindi la curva si chiude dopo 5 anelli. La distanza della penna `d` controlla quanto è drammatico ogni anello: `d` più grande di `r` dà grandi anelli aperti, `d` più piccolo di `r` dà protuberanze dolci, e `d` uguale a `r` dà punte acute (quel caso speciale si chiama epicicloide).
 
-## Explanation Table
+## Tabella Esplicativa
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `x = (R + r) * math.cos(t) - d * math.cos((R + r) / r * t)` | Center of the rolling circle plus the pen's swing — `(R + r)` means rolling *outside* |
-| `d = 40` | Pen offset from the small circle's center; bigger `d` means bigger loops |
-| `(R + r) / r * t` | How fast the pen spins — the rolling circle turns 6 times per trip around |
-| `colors[(i * 5) // (steps + 1)]` | Splits the 1200 steps into 5 color bands, one per loop |
+| `x = (R + r) * math.cos(t) - d * math.cos((R + r) / r * t)` | Centro del cerchio rotolante più l'oscillazione della penna — `(R + r)` significa rotolare *all'esterno* |
+| `d = 40` | Spostamento della penna dal centro del cerchio piccolo; `d` più grande significa anelli più grandi |
+| `(R + r) / r * t` | Quanto velocemente gira la penna — il cerchio rotolante gira 6 volte per giro completo |
+| `colors[(i * 5) // (steps + 1)]` | Divide i 1200 passi in 5 fasce di colore, una per anello |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Roll the Circle Inside"
+!!! mascot-thinking "Tocca a Te — Fai Rotolare il Cerchio all'Interno"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below uses the *same* `R`, `r`, and `d`, but this is the Spirograph
-    (inner-rolling) formula. Run it and compare with the curve above. Then convert it
-    to the outer-rolling epitrochoid: change every `(R - r)` to `(R + r)` and the
-    `+ d` in the `x` line to `- d`. Which way will the loops point after your edit?
+    Il programma qui sotto usa gli *stessi* `R`, `r` e `d`, ma questa è la
+    formula dello Spirografo (rotolamento interno). Eseguilo e confrontalo
+    con la curva sopra. Poi convertilo nell'epitrocoide a rotolamento
+    esterno: cambia ogni `(R - r)` in `(R + r)` e il `+ d` nella riga `x`
+    in `- d`. In che direzione punteranno gli anelli dopo la tua modifica?
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -172,20 +174,21 @@ for i in range(steps + 1):
         monty.goto(x, y)`);
 </script>
 
-The inner-rolling curve tucks its 5 loops *inward* and stays small; after your sign changes the loops flip *outward* and the whole curve grows — same three numbers, opposite rolling.
+La curva a rotolamento interno ripiega i suoi 5 anelli *verso l'interno* e resta piccola; dopo i tuoi cambi di segno gli anelli si ribaltano *verso l'esterno* e l'intera curva cresce — stessi tre numeri, rotolamento opposto.
 
-## Experiments
+## Esperimenti
 
-1. **Change `r = 20` to `r = 25`.** Now `R / r = 4`. You'll know it worked when the curve closes with exactly 4 loops.
+1. **Cambia `r = 20` in `r = 25`.** Ora `R / r = 4`. Saprai che ha funzionato quando la curva si chiude con esattamente 4 anelli.
 
-2. **Set `d = 20` (equal to `r`).** You'll know it worked when the round loops sharpen into 5 pointed cusps — an epicycloid.
+2. **Imposta `d = 20` (uguale a `r`).** Saprai che ha funzionato quando gli anelli rotondi si affinano in 5 punte acute — un'epicicloide.
 
-3. **Try `d = 10` (smaller than `r`).** You'll know it worked when the loops flatten into 5 gentle bumps with no crossing.
+3. **Prova `d = 10` (più piccolo di `r`).** Saprai che ha funzionato quando gli anelli si appiattiscono in 5 protuberanze dolci senza incroci.
 
-4. **Set `r = 30` so `R / r` is not a whole number.** Change `2 * math.pi` to `6 * math.pi` so the curve has time to close. You'll know it worked when 10 loops weave around before the curve meets itself.
+4. **Imposta `r = 30` così `R / r` non è un numero intero.** Cambia `2 * math.pi` in `6 * math.pi` così la curva ha tempo di chiudersi. Saprai che ha funzionato quando 10 anelli si intrecciano prima che la curva si incontri da sola.
 
-!!! mascot-celebration "Rolling On the Outside!"
+!!! mascot-celebration "Rotolando all'Esterno!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You just discovered that one plus-or-minus sign decides whether a circle
-    rolls inside or outside — and completely changes the picture.
-    Up next: **Superellipse** — one exponent that morphs a star into a circle into a rounded square.
+    Hai appena scoperto che un solo segno più-o-meno decide se un cerchio
+    rotola dentro o fuori — e cambia completamente l'immagine.
+    Prossimo: **Superellisse** — un esponente che trasforma una stella in
+    un cerchio in un quadrato arrotondato.

@@ -2,27 +2,28 @@
 hide:
     - toc
 ---
-# Topographic Map
+# Mappa Topografica
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Plot closed contour rings in polar coordinates with `math.sin()` and `math.cos()`
-- Perturb a circle's radius with sine waves to make natural, wobbly coastlines
-- Paint elevation bands by filling rings from the outside in
+- Tracciare anelli di curve di livello chiusi in coordinate polari con `math.sin()` e `math.cos()`
+- Perturbare il raggio di un cerchio con onde sinusoidali per creare coste naturali e ondulate
+- Colorare fasce di elevazione riempiendo gli anelli dall'esterno verso l'interno
 
-Real hikers' maps show mountains as nested contour rings: each ring is a line of equal elevation, and the colors march from lowland green through brown rock up to a white summit. This lab draws a whole island that way — eight wobbly rings, filled from the outside in so each higher elevation paints on top of the last.
+Le vere mappe degli escursionisti mostrano le montagne come anelli di curve di livello annidati: ogni anello è una linea di uguale elevazione, e i colori avanzano dal verde delle pianure attraverso la roccia marrone fino a una vetta bianca. Questo laboratorio disegna un'intera isola in questo modo — otto anelli ondulati, riempiti dall'esterno verso l'interno così ogni elevazione più alta si dipinge sopra l'ultima.
 
-!!! mascot-welcome "Welcome to the Topographic Map!"
+!!! mascot-welcome "Benvenuto alla Mappa Topografica!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Map makers squash 3D mountains onto flat paper using contour lines —
-    and you're about to be the cartographer. Grab your compass: we're
-    drawing an island that never existed, one elevation at a time!
+    I cartografi schiacciano montagne 3D su carta piatta usando le curve
+    di livello — e tu stai per diventare il cartografo. Prendi la
+    bussola: stiamo disegnando un'isola che non è mai esistita, un
+    livello di elevazione alla volta!
 
-## How It Works
+## Come Funziona
 
-Each ring is a circle in polar coordinates whose radius wobbles as the angle sweeps around: `r = base_r * (1 + 0.10*sin(3*theta) + 0.06*sin(7*theta + 1))`. Adding two sine waves of different frequencies (3 and 7) makes the coastline look natural instead of perfectly round, and because the wobble is a *percentage* of `base_r`, the bumps are big on the outer rings and gentle near the peak — and the rings can never cross. The loop draws the biggest ring first and works inward, so each smaller filled ring paints over the one below it, exactly like stacking elevation layers.
+Ogni anello è un cerchio in coordinate polari il cui raggio ondula mentre l'angolo gira intorno: `r = base_r * (1 + 0.10*sin(3*theta) + 0.06*sin(7*theta + 1))`. Aggiungere due onde sinusoidali di frequenze diverse (3 e 7) fa sembrare la costa naturale invece che perfettamente rotonda, e poiché l'ondulazione è una *percentuale* di `base_r`, le protuberanze sono grandi sugli anelli esterni e dolci vicino alla vetta — e gli anelli non possono mai incrociarsi. Il ciclo disegna prima l'anello più grande e procede verso l'interno, così ogni anello riempito più piccolo si dipinge sopra quello sotto di lui, esattamente come impilare strati di elevazione.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -60,14 +61,14 @@ for ring in range(8):
     monty.end_fill()
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The wobble formula includes `math.sin(3 * theta)`, the strongest
-    wiggle. As you travel once around the island's coastline, how many
-    big bulges (peninsulas) will you pass — 3, 7, or 10?
-    Make your guess, then click Run!
+    La formula dell'ondulazione include `math.sin(3 * theta)`, l'ondulazione
+    più forte. Mentre percorri un giro intorno alla costa dell'isola,
+    quante grandi protuberanze (penisole) incontrerai — 3, 7 o 10?
+    Fai la tua ipotesi, poi clicca Esegui!
 
-## Try It Now
+## Prova Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -124,28 +125,28 @@ for ring in range(8):
     monty.end_fill()`);
 </script>
 
-**3 big peninsulas** — `sin(3 * theta)` repeats 3 times per lap, and the faster `sin(7 * theta)` just adds smaller ripples on top. Were you right?
+**3 grandi penisole** — `sin(3 * theta)` si ripete 3 volte per giro, e il più rapido `sin(7 * theta)` aggiunge solo piccole increspature sopra. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Reading the color list tells the whole elevation story: ring 0 (the largest, drawn first) is `'darkgreen'` lowland, and each ring inward steps through lighter greens, khaki, and browns until ring 7 is the `'white'` summit. This works only because of paint order — turtle fill has no idea about "height", but filling outside-in means every smaller ring covers the middle of the bigger one, leaving just a colored band showing. Real topographic maps use the same trick: the band *between* two contour lines gets one elevation color. The blue `bgcolor` plays the ocean around the outermost coastline.
+Leggere la lista dei colori racconta tutta la storia dell'elevazione: l'anello 0 (il più grande, disegnato per primo) è la pianura `'darkgreen'`, e ogni anello verso l'interno avanza attraverso verdi più chiari, kaki e marroni fino a quando l'anello 7 è la vetta `'white'`. Questo funziona solo grazie all'ordine della pittura — il riempimento della turtle non ha idea di cosa sia "l'altezza", ma riempire dall'esterno verso l'interno fa sì che ogni anello più piccolo coprа il centro di quello più grande, lasciando visibile solo una fascia colorata. Le vere mappe topografiche usano lo stesso trucco: la fascia *tra* due curve di livello ottiene un colore di elevazione. Lo sfondo `bgcolor` blu interpreta l'oceano intorno alla costa più esterna.
 
-## Explanation Table
+## Tabella Esplicativa
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `wobble = 0.10 * math.sin(3 * theta) + 0.06 * math.sin(7 * theta + 1)` | Two sine waves make a bumpy but smooth coastline |
-| `return base_r * (1 + wobble)` | Wobble scales with ring size, so rings never cross |
-| `base_r = 160 - ring * 18` | Each ring is 18 pixels smaller — outside in, low to high |
-| `monty.fillcolor(colors[ring])` | Elevation bands: green shores, brown slopes, white peak |
+| `wobble = 0.10 * math.sin(3 * theta) + 0.06 * math.sin(7 * theta + 1)` | Due onde sinusoidali creano una costa bitorzoluta ma liscia |
+| `return base_r * (1 + wobble)` | L'ondulazione si scala con la dimensione dell'anello, così gli anelli non si incrociano mai |
+| `base_r = 160 - ring * 18` | Ogni anello è più piccolo di 18 pixel — dall'esterno verso l'interno, da basso ad alto |
+| `monty.fillcolor(colors[ring])` | Fasce di elevazione: rive verdi, pendii marroni, vetta bianca |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Reshape the Island"
+!!! mascot-thinking "Tocca a Te — Rimodella l'Isola"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    In the program below, `math.sin(3 * theta)` has been changed to
-    `math.sin(6 * theta)`. Predict: how many big peninsulas will the
-    new coastline have? Run it and count them!
+    Nel programma qui sotto, `math.sin(3 * theta)` è stato cambiato in
+    `math.sin(6 * theta)`. Prevedi: quante grandi penisole avrà la nuova
+    costa? Eseguilo e contale!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -196,20 +197,21 @@ for ring in range(8):
     monty.end_fill()`);
 </script>
 
-Six peninsulas — the first number inside `sin(n * theta)` is exactly how many times that bump pattern repeats around the island.
+Sei penisole — il primo numero dentro `sin(n * theta)` è esattamente quante volte quello schema di protuberanze si ripete intorno all'isola.
 
-## Experiments
+## Esperimenti
 
-1. **Make it craggier.** Change `0.10` to `0.20`. You'll know it worked when the coastline grows dramatic fjords and the rings pinch close together.
+1. **Rendila più scoscesa.** Cambia `0.10` in `0.20`. Saprai che ha funzionato quando la costa cresce di fiordi drammatici e gli anelli si stringono vicini tra loro.
 
-2. **Shift the terrain.** Change `math.sin(7 * theta + 1)` to `math.sin(7 * theta + 4)`. You'll know it worked when the small ripples slide around to different spots on the coast.
+2. **Sposta il terreno.** Cambia `math.sin(7 * theta + 1)` in `math.sin(7 * theta + 4)`. Saprai che ha funzionato quando le piccole increspature si spostano in punti diversi della costa.
 
-3. **Deepen the ocean.** Change `screen.bgcolor('lightsteelblue')` to `screen.bgcolor('midnightblue')`. You'll know it worked when the island glows against a dark night-chart sea.
+3. **Approfondisci l'oceano.** Cambia `screen.bgcolor('lightsteelblue')` in `screen.bgcolor('midnightblue')`. Saprai che ha funzionato quando l'isola brilla contro un mare scuro da carta nautica notturna.
 
-4. **Flip the elevation.** Reverse the color list (put `'white'` first and `'darkgreen'` last). You'll know it worked when the map becomes a snowy ring-shaped crater with a green valley floor at the center.
+4. **Ribalta l'elevazione.** Inverti la lista dei colori (metti `'white'` primo e `'darkgreen'` ultimo). Saprai che ha funzionato quando la mappa diventa un cratere innevato a forma di anello con un fondovalle verde al centro.
 
-!!! mascot-celebration "Master Cartographer!"
+!!! mascot-celebration "Cartografo Esperto!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Polar coordinates, layered sine wobbles, and outside-in painting —
-    you turned math into a map worthy of an explorer's backpack.
-    Browse the **Turtle Graphics Gallery** for your next challenge!
+    Coordinate polari, ondulazioni sinusoidali a strati, e pittura
+    dall'esterno verso l'interno — hai trasformato la matematica in una
+    mappa degna dello zaino di un esploratore. Esplora la **Galleria di
+    Grafica Turtle** per la tua prossima sfida!

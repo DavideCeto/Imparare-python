@@ -2,27 +2,28 @@
 hide:
     - toc
 ---
-# DNA Double Helix
+# Doppia Elica del DNA
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Plot a sine wave point by point with `math.sin()`
-- Offset a second wave by 180° (`math.pi`) to make two crossing strands
-- Connect matching points with "rungs" to build the DNA ladder
+- Tracciare un'onda sinusoidale punto per punto con `math.sin()`
+- Spostare una seconda onda di 180° (`math.pi`) per creare due filamenti che si incrociano
+- Collegare i punti corrispondenti con "pioli" per costruire la scala del DNA
 
-Seen from the side, DNA looks like a twisted ladder: two strands weaving over and under each other, joined by rungs (the base pairs). The secret is pure trigonometry — the two strands are the *same* sine wave, just shifted half a cycle apart. (This is a different beast from the gallery's Double Helix Spiral, which is an expanding turtle spiral — here we *plot points* with math.)
+Vista di lato, il DNA sembra una scala attorcigliata: due filamenti che si intrecciano uno sopra e uno sotto l'altro, uniti da pioli (le coppie di basi). Il segreto è pura trigonometria — i due filamenti sono la *stessa* onda sinusoidale, solo spostata di mezzo ciclo. (Questa è una bestia diversa dalla Spirale a Doppia Elica della galleria, che è una spirale della turtle in espansione — qui invece *tracciamo punti* con la matematica.)
 
-!!! mascot-welcome "Welcome to the Double Helix!"
+!!! mascot-welcome "Benvenuto alla Doppia Elica!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    In 1953, the shape of DNA was one of the biggest puzzles in science.
-    You're about to draw it with two sine waves and a phase shift —
-    the molecule of life in under 40 lines of Python!
+    Nel 1953, la forma del DNA era uno dei più grandi rompicapo della
+    scienza. Stai per disegnarla con due onde sinusoidali e uno
+    spostamento di fase — la molecola della vita in meno di 40 righe
+    di Python!
 
-## How It Works
+## Come Funziona
 
-Both strands are plotted as point sequences going across the canvas: for point `i`, the height is `amp * sin(theta + phase)` where `theta` sweeps through 3 full waves. The blue strand uses `phase = 0` and the red strand uses `phase = math.pi` — a 180° offset, so wherever one strand is high the other is low, making them appear to cross like a twisted ladder. The gray rungs are drawn first: every 6th point, a straight line connects the blue strand's height to the red strand's height at the same x.
+Entrambi i filamenti sono tracciati come sequenze di punti che attraversano il canvas: per il punto `i`, l'altezza è `amp * sin(theta + phase)` dove `theta` percorre 3 onde complete. Il filamento blu usa `phase = 0` e il filamento rosso usa `phase = math.pi` — uno spostamento di 180°, così dove un filamento è alto l'altro è basso, facendoli sembrare incrociati come una scala attorcigliata. I pioli grigi vengono disegnati prima: ogni 6° punto, una linea dritta collega l'altezza del filamento blu all'altezza del filamento rosso alla stessa x.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -67,14 +68,14 @@ for strand in range(2):
             monty.pendown()
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The red strand is the blue strand shifted by 180°.
-    When the blue strand is at its **highest** point, where will the
-    red strand be — at the top with it, in the middle, or at its
-    **lowest** point? Make your guess, then click Run!
+    Il filamento rosso è il filamento blu spostato di 180°.
+    Quando il filamento blu è nel suo punto **più alto**, dove sarà
+    il filamento rosso — in alto insieme a lui, nel mezzo, o nel suo
+    punto **più basso**? Fai la tua ipotesi, poi clicca Esegui!
 
-## Try It Now
+## Prova Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -138,29 +139,29 @@ for strand in range(2):
             monty.pendown()`);
 </script>
 
-At its lowest — `sin(theta + pi)` is always the exact opposite of `sin(theta)`. That mirror-image dance is what makes the ladder look twisted. Were you right?
+Nel suo punto più basso — `sin(theta + pi)` è sempre l'esatto opposto di `sin(theta)`. Questa danza a immagine speculare è ciò che fa sembrare attorcigliata la scala. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-This is *parametric plotting*: instead of steering the turtle with `forward()` and `left()`, we compute each point's coordinates from a parameter `i` and jump there with `goto()`. The identity `sin(theta + pi) = -sin(theta)` means the two strands are perfect reflections, so they cross wherever `sin(theta) = 0`. Notice the rungs are longest halfway between crossings (where the strands are far apart) and shrink to nothing at each crossing — no extra code needed, the geometry does it automatically. Drawing the rungs *before* the strands keeps the gray lines neatly behind the blue and red.
+Questo è *plotting parametrico*: invece di guidare la turtle con `forward()` e `left()`, calcoliamo le coordinate di ogni punto da un parametro `i` e ci saltiamo con `goto()`. L'identità `sin(theta + pi) = -sin(theta)` fa sì che i due filamenti siano riflessi perfetti, così si incrociano ovunque `sin(theta) = 0`. Nota che i pioli sono più lunghi a metà strada tra gli incroci (dove i filamenti sono lontani) e si restringono a zero a ogni incrocio — nessun codice extra necessario, lo fa automaticamente la geometria. Disegnare i pioli *prima* dei filamenti mantiene le linee grigie ordinatamente dietro al blu e al rosso.
 
-## Explanation Table
+## Tabella Esplicativa
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `theta = 2 * math.pi * waves * i / points + phase` | Sweeps theta through 3 full waves as i counts up |
-| `return amp * math.sin(theta)` | Turns the angle into a height between -70 and +70 |
-| `offset = math.pi` | 180° phase shift — the whole secret of the helix look |
-| `for i in range(0, points + 1, 6):` | Every 6th point gets a gray rung between the strands |
+| `theta = 2 * math.pi * waves * i / points + phase` | Fa percorrere a theta 3 onde complete mentre i aumenta |
+| `return amp * math.sin(theta)` | Trasforma l'angolo in un'altezza tra -70 e +70 |
+| `offset = math.pi` | Spostamento di fase di 180° — tutto il segreto dell'aspetto a elica |
+| `for i in range(0, points + 1, 6):` | Ogni 6° punto ottiene un piolo grigio tra i filamenti |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Break the Phase"
+!!! mascot-thinking "Tocca a Te — Rompi la Fase"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    In the program below, `offset` has been changed from `math.pi` to `0`,
-    so both strands get the **same** phase. Predict: what will the rungs
-    look like, and how many separate strands will you see? Run it, then
-    set `offset = math.pi` back to repair the DNA!
+    Nel programma qui sotto, `offset` è stato cambiato da `math.pi` a `0`,
+    così entrambi i filamenti ottengono la **stessa** fase. Prevedi: come
+    appariranno i pioli, e quanti filamenti separati vedrai? Eseguilo, poi
+    riporta `offset = math.pi` per riparare il DNA!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -218,21 +219,22 @@ for strand in range(2):
             monty.pendown()`);
 </script>
 
-With `offset = 0` every rung connects a point to itself (length zero!) and the red strand draws exactly on top of the blue one — one lonely wave, no helix. The 180° offset isn't decoration; it *is* the double helix.
+Con `offset = 0` ogni piolo collega un punto a se stesso (lunghezza zero!) e il filamento rosso si disegna esattamente sopra quello blu — un'onda solitaria, nessuna elica. Lo spostamento di 180° non è decorazione; *è* la doppia elica.
 
-## Experiments
+## Esperimenti
 
-1. **Twist it tighter.** Change `waves = 3` to `waves = 5`. You'll know it worked when the strands cross 10 times instead of 6.
+1. **Attorciglia più stretto.** Cambia `waves = 3` in `waves = 5`. Saprai che ha funzionato quando i filamenti si incrociano 10 volte invece di 6.
 
-2. **Add more base pairs.** Change the rung step from `6` to `3` in `range(0, points + 1, 6)`. You'll know it worked when the ladder has twice as many gray rungs.
+2. **Aggiungi più coppie di basi.** Cambia il passo dei pioli da `6` a `3` in `range(0, points + 1, 6)`. Saprai che ha funzionato quando la scala ha il doppio dei pioli grigi.
 
-3. **Squash the molecule.** Change `amp = 70` to `amp = 35`. You'll know it worked when the helix becomes a narrow ribbon through the middle of the canvas.
+3. **Schiaccia la molecola.** Cambia `amp = 70` in `amp = 35`. Saprai che ha funzionato quando l'elica diventa un nastro stretto attraverso il mezzo del canvas.
 
-4. **Try a quarter twist.** Change `offset = math.pi` to `offset = math.pi / 2`. You'll know it worked when the strands still weave but the rungs never quite shrink to zero — a 90° offset never lets the strands meet.
+4. **Prova un quarto di giro.** Cambia `offset = math.pi` in `offset = math.pi / 2`. Saprai che ha funzionato quando i filamenti continuano a intrecciarsi ma i pioli non si restringono mai del tutto a zero — uno spostamento di 90° non lascia mai incontrare i filamenti.
 
-!!! mascot-celebration "You Cracked the Code!"
+!!! mascot-celebration "Hai Decifrato il Codice!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Two sine waves, one phase shift, a few gray rungs — and the most
-    famous molecule in biology appears on your screen.
-    Up next: **Topographic Map** — paint an island's elevation with
-    wobbly contour rings, from green shores to a snowy white peak.
+    Due onde sinusoidali, uno spostamento di fase, qualche piolo grigio —
+    e la molecola più famosa della biologia appare sul tuo schermo.
+    Prossimo: **Mappa Topografica** — colora l'elevazione di un'isola con
+    anelli di curve di livello ondulati, dalle rive verdi a una vetta
+    bianca di neve.

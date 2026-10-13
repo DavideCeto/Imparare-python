@@ -2,27 +2,28 @@
 hide:
     - toc
 ---
-# Leaf Venation
+# Nervatura della Foglia
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Draw smooth curved outlines from many small `goto()` steps
-- Curve a line gradually using small `forward()` + `left()` steps
-- Use nested loops to build three levels of veins: central, secondary, tertiary
+- Disegnare contorni curvi lisci da molti piccoli passi `goto()`
+- Curvare una linea gradualmente usando piccoli passi `forward()` + `left()`
+- Usare cicli annidati per costruire tre livelli di venature: centrale, secondaria, terziaria
 
-Hold a leaf up to the light and you'll see a beautiful branching network: one thick central vein, secondary veins peeling off at regular intervals, and tiny tertiary veins branching off those. This lab draws that whole three-level structure — a real piece of plant anatomy — in about 60 lines of Python.
+Tieni una foglia controluce e vedrai una bellissima rete ramificata: una venatura centrale spessa, venature secondarie che si staccano a intervalli regolari, e minuscole venature terziarie che si ramificano da quelle. Questo laboratorio disegna tutta questa struttura a tre livelli — un vero pezzo di anatomia vegetale — in circa 60 righe di Python.
 
-!!! mascot-welcome "Welcome to Leaf Venation!"
+!!! mascot-welcome "Benvenuto alla Nervatura della Foglia!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Veins are a leaf's plumbing — they carry water out and food back.
-    Today you'll build a leaf layer by layer: outline first, then the
-    central vein, then veins branching off veins. Botany meets loops!
+    Le venature sono l'impianto idraulico di una foglia — portano l'acqua
+    fuori e il cibo dentro. Oggi costruirai una foglia strato per strato:
+    prima il contorno, poi la venatura centrale, poi venature che si
+    ramificano da altre venature. Botanica incontra i cicli!
 
-## How It Works
+## Come Funziona
 
-The outline is two mirrored arcs: for each side, a loop computes points with `x = side * half * sin(pi * t)` as `t` goes from base to tip, which bulges out in the middle and comes to a point at both ends. Then a thick central vein runs straight up the middle. A nested loop adds the detail: the outer loop walks 9 positions up the central vein, and for each side it draws a secondary vein using many small `forward(4)` + `left(1.5)` steps so the vein curves gently toward the tip — and every 4th step it pauses to draw a tiny tertiary vein before continuing.
+Il contorno è formato da due archi speculari: per ogni lato, un ciclo calcola punti con `x = side * half * sin(pi * t)` mentre `t` va dalla base alla punta, il che fa rigonfiare nel mezzo e arrivare a una punta a entrambe le estremità. Poi una venatura centrale spessa corre dritta su per il mezzo. Un ciclo annidato aggiunge il dettaglio: il ciclo esterno percorre 9 posizioni su per la venatura centrale, e per ogni lato disegna una venatura secondaria usando molti piccoli passi `forward(4)` + `left(1.5)` così la venatura si curva dolcemente verso la punta — e ogni 4° passo si ferma per disegnare una minuscola venatura terziaria prima di continuare.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -93,14 +94,14 @@ for i in range(1, 10):
                 monty.pencolor('forestgreen')
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The secondary-vein loop is `for i in range(1, 10)`, and at each
-    position it draws one vein on the **right** and one on the **left**.
-    How many secondary veins will the finished leaf have in total?
-    Count it out, then click Run!
+    Il ciclo delle venature secondarie è `for i in range(1, 10)`, e in
+    ogni posizione disegna una venatura a **destra** e una a **sinistra**.
+    Quante venature secondarie avrà in totale la foglia finita?
+    Contale, poi clicca Esegui!
 
-## Try It Now
+## Prova Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -190,28 +191,29 @@ for i in range(1, 10):
                 monty.pencolor('forestgreen')`);
 </script>
 
-**18 veins** — 9 positions times 2 sides. Were you right?
+**18 venature** — 9 posizioni per 2 lati. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Look closely at how the veins get their length: `reach = half * math.sin(math.pi * t) * 0.85` is the *same* sine formula used for the outline, scaled down. That guarantees each vein fits inside the leaf — long veins in the fat middle, short ones near the tip and base. The curve comes from turning just 1.5° after every 4-pixel step: 20 small turns add up to a smooth bend toward the tip, exactly how real secondary veins sweep upward. The tertiary veins use a save-and-restore trick — remember position and heading, dart off at 45°, then `goto` back and keep going.
+Guarda bene come le venature ottengono la loro lunghezza: `reach = half * math.sin(math.pi * t) * 0.85` è la *stessa* formula del seno usata per il contorno, ridotta in scala. Questo garantisce che ogni venatura si adatti dentro la foglia — venature lunghe nella parte grassa centrale, corte vicino alla punta e alla base. La curva nasce girando solo di 1.5° dopo ogni passo di 4 pixel: 20 piccole svolte si somma­no in una curvatura liscia verso la punta, esattamente come le vere venature secondarie si inarcano verso l'alto. Le venature terziarie usano un trucco di salva-e-ripristina — ricordano posizione e direzione, scattano via a 45°, poi tornano con `goto` e continuano.
 
-## Explanation Table
+## Tabella Esplicativa
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `x = side * half * math.sin(math.pi * t)` | The outline arc: zero width at base and tip, widest in the middle |
-| `monty.forward(4)` + `monty.left(side * 1.5)` | Many tiny steps and turns make a smooth curved vein |
-| `reach = half * math.sin(math.pi * t) * 0.85` | Veins are longer in the middle of the leaf, shorter near the ends |
-| `if step > 0 and step % 4 == 0:` | Every 4th step, pause and sprout a tiny tertiary vein |
+| `x = side * half * math.sin(math.pi * t)` | L'arco del contorno: larghezza zero alla base e alla punta, massima nel mezzo |
+| `monty.forward(4)` + `monty.left(side * 1.5)` | Molti piccoli passi e svolte creano una venatura curva e liscia |
+| `reach = half * math.sin(math.pi * t) * 0.85` | Le venature sono più lunghe nel mezzo della foglia, più corte vicino alle estremità |
+| `if step > 0 and step % 4 == 0:` | Ogni 4° passo, si ferma e fa germinare una minuscola venatura terziaria |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Find the Bug"
+!!! mascot-warning "Trova il Bug"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    This simplified leaf compiles and runs — but all 18 secondary veins
-    grow on the **right side only**! One line forgot to use the `side`
-    variable. Find it, fix it, and make the left side green again.
+    Questa foglia semplificata compila ed esegue — ma tutte le 18
+    venature secondarie crescono solo sul **lato destro**! Una riga ha
+    scordato di usare la variabile `side`. Trovala, correggila, e rendi
+    di nuovo verde il lato sinistro.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -279,21 +281,22 @@ for i in range(1, 10):
             monty.left(side * 1.5)`);
 </script>
 
-The bug is `monty.setheading(90 - 60)` — it should be `monty.setheading(90 - side * 60)`. Without `side`, both "sides" start out pointing up-and-right, so the left half of the leaf stays empty.
+Il bug è `monty.setheading(90 - 60)` — dovrebbe essere `monty.setheading(90 - side * 60)`. Senza `side`, entrambi i "lati" partono puntando in alto a destra, così la metà sinistra della foglia resta vuota.
 
-## Experiments
+## Esperimenti
 
-1. **Grow a willow leaf.** Change `half = 105` to `half = 55`. You'll know it worked when the leaf becomes long and narrow with short veins.
+1. **Fai crescere una foglia di salice.** Cambia `half = 105` in `half = 55`. Saprai che ha funzionato quando la foglia diventa lunga e stretta con venature corte.
 
-2. **Add more veins.** Change `range(1, 10)` to `range(1, 14)` and `t = i / 10.0` to `t = i / 14.0`. You'll know it worked when the leaf has 26 secondary veins packed closer together.
+2. **Aggiungi più venature.** Cambia `range(1, 10)` in `range(1, 14)` e `t = i / 10.0` in `t = i / 14.0`. Saprai che ha funzionato quando la foglia ha 26 venature secondarie ammassate più vicine.
 
-3. **Curve harder.** Change `monty.left(side * 1.5)` to `monty.left(side * 3)`. You'll know it worked when the veins sweep upward in strong arcs like a tropical leaf.
+3. **Curva di più.** Cambia `monty.left(side * 1.5)` in `monty.left(side * 3)`. Saprai che ha funzionato quando le venature si inarcano verso l'alto in curve marcate come una foglia tropicale.
 
-4. **Autumn colors.** Change `'palegreen'` to `'gold'` and `'forestgreen'` to `'chocolate'`. You'll know it worked when your leaf looks ready to fall in October.
+4. **Colori d'autunno.** Cambia `'palegreen'` in `'gold'` e `'forestgreen'` in `'chocolate'`. Saprai che ha funzionato quando la tua foglia sembra pronta a cadere in ottobre.
 
-!!! mascot-celebration "A Botanist's Eye!"
+!!! mascot-celebration "Un Occhio da Botanico!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Outline, central vein, secondary, tertiary — you built a leaf the way
-    a plant does, one level of structure at a time, with nested loops.
-    Up next: **DNA Double Helix** — two sine waves and a 180° phase shift
-    build the molecule of life.
+    Contorno, venatura centrale, secondaria, terziaria — hai costruito
+    una foglia nel modo in cui lo fa una pianta, un livello di struttura
+    alla volta, con cicli annidati. Prossimo: **Doppia Elica del DNA** —
+    due onde sinusoidali e uno spostamento di fase di 180° costruiscono
+    la molecola della vita.
