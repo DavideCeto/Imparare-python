@@ -1,6 +1,6 @@
 ---
-title: Stack and Queue Simulator
-description: Feed the same items into a stack of plates and a waiting line, then remove them and compare the LIFO and FIFO orders side by side.
+title: Simulatore di Pila e Coda
+description: Dai in pasto gli stessi elementi a una pila di piatti e a una fila d'attesa, poi rimuovili e confronta fianco a fianco gli ordini LIFO e FIFO.
 image: /sims/stack-queue-simulator/stack-queue-simulator.png
 og:image: /sims/stack-queue-simulator/stack-queue-simulator.png
 twitter:image: /sims/stack-queue-simulator/stack-queue-simulator.png
@@ -9,44 +9,49 @@ social:
 quality_score: 93
 ---
 
-# Stack and Queue Simulator
+# Simulatore di Pila e Coda
 
 <iframe src="main.html" height="512" width="100%" scrolling="no"></iframe>
 
-[Run the Stack and Queue Simulator MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui il Simulatore di Pila e Coda a Schermo Intero](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Modifica nell'Editor p5.js](https://editor.p5js.org/)
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-LIFO versus FIFO is a difference in *time order*, which code output alone
-cannot show. This simulator makes it a controlled experiment: one Add button
-feeds the identical item to both structures, so the only difference students
-see is the exit. `stack.pop()` lifts the newest plate off the top;
-`queue.pop(0)` releases the oldest item from the front. The removal-history
-strips give the punchline — the stack returns items reversed, the queue in
-original order.
+LIFO contro FIFO è una differenza nell'*ordine temporale*, che il solo
+output del codice non può mostrare. Questo simulatore lo trasforma in un
+esperimento controllato: un pulsante Aggiungi alimenta l'elemento identico
+a entrambe le strutture, così l'unica differenza che gli studenti vedono è
+l'uscita. `stack.pop()` solleva il piatto più nuovo dalla cima;
+`queue.pop(0)` rilascia l'elemento più vecchio dal fronte. Le strisce della
+cronologia delle rimozioni danno la battuta finale — la pila restituisce
+gli elementi invertiti, la coda nell'ordine originale.
 
-**Learning objective:** The student will be able to predict the removal order
-of items from a stack versus a queue and match each to its list operations.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di prevedere
+l'ordine di rimozione degli elementi da una pila rispetto a una coda e di
+abbinare ciascuno alle sue operazioni di lista.
 
-- **Bloom's Taxonomy (2001):** Understand → Apply — *compare, demonstrate,
-  predict*
-- **Interaction pattern:** button-driven push/pop with a side-by-side
-  controlled comparison
+- **Tassonomia di Bloom (2001):** Comprendere → Applicare — *confrontare,
+  dimostrare, prevedere*
+- **Pattern di interazione:** push/pop guidati da pulsanti con un confronto
+  controllato fianco a fianco
 
-## How to Use
+## Come Usarlo
 
-1. Click **Add Item** four times — the same letters join both structures.
-2. Predict which letter each Remove button will release, then click and
-   check the operation line.
-3. Empty both structures and read the two history strips: reversed versus
-   original order.
-4. Note the code: both use `append()` to add; only the removal differs.
+1. Clicca **Aggiungi Elemento** quattro volte — le stesse lettere entrano
+   in entrambe le strutture.
+2. Prevedi quale lettera rilascerà ciascun pulsante Rimuovi, poi clicca e
+   verifica la riga dell'operazione.
+3. Svuota entrambe le strutture e leggi le due strisce di cronologia:
+   ordine invertito contro ordine originale.
+4. Nota il codice: entrambe usano `append()` per aggiungere; solo la
+   rimozione è diversa.
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/stack-queue-simulator/main.html"
@@ -55,37 +60,40 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapter 16 (Lists — Methods and Patterns); revisited in Chapter 30
+Scuola primaria superiore e scuola media (10-14 anni), Capitolo 16 (Liste - Metodi e pattern); ripreso nel Capitolo 30
 
-### Duration
+### Durata
 
-10 minutes
+10 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- List append() and pop() (Chapter 16)
+- append() e pop() delle liste (Capitolo 16)
 
-### Activities
+### Attività
 
-1. **Controlled experiment** (4 min): Add A-D, predict both first exits,
-   remove one from each, verify.
-2. **History race** (3 min): Empty both structures; students write the two
-   history orders and name the patterns (LIFO/FIFO).
-3. **Real-world match** (3 min): Students match scenarios to structures:
-   undo button (stack), print queue (queue), browser back button (stack),
-   lunch line (queue).
+1. **Esperimento controllato** (4 min): Aggiungi A-D, prevedi entrambe le
+   prime uscite, rimuovi una da ciascuna, verifica.
+2. **Gara di cronologia** (3 min): Svuota entrambe le strutture; gli
+   studenti scrivono i due ordini di cronologia e nominano i pattern
+   (LIFO/FIFO).
+3. **Abbinamento al mondo reale** (3 min): Gli studenti abbinano scenari a
+   strutture: pulsante annulla (pila), coda di stampa (coda), pulsante
+   indietro del browser (pila), fila per il pranzo (coda).
 
-### Assessment
+### Verifica
 
-- Student predicts the removal order for both structures after any sequence of adds
-- Student can state which list method makes a stack vs a queue
-- Student names one real-world example of each
+- Lo studente prevede l'ordine di rimozione per entrambe le strutture dopo
+  qualsiasi sequenza di aggiunte
+- Lo studente sa indicare quale metodo di lista crea una pila contro una
+  coda
+- Lo studente nomina un esempio del mondo reale per ciascuna
 
-## References
+## Riferimenti
 
-1. [Python Tutorial — Using Lists as Stacks and Queues](https://docs.python.org/3/tutorial/datastructures.html#using-lists-as-stacks) — official documentation
-2. [p5.js](https://p5js.org/) — the JavaScript library used to build this MicroSim
+1. [Python Tutorial — Using Lists as Stacks and Queues](https://docs.python.org/3/tutorial/datastructures.html#using-lists-as-stacks) — documentazione ufficiale
+2. [p5.js](https://p5js.org/) — la libreria JavaScript usata per costruire questo MicroSim

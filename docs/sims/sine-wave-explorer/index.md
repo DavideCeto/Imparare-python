@@ -1,6 +1,6 @@
 ---
-title: Sine Wave Explorer
-description: Drag amplitude, frequency, and phase sliders and watch y = A*sin(f*x + p) re-plot instantly, with a live equation and a plain sin(x) reference curve.
+title: Esploratore dell'Onda Sinusoidale
+description: Trascina gli slider di ampiezza, frequenza e fase e guarda y = A*sin(f*x + p) ridisegnarsi istantaneamente, con un'equazione dal vivo e una curva di riferimento sin(x) semplice.
 image: /sims/sine-wave-explorer/sine-wave-explorer.png
 og:image: /sims/sine-wave-explorer/sine-wave-explorer.png
 twitter:image: /sims/sine-wave-explorer/sine-wave-explorer.png
@@ -9,40 +9,44 @@ social:
 quality_score: 95
 ---
 
-# Sine Wave Explorer
+# Esploratore dell'Onda Sinusoidale
 
 <iframe src="main.html" height="492" width="100%" scrolling="no"></iframe>
 
-[Run the Sine Wave Explorer MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui l'Esploratore dell'Onda Sinusoidale a Schermo Intero](./main.html){ .md-button .md-button--primary }
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-The chapter's sine-wave turtle project works, but every parameter change
-requires an edit-and-rerun cycle. This explorer closes the feedback loop:
-amplitude, frequency, and phase sliders re-plot `y = A × sin(f·x + p)`
-instantly, the substituted equation updates live, and a dotted plain
-`sin(x)` reference curve makes every change measurable against the same
-baseline.
+Il progetto con la turtle e l'onda sinusoidale del capitolo funziona, ma
+ogni cambio di parametro richiede un ciclo di modifica-e-riesecuzione.
+Questo esploratore chiude il ciclo di riscontro: gli slider di ampiezza,
+frequenza e fase ridisegnano `y = A × sin(f·x + p)` istantaneamente,
+l'equazione sostituita si aggiorna dal vivo, e una curva di riferimento
+tratteggiata `sin(x)` semplice rende ogni cambiamento misurabile rispetto
+alla stessa base di confronto.
 
-**Learning objective:** The student will be able to demonstrate how
-amplitude, frequency, and phase each change the shape of a sine wave.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di dimostrare
+come ampiezza, frequenza e fase cambino ciascuna la forma di un'onda
+sinusoidale.
 
-- **Bloom's Taxonomy (2001):** Apply — *demonstrate, use, solve*
-- **Interaction pattern:** parameter sliders with immediate re-plot
-- **Library:** Plotly.js (mathematical function plot with hover tooltips)
+- **Tassonomia di Bloom (2001):** Applicare — *dimostrare, usare, risolvere*
+- **Pattern di interazione:** slider dei parametri con ridisegno immediato
+- **Libreria:** Plotly.js (grafico di funzione matematica con tooltip al
+  passaggio del mouse)
 
-## How to Use
+## Come Usarlo
 
-1. Predict which slider makes the wave taller, then test each slider one at
-   a time.
-2. Check **show plain sin(x)** and slide the phase — your wave slides left
-   past the dotted reference.
-3. Set frequency to 2: how many complete waves now fit between 0 and 4π?
-4. Hover the curve to read exact (x, y) values.
+1. Prevedi quale slider rende l'onda più alta, poi prova ogni slider uno
+   alla volta.
+2. Seleziona **mostra sin(x) semplice** e scorri la fase — la tua onda
+   scivola a sinistra rispetto al riferimento tratteggiato.
+3. Imposta la frequenza a 2: quante onde complete entrano ora tra 0 e 4π?
+4. Passa il mouse sulla curva per leggere i valori esatti (x, y).
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/sine-wave-explorer/main.html"
@@ -51,38 +55,40 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapter 18 (Math Module and Turtle Projects)
+Scuola primaria superiore e scuola media (10-14 anni), Capitolo 18 (Modulo math e progetti con la turtle)
 
-### Duration
+### Durata
 
-10 minutes
+10 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- math.sin() and the sine wave turtle project (Chapter 18)
+- math.sin() e il progetto con la turtle e l'onda sinusoidale (Capitolo 18)
 
-### Activities
+### Attività
 
-1. **One slider at a time** (4 min): Students describe in one sentence what
-   each slider changes, keeping the other two fixed.
-2. **Reference race** (3 min): With the dotted sin(x) on, students set
-   A = 2, f = 2 and count how many reference peaks fit under one of theirs.
-3. **Match the turtle** (3 min): Students find slider settings that
-   visually match the turtle project's `amplitude = 80, frequency = 0.05`
-   wave shape.
+1. **Uno slider alla volta** (4 min): Gli studenti descrivono in una frase
+   cosa cambia ogni slider, mantenendo fissi gli altri due.
+2. **Gara col riferimento** (3 min): Con il sin(x) tratteggiato attivo, gli
+   studenti impostano A = 2, f = 2 e contano quanti picchi di riferimento
+   entrano sotto uno dei loro.
+3. **Abbina la turtle** (3 min): Gli studenti trovano le impostazioni degli
+   slider che corrispondono visivamente alla forma d'onda del progetto con
+   la turtle `amplitude = 80, frequency = 0.05`.
 
-### Assessment
+### Verifica
 
-- Student correctly names the parameter that controls height, wiggle count,
-  and left-right shift
-- Student can sketch y = 2 sin(x) versus y = sin(2x) without the sim
-- Student connects the sliders back to the turtle project's variables
+- Lo studente nomina correttamente il parametro che controlla altezza,
+  numero di ondulazioni, e spostamento sinistra-destra
+- Lo studente sa disegnare y = 2 sin(x) contro y = sin(2x) senza la
+  simulazione
+- Lo studente collega gli slider alle variabili del progetto con la turtle
 
-## References
+## Riferimenti
 
-1. [Python Documentation — math.sin](https://docs.python.org/3/library/math.html#math.sin) — official documentation
-2. [Plotly.js Documentation](https://plotly.com/javascript/) — the plotting library used
+1. [Python Documentation — math.sin](https://docs.python.org/3/library/math.html#math.sin) — documentazione ufficiale
+2. [Plotly.js Documentation](https://plotly.com/javascript/) — la libreria di grafici usata

@@ -1,6 +1,6 @@
 ---
-title: Set Operations Venn
-description: Type two sets, watch member chips land in the right Venn regions, and light up union, intersection, difference, and symmetric difference.
+title: Diagramma di Venn delle Operazioni sugli Insiemi
+description: Digita due insiemi, guarda i gettoni dei membri atterrare nelle regioni giuste del diagramma di Venn, e illumina unione, intersezione, differenza e differenza simmetrica.
 image: /sims/set-operations-venn/set-operations-venn.png
 og:image: /sims/set-operations-venn/set-operations-venn.png
 twitter:image: /sims/set-operations-venn/set-operations-venn.png
@@ -9,46 +9,52 @@ social:
 quality_score: 93
 ---
 
-# Set Operations Venn
+# Diagramma di Venn delle Operazioni sugli Insiemi
 
 <iframe src="main.html" height="542" width="100%" scrolling="no"></iframe>
 
-[Run the Set Operations Venn MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui il Diagramma di Venn delle Operazioni sugli Insiemi a Schermo Intero](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Modifica nell'Editor p5.js](https://editor.p5js.org/)
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-Union, intersection, and difference are inherently spatial ideas that the
-text output of `{...}` completely hides. Here students type two sets and the
-member chips land in the correct Venn regions automatically. Each operation
-button shades exactly the region it selects — `A | B` lights both circles,
-`A & B` only the lens, `A - B` the left crescent, `A ^ B` everything except
-the lens — while the Python expression and its result set print below.
-Typing a duplicate visibly collapses it, and an empty intersection prints
-`set()`, Python's empty-set notation.
+Unione, intersezione e differenza sono idee intrinsecamente spaziali che
+l'output testuale di `{...}` nasconde completamente. Qui gli studenti
+digitano due insiemi e i gettoni dei membri atterrano automaticamente
+nelle regioni giuste del diagramma di Venn. Ogni pulsante operazione ombreggia
+esattamente la regione che seleziona — `A | B` illumina entrambi i cerchi,
+`A & B` solo la lente, `A - B` la mezzaluna sinistra, `A ^ B` tutto tranne
+la lente — mentre l'espressione Python e il suo insieme risultato vengono
+stampati sotto. Digitare un duplicato lo fa visibilmente collassare, e
+un'intersezione vuota stampa `set()`, la notazione Python per l'insieme
+vuoto.
 
-**Learning objective:** The student will be able to classify which elements
-belong to A | B, A & B, A − B, and A ^ B for two given sets.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di classificare
+quali elementi appartengono a A | B, A & B, A − B e A ^ B per due insiemi
+dati.
 
-- **Bloom's Taxonomy (2001):** Understand → Analyze — *classify, compare,
-  organize*
-- **Interaction pattern:** editable sets plus operation buttons that
-  highlight regions
+- **Tassonomia di Bloom (2001):** Comprendere → Analizzare — *classificare,
+  confrontare, organizzare*
+- **Pattern di interazione:** insiemi modificabili più pulsanti operazione
+  che evidenziano le regioni
 
-## How to Use
+## Come Usarlo
 
-1. Predict which animals `A & B` selects, then click the intersection
-   button and check the shaded region.
-2. Click all four operations and describe each shaded region in your own
-   words.
-3. Edit the sets: type your own items, then type one item twice in set A —
-   the duplicate collapses because sets never hold repeats.
-4. Remove all shared items and click `A & B` — the result is `set()`.
+1. Prevedi quali animali seleziona `A & B`, poi clicca il pulsante
+   intersezione e controlla la regione ombreggiata.
+2. Clicca tutte e quattro le operazioni e descrivi ogni regione ombreggiata
+   con parole tue.
+3. Modifica gli insiemi: digita i tuoi elementi, poi digita un elemento due
+   volte nell'insieme A — il duplicato collassa perché gli insiemi non
+   contengono mai ripetizioni.
+4. Rimuovi tutti gli elementi condivisi e clicca `A & B` — il risultato è
+   `set()`.
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/set-operations-venn/main.html"
@@ -57,37 +63,42 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapter 20 (Tuples and Sets)
+Scuola primaria superiore e scuola media (10-14 anni), Capitolo 20 (Tuple e insiemi)
 
-### Duration
+### Durata
 
-10-15 minutes
+10-15 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- Creating sets with curly braces (Chapter 20)
+- Creare insiemi con le parentesi graffe (Capitolo 20)
 
-### Activities
+### Attività
 
-1. **Region tour** (4 min): For the default sets, students predict all four
-   operation results on paper, then verify each with a click.
-2. **Build your own** (4 min): Students enter their two favorite-food sets
-   and find their intersection with a partner's.
-3. **Edge cases** (4 min): Make the intersection empty (what prints?), make
-   B a subset of A (what does A - B leave?), and enter a duplicate.
+1. **Giro delle regioni** (4 min): Per gli insiemi predefiniti, gli
+   studenti prevedono su carta tutti e quattro i risultati delle
+   operazioni, poi verificano ciascuno con un click.
+2. **Costruisci il tuo** (4 min): Gli studenti inseriscono i loro due
+   insiemi di cibi preferiti e trovano l'intersezione con quello di un
+   compagno.
+3. **Casi limite** (4 min): Rendi vuota l'intersezione (cosa stampa?),
+   rendi B un sottoinsieme di A (cosa lascia A - B?), e inserisci un
+   duplicato.
 
-### Assessment
+### Verifica
 
-- Student matches each operator symbol to its shaded region
-- Student predicts the result set for all four operations on new sets
-- Student can explain why sets automatically remove duplicates
+- Lo studente abbina ogni simbolo di operatore alla sua regione ombreggiata
+- Lo studente prevede l'insieme risultato per tutte e quattro le operazioni
+  su nuovi insiemi
+- Lo studente sa spiegare perché gli insiemi rimuovono automaticamente i
+  duplicati
 
-## References
+## Riferimenti
 
-1. [Python Documentation — Set Types](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset) — official set operations documentation
-2. [Wikipedia — Venn diagram](https://en.wikipedia.org/wiki/Venn_diagram) — background on the visualization
-3. [p5.js](https://p5js.org/) — the JavaScript library used to build this MicroSim
+1. [Python Documentation — Set Types](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset) — documentazione ufficiale delle operazioni sugli insiemi
+2. [Wikipedia — Venn diagram](https://en.wikipedia.org/wiki/Venn_diagram) — approfondimento sulla visualizzazione
+3. [p5.js](https://p5js.org/) — la libreria JavaScript usata per costruire questo MicroSim
