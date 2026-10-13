@@ -1,3 +1,3 @@
-# Book Chapter Generator Skill
+# Skill del Generatore di Capitoli del Libro
 
-Run the /book-chapter-generator skill.  Note that the target audience is a 10-year old student that has just learned Scratch.  Start slowly with turtle graphics build around Skulpt labs.  Do not put too many concepts in any chapter, especially at the beginning.  Use as many chapters as is needed.
+Esegui la skill /book-chapter-generator. Nota che il pubblico target è uno studente di 10 anni che ha appena imparato Scratch. Inizia lentamente con la grafica turtle costruita intorno ai laboratori Skulpt. Non mettere troppi concetti in nessun capitolo, specialmente all'inizio. Usa tutti i capitoli necessari.

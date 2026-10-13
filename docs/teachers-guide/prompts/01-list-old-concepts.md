@@ -1,4 +1,4 @@
-# Listing Old Concepts
+# Elenco dei Vecchi Concetti
 
 !!! prompt
-    This is an old programming book on "Beginning Python" that I want to update to the new /ibook standards.  Please begin by generating a list of all the concepts in the current content in the @docs directory.  Put that entire detailed concept list in the file @docs/learning-graph/concept-list-v1.md - Add any concepts you think are missing from this  course.
+    Questo è un vecchio manuale di programmazione su "Beginning Python" che voglio aggiornare ai nuovi standard /ibook. Inizia generando un elenco di tutti i concetti nei contenuti attuali nella directory @docs. Metti quell'intero elenco dettagliato dei concetti nel file @docs/learning-graph/concept-list-v1.md - Aggiungi qualsiasi concetto che pensi manchi da questo corso.

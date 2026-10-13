@@ -1,4 +1,4 @@
-# Learning Graph
+# Grafo di Apprendimento
 
 !!! prompt
-    Run the /learning-graph-generator using up to 450 concepts.  Make sure that the current concepts listed in @docs/learning-graph/concept-list-v1.md are all included, but also make sure that you include concepts that these concepts depend on.
+    Esegui /learning-graph-generator usando fino a 450 concetti. Assicurati che i concetti attuali elencati in @docs/learning-graph/concept-list-v1.md siano tutti inclusi, ma assicurati anche di includere i concetti da cui questi concetti dipendono.

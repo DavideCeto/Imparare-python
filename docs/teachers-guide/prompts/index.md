@@ -1,3 +1,3 @@
-# Sample AI Prompts
+# Prompt di Esempio per l'IA
 
-Default model: Sonnet with High effort
+Modello predefinito: Sonnet con sforzo Alto

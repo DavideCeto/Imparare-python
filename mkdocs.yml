@@ -375,21 +375,21 @@ nav:
     - Modello di Memoria delle Variabili: sims/variable-memory-model/index.md
     - Esecutore Passo-Passo del Ciclo While: sims/while-loop-stepper/index.md
 
-  - Teacher's Guide:
-    - Overview: teachers-guide/index.md
-    - How to Contribute Examples: teachers-guide/contribute.md
-    - Adding Custom Python Labs: teachers-guide/adding-custom-python-labs.md
-    - The Run ⇄ Pause Button: teachers-guide/run-pause-buttons.md
-    - CodeMirror Editor Example: teachers-guide/code-mirror-example.md
-    - Order of Concepts: teachers-guide/order-of-concepts.md
-    - Comparing Textbooks: teachers-guide/comparing-textbooks.md
-    - Sample Prompts:
-      - List of Prompts: teachers-guide/prompts/index.md
-      - List Old Concepts: teachers-guide/prompts/01-list-old-concepts.md
-      - Course Description: teachers-guide/prompts/02-course-description.md
-      - Learning Graph: teachers-guide/prompts/03-learning-graph.md
-      - Book Chapter Generator: teachers-guide/prompts/04-book-chapter-generator.md
-      - Content Generation Strategy: teachers-guide/prompts/05-content-generation-strategy.md
+  - Guida per gli Insegnanti:
+    - Panoramica: teachers-guide/index.md
+    - Come Contribuire con Esempi: teachers-guide/contribute.md
+    - Aggiungere Laboratori Python Personalizzati: teachers-guide/adding-custom-python-labs.md
+    - Il Pulsante Run ⇄ Pause: teachers-guide/run-pause-buttons.md
+    - Esempio dell'Editor CodeMirror: teachers-guide/code-mirror-example.md
+    - Ordine dei Concetti: teachers-guide/order-of-concepts.md
+    - Confronto tra Manuali: teachers-guide/comparing-textbooks.md
+    - Prompt di Esempio:
+      - Elenco dei Prompt: teachers-guide/prompts/index.md
+      - Elenco dei Vecchi Concetti: teachers-guide/prompts/01-list-old-concepts.md
+      - Descrizione del Corso: teachers-guide/prompts/02-course-description.md
+      - Grafo di Apprendimento: teachers-guide/prompts/03-learning-graph.md
+      - Generatore di Capitoli del Libro: teachers-guide/prompts/04-book-chapter-generator.md
+      - Strategia di Generazione dei Contenuti: teachers-guide/prompts/05-content-generation-strategy.md
 
   - Glossario: glossary.md
   - FAQ: faq.md

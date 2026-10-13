@@ -1,183 +1,194 @@
-# Comparing Free Python Textbooks
+# Confronto tra Manuali Python Gratuiti
 
-Many free resources exist for teaching Python to beginners. This page provides a rubric for
-scoring them, so teachers can make an informed choice about which resource best fits their
-classroom. The rubric weights features that matter most for beginners aged 10–14 in a coding
-club or classroom setting — instant feedback, visual results, and a supportive tone — over
-features that matter more for self-directed adult learners, such as exhaustive reference
-material.
+Esistono molte risorse gratuite per insegnare Python ai principianti. Questa pagina fornisce una
+griglia di valutazione per punteggiarle, così gli insegnanti possono fare una scelta informata su
+quale risorsa si adatta meglio alla loro classe. La griglia dà più peso alle caratteristiche che
+contano di più per principianti di 10-14 anni in un club di programmazione o in una classe —
+riscontro immediato, risultati visivi e un tono di supporto — rispetto alle caratteristiche più
+rilevanti per studenti adulti autodidatti, come materiale di riferimento esaustivo.
 
-The rubric totals **100 points** across 15 categories. Each category below explains what it
-measures and why it received the point value it did. A comparison table follows, scoring this
-textbook (*Learning Python*) against three other popular free Python resources.
+La griglia totalizza **100 punti** su 15 categorie. Ogni categoria qui sotto spiega cosa misura e
+perché ha ricevuto il valore in punti che ha ricevuto. Segue una tabella di confronto, che valuta
+questo manuale (*Learning Python*) rispetto ad altre tre risorse Python gratuite molto usate.
 
-## Rubric Categories
+## Categorie della Griglia
 
-### Course Completeness (8 points)
+### Completezza del Corso (8 punti)
 
-Does the textbook cover a full beginning-to-intermediate curriculum — roughly 30+ chapters or
-units spanning basics through more advanced topics like file I/O, error handling, and
-object-oriented programming? A short primer that stops at loops and functions leaves a
-classroom without a full-year curriculum. This is weighted at 8 points because breadth matters,
-but it is not the single most important factor — a shorter course with excellent pedagogy can
-still teach effectively.
+Il manuale copre un curriculum completo da principiante a intermedio — circa 30+ capitoli o unità
+che spaziano dalle basi fino ad argomenti più avanzati come input/output su file, gestione degli
+errori e programmazione orientata agli oggetti? Un breve primer che si ferma ai cicli e alle
+funzioni lascia una classe senza un curriculum per un intero anno. Questo pesa 8 punti perché
+l'ampiezza conta, ma non è il singolo fattore più importante — un corso più breve con una
+pedagogia eccellente può comunque insegnare efficacemente.
 
-### Syntax Highlighting (4 points)
+### Evidenziazione della Sintassi (4 punti)
 
-Does code appear in a color-coded editor or code block that distinguishes keywords, strings,
-numbers, and comments? Color syntax highlighting reduces the cognitive load of reading code and
-helps beginners recognize patterns faster. This is a baseline expectation for any modern
-textbook, so it is weighted relatively low — nearly every serious resource does this well.
+Il codice appare in un editor o blocco di codice colorato che distingue parole chiave, stringhe,
+numeri e commenti? L'evidenziazione colorata della sintassi riduce il carico cognitivo nella
+lettura del codice e aiuta i principianti a riconoscere i pattern più rapidamente. Questa è
+un'aspettativa di base per qualsiasi manuale moderno, quindi pesa relativamente poco — quasi ogni
+risorsa seria lo fa bene.
 
-### In-Browser Code Execution (5 points)
+### Esecuzione del Codice nel Browser (5 punti)
 
-Can students run small Python programs directly on the page, with no install, no account, and no
-setup? Removing the installation barrier is essential for classrooms with limited IT support or
-young students who cannot install software themselves. This is weighted lower than "visualizing
-tools" below because plain in-browser execution (text output only) is a lower bar than execution
-paired with rich visual feedback.
+Gli studenti possono eseguire piccoli programmi Python direttamente sulla pagina, senza
+installazione, senza account e senza configurazione? Rimuovere la barriera dell'installazione è
+essenziale per classi con supporto IT limitato o studenti giovani che non possono installare
+software da soli. Questo pesa meno di "strumenti di visualizzazione" qui sotto perché la semplice
+esecuzione nel browser (solo output testuale) è un livello più basso dell'esecuzione abbinata a un
+ricco riscontro visivo.
 
-### Visualizing Tools (e.g., Turtle Graphics) (10 points)
+### Strumenti di Visualizzazione (es. Grafica Turtle) (10 punti)
 
-Does the course use a visual output — most commonly turtle graphics — so that a program's effect
-can be *seen* rather than just read as printed text? Visual, immediate feedback is one of the
-strongest engagement tools for young learners: a shape drawn on screen is far more motivating
-than a line of console text. This is one of the highest-weighted categories because it directly
-supports the "see it, run it, modify it" cycle that research on novice programmers shows builds
-retention and confidence.
+Il corso usa un output visivo — più comunemente la grafica turtle — così che l'effetto di un
+programma possa essere *visto* invece che solo letto come testo stampato? Il riscontro visivo e
+immediato è uno degli strumenti di coinvolgimento più forti per i giovani studenti: una forma
+disegnata sullo schermo è molto più motivante di una riga di testo in console. Questa è una delle
+categorie con peso più alto perché supporta direttamente il ciclo "vedi, esegui, modifica" che la
+ricerca sui programmatori principianti mostra costruire ritenzione e fiducia.
 
-### Friendly, Encouraging Mascot or Persona (8 points)
+### Mascotte o Personaggio Amichevole e Incoraggiante (8 punti)
 
-Does the course use a consistent character or persona to guide students, frame predictions, and
-soften the tone around mistakes and bugs? This is known as the **persona effect** in educational
-research — students report higher engagement and lower anxiety when guided by a friendly
-character rather than dry, impersonal text. This is weighted highly because tone has an outsized
-effect on whether a 10–14 year-old sticks with a difficult topic instead of giving up.
+Il corso usa un personaggio o una figura coerente per guidare gli studenti, inquadrare le
+previsioni e ammorbidire il tono intorno a errori e bug? Questo è noto come **effetto persona**
+nella ricerca educativa — gli studenti riportano maggiore coinvolgimento e minore ansia quando
+guidati da un personaggio amichevole piuttosto che da testo arido e impersonale. Questo pesa molto
+perché il tono ha un effetto sproporzionato sul fatto che uno studente di 10-14 anni persista con
+un argomento difficile invece di arrendersi.
 
-### Pausable / Steppable Program Execution (4 points)
+### Esecuzione del Programma Mettibile in Pausa / Passo-Passo (4 punti)
 
-Can a running interactive program (especially an animation or turtle-graphics drawing) be
-paused, resumed, or stepped through mid-execution? This helps students inspect what is happening
-at a specific moment rather than only seeing a finished result. It is weighted lower than other
-categories because it is a "nice to have" refinement on top of visual execution, not a
-requirement for it.
+Un programma interattivo in esecuzione (specialmente un'animazione o un disegno con la grafica
+turtle) può essere messo in pausa, ripreso o eseguito passo-passo a metà esecuzione? Questo aiuta
+gli studenti a esaminare cosa sta succedendo in un momento specifico invece di vedere solo un
+risultato finito. Pesa meno di altre categorie perché è un raffinamento "gradito ma non essenziale"
+sopra l'esecuzione visiva, non un suo requisito.
 
-### Turtle Graphics Example Gallery (4 points)
+### Galleria di Esempi di Grafica Turtle (4 punti)
 
-Is there a gallery of pre-built turtle graphics examples that students can browse, run, and
-remix — beyond the examples embedded in the chapters themselves? A gallery gives students a
-low-stakes way to explore creative possibilities and gives teachers a fast source of bonus
-activities or contest prompts.
+Esiste una galleria di esempi di grafica turtle già pronti che gli studenti possono sfogliare,
+eseguire e remixare — oltre agli esempi incorporati nei capitoli stessi? Una galleria dà agli
+studenti un modo a basso rischio di esplorare possibilità creative e dà agli insegnanti una fonte
+rapida di attività bonus o spunti per concorsi.
 
-### Rich Set of MicroSims / Interactive Simulations (8 points)
+### Ricco Insieme di MicroSim / Simulazioni Interattive (8 punti)
 
-Beyond turtle graphics, does the course include interactive simulations for other concepts —
-sliders that visualize how a loop variable changes, animated diagrams of how recursion works,
-visual sorting algorithms, and similar tools? MicroSims turn abstract concepts (recursion, data
-structures, algorithmic complexity) into something students can manipulate and observe. This is
-weighted highly because it extends the "visual feedback" advantage of turtle graphics to the
-harder, more abstract parts of the curriculum where student confusion is highest.
+Oltre alla grafica turtle, il corso include simulazioni interattive per altri concetti — slider che
+visualizzano come cambia una variabile di ciclo, diagrammi animati di come funziona la ricorsione,
+algoritmi di ordinamento visivi e strumenti simili? I MicroSim trasformano concetti astratti
+(ricorsione, strutture dati, complessità algoritmica) in qualcosa che gli studenti possono
+manipolare e osservare. Questo pesa molto perché estende il vantaggio del "riscontro visivo" della
+grafica turtle alle parti più difficili e astratte del curriculum dove la confusione degli
+studenti è maggiore.
 
-### Chapter Quizzes (8 points)
+### Quiz per Capitolo (8 punti)
 
-Does every chapter include a self-check quiz for formative assessment? Regular low-stakes
-retrieval practice is one of the best-evidenced techniques for improving retention. This is
-weighted highly because without it, teachers must build their own assessments from scratch for
-every chapter — a significant burden that a free resource should remove.
+Ogni capitolo include un quiz di autoverifica per la valutazione formativa? La pratica regolare di
+recupero a basso rischio è una delle tecniche con le prove migliori per migliorare la ritenzione.
+Questo pesa molto perché senza di esso, gli insegnanti devono costruire le proprie valutazioni da
+zero per ogni capitolo — un onere significativo che una risorsa gratuita dovrebbe rimuovere.
 
-### Predict-Then-Run Methodology (10 points)
+### Metodologia Prevedi-Poi-Esegui (10 punti)
 
-Does the course consistently ask students to predict what a program will do *before* they run
-it, and then confirm or correct that prediction afterward? This single habit — pausing to reason
-through code before executing it — is one of the most valuable skills a beginning programmer can
-build, and is strongly associated with improved code comprehension in novice-programmer
-research. It is weighted as highly as visualizing tools because, unlike a quiz, it is woven into
-every single example rather than appearing once per chapter — a resource either commits to this
-pattern throughout or it doesn't.
+Il corso chiede costantemente agli studenti di prevedere cosa farà un programma *prima* di
+eseguirlo, e poi di confermare o correggere quella previsione dopo? Questa singola abitudine —
+fermarsi a ragionare sul codice prima di eseguirlo — è una delle competenze più preziose che un
+programmatore principiante può costruire, ed è fortemente associata a una migliore comprensione
+del codice nella ricerca sui programmatori principianti. Pesa quanto gli strumenti di
+visualizzazione perché, a differenza di un quiz, è intrecciata in ogni singolo esempio invece di
+apparire una volta per capitolo — una risorsa o si impegna in questo pattern per tutto il corso o
+non lo fa.
 
-### Extensive Glossary (4 points)
+### Glossario Esteso (4 punti)
 
-Is there a comprehensive, alphabetized glossary of terms with clear, precise definitions? A
-glossary helps students who encounter unfamiliar vocabulary look it up without interrupting
-their place in a chapter, and helps teachers standardize the vocabulary used in their classroom.
+Esiste un glossario completo e in ordine alfabetico di termini con definizioni chiare e precise?
+Un glossario aiuta gli studenti che incontrano un vocabolario non familiare a cercarlo senza
+interrompere il loro punto nel capitolo, e aiuta gli insegnanti a standardizzare il vocabolario
+usato nella loro classe.
 
-### Extensive FAQ (4 points)
+### FAQ Estese (4 punti)
 
-Is there a curated list of frequently asked questions, organized by topic, that addresses common
-points of confusion beyond what a single chapter's narrative covers? A good FAQ often catches the
-exact questions students ask out loud in class, saving teachers repeated explanations.
+Esiste un elenco curato di domande frequenti, organizzato per argomento, che affronta i punti
+comuni di confusione oltre a ciò che copre la narrazione di un singolo capitolo? Una buona FAQ
+spesso coglie le domande esatte che gli studenti fanno ad alta voce in classe, risparmiando agli
+insegnanti spiegazioni ripetute.
 
-### Annotated References (4 points)
+### Riferimenti Commentati (4 punti)
 
-Does each chapter or unit provide a curated list of further-reading references with a
-description of why each source is relevant — rather than just a bare list of links? Annotations
-help students and teachers judge which reference is worth their time, rather than opening five
-tabs at random.
+Ogni capitolo o unità fornisce un elenco curato di riferimenti per approfondire con una
+descrizione del perché ogni fonte è rilevante — invece di un semplice elenco nudo di link? I
+commenti aiutano studenti e insegnanti a giudicare quale riferimento vale il loro tempo, invece di
+aprire cinque schede a caso.
 
-### Instructor Customization (9 points)
+### Personalizzazione da Parte dell'Istruttore (9 punti)
 
-Can an instructor fork, clone, or otherwise create their own customized version of the course —
-changing the title, reordering content, adding their own examples, and republishing it under
-their own branding? Open licensing and open source code (rather than a closed platform) let a
-teacher adapt the material to their specific classroom, district requirements, or pacing needs.
-This is weighted highly because it is the difference between a resource a teacher can truly make
-their own and one they are permanently locked into using as-is.
+Un istruttore può fare un fork, clonare o altrimenti creare la propria versione personalizzata del
+corso — cambiando il titolo, riordinando i contenuti, aggiungendo i propri esempi e ripubblicandolo
+con il proprio marchio? La licenza aperta e il codice open source (invece di una piattaforma
+chiusa) permettono a un insegnante di adattare il materiale alla propria classe specifica, ai
+requisiti del proprio distretto o alle esigenze di ritmo. Questo pesa molto perché è la differenza
+tra una risorsa che un insegnante può davvero fare propria e una in cui è permanentemente bloccato
+a usarla così com'è.
 
-### Cost and Licensing (10 points)
+### Costo e Licenza (10 punti)
 
-Is the entire course free with no paywall, account requirement, or "premium" tier gating core
-content — and is it available under a license that explicitly permits classroom use and
-redistribution? Many "free" resources gate advanced chapters, exercises, or teacher materials
-behind a paid tier. This is weighted highly because cost is often the deciding factor for
-under-resourced classrooms, and a truly open license (like Creative Commons) gives teachers legal
-clarity that a vague "free to use" statement does not.
+L'intero corso è gratuito senza paywall, requisito di account, o livello "premium" che blocca i
+contenuti principali — ed è disponibile con una licenza che permette esplicitamente l'uso in classe
+e la redistribuzione? Molte risorse "gratuite" bloccano capitoli avanzati, esercizi o materiali per
+insegnanti dietro un livello a pagamento. Questo pesa molto perché il costo è spesso il fattore
+decisivo per classi con poche risorse, e una licenza veramente aperta (come Creative Commons) dà
+agli insegnanti una chiarezza legale che una vaga dichiarazione "gratuito da usare" non dà.
 
-**Total: 100 points** (8 + 4 + 5 + 10 + 8 + 4 + 4 + 8 + 8 + 10 + 4 + 4 + 4 + 9 + 10)
+**Totale: 100 punti** (8 + 4 + 5 + 10 + 8 + 4 + 4 + 8 + 8 + 10 + 4 + 4 + 4 + 9 + 10)
 
-## Comparison Table
+## Tabella di Confronto
 
-The table below scores this textbook (*Learning Python*) against three other widely used free
-Python resources for beginners: **Automate the Boring Stuff with Python** (Al Sweigart),
-**CS Circles / CEMC** (University of Waterloo), and **Python for Everybody** (Dr. Chuck,
-University of Michigan).
+La tabella sottostante valuta questo manuale (*Learning Python*) rispetto ad altre tre risorse
+Python gratuite ampiamente usate per principianti: **Automate the Boring Stuff with Python** (Al
+Sweigart), **CS Circles / CEMC** (Università di Waterloo), e **Python for Everybody** (Dr. Chuck,
+Università del Michigan).
 
-| Category | Points Available | Learning Python | Automate the Boring Stuff | CS Circles (CEMC) | Python for Everybody |
+| Categoria | Punti Disponibili | Learning Python | Automate the Boring Stuff | CS Circles (CEMC) | Python for Everybody |
 |---|---|---|---|---|---|
-| Course Completeness | 8 | 8 | 7 | 5 | 7 |
-| Syntax Highlighting | 4 | 4 | 4 | 4 | 3 |
-| In-Browser Code Execution | 5 | 5 | 0 | 5 | 3 |
-| Visualizing Tools (Turtle Graphics) | 10 | 10 | 2 | 6 | 0 |
-| Friendly, Encouraging Mascot | 8 | 8 | 0 | 2 | 0 |
-| Pausable / Steppable Execution | 4 | 4 | 0 | 0 | 0 |
-| Turtle Graphics Example Gallery | 4 | 4 | 0 | 2 | 0 |
-| Rich Set of MicroSims | 8 | 8 | 0 | 2 | 1 |
-| Chapter Quizzes | 8 | 8 | 0 | 2 | 4 |
-| Predict-Then-Run Methodology | 10 | 10 | 0 | 0 | 0 |
-| Extensive Glossary | 4 | 4 | 0 | 1 | 2 |
-| Extensive FAQ | 4 | 4 | 0 | 0 | 1 |
-| Annotated References | 4 | 4 | 1 | 1 | 2 |
-| Instructor Customization | 9 | 9 | 5 | 2 | 5 |
-| Cost and Licensing | 10 | 10 | 8 | 9 | 8 |
-| **Total** | **100** | **100** | **27** | **41** | **36** |
+| Completezza del Corso | 8 | 8 | 7 | 5 | 7 |
+| Evidenziazione della Sintassi | 4 | 4 | 4 | 4 | 3 |
+| Esecuzione del Codice nel Browser | 5 | 5 | 0 | 5 | 3 |
+| Strumenti di Visualizzazione (Grafica Turtle) | 10 | 10 | 2 | 6 | 0 |
+| Mascotte Amichevole e Incoraggiante | 8 | 8 | 0 | 2 | 0 |
+| Esecuzione Mettibile in Pausa / Passo-Passo | 4 | 4 | 0 | 0 | 0 |
+| Galleria di Esempi di Grafica Turtle | 4 | 4 | 0 | 2 | 0 |
+| Ricco Insieme di MicroSim | 8 | 8 | 0 | 2 | 1 |
+| Quiz per Capitolo | 8 | 8 | 0 | 2 | 4 |
+| Metodologia Prevedi-Poi-Esegui | 10 | 10 | 0 | 0 | 0 |
+| Glossario Esteso | 4 | 4 | 0 | 1 | 2 |
+| FAQ Estese | 4 | 4 | 0 | 0 | 1 |
+| Riferimenti Commentati | 4 | 4 | 1 | 1 | 2 |
+| Personalizzazione da Parte dell'Istruttore | 9 | 9 | 5 | 2 | 5 |
+| Costo e Licenza | 10 | 10 | 8 | 9 | 8 |
+| **Totale** | **100** | **100** | **27** | **41** | **36** |
 
-*Learning Python* earns full marks in every category, since this rubric's categories were
-drawn directly from its own feature set. The other three resources are scored against the same
-criteria for comparison, not adjusted to flatter them — a lower score means the feature is
-genuinely missing or weaker, not that the resource is a worse textbook overall. Several of these
-resources (especially Automate the Boring Stuff) are excellent, well-regarded references for
-older or more independent learners; they simply do not target the same classroom-engagement
-features this rubric measures.
+*Learning Python* ottiene il massimo dei punti in ogni categoria, poiché le categorie di questa
+griglia sono state tratte direttamente dal suo stesso insieme di caratteristiche. Le altre tre
+risorse sono valutate con gli stessi criteri per il confronto, non aggiustate per favorirle — un
+punteggio più basso significa che la caratteristica manca genuinamente o è più debole, non che la
+risorsa sia un manuale peggiore nel complesso. Molte di queste risorse (specialmente Automate the
+Boring Stuff) sono riferimenti eccellenti e ben considerati per studenti più grandi o più
+autonomi; semplicemente non puntano alle stesse caratteristiche di coinvolgimento in classe che
+questa griglia misura.
 
-## How to Use This Rubric
+## Come Usare Questa Griglia
 
-- **Selecting a primary resource** — Use the totals as a starting point, but weigh categories by
-  what matters most for your classroom. A district with strict data-privacy rules may weight
-  "Cost and Licensing" and self-hosting ability more heavily; a club focused purely on creative
-  output may weight "Visualizing Tools" and the "Turtle Graphics Example Gallery" more heavily.
-- **Blending resources** — Many teachers use more than one resource — for example, this
-  textbook's turtle graphics chapters alongside another course's more extensive standard-library
-  coverage. The rubric can help identify which resource is strongest in which category so you
-  can combine them deliberately.
-- **Re-scoring for your own criteria** — Feel free to copy this table, adjust the point values in
-  the categories above, and add rows for other resources you are evaluating (such as
-  Codecademy's free tier, freeCodeCamp, or your district's existing curriculum).
+- **Scegliere una risorsa principale** — Usa i totali come punto di partenza, ma pesa le categorie
+  in base a ciò che conta di più per la tua classe. Un distretto con regole severe sulla privacy
+  dei dati potrebbe dare più peso a "Costo e Licenza" e alla capacità di self-hosting; un club
+  concentrato puramente sulla produzione creativa potrebbe dare più peso agli "Strumenti di
+  Visualizzazione" e alla "Galleria di Esempi di Grafica Turtle".
+- **Combinare le risorse** — Molti insegnanti usano più di una risorsa — per esempio, i capitoli di
+  grafica turtle di questo manuale insieme alla copertura più estesa della libreria standard di un
+  altro corso. La griglia può aiutare a identificare quale risorsa è più forte in quale categoria
+  così puoi combinarle deliberatamente.
+- **Ripunteggiare per i tuoi criteri** — Sentiti libero di copiare questa tabella, aggiustare i
+  valori in punti nelle categorie sopra, e aggiungere righe per altre risorse che stai valutando
+  (come il livello gratuito di Codecademy, freeCodeCamp, o il curriculum esistente del tuo
+  distretto).

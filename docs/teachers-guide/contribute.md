@@ -1,37 +1,39 @@
-## How to Contribute to Our Learning Python Library
+## Come Contribuire alla Nostra Libreria di Learning Python
 
-We are an all-volunteer organization.  So we don't yet have any paid staff to curate new content.  However, we do value your input and will consider all contributions as our volunteer time permits.  We especially value teachers that would like to integrate coding, data science and AI into your classrooms in new and innovative ways.
+Siamo un'organizzazione interamente basata sul volontariato. Quindi non abbiamo ancora personale retribuito per curare nuovi contenuti. Tuttavia, apprezziamo il tuo contributo e considereremo tutti i contributi nei limiti del nostro tempo di volontariato. Apprezziamo in particolare gli insegnanti che vogliono integrare la programmazione, la data science e l'IA nelle loro classi in modi nuovi e innovativi.
 
-## Using Standard Git Pull Requests
-The best way to contribute is to send use your sample programs using a standard GitHub pull request method.  This allow us to view all the changes you are proposing and give you feedback.  This is a three step process.
-1. The first step will require you to have your own github account.  You can go to our github home page and look for the "fork" icon.  When you click that it will make a "virutal copy" in your own github area.
-2. You can then add your content to that repository and do all the testing there.
-3. Once you have everything tested you can click the "Submit Pull Request".  This process will notify our team your additon is pending.  We will review these new submission and if everything looks OK we will accept your changes.  We might suggest a few changes the first time you send us a pull request.  Don't take this personally.  We want to make working on-line togeher as semaless as possible and helping put the right sections in place to start is a normal part of working in teams on line.
+## Usare le Richieste di Pull Standard di Git
 
-## Good Lesson Plans
+Il modo migliore per contribuire è inviarci i tuoi programmi di esempio usando il metodo standard di pull request di GitHub. Questo ci permette di vedere tutte le modifiche che proponi e di darti un riscontro. È un processo in tre passaggi.
+1. Il primo passaggio richiede che tu abbia un tuo account GitHub. Puoi andare sulla nostra pagina GitHub e cercare l'icona "fork". Quando la clicchi, creerà una "copia virtuale" nella tua area GitHub.
+2. Puoi poi aggiungere i tuoi contenuti a quel repository e fare tutti i test lì.
+3. Una volta che hai testato tutto, puoi cliccare su "Submit Pull Request". Questo processo avviserà il nostro team che la tua aggiunta è in attesa. Esamineremo le nuove proposte e se tutto sembra a posto accetteremo le tue modifiche. Potremmo suggerire alcune modifiche la prima volta che ci invii una pull request. Non prenderla sul personale. Vogliamo rendere il lavoro online insieme il più fluido possibile, e aiutarti a mettere le sezioni giuste al posto giusto per iniziare è una parte normale del lavoro di squadra online.
 
-A good contribution has some, but not necessarily all of the following:
+## Buoni Piani di Lezione
 
-1. **Context** - where does this lession fit into our overall cirriculum?  Would it normally follow after an existing lession or is it a standalone lesson?
+Un buon contributo ha alcune, ma non necessariamente tutte, le seguenti caratteristiche:
 
-2. **Concepts** - what concept will be taught in this lesson.  We try to keep to the idea of "One concept per lesson".  So think about what is the minimum amount of code to learn a new concept.
+1. **Contesto** - dove si inserisce questa lezione nel nostro curriculum complessivo? Normalmente seguirebbe una lezione esistente o è una lezione autonoma?
 
-3. **Learning Objective** - what are the goals of this lession.  These are typically written as "After this lesson the student...:
+2. **Concetti** - quale concetto verrà insegnato in questa lezione. Cerchiamo di mantenere l'idea di "un concetto per lezione". Quindi pensa a qual è la quantità minima di codice per imparare un nuovo concetto.
 
-4. **Difficulty Level** - is it a Beginner, Intermediate or Difficult 
-concept?  For example drawing a square with a turtle is a Beginner concept.  Recursion is a Difficult concept.
+3. **Obiettivo di Apprendimento** - quali sono gli obiettivi di questa lezione. Di solito si scrivono come "Dopo questa lezione lo studente...":
 
-4. **Sample Code** - Please provide working sample code that you have tested whenever possible.  We encourage you to put in in-line comments when possible.  To use our test highlighter for Python code, please place your code in a block sourrounded by back quotes.  Use the word "python" on the like with the first backquotes.  See [Examples Here](https://squidfunk.github.io/mkdocs-material/extensions/codehilite/)
+4. **Livello di Difficoltà** - è un concetto per Principianti, Intermedio o Difficile? Per esempio disegnare un quadrato con la turtle è un concetto per Principianti. La ricorsione è un concetto Difficile.
 
-5. **Experiments** - What additional experiments could the students do?  Could they intergrate other prior concepts?
+4. **Codice di Esempio** - Fornisci per favore codice di esempio funzionante che hai testato, ogni volta che è possibile. Ti incoraggiamo a inserire commenti in linea quando possibile. Per usare il nostro evidenziatore di sintassi per il codice Python, metti il tuo codice in un blocco circondato da apici inversi. Usa la parola "python" sulla riga con i primi apici inversi. Vedi [Esempi Qui](https://squidfunk.github.io/mkdocs-material/extensions/codehilite/)
 
-## Using Markdown formats
-We strongly suggest you submit your contributions using Markdown format.  There are tools that will convert MS-Word into Markdown format.  See the [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/) for tips to get started with Markdown.
+5. **Esperimenti** - Quali esperimenti aggiuntivi potrebbero fare gli studenti? Potrebbero integrare altri concetti precedenti?
 
-## Converting MS-Word to Markdown format
-If you have content in Microsoft Word and you use a Windows PC, you can use the [Writage](http://www.writage.com/) plugin to convert your documents.  
+## Usare i Formati Markdown
 
-For Mac users you can use the [PanDoc](https://pandoc.org/) program to convert MS-Word into Markdown.  You will need to open a Terminal to run the following command:
+Suggeriamo vivamente di inviare i tuoi contributi usando il formato Markdown. Esistono strumenti che convertono MS-Word in formato Markdown. Vedi il [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/) per consigli su come iniziare con Markdown.
+
+## Convertire da MS-Word al Formato Markdown
+
+Se hai contenuti in Microsoft Word e usi un PC Windows, puoi usare il plugin [Writage](http://www.writage.com/) per convertire i tuoi documenti.
+
+Per gli utenti Mac puoi usare il programma [PanDoc](https://pandoc.org/) per convertire MS-Word in Markdown. Dovrai aprire un Terminale per eseguire il seguente comando:
 ```unix
 $ pandoc -s MyFile.docx -o MyFile.md
 ```
