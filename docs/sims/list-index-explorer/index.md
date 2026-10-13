@@ -1,6 +1,6 @@
 ---
-title: List Index Explorer
-description: Click append, insert, and pop and watch a list of colored boxes reshape in place - indices renumber live, and a String Test shows the TypeError strings give instead.
+title: Esploratore degli Indici di Lista
+description: Clicca su append, insert e pop e guarda una lista di scatole colorate riformarsi sul posto - gli indici si rinumerano dal vivo, e un Test Stringa mostra il TypeError che le stringhe danno invece.
 image: /sims/list-index-explorer/list-index-explorer.png
 og:image: /sims/list-index-explorer/list-index-explorer.png
 twitter:image: /sims/list-index-explorer/list-index-explorer.png
@@ -9,45 +9,49 @@ social:
 quality_score: 93
 ---
 
-# List Index Explorer
+# Esploratore degli Indici di Lista
 
 <iframe src="main.html" height="482" width="100%" scrolling="no"></iframe>
 
-[Run the List Index Explorer MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui l'Esploratore degli Indici di Lista a Schermo Intero](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Modifica nell'Editor p5.js](https://editor.p5js.org/)
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-Students read that lists "change in place" but never see the boxes shift.
-Here every operation is one click: `append()` grows the end, `insert(1, ...)`
-squeezes in and slides everything rightward, `pop()` shrinks the tail — and
-both the positive and negative index rows renumber before their eyes, with
-the exact Python line shown for each change. The **String Test** panel shows
-the real `TypeError` a string raises for the same in-place change, making the
-mutable/immutable divide concrete.
+Gli studenti leggono che le liste "cambiano sul posto" ma non vedono mai le
+scatole spostarsi. Qui ogni operazione è un click: `append()` allunga la
+fine, `insert(1, ...)` si incunea dentro e fa scorrere tutto verso destra,
+`pop()` accorcia la coda — ed entrambe le righe di indici, positivi e
+negativi, si rinumerano davanti ai loro occhi, con la riga Python esatta
+mostrata per ogni cambiamento. Il pannello **Test Stringa** mostra il vero
+`TypeError` che una stringa solleva per lo stesso cambiamento sul posto,
+rendendo concreta la divisione tra mutabile e immutabile.
 
-**Learning objective:** The student will be able to select items by positive
-and negative index and demonstrate how append, insert, and pop reshape a
-list in place.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di selezionare
+elementi tramite indice positivo e negativo e di dimostrare come append,
+insert e pop riformino una lista sul posto.
 
-- **Bloom's Taxonomy (2001):** Apply → Analyze — *use, demonstrate,
-  differentiate*
-- **Interaction pattern:** button-driven operations with one visible state
-  change per click
+- **Tassonomia di Bloom (2001):** Applicare → Analizzare — *usare,
+  dimostrare, differenziare*
+- **Pattern di interazione:** operazioni guidate da pulsanti con un
+  cambiamento di stato visibile per click
 
-## How to Use
+## Come Usarlo
 
-1. Predict: after `insert(1, ...)`, what index will `"gold"` have? Click and
-   check.
-2. Watch the **negative** index row: which item always has index −1?
-3. Fill the list with `append()`, then `pop()` back down — the list reprints
-   below the boxes after every change.
-4. Click **String Test** to see why `word[0] = "X"` fails on a string.
+1. Prevedi: dopo `insert(1, ...)`, quale indice avrà `"gold"`? Clicca e
+   verifica.
+2. Osserva la riga degli indici **negativi**: quale elemento ha sempre
+   indice −1?
+3. Riempi la lista con `append()`, poi fai `pop()` all'indietro — la lista
+   si ristampa sotto le scatole dopo ogni cambiamento.
+4. Clicca **Test Stringa** per vedere perché `word[0] = "X"` fallisce su
+   una stringa.
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/list-index-explorer/main.html"
@@ -56,36 +60,39 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapters 15-16 (Lists)
+Scuola primaria superiore e scuola media (10-14 anni), Capitoli 15-16 (Liste)
 
-### Duration
+### Durata
 
-10 minutes
+10 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- String indexing (Chapters 8 and 14)
+- Indicizzazione delle stringhe (Capitoli 8 e 14)
 
-### Activities
+### Attività
 
-1. **Shift hunt** (4 min): Students click insert and record which items got
-   new indices and which kept theirs. Then the same for pop.
-2. **Negative anchor** (3 min): "No matter what you do, what is at index
-   −1?" Students test with several operations.
-3. **Mutable vs immutable** (3 min): Compare the String Test error with the
-   list behavior; students write one sentence for each.
+1. **Caccia allo scorrimento** (4 min): Gli studenti cliccano insert e
+   registrano quali elementi hanno ottenuto nuovi indici e quali hanno
+   mantenuto il proprio. Poi lo stesso per pop.
+2. **Ancora negativa** (3 min): "Qualunque cosa tu faccia, cosa c'è
+   all'indice −1?" Gli studenti verificano con diverse operazioni.
+3. **Mutabile contro immutabile** (3 min): Confronta l'errore del Test
+   Stringa con il comportamento della lista; gli studenti scrivono una
+   frase per ciascuno.
 
-### Assessment
+### Verifica
 
-- Student predicts the full index renumbering after an insert
-- Student can state which end pop() removes from
-- Student can explain the TypeError in the String Test panel
+- Lo studente prevede la rinumerazione completa degli indici dopo un
+  insert
+- Lo studente sa indicare da quale estremità rimuove pop()
+- Lo studente sa spiegare il TypeError nel pannello Test Stringa
 
-## References
+## Riferimenti
 
-1. [Python Tutorial — More on Lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists) — official list methods documentation
-2. [p5.js](https://p5js.org/) — the JavaScript library used to build this MicroSim
+1. [Python Tutorial — More on Lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists) — documentazione ufficiale dei metodi delle liste
+2. [p5.js](https://p5js.org/) — la libreria JavaScript usata per costruire questo MicroSim

@@ -1,6 +1,6 @@
 ---
-title: While-Loop Stepper
-description: Step a while loop through its check-condition, run-body rhythm with True/False verdicts stamped at every check - and safely experience an infinite loop.
+title: Esecutore Passo-Passo del Ciclo While
+description: Esegui passo-passo un ciclo while attraverso il suo ritmo controlla-condizione, esegui-corpo con i verdetti True/False timbrati a ogni controllo - e vivi in sicurezza un ciclo infinito.
 image: /sims/while-loop-stepper/while-loop-stepper.png
 og:image: /sims/while-loop-stepper/while-loop-stepper.png
 twitter:image: /sims/while-loop-stepper/while-loop-stepper.png
@@ -9,44 +9,50 @@ social:
 quality_score: 93
 ---
 
-# While-Loop Stepper
+# Esecutore Passo-Passo del Ciclo While
 
 <iframe src="main.html" height="502" width="100%" scrolling="no"></iframe>
 
-[Run the While-Loop Stepper MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui l'Esecutore Passo-Passo del Ciclo While a Schermo Intero](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Modifica nell'Editor p5.js](https://editor.p5js.org/)
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-The invisible heart of a while loop is the repeated condition check. This
-stepper makes the arrow physically visit the `while` line before every trip
-and stamps a True/False verdict there, so students internalize the
-check-run-check rhythm. The **Infinite Bug** preset is the classic
-missing-decrement bug running in a safe cage: the trip odometer spins, the
-verdict stamps True forever, and a warning banner explains the fix — an
-experience Skulpt's safety limits normally prevent.
+Il cuore invisibile di un ciclo while è il controllo ripetuto della
+condizione. Questo esecutore passo-passo fa visitare fisicamente alla
+freccia la riga `while` prima di ogni giro e vi timbra un verdetto
+True/False, così gli studenti interiorizzano il ritmo
+controlla-esegui-controlla. Il preset **Bug Infinito** è il classico bug del
+decremento mancante eseguito dentro una gabbia sicura: il contachilometri
+dei giri gira, il verdetto timbra True per sempre, e un banner di avviso
+spiega la correzione — un'esperienza che i limiti di sicurezza di Skulpt
+normalmente impediscono.
 
-**Learning objective:** The student will be able to trace a while loop's
-condition checks and identify why a loop terminates — or never does.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di tracciare i
+controlli della condizione di un ciclo while e di identificare perché un
+ciclo termina — o non termina mai.
 
-- **Bloom's Taxonomy (2001):** Understand → Analyze — *trace, predict,
-  debug*
-- **Interaction pattern:** step-through with an explicit condition-check
-  stage and a sandboxed infinite-loop demonstration
+- **Tassonomia di Bloom (2001):** Comprendere → Analizzare — *tracciare,
+  prevedere, debuggare*
+- **Pattern di interazione:** esecuzione passo-passo con una fase esplicita
+  di controllo della condizione e una dimostrazione sandbox di ciclo
+  infinito
 
-## How to Use
+## Come Usarlo
 
-1. With **Countdown**, predict: how many times does the body run, and how
-   many times is the condition checked? Step through and count the stamps.
-   (3 trips, 4 checks — the last check says False.)
-2. Try **Double Until 100** — the loop stops at 192, not 100. Why?
-3. Pick **Infinite Bug** and keep clicking: the condition is True every
-   single time because nothing in the body changes `count`.
+1. Con **Conto alla Rovescia**, prevedi: quante volte viene eseguito il
+   corpo, e quante volte viene controllata la condizione? Esegui passo-passo
+   e conta i timbri. (3 giri, 4 controlli — l'ultimo controllo dice False.)
+2. Prova **Raddoppia Fino a 100** — il ciclo si ferma a 192, non a 100.
+   Perché?
+3. Scegli **Bug Infinito** e continua a cliccare: la condizione è True ogni
+   singola volta perché niente nel corpo cambia `count`.
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/while-loop-stepper/main.html"
@@ -55,36 +61,41 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapter 10 (While Loops and Animation)
+Scuola primaria superiore e scuola media (10-14 anni), Capitolo 10 (Cicli while e animazione)
 
-### Duration
+### Durata
 
-10-15 minutes
+10-15 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- for loops (Chapter 7) and comparison operators (Chapter 9)
+- Cicli for (Capitolo 7) e operatori di confronto (Capitolo 9)
 
-### Activities
+### Attività
 
-1. **Count the checks** (5 min): Students tally condition checks vs body
-   runs for the Countdown preset, discovering checks = trips + 1.
-2. **Overshoot** (4 min): With Double Until 100, ask students to predict the
-   printed value before stepping. Most say 100; the sim shows 192.
-3. **Debug** (4 min): With Infinite Bug, students write the one line that
-   would fix the loop, then explain where it must go and why.
+1. **Conta i controlli** (5 min): Gli studenti contano i controlli della
+   condizione rispetto alle esecuzioni del corpo per il preset Conto alla
+   Rovescia, scoprendo che controlli = giri + 1.
+2. **Superamento** (4 min): Con Raddoppia Fino a 100, chiedi agli studenti
+   di prevedere il valore stampato prima di procedere passo-passo. La
+   maggior parte dice 100; la simulazione mostra 192.
+3. **Debug** (4 min): Con Bug Infinito, gli studenti scrivono l'unica riga
+   che correggerebbe il ciclo, poi spiegano dove deve andare e perché.
 
-### Assessment
+### Verifica
 
-- Student can state the check-run-check rhythm in their own words
-- Student identifies the missing line in an infinite countdown loop
-- Student explains why a while loop's variable must change inside the body
+- Lo studente sa esprimere a parole proprie il ritmo
+  controlla-esegui-controlla
+- Lo studente identifica la riga mancante in un ciclo di conto alla
+  rovescia infinito
+- Lo studente spiega perché la variabile di un ciclo while deve cambiare
+  dentro il corpo
 
-## References
+## Riferimenti
 
-1. [Python Tutorial — while Statements](https://docs.python.org/3/reference/compound_stmts.html#the-while-statement) — official documentation
-2. [p5.js](https://p5js.org/) — the JavaScript library used to build this MicroSim
+1. [Python Tutorial — while Statements](https://docs.python.org/3/reference/compound_stmts.html#the-while-statement) — documentazione ufficiale
+2. [p5.js](https://p5js.org/) — la libreria JavaScript usata per costruire questo MicroSim

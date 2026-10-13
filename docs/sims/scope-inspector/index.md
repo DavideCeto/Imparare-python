@@ -1,6 +1,6 @@
 ---
-title: Scope Inspector
-description: Step through a program with global and local variables, watching scope rooms appear and vanish and name lookups probe local first, then global.
+title: Ispettore degli Ambiti
+description: Esegui passo-passo un programma con variabili globali e locali, osservando le stanze di ambito apparire e svanire e le ricerche di nomi sondare prima il locale, poi il globale.
 image: /sims/scope-inspector/scope-inspector.png
 og:image: /sims/scope-inspector/scope-inspector.png
 twitter:image: /sims/scope-inspector/scope-inspector.png
@@ -9,46 +9,50 @@ social:
 quality_score: 93
 ---
 
-# Scope Inspector
+# Ispettore degli Ambiti
 
 <iframe src="main.html" height="512" width="100%" scrolling="no"></iframe>
 
-[Run the Scope Inspector MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui l'Ispettore degli Ambiti a Schermo Intero](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Modifica nell'Editor p5.js](https://editor.p5js.org/)
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-Scope is the most abstract idea in the first half of the book: variables
-"living" in invisible rooms. This inspector draws the rooms. The Global room
-is always on screen; each function call opens a temporary Function room that
-vanishes at return — taking its variables with it. Every name lookup
-highlights the box Python actually uses, and when a local lookup misses, a
-badge says "not found here → check the Global room." The Shadowing Bug preset
-shows a local `score = 99` hiding the global 10; The global Fix preset shows
-the `global` keyword writing straight into the Global room.
+L'ambito è l'idea più astratta della prima metà del libro: le variabili che
+"vivono" in stanze invisibili. Questo ispettore disegna le stanze. La
+stanza Globale è sempre sullo schermo; ogni chiamata di funzione apre una
+stanza Funzione temporanea che svanisce al ritorno — portando via con sé le
+sue variabili. Ogni ricerca di nome evidenzia la scatola effettivamente
+usata da Python, e quando una ricerca locale fallisce, un distintivo dice
+"non trovato qui → controlla la stanza Globale." Il preset Bug di
+Oscuramento mostra uno `score = 99` locale che nasconde il 10 globale; il
+preset La Correzione con global mostra la parola chiave `global` che scrive
+direttamente nella stanza Globale.
 
-**Learning objective:** The student will be able to determine which variable
-a name refers to at any line, differentiating local, global, and shadowed
-variables.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di determinare a
+quale variabile si riferisce un nome in qualsiasi riga, differenziando
+variabili locali, globali e oscurate.
 
-- **Bloom's Taxonomy (2001):** Analyze — *differentiate, attribute, debug*
-- **Interaction pattern:** step-through with nested scope rooms and lookup
-  highlighting
+- **Tassonomia di Bloom (2001):** Analizzare — *differenziare, attribuire,
+  debuggare*
+- **Pattern di interazione:** esecuzione passo-passo con stanze di ambito
+  annidate ed evidenziazione delle ricerche
 
-## How to Use
+## Come Usarlo
 
-1. Start with **Read the Global**: watch the empty Function room appear, and
-   the lookup fall through to the Global room.
-2. Switch to **Shadowing Bug** and predict: what does the final
-   `print(score)` show? Step through — the local 99 box is thrown away with
-   its room.
-3. Run **The global Fix** to see how the `global` keyword changes where the
-   write lands.
+1. Inizia con **Leggi il Globale**: osserva la stanza Funzione vuota
+   apparire, e la ricerca scendere fino alla stanza Globale.
+2. Passa a **Bug di Oscuramento** e prevedi: cosa mostra il `print(score)`
+   finale? Esegui passo-passo — la scatola locale 99 viene buttata via
+   insieme alla sua stanza.
+3. Esegui **La Correzione con global** per vedere come la parola chiave
+   `global` cambia dove atterra la scrittura.
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/scope-inspector/main.html"
@@ -57,38 +61,41 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapter 11 (Functions, Parameters, and Scope)
+Scuola primaria superiore e scuola media (10-14 anni), Capitolo 11 (Funzioni con parametri e scope)
 
-### Duration
+### Durata
 
-15 minutes
+15 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- Defining and calling functions (Chapter 4)
-- Variables and assignment (Chapter 3)
+- Definire e chiamare funzioni (Capitolo 4)
+- Variabili e assegnazione (Capitolo 3)
 
-### Activities
+### Attività
 
-1. **Rooms tour** (4 min): Step through Read the Global. Ask: "when does the
-   Function room exist, and when does it not?"
-2. **Predict the bug** (5 min): Before stepping Shadowing Bug, students vote:
-   99 or 10? Step through and identify the exact step where the local box is
-   destroyed.
-3. **Fix comparison** (4 min): Run The global Fix and have students state in
-   one sentence what `global score` changes.
+1. **Giro delle stanze** (4 min): Esegui passo-passo Leggi il Globale.
+   Chiedi: "quando esiste la stanza Funzione, e quando no?"
+2. **Prevedi il bug** (5 min): Prima di eseguire passo-passo Bug di
+   Oscuramento, gli studenti votano: 99 o 10? Esegui passo-passo e
+   identifica l'esatto passo in cui la scatola locale viene distrutta.
+3. **Confronto della correzione** (4 min): Esegui La Correzione con global
+   e fai esprimere agli studenti in una frase cosa cambia `global score`.
 
-### Assessment
+### Verifica
 
-- Student predicts the output of a shadowing program correctly
-- Student can explain why a local variable disappears after the call
-- Student can state when the `global` keyword is needed and why it is rare
+- Lo studente prevede correttamente l'output di un programma con
+  oscuramento
+- Lo studente sa spiegare perché una variabile locale scompare dopo la
+  chiamata
+- Lo studente sa indicare quando serve la parola chiave `global` e perché è
+  rara
 
-## References
+## Riferimenti
 
-1. [Python FAQ — What are the rules for local and global variables?](https://docs.python.org/3/faq/programming.html#what-are-the-rules-for-local-and-global-variables-in-python) — official explanation
-2. [p5.js](https://p5js.org/) — the JavaScript library used to build this MicroSim
+1. [Python FAQ — What are the rules for local and global variables?](https://docs.python.org/3/faq/programming.html#what-are-the-rules-for-local-and-global-variables-in-python) — spiegazione ufficiale
+2. [p5.js](https://p5js.org/) — la libreria JavaScript usata per costruire questo MicroSim

@@ -1,6 +1,6 @@
 ---
-title: String Slicer
-description: Drag slice handles over letter tiles to build Python index and slice expressions with live word[2:7] notation, negative indices, and challenges.
+title: Affettatore di Stringhe
+description: Trascina le maniglie di affettamento sopra le tessere delle lettere per costruire espressioni Python di indice e slice con notazione word[2:7] dal vivo, indici negativi e sfide.
 image: /sims/string-slicer/string-slicer.png
 og:image: /sims/string-slicer/string-slicer.png
 twitter:image: /sims/string-slicer/string-slicer.png
@@ -9,44 +9,49 @@ social:
 quality_score: 93
 ---
 
-# String Slicer
+# Affettatore di Stringhe
 
 <iframe src="main.html" height="482" width="100%" scrolling="no"></iframe>
 
-[Run the String Slicer MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui l'Affettatore di Stringhe a Schermo Intero](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Modifica nell'Editor p5.js](https://editor.p5js.org/)
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-Slice notation causes endless off-by-one bugs because students cannot see
-the boundaries. This slicer makes them physical: letter tiles carry positive
-indices above and negative indices below, and two draggable handles — green
-start, red end — select the slice. The red handle visibly sits one position
-past the last selected letter, making "end is never included" a thing you
-can see rather than memorize. A step selector adds the third slice argument,
-single-tile clicks show plain indexing, and challenge mode asks for target
-substrings like `"ROCKS"`.
+La notazione slice causa infiniti bug di sbaglio-per-uno perché gli
+studenti non riescono a vedere i confini. Questo affettatore li rende
+fisici: le tessere delle lettere portano indici positivi sopra e indici
+negativi sotto, e due maniglie trascinabili — inizio verde, fine rossa —
+selezionano la slice. La maniglia rossa si trova visibilmente una posizione
+dopo l'ultima lettera selezionata, rendendo "la fine non è mai inclusa" una
+cosa che puoi vedere invece di memorizzare. Un selettore di passo aggiunge
+il terzo argomento della slice, i click su singole tessere mostrano
+l'indicizzazione semplice, e la modalità sfida chiede sottostringhe
+bersaglio come `"ROCKS"`.
 
-**Learning objective:** The student will be able to write index and slice
-expressions that extract a desired substring.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di scrivere
+espressioni di indice e slice che estraggono una sottostringa desiderata.
 
-- **Bloom's Taxonomy (2001):** Apply — *use, execute, solve*
-- **Interaction pattern:** direct manipulation with live notation readout
+- **Tassonomia di Bloom (2001):** Applicare — *usare, eseguire, risolvere*
+- **Pattern di interazione:** manipolazione diretta con lettura della
+  notazione dal vivo
 
-## How to Use
+## Come Usarlo
 
-1. Drag the green **start** and red **end** handles and watch
-   `word[start:end]` update with its result.
-2. Note where the red handle sits when the slice reads `"THON "` — one past
-   the last letter.
-3. Set **step** to 2 and see every-other-letter slices like `word[0:6:2]`.
-4. Click a single tile for index mode, check the negative indices below the
-   tiles, and try **New Challenge**.
+1. Trascina le maniglie verde **inizio** e rossa **fine** e osserva
+   `word[start:end]` aggiornarsi con il suo risultato.
+2. Nota dove si trova la maniglia rossa quando la slice legge `"THON "` —
+   una posizione dopo l'ultima lettera.
+3. Imposta **passo** a 2 e vedi slice a lettere alternate come
+   `word[0:6:2]`.
+4. Clicca una singola tessera per la modalità indice, controlla gli indici
+   negativi sotto le tessere, e prova **Nuova Sfida**.
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/string-slicer/main.html"
@@ -55,36 +60,39 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapter 14 (String Methods and Formatting); foundations from Chapter 8
+Scuola primaria superiore e scuola media (10-14 anni), Capitolo 14 (Metodi delle stringhe e formattazione); fondamenti dal Capitolo 8
 
-### Duration
+### Durata
 
-10-15 minutes
+10-15 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- Strings and len() (Chapter 8)
+- Stringhe e len() (Capitolo 8)
 
-### Activities
+### Attività
 
-1. **Predict and drag** (4 min): For `"PYTHON ROCKS"`, students write the
-   slice for `"ROCKS"` on paper, then verify by dragging.
-2. **End-exclusive drill** (3 min): "Make a slice that selects exactly one
-   letter." What do students notice about start and end? (end = start + 1)
-3. **Challenges** (5 min): Solve all four New Challenge rounds, including
-   the step-2 challenge.
+1. **Prevedi e trascina** (4 min): Per `"PYTHON ROCKS"`, gli studenti
+   scrivono su carta la slice per `"ROCKS"`, poi verificano trascinando.
+2. **Esercizio fine-esclusiva** (3 min): "Crea una slice che selezioni
+   esattamente una lettera." Cosa notano gli studenti su inizio e fine?
+   (fine = inizio + 1)
+3. **Sfide** (5 min): Risolvi tutti e quattro i round di Nuova Sfida,
+   incluso quello con passo 2.
 
-### Assessment
+### Verifica
 
-- Student writes a correct slice for a named substring on the first try
-- Student can explain why `word[2:7]` selects five characters, not six
-- Student can use a negative index to grab the last character
+- Lo studente scrive una slice corretta per una sottostringa indicata al
+  primo tentativo
+- Lo studente sa spiegare perché `word[2:7]` seleziona cinque caratteri, non
+  sei
+- Lo studente sa usare un indice negativo per prendere l'ultimo carattere
 
-## References
+## Riferimenti
 
-1. [Python Tutorial — Strings (indexing and slicing)](https://docs.python.org/3/tutorial/introduction.html#strings) — official documentation
-2. [p5.js](https://p5js.org/) — the JavaScript library used to build this MicroSim
+1. [Python Tutorial — Strings (indexing and slicing)](https://docs.python.org/3/tutorial/introduction.html#strings) — documentazione ufficiale
+2. [p5.js](https://p5js.org/) — la libreria JavaScript usata per costruire questo MicroSim
