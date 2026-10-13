@@ -1,6 +1,6 @@
 ---
-title: Boolean Logic Lab
-description: Set True/False inputs feeding and, or, and not, watch a result lamp, and see short-circuit evaluation gray out the operand Python never checks.
+title: Laboratorio di Logica Booleana
+description: Imposta input True/False che alimentano and, or e not, guarda una lampada del risultato, e vedi la valutazione a corto circuito oscurare l'operando che Python non controlla mai.
 image: /sims/boolean-logic-lab/boolean-logic-lab.png
 og:image: /sims/boolean-logic-lab/boolean-logic-lab.png
 twitter:image: /sims/boolean-logic-lab/boolean-logic-lab.png
@@ -9,45 +9,48 @@ social:
 quality_score: 93
 ---
 
-# Boolean Logic Lab
+# Laboratorio di Logica Booleana
 
 <iframe src="main.html" height="512" width="100%" scrolling="no"></iframe>
 
-[Run the Boolean Logic Lab MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui il Laboratorio di Logica Booleana a Schermo Intero](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Modifica nell'Editor p5.js](https://editor.p5js.org/)
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-Truth tables are usually memorized; this lab lets students *build* them. Two
-True/False inputs feed an operator block (`and`, `or`, `not`) wired to a
-result lamp. The lab also makes short-circuit evaluation visible: when input
-A alone decides the answer (`False and ...`, `True or ...`), the B block
-grays out with a "Python never looked here" badge. A truthiness panel shows
-`bool()` verdicts for values like `0`, `""`, `[]`, and `None`, previewing
-Chapter 19.
+Le tabelle di verità vengono di solito memorizzate; questo laboratorio
+permette agli studenti di *costruirle*. Due input True/False alimentano un
+blocco operatore (`and`, `or`, `not`) collegato a una lampada del risultato.
+Il laboratorio rende visibile anche la valutazione a corto circuito: quando
+l'input A da solo decide la risposta (`False and ...`, `True or ...`), il
+blocco B si oscura con un distintivo "Python non ha mai guardato qui." Un
+pannello di veridicità mostra i verdetti di `bool()` per valori come `0`,
+`""`, `[]` e `None`, anticipando il Capitolo 19.
 
-**Learning objective:** The student will be able to determine the result of
-`and`, `or`, and `not` expressions and explain when Python skips evaluating
-the second operand.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di determinare il
+risultato di espressioni `and`, `or` e `not` e di spiegare quando Python
+salta la valutazione del secondo operando.
 
-- **Bloom's Taxonomy (2001):** Understand → Apply — *classify, explain,
-  demonstrate*
-- **Interaction pattern:** input selectors with an immediate circuit-and-lamp
-  display
+- **Tassonomia di Bloom (2001):** Comprendere → Applicare — *classificare,
+  spiegare, dimostrare*
+- **Pattern di interazione:** selettori di input con una visualizzazione
+  immediata del circuito e della lampada
 
-## How to Use
+## Come Usarlo
 
-1. Build all four rows of the `and` truth table by trying every A/B
-   combination. Which single combination lights the lamp?
-2. Switch to `or` and find the one combination that does NOT light it.
-3. Set A to False with `and` — watch B gray out. Change B: does the result
-   ever change? That is short-circuit evaluation.
-4. In the bonus panel, test `bool(0)`, `bool("")`, and `bool([3, 7])`.
+1. Costruisci tutte e quattro le righe della tabella di verità di `and`
+   provando ogni combinazione A/B. Quale singola combinazione accende la
+   lampada?
+2. Passa a `or` e trova l'unica combinazione che NON la accende.
+3. Imposta A a False con `and` — osserva B oscurarsi. Cambia B: il
+   risultato cambia mai? Questa è la valutazione a corto circuito.
+4. Nel pannello bonus, prova `bool(0)`, `bool("")` e `bool([3, 7])`.
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/boolean-logic-lab/main.html"
@@ -56,37 +59,38 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapters 9 and 19
+Scuola primaria superiore e scuola media (10-14 anni), Capitoli 9 e 19
 
-### Duration
+### Durata
 
-10 minutes
+10 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- Comparison operators producing True/False (Chapter 9)
+- Operatori di confronto che producono True/False (Capitolo 9)
 
-### Activities
+### Attività
 
-1. **Build the tables** (4 min): Students record all four combinations for
-   `and` and `or` in a paper truth table, using the lab to verify.
-2. **Short-circuit discovery** (3 min): "Set it up so that changing B does
-   nothing. How many ways can you do it?" (Two: False-and, True-or.)
-3. **Truthiness sort** (3 min): Students predict True/False for all eight
-   bonus values, then check.
+1. **Costruisci le tabelle** (4 min): Gli studenti registrano tutte e
+   quattro le combinazioni per `and` e `or` in una tabella di verità su
+   carta, usando il laboratorio per verificare.
+2. **Scoperta del corto circuito** (3 min): "Impostalo così che cambiare B
+   non faccia nulla. In quanti modi puoi farlo?" (Due: False-and, True-or.)
+3. **Classificazione di veridicità** (3 min): Gli studenti prevedono
+   True/False per tutti gli otto valori bonus, poi verificano.
 
-### Assessment
+### Verifica
 
-- Student completes and/or truth tables from memory
-- Student can name the two short-circuit situations
-- Student can classify 0, "", [], and None as falsy
+- Lo studente completa le tabelle di verità di and/or a memoria
+- Lo studente sa nominare le due situazioni di corto circuito
+- Lo studente sa classificare 0, "", [] e None come falsi
 
-## References
+## Riferimenti
 
-1. [Python Documentation — Boolean Operations](https://docs.python.org/3/library/stdtypes.html#boolean-operations-and-or-not) — including short-circuit behavior
-2. [Python Documentation — Truth Value Testing](https://docs.python.org/3/library/stdtypes.html#truth-value-testing) — the falsy values list
-3. [p5.js](https://p5js.org/) — the JavaScript library used to build this MicroSim
+1. [Python Documentation — Boolean Operations](https://docs.python.org/3/library/stdtypes.html#boolean-operations-and-or-not) — incluso il comportamento di corto circuito
+2. [Python Documentation — Truth Value Testing](https://docs.python.org/3/library/stdtypes.html#truth-value-testing) — l'elenco dei valori falsi
+3. [p5.js](https://p5js.org/) — la libreria JavaScript usata per costruire questo MicroSim

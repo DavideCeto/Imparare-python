@@ -1,6 +1,6 @@
 ---
-title: Modulo Clock
-description: See the remainder as wrap-around counting on a circular dial and as dots grouped into equal rows with leftovers highlighted.
+title: Orologio del Modulo
+description: Vedi il resto come un conteggio circolare su un quadrante e come puntini raggruppati in righe uguali con gli avanzi evidenziati.
 image: /sims/modulo-clock/modulo-clock.png
 og:image: /sims/modulo-clock/modulo-clock.png
 twitter:image: /sims/modulo-clock/modulo-clock.png
@@ -9,43 +9,48 @@ social:
 quality_score: 93
 ---
 
-# Modulo Clock
+# Orologio del Modulo
 
 <iframe src="main.html" height="502" width="100%" scrolling="no"></iframe>
 
-[Run the Modulo Clock MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui l'Orologio del Modulo a Schermo Intero](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Modifica nell'Editor p5.js](https://editor.p5js.org/)
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-"The leftover after dividing" is an abstract phrase. This MicroSim gives the
-remainder two concrete bodies at once: a clock dial that wraps at the divisor
-(count 17 hops around a 5-slot dial and you land on 2) and a grouping view
-(17 dots in rows of 5 leaves 2 orange leftovers). When the divisor is 2, the
-sim announces even or odd — the classic `n % 2` trick.
+"Ciò che avanza dividendo" è una frase astratta. Questo MicroSim dà al
+resto due forme concrete contemporaneamente: un quadrante da orologio che si
+riavvolge al divisore (conta 17 salti intorno a un quadrante a 5 posizioni e
+atterri su 2) e una vista di raggruppamento (17 puntini in righe di 5
+lasciano 2 avanzi arancioni). Quando il divisore è 2, la simulazione annuncia
+pari o dispari — il classico trucco `n % 2`.
 
-**Learning objective:** The student will be able to explain the remainder as
-wrap-around counting and use `%` to test even/odd and cycle through values.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di spiegare il
+resto come conteggio circolare e di usare `%` per verificare pari/dispari e
+scorrere i valori ciclicamente.
 
-- **Bloom's Taxonomy (2001):** Understand → Apply — *explain, use,
-  demonstrate*
-- **Interaction pattern:** parameter sliders with immediate visual feedback
+- **Tassonomia di Bloom (2001):** Comprendere → Applicare — *spiegare,
+  usare, dimostrare*
+- **Pattern di interazione:** slider dei parametri con riscontro visivo
+  immediato
 
-## How to Use
+## Come Usarlo
 
-1. Predict `17 % 5`, then check both views: the dial lands on your answer
-   and the dot rows show it as leftovers.
-2. Drag the **Dividend** slider slowly upward and watch the remainder cycle
-   0, 1, 2, 3, 4, 0, 1, 2... — that repeating pattern is modulo's superpower.
-3. Set the **Divisor** to 2 and test several dividends: remainder 0 means
-   even, remainder 1 means odd.
-4. Find a dividend/divisor pair with no leftovers. What does that say about
-   the two numbers?
+1. Prevedi `17 % 5`, poi controlla entrambe le viste: il quadrante atterra
+   sulla tua risposta e le righe di puntini la mostrano come avanzo.
+2. Trascina lentamente verso l'alto lo slider **Dividendo** e osserva il
+   resto ciclare 0, 1, 2, 3, 4, 0, 1, 2... — quel pattern ripetuto è il
+   superpotere del modulo.
+3. Imposta il **Divisore** a 2 e prova diversi dividendi: resto 0 significa
+   pari, resto 1 significa dispari.
+4. Trova una coppia dividendo/divisore senza avanzi. Cosa dice questo sui
+   due numeri?
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/modulo-clock/main.html"
@@ -54,36 +59,38 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapter 6 (Math and Arithmetic)
+Scuola primaria superiore e scuola media (10-14 anni), Capitolo 6 (Matematica e aritmetica)
 
-### Duration
+### Durata
 
-10 minutes
+10 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- Division and integer division `//` (Chapter 6)
+- Divisione e divisione intera `//` (Capitolo 6)
 
-### Activities
+### Attività
 
-1. **Predict** (2 min): Students compute `17 % 5`, `20 % 4`, and `9 % 2` by
-   hand.
-2. **Verify** (4 min): Check each with the sliders. Ask students to describe
-   what the dial does when the dividend goes up by exactly one divisor.
-3. **Even/odd hunt** (4 min): With divisor 2, students classify five numbers
-   as even or odd before moving the slider, then verify.
+1. **Prevedi** (2 min): Gli studenti calcolano a mano `17 % 5`, `20 % 4` e
+   `9 % 2`.
+2. **Verifica** (4 min): Controlla ognuno con gli slider. Chiedi agli
+   studenti di descrivere cosa fa il quadrante quando il dividendo sale
+   esattamente di un divisore.
+3. **Caccia a pari/dispari** (4 min): Con divisore 2, gli studenti
+   classificano cinque numeri come pari o dispari prima di muovere lo
+   slider, poi verificano.
 
-### Assessment
+### Verifica
 
-- Student can compute `n % d` for small numbers without the sim
-- Student can explain why remainders always stay between 0 and divisor − 1
-- Student can state how `n % 2` tells you whether n is even
+- Lo studente sa calcolare `n % d` per numeri piccoli senza la simulazione
+- Lo studente sa spiegare perché i resti restano sempre tra 0 e divisore − 1
+- Lo studente sa indicare come `n % 2` dice se n è pari
 
-## References
+## Riferimenti
 
-1. [Python Documentation — Binary arithmetic operations](https://docs.python.org/3/reference/expressions.html#binary-arithmetic-operations) — the `%` operator
-2. [p5.js](https://p5js.org/) — the JavaScript library used to build this MicroSim
+1. [Python Documentation — Binary arithmetic operations](https://docs.python.org/3/reference/expressions.html#binary-arithmetic-operations) — l'operatore `%`
+2. [p5.js](https://p5js.org/) — la libreria JavaScript usata per costruire questo MicroSim

@@ -1,6 +1,6 @@
 ---
-title: Control Flow Explorer
-description: Move a score slider and watch exactly one path through an if/elif/else flowchart light up while skipped conditions are marked never checked.
+title: Esploratore del Flusso di Controllo
+description: Sposta uno slider del punteggio e guarda esattamente un percorso attraverso un diagramma di flusso if/elif/else illuminarsi mentre le condizioni saltate vengono segnate come mai controllate.
 image: /sims/control-flow-explorer/control-flow-explorer.png
 og:image: /sims/control-flow-explorer/control-flow-explorer.png
 twitter:image: /sims/control-flow-explorer/control-flow-explorer.png
@@ -9,44 +9,49 @@ social:
 quality_score: 93
 ---
 
-# Control Flow Explorer
+# Esploratore del Flusso di Controllo
 
 <iframe src="main.html" height="562" width="100%" scrolling="no"></iframe>
 
-[Run the Control Flow Explorer MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui l'Esploratore del Flusso di Controllo a Schermo Intero](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Modifica nell'Editor p5.js](https://editor.p5js.org/)
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-Students can read an elif chain and still believe Python checks every
-condition. This explorer shows the truth: conditions are checked top-down in
-numbered order, exactly one path glows green, and conditions after the first
-`True` are marked **"never checked."** The Python code on the left highlights
-the lines that actually ran, tying the flowchart back to the program text.
+Gli studenti sanno leggere una catena elif ma possono ancora credere che
+Python controlli ogni condizione. Questo esploratore mostra la verità: le
+condizioni vengono controllate dall'alto verso il basso in ordine numerato,
+esattamente un percorso si illumina di verde, e le condizioni dopo il primo
+`True` vengono segnate **"mai controllato."** Il codice Python a sinistra
+evidenzia le righe effettivamente eseguite, collegando il diagramma di
+flusso al testo del programma.
 
-**Learning objective:** The student will be able to predict which branch of
-an if/elif/else chain executes for a given input and explain why later
-branches are skipped.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di prevedere quale
+ramo di una catena if/elif/else viene eseguito per un dato input e di
+spiegare perché i rami successivi vengono saltati.
 
-- **Bloom's Taxonomy (2001):** Understand → Analyze — *predict, trace,
-  differentiate*
-- **Interaction pattern:** slider-driven live path highlighting with check
-  ordering made explicit
+- **Tassonomia di Bloom (2001):** Comprendere → Analizzare — *prevedere,
+  tracciare, differenziare*
+- **Pattern di interazione:** evidenziazione del percorso dal vivo guidata
+  da slider con l'ordine di controllo reso esplicito
 
-## How to Use
+## Come Usarlo
 
-1. With the **Elif Chain** program, predict which branch runs for score 85.
-2. Move the slider and watch: the diamonds show True/False verdicts, the
-   winning path glows, and later checks say "never checked."
-3. Slide from 100 to 0 slowly — the green path steps down the chain at
-   exactly 90, 80, and 70.
-4. Switch to **Simple if** and set the score below 50: the else box shows
-   that nothing happens at all.
+1. Con il programma **Catena Elif**, prevedi quale ramo viene eseguito per
+   il punteggio 85.
+2. Sposta lo slider e osserva: i rombi mostrano i verdetti Vero/Falso, il
+   percorso vincente si illumina, e i controlli successivi dicono "mai
+   controllato."
+3. Scorri da 100 a 0 lentamente — il percorso verde scende lungo la catena
+   esattamente a 90, 80 e 70.
+4. Passa a **If Semplice** e imposta il punteggio sotto 50: la scatola else
+   mostra che non succede nulla.
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/control-flow-explorer/main.html"
@@ -55,37 +60,39 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapter 9 (Making Decisions with If/Else)
+Scuola primaria superiore e scuola media (10-14 anni), Capitolo 9 (Prendere decisioni con if/else)
 
-### Duration
+### Durata
 
-10-15 minutes
+10-15 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- Comparison operators and the Boolean type (Chapter 9 opening sections)
+- Operatori di confronto e il tipo Booleano (sezioni iniziali del Capitolo 9)
 
-### Activities
+### Attività
 
-1. **Predict** (3 min): For scores 95, 85, 75, and 40, students write which
-   grade the elif chain assigns.
-2. **Verify** (5 min): Check each with the slider. For each score, ask "how
-   many conditions did Python actually check?"
-3. **Boundary hunt** (4 min): Students find the exact score where the answer
-   flips from "B" to "A" — reinforcing >= boundaries.
+1. **Prevedi** (3 min): Per i punteggi 95, 85, 75 e 40, gli studenti
+   scrivono quale voto assegna la catena elif.
+2. **Verifica** (5 min): Controlla ognuno con lo slider. Per ogni
+   punteggio, chiedi "quante condizioni ha effettivamente controllato
+   Python?"
+3. **Caccia al confine** (4 min): Gli studenti trovano il punteggio esatto
+   in cui la risposta passa da "B" a "A" — rafforzando i confini con >=.
 
-### Assessment
+### Verifica
 
-- Student predicts the branch taken for any score without the sim
-- Student can explain why `score = 95` checks only one condition
-- Student can explain what happens in a simple if with no else when the
-  condition is False
+- Lo studente prevede il ramo scelto per qualsiasi punteggio senza la
+  simulazione
+- Lo studente sa spiegare perché `score = 95` controlla una sola condizione
+- Lo studente sa spiegare cosa succede in un if semplice senza else quando
+  la condizione è Falsa
 
-## References
+## Riferimenti
 
-1. [Python Tutorial — if Statements](https://docs.python.org/3/tutorial/controlflow.html#if-statements) — official documentation
-2. [p5.js](https://p5js.org/) — the JavaScript library used to build this MicroSim
+1. [Python Tutorial — if Statements](https://docs.python.org/3/tutorial/controlflow.html#if-statements) — documentazione ufficiale
+2. [p5.js](https://p5js.org/) — la libreria JavaScript usata per costruire questo MicroSim

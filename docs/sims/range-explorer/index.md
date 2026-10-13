@@ -1,6 +1,6 @@
 ---
-title: Range Explorer
-description: Adjust start, stop, and step sliders and instantly see which numbers range() generates on a number line, with the stop value shown as never included.
+title: Esploratore di Range
+description: Regola gli slider di inizio, fine e passo e vedi istantaneamente quali numeri genera range() su una linea dei numeri, con il valore finale mostrato come mai incluso.
 image: /sims/range-explorer/range-explorer.png
 og:image: /sims/range-explorer/range-explorer.png
 twitter:image: /sims/range-explorer/range-explorer.png
@@ -9,44 +9,48 @@ social:
 quality_score: 93
 ---
 
-# Range Explorer
+# Esploratore di Range
 
 <iframe src="main.html" height="482" width="100%" scrolling="no"></iframe>
 
-[Run the Range Explorer MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui l'Esploratore di Range a Schermo Intero](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Modifica nell'Editor p5.js](https://editor.p5js.org/)
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-Off-by-one errors around `range()` are the most common loop bug beginners
-write. This explorer makes the rule physical: generated numbers appear as
-filled blue dots on a number line, while the stop value is a hollow orange
-ring labeled "not included." A live code readout shows exactly what
-`range(start, stop, step)` produces, and the fact line connects the count of
-numbers to how many times a for loop would run. Challenge mode shows green
-target rings to hit with the sliders.
+Gli errori di sbaglio-per-uno intorno a `range()` sono il bug da ciclo più
+comune che i principianti scrivono. Questo esploratore rende fisica la
+regola: i numeri generati appaiono come puntini blu pieni su una linea dei
+numeri, mentre il valore finale è un anello arancione vuoto etichettato "non
+incluso." Una lettura del codice dal vivo mostra esattamente cosa produce
+`range(start, stop, step)`, e la riga dei fatti collega il conteggio dei
+numeri a quante volte un ciclo for verrebbe eseguito. La modalità sfida
+mostra anelli bersaglio verdi da colpire con gli slider.
 
-**Learning objective:** The student will be able to choose start, stop, and
-step values that produce a desired sequence of numbers.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di scegliere i
+valori di inizio, fine e passo che producono una sequenza di numeri
+desiderata.
 
-- **Bloom's Taxonomy (2001):** Apply — *use, execute, solve*
-- **Interaction pattern:** parameter sliders with immediate feedback and
-  automatic challenge checking
+- **Tassonomia di Bloom (2001):** Applicare — *usare, eseguire, risolvere*
+- **Pattern di interazione:** slider dei parametri con riscontro immediato e
+  verifica automatica delle sfide
 
-## How to Use
+## Come Usarlo
 
-1. Predict what `range(2, 12, 3)` produces, then check the number line.
-2. Slide **Stop** up and down and watch the hollow ring — the blue dots
-   always stop short of it.
-3. Click **New Challenge** and adjust the sliders until your blue dots land
-   exactly on the green rings.
-4. Check **count backward** to try negative steps — and discover when a
-   range produces no numbers at all.
+1. Prevedi cosa produce `range(2, 12, 3)`, poi controlla la linea dei
+   numeri.
+2. Scorri **Fine** su e giù e osserva l'anello vuoto — i puntini blu si
+   fermano sempre prima di raggiungerlo.
+3. Clicca **Nuova Sfida** e regola gli slider finché i tuoi puntini blu non
+   atterrano esattamente sugli anelli verdi.
+4. Seleziona **conta all'indietro** per provare i passi negativi — e scopri
+   quando un range non produce alcun numero.
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/range-explorer/main.html"
@@ -55,36 +59,39 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapter 7 (For Loops and Drawing Shapes)
+Scuola primaria superiore e scuola media (10-14 anni), Capitolo 7 (Cicli for e disegno di forme)
 
-### Duration
+### Durata
 
-10 minutes
+10 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- The for loop with range() (Chapter 7 opening sections)
+- Il ciclo for con range() (sezioni iniziali del Capitolo 7)
 
-### Activities
+### Attività
 
-1. **Predict** (3 min): Students write the outputs of `range(4)`,
-   `range(2, 6)`, and `range(0, 10, 2)` before touching the sim.
-2. **Verify** (3 min): Check each on the number line. Emphasize the hollow
-   stop ring each time.
-3. **Challenges** (4 min): Students solve three New Challenge rounds.
-   Fastest correct slider settings wins.
+1. **Prevedi** (3 min): Gli studenti scrivono gli output di `range(4)`,
+   `range(2, 6)` e `range(0, 10, 2)` prima di toccare la simulazione.
+2. **Verifica** (3 min): Controlla ognuno sulla linea dei numeri. Enfatizza
+   ogni volta l'anello vuoto di fine.
+3. **Sfide** (4 min): Gli studenti risolvono tre round di Nuova Sfida. Vince
+   chi imposta correttamente gli slider più in fretta.
 
-### Assessment
+### Verifica
 
-- Student writes correct values for a novel range like `range(3, 14, 4)`
-- Student can explain why `range(5)` runs a loop 5 times but never produces 5
-- Student can produce a target sequence such as 1, 3, 5, 7, 9 on the first try
+- Lo studente scrive valori corretti per un nuovo range come
+  `range(3, 14, 4)`
+- Lo studente sa spiegare perché `range(5)` esegue un ciclo 5 volte ma non
+  produce mai 5
+- Lo studente sa produrre una sequenza bersaglio come 1, 3, 5, 7, 9 al primo
+  tentativo
 
-## References
+## Riferimenti
 
-1. [Python Documentation — range](https://docs.python.org/3/library/stdtypes.html#range) — official range documentation
-2. [p5.js](https://p5js.org/) — the JavaScript library used to build this MicroSim
+1. [Python Documentation — range](https://docs.python.org/3/library/stdtypes.html#range) — documentazione ufficiale di range
+2. [p5.js](https://p5js.org/) — la libreria JavaScript usata per costruire questo MicroSim
