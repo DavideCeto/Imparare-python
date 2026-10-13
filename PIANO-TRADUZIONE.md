@@ -209,6 +209,16 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
   successivo ma un generico "Browse the Turtle Graphics Gallery", a
   differenza degli altri file; tradotto fedelmente senza correggerlo,
   stessa logica delle incongruenze editoriali già documentate sopra)
+- `superellipse/`, `cassini-oval/`, `fermat-spiral/`, `astroid/`,
+  `mach-bands/` (diciannovesimo batch — stessa incongruenza già vista in
+  `topographic-map/`: anche `astroid/index.md` chiude con un generico
+  "Browse the Turtle Graphics Gallery" invece di un rimando "Up next";
+  nota di metodo: le liste `labels = [[...]]` dentro i blocchi di codice
+  Python che scrivono testo sul canvas con `monty.write()` (es. 'b = 120
+  (one oval)' in `cassini-oval/`) sono state lasciate intatte in inglese
+  perché sono stringhe letterali dentro codice eseguibile — la regola
+  "codice mai tradotto, carattere per carattere" vale anche per le
+  stringhe visibili sul canvas, non solo per identificatori/sintassi)
 
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
@@ -356,15 +366,13 @@ cuore didattico del libro.
 `dragon-curve/`, `hilbert-curve/`, `cantor-dust/`, `kaleidoscope-slice/`,
 `pinwheel-tiling/`, `escher-fish/`, `voronoi-regions/`, `penrose-rhombus/`,
 `river-delta/`, `coral-branch/`, `leaf-venation/`, `dna-helix/`,
-`topographic-map/`, `epitrochoid/` (91 di ~102 file/unità).
+`topographic-map/`, `epitrochoid/`, `superellipse/`, `cassini-oval/`,
+`fermat-spiral/`, `astroid/`, `mach-bands/` (96 di ~102 file/unità).
 
-Prossimo: continuare la Fase 4 in ordine di nav con `superellipse/`,
-`cassini-oval/`, `fermat-spiral/`, `astroid/`, `mach-bands/`, e così via
-attraverso i restanti ~11 singoli laboratori della galleria (vedi l'ordine
-completo in `mkdocs.yml`: superellipse, cassini-oval, fermat-spiral,
-astroid, mach-bands, vasarely-sphere, scintillating-grid,
-impossible-triangle, ring-pulsation, binary-tree-name, turtle-chase,
-reaction-diffusion — 12 file, non 11, a chiudere la Fase 4).
+Prossimo: continuare la Fase 4 in ordine di nav con `vasarely-sphere/`,
+`scintillating-grid/`, `impossible-triangle/`, `ring-pulsation/`,
+`binary-tree-name/`, `turtle-chase/`, `reaction-diffusion/` — gli ultimi
+7 file che chiudono la Fase 4.
 
 Dopo la Fase 4: Fasi 5-9 (MicroSims, Teacher's Guide, Jupyter/Advanced, Learning Graph,
 Trinket Labs — quest'ultima di priorità minima/da valutare se tradurre affatto, vedi
