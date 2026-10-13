@@ -1,4 +1,4 @@
-# Stock Analysis and (Virtual) Trading With Python
-**Disclaimer - This is NOT Financial advice**
+# Analisi dei Titoli Azionari e Trading (Virtuale) con Python
+**Avvertenza - Questo NON è un consiglio finanziario**
 
-Checkout the notebook [here](https://github.com/dmccreary/python/blob/master/advanced/dataAnalysis/stockTrader.ipynb).
+Dai un'occhiata al notebook [qui](https://github.com/dmccreary/python/blob/master/advanced/dataAnalysis/stockTrader.ipynb).

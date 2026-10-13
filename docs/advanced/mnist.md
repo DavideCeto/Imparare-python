@@ -1,26 +1,26 @@
-# Handwritten Digit Classification
+# Classificazione di Cifre Scritte a Mano
 
-We will program and train a machine learning model to recognize handwritten numbers. The code for this lesson can be found [here](https://github.com/dmccreary/python/blob/master/advanced/machineLearning/mnist.ipynb).
+Programmeremo e addestreremo un modello di machine learning per riconoscere numeri scritti a mano. Il codice per questa lezione si trova [qui](https://github.com/dmccreary/python/blob/master/advanced/machineLearning/mnist.ipynb).
 
-## But What *Is* Machine Learnig?
+## Ma Cos'È *Davvero* il Machine Learning?
 
-Process of determining the function that gives a plausible result **y** for a set of inputs, in form of a vector **x**. In its simplest form, this could be linear regression, where we find the line of best fit through the data.
+Il processo di determinare la funzione che restituisce un risultato plausibile **y** per un insieme di input, nella forma di un vettore **x**. Nella sua forma più semplice, questo potrebbe essere la regressione lineare, dove troviamo la retta che meglio si adatta ai dati.
 
-In more complex forms, however, this can be training a neural network to fit very non-linear data. We will use a type of neural network to recognize our handwritten numbers.
+In forme più complesse, tuttavia, questo può essere addestrare una rete neurale per adattarsi a dati molto non lineari. Useremo un tipo di rete neurale per riconoscere i nostri numeri scritti a mano.
 
 ![Image of Machine Learning Algorithms](https://www.7wdata.be/wp-content/uploads/2017/04/CheatSheet.png)
 
-## Types of Neural Networks
+## Tipi di Reti Neurali
 ![Types of Neural Networks](https://miro.medium.com/max/4000/1*cuTSPlTq0a_327iTPJyD-Q.png)
 
-As you can see, there are many different types, or **architectures** of neural networks. Some of the most common are Feed Forward, Recurrent, LSTM, and AutoEncoder neural networks. The other most common is the one that we will use, or a Convolutional Neural Network.
+Come puoi vedere, ci sono molti tipi diversi, o **architetture**, di reti neurali. Alcune delle più comuni sono le reti neurali Feed Forward, Ricorrenti, LSTM, e AutoEncoder. L'altra più comune è quella che useremo, cioè una Rete Neurale Convoluzionale.
 
-## Convolutional Neural Network
-Since we have image data, we will use a Convolutional Neural Network (CNN). A CNN works by sliding "windows" over the input image and aggregating nearby pixels together.
+## Rete Neurale Convoluzionale
+Poiché abbiamo dati di immagini, useremo una Rete Neurale Convoluzionale (CNN). Una CNN funziona facendo scorrere delle "finestre" sopra l'immagine in ingresso e aggregando insieme i pixel vicini.
 ![CNN Windowing](https://miro.medium.com/max/790/1*nYf_cUIHFEWU1JXGwnz-Ig.gif)
 
-## Importing Packages
-For this project, we will be using a machine learning package called Keras. This makes it really easy to construct our neural network. We also import matplotlib to visualize our data, and numpy for some utilities.
+## Importare i Pacchetti
+Per questo progetto, useremo un pacchetto di machine learning chiamato Keras. Questo rende davvero facile costruire la nostra rete neurale. Importiamo anche matplotlib per visualizzare i nostri dati, e numpy per alcune utilità.
 ```python
 import keras
 from keras.datasets import mnist  # Get dataset
@@ -34,8 +34,8 @@ import matplotlib.image as mpimg
 import numpy as np 
 ```
 
-## Loading Data
-Important to load both a training and testing set to make sure the CNN is not "memorizing" the set of images it will train on. This would lead to awful accuracy in the "real world"
+## Caricare i Dati
+È importante caricare sia un insieme di addestramento che uno di test per assicurarsi che la CNN non stia "memorizzando" l'insieme di immagini su cui si addestrerà. Questo porterebbe a una pessima accuratezza nel "mondo reale"
 ```python
 # input image dimensions (pixels)
 img_rows, img_cols = 28, 28
@@ -49,8 +49,8 @@ x_test = x_test.reshape(x_test.shape[0], img_rows, img_cols, 1)
 input_shape = (img_rows, img_cols, 1)
 ```
 
-## Preprocessing Data
-We want to have our CNN work with numbers between 0 and 1. Since pixel values are from 0-255, we divide all numbers by 255 in order to make them between 0 and 1. We then can see how many training and testing samples we have.
+## Preelaborazione dei Dati
+Vogliamo che la nostra CNN lavori con numeri tra 0 e 1. Poiché i valori dei pixel vanno da 0 a 255, dividiamo tutti i numeri per 255 per portarli tra 0 e 1. Possiamo poi vedere quanti campioni di addestramento e di test abbiamo.
 ```python
 x_train = x_train.astype('float32')
 x_test = x_test.astype('float32')
@@ -60,8 +60,8 @@ print('x_train shape:', x_train.shape)
 print(x_train.shape[0], 'train samples')
 print(x_test.shape[0], 'test samples')
 ```
-## Look At Data
-In the next few cells, we will look at an example of a digit and see what number it is in the training set.
+## Osservare i Dati
+Nelle prossime celle, osserveremo un esempio di cifra e vedremo quale numero è nell'insieme di addestramento.
 
 ```python
 x_train[0]
@@ -75,10 +75,10 @@ plt.imshow(pixels, cmap='gray')
 print(y_train[0])
 ```
 
-## Desired Output
-We want to convert the desired output from a number n to a vector where the nth element is 1 and the rest are 0.
+## Output Desiderato
+Vogliamo convertire l'output desiderato da un numero n a un vettore dove l'ennesimo elemento è 1 e il resto sono 0.
 
-Example: n = 5 Resulting Vector = {0, 0, 0, 0, 0, 1, 0, 0, 0, 0}
+Esempio: n = 5 Vettore Risultante = {0, 0, 0, 0, 0, 1, 0, 0, 0, 0}
 
 ```python
 num_classes = 10
@@ -87,8 +87,8 @@ y_train = keras.utils.to_categorical(y_train, num_classes)
 y_test = keras.utils.to_categorical(y_test, num_classes)
 ```
 
-## Define Model
-Now here is the fun part. Building the model! We will have a 5 layer neural network. Feel free to play around with some of the parameters and see what works better or worse!
+## Definire il Modello
+Ed ecco la parte divertente. Costruire il modello! Avremo una rete neurale a 5 livelli. Sentiti libero di giocare con alcuni dei parametri e vedere cosa funziona meglio o peggio!
 
 ```python
 model = Sequential()
@@ -106,16 +106,16 @@ model.add(Dense(num_classes, activation='softmax'))
 model.summary()
 ```
 
-## Set Parameters
-Here, we will set two parameters for the network. The first is batch size, which determines how many training examples we will look at before changing the weights in the model. We will also set the number of epochs, or iterations through the entire training set.
+## Impostare i Parametri
+Qui, impostiamo due parametri per la rete. Il primo è la dimensione del batch, che determina quanti esempi di addestramento osserveremo prima di cambiare i pesi nel modello. Imposteremo anche il numero di epoche, ovvero le iterazioni attraverso l'intero insieme di addestramento.
 
 ```python
 batch_size = 128  # How many training examples will we look at before updating the weights in the matrix
 epochs = 12 # How many times we will run through the complete training set
 ```
 
-## Compile and Train Model
-Here, we compile the model and then train it. A couple things to note. We are using the Adam optimizer, as compared to others such as stochastic gradient descent. We are measuring the success of the model through the categorical crossentropy loss metric, which determines how to adjust the weights within the model.
+## Compilare e Addestrare il Modello
+Qui, compiliamo il modello e poi lo addestriamo. Un paio di cose da notare. Stiamo usando l'ottimizzatore Adam, rispetto ad altri come la discesa del gradiente stocastica. Misuriamo il successo del modello attraverso la metrica di perdita categorical crossentropy, che determina come aggiustare i pesi all'interno del modello.
 
 ```python
 model.compile(loss=keras.losses.categorical_crossentropy,
@@ -128,15 +128,15 @@ model.fit(x_train, y_train,
           verbose=1,
           validation_data=(x_test, y_test))
 ```
-## Test Model
-Now here is the big finish, lets see how well the model performs! We will do this by running through our test set and having the model produce a prediction. Thankfully, there is already a function built into the model for this.
+## Testare il Modello
+Ed ecco il gran finale, vediamo quanto bene si comporta il modello! Lo faremo eseguendo il nostro insieme di test e facendo produrre al modello una previsione. Per fortuna, c'è già una funzione integrata nel modello per questo.
 ```python
 score = model.evaluate(x_test, y_test, verbose=0)
 print('Test loss:', score[0])
 print('Test accuracy:', score[1])
 ```
 
-Let's see what happens on an individual image level:
+Vediamo cosa succede a livello di singola immagine:
 ```python
 to_predict = np.array([x_test[0]])
 
@@ -152,4 +152,4 @@ output
 ```python
 np.argmax(output)
 ```
-And there you have it! Congratulations on successfully creating, training, and testing your own neural network.
+Ed ecco fatto! Congratulazioni per aver creato, addestrato e testato con successo la tua rete neurale.
