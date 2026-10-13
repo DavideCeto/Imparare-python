@@ -2,37 +2,39 @@
 hide:
   toc
 ---
-# CodeMirror Python Editor
+# Editor Python CodeMirror
 
-The standard Skulpt labs use a plain `<textarea>` for code entry — intentionally
-minimal so that chapters 1–18 stay simple to deploy and share.
-For longer programs (20+ lines), a proper code editor with **line numbers** and
-**syntax highlighting** makes a meaningful difference: when Skulpt reports
-`NameError on line 27`, students can jump directly to the problem instead
-of counting lines manually.
+I laboratori Skulpt standard usano una semplice `<textarea>` per l'inserimento
+del codice — volutamente minimale così che i capitoli 1–18 restino semplici
+da distribuire e condividere.
+Per programmi più lunghi (20+ righe), un vero editor di codice con **numeri di
+riga** ed **evidenziazione della sintassi** fa una differenza significativa:
+quando Skulpt segnala `NameError on line 27`, gli studenti possono saltare
+direttamente al problema invece di contare le righe manualmente.
 
-This page is a self-contained proof-of-concept.
-It loads **CodeMirror 5** from a CDN and wires it to Skulpt — all inside this
-single Markdown file, with no changes to shared CSS, JavaScript, or `mkdocs.yml`.
+Questa pagina è una prova di concetto autonoma.
+Carica **CodeMirror 5** da un CDN e lo collega a Skulpt — tutto dentro questo
+singolo file Markdown, senza modifiche al CSS condiviso, al JavaScript, o a
+`mkdocs.yml`.
 
-## What CodeMirror Adds
+## Cosa Aggiunge CodeMirror
 
-| Feature | Plain `textarea` | CodeMirror |
+| Funzionalità | `textarea` semplice | CodeMirror |
 |---|---|---|
-| Line numbers | no | yes |
-| Syntax highlighting | no | yes |
-| Auto-indent on Enter | no | yes |
-| Tab → 4 spaces | manual | built-in |
-| Bracket matching | no | yes |
+| Numeri di riga | no | sì |
+| Evidenziazione della sintassi | no | sì |
+| Auto-indentazione su Invio | no | sì |
+| Tab → 4 spazi | manuale | integrato |
+| Corrispondenza delle parentesi | no | sì |
 
-## Live Demo — Fractal Tree
+## Demo dal Vivo — Albero Frattale
 
-The program below is 37 lines.
-Without line numbers, `NameError on line 27` sends students scanning.
-With line numbers, they find the problem immediately.
+Il programma qui sotto è di 37 righe.
+Senza numeri di riga, `NameError on line 27` manda gli studenti a scandagliare.
+Con i numeri di riga, trovano il problema immediatamente.
 
-Click **Run** to grow the tree, then try editing `depth` (currently `6`)
-or the trunk length (currently `80`).
+Clicca **Run** per far crescere l'albero, poi prova a modificare `depth`
+(attualmente `6`) o la lunghezza del tronco (attualmente `80`).
 
 <!-- Skulpt runtime (same CDN used by all Skulpt labs in this textbook) -->
 <script src="https://skulpt.org/js/skulpt.min.js" type="text/javascript"></script>
@@ -211,23 +213,25 @@ function resetCmLab() {
 
 ---
 
-## Copying This Into Your Own Page
+## Copiare Questo nella Tua Pagina
 
-Paste these five blocks into any Markdown page to get a CodeMirror + Skulpt lab.
-Replace the Python code in `_cmLines` with your own program.
+Incolla questi cinque blocchi in qualsiasi pagina Markdown per ottenere un
+laboratorio CodeMirror + Skulpt.
+Sostituisci il codice Python in `_cmLines` con il tuo programma.
 
-This page is a standalone proof-of-concept: `runCmLab` and `resetCmLab` are
-defined **inline** and read from `cmEditor.getValue()`. The production labs
-throughout the textbook use the shared `js/codemirror-lab.js` instead, which
-handles multiple labs per page via a suffix registry (`initCmLab`) and adds
-a Run ⇄ Pause button: while a program runs, clicking **Pause** freezes the
-turtle drawing (handy for discussion or screenshots) and **Resume** continues
-it. If the code is edited while paused, the button changes to **Run New
-Code** and starts a fresh run with the new code instead of resuming the old
-one. **Reset** stops a running program. See
-[The Run ⇄ Pause Button](run-pause-buttons.md) for the full behavior table
-and the design rationale. The minimal inline version below does not include
-the pause feature.
+Questa pagina è una prova di concetto autonoma: `runCmLab` e `resetCmLab`
+sono definiti **in linea** e leggono da `cmEditor.getValue()`. I laboratori
+di produzione in tutto il manuale usano invece il file condiviso
+`js/codemirror-lab.js`, che gestisce più laboratori per pagina tramite un
+registro di suffissi (`initCmLab`) e aggiunge un pulsante Run ⇄ Pause:
+mentre un programma è in esecuzione, cliccare **Pause** blocca il disegno
+della turtle (utile per discussioni o screenshot) e **Resume** lo
+continua. Se il codice viene modificato durante la pausa, il pulsante
+cambia in **Run New Code** e avvia un'esecuzione nuova con il nuovo codice
+invece di riprendere quella vecchia. **Reset** ferma un programma in
+esecuzione. Vedi [Il Pulsante Run ⇄ Pause](run-pause-buttons.md) per la
+tabella completa dei comportamenti e la motivazione del design. La versione
+minimale in linea qui sotto non include la funzionalità di pausa.
 
 ```html
 <!-- 1. Skulpt runtime -->
@@ -339,15 +343,16 @@ function resetCmLab() {
 
 ---
 
-## When to Use CodeMirror vs Plain Textarea
+## Quando Usare CodeMirror invece della Textarea Semplice
 
-| Use the plain `textarea` when… | Use CodeMirror when… |
+| Usa la `textarea` semplice quando… | Usa CodeMirror quando… |
 |---|---|
-| Programs are 5–15 lines | Programs are 20+ lines |
-| Focus is on one new concept | Multiple functions or nested loops |
-| You are writing a standard textbook lab | Teachers will project and navigate the code |
-| Simplicity of page authoring matters | Students will read error messages with line numbers |
+| I programmi sono di 5–15 righe | I programmi sono di 20+ righe |
+| Il focus è su un singolo concetto nuovo | Più funzioni o cicli annidati |
+| Stai scrivendo un laboratorio standard del manuale | Gli insegnanti proietteranno e navigheranno il codice |
+| Conta la semplicità nello scrivere la pagina | Gli studenti leggeranno messaggi di errore con numeri di riga |
 
-The standard Skulpt labs in chapters 1–18 stay with `<textarea>` — intentionally.
-CodeMirror is worth the extra setup for longer demonstrations where navigating to
-a specific line number is part of the lesson.
+I laboratori Skulpt standard nei capitoli 1–18 restano con `<textarea>` —
+intenzionalmente. CodeMirror vale la configurazione extra per dimostrazioni
+più lunghe dove navigare verso un numero di riga specifico fa parte della
+lezione.
