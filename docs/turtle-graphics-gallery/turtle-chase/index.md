@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Turtle Chase
+# Caccia tra Tartarughe
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Run two turtles at once inside a single animation loop
-- Aim one turtle at another using `math.atan2(dy, dx)`
-- Detect a "catch" by comparing the squared distance between turtles
+- Eseguire due tartarughe contemporaneamente dentro un singolo ciclo di animazione
+- Puntare una tartaruga verso un'altra usando `math.atan2(dy, dx)`
+- Rilevare una "cattura" confrontando la distanza al quadrato tra le tartarughe
 
-A green prey turtle wanders randomly around the canvas while a red hunter turtle chases it — every frame the hunter re-aims straight at the prey and takes a slightly bigger step. The chase ends the moment the hunter gets within 10 pixels.
+Una tartaruga preda verde vaga a caso per il canvas mentre una tartaruga cacciatrice rossa la insegue — ogni fotogramma il cacciatore ripunta dritto verso la preda e fa un passo leggermente più grande. La caccia finisce nel momento in cui il cacciatore arriva entro 10 pixel.
 
-!!! mascot-welcome "Welcome to Turtle Chase!"
+!!! mascot-welcome "Benvenuto alla Caccia tra Tartarughe!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Two turtles, one canvas: a wanderer and a hunter.
-    This is your first program where two characters *interact*!
-    Let's code it together!
+    Due tartarughe, un canvas: una vagabonda e una cacciatrice.
+    Questo è il tuo primo programma dove due personaggi *interagiscono*!
+    Programmiamolo insieme!
 
-## How It Works
+## Come Funziona
 
-Each frame does three things. The prey turns a random amount (up to ±30°) and steps forward 3.5 pixels — a random walk. The hunter computes the vector to the prey (`dx`, `dy`), converts it to a heading with `math.atan2(dy, dx)`, and steps forward 4.0 pixels — slightly faster than the prey, so it always gains ground. Finally, if the squared distance `dx*dx + dy*dy` drops below 100 (that's 10 pixels), the prey is caught.
+Ogni fotogramma fa tre cose. La preda gira di una quantità casuale (fino a ±30°) e fa un passo in avanti di 3.5 pixel — una passeggiata casuale. Il cacciatore calcola il vettore verso la preda (`dx`, `dy`), lo converte in una direzione con `math.atan2(dy, dx)`, e fa un passo in avanti di 4.0 pixel — leggermente più veloce della preda, così guadagna sempre terreno. Infine, se la distanza al quadrato `dx*dx + dy*dy` scende sotto 100 (cioè 10 pixel), la preda viene catturata.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -47,13 +47,14 @@ for frame in range(300):
     screen.update()
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The hunter moves 4.0 pixels per frame; the prey only 3.5.
-    Will the hunter catch the prey before the 300 frames run out?
-    Make your guess, then click Run and watch the chase!
+    Il cacciatore si muove di 4.0 pixel per fotogramma; la preda solo di
+    3.5. Il cacciatore catturerà la preda prima che finiscano i 300
+    fotogrammi? Fai la tua ipotesi, poi clicca Esegui e guarda la
+    caccia!
 
-## Try It Now
+## Prova Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -129,28 +130,30 @@ if caught:
 screen.update()`);
 </script>
 
-The hunter closes in and "Caught!" appears — with a 0.5 pixel-per-frame speed edge and dead-straight aim, the hunter always wins eventually. Were you right?
+Il cacciatore si avvicina e appare "Caught!" — con un vantaggio di velocità di 0.5 pixel per fotogramma e una mira perfettamente dritta, il cacciatore vince sempre, prima o poi. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-`math.atan2(dy, dx)` returns the angle of the vector `(dx, dy)` — unlike plain `atan(dy/dx)` it handles all four quadrants and never divides by zero. `math.degrees()` converts radians to the degrees that `setheading()` expects. Notice the wall check: when the prey wanders past ±160, it aims back toward the center `(0, 0)` using the same `atan2` trick — pointing at a target and fleeing to safety are the same math.
+`math.atan2(dy, dx)` restituisce l'angolo del vettore `(dx, dy)` — a differenza del semplice `atan(dy/dx)` gestisce tutti e quattro i quadranti e non divide mai per zero. `math.degrees()` converte i radianti nei gradi che `setheading()` si aspetta. Nota il controllo del muro: quando la preda vaga oltre ±160, punta indietro verso il centro `(0, 0)` usando lo stesso trucco `atan2` — puntare verso un bersaglio e fuggire verso la salvezza sono la stessa matematica.
 
-## Explanation Table
+## Tabella Esplicativa
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `prey.right(random.uniform(-30, 30))` | Random walk: small random turn each frame |
-| `math.atan2(dy, dx)` | Angle from hunter to prey, safe in all quadrants |
-| `hunter.forward(4.0)` | Hunter is 0.5 px/frame faster than the prey |
-| `dx * dx + dy * dy < 100` | Within 10 px — squared distance avoids `sqrt` |
+| `prey.right(random.uniform(-30, 30))` | Passeggiata casuale: piccola svolta casuale ogni fotogramma |
+| `math.atan2(dy, dx)` | Angolo dal cacciatore alla preda, sicuro in tutti i quadranti |
+| `hunter.forward(4.0)` | Il cacciatore è 0.5 px/fotogramma più veloce della preda |
+| `dx * dx + dy * dy < 100` | Entro 10 px — la distanza al quadrato evita `sqrt` |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Give the Prey a Brain"
+!!! mascot-thinking "Tocca a Te — Dai un Cervello alla Preda"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    This version adds an escape instinct: when the hunter gets within 80 pixels,
-    the prey stops wandering and runs **directly away**. The prey is still slower —
-    will smarter steering let it survive all 300 frames? Predict, then run it!
+    Questa versione aggiunge un istinto di fuga: quando il cacciatore
+    arriva entro 80 pixel, la preda smette di vagare e corre
+    **direttamente via**. La preda è ancora più lenta — una guida più
+    intelligente le permetterà di sopravvivere a tutti i 300 fotogrammi?
+    Fai una previsione, poi eseguilo!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -228,20 +231,22 @@ else:
 screen.update()`);
 </script>
 
-The fleeing prey survives much longer than the random walker — running directly away cancels most of the hunter's speed advantage, but the walls keep forcing it to turn. Smart steering matters as much as speed!
+La preda in fuga sopravvive molto più a lungo della vagabonda casuale — correre direttamente via annulla la maggior parte del vantaggio di velocità del cacciatore, ma i muri continuano a costringerla a girare. Una guida intelligente conta quanto la velocità!
 
-## Experiments
+## Esperimenti
 
-1. **Even the speeds.** Set the hunter's step to 3.5 too. You'll know it worked when the hunter can no longer close the gap and "Got away!" appears.
+1. **Pareggia le velocità.** Imposta anche il passo del cacciatore a 3.5. Saprai che ha funzionato quando il cacciatore non riesce più a chiudere il divario e appare "Got away!".
 
-2. **Add a second hunter.** Create `hunter2` starting at (150, -140) with the same chase logic. You'll know it worked when the prey gets cornered between two red turtles.
+2. **Aggiungi un secondo cacciatore.** Crea `hunter2` che parte da (150, -140) con la stessa logica di caccia. Saprai che ha funzionato quando la preda viene messa all'angolo tra due tartarughe rosse.
 
-3. **Lazy aim.** Make the hunter re-aim only every 10th frame (`if frame % 10 == 0:`). You'll know it worked when the red path becomes a series of straight line segments that lag behind the prey.
+3. **Mira pigra.** Fai ripuntare il cacciatore solo ogni 10° fotogramma (`if frame % 10 == 0:`). Saprai che ha funzionato quando il percorso rosso diventa una serie di segmenti rettilinei che restano indietro rispetto alla preda.
 
-4. **Shrink the catch radius.** Change `100` to `25` (5 pixels). You'll know it worked when the hunter has to practically touch the prey to win.
+4. **Riduci il raggio di cattura.** Cambia `100` in `25` (5 pixel). Saprai che ha funzionato quando il cacciatore deve praticamente toccare la preda per vincere.
 
-!!! mascot-celebration "Master of the Hunt!"
+!!! mascot-celebration "Maestro della Caccia!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Two interacting characters, targeting math, and collision detection —
-    you just wrote the core loop of every chase scene in video games!
-    Up next: **Reaction-Diffusion Pattern** — animal-skin patterns from pure chemistry math.
+    Due personaggi che interagiscono, matematica di puntamento, e
+    rilevamento delle collisioni — hai appena scritto il ciclo
+    fondamentale di ogni scena di inseguimento nei videogiochi!
+    Prossimo: **Motivo di Reazione-Diffusione** — pattern da pelle
+    animale dalla pura matematica chimica.

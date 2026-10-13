@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Binary Tree Name
+# Nome ad Albero Binario
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Convert a letter to a number with `ord()` and pull out its binary bits with `//` and `%`
-- Trace a path down a binary tree — left for 0, right for 1
-- Draw the same structure at every level using nested loops
+- Convertire una lettera in un numero con `ord()` ed estrarre i suoi bit binari con `//` e `%`
+- Tracciare un percorso giù per un albero binario — sinistra per 0, destra per 1
+- Disegnare la stessa struttura a ogni livello usando cicli annidati
 
-Every letter in your name is secretly a number, and every number is secretly a string of bits. This lab draws a five-level binary tree, then traces each letter of a name down the tree — branching left for every 0 bit and right for every 1 bit. Each letter lands on its own leaf!
+Ogni lettera nel tuo nome è segretamente un numero, e ogni numero è segretamente una stringa di bit. Questo laboratorio disegna un albero binario a cinque livelli, poi traccia ogni lettera di un nome giù per l'albero — ramificando a sinistra per ogni bit 0 e a destra per ogni bit 1. Ogni lettera atterra sulla propria foglia!
 
-!!! mascot-welcome "Welcome to Binary Tree Name!"
+!!! mascot-welcome "Benvenuto al Nome ad Albero Binario!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Computers store letters as numbers, and numbers as bits.
-    Today you'll *see* those bits — as colorful paths through a tree.
-    Let's code it together!
+    I computer memorizzano le lettere come numeri, e i numeri come bit.
+    Oggi *vedrai* quei bit — come percorsi colorati attraverso un
+    albero. Programmiamolo insieme!
 
-## How It Works
+## Come Funziona
 
-`ord('M') - 64` gives 13, because M is the 13th letter of the alphabet. Written in five bits, 13 is `01101`. Starting at the root, the turtle reads the bits from left to right: 0 means "go down-left", 1 means "go down-right". After five moves every letter arrives at its own unique leaf — that's why five bits can label 32 different letters.
+`ord('M') - 64` dà 13, perché M è la 13ª lettera dell'alfabeto. Scritto in cinque bit, 13 è `01101`. Partendo dalla radice, la turtle legge i bit da sinistra a destra: 0 significa "scendi a sinistra", 1 significa "scendi a destra". Dopo cinque mosse ogni lettera arriva alla propria foglia unica — ecco perché cinque bit possono etichettare 32 lettere diverse.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -57,13 +57,15 @@ for ch in name:
     pos = pos + 1
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    MONTY has 5 letters, but the letter T appears once and Y once — all 5 letters are
-    different. Will all 5 colored paths end on **different** leaves, or will any two
-    paths land on the same leaf? Make your guess, then click Run!
+    MONTY ha 5 lettere, ma la lettera T appare una volta e la Y una
+    volta — tutte e 5 le lettere sono diverse. Tutti e 5 i percorsi
+    colorati finiranno su foglie **diverse**, oppure due percorsi
+    atterreranno sulla stessa foglia? Fai la tua ipotesi, poi clicca
+    Esegui!
 
-## Try It Now
+## Prova Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -150,29 +152,30 @@ for ch in name:
     pos = pos + 1`);
 </script>
 
-Every letter lands on its own leaf — different letters always mean different bit patterns, so their paths must split apart somewhere. Were you right?
+Ogni lettera atterra sulla propria foglia — lettere diverse significano sempre pattern di bit diversi, quindi i loro percorsi devono separarsi da qualche parte. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-The gray scaffold is drawn first: at each of the 5 levels, the loop visits every node (there are `2 ** level` of them) and draws its two child branches. The branch spread `off` halves at every level (88, 44, 22, 11...) so branches never collide. Then each letter's number is peeled apart high-bit-first: dividing by 16, 8, 4, 2, 1 and taking `% 2` yields the five bits in reading order, steering the colored pen down the tree.
+L'impalcatura grigia viene disegnata per prima: a ognuno dei 5 livelli, il ciclo visita ogni nodo (ce ne sono `2 ** level`) e disegna i suoi due rami figli. L'apertura del ramo `off` si dimezza a ogni livello (88, 44, 22, 11...) così i rami non collidono mai. Poi il numero di ogni lettera viene scomposto a partire dal bit più significativo: dividendo per 16, 8, 4, 2, 1 e prendendo `% 2` si ottengono i cinque bit nell'ordine di lettura, guidando la penna colorata giù per l'albero.
 
-## Explanation Table
+## Tabella Esplicativa
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `n = ord(ch) - 64` | Letter position in the alphabet: A=1 ... Z=26 |
-| `bit = (n // d) % 2` | Extracts one bit; d counts down 16, 8, 4, 2, 1 |
-| `off = off / 2` | Halves the branch spread at each level down |
-| `monty.write(ch + ' = ' + bits, ...)` | Prints the letter's full bit string below the tree |
+| `n = ord(ch) - 64` | Posizione della lettera nell'alfabeto: A=1 ... Z=26 |
+| `bit = (n // d) % 2` | Estrae un bit; d conta alla rovescia 16, 8, 4, 2, 1 |
+| `off = off / 2` | Dimezza l'apertura del ramo a ogni livello in giù |
+| `monty.write(ch + ' = ' + bits, ...)` | Stampa la stringa di bit completa della lettera sotto l'albero |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Encode Your Initials"
+!!! mascot-thinking "Tocca a Te — Codifica le Tue Iniziali"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    This smaller version traces just three letters — but it's set to 'ABC'.
-    A is 1, which in five bits is `00001` — four moves left, then one right.
-    Change `name` to **your own initials** and predict which side of the tree
-    each letter will land on before you run it!
+    Questa versione più piccola traccia solo tre lettere — ma è
+    impostata su 'ABC'. A è 1, che in cinque bit è `00001` — quattro
+    mosse a sinistra, poi una a destra. Cambia `name` con le **tue
+    iniziali** e prevedi su quale lato dell'albero atterrerà ogni
+    lettera prima di eseguirlo!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -228,20 +231,22 @@ for ch in name:
     pos = pos + 1`);
 </script>
 
-Letters early in the alphabet (small numbers) start with 0 bits, so they drift left; letters from Q onward start with a 1 bit and go right. Initials like 'AZ' split to opposite edges of the tree!
+Le lettere all'inizio dell'alfabeto (numeri piccoli) iniziano con bit 0, quindi derivano a sinistra; le lettere da Q in poi iniziano con un bit 1 e vanno a destra. Iniziali come 'AZ' si dividono verso i bordi opposti dell'albero!
 
-## Experiments
+## Esperimenti
 
-1. **Trace the whole alphabet.** Set `name` to 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' and use `colors[pos % 5]`. You'll know it worked when every leaf from the far left to position 26 has a path.
+1. **Traccia l'intero alfabeto.** Imposta `name` su 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' e usa `colors[pos % 5]`. Saprai che ha funzionato quando ogni foglia dall'estrema sinistra fino alla posizione 26 ha un percorso.
 
-2. **Six-bit tree.** Change `top` to 180, start `d` at 32, and add a sixth level to the scaffold loop (`range(6)`). You'll know it worked when the tree gains a whole extra row of tinier branches.
+2. **Albero a sei bit.** Cambia `top` in 180, fai partire `d` da 32, e aggiungi un sesto livello al ciclo dell'impalcatura (`range(6)`). Saprai che ha funzionato quando l'albero guadagna un'intera riga extra di rami più piccoli.
 
-3. **Count the leaves.** Add a loop that puts a tiny `monty.dot(4, 'gray')` at all 32 leaf positions of the bottom row. You'll know it worked when you see exactly 32 dots.
+3. **Conta le foglie.** Aggiungi un ciclo che mette un piccolo `monty.dot(4, 'gray')` a tutte e 32 le posizioni delle foglie dell'ultima riga. Saprai che ha funzionato quando vedi esattamente 32 puntini.
 
-4. **Secret word decoder.** Delete the letter labels (both `write` calls) and ask a friend to decode your word from the paths alone. You'll know it worked when they can read the bits right off the drawing.
+4. **Decodificatore di parole segrete.** Elimina le etichette delle lettere (entrambe le chiamate `write`) e chiedi a un amico di decodificare la tua parola solo dai percorsi. Saprai che ha funzionato quando riesce a leggere i bit direttamente dal disegno.
 
-!!! mascot-celebration "You Speak Binary!"
+!!! mascot-celebration "Parli Binario!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You just drew what every computer does with text — turn letters into bits!
-    ASCII, Unicode, files, and the whole internet rest on this one idea.
-    Up next: **Turtle Chase** — a predator turtle hunts its prey with `atan2()`.
+    Hai appena disegnato ciò che ogni computer fa con il testo —
+    trasformare lettere in bit! ASCII, Unicode, i file, e l'intero
+    internet si basano su questa singola idea. Prossimo: **Caccia tra
+    Tartarughe** — una tartaruga predatrice dà la caccia alla sua preda
+    con `atan2()`.

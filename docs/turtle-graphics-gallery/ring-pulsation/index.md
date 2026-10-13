@@ -2,27 +2,28 @@
 hide:
     - toc
 ---
-# Concentric Ring Pulsation
+# Pulsazione di Anelli Concentrici
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Build a bull's-eye by layering filled circles from largest to smallest
-- Generate a decreasing sequence where each step shrinks by a percentage
-- Explain how warm/cool color contrast makes a still image appear to vibrate
+- Costruire un bersaglio sovrapponendo cerchi riempiti dal più grande al più piccolo
+- Generare una sequenza decrescente dove ogni passo si restringe di una percentuale
+- Spiegare come il contrasto tra colori caldi/freddi faccia sembrare un'immagine ferma vibrare
 
-A bull's-eye of rings that alternate between warm colors (orange, crimson) and cool colors (blue, teal), with the rings squeezing thinner and thinner toward the center. Stare at it and the rings seem to shimmer and pulse — warm colors push forward while cool colors pull back, and your eyes never settle.
+Un bersaglio di anelli che alternano colori caldi (arancione, cremisi) e colori freddi (blu, verde acqua), con gli anelli che si stringono sempre più sottili verso il centro. Fissalo e gli anelli sembrano scintillare e pulsare — i colori caldi spingono in avanti mentre quelli freddi si ritirano, e i tuoi occhi non si stabilizzano mai.
 
-!!! mascot-welcome "Welcome to Concentric Ring Pulsation!"
+!!! mascot-welcome "Benvenuto alla Pulsazione di Anelli Concentrici!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Warm colors leap toward you, cool colors sink away — and when you
-    alternate them in shrinking rings, the whole picture starts to hum.
-    Op artists call this vibration. Let's make some!
+    I colori caldi balzano verso di te, i colori freddi sprofondano via
+    — e quando li alterni in anelli che si restringono, l'intera
+    immagine inizia a vibrare. Gli artisti op art chiamano questo
+    vibrazione. Creiamone un po'!
 
-## How It Works
+## Come Funziona
 
-There is no "ring" command — the trick is layering. We draw a filled circle of radius 180, then a slightly smaller one on top of it, then a smaller one still, each in the next color. Every circle covers the middle of the previous one, so only a ring of each color stays visible. The gap between radii starts at 30 and is multiplied by 0.85 each time, so the rings get narrower as they crowd toward the center.
+Non esiste un comando "anello" — il trucco è la sovrapposizione. Disegniamo un cerchio riempito di raggio 180, poi uno leggermente più piccolo sopra di esso, poi uno ancora più piccolo, ciascuno nel colore successivo. Ogni cerchio copre il centro di quello precedente, così resta visibile solo un anello di ogni colore. Il divario tra i raggi inizia a 30 e viene moltiplicato per 0.85 ogni volta, così gli anelli diventano più stretti man mano che si affollano verso il centro.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -55,14 +56,14 @@ while r > 4:
     i = i + 1
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The first circle has radius 180 and every new circle is smaller,
-    with the step shrinking by 15% each time.
-    Will the **widest** ring end up at the outside edge or at the center?
-    Make your guess, then click Run!
+    Il primo cerchio ha raggio 180 e ogni nuovo cerchio è più piccolo,
+    con il passo che si riduce del 15% ogni volta.
+    L'anello **più largo** finirà sul bordo esterno o al centro?
+    Fai la tua ipotesi, poi clicca Esegui!
 
-## Try It Now
+## Prova Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -114,28 +115,29 @@ while r > 4:
     i = i + 1`);
 </script>
 
-The widest ring is on the outside — each ring's width equals the current `step`, which starts at 30 and shrinks every loop. Were you right?
+L'anello più largo è all'esterno — la larghezza di ogni anello è uguale al `step` corrente, che inizia a 30 e si restringe a ogni ciclo. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Your eye focuses warm colors (long wavelengths, like red and orange) slightly differently than cool colors (short wavelengths, like blue). Placed side by side at high contrast, the boundary between them never quite settles on your retina — the colors fight, and the edge appears to shimmer. The shrinking ring widths supercharge this: as the rings get thinner toward the center, the warring edges pack closer and closer together, so the middle of the bull's-eye buzzes hardest.
+Il tuo occhio mette a fuoco i colori caldi (lunghezze d'onda lunghe, come rosso e arancione) in modo leggermente diverso dai colori freddi (lunghezze d'onda corte, come il blu). Posti fianco a fianco ad alto contrasto, il confine tra loro non si stabilizza mai del tutto sulla tua retina — i colori combattono, e il bordo sembra scintillare. La larghezza decrescente degli anelli amplifica questo effetto: man mano che gli anelli diventano più sottili verso il centro, i bordi in lotta si affollano sempre più vicini, così il centro del bersaglio ronza più forte.
 
-## Explanation Table
+## Tabella Esplicativa
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `filled_circle(r, colors[i % 4])` | Paints a full disc — each disc covers the middle of the one before |
-| `r = r - step` | The next circle is smaller, leaving a visible ring of the old color |
-| `step = step * 0.85` | Each ring is 15% thinner than the last — a decreasing sequence |
-| `if step < 5: step = 5` | Keeps rings at least 5 pixels wide so the loop always finishes |
+| `filled_circle(r, colors[i % 4])` | Dipinge un disco pieno — ogni disco copre il centro di quello precedente |
+| `r = r - step` | Il cerchio successivo è più piccolo, lasciando visibile un anello del vecchio colore |
+| `step = step * 0.85` | Ogni anello è il 15% più sottile dell'ultimo — una sequenza decrescente |
+| `if step < 5: step = 5` | Mantiene gli anelli larghi almeno 5 pixel così il ciclo finisce sempre |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Find the Bug"
+!!! mascot-warning "Trova il Bug"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    This version was supposed to draw a bull's-eye too — but all you get is
-    ONE giant solid disc. The loop really does draw seven circles in four colors.
-    Where did the other six go? Fix the code so all the rings show.
+    Anche questa versione doveva disegnare un bersaglio — ma ottieni
+    solo UN gigantesco disco pieno. Il ciclo disegna davvero sette
+    cerchi in quattro colori. Dove sono finiti gli altri sei? Correggi
+    il codice così tutti gli anelli appaiono.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -177,20 +179,21 @@ while r < 181:
     i = i + 1`);
 </script>
 
-The circles are drawn smallest to largest, so every new disc buries all the ones before it — you only ever see the last, biggest circle. Layering only works largest-first: start at `r = 180.0` and count *down*.
+I cerchi vengono disegnati dal più piccolo al più grande, così ogni nuovo disco seppellisce tutti quelli precedenti — vedi solo l'ultimo, il cerchio più grande. La sovrapposizione funziona solo partendo dal più grande: inizia a `r = 180.0` e conta *all'indietro*.
 
-## Experiments
+## Esperimenti
 
-1. **Make equal-width rings.** Delete the `step = step * 0.85` line. You'll know it worked when every ring is the same 30-pixel width — does it still vibrate as much?
+1. **Crea anelli di larghezza uguale.** Elimina la riga `step = step * 0.85`. Saprai che ha funzionato quando ogni anello ha la stessa larghezza di 30 pixel — vibra ancora tanto?
 
-2. **Turn up the squeeze.** Change `0.85` to `0.75`. You'll know it worked when the rings thin out much faster and the center becomes a dense, buzzing target.
+2. **Aumenta la stretta.** Cambia `0.85` in `0.75`. Saprai che ha funzionato quando gli anelli si assottigliano molto più in fretta e il centro diventa un bersaglio denso e ronzante.
 
-3. **Go maximum contrast.** Change the color list to `['red', 'blue', 'red', 'blue']`. You'll know it worked when the bull's-eye is only two clashing colors — many people find this version vibrates the most.
+3. **Vai al massimo contrasto.** Cambia la lista dei colori in `['red', 'blue', 'red', 'blue']`. Saprai che ha funzionato quando il bersaglio è di sole due colori in contrasto — molte persone trovano che questa versione vibri di più.
 
-4. **Calm it down.** Change the colors to `['navy', 'royalblue', 'steelblue', 'teal']` — all cool. You'll know it worked when the rings look peaceful instead of pulsing, proving the warm/cool fight was the engine.
+4. **Calmalo.** Cambia i colori in `['navy', 'royalblue', 'steelblue', 'teal']` — tutti freddi. Saprai che ha funzionato quando gli anelli sembrano tranquilli invece di pulsare, dimostrando che il combattimento caldo/freddo era il motore.
 
-!!! mascot-celebration "You Made a Still Image Move!"
+!!! mascot-celebration "Hai Fatto Muovere un'Immagine Ferma!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Layered circles, a shrinking step, and clashing warm/cool colors —
-    that's a complete op-art vibration machine in about 25 lines of Python.
-    That wraps up the optical illusions! Browse the **Turtle Graphics Gallery** for your next challenge!
+    Cerchi sovrapposti, un passo decrescente, e colori caldi/freddi in
+    contrasto — questa è una macchina completa di vibrazione op art in
+    circa 25 righe di Python. Questo chiude le illusioni ottiche!
+    Esplora la **Galleria di Grafica Turtle** per la tua prossima sfida!

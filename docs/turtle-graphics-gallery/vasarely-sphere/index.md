@@ -2,27 +2,28 @@
 hide:
     - toc
 ---
-# Vasarely Sphere
+# Sfera di Vasarely
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Draw a regular grid of dots with nested loops
-- Measure each dot's distance from the center with `math.sqrt`
-- Map distance to dot size so a flat grid appears to bulge into a 3-D sphere
+- Disegnare una griglia regolare di punti con cicli annidati
+- Misurare la distanza di ogni punto dal centro con `math.sqrt`
+- Mappare la distanza sulla dimensione del punto così una griglia piatta sembra rigonfiarsi in una sfera 3D
 
-A perfectly regular grid of dots — except that inside a central circle, the dots swell up based on how close they are to the center. That one change makes a sphere appear to push out of the flat page. The Hungarian-French artist Victor Vasarely, the "grandfather of op art," used exactly this trick in his famous *Vega* paintings.
+Una griglia di punti perfettamente regolare — tranne che dentro un cerchio centrale, i punti si gonfiano in base a quanto sono vicini al centro. Quel singolo cambiamento fa sembrare che una sfera spinga fuori dalla pagina piatta. L'artista ungherese-francese Victor Vasarely, il "nonno dell'op art," usò esattamente questo trucco nei suoi famosi dipinti *Vega*.
 
-!!! mascot-welcome "Welcome to the Vasarely Sphere!"
+!!! mascot-welcome "Benvenuto alla Sfera di Vasarely!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Every dot in this picture sits exactly on a flat, square grid.
-    Yet a 3-D sphere will bulge right out at you!
-    Victor Vasarely turned this trick into world-famous art — now it's your turn.
+    Ogni punto in questa immagine si trova esattamente su una griglia
+    piatta e quadrata. Eppure una sfera 3D si rigonfierà proprio verso di
+    te! Victor Vasarely ha trasformato questo trucco in arte famosa in
+    tutto il mondo — ora tocca a te.
 
-## How It Works
+## Come Funziona
 
-Two nested loops place a dot every 28 pixels in a 13 × 13 grid. For each dot we compute its distance `d` from the center using the Pythagorean theorem: `d = sqrt(x*x + y*y)`. If the dot is inside the radius `R`, we compute a swell factor with `cos(d / R * pi / 2)` — it equals 1 at the center and fades to 0 at the rim — and add `bulge * swell` to the dot's size. Dots outside `R` stay small, so the sphere sits inside a calm, flat grid.
+Due cicli annidati posizionano un punto ogni 28 pixel in una griglia 13 × 13. Per ogni punto calcoliamo la sua distanza `d` dal centro usando il teorema di Pitagora: `d = sqrt(x*x + y*y)`. Se il punto è dentro il raggio `R`, calcoliamo un fattore di rigonfiamento con `cos(d / R * pi / 2)` — vale 1 al centro e svanisce a 0 al bordo — e aggiungiamo `bulge * swell` alla dimensione del punto. I punti fuori da `R` restano piccoli, così la sfera si trova dentro una griglia calma e piatta.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -51,13 +52,14 @@ for row in range(-n, n + 1):
         monty.dot(int(size), 'navy')
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The grid spacing never changes — only the dot **size** does.
-    Will the middle of the picture look like a flat patch of bigger dots,
-    or like a 3-D ball pushing out of the page? Guess, then click Run!
+    La spaziatura della griglia non cambia mai — solo la **dimensione**
+    del punto cambia. Il centro dell'immagine sembrerà una zona piatta
+    di punti più grandi, o una palla 3D che spinge fuori dalla pagina?
+    Fai la tua ipotesi, poi clicca Esegui!
 
-## Try It Now
+## Prova Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -105,28 +107,29 @@ for row in range(-n, n + 1):
         monty.dot(int(size), 'navy')`);
 </script>
 
-Most people see a ball bulging out of the page — your brain reads "bigger" as "closer" and builds the 3-D shape automatically. Were you right?
+La maggior parte delle persone vede una palla che si rigonfia fuori dalla pagina — il tuo cervello legge "più grande" come "più vicino" e costruisce automaticamente la forma 3D. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Your visual system constantly guesses depth from size: things that are closer look bigger. When dot size grows smoothly toward the center, your brain's simplest explanation is that the surface itself is curving toward you — so it perceives a sphere. The cosine function is the secret sauce: it changes slowly near the center and quickly near the rim, exactly like the surface of a real ball tilting away from you.
+Il tuo sistema visivo indovina costantemente la profondità dalla dimensione: le cose più vicine sembrano più grandi. Quando la dimensione del punto cresce in modo liscio verso il centro, la spiegazione più semplice per il tuo cervello è che la superficie stessa si sta curvando verso di te — quindi percepisce una sfera. La funzione coseno è il segreto: cambia lentamente vicino al centro e velocemente vicino al bordo, esattamente come la superficie di una vera palla che si inclina lontano da te.
 
-## Explanation Table
+## Tabella Esplicativa
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `for row in range(-n, n + 1):` | Nested loops visit all 13 × 13 = 169 grid positions |
-| `d = math.sqrt(x * x + y * y)` | Pythagorean distance from the dot to the center |
-| `swell = math.cos(d / R * math.pi / 2)` | 1 at the center, fading to 0 at the rim of the bulge |
-| `size = base + bulge * swell` | Maps distance to dot size — the whole illusion in one line |
+| `for row in range(-n, n + 1):` | I cicli annidati visitano tutte le 13 × 13 = 169 posizioni della griglia |
+| `d = math.sqrt(x * x + y * y)` | Distanza pitagorica dal punto al centro |
+| `swell = math.cos(d / R * math.pi / 2)` | 1 al centro, svanisce a 0 al bordo del rigonfiamento |
+| `size = base + bulge * swell` | Mappa la distanza sulla dimensione del punto — l'intera illusione in una riga |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Add the Missing Line"
+!!! mascot-thinking "Tocca a Te — Aggiungi la Riga Mancante"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    This version computes `swell` but never **uses** it, so the sphere is gone —
-    every dot stays the same size. Add **one line** inside the `if` block
-    (right after `swell` is computed) to bring the bulge back!
+    Questa versione calcola `swell` ma non lo **usa** mai, quindi la
+    sfera è sparita — ogni punto resta della stessa dimensione. Aggiungi
+    **una riga** dentro il blocco `if` (subito dopo che `swell` viene
+    calcolato) per riportare indietro il rigonfiamento!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -167,20 +170,21 @@ for row in range(-n, n + 1):
         monty.dot(int(size), 'navy')`);
 </script>
 
-The missing line is `size = base + bulge * swell` — without it, `swell` is computed and thrown away, and every dot keeps the base size.
+La riga mancante è `size = base + bulge * swell` — senza di essa, `swell` viene calcolato e buttato via, e ogni punto mantiene la dimensione base.
 
-## Experiments
+## Esperimenti
 
-1. **Make the bulge stronger.** Change `bulge = 16` to `bulge = 22`. You'll know it worked when the center dots nearly touch and the sphere looks even rounder.
+1. **Rendi il rigonfiamento più forte.** Cambia `bulge = 16` in `bulge = 22`. Saprai che ha funzionato quando i punti centrali quasi si toccano e la sfera sembra ancora più rotonda.
 
-2. **Make a dent instead of a bump.** Change the size line to `size = base + bulge - bulge * swell` so dots *shrink* toward the center. You'll know it worked when the grid looks like it is denting away from you.
+2. **Crea un'ammaccatura invece di un rigonfiamento.** Cambia la riga della dimensione in `size = base + bulge - bulge * swell` così i punti *si restringono* verso il centro. Saprai che ha funzionato quando la griglia sembra ammaccarsi lontano da te.
 
-3. **Grow the sphere.** Change `R = 130` to `R = 180`. You'll know it worked when the bulge swallows almost the whole grid, leaving only the corners flat.
+3. **Fai crescere la sfera.** Cambia `R = 130` in `R = 180`. Saprai che ha funzionato quando il rigonfiamento inghiotte quasi tutta la griglia, lasciando piatti solo gli angoli.
 
-4. **Move the sphere off-center.** Change the distance line to `d = math.sqrt((x - 56) * (x - 56) + y * y)`. You'll know it worked when the bulge slides to the right side of the grid.
+4. **Sposta la sfera fuori centro.** Cambia la riga della distanza in `d = math.sqrt((x - 56) * (x - 56) + y * y)`. Saprai che ha funzionato quando il rigonfiamento scivola verso il lato destro della griglia.
 
-!!! mascot-celebration "You Made Flat Paper Bulge!"
+!!! mascot-celebration "Hai Fatto Rigonfiare la Carta Piatta!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    One `if` statement and a cosine turned a boring grid into 3-D op art —
-    the same math Vasarely used in galleries around the world.
-    Up next: **Scintillating Grid** — white dots that flash black when you're not looking.
+    Un'istruzione `if` e un coseno hanno trasformato una noiosa griglia
+    in op art 3D — la stessa matematica che Vasarely usava nelle gallerie
+    di tutto il mondo. Prossimo: **Griglia Scintillante** — punti bianchi
+    che lampeggiano neri quando non stai guardando.

@@ -2,27 +2,28 @@
 hide:
     - toc
 ---
-# Reaction-Diffusion Pattern
+# Motivo di Reazione-Diffusione
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Store a grid of numbers in a flat Python list and index it with `i * w + j`
-- Update every cell from its neighbors using a Laplacian (diffusion) stencil
-- Explain how spots and stripes on animal skins emerge from two simple local rules
+- Memorizzare una griglia di numeri in una lista Python piatta e indicizzarla con `i * w + j`
+- Aggiornare ogni cella dai suoi vicini usando uno stencil Laplaciano (di diffusione)
+- Spiegare come macchie e strisce sulla pelle degli animali emergano da due semplici regole locali
 
-Two invisible chemicals, U and V, spread across a 32×32 grid. U feeds V, V eats U, and both diffuse to their neighbors. From four small seed squares, 300 simulation steps grow organic blobs and worm-like stripes — the same Gray-Scott mathematics believed to paint leopard spots and zebra stripes.
+Due sostanze chimiche invisibili, U e V, si diffondono su una griglia 32×32. U nutre V, V consuma U, ed entrambe diffondono verso i loro vicini. Da quattro piccoli quadrati seme, 300 passi di simulazione fanno crescere macchie organiche e strisce simili a vermi — la stessa matematica di Gray-Scott che si ritiene dipinga le macchie del leopardo e le strisce della zebra.
 
-!!! mascot-welcome "Welcome to Reaction-Diffusion!"
+!!! mascot-welcome "Benvenuto alla Reazione-Diffusione!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    No shapes are drawn in this program — the pattern *grows itself* from
-    chemistry rules, one neighbor at a time. This is real computational science!
-    Be patient when you click Run: 300 steps of simulation take a little while.
+    In questo programma non viene disegnata nessuna forma — il motivo
+    *cresce da solo* dalle regole della chimica, un vicino alla volta.
+    Questa è vera scienza computazionale! Sii paziente quando clicchi
+    Esegui: 300 passi di simulazione richiedono un po' di tempo.
 
-## How It Works
+## Come Funziona
 
-Each cell holds two numbers: `u` (food) and `v` (creature). Every step, each cell looks at its 8 neighbors to compute a **Laplacian** — a measure of "how different am I from my surroundings" — which makes both chemicals spread. Then the reaction happens: `u * v * v` converts food into creature, `feed` tops up the food, and `kill` removes creature. After all the steps, each cell is painted as one dot colored by how much `v` it contains.
+Ogni cella contiene due numeri: `u` (cibo) e `v` (creatura). A ogni passo, ogni cella guarda i suoi 8 vicini per calcolare un **Laplaciano** — una misura di "quanto sono diverso dal mio ambiente circostante" — che fa diffondere entrambe le sostanze chimiche. Poi avviene la reazione: `u * v * v` converte il cibo in creatura, `feed` rifornisce il cibo, e `kill` rimuove la creatura. Dopo tutti i passi, ogni cella viene dipinta come un punto colorato in base a quanto `v` contiene.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 w = 32
@@ -44,13 +45,14 @@ for step in range(300):
     v = v2
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The simulation starts with just **4 small squares** of chemical V.
-    After 300 steps, will the picture still show 4 separate squares,
-    or something else? Make your guess, then click Run (and give it a moment)!
+    La simulazione inizia con solo **4 piccoli quadrati** di sostanza V.
+    Dopo 300 passi, l'immagine mostrerà ancora 4 quadrati separati, o
+    qualcos'altro? Fai la tua ipotesi, poi clicca Esegui (e dagli un
+    momento)!
 
-## Try It Now
+## Prova Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -126,28 +128,29 @@ for i in range(w):
 screen.update()`);
 </script>
 
-The four squares are long gone — they melted, spread, and merged into curling organic blobs. That's emergence: no line of code says "draw a worm shape", yet worms appear. Were you right?
+I quattro quadrati sono spariti da tempo — si sono sciolti, diffusi e fusi in macchie organiche arricciate. Questa è l'emergenza: nessuna riga di codice dice "disegna una forma di verme", eppure appaiono vermi. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-The Laplacian stencil weights the 4 edge neighbors by 0.2 and the 4 corner neighbors by 0.05 — a smoothed average of the surroundings minus the cell itself. Two details matter enormously: the update writes into **copies** (`u2`, `v2`) so every cell sees the same "before" picture, and V diffuses at **half** the speed of U (`dv = 0.25` vs `du = 0.5`). That difference in diffusion speed is exactly what Alan Turing showed in 1952 could destabilize a uniform mixture into spots and stripes.
+Lo stencil Laplaciano pesa i 4 vicini sui bordi per 0.2 e i 4 vicini agli angoli per 0.05 — una media smussata dell'ambiente circostante meno la cella stessa. Due dettagli contano enormemente: l'aggiornamento scrive dentro delle **copie** (`u2`, `v2`) così ogni cella vede la stessa immagine "prima", e V diffonde a **metà** della velocità di U (`dv = 0.25` contro `du = 0.5`). Quella differenza nella velocità di diffusione è esattamente ciò che Alan Turing dimostrò nel 1952 poter destabilizzare un miscuglio uniforme in macchie e strisce.
 
-## Explanation Table
+## Tabella Esplicativa
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `p = i * w + j` | Finds cell (i, j) inside the flat list |
-| `lapu = (...) * 0.2 + (...) * 0.05 - uc` | Diffusion: 8-neighbor weighted average minus self |
-| `uvv = uc * vc * vc` | The reaction: U + 2V → 3V |
-| `u2[p] = uc + ...` | Writes to a copy so all cells update together |
+| `p = i * w + j` | Trova la cella (i, j) dentro la lista piatta |
+| `lapu = (...) * 0.2 + (...) * 0.05 - uc` | Diffusione: media pesata degli 8 vicini meno se stesso |
+| `uvv = uc * vc * vc` | La reazione: U + 2V → 3V |
+| `u2[p] = uc + ...` | Scrive in una copia così tutte le celle si aggiornano insieme |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Catch the Pattern Mid-Growth"
+!!! mascot-thinking "Tocca a Te — Cogli il Motivo a Metà Crescita"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    This copy is set to stop after only `steps = 60`.
-    Predict what you'll see: finished blobs, four fuzzy squares, or nothing at all?
-    Run it, compare with the 300-step picture above, then try 150 and 600!
+    Questa copia è impostata per fermarsi dopo solo `steps = 60`.
+    Prevedi cosa vedrai: macchie finite, quattro quadrati sfocati, o
+    niente del tutto? Eseguilo, confrontalo con l'immagine a 300 passi
+    sopra, poi prova 150 e 600!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -217,21 +220,22 @@ for i in range(w):
 screen.update()`);
 </script>
 
-At 60 steps the four seeds have only just started dissolving into rings — the pattern is still recognizably "four squares melting". Emergence takes time: the interesting structure appears somewhere between 150 and 300 steps.
+A 60 passi i quattro semi hanno solo appena iniziato a dissolversi in anelli — il motivo è ancora riconoscibile come "quattro quadrati che si sciolgono". L'emergenza richiede tempo: la struttura interessante appare da qualche parte tra 150 e 300 passi.
 
-## Experiments
+## Esperimenti
 
-1. **Change the recipe.** Try `kill = 0.065` (coral growth) or `feed = 0.035, kill = 0.060` (solitons). You'll know it worked when the blob shapes change character completely.
+1. **Cambia la ricetta.** Prova `kill = 0.065` (crescita a corallo) o `feed = 0.035, kill = 0.060` (solitoni). Saprai che ha funzionato quando le forme delle macchie cambiano completamente carattere.
 
-2. **One seed only.** Delete three of the four seeds. You'll know it worked when a single blob grows rings outward like a tiny coral colony.
+2. **Un solo seme.** Elimina tre dei quattro semi. Saprai che ha funzionato quando una singola macchia fa crescere anelli verso l'esterno come una piccola colonia di corallo.
 
-3. **New color scheme.** Replace the color list with reds and oranges for a lava-skin look. You'll know it worked when the pattern glows warm instead of ocean-cool.
+3. **Nuovo schema di colori.** Sostituisci la lista dei colori con rossi e arancioni per un aspetto a pelle di lava. Saprai che ha funzionato quando il motivo brilla caldo invece che freddo-oceano.
 
-4. **Bigger canvas, coarser grid.** Try `w = 24` with `cell = 14` and `steps = 400`. You'll know it worked when the pattern is chunkier but evolves further in the same run time.
+4. **Canvas più grande, griglia più grossolana.** Prova `w = 24` con `cell = 14` e `steps = 400`. Saprai che ha funzionato quando il motivo è più grossolano ma evolve di più nello stesso tempo di esecuzione.
 
-!!! mascot-celebration "You Simulated Nature!"
+!!! mascot-celebration "Hai Simulato la Natura!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    A grid, two chemicals, and neighbor math — and your program grew patterns
-    no one drew. Alan Turing dreamed this up in 1952; you just ran it in a browser.
-    You've reached the end of the gallery — browse the **Turtle Graphics Gallery**
-    for your next challenge!
+    Una griglia, due sostanze chimiche, e matematica dei vicini — e il
+    tuo programma ha fatto crescere motivi che nessuno ha disegnato.
+    Alan Turing lo immaginò nel 1952; tu l'hai appena eseguito in un
+    browser. Hai raggiunto la fine della galleria — esplora la
+    **Galleria di Grafica Turtle** per la tua prossima sfida!

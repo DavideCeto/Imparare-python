@@ -2,27 +2,28 @@
 hide:
     - toc
 ---
-# Impossible Triangle
+# Triangolo Impossibile
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Draw a filled polygon from a hard-coded list of (x, y) waypoints
-- Rotate a list of points around the center using `sin` and `cos`
-- Explain how three shades of gray fake 3-D depth in an object that cannot exist
+- Disegnare un poligono riempito da una lista di punti (x, y) scritta direttamente nel codice
+- Ruotare una lista di punti intorno al centro usando `sin` e `cos`
+- Spiegare come tre sfumature di grigio simulino una profondità 3D in un oggetto che non può esistere
 
-The Penrose triangle — three solid beams that each sit squarely in front of the next, all the way around. Follow any beam with your eye and the geometry works; look at the whole thing and it is impossible to build. The trick: one beam shape, drawn three times at 0°, 120°, and 240°, in three shades of gray that your brain reads as three-dimensional lighting.
+Il triangolo di Penrose — tre travi solide che si trovano ciascuna proprio davanti alla successiva, tutto intorno. Segui una trave qualsiasi con l'occhio e la geometria funziona; guarda l'intero oggetto ed è impossibile da costruire. Il trucco: una forma di trave, disegnata tre volte a 0°, 120° e 240°, in tre sfumature di grigio che il tuo cervello legge come illuminazione tridimensionale.
 
-!!! mascot-welcome "Welcome to the Impossible Triangle!"
+!!! mascot-welcome "Benvenuto al Triangolo Impossibile!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Mathematician Roger Penrose called this "impossibility in its purest form."
-    Every corner makes sense on its own — but the whole object could never exist.
-    We'll build it from ONE list of five points and a rotation trick!
+    Il matematico Roger Penrose chiamò questo "l'impossibilità nella sua
+    forma più pura." Ogni angolo ha senso da solo — ma l'intero oggetto
+    non potrebbe mai esistere. Lo costruiremo da UNA lista di cinque
+    punti e un trucco di rotazione!
 
-## How It Works
+## Come Funziona
 
-The list `beam` holds five (x, y) waypoints outlining one L-shaped beam. The `rotate()` function spins a point around the center (0, 0) using the standard rotation formulas `rx = x*cos(a) - y*sin(a)` and `ry = x*sin(a) + y*cos(a)`. A loop draws the beam three times — rotated by 0°, 120°, and 240° — filling each copy with a lighter or darker gray. Because the three shapes share edges perfectly, they weave into the famous impossible figure.
+La lista `beam` contiene cinque punti (x, y) che delineano una trave a forma di L. La funzione `rotate()` fa girare un punto intorno al centro (0, 0) usando le formule standard di rotazione `rx = x*cos(a) - y*sin(a)` e `ry = x*sin(a) + y*cos(a)`. Un ciclo disegna la trave tre volte — ruotata di 0°, 120° e 240° — riempiendo ogni copia con un grigio più chiaro o più scuro. Poiché le tre forme condividono i bordi perfettamente, si intrecciano nella famosa figura impossibile.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -61,13 +62,14 @@ for i in range(3):
     draw_beam(turned, shades[i])
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The same five points are drawn three times, rotated by 0°, 120°, and 240°.
-    Will the three separate beams line up edge-to-edge into one closed triangle,
-    or will there be gaps between them? Guess, then click Run!
+    Gli stessi cinque punti vengono disegnati tre volte, ruotati di 0°,
+    120° e 240°. Le tre travi separate si allineeranno bordo a bordo in
+    un unico triangolo chiuso, o ci saranno spazi vuoti tra loro?
+    Fai la tua ipotesi, poi clicca Esegui!
 
-## Try It Now
+## Prova Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -125,28 +127,29 @@ for i in range(3):
     draw_beam(turned, shades[i])`);
 </script>
 
-The three beams meet edge-to-edge with no gaps — and together they form an object that could never exist. Were you right?
+Le tre travi si incontrano bordo a bordo senza spazi vuoti — e insieme formano un oggetto che non potrebbe mai esistere. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Each beam looks like a solid 3-D bar because of the shading: light gray reads as a surface facing the light, dark gray as a surface in shadow. At each corner, one beam's slanted cut makes it look like it slides *behind* its neighbor. Going around the triangle: the light beam covers the dark one, the medium covers the light, and the dark covers the medium. That circular chain of "in front of" can never happen with real objects — every beam would have to be in front of all the others at once.
+Ogni trave sembra una barra 3D solida grazie all'ombreggiatura: il grigio chiaro si legge come una superficie rivolta verso la luce, il grigio scuro come una superficie in ombra. A ogni angolo, il taglio obliquo di una trave la fa sembrare scivolare *dietro* la sua vicina. Girando intorno al triangolo: la trave chiara copre quella scura, quella media copre quella chiara, e quella scura copre quella media. Quella catena circolare di "davanti a" non può mai accadere con oggetti reali — ogni trave dovrebbe trovarsi davanti a tutte le altre contemporaneamente.
 
-## Explanation Table
+## Tabella Esplicativa
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `beam = [(0, 76), (101, -99), ...]` | Five hard-coded waypoints outlining one L-shaped beam |
-| `rx = x * math.cos(a) - y * math.sin(a)` | Rotation formula: spins a point around (0, 0) by angle `a` |
-| `turned = [rotate(p, angle) for p in beam]` | Builds a new list with every waypoint rotated |
-| `angle = i * 120` | Three copies at 0°, 120°, 240° — perfect three-fold symmetry |
+| `beam = [(0, 76), (101, -99), ...]` | Cinque punti scritti direttamente nel codice che delineano una trave a forma di L |
+| `rx = x * math.cos(a) - y * math.sin(a)` | Formula di rotazione: fa girare un punto intorno a (0, 0) di un angolo `a` |
+| `turned = [rotate(p, angle) for p in beam]` | Costruisce una nuova lista con ogni punto ruotato |
+| `angle = i * 120` | Tre copie a 0°, 120°, 240° — perfetta simmetria a tre vie |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Find the Bug"
+!!! mascot-warning "Trova il Bug"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    In this version the triangle has fallen apart — three lonely beams float
-    with big gaps between them. One number in the final loop is wrong.
-    Hint: three copies must share 360° equally. Find it and fix it!
+    In questa versione il triangolo è andato in pezzi — tre travi
+    solitarie fluttuano con grandi spazi vuoti tra loro. Un numero nel
+    ciclo finale è sbagliato. Suggerimento: tre copie devono condividere
+    360° in parti uguali. Trovalo e correggilo!
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -198,20 +201,21 @@ for i in range(3):
     draw_beam(turned, shades[i])`);
 </script>
 
-The bug is `angle = i * 100` — the copies land at 0°, 100°, and 200°, leaving gaps. Three equal copies of anything need 360° ÷ 3 = 120° between them.
+Il bug è `angle = i * 100` — le copie atterrano a 0°, 100° e 200°, lasciando spazi vuoti. Tre copie uguali di qualunque cosa richiedono 360° ÷ 3 = 120° tra loro.
 
-## Experiments
+## Esperimenti
 
-1. **Spin the whole figure.** Change `angle = i * 120` to `angle = i * 120 + 60`. You'll know it worked when the entire triangle rotates to point downward, still perfectly joined.
+1. **Fai girare l'intera figura.** Cambia `angle = i * 120` in `angle = i * 120 + 60`. Saprai che ha funzionato quando l'intero triangolo ruota per puntare verso il basso, restando perfettamente unito.
 
-2. **Change the mood with color.** Replace the shades list with `['#bcd4ec', '#5a8cc0', '#1e4a78']`. You'll know it worked when the triangle turns three shades of blue and still looks 3-D.
+2. **Cambia l'atmosfera con il colore.** Sostituisci la lista delle sfumature con `['#bcd4ec', '#5a8cc0', '#1e4a78']`. Saprai che ha funzionato quando il triangolo diventa di tre sfumature di blu e sembra ancora 3D.
 
-3. **Flip the lighting.** Reverse the shades to `['#505050', '#989898', '#d8d8d8']`. You'll know it worked when the shadow appears to come from the opposite side — does the "in front" order look different?
+3. **Ribalta l'illuminazione.** Inverti le sfumature in `['#505050', '#989898', '#d8d8d8']`. Saprai che ha funzionato quando l'ombra sembra provenire dal lato opposto — l'ordine "davanti a" sembra diverso?
 
-4. **Break the illusion on purpose.** Fill all three beams with the same shade, `'#989898'`. You'll know it worked when the figure flattens into a plain 2-D triangle outline — proof that the shading, not the outline, fakes the 3-D.
+4. **Rompi l'illusione di proposito.** Riempi tutte e tre le travi con la stessa sfumatura, `'#989898'`. Saprai che ha funzionato quando la figura si appiattisce in un semplice contorno triangolare 2D — prova che è l'ombreggiatura, non il contorno, a simulare il 3D.
 
-!!! mascot-celebration "You Drew the Undrawable!"
+!!! mascot-celebration "Hai Disegnato l'Indisegnabile!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    One point list, one rotation formula, three shades of gray —
-    and you built an object that cannot exist anywhere in the universe.
-    Up next: **Concentric Ring Pulsation** — rings of clashing colors that seem to vibrate.
+    Una lista di punti, una formula di rotazione, tre sfumature di
+    grigio — e hai costruito un oggetto che non può esistere da nessuna
+    parte nell'universo. Prossimo: **Pulsazione di Anelli Concentrici** —
+    anelli di colori in contrasto che sembrano vibrare.

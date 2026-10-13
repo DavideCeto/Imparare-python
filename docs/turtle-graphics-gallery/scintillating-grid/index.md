@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Scintillating Grid
+# Griglia Scintillante
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Place bars and dots precisely on a grid using nested loops and coordinate math
-- Layer shapes in the right order so later drawings sit on top of earlier ones
-- Explain how local contrast tricks your eyes into seeing dots that flicker
+- Posizionare barre e punti con precisione su una griglia usando cicli annidati e calcoli di coordinate
+- Sovrapporre forme nell'ordine giusto così i disegni successivi si trovano sopra quelli precedenti
+- Spiegare come il contrasto locale inganna i tuoi occhi facendoti vedere punti che lampeggiano
 
-A dark background, a lattice of medium-gray "streets," and a crisp white dot at every intersection. When you look around the picture, ghostly dark dots flash inside the white ones — but only at the intersections you are *not* looking directly at. Chase one and it vanishes! This is the scintillating grid illusion, discovered in 1994.
+Uno sfondo scuro, un reticolo di "strade" grigio medio, e un nitido punto bianco a ogni intersezione. Quando guardi in giro per l'immagine, fantomatici punti scuri lampeggiano dentro quelli bianchi — ma solo alle intersezioni che *non* stai guardando direttamente. Inseguine uno e svanisce! Questa è l'illusione della griglia scintillante, scoperta nel 1994.
 
-!!! mascot-welcome "Welcome to the Scintillating Grid!"
+!!! mascot-welcome "Benvenuto alla Griglia Scintillante!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    This is one of the strongest illusions ever found — your eyes will see
-    black dots flickering inside dots that the code paints pure white.
-    Twenty-five white dots, zero black ones. Let's build it!
+    Questa è una delle illusioni più potenti mai trovate — i tuoi occhi
+    vedranno punti neri lampeggiare dentro punti che il codice dipinge
+    puro bianco. Venticinque punti bianchi, zero neri. Costruiamola!
 
-## How It Works
+## Come Funziona
 
-First `screen.bgcolor` fills the background dark gray. One loop draws five vertical and five horizontal gray bars, spaced `gap` pixels apart, using a filled-rectangle helper. Then a nested loop visits all 25 intersections and stamps a white dot at each one. The dots are slightly wider than the bars, so they poke out into the dark squares — that tiny overlap is what makes the flicker so strong.
+Prima `screen.bgcolor` riempie lo sfondo di grigio scuro. Un ciclo disegna cinque barre verticali e cinque orizzontali grigie, distanziate di `gap` pixel, usando una funzione di supporto per rettangoli riempiti. Poi un ciclo annidato visita tutte le 25 intersezioni e timbra un punto bianco su ognuna. I punti sono leggermente più larghi delle barre, così sporgono nei quadrati scuri — quella piccola sovrapposizione è ciò che rende il lampeggio così forte.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -61,13 +61,14 @@ for i in range(-2, 3):
         monty.dot(16, 'white')
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The code stamps exactly 25 white dots and never draws a single dark one.
-    When you let your eyes wander around the finished grid,
-    will all 25 dots stay white? Make your guess, then click Run!
+    Il codice timbra esattamente 25 punti bianchi e non ne disegna mai
+    uno scuro. Quando lasci vagare gli occhi per la griglia finita,
+    tutti e 25 i punti resteranno bianchi? Fai la tua ipotesi, poi
+    clicca Esegui!
 
-## Try It Now
+## Prova Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -125,28 +126,29 @@ for i in range(-2, 3):
         monty.dot(16, 'white')`);
 </script>
 
-Dark dots flicker at the intersections in the corner of your eye, but the dot you stare at stays white. Were you right?
+Punti scuri lampeggiano alle intersezioni nell'angolo del tuo occhio, ma il punto che fissi resta bianco. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Cells in your retina measure brightness by comparing a spot against its surroundings — a trick called lateral inhibition. At an intersection, a white dot is surrounded by four bright gray streets, so its brightness signal gets pushed down hard and it momentarily reads as dark. Your central vision (the fovea) uses much smaller comparison zones, so the dot you look at directly is measured correctly and stays white. That is why the dark ghosts always dance just out of reach.
+Le cellule nella tua retina misurano la luminosità confrontando un punto con ciò che lo circonda — un trucco chiamato inibizione laterale. A un'intersezione, un punto bianco è circondato da quattro strade grigie luminose, così il suo segnale di luminosità viene spinto giù con forza e per un momento viene letto come scuro. La tua visione centrale (la fovea) usa zone di confronto molto più piccole, così il punto che guardi direttamente viene misurato correttamente e resta bianco. Ecco perché i fantasmi scuri danzano sempre appena fuori portata.
 
-## Explanation Table
+## Tabella Esplicativa
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `screen.bgcolor('#282828')` | Dark gray background — the squares between the streets |
-| `filled_rect(i * gap - bar / 2, -180, bar, 360, 'gray')` | One vertical street, centered on grid line `i` |
-| `for i in range(-2, 3):` | Five grid lines at -140, -70, 0, 70, 140 |
-| `monty.dot(16, 'white')` | White dot, wider than the 10-pixel street, at each of the 25 crossings |
+| `screen.bgcolor('#282828')` | Sfondo grigio scuro — i quadrati tra le strade |
+| `filled_rect(i * gap - bar / 2, -180, bar, 360, 'gray')` | Una strada verticale, centrata sulla linea della griglia `i` |
+| `for i in range(-2, 3):` | Cinque linee della griglia a -140, -70, 0, 70, 140 |
+| `monty.dot(16, 'white')` | Punto bianco, più largo della strada di 10 pixel, a ognuno dei 25 incroci |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Find the Bug"
+!!! mascot-warning "Trova il Bug"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    Disaster — all 25 white dots have vanished from this version, yet the
-    dot-stamping loop is definitely there. Nothing was deleted, but two blocks
-    of code were swapped. Can you figure out why the dots are invisible and fix it?
+    Disastro — tutti e 25 i punti bianchi sono spariti da questa
+    versione, eppure il ciclo che timbra i punti c'è di sicuro. Niente è
+    stato eliminato, ma due blocchi di codice sono stati scambiati.
+    Riesci a capire perché i punti sono invisibili e a correggerlo?
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -198,20 +200,21 @@ for i in range(-2, 3):
     filled_rect(-180, i * gap - bar / 2, 360, bar, 'gray')`);
 </script>
 
-The dots are drawn *first*, then the gray bars are painted right over them — turtle graphics layers shapes in drawing order, like coats of paint. Move the dot loop below the bar loop and the dots reappear on top.
+I punti vengono disegnati *per primi*, poi le barre grigie vengono dipinte proprio sopra di essi — la grafica turtle sovrappone le forme nell'ordine di disegno, come strati di vernice. Sposta il ciclo dei punti sotto il ciclo delle barre e i punti riappariranno sopra.
 
-## Experiments
+## Esperimenti
 
-1. **Shrink the dots.** Change `monty.dot(16, 'white')` to `monty.dot(10, 'white')` so the dots exactly match the street width. You'll know it worked when the dots no longer poke into the dark squares — is the flicker weaker?
+1. **Rimpicciolisci i punti.** Cambia `monty.dot(16, 'white')` in `monty.dot(10, 'white')` così i punti corrispondono esattamente alla larghezza della strada. Saprai che ha funzionato quando i punti non sporgono più nei quadrati scuri — il lampeggio è più debole?
 
-2. **Brighten the streets.** Change both `'gray'` strings to `'lightgray'`. You'll know it worked when the streets are nearly white — the classic version of this experiment makes the scintillation fade.
+2. **Schiarisci le strade.** Cambia entrambe le stringhe `'gray'` in `'lightgray'`. Saprai che ha funzionato quando le strade sono quasi bianche — la versione classica di questo esperimento fa svanire la scintillazione.
 
-3. **Pack the grid tighter.** Change `gap = 70` to `gap = 45` and both `range(-2, 3)` grid loops to `range(-3, 4)`. You'll know it worked when a 7 × 7 grid of 49 dots appears and the flickering gets even busier.
+3. **Stringi la griglia.** Cambia `gap = 70` in `gap = 45` ed entrambi i cicli della griglia `range(-2, 3)` in `range(-3, 4)`. Saprai che ha funzionato quando appare una griglia 7 × 7 di 49 punti e il lampeggio diventa ancora più affollato.
 
-4. **Try a colored version.** Change the dot color to `'yellow'` and the background to `'#102040'`. You'll know it worked when yellow dots sparkle on a dark blue grid — the ghost dots still appear!
+4. **Prova una versione colorata.** Cambia il colore dei punti in `'yellow'` e lo sfondo in `'#102040'`. Saprai che ha funzionato quando punti gialli scintillano su una griglia blu scuro — i punti fantasma appaiono ancora!
 
-!!! mascot-celebration "Now You See Them, Now You Don't!"
+!!! mascot-celebration "Ora li Vedi, Ora No!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You built one of the most powerful illusions in science with two loops
-    and 25 white dots — and learned why drawing order matters as much as coordinates.
-    Up next: **Impossible Triangle** — an object that cannot exist, drawn in 30 lines.
+    Hai costruito una delle illusioni più potenti della scienza con due
+    cicli e 25 punti bianchi — e hai imparato perché l'ordine di disegno
+    conta quanto le coordinate. Prossimo: **Triangolo Impossibile** — un
+    oggetto che non può esistere, disegnato in 30 righe.
