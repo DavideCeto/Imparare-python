@@ -1,7 +1,7 @@
-# Advanced Python
-Here are some suggested programs for doing more advanced Python programming.  Here we define advanced as anything that is not covered under our Beginning Python class that usually runs between one and three hours.
+# Python Avanzato
+Ecco alcuni programmi suggeriti per fare programmazione Python più avanzata. Qui definiamo avanzato come tutto ciò che non è coperto dal nostro corso Beginning Python che di solito dura tra una e tre ore.
 
-## Roll the Dice
-This lab uses the random number function to generate dice rolls.  It uses a while loop to continue to roll a pair of six-sided dice repeatedly.
+## Lancia i Dadi
+Questo laboratorio usa la funzione dei numeri casuali per generare lanci di dadi. Usa un ciclo while per continuare a lanciare ripetutamente una coppia di dadi a sei facce.
 [./02-roll-the-dice.md]
 

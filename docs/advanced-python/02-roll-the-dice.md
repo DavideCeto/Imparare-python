@@ -1,6 +1,6 @@
-# Roll the Dice
-In this game the program generates two random numbers between 1 and 6.  The program then asks the user if they want to roll the dice again.  If they answer y or yes then the pair of
-dice are rolled again.
+# Lancia i Dadi
+In questo gioco il programma genera due numeri casuali tra 1 e 6. Il programma poi chiede all'utente se vuole lanciare di nuovo i dadi. Se risponde y o yes allora la
+coppia di dadi viene lanciata di nuovo.
 
 ```py
 import random
