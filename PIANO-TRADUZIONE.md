@@ -262,6 +262,47 @@ singoli MicroSim). Decisioni prese durante questa fase:
   chi mantiene il libro, non contenuto per il lettore. Da rivalutare se
   l'utente lo richiede esplicitamente.
 
+**FASE 6 COMPLETA — tutti i 13 file della Guida per gli Insegnanti
+tradotti** (nav di `mkdocs.yml`, `index.md` panoramica, `contribute.md`,
+`adding-custom-python-labs.md`, `run-pause-buttons.md`,
+`code-mirror-example.md`, `order-of-concepts.md`,
+`comparing-textbooks.md`, e tutte le 7 pagine di Prompt di Esempio).
+Decisioni prese durante questa fase:
+
+- Le **etichette dei pulsanti dell'interfaccia** (Run, Pause, Resume, Run
+  New Code, Reset) restano in inglese ovunque compaiano — nel testo
+  prosa, nelle tabelle di comportamento, e nel codice HTML/JS incorporato
+  — coerente con la decisione 2 già presa (UI chrome resta in inglese
+  come "linguaggio universale dei bottoni").
+- I **blocchi di codice incorporati HTML/CSS/JS** in `code-mirror-example.md`
+  (inclusi i commenti Python dentro la stringa `_cmLines` che Skulpt
+  esegue) sono stati lasciati completamente intatti, anche se non sono
+  racchiusi in un fence ```` ```html ```` ma scritti direttamente nel
+  Markdown — è comunque infrastruttura di pagina/codice eseguibile, non
+  prosa.
+- I **blocchi ``` generici senza tag di linguaggio** che contengono testo
+  in inglese semplice (i prompt dati all'IA in `order-of-concepts.md`, e
+  il diagramma di flusso ASCII "Decision Guide" in
+  `adding-custom-python-labs.md`) sono stati trattati come prosa e
+  tradotti — a differenza dei blocchi ```python/```sh/```bash/```yaml
+  che restano sempre intatti perché contengono sintassi eseguibile vera.
+  Il criterio: un fence senza tag linguaggio il cui contenuto sono frasi
+  in inglese naturale è prosa formattata come citazione, non codice.
+- Le pagine di **Prompt di Esempio** (`teachers-guide/prompts/*.md`) sono
+  i prompt letterali dati all'IA durante la creazione di questo stesso
+  libro. Tradotta la prosa, ma lasciati intatti i riferimenti `@percorso/file`
+  e gli slash-command (`/ibook`, `/course-description-analyzer`,
+  `/learning-graph-generator`, `/book-chapter-generator`,
+  `/microsim-generator`) perché funzionano come identificatori di
+  strumenti, non prosa. Il file `06-microsim-ideas-given-to-fable-5.md`
+  non è nella nav di `mkdocs.yml` ma è stato tradotto comunque per
+  completezza della collezione di prompt (è molto breve).
+- `order-of-concepts.md` contiene un bug pre-esistente nell'originale
+  inglese: un blocco ``` di apertura senza chiusura corrispondente in
+  fondo al file (5 marcatori ``` totali, numero dispari). Preservato
+  fedelmente senza correggerlo, stessa logica delle incongruenze
+  editoriali già documentate per la Fase 4.
+
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
 (nessuna modifica rispetto a `main`), quindi il problema dei placeholder rotti
@@ -428,12 +469,21 @@ tutti i 30 singoli MicroSim (`boolean-logic-lab`, `code-stepper`,
 `unit-circle-radians`, `variable-memory-model`, `while-loop-stepper`).
 `docs/sims/microsim-ideas.md` escluso dallo scope (vedi nota sopra).
 
-Prossimo: iniziare la Fase 6 (Teacher's Guide, `docs/teachers-guide/`,
-14 file secondo il conteggio originale del piano — vedi sezione 3).
+**FASE 6 COMPLETA.** Tradotti tutti i 13 file di `docs/teachers-guide/`:
+nav di `mkdocs.yml` (sezione "Guida per gli Insegnanti"), `index.md`
+(panoramica, 508 righe), `adding-custom-python-labs.md`,
+`code-mirror-example.md`, `comparing-textbooks.md`, `contribute.md`,
+`order-of-concepts.md`, `run-pause-buttons.md`, e tutte le 7 pagine in
+`teachers-guide/prompts/` (`index.md`, `01-list-old-concepts.md`,
+`02-course-description.md`, `03-learning-graph.md`,
+`04-book-chapter-generator.md`, `05-content-generation-strategy.md`,
+`06-microsim-ideas-given-to-fable-5.md`).
 
-Dopo la Fase 6: Fasi 7-9 (Jupyter/Advanced, Learning Graph, Trinket Labs —
-quest'ultima di priorità minima/da valutare se tradurre affatto, vedi
-sezione 3).
+Prossimo: iniziare la Fase 7 (Jupyter Notebooks docs e Advanced/Advanced
+Python, ~11 file secondo il conteggio originale del piano — vedi sezione 3).
+
+Dopo la Fase 7: Fasi 8-9 (Learning Graph, Trinket Labs — quest'ultima di
+priorità minima/da valutare se tradurre affatto, vedi sezione 3).
 
 Note di qualità accumulate durante la Fase 2, da continuare ad applicare nelle fasi
 successive: (1) controllare sempre con `grep '!\[.*\]('` (o pattern equivalente per il
