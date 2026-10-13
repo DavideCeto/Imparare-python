@@ -1,6 +1,6 @@
 ---
-title: Variable Memory Model
-description: Step through a short Python script and watch labeled memory boxes get created, read, and replaced as each assignment runs.
+title: Modello di Memoria delle Variabili
+description: Percorri passo-passo un breve script Python e guarda scatole di memoria etichettate venire create, lette e sostituite man mano che ogni assegnazione viene eseguita.
 image: /sims/variable-memory-model/variable-memory-model.png
 og:image: /sims/variable-memory-model/variable-memory-model.png
 twitter:image: /sims/variable-memory-model/variable-memory-model.png
@@ -9,43 +9,46 @@ social:
 quality_score: 93
 ---
 
-# Variable Memory Model
+# Modello di Memoria delle Variabili
 
 <iframe src="main.html" height="482" width="100%" scrolling="no"></iframe>
 
-[Run the Variable Memory Model MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui il Modello di Memoria delle Variabili a Schermo Intero](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Modifica nell'Editor p5.js](https://editor.p5js.org/)
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-`score = 10` is invisible magic until you can see the box. This MicroSim makes
-the sticky-note metaphor operational: each assignment creates or updates a
-labeled memory box, each read outlines the box being looked at in blue, and
-each reassignment shows the old value being replaced (with a small "was 10"
-note so students see that the old value is gone).
+`score = 10` è magia invisibile finché non riesci a vedere la scatola. Questo
+MicroSim rende operativa la metafora del post-it: ogni assegnazione crea o
+aggiorna una scatola di memoria etichettata, ogni lettura evidenzia in blu la
+scatola osservata, e ogni riassegnazione mostra il vecchio valore mentre
+viene sostituito (con una piccola nota "era 10" così gli studenti vedono che
+il vecchio valore è sparito).
 
-**Learning objective:** The student will be able to explain what happens in
-memory when a variable is created, read, and reassigned.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di spiegare cosa
+succede in memoria quando una variabile viene creata, letta e riassegnata.
 
-- **Bloom's Taxonomy (2001):** Understand — *explain, interpret, predict*
-- **Interaction pattern:** step-through worked example with labeled memory
-  boxes (no animation)
+- **Tassonomia di Bloom (2001):** Comprendere — *spiegare, interpretare, prevedere*
+- **Pattern di interazione:** esempio guidato passo-passo con scatole di
+  memoria etichettate (nessuna animazione)
 
-## How to Use
+## Come Usarlo
 
-1. Read the script on the left and **predict how many boxes will exist** when
-   it finishes, and what each will hold.
-2. Click **Next Step** to run one line. Orange means a box is being
-   **written**; blue means a box is being **read**.
-3. Watch `score = score + 5` carefully: Python reads the old value first,
-   then replaces it.
-4. Try all three programs. **Copy Surprise** answers a classic question:
-   after `b = a`, does changing `a` also change `b`?
+1. Leggi lo script a sinistra e **prevedi quante scatole esisteranno**
+   quando finisce, e cosa conterrà ciascuna.
+2. Clicca **Passo Successivo** per eseguire una riga. L'arancione significa
+   che una scatola viene **scritta**; il blu significa che una scatola viene
+   **letta**.
+3. Osserva attentamente `score = score + 5`: Python legge prima il vecchio
+   valore, poi lo sostituisce.
+4. Prova tutti e tre i programmi. **Sorpresa della Copia** risponde a una
+   domanda classica: dopo `b = a`, cambiare `a` cambia anche `b`?
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/variable-memory-model/main.html"
@@ -54,37 +57,41 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapter 3 (Variables and Numbers)
+Scuola primaria superiore e scuola media (10-14 anni), Capitolo 3 (Variabili e numeri)
 
-### Duration
+### Durata
 
-10 minutes
+10 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- print() and the idea that programs run top to bottom (Chapters 1-2)
+- print() e l'idea che i programmi vengono eseguiti dall'alto verso il
+  basso (Capitoli 1-2)
 
-### Activities
+### Attività
 
-1. **Predict** (3 min): For the "Game Score" script, students write down the
-   final value of every variable before stepping.
-2. **Step and check** (4 min): Step through and compare. Pause on
-   `score = score + 5` and ask: "Which happens first — the read or the
-   write?"
-3. **Copy Surprise** (3 min): Students predict what `print(b)` shows after
-   `a = 7`. Most expect 7; the sim shows why it is 5.
+1. **Prevedi** (3 min): Per lo script "Punteggio di Gioco", gli studenti
+   scrivono il valore finale di ogni variabile prima di procedere passo-passo.
+2. **Esegui passo-passo e verifica** (4 min): Procedi passo dopo passo e
+   confronta. Fermati su `score = score + 5` e chiedi: "Cosa succede prima —
+   la lettura o la scrittura?"
+3. **Sorpresa della Copia** (3 min): Gli studenti prevedono cosa mostra
+   `print(b)` dopo `a = 7`. La maggior parte si aspetta 7; la simulazione
+   mostra perché è 5.
 
-### Assessment
+### Verifica
 
-- Student can state that assignment stores a value and reassignment replaces it
-- Student correctly predicts the output of a 4-line script using reassignment
-- Student can explain why changing `a` after `b = a` does not change `b`
+- Lo studente sa affermare che l'assegnazione memorizza un valore e la
+  riassegnazione lo sostituisce
+- Lo studente prevede correttamente l'output di uno script di 4 righe che
+  usa la riassegnazione
+- Lo studente sa spiegare perché cambiare `a` dopo `b = a` non cambia `b`
 
-## References
+## Riferimenti
 
-1. [Python Tutorial — Numbers and Variables](https://docs.python.org/3/tutorial/introduction.html) — official introduction to assignment
-2. [p5.js](https://p5js.org/) — the JavaScript library used to build this MicroSim
+1. [Python Tutorial — Numbers and Variables](https://docs.python.org/3/tutorial/introduction.html) — introduzione ufficiale all'assegnazione
+2. [p5.js](https://p5js.org/) — la libreria JavaScript usata per costruire questo MicroSim

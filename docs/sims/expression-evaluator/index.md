@@ -1,6 +1,6 @@
 ---
-title: Expression Evaluator
-description: Watch a Python arithmetic expression collapse one operation at a time in the exact order Python evaluates it, guided by a precedence ladder.
+title: Valutatore di Espressioni
+description: Guarda un'espressione aritmetica Python ridursi un'operazione alla volta esattamente nell'ordine in cui Python la valuta, guidata da una scala di precedenza.
 image: /sims/expression-evaluator/expression-evaluator.png
 og:image: /sims/expression-evaluator/expression-evaluator.png
 twitter:image: /sims/expression-evaluator/expression-evaluator.png
@@ -9,42 +9,47 @@ social:
 quality_score: 93
 ---
 
-# Expression Evaluator
+# Valutatore di Espressioni
 
 <iframe src="main.html" height="422" width="100%" scrolling="no"></iframe>
 
-[Run the Expression Evaluator MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui il Valutatore di Espressioni a Schermo Intero](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Modifica nell'Editor p5.js](https://editor.p5js.org/)
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-Order of operations is usually taught as a table to memorize. This MicroSim
-lets students watch it *happen*: each Next Step highlights the operation
-Python computes next and collapses it into its value, while a precedence
-ladder shows which rank ("running now") is active. Presets cover the classic
-`2 + 3 * 4` surprise, parentheses, left-to-right evaluation, exponents, and
-the `//` / `%` pair.
+L'ordine delle operazioni viene di solito insegnato come una tabella da
+memorizzare. Questo MicroSim permette agli studenti di guardarlo *accadere*:
+ogni Passo Successivo evidenzia l'operazione che Python calcola per prima e
+la riduce al suo valore, mentre una scala di precedenza mostra quale rango
+("in esecuzione ora") è attivo. I preset coprono la classica sorpresa di
+`2 + 3 * 4`, le parentesi, la valutazione da sinistra a destra, gli
+esponenti, e la coppia `//` / `%`.
 
-**Learning objective:** The student will be able to evaluate an arithmetic
-expression in the same order Python does, one operation at a time.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di valutare
+un'espressione aritmetica nello stesso ordine in cui lo fa Python, un'
+operazione alla volta.
 
-- **Bloom's Taxonomy (2001):** Understand → Apply — *interpret, execute,
-  predict*
-- **Interaction pattern:** step-through reduction with a live precedence
-  legend
+- **Tassonomia di Bloom (2001):** Comprendere → Applicare — *interpretare,
+  eseguire, prevedere*
+- **Pattern di interazione:** riduzione passo-passo con una legenda di
+  precedenza dal vivo
 
-## How to Use
+## Come Usarlo
 
-1. Pick an expression and **predict the final answer** before stepping.
-2. Click **Next Step**. The amber highlight shows the operation Python runs
-   next; the ladder shows why it was chosen.
-3. Compare `2 + 3 * 4` with `(2 + 3) * 4` — same numbers, different answers.
-4. Try `10 - 4 - 3` to see that equal-rank operators run left to right.
+1. Scegli un'espressione e **prevedi la risposta finale** prima di
+   procedere passo-passo.
+2. Clicca **Passo Successivo**. L'evidenziazione ambra mostra l'operazione
+   che Python esegue per prima; la scala mostra perché è stata scelta.
+3. Confronta `2 + 3 * 4` con `(2 + 3) * 4` — stessi numeri, risposte diverse.
+4. Prova `10 - 4 - 3` per vedere che gli operatori di pari rango vengono
+   eseguiti da sinistra a destra.
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/expression-evaluator/main.html"
@@ -53,36 +58,37 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapter 6 (Math and Arithmetic)
+Scuola primaria superiore e scuola media (10-14 anni), Capitolo 6 (Matematica e aritmetica)
 
-### Duration
+### Durata
 
-10 minutes
+10 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- The seven arithmetic operators, including `**`, `//`, and `%` (Chapter 6)
+- I sette operatori aritmetici, inclusi `**`, `//` e `%` (Capitolo 6)
 
-### Activities
+### Attività
 
-1. **Predict** (3 min): Students write down answers for all five preset
-   expressions before using the sim.
-2. **Step and check** (5 min): Step through each expression. Score their
-   predictions.
-3. **Discuss** (2 min): "Which prediction surprised you most, and what rule
-   explains it?"
+1. **Prevedi** (3 min): Gli studenti scrivono le risposte per tutte e
+   cinque le espressioni preimpostate prima di usare la simulazione.
+2. **Esegui passo-passo e verifica** (5 min): Procedi passo dopo passo per
+   ogni espressione. Valuta le loro previsioni.
+3. **Discuti** (2 min): "Quale previsione ti ha sorpreso di più, e quale
+   regola lo spiega?"
 
-### Assessment
+### Verifica
 
-- Student correctly evaluates a new mixed expression like `1 + 2 ** 2 * 3` by hand
-- Student can explain why `10 - 4 - 3` is 3 and not 9
-- Student can state when parentheses change a result and when they do not
+- Lo studente valuta correttamente a mano una nuova espressione mista come
+  `1 + 2 ** 2 * 3`
+- Lo studente sa spiegare perché `10 - 4 - 3` fa 3 e non 9
+- Lo studente sa indicare quando le parentesi cambiano un risultato e quando no
 
-## References
+## Riferimenti
 
-1. [Python Documentation — Operator precedence](https://docs.python.org/3/reference/expressions.html#operator-precedence) — the full precedence table
-2. [p5.js](https://p5js.org/) — the JavaScript library used to build this MicroSim
+1. [Python Documentation — Operator precedence](https://docs.python.org/3/reference/expressions.html#operator-precedence) — la tabella completa di precedenza
+2. [p5.js](https://p5js.org/) — la libreria JavaScript usata per costruire questo MicroSim
