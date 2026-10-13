@@ -2,28 +2,28 @@
 hide:
     - toc
 ---
-# Astroid
+# Astroide
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Plot the astroid using its parametric form `x = R*cos³(t)`, `y = R*sin³(t)`
-- Draw a "string art" family of line segments whose envelope is the astroid
-- Explain what a curve *envelope* is and how a ladder sliding down a wall traces one
+- Tracciare l'astroide usando la sua forma parametrica `x = R*cos³(t)`, `y = R*sin³(t)`
+- Disegnare una famiglia di segmenti di linea in stile "string art" il cui inviluppo è l'astroide
+- Spiegare cos'è l'*inviluppo* di una curva e come una scala che scivola lungo un muro ne traccia uno
 
-The astroid is a four-cusped star — the path traced by a point on a small circle rolling inside a circle four times its size (a hypocycloid, cousin of the Spirograph). It hides a beautiful secret: if a ladder slides down a wall, the ladder's positions outline the astroid. We'll draw both the star and the sliding "strings" that reveal it.
+L'astroide è una stella a quattro cuspidi — il percorso tracciato da un punto su un piccolo cerchio che rotola dentro un cerchio quattro volte più grande (un'ipocicloide, cugina dello Spirografo). Nasconde un bellissimo segreto: se una scala scivola giù lungo un muro, le posizioni della scala delineano l'astroide. Disegneremo sia la stella che i "fili" scorrevoli che la rivelano.
 
-!!! mascot-welcome "Welcome to the Astroid!"
+!!! mascot-welcome "Benvenuto all'Astroide!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Cube a cosine, cube a sine — get a four-pointed star!
-    Then we'll overlay classic string art: dozens of straight lines
-    that magically outline the same curved star. No curve is drawn
-    by the strings, yet the star appears. Ready?
+    Eleva al cubo un coseno, eleva al cubo un seno — ottieni una stella a
+    quattro punte! Poi sovrapporremo il classico string art: decine di
+    linee rette che delineano magicamente la stessa stella curva. Nessuna
+    curva viene disegnata dai fili, eppure la stella appare. Pronto?
 
-## How It Works
+## Come Funziona
 
-First the string art: draw straight segments from `(R*cos(a), 0)` on the x-axis to `(0, R*sin(a))` on the y-axis. Every segment satisfies `a² + b² = R²` — like a ladder of fixed length `R` sliding down a wall. Then the star itself: for `t` from 0 to 2π, plot `x = R * cos(t)**3` and `y = R * sin(t)**3`. The cubing pulls points toward the axes, pinching the circle into four sharp cusps — and that curve is exactly the *envelope* the strings outline.
+Prima il string art: disegna segmenti rettilinei da `(R*cos(a), 0)` sull'asse x a `(0, R*sin(a))` sull'asse y. Ogni segmento soddisfa `a² + b² = R²` — come una scala di lunghezza fissa `R` che scivola giù lungo un muro. Poi la stella stessa: per `t` da 0 a 2π, traccia `x = R * cos(t)**3` e `y = R * sin(t)**3`. L'elevazione al cubo tira i punti verso gli assi, stringendo il cerchio in quattro cuspidi acute — e quella curva è esattamente l'*inviluppo* che i fili delineano.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -59,13 +59,13 @@ for i in range(steps + 1):
         monty.goto(x, y)
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The star comes from `cos(t)**3` and `sin(t)**3`.
-    How many sharp points (cusps) will it have? Count the places where
-    cosine or sine hits 1 or -1... guess, then click Run!
+    La stella nasce da `cos(t)**3` e `sin(t)**3`.
+    Quante punte acute (cuspidi) avrà? Conta i punti dove coseno o seno
+    raggiungono 1 o -1... fai la tua ipotesi, poi clicca Esegui!
 
-## Try It Now
+## Prova Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -120,28 +120,28 @@ for i in range(steps + 1):
         monty.goto(x, y)`);
 </script>
 
-**4 cusps** — one on each axis, at `(±R, 0)` and `(0, ±R)`, exactly where cosine or sine reaches ±1. Were you right?
+**4 cuspidi** — una su ogni asse, a `(±R, 0)` e `(0, ±R)`, esattamente dove coseno o seno raggiungono ±1. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-None of the silver segments is curved, yet together they outline the star. Each segment is *tangent* to the astroid — it kisses the curve at exactly one point without crossing it. A curve that every member of a family of lines touches like this is called the family's **envelope**. The sliding-ladder picture explains the physics: as a ladder of length `R` slides from upright to flat, its midsection sweeps through the region under the curve, but its outer boundary — the farthest the ladder ever reaches — is the astroid. The cubes in `cos³` and `sin³` come from the double-angle algebra of a circle of radius `R/4` rolling inside a circle of radius `R`.
+Nessuno dei segmenti argentei è curvo, eppure insieme delineano la stella. Ogni segmento è *tangente* all'astroide — bacia la curva in esattamente un punto senza attraversarla. Una curva che ogni membro di una famiglia di linee tocca in questo modo si chiama l'**inviluppo** della famiglia. L'immagine della scala scorrevole spiega la fisica: mentre una scala di lunghezza `R` scivola da verticale a orizzontale, la sua sezione centrale spazza la regione sotto la curva, ma il suo confine esterno — il punto più lontano che la scala raggiunge mai — è l'astroide. I cubi in `cos³` e `sin³` derivano dall'algebra dell'angolo doppio di un cerchio di raggio `R/4` che rotola dentro un cerchio di raggio `R`.
 
-## Explanation Table
+## Tabella Esplicativa
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `x = R * math.cos(t) ** 3` | The astroid's parametric form — cubing pinches the circle into cusps |
-| `monty.goto(R * math.cos(a), 0)` | One end of the "ladder" on the x-axis |
-| `monty.goto(0, R * math.sin(a))` | The other end on the y-axis — the two ends always satisfy a² + b² = R² |
-| `n_lines = 40` | How many ladder positions to draw; more lines make a smoother envelope |
+| `x = R * math.cos(t) ** 3` | La forma parametrica dell'astroide — elevare al cubo stringe il cerchio in cuspidi |
+| `monty.goto(R * math.cos(a), 0)` | Un'estremità della "scala" sull'asse x |
+| `monty.goto(0, R * math.sin(a))` | L'altra estremità sull'asse y — le due estremità soddisfano sempre a² + b² = R² |
+| `n_lines = 40` | Quante posizioni della scala disegnare; più linee creano un inviluppo più liscio |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-warning "Find the Bug"
+!!! mascot-warning "Trova il Bug"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
-    This program is supposed to draw the four-pointed star — but it draws a plain
-    straight line instead! Look carefully at the exponents. Find the bug and fix
-    it so the star appears.
+    Questo programma dovrebbe disegnare la stella a quattro punte — ma
+    disegna invece una semplice linea retta! Guarda bene gli esponenti.
+    Trova il bug e correggilo così la stella appare.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -180,20 +180,21 @@ for i in range(steps + 1):
         monty.goto(x, y)`);
 </script>
 
-The exponents say `** 2` instead of `** 3`. Squares are never negative, and since `cos² + sin² = 1` every point lands on the straight line `x + y = R` — change both exponents to `3` and the star returns.
+Gli esponenti dicono `** 2` invece di `** 3`. I quadrati non sono mai negativi, e poiché `cos² + sin² = 1` ogni punto atterra sulla linea retta `x + y = R` — cambia entrambi gli esponenti in `3` e la stella ritorna.
 
-## Experiments
+## Esperimenti
 
-1. **Use more strings.** Change `n_lines = 40` to `n_lines = 120`. You'll know it worked when the silver web becomes so dense the envelope looks like a smooth gray curve.
+1. **Usa più fili.** Cambia `n_lines = 40` in `n_lines = 120`. Saprai che ha funzionato quando la ragnatela argentea diventa così densa che l'inviluppo sembra una curva grigia liscia.
 
-2. **Try a different hypocycloid.** Replace the star loop's `x` and `y` with `x = R * (0.667 * math.cos(t) + 0.333 * math.cos(2 * t))` and `y = R * (0.667 * math.sin(t) - 0.333 * math.sin(2 * t))`. You'll know it worked when a three-cusped star (the deltoid) appears instead.
+2. **Prova un'ipocicloide diversa.** Sostituisci la `x` e la `y` del ciclo della stella con `x = R * (0.667 * math.cos(t) + 0.333 * math.cos(2 * t))` e `y = R * (0.667 * math.sin(t) - 0.333 * math.sin(2 * t))`. Saprai che ha funzionato quando appare invece una stella a tre cuspidi (il deltoide).
 
-3. **Color the quadrants.** Before drawing each string, set the pencolor based on `i` (for example silver for `i < 10`, lightblue for `i < 20`, and so on). You'll know it worked when each quadrant's string fan has its own color.
+3. **Colora i quadranti.** Prima di disegnare ogni filo, imposta il colore della penna in base a `i` (per esempio argento per `i < 10`, azzurro chiaro per `i < 20`, e così via). Saprai che ha funzionato quando il ventaglio di fili di ogni quadrante ha il proprio colore.
 
-4. **Cube higher.** Change both `** 3` to `** 5`. You'll know it worked when the star's arms become even skinnier and the cusps sharper — higher odd powers pinch harder.
+4. **Eleva al cubo di più.** Cambia entrambi i `** 3` in `** 5`. Saprai che ha funzionato quando le braccia della stella diventano ancora più sottili e le cuspidi più acute — potenze dispari più alte stringono di più.
 
-!!! mascot-celebration "Star of the Gallery!"
+!!! mascot-celebration "Stella della Galleria!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You drew a curve two ways at once: directly from cos³ and sin³, and as the
-    envelope of forty straight lines — and they matched perfectly. That's real
-    mathematics made visible. Browse the **Turtle Graphics Gallery** for your next challenge!
+    Hai disegnato una curva in due modi contemporaneamente: direttamente
+    da cos³ e sin³, e come inviluppo di quaranta linee rette — e
+    combaciavano perfettamente. Questa è matematica vera resa visibile.
+    Esplora la **Galleria di Grafica Turtle** per la tua prossima sfida!

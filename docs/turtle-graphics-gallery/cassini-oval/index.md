@@ -2,27 +2,27 @@
 hide:
     - toc
 ---
-# Cassini Oval
+# Ovale di Cassini
 
-By the end of this lab you'll be able to:
+Alla fine di questo laboratorio sarai in grado di:
 
-- Plot Cassini ovals — points where the *product* of distances to two foci equals `b * b`
-- Use the polar form with a square-root guard to handle values that do not exist
-- Watch a single constant `b` change the curve's whole topology: one oval, a figure-eight, or two separate lobes
+- Tracciare ovali di Cassini — punti dove il *prodotto* delle distanze da due fuochi è uguale a `b * b`
+- Usare la forma polare con una protezione per radice quadrata per gestire valori che non esistono
+- Osservare una singola costante `b` cambiare l'intera topologia della curva: un ovale, una figura a otto, o due lobi separati
 
-An ellipse keeps the *sum* of distances to two focus points constant. A Cassini oval keeps the *product* constant instead — and that one change creates a shape-shifting family. Depending on how `b` compares to the focus distance `c`, you get one peanut-shaped oval, a perfect figure-eight (the lemniscate), or two separate egg-shaped lobes.
+Un'ellisse mantiene costante la *somma* delle distanze da due punti focali. Un ovale di Cassini mantiene invece costante il *prodotto* — e quel singolo cambiamento crea una famiglia di forme mutevoli. A seconda di come `b` si confronta con la distanza focale `c`, ottieni un ovale a forma di arachide, una perfetta figura a otto (la lemniscata), o due lobi separati a forma di uovo.
 
-!!! mascot-welcome "Welcome to the Cassini Oval!"
+!!! mascot-welcome "Benvenuto all'Ovale di Cassini!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    The astronomer Giovanni Cassini thought planets traced these curves.
-    He was wrong about the planets — but the curves are amazing:
-    nudge one number and a single oval *tears itself into two*!
+    L'astronomo Giovanni Cassini pensava che i pianeti tracciassero queste
+    curve. Si sbagliava sui pianeti — ma le curve sono straordinarie:
+    sposta un numero e un singolo ovale *si lacera in due*!
 
-## How It Works
+## Come Funziona
 
-Pick two foci at `(-c, 0)` and `(c, 0)`. A point belongs to the curve when `distance1 * distance2 = b * b`. In polar coordinates that becomes `r*r = c*c*cos(2*theta) + or - sqrt(c**4 * cos(2*theta)**2 + (b**4 - c**4))`. For each angle we compute the value under the square root first — if it is negative, no point exists at that angle and we simply skip it. Because `r*r` can have two valid answers at one angle, we plot dots for both the `+` and `-` branches instead of dragging a pen line.
+Scegli due fuochi a `(-c, 0)` e `(c, 0)`. Un punto appartiene alla curva quando `distanza1 * distanza2 = b * b`. In coordinate polari questo diventa `r*r = c*c*cos(2*theta) + o - sqrt(c**4 * cos(2*theta)**2 + (b**4 - c**4))`. Per ogni angolo calcoliamo prima il valore sotto la radice quadrata — se è negativo, non esiste alcun punto a quell'angolo e lo saltiamo semplicemente. Poiché `r*r` può avere due risposte valide a un singolo angolo, disegniamo puntini sia per il ramo `+` che per quello `-` invece di trascinare una linea con la penna.
 
-## Sample Code
+## Codice di Esempio
 
 ```python
 import turtle
@@ -55,13 +55,14 @@ draw_cassini(100, 'forestgreen')
 draw_cassini(90, 'crimson')
 ```
 
-!!! mascot-thinking "What Do You Think Will Happen?"
+!!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The foci sit at distance `c = 100` from the center, and we draw `b = 120`,
-    `b = 100`, and `b = 90`. Which `b` gives the figure-eight: bigger than `c`,
-    equal to `c`, or smaller than `c`? Guess, then click Run!
+    I fuochi si trovano a distanza `c = 100` dal centro, e disegniamo
+    `b = 120`, `b = 100` e `b = 90`. Quale `b` dà la figura a otto: più
+    grande di `c`, uguale a `c`, o più piccolo di `c`? Fai la tua
+    ipotesi, poi clicca Esegui!
 
-## Try It Now
+## Prova Ora
 
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
@@ -125,28 +126,29 @@ for i in range(3):
     monty.write(labels[i][0])`);
 </script>
 
-**Equal** — at exactly `b = c` the green curve pinches through the center point, forming the famous figure-eight called the lemniscate of Bernoulli. Were you right?
+**Uguale** — esattamente a `b = c` la curva verde si stringe attraverso il punto centrale, formando la famosa figura a otto chiamata lemniscata di Bernoulli. Avevi indovinato?
 
-## How It Works
+## Come Funziona
 
-Think about a point exactly between the two foci (the origin). Its two distances are both `c`, so their product is `c * c`. If the target product `b * b` is bigger than that, the curve has room to pass over the middle and wraps both foci in one blue peanut. If `b * b` is smaller, the middle is out of reach — the curve must stay close to one focus or the other, so it splits into two crimson lobes. At exactly `b = c` the curve *just barely* touches the origin: the figure-eight. One constant crossing one threshold flips the topology from one piece to two.
+Pensa a un punto esattamente tra i due fuochi (l'origine). Le sue due distanze sono entrambe `c`, quindi il loro prodotto è `c * c`. Se il prodotto obiettivo `b * b` è più grande di quello, la curva ha spazio per passare sopra il centro e avvolge entrambi i fuochi in un'unica arachide blu. Se `b * b` è più piccolo, il centro è irraggiungibile — la curva deve restare vicina a un fuoco o all'altro, quindi si divide in due lobi cremisi. Esattamente a `b = c` la curva tocca *appena* l'origine: la figura a otto. Una costante che attraversa una soglia ribalta la topologia da un pezzo a due.
 
-## Explanation Table
+## Tabella Esplicativa
 
-| Line | What it does |
+| Riga | Cosa fa |
 |------|-------------|
-| `disc = c ** 4 * cos2 * cos2 + (b ** 4 - c ** 4)` | The value under the square root — negative means no point at this angle |
-| `if disc < 0: continue` | The guard: skip angles where the curve does not exist |
-| `for sign in [1, -1]:` | Try both the `+` and `-` branches — some angles have two radii |
-| `monty.dot(3, color)` | Plot a dot; dots handle curves that split into pieces better than pen lines |
+| `disc = c ** 4 * cos2 * cos2 + (b ** 4 - c ** 4)` | Il valore sotto la radice quadrata — negativo significa nessun punto a questo angolo |
+| `if disc < 0: continue` | La protezione: salta gli angoli dove la curva non esiste |
+| `for sign in [1, -1]:` | Prova sia il ramo `+` che quello `-` — alcuni angoli hanno due raggi |
+| `monty.dot(3, color)` | Disegna un puntino; i puntini gestiscono meglio delle linee di penna le curve che si dividono in pezzi |
 
-## Learning Check
+## Verifica di Apprendimento
 
-!!! mascot-thinking "Your Turn — Split the Oval"
+!!! mascot-thinking "Tocca a Te — Dividi l'Ovale"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    The program below draws a single purple oval with `b = 130`.
-    Change **one number** so the curve splits into two separate lobes.
-    Remember the rule you just learned — should `b` end up bigger or smaller than `c = 100`?
+    Il programma qui sotto disegna un singolo ovale viola con `b = 130`.
+    Cambia **un numero** così la curva si divide in due lobi separati.
+    Ricorda la regola che hai appena imparato — `b` dovrebbe finire più
+    grande o più piccolo di `c = 100`?
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -194,20 +196,22 @@ monty.goto(c, 0)
 monty.dot(8, 'black')`);
 </script>
 
-Any `b` *smaller* than `c` works — try `b = 80` and the oval tears into two lobes, one hugging each focus.
+Qualunque `b` *più piccolo* di `c` funziona — prova `b = 80` e l'ovale si lacera in due lobi, ciascuno abbracciato a un fuoco.
 
-## Experiments
+## Esperimenti
 
-1. **Sneak up on the split.** Try `b = 101`, then `b = 99`. You'll know it worked when 101 gives one very pinched peanut and 99 gives two lobes joined by almost nothing.
+1. **Avvicinati alla divisione.** Prova `b = 101`, poi `b = 99`. Saprai che ha funzionato quando 101 dà un'arachide molto stretta e 99 dà due lobi uniti da quasi nulla.
 
-2. **Shrink `b` far below `c`.** Set `b = 60` in the Learning Check program. You'll know it worked when the two lobes become small tight eggs hugging the black focus dots.
+2. **Riduci `b` ben sotto `c`.** Imposta `b = 60` nel programma della Verifica di Apprendimento. Saprai che ha funzionato quando i due lobi diventano piccole uova strette abbracciate ai puntini neri dei fuochi.
 
-3. **Move the foci.** Change `c = 100` to `c = 60` in the main program. You'll know it worked when all three curves become single ovals — with the foci closer together, every `b` is now bigger than `c`, so even the crimson curve wraps around both foci.
+3. **Sposta i fuochi.** Cambia `c = 100` in `c = 60` nel programma principale. Saprai che ha funzionato quando tutte e tre le curve diventano ovali singoli — con i fuochi più vicini tra loro, ogni `b` è ora più grande di `c`, così anche la curva cremisi avvolge entrambi i fuochi.
 
-4. **Count the existing angles.** Add a counter variable, add 1 each time a dot is drawn for `b = 90`, and `print` it at the end. You'll know it worked when the count printed in the output pane is far less than `steps * 2` — proof the guard skipped the impossible angles.
+4. **Conta gli angoli esistenti.** Aggiungi una variabile contatore, aggiungi 1 ogni volta che viene disegnato un puntino per `b = 90`, e fai un `print` alla fine. Saprai che ha funzionato quando il conteggio stampato nel pannello di output è molto inferiore a `steps * 2` — prova che la protezione ha saltato gli angoli impossibili.
 
-!!! mascot-celebration "Topology Changer!"
+!!! mascot-celebration "Cambiatore di Topologia!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    You watched one constant crossing a threshold rip a single curve into two pieces —
-    mathematicians call that a change in *topology*, and you coded it with one `if` guard.
-    Up next: **Fermat's Spiral** — a square root sends two mirrored arms winding out of the origin.
+    Hai osservato una costante che attraversa una soglia strappare una
+    singola curva in due pezzi — i matematici lo chiamano un cambiamento
+    di *topologia*, e tu l'hai programmato con una sola protezione `if`.
+    Prossimo: **Spirale di Fermat** — una radice quadrata manda due
+    braccia speculari ad avvolgersi fuori dall'origine.
