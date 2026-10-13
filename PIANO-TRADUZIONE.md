@@ -339,6 +339,42 @@ Decisioni di questa fase:
   — stessa regola generale, anche se qui il comando così com'è non
   funzionerebbe davvero se digitato alla lettera.
 
+**FASE 8 COMPLETA — tutti i 9 file nav-collegati di `docs/learning-graph/`
+tradotti**, più la nav di `mkdocs.yml` (sezione "Grafo di Apprendimento"):
+`index.md`, `course-description-assessment.md`, `concept-list-v1.md`,
+`concept-list.md`, `quality-metrics.md`, `concept-taxonomy.md`,
+`taxonomy-distribution.md`, `mascot-test.md`, `faq-quality-report.md`.
+
+**Decisione di metodo cruciale per questa fase** (verificata prima di
+tradurre, non assunta): i titoli dei 450/350 concetti e i nomi delle 14
+categorie di tassonomia (ENV, SYN, DAT, CTL, FUN, COL, MOD, TXT, FIO,
+ERR, OOP, VIZ, ALG, ADV e i rispettivi nomi estesi come "Environment &
+Tools") **restano sempre in inglese**, in ogni file di questa sezione —
+non solo in `concept-list.md`/`concept-list-v1.md` ma anche nelle liste
+di esempio dentro `quality-metrics.md`, `taxonomy-distribution.md` e
+`faq-quality-report.md`. Verificato con
+`python3 -c "import json; ..."` che questi titoli/nomi corrispondono
+esattamente (stessa stringa carattere per carattere) alle label dei nodi
+in `learning-graph.json`/`learning-graph.csv` e alle chiavi di
+`taxonomy-names.json` — gli stessi file dati che alimentano il
+Visualizzatore del Grafo di Apprendimento (MicroSim, Fase 5) e il tool
+di verifica delle dipendenze citato in CLAUDE.md ("L'assegnazione dei
+concetti è la fonte di verità"). Tradurli romperebbe quella
+corrispondenza automatica. Tradotti invece: titoli di pagina, prosa
+introduttiva/esplicativa, intestazioni di sezione, etichette di campo
+generiche (es. "Conteggio", "Percentuale"), raccomandazioni — ma non le
+etichette di schema CSV/dati come `TaxonomyID`/`ConceptID` che sono
+nomi di colonna letterali in `learning-graph.csv`.
+
+File esclusi dallo scope (stessa logica di `microsim-ideas.md`):
+`book-metrics.md` e `chapter-metrics.md` — non collegati alla nav né da
+nessuna pagina `.md`, report auto-generati per chi mantiene il libro con
+un timestamp di generazione (2026-07-02) già disallineato con lo stato
+attuale (i conteggi parole riflettono la versione inglese pre-traduzione,
+non quella italiana). I file `.py`, `.json` e `.csv` in
+`docs/learning-graph/` (script e dati) non sono mai stati toccati, per
+definizione.
+
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
 (nessuna modifica rispetto a `main`), quindi il problema dei placeholder rotti
@@ -524,12 +560,19 @@ Notebook orfani non collegati (`02-draw-box.ipynb`, `canvas-test.ipynb`,
 `Python_Introduction.ipynb`, `variables-and-strings.ipynb`) esclusi
 dallo scope, vedi nota sopra.
 
-Prossimo: iniziare la Fase 8 (Learning Graph, `docs/learning-graph/`,
-~11 file secondo il conteggio originale del piano — report tecnici per
-chi mantiene il libro, vedi sezione 3).
+**FASE 8 COMPLETA.** Tradotti tutti i 9 file nav-collegati di
+`docs/learning-graph/` più la nav di `mkdocs.yml`. Titoli dei concetti e
+nomi delle categorie di tassonomia lasciati in inglese ovunque (vedi nota
+sopra); `book-metrics.md`/`chapter-metrics.md` esclusi (orfani, stale).
 
-Dopo la Fase 8: Fase 9 (Trinket Labs — priorità minima/da valutare se
-tradurre affatto, vedi sezione 3).
+Con questo si chiudono tutte le fasi di priorità Alta/Media. Resta solo
+la Fase 9 (Trinket Labs, 23 file, priorità Minima — la nav originale la
+marca già come "(deprecated)").
+
+Prossimo: decidere con l'utente se affrontare la Fase 9 (Trinket Labs)
+o considerare il piano di traduzione sostanzialmente completo così
+com'è, vista la priorità minima/deprecata di quella sezione (vedi
+sezione 3).
 
 Note di qualità accumulate durante la Fase 2, da continuare ad applicare nelle fasi
 successive: (1) controllare sempre con `grep '!\[.*\]('` (o pattern equivalente per il
