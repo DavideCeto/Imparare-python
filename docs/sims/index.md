@@ -4,284 +4,304 @@ description: A gallery of the interactive MicroSims used in the Beginning Python
 hide:
   - toc
 ---
-# List of Beginning Python MicroSims
+# Elenco dei MicroSims di Beginning Python
 
-Interactive Micro Simulations to help students beginning Python programming. Click any card to open the MicroSim.
+Micro Simulazioni interattive per aiutare gli studenti che iniziano a programmare in Python. Clicca su una card per aprire il MicroSim.
 
 <div class="grid cards" markdown>
 
--   **[Code Stepper](./code-stepper/index.md)**
+-   **[Esecutore di Codice Passo-Passo](./code-stepper/index.md)**
 
     ---
 
-    ![Code Stepper](./code-stepper/code-stepper.png)
+    ![Esecutore di Codice Passo-Passo](./code-stepper/code-stepper.png)
 
-    Step through a short Python program one line at a time and watch the
-    output appear — see top-to-bottom execution with your own eyes.
-    (Chapters 1-2)
+    Percorri un breve programma Python una riga alla volta e guarda
+    l'output apparire — vedi l'esecuzione dall'alto verso il basso con i
+    tuoi stessi occhi. (Capitoli 1-2)
 
--   **[Variable Memory Model](./variable-memory-model/index.md)**
-
-    ---
-
-    ![Variable Memory Model](./variable-memory-model/variable-memory-model.png)
-
-    Watch labeled memory boxes get created, read, and replaced as a script
-    runs — the sticky-note metaphor made real. (Chapter 3)
-
--   **[Function Call Flow](./function-call-flow/index.md)**
+-   **[Modello di Memoria delle Variabili](./variable-memory-model/index.md)**
 
     ---
 
-    ![Function Call Flow](./function-call-flow/function-call-flow.png)
+    ![Modello di Memoria delle Variabili](./variable-memory-model/variable-memory-model.png)
 
-    Trace a function call in slow motion: the argument flies into the
-    parameter slot and the return value flies back. (Chapter 4)
+    Guarda scatole di memoria etichettate venire create, lette e
+    sostituite mentre uno script viene eseguito — la metafora del
+    post-it resa reale. (Capitolo 3)
 
--   **[Turtle State Inspector](./turtle-state-inspector/index.md)**
-
-    ---
-
-    ![Turtle State Inspector](./turtle-state-inspector/turtle-state-inspector.png)
-
-    Step through turtle commands while a dashboard reveals the turtle's
-    hidden state: position, heading compass, and pen. (Chapter 5)
-
--   **[Expression Evaluator](./expression-evaluator/index.md)**
+-   **[Flusso di Chiamata delle Funzioni](./function-call-flow/index.md)**
 
     ---
 
-    ![Expression Evaluator](./expression-evaluator/expression-evaluator.png)
+    ![Flusso di Chiamata delle Funzioni](./function-call-flow/function-call-flow.png)
 
-    Watch `2 + 3 * 4` collapse one operation at a time in the exact order
-    Python evaluates it — PEMDAS made visible. (Chapter 6)
+    Traccia una chiamata di funzione al rallentatore: l'argomento vola
+    nello slot del parametro e il valore di ritorno vola indietro.
+    (Capitolo 4)
 
--   **[Modulo Clock](./modulo-clock/index.md)**
-
-    ---
-
-    ![Modulo Clock](./modulo-clock/modulo-clock.png)
-
-    See the remainder as wrap-around counting on a dial and as leftover
-    dots — the `%` operator made concrete. (Chapter 6)
-
--   **[For-Loop Stepper](./for-loop-stepper/index.md)**
+-   **[Ispettore dello Stato della Turtle](./turtle-state-inspector/index.md)**
 
     ---
 
-    ![For-Loop Stepper](./for-loop-stepper/for-loop-stepper.png)
+    ![Ispettore dello Stato della Turtle](./turtle-state-inspector/turtle-state-inspector.png)
 
-    Crank a for loop by hand: watch `i` change, the arrow jump back to the
-    top, and a turtle draw one square side per trip. (Chapter 7)
+    Percorri i comandi della turtle mentre un pannello rivela lo stato
+    nascosto della turtle: posizione, bussola della direzione e penna.
+    (Capitolo 5)
 
--   **[Range Explorer](./range-explorer/index.md)**
-
-    ---
-
-    ![Range Explorer](./range-explorer/range-explorer.png)
-
-    Slide start, stop, and step and watch the number line light up — the
-    stop value is a hollow ring because it is never included. (Chapter 7)
-
--   **[Control Flow Explorer](./control-flow-explorer/index.md)**
+-   **[Valutatore di Espressioni](./expression-evaluator/index.md)**
 
     ---
 
-    ![Control Flow Explorer](./control-flow-explorer/control-flow-explorer.png)
+    ![Valutatore di Espressioni](./expression-evaluator/expression-evaluator.png)
 
-    Move a score slider and watch exactly one path through an if/elif/else
-    flowchart glow green — later checks are never even looked at. (Chapter 9)
+    Guarda `2 + 3 * 4` ridursi un'operazione alla volta esattamente
+    nell'ordine in cui Python la valuta — PEMDAS reso visibile.
+    (Capitolo 6)
 
--   **[Boolean Logic Lab](./boolean-logic-lab/index.md)**
-
-    ---
-
-    ![Boolean Logic Lab](./boolean-logic-lab/boolean-logic-lab.png)
-
-    Wire True/False inputs into and, or, and not — and catch Python
-    skipping the second input when the first one decides. (Chapters 9, 19)
-
--   **[While-Loop Stepper](./while-loop-stepper/index.md)**
+-   **[Orologio del Modulo](./modulo-clock/index.md)**
 
     ---
 
-    ![While-Loop Stepper](./while-loop-stepper/while-loop-stepper.png)
+    ![Orologio del Modulo](./modulo-clock/modulo-clock.png)
 
-    Feel the check-run-check rhythm of a while loop — and safely watch an
-    infinite loop spin inside its cage. (Chapter 10)
+    Vedi il resto come un conteggio circolare su un quadrante e come
+    puntini rimanenti — l'operatore `%` reso concreto. (Capitolo 6)
 
--   **[Scope Inspector](./scope-inspector/index.md)**
-
-    ---
-
-    ![Scope Inspector](./scope-inspector/scope-inspector.png)
-
-    Variables live in rooms: watch a Function room appear during a call,
-    shadow the global, and vanish at return. (Chapter 11)
-
--   **[RGB Color Mixer](./rgb-color-mixer/index.md)**
+-   **[Esecutore Passo-Passo del Ciclo For](./for-loop-stepper/index.md)**
 
     ---
 
-    ![RGB Color Mixer](./rgb-color-mixer/rgb-color-mixer.png)
+    ![Esecutore Passo-Passo del Ciclo For](./for-loop-stepper/for-loop-stepper.png)
 
-    Mix red, green, and blue, watch the hex code assemble itself, and copy
-    the pencolor line straight into your turtle art. (Chapter 12)
+    Fai girare a mano un ciclo for: guarda `i` cambiare, la freccia
+    saltare indietro in cima, e una turtle disegnare un lato del
+    quadrato per ogni giro. (Capitolo 7)
 
--   **[String Slicer](./string-slicer/index.md)**
-
-    ---
-
-    ![String Slicer](./string-slicer/string-slicer.png)
-
-    Drag start and end handles over letter tiles and watch `word[2:7]`
-    build itself — the end is never included, and now you can see why.
-    (Chapters 8, 14)
-
--   **[List Index Explorer](./list-index-explorer/index.md)**
+-   **[Esploratore di Range](./range-explorer/index.md)**
 
     ---
 
-    ![List Index Explorer](./list-index-explorer/list-index-explorer.png)
+    ![Esploratore di Range](./range-explorer/range-explorer.png)
 
-    Append, insert, and pop a list of colored boxes and watch every index
-    renumber — plus the TypeError a string gives instead. (Chapters 15-16)
+    Scorri inizio, fine e passo e guarda la linea dei numeri
+    illuminarsi — il valore finale è un anello vuoto perché non è mai
+    incluso. (Capitolo 7)
 
--   **[Stack and Queue Simulator](./stack-queue-simulator/index.md)**
-
-    ---
-
-    ![Stack and Queue Simulator](./stack-queue-simulator/stack-queue-simulator.png)
-
-    Feed the same letters into a stack of plates and a waiting line — then
-    watch them leave in opposite orders. (Chapters 16, 30)
-
--   **[Dice Roll Histogram](./dice-roll-histogram/index.md)**
+-   **[Esploratore del Flusso di Controllo](./control-flow-explorer/index.md)**
 
     ---
 
-    ![Dice Roll Histogram](./dice-roll-histogram/dice-roll-histogram.png)
+    ![Esploratore del Flusso di Controllo](./control-flow-explorer/control-flow-explorer.png)
 
-    Roll 1, 100, or 1000 dice and watch chaos flatten into a pattern —
-    then find the mountain hiding in two-dice sums. (Chapter 17)
+    Sposta uno slider del punteggio e guarda esattamente un percorso
+    attraverso un diagramma di flusso if/elif/else illuminarsi di verde
+    — i controlli successivi non vengono nemmeno guardati. (Capitolo 9)
 
--   **[Sine Wave Explorer](./sine-wave-explorer/index.md)**
-
-    ---
-
-    ![Sine Wave Explorer](./sine-wave-explorer/sine-wave-explorer.png)
-
-    Drag amplitude, frequency, and phase sliders and watch
-    `y = A × sin(f·x + p)` re-plot instantly. (Chapter 18)
-
--   **[Unit Circle Degrees and Radians](./unit-circle-radians/index.md)**
+-   **[Laboratorio di Logica Booleana](./boolean-logic-lab/index.md)**
 
     ---
 
-    ![Unit Circle](./unit-circle-radians/unit-circle-radians.png)
+    ![Laboratorio di Logica Booleana](./boolean-logic-lab/boolean-logic-lab.png)
 
-    Drag a point around the unit circle and read the angle in degrees,
-    radians, and multiples of π — with sin and cos bars. (Chapter 18)
+    Collega input True/False in and, or e not — e cogli Python mentre
+    salta il secondo input quando il primo decide già. (Capitoli 9, 19)
 
--   **[Set Operations Venn](./set-operations-venn/index.md)**
-
-    ---
-
-    ![Set Operations Venn](./set-operations-venn/set-operations-venn.png)
-
-    Type two sets, watch the chips land in the right regions, and light up
-    union, intersection, and difference. (Chapter 20)
-
--   **[Dictionary Key Lookup](./dictionary-key-lookup/index.md)**
+-   **[Esecutore Passo-Passo del Ciclo While](./while-loop-stepper/index.md)**
 
     ---
 
-    ![Dictionary Key Lookup](./dictionary-key-lookup/dictionary-key-lookup.png)
+    ![Esecutore Passo-Passo del Ciclo While](./while-loop-stepper/while-loop-stepper.png)
 
-    Type a key and the right drawer springs open in one hop — or hit a
-    KeyError — then race the dict against a list. (Chapter 21)
+    Senti il ritmo controlla-esegui-controlla di un ciclo while — e
+    guarda in sicurezza un ciclo infinito girare dentro la sua gabbia.
+    (Capitolo 10)
 
--   **[Recursion Call Stack](./recursion-call-stack/index.md)**
-
-    ---
-
-    ![Recursion Call Stack](./recursion-call-stack/recursion-call-stack.png)
-
-    Watch factorial(4) stack frames pile up to the gold base case, then
-    unwind as each paused multiplication fills in. (Chapters 23-24)
-
--   **[Fractal Tree Explorer](./fractal-tree-explorer/index.md)**
+-   **[Ispettore degli Ambiti](./scope-inspector/index.md)**
 
     ---
 
-    ![Fractal Tree Explorer](./fractal-tree-explorer/fractal-tree-explorer.png)
+    ![Ispettore degli Ambiti](./scope-inspector/scope-inspector.png)
 
-    Sculpt a recursive tree with angle, depth, and shrink sliders — every
-    recursion level wears its own color. (Chapter 24)
+    Le variabili vivono in stanze: guarda una stanza Funzione apparire
+    durante una chiamata, oscurare quella globale, e svanire al ritorno.
+    (Capitolo 11)
 
--   **[Object Instance Inspector](./object-instance-inspector/index.md)**
-
-    ---
-
-    ![Object Instance Inspector](./object-instance-inspector/object-instance-inspector.png)
-
-    A dashed blueprint, solid instance cards, and a glowing arrow that
-    shows exactly which dog `self` is. (Chapter 25)
-
--   **[Inheritance Explorer](./inheritance-explorer/index.md)**
+-   **[Miscelatore di Colori RGB](./rgb-color-mixer/index.md)**
 
     ---
 
-    ![Inheritance Explorer](./inheritance-explorer/inheritance-explorer.png)
+    ![Miscelatore di Colori RGB](./rgb-color-mixer/rgb-color-mixer.png)
 
-    Click a method call and watch the lookup climb the class tree —
-    overrides shadow the parent, and super() climbs on purpose.
-    (Chapter 25)
+    Mescola rosso, verde e blu, guarda il codice esadecimale
+    assemblarsi da solo, e copia la riga pencolor direttamente nella
+    tua arte con la turtle. (Capitolo 12)
 
--   **[JSON to Python Type Mapper](./json-python-mapper/index.md)**
-
-    ---
-
-    ![JSON to Python Type Mapper](./json-python-mapper/json-python-mapper.png)
-
-    Edit JSON on the left and watch the Python objects appear on the
-    right — true becomes True, null becomes None. (Chapter 27)
-
--   **[Regex Match Lab](./regex-match-lab/index.md)**
+-   **[Affettatore di Stringhe](./string-slicer/index.md)**
 
     ---
 
-    ![Regex Match Lab](./regex-match-lab/regex-match-lab.png)
+    ![Affettatore di Stringhe](./string-slicer/string-slicer.png)
 
-    Type a pattern, watch matches light up live, and read the pattern as
-    plain-English chips — regex stops being magic. (Chapter 29)
+    Trascina le maniglie di inizio e fine sopra le tessere delle
+    lettere e guarda `word[2:7]` costruirsi da solo — la fine non è mai
+    inclusa, e ora puoi vedere perché. (Capitoli 8, 14)
 
--   **[Sorting Algorithm Comparer](./sorting-comparer/index.md)**
-
-    ---
-
-    ![Sorting Algorithm Comparer](./sorting-comparer/sorting-comparer.png)
-
-    Step three classic sorts one comparison at a time, then race bubble
-    vs insertion on identical data — the winner depends on the data.
-    (Chapter 30)
-
--   **[Search Race](./search-race/index.md)**
+-   **[Esploratore degli Indici di Lista](./list-index-explorer/index.md)**
 
     ---
 
-    ![Search Race](./search-race/search-race.png)
+    ![Esploratore degli Indici di Lista](./list-index-explorer/list-index-explorer.png)
 
-    Linear search plods box by box while binary search throws away half
-    the shelf per check — and a shuffled-shelf trap shows why sorted
-    matters. (Chapter 30)
+    Aggiungi, inserisci ed estrai da una lista di scatole colorate e
+    guarda ogni indice rinumerarsi — più il TypeError che dà una
+    stringa invece. (Capitoli 15-16)
 
--   **[Graph Traversal Explorer](./graph-traversal-explorer/index.md)**
+-   **[Simulatore di Pila e Coda](./stack-queue-simulator/index.md)**
 
     ---
 
-    ![Graph Traversal Explorer](./graph-traversal-explorer/graph-traversal-explorer.png)
+    ![Simulatore di Pila e Coda](./stack-queue-simulator/stack-queue-simulator.png)
 
-    Step BFS and DFS over the same graph with the live queue or stack
-    beside it — then watch BFS reveal the shortest path. (Chapter 30)
+    Dai in pasto le stesse lettere a una pila di piatti e a una fila
+    d'attesa — poi guardale uscire in ordini opposti. (Capitoli 16, 30)
 
+-   **[Istogramma dei Lanci di Dadi](./dice-roll-histogram/index.md)**
+
+    ---
+
+    ![Istogramma dei Lanci di Dadi](./dice-roll-histogram/dice-roll-histogram.png)
+
+    Lancia 1, 100 o 1000 dadi e guarda il caos appiattirsi in un
+    pattern — poi trova la montagna nascosta nelle somme di due dadi.
+    (Capitolo 17)
+
+-   **[Esploratore dell'Onda Sinusoidale](./sine-wave-explorer/index.md)**
+
+    ---
+
+    ![Esploratore dell'Onda Sinusoidale](./sine-wave-explorer/sine-wave-explorer.png)
+
+    Trascina gli slider di ampiezza, frequenza e fase e guarda
+    `y = A × sin(f·x + p)` ridisegnarsi istantaneamente. (Capitolo 18)
+
+-   **[Cerchio Unitario — Gradi e Radianti](./unit-circle-radians/index.md)**
+
+    ---
+
+    ![Cerchio Unitario](./unit-circle-radians/unit-circle-radians.png)
+
+    Trascina un punto intorno al cerchio unitario e leggi l'angolo in
+    gradi, radianti e multipli di π — con barre di seno e coseno.
+    (Capitolo 18)
+
+-   **[Diagramma di Venn delle Operazioni sugli Insiemi](./set-operations-venn/index.md)**
+
+    ---
+
+    ![Diagramma di Venn delle Operazioni sugli Insiemi](./set-operations-venn/set-operations-venn.png)
+
+    Digita due insiemi, guarda i gettoni atterrare nelle regioni
+    giuste, e illumina unione, intersezione e differenza. (Capitolo 20)
+
+-   **[Ricerca delle Chiavi nel Dizionario](./dictionary-key-lookup/index.md)**
+
+    ---
+
+    ![Ricerca delle Chiavi nel Dizionario](./dictionary-key-lookup/dictionary-key-lookup.png)
+
+    Digita una chiave e il cassetto giusto scatta aperto in un solo
+    balzo — o incontri un KeyError — poi fai gareggiare il dizionario
+    contro una lista. (Capitolo 21)
+
+-   **[Pila delle Chiamate Ricorsive](./recursion-call-stack/index.md)**
+
+    ---
+
+    ![Pila delle Chiamate Ricorsive](./recursion-call-stack/recursion-call-stack.png)
+
+    Guarda i frame di factorial(4) impilarsi fino al caso base dorato,
+    poi srotolarsi mentre ogni moltiplicazione in sospeso si riempie.
+    (Capitoli 23-24)
+
+-   **[Esploratore dell'Albero Frattale](./fractal-tree-explorer/index.md)**
+
+    ---
+
+    ![Esploratore dell'Albero Frattale](./fractal-tree-explorer/fractal-tree-explorer.png)
+
+    Scolpisci un albero ricorsivo con slider di angolo, profondità e
+    restringimento — ogni livello di ricorsione indossa il proprio
+    colore. (Capitolo 24)
+
+-   **[Ispettore delle Istanze degli Oggetti](./object-instance-inspector/index.md)**
+
+    ---
+
+    ![Ispettore delle Istanze degli Oggetti](./object-instance-inspector/object-instance-inspector.png)
+
+    Un progetto tratteggiato, card di istanza solide, e una freccia
+    luminosa che mostra esattamente quale cane è `self`. (Capitolo 25)
+
+-   **[Esploratore dell'Ereditarietà](./inheritance-explorer/index.md)**
+
+    ---
+
+    ![Esploratore dell'Ereditarietà](./inheritance-explorer/inheritance-explorer.png)
+
+    Clicca una chiamata a un metodo e guarda la ricerca risalire
+    l'albero delle classi — gli override oscurano il genitore, e
+    super() risale di proposito. (Capitolo 25)
+
+-   **[Mappatore dei Tipi da JSON a Python](./json-python-mapper/index.md)**
+
+    ---
+
+    ![Mappatore dei Tipi da JSON a Python](./json-python-mapper/json-python-mapper.png)
+
+    Modifica il JSON a sinistra e guarda gli oggetti Python apparire a
+    destra — true diventa True, null diventa None. (Capitolo 27)
+
+-   **[Laboratorio di Corrispondenze Regex](./regex-match-lab/index.md)**
+
+    ---
+
+    ![Laboratorio di Corrispondenze Regex](./regex-match-lab/regex-match-lab.png)
+
+    Digita un pattern, guarda le corrispondenze illuminarsi dal vivo, e
+    leggi il pattern come gettoni in inglese semplice — il regex smette
+    di essere magia. (Capitolo 29)
+
+-   **[Comparatore di Algoritmi di Ordinamento](./sorting-comparer/index.md)**
+
+    ---
+
+    ![Comparatore di Algoritmi di Ordinamento](./sorting-comparer/sorting-comparer.png)
+
+    Percorri tre ordinamenti classici un confronto alla volta, poi fai
+    gareggiare bubble contro insertion sugli stessi dati — il vincitore
+    dipende dai dati. (Capitolo 30)
+
+-   **[Gara di Ricerca](./search-race/index.md)**
+
+    ---
+
+    ![Gara di Ricerca](./search-race/search-race.png)
+
+    La ricerca lineare avanza faticosamente scatola per scatola mentre
+    la ricerca binaria butta via metà scaffale a ogni controllo — e una
+    trappola con lo scaffale mescolato mostra perché ordinato conta.
+    (Capitolo 30)
+
+-   **[Esploratore di Attraversamento del Grafo](./graph-traversal-explorer/index.md)**
+
+    ---
+
+    ![Esploratore di Attraversamento del Grafo](./graph-traversal-explorer/graph-traversal-explorer.png)
+
+    Percorri BFS e DFS sullo stesso grafo con la coda o la pila dal
+    vivo accanto — poi guarda BFS rivelare il percorso più breve.
+    (Capitolo 30)
+
+</div>

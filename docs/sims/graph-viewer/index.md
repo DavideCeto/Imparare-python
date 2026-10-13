@@ -1,35 +1,35 @@
-# Learning Graph Viewer
+# Visualizzatore del Grafo di Apprendimento
 
-This interactive viewer allows you to explore the learning graph for this course.
+Questo visualizzatore interattivo ti permette di esplorare il grafo di apprendimento di questo corso.
 
-## Features
+## Funzionalità
 
-- **Search**: Type in the search box to find specific concepts
-- **Category Filtering**: Use checkboxes to show/hide concept categories
-- **Interactive Navigation**: Click and drag to explore, scroll to zoom
-- **Statistics**: View real-time counts of visible nodes and edges
+- **Ricerca**: Digita nella casella di ricerca per trovare concetti specifici
+- **Filtro per Categoria**: Usa le caselle di controllo per mostrare/nascondere le categorie di concetti
+- **Navigazione Interattiva**: Clicca e trascina per esplorare, scorri per ingrandire
+- **Statistiche**: Visualizza conteggi in tempo reale di nodi e archi visibili
 
-## Using the Viewer
+## Usare il Visualizzatore
 
-1. **Search for Concepts**: Start typing in the search box to find concepts. Click on a result to focus on that node.
+1. **Cerca Concetti**: Inizia a digitare nella casella di ricerca per trovare concetti. Clicca su un risultato per concentrarti su quel nodo.
 
-2. **Filter by Category**: Use the category checkboxes in the sidebar to show or hide groups of related concepts. Use "Check All" or "Uncheck All" for bulk operations.
+2. **Filtra per Categoria**: Usa le caselle di controllo delle categorie nella barra laterale per mostrare o nascondere gruppi di concetti correlati. Usa "Seleziona Tutto" o "Deseleziona Tutto" per operazioni in blocco.
 
-3. **Navigate the Graph**:
-   - Drag to pan around the graph
-   - Scroll to zoom in and out
-   - Click on a node to select it and highlight its connections
+3. **Naviga il Grafo**:
+   - Trascina per spostarti nel grafo
+   - Scorri per ingrandire e rimpicciolire
+   - Clicca su un nodo per selezionarlo ed evidenziare le sue connessioni
 
-4. **View Statistics**: The sidebar shows counts of visible nodes, edges, and foundational concepts.
+4. **Visualizza le Statistiche**: La barra laterale mostra i conteggi di nodi, archi e concetti fondamentali visibili.
 
-## Graph Structure
+## Struttura del Grafo
 
-- **Foundational Concepts** (left side): Prerequisites with no dependencies
-- **Advanced Concepts** (right side): Topics that build on multiple prerequisites
-- **Edges**: Arrows point from a concept to its prerequisites
+- **Concetti Fondamentali** (lato sinistro): Prerequisiti senza dipendenze
+- **Concetti Avanzati** (lato destro): Argomenti che si basano su più prerequisiti
+- **Archi**: Le frecce puntano da un concetto ai suoi prerequisiti
 
-## Launch the Viewer
+## Avvia il Visualizzatore
 
-[Open Learning Graph Viewer](./main.html){ .md-button .md-button--primary }
+[Apri il Visualizzatore del Grafo di Apprendimento](./main.html){ .md-button .md-button--primary }
 
 <iframe src="./main.html" width="100%" height="600px" frameborder="0"></iframe>
