@@ -1,12 +1,18 @@
-# Beginning Python — Concept List v1
+# Beginning Python — Elenco dei Concetti v1
 
-This concept list was derived from the existing manually created course content in the `docs/` directory
-and supplemented with additional concepts appropriate for a beginning Python course.
-The original textbook was created by hand by humans starting around May of 2020 when Trinket was
-the best practice for teaching introduction to Python with Turtle graphics.  This
-course was used in the CoderDojo Twin Cities coding clubs and the Code Savvy clubs for many years.
-It serves as the foundation for the learning graph used to regenerate the course in June of 2026
-using Claude Code Opus 2.6 in High effort mode.
+*(Nota: i titoli dei concetti qui sotto restano in inglese perché corrispondono
+esattamente alle etichette usate nei file dati del grafo di apprendimento —
+`learning-graph.json` e `learning-graph.csv` — e nel Visualizzatore del Grafo di
+Apprendimento interattivo. Tradurli romperebbe la corrispondenza automatica tra
+questo elenco e il grafo.)*
+
+Questo elenco di concetti è stato derivato dai contenuti del corso esistenti, creati manualmente, nella directory `docs/`
+e integrato con concetti aggiuntivi appropriati per un corso Python per principianti.
+Il manuale originale è stato creato a mano da persone a partire da maggio 2020, quando Trinket era
+la migliore pratica per insegnare l'introduzione a Python con la grafica turtle. Questo
+corso è stato usato nei coding club CoderDojo Twin Cities e nei club Code Savvy per molti anni.
+Serve come fondamento per il grafo di apprendimento usato per rigenerare il corso nel giugno 2026
+usando Claude Code Opus 2.6 in modalità High effort.
 
 ---
 
