@@ -1,349 +1,349 @@
-# Python Programming Teacher's Guide
+# Guida per gli Insegnanti alla Programmazione Python
 
-Welcome to the teacher's guide for *Learning Python: Resources for teaching Python to 5th graders and beyond, from beginning programmers to experienced developers.* This guide explains every feature of the textbook, how to use it in your classroom, and how to customize it for your students. No prior technical knowledge is assumed — every technical term is defined before it is used.
+Benvenuto alla guida per gli insegnanti di *Learning Python: Risorse per insegnare Python a studenti di quinta elementare e oltre, dai programmatori principianti agli sviluppatori esperti.* Questa guida spiega ogni caratteristica del manuale, come usarlo nella tua classe, e come personalizzarlo per i tuoi studenti. Non si presuppone nessuna conoscenza tecnica preliminare — ogni termine tecnico viene definito prima di essere usato.
 
-## About This Interactive Intelligent Textbook
+## Informazioni su Questo Manuale Intelligente Interattivo
 
-### What is an Intelligent Textbook?
+### Cos'è un Manuale Intelligente?
 
-An **intelligent textbook** is a digital textbook that goes beyond static text and images. It includes interactive simulations, self-grading quizzes, a searchable glossary, and a structured map of how concepts relate to each other. The goal is to give students a richer, more engaging learning experience than a traditional printed textbook.
+Un **manuale intelligente** è un manuale digitale che va oltre il testo e le immagini statiche. Include simulazioni interattive, quiz auto-valutanti, un glossario ricercabile, e una mappa strutturata di come i concetti si collegano tra loro. L'obiettivo è dare agli studenti un'esperienza di apprendimento più ricca e coinvolgente rispetto a un manuale stampato tradizionale.
 
-### The Five Levels of Intelligent Textbooks
+### I Cinque Livelli dei Manuali Intelligenti
 
-Not all digital textbooks are created equal. We categorize intelligent textbooks into five levels based on how interactive and adaptive they are:
+Non tutti i manuali digitali sono uguali. Classifichiamo i manuali intelligenti in cinque livelli in base a quanto siano interattivi e adattivi:
 
 <iframe src="https://dmccreary.github.io/intelligent-textbooks/sims/book-levels/main.html" height="500px" scrolling="no"
   style="overflow: hidden;"></iframe>
 
-| Level | Name | Description | Example Features |
+| Livello | Nome | Descrizione | Esempi di Funzionalità |
 |-------|------|-------------|-----------------|
-| **Level 1** | Static Digital | A PDF or basic web version of a print textbook | Text and images only, no interactivity |
-| **Level 2** | Interactive | Adds interactive elements like simulations, quizzes, and searchable glossaries | Skulpt labs, self-check quizzes, concept search |
-| **Level 3** | Adaptive | Adjusts content based on student performance | Personalized learning paths, difficulty adjustment |
-| **Level 4** | AI-Assisted | Includes an AI tutor that can answer student questions | Chatbot integration, automated feedback |
-| **Level 5** | Fully Adaptive AI | Continuously learns from student interactions and optimizes the experience | Real-time content generation, predictive analytics |
+| **Livello 1** | Digitale Statico | Un PDF o una versione web di base di un manuale stampato | Solo testo e immagini, nessuna interattività |
+| **Livello 2** | Interattivo | Aggiunge elementi interattivi come simulazioni, quiz e glossari ricercabili | Laboratori Skulpt, quiz di autoverifica, ricerca dei concetti |
+| **Livello 3** | Adattivo | Regola i contenuti in base alle prestazioni dello studente | Percorsi di apprendimento personalizzati, regolazione della difficoltà |
+| **Livello 4** | Assistito dall'IA | Include un tutor IA che può rispondere alle domande degli studenti | Integrazione chatbot, riscontro automatizzato |
+| **Livello 5** | IA Pienamente Adattiva | Impara continuamente dalle interazioni degli studenti e ottimizza l'esperienza | Generazione di contenuti in tempo reale, analisi predittiva |
 
-**This textbook is a Level 2 Intelligent Textbook.** Students can run and modify Python code directly in their browser — no installation, no account — using Skulpt-powered interactive labs embedded in every chapter.
+**Questo manuale è un Manuale Intelligente di Livello 2.** Gli studenti possono eseguire e modificare codice Python direttamente nel loro browser — senza installazione, senza account — usando laboratori interattivi basati su Skulpt incorporati in ogni capitolo.
 
-### What Makes This Textbook Different
+### Cosa Rende Diverso Questo Manuale
 
-- **Skulpt interactive labs** let students write and run Python code instantly in the browser — no software installation required
-- **Turtle graphics** makes programming visual and immediately rewarding — students see their code draw shapes, patterns, and animations in real time
-- **"See it, run it, modify it" framing** — every lesson is built around this cycle rather than passive reading
-- **Predict before you run** — students form a hypothesis before executing code, building the habit of reasoning through programs
-- **Learning graph** — a visual map showing how all 450 concepts connect and build on each other
-- **Monty the Python** — a friendly mascot character who guides students through each chapter with tips, encouragement, and key insights
-- **Completely free and open source** — licensed under Creative Commons for non-commercial use
+- **Laboratori interattivi Skulpt** permettono agli studenti di scrivere ed eseguire codice Python istantaneamente nel browser — nessuna installazione di software richiesta
+- **La grafica turtle** rende la programmazione visiva e immediatamente gratificante — gli studenti vedono il loro codice disegnare forme, pattern e animazioni in tempo reale
+- **L'inquadratura "vedi, esegui, modifica"** — ogni lezione è costruita intorno a questo ciclo invece che su una lettura passiva
+- **Prevedi prima di eseguire** — gli studenti formulano un'ipotesi prima di eseguire il codice, costruendo l'abitudine di ragionare sui programmi
+- **Il grafo di apprendimento** — una mappa visiva che mostra come tutti i 450 concetti si collegano e si costruiscono l'uno sull'altro
+- **Monty the Python** — un personaggio mascotte amichevole che guida gli studenti attraverso ogni capitolo con consigli, incoraggiamento e intuizioni chiave
+- **Completamente gratuito e open source** — concesso in licenza Creative Commons per uso non commerciale
 
-## Adding Custom Python Labs
+## Aggiungere Laboratori Python Personalizzati
 
-Teachers can add new interactive Python labs to the textbook using several different execution environments — from the zero-install Skulpt browser runner to full Docker containers.
+Gli insegnanti possono aggiungere nuovi laboratori Python interattivi al manuale usando diversi ambienti di esecuzione — dall'esecutore browser Skulpt a installazione zero fino a container Docker completi.
 
-**[Read the full guide: Adding Custom Python Labs](adding-custom-python-labs.md)**
+**[Leggi la guida completa: Aggiungere Laboratori Python Personalizzati](adding-custom-python-labs.md)**
 
-That guide covers:
+Quella guida copre:
 
-- **The Skulpt Lab skill** — for in-browser Python labs with turtle graphics (recommended for chapters 1–18)
-- **The Docker Python Lab skill** — for running real Python in a sandboxed container
-- **Nine execution environments** — a comparison table from Skulpt to Thonny to VS Code to Jupyter, with guidance on when to use each
-- **A decision guide** — a flowchart for choosing the right lab type for your teaching context
+- **La skill del Laboratorio Skulpt** — per laboratori Python nel browser con grafica turtle (raccomandata per i capitoli 1–18)
+- **La skill del Laboratorio Python Docker** — per eseguire vero Python in un container isolato
+- **Nove ambienti di esecuzione** — una tabella di confronto da Skulpt a Thonny a VS Code a Jupyter, con indicazioni su quando usare ciascuno
+- **Una guida alla decisione** — un diagramma di flusso per scegliere il tipo di laboratorio giusto per il tuo contesto didattico
 
-## Using the Chapters
+## Usare i Capitoli
 
-### Chapter Structure
+### Struttura dei Capitoli
 
-The textbook contains **38 chapters** organized in a deliberate sequence. Each chapter builds on concepts from previous chapters, so students should work through them in order:
+Il manuale contiene **38 capitoli** organizzati in una sequenza deliberata. Ogni capitolo si basa sui concetti dei capitoli precedenti, quindi gli studenti dovrebbero percorrerli in ordine:
 
-| Chapters | Topic Area |
+| Capitoli | Area Tematica |
 |----------|-----------|
-| 1–2 | Foundations (Welcome to Python, code structure, the Skulpt environment) |
-| 3–5 | Core Concepts (variables, functions, turtle graphics) |
-| 6–9 | Building Blocks (math, for loops, strings, if/else decisions) |
-| 10–12 | Control Flow and Art (while loops, function parameters, colors and turtle art) |
-| 13–18 | Data and Modules (user input, string methods, lists, modules, random numbers, math module) |
-| 19–25 | Intermediate Python (booleans, tuples, sets, dictionaries, advanced collections, error handling, recursion, OOP) |
-| 26–31 | Python in Practice (file I/O, standard library, JSON, dev tools, text processing, algorithms) |
-| 32–35 | Applied Python (data visualization, NumPy, image processing, advanced turtle and events) |
-| 36–38 | Advanced Topics (computational thinking, machine learning foundations, neural networks and MNIST) |
+| 1–2 | Fondamenta (Benvenuto in Python, struttura del codice, l'ambiente Skulpt) |
+| 3–5 | Concetti Fondamentali (variabili, funzioni, grafica turtle) |
+| 6–9 | Elementi Costitutivi (matematica, cicli for, stringhe, decisioni if/else) |
+| 10–12 | Flusso di Controllo e Arte (cicli while, parametri delle funzioni, colori e arte con la turtle) |
+| 13–18 | Dati e Moduli (input dell'utente, metodi delle stringhe, liste, moduli, numeri casuali, modulo math) |
+| 19–25 | Python Intermedio (booleani, tuple, insiemi, dizionari, collezioni avanzate, gestione degli errori, ricorsione, OOP) |
+| 26–31 | Python in Pratica (I/O su file, libreria standard, JSON, strumenti di sviluppo, elaborazione del testo, algoritmi) |
+| 32–35 | Python Applicato (visualizzazione dati, NumPy, elaborazione delle immagini, turtle avanzata ed eventi) |
+| 36–38 | Argomenti Avanzati (pensiero computazionale, fondamenti di machine learning, reti neurali e MNIST) |
 
-### What Each Chapter Contains
+### Cosa Contiene Ogni Capitolo
 
-Every chapter follows a consistent structure:
+Ogni capitolo segue una struttura coerente:
 
-1. **YAML front matter** — Metadata at the top of each chapter file (title, description, reading level, version). Students don't see this; it's used by search engines and the website builder.
-2. **Summary** — A brief overview of what the chapter covers and what students will learn.
-3. **Concepts covered** — A numbered list of the specific concepts addressed in the chapter, drawn from the learning graph.
-4. **Prerequisites** — Links to prior chapters that should be completed first.
-5. **Welcome from Monty** — A mascot admonition that introduces the chapter topic in Monty's friendly voice.
-6. **Main content** — The core instructional material, written at a Grade 5–8 reading level. Includes tables, real-world examples, and embedded Skulpt labs.
-7. **Predict before you run** — Before every Skulpt lab, Monty asks students to predict what the code will do. This is placed immediately above the lab so students form a hypothesis first.
-8. **Skulpt labs** — Interactive Python programs embedded directly in the page. Students read the code, predict its output, run it, and then modify it.
-9. **Learning checks** — Labs where a program is missing one key line (student adds it) or contains a small deliberate bug (student finds and fixes it).
-10. **Monty admonitions** — Throughout the chapter, Monty appears 5–6 times to highlight key insights, offer tips, and warn about common mistakes.
-11. **Key takeaways** — A numbered summary of the most important concepts, preceded by a celebration from Monty.
+1. **Front matter YAML** — Metadati all'inizio di ogni file di capitolo (titolo, descrizione, livello di lettura, versione). Gli studenti non lo vedono; viene usato dai motori di ricerca e dal generatore del sito web.
+2. **Riepilogo** — Una breve panoramica di cosa copre il capitolo e cosa impareranno gli studenti.
+3. **Concetti trattati** — Un elenco numerato dei concetti specifici affrontati nel capitolo, tratti dal grafo di apprendimento.
+4. **Prerequisiti** — Link ai capitoli precedenti che dovrebbero essere completati prima.
+5. **Benvenuto da Monty** — Un'ammonizione della mascotte che introduce l'argomento del capitolo con la voce amichevole di Monty.
+6. **Contenuto principale** — Il materiale didattico centrale, scritto a un livello di lettura di quinta-ottava elementare. Include tabelle, esempi del mondo reale, e laboratori Skulpt incorporati.
+7. **Prevedi prima di eseguire** — Prima di ogni laboratorio Skulpt, Monty chiede agli studenti di prevedere cosa farà il codice. Questo è posizionato immediatamente sopra il laboratorio così gli studenti formano prima un'ipotesi.
+8. **Laboratori Skulpt** — Programmi Python interattivi incorporati direttamente nella pagina. Gli studenti leggono il codice, prevedono il suo output, lo eseguono, e poi lo modificano.
+9. **Verifiche di apprendimento** — Laboratori dove a un programma manca una riga chiave (lo studente la aggiunge) o contiene un piccolo bug deliberato (lo studente lo trova e lo corregge).
+10. **Ammonizioni di Monty** — Durante tutto il capitolo, Monty appare 5-6 volte per evidenziare intuizioni chiave, offrire consigli, e avvertire su errori comuni.
+11. **Punti chiave da ricordare** — Un riepilogo numerato dei concetti più importanti, preceduto da una celebrazione di Monty.
 
-### Suggested Classroom Use
+### Uso Suggerito in Classe
 
-- **Before class**: Assign the chapter as reading homework. The Skulpt labs keep students engaged during independent reading — they can run every example without any setup.
-- **During class**: Open the chapter on a projector. Read the "predict before you run" prompt aloud, let students discuss their predictions, then run the code together.
-- **After class**: Assign the practice questions and learning checks. Use the quiz (separate page) for a quick formative assessment.
-- **Pacing**: Each chapter is designed for approximately 2–3 class periods (90–135 minutes of instruction). Chapters with more Skulpt labs or complex topics (recursion, OOP, machine learning) may take longer.
+- **Prima della lezione**: Assegna il capitolo come lettura per casa. I laboratori Skulpt mantengono gli studenti coinvolti durante la lettura indipendente — possono eseguire ogni esempio senza alcuna configurazione.
+- **Durante la lezione**: Apri il capitolo su un proiettore. Leggi ad alta voce lo spunto "prevedi prima di eseguire", lascia che gli studenti discutano le loro previsioni, poi esegui il codice insieme.
+- **Dopo la lezione**: Assegna le domande di pratica e le verifiche di apprendimento. Usa il quiz (pagina separata) per una rapida valutazione formativa.
+- **Ritmo**: Ogni capitolo è progettato per circa 2-3 periodi di lezione (90-135 minuti di istruzione). I capitoli con più laboratori Skulpt o argomenti complessi (ricorsione, OOP, machine learning) potrebbero richiedere più tempo.
 
-## Using the Skulpt Interactive Labs
+## Usare i Laboratori Interattivi Skulpt
 
-### What is a Skulpt Lab?
+### Cos'è un Laboratorio Skulpt?
 
-**Skulpt** is a Python interpreter compiled to JavaScript — meaning it runs entirely inside the student's web browser with no server, no installation, and no account required. Students can read a working Python program, run it instantly, change a number or a color, and run it again.
+**Skulpt** è un interprete Python compilato in JavaScript — il che significa che viene eseguito interamente dentro il browser web dello studente senza server, senza installazione, e senza account richiesto. Gli studenti possono leggere un programma Python funzionante, eseguirlo istantaneamente, cambiare un numero o un colore, ed eseguirlo di nuovo.
 
-This "see it, run it, modify it" cycle is the primary teaching tool in chapters 1–18.
+Questo ciclo "vedi, esegui, modifica" è lo strumento didattico principale nei capitoli 1–18.
 
-### How Skulpt Labs Work
+### Come Funzionano i Laboratori Skulpt
 
-Each Skulpt lab appears in the chapter text as an interactive area with:
+Ogni laboratorio Skulpt appare nel testo del capitolo come un'area interattiva con:
 
-- A **code editor** (a text area where students can modify the program)
-- A **Run button** that executes the code immediately
-- A **canvas** where turtle graphics renders inline next to the code
-- A **Reset button** that restores the original program
+- Un **editor di codice** (un'area di testo dove gli studenti possono modificare il programma)
+- Un **pulsante Run** che esegue il codice immediatamente
+- Un **canvas** dove la grafica turtle si rende in linea accanto al codice
+- Un **pulsante Reset** che ripristina il programma originale
 
-Students don't need to install Python, open a terminal, or create any account. They can be writing and running Python within 30 seconds of opening the page.
+Gli studenti non devono installare Python, aprire un terminale, o creare alcun account. Possono essere a scrivere ed eseguire Python entro 30 secondi dall'apertura della pagina.
 
-### The Predict Before You Run Habit
+### L'Abitudine di Prevedere Prima di Eseguire
 
-Before every Skulpt lab, Monty asks students a specific, answerable question — "How many sides will the turtle draw?" or "What color do you think the output will be?" — before they click Run.
+Prima di ogni laboratorio Skulpt, Monty fa agli studenti una domanda specifica e risolvibile — "Quanti lati disegnerà la turtle?" o "Di che colore pensi che sarà l'output?" — prima che clicchino Esegui.
 
-This habit of pausing to reason through code before executing it is one of the most valuable skills a beginning programmer can build. Encourage students to write down their prediction, not just think it.
+Questa abitudine di fermarsi a ragionare sul codice prima di eseguirlo è una delle competenze più preziose che un programmatore principiante può costruire. Incoraggia gli studenti a scrivere la loro previsione, non solo a pensarla.
 
-### Learning Checks
+### Verifiche di Apprendimento
 
-Some labs are **learning checks** where:
+Alcuni laboratori sono **verifiche di apprendimento** dove:
 
-- The program is almost complete but is missing one key line the student must add, OR
-- The program contains a small, deliberate bug the student must find and fix
+- Il programma è quasi completo ma manca di una riga chiave che lo studente deve aggiungere, OPPURE
+- Il programma contiene un piccolo bug deliberato che lo studente deve trovare e correggere
 
-Learning checks labeled with Monty's "thinking" icon ask students to add a missing line. Those labeled with Monty's "warning" icon ask students to find and fix a bug.
+Le verifiche di apprendimento etichettate con l'icona "pensante" di Monty chiedono agli studenti di aggiungere una riga mancante. Quelle etichettate con l'icona "avviso" di Monty chiedono agli studenti di trovare e correggere un bug.
 
-### Tips for Using Skulpt Labs in Class
+### Consigli per Usare i Laboratori Skulpt in Classe
 
-1. **Project them on a screen** — The canvas renders on any projector. Ask students to predict what shape will be drawn before you run it.
-2. **Let students experiment** — After seeing the expected output, encourage students to change one number or color and predict the new result.
-3. **Use the Reset button** — If a student's edits break the program, Reset restores the original in one click.
-4. **No troubleshooting needed** — Because Skulpt runs in the browser, there is no Python installation to debug, no PATH to fix, and no version mismatch between students.
+1. **Proiettali su uno schermo** — Il canvas si rende su qualsiasi proiettore. Chiedi agli studenti di prevedere quale forma verrà disegnata prima di eseguirlo.
+2. **Lascia che gli studenti sperimentino** — Dopo aver visto l'output atteso, incoraggia gli studenti a cambiare un numero o un colore e a prevedere il nuovo risultato.
+3. **Usa il pulsante Reset** — Se le modifiche di uno studente rompono il programma, Reset ripristina l'originale con un click.
+4. **Nessuna risoluzione di problemi necessaria** — Poiché Skulpt viene eseguito nel browser, non c'è alcuna installazione di Python da debuggare, nessun PATH da correggere, e nessuna incompatibilità di versione tra gli studenti.
 
-### Adding New Skulpt Labs
+### Aggiungere Nuovi Laboratori Skulpt
 
-Any teacher can add new Skulpt labs to the textbook. See the [Adding Custom Python Labs](adding-custom-python-labs.md) guide for instructions, including the exact HTML block format and available execution environments.
+Qualsiasi insegnante può aggiungere nuovi laboratori Skulpt al manuale. Vedi la guida [Aggiungere Laboratori Python Personalizzati](adding-custom-python-labs.md) per le istruzioni, incluso il formato esatto del blocco HTML e gli ambienti di esecuzione disponibili.
 
-## Using the Glossary
+## Usare il Glossario
 
-### What is the Glossary?
+### Cos'è il Glossario?
 
-The **glossary** is an alphabetical list of all key terms used in the textbook, each with a precise, concise definition. It serves as a quick-reference dictionary for students encountering unfamiliar vocabulary.
+Il **glossario** è un elenco alfabetico di tutti i termini chiave usati nel manuale, ciascuno con una definizione precisa e concisa. Serve come dizionario di riferimento rapido per gli studenti che incontrano un vocabolario non familiare.
 
-### How to Access the Glossary
+### Come Accedere al Glossario
 
-- Click **"Glossary"** in the left navigation sidebar from any page
-- Use the browser's built-in search (Ctrl+F on Windows/Linux, Cmd+F on Mac) to find a specific term on the glossary page
-- Use the site-wide **search bar** at the top of any page to search for a term across the entire textbook
+- Clicca **"Glossario"** nella barra di navigazione laterale sinistra da qualsiasi pagina
+- Usa la ricerca integrata del browser (Ctrl+F su Windows/Linux, Cmd+F su Mac) per trovare un termine specifico nella pagina del glossario
+- Usa la **barra di ricerca** a livello di sito in cima a qualsiasi pagina per cercare un termine in tutto il manuale
 
-### Tips for Using the Glossary in Class
+### Consigli per Usare il Glossario in Classe
 
-- **Vocabulary preview** — Before starting a new chapter, have students look up the key terms in the glossary to build familiarity.
-- **Definition matching** — Create a warm-up activity where students match glossary definitions to terms from the current chapter.
-- **Student-generated definitions** — After reading a chapter, have students write their own definitions, then compare with the glossary.
-- **Glossary quizzes** — Use glossary terms for quick formative assessments (flash cards, quiz games, etc.).
+- **Anteprima del vocabolario** — Prima di iniziare un nuovo capitolo, fai cercare agli studenti i termini chiave nel glossario per costruire familiarità.
+- **Abbinamento delle definizioni** — Crea un'attività di riscaldamento dove gli studenti abbinano le definizioni del glossario ai termini del capitolo corrente.
+- **Definizioni generate dagli studenti** — Dopo aver letto un capitolo, fai scrivere agli studenti le proprie definizioni, poi confronta con il glossario.
+- **Quiz sul glossario** — Usa i termini del glossario per rapide valutazioni formative (flash card, giochi di quiz, ecc.).
 
-## Using the FAQ
+## Usare le FAQ
 
-### What is the FAQ?
+### Cosa Sono le FAQ?
 
-The **FAQ** (Frequently Asked Questions) is a curated list of common questions students ask about Python programming, organized by topic. Each question includes a clear, concise answer written at the same reading level as the chapters.
+Le **FAQ** (Domande Frequenti) sono un elenco curato di domande comuni che gli studenti fanno sulla programmazione Python, organizzate per argomento. Ogni domanda include una risposta chiara e concisa scritta allo stesso livello di lettura dei capitoli.
 
-### How the FAQ is Organized
+### Come Sono Organizzate le FAQ
 
-The FAQ covers questions across all 38 chapters. Questions are grouped by topic area to make browsing easy.
+Le FAQ coprono domande attraverso tutti i 38 capitoli. Le domande sono raggruppate per area tematica per rendere facile la navigazione.
 
-### Tips for Using the FAQ in Class
+### Consigli per Usare le FAQ in Classe
 
-- **Discussion starters** — Pick 2–3 FAQ questions at the start of class and have students discuss before revealing the answer.
-- **Homework support** — Point students to the FAQ when they have questions outside of class hours.
-- **Extension reading** — The FAQ often covers angles not addressed in the main chapter text, making it good supplementary material.
-- **Test review** — Students can use the FAQ as a study guide before assessments.
+- **Spunti di discussione** — Scegli 2-3 domande dalle FAQ all'inizio della lezione e fai discutere gli studenti prima di rivelare la risposta.
+- **Supporto per i compiti** — Indirizza gli studenti alle FAQ quando hanno domande fuori dall'orario di lezione.
+- **Lettura di approfondimento** — Le FAQ spesso coprono angolazioni non affrontate nel testo principale del capitolo, rendendole un buon materiale supplementare.
+- **Ripasso per i test** — Gli studenti possono usare le FAQ come guida di studio prima delle valutazioni.
 
-## Using the Quizzes
+## Usare i Quiz
 
-### What Are the Quizzes?
+### Cosa Sono i Quiz?
 
-Each chapter has an accompanying **quiz page** with multiple-choice questions designed for self-assessment. Quizzes test understanding of the concepts covered in that chapter and are aligned to specific items from the learning graph.
+Ogni capitolo ha una **pagina quiz** associata con domande a scelta multipla progettate per l'autovalutazione. I quiz verificano la comprensione dei concetti trattati in quel capitolo e sono allineati a elementi specifici del grafo di apprendimento.
 
-### How Quizzes Work
+### Come Funzionano i Quiz
 
-- Quizzes are accessed by clicking the **"Quiz"** link under each chapter in the left navigation
-- Each quiz contains multiple-choice questions at varying Bloom's Taxonomy levels
-- Questions are presented as expandable sections — students can click to reveal the answer and explanation after attempting the question
-- Quizzes are **not graded automatically** — they are designed as formative self-check tools, not summative assessments
+- Si accede ai quiz cliccando il link **"Quiz"** sotto ogni capitolo nella navigazione a sinistra
+- Ogni quiz contiene domande a scelta multipla a vari livelli della Tassonomia di Bloom
+- Le domande sono presentate come sezioni espandibili — gli studenti possono cliccare per rivelare la risposta e la spiegazione dopo aver tentato la domanda
+- I quiz **non sono valutati automaticamente** — sono progettati come strumenti formativi di autoverifica, non come valutazioni sommative
 
-### Tips for Using Quizzes in Class
+### Consigli per Usare i Quiz in Classe
 
-- **Exit tickets** — Have students complete the quiz at the end of a class period as a quick check for understanding.
-- **Pre-reading check** — Assign the quiz before the chapter to see what students already know (diagnostic assessment).
-- **Post-reading review** — Use the quiz after reading to identify concepts that need re-teaching.
-- **Collaborative quiz** — Have students work in pairs to discuss each question before revealing the answer.
-- **Custom assessments** — Use the quiz questions as a bank to create your own tests. The questions are openly licensed (see "Understanding the License" below).
+- **Biglietti d'uscita** — Fai completare il quiz agli studenti alla fine di un periodo di lezione come rapido controllo della comprensione.
+- **Controllo pre-lettura** — Assegna il quiz prima del capitolo per vedere cosa già sanno gli studenti (valutazione diagnostica).
+- **Ripasso post-lettura** — Usa il quiz dopo la lettura per identificare i concetti che necessitano di essere reinsegnati.
+- **Quiz collaborativo** — Fai lavorare gli studenti in coppia per discutere ogni domanda prima di rivelare la risposta.
+- **Valutazioni personalizzate** — Usa le domande del quiz come banca per creare i tuoi test. Le domande sono concesse in licenza aperta (vedi "Comprendere la Licenza" qui sotto).
 
-### Bloom's Taxonomy Levels
+### Livelli della Tassonomia di Bloom
 
-Each quiz question is tagged with a **Bloom's Taxonomy** level. Bloom's Taxonomy is a framework that classifies thinking skills from simple to complex:
+Ogni domanda del quiz è etichettata con un livello della **Tassonomia di Bloom**. La Tassonomia di Bloom è un quadro che classifica le abilità di pensiero dal semplice al complesso:
 
-| Level | Name | What It Means | Example Verb |
+| Livello | Nome | Cosa Significa | Verbo di Esempio |
 |-------|------|--------------|-------------|
-| L1 | Remember | Recall facts and definitions | Define, list, name |
-| L2 | Understand | Explain concepts in your own words | Explain, describe, compare |
-| L3 | Apply | Use concepts to solve problems | Write, demonstrate, trace |
-| L4 | Analyze | Break down and examine relationships | Differentiate, organize, predict |
-| L5 | Evaluate | Make judgments based on criteria | Assess, argue, justify |
-| L6 | Create | Produce original work or solutions | Design, build, write a program |
+| L1 | Ricordare | Richiamare fatti e definizioni | Definire, elencare, nominare |
+| L2 | Comprendere | Spiegare concetti con parole proprie | Spiegare, descrivere, confrontare |
+| L3 | Applicare | Usare concetti per risolvere problemi | Scrivere, dimostrare, tracciare |
+| L4 | Analizzare | Scomporre ed esaminare le relazioni | Differenziare, organizzare, prevedere |
+| L5 | Valutare | Esprimere giudizi basati su criteri | Valutare, argomentare, giustificare |
+| L6 | Creare | Produrre lavoro o soluzioni originali | Progettare, costruire, scrivere un programma |
 
-A well-balanced assessment includes questions across multiple levels. The quizzes in this textbook primarily target levels L1–L4, with the learning checks and turtle graphics projects targeting L5–L6.
+Una valutazione ben bilanciata include domande attraverso più livelli. I quiz in questo manuale puntano principalmente ai livelli L1–L4, con le verifiche di apprendimento e i progetti di grafica turtle che puntano a L5–L6.
 
-## Using the References
+## Usare i Riferimenti
 
-### What Are the References?
+### Cosa Sono i Riferimenti?
 
-Each chapter has an accompanying **references page** with a curated list of approximately 10 high-quality sources that students can use for further reading. References prioritize Wikipedia articles for accessibility and reliability, supplemented by authoritative Python documentation and books.
+Ogni capitolo ha una **pagina dei riferimenti** associata con un elenco curato di circa 10 fonti di alta qualità che gli studenti possono usare per approfondire. I riferimenti danno priorità agli articoli di Wikipedia per accessibilità e affidabilità, integrati da documentazione Python autorevole e libri.
 
-### How References Are Organized
+### Come Sono Organizzati i Riferimenti
 
-Each reference includes:
+Ogni riferimento include:
 
-- **Title** — The name of the source
-- **URL** — A clickable link to the source
-- **Relevance** — A brief description of why this source is useful and how it connects to the chapter content
+- **Titolo** — Il nome della fonte
+- **URL** — Un link cliccabile alla fonte
+- **Rilevanza** — Una breve descrizione del perché questa fonte è utile e come si collega al contenuto del capitolo
 
-### A Note About Link Rot
+### Una Nota sui Link Non Più Funzionanti
 
-**Link rot** is when a web link (URL) stops working because the page has been moved, renamed, or deleted. If you or your students encounter a broken link:
+Il **decadimento dei link** si verifica quando un link web (URL) smette di funzionare perché la pagina è stata spostata, rinominata, o eliminata. Se tu o i tuoi studenti incontrate un link rotto:
 
-1. Try searching for the article title on the source website
-2. Use the [Wayback Machine](https://web.archive.org/) to find archived versions of the page
-3. Report the broken link using GitHub Issues (see "Feedback" below)
+1. Prova a cercare il titolo dell'articolo sul sito web della fonte
+2. Usa la [Wayback Machine](https://web.archive.org/) per trovare versioni archiviate della pagina
+3. Segnala il link rotto usando GitHub Issues (vedi "Riscontro" qui sotto)
 
-## Feedback
+## Riscontro
 
-### Reporting Issues and Suggestions
+### Segnalare Problemi e Suggerimenti
 
-This textbook is an open-source project hosted on **GitHub**, a website where software and content projects are developed collaboratively. You don't need to understand programming to report a problem or suggest an improvement.
+Questo manuale è un progetto open source ospitato su **GitHub**, un sito web dove i progetti di software e contenuti vengono sviluppati collaborativamente. Non è necessario capire la programmazione per segnalare un problema o suggerire un miglioramento.
 
-### What is a GitHub Issue?
+### Cos'è una GitHub Issue?
 
-A **GitHub Issue** is like a support ticket — it's a way to report a bug, suggest an improvement, or ask a question. Each issue gets a unique number and can be discussed by the project team and community.
+Una **GitHub Issue** è come un ticket di supporto — è un modo per segnalare un bug, suggerire un miglioramento, o fare una domanda. Ogni issue riceve un numero unico e può essere discussa dal team del progetto e dalla community.
 
-### How to Submit Feedback
+### Come Inviare un Riscontro
 
-1. Go to the textbook's GitHub repository: [dmccreary/learning-python](https://github.com/dmccreary/learning-python)
-2. Click the **"Issues"** tab at the top of the page
-3. Click the green **"New issue"** button
-4. Give your issue a clear title (e.g., "Broken link in Chapter 5 references" or "Suggestion: Add lab for topic X")
-5. In the description, provide as much detail as possible:
-    - Which page or chapter has the problem
-    - What you expected to see vs. what you actually see
-    - Your browser and device (if relevant)
-6. Click **"Submit new issue"**
+1. Vai al repository GitHub del manuale: [dmccreary/learning-python](https://github.com/dmccreary/learning-python)
+2. Clicca la scheda **"Issues"** in cima alla pagina
+3. Clicca il pulsante verde **"New issue"**
+4. Dai alla tua issue un titolo chiaro (es. "Link rotto nei riferimenti del Capitolo 5" o "Suggerimento: Aggiungere un laboratorio per l'argomento X")
+5. Nella descrizione, fornisci quanti più dettagli possibile:
+    - Quale pagina o capitolo ha il problema
+    - Cosa ti aspettavi di vedere rispetto a cosa vedi effettivamente
+    - Il tuo browser e dispositivo (se rilevante)
+6. Clicca **"Submit new issue"**
 
-You will need a free GitHub account to submit issues. If you prefer not to create an account, you can email feedback to the author using the contact page.
+Avrai bisogno di un account GitHub gratuito per inviare issue. Se preferisci non creare un account, puoi inviare un riscontro via email all'autore usando la pagina dei contatti.
 
-### Types of Feedback Welcome
+### Tipi di Riscontro Benvenuti
 
-- **Typos and errors** — factual mistakes, spelling errors, broken formatting
-- **Broken links** — URLs that no longer work
-- **Skulpt lab bugs** — programs that don't run or produce unexpected output
-- **Content suggestions** — topics that should be covered, examples that could be improved
-- **Accessibility issues** — content that is difficult to read or navigate for students with disabilities
+- **Refusi ed errori** — errori fattuali, errori di ortografia, formattazione rotta
+- **Link rotti** — URL che non funzionano più
+- **Bug nei laboratori Skulpt** — programmi che non si eseguono o producono output inaspettato
+- **Suggerimenti di contenuto** — argomenti che dovrebbero essere trattati, esempi che potrebbero essere migliorati
+- **Problemi di accessibilità** — contenuto difficile da leggere o navigare per studenti con disabilità
 
-## Understanding the License
+## Comprendere la Licenza
 
-### What is a Creative Commons License?
+### Cos'è una Licenza Creative Commons?
 
-A **license** is a legal document that explains what others are allowed to do with a piece of work. A **Creative Commons (CC) license** is a standardized, easy-to-understand license used for educational and creative content. It tells you exactly what permissions you have without needing a lawyer.
+Una **licenza** è un documento legale che spiega cosa è permesso fare agli altri con un'opera. Una **licenza Creative Commons (CC)** è una licenza standardizzata e facile da comprendere usata per contenuti educativi e creativi. Ti dice esattamente quali permessi hai senza bisogno di un avvocato.
 
-### This Textbook's License
+### La Licenza di Questo Manuale
 
-This textbook uses the **CC BY-NC-SA 4.0** license. Here's what each part means:
+Questo manuale usa la licenza **CC BY-NC-SA 4.0**. Ecco cosa significa ogni parte:
 
-| Code | Full Name | What It Means |
+| Codice | Nome Completo | Cosa Significa |
 |------|-----------|---------------|
-| **CC** | Creative Commons | A standard open license |
-| **BY** | Attribution | You must give credit to the original author |
-| **NC** | Non-Commercial | You cannot use the material to make money |
-| **SA** | Share-Alike | If you modify the material, you must share it under the same license |
-| **4.0** | Version 4.0 | The version of the license (the current standard) |
+| **CC** | Creative Commons | Una licenza aperta standard |
+| **BY** | Attribuzione | Devi dare credito all'autore originale |
+| **NC** | Non-Commerciale | Non puoi usare il materiale per fare soldi |
+| **SA** | Condividi Allo Stesso Modo | Se modifichi il materiale, devi condividerlo con la stessa licenza |
+| **4.0** | Versione 4.0 | La versione della licenza (lo standard attuale) |
 
-### What You CAN Do
+### Cosa PUOI Fare
 
-- **Copy** the entire textbook or individual chapters for your students
-- **Share** the textbook link with other teachers, students, or parents
-- **Print** chapters for classroom use
-- **Modify** the content — add your own examples, remove sections, change the order
-- **Translate** the content into other languages
-- **Create derivative works** — build your own version of the textbook based on this one
-- **Add your own Skulpt labs** — and submit them back via a pull request
+- **Copiare** l'intero manuale o singoli capitoli per i tuoi studenti
+- **Condividere** il link del manuale con altri insegnanti, studenti, o genitori
+- **Stampare** i capitoli per uso in classe
+- **Modificare** il contenuto — aggiungere i tuoi esempi, rimuovere sezioni, cambiare l'ordine
+- **Tradurre** il contenuto in altre lingue
+- **Creare opere derivate** — costruire la tua versione del manuale basata su questo
+- **Aggiungere i tuoi laboratori Skulpt** — e inviarli indietro tramite una pull request
 
-### What You CANNOT Do
+### Cosa NON PUOI Fare
 
-- **Sell** the textbook or charge students for access
-- **Remove attribution** — you must credit the original author (Dan McCreary)
-- **Use a different license** — if you modify and share, it must remain CC BY-NC-SA 4.0
-- **Claim it as your own work** — the attribution requirement means you must acknowledge the original source
+- **Vendere** il manuale o far pagare gli studenti per l'accesso
+- **Rimuovere l'attribuzione** — devi accreditare l'autore originale (Dan McCreary)
+- **Usare una licenza diversa** — se modifichi e condividi, deve rimanere CC BY-NC-SA 4.0
+- **Rivendicarlo come opera tua** — il requisito di attribuzione significa che devi riconoscere la fonte originale
 
-For the full legal text, see the [Creative Commons License](../license.md) page.
+Per il testo legale completo, vedi la pagina [Licenza Creative Commons](../license.md).
 
-## Customizing Your Own Textbook
+## Personalizzare il Tuo Manuale
 
-One of the most powerful features of this textbook is that you can create your own customized version. This section explains how, step by step.
+Una delle caratteristiche più potenti di questo manuale è che puoi creare la tua versione personalizzata. Questa sezione spiega come, passo dopo passo.
 
-### Key Technical Terms
+### Termini Tecnici Chiave
 
-Before we begin, here are some terms you'll need to understand:
+Prima di iniziare, ecco alcuni termini che dovrai capire:
 
-- **Repository (repo)** — A folder on GitHub that contains all the files for a project. Think of it as the project's home directory.
-- **Git** — A version control tool that tracks changes to files. It lets you see what changed, when, and by whom.
-- **Clone** — Making a complete copy of a repository on your own computer.
-- **Fork** — Making a complete copy of a repository on your own GitHub account (stays on GitHub, not your computer).
-- **MkDocs** — The software that converts the textbook's markdown files into a website. You don't need to learn MkDocs deeply — just enough to make basic changes.
-- **Markdown** — A simple text formatting language. If you can write an email, you can write Markdown. `**bold**` makes **bold**, `# Heading` makes a heading, and `-` makes a bullet point.
-- **mkdocs.yml** — The main configuration file for the textbook website. It controls the site title, navigation structure, colors, and which features are enabled.
+- **Repository (repo)** — Una cartella su GitHub che contiene tutti i file di un progetto. Pensala come la directory principale del progetto.
+- **Git** — Uno strumento di controllo versione che traccia le modifiche ai file. Ti permette di vedere cosa è cambiato, quando, e da chi.
+- **Clone** — Fare una copia completa di un repository sul tuo computer.
+- **Fork** — Fare una copia completa di un repository nel tuo account GitHub (resta su GitHub, non sul tuo computer).
+- **MkDocs** — Il software che converte i file markdown del manuale in un sito web. Non devi imparare MkDocs in profondità — solo abbastanza per fare modifiche di base.
+- **Markdown** — Un semplice linguaggio di formattazione del testo. Se sai scrivere un'email, sai scrivere Markdown. `**grassetto**` crea il **grassetto**, `# Titolo` crea un titolo, e `-` crea un punto elenco.
+- **mkdocs.yml** — Il file di configurazione principale per il sito web del manuale. Controlla il titolo del sito, la struttura di navigazione, i colori, e quali funzionalità sono abilitate.
 
-### Step 1: Create a GitHub Account
+### Passo 1: Crea un Account GitHub
 
-If you don't already have one, go to [github.com](https://github.com) and create a free account.
+Se non ne hai già uno, vai su [github.com](https://github.com) e crea un account gratuito.
 
-### Step 2: Fork or Clone the Repository
+### Passo 2: Fai il Fork o Clona il Repository
 
-**Option A: Fork (easier, stays on GitHub)**
+**Opzione A: Fork (più facile, resta su GitHub)**
 
-1. Go to [dmccreary/learning-python](https://github.com/dmccreary/learning-python)
-2. Click the **"Fork"** button in the upper-right corner
-3. This creates a copy in your own GitHub account that you can edit
+1. Vai su [dmccreary/learning-python](https://github.com/dmccreary/learning-python)
+2. Clicca il pulsante **"Fork"** nell'angolo in alto a destra
+3. Questo crea una copia nel tuo account GitHub che puoi modificare
 
-**Option B: Clone (more control, works on your computer)**
+**Opzione B: Clone (più controllo, funziona sul tuo computer)**
 
-1. Install Git on your computer ([git-scm.com](https://git-scm.com/))
-2. Open a terminal (Command Prompt on Windows, Terminal on Mac)
-3. Run this command:
+1. Installa Git sul tuo computer ([git-scm.com](https://git-scm.com/))
+2. Apri un terminale (Prompt dei comandi su Windows, Terminale su Mac)
+3. Esegui questo comando:
 
 ```bash
 git clone https://github.com/dmccreary/learning-python.git
 ```
 
-This downloads the entire textbook to your computer.
+Questo scarica l'intero manuale sul tuo computer.
 
-### Step 3: Make Changes
+### Passo 3: Fai le Modifiche
 
-All content files are in the `docs/` folder. They are written in **Markdown** (`.md` files) — plain text files with simple formatting. You can edit them with any text editor.
+Tutti i file di contenuto sono nella cartella `docs/`. Sono scritti in **Markdown** (file `.md`) — file di testo semplice con formattazione semplice. Puoi modificarli con qualsiasi editor di testo.
 
-#### Changing the Title and Description
+#### Cambiare il Titolo e la Descrizione
 
-Open `mkdocs.yml` and edit these lines:
+Apri `mkdocs.yml` e modifica queste righe:
 
 ```yaml
 site_name: "Your Custom Textbook Title"
@@ -351,9 +351,9 @@ site_description: "Your description here"
 site_author: "Your Name"
 ```
 
-#### Changing the Colors
+#### Cambiare i Colori
 
-In `mkdocs.yml`, find the `palette` section:
+In `mkdocs.yml`, trova la sezione `palette`:
 
 ```yaml
 theme:
@@ -362,58 +362,58 @@ theme:
     accent: '#41BAC1'     # Change the accent color
 ```
 
-MkDocs Material supports named colors (blue, red, green, purple, teal, etc.) or any CSS hex color code.
+MkDocs Material supporta colori con nome (blue, red, green, purple, teal, ecc.) o qualsiasi codice colore esadecimale CSS.
 
-#### Adding Your Own Labs
+#### Aggiungere i Tuoi Laboratori
 
-See the [Adding Custom Python Labs](adding-custom-python-labs.md) guide for the full workflow, including Skulpt labs (zero-install, in-browser) and Docker labs (for more advanced topics).
+Vedi la guida [Aggiungere Laboratori Python Personalizzati](adding-custom-python-labs.md) per il flusso di lavoro completo, inclusi i laboratori Skulpt (installazione zero, nel browser) e i laboratori Docker (per argomenti più avanzati).
 
-### Step 4: Preview Your Changes Locally
+### Passo 4: Visualizza in Anteprima le Tue Modifiche Localmente
 
-1. Install Python (version 3.8 or newer) from [python.org](https://python.org)
-2. Install MkDocs and the Material theme:
+1. Installa Python (versione 3.8 o più recente) da [python.org](https://python.org)
+2. Installa MkDocs e il tema Material:
 
 ```bash
 pip install mkdocs mkdocs-material
 ```
 
-3. Navigate to the project folder and start the preview server:
+3. Naviga nella cartella del progetto e avvia il server di anteprima:
 
 ```bash
 cd learning-python
 mkdocs serve
 ```
 
-4. Open your browser to `http://127.0.0.1:8000/learning-python/` to see your customized version
+4. Apri il tuo browser su `http://127.0.0.1:8000/learning-python/` per vedere la tua versione personalizzata
 
-The preview server watches for file changes. When you edit and save a Markdown file, the page automatically refreshes in your browser.
+Il server di anteprima tiene sotto controllo le modifiche ai file. Quando modifichi e salvi un file Markdown, la pagina si aggiorna automaticamente nel tuo browser.
 
-### Step 5: Publish Your Version
+### Passo 5: Pubblica la Tua Versione
 
-To publish your customized textbook as a free website using GitHub Pages:
+Per pubblicare il tuo manuale personalizzato come sito web gratuito usando GitHub Pages:
 
 ```bash
 mkdocs gh-deploy
 ```
 
-This command builds the website and publishes it to `https://YOUR-USERNAME.github.io/learning-python/`. The process takes about 1–2 minutes.
+Questo comando costruisce il sito web e lo pubblica su `https://YOUR-USERNAME.github.io/learning-python/`. Il processo richiede circa 1-2 minuti.
 
-## Customizing Your Analytics
+## Personalizzare le Tue Analitiche
 
-### What is Web Analytics?
+### Cos'è l'Analisi Web?
 
-**Web analytics** is the process of measuring how visitors use a website — which pages they visit, how long they stay, and where they come from. For an educational textbook, analytics can help you understand which chapters students read most and which Skulpt labs they interact with.
+L'**analisi web** è il processo di misurare come i visitatori usano un sito web — quali pagine visitano, quanto tempo rimangono, e da dove provengono. Per un manuale educativo, l'analisi può aiutarti a capire quali capitoli leggono di più gli studenti e con quali laboratori Skulpt interagiscono.
 
 ### Google Analytics
 
-This textbook includes **Google Analytics** — a free service from Google that tracks website visits. The author's analytics property is already configured, but if you create your own fork, you'll want to set up your own.
+Questo manuale include **Google Analytics** — un servizio gratuito di Google che traccia le visite al sito web. La proprietà di analisi dell'autore è già configurata, ma se crei il tuo fork, vorrai configurarne una tua.
 
-#### Setting Up Your Own Google Analytics
+#### Configurare il Tuo Google Analytics
 
-1. Go to [analytics.google.com](https://analytics.google.com/) and sign in with a Google account
-2. Create a new **property** (Google's term for a tracked website)
-3. Google will give you a **Measurement ID** — a code that looks like `G-XXXXXXXXXX`
-4. In your `mkdocs.yml`, update this section:
+1. Vai su [analytics.google.com](https://analytics.google.com/) e accedi con un account Google
+2. Crea una nuova **proprietà** (il termine di Google per un sito web tracciato)
+3. Google ti darà un **ID di Misurazione** — un codice che assomiglia a `G-XXXXXXXXXX`
+4. Nel tuo `mkdocs.yml`, aggiorna questa sezione:
 
 ```yaml
 extra:
@@ -422,87 +422,87 @@ extra:
     property: G-YOUR-MEASUREMENT-ID
 ```
 
-5. Rebuild and deploy your site. Analytics data will start appearing within 24–48 hours.
+5. Ricostruisci e pubblica il tuo sito. I dati di analisi inizieranno ad apparire entro 24-48 ore.
 
-#### What You Can Learn from Analytics
+#### Cosa Puoi Imparare dall'Analisi
 
-- **Which chapters are most/least visited** — helps you identify where students might be skipping content
-- **Average time on page** — longer times may indicate engagement or difficulty
-- **Device breakdown** — what percentage of students use phones vs. computers
-- **Geographic distribution** — where your students are accessing from
+- **Quali capitoli sono più/meno visitati** — ti aiuta a identificare dove gli studenti potrebbero saltare i contenuti
+- **Tempo medio sulla pagina** — tempi più lunghi possono indicare coinvolgimento o difficoltà
+- **Ripartizione per dispositivo** — quale percentuale di studenti usa telefoni rispetto a computer
+- **Distribuzione geografica** — da dove accedono i tuoi studenti
 
-### xAPI Monitoring (Advanced)
+### Monitoraggio xAPI (Avanzato)
 
-**xAPI** (Experience API, also called "Tin Can API") is an advanced standard for tracking detailed learning activities — not just page views, but specific interactions like "student ran the turtle graphics lab in Chapter 5" or "student answered quiz question 3 correctly."
+**xAPI** (Experience API, chiamata anche "Tin Can API") è uno standard avanzato per tracciare attività di apprendimento dettagliate — non solo visualizzazioni di pagina, ma interazioni specifiche come "lo studente ha eseguito il laboratorio di grafica turtle nel Capitolo 5" o "lo studente ha risposto correttamente alla domanda 3 del quiz".
 
-#### What is an LRS?
+#### Cos'è un LRS?
 
-An **LRS** (Learning Record Store) is a database that stores xAPI learning records. Think of it as a specialized analytics system designed specifically for education. If you use an LRS, you can track granular student learning data, such as which Skulpt labs a student ran, how many times they clicked Run before getting the expected output, and which learning checks they completed successfully.
+Un **LRS** (Learning Record Store) è un database che memorizza i record di apprendimento xAPI. Pensalo come un sistema di analisi specializzato progettato specificamente per l'educazione. Se usi un LRS, puoi tracciare dati di apprendimento granulari degli studenti, come quali laboratori Skulpt uno studente ha eseguito, quante volte ha cliccato Esegui prima di ottenere l'output atteso, e quali verifiche di apprendimento ha completato con successo.
 
-#### Important: Regulatory Considerations
+#### Importante: Considerazioni Normative
 
-Before collecting student-specific data, be aware of these regulations:
+Prima di raccogliere dati specifici degli studenti, sii consapevole di queste normative:
 
-- **FERPA** (Family Educational Rights and Privacy Act) — U.S. federal law that protects student education records. If you collect data that can identify individual students, you must comply with FERPA.
-- **COPPA** (Children's Online Privacy Protection Act) — U.S. federal law that applies to children under 13. Since this textbook targets ages 10–14, COPPA may apply to your students.
-- **State laws** — Many U.S. states have additional student privacy laws.
-- **GDPR** (General Data Protection Regulation) — European Union law that applies if any of your students are in the EU.
+- **FERPA** (Family Educational Rights and Privacy Act) — legge federale USA che protegge i registri scolastici degli studenti. Se raccogli dati che possono identificare singoli studenti, devi rispettare il FERPA.
+- **COPPA** (Children's Online Privacy Protection Act) — legge federale USA che si applica ai bambini sotto i 13 anni. Poiché questo manuale si rivolge a studenti di 10-14 anni, il COPPA potrebbe applicarsi ai tuoi studenti.
+- **Leggi statali** — Molti stati USA hanno leggi aggiuntive sulla privacy degli studenti.
+- **GDPR** (General Data Protection Regulation) — legge dell'Unione Europea che si applica se qualcuno dei tuoi studenti si trova nell'UE.
 
-**Recommendation**: The Google Analytics setup described above is anonymous by default — it tracks aggregate page views, not individual students. This is the safest approach for K–12 use. If you want individual student tracking via xAPI, consult your school district's data privacy officer before proceeding.
+**Raccomandazione**: La configurazione di Google Analytics descritta sopra è anonima per impostazione predefinita — traccia visualizzazioni aggregate di pagina, non singoli studenti. Questo è l'approccio più sicuro per l'uso K-12. Se vuoi il tracciamento individuale degli studenti tramite xAPI, consulta il responsabile della privacy dei dati del tuo distretto scolastico prima di procedere.
 
-### Building a Student Progress Dashboard with AI
+### Costruire una Dashboard dei Progressi degli Studenti con l'IA
 
-As AI tools become more accessible, it is becoming possible to build custom dashboards that visualize student progress through the textbook. For example:
+Man mano che gli strumenti IA diventano più accessibili, sta diventando possibile costruire dashboard personalizzate che visualizzano i progressi degli studenti attraverso il manuale. Per esempio:
 
-- Which chapters each student has completed
-- Quiz scores over time
-- Skulpt lab engagement — how many labs a student ran and modified
-- Concepts that need re-teaching based on quiz performance
+- Quali capitoli ogni studente ha completato
+- I punteggi dei quiz nel tempo
+- Il coinvolgimento nei laboratori Skulpt — quanti laboratori uno studente ha eseguito e modificato
+- Concetti che necessitano di essere reinsegnati in base alle prestazioni nei quiz
 
-Building such a dashboard requires programming knowledge (Python, JavaScript) and careful attention to student data privacy. This is an advanced topic beyond the scope of this guide, but the open-source nature of this textbook means all the data structures are available for developers to build upon.
+Costruire una dashboard del genere richiede conoscenze di programmazione (Python, JavaScript) e attenzione scrupolosa alla privacy dei dati degli studenti. Questo è un argomento avanzato che va oltre lo scopo di questa guida, ma la natura open source di questo manuale significa che tutte le strutture dati sono disponibili perché gli sviluppatori ci costruiscano sopra.
 
-## The Learning Graph
+## Il Grafo di Apprendimento
 
-### What is a Learning Graph?
+### Cos'è un Grafo di Apprendimento?
 
-A **learning graph** is a visual map showing how concepts in the textbook depend on each other. It is structured as a **DAG** (Directed Acyclic Graph) — a diagram where arrows show which concepts must be understood before others.
+Un **grafo di apprendimento** è una mappa visiva che mostra come i concetti nel manuale dipendono l'uno dall'altro. È strutturato come un **DAG** (Directed Acyclic Graph, grafo aciclico diretto) — un diagramma dove le frecce mostrano quali concetti devono essere compresi prima di altri.
 
-For example, understanding recursion requires understanding functions and return values first. The learning graph makes these dependency chains visible. This textbook's learning graph covers all **450 concepts** across the 38 chapters, with zero dependency violations.
+Per esempio, comprendere la ricorsione richiede prima di comprendere le funzioni e i valori di ritorno. Il grafo di apprendimento rende visibili queste catene di dipendenza. Il grafo di apprendimento di questo manuale copre tutti i **450 concetti** attraverso i 38 capitoli, con zero violazioni di dipendenza.
 
-### How Teachers Can Use the Learning Graph
+### Come gli Insegnanti Possono Usare il Grafo di Apprendimento
 
-- **Prerequisite checking** — Before teaching a concept, verify that students have covered its prerequisites
-- **Remediation** — If a student struggles with a concept, trace back to its prerequisites to find the gap
-- **Curriculum mapping** — Compare the learning graph to your existing syllabus to identify coverage gaps
-- **Enrichment** — Advanced students can explore concepts ahead of the current chapter by following the graph forward
+- **Verifica dei prerequisiti** — Prima di insegnare un concetto, verifica che gli studenti abbiano coperto i suoi prerequisiti
+- **Recupero** — Se uno studente fatica con un concetto, risali ai suoi prerequisiti per trovare la lacuna
+- **Mappatura del curriculum** — Confronta il grafo di apprendimento con il tuo programma esistente per identificare lacune di copertura
+- **Arricchimento** — Gli studenti avanzati possono esplorare concetti in anticipo rispetto al capitolo corrente seguendo il grafo in avanti
 
-The interactive Learning Graph Viewer is available in the "Learning Graph" section of the left navigation.
+Il Visualizzatore interattivo del Grafo di Apprendimento è disponibile nella sezione "Grafo di Apprendimento" della navigazione a sinistra.
 
-## Monty the Python: Your Pedagogical Agent
+## Monty the Python: Il Tuo Agente Pedagogico
 
-### What is a Pedagogical Agent?
+### Cos'è un Agente Pedagogico?
 
-A **pedagogical agent** is a character that appears throughout a textbook to guide students. Research shows that pedagogical agents improve student engagement and perception of learning — a phenomenon called the **persona effect**.
+Un **agente pedagogico** è un personaggio che appare in tutto un manuale per guidare gli studenti. La ricerca mostra che gli agenti pedagogici migliorano il coinvolgimento degli studenti e la percezione dell'apprendimento — un fenomeno chiamato **effetto persona**.
 
-### How Monty Appears
+### Come Appare Monty
 
-Monty the Python appears as colored callout boxes (called **admonitions**) throughout each chapter. There are seven types:
+Monty the Python appare come riquadri colorati (chiamati **ammonizioni**) in tutto ogni capitolo. Ce ne sono sette tipi:
 
-| Type | Color | Purpose | Frequency |
+| Tipo | Colore | Scopo | Frequenza |
 |------|-------|---------|-----------|
-| Welcome | Green | Introduces the chapter | Every chapter opening |
-| Thinking | Orange | Highlights key insights, poses prediction questions | 1–2 per chapter |
-| Tip | Green | Shares practical advice | As needed |
-| Warning | Red | Alerts to common mistakes and bugs | As needed |
-| Encourage | Blue | Supports students on harder concepts | Where students may struggle |
-| Celebration | Purple | Celebrates progress | Every chapter ending |
-| Neutral | Gray | General notes | As needed |
+| Welcome | Verde | Introduce il capitolo | Ogni apertura di capitolo |
+| Thinking | Arancione | Evidenzia intuizioni chiave, pone domande di previsione | 1-2 per capitolo |
+| Tip | Verde | Condivide consigli pratici | Secondo necessità |
+| Warning | Rosso | Avverte su errori comuni e bug | Secondo necessità |
+| Encourage | Blu | Supporta gli studenti sui concetti più difficili | Dove gli studenti potrebbero avere difficoltà |
+| Celebration | Viola | Celebra i progressi | Ogni chiusura di capitolo |
+| Neutral | Grigio | Note generali | Secondo necessità |
 
-Monty appears no more than 5–6 times per chapter to avoid overuse. Mascot admonitions are never placed back-to-back.
+Monty appare non più di 5-6 volte per capitolo per evitare l'eccesso. Le ammonizioni della mascotte non vengono mai messe una dopo l'altra.
 
-### Tips for Teachers
+### Consigli per gli Insegnanti
 
-- **Read Monty's tips aloud** — They're written in a conversational tone that works well when spoken
-- **Use as discussion prompts** — Monty's "thinking" admonitions highlight the most important insight in the section
-- **Point to "encourage" admonitions** for students who are frustrated with a concept — Monty's tone is specifically calibrated for that moment
-- **The prediction prompts are interactive** — Ask the whole class to vote before you run the code; the reveal becomes a mini-lesson
+- **Leggi ad alta voce i consigli di Monty** — Sono scritti in un tono colloquiale che funziona bene se letto ad alta voce
+- **Usali come spunti di discussione** — Le ammonizioni "pensanti" di Monty evidenziano l'intuizione più importante della sezione
+- **Indica le ammonizioni "encourage"** per gli studenti frustrati con un concetto — il tono di Monty è specificamente calibrato per quel momento
+- **Gli spunti di previsione sono interattivi** — Chiedi a tutta la classe di votare prima di eseguire il codice; la rivelazione diventa una mini-lezione
