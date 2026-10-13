@@ -1,7 +1,7 @@
-## Canvas Color Bars
-We can draw directly into the Jupyter Lab canvas by using the Canvas drawing component.
+## Barre Colorate sul Canvas
+Possiamo disegnare direttamente nel canvas di Jupyter Lab usando il componente di disegno Canvas.
 
-The following draws several horizontal bars of different color.
+Quello che segue disegna diverse barre orizzontali di colori diversi.
 
 ```python
 from ipycanvas import Canvas
@@ -35,11 +35,11 @@ canvas.fill_rect(0, 150, 400, 10)
 
 canvas
 ```
-# Experiments
-Can you modify the above to use a list of colors and a for loop?
-The color list might be:
+# Esperimenti
+Riesci a modificare quanto sopra per usare una lista di colori e un ciclo for?
+La lista dei colori potrebbe essere:
 
-## Using Lists
+## Usare le Liste
 ```
 from ipycanvas import Canvas
 canvas = Canvas(width=400, height=250)

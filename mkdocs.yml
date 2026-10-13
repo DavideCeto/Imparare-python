@@ -294,16 +294,16 @@ nav:
     - Caccia tra Tartarughe: turtle-graphics-gallery/turtle-chase/index.md
     - Motivo di Reazione-Diffusione: turtle-graphics-gallery/reaction-diffusion/index.md
 
-  - Jupyter Notebooks:
-    - List of Notebooks: jupyter/index.md
-    - Setup Turtle on Jupyter: jupyter/01-setup.md
-    - Drawing Figure: jupyter/02-draw-figure.md
-    - Setup Canvas on Jupyter Lab: jupyter/02-setup-canvas.md
-    - Canvas Color Bars: jupyter/20-canvas-color-bars.md
-  
-  - Advanced Python Examples:
-    - Stock Ticker Analysis: advanced/stocks.md
-    - MNIST Digit Prediction: advanced/mnist.md
+  - Notebook Jupyter:
+    - Elenco dei Notebook: jupyter/index.md
+    - Configurare la Turtle su Jupyter: jupyter/01-setup.md
+    - Disegnare una Figura: jupyter/02-draw-figure.md
+    - Configurare il Canvas su Jupyter Lab: jupyter/02-setup-canvas.md
+    - Barre Colorate sul Canvas: jupyter/20-canvas-color-bars.md
+
+  - Esempi di Python Avanzato:
+    - Analisi dei Titoli Azionari: advanced/stocks.md
+    - Previsione delle Cifre MNIST: advanced/mnist.md
   
   - Trinket Labs (deprecated):
     - Introduction: trinket/00-introduction.md

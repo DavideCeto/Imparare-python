@@ -1,26 +1,26 @@
-We will be using python canvas drawing library.  Unlike turtle graphics the canvas library has many powerful drawing tools.
+Useremo la libreria Python di disegno canvas. A differenza della grafica turtle, la libreria canvas ha molti strumenti di disegno potenti.
 
-[Python IPYCanvas Library](https://ipycanvas.readthedocs.io/en/latest/index.html)
+[Libreria Python IPYCanvas](https://ipycanvas.readthedocs.io/en/latest/index.html)
 
 ## Jupyter Lab
-We will be running this library from within a Jypyter lab.
+Eseguiremo questa libreria dentro un Jupyter Lab.
 
-## Steps
-Install conda
-Create a new conda environment
-Install Jupyter lab
-Start up Jupyter
-Test Canvas
+## Passaggi
+Installa conda
+Crea un nuovo ambiente conda
+Installa Jupyter lab
+Avvia Jupyter
+Testa Canvas
 
-## Setup With Conda
+## Configurazione con Conda
 ```python
 conda env list
 conda create -n turtle python=3.6
 conda activate turtle
 juypter lab
 ```
-After you run the last command it will open a web browser.
+Dopo aver eseguito l'ultimo comando si aprirà un browser web.
 
-## References
-[Conda Documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+## Riferimenti
+[Documentazione Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 

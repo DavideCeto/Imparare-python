@@ -1,36 +1,36 @@
-## Why Jupyter Notebook
-We will be running this library from within a Jupyter Notebook.  Jupyter Notebooks are part of an important type in programming called [Literate Programming](https://en.wikipedia.org/wiki/Literate_programming) where code and explaination of your code are interspersed in cells. Jupyter Notebooks are sometimes called the "New Excel" because they are both popular ways to analize data.  Jupyter Notebooks are also popular with Data Scientists and Artificial Intelligence developers and has almost compleatly replaced the [R Progamming](https://trends.google.com/trends/explore?date=all&geo=US&q=Jupyter,R%20Programming) programming language.
+## Perché Jupyter Notebook
+Eseguiremo questa libreria dentro un Jupyter Notebook. I Jupyter Notebook fanno parte di un tipo importante di programmazione chiamato [Programmazione Letterata](https://en.wikipedia.org/wiki/Literate_programming) dove il codice e la spiegazione del tuo codice sono intervallati in celle. I Jupyter Notebook vengono a volte chiamati il "nuovo Excel" perché entrambi sono modi popolari per analizzare dati. I Jupyter Notebook sono anche popolari tra i Data Scientist e gli sviluppatori di Intelligenza Artificiale e hanno quasi completamente sostituito il linguaggio di programmazione [R](https://trends.google.com/trends/explore?date=all&geo=US&q=Jupyter,R%20Programming).
 
-We think that learning Python using Jupyter is ideal if you have some type of interactive way to see the results of your code.  By combining turtle graphics with Jupyter you get the best of both worlds.
+Pensiamo che imparare Python usando Jupyter sia l'ideale se hai un qualche modo interattivo di vedere i risultati del tuo codice. Combinando la grafica turtle con Jupyter ottieni il meglio di entrambi i mondi.
 
-## Two Ways to View Turtle Graphics
-There are two ways to view turtle graphics in Jupyter:
+## Due Modi per Vedere la Grafica Turtle
+Ci sono due modi per vedere la grafica turtle in Jupyter:
 
-1. With the turtle being drawn in a separate window
-2. With the turtle being drawn "inline" directly under your code
+1. Con la turtle disegnata in una finestra separata
+2. Con la turtle disegnata "in linea" direttamente sotto il tuo codice
 
-In general, inline is preferred because you can keep track of many small exercises just by scrolling down. You can also print out the notebooks to show others your work.
+In generale, in linea è preferibile perché puoi tenere traccia di molti piccoli esercizi semplicemente scorrendo verso il basso. Puoi anche stampare i notebook per mostrare il tuo lavoro ad altri.
 
-In many of these labs we will be using a special version of the turtle library that was developed by [Thomas Kluyver](https://github.com/takluyver) from the UK called the "mobilechelonian". We want to thank him for this work.  If you want you can "star" the following github repository: https://github.com/takluyver/mobilechelonian
+In molti di questi laboratori useremo una versione speciale della libreria turtle sviluppata da [Thomas Kluyver](https://github.com/takluyver) dal Regno Unito chiamata "mobilechelonian". Vogliamo ringraziarlo per questo lavoro. Se vuoi puoi mettere una "stella" al seguente repository github: https://github.com/takluyver/mobilechelonian
 
-Note that "Chelonians" are animals in the order Chelonia (or Testudines), which includes the turtles and tortoises.  By picking a very distinctive name for his implementation of the turtle library Thomas avoided collision with other python libraries that had the same name.
+Nota che i "Chelonia" sono animali dell'ordine Chelonia (o Testudines), che include le tartarughe e le testuggini. Scegliendo un nome molto distintivo per la sua implementazione della libreria turtle, Thomas ha evitato collisioni con altre librerie Python che avevano lo stesso nome.
 
-## Steps
-Here are the steps we will go through to get turtle running in our Jupyter Notebook:
+## Passaggi
+Ecco i passaggi che seguiremo per far funzionare la turtle nel nostro Jupyter Notebook:
 
-1. Install the conda python environment systems
-2. Create a new conda environment for our turtle and activate it
-3. Use the pip tool to install the turtle library
-4. Install the Jupyter Notebooks software
-5. Start up Jupyter Notebooks
-6. Test the turtle program
+1. Installare i sistemi dell'ambiente Python conda
+2. Creare un nuovo ambiente conda per la nostra turtle e attivarlo
+3. Usare lo strumento pip per installare la libreria turtle
+4. Installare il software Jupyter Notebook
+5. Avviare Jupyter Notebook
+6. Testare il programma della turtle
 
-## Install Conda
-Google "install python" on your operating system.
-Google "install conda"
+## Installare Conda
+Cerca su Google "install python" per il tuo sistema operativo.
+Cerca su Google "install conda"
 
-## Create a new conda envornment:
-Open your terminal.  Type in the following commands.
+## Creare un Nuovo Ambiente Conda:
+Apri il tuo terminale. Digita i seguenti comandi.
 
 ```shell
 conda env list
@@ -40,7 +40,7 @@ pip install mobilechelonian
 juypter notebook
 ```
 
-After you run the last command it will open a Jupyter Notbook in a web browser.  You can now test that the turtle library installed correctly.
+Dopo aver eseguito l'ultimo comando si aprirà un Jupyter Notebook in un browser web. Ora puoi verificare che la libreria turtle sia stata installata correttamente.
 
 ```python
 from mobilechelonian import Turtle
@@ -54,6 +54,6 @@ t.forward(100)
 help(Turtle)
 ```
 
-## References
-[Conda Documentation](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+## Riferimenti
+[Documentazione Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
 

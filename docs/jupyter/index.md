@@ -1,84 +1,106 @@
-# Sample Jupyter Notebooks
+# Notebook Jupyter di Esempio
 
 !!! Warning
-    This section introduces students to simple Jypyter Notebooks.
-    This section has not been extensively tested and depends on a Jupyter Notebook
-    library that is not well maintained since 2023.
-    To run the lessons, students will need to download Jupyter Notebooks on their local computer
-    or run these notebooks within an IDE like VS Code.
+    Questa sezione introduce gli studenti a semplici Notebook Jupyter.
+    Questa sezione non è stata testata a fondo e dipende da una libreria
+    per Jupyter Notebook che non è ben mantenuta dal 2023.
+    Per eseguire le lezioni, gli studenti dovranno scaricare Jupyter Notebook
+    sul proprio computer locale o eseguire questi notebook dentro un IDE
+    come VS Code.
 
-## What is a Jupyter Notebook
+## Cos'è un Jupyter Notebook
 
-A **Jupyter Notebook** is a document that mixes together three things you'd normally keep
-separate: writing, code, and the results of running that code. Instead of writing a whole
-Python program in one file and running it all at once, a notebook is broken into small
-boxes called **cells**. You can write a sentence in one cell, a few lines of Python in the
-next cell, run just that cell, and immediately see the output appear right underneath it —
-a number, some text, a chart, or even a picture.
+Un **Jupyter Notebook** è un documento che mescola insieme tre cose che normalmente
+terresti separate: scrittura, codice, e i risultati dell'esecuzione di quel
+codice. Invece di scrivere un intero programma Python in un unico file ed
+eseguirlo tutto in una volta, un notebook è diviso in piccole caselle chiamate
+**celle**. Puoi scrivere una frase in una cella, qualche riga di Python nella
+cella successiva, eseguire solo quella cella, e vedere immediatamente l'output
+apparire proprio sotto di essa — un numero, del testo, un grafico, o persino
+un'immagine.
 
-This "run one small piece at a time" style is called **Literate Programming** — code and
-the explanation of that code live side by side, so the notebook reads almost like a lab
-report that also happens to be alive and runnable. Because you can re-run a single cell
-without re-running the whole program, notebooks are great for experimenting: change one
-number, press run, see what changed, without waiting for anything else to happen.
+Questo stile "esegui un piccolo pezzo alla volta" si chiama **Programmazione
+Letterata** — il codice e la spiegazione di quel codice convivono fianco a
+fianco, così il notebook si legge quasi come un rapporto di laboratorio che
+però è anche vivo ed eseguibile. Poiché puoi rieseguire una singola cella senza
+rieseguire l'intero programma, i notebook sono ottimi per sperimentare: cambia
+un numero, premi esegui, guarda cosa è cambiato, senza aspettare che accada
+nient'altro.
 
-Some things students commonly build in a first notebook:
+Alcune cose che gli studenti costruiscono comunemente in un primo notebook:
 
-- A **grade calculator** — type in test scores in one cell, compute the average in the next
-- A **step-by-step turtle drawing** — draw one side of a shape per cell so you can see it grow
-- A **mini science log** — record measurements in a cell, then plot them as a simple chart
+- Un **calcolatore di voti** — digita i punteggi dei test in una cella, calcola
+  la media nella successiva
+- Un **disegno con la turtle passo-passo** — disegna un lato di una forma per
+  cella così puoi vederla crescere
+- Un **mini diario scientifico** — registra le misurazioni in una cella, poi
+  tracciale come un semplice grafico
 
-## What is Jupyter Lab
+## Cos'è Jupyter Lab
 
-**Jupyter Lab** is the application (it runs in your web browser) that lets you open, edit,
-and run notebooks. Think of it like a combination of a text editor and a file browser built
-just for notebooks: a panel on the left shows your files and folders, and the main area in
-the middle is where your notebook cells live. You can have several notebooks open in tabs at
-once, just like tabs in a web browser.
+**Jupyter Lab** è l'applicazione (viene eseguita nel tuo browser web) che ti
+permette di aprire, modificare ed eseguire i notebook. Pensala come una
+combinazione tra un editor di testo e un browser di file costruita apposta per
+i notebook: un pannello a sinistra mostra i tuoi file e cartelle, e l'area
+principale al centro è dove vivono le celle del tuo notebook. Puoi avere
+diversi notebook aperti in schede contemporaneamente, proprio come le schede
+in un browser web.
 
-Jupyter Lab is the newer, more powerful cousin of the older **Jupyter Notebook** app — they
-both open the same `.ipynb` notebook files, but Jupyter Lab adds extra tools like a file
-manager, an image viewer, and the ability to arrange multiple notebooks side by side on
-your screen.
+Jupyter Lab è il cugino più nuovo e più potente della più vecchia app
+**Jupyter Notebook** — entrambi aprono gli stessi file notebook `.ipynb`, ma
+Jupyter Lab aggiunge strumenti extra come un gestore di file, un visualizzatore
+di immagini, e la capacità di disporre più notebook fianco a fianco sul tuo
+schermo.
 
-## Who Uses Jupyter
+## Chi Usa Jupyter
 
-Jupyter notebooks are one of the most widely used tools in modern programming, especially
-outside of traditional software engineering:
+I notebook Jupyter sono uno degli strumenti più usati nella programmazione
+moderna, specialmente fuori dall'ingegneria del software tradizionale:
 
-- **Data scientists** use notebooks to explore huge sets of data — for example, cleaning up
-  and charting weather data to look for climate trends
-- **AI and machine learning developers** use notebooks to train and test models, since they
-  can rerun just the "training" cell over and over without rebuilding everything else
-- **Scientists and researchers** use notebooks to record experiments and calculations
-  together, so anyone reading the notebook can see exactly how a result was produced
-- **Teachers and students** use notebooks for interactive lessons, since a notebook can mix
-  explanations, runnable examples, and practice problems on the same page
+- I **data scientist** usano i notebook per esplorare enormi insiemi di dati —
+  per esempio, pulire e tracciare in grafico dati meteorologici per cercare
+  tendenze climatiche
+- Gli **sviluppatori di IA e machine learning** usano i notebook per addestrare
+  e testare modelli, poiché possono rieseguire solo la cella di "addestramento"
+  più e più volte senza ricostruire tutto il resto
+- Gli **scienziati e ricercatori** usano i notebook per registrare insieme
+  esperimenti e calcoli, così chiunque legga il notebook può vedere esattamente
+  come è stato prodotto un risultato
+- Gli **insegnanti e gli studenti** usano i notebook per lezioni interattive,
+  poiché un notebook può mescolare spiegazioni, esempi eseguibili, ed esercizi
+  pratici sulla stessa pagina
 
-If you've ever seen a spreadsheet used to analyze data, a notebook does something similar
-but with the full power of the Python language behind every cell — which is part of why
-some people call notebooks the "new Excel."
+Se hai mai visto un foglio di calcolo usato per analizzare dati, un notebook
+fa qualcosa di simile ma con tutta la potenza del linguaggio Python dietro
+ogni cella — il che è parte del motivo per cui alcune persone chiamano i
+notebook il "nuovo Excel".
 
-## How is Jupyter Different from Normal Python?
+## In Cosa Jupyter è Diverso da Python Normale?
 
-When you write a normal Python program — the kind you save as a `.py` file — the whole
-file runs from top to bottom every time, in one shot. If there's a mistake on line 40, you
-often have to wait for the program to reach that line before you find out, and every test
-run starts over from scratch.
+Quando scrivi un normale programma Python — il tipo che salvi come file
+`.py` — l'intero file viene eseguito dall'inizio alla fine ogni volta, in
+un colpo solo. Se c'è un errore alla riga 40, spesso devi aspettare che il
+programma raggiunga quella riga prima di scoprirlo, e ogni esecuzione di test
+ricomincia da zero.
 
-A Jupyter Notebook works differently:
+Un Jupyter Notebook funziona diversamente:
 
-- **Cells run independently.** You can run cell 3 without re-running cells 1 and 2, as long
-  as they've already run once. This makes it fast to test small changes.
-- **Variables stick around.** If you create a variable like `score = 95` in one cell, every
-  cell after it can still use `score` — the notebook remembers it until you restart.
-- **Output stays attached to the code that made it.** Charts, drawings, and printed text
-  appear directly below the cell that produced them, so your notebook becomes a saved
-  record of what you did and what happened.
-- **Order matters — but isn't fixed.** You can run cells out of order while experimenting,
-  which is powerful, but it also means a notebook can get confusing if you don't occasionally
-  run everything from the top down to make sure it still works correctly.
+- **Le celle vengono eseguite indipendentemente.** Puoi eseguire la cella 3
+  senza rieseguire le celle 1 e 2, purché siano già state eseguite una volta.
+  Questo rende veloce testare piccole modifiche.
+- **Le variabili restano.** Se crei una variabile come `score = 95` in una
+  cella, ogni cella successiva può ancora usare `score` — il notebook se la
+  ricorda finché non riavvii.
+- **L'output resta attaccato al codice che l'ha prodotto.** Grafici, disegni
+  e testo stampato appaiono direttamente sotto la cella che li ha prodotti,
+  così il tuo notebook diventa un registro salvato di cosa hai fatto e cosa è
+  successo.
+- **L'ordine conta — ma non è fisso.** Puoi eseguire le celle fuori ordine
+  mentre sperimenti, il che è potente, ma significa anche che un notebook può
+  diventare confuso se non lo esegui occasionalmente tutto dall'inizio alla
+  fine per assicurarti che funzioni ancora correttamente.
 
-In short: a `.py` file is a finished program meant to run start-to-finish, while a notebook
-is more like a scratchpad for exploring ideas one small step at a time — which is exactly
-why it's such a popular way to learn Python.
+In breve: un file `.py` è un programma finito pensato per essere eseguito
+dall'inizio alla fine, mentre un notebook è più simile a un blocco appunti
+per esplorare idee un piccolo passo alla volta — il che è esattamente il
+motivo per cui è un modo così popolare per imparare Python.

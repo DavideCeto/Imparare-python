@@ -1,6 +1,6 @@
-## Draw Figure Turtle Lab in Jupyter
+## Laboratorio Turtle Disegna Figura in Jupyter
 
-In this lab we setup a new Jupyter notebook that will do turtle graphics.
+In questo laboratorio impostiamo un nuovo notebook Jupyter che farà grafica turtle.
 
-## Link to Jypyter Notebook
-[Draw Figure Jypyter Notebook](draw-figure.ipynb)
+## Link al Notebook Jupyter
+[Notebook Jupyter Disegna Figura](draw-figure.ipynb)
