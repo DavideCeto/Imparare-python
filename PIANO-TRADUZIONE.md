@@ -303,6 +303,42 @@ Decisioni prese durante questa fase:
   fedelmente senza correggerlo, stessa logica delle incongruenze
   editoriali già documentate per la Fase 4.
 
+**FASE 7 COMPLETA — Jupyter Notebooks docs e Advanced Python Examples
+tradotti.** File tradotti: nav di `mkdocs.yml` (sezioni "Notebook Jupyter"
+ed "Esempi di Python Avanzato"), `docs/jupyter/index.md`,
+`docs/jupyter/01-setup.md`, `docs/jupyter/02-draw-figure.md`,
+`docs/jupyter/02-setup-canvas.md`, `docs/jupyter/20-canvas-color-bars.md`,
+`docs/advanced/stocks.md`, `docs/advanced/mnist.md`. Inoltre tradotte le
+due pagine orfane ma legittime `docs/advanced-python/01-intro.md` e
+`02-roll-the-dice.md` (non nella nav, ma contenuto reale per il lettore,
+stessa logica di `text-only-example.md` in Fase 3) — il file sorgente
+`roll-dice.py` resta codice, non toccato.
+
+Decisioni di questa fase:
+
+- **Un solo notebook Jupyter tradotto**: `docs/jupyter/draw-figure.ipynb`,
+  l'unico `.ipynb` effettivamente collegato da una pagina raggiungibile
+  dalla nav (`02-draw-figure.md`). Tradotte solo le 4 celle markdown di
+  spiegazione con lo strumento `NotebookEdit`; le celle codice (inclusi i
+  commenti Python come `# this will be true for alternate edges`) sono
+  rimaste intatte. Verificato con un confronto cella per cella che il
+  codice non fosse stato toccato.
+- **Notebook orfani esclusi dallo scope**: `02-draw-box.ipynb`,
+  `canvas-test.ipynb`, `Python_Introduction.ipynb`,
+  `variables-and-strings.ipynb` non sono collegati da nessuna pagina
+  `.md` né dalla nav — trattati come i file sotto `microsim-ideas.md`,
+  priorità minima, da rivalutare se richiesti esplicitamente.
+  `docs/jupyter/.ipynb_checkpoints/` è una cartella di backup automatico
+  di Jupyter (non contenuto editoriale) ed è esclusa a priori.
+- **Typo pre-esistenti "Jypyter"/"juypter"**: nel testo prosa inglese
+  originale (titoli, link) sono stati corretti silenziosamente in
+  "Jupyter" durante la traduzione italiana (sono refusi di battitura, non
+  bug di contenuto pedagogico). Dentro i blocchi di codice/shell (es. il
+  comando `juypter notebook` nei passaggi di setup conda) sono stati
+  lasciati intatti carattere per carattere, perché sono codice eseguibile
+  — stessa regola generale, anche se qui il comando così com'è non
+  funzionerebbe davvero se digitato alla lettera.
+
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
 (nessuna modifica rispetto a `main`), quindi il problema dei placeholder rotti
@@ -479,11 +515,21 @@ nav di `mkdocs.yml` (sezione "Guida per gli Insegnanti"), `index.md`
 `04-book-chapter-generator.md`, `05-content-generation-strategy.md`,
 `06-microsim-ideas-given-to-fable-5.md`).
 
-Prossimo: iniziare la Fase 7 (Jupyter Notebooks docs e Advanced/Advanced
-Python, ~11 file secondo il conteggio originale del piano — vedi sezione 3).
+**FASE 7 COMPLETA.** Tradotti: nav di `mkdocs.yml` (Notebook Jupyter,
+Esempi di Python Avanzato), i 5 file di `docs/jupyter/*.md` collegati
+alla nav, i 2 file di `docs/advanced/*.md`, i 2 file orfani di
+`docs/advanced-python/*.md`, e le celle markdown di
+`docs/jupyter/draw-figure.ipynb` (unico notebook collegato alla nav).
+Notebook orfani non collegati (`02-draw-box.ipynb`, `canvas-test.ipynb`,
+`Python_Introduction.ipynb`, `variables-and-strings.ipynb`) esclusi
+dallo scope, vedi nota sopra.
 
-Dopo la Fase 7: Fasi 8-9 (Learning Graph, Trinket Labs — quest'ultima di
-priorità minima/da valutare se tradurre affatto, vedi sezione 3).
+Prossimo: iniziare la Fase 8 (Learning Graph, `docs/learning-graph/`,
+~11 file secondo il conteggio originale del piano — report tecnici per
+chi mantiene il libro, vedi sezione 3).
+
+Dopo la Fase 8: Fase 9 (Trinket Labs — priorità minima/da valutare se
+tradurre affatto, vedi sezione 3).
 
 Note di qualità accumulate durante la Fase 2, da continuare ad applicare nelle fasi
 successive: (1) controllare sempre con `grep '!\[.*\]('` (o pattern equivalente per il
