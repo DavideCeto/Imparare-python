@@ -1,51 +1,51 @@
 ---
-title: Monty the Python - Mascot Test
-description: Test page showing all mascot images and admonition styles for Monty the Python, our pedagogical agent.
+title: Monty the Python - Test della Mascotte
+description: Pagina di test che mostra tutte le immagini della mascotte e gli stili delle ammonizioni per Monty the Python, il nostro agente pedagogico.
 ---
-# Monty the Python — Mascot Test
+# Monty the Python — Test della Mascotte
 
-This page shows all mascot images and admonition styles for reference.
-Check that all images have a transparent background and no excessive padding.
-The dashed blue border around each image makes the padding visible.
+Questa pagina mostra tutte le immagini della mascotte e gli stili delle ammonizioni come riferimento.
+Controlla che tutte le immagini abbiano uno sfondo trasparente e nessuna spaziatura eccessiva.
+Il bordo blu tratteggiato intorno a ogni immagine rende visibile la spaziatura.
 
 <style>
 img { border: 1px dashed blue; }
 </style>
 
-## Admonition Tests
+## Test delle Ammonizioni
 
-!!! mascot-neutral "A Note from Monty"
+!!! mascot-neutral "Una Nota da Monty"
     ![Monty neutral pose](../img/mascot/neutral.png){ class="mascot-admonition-img" }
-    Here is a friendly note from Monty. This is the **neutral** style, used for general sidebars or introductions.
+    Ecco una nota amichevole da Monty. Questo è lo stile **neutral**, usato per barre laterali generali o introduzioni.
 
-!!! mascot-welcome "Monty Welcomes You!"
+!!! mascot-welcome "Monty ti dà il Benvenuto!"
     ![Monty waving welcome](../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Welcome, coder! I'm Monty the Python, and I'm here to help you learn to program. This is the **welcome** style, used at the start of each lesson.
+    Benvenuto, programmatore! Sono Monty the Python, e sono qui per aiutarti a imparare a programmare. Questo è lo stile **welcome**, usato all'inizio di ogni lezione.
 
-!!! mascot-thinking "Monty's Key Insight"
+!!! mascot-thinking "L'Intuizione Chiave di Monty"
     ![Monty thinking](../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Let's think this through together! This is the **thinking** style, used to highlight key concepts and important ideas.
+    Pensiamoci insieme! Questo è lo stile **thinking**, usato per evidenziare concetti chiave e idee importanti.
 
-!!! mascot-tip "Monty's Tip"
+!!! mascot-tip "Il Consiglio di Monty"
     ![Monty sharing a tip](../img/mascot/tip.png){ class="mascot-admonition-img" }
-    Here is a helpful suggestion from Monty. This is the **tip** style, used for hints and shortcuts.
+    Ecco un suggerimento utile da Monty. Questo è lo stile **tip**, usato per indizi e scorciatoie.
 
-!!! mascot-warning "Watch Out!"
+!!! mascot-warning "Attenzione!"
     ![Monty warning you](../img/mascot/warning.png){ class="mascot-admonition-img" }
-    Watch out for this one — it's a common mistake! This is the **warning** style, used to flag pitfalls.
+    Attenzione a questo — è un errore comune! Questo è lo stile **warning**, usato per segnalare insidie.
 
-!!! mascot-encourage "You've Got This!"
+!!! mascot-encourage "Ce la Puoi Fare!"
     ![Monty encouraging you](../img/mascot/encouraging.png){ class="mascot-admonition-img" }
-    You can do it! I believe in you! This is the **encouraging** style, used when the content gets challenging.
+    Puoi farcela! Credo in te! Questo è lo stile **encouraging**, usato quando il contenuto diventa impegnativo.
 
-!!! mascot-celebration "Excellent Work!"
+!!! mascot-celebration "Ottimo Lavoro!"
     ![Monty celebrating](../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Congratulations — you made it! This is the **celebration** style, used at the end of lessons.
+    Congratulazioni — ce l'hai fatta! Questo è lo stile **celebration**, usato alla fine delle lezioni.
 
-## Image Padding Tests
+## Test della Spaziatura delle Immagini
 
-Verify there is no excessive padding around the images.
-If there is, run `scripts/trim-padding-from-image.py docs/img/mascot/FILENAME.png`.
+Verifica che non ci sia spaziatura eccessiva intorno alle immagini.
+Se c'è, esegui `scripts/trim-padding-from-image.py docs/img/mascot/FILENAME.png`.
 
 <div class="grid cards" markdown>
 
