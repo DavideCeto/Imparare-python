@@ -1,32 +1,32 @@
-# Learning Graph Quality Metrics Report
+# Report sulla Qualità del Grafo di Apprendimento
 
-## Overview
+## Panoramica
 
-- **Total Concepts**: 450
-- **Foundational Concepts** (no prerequisites, other concepts depend on them): 2
-- **Terminal Nodes** (nothing depends on them, but have prerequisites): 235
-- **Orphaned Nodes** (completely disconnected, no edges): 0
-- **Concepts with Dependencies**: 448
-- **Average Dependencies per Concept**: 1.87
+- **Concetti Totali**: 450
+- **Concetti Fondamentali** (nessun prerequisito, altri concetti dipendono da loro): 2
+- **Nodi Terminali** (nulla dipende da loro, ma hanno prerequisiti): 235
+- **Nodi Orfani** (completamente disconnessi, nessun arco): 0
+- **Concetti con Dipendenze**: 448
+- **Media di Dipendenze per Concetto**: 1.87
 
-## Graph Structure Validation
+## Validazione della Struttura del Grafo
 
-- **Valid DAG Structure**: ✅ Yes
-- **Self-Dependencies**: None detected ✅
-- **Cycles Detected**: 0
+- **Struttura DAG Valida**: ✅ Sì
+- **Auto-Dipendenze**: Nessuna rilevata ✅
+- **Cicli Rilevati**: 0
 
-## Foundational Concepts
+## Concetti Fondamentali
 
-These concepts have no prerequisites:
+Questi concetti non hanno prerequisiti:
 
 - **1**: Python Interpreter Overview
 - **19**: Command Line Basics
 
-## Dependency Chain Analysis
+## Analisi della Catena di Dipendenze
 
-- **Maximum Dependency Chain Length**: 13
+- **Lunghezza Massima della Catena di Dipendenze**: 13
 
-### Longest Learning Path:
+### Percorso di Apprendimento Più Lungo:
 
 1. **Python Interpreter Overview** (ID: 1)
 2. **print() Function** (ID: 21)
@@ -42,14 +42,14 @@ These concepts have no prerequisites:
 12. **Custom Exception Classes** (ID: 283)
 13. **Exception Chaining** (ID: 284)
 
-## Terminal Nodes Analysis
+## Analisi dei Nodi Terminali
 
-Terminal nodes are concepts that nothing else depends on but have prerequisites. They represent natural endpoints of learning paths — culminating or specialized concepts.
+I nodi terminali sono concetti da cui nient'altro dipende ma che hanno prerequisiti. Rappresentano i punti finali naturali dei percorsi di apprendimento — concetti culminanti o specializzati.
 
-- **Total Terminal Nodes**: 235 (52.2% of all concepts)
-- **Healthy Range**: 5-40% of total concepts
+- **Totale Nodi Terminali**: 235 (52.2% di tutti i concetti)
+- **Intervallo Sano**: 5-40% del totale dei concetti
 
-Concepts at the end of learning paths:
+Concetti alla fine dei percorsi di apprendimento:
 
 - **2**: Python 2 vs Python 3
 - **4**: Repl.it Online IDE
@@ -72,27 +72,27 @@ Concepts at the end of learning paths:
 - **40**: Naming Conflicts to Avoid
 - **43**: Division Returns Float
 
-*...and 215 more*
+*...e altri 215*
 
-## Orphaned Nodes Analysis
+## Analisi dei Nodi Orfani
 
-Orphaned nodes are completely disconnected concepts with no inbound AND no outbound edges. These indicate a quality problem — every concept should connect to the graph.
+I nodi orfani sono concetti completamente disconnessi senza archi in entrata NÉ in uscita. Indicano un problema di qualità — ogni concetto dovrebbe collegarsi al grafo.
 
-- **Total Orphaned Nodes**: 0
+- **Totale Nodi Orfani**: 0
 
-✅ No orphaned nodes detected. All concepts are connected to the graph.
+✅ Nessun nodo orfano rilevato. Tutti i concetti sono collegati al grafo.
 
-## Connected Components
+## Componenti Connesse
 
-- **Number of Connected Components**: 1
+- **Numero di Componenti Connesse**: 1
 
-✅ All concepts are connected in a single graph.
+✅ Tutti i concetti sono collegati in un unico grafo.
 
-## Indegree Analysis
+## Analisi del Grado Entrante
 
-Top 10 concepts that are prerequisites for the most other concepts:
+I primi 10 concetti che sono prerequisiti per il maggior numero di altri concetti:
 
-| Rank | Concept ID | Concept Label | Indegree |
+| Posizione | ID Concetto | Etichetta del Concetto | Grado Entrante |
 |------|-----------|---------------|----------|
 | 1 | 137 | List Type | 34 |
 | 2 | 58 | String Type | 33 |
@@ -105,9 +105,9 @@ Top 10 concepts that are prerequisites for the most other concepts:
 | 9 | 285 | Objects and Classes Overview | 18 |
 | 10 | 163 | Dictionary Type | 16 |
 
-## Outdegree Distribution
+## Distribuzione del Grado Uscente
 
-| Dependencies | Number of Concepts |
+| Dipendenze | Numero di Concetti |
 |--------------|--------------------|
 | 0 | 2 |
 | 1 | 132 |
@@ -115,11 +115,11 @@ Top 10 concepts that are prerequisites for the most other concepts:
 | 3 | 64 |
 | 4 | 5 |
 
-## Recommendations
+## Raccomandazioni
 
-- ℹ️ **High terminal node percentage** (52.2%): Consider if some terminal concepts should be prerequisites for advanced concepts
-- ✅ **DAG structure verified**: Graph supports valid learning progressions
+- ℹ️ **Percentuale alta di nodi terminali** (52.2%): Considera se alcuni concetti terminali dovrebbero essere prerequisiti per concetti avanzati
+- ✅ **Struttura DAG verificata**: Il grafo supporta progressioni di apprendimento valide
 
 ---
 
-*Report generated by learning-graph-reports/analyze_graph.py*
+*Report generato da learning-graph-reports/analyze_graph.py*

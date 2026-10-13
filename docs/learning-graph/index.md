@@ -1,101 +1,101 @@
-# Learning Graph for Beginning Python
+# Grafo di Apprendimento per Beginning Python
 
-[Open Learning Graph Viewer Fullscreen](../sims/graph-viewer/main.html){ .md-button .md-button--primary }
+[Apri il Visualizzatore del Grafo di Apprendimento a Schermo Intero](../sims/graph-viewer/main.html){ .md-button .md-button--primary }
 
 <iframe src="../sims/graph-viewer/main.html" width="100%" height="600px" frameborder="0"></iframe>
 
-This section contains the learning graph for Beginning Python — From Blocks to Code with Monty.
-A learning graph is a graph of concepts used in this course. Each concept is represented by a
-node in a network graph. Concepts are connected by directed edges that indicate
-what concepts each node depends on before that concept is understood by the student.
+Questa sezione contiene il grafo di apprendimento per Beginning Python — From Blocks to Code with Monty.
+Un grafo di apprendimento è un grafo di concetti usati in questo corso. Ogni concetto è rappresentato da un
+nodo in un grafo di rete. I concetti sono collegati da archi diretti che indicano
+da quali concetti dipende ogni nodo prima che quel concetto venga compreso dallo studente.
 
-A learning graph is the foundational data structure for intelligent textbooks that can recommend learning paths.
-A learning graph is like a roadmap of concepts to help students arrive at their learning goals.
+Un grafo di apprendimento è la struttura dati fondamentale per i manuali intelligenti che possono raccomandare percorsi di apprendimento.
+Un grafo di apprendimento è come una mappa di concetti per aiutare gli studenti a raggiungere i loro obiettivi di apprendimento.
 
-At the left of the learning graph are prerequisite or foundational concepts. They
-have no outbound edges. They only have inbound edges for other concepts that depend on
-understanding these foundational prerequisite concepts. At the far right
-we have the most advanced concepts in the course. To master these concepts you
-must understand all the concepts that they point to.
+A sinistra del grafo di apprendimento ci sono i concetti prerequisiti o fondamentali. Non
+hanno archi in uscita. Hanno solo archi in entrata da altri concetti che dipendono dalla
+comprensione di questi concetti prerequisiti fondamentali. All'estrema destra
+ci sono i concetti più avanzati del corso. Per padroneggiare questi concetti
+devi comprendere tutti i concetti a cui puntano.
 
-This graph contains **450 concepts** organized into **14 taxonomy categories** with **838 dependency edges**,
-spanning from the Python interpreter and command-line basics all the way to Keras neural networks
-and computational thinking foundations.
+Questo grafo contiene **450 concetti** organizzati in **14 categorie tassonomiche** con **838 archi di dipendenza**,
+che spaziano dall'interprete Python e le basi della riga di comando fino alle
+reti neurali Keras e ai fondamenti del pensiero computazionale.
 
-Here are other files used by the learning graph.
+Ecco altri file usati dal grafo di apprendimento.
 
-## Course Description
+## Descrizione del Corso
 
-We use the [Course Description](../course-description.md) as
-the source document for the concepts that are included in this course.
-The course description uses the 2001 Bloom taxonomy to order learning objectives.
+Usiamo la [Descrizione del Corso](../course-description.md) come
+documento sorgente per i concetti inclusi in questo corso.
+La descrizione del corso usa la tassonomia di Bloom del 2001 per ordinare gli obiettivi di apprendimento.
 
-## List of Concepts
+## Elenco dei Concetti
 
-We use generative AI to convert the course description into a [Concept List](./concept-list.md).
-Each concept is in the form of a short Title Case label with most labels under 32 characters long.
+Usiamo l'IA generativa per convertire la descrizione del corso in un [Elenco dei Concetti](./concept-list.md).
+Ogni concetto è nella forma di una breve etichetta con la Maiuscola a Ogni Parola, con la maggior parte delle etichette sotto i 32 caratteri di lunghezza.
 
-## Concept Dependency List
+## Elenco delle Dipendenze tra Concetti
 
-We next use generative AI to create a Directed Acyclic Graph (DAG). DAGs do not have cycles where
-concepts depend on themselves. We provide the DAG in two formats. One is a [CSV file](learning-graph.csv) and the other
-format is a [JSON file](learning-graph.json) that uses the vis-network JavaScript library format. The vis-network format uses `nodes`, `edges` and `metadata`
-elements with edges containing `from` and `to` properties. This makes it easy for you to view and edit the learning
-graph using an editor built with the vis-network tools.
+Usiamo poi l'IA generativa per creare un Grafo Aciclico Diretto (DAG). I DAG non hanno cicli dove
+i concetti dipendono da se stessi. Forniamo il DAG in due formati. Uno è un [file CSV](learning-graph.csv) e l'altro
+formato è un [file JSON](learning-graph.json) che usa il formato della libreria JavaScript vis-network. Il formato vis-network usa elementi `nodes`, `edges` e `metadata`
+con gli archi che contengono le proprietà `from` e `to`. Questo rende facile visualizzare e modificare il grafo
+di apprendimento usando un editor costruito con gli strumenti vis-network.
 
-## Analysis & Documentation
+## Analisi e Documentazione
 
-### Course Description Quality Assessment
+### Valutazione della Qualità della Descrizione del Corso
 
-This report rates the overall quality of the course description for the purpose of generating a learning graph.
+Questo report valuta la qualità complessiva della descrizione del corso allo scopo di generare un grafo di apprendimento.
 
-- Course description fields and content depth analysis
-- Validates course description has sufficient depth for generating 200 concepts
-- Compares course description against similar courses
-- Identifies content gaps and strengths
-- Suggests areas of improvement
+- Analisi dei campi della descrizione del corso e della profondità dei contenuti
+- Verifica che la descrizione del corso abbia profondità sufficiente per generare 200 concetti
+- Confronta la descrizione del corso con corsi simili
+- Identifica lacune e punti di forza dei contenuti
+- Suggerisce aree di miglioramento
 
-[View the Course Description Quality Assessment](course-description-assessment.md)
+[Visualizza la Valutazione della Qualità della Descrizione del Corso](course-description-assessment.md)
 
-### Learning Graph Quality Validation
+### Validazione della Qualità del Grafo di Apprendimento
 
-This report gives you an overall assessment of the quality of the learning graph.
-It uses graph algorithms to look for specific quality patterns in the graph.
+Questo report fornisce una valutazione complessiva della qualità del grafo di apprendimento.
+Usa algoritmi sui grafi per cercare pattern di qualità specifici nel grafo.
 
-- Graph structure validation — all concepts are connected
-- DAG validation — no cycles detected ✅
-- Foundational concepts: 2 entry points (Python Interpreter Overview, Command Line Basics)
-- Indegree distribution analysis
-- Longest dependency chain: 13 steps
-- Connectivity: all 450 nodes in a single connected component
+- Validazione della struttura del grafo — tutti i concetti sono collegati
+- Validazione DAG — nessun ciclo rilevato ✅
+- Concetti fondamentali: 2 punti di ingresso (Python Interpreter Overview, Command Line Basics)
+- Analisi della distribuzione del grado entrante
+- Catena di dipendenza più lunga: 13 passaggi
+- Connettività: tutti i 450 nodi in un'unica componente connessa
 
-[View the Learning Graph Quality Validation](quality-metrics.md)
+[Visualizza la Validazione della Qualità del Grafo di Apprendimento](quality-metrics.md)
 
-### Concept Taxonomy
+### Tassonomia dei Concetti
 
-In order to see patterns in the learning graph, it is useful to assign colors
-to each concept based on the concept type. We use generative AI to
-create about a dozen categories for our concepts and then place each concept
-into a single primary classifier.
+Per vedere i pattern nel grafo di apprendimento, è utile assegnare colori
+a ogni concetto in base al tipo di concetto. Usiamo l'IA generativa per
+creare circa una dozzina di categorie per i nostri concetti e poi collocare ogni concetto
+in un singolo classificatore primario.
 
-- A concept classifier taxonomy with 14 categories
-- Category organization — environment first, advanced ML/AI last
-- Balanced categories (2.2% – 15.1% each)
-- All categories under 30% threshold
-- Clear 3-letter abbreviations for use in CSV file
+- Una tassonomia classificatrice di concetti con 14 categorie
+- Organizzazione delle categorie — prima l'ambiente, poi ML/IA avanzato per ultimo
+- Categorie bilanciate (2.2% – 15.1% ciascuna)
+- Tutte le categorie sotto la soglia del 30%
+- Abbreviazioni chiare di 3 lettere per l'uso nel file CSV
 
-[View the Concept Taxonomy](concept-taxonomy.md)
+[Visualizza la Tassonomia dei Concetti](concept-taxonomy.md)
 
-### Taxonomy Distribution
+### Distribuzione della Tassonomia
 
-This report shows how many concepts fit into each category of the taxonomy.
-Our goal is a somewhat balanced taxonomy where each category holds an
-equal number of concepts. We also don't want any category to contain
-over 30% of our concepts.
+Questo report mostra quanti concetti rientrano in ogni categoria della tassonomia.
+Il nostro obiettivo è una tassonomia abbastanza bilanciata dove ogni categoria contenga
+un numero uguale di concetti. Non vogliamo nemmeno che nessuna categoria contenga
+oltre il 30% dei nostri concetti.
 
-- Statistical breakdown
-- Detailed concept listing by category
-- Visual distribution table
-- Balance verification
+- Riepilogo statistico
+- Elenco dettagliato dei concetti per categoria
+- Tabella visiva della distribuzione
+- Verifica del bilanciamento
 
-[View the Taxonomy Distribution Report](./taxonomy-distribution.md)
+[Visualizza il Report sulla Distribuzione della Tassonomia](./taxonomy-distribution.md)

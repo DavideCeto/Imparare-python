@@ -1,18 +1,23 @@
-# Learning Python — Concept Taxonomy
+# Learning Python — Tassonomia dei Concetti
 
-This taxonomy organizes the 450 concepts into 14 categories that reflect the natural
-structure of a beginning-to-advanced Python course. Categories are designed to be
-approximately equal in size, with none exceeding 30% of total concepts.
+Questa tassonomia organizza i 450 concetti in 14 categorie che riflettono la struttura
+naturale di un corso Python da principiante ad avanzato. Le categorie sono progettate per
+essere approssimativamente uguali in dimensione, con nessuna che superi il 30% del totale dei concetti.
+
+*(I nomi delle categorie restano in inglese perché corrispondono esattamente alle
+etichette usate nei file dati del grafo di apprendimento — `learning-graph.json`,
+`learning-graph.csv` e `taxonomy-names.json` — e nel Visualizzatore del Grafo di
+Apprendimento interattivo.)*
 
 ---
 
-## Taxonomy Categories
+## Categorie della Tassonomia
 
 ### 1. Environment & Tools (ENV)
 **TaxonomyID:** ENV
 
-Concepts covering Python installation, development environments, IDEs, the command line,
-virtual environments, and the overall ecosystem. These are the "before you code" concepts.
+Concetti che coprono l'installazione di Python, gli ambienti di sviluppo, gli IDE, la riga di comando,
+gli ambienti virtuali, e l'ecosistema complessivo. Questi sono i concetti "prima di programmare".
 
 **Concept IDs:** 1–20
 
@@ -21,9 +26,9 @@ virtual environments, and the overall ecosystem. These are the "before you code"
 ### 2. Core Syntax & Output (SYN)
 **TaxonomyID:** SYN
 
-Foundational Python syntax: the print statement, comments, indentation, keywords,
-code blocks, statements, expressions, and whitespace rules. The very first things
-a student writes.
+Sintassi Python fondamentale: l'istruzione print, i commenti, l'indentazione, le parole chiave,
+i blocchi di codice, le istruzioni, le espressioni, e le regole sugli spazi bianchi. Le primissime cose
+che uno studente scrive.
 
 **Concept IDs:** 21–30
 
@@ -32,8 +37,8 @@ a student writes.
 ### 3. Variables & Data Types (DAT)
 **TaxonomyID:** DAT
 
-Variables, assignment, naming conventions, and all primitive data types: integers,
-floats, booleans, strings, and None. Also includes type conversion functions.
+Variabili, assegnazione, convenzioni di denominazione, e tutti i tipi di dati primitivi: interi,
+numeri decimali, booleani, stringhe, e None. Include anche le funzioni di conversione di tipo.
 
 **Concept IDs:** 31–85
 
@@ -42,8 +47,8 @@ floats, booleans, strings, and None. Also includes type conversion functions.
 ### 4. Input & Control Flow (CTL)
 **TaxonomyID:** CTL
 
-User input, conditionals (if/elif/else/match), and all loop constructs (for, while,
-break, continue, enumerate, zip, range). The logic and flow control layer of Python.
+Input dell'utente, condizionali (if/elif/else/match), e tutti i costrutti di ciclo (for, while,
+break, continue, enumerate, zip, range). Lo strato di logica e controllo del flusso di Python.
 
 **Concept IDs:** 86–114
 
@@ -52,8 +57,8 @@ break, continue, enumerate, zip, range). The logic and flow control layer of Pyt
 ### 5. Functions & Scope (FUN)
 **TaxonomyID:** FUN
 
-Defining and calling functions, parameters, return values, scope, recursion, lambda
-functions, higher-order functions, and docstrings. The fundamental abstraction unit.
+Definire e chiamare funzioni, parametri, valori di ritorno, scope, ricorsione, funzioni
+lambda, funzioni di ordine superiore, e docstring. L'unità fondamentale di astrazione.
 
 **Concept IDs:** 115–136
 
@@ -62,9 +67,9 @@ functions, higher-order functions, and docstrings. The fundamental abstraction u
 ### 6. Collections (COL)
 **TaxonomyID:** COL
 
-Python's built-in collection types: lists, tuples, dictionaries, and sets with all
-their methods, comprehensions, and iteration patterns. Also includes built-in functions
-that operate on collections.
+I tipi di collezione integrati di Python: liste, tuple, dizionari, e insiemi con tutti
+i loro metodi, comprehension, e pattern di iterazione. Include anche le funzioni integrate
+che operano sulle collezioni.
 
 **Concept IDs:** 137–204
 
@@ -73,8 +78,8 @@ that operate on collections.
 ### 7. Modules & Standard Library (MOD)
 **TaxonomyID:** MOD
 
-The import system, custom modules, and the Python standard library including the
-random, math, string, time, sys, os, json, csv, collections, and itertools modules.
+Il sistema di import, i moduli personalizzati, e la libreria standard di Python inclusi i
+moduli random, math, string, time, sys, os, json, csv, collections, e itertools.
 
 **Concept IDs:** 205–240
 
@@ -83,8 +88,8 @@ random, math, string, time, sys, os, json, csv, collections, and itertools modul
 ### 8. Text Processing & Regex (TXT)
 **TaxonomyID:** TXT
 
-Regular expression patterns, the re module, character classes, quantifiers, anchors,
-groups, substitution, and raw strings for pattern matching.
+Pattern di espressioni regolari, il modulo re, classi di caratteri, quantificatori, ancore,
+gruppi, sostituzione, e stringhe raw per la corrispondenza di pattern.
 
 **Concept IDs:** 241–254
 
@@ -93,8 +98,8 @@ groups, substitution, and raw strings for pattern matching.
 ### 9. File I/O & Data (FIO)
 **TaxonomyID:** FIO
 
-File operations (open, read, write, close), the with statement, context managers,
-CSV and JSON file handling, and file path operations.
+Operazioni sui file (open, read, write, close), l'istruzione with, i context manager,
+la gestione di file CSV e JSON, e le operazioni sui percorsi dei file.
 
 **Concept IDs:** 255–270
 
@@ -103,8 +108,8 @@ CSV and JSON file handling, and file path operations.
 ### 10. Error Handling & Debugging (ERR)
 **TaxonomyID:** ERR
 
-Exception types, try/except/finally, raise, assert, debugging strategies, tracebacks,
-the exception hierarchy, custom exceptions, and using documentation to debug.
+Tipi di eccezione, try/except/finally, raise, assert, strategie di debug, traceback,
+la gerarchia delle eccezioni, eccezioni personalizzate, e l'uso della documentazione per il debug.
 
 **Concept IDs:** 271–284
 
@@ -113,8 +118,8 @@ the exception hierarchy, custom exceptions, and using documentation to debug.
 ### 11. Object-Oriented Programming (OOP)
 **TaxonomyID:** OOP
 
-Classes, objects, attributes, methods, constructors, self, inheritance, dunder methods,
-properties, class vs instance variables, and object composition.
+Classi, oggetti, attributi, metodi, costruttori, self, ereditarietà, metodi dunder,
+proprietà, variabili di classe contro variabili di istanza, e composizione di oggetti.
 
 **Concept IDs:** 285–304
 
@@ -123,9 +128,9 @@ properties, class vs instance variables, and object composition.
 ### 12. Turtle Graphics & Visualization (VIZ)
 **TaxonomyID:** VIZ
 
-The turtle graphics library, screen setup, movement and pen control, color and fill,
-shapes, text, events, animation, and complete turtle projects. Also matplotlib charts,
-NumPy arrays, Pillow image processing, and Jupyter canvas.
+La libreria di grafica turtle, la configurazione dello schermo, il controllo del movimento e della penna, colore e riempimento,
+forme, testo, eventi, animazione, e progetti completi con la turtle. Anche i grafici matplotlib,
+gli array NumPy, l'elaborazione delle immagini con Pillow, e il canvas di Jupyter.
 
 **Concept IDs:** 305–363, 414–417
 
@@ -134,8 +139,8 @@ NumPy arrays, Pillow image processing, and Jupyter canvas.
 ### 13. Algorithms & Data Structures (ALG)
 **TaxonomyID:** ALG
 
-Abstract data types, stacks, queues, graphs, adjacency lists, BFS, DFS, sorting
-algorithms, binary search, and complexity analysis. The algorithmic thinking layer.
+Tipi di dati astratti, pile, code, grafi, liste di adiacenza, BFS, DFS, algoritmi
+di ordinamento, ricerca binaria, e analisi della complessità. Lo strato del pensiero algoritmico.
 
 **Concept IDs:** 364–385
 
@@ -144,17 +149,17 @@ algorithms, binary search, and complexity analysis. The algorithmic thinking lay
 ### 14. Advanced & Applied Python (ADV)
 **TaxonomyID:** ADV
 
-Machine learning with Keras, neural network concepts, the MNIST dataset, event-driven
-programming, programming best practices (DRY, modularity, refactoring), color theory,
-and computational thinking foundations (decomposition, abstraction, algorithm design).
+Machine learning con Keras, concetti di reti neurali, il dataset MNIST, programmazione
+guidata da eventi, buone pratiche di programmazione (DRY, modularità, refactoring), teoria del colore,
+e fondamenti del pensiero computazionale (scomposizione, astrazione, progettazione di algoritmi).
 
 **Concept IDs:** 386–413, 418–450
 
 ---
 
-## Summary Table
+## Tabella Riassuntiva
 
-| # | TaxonomyID | Category Name | Approx Count |
+| # | TaxonomyID | Nome Categoria | Conteggio Approssimativo |
 |---|-----------|---------------|-------------|
 | 1 | ENV | Environment & Tools | 20 |
 | 2 | SYN | Core Syntax & Output | 10 |
@@ -170,4 +175,4 @@ and computational thinking foundations (decomposition, abstraction, algorithm de
 | 12 | VIZ | Turtle Graphics & Visualization | 63 |
 | 13 | ALG | Algorithms & Data Structures | 22 |
 | 14 | ADV | Advanced & Applied Python | 61 |
-| | | **Total** | **450** |
+| | | **Totale** | **450** |
