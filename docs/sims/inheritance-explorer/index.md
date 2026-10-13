@@ -1,6 +1,6 @@
 ---
-title: Inheritance Explorer
-description: Click a method call and watch the lookup climb the class tree until a match highlights - overridden parent methods show as shadowed, and super() hops up explicitly.
+title: Esploratore dell'Ereditarietà
+description: Clicca una chiamata a un metodo e guarda la ricerca risalire l'albero delle classi finché non si evidenzia una corrispondenza - i metodi del genitore sovrascritti appaiono oscurati, e super() risale esplicitamente.
 image: /sims/inheritance-explorer/inheritance-explorer.png
 og:image: /sims/inheritance-explorer/inheritance-explorer.png
 twitter:image: /sims/inheritance-explorer/inheritance-explorer.png
@@ -9,47 +9,52 @@ social:
 quality_score: 95
 ---
 
-# Inheritance Explorer
+# Esploratore dell'Ereditarietà
 
 <iframe src="main.html" height="507" width="100%" scrolling="no"></iframe>
 
-[Run the Inheritance Explorer MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui l'Esploratore dell'Ereditarietà a Schermo Intero](./main.html){ .md-button .md-button--primary }
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-When you call a method on an object, Python performs an invisible search:
-look on the object's own class first, then climb parent by parent. This
-explorer makes the dispatch visible. The class tree (`Animal` with children
-`Dog` and `Cat`, and an instance `d` below Dog) is a live diagram; each call
-button animates the lookup hop by hop with a plain-language log. `d.eat()`
-misses on Dog and climbs to Animal (inheritance); `d.speak()` stops at Dog
-while Animal's copy is marked *shadowed* (overriding); the `super()` preset
-shows a child deliberately hopping up to run the parent's version too.
+Quando chiami un metodo su un oggetto, Python esegue una ricerca invisibile:
+guarda prima nella classe propria dell'oggetto, poi risale genitore per
+genitore. Questo esploratore rende visibile il dispacciamento. L'albero
+delle classi (`Animal` con i figli `Dog` e `Cat`, e un'istanza `d` sotto
+Dog) è un diagramma dal vivo; ogni pulsante di chiamata anima la ricerca
+balzo dopo balzo con un registro in linguaggio semplice. `d.eat()` manca su
+Dog e risale ad Animal (ereditarietà); `d.speak()` si ferma su Dog mentre
+la copia di Animal viene segnata come *oscurata* (sovrascrittura); il
+preset `super()` mostra un figlio che risale deliberatamente per eseguire
+anche la versione del genitore.
 
-**Learning objective:** The student will be able to determine which class's
-method runs when a method is called on a subclass instance.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di determinare il
+metodo di quale classe viene eseguito quando un metodo viene chiamato su
+un'istanza di una sottoclasse.
 
-- **Bloom's Taxonomy (2001):** Analyze — *attribute, organize,
-  differentiate*
-- **Interaction pattern:** click-a-call lookup animation with a hop-by-hop
-  log
-- **Library:** vis-network (class hierarchy as nodes and edges; mouse
-  zoom/pan disabled, navigation buttons enabled)
+- **Tassonomia di Bloom (2001):** Analizzare — *attribuire, organizzare,
+  differenziare*
+- **Pattern di interazione:** animazione di ricerca clicca-una-chiamata con
+  un registro balzo per balzo
+- **Libreria:** vis-network (gerarchia delle classi come nodi e archi;
+  zoom/pan del mouse disabilitati, pulsanti di navigazione abilitati)
 
-## How to Use
+## Come Usarlo
 
-1. Predict where each of the three methods lives, then click **d.fetch()**,
-   **d.speak()**, and **d.eat()** and follow the highlights.
-2. Notice `d.eat()` needs an extra hop — Dog never defines `eat()`, it
-   inherits it.
-3. After `d.speak()`, look at the Animal box: its `speak()` is marked
-   shadowed. The parent's version never ran.
-4. Click the **super()** button to see how a child can run the parent's
-   method on purpose.
+1. Prevedi dove vive ciascuno dei tre metodi, poi clicca **d.fetch()**,
+   **d.speak()** e **d.eat()** e segui le evidenziazioni.
+2. Nota che `d.eat()` richiede un balzo extra — Dog non definisce mai
+   `eat()`, lo eredita.
+3. Dopo `d.speak()`, guarda la scatola di Animal: il suo `speak()` è
+   segnato come oscurato. La versione del genitore non è mai stata
+   eseguita.
+4. Clicca il pulsante **super()** per vedere come un figlio può eseguire di
+   proposito il metodo del genitore.
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/inheritance-explorer/main.html"
@@ -58,36 +63,39 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapter 25 (Object-Oriented Programming)
+Scuola primaria superiore e scuola media (10-14 anni), Capitolo 25 (Programmazione orientata agli oggetti)
 
-### Duration
+### Durata
 
-10 minutes
+10 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- Classes, instances, and self (Chapter 25; Object Instance Inspector MicroSim)
+- Classi, istanze e self (Capitolo 25; MicroSim Ispettore delle Istanze
+  degli Oggetti)
 
-### Activities
+### Attività
 
-1. **Predict the hops** (4 min): For each of the three calls, students write
-   how many hops the lookup will take before clicking.
-2. **Override vs inherit** (3 min): Students explain in one sentence why
-   `d.speak()` and `d.eat()` end in different classes.
-3. **super() discussion** (3 min): "When would a child want to run the
-   parent's version too?" (Example: adding to a parent's greeting.)
+1. **Prevedi i balzi** (4 min): Per ciascuna delle tre chiamate, gli
+   studenti scrivono quanti balzi farà la ricerca prima di cliccare.
+2. **Sovrascrittura contro ereditarietà** (3 min): Gli studenti spiegano in
+   una frase perché `d.speak()` e `d.eat()` finiscono in classi diverse.
+3. **Discussione su super()** (3 min): "Quando un figlio vorrebbe eseguire
+   anche la versione del genitore?" (Esempio: aggiungere qualcosa al
+   saluto di un genitore.)
 
-### Assessment
+### Verifica
 
-- Student can trace which class answers any method call on a Dog instance
-- Student can define overriding and inheritance using the tree
-- Student can explain what super() changes about the lookup
+- Lo studente sa tracciare quale classe risponde a qualsiasi chiamata di
+  metodo su un'istanza di Dog
+- Lo studente sa definire sovrascrittura ed ereditarietà usando l'albero
+- Lo studente sa spiegare cosa cambia super() nella ricerca
 
-## References
+## Riferimenti
 
-1. [Python Tutorial — Inheritance](https://docs.python.org/3/tutorial/classes.html#inheritance) — official documentation
-2. [vis-network](https://visjs.github.io/vis-network/docs/network/) — the network library used to build this MicroSim
+1. [Python Tutorial — Inheritance](https://docs.python.org/3/tutorial/classes.html#inheritance) — documentazione ufficiale
+2. [vis-network](https://visjs.github.io/vis-network/docs/network/) — la libreria di rete usata per costruire questo MicroSim

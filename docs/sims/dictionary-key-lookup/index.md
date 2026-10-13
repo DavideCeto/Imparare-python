@@ -1,6 +1,6 @@
 ---
-title: Dictionary Key Lookup
-description: Type a key and watch the matching drawer spring open - or hit a KeyError - then race a dictionary against a list to feel why dict lookup is one hop.
+title: Ricerca delle Chiavi nel Dizionario
+description: Digita una chiave e guarda il cassetto corrispondente scattare aperto - o incontra un KeyError - poi fai gareggiare un dizionario contro una lista per sentire perché la ricerca nel dizionario è un solo balzo.
 image: /sims/dictionary-key-lookup/dictionary-key-lookup.png
 og:image: /sims/dictionary-key-lookup/dictionary-key-lookup.png
 twitter:image: /sims/dictionary-key-lookup/dictionary-key-lookup.png
@@ -9,45 +9,48 @@ social:
 quality_score: 93
 ---
 
-# Dictionary Key Lookup
+# Ricerca delle Chiavi nel Dizionario
 
 <iframe src="main.html" height="532" width="100%" scrolling="no"></iframe>
 
-[Run the Dictionary Key Lookup MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui la Ricerca delle Chiavi nel Dizionario a Schermo Intero](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Modifica nell'Editor p5.js](https://editor.p5js.org/)
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-Why is dictionary lookup instant, and why does a missing key crash? This sim
-draws the dictionary as a cabinet of drawers with keys written on the fronts.
-A typed key springs the matching drawer open in "one hop"; a missing key
-shows the real `KeyError` banner — or, with the `.get()` toggle, a polite
-`None`. The comparison mode puts the same data in a list and counts how many
-items must be checked one by one, planting the efficiency seed without any
-hash-table jargon.
+Perché la ricerca nel dizionario è istantanea, e perché una chiave mancante
+fa crashare? Questa simulazione disegna il dizionario come un mobile di
+cassetti con le chiavi scritte sulle ante. Una chiave digitata fa scattare
+aperto il cassetto corrispondente in "un solo balzo"; una chiave mancante
+mostra il vero banner `KeyError` — oppure, con l'interruttore `.get()`, un
+educato `None`. La modalità di confronto mette gli stessi dati in una
+lista e conta quanti elementi devono essere controllati uno per uno,
+piantando il seme dell'efficienza senza alcun gergo sulle tabelle hash.
 
-**Learning objective:** The student will be able to explain how a dictionary
-finds a value from a key and why a missing key raises KeyError while `.get()`
-does not.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di spiegare come
+un dizionario trova un valore da una chiave e perché una chiave mancante
+solleva KeyError mentre `.get()` no.
 
-- **Bloom's Taxonomy (2001):** Understand — *explain, compare, infer*
-- **Interaction pattern:** type-a-key lookup with a list-vs-dict comparison
-  mode
+- **Tassonomia di Bloom (2001):** Comprendere — *spiegare, confrontare,
+  dedurre*
+- **Pattern di interazione:** ricerca digita-una-chiave con una modalità di
+  confronto lista-contro-dizionario
 
-## How to Use
+## Come Usarlo
 
-1. Look up `grace` — the drawer opens in one hop.
-2. Try `Grace` with a capital G: keys must match exactly, so you get a
-   `KeyError`.
-3. Check **use .get()** and repeat: `None` instead of a crash.
-4. Check **compare with a list search** and look up `guido` (the last
-   drawer): the list checks all five items; the dictionary still takes one
-   hop.
+1. Cerca `grace` — il cassetto si apre in un balzo.
+2. Prova `Grace` con la G maiuscola: le chiavi devono corrispondere
+   esattamente, quindi ottieni un `KeyError`.
+3. Seleziona **usa .get()** e ripeti: `None` invece di un crash.
+4. Seleziona **confronta con una ricerca in lista** e cerca `guido` (l'ultimo
+   cassetto): la lista controlla tutti e cinque gli elementi; il dizionario
+   impiega comunque un solo balzo.
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/dictionary-key-lookup/main.html"
@@ -56,37 +59,42 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapter 21 (Dictionaries)
+Scuola primaria superiore e scuola media (10-14 anni), Capitolo 21 (Dizionari)
 
-### Duration
+### Durata
 
-10 minutes
+10 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- Creating dictionaries and accessing values by key (Chapter 21 opening sections)
-- Lists and the in operator (Chapters 15-16)
+- Creare dizionari e accedere ai valori tramite chiave (sezioni iniziali
+  del Capitolo 21)
+- Liste e l'operatore in (Capitoli 15-16)
 
-### Activities
+### Attività
 
-1. **Exact-match drill** (3 min): Students predict the outcome for `grace`,
-   `Grace`, and `gracie`, then test all three.
-2. **Crash vs None** (3 min): Same missing key with brackets and with
-   .get(); students write one sentence on when they would choose each.
-3. **The race** (4 min): With comparison on, students look up the first,
-   middle, and last keys and record the list's check counts vs the dict's.
+1. **Esercizio di corrispondenza esatta** (3 min): Gli studenti prevedono
+   il risultato per `grace`, `Grace` e `gracie`, poi testano tutte e tre.
+2. **Crash contro None** (3 min): Stessa chiave mancante con le parentesi e
+   con .get(); gli studenti scrivono una frase su quando sceglierebbero
+   ciascuno.
+3. **La gara** (4 min): Con il confronto attivo, gli studenti cercano la
+   prima, la media e l'ultima chiave e registrano i conteggi dei controlli
+   della lista contro quelli del dizionario.
 
-### Assessment
+### Verifica
 
-- Student can explain why `phone_book["Grace"]` fails when the key is `"grace"`
-- Student can state what `.get()` returns for a missing key
-- Student can explain why dictionaries are faster than lists for lookups
+- Lo studente sa spiegare perché `phone_book["Grace"]` fallisce quando la
+  chiave è `"grace"`
+- Lo studente sa indicare cosa restituisce `.get()` per una chiave mancante
+- Lo studente sa spiegare perché i dizionari sono più veloci delle liste
+  per le ricerche
 
-## References
+## Riferimenti
 
-1. [Python Tutorial — Dictionaries](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) — official documentation
-2. [p5.js](https://p5js.org/) — the JavaScript library used to build this MicroSim
+1. [Python Tutorial — Dictionaries](https://docs.python.org/3/tutorial/datastructures.html#dictionaries) — documentazione ufficiale
+2. [p5.js](https://p5js.org/) — la libreria JavaScript usata per costruire questo MicroSim

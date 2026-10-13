@@ -1,6 +1,6 @@
 ---
-title: Object Instance Inspector
-description: Step through Dog constructions and method calls, watching instance cards get their own attributes while a glowing self arrow shows which card each method works on.
+title: Ispettore delle Istanze degli Oggetti
+description: Percorri passo-passo le costruzioni di Dog e le chiamate ai metodi, guardando le card delle istanze ottenere i propri attributi mentre una freccia luminosa self mostra su quale card lavora ogni metodo.
 image: /sims/object-instance-inspector/object-instance-inspector.png
 og:image: /sims/object-instance-inspector/object-instance-inspector.png
 twitter:image: /sims/object-instance-inspector/object-instance-inspector.png
@@ -9,48 +9,50 @@ social:
 quality_score: 93
 ---
 
-# Object Instance Inspector
+# Ispettore delle Istanze degli Oggetti
 
 <iframe src="main.html" height="572" width="100%" scrolling="no"></iframe>
 
-[Run the Object Instance Inspector MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui l'Ispettore delle Istanze degli Oggetti a Schermo Intero](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Modifica nell'Editor p5.js](https://editor.p5js.org/)
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-Students routinely conflate the class with its objects and cannot say what
-`self` refers to. This inspector separates the two visually: the class is a
-dashed **blueprint** card that makes nothing by itself; each `Dog(...)` call
-spawns a solid instance card with its own `name` and `age` boxes. During
-`rex.bark()`, a glowing orange arrow connects the blueprint's method to
-exactly one card — `self` is the object left of the dot. The final step reads
-`rex.species` and shows the lookup falling through to the shared class
-variable on the blueprint.
+Gli studenti confondono abitualmente la classe con i suoi oggetti e non
+sanno dire a cosa si riferisce `self`. Questo ispettore separa i due
+visivamente: la classe è una card **progetto** tratteggiata che da sola
+non crea nulla; ogni chiamata `Dog(...)` genera una card istanza solida
+con le proprie scatole `name` e `age`. Durante `rex.bark()`, una freccia
+arancione luminosa collega il metodo del progetto a esattamente una card —
+`self` è l'oggetto a sinistra del punto. Il passo finale legge
+`rex.species` e mostra la ricerca scendere fino alla variabile di classe
+condivisa sul progetto.
 
-**Learning objective:** The student will be able to explain the difference
-between a class and its instances and identify which object `self` refers to
-during a method call.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di spiegare la
+differenza tra una classe e le sue istanze e di identificare a quale
+oggetto si riferisce `self` durante una chiamata di metodo.
 
-- **Bloom's Taxonomy (2001):** Understand — *explain, exemplify,
-  differentiate*
-- **Interaction pattern:** step-through of construction and method calls
-  with instance cards and a self arrow
+- **Tassonomia di Bloom (2001):** Comprendere — *spiegare, esemplificare,
+  differenziare*
+- **Pattern di interazione:** esecuzione passo-passo di costruzione e
+  chiamate di metodo con card delle istanze e una freccia self
 
-## How to Use
+## Come Usarlo
 
-1. Step 1: notice that `class Dog:` creates NO dog — just the dashed
-   blueprint.
-2. Steps 2-3: each `Dog(...)` call builds a separate card with its own
-   boxes.
-3. Step 4: before clicking, predict whose name `rex.bark()` prints, then
-   follow the `self` arrow.
-4. Step 5: `rex.species` is not on rex's card — watch the dotted lookup
-   climb to the blueprint.
+1. Passo 1: nota che `class Dog:` NON crea nessun cane — solo il progetto
+   tratteggiato.
+2. Passi 2-3: ogni chiamata `Dog(...)` costruisce una card separata con le
+   proprie scatole.
+3. Passo 4: prima di cliccare, prevedi il nome di chi stampa `rex.bark()`,
+   poi segui la freccia `self`.
+4. Passo 5: `rex.species` non è sulla card di rex — osserva la ricerca
+   tratteggiata risalire fino al progetto.
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/object-instance-inspector/main.html"
@@ -59,37 +61,40 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapter 25 (Object-Oriented Programming)
+Scuola primaria superiore e scuola media (10-14 anni), Capitolo 25 (Programmazione orientata agli oggetti)
 
-### Duration
+### Durata
 
-10-15 minutes
+10-15 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- Functions and parameters (Chapters 4 and 11)
-- Objects and dot notation (Chapter 4)
+- Funzioni e parametri (Capitoli 4 e 11)
+- Oggetti e notazione col punto (Capitolo 4)
 
-### Activities
+### Attività
 
-1. **Blueprint check** (3 min): After step 1, ask: "How many dogs exist
-   right now?" (Zero — a common misconception.)
-2. **Whose name?** (4 min): Students predict the output of `rex.bark()` and
-   `bella.bark()`, then verify with the self arrow.
-3. **Shared vs owned** (4 min): Students sort `name`, `age`, and `species`
-   into "each dog owns one" vs "all dogs share one."
+1. **Verifica del progetto** (3 min): Dopo il passo 1, chiedi: "Quanti
+   cani esistono in questo momento?" (Zero — un equivoco comune.)
+2. **Il nome di chi?** (4 min): Gli studenti prevedono l'output di
+   `rex.bark()` e `bella.bark()`, poi verificano con la freccia self.
+3. **Condiviso contro posseduto** (4 min): Gli studenti classificano
+   `name`, `age` e `species` in "ogni cane ne possiede uno" contro "tutti i
+   cani ne condividono uno."
 
-### Assessment
+### Verifica
 
-- Student can state what self refers to in any method call
-- Student can explain why two instances have independent attribute values
-- Student can predict where Python finds rex.species
+- Lo studente sa indicare a cosa si riferisce self in qualsiasi chiamata
+  di metodo
+- Lo studente sa spiegare perché due istanze hanno valori di attributo
+  indipendenti
+- Lo studente prevede dove Python trova rex.species
 
-## References
+## Riferimenti
 
-1. [Python Tutorial — Classes](https://docs.python.org/3/tutorial/classes.html) — official documentation
-2. [p5.js](https://p5js.org/) — the JavaScript library used to build this MicroSim
+1. [Python Tutorial — Classes](https://docs.python.org/3/tutorial/classes.html) — documentazione ufficiale
+2. [p5.js](https://p5js.org/) — la libreria JavaScript usata per costruire questo MicroSim

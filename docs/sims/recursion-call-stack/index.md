@@ -1,6 +1,6 @@
 ---
-title: Recursion Call Stack
-description: Step factorial(4) and watch stack frames pile up to the gold base case, then unwind as each pending multiplication fills in.
+title: Pila delle Chiamate Ricorsive
+description: Esegui passo-passo factorial(4) e guarda i frame della pila accumularsi fino al caso base dorato, poi srotolarsi mentre ogni moltiplicazione in sospeso si riempie.
 image: /sims/recursion-call-stack/recursion-call-stack.png
 og:image: /sims/recursion-call-stack/recursion-call-stack.png
 twitter:image: /sims/recursion-call-stack/recursion-call-stack.png
@@ -9,46 +9,50 @@ social:
 quality_score: 93
 ---
 
-# Recursion Call Stack
+# Pila delle Chiamate Ricorsive
 
 <iframe src="main.html" height="562" width="100%" scrolling="no"></iframe>
 
-[Run the Recursion Call Stack MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui la Pila delle Chiamate Ricorsive a Schermo Intero](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Modifica nell'Editor p5.js](https://editor.p5js.org/)
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-The call stack is the canonical invisible machine: students see
-`factorial(4) = 24` but never the frames stacking up and unwinding. This sim
-draws each frame as a physical box remembering its own `n` and its paused
-work (`4 × ?`). Frames pile upward until the base case lights **gold**, then
-pop one at a time as each pending multiplication fills in and its answer
-flows down. The `countdown(3)` preset shows recursion with side effects and
-no return value; **Missing Base Case** grows the tower past `n = 0` until a
-`RecursionError` banner appears.
+La pila delle chiamate è la macchina invisibile per eccellenza: gli
+studenti vedono `factorial(4) = 24` ma mai i frame che si accumulano e si
+srotolano. Questa simulazione disegna ogni frame come una scatola fisica
+che ricorda il proprio `n` e il proprio lavoro in sospeso (`4 × ?`). I
+frame si accumulano verso l'alto finché il caso base non si illumina
+**dorato**, poi vengono rimossi uno alla volta mentre ogni moltiplicazione
+in sospeso si riempie e la sua risposta scorre verso il basso. Il preset
+`countdown(3)` mostra la ricorsione con effetti collaterali e nessun
+valore di ritorno; **Caso Base Mancante** fa crescere la torre oltre
+`n = 0` finché non appare un banner `RecursionError`.
 
-**Learning objective:** The student will be able to deconstruct a recursive
-call into stack frames, identify the base case, and trace values returning
-back down the stack.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di scomporre una
+chiamata ricorsiva in frame della pila, identificare il caso base e
+tracciare i valori che tornano giù lungo la pila.
 
-- **Bloom's Taxonomy (2001):** Analyze — *deconstruct, organize, trace*
-- **Interaction pattern:** step-through with every frame's variables and
-  pending work visible
+- **Tassonomia di Bloom (2001):** Analizzare — *scomporre, organizzare,
+  tracciare*
+- **Pattern di interazione:** esecuzione passo-passo con le variabili e il
+  lavoro in sospeso di ogni frame visibili
 
-## How to Use
+## Come Usarlo
 
-1. Predict how tall the tower will get for `factorial(4)`, then step and
-   count the frames.
-2. Watch the turn-around moment: the gold base case is the only frame that
-   answers without asking anyone else.
-3. On the way down, follow each answer: 1 → 2 → 6 → 24.
-4. Try **countdown(3)** (recursion that prints instead of returning) and
-   **Missing Base Case** (why the stopping rule matters).
+1. Prevedi quanto sarà alta la torre per `factorial(4)`, poi procedi
+   passo-passo e conta i frame.
+2. Osserva il momento di svolta: il caso base dorato è l'unico frame che
+   risponde senza chiedere a nessun altro.
+3. Sulla via del ritorno, segui ogni risposta: 1 → 2 → 6 → 24.
+4. Prova **countdown(3)** (ricorsione che stampa invece di restituire) e
+   **Caso Base Mancante** (perché la regola di arresto conta).
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/recursion-call-stack/main.html"
@@ -57,37 +61,39 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapter 24 (Recursion and Fractals); also useful for tracebacks in Chapter 23
+Scuola primaria superiore e scuola media (10-14 anni), Capitolo 24 (Ricorsione e frattali); utile anche per i traceback nel Capitolo 23
 
-### Duration
+### Durata
 
-15 minutes
+15 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- Functions, parameters, and return values (Chapters 4 and 11)
+- Funzioni, parametri e valori di ritorno (Capitoli 4 e 11)
 
-### Activities
+### Attività
 
-1. **Tower prediction** (4 min): Students predict the maximum frame count
-   for factorial(4), then factorial(6) (without the sim).
-2. **Two-phase trace** (5 min): Step through all 8 steps; students narrate
-   the "up with pauses, down with answers" rhythm in their own words.
-3. **Break it** (4 min): Run Missing Base Case. Students write the one line
-   that fixes it and say where it must go.
+1. **Previsione della torre** (4 min): Gli studenti prevedono il numero
+   massimo di frame per factorial(4), poi factorial(6) (senza la
+   simulazione).
+2. **Traccia a due fasi** (5 min): Esegui passo-passo tutti gli 8 passi;
+   gli studenti narrano con parole proprie il ritmo "su con le pause, giù
+   con le risposte."
+3. **Rompilo** (4 min): Esegui Caso Base Mancante. Gli studenti scrivono
+   l'unica riga che lo corregge e dicono dove deve andare.
 
-### Assessment
+### Verifica
 
-- Student states the maximum stack depth for factorial(n)
-- Student can identify the base case in a new recursive function
-- Student can explain what RecursionError means and how to prevent it
+- Lo studente indica la profondità massima della pila per factorial(n)
+- Lo studente sa identificare il caso base in una nuova funzione ricorsiva
+- Lo studente sa spiegare cosa significa RecursionError e come prevenirlo
 
-## References
+## Riferimenti
 
-1. [Python Tutorial — more on defining functions](https://docs.python.org/3/tutorial/controlflow.html#defining-functions) — background on function calls
-2. [Wikipedia — Call stack](https://en.wikipedia.org/wiki/Call_stack) — the general concept
-3. [p5.js](https://p5js.org/) — the JavaScript library used to build this MicroSim
+1. [Python Tutorial — more on defining functions](https://docs.python.org/3/tutorial/controlflow.html#defining-functions) — contesto sulle chiamate di funzione
+2. [Wikipedia — Call stack](https://en.wikipedia.org/wiki/Call_stack) — il concetto generale
+3. [p5.js](https://p5js.org/) — la libreria JavaScript usata per costruire questo MicroSim

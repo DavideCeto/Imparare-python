@@ -1,6 +1,6 @@
 ---
-title: Fractal Tree Explorer
-description: Drag branch angle, depth, and shrink sliders and watch a recursive tree redraw instantly, with each recursion level tinted its own color.
+title: Esploratore dell'Albero Frattale
+description: Trascina gli slider di angolo del ramo, profondità e restringimento e guarda un albero ricorsivo ridisegnarsi istantaneamente, con ogni livello di ricorsione tinto del proprio colore.
 image: /sims/fractal-tree-explorer/fractal-tree-explorer.png
 og:image: /sims/fractal-tree-explorer/fractal-tree-explorer.png
 twitter:image: /sims/fractal-tree-explorer/fractal-tree-explorer.png
@@ -9,45 +9,50 @@ social:
 quality_score: 93
 ---
 
-# Fractal Tree Explorer
+# Esploratore dell'Albero Frattale
 
 <iframe src="main.html" height="552" width="100%" scrolling="no"></iframe>
 
-[Run the Fractal Tree Explorer MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
+[Esegui l'Esploratore dell'Albero Frattale a Schermo Intero](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Modifica nell'Editor p5.js](https://editor.p5js.org/)
 
-## About This MicroSim
+## Informazioni su questo MicroSim
 
-The chapter's turtle fractal requires an edit-and-rerun cycle for every
-parameter change; this explorer closes the loop with three sliders. Each
-recursion level is tinted its own color (brown trunk to green twigs), which
-turns the depth slider into a live demonstration of recursion levels. The
-"recursive calls" counter roughly doubles with every +1 depth — connecting
-the tree's beauty back to the call stack — and Snapshot keeps a gray ghost
-so students can compare designs.
+Il frattale con la turtle del capitolo richiede un ciclo di
+modifica-e-riesecuzione per ogni cambio di parametro; questo esploratore
+chiude il ciclo con tre slider. Ogni livello di ricorsione è tinto del
+proprio colore (tronco marrone fino a rametti verdi), il che trasforma lo
+slider della profondità in una dimostrazione dal vivo dei livelli di
+ricorsione. Il contatore delle "chiamate ricorsive" raddoppia più o meno a
+ogni +1 di profondità — collegando la bellezza dell'albero alla pila delle
+chiamate — e Istantanea mantiene un fantasma grigio così gli studenti
+possono confrontare i progetti.
 
-**Learning objective:** The student will be able to demonstrate how branch
-angle, depth, and shrink factor shape a recursive tree and design a tree of
-their own.
+**Obiettivo di apprendimento:** Lo studente sarà in grado di dimostrare
+come l'angolo del ramo, la profondità e il fattore di restringimento
+modellano un albero ricorsivo e di progettarne uno proprio.
 
-- **Bloom's Taxonomy (2001):** Apply → Create — *demonstrate, experiment,
-  design*
-- **Interaction pattern:** parameter sliders with immediate redraw, plus
-  snapshot comparison
+- **Tassonomia di Bloom (2001):** Applicare → Creare — *dimostrare,
+  sperimentare, progettare*
+- **Pattern di interazione:** slider dei parametri con ridisegno immediato,
+  più confronto con istantanea
 
-## How to Use
+## Come Usarlo
 
-1. Predict what the call counter does when depth goes from 6 to 7, then
-   drag and check (it roughly doubles: two recursive calls per branch).
-2. Sweep the **angle** slider from 10° to 60° — from poplar to banyan.
-3. Click **Snapshot**, change one slider, and compare against the ghost.
-4. Design challenge: make a weeping willow (big angle, high shrink), then
-   a scraggly bush (Randomize and refine).
+1. Prevedi cosa fa il contatore delle chiamate quando la profondità passa
+   da 6 a 7, poi trascina e verifica (raddoppia più o meno: due chiamate
+   ricorsive per ramo).
+2. Scorri lo slider dell'**angolo** da 10° a 60° — dal pioppo al banyan.
+3. Clicca **Istantanea**, cambia uno slider, e confronta con il fantasma.
+4. Sfida di progettazione: crea un salice piangente (angolo grande,
+   restringimento alto), poi un cespuglio spelacchiato (Randomizza e
+   perfeziona).
 
-## Iframe Embed Code
+## Codice di Incorporamento Iframe
 
-You can add this MicroSim to any web page by adding this to your HTML:
+Puoi aggiungere questo MicroSim a qualsiasi pagina web aggiungendo questo al
+tuo HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/learning-python/sims/fractal-tree-explorer/main.html"
@@ -56,37 +61,42 @@ You can add this MicroSim to any web page by adding this to your HTML:
         scrolling="no"></iframe>
 ```
 
-## Lesson Plan
+## Piano della Lezione
 
-### Grade Level
+### Livello Scolastico
 
-Upper elementary and middle school (ages 10-14), Chapter 24 (Recursion and Fractals)
+Scuola primaria superiore e scuola media (10-14 anni), Capitolo 24 (Ricorsione e frattali)
 
-### Duration
+### Durata
 
-10-15 minutes
+10-15 minuti
 
-### Prerequisites
+### Prerequisiti
 
-- The recursive turtle tree program (Chapter 24)
-- The call stack model (Recursion Call Stack MicroSim)
+- Il programma ricorsivo dell'albero con la turtle (Capitolo 24)
+- Il modello della pila delle chiamate (MicroSim Pila delle Chiamate Ricorsive)
 
-### Activities
+### Attività
 
-1. **Doubling hunt** (4 min): Students record the call count at depths 4,
-   5, 6, 7 and describe the pattern (2^(depth+1) − 1).
-2. **One-slider studies** (4 min): Change only the angle, then only the
-   shrink; students write one sentence per slider about its visual effect.
-3. **Design gallery** (5 min): Each student snapshots their best tree and
-   records its three parameter values for a partner to reproduce.
+1. **Caccia al raddoppio** (4 min): Gli studenti registrano il conteggio
+   delle chiamate alle profondità 4, 5, 6, 7 e descrivono il pattern
+   (2^(profondità+1) − 1).
+2. **Studi a uno slider** (4 min): Cambia solo l'angolo, poi solo il
+   restringimento; gli studenti scrivono una frase per slider sul suo
+   effetto visivo.
+3. **Galleria di progetti** (5 min): Ogni studente fa un'istantanea del
+   proprio albero migliore e registra i suoi tre valori di parametro
+   perché un compagno lo riproduca.
 
-### Assessment
+### Verifica
 
-- Student predicts the approximate call count for a given depth
-- Student can map each slider to its line in the chapter's draw_tree code
-- Student can reproduce a target tree from its three parameters
+- Lo studente prevede il conteggio approssimativo delle chiamate per una
+  data profondità
+- Lo studente sa mappare ogni slider alla sua riga nel codice draw_tree
+  del capitolo
+- Lo studente sa riprodurre un albero bersaglio dai suoi tre parametri
 
-## References
+## Riferimenti
 
-1. [Wikipedia — Fractal canopy](https://en.wikipedia.org/wiki/Fractal_canopy) — the fractal family this tree belongs to
-2. [p5.js](https://p5js.org/) — the JavaScript library used to build this MicroSim
+1. [Wikipedia — Fractal canopy](https://en.wikipedia.org/wiki/Fractal_canopy) — la famiglia di frattali a cui appartiene questo albero
+2. [p5.js](https://p5js.org/) — la libreria JavaScript usata per costruire questo MicroSim
