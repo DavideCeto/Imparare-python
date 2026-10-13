@@ -219,6 +219,17 @@ Già tradotti (modifiche presenti nel working tree, non ancora committate):
   perché sono stringhe letterali dentro codice eseguibile — la regola
   "codice mai tradotto, carattere per carattere" vale anche per le
   stringhe visibili sul canvas, non solo per identificatori/sintassi)
+- `vasarely-sphere/`, `scintillating-grid/`, `impossible-triangle/`,
+  `ring-pulsation/`, `binary-tree-name/`, `turtle-chase/`,
+  `reaction-diffusion/` (ventesimo e ultimo batch della Fase 4 — nessun
+  problema trovato; conferma della nota di metodo sui commenti `#` dentro
+  i blocchi di codice Python, es. `# ... create prey (green) and hunter
+  (red) turtles ...` in `turtle-chase/`: restano in inglese, stessa
+  regola delle stringhe letterali)
+
+**FASE 4 COMPLETA — tutti i 102 file/unità della Turtle Graphics Gallery
+tradotti** (nav di `mkdocs.yml`, `pattern-ideas.md`, `index.md` root, e
+tutti i singoli laboratori).
 
 Verificato: i file skill (`skills/python-lab-generator/SKILL.md` e
 `skills/python-lab-generator/references/content-rules.md`) risultano intatti
@@ -367,14 +378,16 @@ cuore didattico del libro.
 `pinwheel-tiling/`, `escher-fish/`, `voronoi-regions/`, `penrose-rhombus/`,
 `river-delta/`, `coral-branch/`, `leaf-venation/`, `dna-helix/`,
 `topographic-map/`, `epitrochoid/`, `superellipse/`, `cassini-oval/`,
-`fermat-spiral/`, `astroid/`, `mach-bands/` (96 di ~102 file/unità).
-
-Prossimo: continuare la Fase 4 in ordine di nav con `vasarely-sphere/`,
+`fermat-spiral/`, `astroid/`, `mach-bands/`, `vasarely-sphere/`,
 `scintillating-grid/`, `impossible-triangle/`, `ring-pulsation/`,
-`binary-tree-name/`, `turtle-chase/`, `reaction-diffusion/` — gli ultimi
-7 file che chiudono la Fase 4.
+`binary-tree-name/`, `turtle-chase/`, `reaction-diffusion/`
+(102 di 102 file/unità — **FASE 4 COMPLETA**).
 
-Dopo la Fase 4: Fasi 5-9 (MicroSims, Teacher's Guide, Jupyter/Advanced, Learning Graph,
+Prossimo: iniziare la Fase 5 (MicroSims — solo le pagine `index.md`
+descrittive in `docs/sims/*/`, non il codice JS delle app, vedi
+decisione 3 nella sezione 2).
+
+Dopo la Fase 5: Fasi 6-9 (Teacher's Guide, Jupyter/Advanced, Learning Graph,
 Trinket Labs — quest'ultima di priorità minima/da valutare se tradurre affatto, vedi
 sezione 3).
 
