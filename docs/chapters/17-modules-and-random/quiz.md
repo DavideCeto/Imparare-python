@@ -89,7 +89,7 @@ Verifica la tua comprensione dei moduli Python, della sintassi di import, e del 
 <div class="upper-alpha" markdown>
 1. Restituisce tutti e tre gli elementi come una lista
 2. Restituisce `None` dopo aver stampato una scelta casuale
-3. Scegli e restituisce un elemento casuale dalla lista
+3. Sceglie e restituisce un elemento casuale dalla lista
 4. Mescola la lista sul posto e la restituisce
 </div>
 

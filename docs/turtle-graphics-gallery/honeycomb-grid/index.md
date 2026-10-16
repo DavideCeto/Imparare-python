@@ -125,7 +125,7 @@ for row in range(7):
 
 La funzione `hexagon()` usa `setheading(30)` così ogni esagono inizia a un angolo di 30°, producendo un esagono **con la punta in alto**. Reimpostare la direzione all'inizio di ogni chiamata è essenziale — non sai mai a che angolo si trovi Monty quando la funzione viene chiamata.
 
-La formula dell'offset `col_w / 2 if row % 2 == 1 else 0` sposta le righe dispari a destra di metà della larghezza dell'esagono, scalandole così ogni esagono si incastra nello spazio tra due esagoni nella riga sopra.
+La formula dell'offset `col_w / 2 if row % 2 == 1 else 0` sposta le righe dispari a destra di metà della larghezza dell'esagono, sfalsandole: così ogni esagono si incastra nello spazio tra due esagoni della riga sopra.
 
 ## Tabella delle Spiegazioni
 
@@ -144,7 +144,7 @@ La formula dell'offset `col_w / 2 if row % 2 == 1 else 0` sposta le righe dispar
 !!! mascot-warning "Trova il Bug!"
     ![Monty warning](../../img/mascot/warning.png){ class="mascot-admonition-img" }
     Il programma sotto disegna esagoni ma non tassellano — ci sono spazi vuoti e sovrapposizioni!
-    La formula dell'offset di riga è sbagliata. Correggila così le righe dispari si spostino esattamente di `size` pixel.
+    La formula dell'offset di riga è sbagliata. Correggila in modo che le righe dispari si spostino esattamente di metà larghezza dell'esagono.
 
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -205,6 +205,6 @@ Cambia `col_w` in `col_w / 2` nella riga dell'offset — lo spostamento dovrebbe
 
 !!! mascot-celebration "Lavoro Incredibile!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Hai costruito un motore di tassellatura completo con una funzione, cicli annidati, e geometria a righe con offset!
-    Le api hanno scoperto questo pattern milioni di anni fa — e ora conosci la matematica dietro di esso.
+    Hai costruito un motore di tassellatura completo con una funzione, cicli annidati e geometria a righe con offset!
+    Le api hanno scoperto questo pattern milioni di anni fa — e ora conosci la matematica che c'è dietro.
     Prossimo: **Skyline Urbano** — comporre una scena da funzioni riutilizzabili per edifici.

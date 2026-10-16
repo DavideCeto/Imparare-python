@@ -1,92 +1,153 @@
 # Domande frequenti su Python
 
-Benvenuti alle Domande frequenti per *Beginning Python – Dall’inizio alla programmazione con Monty*.
-Queste domande sono organizzate per argomenti di base fino a concetti avanzati,
-in modo da poter passare direttamente alla parte che vi interessa di più.
+Benvenuto nelle Domande frequenti di *Beginning Python — From Blocks to Code with Monty*.
+Le domande sono organizzate dagli argomenti introduttivi fino ai concetti avanzati,
+così puoi saltare direttamente a quello che ti serve di più.
 
 ---
 
-## Domande di avvio
+## Domande per iniziare
 
-### Di cosa tratta questo corso?
+### Di che cosa parla questo corso?
 
-*Beginning Python – Dall’inizio alla programmazione con Monty* è un corso orientato al progetto che si rivolge a studenti che hanno già imparato Scratch (o un altro linguaggio basato su blocchi) e li aiuta a scrivere programmi Python veri. Il corso inizia con l’uso della grafica visiva dei “turtles”, in modo da vedere i risultati immediatamente, e si sviluppa progressivamente verso variabili, cicli, funzioni, strutture dati e, infine, l’apprendimento del machine learning. Lungo il percorso, **Monty**, la mascotte della Python, appare in ogni lezione per fornire consigli, collegare idee provenienti da Scratch e celebrare i vostri progressi.
+*Beginning Python — From Blocks to Code with Monty* (dai blocchi al codice con Monty) è un corso
+basato su progetti che accompagna gli studenti che hanno già imparato Scratch (o un altro
+linguaggio a blocchi) e insegna loro a scrivere veri programmi in Python. Il corso parte dalla
+grafica turtle, che è visiva e ti fa vedere subito i risultati, e procede passo dopo passo verso
+variabili, cicli, funzioni, strutture dati e infine il machine learning. Lungo il percorso
+**Monty**, il pitone mascotte, compare in ogni lezione per darti consigli, collegare le idee
+a quelle di Scratch e festeggiare i tuoi progressi.
 
-Per una descrizione completa, consultate [course-description.md](course-description.md).
+Vedi [course-description.md](course-description.md) per la panoramica completa.
 
-### A chi è destinato questo corso?
+### A chi è rivolto questo corso?
 
-Questo corso è pensato per studenti delle scuole elementari e medie, circa **età 10–13 anni**, che hanno già completato almeno un semestre di programmazione basata su blocchi – Scratch, Snap! o MIT App Inventor – e sono pronti a passare a una programmazione basata su testi. Non è necessario avere alcuna esperienza pregressa con Python. È sufficiente avere abilità di lettura di base e la capacità di fare operazioni aritmetiche.
+Questo corso è pensato per studenti della scuola primaria e secondaria di primo grado, di circa
+**10–13 anni**, che hanno completato almeno un semestre di programmazione a blocchi (Scratch,
+Snap! o MIT App Inventor) e sono pronti a passare al codice scritto. Non serve alcuna esperienza
+con Python. Bastano una capacità di lettura di base e il saper fare addizioni e sottrazioni.
 
-### Cosa devo sapere prima di iniziare?
+### Che cosa dovrei sapere già prima di iniziare?
 
-Dovreste essere a vostro agio con i concetti di **sequenze** (eseguire passaggi in ordine), **cicli** (ripetere azioni), **condizionalità** (eseguire qualcosa se una condizione è vera) e **variabili** (conservare un valore sotto un nome). Se avete già utilizzato questi concetti in Scratch, siete completamente pronti. Non è necessario avere esperienza pregressa con Python, né con le matematiche al di fuori delle operazioni aritmetiche. Non è necessario effettuare alcuna installazione particolare.
+Dovresti avere familiarità con l'idea di **sequenza** (eseguire dei passi in ordine), di
+**ciclo** (ripetere delle azioni), di **condizione** (se qualcosa è vero, fai questo) e di
+**variabile** (memorizzare un valore con un nome). Se hai usato queste idee in Scratch, sei
+pronto. Non servono conoscenze di Python, né matematica oltre l'aritmetica, né installazioni.
 
-### Come si esegue il codice Python in questo libro di testo?
+### Come si esegue il codice Python in questo manuale?
 
-**Ogni lezione nei Capitoli 1–18 contiene uno o più **Skulpt labs** – finestre di codice interattive integrate direttamente nella pagina. Fai clic su **Run** e il Python viene eseguito immediatamente nel tuo browser. Non è necessario effettuare login, creare un account o installare nulla. Per i Capitoli 19–38, alcuni esempi utilizzano un Python installato localmente, ma i Skulpt labs continuano a comparire.
+Ogni lezione dei Capitoli 1–18 contiene uno o più **laboratori Skulpt**: finestre di codice
+interattive integrate direttamente nella pagina. Clicchi **Run** e Python viene eseguito subito
+nel tuo browser. Niente login, niente account, niente installazioni. Nei Capitoli 19–38 alcuni
+esempi usano Python installato sul tuo computer, ma i laboratori Skulpt continuano a comparire
+in tutto il manuale.
 
-### Cos’è Skulpt e perché viene utilizzato nei Capitoli 1–18?
+### Che cos'è Skulpt e perché i Capitoli 1–18 lo usano?
 
-**Skulpt** è una versione del Python che viene eseguita interamente all’interno di un browser web, utilizzando JavaScript. Poiché viene eseguito nel browser, gli studenti non hanno bisogno di installare nulla o aprire una nuova finestra – la finestra di codice si trova direttamente sulla pagina. I primi 18 capitoli si concentrano su concetti che Skulpt gestisce bene: stampa, variabili, cicli, funzioni, liste e grafica con il programma turtle. I capitoli successivi introducono librerie (NumPy, matplotlib, Pillow, Keras) che richiedono un’installazione completa di Python.
+**Skulpt** è una versione di Python che funziona interamente dentro il browser, grazie a
+JavaScript. Dato che gira nel browser, gli studenti non devono installare nulla né aprire una
+nuova scheda: la finestra del codice è proprio lì nella pagina. I primi 18 capitoli si
+concentrano su concetti che Skulpt gestisce bene: print, variabili, cicli, funzioni, liste e
+grafica turtle. I capitoli successivi introducono librerie (NumPy, matplotlib, Pillow, Keras)
+che richiedono un'installazione completa di Python.
 
-Per maggiori informazioni su Skulpt, consulta [chapters/01-welcome-to-python/index.md](chapters/01-welcome-to-python/index.md).
+Vedi [chapters/01-welcome-to-python/index.md](chapters/01-welcome-to-python/index.md) per
+un'introduzione a Skulpt.
 
-### Chi è Monty e cosa fa?
+### Chi è Monty e che cosa fa?
 
-**Monty** è la simpatica mascotte di python-snake che vive all’interno di questo libro di testo. Monty ha esattamente sette compiti: accoglierti all’inizio di ogni lezione, aiutarti a prevedere cosa farà il codice prima di eseguirlo, fornirti consigli utilizzati dai programmatori esperti, collegare le idee di Python alle loro corrispondenti funzionalità in Scratch, avvertirti sui errori comuni, incoraggiarti quando un concetto è difficile, e festeggiare con te alla fine di ogni lezione. Monty appare solo quando svolge uno di questi sette compiti – mai in modo casuale.
+**Monty** è il simpatico pitone mascotte che vive dentro questo manuale. Monty ha esattamente
+sette compiti: darti il benvenuto all'inizio di ogni lezione, aiutarti a prevedere che cosa
+farà il codice prima di eseguirlo, darti i consigli che usano i programmatori esperti,
+collegare le idee di Python ai loro equivalenti in Scratch, avvisarti degli errori più comuni,
+incoraggiarti quando un concetto è difficile e festeggiare con te alla fine di ogni lezione.
+Monty compare solo quando sta facendo una di queste sette cose, mai a caso.
 
-### Devo installare Python per utilizzare questo libro di testo?
+### Devo installare Python per usare questo manuale?
 
-**No** — non per i capitoli 1–18. Tutto ciò di cui hai bisogno è un moderno browser web. I laboratori Skulpt eseguono Python direttamente sulla pagina. Se desideri esplorare oltre il libro di testo — o affrontare i capitoli più avanzati che utilizzano NumPy, matplotlib o Keras — puoi installare Python su [python.org](https://www.python.org) o utilizzare un ambiente cloud come Google Colab.
+**No**, non per i Capitoli 1–18. Ti basta un browser moderno. I laboratori Skulpt integrati
+eseguono Python direttamente nella pagina. Se vuoi andare oltre il manuale, o affrontare i
+capitoli più avanzati che usano NumPy, matplotlib o Keras, puoi installare Python da
+[python.org](https://www.python.org) oppure usare un ambiente cloud come Google Colab.
 
-Per istruzioni sull’installazione, consulta [chapters/28-python-dev-tools/index.md](chapters/28-python-dev-tools/index.md).
+Vedi [chapters/28-python-dev-tools/index.md](chapters/28-python-dev-tools/index.md) per le
+istruzioni di installazione.
 
-### Cosa rende Python diverso da Scratch?
+### In che cosa Python è diverso da Scratch?
 
-In Scratch si trascinano blocchi colorati e si assemblano tra loro. In Python si **scrivono** istruzioni come testo. Le idee fondamentali — sequenze, cicli, condizionalità, variabili — sono le stesse, ma scrivere permette di avere molta più flessibilità: si possono scrivere cicli che vengono eseguiti milioni di volte, lavorare con grandi file di dati, creare grafici e costruire modelli di machine learning. Monty evidenzia i concetti equivalenti a Scratch ogni volta che appare un nuovo concetto di Python, in modo da poter costruire sulle conoscenze già acquisite.
+In Scratch trascini dei blocchi colorati e li incastri tra loro. In Python **scrivi** le
+istruzioni come testo. Le idee di base (sequenze, cicli, condizioni, variabili) sono le stesse,
+ma scrivere il codice ti dà molta più flessibilità: puoi scrivere cicli che si ripetono milioni
+di volte, lavorare con grandi file di dati, creare grafica e costruire modelli di machine
+learning. Ogni volta che compare un nuovo concetto di Python, Monty ti mostra l'equivalente in
+Scratch, così puoi costruire su quello che sai già.
 
-Per una comparazione completa tra Scratch e Python, consulta [chapters/01-welcome-to-python/index.md](chapters/01-welcome-to-python/index.md).
+Vedi [chapters/01-welcome-to-python/index.md](chapters/01-welcome-to-python/index.md) per il
+confronto completo tra Scratch e Python.
 
-### Cosa posso costruire alla fine di questo corso?
+### Che cosa sarò in grado di costruire alla fine del corso?
 
-Alla fine di questo corso di 38 capitoli, sarai in grado di creare:
+Alla fine di questo corso di 38 capitoli sarai in grado di costruire:
 
-- Programmi grafici con grafici a torta colorati e frattali animati
-- Giochi interattivi che utilizzano clic del mouse e eventi tastiera
+- Programmi colorati con la grafica turtle e frattali animati
+- Giochi interattivi che usano i clic del mouse e gli eventi della tastiera
 - Programmi di elaborazione dati che leggono e scrivono file di testo
-- Moduli personalizzati che possono essere riutilizzati in diversi progetti
-- Programmi per risolvere labirinti utilizzando algoritmi grafici
-- Pannelli di visualizzazione dei dati con matplotlib
-- Un network neurale in grado di riconoscere caratteri scritti dal dataset MNIST
+- Moduli personalizzati da riutilizzare in più progetti
+- Programmi che risolvono labirinti usando gli algoritmi sui grafi
+- Dashboard di visualizzazione dei dati con matplotlib
+- Una rete neurale che riconosce le cifre scritte a mano del dataset MNIST
 
-### Quanto tempo impiega questo corso per essere completato?
+### Quanto tempo serve per completare il corso?
 
-Il corso è pensato per circa **un anno scolastico** in un club di programmazione o in una lezione alternativa, che si tengono due o tre volte a settimana, oppure per studenti motivati che si dedicano alla lezione per 30–45 minuti a sessione. I 38 capitoli sono organizzati in modo che i capitoli 1–18 costituiscono una completa **fase iniziale**, mentre i capitoli 19–38 rappresentano una **fase intermedio-alta**.
+Il corso è pensato per circa **un anno scolastico** in un club di programmazione o in un corso
+opzionale che si incontra due o tre volte a settimana, oppure per studenti motivati che
+studiano da soli per 30–45 minuti a sessione. I 38 capitoli sono organizzati in modo che i
+Capitoli 1–18 formino un percorso **base** completo e i Capitoli 19–38 un'estensione di livello
+**intermedio-avanzato**.
 
-### È disponibile una guida per gli insegnanti?
+### Esiste una guida per gli insegnanti?
 
-Sì. Il corso include una **guida dettagliata per gli insegnanti**, che contiene raccomandazioni per il ritmo degli esercizi, mappe concettuali di riferimento, domande per le discussioni, informazioni sui concetti errati comuni, attività di approfondimento, criteri di valutazione e un allineamento con gli standard educativi CSTA K-12 in materia di programmazione. Per una descrizione di tutti i materiali inclusi, consultare [course-description.md](course-description.md).
+Sì. Il corso include una **guida dettagliata per gli insegnanti** con indicazioni sui tempi,
+mappe dei concetti prerequisiti, spunti di discussione, idee sbagliate più comuni, attività di
+approfondimento, rubriche di valutazione e l'allineamento agli standard CSTA K-12 per
+l'informatica. Vedi [course-description.md](course-description.md) per una descrizione di tutti
+i materiali inclusi.
 
-### I capitoli sono organizzati come?
+### Come sono organizzati i capitoli?
 
-I 38 capitoli seguono una sequenza logica che comprende 450 concetti, ciascuno dei quali si basa sui concetti precedenti. I primi cinque capitoli introducono l’ambiente di programmazione in Python e i grattugi di testo, utilizzando il feedback visivo come strumento di apprendimento. I capitoli 6–18 trattano i concetti fondamentali del linguaggio: matematica, cicli, stringhe, decisioni, funzioni, colori, input e liste. I capitoli 19–30 introducono concetti avanzati come collezioni, gestione degli errori, ricorsione, programmazione orientata agli oggetti, input/output di file e algoritmi. I capitoli 31–38 trattano la visualizzazione dei dati, NumPy, l’elaborazione delle immagini e l’apprendimento automatico.
+I 38 capitoli seguono un grafo di apprendimento di 450 concetti messi in sequenza con cura, in
+cui ogni concetto si basa su quelli precedenti. I primi cinque capitoli presentano l'ambiente
+Python e la grafica turtle, e stabiliscono il riscontro visivo e immediato come strumento di
+apprendimento. I Capitoli 6–18 trattano il nucleo del linguaggio: matematica, cicli, stringhe,
+decisioni, funzioni, colori, input e liste. I Capitoli 19–30 introducono collezioni avanzate,
+gestione degli errori, ricorsione, OOP, input/output su file e algoritmi. I Capitoli 31–38
+trattano visualizzazione dei dati, NumPy, elaborazione delle immagini e machine learning.
 
 ---
 
 ## Domande sui concetti fondamentali
 
-### Cos’è l’interprete di Python?
+### Che cos'è l'interprete Python?
 
-Il **interprete di Python** è il programma che legge il codice Python e esegue le sue istruzioni, linea per linea, dall’alto verso il basso. Pensatelo come un lettore molto veloce che traduce le vostre istruzioni, simili a quelle in linguaggio inglese, in azioni che il computer può eseguire. Quando fate clic su **Run** in un ambiente Skulpt, l’interprete Skulpt – una versione di Python progettata per browser web – svolge esattamente questo compito. Quando eseguite un file `.py` dal terminale, l’interprete standard CPython fa lo stesso sul vostro computer.
+L'**interprete Python** è il programma che legge il tuo codice Python ed esegue le sue
+istruzioni, una riga alla volta, dall'alto verso il basso. Immaginalo come un lettore
+velocissimo che traduce le tue istruzioni, scritte in un linguaggio simile all'inglese, in azioni
+che il computer può compiere. Quando clicchi **Run** in un laboratorio Skulpt, è l'interprete
+Skulpt (una versione di Python costruita per i browser) a fare esattamente questo lavoro. Quando
+esegui un file `.py` da un terminale, l'interprete standard CPython fa la stessa cosa sul tuo
+computer.
 
-Vedere [chapters/01-welcome-to-python/index.md](chapters/01-welcome-to-python/index.md).
+Vedi [chapters/01-welcome-to-python/index.md](chapters/01-welcome-to-python/index.md).
 
-### Cosa è l’indentazione e perché Python ci tiene?
+### Che cos'è l'indentazione e perché è così importante per Python?
 
-L’**indentazione** significa inserire spazi (o una tabulazione) all’inizio di una riga per indicare che essa appartiene a un blocco. In Python, l’indentazione non è solo uno stile – è parte della sintassi del linguaggio. Il corpo di un ciclo, un blocco e il corpo di una funzione sono tutti identificati attraverso l’indentazione. La maggior parte dei programmatori Python utilizza **4 spazi** per ogni livello di indentazione.
+**Indentare** significa mettere degli spazi (o un tab) all'inizio di una riga per indicare che
+appartiene a un blocco. In Python l'indentazione non è solo una questione di stile: fa parte
+della sintassi del linguaggio. Il corpo di un ciclo `for`, un blocco `if` e il corpo di una
+funzione sono tutti riconosciuti dalla loro indentazione. La maggior parte dei programmatori
+Python usa **4 spazi** per livello.
 
-Esempio: il `print` qui sotto è all’interno del ciclo perché è indentato:
+Esempio: il `print` qui sotto è dentro il ciclo perché è indentato:
 
 ```python
 for i in range(3):
@@ -94,50 +155,63 @@ for i in range(3):
 print("done")  # not indented — runs once after the loop
 ```
 
-Se dimenticate di indentare, Python genera un errore `IndentationError`.
+Se dimentichi di indentare, Python solleva un `IndentationError`.
 
-Vedere [chapters/02-python-code-structure/index.md](chapters/02-python-code-structure/index.md).
+Vedi [chapters/02-python-code-structure/index.md](chapters/02-python-code-structure/index.md).
 
-### Cos’è una variabile?
+### Che cos'è una variabile?
 
-Una **variabile** è un contenitore a nome che contiene un valore. Create una variabile utilizzando l’operatore di assegnazione `=`:
+Una **variabile** è un contenitore con un nome che conserva un valore. La crei con l'operatore di
+assegnazione `=`:
 
 ```python
 score = 10
 name = "Monty"
 ```
 
-Dopo quella riga, `score` si riferisce al numero `10` e `name` si riferisce al testo `"Monty"`.  
-Puoi utilizzare il nome della variabile ovunque utilizzeresti il valore corrispondente, e puoi aggiornarla in qualsiasi momento assegnandole un nuovo valore. In Scratch, queste venivano chiamate *variabili* – la stessa idea, solo scritta in modo diverso.  
-Vedi [chapters/03-variables-and-numbers/index.md](chapters/03-variables-and-numbers/index.md).  
-  
-### Quali sono i sei tipi di dati di base in Python?  
-I sei tipi di dati di base in Python sono:  
-  
-| Tipo | Esempio | Cosa contiene |
+Dopo questa riga, `score` si riferisce al numero `10` e `name` al testo `"Monty"`. Puoi usare il
+nome della variabile ovunque useresti il valore, e puoi aggiornarla in qualsiasi momento
+assegnandole un nuovo valore. Anche in Scratch si chiamavano *variabili*: stessa idea, scritta in
+modo diverso.
+
+Vedi [chapters/03-variables-and-numbers/index.md](chapters/03-variables-and-numbers/index.md).
+
+### Quali sono i sei tipi di dati fondamentali di Python?
+
+I sei tipi di dati fondamentali di Python sono:
+
+| Tipo | Esempio | Che cosa contiene |
 |------|---------|--------------|
 | `int` | `42` | Numeri interi |
 | `float` | `3.14` | Numeri decimali |
 | `str` | `"hello"` | Testo |
 | `bool` | `True` / `False` | Vero o falso |
 | `list` | `[1, 2, 3]` | Collezione ordinata e modificabile |
-| `dict` | `{"a": 1}` | Pari di chiave e valore |
+| `dict` | `{"a": 1}` | Coppie chiave-valore |
 
-Puoi sempre verificare il tipo di un valore utilizzando `type(value)`.  
-  
-### Cos’è un ciclo `for`?  
-Un **ciclo `for`** ripete un blocco di codice una volta per ogni elemento in una sequenza. La forma più comune utilizza `range()` per contare:  
+Puoi sempre controllare il tipo di un valore con `type(value)`.
+
+### Che cos'è un ciclo for?
+
+Un **ciclo `for`** ripete un blocco di codice una volta per ogni elemento di una sequenza. La
+forma più comune usa `range()` per contare:
+
 ```python
 for i in range(4):
     print(i)   # prints 0, 1, 2, 3
-```  
-  
-Puoi anche eseguire il ciclo su una lista, una stringa o qualsiasi altra sequenza. I cicli `for` sono l’equivalente in Python del blocco *repeat N volte* di Scratch. Vengono utilizzati costantemente per disegnare figure, elaborare liste e creare pattern accumulativi.  
-Vedi [chapters/07-for-loops-and-shapes/index.md](chapters/07-for-loops-and-shapes/index.md).  
-  
-### Cos’è un ciclo `while`?
+```
 
-A **`while` loop** ripete un blocco di codice finché una condizione è soddisfatta `True`. A differenza di un `for` loop (che conta un numero fisso di ripetizioni), un `while` loop viene eseguito un numero sconosciuto di volte — dipende da ciò che succede all’interno della buca.
+Puoi anche scorrere una lista, una stringa o qualsiasi altra sequenza. I cicli for sono
+l'equivalente in Python del blocco *ripeti N volte* di Scratch. Si usano di continuo per disegnare
+forme, elaborare liste e costruire schemi ad accumulatore.
+
+Vedi [chapters/07-for-loops-and-shapes/index.md](chapters/07-for-loops-and-shapes/index.md).
+
+### Che cos'è un ciclo while?
+
+Un **ciclo `while`** ripete un blocco di codice finché una condizione resta `True`. A differenza
+di un ciclo `for` (che conta un numero fisso di ripetizioni), un ciclo `while` viene eseguito un
+numero di volte che non si conosce in anticipo: dipende da ciò che succede dentro il ciclo.
 
 ```python
 count = 0
@@ -146,13 +220,17 @@ while count < 5:
     count += 1
 ```
 
-I cicli while sono perfetti per l’animazione (continua l’esecuzione finché l’utente non clicca sul pulsante “stop”), per la validazione delle input (continua a chiedere finché l’utente non inserisce un numero valido) e per i cicli dei giochi (continua a giocare finché qualcuno non vince).
+I cicli while sono perfetti per le animazioni (continua finché l'utente non clicca stop), per
+controllare l'input (continua a chiedere finché l'utente non inserisce un numero valido) e per i
+cicli di gioco (continua a giocare finché qualcuno non vince).
 
 Vedi [chapters/10-while-loops-and-animation/index.md](chapters/10-while-loops-and-animation/index.md).
 
-### Come funziona un’istruzione if/elif/else?
+### Come funziona un'istruzione if/elif/else?
 
-Una **`if` istruzione** esegue un blocco di codice solo quando una condizione è soddisfatta `True`. Aggiungi **`elif`** (abbreviazione di “else if”) per verificare ulteriori condizioni. Aggiungi **`else`** per gestire tutte le situazioni in cui la condizione non è soddisfatta:
+Un'**istruzione `if`** esegue un blocco di codice solo quando una condizione è `True`. Aggiungi
+**`elif`** (abbreviazione di "else if", altrimenti se) per controllare altre condizioni in ordine.
+Aggiungi **`else`** per gestire tutto ciò che non corrisponde:
 
 ```python
 score = 85
@@ -164,13 +242,16 @@ else:
     print("Keep practicing!")
 ```
 
-Python controlla ogni condizione dall’alto verso il basso e esegue soltanto il primo blocco che soddisfa la condizione `True`. È esattamente così che funziona il blocco *if-else* di Scratch, semplicemente scritto in testo.
+Python controlla ogni condizione dall'alto verso il basso ed esegue solo il primo blocco la cui
+condizione è `True`. È esattamente come funziona il blocco *se-altrimenti* di Scratch, solo
+scritto come testo.
 
 Vedi [chapters/09-decisions-if-else/index.md](chapters/09-decisions-if-else/index.md).
 
-### Cos’è una funzione e perché dovrei usarla?
+### Che cos'è una funzione e perché dovrei usarla?
 
-Una **funzione** è un blocco di codice riutilizzabile che si dà un nome e si può chiamare ogni volta che è necessario. Definisci una funzione con `def`:
+Una **funzione** è un blocco di codice riutilizzabile a cui dai un nome e che puoi chiamare
+ogni volta che ti serve. Definisci una funzione con `def`:
 
 ```python
 def greet(name):
@@ -180,13 +261,16 @@ greet("Monty")   # prints: Hello, Monty!
 greet("Alex")    # prints: Hello, Alex!
 ```
 
-Le funzioni permettono di evitare di scrivere lo stesso codice due volte (principio DRY), rendono i programmi più leggibili e permettono di suddividere problemi grandi in parti più piccole e gestibili. In Scratch, i blocchi personalizzati funzionano allo stesso modo.
+Le funzioni ti permettono di non scrivere due volte lo stesso codice (il principio DRY),
+rendono i programmi più facili da leggere e dividono i problemi grandi in pezzi più piccoli e
+gestibili. In Scratch, i blocchi personalizzati funzionano allo stesso modo.
 
 Vedi [chapters/11-functions-parameters-scope/index.md](chapters/11-functions-parameters-scope/index.md).
 
-### Cos’è una lista?
+### Che cos'è una lista?
 
-**Lista** è una collezione ordinata e modificabile di valori. Si crea utilizzando parentesi quadre:
+Una **lista** è una collezione di valori ordinata e modificabile. La crei con le parentesi
+quadre:
 
 ```python
 colors = ["red", "green", "blue"]
@@ -194,13 +278,16 @@ print(colors[0])   # red — indexing starts at 0
 colors.append("yellow")
 ```
 
-Le liste sono lo strumento principale nello storage dei dati in Python. È possibile aggiungere elementi (`append`), rimuovere elementi (`remove`, `pop`), ordinare le liste, iterare su di esse e estrarre sottosezioni. Ogni lista conserva gli elementi nell’ordine in cui sono stati inseriti.
+Le liste sono il cavallo di battaglia per memorizzare dati in Python. Puoi aggiungere elementi
+(`append`), toglierli (`remove`, `pop`), ordinarli, scorrerli con un ciclo ed estrarne delle
+porzioni (slicing). Ogni lista mantiene gli elementi nell'ordine in cui li hai inseriti.
 
-Per maggiori informazioni, consultare [chapters/15-lists-basics/index.md](chapters/15-lists-basics/index.md).
+Vedi [chapters/15-lists-basics/index.md](chapters/15-lists-basics/index.md).
 
-### Cosa è un dizionario?
+### Che cos'è un dizionario?
 
-Un **dizionario** memorizza dati sotto forma di **coppie chiave-valore**. Invece di un indice numerico, si ricerca i valori attraverso una chiave descrittiva:
+Un **dizionario** memorizza i dati come **coppie chiave-valore**. Invece di usare un indice
+numerico, cerchi i valori tramite una chiave descrittiva:
 
 ```python
 grades = {"Alice": 95, "Bob": 88, "Carol": 92}
@@ -208,21 +295,27 @@ print(grades["Alice"])  # 95
 grades["Dan"] = 79      # add a new entry
 ```
 
-I dizionari sono perfetti per memorizzare dati con nomi specifici: elenchi di voti, contatori di frequenza delle parole, impostazioni di configurazione, o qualsiasi situazione in cui si desidera recuperare informazioni attraverso un nome piuttosto che un indice.
+I dizionari sono perfetti per memorizzare dati con un nome: un registro dei voti, un contatore
+della frequenza delle parole, delle impostazioni di configurazione, o qualsiasi situazione in cui
+vuoi cercare qualcosa per nome invece che per posizione.
 
-Per maggiori informazioni, consultare [chapters/21-dictionaries/index.md](chapters/21-dictionaries/index.md).
+Vedi [chapters/21-dictionaries/index.md](chapters/21-dictionaries/index.md).
 
-### Cosa sono le grafiche a tortora?
+### Che cos'è la grafica turtle?
 
-Le **grafiche a tortora** sono un modo per disegnare figure controllando un piccolo “tortora” che si muove attorno a una tela. Si forniscono comandi come `forward(100)`, `left(90)` e `pencolor("red")` per dirigere il movimento e l’aspetto del tortora. Poiché il risultato di ogni comando può essere visualizzato immediatamente, le grafiche a tortora sono un ottimo strumento per imparare i cicli, le funzioni e le coordinate.
+La **grafica turtle** è un modo per disegnare forme controllando una piccola freccia (la
+"turtle", cioè la tartaruga) che si muove su un canvas. Le dai comandi come `forward(100)`,
+`left(90)` e `pencolor("red")` per guidarne il movimento e l'aspetto. Dato che vedi subito il
+risultato di ogni comando, la grafica turtle è un ottimo modo per imparare cicli, funzioni e
+coordinate. È il principale strumento di disegno nei Capitoli 5–18 di questo corso.
 
-È lo strumento principale per il disegno nei capitoli 5–18 di questo corso.
+Vedi [chapters/05-drawing-with-turtle/index.md](chapters/05-drawing-with-turtle/index.md).
 
-Per maggiori informazioni, consultare [chapters/05-drawing-with-turtle/index.md](chapters/05-drawing-with-turtle/index.md).
+### Che cos'è la ricorsione?
 
-### Cosa è la ricorsione?
-
-La **ricorsione** è quando una funzione chiama se stessa. Ogni chiamata ricorsiva lavora su una versione più semplificata del problema, fino a raggiungere il **caso base** – una condizione che interrompe la catena di chiamate.
+La **ricorsione** si ha quando una funzione chiama se stessa. Ogni chiamata ricorsiva lavora su
+una versione più piccola del problema, finché non raggiunge il **caso base**: una condizione che
+interrompe la catena di chiamate.
 
 ```python
 def countdown(n):
@@ -233,13 +326,16 @@ def countdown(n):
     countdown(n - 1)    # recursive call
 ```
 
-**Recursione è particolarmente potente per problemi che hanno una struttura naturalmente auto-similare, come gli alberi frattali, dove ogni ramo è una versione più piccola dell’intero albero.**
+La ricorsione è particolarmente potente per i problemi che hanno una struttura naturalmente
+auto-simile, come gli alberi frattali, in cui ogni ramo è una versione più piccola dell'intero
+albero.
 
-Vedi [chapters/24-recursione-and-fractals/index.md](chapters/24-recursione-and-fractals/index.md).
+Vedi [chapters/24-recursion-and-fractals/index.md](chapters/24-recursion-and-fractals/index.md).
 
-### Che cos’è un modulo?
+### Che cos'è un modulo?
 
-Un **modulo** è un file di Python (o una raccolta di file) che contiene funzioni, variabili e classi riutilizzabili. Puoi inserire un modulo nel tuo programma utilizzando `import`:
+Un **modulo** è un file Python (o un insieme di file) che contiene funzioni, variabili e classi
+riutilizzabili. Porti un modulo nel tuo programma con `import`:
 
 ```python
 import math
@@ -249,13 +345,17 @@ import random
 print(random.randint(1, 10))   # a random number 1-10
 ```
 
-Python include una grande **biblioteca standard** di moduli che coprono argomenti come matematica, gestione dei file, data, espressioni regolari, strutture dati e molto altro. Puoi anche creare i tuoi propri moduli e importarli in altri programmi.
+Python include una grande **libreria standard** di moduli che coprono matematica, gestione dei
+file, date, espressioni regolari, strutture dati e molto altro. Puoi anche creare i tuoi moduli e
+importarli in altri programmi.
 
 Vedi [chapters/17-modules-and-random/index.md](chapters/17-modules-and-random/index.md).
 
-### Che cos’è una classe in Python?
+### Che cos'è una classe in Python?
 
-Una **classe** è un modello per creare oggetti. Ogni oggetto creato a partire dalla classe riceve il proprio **insieme di attributi** (dati) e **metodi** (azioni). Definisci una classe utilizzando `class` e configuri i suoi attributi tramite un metodo speciale chiamato `__init__`:
+Una **classe** è un progetto per creare oggetti. Ogni oggetto costruito a partire dalla classe ha
+i propri **attributi** (dati) e **metodi** (azioni). Definisci una classe con `class` e ne
+prepari gli attributi in un metodo speciale chiamato `__init__`:
 
 ```python
 class Dog:
@@ -270,13 +370,17 @@ fido = Dog("Fido", "Labrador")
 fido.bark()   # Fido says: Woof!
 ```
 
-Hai già utilizzato delle classi: `turtle.Turtle()` e `turtle.Screen()` sono entrambe classi fornite dal modulo turtle.
+Hai già usato delle classi: `turtle.Turtle()` e `turtle.Screen()` sono entrambe classi fornite
+dal modulo turtle.
 
 Vedi [chapters/25-object-oriented-programming/index.md](chapters/25-object-oriented-programming/index.md).
 
-### Che cos’è una stringa?
+### Che cos'è una stringa?
 
-Una **stringa** è una sequenza di caratteri testuali racchiusi tra virgolette. Sia le virgole single `'hello'` che quelle doppie `"hello"` funzionano. Le stringhe sono **immutabili**: non puoi modificare singoli caratteri, ma puoi creare nuove stringhe combinando o trasformando quelle esistenti:
+Una **stringa** è una sequenza di caratteri di testo racchiusa tra virgolette. Funzionano sia
+gli apici singoli `'hello'` sia le virgolette doppie `"hello"`. Le stringhe sono **immutabili**:
+non puoi cambiarne i singoli caratteri, ma puoi creare nuove stringhe combinando o trasformando
+quelle esistenti:
 
 ```python
 greeting = "Hello, " + "world!"   # concatenation
@@ -284,27 +388,34 @@ upper = greeting.upper()           # "HELLO, WORLD!"
 words = greeting.split(", ")      # ["Hello", "world!"]
 ```
 
-Le stringhe dispongono di decine di metodi incorporati per cercare, spezzare, sostituire e formattare il testo.
+Le stringhe hanno decine di metodi built-in per cercare, dividere, sostituire e formattare il
+testo.
 
 Vedi [chapters/08-working-with-strings/index.md](chapters/08-working-with-strings/index.md).
 
 ### Qual è la differenza tra una lista, una tupla e un insieme?
 
-Tutte e tre sono collezioni in Python, ma differiscono per diversi aspetti:
+Sono tutte e tre collezioni di Python, ma differiscono in modi importanti:
 
 | Collezione | Ordinata? | Modificabile? | Duplicati? |
 |------------|----------|-------------|-------------|
-| `list` | Sì | Sì (mutabile) | Permesso |
-| `tuple` | Sì | No (immutabile) | Permesso |
-| `set` | No | Sì | Non permesso |
+| `list` | Sì | Sì (mutabile) | Ammessi |
+| `tuple` | Sì | No (immutabile) | Ammessi |
+| `set` | No | Sì | Non ammessi |
 
-Usa una **lista** quando l'ordine è importante e devi aggiungere o rimuovere elementi. Usa una **tupla** per una collezione fissa di valori (come coordinate `(x, y)`). Usa un **insieme** quando ti interessa solo che un elemento sia presente e ogni elemento deve essere unico.
+Usa una **lista** quando l'ordine conta e devi aggiungere o togliere elementi. Usa una **tupla**
+per una collezione fissa di valori (come le coordinate `(x, y)`). Usa un **insieme** quando ti
+interessa solo sapere se un elemento è presente e ogni elemento deve essere unico.
 
 Vedi [chapters/20-tuples-and-sets/index.md](chapters/20-tuples-and-sets/index.md).
 
-### Che cos'è il **scope** in Python?
+### Che cos'è lo scope in Python?
 
-Il **scope** determina dove in un programma una variabile può essere vista. Una variabile definita all'interno di una funzione ha **scope locale** — esiste solo all'interno di quella funzione. Una variabile definita al di fuori di tutte le funzioni ha **scope globale** — può essere vista ovunque. Questo significa che due funzioni possono avere ciascuna la propria variabile denominata `count` senza interferire tra loro.
+Lo **scope** (ambito di visibilità) stabilisce in quali punti di un programma una variabile può
+essere vista. Una variabile definita dentro una funzione ha **scope locale**: esiste solo dentro
+quella funzione. Una variabile definita fuori da tutte le funzioni ha **scope globale**: può
+essere vista ovunque. Questo significa che due funzioni possono avere ciascuna la propria
+variabile chiamata `count` senza interferire tra loro.
 
 ```python
 def example():
@@ -313,27 +424,48 @@ def example():
 y = 20          # global — visible everywhere
 ```
 
-Comprendere il scope evita una comune categoria di errori in cui si sovrascrive accidentalmente una variabile proveniente da un'altra parte del programma.
+Capire lo scope evita un tipo comune di bug in cui sovrascrivi per sbaglio una variabile di
+un'altra parte del programma.
 
 Vedi [chapters/11-functions-parameters-scope/index.md](chapters/11-functions-parameters-scope/index.md).
 
-### Che cos' sono BFS e DFS?
+### Che cosa sono BFS e DFS?
 
-**BFS (Breadth-First Search)** e **DFS (Depth-First Search)** sono algoritmi per visitare tutti gli nodi in un grafo o un albero.
+**BFS (Breadth-First Search, ricerca in ampiezza)** e **DFS (Depth-First Search, ricerca in
+profondità)** sono algoritmi per visitare tutti i nodi di un grafo o di un albero.
 
-- **BFS** utilizza una **coda** (primo arrivato, primo uscito). Esplora tutti i vicini alla distanza attuale prima di approfondire ulteriormente. BFS **garantisce il percorso più breve** in un grafo non ponderato.
-- **DFS** utilizza una **stack** (ultimo arrivato, primo uscito) — o ricorsione. Si spinge il più possibile lungo un percorso prima di tornare indietro.
-BFS è la scelta giusta per trovare il percorso più breve in un labirinto. DFS è spesso più semplice da implementare ricorsivamente e funziona bene per problemi che richiedono l'esplorazione di tutte le possibilità.
+- **BFS** usa una **coda** (il primo che entra è il primo che esce). Esplora tutti i vicini alla
+  distanza attuale prima di andare più in profondità. BFS **garantisce il percorso più breve** in
+  un grafo non pesato.
+- **DFS** usa una **pila** (l'ultimo che entra è il primo che esce), oppure la ricorsione. Si
+  spinge il più in profondità possibile lungo un percorso prima di tornare indietro.
+
+BFS è la scelta giusta per trovare la strada più breve in un labirinto. DFS è spesso più
+semplice da implementare in modo ricorsivo e funziona bene per i problemi in cui bisogna
+esplorare tutte le possibilità.
+
 Vedi [chapters/30-algorithms-data-structures/index.md](chapters/30-algorithms-data-structures/index.md).
 
 ### Che cos'è la programmazione orientata agli oggetti?
 
-**Programmazione orientata agli oggetti (OOP)** è uno stile di programmazione che organizza il codice attorno a **oggetti** — entità che combinano dati (attributi) e comportamenti (metodi). Python è un linguaggio orientato agli oggetti: stringhe, liste, dictionary e grafici con turtle sono tutti oggetti. Quando chiami `my_list.append(5)`, stai chiamando il metodo `append` su un oggetto lista. OOP diventa particolarmente utile per modellare cose del mondo reale: una classe `Player` in un gioco, una classe `Quiz` per un'app per quiz, una classe `Turtle` per il tuo agente di disegno.
+La **programmazione orientata agli oggetti (OOP)** è uno stile di programmazione che organizza il
+codice attorno agli **oggetti**: entità che raggruppano dati (attributi) e comportamenti
+(metodi). Python è un linguaggio orientato agli oggetti: stringhe, liste, dizionari e la grafica
+turtle sono tutti oggetti. Quando chiami `my_list.append(5)`, stai chiamando il metodo `append`
+su un oggetto lista. La OOP diventa particolarmente utile per rappresentare cose del mondo
+reale: una classe `Player` in un gioco, una classe `Quiz` per un'app di quiz, una classe
+`Turtle` per il tuo strumento di disegno.
+
 Vedi [chapters/25-object-oriented-programming/index.md](chapters/25-object-oriented-programming/index.md).
 
-### Che cos'è una struttura dati grafica?
+### Che cos'è la struttura dati grafo?
 
-In informatica, un **grafo** è una collezione di **nodi** (chiamati anche vertici) collegati da **aristri** (o legami). I grafi modellano reti: città collegate da strade, pagine web collegate da hyperlink, o stanze in un labirinto collegate da corridoi. Python rappresenta i grafi come **liste di adiacenza** — dictionary in cui ogni chiave è un nodo e il suo valore è una lista dei nodi vicini.
+In informatica, un **grafo** è un insieme di **nodi** (chiamati anche vertici) collegati da
+**archi**. I grafi rappresentano delle reti: città collegate da strade, pagine web collegate da
+link, o stanze di un labirinto collegate da corridoi. In Python i grafi si rappresentano con le
+**liste di adiacenza**: dizionari in cui ogni chiave è un nodo e il suo valore è la lista dei
+nodi vicini.
+
 ```python
 graph = {
     "A": ["B", "C"],
@@ -343,40 +475,41 @@ graph = {
 }
 ```
 
-BFS and DFS are the two standard algorithms for searching a graph.
+BFS e DFS sono i due algoritmi standard per esplorare un grafo.
 
-See [chapters/30-algorithms-data-structures/index.md](chapters/30-algorithms-data-structures/index.md).
+Vedi [chapters/30-algorithms-data-structures/index.md](chapters/30-algorithms-data-structures/index.md).
 
-### What is the random module?
+### Che cos'è il modulo random?
 
-The **`random` module** provides functions for generating random numbers and making random
-choices. The most common ones in this course are:
+Il **modulo `random`** fornisce funzioni per generare numeri casuali e fare scelte casuali.
+Quelle che userai più spesso in questo corso sono:
 
-- `random.randint(a, b)` — random integer between `a` and `b` (inclusive)
-- `random.choice(seq)` — pick one random item from a list
-- `random.random()` — random float between 0.0 and 1.0
-- `random.shuffle(lst)` — shuffle a list in place
+- `random.randint(a, b)` — un numero intero casuale tra `a` e `b` (inclusi)
+- `random.choice(seq)` — sceglie un elemento a caso da una lista
+- `random.random()` — un numero decimale (float) casuale tra 0.0 e 1.0
+- `random.shuffle(lst)` — mescola una lista modificandola direttamente
 
-Random numbers are used throughout turtle graphics projects: random colors, random starting
-positions, turtle races, and star-field generators.
+I numeri casuali compaiono in moltissimi progetti di grafica turtle: colori casuali, posizioni
+di partenza casuali, gare tra turtle e generatori di cieli stellati.
 
-See [chapters/17-modules-and-random/index.md](chapters/17-modules-and-random/index.md).
+Vedi [chapters/17-modules-and-random/index.md](chapters/17-modules-and-random/index.md).
 
-### What is machine learning?
+### Che cos'è il machine learning?
 
-**Machine learning** is a branch of artificial intelligence where a program learns patterns
-from data instead of following hand-written rules. You provide labeled examples and the program
-adjusts internal numbers (called **weights**) until it can correctly classify new examples it
-has never seen. In this course, you use the **Keras** library to build a small neural network
-that learns to recognize handwritten digits from the MNIST dataset — 60,000 training images of
-digits 0–9.
+Il **machine learning** (apprendimento automatico) è un ramo dell'intelligenza artificiale in
+cui un programma impara degli schemi dai dati invece di seguire regole scritte a mano. Tu fornisci
+degli esempi etichettati e il programma regola dei numeri interni (chiamati **pesi**) finché
+non riesce a classificare correttamente nuovi esempi che non ha mai visto. In questo corso usi
+la libreria **Keras** per costruire una piccola rete neurale che impara a riconoscere le cifre
+scritte a mano del dataset MNIST — 60.000 immagini di addestramento con le cifre da 0 a 9.
 
-See [chapters/37-machine-learning-foundations/index.md](chapters/37-machine-learning-foundations/index.md).
+Vedi [chapters/37-machine-learning-foundations/index.md](chapters/37-machine-learning-foundations/index.md).
 
-### What is a list comprehension?
+### Che cos'è una list comprehension?
 
-A **list comprehension** is a compact way to build a new list by transforming or filtering
-another sequence. It combines a `for` loop and an optional `if` condition into a single line:
+Una **list comprehension** è un modo compatto per costruire una nuova lista trasformando o
+filtrando un'altra sequenza. Unisce un ciclo `for` e una condizione `if` facoltativa in
+un'unica riga:
 
 ```python
 squares = [x**2 for x in range(10)]
@@ -386,28 +519,28 @@ evens = [x for x in range(20) if x % 2 == 0]
 # [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
 ```
 
-List comprehensions are more concise than building a list with `append()` inside a regular
-`for` loop, and experienced Python programmers use them constantly.
+Le list comprehension sono più concise che costruire una lista con `append()` dentro un normale
+ciclo `for`, e i programmatori Python esperti le usano di continuo.
 
-See [chapters/22-advanced-collections/index.md](chapters/22-advanced-collections/index.md).
+Vedi [chapters/22-advanced-collections/index.md](chapters/22-advanced-collections/index.md).
 
 ---
 
-## Technical Detail Questions
+## Domande sui dettagli tecnici
 
-### What is the difference between Python 2 and Python 3?
+### Qual è la differenza tra Python 2 e Python 3?
 
-Python 3 (released 2008) made several improvements that were not backward-compatible with
-Python 2. The biggest practical difference for beginners is that `print` changed from a
-statement (`print "hello"`) to a function (`print("hello")`). Division also changed:
-in Python 2, `5 / 2` returned `2` (integer division); in Python 3 it returns `2.5`.
-**This course uses Python 3.** Python 2 reached end-of-life in January 2020 and should not be
-used for new projects.
+Python 3 (uscito nel 2008) ha introdotto diversi miglioramenti non compatibili con Python 2.
+Per chi inizia, la differenza pratica più grande è che `print` è passato da istruzione
+(`print "hello"`) a funzione (`print("hello")`). È cambiata anche la divisione: in Python 2
+`5 / 2` restituiva `2` (divisione intera); in Python 3 restituisce `2.5`.
+**Questo corso usa Python 3.** Il supporto a Python 2 è terminato a gennaio 2020 e non va
+usato per nuovi progetti.
 
-### What does the print() function do?
+### Che cosa fa la funzione print()?
 
-`print()` displays output to the screen. You pass one or more values separated by commas, and
-Python prints them on a single line with spaces between them, followed by a newline:
+`print()` mostra un risultato sullo schermo. Le passi uno o più valori separati da virgole e
+Python li stampa su un'unica riga separati da spazi, andando poi a capo:
 
 ```python
 print("Hello", "world")   # Hello world
@@ -415,13 +548,15 @@ print(42)                  # 42
 print(1 + 1)               # 2
 ```
 
-`print()` is the most fundamental debugging tool in Python — when something goes wrong, adding
-`print()` statements to show the values of variables is often the fastest way to find the bug.
+`print()` è lo strumento di debug più importante in Python: quando qualcosa va storto,
+aggiungere delle istruzioni `print()` che mostrano i valori delle variabili è spesso il modo più
+rapido per trovare il bug.
 
-### How do f-strings work?
+### Come funzionano le f-string?
 
-An **f-string** (formatted string literal) lets you embed variable values directly inside a
-string by placing an `f` before the opening quote and wrapping variable names in `{}`:
+Una **f-string** (stringa letterale formattata) ti permette di inserire i valori delle variabili
+direttamente dentro una stringa: basta mettere una `f` prima delle virgolette di apertura e
+racchiudere i nomi delle variabili tra `{}`:
 
 ```python
 name = "Monty"
@@ -431,15 +566,16 @@ print(message)
 # Great job, Monty! You scored 95 points.
 ```
 
-Any Python expression inside the braces is evaluated and inserted into the string. F-strings
-are the preferred way to build strings that include variable values in modern Python.
+Qualsiasi espressione Python tra le parentesi graffe viene calcolata e inserita nella stringa.
+Nel Python moderno, le f-string sono il modo preferito per costruire stringhe che contengono
+valori di variabili.
 
-See [chapters/14-string-methods-formatting/index.md](chapters/14-string-methods-formatting/index.md).
+Vedi [chapters/14-string-methods-formatting/index.md](chapters/14-string-methods-formatting/index.md).
 
-### What does the range() function do?
+### Che cosa fa la funzione range()?
 
-`range(n)` generates a sequence of integers from `0` up to (but not including) `n`. You can
-also specify a start, stop, and step:
+`range(n)` genera una sequenza di numeri interi da `0` fino a `n` (escluso). Puoi anche
+indicare un inizio, una fine e un passo:
 
 ```python
 range(5)         # 0, 1, 2, 3, 4
@@ -448,12 +584,13 @@ range(0, 10, 2)  # 0, 2, 4, 6, 8
 range(5, 0, -1)  # 5, 4, 3, 2, 1
 ```
 
-`range()` is used in nearly every `for` loop that counts. It does not create a list in memory
-— it generates values one at a time, which makes it efficient even for very large ranges.
+`range()` si usa in quasi tutti i cicli `for` che contano. Non crea una lista in memoria:
+genera i valori uno alla volta, ed è per questo che resta efficiente anche con intervalli
+molto grandi.
 
-### What is the modulo operator?
+### Che cos'è l'operatore modulo?
 
-The **modulo operator `%`** returns the remainder after division:
+L'**operatore modulo `%`** restituisce il resto di una divisione:
 
 ```python
 10 % 3   # 1  (10 divided by 3 = 3 remainder 1)
@@ -461,16 +598,16 @@ The **modulo operator `%`** returns the remainder after division:
 7 % 5    # 2
 ```
 
-The most common uses for `%` in this course are:
-- **Even or odd**: `if n % 2 == 0:` is true for even numbers
-- **Every Nth iteration**: `if i % 10 == 0: print(i)` prints every 10th value in a loop
+In questo corso `%` si usa soprattutto per:
+- **Pari o dispari**: `if n % 2 == 0:` è vero per i numeri pari
+- **Ogni N ripetizioni**: `if i % 10 == 0: print(i)` stampa un valore ogni 10 in un ciclo
 
-See [chapters/06-math-and-arithmetic/index.md](chapters/06-math-and-arithmetic/index.md).
+Vedi [chapters/06-math-and-arithmetic/index.md](chapters/06-math-and-arithmetic/index.md).
 
-### How do I get input from the user?
+### Come faccio a chiedere un input all'utente?
 
-The built-in `input()` function prints a prompt and waits for the user to type something.
-It always returns a **string**, so if you need a number you must convert it:
+La funzione built-in `input()` stampa un messaggio e aspetta che l'utente scriva qualcosa.
+Restituisce sempre una **stringa**, quindi se ti serve un numero devi convertirla:
 
 ```python
 name = input("What is your name? ")
@@ -478,18 +615,19 @@ age = int(input("How old are you? "))
 print(f"Hi {name}, you are {age} years old!")
 ```
 
-If the user enters something that cannot be converted to `int`, Python raises a `ValueError` —
-wrapping the conversion in a `try/except` block handles that gracefully.
+Se l'utente scrive qualcosa che non si può convertire in `int`, Python solleva un `ValueError`;
+racchiudere la conversione in un blocco `try/except` permette di gestire il problema senza
+far bloccare il programma.
 
-See [chapters/13-user-input-type-conversion/index.md](chapters/13-user-input-type-conversion/index.md).
+Vedi [chapters/13-user-input-type-conversion/index.md](chapters/13-user-input-type-conversion/index.md).
 
-### What is the difference between = and ==?
+### Qual è la differenza tra = e ==?
 
-- `=` is the **assignment operator** — it stores a value in a variable: `x = 5`
-- `==` is the **equality comparison operator** — it tests whether two values are equal
-  and returns `True` or `False`: `x == 5` → `True`
+- `=` è l'**operatore di assegnazione**: memorizza un valore in una variabile: `x = 5`
+- `==` è l'**operatore di confronto di uguaglianza**: verifica se due valori sono uguali
+  e restituisce `True` o `False`: `x == 5` → `True`
 
-Mixing these up is one of the most common beginner mistakes:
+Confonderli è uno degli errori più comuni per chi inizia:
 
 ```python
 x = 10        # assigns 10 to x
@@ -497,27 +635,28 @@ if x == 10:   # checks whether x equals 10
     print("yes")
 ```
 
-Using `=` inside an `if` condition is a `SyntaxError` in Python (unlike C or Java, where it
-is a common bug that silently works).
+In Python usare `=` dentro una condizione `if` è un `SyntaxError` (a differenza di C o Java,
+dove è un bug comune che funziona senza dare errori).
 
-### What are comparison operators?
+### Che cosa sono gli operatori di confronto?
 
-Python's **comparison operators** compare two values and return `True` or `False`:
+Gli **operatori di confronto** di Python confrontano due valori e restituiscono `True` o
+`False`:
 
-| Operator | Meaning |
+| Operatore | Significato |
 |----------|---------|
-| `==` | Equal to |
-| `!=` | Not equal to |
-| `<` | Less than |
-| `>` | Greater than |
-| `<=` | Less than or equal to |
-| `>=` | Greater than or equal to |
+| `==` | Uguale a |
+| `!=` | Diverso da |
+| `<` | Minore di |
+| `>` | Maggiore di |
+| `<=` | Minore o uguale a |
+| `>=` | Maggiore o uguale a |
 
-You combine comparisons with the logical operators `and`, `or`, and `not`.
+Puoi combinare più confronti con gli operatori logici `and`, `or` e `not`.
 
-### What does the import statement do?
+### Che cosa fa l'istruzione import?
 
-`import` loads a module and makes its contents available under the module's name:
+`import` carica un modulo e rende disponibile il suo contenuto con il nome del modulo:
 
 ```python
 import math
@@ -525,32 +664,34 @@ print(math.pi)      # 3.141592653589793
 print(math.sqrt(9)) # 3.0
 ```
 
-You can also import specific names from a module (`from math import sqrt`) or give the module
-a shorter alias (`import numpy as np`). The `import` statement runs the module's code once and
-caches the result, so importing the same module twice is efficient.
+Puoi anche importare solo alcuni nomi da un modulo (`from math import sqrt`) oppure dare al
+modulo un alias più corto (`import numpy as np`). L'istruzione `import` esegue il codice del
+modulo una sola volta e ne conserva il risultato, quindi importare due volte lo stesso modulo
+non costa nulla in più.
 
-### What is the math module?
+### Che cos'è il modulo math?
 
-The **`math` module** provides mathematical functions and constants beyond basic arithmetic:
+Il **modulo `math`** fornisce funzioni e costanti matematiche che vanno oltre l'aritmetica di base:
 
-- `math.sqrt(x)` — square root
-- `math.pi` — the constant π (3.14159…)
-- `math.sin(x)`, `math.cos(x)` — trigonometric functions (x in radians)
-- `math.radians(degrees)` — convert degrees to radians
-- `math.floor(x)`, `math.ceil(x)` — round down or up to an integer
-- `math.factorial(n)` — n! (n factorial)
+- `math.sqrt(x)` — radice quadrata
+- `math.pi` — la costante π (3,14159…)
+- `math.sin(x)`, `math.cos(x)` — funzioni trigonometriche (x in radianti)
+- `math.radians(degrees)` — converte i gradi in radianti
+- `math.floor(x)`, `math.ceil(x)` — arrotonda per difetto o per eccesso a un numero intero
+- `math.factorial(n)` — n! (il fattoriale di n)
 
-The `math` module is used heavily in Chapter 18 for plotting sine waves and other mathematical
-turtle graphics.
+Il modulo `math` è usato moltissimo nel Capitolo 18 per disegnare onde sinusoidali e altre
+figure matematiche con la turtle.
 
-See [chapters/18-math-module-turtle-projects/index.md](chapters/18-math-module-turtle-projects/index.md).
+Vedi [chapters/18-math-module-turtle-projects/index.md](chapters/18-math-module-turtle-projects/index.md).
 
-### What is a traceback?
+### Che cos'è un traceback?
 
-A **traceback** is Python's error report. When a runtime error occurs, Python prints the chain
-of function calls that led to the error (most recent last), followed by the error type and a
-short message. Reading a traceback from **bottom to top** is the fastest way to find the
-problem: the last line tells you what went wrong, and the lines above tell you where.
+Un **traceback** è il rapporto di errore di Python. Quando si verifica un errore durante
+l'esecuzione, Python stampa la catena di chiamate di funzione che ha portato all'errore (la più
+recente per ultima), seguita dal tipo di errore e da un breve messaggio. Leggere un traceback
+**dal basso verso l'alto** è il modo più rapido per trovare il problema: l'ultima riga ti dice
+che cosa è andato storto, le righe sopra ti dicono dove.
 
 ```
 Traceback (most recent call last):
@@ -559,13 +700,13 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 ```
 
-See [chapters/23-error-handling-debugging/index.md](chapters/23-error-handling-debugging/index.md).
+Vedi [chapters/23-error-handling-debugging/index.md](chapters/23-error-handling-debugging/index.md).
 
-### What is a try/except block?
+### Che cos'è un blocco try/except?
 
-A **`try/except` block** lets your program handle errors gracefully instead of crashing.
-Code in the `try` block runs normally. If a specified error occurs, Python jumps to the
-`except` block instead of stopping:
+Un **blocco `try/except`** permette al tuo programma di gestire gli errori invece di bloccarsi.
+Il codice nel blocco `try` viene eseguito normalmente. Se si verifica l'errore indicato, Python
+salta al blocco `except` invece di fermarsi:
 
 ```python
 try:
@@ -574,15 +715,15 @@ except ValueError:
     print("Please enter a whole number!")
 ```
 
-You should catch the most specific exception possible. Catching bare `Exception` or using a
-bare `except:` makes bugs harder to find later.
+Conviene intercettare l'eccezione più specifica possibile. Intercettare un generico `Exception`
+o usare un `except:` senza tipo rende più difficile trovare i bug in seguito.
 
-See [chapters/23-error-handling-debugging/index.md](chapters/23-error-handling-debugging/index.md).
+Vedi [chapters/23-error-handling-debugging/index.md](chapters/23-error-handling-debugging/index.md).
 
-### How do I read a file in Python?
+### Come faccio a leggere un file in Python?
 
-Use the built-in `open()` function with a `with` statement. The `with` statement
-automatically closes the file when you are done, even if an error occurs:
+Usa la funzione built-in `open()` insieme all'istruzione `with`. L'istruzione `with` chiude il
+file automaticamente quando hai finito, anche se si verifica un errore:
 
 ```python
 with open("story.txt", "r") as f:
@@ -590,15 +731,15 @@ with open("story.txt", "r") as f:
         print(line.strip())
 ```
 
-The `"r"` means read mode. Use `"w"` to write (overwrites the file) or `"a"` to append.
-The `.strip()` removes the trailing newline character from each line.
+`"r"` indica la modalità di lettura. Usa `"w"` per scrivere (sovrascrive il file) oppure `"a"`
+per aggiungere in fondo. `.strip()` toglie il carattere di a capo alla fine di ogni riga.
 
-See [chapters/26-file-input-output/index.md](chapters/26-file-input-output/index.md).
+Vedi [chapters/26-file-input-output/index.md](chapters/26-file-input-output/index.md).
 
-### What is a regular expression?
+### Che cos'è un'espressione regolare?
 
-A **regular expression (regex)** is a pattern that describes a set of strings. The `re` module
-lets you search for, extract, and replace text based on these patterns:
+Un'**espressione regolare (regex)** è uno schema che descrive un insieme di stringhe. Il modulo
+`re` ti permette di cercare, estrarre e sostituire del testo in base a questi schemi:
 
 ```python
 import re
@@ -607,32 +748,34 @@ phones = re.findall(r"\d{3}-\d{4}", text)
 # ['555-1234', '555-9876']
 ```
 
-Common pattern pieces: `\d` matches any digit, `\w` matches any word character, `.` matches
-any character, `*` means zero or more, `+` means one or more, `?` means zero or one.
+Pezzi di schema comuni: `\d` corrisponde a una cifra qualsiasi, `\w` a un qualsiasi carattere
+di parola, `.` a un carattere qualsiasi; `*` significa zero o più volte, `+` una o più volte,
+`?` zero o una volta.
 
-See [chapters/29-text-processing-regex/index.md](chapters/29-text-processing-regex/index.md).
+Vedi [chapters/29-text-processing-regex/index.md](chapters/29-text-processing-regex/index.md).
 
-### What are the turtle movement commands?
+### Quali sono i comandi di movimento della turtle?
 
-The four core movement commands for a turtle object `t` are:
+I quattro comandi di movimento fondamentali per un oggetto turtle `t` sono:
 
-| Command | Action |
+| Comando | Azione |
 |---------|--------|
-| `t.forward(n)` | Move `n` pixels in the current direction |
-| `t.backward(n)` | Move `n` pixels in the opposite direction |
-| `t.left(angle)` | Turn left by `angle` degrees |
-| `t.right(angle)` | Turn right by `angle` degrees |
+| `t.forward(n)` | Si sposta di `n` pixel nella direzione attuale |
+| `t.backward(n)` | Si sposta di `n` pixel nella direzione opposta |
+| `t.left(angle)` | Gira a sinistra di `angle` gradi |
+| `t.right(angle)` | Gira a destra di `angle` gradi |
 
-Supporting commands: `t.penup()` / `t.pendown()` lift and lower the pen; `t.goto(x, y)`
-teleports the turtle to any coordinate; `t.speed(n)` controls drawing speed (0 is fastest).
+Comandi di supporto: `t.penup()` / `t.pendown()` alzano e abbassano la penna; `t.goto(x, y)`
+teletrasporta la turtle in qualsiasi coordinata; `t.speed(n)` controlla la velocità di
+disegno (0 è la più veloce).
 
-See [chapters/05-drawing-with-turtle/index.md](chapters/05-drawing-with-turtle/index.md).
+Vedi [chapters/05-drawing-with-turtle/index.md](chapters/05-drawing-with-turtle/index.md).
 
-### What is NumPy?
+### Che cos'è NumPy?
 
-**NumPy** is a Python library for fast numerical computing. Its central object is the
-**ndarray** — a multi-dimensional array that supports element-wise math operations orders of
-magnitude faster than Python lists:
+**NumPy** è una libreria Python per il calcolo numerico veloce. Il suo oggetto centrale è
+l'**ndarray**, un array multidimensionale che esegue operazioni matematiche elemento per
+elemento con una velocità di vari ordini di grandezza superiore alle liste di Python:
 
 ```python
 import numpy as np
@@ -641,16 +784,16 @@ print(a * 2)   # [2 4 6 8]
 print(a ** 2)  # [1 4 9 16]
 ```
 
-NumPy is the foundation of scientific Python: matplotlib uses NumPy arrays, and Keras
-processes image data as NumPy arrays. Chapter 33 covers the NumPy functions used in this course.
+NumPy è la base del Python scientifico: matplotlib usa gli array NumPy, e Keras elabora i dati
+delle immagini come array NumPy. Il Capitolo 33 tratta le funzioni NumPy usate in questo corso.
 
-See [chapters/33-numpy-scientific-computing/index.md](chapters/33-numpy-scientific-computing/index.md).
+Vedi [chapters/33-numpy-scientific-computing/index.md](chapters/33-numpy-scientific-computing/index.md).
 
-### What is matplotlib?
+### Che cos'è matplotlib?
 
-**matplotlib** is the most widely-used Python library for creating data visualizations.
-`matplotlib.pyplot` provides a MATLAB-like interface for line plots, scatter plots, bar charts,
-and histograms:
+**matplotlib** è la libreria Python più usata per creare visualizzazioni di dati.
+`matplotlib.pyplot` offre un'interfaccia simile a MATLAB per grafici a linee, grafici a
+dispersione, grafici a barre e istogrammi:
 
 ```python
 import matplotlib.pyplot as plt
@@ -663,12 +806,12 @@ plt.ylabel("Y Axis")
 plt.show()
 ```
 
-See [chapters/32-data-visualization-matplotlib/index.md](chapters/32-data-visualization-matplotlib/index.md).
+Vedi [chapters/32-data-visualization-matplotlib/index.md](chapters/32-data-visualization-matplotlib/index.md).
 
-### What does lambda mean?
+### Che cosa significa lambda?
 
-A **lambda** is a short, anonymous function written in a single expression. It is useful when
-you need a simple function for only one place in your code:
+Una **lambda** è una funzione breve e anonima, scritta in un'unica espressione. È utile quando
+ti serve una funzione semplice in un solo punto del codice:
 
 ```python
 square = lambda x: x ** 2
@@ -679,118 +822,121 @@ def square(x):
     return x ** 2
 ```
 
-Lambdas are commonly passed as arguments to functions like `sorted()` and `map()`:
-`sorted(words, key=lambda w: len(w))` sorts a list of words by length.
+Le lambda si passano spesso come argomenti a funzioni come `sorted()` e `map()`:
+`sorted(words, key=lambda w: len(w))` ordina una lista di parole in base alla lunghezza.
 
-See [chapters/24-recursion-and-fractals/index.md](chapters/24-recursion-and-fractals/index.md).
+Vedi [chapters/24-recursion-and-fractals/index.md](chapters/24-recursion-and-fractals/index.md).
 
 ---
 
-## Common Challenge Questions
+## Domande sui problemi più comuni
 
-### Why does Python say "IndentationError"?
+### Perché Python mi dice "IndentationError"?
 
-An `IndentationError` means Python found a line that is indented inconsistently with the
-lines around it. The most common causes are:
+Un `IndentationError` significa che Python ha trovato una riga indentata in modo non coerente
+con le righe vicine. Le cause più comuni sono:
 
-1. **Mixing tabs and spaces** — Python 3 treats them as different characters. Stick to 4
-   spaces per level everywhere.
-2. **Wrong level** — you indented one line too many or too few spaces.
-3. **Forgot to indent** — a line that should be inside a `for`, `if`, or `def` block is
-   at the wrong level.
+1. **Tab e spazi mescolati**: Python 3 li considera caratteri diversi. Usa sempre 4 spazi per
+   livello, ovunque.
+2. **Livello sbagliato**: hai indentato una riga con troppi o troppo pochi spazi.
+3. **Indentazione dimenticata**: una riga che dovrebbe stare dentro un blocco `for`, `if` o
+   `def` si trova al livello sbagliato.
 
-Fix: set your editor to **always insert spaces** (never tabs) and use **4 spaces per indent**.
-Most code editors do this automatically when you press Tab.
+Soluzione: imposta il tuo editor in modo che **inserisca sempre spazi** (mai tab) e usa
+**4 spazi per livello di indentazione**. La maggior parte degli editor lo fa automaticamente
+quando premi Tab.
 
-See [chapters/02-python-code-structure/index.md](chapters/02-python-code-structure/index.md).
+Vedi [chapters/02-python-code-structure/index.md](chapters/02-python-code-structure/index.md).
 
-### Why is my turtle not drawing anything?
+### Perché la mia turtle non disegna niente?
 
-Common reasons the turtle window appears blank:
+Motivi comuni per cui la finestra della turtle resta vuota:
 
-1. **Speed is `0` but the program ended before the canvas displayed** — call
-   `turtle.done()` or `wn.mainloop()` at the end to keep the window open.
-2. **Pen is up** — check that you called `t.pendown()` before moving.
-3. **Color matches background** — if the turtle color and background color are the same,
-   lines are invisible.
-4. **`forward(0)`** — moving zero pixels draws nothing.
-5. **In Skulpt** — the Skulpt turtle output appears inside the page div, not in a separate
-   window. Make sure you are looking at the output area below the code editor.
+1. **La velocità è `0` ma il programma è finito prima che il canvas venisse mostrato**:
+   chiama `turtle.done()` o `wn.mainloop()` alla fine per tenere aperta la finestra.
+2. **La penna è alzata**: controlla di aver chiamato `t.pendown()` prima di muoverti.
+3. **Il colore è uguale allo sfondo**: se il colore della turtle e quello dello sfondo sono
+   uguali, le linee sono invisibili.
+4. **`forward(0)`**: spostarsi di zero pixel non disegna nulla.
+5. **In Skulpt**: il disegno della turtle di Skulpt compare dentro la pagina, non in una
+   finestra separata. Assicurati di guardare l'area di output sotto l'editor del codice.
 
-See [chapters/05-drawing-with-turtle/index.md](chapters/05-drawing-with-turtle/index.md).
+Vedi [chapters/05-drawing-with-turtle/index.md](chapters/05-drawing-with-turtle/index.md).
 
-### What is the difference between a syntax error and a runtime error?
+### Qual è la differenza tra un errore di sintassi e un errore di runtime?
 
-- A **syntax error** is detected *before* the program runs. Python cannot even parse the code
-  because it violates Python grammar — a missing colon after `if`, unmatched parentheses, or
-  misspelled `def`. Python shows a `SyntaxError` with the line number.
-- A **runtime error** (also called an **exception**) is detected *while* the program is
-  running. The code is syntactically valid but something goes wrong during execution —
-  dividing by zero, looking up a key that does not exist in a dictionary, calling a method
-  on the wrong type.
+- Un **errore di sintassi** viene rilevato *prima* che il programma parta. Python non riesce
+  nemmeno a leggere il codice perché viola la grammatica di Python: i due punti mancanti dopo
+  un `if`, parentesi non chiuse o `def` scritto male. Python mostra un `SyntaxError` con il
+  numero di riga.
+- Un **errore di runtime** (chiamato anche **eccezione**) viene rilevato *mentre* il programma
+  è in esecuzione. Il codice è sintatticamente corretto, ma qualcosa va storto durante
+  l'esecuzione: una divisione per zero, la ricerca di una chiave che non esiste in un
+  dizionario, la chiamata di un metodo sul tipo sbagliato.
 
-There is also a third type: **logic errors** — the program runs to completion but produces the
-wrong answer. Python gives no error message; you have to figure out the mistake by reasoning
-through the code or adding `print()` statements.
+Esiste anche un terzo tipo: gli **errori logici**. Il programma arriva fino in fondo ma produce
+la risposta sbagliata. Python non mostra alcun messaggio di errore: devi scoprire lo sbaglio
+ragionando sul codice o aggiungendo delle istruzioni `print()`.
 
-See [chapters/23-error-handling-debugging/index.md](chapters/23-error-handling-debugging/index.md).
+Vedi [chapters/23-error-handling-debugging/index.md](chapters/23-error-handling-debugging/index.md).
 
-### Why does my while loop run forever?
+### Perché il mio ciclo while non finisce mai?
 
-An **infinite loop** happens when the condition in a `while` loop never becomes `False`.
-The most common causes are:
+Un **ciclo infinito** si verifica quando la condizione di un ciclo `while` non diventa mai
+`False`. Le cause più comuni sono:
 
-1. **Forgetting to update the loop variable** — if you never change the value being tested,
-   the condition stays `True` forever.
-2. **Off-by-one in the update** — `count += 0` instead of `count += 1`.
-3. **Condition that can never be `False`** — like `while True:` without a `break` statement.
+1. **Hai dimenticato di aggiornare la variabile del ciclo**: se non cambi mai il valore che
+   viene controllato, la condizione resta `True` per sempre.
+2. **Aggiornamento sbagliato**: `count += 0` invece di `count += 1`.
+3. **Una condizione che non può mai essere `False`**: come `while True:` senza un'istruzione
+   `break`.
 
-Fix: add a `print(count)` inside the loop to see whether the value is actually changing.
-If you are stuck in a Skulpt lab, refresh the page. In a terminal, press **Ctrl+C** to
-interrupt the program.
+Soluzione: aggiungi un `print(count)` dentro il ciclo per vedere se il valore cambia davvero.
+Se sei bloccato in un laboratorio Skulpt, ricarica la pagina. In un terminale, premi
+**Ctrl+C** per interrompere il programma.
 
-See [chapters/10-while-loops-and-animation/index.md](chapters/10-while-loops-and-animation/index.md).
+Vedi [chapters/10-while-loops-and-animation/index.md](chapters/10-while-loops-and-animation/index.md).
 
-### Why do I get a "NameError" for a variable I defined?
+### Perché ottengo un "NameError" per una variabile che ho definito?
 
-`NameError: name 'x' is not defined` means Python cannot find the variable `x` in scope
-at the point where you used it. Common causes:
+`NameError: name 'x' is not defined` significa che Python non trova la variabile `x` nello scope
+del punto in cui l'hai usata. Cause comuni:
 
-1. **Typo** — `scroe` instead of `score`. Python is case-sensitive: `Score` and `score` are
-   different names.
-2. **Defined in a function** — local variables only exist inside the function where they
-   are created.
-3. **Defined after the line that uses it** — Python reads code top-to-bottom; you cannot
-   use a variable before the line that assigns it.
-4. **Loop variable used after the loop** — in Python, `for` loop variables persist after
-   the loop, but `for i in []:` never assigns anything if the list is empty.
+1. **Errore di battitura**: `scroe` invece di `score`. Python distingue maiuscole e minuscole:
+   `Score` e `score` sono nomi diversi.
+2. **Definita dentro una funzione**: le variabili locali esistono solo dentro la funzione in
+   cui vengono create.
+3. **Definita dopo la riga che la usa**: Python legge il codice dall'alto verso il basso; non
+   puoi usare una variabile prima della riga che le assegna un valore.
+4. **Variabile del ciclo usata dopo il ciclo**: in Python le variabili dei cicli `for` restano
+   disponibili dopo il ciclo, ma `for i in []:` non assegna nulla se la lista è vuota.
 
-### What is "RecursionError: maximum recursion depth exceeded"?
+### Che cosa significa "RecursionError: maximum recursion depth exceeded"?
 
-This error means a recursive function called itself so many times that Python ran out of
-space on the **call stack**. Python's default recursion limit is 1000 calls. This almost
-always means one of two things:
+Questo errore significa che una funzione ricorsiva ha chiamato se stessa così tante volte che
+Python ha esaurito lo spazio sullo **stack delle chiamate** (call stack). Il limite predefinito
+di ricorsione di Python è di 1000 chiamate. Quasi sempre significa una di queste due cose:
 
-1. **Missing base case** — you forgot to write (or correctly test) the condition that
-   stops the recursion.
-2. **Base case is never reached** — the recursive call does not actually reduce the problem
-   toward the base case.
+1. **Manca il caso base**: hai dimenticato di scrivere (o di controllare correttamente) la
+   condizione che ferma la ricorsione.
+2. **Il caso base non viene mai raggiunto**: la chiamata ricorsiva non rende davvero il
+   problema più piccolo, avvicinandolo al caso base.
 
-Fix: add a `print(n)` at the top of your recursive function to see whether the value is
-getting smaller on each call. If it is not, the logic of your recursive step needs fixing.
+Soluzione: aggiungi un `print(n)` all'inizio della tua funzione ricorsiva per vedere se il
+valore diminuisce a ogni chiamata. Se non diminuisce, va corretta la logica del passo ricorsivo.
 
-See [chapters/24-recursion-and-fractals/index.md](chapters/24-recursion-and-fractals/index.md).
+Vedi [chapters/24-recursion-and-fractals/index.md](chapters/24-recursion-and-fractals/index.md).
 
-### Why does my function return None instead of a value?
+### Perché la mia funzione restituisce None invece di un valore?
 
-Every Python function returns `None` unless you explicitly use a `return` statement with a
-value. Common causes of unexpected `None`:
+Ogni funzione Python restituisce `None`, a meno che tu non usi esplicitamente un'istruzione
+`return` con un valore. Cause comuni di un `None` inatteso:
 
-1. **Forgot `return`** — the function computes the answer but does not return it.
-2. **`return` is inside an `if` block that was not reached** — only some code paths
-   return a value.
-3. **`print()` instead of `return`** — `print()` shows a value on the screen but does not
-   send it back to the caller.
+1. **Hai dimenticato `return`**: la funzione calcola la risposta ma non la restituisce.
+2. **Il `return` è dentro un blocco `if` che non è stato raggiunto**: solo alcuni percorsi del
+   codice restituiscono un valore.
+3. **`print()` al posto di `return`**: `print()` mostra un valore sullo schermo ma non lo
+   rimanda a chi ha chiamato la funzione.
 
 ```python
 def add(a, b):
@@ -802,13 +948,13 @@ total = add(3, 4)
 print(total)   # None — because add() returned nothing
 ```
 
-See [chapters/11-functions-parameters-scope/index.md](chapters/11-functions-parameters-scope/index.md).
+Vedi [chapters/11-functions-parameters-scope/index.md](chapters/11-functions-parameters-scope/index.md).
 
-### What does "TypeError: can only concatenate str (not 'int') to str" mean?
+### Che cosa significa "TypeError: can only concatenate str (not 'int') to str"?
 
-This error means you tried to join a string and a number with `+`. Python's `+` operator
-either concatenates two strings or adds two numbers, but it cannot mix the two. Convert the
-number to a string first:
+Questo errore significa che hai provato a unire una stringa e un numero con `+`. L'operatore
+`+` di Python concatena due stringhe oppure somma due numeri, ma non può mescolare le due cose.
+Converti prima il numero in stringa:
 
 ```python
 age = 12
@@ -822,253 +968,264 @@ print("I am " + str(age) + " years old.")
 print(f"I am {age} years old.")
 ```
 
-See [chapters/08-working-with-strings/index.md](chapters/08-working-with-strings/index.md).
+Vedi [chapters/08-working-with-strings/index.md](chapters/08-working-with-strings/index.md).
 
-### Why does my for loop skip the last number?
+### Perché il mio ciclo for salta l'ultimo numero?
 
-Because `range(n)` generates numbers **up to but not including** `n`. This is intentional:
+Perché `range(n)` genera i numeri **fino a `n` escluso**. È una scelta voluta:
 
 ```python
 for i in range(5):
     print(i)   # 0, 1, 2, 3, 4  — stops at 4, not 5
 ```
 
-To include `n`, use `range(n + 1)`. To loop from `1` to `10` inclusive: `range(1, 11)`.
-This "exclusive upper bound" is consistent with how Python indexing works — the last valid
-index of a list of 5 items is `4`, not `5`.
+Per includere `n`, usa `range(n + 1)`. Per contare da `1` a `10` compresi: `range(1, 11)`.
+Questo "limite superiore escluso" è coerente con il funzionamento degli indici in Python:
+l'ultimo indice valido di una lista di 5 elementi è `4`, non `5`.
 
-### How do I fix a logic error when there is no error message?
+### Come correggo un errore logico se non c'è nessun messaggio di errore?
 
-Logic errors are the hardest bugs because Python does not complain — the program just produces
-the wrong output. Strategies:
+Gli errori logici sono i bug più difficili perché Python non si lamenta: il programma produce
+semplicemente il risultato sbagliato. Alcune strategie:
 
-1. **Add print statements** — print variable values at key points to see what is actually
-   happening versus what you expect.
-2. **Trace the code by hand** — on paper, step through the code line by line as Python
-   would, keeping track of every variable's value.
-3. **Split the problem** — test smaller pieces of your program independently to narrow down
-   which part produces the wrong result.
-4. **Rubber-duck debug** — explain your code out loud (to a rubber duck, a friend, or Monty)
-   — the act of explaining often reveals the mistake.
+1. **Aggiungi delle istruzioni print**: stampa i valori delle variabili nei punti chiave per
+   confrontare ciò che succede davvero con ciò che ti aspetti.
+2. **Segui il codice a mano**: su carta, esegui il codice riga per riga come farebbe Python,
+   tenendo traccia del valore di ogni variabile.
+3. **Dividi il problema**: prova separatamente pezzi più piccoli del programma per capire quale
+   parte produce il risultato sbagliato.
+4. **Debug con la paperella di gomma**: spiega il tuo codice ad alta voce (a una paperella di
+   gomma, a un amico o a Monty). Spesso è proprio spiegandolo che ti accorgi dell'errore.
 
-See [chapters/23-error-handling-debugging/index.md](chapters/23-error-handling-debugging/index.md).
+Vedi [chapters/23-error-handling-debugging/index.md](chapters/23-error-handling-debugging/index.md).
 
-### Why does 1 == 1.0 return True in Python?
+### Perché 1 == 1.0 restituisce True in Python?
 
-It does! Python compares `int` and `float` values mathematically: `1 == 1.0` is `True`
-because the number one is the same regardless of type. However, `1 is 1.0` is `False` because
-`is` checks object identity (whether they are literally the same object in memory), not
-mathematical equality. Use `==` for value comparisons. Use `is` only for comparing to `None`,
-`True`, or `False`.
-
----
-
-## Best Practice Questions
-
-### How should I name my variables?
-
-Python variable names should be:
-
-- **Descriptive** — `student_count` beats `n`, `sc`, or `x`
-- **Snake case** — words separated by underscores: `first_name`, `total_score`
-- **Lowercase** — by convention, only constants use `ALL_CAPS` (`MAX_SIZE = 100`)
-- **Not a Python keyword** — avoid `list`, `type`, `input`, `id`, `print` as variable names
-
-Good naming makes code read almost like English: `if score >= passing_grade:` is far clearer
-than `if s >= pg:`. One concise variable name saves a comment and prevents confusion.
-
-See [chapters/03-variables-and-numbers/index.md](chapters/03-variables-and-numbers/index.md).
-
-### When should I write a function instead of repeating code?
-
-Write a function whenever you find yourself **copying and pasting the same code** with only
-small changes. The threshold is roughly **three repetitions** — once is fine, twice is a
-coincidence, three times is a pattern worth abstracting.
-
-Also write a function when:
-- A block of code grows long enough that you lose track of what it does
-- You want to give a complex operation a meaningful name
-- You want to be able to test a piece of logic in isolation
-
-Functions make bugs easier to fix: repair the function once instead of hunting down every
-copy of the pasted code.
-
-See [chapters/11-functions-parameters-scope/index.md](chapters/11-functions-parameters-scope/index.md).
-
-### How do I choose between a list and a dictionary?
-
-Use a **list** when:
-- Items are ordered and you access them by position (`items[0]`, `items[-1]`)
-- You are processing a sequence of similar things (a list of scores, a list of colors)
-
-Use a **dictionary** when:
-- You need to look up values by a meaningful name or key (`grades["Alice"]`)
-- You are mapping one thing to another (word → frequency, username → password)
-- You want to avoid searching through a list one item at a time
-
-When in doubt: if you find yourself writing `if item in list` repeatedly for lookup, switch
-to a dictionary or a set.
-
-See [chapters/21-dictionaries/index.md](chapters/21-dictionaries/index.md).
-
-### What is the DRY principle?
-
-**DRY** stands for **Don't Repeat Yourself**. Every piece of knowledge or logic should exist
-in exactly one place. When you copy and paste code and later need to change it, you risk
-forgetting to update one of the copies. Functions, modules, and loops are all tools for
-avoiding repetition.
-
-The opposite of DRY is **WET** (Write Everything Twice), which leads to harder-to-maintain
-programs. Applying DRY consistently is one of the most important habits a programmer can build.
-
-See [chapters/36-computational-thinking-best-practices/index.md](chapters/36-computational-thinking-best-practices/index.md).
-
-### When should I use a for loop versus a while loop?
-
-Use a **`for` loop** when you know in advance how many times to repeat — iterating over a
-list, processing each line in a file, or counting from 1 to 10.
-
-Use a **`while` loop** when the number of repetitions depends on something that changes
-during the loop — waiting for user input, running an animation until a condition changes,
-or searching until an item is found.
-
-A `while True:` loop with a `break` inside is common for "repeat until the user wants to
-stop" patterns in interactive programs.
-
-### How do I make my code easier to read?
-
-- **Use meaningful names** — `player_health` instead of `ph`
-- **Keep functions short** — if a function is more than 20 lines, consider splitting it
-- **Add a blank line** between logical sections of your program
-- **Use constants** for magic numbers: `MAX_SPEED = 10` instead of `10` scattered everywhere
-- **Write a docstring** for each function that explains what it does, its parameters, and
-  what it returns
-- **Avoid deep nesting** — more than 3 levels of indentation is a sign to refactor
-
-See [chapters/36-computational-thinking-best-practices/index.md](chapters/36-computational-thinking-best-practices/index.md).
-
-### When should I use try/except?
-
-Use `try/except` at **system boundaries** — places where your code interacts with the outside
-world and things can go wrong unpredictably:
-
-- Converting user input to a number (`int(input(...))`)
-- Opening a file that might not exist
-- Parsing data from an external source (CSV, JSON)
-
-Do **not** use `try/except` to hide bugs in your own logic. If you get a `KeyError` inside
-your own dictionary lookup, that is a bug to fix — not something to silently swallow with
-`except`.
-
-See [chapters/23-error-handling-debugging/index.md](chapters/23-error-handling-debugging/index.md).
-
-### When is recursion a good choice?
-
-Recursion shines when the problem is **naturally self-similar** — when you can express the
-solution to the big problem in terms of the same kind of problem at a smaller scale:
-
-- Fractal drawings (each branch is a smaller version of the tree)
-- Tree traversal (left subtree + right subtree, same algorithm)
-- Maze solving with backtracking
-- Directory listing (each subdirectory is itself a directory)
-
-Recursion can be harder to debug than iteration, and deep recursion uses more memory
-(Python's default limit is 1000 calls). For straightforward counting problems, a `for` or
-`while` loop is usually simpler.
-
-See [chapters/24-recursion-and-fractals/index.md](chapters/24-recursion-and-fractals/index.md).
-
-### How do I organize a larger Python program?
-
-For programs that span more than one or two screens of code:
-
-1. **Break work into functions** — one clear job per function
-2. **Group related functions into modules** — put drawing functions in `drawing.py`,
-   data functions in `data.py`
-3. **Use a `main()` function** as the entry point and call it with the `if __name__ == "__main__":` guard
-4. **Keep data separate from display logic** — compute your results first, then print or draw them
-5. **Write a short docstring** at the top of each file explaining its purpose
-
-These practices scale from a 100-line script to a 10,000-line project without changing
-the core habits.
-
-See [chapters/31-advanced-functions-oop/index.md](chapters/31-advanced-functions-oop/index.md).
-
-### How do I use version control with Python?
-
-**Git** is the standard version control tool for Python projects. The basic workflow:
-
-1. `git init` — set up a new repository in your project folder
-2. `git add my_file.py` — stage a file you changed
-3. `git commit -m "Add drawing function"` — save a snapshot with a message
-4. `git log` — see your history of snapshots
-
-Version control lets you experiment safely: if you break something, you can always roll back
-to the last working snapshot. For sharing and collaboration, GitHub is the most popular hosting
-service.
-
-See [chapters/36-computational-thinking-best-practices/index.md](chapters/36-computational-thinking-best-practices/index.md).
+Proprio così! Python confronta i valori `int` e `float` dal punto di vista matematico:
+`1 == 1.0` è `True` perché il numero uno è lo stesso indipendentemente dal tipo. Invece
+`1 is 1.0` è `False`, perché `is` controlla l'identità degli oggetti (se sono letteralmente lo
+stesso oggetto in memoria), non l'uguaglianza matematica. Usa `==` per confrontare i valori.
+Usa `is` solo per i confronti con `None`, `True` o `False`.
 
 ---
 
-## Advanced Topic Questions
+## Domande sulle buone pratiche
 
-### How does BFS guarantee the shortest path?
+### Come dovrei chiamare le mie variabili?
 
-BFS explores nodes **level by level** using a queue. Because a queue is first-in, first-out,
-BFS always processes all nodes at distance 1 before any node at distance 2, and all at
-distance 2 before any at distance 3, and so on. This means the first time BFS reaches the
-goal node, it reached it via the fewest steps possible. A longer path to the same goal cannot
-arrive first because the shorter path was already fully explored at an earlier level.
+I nomi delle variabili in Python dovrebbero essere:
 
-DFS makes no such guarantee — it can go deep down a dead end before exploring a shorter
-route, so it may find a path that is not the shortest.
+- **Descrittivi**: `student_count` è molto meglio di `n`, `sc` o `x`
+- **In snake case**: parole separate da trattini bassi: `first_name`, `total_score`
+- **In minuscolo**: per convenzione, solo le costanti usano `TUTTO_MAIUSCOLO` (`MAX_SIZE = 100`)
+- **Non nomi già usati da Python**: evita `list`, `type`, `input`, `id`, `print` come nomi di
+  variabile
 
-See [chapters/30-algorithms-data-structures/index.md](chapters/30-algorithms-data-structures/index.md).
+Dei buoni nomi fanno sì che il codice si legga quasi come una frase: `if score >= passing_grade:`
+è molto più chiaro di `if s >= pg:`. Un nome di variabile ben scelto ti risparmia un commento
+ed evita confusione.
 
-### What is a convolutional neural network?
+Vedi [chapters/03-variables-and-numbers/index.md](chapters/03-variables-and-numbers/index.md).
 
-A **convolutional neural network (CNN)** is a type of neural network designed for processing
-data that has a grid structure — like images. Instead of connecting every pixel to every neuron
-(which would be millions of connections), a CNN uses small **filters** (for example 3×3 grids
-of weights) that slide across the image, detecting edges, corners, and patterns locally.
-Stacking convolutional layers allows the network to detect increasingly complex features:
-edges → shapes → objects.
+### Quando dovrei scrivere una funzione invece di ripetere il codice?
 
-In Chapter 38, the course extends the MNIST example with a simple CNN using Keras `Conv2D`
-and `MaxPooling2D` layers.
+Scrivi una funzione ogni volta che ti accorgi di **copiare e incollare lo stesso codice** con
+solo piccole modifiche. La soglia è più o meno di **tre ripetizioni**: una volta va bene, due
+volte è una coincidenza, tre volte è uno schema che vale la pena trasformare in funzione.
 
-See [chapters/38-neural-networks-and-mnist/index.md](chapters/38-neural-networks-and-mnist/index.md).
+Scrivi una funzione anche quando:
+- Un blocco di codice diventa così lungo che perdi di vista che cosa fa
+- Vuoi dare un nome significativo a un'operazione complessa
+- Vuoi poter provare un pezzo di logica da solo
 
-### What is the MNIST dataset?
+Le funzioni rendono i bug più facili da correggere: ripari la funzione una volta sola invece di
+andare a cercare ogni copia del codice incollato.
 
-**MNIST** (Modified National Institute of Standards and Technology) is a classic machine
-learning dataset containing 70,000 grayscale images of handwritten digits 0–9, each 28×28
-pixels. 60,000 images are used for training and 10,000 for testing. MNIST is the "Hello
-World" of machine learning: models trained on it typically achieve 97–99% accuracy, making
-it a good benchmark for learning how neural networks work without requiring enormous
-computational resources.
+Vedi [chapters/11-functions-parameters-scope/index.md](chapters/11-functions-parameters-scope/index.md).
 
-See [chapters/37-machine-learning-foundations/index.md](chapters/37-machine-learning-foundations/index.md).
+### Come scelgo tra una lista e un dizionario?
 
-### What is the difference between supervised and unsupervised learning?
+Usa una **lista** quando:
+- Gli elementi sono in ordine e li raggiungi per posizione (`items[0]`, `items[-1]`)
+- Stai elaborando una sequenza di cose simili (una lista di punteggi, una lista di colori)
 
-- **Supervised learning** trains on **labeled examples** — each input has a correct answer
-  (label) provided. The model learns to predict the label for new inputs. MNIST digit
-  recognition is supervised: every image is labeled with its correct digit (0–9).
-- **Unsupervised learning** finds structure in **unlabeled data** — no correct answers are
-  provided. The model discovers groupings, patterns, or compressed representations on its
-  own. Clustering and autoencoders are examples.
+Usa un **dizionario** quando:
+- Devi cercare dei valori tramite un nome o una chiave significativa (`grades["Alice"]`)
+- Stai associando una cosa a un'altra (parola → frequenza, nome utente → password)
+- Vuoi evitare di cercare in una lista un elemento alla volta
 
-This course focuses on supervised learning. Unsupervised learning is briefly mentioned
-in [chapters/37-machine-learning-foundations/index.md](chapters/37-machine-learning-foundations/index.md).
+Nel dubbio: se ti ritrovi a scrivere spesso `if item in list` per cercare qualcosa, passa a
+un dizionario o a un insieme.
 
-### What is NumPy broadcasting?
+Vedi [chapters/21-dictionaries/index.md](chapters/21-dictionaries/index.md).
 
-**Broadcasting** is NumPy's rule for applying an operation between arrays of different shapes.
-When you write `array + 5`, NumPy behaves as if `5` were an array of the same shape as
-`array`, filled with fives, and adds element-wise. More generally, if two arrays have
-compatible shapes, NumPy extends the smaller one to match the larger one without copying data.
+### Che cos'è il principio DRY?
+
+**DRY** sta per **Don't Repeat Yourself** (non ripeterti). Ogni conoscenza o pezzo di logica
+dovrebbe esistere in un solo punto. Quando copi e incolli del codice e poi devi modificarlo,
+rischi di dimenticarti di aggiornare una delle copie. Funzioni, moduli e cicli sono tutti
+strumenti per evitare le ripetizioni.
+
+Il contrario di DRY è **WET** (Write Everything Twice, scrivi tutto due volte), che porta a
+programmi più difficili da mantenere. Applicare DRY con costanza è una delle abitudini più
+importanti che un programmatore possa sviluppare.
+
+Vedi [chapters/36-computational-thinking-best-practices/index.md](chapters/36-computational-thinking-best-practices/index.md).
+
+### Quando dovrei usare un ciclo for e quando un ciclo while?
+
+Usa un **ciclo `for`** quando sai in anticipo quante volte ripetere: per scorrere una lista,
+elaborare ogni riga di un file o contare da 1 a 10.
+
+Usa un **ciclo `while`** quando il numero di ripetizioni dipende da qualcosa che cambia durante
+il ciclo: aspettare l'input dell'utente, far andare un'animazione finché una condizione cambia,
+o cercare finché non trovi un elemento.
+
+Un ciclo `while True:` con un `break` all'interno è molto comune nei programmi interattivi per
+lo schema "ripeti finché l'utente non vuole smettere".
+
+### Come rendo il mio codice più facile da leggere?
+
+- **Usa nomi significativi**: `player_health` invece di `ph`
+- **Tieni le funzioni brevi**: se una funzione supera le 20 righe, valuta di dividerla
+- **Lascia una riga vuota** tra le sezioni logiche del programma
+- **Usa delle costanti** al posto dei "numeri magici": `MAX_SPEED = 10` invece di un `10`
+  sparso ovunque
+- **Scrivi una docstring** per ogni funzione, che spieghi che cosa fa, i suoi parametri e che
+  cosa restituisce
+- **Evita annidamenti troppo profondi**: più di 3 livelli di indentazione sono un segnale che
+  è il momento di riorganizzare il codice
+
+Vedi [chapters/36-computational-thinking-best-practices/index.md](chapters/36-computational-thinking-best-practices/index.md).
+
+### Quando dovrei usare try/except?
+
+Usa `try/except` ai **confini del sistema**, cioè nei punti in cui il tuo codice interagisce con
+il mondo esterno e le cose possono andare storte in modo imprevedibile:
+
+- Convertire l'input dell'utente in un numero (`int(input(...))`)
+- Aprire un file che potrebbe non esistere
+- Leggere dati da una fonte esterna (CSV, JSON)
+
+**Non** usare `try/except` per nascondere i bug della tua logica. Se ottieni un `KeyError` in
+una ricerca nel tuo dizionario, è un bug da correggere, non qualcosa da far sparire in silenzio
+con `except`.
+
+Vedi [chapters/23-error-handling-debugging/index.md](chapters/23-error-handling-debugging/index.md).
+
+### Quando conviene usare la ricorsione?
+
+La ricorsione dà il meglio quando il problema è **naturalmente auto-simile**, cioè quando puoi
+esprimere la soluzione del problema grande attraverso lo stesso tipo di problema in scala più
+piccola:
+
+- Disegni frattali (ogni ramo è una versione più piccola dell'albero)
+- Visita di un albero (sottoalbero sinistro + sottoalbero destro, stesso algoritmo)
+- Risoluzione di labirinti con il backtracking
+- Elenco delle cartelle (ogni sottocartella è a sua volta una cartella)
+
+La ricorsione può essere più difficile da correggere rispetto all'iterazione, e una ricorsione
+profonda usa più memoria (il limite predefinito di Python è di 1000 chiamate). Per i semplici
+problemi di conteggio, un ciclo `for` o `while` di solito è più semplice.
+
+Vedi [chapters/24-recursion-and-fractals/index.md](chapters/24-recursion-and-fractals/index.md).
+
+### Come organizzo un programma Python più grande?
+
+Per i programmi che occupano più di una o due schermate di codice:
+
+1. **Dividi il lavoro in funzioni**: un compito chiaro per ogni funzione
+2. **Raggruppa le funzioni collegate in moduli**: metti le funzioni di disegno in `drawing.py`
+   e quelle sui dati in `data.py`
+3. **Usa una funzione `main()`** come punto di ingresso e chiamala con la protezione `if __name__ == "__main__":`
+4. **Tieni i dati separati dalla logica di visualizzazione**: prima calcola i risultati, poi stampali o disegnali
+5. **Scrivi una breve docstring** all'inizio di ogni file per spiegarne lo scopo
+
+Queste pratiche funzionano sia per uno script di 100 righe sia per un progetto di 10.000 righe,
+senza cambiare le abitudini di base.
+
+Vedi [chapters/31-advanced-functions-oop/index.md](chapters/31-advanced-functions-oop/index.md).
+
+### Come uso il controllo di versione con Python?
+
+**Git** è lo strumento standard di controllo di versione per i progetti Python. Il flusso di
+lavoro di base:
+
+1. `git init` — crea un nuovo repository nella cartella del progetto
+2. `git add my_file.py` — prepara (stage) un file che hai modificato
+3. `git commit -m "Add drawing function"` — salva un'istantanea con un messaggio
+4. `git log` — mostra la cronologia delle istantanee
+
+Il controllo di versione ti permette di sperimentare in sicurezza: se rompi qualcosa, puoi
+sempre tornare all'ultima istantanea funzionante. Per condividere e collaborare, GitHub è il
+servizio di hosting più diffuso.
+
+Vedi [chapters/36-computational-thinking-best-practices/index.md](chapters/36-computational-thinking-best-practices/index.md).
+
+---
+
+## Domande sugli argomenti avanzati
+
+### In che modo BFS garantisce il percorso più breve?
+
+BFS esplora i nodi **livello per livello** usando una coda. Dato che una coda funziona con la
+regola "primo arrivato, primo servito", BFS elabora sempre tutti i nodi a distanza 1 prima di
+qualsiasi nodo a distanza 2, tutti quelli a distanza 2 prima di qualsiasi nodo a distanza 3, e
+così via. Questo significa che la prima volta che BFS raggiunge il nodo di arrivo, ci è arrivato
+con il minor numero di passi possibile. Un percorso più lungo verso lo stesso arrivo non può
+arrivare per primo, perché il percorso più breve è già stato esplorato del tutto a un livello
+precedente.
+
+DFS non offre questa garanzia: può scendere in profondità lungo un vicolo cieco prima di
+esplorare una strada più breve, quindi può trovare un percorso che non è il più breve.
+
+Vedi [chapters/30-algorithms-data-structures/index.md](chapters/30-algorithms-data-structures/index.md).
+
+### Che cos'è una rete neurale convoluzionale?
+
+Una **rete neurale convoluzionale (CNN)** è un tipo di rete neurale progettata per elaborare dati
+con una struttura a griglia, come le immagini. Invece di collegare ogni pixel a ogni neurone
+(il che significherebbe milioni di collegamenti), una CNN usa dei piccoli **filtri** (per
+esempio griglie di pesi 3×3) che scorrono sull'immagine e rilevano localmente bordi, angoli e
+schemi. Sovrapponendo più strati convoluzionali, la rete riesce a riconoscere caratteristiche
+sempre più complesse: bordi → forme → oggetti.
+
+Nel Capitolo 38 il corso amplia l'esempio MNIST con una semplice CNN che usa gli strati Keras
+`Conv2D` e `MaxPooling2D`.
+
+Vedi [chapters/38-neural-networks-and-mnist/index.md](chapters/38-neural-networks-and-mnist/index.md).
+
+### Che cos'è il dataset MNIST?
+
+**MNIST** (Modified National Institute of Standards and Technology) è un classico dataset di
+machine learning che contiene 70.000 immagini in scala di grigi di cifre scritte a mano da 0 a 9,
+ognuna di 28×28 pixel. 60.000 immagini servono per l'addestramento e 10.000 per il test. MNIST
+è l'"Hello World" del machine learning: i modelli addestrati su questo dataset raggiungono di
+solito un'accuratezza del 97–99%, ed è quindi un buon banco di prova per imparare come
+funzionano le reti neurali senza bisogno di enormi risorse di calcolo.
+
+Vedi [chapters/37-machine-learning-foundations/index.md](chapters/37-machine-learning-foundations/index.md).
+
+### Qual è la differenza tra apprendimento supervisionato e non supervisionato?
+
+- L'**apprendimento supervisionato** si addestra su **esempi etichettati**: per ogni input viene
+  fornita la risposta corretta (l'etichetta). Il modello impara a prevedere l'etichetta per
+  nuovi input. Il riconoscimento delle cifre MNIST è supervisionato: ogni immagine è etichettata
+  con la cifra corretta (0–9).
+- L'**apprendimento non supervisionato** trova una struttura in **dati non etichettati**: non
+  viene fornita alcuna risposta corretta. Il modello scopre da solo raggruppamenti, schemi o
+  rappresentazioni compresse. Il clustering e gli autoencoder ne sono esempi.
+
+Questo corso si concentra sull'apprendimento supervisionato. L'apprendimento non supervisionato
+è citato brevemente in [chapters/37-machine-learning-foundations/index.md](chapters/37-machine-learning-foundations/index.md).
+
+### Che cos'è il broadcasting di NumPy?
+
+Il **broadcasting** è la regola di NumPy per applicare un'operazione tra array di forme diverse.
+Quando scrivi `array + 5`, NumPy si comporta come se `5` fosse un array della stessa forma di
+`array`, pieno di cinque, e somma elemento per elemento. Più in generale, se due array hanno
+forme compatibili, NumPy estende quello più piccolo per farlo corrispondere a quello più grande,
+senza copiare i dati.
 
 ```python
 import numpy as np
@@ -1077,13 +1234,14 @@ a = np.array([[1, 2, 3],
 print(a * 2)   # every element multiplied by 2
 ```
 
-Broadcasting makes numerical code much more concise and efficient than writing explicit loops.
+Il broadcasting rende il codice numerico molto più conciso ed efficiente rispetto a scrivere dei
+cicli espliciti.
 
-See [chapters/33-numpy-scientific-computing/index.md](chapters/33-numpy-scientific-computing/index.md).
+Vedi [chapters/33-numpy-scientific-computing/index.md](chapters/33-numpy-scientific-computing/index.md).
 
-### How does image processing work with Pillow?
+### Come funziona l'elaborazione delle immagini con Pillow?
 
-**Pillow** (PIL) lets you open, display, modify, and save images in Python:
+**Pillow** (PIL) ti permette di aprire, mostrare, modificare e salvare immagini in Python:
 
 ```python
 from PIL import Image
@@ -1094,22 +1252,23 @@ gray = img.convert("L")          # convert to grayscale
 gray.save("gray_photo.jpg")      # save to file
 ```
 
-Pillow also gives access to the raw pixel data as a NumPy array, which allows you to
-manipulate individual pixels — brightening, inverting colors, or extracting image features
-for machine learning preprocessing.
+Pillow dà anche accesso ai dati grezzi dei pixel sotto forma di array NumPy, il che ti permette
+di modificare i singoli pixel: schiarire un'immagine, invertirne i colori o estrarne delle
+caratteristiche per preparare i dati al machine learning.
 
-See [chapters/34-image-processing-pillow/index.md](chapters/34-image-processing-pillow/index.md).
+Vedi [chapters/34-image-processing-pillow/index.md](chapters/34-image-processing-pillow/index.md).
 
-### What is event-driven programming?
+### Che cos'è la programmazione a eventi?
 
-**Event-driven programming** is a style where the program waits for **events** — user actions
-like mouse clicks or key presses — and runs a **callback function** when each event occurs.
-Instead of executing top-to-bottom once, the program enters an **event loop** that keeps
-listening for events indefinitely.
+La **programmazione a eventi** (event-driven) è uno stile in cui il programma aspetta degli
+**eventi**, cioè azioni dell'utente come clic del mouse o pressioni di tasti, ed esegue una
+**funzione di callback** ogni volta che un evento si verifica. Invece di essere eseguito una
+sola volta dall'alto verso il basso, il programma entra in un **ciclo degli eventi** (event
+loop) che resta in ascolto degli eventi all'infinito.
 
-Turtle graphics uses event-driven programming: `wn.onscreenclick(my_function)` registers
-`my_function` as the callback for mouse click events. When the user clicks the canvas,
-the turtle module calls `my_function` with the click coordinates.
+La grafica turtle usa la programmazione a eventi: `wn.onscreenclick(my_function)` registra
+`my_function` come callback per i clic del mouse. Quando l'utente fa clic sul canvas, il modulo
+turtle chiama `my_function` passandole le coordinate del clic.
 
 ```python
 def clicked(x, y):
@@ -1119,13 +1278,13 @@ wn.onscreenclick(clicked)
 wn.mainloop()   # start the event loop
 ```
 
-See [chapters/35-advanced-turtle-event-driven/index.md](chapters/35-advanced-turtle-event-driven/index.md).
+Vedi [chapters/35-advanced-turtle-event-driven/index.md](chapters/35-advanced-turtle-event-driven/index.md).
 
-### How do I create my own Python module?
+### Come creo un mio modulo Python?
 
-Creating a module is as simple as saving Python code in a `.py` file. Any functions,
-variables, or classes you define in that file become available when another program imports
-it:
+Creare un modulo è semplice come salvare del codice Python in un file `.py`. Tutte le funzioni,
+le variabili o le classi che definisci in quel file diventano disponibili quando un altro
+programma lo importa:
 
 ```python
 # shapes.py
@@ -1150,26 +1309,27 @@ shapes.draw_square(t, 100)
 shapes.draw_triangle(t, 80)
 ```
 
-Both files must be in the same directory (or on Python's module search path). Add a
-`if __name__ == "__main__":` guard in `shapes.py` if you want to test it independently
-without that test code running when it is imported.
+Entrambi i file devono trovarsi nella stessa cartella (o nel percorso di ricerca dei moduli di
+Python). Aggiungi la protezione `if __name__ == "__main__":` in `shapes.py` se vuoi poterlo
+provare da solo, senza che quel codice di prova venga eseguito quando il modulo viene importato.
 
-See [chapters/27-standard-library-json/index.md](chapters/27-standard-library-json/index.md).
+Vedi [chapters/27-standard-library-json/index.md](chapters/27-standard-library-json/index.md).
 
-### What are common sorting algorithms and when do I need them?
+### Quali sono gli algoritmi di ordinamento più comuni e quando mi servono?
 
-This course covers three elementary sorting algorithms:
+Questo corso presenta tre algoritmi di ordinamento elementari:
 
-- **Bubble sort** — repeatedly swap adjacent elements that are out of order. Simple to
-  understand, slow for large lists (O(n²)).
-- **Selection sort** — find the minimum element in the unsorted portion and move it to the
-  front. Also O(n²) but fewer swaps than bubble sort.
-- **Insertion sort** — build the sorted list one element at a time by inserting each new
-  element in its correct position. Efficient for nearly-sorted data.
+- **Bubble sort**: scambia ripetutamente gli elementi vicini che sono nell'ordine sbagliato.
+  Facile da capire, lento con liste grandi (O(n²)).
+- **Selection sort**: trova l'elemento più piccolo nella parte non ancora ordinata e lo sposta
+  in testa. Anche questo è O(n²), ma fa meno scambi del bubble sort.
+- **Insertion sort**: costruisce la lista ordinata un elemento alla volta, inserendo ogni nuovo
+  elemento nella posizione giusta. È efficiente con dati quasi ordinati.
 
-In practice, you almost never need to implement your own sort — Python's built-in `sorted()`
-and `list.sort()` use Timsort, which is O(n log n) and beats all three elementary algorithms
-on real data. You study sorting algorithms to understand how computers solve ordering problems
-and to learn to analyze algorithm efficiency with Big-O notation.
+In pratica non dovrai quasi mai scrivere un tuo algoritmo di ordinamento: le funzioni built-in
+di Python `sorted()` e `list.sort()` usano Timsort, che è O(n log n) e sui dati reali batte
+tutti e tre gli algoritmi elementari. Si studiano gli algoritmi di ordinamento per capire come i
+computer risolvono i problemi di ordinamento e per imparare ad analizzare l'efficienza degli
+algoritmi con la notazione O-grande (Big-O).
 
-See [chapters/30-algorithms-data-structures/index.md](chapters/30-algorithms-data-structures/index.md).
+Vedi [chapters/30-algorithms-data-structures/index.md](chapters/30-algorithms-data-structures/index.md).

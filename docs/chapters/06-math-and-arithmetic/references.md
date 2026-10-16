@@ -16,7 +16,7 @@
    Copre gli operatori aritmetici e le espressioni specificamente per giovani studenti, con umorismo ed esempi visivi. Il tono e la fascia d'età target (10-12) si allineano strettamente con il pubblico di questo capitolo.
 
 6. **Python Docs: Numeric Types** — [https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex](https://docs.python.org/3/library/stdtypes.html#numeric-types-int-float-complex)
-   Il riferimento ufficiale di Python per i tipi `int` e `float`, che copre tutti gli operatori aritmetici inclusi `//`, `%` e `**`. Fonte autorevole per il comportamento esatto degli operatori e i casi limite come la divisione per troncamento con numeri negativi.
+   Il riferimento ufficiale di Python per i tipi `int` e `float`, che copre tutti gli operatori aritmetici inclusi `//`, `%` e `**`. Fonte autorevole per il comportamento esatto degli operatori e i casi limite come la divisione intera (floor division, `//`) con numeri negativi.
 
 7. **Real Python: Python Operators** — [https://realpython.com/python-operators-expressions/](https://realpython.com/python-operators-expressions/)
    Tutorial completo che copre ogni operatore aritmetico, la precedenza degli operatori, gli operatori di assegnazione aumentata (`+=`, `*=`) e la valutazione delle espressioni. Include esempi interattivi e le trappole più comuni per i principianti.

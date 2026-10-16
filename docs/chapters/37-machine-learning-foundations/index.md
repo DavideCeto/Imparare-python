@@ -117,7 +117,7 @@ Un'immagine 28×28 è una griglia di 784 numeri — questo diventa un vettore di
 
 ## Divisioni Train / Validation / Test
 
-Prima di allenare un modello, divide i tuoi dati in tre insiemi separati:
+Prima di allenare un modello, dividi i tuoi dati in tre insiemi separati:
 
 | Insieme | Scopo | Dimensione tipica |
 |-----|---------|-------------|

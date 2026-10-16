@@ -119,7 +119,7 @@ Verifica la tua comprensione delle pile, delle code, dei grafi, di BFS, DFS, del
 #### 8. Come funziona il bubble sort?
 
 <div class="upper-alpha" markdown>
-1. Scegli ripetutamente l'elemento più piccolo rimanente e lo posiziona nella sua posizione corretta
+1. Sceglie ripetutamente l'elemento più piccolo rimanente e lo posiziona nella sua posizione corretta
 2. Divide la lista a metà, ordina ogni metà, e le fonde di nuovo insieme
 3. Scorre ripetutamente la lista, confrontando gli elementi adiacenti e scambiandoli se sono nell'ordine sbagliato
 4. Usa una tabella hash per contare le frequenze degli elementi e ricostruire l'ordine ordinato
