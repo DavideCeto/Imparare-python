@@ -1,0 +1,37 @@
+{
+  "file": "chapters/08-working-with-strings/references.md",
+  "hash": "05dbe2c77a4ba03ed00d3df87bbbd16a70081b26e6e19ed9a84adde50317b4ca",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0218,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "a pace well suited to students ages 10–13",
+      "italian": "a un ritmo adatto a studenti dai 10 ai 13 anni",
+      "explanation": "Corrisponde all'originale; nessun errore. (Nota: il pubblico del manuale è 13-15 anni, ma è un dato dell'originale.)",
+      "suggestion": "Nessuna modifica necessaria.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Explains what strings are in computing, how they are stored, and why",
+      "italian": "come vengono memorizzate, e perché sono uno dei tipi",
+      "explanation": "Virgola prima di 'e' non necessaria in italiano.",
+      "suggestion": "come vengono memorizzate e perché sono uno dei tipi",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "Covers the concept of writing string values directly in source code",
+      "italian": "Copre il concetto di scrivere valori stringa",
+      "explanation": "'Copre' è un calco dall'inglese, poco naturale.",
+      "suggestion": "Tratta il concetto di scrivere i valori stringa...",
+      "part": 1
+    }
+  ]
+}

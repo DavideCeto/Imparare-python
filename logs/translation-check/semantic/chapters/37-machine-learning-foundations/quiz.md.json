@@ -1,0 +1,55 @@
+{
+  "file": "chapters/37-machine-learning-foundations/quiz.md",
+  "hash": "2b8928802dd8922dcf54eda057f459872a52bb8805c61d20d243e31ceb2fd525",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0378,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "**Concept Tested:** Supervised vs Unsupervised Learning",
+      "italian": "**Concept Tested:** Supervised vs Unsupervised Learning",
+      "explanation": "L'etichetta «Concept Tested» è prosa rimasta in inglese in tutte le domande; non è un titolo di concetto della lista «Concepts Covered».",
+      "suggestion": "**Concetto verificato:** (mantenendo il nome del concetto in inglese).",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Training a model for too many epochs, making it run slowly",
+      "italian": "Allenare un modello per troppi epoch, facendolo girare lentamente",
+      "explanation": "«epoch» usato al maschile e invariabile in modo incerto; suona innaturale («troppi epoch»). Inoltre la frase «Cosa significa un epoch» è poco naturale.",
+      "suggestion": "Usare «epoche» o «cicli di addestramento (epoch)»: «per troppe epoche».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "every training example comes with a label",
+      "italian": "ogni esempio di training viene con un'etichetta",
+      "explanation": "Calco dall'inglese («comes with»), innaturale in italiano.",
+      "suggestion": "ogni esempio di training ha un'etichetta / è accompagnato da un'etichetta",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "The test set should be reviewed before training",
+      "italian": "Il test set dovrebbe essere revisionato prima del training",
+      "explanation": "«revisionato» è calco poco adatto; il senso è «esaminato».",
+      "suggestion": "dovrebbe essere esaminato prima del training",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Randomly drops some neurons to prevent overfitting",
+      "italian": "Disabilita casualmente alcuni neuroni per prevenire l'overfitting",
+      "explanation": "Accettabile, ma terminologia mista: «training» e «allenare» usati alternativamente nella sezione (es. «si è mai allenato», «ti alleni»).",
+      "suggestion": "Uniformare l'uso tra «allenare» e «training».",
+      "part": 1
+    }
+  ]
+}

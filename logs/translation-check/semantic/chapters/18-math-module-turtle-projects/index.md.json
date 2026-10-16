@@ -1,0 +1,64 @@
+{
+  "file": "chapters/18-math-module-turtle-projects/index.md",
+  "hash": "3be9c263f1563d340de2836a1ee6dfd17c9c3c8f4292e4a8aeab3fa473cd8c2b",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.069,
+  "issues": [
+    {
+      "severity": "major",
+      "category": "prediction",
+      "english": "Add a fourth turtle named `t4` with color `\"orange\"`,\n    starting at y = `-80`.",
+      "italian": "Aggiungi una quarta tartaruga chiamata `t4` con colore `\"orange\"`,\n    che parte da y = `-80`.",
+      "explanation": "Il testo inglese dice y = -80, ma il codice del laboratorio commenta y=-60 (e le altre tartarughe sono a 60, 20, -20). L'italiano riproduce l'incoerenza dell'originale; lo studente seguirebbe istruzioni non coerenti con il laboratorio.",
+      "suggestion": "Correggere in y = `-60` (sia nell'originale sia nella traduzione), coerente con il commento nel codice.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Add a Fourth Racer",
+      "italian": "Aggiungi una Quarta Corridora",
+      "explanation": "Il femminile 'corridora' non esiste in italiano standard e poco dopo si usa 'corridori'.",
+      "suggestion": "\"Aggiungi un Quarto Corridore\" o \"Aggiungi una Quarta Tartaruga\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to Chapter 18!",
+      "italian": "Benvenuto/a al Capitolo 18!",
+      "explanation": "Forma 'Benvenuto/a' poco naturale; inoltre 'al Capitolo' andrebbe 'nel Capitolo'.",
+      "suggestion": "\"Benvenuto nel Capitolo 18!\" oppure \"Benvenuti al Capitolo 18!\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "so we multiply by `amplitude` to scale it up",
+      "italian": "quindi moltiplichiamo per `amplitude` per scalarlo",
+      "explanation": "'Scalarlo' è un calco poco chiaro per studenti.",
+      "suggestion": "\"per ingrandirlo\" / \"per portarlo alla scala giusta\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Check **show plain sin(x)** to keep the original wave as a dotted reference",
+      "italian": "Seleziona **show plain sin(x)** per mantenere l'onda originale",
+      "explanation": "Più naturale 'Spunta'; inoltre 'muovi la fase' e 'Mezzo giro' vanno bene, ma 'slider' resta anglicismo non spiegato.",
+      "suggestion": "\"Spunta la casella ...\"; usare 'cursori' al posto di 'slider'.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "packs more wiggles into the same space",
+      "italian": "ne infila più ondulazioni nello stesso spazio",
+      "explanation": "Frase poco scorrevole.",
+      "suggestion": "\"quale ne mette più ondulazioni nello stesso spazio\" → \"quale fa stare più ondulazioni nello stesso spazio\".",
+      "part": 1
+    }
+  ]
+}

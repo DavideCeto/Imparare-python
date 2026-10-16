@@ -1,0 +1,55 @@
+{
+  "file": "chapters/29-text-processing-regex/index.md",
+  "hash": "ca66c349a8b8b067bca489739ce615cac1c66a9a780dde5644521b8784c806ec",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0624,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "The chip strip always translates your pattern into plain English",
+      "italian": "La striscia dei chip traduce sempre il tuo pattern in inglese semplice",
+      "explanation": "\"Plain English\" qui significa linguaggio semplice; tradurlo \"inglese semplice\" è fuorviante per studenti italiani.",
+      "suggestion": "traduce sempre il tuo pattern in parole semplici",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "build your own pattern one character at a time",
+      "italian": "costruisci il tuo proprio pattern un carattere alla volta",
+      "explanation": "\"il tuo proprio\" è ridondante e poco naturale.",
+      "suggestion": "costruisci un tuo pattern un carattere alla volta",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "for better performance",
+      "italian": "per una migliore prestazione",
+      "explanation": "Espressione poco naturale in italiano.",
+      "suggestion": "per prestazioni migliori",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "to match patterns in text",
+      "italian": "per far corrispondere pattern nel testo",
+      "explanation": "Formulazione goffa; meglio \"trovare\" pattern nel testo.",
+      "suggestion": "per trovare pattern nel testo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Regular expressions look scary at first — but once you learn the building blocks",
+      "italian": "una volta che imparerai i blocchi costitutivi",
+      "explanation": "Il futuro dopo \"una volta che\" è meno naturale del passato prossimo.",
+      "suggestion": "una volta che avrai imparato i blocchi costitutivi",
+      "part": 1
+    }
+  ]
+}

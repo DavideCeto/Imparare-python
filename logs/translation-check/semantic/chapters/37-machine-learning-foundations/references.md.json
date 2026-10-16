@@ -1,0 +1,55 @@
+{
+  "file": "chapters/37-machine-learning-foundations/references.md",
+  "hash": "5cb19b90e4e640f67509acff7c87b4bc8c431e70738621039487ac68b33e3962",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0213,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "supervised vs. unsupervised learning",
+      "italian": "l'apprendimento supervisionato contro quello non supervisionato",
+      "explanation": "\"contro\" è un calco di \"vs.\"; in italiano suona innaturale.",
+      "suggestion": "\"l'apprendimento supervisionato e quello non supervisionato\" oppure \"la differenza tra apprendimento supervisionato e non supervisionato\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "allenamento dei modelli",
+      "italian": "l'allenamento dei modelli, e le applicazioni",
+      "explanation": "Incoerenza terminologica: \"training\" resta in inglese in \"dati di training\", ma \"model training\" è tradotto come \"allenamento\". Inoltre c'è una virgola prima di \"e\" non necessaria (anche in altri punti).",
+      "suggestion": "Usare un termine coerente (es. \"addestramento dei modelli\" e \"dati di addestramento\") e togliere la virgola prima di \"e\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "predict values",
+      "italian": "predire i valori",
+      "explanation": "\"predire\" è corretto ma \"prevedere\" è più naturale in italiano.",
+      "suggestion": "\"prevedere valori\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "making this book a practical companion for students",
+      "italian": "rendendo questo libro un compagno pratico per studenti che iniziano",
+      "explanation": "Frase leggermente innaturale; manca l'articolo (\"per gli studenti\").",
+      "suggestion": "\"un utile compagno per gli studenti che iniziano a lavorare con dataset strutturati\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "self-paced",
+      "italian": "autogestito",
+      "explanation": "\"autogestito\" non rende bene \"self-paced\" (al proprio ritmo).",
+      "suggestion": "\"che si segue al proprio ritmo\".",
+      "part": 1
+    }
+  ]
+}

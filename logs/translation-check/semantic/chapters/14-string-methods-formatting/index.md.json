@@ -1,0 +1,46 @@
+{
+  "file": "chapters/14-string-methods-formatting/index.md",
+  "hash": "5ada4e76685c91fefaa9a4cadc0210680e4a31bf0bc63a68c90a815bfeda986c",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0596,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Use `startswith()` to check if a filename ends with `\".py\"`.",
+      "italian": "Usa `startswith()` per controllare se un nome di file finisce con `\".py\"`.",
+      "explanation": "L'originale ha un errore (startswith per controllare la fine), ma la traduzione lo riproduce fedelmente. Lo studente imparerebbe un metodo sbagliato: per controllare la fine serve endswith().",
+      "suggestion": "Usa `endswith()` per controllare se un nome di file finisce con `\".py\"`.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the output reads `This is a *** example`",
+      "italian": "l'output legge `This is a *** example`",
+      "explanation": "\"legge\" è un calco dall'inglese e suona innaturale in italiano.",
+      "suggestion": "l'output è `This is a *** example`",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Python gives you a huge toolkit of string methods so you can chop, search, replace, and format text",
+      "italian": "Python ti dà un enorme set di strumenti di metodi delle stringhe così puoi tagliare",
+      "explanation": "\"set di strumenti di metodi\" è pesante e innaturale; manca anche il congiuntivo dopo \"così\".",
+      "suggestion": "Python ti mette a disposizione tantissimi metodi per le stringhe, così puoi tagliare, cercare, sostituire e formattare il testo con poche righe di codice.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Usa `split()`, `join()`, `replace()`, `find()`, `startswith()`, ed `endswith()`",
+      "italian": "Usa `split()`, `join()`, `replace()`, `find()`, `startswith()`, ed `endswith()`",
+      "explanation": "Virgola prima della congiunzione e \"ed\" prima di una parola che non inizia con la vocale e: scorrevolezza. Frequente anche la virgola prima di \"e\" nelle liste.",
+      "suggestion": "`startswith()` e `endswith()`",
+      "part": 1
+    }
+  ]
+}

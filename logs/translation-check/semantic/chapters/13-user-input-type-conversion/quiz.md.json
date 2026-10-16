@@ -1,0 +1,37 @@
+{
+  "file": "chapters/13-user-input-type-conversion/quiz.md",
+  "hash": "7f7477be9cb24a0696e840573a07f6ccf0e6f2c352a6260300d465b95ea4a502",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0337,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "`bool(1)` or `bool(-5)` returns `True`",
+      "italian": "ma `bool(1)` o `bool(-5)` restituisce `True`",
+      "explanation": "Soggetto plurale coordinato con «o»: più naturale il verbo al plurale.",
+      "suggestion": "ma `bool(1)` o `bool(-5)` restituiscono `True`",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "**Concept Tested:** input() Function",
+      "italian": "**Concept Tested:** input() Function",
+      "explanation": "L'etichetta «Concept Tested» è rimasta in inglese in tutte le risposte; è prosa da tradurre (il nome del concetto può restare).",
+      "suggestion": "**Concetto verificato:** input() Function",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Test your understanding of the input() function, type conversion, and input validation",
+      "italian": "della conversione di tipo, e della validazione dell'input",
+      "explanation": "Virgola prima di «e» innaturale in italiano (anche in «0.0, \"\", None, e le collezioni vuote»).",
+      "suggestion": "della conversione di tipo e della validazione dell'input",
+      "part": 1
+    }
+  ]
+}

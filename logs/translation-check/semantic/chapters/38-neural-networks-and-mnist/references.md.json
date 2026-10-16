@@ -1,0 +1,46 @@
+{
+  "file": "chapters/38-neural-networks-and-mnist/references.md",
+  "hash": "11a91286c71b4bbbc54972f7a1da75b7de9fec6740c006a43c00b3f782743977",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0261,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "suited to ages 10–13",
+      "italian": "adatti per studenti dai 10 ai 13 anni",
+      "explanation": "L'originale parla di età (10–13), non di «studenti»; l'aggiunta è lieve. Inoltre «adatti» concorda con «esempi», ma «adatti per» è meno naturale di «adatti a».",
+      "suggestion": "esempi giocosi e accessibili adatti a ragazzi dai 10 ai 13 anni",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Provides the core Python syntax and data-structure knowledge that underpins loading the MNIST dataset",
+      "italian": "Fornisce la sintassi Python di base e la conoscenza delle strutture di dati che sostiene il caricamento del dataset MNIST",
+      "explanation": "Il verbo «sostiene» è singolare, ma il soggetto relativo è composto («sintassi e conoscenza»); suona poco naturale.",
+      "suggestion": "che sono alla base del caricamento del dataset MNIST",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "the theoretical backbone of this chapter",
+      "italian": "la spina dorsale teorica di questo capitolo",
+      "explanation": "Calco dall'inglese, un po' innaturale in italiano.",
+      "suggestion": "la base teorica di questo capitolo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "including how layers of nodes process information, what activation functions do, and how networks learn from data",
+      "italian": "incluso come i layer di nodi elaborano le informazioni, cosa fanno le funzioni di attivazione, e come le reti imparano dai dati",
+      "explanation": "«incluso come» è poco naturale; inoltre la virgola prima di «e» è un calco dall'inglese.",
+      "suggestion": "compreso il modo in cui i layer di nodi elaborano le informazioni, cosa fanno le funzioni di attivazione e come le reti imparano dai dati",
+      "part": 1
+    }
+  ]
+}

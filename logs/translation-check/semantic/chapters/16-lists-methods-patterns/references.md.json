@@ -1,0 +1,46 @@
+{
+  "file": "chapters/16-lists-methods-patterns/references.md",
+  "hash": "1b9d7e70101f7e9ed896e1d69acbb7ca11b71b02c485d40469793c8839289f4c",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.023,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Ideal supplemental reading for students ages 10–13",
+      "italian": "Lettura supplementare ideale per studenti dai 10 ai 13 anni",
+      "explanation": "Corretto nel senso, ma il riferimento alla fascia d'età è fedele; nessun problema reale. (Nota: la fascia del manuale è 13-15, ma l'originale dice 10–13.)",
+      "suggestion": "Nessuna modifica necessaria.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "covering operations like insertion, removal, and traversal",
+      "italian": "coprendo operazioni come l'inserimento, la rimozione, e l'attraversamento",
+      "explanation": "In italiano la virgola prima della 'e' finale in un elenco è innaturale (calco dell'inglese); lo stesso vale in altri punti.",
+      "suggestion": "coprendo operazioni come l'inserimento, la rimozione e l'attraversamento",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "looping through lists",
+      "italian": "il ciclo attraverso le liste",
+      "explanation": "Resa letterale poco naturale; meglio 'scorrere le liste'. Analogamente 'e il ciclo' nel punto 8 è ambiguo.",
+      "suggestion": "lo scorrimento delle liste con i cicli / e i cicli",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Chapter 3 and 4 cover",
+      "italian": "I Capitoli 3 e 4 coprono",
+      "explanation": "Maiuscola non necessaria e 'coprono' è un calco; più naturale 'trattano'.",
+      "suggestion": "I capitoli 3 e 4 trattano a fondo le liste Python",
+      "part": 1
+    }
+  ]
+}

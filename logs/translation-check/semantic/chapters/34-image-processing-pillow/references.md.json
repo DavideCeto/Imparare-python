@@ -1,0 +1,55 @@
+{
+  "file": "chapters/34-image-processing-pillow/references.md",
+  "hash": "75bcd5a5a5efae7d90e38196e3f984d9c82012abf3757f37657d1e7e52b061b2",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0272,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "includes `Image.open()`, `Image.resize()`, `Image.crop()`, `ImageFilter`, and pixel-level access",
+      "italian": "incluso `Image.open()`, `Image.resize()`, `Image.crop()`, `ImageFilter`, e l'accesso a livello di pixel",
+      "explanation": "Concordanza: l'elenco è plurale, quindi serve «inclusi». Inoltre la virgola prima di «e» è un calco dall'inglese.",
+      "suggestion": "inclusi `Image.open()`, `Image.resize()`, `Image.crop()`, `ImageFilter` e l'accesso a livello di pixel",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "for Pillow operations including image filters, cropping, resizing",
+      "italian": "per le operazioni di Pillow incluso i filtri delle immagini",
+      "explanation": "Concordanza errata: «incluso» davanti a un plurale.",
+      "suggestion": "incluse i filtri... meglio: «comprese i filtri» → «tra cui i filtri delle immagini, il ritaglio, il ridimensionamento e la manipolazione dei pixel»",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "**Pillow (PIL Fork) — Official Documentation**",
+      "italian": "**Pillow (PIL Fork) — Official Documentation**",
+      "explanation": "Il titolo è rimasto in inglese, mentre la voce è descritta in italiano; gli altri titoli sono titoli di opere, questo è generico. Probabilmente andava tradotto.",
+      "suggestion": "**Pillow (fork di PIL) — Documentazione ufficiale**",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "how computers represent, store, and transform images",
+      "italian": "rappresentano, memorizzano, e trasformano",
+      "explanation": "Virgola prima di «e» nelle elenchi, calco dall'inglese (ripetuto in varie voci).",
+      "suggestion": "rappresentano, memorizzano e trasformano",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "runnable code snippets suitable for beginners",
+      "italian": "frammenti di codice provabili",
+      "explanation": "«provabili» è innaturale.",
+      "suggestion": "frammenti di codice eseguibili",
+      "part": 1
+    }
+  ]
+}

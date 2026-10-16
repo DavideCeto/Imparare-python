@@ -1,0 +1,19 @@
+{
+  "file": "chapters/02-python-code-structure/quiz.md",
+  "hash": "e0fdf33a6bba24db1b45077e4091c1879f47c6351dab1b1536cdda81f434c9ac",
+  "model": "sonnet",
+  "score": 5,
+  "parts": 1,
+  "cost_usd": 0.0311,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Test your understanding of Python code structure",
+      "italian": "Cos'è una parola chiave di Python?",
+      "explanation": "Nessun problema reale in questa riga; si segnala solo una lieve incoerenza: \"tartaruga\" nelle domande 4 e 9 vs \"turtle\" altrove (\"metodo turtle\", \"libreria turtle\").",
+      "suggestion": "Uniformare, ad esempio \"un oggetto turtle\" nella domanda 4.",
+      "part": 1
+    }
+  ]
+}

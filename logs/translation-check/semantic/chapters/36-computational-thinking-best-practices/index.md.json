@@ -1,0 +1,64 @@
+{
+  "file": "chapters/36-computational-thinking-best-practices/index.md",
+  "hash": "413eaff5503fe4e90ce7041256b791748a8bab23f2a0d5ca1ad40cf349322201",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0685,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "comments tell you why that was the right choice",
+      "italian": "i commenti ti dicono perché quella fosse la scelta giusta",
+      "explanation": "Forma verbale innaturale (congiuntivo imperfetto); meglio l'indicativo.",
+      "suggestion": "i commenti ti dicono perché quella è stata la scelta giusta",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "**Wet code (repeating yourself):**",
+      "italian": "**Codice wet (ripeti te stesso):**",
+      "explanation": "Formulazione letterale e poco naturale; 'wet' non spiegato.",
+      "suggestion": "**Codice wet (ti ripeti):**",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "one person types the solution to experiment 3 while the other reads it aloud",
+      "italian": "una persona scrive la soluzione dell'esperimento 3 mentre l'altra lo legge ad alta voce",
+      "explanation": "Concordanza errata: 'lo' riferito a 'soluzione' (femminile).",
+      "suggestion": "mentre l'altra la legge ad alta voce",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Catches bugs before they're committed",
+      "italian": "Cattura i bug prima che vengano committati",
+      "explanation": "'Committati' è un gergo poco adatto; meglio una formula più chiara.",
+      "suggestion": "Individua i bug prima che vengano salvati con un commit",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Extract a repeated block into a named function",
+      "italian": "Estrarre un blocco ripetuto in una funzione nominata",
+      "explanation": "'Funzione nominata' è un calco poco naturale.",
+      "suggestion": "in una funzione con un nome chiaro",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Does it feel more readable?",
+      "italian": "Sembra più leggibile?",
+      "explanation": "Piccola perdita di sfumatura, accettabile; 'si legge quasi come l'inglese' ok.",
+      "suggestion": "Ti sembra più leggibile?",
+      "part": 1
+    }
+  ]
+}

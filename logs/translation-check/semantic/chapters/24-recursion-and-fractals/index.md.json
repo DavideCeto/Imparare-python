@@ -1,0 +1,19 @@
+{
+  "file": "chapters/24-recursion-and-fractals/index.md",
+  "hash": "f783520fb040182cf8985b7caaeafc2eb1507ce0facb702ca8cee4a4877b61ce",
+  "model": "sonnet",
+  "score": 5,
+  "parts": 1,
+  "cost_usd": 0.0585,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "This is the turtle going back to where it started *before* it drew the current branch.",
+      "italian": "Questo è la tartaruga che torna a dove era partita *prima* di disegnare il ramo attuale.",
+      "explanation": "\"Questo è la tartaruga\" è scorretto nella concordanza e suona innaturale.",
+      "suggestion": "Così la tartaruga torna al punto da cui era partita *prima* di disegnare il ramo attuale.",
+      "part": 1
+    }
+  ]
+}

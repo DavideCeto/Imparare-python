@@ -1,0 +1,28 @@
+{
+  "file": "chapters/11-functions-parameters-scope/references.md",
+  "hash": "363b3b04abce6a8f25e1ff74cea0770146369c4fef29354e2d6eb3dbaee2176b",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0227,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "ideal supplemental reading for students ages 10–14 working through this chapter",
+      "italian": "lettura supplementare ideale per studenti dai 10 ai 14 anni che affrontano questo capitolo",
+      "explanation": "Traduzione fedele all'originale; nessun problema reale. Nota solo che il pubblico del manuale è 13-15 anni, ma l'originale dice 10–14, quindi non è un errore di traduzione.",
+      "suggestion": "Nessuna modifica necessaria.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "including how parameters work, return values, and why functions are the foundation",
+      "italian": "incluso come funzionano i parametri, i valori di ritorno, e perché le funzioni sono le fondamenta",
+      "explanation": "Virgola prima di «e» non necessaria in italiano; la frase suona un po' calcata sull'inglese (ripetuta in più voci).",
+      "suggestion": "«...inclusi il funzionamento dei parametri, i valori di ritorno e il motivo per cui le funzioni sono le fondamenta del codice riutilizzabile e organizzato.»",
+      "part": 1
+    }
+  ]
+}

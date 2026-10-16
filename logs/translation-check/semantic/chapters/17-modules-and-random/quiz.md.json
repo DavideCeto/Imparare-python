@@ -1,0 +1,28 @@
+{
+  "file": "chapters/17-modules-and-random/quiz.md",
+  "hash": "222137839c4a97f4be07b69ded6b1f06cab4182c9b568408bc2e3818c06b15c8",
+  "model": "sonnet",
+  "score": 5,
+  "parts": 1,
+  "cost_usd": 0.034,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Rename all functions in `random` to start with `rnd_`",
+      "italian": "Rinomina tutte le funzioni in `random` perché iniziano con `rnd_`",
+      "explanation": "\"perché iniziano\" cambia il senso (causa invece di scopo): l'originale dice \"in modo che inizino\".",
+      "suggestion": "Rinomina tutte le funzioni di `random` in modo che inizino con `rnd_`",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "to save typing",
+      "italian": "per risparmiare digitazione",
+      "explanation": "Espressione poco naturale in italiano.",
+      "suggestion": "per scrivere meno",
+      "part": 1
+    }
+  ]
+}

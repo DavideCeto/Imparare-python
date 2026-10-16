@@ -1,0 +1,46 @@
+{
+  "file": "chapters/27-standard-library-json/quiz.md",
+  "hash": "cbd280e2822df06a535ec7aa3ecd51c08bec6abb54070cb7becf6cab46b27dbf",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0396,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "What does the `if __name__ == \"__main__\":` guard do?",
+      "italian": "Cosa fa il guardiano `if __name__ == \"__main__\":`?",
+      "explanation": "\"Guardiano\" è una resa letterale poco naturale di \"guard\"; in italiano si usa \"controllo\" o si lascia il termine.",
+      "suggestion": "Usa \"il controllo `if __name__ == \"__main__\":`\" (anche nella spiegazione).",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "**Concept Tested:** Custom Modules",
+      "italian": "**Concept Tested:** Custom Modules",
+      "explanation": "L'etichetta \"Concept Tested\" è rimasta in inglese in tutte le domande, mentre il resto è tradotto. I nomi dei concetti possono restare in inglese, ma l'etichetta andrebbe tradotta.",
+      "suggestion": "**Concetto verificato:** Custom Modules",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "omission",
+      "english": "Test your understanding of Python modules, JSON data, the sys and os modules, and the collections module with these questions.",
+      "italian": "Verifica la tua comprensione dei moduli Python, dei dati JSON, dei moduli sys e os, e del modulo collections con queste domande.",
+      "explanation": "Traduzione corretta rispetto all'originale (che cita collections senza domande): nessun problema reale, solo nota. Nel punto 2 \"girare\" è colloquiale ma accettabile.",
+      "suggestion": "Nessuna modifica necessaria; eventualmente \"funzionare/viene eseguito\" al posto di \"girare\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "containing functions, variables, and classes",
+      "italian": "contenente funzioni, variabili, e classi",
+      "explanation": "In italiano non si mette la virgola prima della \"e\" finale in un elenco (ripetuto anche in altre risposte).",
+      "suggestion": "contenente funzioni, variabili e classi",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "file": "chapters/04-functions-and-objects/references.md",
+  "hash": "2963298acbb80d747eb9612257fd7a9783264f1837beb80e933de5dca7347b7b",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0225,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Provides the conceptual foundation for defining and calling functions covered in this chapter.",
+      "italian": "Fornisce le basi concettuali per definire e chiamare funzioni trattate in questo capitolo.",
+      "explanation": "Il participio 'trattate' si accorda con 'funzioni' ma il senso è che il tema è trattato nel capitolo; la frase risulta ambigua e un po' goffa.",
+      "suggestion": "Fornisce le basi concettuali per definire e chiamare le funzioni, argomenti trattati in questo capitolo.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "aimed at ages 10–13",
+      "italian": "pensate per l'età 10-13 anni",
+      "explanation": "Formulazione poco naturale in italiano.",
+      "suggestion": "pensate per ragazzi dai 10 ai 13 anni",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "that students will encounter throughout Python",
+      "italian": "che gli studenti incontreranno in tutto Python",
+      "explanation": "'in tutto Python' è un calco poco naturale.",
+      "suggestion": "che gli studenti incontreranno ovunque in Python",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Well-paced for the 10–13 age range",
+      "italian": "Ben calibrato per la fascia d'età 10-13 anni",
+      "explanation": "'Well-paced' riguarda il ritmo; 'calibrato' è meno chiaro per gli studenti.",
+      "suggestion": "Con un ritmo adatto alla fascia d'età 10-13 anni",
+      "part": 1
+    }
+  ]
+}

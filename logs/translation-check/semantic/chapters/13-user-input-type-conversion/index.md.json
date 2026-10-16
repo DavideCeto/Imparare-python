@@ -1,0 +1,55 @@
+{
+  "file": "chapters/13-user-input-type-conversion/index.md",
+  "hash": "6bc8ea69bf7f4c460546d286181ab07b0ea70086dfdc342c20bd2d32dac5f0bf",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0516,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Spot the Bug!",
+      "italian": "Il programma sotto dovrebbe sommare due numeri inseriti dall'utente.",
+      "explanation": "Nessun problema reale qui; vedi invece la frase sul ValueError.",
+      "suggestion": "Nessuna modifica.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "so always convert only after checking the input looks like a number",
+      "italian": "quindi convertila sempre solo dopo aver controllato che l'input sembri un numero",
+      "explanation": "Frase un po' macchinosa ('convertila' riferito a stringa ma 'sempre solo').",
+      "suggestion": "quindi converti solo dopo aver controllato che l'input sembri un numero.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Correggilo così che la matematica funzioni davvero.",
+      "italian": "Correggilo così che la matematica funzioni davvero.",
+      "explanation": "'così che' è poco naturale; meglio 'così che' → 'in modo che' / 'così da'.",
+      "suggestion": "Correggilo in modo che il calcolo funzioni davvero.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Validate user input so your program doesn't crash on bad data",
+      "italian": "così che il tuo programma non si blocchi con dati sbagliati",
+      "explanation": "'così che' con congiuntivo è ok ma poco scorrevole.",
+      "suggestion": "in modo che il tuo programma non si blocchi con dati sbagliati",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "**\"Ask ___ and wait\"**",
+      "italian": "**\"Chiedi ___ e aspetta\"**",
+      "explanation": "Nel Scratch italiano il blocco è 'Chiedi ... e attendi'.",
+      "suggestion": "\"Chiedi ___ e attendi\"",
+      "part": 1
+    }
+  ]
+}

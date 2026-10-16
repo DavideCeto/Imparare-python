@@ -1,0 +1,37 @@
+{
+  "file": "chapters/05-drawing-with-turtle/index.md",
+  "hash": "33e7c47ed3b1e7264cdb7c3805f440728a8bb579dbc8ce2f292cfdcd18db004b",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0697,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "`t.right(90)` subtracts 90 from the heading each time.",
+      "italian": "`t.right(90)` sottrae 90 dall'orientamento ogni volta.",
+      "explanation": "Fedele all'originale, ma l'originale è coerente con la convenzione turtle (heading antiorario). Nessun errore di traduzione; si segnala solo per verifica.",
+      "suggestion": "Nessuna modifica necessaria.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Were you right?",
+      "italian": "Avevi indovinato?",
+      "explanation": "Corretto; nessun problema.",
+      "suggestion": "Nessuna modifica.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "Welcome to Chapter 5!",
+      "italian": "Benvenuto/a al Capitolo 5!",
+      "explanation": "Forma accettabile; leggermente macchinosa ma inclusiva.",
+      "suggestion": "Si può lasciare così.",
+      "part": 1
+    }
+  ]
+}

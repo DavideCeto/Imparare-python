@@ -1,0 +1,64 @@
+{
+  "file": "chapters/25-object-oriented-programming/quiz.md",
+  "hash": "c7957b3e4fbdaf3e528742c075726323e42565fe744365610cd67840e5540918",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.04,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "A blueprint for creating objects, defining their attributes and methods",
+      "italian": "Un progetto per creare oggetti, che definisce i loro attributi e metodi",
+      "explanation": "\"Progetto\" è un calco poco chiaro per \"blueprint\"; per studenti è più naturale \"modello\" o \"schema\".",
+      "suggestion": "Un modello (o schema) per creare oggetti, che definisce i loro attributi e metodi",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "inheritance",
+      "italian": "dell'eredità",
+      "explanation": "In informatica italiano il termine usuale è \"ereditarietà\", non \"eredità\" (anche in \"catena di eredità\").",
+      "suggestion": "ereditarietà (\"catena di ereditarietà\")",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Class variables are faster to access; instance variables are slower",
+      "italian": "sono più veloci da accedere; le variabili di istanza sono più lente",
+      "explanation": "\"Veloci da accedere\" è innaturale in italiano.",
+      "suggestion": "sono più veloci da raggiungere / l'accesso è più veloce",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Python fills it in automatically",
+      "italian": "Python lo riempie automaticamente",
+      "explanation": "\"Riempie\" è un calco poco naturale.",
+      "suggestion": "Python lo inserisce automaticamente",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Only Python uses the `(ParentClass)` syntax for inheritance",
+      "italian": "Solo Python usa la sintassi `(ClasseGenitore)`",
+      "explanation": "Resa fedele all'originale, ma l'affermazione è tecnicamente inesatta (altri linguaggi usano la stessa sintassi); si può attenuare.",
+      "suggestion": "Python usa la sintassi `(ClasseGenitore)`; molti altri linguaggi usano `extends`",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "the turtle (`t.forward(100)`)",
+      "italian": "la tartaruga (`t.forward(100)`)",
+      "explanation": "La convenzione del progetto è lasciare \"turtle\" in inglese.",
+      "suggestion": "la turtle",
+      "part": 1
+    }
+  ]
+}

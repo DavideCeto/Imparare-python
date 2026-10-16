@@ -1,0 +1,37 @@
+{
+  "file": "chapters/07-for-loops-and-shapes/quiz.md",
+  "hash": "32b621f505478d6260531863388eabdb46ea725430ebace6a907d78b08c19526",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0374,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "code",
+      "english": "`turn_angle = 360 / number_of_sides`",
+      "italian": "`angolo_svolta = 360 / numero_di_lati`",
+      "explanation": "Il nome della variabile dentro il codice inline è stato tradotto; i nomi di variabili vanno lasciati come nell'originale.",
+      "suggestion": "`turn_angle = 360 / number_of_sides`",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Il ciclo gira 4 volte",
+      "italian": "Il ciclo gira 4 volte",
+      "explanation": "\"Girare\" per l'esecuzione del ciclo è un calco poco naturale in italiano; meglio \"viene eseguito\" o \"si ripete\".",
+      "suggestion": "Il ciclo si ripete 4 volte.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "which turn relative to the turtle's current facing direction",
+      "italian": "che girano relativamente alla direzione attuale verso cui è rivolta la turtle",
+      "explanation": "Frase macchinosa e poco scorrevole per studenti di 13-15 anni.",
+      "suggestion": "che girano rispetto alla direzione in cui la turtle è rivolta in quel momento.",
+      "part": 1
+    }
+  ]
+}

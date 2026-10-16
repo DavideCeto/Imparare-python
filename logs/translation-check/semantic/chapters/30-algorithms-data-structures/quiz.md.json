@@ -1,0 +1,55 @@
+{
+  "file": "chapters/30-algorithms-data-structures/quiz.md",
+  "hash": "451cbc3a3c328345cd16b544e73be35adeaf0705dda5683b7370a1e7fe01689e",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0567,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "**Concept Tested:** Stack (LIFO)",
+      "italian": "**Concept Tested:** Stack (LIFO)",
+      "explanation": "L'etichetta \"Concept Tested\" è rimasta in inglese in tutte le domande. Il nome del concetto può restare in inglese, ma l'etichetta è prosa.",
+      "suggestion": "**Concetto verificato:** Stack (LIFO)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "the largest unsorted element has \"bubbled up\" to its correct position",
+      "italian": "l'elemento non ordinato più grande è \"risalito a bolla\" alla sua posizione corretta",
+      "explanation": "\"Risalito a bolla\" è innaturale in italiano.",
+      "suggestion": "è \"salito a galla come una bolla\" fino alla sua posizione corretta",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "it is pushed onto the stack",
+      "italian": "viene spinta sulla pila",
+      "explanation": "Incoerente con la risposta 1, dove si usa \"fare push\"/\"fare pop\"; anche \"tolta\" per pop è incoerente.",
+      "suggestion": "viene aggiunta (push) sulla pila ... viene rimossa (pop)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "If the list were unsorted, eliminating half the elements would be invalid — the target could be in either half.",
+      "italian": "l'obiettivo potrebbe essere in entrambe le metà",
+      "explanation": "\"Target\" tradotto come \"obiettivo\" è poco chiaro; \"in entrambe\" cambia il senso (\"either\" = in una qualsiasi delle due).",
+      "suggestion": "il valore cercato potrebbe trovarsi in una qualsiasi delle due metà",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Test your understanding of stacks, queues, graphs, BFS, DFS, sorting, binary search, and Big-O notation",
+      "italian": "dell'ordinamento, della ricerca binaria, e della notazione Big-O",
+      "explanation": "Virgola prima della \"e\" non naturale in italiano.",
+      "suggestion": "della ricerca binaria e della notazione Big-O",
+      "part": 1
+    }
+  ]
+}

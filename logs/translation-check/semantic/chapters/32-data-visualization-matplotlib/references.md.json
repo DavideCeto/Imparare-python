@@ -1,0 +1,46 @@
+{
+  "file": "chapters/32-data-visualization-matplotlib/references.md",
+  "hash": "10ae712f9fe6c09f0c50db21ca687135b1c2e38ab80d1900fd5758f564fcba2d",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0234,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "ideal for students ages 10–14",
+      "italian": "ideali per studenti dai 10 ai 14 anni",
+      "explanation": "\"ideali\" concorda con \"spiegazioni\" ma la frase risulta ambigua: sembra che siano le spiegazioni, e non il libro, a essere ideali; la costruzione è poco scorrevole.",
+      "suggestion": "con spiegazioni adatte ai principianti, ideali per studenti dai 10 ai 14 anni.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "with runnable code snippets well matched to the skill level of beginning Python programmers",
+      "italian": "con frammenti di codice provabili ben adatti al livello di competenza dei programmatori Python principianti",
+      "explanation": "\"provabili\" è innaturale; meglio \"eseguibili\". \"ben adatti\" è un po' pesante.",
+      "suggestion": "con frammenti di codice eseguibili adatti al livello di chi inizia a programmare in Python.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "subplots",
+      "italian": "i sottografici",
+      "explanation": "\"sottografici\" non è un termine standard; in matplotlib si usa \"subplot\" anche in italiano.",
+      "suggestion": "i subplot (grafici multipli nella stessa figura)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Comprehensive overview of the matplotlib library, its history, architecture, and capabilities",
+      "italian": "la sua storia, architettura, e capacità di creare",
+      "explanation": "Elenco poco naturale: manca l'articolo ripetuto e c'è la virgola prima di \"e\" (stile inglese).",
+      "suggestion": "la sua storia, la sua architettura e la sua capacità di creare",
+      "part": 1
+    }
+  ]
+}

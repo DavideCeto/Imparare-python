@@ -1,0 +1,46 @@
+{
+  "file": "chapters/22-advanced-collections/index.md",
+  "hash": "d7195bf924d79e01865c10fbc6eb41157d34d53fbac3aeee0a34564c4355c8e1",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0577,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "`enumerate(iterable)` wraps a list",
+      "italian": "`enumerate(iterable)` incapsula una lista",
+      "explanation": "\"Incapsula\" è un termine tecnico di altro significato (encapsulation); per studenti è oscuro e fuorviante.",
+      "suggestion": "`enumerate(iterable)` prende una lista (o qualsiasi sequenza) e ti dà sia l'indice sia l'elemento...",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Each line should look like: `1. Alice: 95`",
+      "italian": "Ogni riga dovrebbe sembrare: `1. Alice: 95`",
+      "explanation": "\"Sembrare\" è innaturale in questo contesto.",
+      "suggestion": "Ogni riga dovrebbe essere così: `1. Alice: 95`",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Correggilo per usare",
+      "italian": "Correggilo per usare `zip()` per accoppiare",
+      "explanation": "Ripetizione di \"per\" e costruzione pesante.",
+      "suggestion": "Correggilo usando `zip()` per accoppiare i nomi con i punteggi e `enumerate()` partendo da 1 per numerare le voci.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "Python's built-in functions are a powerful toolkit.",
+      "italian": "Le funzioni built-in di Python sono un set di strumenti potente. Questo capitolo raccoglie le più utili così puoi scrivere",
+      "explanation": "\"set di strumenti\" è un po' calco; \"così puoi\" è colloquiale ma meglio \"così da poter\".",
+      "suggestion": "sono una potente cassetta degli attrezzi. ... così da poter scrivere codice più corto e pulito",
+      "part": 1
+    }
+  ]
+}

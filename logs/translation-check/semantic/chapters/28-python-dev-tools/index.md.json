@@ -1,0 +1,55 @@
+{
+  "file": "chapters/28-python-dev-tools/index.md",
+  "hash": "e3f049c0911708dde1264b66142dfdfe48e0a1cb47a2939982b1d4ed3f26509f",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0636,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "you'll avoid most of the pain",
+      "italian": "ed evitarai la maggior parte del dolore",
+      "explanation": "Errore di battitura: futuro sbagliato (\"evitarai\"). Inoltre \"dolore\" è una resa letterale poco naturale.",
+      "suggestion": "ed eviterai la maggior parte dei problemi.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Environment headaches happen to everyone",
+      "italian": "I mal di testa da ambiente succedono a tutti",
+      "explanation": "Resa letterale e poco naturale in italiano.",
+      "suggestion": "I problemi con gli ambienti capitano a tutti",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Once you outgrow Thonny",
+      "italian": "Una volta che superi Thonny",
+      "explanation": "\"Superi Thonny\" è poco naturale; il senso è che Thonny non basta più.",
+      "suggestion": "Quando Thonny ti starà stretto",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Python checks these folders **in order** and uses the first matching module it finds.",
+      "italian": "Python vede sempre solo il primo.",
+      "explanation": "Poco chiaro ma accettabile; lieve imprecisione di scorrevolezza. Inoltre \"Sto solo imparando Python\" nella tabella cambia la prospettiva rispetto a \"Just learning Python\".",
+      "suggestion": "Nella tabella: \"Sto imparando Python da poco\" o \"Solo per imparare Python\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Anaconda (the full distribution) includes Python, conda, Jupyter, and 200+ data science packages pre-installed.",
+      "italian": "Il **Raspberry Pi** è un piccolo computer economico (circa delle dimensioni di una carta di credito) che esegue Python completo.",
+      "explanation": "\"circa delle dimensioni\" è innaturale; \"Python completo\" suona strano.",
+      "suggestion": "grande più o meno come una carta di credito) che può eseguire Python al completo.",
+      "part": 1
+    }
+  ]
+}

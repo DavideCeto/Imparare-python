@@ -1,0 +1,46 @@
+{
+  "file": "chapters/15-lists-basics/references.md",
+  "hash": "c8db99db6da64195098da2cf4507c47b86f061b492035e78220c9ffe123588fb",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0221,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Ideal supplemental reading for students ages 10–13",
+      "italian": "Lettura supplementare ideale per studenti dai 10 ai 13 anni",
+      "explanation": "Corretto come traduzione; nessun problema di significato. (Nota: nessuna differenza reale.)",
+      "suggestion": "Nessuna modifica necessaria.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "including indexing, slicing, and the `len()` function",
+      "italian": "incluso l'indicizzazione, lo slicing, e la funzione `len()`",
+      "explanation": "Concordanza errata: «incluso» con sostantivo femminile; meglio «inclusa l'indicizzazione» o «tra cui».",
+      "suggestion": "inclusa l'indicizzazione, lo slicing e la funzione `len()`",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "An encyclopedic overview of Python's design, history, and core data structures",
+      "italian": "del design, della storia, e delle strutture di dati fondamentali",
+      "explanation": "Virgola prima della «e» non usata in italiano (ripetuta in più voci).",
+      "suggestion": "del design, della storia e delle strutture di dati fondamentali",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Python's built-in list type",
+      "italian": "il tipo lista built-in di Python",
+      "explanation": "«built-in» lasciato in inglese; per studenti meglio «integrato».",
+      "suggestion": "il tipo lista integrato di Python",
+      "part": 1
+    }
+  ]
+}

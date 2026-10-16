@@ -1,0 +1,55 @@
+{
+  "file": "chapters/35-advanced-turtle-event-driven/index.md",
+  "hash": "1cec7e2e9943c5c590fa51fc65f17bf3ab2968ef041d18f20ffc04a304bd048a",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0573,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "screen.onscreenclick(stop_draw,  3)   # right mouse button up",
+      "italian": "screen.onscreenclick(stop_draw,  3)   # right mouse button up",
+      "explanation": "Il codice è identico all'originale; nessuna differenza di traduzione (non è un problema di traduzione). Il commento in codice resta in inglese ma è ammesso.",
+      "suggestion": "Nessuna modifica necessaria.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Add a key event so pressing `\"c\"` cycles through a list of colors",
+      "italian": "Aggiungi un evento tasto così che premere `\"c\"` scorra tra una lista di colori",
+      "explanation": "Costruzione poco naturale: «così che premere» richiede il congiuntivo con soggetto esplicito.",
+      "suggestion": "Aggiungi un evento tasto così che, premendo `\"c\"`, si passi al colore successivo della lista a ogni pressione!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "stamp the click coordinates at each click location",
+      "italian": "per timbrare le coordinate del clic",
+      "explanation": "«Timbrare» è innaturale; meglio «scrivere/stampare» sul canvas.",
+      "suggestion": "per scrivere le coordinate del clic nel punto cliccato",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Callbacks Are Just Functions",
+      "italian": "I Callback Sono Solo Funzioni",
+      "explanation": "Il genere di «callback» oscilla nel testo («il callback», «una funzione di callback»); accettabile ma «Non la chiami tu stesso» è poco coerente con il soggetto studente/studentessa.",
+      "suggestion": "Non la chiami tu — quello è il compito del ciclo di eventi.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Learning Check",
+      "italian": "Verifica di Apprendimento",
+      "explanation": "Resa un po' calcata sull'inglese.",
+      "suggestion": "Verifica di ciò che hai imparato",
+      "part": 1
+    }
+  ]
+}

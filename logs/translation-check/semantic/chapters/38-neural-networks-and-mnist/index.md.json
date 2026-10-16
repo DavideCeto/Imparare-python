@@ -1,0 +1,19 @@
+{
+  "file": "chapters/38-neural-networks-and-mnist/index.md",
+  "hash": "5504e1f0d87805616683508af264a33990e307891d461466596cd0114f79de7e",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0618,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "You started with a turtle drawing a square",
+      "italian": "Hai iniziato stampando un quadrato con la tartaruga",
+      "explanation": "\"Stampando\" suggerisce la stampa su carta; in originale la turtle disegna. Inoltre la convenzione è lasciare \"turtle\".",
+      "suggestion": "Hai iniziato facendo disegnare un quadrato alla turtle",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "file": "chapters/23-error-handling-debugging/index.md",
+  "hash": "12c15e7738fbd186ffc6df57b4048e859519dabaaeb3f136fe3c201f8c04cdee",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0532,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Catching specific exceptions is better than a bare `except:` — it prevents hiding bugs",
+      "italian": "previene il nascondere bug che non intendevi catturare",
+      "explanation": "Costruzione innaturale in italiano.",
+      "suggestion": "evita di nascondere bug che non intendevi catturare",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "so it prints a friendly message instead!",
+      "italian": "così che stampi un messaggio gentile invece!",
+      "explanation": "Frase poco naturale e congiuntivo/posizione di 'invece' imprecisi.",
+      "suggestion": "così che stampi invece un messaggio amichevole!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Off-by-one in a loop",
+      "italian": "Scarto di uno in un ciclo",
+      "explanation": "'Scarto di uno' è poco comune; il termine usuale è 'errore di off-by-one' / 'errore di un'unità'.",
+      "suggestion": "Errore di uno (off-by-one) in un ciclo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Python can't parse the code at all.",
+      "italian": "Python non può nemmeno interpretare il codice.",
+      "explanation": "'Interpretare' è ambiguo; meglio 'analizzare' (parse).",
+      "suggestion": "Python non riesce proprio ad analizzare il codice.",
+      "part": 1
+    }
+  ]
+}

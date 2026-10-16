@@ -1,0 +1,55 @@
+{
+  "file": "chapters/30-algorithms-data-structures/references.md",
+  "hash": "eb82b06f7110db520511f728b36658bfdb185f822abeeb2ead3d75481633151f",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0254,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Mostra agli studenti come cercare in una lista ordinata dimezzandola sia drammaticamente più veloce che scansionare",
+      "italian": "Mostra agli studenti come cercare in una lista ordinata dimezzandola sia drammaticamente più veloce che scansionare ogni elemento uno alla volta.",
+      "explanation": "Frase contorta e innaturale; la struttura \"sia ... che\" è errata e \"drammaticamente\" è un calco.",
+      "suggestion": "Mostra agli studenti come cercare in una lista ordinata dimezzandola ogni volta sia molto più veloce che scorrere ogni elemento uno alla volta.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "how BFS and DFS explore nodes in a graph using queues versus stacks",
+      "italian": "esplorano i nodi in un grafo usando code contro pile",
+      "explanation": "\"contro\" è un calco di \"versus\" e suona innaturale.",
+      "suggestion": "usando rispettivamente code e pile",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "A foundational overview of what algorithms are, how they work, and why they matter.",
+      "italian": "come funzionano, e perché sono importanti",
+      "explanation": "Virgola prima della \"e\" nelle enumerazioni (calco dall'inglese) non è naturale in italiano; si ripete in più voci.",
+      "suggestion": "come funzionano e perché sono importanti",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Covers algorithm design",
+      "italian": "il design degli algoritmi",
+      "explanation": "\"design\" non necessario: esiste un termine italiano più naturale.",
+      "suggestion": "la progettazione degli algoritmi",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "worked examples",
+      "italian": "esempi lavorati",
+      "explanation": "Calco dall'inglese poco naturale.",
+      "suggestion": "esempi svolti",
+      "part": 1
+    }
+  ]
+}

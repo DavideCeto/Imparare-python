@@ -1,0 +1,19 @@
+{
+  "file": "chapters/19-booleans-and-conditionals/quiz.md",
+  "hash": "ba842bc435dea6e5a81d485aab47bf10ae1f508bd7703d2921b633b0639c6041",
+  "model": "sonnet",
+  "score": 5,
+  "parts": 1,
+  "cost_usd": 0.0337,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "All three options B, C, and D produce the same result",
+      "italian": "Tutte le tre opzioni B, C, e D producono lo stesso risultato",
+      "explanation": "Forma non corretta: si dice \"Tutte e tre\". Inoltre, la virgola prima di \"e\" nell'elenco non è usata in italiano.",
+      "suggestion": "Tutte e tre le opzioni B, C e D producono lo stesso risultato",
+      "part": 1
+    }
+  ]
+}

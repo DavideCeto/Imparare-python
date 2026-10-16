@@ -1,0 +1,64 @@
+{
+  "file": "chapters/17-modules-and-random/references.md",
+  "hash": "385c2821ea055bd59e238e58e55a0df2a95590674fade4d76fd1a87ccbbf3f6c",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0263,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "its history, design philosophy, and ecosystem of modules and libraries",
+      "italian": "della sua storia, filosofia di design, ed ecosistema di moduli e librerie",
+      "explanation": "Mancano le preposizioni articolate nell'elenco e c'è una virgola prima di \"ed\"; suona poco naturale.",
+      "suggestion": "della sua storia, della filosofia di progettazione e dell'ecosistema di moduli e librerie",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Python's import system and standard library are so widely used",
+      "italian": "il sistema di import di Python e la libreria standard sono così largamente usati",
+      "explanation": "\"sistema di import\" è un calco poco chiaro per studenti.",
+      "suggestion": "il sistema di importazione (`import`) di Python e la libreria standard sono così diffusi",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Covers how computers generate \"random\" numbers algorithmically",
+      "italian": "Copre come i computer generano numeri \"casuali\" algoritmicamente",
+      "explanation": "\"Copre come\" è un calco dall'inglese; poco naturale.",
+      "suggestion": "Spiega come i computer generano numeri \"casuali\" tramite algoritmi",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Directly relevant to understanding why",
+      "italian": "Direttamente rilevante per capire perché",
+      "explanation": "\"rilevante\" calco; più naturale \"utile\".",
+      "suggestion": "Molto utile per capire perché esiste l'istruzione `import` di Python",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Uses the `random` module extensively across multiple game projects",
+      "italian": "Usa il modulo `random` estensivamente in molteplici progetti di giochi",
+      "explanation": "Calco dall'inglese (\"estensivamente\", \"molteplici\").",
+      "suggestion": "Usa molto il modulo `random` in diversi progetti di giochi",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "including `randint`, `choice`, and `shuffle` with concise descriptions",
+      "italian": "incluso `randint`, `choice`, e `shuffle`",
+      "explanation": "Concordanza: \"incluse\" (funzioni); virgola prima di \"e\" non necessaria in italiano. Ricorre anche nei punti 7, 8, 10.",
+      "suggestion": "incluse `randint`, `choice` e `shuffle`",
+      "part": 1
+    }
+  ]
+}

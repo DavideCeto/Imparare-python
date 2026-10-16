@@ -1,0 +1,55 @@
+{
+  "file": "chapters/09-decisions-if-else/references.md",
+  "hash": "9e9ab88bcaa37d59a00466af6cd2b56e4b63a6dae76563ec291e8e9587778cfb",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0245,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "and chooses which block of code to execute",
+      "italian": "come Python valuta le condizioni e scegli quale blocco di codice eseguire",
+      "explanation": "Errore di coniugazione: soggetto Python, serve la terza persona.",
+      "suggestion": "e sceglie quale blocco di codice eseguire",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "ideally suited for students ages 10–13 making the jump from Scratch to Python",
+      "italian": "ideali per studenti dai 10 ai 13 anni che compiono il salto da Scratch a Python",
+      "explanation": "Corretto nel significato; nessun problema reale, ma 'ideali' concorda con 'esempi e spiegazioni' ed è accettabile. (Nota trascurabile.)",
+      "suggestion": "Nessuna modifica necessaria.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "ideal for visual learners",
+      "italian": "ideale per studenti visivi",
+      "explanation": "'Studenti visivi' è poco naturale in italiano.",
+      "suggestion": "ideale per chi impara meglio con le immagini",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "coding exercises",
+      "italian": "esercizi di codifica",
+      "explanation": "'Codifica' non è il termine abituale per 'coding'.",
+      "suggestion": "esercizi di programmazione",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "covering if/else branching logic, truth values, and how decision-making structures appear",
+      "italian": "i valori di verità, e come le strutture decisionali appaiono",
+      "explanation": "Virgola prima della 'e' non idiomatica in italiano; 'appaiono' è un calco.",
+      "suggestion": "i valori di verità e come le strutture decisionali compaiono in molti linguaggi",
+      "part": 1
+    }
+  ]
+}

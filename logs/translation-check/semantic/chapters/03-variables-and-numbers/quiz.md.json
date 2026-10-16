@@ -1,0 +1,55 @@
+{
+  "file": "chapters/03-variables-and-numbers/quiz.md",
+  "hash": "94ea7216a5e366acdb22104e980f6aba472c27df567835b569ce6e1fb6fc5d45",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0354,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "A labeled storage location that holds a value in your program's memory",
+      "italian": "Una posizione di memoria con un nome che contiene un valore nella memoria del tuo programma",
+      "explanation": "Frase ridondante e poco naturale (\"memoria\" ripetuta due volte).",
+      "suggestion": "Una posizione di archiviazione con un nome che contiene un valore nella memoria del tuo programma",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "A special value meaning \"no value yet\" or \"nothing here\"",
+      "italian": "Un valore speciale che significa \"nessun valore ancora\" o \"niente qui\"",
+      "explanation": "Formulazione innaturale in italiano.",
+      "suggestion": "\"ancora nessun valore\" o \"niente qui\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Integers (`int`) are for countable whole things",
+      "italian": "Gli interi (`int`) servono per cose intere e contabili",
+      "explanation": "\"cose intere e contabili\" è poco chiaro.",
+      "suggestion": "Gli interi (`int`) servono per cose che si contano",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "each of those is something, whereas `None` means the absence of any value at all",
+      "italian": "ognuno di questi è comunque qualcosa",
+      "explanation": "\"comunque\" non rende il senso dell'originale.",
+      "suggestion": "ognuno di questi è un valore vero e proprio, mentre `None`...",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Any number with a decimal point",
+      "italian": "Qualsiasi numero con una virgola decimale",
+      "explanation": "In Python si usa il punto decimale, non la virgola; potrebbe confondere gli studenti.",
+      "suggestion": "Qualsiasi numero con il punto decimale",
+      "part": 1
+    }
+  ]
+}

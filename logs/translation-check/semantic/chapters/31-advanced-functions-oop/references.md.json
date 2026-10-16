@@ -1,0 +1,64 @@
+{
+  "file": "chapters/31-advanced-functions-oop/references.md",
+  "hash": "d4d4520303b87503c92b006adedf5576f0a383b6d3abbb1cfa30576beb7eb187",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0271,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Chapters 9 covers classes, inheritance, and instances in a clear, beginner-friendly style that bridges the gap",
+      "italian": "collega il divario tra le semplici funzioni e i programmi orientati agli oggetti completi",
+      "explanation": "\"Collegare il divario\" è innaturale; si colma un divario. Anche la virgola prima di \"e le istanze\" è superflua.",
+      "suggestion": "\"...in uno stile chiaro e adatto ai principianti che colma il divario tra le semplici funzioni e i programmi orientati agli oggetti completi.\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "including abstract base classes",
+      "italian": "incluse le classi base abstract",
+      "explanation": "\"abstract\" lasciato in inglese; in italiano si dice \"classi base astratte\".",
+      "suggestion": "incluse le classi base astratte",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "The authoritative tutorial section on Python classes",
+      "italian": "La sezione del tutorial autorevole sulle classi Python",
+      "explanation": "Ordine delle parole innaturale: \"autorevole\" sembra riferirsi al tutorial in modo ambiguo.",
+      "suggestion": "La sezione autorevole del tutorial sulle classi Python",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "covers the software design pattern that Python's `@decorator` syntax implements, explaining how wrapping functions or classes adds behavior",
+      "italian": "Copre il pattern di design software che la sintassi `@decorator` di Python implementa, spiegando come racchiudere funzioni o classi aggiunge comportamento",
+      "explanation": "\"racchiudere\" è una resa poco precisa di \"wrapping\"; la frase suona goffa.",
+      "suggestion": "Tratta il pattern di progettazione software implementato dalla sintassi `@decorator` di Python, spiegando come \"avvolgere\" funzioni o classi aggiunga comportamento...",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "from an enclosing scope",
+      "italian": "da uno scope racchiudente",
+      "explanation": "\"scope racchiudente\" è calco poco naturale.",
+      "suggestion": "da uno scope esterno (che la racchiude)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Explains anonymous (lambda) functions across programming languages",
+      "italian": "in tutti i linguaggi di programmazione",
+      "explanation": "\"across\" significa \"in vari\", non \"in tutti\".",
+      "suggestion": "in diversi linguaggi di programmazione",
+      "part": 1
+    }
+  ]
+}

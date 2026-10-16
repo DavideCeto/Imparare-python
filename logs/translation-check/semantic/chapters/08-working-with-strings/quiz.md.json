@@ -1,0 +1,37 @@
+{
+  "file": "chapters/08-working-with-strings/quiz.md",
+  "hash": "c7581830b9d52ed37bc5fb03592e057a025cdf06f03381e1fc553da7ca380059",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0353,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "H, e, l, l, o, and !",
+      "italian": "H, e, l, l, o, e !",
+      "explanation": "Nell'elenco dei caratteri, \"e\" è sia la lettera sia la congiunzione: la frase risulta ambigua e confusa.",
+      "suggestion": "H, e, l, l, o e il punto esclamativo (!).",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "The main reason to switch is when your string contains one type of quote inside it.",
+      "italian": "Il motivo principale per cambiare è quando la tua stringa contiene al suo interno un tipo di virgolette.",
+      "explanation": "Costruzione poco naturale in italiano, e il senso (contiene quel tipo di virgolette) è poco chiaro.",
+      "suggestion": "Il motivo principale per cambiare è che la stringa contiene al suo interno un certo tipo di virgolette.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "`t.write(text)`",
+      "italian": "`t.write(testo)`",
+      "explanation": "Il nome del parametro nella firma è stato tradotto; è meglio mantenere la forma originale del codice inline.",
+      "suggestion": "`t.write(text)`",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "file": "chapters/24-recursion-and-fractals/quiz.md",
+  "hash": "226ddebe30bd9a4134197cd6e072127edf50ee20e2ea2215dc33f3f25f5c7866",
+  "model": "sonnet",
+  "score": 5,
+  "parts": 1,
+  "cost_usd": 0.0361,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "recursion, base cases, lambda functions, and the call stack",
+      "italian": "delle funzioni lambda, e dello stack delle chiamate",
+      "explanation": "Virgola prima della 'e' non necessaria in italiano.",
+      "suggestion": "delle funzioni lambda e dello stack delle chiamate",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "The function runs exactly 1,000 times and then stops",
+      "italian": "La funzione gira esattamente 1.000 volte e poi si ferma",
+      "explanation": "'gira' è un po' colloquiale; meglio 'viene eseguita'.",
+      "suggestion": "La funzione viene eseguita esattamente 1.000 volte e poi si ferma",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "file": "chapters/31-advanced-functions-oop/index.md",
+  "hash": "3db28b28f2cf2a917de7fc5d79e766e9b212fbef4f88d837bc9ee724ba995ea4",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0542,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Both short-circuit — they stop as soon as the answer is known.",
+      "italian": "si fermano non appena la risposta è conosciuta.",
+      "explanation": "\"conosciuta\" è innaturale; meglio \"nota\". Inoltre \"fanno corto circuito\" è un po' oscuro per ragazzi.",
+      "suggestion": "Entrambi si fermano non appena la risposta è nota (valutazione \"short-circuit\").",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "file": "chapters/20-tuples-and-sets/quiz.md",
+  "hash": "c9bdac44b5984836ac927108c36edc67157a64e333be4d1d1206a13554d25f0f",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0392,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "`discard()` silently does nothing if `x` is not found",
+      "italian": "`discard()` non fa nulla silenziosamente se `x` non viene trovato",
+      "explanation": "Formulazione calcata dall'inglese e poco naturale.",
+      "suggestion": "`discard()` non fa nulla, senza segnalare errori, se `x` non viene trovato",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Tuples are faster to create; lists are faster to access",
+      "italian": "le liste sono più veloci da accedere",
+      "explanation": "Costruzione non naturale in italiano.",
+      "suggestion": "le liste sono più veloci da consultare / a cui accedere",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "items that appear in **both** sets / (items in both A and B)",
+      "italian": "(elementi in sia A sia B)",
+      "explanation": "Espressione innaturale.",
+      "suggestion": "(elementi presenti sia in A sia in B)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "To return multiple values from a function at once",
+      "italian": "Per restituire valori multipli da una funzione in una volta",
+      "explanation": "Calco dall'inglese; più naturale 'più valori' e 'tutti insieme'.",
+      "suggestion": "Per restituire più valori da una funzione tutti insieme",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Converts a tuple into a list so its items can be changed",
+      "italian": "così i suoi elementi possono essere cambiati",
+      "explanation": "Meglio 'in modo che' con il congiuntivo.",
+      "suggestion": "in modo che i suoi elementi possano essere cambiati",
+      "part": 1
+    }
+  ]
+}

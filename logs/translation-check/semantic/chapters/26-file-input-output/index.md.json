@@ -1,0 +1,46 @@
+{
+  "file": "chapters/26-file-input-output/index.md",
+  "hash": "df788e9a57c717b965b0bab7d86c249b04346daa97cabf8ea48ba03fb5df14b6",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0613,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Python looks for files relative to the **current working directory** — the folder the script lives in.",
+      "italian": "Python cerca i file in relazione alla **cartella di lavoro attuale** — la cartella in cui vive lo script.",
+      "explanation": "\"in relazione a\" è un calco; meglio \"rispetto a\".",
+      "suggestion": "Python cerca i file rispetto alla **cartella di lavoro corrente** — la cartella in cui si trova lo script.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Short, common words like \"the\" and \"i\" repeat the most in this excerpt — with a whole book of text, that pattern becomes even more dramatic.",
+      "italian": "con un intero libro di testo, quel pattern diventa ancora più marcato.",
+      "explanation": "\"pattern\" è un anglicismo non necessario per studenti.",
+      "suggestion": "quella tendenza diventa ancora più evidente.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "all five fruits print in a real Python terminal with their numbers.",
+      "italian": "tutti i cinque frutti si stampano in un vero terminale Python",
+      "explanation": "\"tutti i cinque\" non è naturale; \"frutti\" va meglio con \"frutta\".",
+      "suggestion": "tutti e cinque i frutti vengono stampati in un vero terminale Python con i loro numeri.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Each row is one line; columns are separated by commas.",
+      "italian": "Ogni riga è una linea;",
+      "explanation": "Ripetizione poco naturale.",
+      "suggestion": "Ogni riga corrisponde a una riga del file;",
+      "part": 1
+    }
+  ]
+}

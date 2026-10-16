@@ -1,0 +1,399 @@
+{
+  "missing": [],
+  "files": {
+    "about.md": [
+      {
+        "severity": "warning",
+        "kind": "links-changed",
+        "message": "links presenti in EN ma non in IT: ['https://trinket.io/announcement']",
+        "detail": null
+      },
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "1 paragrafo/i sembrano ancora in inglese",
+        "detail": "## Riferimenti  \n[^1]: Computer Science Teachers Association. (2023). *State of K-12 Computer Science Education*. https://advocacy.code.org/stateofcs  \n[^2]: U.S. Bureau of Labor Statistics. (2024). *"
+      }
+    ],
+    "chapters/07-for-loops-and-shapes/index.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "1 paragrafo/i sembrano ancora in inglese",
+        "detail": "1. for Loop over Sequence\n2. for Loop with range()\n3. Range with Start Stop Step\n4. Loop Counter Variable\n5. Loop Accumulator Pattern\n6. Absolute Positioning goto()\n7. Drawing circle() and Polygons\n8."
+      }
+    ],
+    "chapters/09-decisions-if-else/index.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "1 paragrafo/i sembrano ancora in inglese",
+        "detail": "1. Boolean Type\n2. Comparison Operators\n3. Logical Operators\n4. Boolean in Conditions\n5. Chained Comparisons\n6. if Statement\n7. if...else Block\n8. elif Chains\n9. Nested if Statements"
+      }
+    ],
+    "chapters/index.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "3 paragrafo/i sembrano ancora in inglese",
+        "detail": "This textbook is organized into 38 chapters covering 450 concepts, guiding you from your very first Python program all the way to machine learning.\n\n1. [Welcome to Python and Skulpt] — Meet Monty, run your first , write , and see what's coming.\n2. [Python Code Structure] — Indentation, code blocks, keywords, whitespace, and named colors.\n3. [Varia\n\nStart at Chapter 1 and work through in order — each chapter builds on the previous ones.\nChapters 1–12 focus on turtle graphics so you get visual, immediate feedback on every concept.\nFrom Chapter 13 "
+      }
+    ],
+    "course-description.md": [
+      {
+        "severity": "warning",
+        "kind": "count-headings",
+        "message": "headings: EN 12, IT 9",
+        "detail": null
+      },
+      {
+        "severity": "warning",
+        "kind": "links-changed",
+        "message": "links presenti in EN ma non in IT: ['./faq.md', './teachers-guide/index.md']",
+        "detail": null
+      }
+    ],
+    "faq.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "100 paragrafo/i sembrano ancora in inglese",
+        "detail": "BFS and DFS are the two standard algorithms for searching a graph.\n\nThe ** module** provides functions for generating random numbers and making random\nchoices. The most common ones in this course are:\n\n-  — random integer between  and  (inclusive)\n-  — pick one random item from a list\n-  — random float between 0.0 and 1.0\n-  — shuffle a list in place\n\n**Machine learning** is a branch of artificial intelligence where a program learns patterns\nfrom data instead of following hand-written rules. You provide labeled examples and the program\nadjusts inte\n\nA **list comprehension** is a compact way to build a new list by transforming or filtering\nanother sequence. It combines a  loop and an optional  condition into a single line:"
+      }
+    ],
+    "img/cover-image-prompt.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "9 paragrafo/i sembrano ancora in inglese",
+        "detail": "Please generate a cover image for a \"Learning Python\" textbook that can be used by social media previews.\nThe image should follow the open graph image standards with a Wide landscape format  (1.91:1)\n\n\nA vibrant, friendly textbook cover illustration for a children's coding book titled \"Learning Python\", designed for \"Ages 10 and Up\", suitable for a web book cover and social media preview card.\n\nLeft side: A cheerful cartoon green python snake named Monty sits center-left, wearing round reading glasses, looking curious and excited. Monty has a friendly, approachable expression — not scary at \n\nTitle: The title \"Learning Python\" must be placed in the center of the cover page using a white font.\nThe title should not cover the mascot on the left side.\n\n- A turtle graphics canvas of a square outline with a turtle icon finishing the last edge.\n- A turtle graphics canvas showing a colorful geometric flower made of petals in yellow, and green leaves\n- A"
+      }
+    ],
+    "intermediate/01-docker-python.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "26 paragrafo/i sembrano ancora in inglese",
+        "detail": "So far in this course you have run Python programs in two ways:\n\nNow we add a third option: **Docker**.  Docker lets you run Python inside a\ntiny, isolated box called a *container* — directly on your computer, but safely\nseparated from everything else.  The contain\n\nThis is actually how many real companies run student code in coding platforms!\n\nYou must have the Docker execution service running in a separate terminal before\nthe labs on this page will work.\n\nIf Docker is not installed the script will print detailed instructions for\nevery operating system.  Once the service is running you will see:"
+      }
+    ],
+    "jupyter/.ipynb_checkpoints/01-setup-checkpoint.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "3 paragrafo/i sembrano ancora in inglese",
+        "detail": "We will be using the turtle library in Python 3.3\n\n## Jupyter Notebook Setup\nWe will be running this library from within a Jypyter notebook.\n\nAfter you run the last command it will open a web browser."
+      }
+    ],
+    "learning-graph/book-metrics.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "6 paragrafo/i sembrano ancora in inglese",
+        "detail": "**Note**: Student-facing content metrics exclude  and  directories. Chapter-only metrics show what students see in the main chapters.\n\nThe twelve tracked elements of an intelligent textbook. The **Status** column shows whether each element is *Required*, *Recommended*, or *Optional*; a ⚠️ marks a required element that is still missin\n\n| # | Element | Value | Status | Notes |\n|---|---------|-------|--------|-------|\n| 1 | Concepts | 450 | Required | Concepts from learning graph |\n| 2 | Chapters | 38 | Required | Chapter directories \n\n| Metric Name | All Content | Chapters Only | Notes |\n|-------------|-------------|---------------|-------|\n| Diagrams | 0 | 0 | H4 headers starting with '#### Diagram:' |\n| Equations | 6 | 5 | LaTeX \n\n- **Concepts** *(required)*: Number of rows in learning-graph.csv\n- **Chapters** *(required)*: Count of chapter directories containing index.md files\n- **MicroSims** *(recommended)*: Directories in do"
+      }
+    ],
+    "learning-graph/chapter-metrics.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "2 paragrafo/i sembrano ancora in inglese",
+        "detail": "| Chapter | Name | Sections | Diagrams | Equations | Words | Links | Quiz | Refs |\n|---------|------|----------|----------|-----------|-------|-------|------|------|\n| 1 | [Welcome to Python and Skulp\n\n- **Chapter**: Chapter number (leading zeros removed)\n- **Name**: Chapter title from index.md\n- **Sections**: Count of H2 and H3 headers in chapter markdown files\n- **Diagrams**: Count of H4 headers s"
+      }
+    ],
+    "learning-graph/concept-list-v1.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "22 paragrafo/i sembrano ancora in inglese",
+        "detail": "1. Python interpreter overview\n2. Python 2 vs Python 3 differences\n3. Trinket.io — web-based Python environment\n4. repl.it — online Python IDE\n5. Thonny — beginner-friendly Python IDE\n6. Spyder IDE — \n\n### Strings\n42. String type () — text enclosed in quotes\n43. Single vs double quotes\n44. String concatenation with \n45. String repetition with \n46. String indexing (0-based)\n47. String slicing ()\n48. \n\n60.  — convert to integer\n61.  — convert to float\n62.  — convert to string\n63.  — convert to boolean\n64.  — inspect a variable's type\n65.  — check if object is an instance of a type\n\n66.  function — read text from user\n67. Prompting the user (passing a string to )\n68. Converting input strings to numbers with  / \n69. Input validation basics\n\n76.  loop — iterating over a sequence\n77.  loop with \n78. \n79.  loop — condition-based repetition\n80.  — exit a loop early\n81.  — skip to next iteration\n82.  clause on loops\n83. Nested loops\n84. Loop "
+      }
+    ],
+    "learning-graph/concept-list.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "11 paragrafo/i sembrano ancora in inglese",
+        "detail": "76. None Value and NoneType\n77. Functions Returning None\n78. Checking for None with is\n\n92. if Statement\n93. if...else Block\n94. elif Chains\n95. Nested if Statements\n96. Conditional Ternary Expression\n97. match/case Statement\n98. Truthiness in Conditions\n99. Compound Conditions\n\n100. for Loop over Sequence\n101. for Loop with range()\n102. range(start, stop, step)\n103. while Loop\n104. break Statement\n105. continue Statement\n106. else Clause on Loops\n107. Nested Loops\n108. Loop \n\n137. List Type\n138. Creating a List\n139. List Indexing\n140. Negative Indexing\n141. List Slicing\n142. len() for Lists\n143. List append() insert() extend()\n144. List remove() pop() clear()\n145. List sor\n\n163. Dictionary Type\n164. Creating a Dictionary\n165. Accessing Values by Key\n166. dict get() Method\n167. Adding and Updating Key-Value Pairs\n168. Removing Entries pop() del\n169. Dictionary keys() valu"
+      }
+    ],
+    "learning-graph/faq-quality-report.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "1 paragrafo/i sembrano ancora in inglese",
+        "detail": "1. **Boolean Type** (concetto 51) — centrale per tutti i condizionali\n2. **Augmented Assignment Operators** (+=, -=) — concetto 36\n3. **Logical Operators** (and/or/not) — concetto 53\n4. **Membership w"
+      }
+    ],
+    "learning-graph/quality-metrics.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "2 paragrafo/i sembrano ancora in inglese",
+        "detail": "- **2**: Python 2 vs Python 3\n- **4**: Repl.it Online IDE\n- **5**: Thonny Beginner IDE\n- **6**: Spyder Scientific IDE\n- **7**: VS Code Editor\n- **9**: JupyterLab Environment\n- **12**: Virtual Environm\n\n| Posizione | ID Concetto | Etichetta del Concetto | Grado Entrante |\n|------|-----------|---------------|----------|\n| 1 | 137 | List Type | 34 |\n| 2 | 58 | String Type | 33 |\n| 3 | 115 | Defining a "
+      }
+    ],
+    "learning-graph/taxonomy-distribution.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "6 paragrafo/i sembrano ancora in inglese",
+        "detail": "- 137. List Type\n- 138. Creating a List\n- 139. List Indexing\n- 140. Negative Indexing\n- 141. List Slicing\n- 142. len() for Lists\n- 143. List append() insert() extend()\n- 144. List remove() pop() clear\n\n- 305. import turtle\n- 306. turtle.Turtle() Object\n- 307. turtle.Screen() Object\n- 308. Screen Setup and bgcolor()\n- 309. Movement forward() backward()\n- 310. Turning left() right()\n- 311. Absolute Po\n\n- 86. input() Function\n- 87. Prompting the User\n- 88. Converting Input to Numbers\n- 89. Input Validation Basics\n- 90. Reading Multiple Inputs\n- 91. Strip Whitespace from Input\n- 92. if Statement\n- 93.\n\n- 364. Abstract Data Types Overview\n- 365. Stack LIFO Structure\n- 366. Queue FIFO Structure\n- 367. Queue enqueue() dequeue()\n- 368. Graph Nodes and Edges\n- 369. Adjacency List Representation\n- 370. Br\n\n- 285. Objects and Classes Overview\n- 286. Attributes of an Object\n- 287. Methods of an Object\n- 288. class Keyword\n- 289. __init__() Constructor\n- 290. self Parameter\n- 291. Creating Class Instances\n"
+      }
+    ],
+    "sims/microsim-ideas.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "44 paragrafo/i sembrano ancora in inglese",
+        "detail": "This document was produced by scanning all 38 chapters in , the\n17 Python labs, the learning graph, and the turtle graphics gallery. Every\nchapter already has strong Skulpt/CodeMirror \"see it, run it,\n\n- **Directory:**  with , ,\n  , and  (scaffolded by )\n- **Library routing** follows the generator's routing table (p5.js for custom\n  simulations, Chart.js for charts, Plotly for f(x) plots, vis-networ\n\n| Tier | Focus | Sims | Rationale |\n|------|-------|------|-----------|\n| 1 | Core mental models (Ch 1–10) | 11 | The book's foundation; misconceptions formed here persist for years |\n| 2 | Data and f\n\n- **Chapter:** 1–2 (Welcome to Python; Python Code Structure)\n- **Concept and gap:** Students run whole programs and see only final output.\n  They never see the interpreter walking the code top to bot\n\n- **Chapter:** 3 (Variables and Numbers)\n- **Concept and gap:**  is invisible magic. The sticky-note\n  metaphor is described in prose but never shown operating. Reassignment\n  (\"the old value is repla"
+      }
+    ],
+    "teachers-guide/adding-custom-python-labs.md": [
+      {
+        "severity": "error",
+        "kind": "code-logic",
+        "message": "blocco di codice #5: la logica del codice è diversa",
+        "detail": "--- EN\n+++ IT\n@@ -1,18 +1,18 @@\n-Does the lab need turtle graphics or run in the shared textbook?\n-  └─ YES → Use Skulpt (Option 1)\n+Il laboratorio ha bisogno della grafica turtle o viene eseguito nel manuale condiviso?\n+  └─ SÌ → Usa Skulpt (Opzione 1)\n \n-Does the lab need third-party packages (numpy, matplotlib, requests)?\n-  ├─ Data science / ML / visualisation → Use Jupyter + Conda (Options 8 + 4)\n-  └─ General packages only             → Use venv (Option 3)\n+Il laboratorio ha bisogno di pacchetti di terze parti (numpy, matplotlib, requests)?\n+  ├─ Data science / ML / visualizzazione → Usa Jupyter + Conda (Opzioni 8 + 4)\n+  └─ Solo pacchetti generali                → Usa venv (Opzione 3)\n \n-Is this a student's first time running Python locally?\n-  └─ YES → Use Thonny (Option 6)\n+È la prima volta che lo studente esegue Python localmente?\n+  └─ SÌ → Usa Thonny (Opzione 6)\n \n-Do you need a fully reproducible sandbox with no student setup?\n-  └─ YES → Use Docker (Option 5)\n+Hai bisogno di una sandbox pienamente riproducibile senza configurazione per lo studente?\n+  └─ SÌ → Usa Docker (Opzione 5)\n \n-Is the student writing narrative code (code + explanation + charts)?\n-  └─ YES → Use Jupyter (Option 8)\n+Lo studente sta scrivendo codice narrativo (codice + spiegazione + grafici)?\n+  └─ SÌ → Usa Jupyter (Opzione 8)\n \n-Is the student ready for professional tools / multi-file projects?\n-  └─ YES → Use VS Code (Option 7)\n+Lo studente è pronto per strumenti professionali / progetti multi-file?\n+  └─ SÌ → Usa VS Code (Opzione 7)"
+      }
+    ],
+    "teachers-guide/order-of-concepts.md": [
+      {
+        "severity": "error",
+        "kind": "code-logic",
+        "message": "blocco di codice #1: la logica del codice è diversa",
+        "detail": "--- EN\n+++ IT\n@@ -1,3 +1,4 @@\n-What are the key concepts in learning Python for a 9th\n-grade student in the US?  List the concepts in the order\n-they should be taught and add justification for ordering.\n+Quali sono i concetti chiave per imparare Python per uno\n+studente di terza media negli USA? Elenca i concetti\n+nell'ordine in cui dovrebbero essere insegnati e aggiungi\n+una giustificazione per l'ordinamento."
+      },
+      {
+        "severity": "error",
+        "kind": "code-logic",
+        "message": "blocco di codice #2: la logica del codice è diversa",
+        "detail": "--- EN\n+++ IT\n@@ -1,5 +1,5 @@\n-Now assume that all students have access to the\n-trinket.io website that allows students to learn\n-using turtle graphics to get fast visual feedback.\n-Generate a list of the key Python concepts and the\n-order they should be taught.\n+Ora supponi che tutti gli studenti abbiano accesso al\n+sito trinket.io che permette agli studenti di imparare\n+usando la grafica turtle per ottenere un riscontro visivo\n+rapido. Genera un elenco dei concetti Python chiave e\n+l'ordine in cui dovrebbero essere insegnati."
+      }
+    ],
+    "trinket/00-introduction.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "8 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\nThese labs assume that you have internet access and a modern web browser such as Chrome.\n\nWe use the [Trinket web site] because it a kid-safe place that has many of the basic turtle drawing libraries implemented in and easy-to-use web environment.  It is appropriate for students just getti\n\nIf you want to try another web-based system that support turtle graphics and Python 3.X we suggest the web site [repl.it].  Note that repl.it is not specifically designed for kids."
+      }
+    ],
+    "trinket/01a-trinket-account.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "5 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\nThese labs assume that you have internet access and a modern web browser such as Chrome.\n\nWe use the [Trinket web site] because it a kid-save place that has many of the basic turtle drawing libraries implemented in and easy-to-use web environment.  It is appropriate for students just getti\n\n1. You can save programs\n1. You can rename programs\n1. You can create folders of programs\n1. You can run your program\n1. You can make the program fill the screen (fullscreen)\n1. Download your Python c"
+      }
+    ],
+    "trinket/01b-turtle-graphics.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "16 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\n## What is the turtle graphics library?\nTurtle graphs have been around for almost [50 years].  A turtle is a drawing object that has position, direction, and a pen to draw as it moves around a grid.  \n\nFor many of our introductory python labs, we will use the turtle python library.  Although there are many different versions of the turtle library, most of the commands are similar.  What you learn wi\n\n## Initialization commands\nThere are three lines that will appear at the top of these labs:"
+      }
+    ],
+    "trinket/02-simple-square.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "8 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\n## Drawing a Square\nThe following code is an example of drawing a square using turtle graphics.  In this example the turtle moves forward 100 units and then turns right.  The angle for the right turn \n\n## Try it out\nHere is a link to the Trinket web site with this program running:\n[https://trinket.io/python/564899ffe9]\nYou can click on this link and then press the Run button.  You should see the pyt\n\n## Explanation\nThe first three lines will be the same for all our programs.  They import the turtle library into our program, create a new turtle object and then assign the turtle a shape icon.  Altho"
+      }
+    ],
+    "trinket/03-variables.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "5 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\nIn the simple square program we repeated the numbers for the distance and turning angle four times in four different places.  If we wanted to change the size of our box we would have to change the cod\n\nIn this example program we will make the turtle go forward 40 steps and then make a right turn of 90 degrees.  We will repeat this four times to complete a square.\n\n## Experiments\nCan you make the turtle draw a larger square?  Hint: change the forward(40) to be forward(100)"
+      }
+    ],
+    "trinket/04-loops.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "4 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\nIn this example program we will make the turtle go forward 40 steps and then make a right turn of 90 degrees.  \nWe will repeat this four times to complete a square.\n\n## Experiments\n1. Can you make the turtle draw a larger square?  Hint: change the distance to be 80.  How big can you make the square before the turtle goes off the screen?\n2. Can you make a hexagon? "
+      }
+    ],
+    "trinket/04a-stop-sign.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "3 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\nIn this lesson, we will use variables and for loop to draw a stop sign.\nWe will also show how to use the penup, pendown, color, begin_fill, end_fill and write functions.\nOur write function will also c"
+      }
+    ],
+    "trinket/05-conditionals.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "9 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\nIn this example program we will make the turtle draw\ndifferent sides of the square using different colors.\n\nThere are two things we do with equations in Python.  The first is to use the equal sign to **assign values** on the left side of the equal sign to the values on the right side.  The second thing we d\n\nHere is the basic syntax of the Python conditional operator."
+      }
+    ],
+    "trinket/06-functions.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "4 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\nNow we will create a new function that will draw each side.\n\n## Experiments\nCan you change the name of the function to be \"petal\"?"
+      }
+    ],
+    "trinket/07-flower.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "4 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\nNow we will create a new function that will draw a triangle for\neach side.  It will do this by going forward and right three times\nat an angle of 120 degrees.  We will put that triangle into a\nfunctio\n\n## Experiments\n1. Can you change the colors of the petals?\n2. Can you change the width of the stem of the flower using the pensize() function?\n3. Can you change the size of the petals?\n4. Can you chan"
+      }
+    ],
+    "trinket/07-function-parameters.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "4 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\n## Lesson Objective\nNow we will create a new function that draw a square with a specific color at a specific x and y point.  The function will take three inputs:\n- the color\n- the horizontal x positio\n\n1. Can you change the name of the function to be \"petal\"?\n2. Can you change the function to include the ability to pass in one color for the border, and one color for the center fill?\n[Sample of Borde"
+      }
+    ],
+    "trinket/08-list.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "5 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\nHow would we create and access a list of colors in Python?\nHere is a list of colors:\n\nTo access any color you can reference the index of the color by using a number.  For example to get the third\ncolor you would use:\n\n1. Can you change the name of the function to be \"petal\"?\n1. What does ```` return?\n1. Go to the [Trinket colors page] and see the name of other colors you can use.\n1. What happens if a list does not "
+      }
+    ],
+    "trinket/08-random.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "5 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\nIn this exercise we will draw 10 random circles on the screen.  We will use the random function **randint(min, max)** that will generate a random number between the minimum and maximum values.  Since \n\nAfter this line runs, the variable myNumber will be assigned some random number between -200 and 200.   We will then use this number to go to that location before we draw a circle.\n\n## Experiments\n1. Can you create a variable that is used to control the distance from the origin to wander?  Right now the distance is set to be 200 on each extent.\n2. Can you create a variable for th"
+      }
+    ],
+    "trinket/08b-random-stars.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "5 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\nIn this exercise we will draw 5 stars of different colors:\nThe colors are randomly picked from the list of colors\n\nAfter these line runs, the variable mycolor will be assigned some random color from the list of colors myColorList.   We will then use this color to fill a star.\nThe stars are drawn at random location\n\n## Experiments\n1. Can you create a variable for the number of circles to draw?\n2. Go to the [Trinket colors page] and see the name of other colors you can use.  Note that you can use any of these colo"
+      }
+    ],
+    "trinket/08c-turtle-shapes.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "5 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\nWith the turtle shape() method we can change your turtle shape to be any of the following shapes\n\n## Using a List of Shapes\nWhat if we want to use a list of shapes?\n\n## Experiments\nCan you use the new shapes to draw a star or any other shape of your chosing"
+      }
+    ],
+    "trinket/11-input.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "4 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\nWe can prompt the user to supply a number using the input() function.\n\n1. Write a program that will prompt the user to enter the number of shapes to draw, the size of the shapes, the color of the shapes and the range of the screen to draw them (50 to 200).\n2. Add some ad"
+      }
+    ],
+    "trinket/12-recursion.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "7 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\n## Recursion\nRecursion is when we write a function that calls itself.  It usually passes a parameter that changes and when it hits a limit it stops going.  This lab does a lot of drawing so to speed i\n\nOur recursive function is the draw_branch function.  It will draw a single branch and then call itself two times at its tip to draw two more smaller branches.\n\n## Explanation\nThe first three lines will be the same for all our programs.  They import the turtle library into our program, create a new turtle object and then assign the turtle a shape icon."
+      }
+    ],
+    "trinket/13-shape-module.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "3 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\nIn this lab we will create a set of drawing function and put them together into a new file.  We will then import this file into our main.py file."
+      }
+    ],
+    "trinket/14-color-picker.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "5 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\nYou are not limited to the colors by name [Trinket Colors].\nYou can use Hex and RGB values and let your imagination run wild.\n\n## Experiments\nCan you try different colors? \nCan you change font properties in style object?\n\nThe font name can as 'Arial', 'Courier', or 'Times New Roman'\nThe font size in pixels.\nThe font type, which can be 'normal', 'bold', or 'italic'"
+      }
+    ],
+    "trinket/15-sine-wave.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "4 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\nHere is an example of plotting a sine function with turtle goto() functions.  We calculate the new vertical value with the following function:\n\nAnd we loop through about 400 values from -200 to 200.  We use the radians() function to convert the numbers into a a number that will give us a single sine in the X range."
+      }
+    ],
+    "trinket/16-changing-background.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "6 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\nWe can use trinkets to change the background and change the shape of the turtle with a custom image.\nAlso we can control the screen with the mouse. It gives a starting point for how to create a game.\n\nThe following blog lays out the steps for creating a rocket ship\nhttps://blog.trinket.io/using-images-in-turtle-programs/\n\nThe images have to be the same size as the the screen size. Here are some other images that have been resized."
+      }
+    ],
+    "trinket/17-controlling-mouseclicks.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "6 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\nWe can use trinkets to change the background and control mouse clicks.\nAlso we have access to the exact position where the mouse was clicked. That creates a lot of possibilities \nfor creating differen\n\nHere is an example of setting the screen color. We then draw a square in the center of the screen. \nWhen the user clicks a circle is drawn within the circle. On next click the circle increases in diam\n\nIf the user clicks the screen outside the square the screen is refreshed"
+      }
+    ],
+    "trinket/examples.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "3 paragrafo/i sembrano ancora in inglese",
+        "detail": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**, which is [shutting down in August 2026]. The embedded  links on this page will stop working after t\n\nThese pages are kept for reference only. The current version of this course now runs every lab as an inline **[Skulpt]** editor right in the page — no account or install needed. **Start at [Chapter 1:\n\nUse the [Turtle API] documentation to check out what else is available."
+      }
+    ],
+    "turtle-graphics-gallery/honeycomb-grid/index.md": [
+      {
+        "severity": "error",
+        "kind": "code-count",
+        "message": "blocchi di codice: EN 4, IT 3",
+        "detail": null
+      },
+      {
+        "severity": "error",
+        "kind": "code-logic",
+        "message": "blocco di codice #2: la logica del codice è diversa",
+        "detail": "--- EN\n+++ IT\n@@ -1,49 +1,29 @@\n+import turtle\n import math\n-import turtle\n+monty = turtle.Turtle()\n+monty.speed(0)\n+monty.hideturtle()\n \n+def hexagon(x, y, size, color):\n+    monty.penup()\n+    monty.goto(x, y)\n+    monty.setheading(30)\n+    monty.pendown()\n+    monty.color(color)\n+    monty.begin_fill()\n+    for _ in range(6):\n+        monty.forward(size)\n+        monty.left(60)\n+    monty.end_fill()\n \n-def draw_hexagon(size):\n-    \"\"\"Draws a single regular hexagon.\"\"\"\n-    for _ in range(6):\n-        turtle.forward(size)\n-        turtle.left(60)\n+size = 30\n+colors = ['gold', 'orange']\n+h = size * 2                     # height of a pointy-top hexagon\n+col_w = size * math.sqrt(3)      # width of a pointy-top hexagon\n \n-\n-def draw_honeycomb(rows, cols, size):\n-    \"\"\"Draws a grid of hexagons offset to form a honeycomb pattern.\"\"\"\n-    # Calculate geometric spacing based on hexagon properties\n-    w = size * math.sqrt(3)  # Width of the hexagon\n-    h = size * 1.5  # Vertical distance to the next row\n-\n-    for r in range(rows):\n-        for c in range(cols):\n-            # Calculate the starting X position\n-            x = c * w\n-            # Offset every odd row to the right by half a hexagon width\n-            if r % 2 == 1:\n-                x += w / 2\n-\n-            # Calculate the starting Y position\n-            y = r * h\n-\n-            # Move turtle to the cell position without drawing\n-            turtle.penup()\n-            turtle.goto(x, y)\n-            turtle.pendown()\n-\n-            # Render the hexagon\n-            draw_hexagon(size)\n-\n-\n-# Main setup\n-if __name__ == \"__main__\":\n-    # Optimize drawing speed\n-    turtle.speed(0)\n-    turtle.delay(0)\n-\n-    # Configuration: Rows, Columns, Edge Size\n-    draw_honeycomb(rows=6, cols=8, size=30)\n-\n-    # Keep window open\n-    turtle.hideturtle()\n-    turtle.done()\n+for row in range(7):\n+    for col in range(8):\n+        offset = col_w / 2 if row % 2 == 1 else 0\n+        x = -200 + col * col_w + offset\n+        y = 150 - row * h * 0.75\n+        hexagon(x, y, size, colors[(row + col) % 2])"
+      },
+      {
+        "severity": "error",
+        "kind": "code-logic",
+        "message": "blocco di codice #3: la logica del codice è diversa",
+        "detail": "--- EN\n+++ IT\n@@ -20,4 +20,4 @@\n colors = ['gold', 'orange']\n-h = size * 2                     # height of a pointy-top hexagon\n-col_w = size * math.sqrt(3)      # width of a pointy-top hexagon\n+h = size * 2\n+col_w = size * math.sqrt(3)\n \n@@ -25,3 +25,3 @@\n     for col in range(8):\n-        offset = col_w / 2 if row % 2 == 1 else 0\n+        offset = col_w if row % 2 == 1 else 0\n         x = -200 + col * col_w + offset"
+      },
+      {
+        "severity": "warning",
+        "kind": "count-headings",
+        "message": "headings: EN 12, IT 8",
+        "detail": null
+      },
+      {
+        "severity": "warning",
+        "kind": "count-code_blocks",
+        "message": "code_blocks: EN 4, IT 2",
+        "detail": null
+      }
+    ],
+    "turtle-graphics-gallery/t-square-fractal/index.md": [
+      {
+        "severity": "warning",
+        "kind": "untranslated",
+        "message": "1 paragrafo/i sembrano ancora in inglese",
+        "detail": "Posizioni degli angoli:\n- In alto a sinistra: \n- In alto a destra: \n- In basso a sinistra: \n- In basso a destra:"
+      }
+    ]
+  }
+}

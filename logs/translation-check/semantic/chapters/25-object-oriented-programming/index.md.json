@@ -1,0 +1,64 @@
+{
+  "file": "chapters/25-object-oriented-programming/index.md",
+  "hash": "f81fcf39cd0bf9694cb1c4a650adb4b5b5ff772e5a1c4cd3791e7dd013211df7",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0595,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "# method call — sets an attribute",
+      "italian": "# method call — sets an attribute",
+      "explanation": "Commenti nel codice possono essere tradotti; restano in inglese, ma è accettabile. Nota solo minore: incoerenza con la prosa tradotta.",
+      "suggestion": "Facoltativo: tradurre i commenti, es. '# chiamata di metodo'.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Now you'll define your own objects.",
+      "italian": "Ora definirai i tuoi propri oggetti.",
+      "explanation": "\"i tuoi propri\" è ridondante e poco naturale.",
+      "suggestion": "Ora definirai i tuoi oggetti.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "You've learned to design your own objects with classes",
+      "italian": "progettare i tuoi propri oggetti",
+      "explanation": "Ridondanza \"i tuoi propri\".",
+      "suggestion": "progettare i tuoi oggetti",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "A **class** is a blueprint for creating objects.",
+      "italian": "Una **classe** è un progetto per creare oggetti.",
+      "explanation": "\"Progetto\" per blueprint va bene, ma \"stampo/modello\" è più chiaro; \"a tratteggio\" e \"carte solide\" sono rese un po' goffe.",
+      "suggestion": "Usare \"modello\" in modo coerente; \"tratteggiato\", \"schede piene\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Animal's own `speak()` is marked **shadowed**",
+      "italian": "il proprio `speak()` di Animal è segnato come **shadowed** (oscurato)",
+      "explanation": "Frase un po' innaturale; \"shadowed\" resta come etichetta del simulatore, ok.",
+      "suggestion": "lo `speak()` di Animal è segnato come **shadowed** (oscurato)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "when `rex.bark()` runs",
+      "italian": "quando `rex.bark()` gira",
+      "explanation": "\"gira\" e \"girare\" come tradurre \"run\" è colloquiale/calco.",
+      "suggestion": "quando `rex.bark()` viene eseguito",
+      "part": 1
+    }
+  ]
+}

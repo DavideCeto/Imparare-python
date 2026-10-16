@@ -1,0 +1,37 @@
+{
+  "file": "chapters/12-colors-fill-turtle-art/index.md",
+  "hash": "bcb639b2850ad088a4d2ee625d607c8963e3dffb312007f9ac93ba80016c622a",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0614,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Colors make turtle art come alive.",
+      "italian": "I colori fanno venire viva l'arte con la tartaruga.",
+      "explanation": "Frase innaturale in italiano.",
+      "suggestion": "I colori danno vita all'arte con la tartaruga.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Python's turtle doesn't support transparency natively, but image processing libraries like Pillow (Chapter 34) do.",
+      "italian": "ma le librerie di elaborazione delle immagini come Pillow (Capitolo 34) sì.",
+      "explanation": "Il \"sì\" finale è ellittico e poco chiaro per studenti.",
+      "suggestion": "ma le librerie di elaborazione delle immagini come Pillow (Capitolo 34) la supportano.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Lightness** — how bright or dark the color is (0% = black, 100% = white)",
+      "italian": "**Luminosità (Lightness)** — quanto è chiaro o scuro il colore",
+      "explanation": "Il termine \"Luminosità\" è usato sia per Lightness sia per brightness/\"luminosità massima\"/\"luminosità piena\": ambiguo.",
+      "suggestion": "Usare \"Chiarezza\" o \"Luminosità (Lightness)\" in modo coerente e altrove \"intensità\".",
+      "part": 1
+    }
+  ]
+}

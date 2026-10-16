@@ -1,0 +1,55 @@
+{
+  "file": "chapters/36-computational-thinking-best-practices/quiz.md",
+  "hash": "845e03b4ad37a9ca21542ff908a697d5cf1cabff3c0831baa23fe712bf22edff",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0428,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "**Concept Tested:** Decomposition",
+      "italian": "**Concept Tested:** Decomposition",
+      "explanation": "L'etichetta \"Concept Tested\" è rimasta in inglese in tutte le domande; è prosa da tradurre (il nome del concetto può restare).",
+      "suggestion": "**Concetto verificato:** Decomposition",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Abstraction means focusing on what matters",
+      "italian": "L'abstraction significa concentrarsi su ciò che conta",
+      "explanation": "\"Abstraction\" è lasciato in inglese nel testo mentre esiste il termine italiano \"astrazione\"; incoerente con \"scomposizione\" tradotto.",
+      "suggestion": "Usare \"astrazione\" (es. \"Cos'è l'astrazione nel pensiero computazionale?\").",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Good abstraction makes code reusable and easier to reason about.",
+      "italian": "più facile da ragionare.",
+      "explanation": "Calco innaturale dall'inglese.",
+      "suggestion": "\"più facile da capire / su cui ragionare\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "omission",
+      "english": "strategies, debugging strategies, and version control",
+      "italian": "delle strategie di debug, e del controllo di versione",
+      "explanation": "Lieve: l'introduzione elenca il debug ma nessuna domanda lo copre (uguale all'originale); nessun problema reale. Inoltre virgola prima di \"e\" poco naturale in italiano.",
+      "suggestion": "Togliere la virgola prima di \"e\" (anche in altre frasi, es. \"individuare somiglianze, ripetizioni, e struttura\").",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Breaking a program into its individual lines of code",
+      "italian": "Scomporre un programma nelle sue singole righe di codice",
+      "explanation": "Frasi come \"fare debug\", \"fanno il refactor\" e \"che girano\" sono colloquiali/calchi; \"i buoni programmatori fanno il refactor\" è poco naturale.",
+      "suggestion": "\"i bravi programmatori rifattorizzano/fanno refactoring regolarmente\".",
+      "part": 1
+    }
+  ]
+}

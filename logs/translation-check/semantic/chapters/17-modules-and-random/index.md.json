@@ -1,0 +1,46 @@
+{
+  "file": "chapters/17-modules-and-random/index.md",
+  "hash": "184958561f6df1dc4a4d5fbf3531fdc6711400d9a8572de44f09e381ae46ef61",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0626,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Next chapter we'll add math power to your turtle programs.",
+      "italian": "aggiungeremo potere matematico ai tuoi programmi con la tartaruga",
+      "explanation": "Calco dall'inglese poco naturale; inoltre \"tartaruga\" contrasta con \"turtle\" usato altrove.",
+      "suggestion": "aggiungeremo la potenza della matematica ai tuoi programmi con la turtle",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "so other programs (or your future self) can `import` them",
+      "italian": "il tuo futuro te stesso",
+      "explanation": "Espressione un po' innaturale in italiano.",
+      "suggestion": "(o il te stesso del futuro)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Learn how to import modules, use aliases, and harness the random module",
+      "italian": "Impara come importare moduli, usare gli alias, e sfruttare il modulo random",
+      "explanation": "Virgola prima della \"e\" non adatta all'italiano; \"Impara come\" è un calco.",
+      "suggestion": "Impara a importare moduli, usare gli alias e sfruttare il modulo random",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Fix it so the list is actually shuffled and printed.",
+      "italian": "Correggilo così che la lista venga davvero mescolata e stampata.",
+      "explanation": "\"così che\" richiede il congiuntivo e suona poco naturale.",
+      "suggestion": "Correggilo in modo che la lista venga davvero mescolata e stampata.",
+      "part": 1
+    }
+  ]
+}

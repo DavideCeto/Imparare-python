@@ -1,0 +1,28 @@
+{
+  "file": "chapters/21-dictionaries/quiz.md",
+  "hash": "c2e94e166af24370128c2e7e56fa34e327ba74b2692b73400c0897df0e6f6a9b",
+  "model": "sonnet",
+  "score": 5,
+  "parts": 1,
+  "cost_usd": 0.0342,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Test your understanding of Python dictionaries, key-value access, iteration, and dictionary comprehensions",
+      "italian": "dell'accesso chiave-valore, dell'iterazione, e delle dictionary comprehension",
+      "explanation": "In italiano la virgola prima dell'ultima voce dell'elenco non è necessaria.",
+      "suggestion": "dell'accesso chiave-valore, dell'iterazione e delle dictionary comprehension",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "is the standard Pythonic way",
+      "italian": "è il modo Pythonic standard",
+      "explanation": "\"Pythonic\" lasciato in inglese può risultare oscuro a studenti di 13-15 anni.",
+      "suggestion": "è il modo standard e tipico di Python",
+      "part": 1
+    }
+  ]
+}

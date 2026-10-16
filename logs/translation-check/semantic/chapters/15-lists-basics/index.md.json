@@ -1,0 +1,55 @@
+{
+  "file": "chapters/15-lists-basics/index.md",
+  "hash": "307d6dfa6f4bbe50371d426567a39a75e1b20de220575456694114ce4af679b1",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0488,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Create a Python list and access items by index (including negative indexing)",
+      "italian": "incluso l'indicizzazione negativa",
+      "explanation": "Errore di accordo: \"indicizzazione\" è femminile, quindi \"inclusa\".",
+      "suggestion": "inclusa l'indicizzazione negativa",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Once you learn lists, you'll wonder how you ever programmed without them.",
+      "italian": "Una volta che imparerai le liste, ti chiederai come hai fatto a programmare senza di loro.",
+      "explanation": "Il futuro dopo \"una volta che\" suona innaturale; meglio il passato prossimo.",
+      "suggestion": "Una volta che avrai imparato le liste, ti chiederai come hai fatto a programmare senza.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "Discover Python lists — how to create them, access items by index, slice sublists",
+      "italian": "Fare slice di una sottolista",
+      "explanation": "\"Fare slice\" è un calco poco naturale per ragazzi.",
+      "suggestion": "Estrarre una sottolista con lo slicing, usando la notazione `[start:end]`",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "it has an off-by-one bug",
+      "italian": "Ma ha un bug di uno scarto di uno.",
+      "explanation": "Espressione innaturale e poco chiara.",
+      "suggestion": "Ma ha un bug \"off-by-one\" (sbagliato di una posizione).",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "**You'll know it worked when** all three print without errors.",
+      "italian": "tutti e tre si stampano senza errori",
+      "explanation": "Forma riflessiva innaturale.",
+      "suggestion": "tutti e tre vengono stampati senza errori",
+      "part": 1
+    }
+  ]
+}

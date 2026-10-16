@@ -1,0 +1,46 @@
+{
+  "file": "chapters/33-numpy-scientific-computing/index.md",
+  "hash": "0cb9135b362b01d0a4d4028856921f5fbdd3d930c54d456263510dce7a358fdf",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0548,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "NumPy has fast built-in statistics:",
+      "italian": "NumPy ha statistiche built-in veloci:",
+      "explanation": "\"built-in\" lasciato in inglese in prosa; esiste un equivalente italiano naturale.",
+      "suggestion": "NumPy ha statistiche integrate e veloci:",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Slice and index NumPy arrays, including 2-D arrays",
+      "italian": "Fare slice e indicizzare gli array NumPy",
+      "explanation": "\"Fare slice\" è un calco poco naturale, mentre nel resto della pagina si usa \"slicing\".",
+      "suggestion": "Estrarre porzioni (slicing) e indicizzare gli array NumPy, inclusi gli array 2-D",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Mastering it puts you at the starting line of data science and AI.",
+      "italian": "Padroneggiarlo ti mette alla linea di partenza",
+      "explanation": "\"Padroneggiarlo\" è un po' formale per ragazzi di 13-15 anni.",
+      "suggestion": "Se lo impari bene, sei già alla linea di partenza della data science e dell'IA.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "a square matrix with 1s on the diagonal",
+      "italian": "una matrice quadrata con degli 1 sulla diagonale",
+      "explanation": "\"degli 1\" suona innaturale.",
+      "suggestion": "con 1 sulla diagonale",
+      "part": 1
+    }
+  ]
+}

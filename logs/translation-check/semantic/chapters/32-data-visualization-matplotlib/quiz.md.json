@@ -1,0 +1,46 @@
+{
+  "file": "chapters/32-data-visualization-matplotlib/quiz.md",
+  "hash": "1da733aebae0bc5ead8c26042a7445df2b1a61517ea46648567944dafffaea40",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0391,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Renders and displays the chart that has been built up with previous `plt.plot()` calls",
+      "italian": "Rende e mostra il grafico che è stato costruito con le precedenti chiamate a `plt.plot()`",
+      "explanation": "\"Rende\" è un calco dall'inglese \"renders\" e suona innaturale per studenti di 13-15 anni.",
+      "suggestion": "Disegna e mostra il grafico costruito con le chiamate precedenti a `plt.plot()`",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "`plt.show()` renders and displays the chart window.",
+      "italian": "`plt.show()` rende e mostra la finestra del grafico.",
+      "explanation": "Calco innaturale di \"renders\"; anche \"i grafici potrebbero rendersi automaticamente\" è poco naturale.",
+      "suggestion": "`plt.show()` disegna e mostra la finestra del grafico... i grafici possono apparire automaticamente",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Changes the x-axis tick marks to show seconds",
+      "italian": "Cambia i segni di graduazione dell'asse x per mostrare i secondi",
+      "explanation": "\"Segni di graduazione\" è poco comune; il termine usuale è \"tacche\" o \"segni sull'asse\".",
+      "suggestion": "Cambia le tacche dell'asse x per mostrare i secondi",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Displays the chart coordinates of every data point",
+      "italian": "Mostra le coordinate del grafico di ogni punto di dati",
+      "explanation": "Formulazione pesante; \"sottografici\" per subplots e \"scatter plot\" lasciato in inglese sono accettabili, ma qui la resa è goffa.",
+      "suggestion": "Mostra le coordinate di ogni punto dei dati",
+      "part": 1
+    }
+  ]
+}

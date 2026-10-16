@@ -1,0 +1,37 @@
+{
+  "file": "chapters/09-decisions-if-else/quiz.md",
+  "hash": "47a657e4dade6184ef5c56a995f839f425ec4b78ec881711f3b8ee96d1843d41",
+  "model": "sonnet",
+  "score": 5,
+  "parts": 1,
+  "cost_usd": 0.035,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Test your understanding of Boolean values, comparison operators, and if/elif/else branching",
+      "italian": "degli operatori di confronto, e delle diramazioni if/elif/else",
+      "explanation": "In italiano la virgola prima della \"e\" in un elenco è innaturale.",
+      "suggestion": "degli operatori di confronto e delle diramazioni if/elif/else",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "**Concept Tested:** Boolean Type",
+      "italian": "**Concept Tested:** Boolean Type",
+      "explanation": "L'etichetta \"Concept Tested\" è rimasta in inglese; il nome del concetto può restare, ma l'etichetta va tradotta.",
+      "suggestion": "**Concetto verificato:** Boolean Type",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "is both greater than 0 AND even?",
+      "italian": "è sia maggiore di 0 SIA pari?",
+      "explanation": "\"sia ... sia\" con la maiuscola enfatica è innaturale; l'originale enfatizza \"AND\".",
+      "suggestion": "è maggiore di 0 E anche pari?",
+      "part": 1
+    }
+  ]
+}

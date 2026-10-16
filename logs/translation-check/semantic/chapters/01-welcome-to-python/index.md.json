@@ -1,0 +1,46 @@
+{
+  "file": "chapters/01-welcome-to-python/index.md",
+  "hash": "94a19aa9e1a77a8bceddfec07641aa2a5de188b44eddc7b72cb2ed1cfd1e3127",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0794,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Python was invented in 1991 by a programmer named Guido van Rossum. He named it after a British comedy show",
+      "italian": "Gli ha dato questo nome in onore di uno show comico britannico — non del serpente",
+      "explanation": "Python fu pubblicato nel 1991. «Inventato nel 1991» è comunque nell'originale, quindi la resa è fedele, ma «in onore di» non è del tutto naturale.",
+      "suggestion": "Gli ha dato il nome di uno show comico britannico — non del serpente",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "It is consistently ranked the most popular first programming language in the world",
+      "italian": "È costantemente considerato il primo linguaggio di programmazione più popolare al mondo",
+      "explanation": "Frase ambigua: «primo linguaggio... più popolare» sembra dire «il più popolare in assoluto» invece di «il linguaggio più popolare con cui iniziare».",
+      "suggestion": "È costantemente considerato il linguaggio più popolare da cui iniziare a programmare, al mondo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "omission",
+      "english": "The table below summarizes all three environments:",
+      "italian": "La tabella seguente riassume tutti e tre gli ambienti:",
+      "explanation": "Traduzione fedele, ma la tabella contiene solo due righe (incoerenza già nell'originale).",
+      "suggestion": "Eventualmente correggere in «entrambi gli ambienti» o aggiungere la terza riga.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Python does not care about blank lines",
+      "italian": "A Python non importa delle righe vuote",
+      "explanation": "Costruzione poco corretta con «importare di»; più naturale «non importa nulla delle righe vuote».",
+      "suggestion": "A Python non interessano le righe vuote",
+      "part": 1
+    }
+  ]
+}

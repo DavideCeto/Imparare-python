@@ -1,0 +1,29 @@
+{
+  "file": "chapters/02-python-code-structure/references.md",
+  "hash": "d2ea8500c46eb49ee82650087fd9939c8d9fcfd61fa04aaaf36df89451a017bc",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.021,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Closely matches this chapter's audience of students ages 10–13 new to text-based programming.",
+      "italian": "studenti di 10-13 anni nuovi alla programmazione testuale.",
+      "explanation": "La traduzione è fedele all'originale (10–13), ma il manuale è rivolto a studenti di 13-15 anni; l'originale è incoerente. Nessun errore di traduzione, solo da verificare.",
+      "suggestion": "Verificare l'età del pubblico nell'originale; la traduzione è coerente con esso.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Programiz — Python Indentation ... Explains Python statements",
+      "italian": "Spiega gli statement, l'indentazione e i commenti in Python",
+      "italian_note": "",
+      "explanation": "\"statement\" lasciato in inglese; per studenti è più chiaro \"istruzioni\".",
+      "suggestion": "Spiega le istruzioni, l'indentazione e i commenti in Python",
+      "part": 1
+    }
+  ]
+}

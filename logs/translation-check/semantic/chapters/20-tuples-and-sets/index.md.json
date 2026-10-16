@@ -1,0 +1,46 @@
+{
+  "file": "chapters/20-tuples-and-sets/index.md",
+  "hash": "3f5968010d8ce178373b973edafd6b4e93e040bc8b344ea3d2c34d7da8f7b73f",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0545,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Now you have four collection tools: list, tuple, set, and (coming next) dictionary.",
+      "italian": "list, tuple, set, e (il prossimo) dictionary.",
+      "explanation": "\"coming next\" significa \"in arrivo, nel prossimo capitolo\"; \"il prossimo\" è ambiguo e poco naturale.",
+      "suggestion": "list, tuple, set e (nel prossimo capitolo) dictionary.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "silently does nothing if not found",
+      "italian": "non fa nulla silenziosamente se non trovato",
+      "explanation": "Formulazione goffa in italiano.",
+      "suggestion": "non fa nulla (senza errori) se non lo trova",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Gli insiemi sono più utili per:",
+      "italian": "Gli insiemi sono più utili per:",
+      "explanation": "\"Sets are most useful for\" è un superlativo; \"più utili\" suona incompleto e poco naturale.",
+      "suggestion": "Gli insiemi sono particolarmente utili per:",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Tuple unpacking",
+      "italian": "Scomposizione delle Tuple",
+      "explanation": "Genere di \"tupla/tuple\" usato in modo misto (titoli con \"Tuple\" e testo \"tupla\"); nel titolo \"Il Tipo Tuple\" e \"Il Tipo Set\" mescolano inglese e italiano in modo incoerente.",
+      "suggestion": "Uniformare, ad es. \"Il Tipo Tupla\" e \"Il Tipo Insieme (set)\".",
+      "part": 1
+    }
+  ]
+}

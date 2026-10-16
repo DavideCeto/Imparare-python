@@ -1,0 +1,28 @@
+{
+  "file": "chapters/09-decisions-if-else/index.md",
+  "hash": "e215256c7444a3e76b397f9c12e75a843f21ace1b93bfe4657af218048b0b8ed",
+  "model": "sonnet",
+  "score": 5,
+  "parts": 1,
+  "cost_usd": 0.0552,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Notice something sneaky",
+      "italian": "Nota una cosa furtiva",
+      "explanation": "\"Furtiva\" è una resa letterale e poco naturale in italiano.",
+      "suggestion": "Nota una cosa curiosa / Nota un trucchetto:",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Python never looked here.",
+      "italian": "Python non ha mai guardato qui.",
+      "explanation": "Il testo è una citazione dall'interfaccia della simulazione, tradotta mentre la simulazione resta in inglese; potrebbe non corrispondere a ciò che lo studente vede.",
+      "suggestion": "Lasciare la citazione in inglese o indicare la versione originale: \"Python never looked here.\"",
+      "part": 1
+    }
+  ]
+}

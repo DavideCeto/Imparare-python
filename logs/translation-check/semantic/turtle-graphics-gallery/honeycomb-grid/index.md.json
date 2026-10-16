@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/honeycomb-grid/index.md",
+  "hash": "e51520eb2c0648dc154af9367144301596375c1b4ae1a73eaf37c59a26aa87d0",
+  "model": "sonnet",
+  "score": 2,
+  "parts": 1,
+  "cost_usd": 0.0637,
+  "issues": [
+    {
+      "severity": "major",
+      "category": "omission",
+      "english": "```python\nimport math\nimport turtle\n\n\ndef draw_hexagon(size):\n    \"\"\"Draws a single regular hexagon.\"\"\"",
+      "italian": "Cambia `col_w` in `col_w / 2` nella riga dell'offset — lo spostamento dovrebbe essere metà della larghezza dell'esagono, non la larghezza intera.\n\n## Esperimenti",
+      "explanation": "Mancano del tutto le sezioni finali dopo il Learning Check: il blocco di codice draw_honeycomb, \"How the Math Works\", \"Alternative Package Options\" (Games & Simulation, Data Visualization, GIS & Maps).",
+      "suggestion": "Tradurre e inserire il codice e le sezioni mancanti (o confermare che nell'originale sono residui da rimuovere).",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Fix it so odd rows shift by exactly `size` pixels.",
+      "italian": "Correggila in modo che le righe dispari si spostino esattamente di metà larghezza dell'esagono.",
+      "explanation": "L'originale dice \"esattamente `size` pixel\", incoerente con la soluzione (col_w / 2); la traduzione cambia il senso e corregge l'originale, ma ora non corrisponde più ad esso.",
+      "suggestion": "Se si vuole fedeltà: \"si spostino esattamente di `size` pixel\"; altrimenti segnalare l'incoerenza dell'originale.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Fix it so odd rows shift",
+      "italian": "Il programma sotto disegna esagoni ma non tassellano",
+      "explanation": "Soggetto incoerente: \"esagoni ... non tassellano\" va bene, ma \"il programma ... ma non tassellano\" è poco chiaro.",
+      "suggestion": "\"Il programma qui sotto disegna degli esagoni, ma non si incastrano bene: ci sono spazi vuoti e sovrapposizioni!\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "critical for correct tiling",
+      "italian": "critico per la tassellatura corretta",
+      "explanation": "\"Critico\" è un calco dall'inglese, poco naturale.",
+      "suggestion": "\"fondamentale per una tassellatura corretta\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "The exterior angle at each corner is `360 / 6 = 60°`.",
+      "italian": "L'angolo esterno a ogni angolo è",
+      "explanation": "Ripetizione \"angolo ... angolo\".",
+      "suggestion": "\"L'angolo esterno in ogni vertice è\"",
+      "part": 1
+    }
+  ]
+}

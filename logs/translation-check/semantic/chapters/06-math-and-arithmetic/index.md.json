@@ -1,0 +1,55 @@
+{
+  "file": "chapters/06-math-and-arithmetic/index.md",
+  "hash": "df610f7bdfd95e82db47c384c5578a710b449e96d76700721b92de9b092953fc",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0626,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Draw any regular polygon by applying the formula `360 / sides` to your turtle",
+      "italian": "applicando la formula `360 / lati` alla tua turtle",
+      "explanation": "Il codice inline è stato modificato: la variabile nel codice resta `sides`, non `lati`.",
+      "suggestion": "applicando la formula `360 / sides` alla tua turtle",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to Chapter 6!",
+      "italian": "Benvenuto/a al Capitolo 6!",
+      "explanation": "Preposizione scorretta: in italiano si dice 'Benvenuto/a nel Capitolo 6'.",
+      "suggestion": "Benvenuto/a nel Capitolo 6!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "\"How many times does 3 fit *completely* inside 10?\"",
+      "italian": "\"Quante volte entra *completamente* 3 dentro 10?\"",
+      "explanation": "Frase poco naturale in italiano.",
+      "suggestion": "\"Quante volte il 3 entra *per intero* nel 10?\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Two stars together means \"to the power of.\"",
+      "italian": "significano \"elevato alla potenza di.\"",
+      "explanation": "Formulazione scorretta/innaturale.",
+      "suggestion": "significano \"elevato alla\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "the turtle must turn the **same angle** at every corner",
+      "italian": "a ogni angolo",
+      "explanation": "Ripetizione di 'angolo' ambigua; meglio 'vertice'.",
+      "suggestion": "a ogni vertice",
+      "part": 1
+    }
+  ]
+}

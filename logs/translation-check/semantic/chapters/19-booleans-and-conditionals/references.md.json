@@ -1,0 +1,46 @@
+{
+  "file": "chapters/19-booleans-and-conditionals/references.md",
+  "hash": "fd57c2cf795e5a23292f28c2e692a253aa1b90b8ea77e952ee8a9d49d03f1e17",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0217,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "well-suited for beginners in the 10–13 age range",
+      "italian": "ben adatti ai principianti nella fascia di età 10-13 anni",
+      "explanation": "Traduzione fedele; nessun errore. Nota: la fascia d'età dell'originale (10–13) differisce da quella del progetto (13-15), ma è un problema del testo sorgente, non della traduzione.",
+      "suggestion": "Nessuna modifica necessaria nella traduzione.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "short coding activities that reinforce True/False reasoning",
+      "italian": "brevi attività di codifica che rafforzano",
+      "explanation": "\"Attività di codifica\" è un calco poco naturale; meglio \"di programmazione\".",
+      "suggestion": "brevi attività di programmazione che rafforzano il ragionamento True/False",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "with worked examples combining and, or, and not operators",
+      "italian": "con esempi lavorati che combinano",
+      "explanation": "\"Esempi lavorati\" è un calco dall'inglese (worked examples).",
+      "suggestion": "con esempi svolti che combinano",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "for students building on prior knowledge of simple conditions",
+      "italian": "studenti che costruiscono sulla conoscenza precedente delle condizioni semplici",
+      "explanation": "Frase calcata dall'inglese e poco naturale.",
+      "suggestion": "studenti che partono dalle conoscenze già acquisite sulle condizioni semplici",
+      "part": 1
+    }
+  ]
+}

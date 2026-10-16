@@ -1,0 +1,46 @@
+{
+  "file": "chapters/20-tuples-and-sets/references.md",
+  "hash": "20dd0edec5d9ea77c4393fb3055686c2f8690d0fbdb97e2a7f6bdbb0e3cd5466",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0231,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "well-suited for students ages 10–13",
+      "italian": "ben adatti a studenti dai 10 ai 13 anni",
+      "explanation": "Traduzione fedele, ma il manuale è rivolto a studenti di 13-15 anni; l'originale è incoerente. Nessun errore di traduzione, solo da verificare.",
+      "suggestion": "Mantenere fedele all'originale oppure correggere l'età in entrambe le lingue.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Includes worked examples well-suited",
+      "italian": "Include esempi lavorati ben adatti",
+      "explanation": "\"esempi lavorati\" è un calco innaturale dall'inglese \"worked examples\".",
+      "suggestion": "\"esempi svolti\" o \"esempi risolti passo passo\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "short, runnable examples",
+      "italian": "esempi brevi e provabili",
+      "explanation": "\"provabili\" è poco naturale.",
+      "suggestion": "\"esempi brevi che si possono eseguire\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Covers how the mathematical set concept is implemented",
+      "italian": "Copre come il concetto matematico di insieme viene implementato",
+      "explanation": "Frase un po' rigida e calcata sull'inglese; inoltre \"che il tipo `set` built-in di Python supporta\" è innaturale.",
+      "suggestion": "\"Spiega come il concetto matematico di insieme viene implementato...\" e \"le operazioni standard supportate dal tipo `set` integrato di Python\".",
+      "part": 1
+    }
+  ]
+}

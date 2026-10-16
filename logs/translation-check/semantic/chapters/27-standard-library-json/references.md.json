@@ -1,0 +1,55 @@
+{
+  "file": "chapters/27-standard-library-json/references.md",
+  "hash": "2d51f682f36e03d2dd359e706f587c981f0cba42ae1271efbbf2444d6055b6b0",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0196,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "including converting between JSON strings and Python dictionaries",
+      "italian": "incluso la conversione tra stringhe JSON e dizionari Python",
+      "explanation": "\"incluso\" seguito da un sostantivo femminile è scorretto; serve \"inclusa\" o \"compresa\".",
+      "suggestion": "inclusa la conversione tra stringhe JSON e dizionari Python",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Chapter 10 covers working with files and data formats including JSON",
+      "italian": "i formati di dati incluso JSON",
+      "explanation": "Costruzione poco scorrevole; meglio \"compreso JSON\" o \"incluso il JSON\".",
+      "suggestion": "i formati di dati, compreso JSON",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "worked examples",
+      "italian": "esempi lavorati",
+      "explanation": "\"esempi lavorati\" è un calco dall'inglese e suona innaturale.",
+      "suggestion": "esempi svolti",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Explains JSON parsing and generation in Python with worked examples covering",
+      "italian": "Spiega l'analisi e la generazione di JSON",
+      "explanation": "\"Pretty-printing\" reso con \"formattazione leggibile\" va bene, ma la serie con virgola prima di \"e\" (\"oggetti, array, stringhe, e numeri\") è un calco dell'inglese.",
+      "suggestion": "Eliminare la virgola prima di \"e\" nelle elencazioni.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "runnable examples",
+      "italian": "esempi provabili",
+      "explanation": "\"provabili\" è poco naturale in italiano.",
+      "suggestion": "esempi eseguibili",
+      "part": 1
+    }
+  ]
+}

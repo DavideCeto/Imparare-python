@@ -1,0 +1,37 @@
+{
+  "file": "chapters/10-while-loops-and-animation/index.md",
+  "hash": "19f80e49826f1714b8af61218073b11386472aed2d9109ae8866e3fd3c8ceba9",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0567,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Monty the turtle will be drawing all by himself!",
+      "italian": "Monty la tartaruga disegnerà tutto da solo!",
+      "explanation": "Poco naturale; \"Monty la tartaruga\" richiede una virgola o un adattamento.",
+      "suggestion": "Monty, la tartaruga, disegnerà tutto da solo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "You'll finish with a real animated turtle drawing that moves by itself.",
+      "italian": "vero disegno animato con la tartaruga che si muove da solo.",
+      "explanation": "Concordanza: il soggetto è \"disegno\" (ok), ma l'italiano è un po' ambiguo; sarebbe meglio \"che si muove da solo\" riferito chiaramente al disegno.",
+      "suggestion": "un vero disegno animato con la turtle che si muove da solo.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "`for i in range(10)` repeats exactly ten times.",
+      "italian": "`for i in range(10)` si ripete esattamente dieci volte.",
+      "explanation": "Resa accettabile, ma \"for ... ripete\" è più corretto: è il ciclo a ripetersi.",
+      "suggestion": "`for i in range(10)` ripete esattamente dieci volte.",
+      "part": 1
+    }
+  ]
+}

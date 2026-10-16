@@ -1,0 +1,46 @@
+{
+  "file": "chapters/07-for-loops-and-shapes/index.md",
+  "hash": "48a70c1f8b09e7a11c8ec4d40248bac474ec1b1f4f4e6128b986ff5de7e42597",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0618,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "code",
+      "english": "Draw any regular polygon by combining a loop with the `360 / sides` formula",
+      "italian": "la formula `360 / lati`",
+      "explanation": "Nel codice inline la variabile/formula è `sides`; tradurla in `lati` non corrisponde al codice (`360 / sides`) e può confondere gli studenti.",
+      "suggestion": "Usare `360 / sides` (come nel codice), eventualmente spiegando \"sides = lati\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "With the loop mastered, it's time to add precision turtle commands to your toolkit.",
+      "italian": "Con il ciclo padroneggiato, è tempo di aggiungere comandi turtle di precisione al tuo repertorio.",
+      "explanation": "Costruzione calcata dall'inglese e poco naturale.",
+      "suggestion": "Ora che hai imparato i cicli, è il momento di aggiungere al tuo repertorio dei comandi turtle più precisi.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "The most common accumulator just adds values together:",
+      "italian": "L'accumulatore più comune semplicemente somma dei valori insieme:",
+      "explanation": "Frase innaturale in italiano.",
+      "suggestion": "L'accumulatore più comune si limita a sommare dei valori:",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "previews the accumulator pattern",
+      "italian": "Il Pattern Accumulatore del Ciclo",
+      "explanation": "Terminologia mista (pattern/accumulatore) accettabile, ma \"interrogazioni di posizione\" nel riepilogo è poco naturale per \"position queries\".",
+      "suggestion": "Usare \"lettura della posizione\" o \"richieste di posizione\".",
+      "part": 1
+    }
+  ]
+}

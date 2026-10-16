@@ -1,0 +1,46 @@
+{
+  "file": "chapters/28-python-dev-tools/references.md",
+  "hash": "a72b2639d0396358ed51047cb75b21c9e20ab5bb9677b4127004051953a95757",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0257,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "accessible to ages 10–13",
+      "italian": "accessibile per studenti dai 10 ai 13 anni",
+      "explanation": "Resa corretta nel senso; solo la preposizione è poco naturale. Il pubblico del manuale è 13-15, ma l'originale dice 10–13: fedele, nessun problema di significato.",
+      "suggestion": "accessibile a studenti dai 10 ai 13 anni",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Comprehensive comparison of popular Python IDEs and editors including Thonny, VS Code, and IDLE",
+      "italian": "Confronto completo dei più popolari IDE ed editor Python incluso Thonny, VS Code, e IDLE",
+      "explanation": "Concordanza: 'inclusi' al plurale. Inoltre la virgola prima dell'ultimo elemento dell'elenco (qui e in altre voci) è un calco dall'inglese.",
+      "suggestion": "Confronto completo dei più popolari IDE ed editor Python, inclusi Thonny, VS Code e IDLE",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "a text editor, running scripts from the terminal, and debugging basics — an ideal companion for students",
+      "italian": "l'uso di un editor di testo, l'esecuzione di script dal terminale, e le basi del debug — un compagno ideale",
+      "explanation": "Virgola seriale all'inglese, non naturale in italiano. 'Compagno' è un po' calcato; meglio 'un complemento ideale'.",
+      "suggestion": "…dal terminale e le basi del debug — un valido complemento per gli studenti…",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Beginner-friendly walkthrough of downloading Python",
+      "italian": "Percorso adatto ai principianti per scaricare Python, eseguire l'interprete, e usare IDLE",
+      "explanation": "Virgola prima di 'e' non necessaria; 'walkthrough' meglio come 'guida passo passo'.",
+      "suggestion": "Guida passo passo per principianti per scaricare Python, eseguire l'interprete e usare IDLE",
+      "part": 1
+    }
+  ]
+}

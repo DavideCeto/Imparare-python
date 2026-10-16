@@ -1,0 +1,37 @@
+{
+  "file": "chapters/02-python-code-structure/index.md",
+  "hash": "0d1c868792536557eff29600bf982e67be2e60007a3a666d05c42f15ceb8087e",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0717,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Whitespace is the name for any invisible characters in your code",
+      "italian": "Spazio bianco è il nome per qualsiasi carattere invisibile nel tuo codice",
+      "explanation": "Frase poco scorrevole, senza articolo e con la struttura calcata sull'inglese.",
+      "suggestion": "Gli spazi bianchi sono tutti i caratteri invisibili nel tuo codice: spazi, tab e righe vuote.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Statement vs Expression",
+      "italian": "Istruzione vs Espressione",
+      "explanation": "Nel testo si alternano «statement» e «istruzione» (anche per il termine generico «instruction»), il che può confondere. Inoltre il titolo è in italiano mentre i concetti sono elencati in inglese.",
+      "suggestion": "Usare in modo coerente «istruzione (statement)» ed «espressione (expression)». Per «instruction» usare un altro termine, come «comando».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Just pass it to `t.pencolor()` before you draw a line and the turtle will switch to that color.",
+      "italian": "la tartaruga passerà a quel colore",
+      "explanation": "Nel resto del testo si usa «la turtle» e «tartaruga» in modo alternato. Non è un errore grave, ma è incoerente.",
+      "suggestion": "Scegliere un solo termine, per esempio «la turtle».",
+      "part": 1
+    }
+  ]
+}

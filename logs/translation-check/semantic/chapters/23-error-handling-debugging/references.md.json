@@ -1,0 +1,46 @@
+{
+  "file": "chapters/23-error-handling-debugging/references.md",
+  "hash": "dd701ab02b6245e544181e8423ec71821269221b535e5123c38c83e5c0592bcc",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0218,
+  "issues": [
+    {
+      "severity": "major",
+      "category": "meaning",
+      "english": "making it an ideal companion resource for students ages 10–13",
+      "italian": "rendendolo una risorsa complementare ideale per studenti dai 10 ai 13 anni",
+      "explanation": "Nel testo EN l'età è 10–13, il che è fedele, ma il manuale è rivolto a 13-15 anni; non è un errore di traduzione, quindi nessuna correzione necessaria.",
+      "suggestion": "Nessuna modifica alla traduzione.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "including built-in error types, try/except syntax, raising exceptions",
+      "italian": "alle eccezioni Python incluso i tipi di errore built-in, la sintassi try/except, il generare eccezioni",
+      "explanation": "\"incluso\" non concorda con \"i tipi\" (dovrebbe essere \"inclusi\"); \"il generare eccezioni\" è poco naturale.",
+      "suggestion": "\"...alle eccezioni Python, inclusi i tipi di errore built-in, la sintassi try/except, come sollevare eccezioni e l'istruzione assert...\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "with worked examples",
+      "italian": "con esempi lavorati",
+      "explanation": "\"esempi lavorati\" è un calco dall'inglese e suona innaturale.",
+      "suggestion": "\"con esempi svolti\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "with runnable examples",
+      "italian": "con esempi provabili",
+      "explanation": "\"provabili\" è innaturale.",
+      "suggestion": "\"con esempi eseguibili\"",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "file": "chapters/06-math-and-arithmetic/quiz.md",
+  "hash": "cf3bdaa7117440ce41980db531fcbea5bb4ba025a715d439b0f3d787013fa0e2",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0305,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "\"to the power of.\"",
+      "italian": "\"elevato alla potenza di.\"",
+      "explanation": "Resa letterale poco naturale in italiano; meglio una forma più comune.",
+      "suggestion": "\"elevato a\" oppure \"alla potenza di\"",
+      "part": 1
+    }
+  ]
+}

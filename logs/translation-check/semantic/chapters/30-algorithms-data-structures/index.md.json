@@ -1,0 +1,91 @@
+{
+  "file": "chapters/30-algorithms-data-structures/index.md",
+  "hash": "09e0d6bebc39fc591b8607cc658818a5208c60cef5be88c28e77ad7d9e8f49db",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0879,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Abstract Data Types",
+      "italian": "Tipi di Dati Abstract",
+      "explanation": "\"Abstract\" è lasciato in inglese; in italiano si dice \"astratto\" (Tipo di Dato Astratto). Anche \"Tipo di Dato Abstract (ADT)\" è incoerente.",
+      "suggestion": "Tipi di Dati Astratti / Tipo di Dato Astratto (ADT)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Enqueue** — add to the back",
+      "italian": "**Dequeue** — rimuovi dal fronte",
+      "explanation": "\"Fronte\" è un calco poco naturale per \"front\" di una coda.",
+      "suggestion": "rimuovi dall'inizio (dalla testa) della coda",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Start at the source node; mark it as visited; enqueue it",
+      "italian": "segnalo come visitato; metti in coda",
+      "explanation": "\"segnalo\" è poco adatto: significa \"indicare\"; meglio \"segnalo\" → \"contrassegnalo/marcalo\". Inoltre manca il pronome in \"metti in coda\".",
+      "suggestion": "marcalo come visitato e mettilo in coda",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "After pushing all characters and popping them",
+      "italian": "Dopo aver spinto tutti i caratteri e averli tolti",
+      "explanation": "\"spinto\" è un calco innaturale di \"pushing\".",
+      "suggestion": "Dopo aver messo (push) tutti i caratteri sulla pila e averli tolti (pop)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "how many comparisons will bubble sort need?",
+      "italian": "quanti confronti avrà bisogno il bubble sort?",
+      "explanation": "Costruzione sbagliata: \"avere bisogno\" non si accorda così.",
+      "suggestion": "di quanti confronti avrà bisogno il bubble sort?",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "how many checks will each search need to find 24?",
+      "italian": "quanti controlli avrà bisogno ciascuna ricerca",
+      "explanation": "Stessa costruzione errata.",
+      "suggestion": "di quanti controlli avrà bisogno ciascuna ricerca per trovare 24?",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Implement it using the algorithm",
+      "italian": "Implementalo usando l'algoritmo",
+      "explanation": "\"la funzione\" è femminile: dovrebbe essere \"Implementala\".",
+      "suggestion": "Implementala usando l'algoritmo descritto sopra",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Selection sort** finds the smallest item and moves it to the front",
+      "italian": "lo sposta in avanti",
+      "explanation": "\"in avanti\" è ambiguo; significa \"all'inizio\".",
+      "suggestion": "lo sposta all'inizio della lista",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Race — Bubble vs Insertion",
+      "italian": "Race — Bubble vs Insertion",
+      "explanation": "Etichette dell'interfaccia del MicroSim lasciate in inglese: accettabile se coincidono con la UI, ma Step/Auto-play non sono spiegati.",
+      "suggestion": "Verificare che coincidano con la UI; altrimenti tradurre.",
+      "part": 1
+    }
+  ]
+}

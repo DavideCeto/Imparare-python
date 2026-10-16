@@ -1,0 +1,19 @@
+{
+  "file": "chapters/03-variables-and-numbers/index.md",
+  "hash": "e6ef30140d8b4ff90a6aa0f52c654b377ac39d1363ccc35b8735fece5c1f68b6",
+  "model": "sonnet",
+  "score": 5,
+  "parts": 1,
+  "cost_usd": 0.0665,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "note the decimal point.",
+      "italian": "nota la virgola decimale.",
+      "explanation": "Nel codice Python il separatore è il punto (5.0), non la virgola. Usare «virgola» può confondere gli studenti.",
+      "suggestion": "nota il punto decimale.",
+      "part": 1
+    }
+  ]
+}

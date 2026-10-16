@@ -1,0 +1,64 @@
+{
+  "file": "chapters/35-advanced-turtle-event-driven/references.md",
+  "hash": "ad7e81f60cc199530ada5fc1ffe9a209d4f35db41b228dbda3b75a7e52243a7b",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0259,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "well-suited to ages 10–13",
+      "italian": "ben adatti per studenti dai 10 ai 13 anni",
+      "explanation": "Il riferimento è al libro (adatto a ragazzi di 10–13 anni); \"ben adatti per studenti\" è lievemente goffo e la preposizione è scorretta.",
+      "suggestion": "\"adatti a ragazzi dai 10 ai 13 anni\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "providing context for why turtle is a powerful beginner tool and how event-driven features extend its capabilities",
+      "italian": "fornendo contesto per cui turtle è uno strumento potente per principianti e come le caratteristiche guidate da eventi estendono le sue capacità",
+      "explanation": "Costruzione sintattica scorretta (\"per cui\" + \"e come\") e innaturale.",
+      "suggestion": "\"spiegando perché la turtle è uno strumento potente per i principianti e come le funzioni guidate da eventi ne ampliano le possibilità\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Quick-reference examples for common turtle methods including event handlers",
+      "italian": "per i metodi comuni della turtle incluso i gestori di eventi",
+      "explanation": "Concordanza errata: \"incluso\" va al plurale.",
+      "suggestion": "\"inclusi i gestori di eventi\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Explains the core programming paradigm where program flow",
+      "italian": "Spiega il paradigma di programmazione centrale dove il flusso del programma",
+      "explanation": "\"centrale dove\" è calco dall'inglese e poco naturale.",
+      "suggestion": "\"Spiega il paradigma di programmazione fondamentale in cui il flusso del programma è determinato...\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "runnable examples",
+      "italian": "esempi chiari e provabili",
+      "explanation": "\"provabili\" è innaturale; inoltre \"chiari\" è ripetuto subito dopo.",
+      "suggestion": "\"esempi chiari ed eseguibili\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "study, remix, and adapt",
+      "italian": "da studiare, rimescolare, e adattare",
+      "explanation": "\"rimescolare\" rende male \"remix\"; inoltre virgola prima della \"e\" non idiomatica in italiano (anche in altre voci).",
+      "suggestion": "\"da studiare, rimaneggiare ed adattare\" (senza virgola)",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "file": "chapters/16-lists-methods-patterns/quiz.md",
+  "hash": "eb81a61e15fa3a2859d48d7b990528bfabc20bd5a26293fedcc6b2087c2ec33e",
+  "model": "sonnet",
+  "score": 5,
+  "parts": 1,
+  "cost_usd": 0.0337,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "list comprehensions, and stack/queue patterns",
+      "italian": "delle list comprehension, e dei pattern pila/coda",
+      "explanation": "Virgola superflua prima della «e» nell'elenco.",
+      "suggestion": "delle list comprehension e dei pattern pila/coda",
+      "part": 1
+    }
+  ]
+}

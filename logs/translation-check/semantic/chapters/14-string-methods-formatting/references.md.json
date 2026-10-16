@@ -1,0 +1,37 @@
+{
+  "file": "chapters/14-string-methods-formatting/references.md",
+  "hash": "121d1702969a6d86de9c24e05ce85f78dcfd7d5d8c2a17188a369d81eb41ee8b",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.021,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "how they store sequences of characters, and why they are one of the most fundamental data types",
+      "italian": "come memorizzano sequenze di caratteri, e perché sono uno dei tipi di dati più fondamentali",
+      "explanation": "Virgola prima della 'e' (stile inglese, serial comma) non naturale in italiano; ricorre in molte voci.",
+      "suggestion": "come memorizzano sequenze di caratteri e perché sono uno dei tipi di dati più fondamentali",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "suitable for ages 10–13",
+      "italian": "adatti per studenti dai 10 ai 13 anni",
+      "explanation": "Lieve adattamento ('ages' → 'studenti'); il senso resta, ma 'adatti a ragazzi dai 10 ai 13 anni' è più naturale.",
+      "suggestion": "adatti a ragazzi dai 10 ai 13 anni",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "runnable examples for each method",
+      "italian": "esempi provabili per ogni metodo",
+      "explanation": "'Provabili' è poco naturale in italiano.",
+      "suggestion": "esempi eseguibili per ogni metodo",
+      "part": 1
+    }
+  ]
+}

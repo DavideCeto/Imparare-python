@@ -1,0 +1,55 @@
+{
+  "file": "chapters/34-image-processing-pillow/quiz.md",
+  "hash": "096eceac6c21a849ae008ddc86b248e4db1cb22aed9ba6520d27b4276ccc80cd",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0393,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "**Concept Tested:** Importing Pillow",
+      "italian": "**Concept Tested:** Importing Pillow",
+      "explanation": "L'etichetta \"Concept Tested\" è rimasta in inglese in tutte le risposte; è prosa che andrebbe tradotta (il nome del concetto può restare).",
+      "suggestion": "**Concetto verificato:** Importing Pillow",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Large format — the image is bigger than standard size",
+      "italian": "Large format — l'immagine è più grande della dimensione standard",
+      "explanation": "\"Large format\" e \"Layered\" lasciati in inglese: sono le opzioni sbagliate del quiz e vanno tradotte come le altre.",
+      "suggestion": "Formato grande — l'immagine è più grande della dimensione standard; A livelli — l'immagine ha più livelli trasparenti",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "JPEG is for photos; PNG cannot store photographs at all",
+      "italian": "PNG non può memorizzare fotografie affatto",
+      "explanation": "Ordine innaturale in italiano.",
+      "suggestion": "PNG non può memorizzare affatto fotografie",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Use JPEG for photos where small file size matters",
+      "italian": "dove la dimensione piccola del file è importante",
+      "explanation": "Calco dall'inglese, poco naturale.",
+      "suggestion": "dove è importante che il file sia leggero",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Converts the image to a large-format high-resolution version",
+      "italian": "in una versione a grande formato e alta risoluzione",
+      "explanation": "Formulazione poco naturale.",
+      "suggestion": "in una versione di grande formato e ad alta risoluzione",
+      "part": 1
+    }
+  ]
+}

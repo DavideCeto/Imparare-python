@@ -1,0 +1,55 @@
+{
+  "file": "chapters/27-standard-library-json/index.md",
+  "hash": "a653d336701461706a378e2208be37c835c5ffc14fca8b6b61d3c36a9f7e185c",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0621,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Create your own Python module and use the `__name__ == \"__main__\"` guard",
+      "italian": "Creare il tuo proprio modulo Python e usare il guardiano `__name__ == \"__main__\"`",
+      "explanation": "\"Guardiano\" è un calco poco naturale per \"guard\"; \"il tuo proprio\" è ridondante.",
+      "suggestion": "\"Creare un tuo modulo Python e usare il controllo `__name__ == \"__main__\"`\" (usare la stessa scelta in tutta la sezione).",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "**loads** JSON from a string into Python objects (\"loads\" = load string)",
+      "italian": "**carica** JSON da una stringa in oggetti Python (\"loads\" = load string)",
+      "explanation": "\"dumps\" tradotto con \"scarica\" suggerisce un download; in italiano è fuorviante (meglio \"converte/serializza\").",
+      "suggestion": "\"**converte** oggetti Python in una stringa JSON\" (o \"scrive\").",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "the same round-trip without needing a file on disk",
+      "italian": "lo stesso andirivieni senza bisogno di un file sul disco",
+      "explanation": "\"Andirivieni\" è poco chiaro e non tecnico per \"round-trip\".",
+      "suggestion": "\"lo stesso viaggio di andata e ritorno\" o \"la stessa conversione di andata e ritorno\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "JSON looks almost exactly like Python — which is exactly why it trips people up.",
+      "italian": "che è esattamente il motivo per cui inganna le persone",
+      "explanation": "Formulazione un po' goffa; \"Mappatore\" per \"Mapper\" è poco naturale.",
+      "suggestion": "\"ed è proprio per questo che fa confondere tanti\"; \"Il Convertitore di Tipi\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Click the **The tricky trio** preset",
+      "italian": "Clicca il preset **The tricky trio** ... entrambi i preset **Broken**",
+      "explanation": "Nomi dei pulsanti lasciati in inglese; accettabile se coincidono con la UI della simulazione, altrimenti vanno spiegati.",
+      "suggestion": "Verificare che corrispondano alla UI; eventualmente aggiungere la traduzione tra parentesi.",
+      "part": 1
+    }
+  ]
+}

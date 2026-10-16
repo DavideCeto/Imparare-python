@@ -1,0 +1,19 @@
+{
+  "file": "chapters/11-functions-parameters-scope/quiz.md",
+  "hash": "2c1c1df8fecfa948dc3cc016822c0a4cea521a5b94d27495052428305c317ec7",
+  "model": "sonnet",
+  "score": 5,
+  "parts": 1,
+  "cost_usd": 0.0343,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Surrounded by double underscores, like `__max_speed__`",
+      "italian": "Circondato da doppi underscore, come `__max_speed__`",
+      "explanation": "Il soggetto implicito è «il nome»; il participio andrebbe concordato al maschile, ma «Circondato» può risultare ambiguo rispetto alle altre opzioni al plurale/gerundio. Piccola questione di coerenza.",
+      "suggestion": "Racchiuso tra doppi underscore, come `__max_speed__`",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "file": "chapters/16-lists-methods-patterns/index.md",
+  "hash": "d891a4b27a6819d90ef0794a714c8144fa55ccf0cd69efc3a4ec7785ba8fc04f",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0575,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Simulate a stack of three pancakes. Push \"bottom\", \"middle\", \"top\". Pop one.",
+      "italian": "Impila \"bottom\", \"middle\", \"top\". Toglierne uno.",
+      "explanation": "\"Toglierne uno\" è un infinito, non un imperativo, incoerente con le altre istruzioni (Impila, Stampa).",
+      "suggestion": "Usa l'imperativo: \"Togline uno con pop().\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Fix it so `evens` contains only even numbers!",
+      "italian": "Correggilo così che `evens` contenga solo numeri pari!",
+      "explanation": "\"così che\" è poco naturale in italiano.",
+      "suggestion": "\"Correggilo in modo che `evens` contenga solo numeri pari!\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "The comprehension just reads like English: \"s times 2, for each s in scores.\"",
+      "italian": "La comprehension si legge come l'inglese: \"s per 2, per ogni s in scores.\"",
+      "explanation": "Formulazione poco naturale; l'originale intende che si legge come una frase in linguaggio naturale.",
+      "suggestion": "\"La comprehension si legge quasi come una frase: «s per 2, per ogni s in scores».\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Add items with `append()`, `insert()`, and `extend()`, and remove items",
+      "italian": "Aggiungere elementi con `append()`, `insert()`, ed `extend()`, e rimuovere elementi con `remove()`, `pop()`, e `clear()`",
+      "explanation": "Virgole all'inglese prima di \"e\" nelle elencazioni (anche altrove) e \"ed extend\" non scorrevoli.",
+      "suggestion": "Togliere la virgola prima di \"e\" e usare \"e `extend()`\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "called the **loop-with-list-building** pattern",
+      "italian": "chiamato il pattern **ciclo-con-costruzione-di-lista**",
+      "explanation": "Formulazione calcata e pesante per ragazzi.",
+      "suggestion": "\"chiamato pattern **ciclo con costruzione di lista**\".",
+      "part": 1
+    }
+  ]
+}

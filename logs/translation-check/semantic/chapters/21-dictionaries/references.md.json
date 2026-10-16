@@ -1,0 +1,64 @@
+{
+  "file": "chapters/21-dictionaries/references.md",
+  "hash": "429c7725d8408072d105323d1724958fe49992d4d1edc3d604d26eea19b2c80e",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0256,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "for students ages 10–13 who want a second explanation",
+      "italian": "per studenti dai 10 ai 13 anni che vogliono una seconda spiegazione",
+      "explanation": "Corretto, ma \"Un eccellente compagno\" è un calco poco naturale di \"companion\".",
+      "suggestion": "Un ottimo libro di accompagnamento per studenti dai 10 ai 13 anni...",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "with age-appropriate analogies and short, visual examples",
+      "italian": "analogie adatte all'età e esempi brevi e visivi",
+      "explanation": "Davanti a parola che inizia per vocale si usa \"ed\" (\"e esempi\" è poco corretto).",
+      "suggestion": "analogie adatte all'età ed esempi brevi e visivi",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "more worked examples beyond the textbook",
+      "italian": "più esempi lavorati oltre al manuale",
+      "explanation": "\"Esempi lavorati\" è un calco di \"worked examples\"; poco naturale in italiano.",
+      "suggestion": "più esempi svolti passo passo oltre al manuale",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "how the key-value pair concept scales from small scripts",
+      "italian": "si scala da piccoli script",
+      "explanation": "\"Si scala\" è un calco innaturale di \"scales\".",
+      "suggestion": "può crescere da piccoli script a grandi applicazioni",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "many runnable code snippets",
+      "italian": "molti frammenti di codice provabili",
+      "explanation": "\"Provabili\" è innaturale; il senso è \"eseguibili\".",
+      "suggestion": "molti frammenti di codice eseguibili",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "a built-in online code runner",
+      "italian": "un esecutore di codice online integrato",
+      "explanation": "\"Esecutore di codice\" suona poco naturale.",
+      "suggestion": "un editor online per eseguire il codice, integrato nella pagina",
+      "part": 1
+    }
+  ]
+}

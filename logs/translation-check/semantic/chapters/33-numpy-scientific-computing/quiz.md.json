@@ -1,0 +1,46 @@
+{
+  "file": "chapters/33-numpy-scientific-computing/quiz.md",
+  "hash": "6b4d4fd378333210b24d5df1c707d4e0cf21b8aea1d255147e9ffb46fd66ed75",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0408,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Test your understanding of NumPy arrays, element-wise math, broadcasting, array creation, slicing, and statistical functions",
+      "italian": "dello slicing, e delle funzioni statistiche",
+      "explanation": "In italiano non si mette la virgola prima dell'ultima \"e\" di un elenco. Anche in \"manuale, ed esempio\" la \"ed\" è inutile.",
+      "suggestion": "\"dello slicing e delle funzioni statistiche\"; \"manuale ed esempio\" → \"manuale e ogni esempio\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Array Slicing: NumPy arrays cannot be sliced — you must use `np.select()` instead",
+      "italian": "Gli array NumPy non possono essere tagliati — devi usare `np.select()` invece",
+      "explanation": "\"Tagliati\" non è coerente con \"slicing/slice\" usato altrove nella sezione. Anche \"invece\" in fondo suona poco naturale.",
+      "suggestion": "\"Gli array NumPy non possono essere affettati (sliced) — devi usare invece `np.select()`\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "NumPy array slices are views (changes to the slice affect the original)",
+      "italian": "Gli slice degli array NumPy sono vedute",
+      "explanation": "\"Vedute\" è una traduzione poco usata di \"view\". Sarebbe più chiaro mantenere \"view\", come si fa in altri punti.",
+      "suggestion": "\"sono view (viste sullo stesso array)\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "NumPy \"broadcasts\" the value `10` across all elements",
+      "italian": "NumPy \"trasmette\" il valore `10` attraverso tutti gli elementi",
+      "explanation": "\"Attraverso\" è un calco dall'inglese e poco naturale.",
+      "suggestion": "\"NumPy \\\"trasmette\\\" il valore `10` a tutti gli elementi\"",
+      "part": 1
+    }
+  ]
+}

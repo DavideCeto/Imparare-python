@@ -1,0 +1,64 @@
+{
+  "file": "chapters/22-advanced-collections/references.md",
+  "hash": "4a278e85e1ee5445c1a03fd7403fb962b2cb72cfc0c8b0c5619d5645f42cea64",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0279,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "the abstract data type that underlies Python dictionaries",
+      "italian": "il tipo di dato abstract che sta alla base dei dizionari Python",
+      "explanation": "\"abstract\" è lasciato in inglese, ma esiste il termine italiano \"astratto\".",
+      "suggestion": "il tipo di dato astratto che sta alla base dei dizionari Python",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "An excellent companion for this chapter",
+      "italian": "Un eccellente compagno per questo capitolo",
+      "explanation": "Calco dall'inglese, poco naturale; \"eccellente\" va con \"un ottimo\" e \"compagno\" suona strano per un libro.",
+      "suggestion": "Un ottimo libro di accompagnamento per questo capitolo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Covers functions that accept other functions as arguments or return them",
+      "italian": "Copre le funzioni che accettano altre funzioni come argomenti o le restituiscono",
+      "explanation": "\"Copre\" è un calco di \"covers\"; poco naturale.",
+      "suggestion": "Tratta le funzioni che accettano altre funzioni come argomenti o le restituiscono",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "for real file-manipulation and data-processing tasks",
+      "italian": "a veri compiti di manipolazione di file e elaborazione di dati",
+      "explanation": "\"e elaborazione\" dovrebbe essere \"ed elaborazione\"; \"veri compiti\" è poco naturale.",
+      "suggestion": "a compiti reali di manipolazione di file ed elaborazione di dati",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "`map`, `filter`, and `sorted`",
+      "italian": "`map`, `filter`, e `sorted`",
+      "explanation": "In italiano non si mette la virgola prima di \"e\" nelle elenchi (ripetuto in più voci).",
+      "suggestion": "`map`, `filter` e `sorted`",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "compact, Pythonic collection expressions",
+      "italian": "espressioni di collezione compatte e Pythonic",
+      "explanation": "\"Pythonic\" lasciato in inglese senza spiegazione per studenti 13-15 anni; \"espressioni di collezione\" è un calco.",
+      "suggestion": "espressioni compatte per le collezioni, nello stile tipico di Python",
+      "part": 1
+    }
+  ]
+}

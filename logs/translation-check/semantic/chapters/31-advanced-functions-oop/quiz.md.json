@@ -1,0 +1,64 @@
+{
+  "file": "chapters/31-advanced-functions-oop/quiz.md",
+  "hash": "00689da3a9b93e3e5936a86fc6fd919d7e93f20d37e537061eca02b87338cce8",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0393,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "is accessed like an attribute",
+      "italian": "viene accesso come un attributo",
+      "explanation": "\"accesso\" non è il participio corretto di \"accedere\" in questo uso passivo; la frase è scorretta.",
+      "suggestion": "che si usa come un attributo / a cui si accede come a un attributo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "**Concept Tested:** map()",
+      "italian": "**Concept Tested:** map()",
+      "explanation": "L'etichetta \"Concept Tested\" è prosa rimasta in inglese (ripetuta in tutte le risposte); il nome del concetto può restare in inglese.",
+      "suggestion": "**Concetto verificato:** map()",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Wrap it with `list()`",
+      "italian": "Racchiudilo con `list()`",
+      "explanation": "Formulazione poco naturale in italiano.",
+      "suggestion": "Passalo a `list()` / Convertilo con `list()`",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "A list of only the truthy items",
+      "italian": "una lista di solo gli elementi truthy",
+      "explanation": "Costruzione poco naturale.",
+      "suggestion": "una lista dei soli elementi truthy",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "inheritance",
+      "italian": "l'eredità multipla",
+      "explanation": "In informatica si usa \"ereditarietà\" per inheritance; \"eredità\" è meno corretto.",
+      "suggestion": "ereditarietà multipla / ereditarietà",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "`False` (not every item is True)",
+      "italian": "non ogni elemento è True",
+      "explanation": "Formulazione innaturale.",
+      "suggestion": "non tutti gli elementi sono True",
+      "part": 1
+    }
+  ]
+}

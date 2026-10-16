@@ -1,0 +1,55 @@
+{
+  "file": "chapters/34-image-processing-pillow/index.md",
+  "hash": "407abad2d63725eb1a54e87018a8be64544148588e8148e1e5b6b0f9f2f7d744",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.062,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Open, display, resize, crop, convert, and save images",
+      "italian": "Apri, mostra, ridimensiona, ritaglia, converti, e salva immagini",
+      "explanation": "Uso della virgola prima dell'ultimo elemento dell'elenco (stile inglese, 'Oxford comma'), innaturale in italiano; ricorre in tutto il testo.",
+      "suggestion": "Apri, mostra, ridimensiona, ritaglia, converti e salva immagini",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "The method constants live in `Image.Transpose` (or the older `Image` namespace)",
+      "italian": "Le costanti del metodo vivono in `Image.Transpose` (o nel namespace `Image` più vecchio)",
+      "explanation": "'vivono' è un calco letterale dell'inglese e 'più vecchio' è poco naturale.",
+      "suggestion": "Le costanti dei metodi si trovano in `Image.Transpose` (o nel vecchio namespace `Image`)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "The code below has a function stub for `brighten(image, amount)`.",
+      "italian": "Il codice sotto ha una funzione stub per `brighten(image, amount)`.",
+      "explanation": "'stub' è un termine oscuro per studenti di 13-15 anni.",
+      "suggestion": "Il codice sotto contiene una funzione `brighten(image, amount)` da completare.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "you see a gradient that shifts from dark to bright in two directions",
+      "italian": "vedi un gradiente che passa da scuro a brillante in due direzioni",
+      "explanation": "'brillante' per 'bright' è poco naturale riferito ai colori; meglio 'chiaro'. Vale anche per 'linee brillanti'.",
+      "suggestion": "da scuro a chiaro; 'linee luminose'",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Try these changes.",
+      "italian": "Prova questi cambiamenti.",
+      "explanation": "Formulazione un po' calcata sull'inglese.",
+      "suggestion": "Prova queste modifiche.",
+      "part": 1
+    }
+  ]
+}

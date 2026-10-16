@@ -1,0 +1,46 @@
+{
+  "file": "chapters/36-computational-thinking-best-practices/references.md",
+  "hash": "6f7202dd9ed5d673a9eb0d97766ee2c304364e52b76aec9a15f093435f185084",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0239,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "abstraction, and algorithm design",
+      "italian": "abstraction, e design degli algoritmi",
+      "explanation": "\"Abstraction\" è lasciato in inglese nella prosa (anche nei punti 3 e 6); in italiano esiste \"astrazione\". \"Design\" è anglicismo evitabile.",
+      "suggestion": "astrazione e progettazione degli algoritmi",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "easier to read, maintain, and debug",
+      "italian": "più facili da leggere, mantenere, e fare debug",
+      "explanation": "Virgola prima della \"e\" non naturale in italiano e costruzione \"fare debug\" poco armoniosa.",
+      "suggestion": "più facili da leggere, mantenere e correggere (debug)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Covers how abstraction lets programmers hide complexity",
+      "italian": "Copre come l'abstraction permette ai programmatori",
+      "explanation": "\"Copre come\" è un calco dall'inglese, e \"abstraction\" non è tradotto.",
+      "suggestion": "Spiega come l'astrazione permette ai programmatori di nascondere la complessità",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "covering naming conventions, documentation, and refactoring",
+      "italian": "le convenzioni di denominazione, la documentazione, e il refactoring",
+      "explanation": "Virgola prima della \"e\" non adatta all'italiano; stessa cosa nel punto 10.",
+      "suggestion": "le convenzioni di denominazione, la documentazione e il refactoring",
+      "part": 1
+    }
+  ]
+}

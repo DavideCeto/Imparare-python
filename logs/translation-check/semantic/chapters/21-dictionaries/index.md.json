@@ -1,0 +1,28 @@
+{
+  "file": "chapters/21-dictionaries/index.md",
+  "hash": "17df7e866dec00ec17de319b2a2eac60f4e528f8a4f5a6d653ad1e62fa1ba8d3",
+  "model": "sonnet",
+  "score": 5,
+  "parts": 1,
+  "cost_usd": 0.0533,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Three dictionary methods give you different views of the data",
+      "italian": "Tre metodi del dizionario ti danno diverse vedute dei dati",
+      "explanation": "\"Vedute\" suona poco naturale per studenti; meglio \"viste\" o \"modi di vedere\".",
+      "suggestion": "Tre metodi del dizionario ti danno viste diverse dei dati:",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Add, update, and remove entries, and iterate over keys, values, and items",
+      "italian": "Aggiungere, aggiornare, e rimuovere voci, e iterare su chiavi, valori, e coppie",
+      "explanation": "In italiano non si usa la virgola prima della \"e\" nelle enumerazioni (virgola seriale all'inglese).",
+      "suggestion": "Aggiungere, aggiornare e rimuovere voci, e iterare su chiavi, valori e coppie",
+      "part": 1
+    }
+  ]
+}

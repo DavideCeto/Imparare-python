@@ -1,0 +1,37 @@
+{
+  "file": "chapters/19-booleans-and-conditionals/index.md",
+  "hash": "db976beda42af4c1502e8b660441282442aa79e59dc209d585430ca2e8b20690",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0522,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Everything else is **truthy** — including non-zero numbers, non-empty strings, and non-empty lists.",
+      "italian": "inclusi i numeri diversi da zero, le stringhe non vuote, e le liste non vuote.",
+      "explanation": "La virgola prima di \"e\" nell'elenco è innaturale in italiano (vale anche per altri elenchi).",
+      "suggestion": "inclusi i numeri diversi da zero, le stringhe non vuote e le liste non vuote.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Python treats lots of things as True or False",
+      "italian": "Sapevi che Python tratta molte cose come True o False",
+      "explanation": "Lieve: \"Benvenuto/a\" va bene, ma \"Programmiamo insieme!\" ok. Nessun problema di senso; solo la frase \"sistema di verità\" è un po' calco.",
+      "suggestion": "come funziona davvero il modo in cui Python decide cosa è vero o falso",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "**You'll know it worked when** entering `85` gives \"B\".",
+      "italian": "**Saprai che ha funzionato quando** inserendo `85` dà \"B\".",
+      "explanation": "Costruzione grammaticalmente scorretta (gerundio senza soggetto coerente).",
+      "suggestion": "**Saprai che ha funzionato quando** inserendo `85` ottieni \"B\".",
+      "part": 1
+    }
+  ]
+}

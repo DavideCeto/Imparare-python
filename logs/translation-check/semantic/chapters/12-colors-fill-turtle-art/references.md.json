@@ -1,0 +1,46 @@
+{
+  "file": "chapters/12-colors-fill-turtle-art/references.md",
+  "hash": "a015d417a381fae111a8e6e778b1a5cebbe0a069ec7c9524f9e45b53f945f047",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0193,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Includes runnable examples that demonstrate the same concepts",
+      "italian": "Include esempi provabili che mostrano gli stessi concetti",
+      "explanation": "\"Provabili\" è poco naturale in italiano per \"runnable\".",
+      "suggestion": "Include esempi eseguibili che mostrano gli stessi concetti",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "additional worked examples beyond what the chapter provides",
+      "italian": "esempi lavorati aggiuntivi oltre a quelli forniti dal capitolo",
+      "explanation": "\"Esempi lavorati\" è un calco dall'inglese e suona innaturale.",
+      "suggestion": "esempi svolti in più rispetto a quelli del capitolo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "how red, green, and blue light values combine",
+      "italian": "i valori di luce rossa, verde, e blu si combinano",
+      "explanation": "Virgola prima della \"e\" non usata in italiano (ripetuto in più elenchi).",
+      "suggestion": "i valori di luce rossa, verde e blu si combinano",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "Directly relevant to this chapter's coverage of color names",
+      "italian": "Direttamente rilevante per la trattazione di questo capitolo sui nomi dei colori",
+      "explanation": "Frase un po' formale e calcata dall'inglese (\"rilevante\").",
+      "suggestion": "Utile per gli argomenti del capitolo: nomi dei colori e terne RGB nel modulo turtle di Python.",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "file": "chapters/25-object-oriented-programming/references.md",
+  "hash": "51523661b124037709c0f1021e8198eb8b811cda77eea9ab1f41e81d3b75da7a",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0275,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "well-paced for students new to object-oriented thinking",
+      "italian": "ben ritmato per studenti nuovi al pensiero orientato agli oggetti",
+      "explanation": "\"Ben ritmato\" è un calco poco naturale; meglio una formulazione più chiara per ragazzi.",
+      "suggestion": "con un ritmo graduale, adatto a chi si avvicina per la prima volta alla programmazione a oggetti",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "omission",
+      "english": "Chapters 9 covers classes in Python",
+      "italian": "Il Capitolo 9 copre le classi in Python",
+      "explanation": "Lieve: il testo originale ha un errore (\"Chapters 9 covers\"), la traduzione è corretta. Nessun problema reale.",
+      "suggestion": "Nessuna modifica necessaria.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Covers how classes work as blueprints for creating objects",
+      "italian": "Copre come le classi funzionano come progetti per creare oggetti",
+      "explanation": "Frase calcata dall'inglese; \"progetti\" per blueprint e \"Copre come\" suonano poco naturali.",
+      "suggestion": "Spiega come le classi funzionano da modelli (o \"schemi\") per creare oggetti",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "multiple worked examples",
+      "italian": "molteplici esempi lavorati",
+      "explanation": "\"Esempi lavorati\" è un calco da \"worked examples\".",
+      "suggestion": "numerosi esempi svolti",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "short runnable examples",
+      "italian": "esempi brevi e provabili",
+      "explanation": "\"Provabili\" è innaturale.",
+      "suggestion": "esempi brevi che si possono eseguire",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "encapsulation, inheritance, and polymorphism",
+      "italian": "incapsulamento, eredità, e polimorfismo",
+      "explanation": "In italiano non si usa la virgola prima della \"e\" finale in un elenco (anche in altri punti: \"`__init__`, e `self`\").",
+      "suggestion": "incapsulamento, eredità e polimorfismo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "ages 10–13",
+      "italian": "studenti dai 10 ai 13 anni",
+      "explanation": "Corretto, ma \"studenti\" è ripetuto nella stessa frase (\"giovani studenti ... studenti\").",
+      "suggestion": "accessibili ai ragazzi dai 10 ai 13 anni",
+      "part": 1
+    }
+  ]
+}

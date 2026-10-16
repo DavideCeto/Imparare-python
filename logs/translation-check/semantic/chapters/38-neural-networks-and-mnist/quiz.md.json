@@ -1,0 +1,46 @@
+{
+  "file": "chapters/38-neural-networks-and-mnist/quiz.md",
+  "hash": "8600ceaedb13ba0e448ca347b5a77be6de25326a79b3d0a33d321d7b0ec2d8c8",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.043,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "a kernel learned in the training set that does not work on the test set",
+      "italian": "Un kernel imparato nel set di training che non funziona sul set di test",
+      "explanation": "Nessun errore grave, ma \"Concept Tested\" lasciato in inglese è convenzione; non da segnalare. Qui nota solo: \"rilevano pattern\" ok.",
+      "suggestion": "Nessuna modifica necessaria.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "whether it appears in the top-left or bottom-right of the image",
+      "italian": "che appaia in alto a sinistra o in basso a destra dell'immagine",
+      "explanation": "La frase \"una caratteristica ... che appaia\" è sintatticamente poco chiara; manca \"sia che\".",
+      "suggestion": "\"...una caratteristica — come la curva in cima a un \"6\" — sia che appaia in alto a sinistra sia che appaia in basso a destra dell'immagine.\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Keeps only the top 50% of neurons by weight magnitude",
+      "italian": "Mantiene solo il 50% superiore dei neuroni per grandezza del peso",
+      "explanation": "Formulazione poco naturale per studenti.",
+      "suggestion": "\"Mantiene solo il 50% dei neuroni con i pesi più grandi\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Converts the 2-D feature maps ... Normalizes all pixel values to be between 0 and 1",
+      "italian": "Normalizza tutti i valori dei pixel per essere tra 0 e 1",
+      "explanation": "Costruzione non corretta in italiano.",
+      "suggestion": "\"Normalizza tutti i valori dei pixel in modo che siano tra 0 e 1\"",
+      "part": 1
+    }
+  ]
+}

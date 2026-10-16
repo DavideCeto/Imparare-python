@@ -1,0 +1,65 @@
+{
+  "file": "chapters/35-advanced-turtle-event-driven/quiz.md",
+  "hash": "657107c01554a2cf4afff13a226ec3c203c658112d0118c556bd4cd9f641fa3e",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0434,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "**Concept Tested:** Event-Driven Model",
+      "italian": "**Concept Tested:** Event-Driven Model",
+      "explanation": "L'etichetta \"Concept Tested\" è rimasta in inglese in tutte le risposte; la prosa andrebbe tradotta (il nome del concetto può restare).",
+      "suggestion": "**Concetto verificato:** Event-Driven Model",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "A function you write that is passed as an argument and called automatically",
+      "italian": "Una funzione che scrivi che viene passata come argomento e chiamata automaticamente",
+      "energy": "",
+      "explanation": "Doppio \"che\" ravvicinato, frase pesante.",
+      "suggestion": "Una funzione che scrivi tu, viene passata come argomento e viene chiamata automaticamente quando si verifica un evento specifico",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Detects single vs double clicks",
+      "italian": "Rileva i clic singoli contro quelli doppi",
+      "explanation": "\"contro\" è calco poco naturale.",
+      "suggestion": "Distingue i clic singoli da quelli doppi",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the event system fills them in automatically",
+      "italian": "il sistema di eventi li riempie automaticamente",
+      "explanation": "Formulazione calcata; meglio \"assegna i valori\".",
+      "suggestion": "il sistema di eventi fornisce automaticamente i valori",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "you want to stamp a dot at a click location",
+      "italian": "vuoi timbrare un punto in una posizione cliccata",
+      "explanation": "\"timbrare\" è innaturale in italiano.",
+      "suggestion": "vuoi disegnare un punto nel punto in cui hai cliccato",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the code after it does not run until the window is closed",
+      "italian": "il codice dopo di essa non gira finché",
+      "explanation": "\"gira\" e \"girare\" per \"run\" sono colloquiali; \"non viene eseguito\" è più chiaro.",
+      "suggestion": "il codice che la segue non viene eseguito finché la finestra non viene chiusa",
+      "part": 1
+    }
+  ]
+}

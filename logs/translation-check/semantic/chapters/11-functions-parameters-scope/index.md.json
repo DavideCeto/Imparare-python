@@ -1,0 +1,55 @@
+{
+  "file": "chapters/11-functions-parameters-scope/index.md",
+  "hash": "65430700053a740056a725132a1edb4bb6e970f374de54400b239b1ed17d3085",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0646,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Make your guess, then click Run!",
+      "italian": "Fai la tua previsione, poi clicca Esegui!",
+      "explanation": "Il pulsante nel laboratorio resta \"Run\" (convenzione del progetto), ma il testo dice \"Esegui\": incoerenza con l'interfaccia.",
+      "suggestion": "poi clicca Run!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "the local one **shadows** the global one",
+      "italian": "quella locale **oscura** (shadow) quella globale",
+      "explanation": "Il termine è ok, ma altrove \"tartaruga\" e \"turtle\" sono alternati e \"size\" è usato come termine in italiano (\"la size predefinita\"), poco naturale.",
+      "suggestion": "Usare \"la dimensione predefinita (size)\" e un termine coerente per turtle/tartaruga.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "Watch how keyword arguments make the call read like plain English:",
+      "italian": "fanno leggere la chiamata come inglese semplice:",
+      "explanation": "Per studenti italiani suona strano; l'originale intende linguaggio naturale.",
+      "suggestion": "fanno leggere la chiamata come una frase normale:",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "It only exists while the function runs.",
+      "italian": "Esiste solo mentre la funzione gira.",
+      "explanation": "\"gira\" è colloquiale/calco; meglio \"viene eseguita\".",
+      "suggestion": "Esiste solo mentre la funzione viene eseguita.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "The key word `global score`",
+      "italian": "La parola chiave `global score`",
+      "explanation": "Più preciso: è l'istruzione `global score`, non una parola chiave unica.",
+      "suggestion": "L'istruzione `global score` dentro la funzione dice a Python...",
+      "part": 1
+    }
+  ]
+}

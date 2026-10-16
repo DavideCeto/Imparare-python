@@ -1,0 +1,56 @@
+{
+  "file": "chapters/32-data-visualization-matplotlib/index.md",
+  "hash": "d52d46e003b0180e36d4f3451183994057abb7dc7d44f7fc35849877e1bffaf4",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0593,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "The simplest pattern is:",
+      "italian": "Il pattern più semplice è:",
+      "explanation": "Calco: \"pattern\" è accettabile ma poco chiaro per studenti; meglio un termine italiano.",
+      "suggestion": "Lo schema più semplice è:",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "draws a line connecting the given data points.\n`plt.show()` renders the chart.",
+      "italian": "disegna una linea che collega i punti di dati dati.\n`plt.show()` rende il grafico.",
+      "issues": "",
+      "explanation": "\"dati dati\" è cacofonico; \"rende il grafico\" è un calco innaturale di \"renders\".",
+      "suggestion": "collega i punti dati forniti... `plt.show()` mostra il grafico.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Scientists, journalists, business analysts, and game developers all use charts",
+      "italian": "Scienziati, giornalisti, analisti di business, e sviluppatori di giochi usano tutti grafici",
+      "explanation": "Virgola prima della \"e\" non usuale in italiano (presente in tutto il testo).",
+      "suggestion": "Eliminare la virgola prima di \"e\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "A chart can communicate in one second what a table of numbers takes minutes to understand.",
+      "italian": "quello che una tabella di numeri richiede minuti per essere capita",
+      "explanation": "Frase poco scorrevole.",
+      "suggestion": "ciò che una tabella di numeri impiega minuti a farti capire",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Plotting Multiple Lines",
+      "italian": "Disegnare Linee Multiple",
+      "explanation": "\"Linee multiple\" è un calco; meglio \"più linee\".",
+      "suggestion": "Disegnare Più Linee",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "file": "chapters/13-user-input-type-conversion/references.md",
+  "hash": "f060aa511c0c0dfd854910373f9859226b132ab77fccb94659e9ebbf7fd9a165",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0228,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "including converting input to integers",
+      "italian": "incluso la conversione dell'input in interi",
+      "explanation": "\"incluso\" seguito da sostantivo femminile è scorretto; meglio \"inclusa\" o \"compresa\". Inoltre \"a fondo\" è posto in modo poco naturale.",
+      "suggestion": "Il Capitolo 7 tratta a fondo l'input dell'utente e la funzione `input()`, compresa la conversione dell'input in interi...",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "addition",
+      "english": "ideal supplementary reading for students ages 10–13 new to Python",
+      "italian": "per studenti dai 10 ai 13 anni nuovi a Python",
+      "explanation": "Costruzione poco scorrevole in italiano.",
+      "suggestion": "per studenti dai 10 ai 13 anni che si avvicinano a Python",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "with worked examples",
+      "italian": "con esempi lavorati",
+      "explanation": "\"esempi lavorati\" è un calco dall'inglese, innaturale.",
+      "suggestion": "con esempi svolti",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Describes standard input (stdin), output (stdout), and error streams",
+      "italian": "Descrive lo stream standard di input (stdin), output (stdout), ed errore nell'informatica.",
+      "explanation": "Frase poco naturale; \"ed errore\" e \"nell'informatica\" suonano forzati.",
+      "suggestion": "Descrive gli stream standard di input (stdin), output (stdout) ed errore (stderr) in informatica.",
+      "part": 1
+    }
+  ]
+}
