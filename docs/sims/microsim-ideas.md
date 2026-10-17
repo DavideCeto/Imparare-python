@@ -1,904 +1,950 @@
 ---
-title: MicroSim Ideas for Beginning Python
-description: A prioritized, Bloom-classified list of proposed MicroSims for the Beginning Python textbook, with an implementation plan for each.
+title: Idee di MicroSim per Beginning Python
+description: Un elenco con priorità, classificato secondo Bloom, delle MicroSim proposte per il manuale Beginning Python, con un piano di implementazione per ciascuna.
 status: draft-for-review
 ---
-# MicroSim Ideas for Beginning Python
+# Idee di MicroSim per Beginning Python
 
-**Status: Draft for review — no sims have been generated yet.**
+**Stato: bozza da rivedere — nessuna sim è stata ancora generata.**
 
-This document was produced by scanning all 38 chapters in `docs/chapters/`, the
-17 Python labs, the learning graph, and the turtle graphics gallery. Every
-chapter already has strong Skulpt/CodeMirror "see it, run it, modify it" labs,
-so these proposals deliberately avoid duplicating what a run-the-code lab
-already does well. Instead, each proposed MicroSim targets **invisible
-machinery** — the mental models (memory, control flow, the call stack, hash
-lookup, convolution) that students cannot see in program output alone.
+Questo documento è stato prodotto analizzando tutti i 38 capitoli in `docs/chapters/`, i
+17 laboratori Python, il grafo di apprendimento e la galleria di grafica turtle. Ogni
+capitolo ha già degli ottimi laboratori Skulpt/CodeMirror del tipo "guardalo, eseguilo,
+modificalo", quindi queste proposte evitano di proposito di duplicare ciò che un laboratorio
+in cui si esegue il codice fa già bene. Ogni MicroSim proposta si concentra invece sui
+**meccanismi invisibili**: i modelli mentali (memoria, flusso di controllo, stack delle
+chiamate, ricerca per hash, convoluzione) che gli studenti non possono vedere solo
+guardando l'output del programma.
 
-## Design Ground Rules
+## Regole di base per il progetto
 
-All proposals follow the `microsim-generator` skill conventions:
+Tutte le proposte seguono le convenzioni della skill `microsim-generator`:
 
-- **Directory:** `docs/sims/<sim-id>/` with `main.html`, `<sim-id>.js`,
-  `index.md`, and `metadata.json` (scaffolded by `generate-sim-scaffold.py`)
-- **Library routing** follows the generator's routing table (p5.js for custom
-  simulations, Chart.js for charts, Plotly for f(x) plots, vis-network for
-  node/edge graphs, custom HTML for Venn and table sims)
-- **Interaction pattern matches the Bloom level** (generator Step 3.2):
-  Understand-level sims use **step-through** (Next/Previous buttons, concrete
-  data visible), never continuous animation; Apply-level sims use **parameter
-  sliders with immediate feedback**; Analyze-level sims use **comparison and
-  exploration tools**; Create-level sims use **builders and canvases**
-- Every `.js` file declares `// CANVAS_HEIGHT: <n>` in its first 10 lines;
-  iframe height = CANVAS_HEIGHT + 2; iframes are relative-path,
-  `scrolling="no"`, no `style` attribute
-- Audience is ages 10–14: one concept per sim, large touch-friendly controls,
-  no jargon in labels
+- **Cartella:** `docs/sims/<sim-id>/` con `main.html`, `<sim-id>.js`,
+  `index.md` e `metadata.json` (struttura creata da `generate-sim-scaffold.py`)
+- **La scelta della libreria** segue la tabella di instradamento del generatore (p5.js per
+  le simulazioni personalizzate, Chart.js per i grafici, Plotly per i grafici di f(x),
+  vis-network per i grafi di nodi e archi, HTML personalizzato per le sim con diagrammi di
+  Venn e tabelle)
+- **Lo schema di interazione corrisponde al livello di Bloom** (Step 3.2 del generatore):
+  le sim di livello Comprendere usano l'**avanzamento passo passo** (pulsanti Next/Previous,
+  dati concreti visibili), mai un'animazione continua; le sim di livello Applicare usano
+  **cursori dei parametri con riscontro immediato**; le sim di livello Analizzare usano
+  **strumenti di confronto ed esplorazione**; le sim di livello Creare usano **strumenti di
+  costruzione e canvas**
+- Ogni file `.js` dichiara `// CANVAS_HEIGHT: <n>` nelle prime 10 righe;
+  altezza dell'iframe = CANVAS_HEIGHT + 2; gli iframe usano percorsi relativi,
+  `scrolling="no"` e nessun attributo `style`
+- Il pubblico ha 10–14 anni: un concetto per sim, controlli grandi e adatti al tocco,
+  niente gergo tecnico nelle etichette
 
-### Revised (2001) Bloom's Taxonomy Quick Reference
+### Promemoria della Tassonomia di Bloom rivista (2001)
 
-| Level | Cognitive Process | Typical Verbs |
+| Livello | Processo cognitivo | Verbi tipici |
 |-------|-------------------|---------------|
-| 1. Remember | Retrieve knowledge | recognize, recall, list, identify, name |
-| 2. Understand | Construct meaning | explain, interpret, classify, summarize, infer, compare, predict, exemplify |
-| 3. Apply | Carry out a procedure | execute, implement, use, demonstrate, solve |
-| 4. Analyze | Break into parts, relate | differentiate, organize, attribute, contrast, debug, deconstruct |
-| 5. Evaluate | Judge against criteria | check, critique, judge, justify, defend, test |
-| 6. Create | Assemble something new | generate, plan, design, produce, construct, compose |
+| 1. Ricordare | Recuperare conoscenze | riconoscere, richiamare, elencare, identificare, nominare |
+| 2. Comprendere | Costruire significato | spiegare, interpretare, classificare, riassumere, dedurre, confrontare, prevedere, esemplificare |
+| 3. Applicare | Eseguire una procedura | eseguire, implementare, usare, dimostrare, risolvere |
+| 4. Analizzare | Scomporre in parti e collegarle | differenziare, organizzare, attribuire, contrapporre, fare debug, scomporre |
+| 5. Valutare | Giudicare in base a criteri | verificare, criticare, giudicare, motivare, difendere, testare |
+| 6. Creare | Assemblare qualcosa di nuovo | generare, pianificare, progettare, produrre, costruire, comporre |
 
-## Priority Summary
+## Riepilogo delle priorità
 
-| Tier | Focus | Sims | Rationale |
+| Priorità | Ambito | Sim | Motivazione |
 |------|-------|------|-----------|
-| 1 | Core mental models (Ch 1–10) | 11 | The book's foundation; misconceptions formed here persist for years |
-| 2 | Data and functions (Ch 11–20) | 9 | Indexing, scope, and collections are the top sources of beginner bugs |
-| 3 | Intermediate CS (Ch 21–30) | 10 | Call stack, hashing, and algorithms are classic "must-visualize" topics |
-| 4 | Advanced topics (Ch 31–38) | 6 | Smaller audience reaches these chapters; still high value per sim |
+| 1 | Modelli mentali di base (Cap. 1–10) | 11 | Le fondamenta del libro; le idee sbagliate che si formano qui durano per anni |
+| 2 | Dati e funzioni (Cap. 11–20) | 9 | Indici, scope e collezioni sono le principali fonti di bug per i principianti |
+| 3 | Informatica di livello intermedio (Cap. 21–30) | 10 | Stack delle chiamate, hashing e algoritmi sono classici argomenti "da visualizzare per forza" |
+| 4 | Argomenti avanzati (Cap. 31–38) | 6 | Meno lettori arrivano a questi capitoli, ma ogni sim ha comunque molto valore |
 
 ---
 
-## Tier 1 — Core Mental Models (Chapters 1–10)
+## Priorità 1 — Modelli mentali di base (Capitoli 1–10)
 
-### 1. Code Stepper (`code-stepper`)
+### 1. Esecutore passo passo (`code-stepper`)
 
-- **Chapter:** 1–2 (Welcome to Python; Python Code Structure)
-- **Concept and gap:** Students run whole programs and see only final output.
-  They never see the interpreter walking the code top to bottom, one line at
-  a time — the single most fundamental mental model in programming.
-- **Bloom (2001):** Understand — *explain, predict, trace*
-- **Learning objective:** The student will be able to predict which line of a
-  short Python program executes next and explain that Python runs statements
-  in order, top to bottom.
-- **Library:** p5.js (custom step-through simulation)
-- **Interaction pattern:** Step-through with Next / Previous / Reset buttons
-  (no continuous animation — this is an Understand-level objective)
-- **Implementation plan:**
-    - Left panel: a fixed 6–8 line program (print statements, a variable, a
-      comment) with the current line highlighted by a moving arrow
-    - Right panel: the output console that grows one line per step, plus a
-      small "skipped — it's a comment" callout when the arrow passes a comment
-    - Dropdown to swap among 3 preset programs of increasing trickiness
-    - Buttons: Next Step, Previous Step, Reset; step counter display
-    - Estimated `CANVAS_HEIGHT: 460` (400 draw + 60 controls)
+- **Capitolo:** 1–2 (Benvenuto in Python; Struttura del codice Python)
+- **Concetto e lacuna:** gli studenti eseguono programmi interi e vedono solo l'output
+  finale. Non vedono mai l'interprete percorrere il codice dall'alto verso il basso, una riga
+  alla volta: il modello mentale più fondamentale della programmazione.
+- **Bloom (2001):** Comprendere — *spiegare, prevedere, seguire l'esecuzione*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di prevedere quale riga di un
+  breve programma Python verrà eseguita dopo e di spiegare che Python esegue le istruzioni
+  in ordine, dall'alto verso il basso.
+- **Libreria:** p5.js (simulazione personalizzata passo passo)
+- **Schema di interazione:** avanzamento passo passo con i pulsanti Next / Previous / Reset
+  (niente animazione continua: è un obiettivo di livello Comprendere)
+- **Piano di implementazione:**
+    - Pannello sinistro: un programma fisso di 6–8 righe (istruzioni print, una variabile, un
+      commento) con la riga corrente evidenziata da una freccia che si sposta
+    - Pannello destro: la console di output, che cresce di una riga a ogni passo, più un
+      piccolo riquadro "saltata: è un commento" quando la freccia passa su un commento
+    - Menu a tendina per scegliere tra 3 programmi predefiniti, via via più insidiosi
+    - Pulsanti: Next Step, Previous Step, Reset; contatore dei passi
+    - `CANVAS_HEIGHT` stimato: `460` (400 per il disegno + 60 per i controlli)
 
-### 2. Variable Memory Model (`variable-memory-model`)
+### 2. Modello della memoria delle variabili (`variable-memory-model`)
 
-- **Chapter:** 3 (Variables and Numbers)
-- **Concept and gap:** `score = 10` is invisible magic. The sticky-note
-  metaphor is described in prose but never shown operating. Reassignment
-  ("the old value is replaced") is a common misconception point.
-- **Bloom (2001):** Understand — *explain, interpret, predict*
-- **Learning objective:** The student will be able to explain what happens in
-  memory when a variable is created, read, and reassigned.
-- **Library:** p5.js
-- **Interaction pattern:** Step-through of a short assignment script; labeled
-  memory boxes update per step
-- **Implementation plan:**
-    - Top: 5-line script (`score = 10`, `lives = 3`, `score = score + 5`, …)
-      with current-line highlight
-    - Bottom: named memory boxes; on reassignment the old value visibly pops
-      out and the new value drops in; reads draw an arrow from box to
-      expression
-    - Prediction prompt before the `score = score + 5` step: "What will the
-      box hold?" with a 3-choice click check
-    - Buttons: Next, Reset; preset selector (numbers, strings, mixed)
-    - Estimated `CANVAS_HEIGHT: 480`
+- **Capitolo:** 3 (Variabili e numeri)
+- **Concetto e lacuna:** `score = 10` è una magia invisibile. La metafora del foglietto
+  adesivo è descritta a parole ma non si vede mai in azione. La riassegnazione ("il vecchio
+  valore viene sostituito") è un punto in cui nascono spesso idee sbagliate.
+- **Bloom (2001):** Comprendere — *spiegare, interpretare, prevedere*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di spiegare che cosa succede in
+  memoria quando una variabile viene creata, letta e riassegnata.
+- **Libreria:** p5.js
+- **Schema di interazione:** avanzamento passo passo in un breve script di assegnazioni; le
+  caselle di memoria con l'etichetta si aggiornano a ogni passo
+- **Piano di implementazione:**
+    - In alto: uno script di 5 righe (`score = 10`, `lives = 3`, `score = score + 5`, …)
+      con la riga corrente evidenziata
+    - In basso: caselle di memoria con un nome; alla riassegnazione il vecchio valore salta
+      fuori in modo visibile e quello nuovo ci cade dentro; le letture disegnano una freccia
+      dalla casella all'espressione
+    - Domanda di previsione prima del passo `score = score + 5`: "Che cosa conterrà la
+      casella?", con una verifica a 3 scelte da cliccare
+    - Pulsanti: Next, Reset; selettore di esempi predefiniti (numeri, stringhe, misti)
+    - `CANVAS_HEIGHT` stimato: `480`
 
-### 3. Function Call Flow (`function-call-flow`)
+### 3. Flusso di una chiamata di funzione (`function-call-flow`)
 
-- **Chapter:** 4 (Functions and Objects), reused in 11
-- **Concept and gap:** Students cannot see the argument → parameter binding,
-  the jump into the function body, or the return value flowing back. "Why
-  doesn't `def` run my code?" is the #1 question in this chapter.
-- **Bloom (2001):** Understand — *explain, trace, infer*
-- **Learning objective:** The student will be able to trace a function call,
-  explaining how the argument value binds to the parameter and how the return
-  value replaces the call site.
-- **Library:** p5.js
-- **Interaction pattern:** Step-through with data-flow arrows (per generator
-  guidance: concrete data visibility, not particle effects)
-- **Implementation plan:**
-    - Program panel showing a `def double(n): return n * 2` plus two calls;
-      define phase renders the function as a labeled "machine" box that is
-      stored but not run
-    - On call steps, animate-by-step: argument `5` travels into parameter slot
-      `n`, body computes, `10` travels back to the call site and replaces it
-    - Show the same function called twice with different arguments to
-      reinforce reusability
-    - Buttons: Next, Previous, Reset
-    - Estimated `CANVAS_HEIGHT: 500`
+- **Capitolo:** 4 (Funzioni e oggetti), riutilizzata nel Cap. 11
+- **Concetto e lacuna:** gli studenti non vedono il legame tra argomento e parametro, il
+  salto nel corpo della funzione o il valore di ritorno che torna indietro. "Perché `def` non
+  esegue il mio codice?" è la domanda numero 1 di questo capitolo.
+- **Bloom (2001):** Comprendere — *spiegare, seguire l'esecuzione, dedurre*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di seguire una chiamata di
+  funzione, spiegando come il valore dell'argomento si lega al parametro e come il valore di
+  ritorno prende il posto della chiamata.
+- **Libreria:** p5.js
+- **Schema di interazione:** avanzamento passo passo con frecce che mostrano il flusso dei
+  dati (secondo le indicazioni del generatore: dati concreti visibili, niente effetti
+  particellari)
+- **Piano di implementazione:**
+    - Pannello del programma con `def double(n): return n * 2` più due chiamate; nella fase
+      di definizione la funzione appare come una "macchina" con un'etichetta, che viene
+      memorizzata ma non eseguita
+    - Nei passi di chiamata, animazione un passo alla volta: l'argomento `5` entra nello
+      spazio del parametro `n`, il corpo calcola, `10` torna al punto della chiamata e lo
+      sostituisce
+    - Mostrare la stessa funzione chiamata due volte con argomenti diversi, per rafforzare
+      l'idea di riutilizzo
+    - Pulsanti: Next, Previous, Reset
+    - `CANVAS_HEIGHT` stimato: `500`
 
-### 4. Turtle State Inspector (`turtle-state-inspector`)
+### 4. Ispettore dello stato della turtle (`turtle-state-inspector`)
 
-- **Chapter:** 5 (Drawing with Turtle Graphics), reused in 7 and 18
-- **Concept and gap:** Students command the turtle but never see its internal
-  state: (x, y) position, heading angle, pen up/down. Without a heading model,
-  `t.right(90)` is memorized, not understood.
-- **Bloom (2001):** Understand → Apply — *interpret, predict, demonstrate*
-- **Learning objective:** The student will be able to predict the turtle's
-  position and heading after each command and demonstrate how heading changes
-  produce shapes.
-- **Library:** p5.js
-- **Interaction pattern:** Step-through of a command list plus a live state
-  dashboard
-- **Implementation plan:**
-    - Main canvas: coordinate grid with origin crosshair, turtle drawn as a
-      triangle with a heading vector arrow
-    - Side dashboard: live x, y, heading (compass dial), pen state (up/down
-      icon), pen color swatch — updated each step
-    - Command list (e.g., the classic square) stepped with Next; the executed
-      command highlights and the dashboard values flash when they change
-    - Preset selector: square, triangle, star, penup/pendown demo
-    - Estimated `CANVAS_HEIGHT: 520`
+- **Capitolo:** 5 (Disegnare con la grafica turtle), riutilizzata nel 7 e nel 18
+- **Concetto e lacuna:** gli studenti danno comandi alla turtle ma non vedono mai il suo
+  stato interno: posizione (x, y), direzione, penna alzata o abbassata. Senza un modello
+  della direzione, `t.right(90)` viene imparato a memoria, non capito.
+- **Bloom (2001):** da Comprendere ad Applicare — *interpretare, prevedere, dimostrare*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di prevedere la posizione e la
+  direzione della turtle dopo ogni comando e di dimostrare come i cambi di direzione
+  producono le forme.
+- **Libreria:** p5.js
+- **Schema di interazione:** avanzamento passo passo in un elenco di comandi, più un pannello
+  dello stato aggiornato in tempo reale
+- **Piano di implementazione:**
+    - Canvas principale: griglia di coordinate con il mirino sull'origine, la turtle
+      disegnata come un triangolo con una freccia che indica la direzione
+    - Pannello laterale: x, y e direzione in tempo reale (quadrante a bussola), stato della
+      penna (icona alzata/abbassata), campione del colore della penna, aggiornati a ogni
+      passo
+    - Elenco di comandi (per esempio il classico quadrato) da percorrere con Next; il
+      comando eseguito si evidenzia e i valori del pannello lampeggiano quando cambiano
+    - Selettore di esempi predefiniti: quadrato, triangolo, stella, dimostrazione di
+      penup/pendown
+    - `CANVAS_HEIGHT` stimato: `520`
 
-### 5. Expression Evaluator (`expression-evaluator`)
+### 5. Valutatore di espressioni (`expression-evaluator`)
 
-- **Chapter:** 6 (Math and Arithmetic)
-- **Concept and gap:** Order of operations is shown as a static table.
-  Students need to see `2 + 3 * 4` collapse in the right order, step by step.
-- **Bloom (2001):** Understand → Apply — *interpret, execute, predict*
-- **Learning objective:** The student will be able to evaluate an arithmetic
-  expression in the same order Python does, one operation at a time.
-- **Library:** p5.js
-- **Interaction pattern:** Step-through evaluation with predict-first option
-- **Implementation plan:**
-    - Large expression rendered center-canvas; each Next click highlights the
-      next operation to run (color-coded by precedence) and collapses it to
-      its value
-    - "Show parentheses" toggle that draws implied grouping before stepping
-    - Preset expressions covering `**`, `//`, `%`, and parentheses; plus a
-      "your turn" input box (digits and operators only) that evaluates the
-      student's own expression
-    - Estimated `CANVAS_HEIGHT: 420`
+- **Capitolo:** 6 (Matematica e aritmetica)
+- **Concetto e lacuna:** l'ordine delle operazioni è mostrato in una tabella statica. Gli
+  studenti hanno bisogno di vedere `2 + 3 * 4` ridursi nell'ordine giusto, passo dopo passo.
+- **Bloom (2001):** da Comprendere ad Applicare — *interpretare, eseguire, prevedere*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di calcolare un'espressione
+  aritmetica nello stesso ordine di Python, un'operazione alla volta.
+- **Libreria:** p5.js
+- **Schema di interazione:** calcolo passo passo, con l'opzione di fare prima una previsione
+- **Piano di implementazione:**
+    - Un'espressione grande al centro del canvas; ogni clic su Next evidenzia l'operazione
+      successiva da eseguire (con un colore diverso per ogni livello di precedenza) e la
+      riduce al suo valore
+    - Interruttore "Mostra parentesi" che disegna i raggruppamenti impliciti prima di
+      procedere
+    - Espressioni predefinite che coprono `**`, `//`, `%` e le parentesi, più una casella
+      "tocca a te" (solo cifre e operatori) che calcola un'espressione scritta dallo
+      studente
+    - `CANVAS_HEIGHT` stimato: `420`
 
-### 6. Modulo Clock (`modulo-clock`)
+### 6. Orologio del modulo (`modulo-clock`)
 
-- **Chapter:** 6 (Math and Arithmetic)
-- **Concept and gap:** `10 % 3` as "the leftover" is abstract; modulo's real
-  power (cycling, even/odd) needs a wrap-around visual.
-- **Bloom (2001):** Understand → Apply — *explain, use, demonstrate*
-- **Learning objective:** The student will be able to explain the remainder as
-  wrap-around counting and use `%` to test even/odd and cycle through values.
-- **Library:** p5.js
-- **Interaction pattern:** Two sliders with immediate visual feedback
-  (Apply-level: real-time response is appropriate)
-- **Implementation plan:**
-    - Circular dial with `divisor` tick marks; a token hops around the dial
-      `dividend` times and lands on the remainder
-    - Sliders: dividend (0–60), divisor (2–12); readout shows
-      `17 % 5 = 2` updating live, plus the grouping view (17 dots grouped
-      into rows of 5 with 2 left over)
-    - "Even/odd tester" mini-mode using divisor locked at 2
-    - Estimated `CANVAS_HEIGHT: 470`
+- **Capitolo:** 6 (Matematica e aritmetica)
+- **Concetto e lacuna:** `10 % 3` come "quello che avanza" è un'idea astratta; la vera
+  potenza del modulo (i cicli, pari/dispari) ha bisogno di un'immagine che "ricomincia da
+  capo".
+- **Bloom (2001):** da Comprendere ad Applicare — *spiegare, usare, dimostrare*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di spiegare il resto come un
+  conteggio che ricomincia da capo e di usare `%` per verificare se un numero è pari o
+  dispari e per ripetere ciclicamente dei valori.
+- **Libreria:** p5.js
+- **Schema di interazione:** due cursori con riscontro visivo immediato (livello Applicare:
+  la risposta in tempo reale è adatta)
+- **Piano di implementazione:**
+    - Un quadrante circolare con `divisor` tacche; una pedina fa il giro del quadrante
+      `dividend` volte e si ferma sul resto
+    - Cursori: dividendo (0–60), divisore (2–12); un'indicazione mostra `17 % 5 = 2`
+      aggiornata in tempo reale, più la vista a gruppi (17 puntini raggruppati in righe da 5,
+      con 2 che avanzano)
+    - Mini-modalità "verifica pari/dispari" con il divisore bloccato a 2
+    - `CANVAS_HEIGHT` stimato: `470`
 
-### 7. For-Loop Stepper (`for-loop-stepper`)
+### 7. Ciclo for passo passo (`for-loop-stepper`)
 
-- **Chapter:** 7 (For Loops and Drawing Shapes)
-- **Concept and gap:** The loop-trip table in prose is static. Students need to
-  watch `i` change, the body re-execute, and — crucially for this book — the
-  turtle draw one square side per trip.
-- **Bloom (2001):** Understand — *trace, explain, predict*
-- **Learning objective:** The student will be able to trace a `for` loop,
-  stating the value of the loop variable on each trip and predicting the total
-  number of repetitions.
-- **Bloom stretch:** an accumulator preset (`total += i`) raises it toward
-  Apply.
-- **Library:** p5.js
-- **Interaction pattern:** Step-through; each click advances one statement
-  (not one full trip) so the back-to-the-top jump is visible
-- **Implementation plan:**
-    - Left: `for i in range(4):` + 2-line body with execution arrow; `i` badge
-      showing current value; trip counter ("Trip 2 of 4")
-    - Right: mini turtle canvas drawing one side per trip — connects directly
-      to the chapter's square lab
-    - Preset selector: draw square, print countdown, accumulator (running
-      total shown as a growing bar)
-    - Buttons: Next, Auto-play (slow, pausable), Reset
-    - Estimated `CANVAS_HEIGHT: 500`
+- **Capitolo:** 7 (Cicli for e disegno di forme)
+- **Concetto e lacuna:** la tabella delle ripetizioni del ciclo nel testo è statica. Gli
+  studenti hanno bisogno di vedere `i` che cambia, il corpo che viene rieseguito e,
+  soprattutto per questo libro, la turtle che disegna un lato del quadrato a ogni giro.
+- **Bloom (2001):** Comprendere — *seguire l'esecuzione, spiegare, prevedere*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di seguire un ciclo `for`,
+  indicando il valore della variabile del ciclo a ogni giro e prevedendo il numero totale di
+  ripetizioni.
+- **Estensione di Bloom:** un esempio predefinito con accumulatore (`total += i`) lo porta
+  verso il livello Applicare.
+- **Libreria:** p5.js
+- **Schema di interazione:** avanzamento passo passo; ogni clic fa avanzare di un'istruzione
+  (non di un giro intero), così si vede il salto che torna all'inizio del ciclo
+- **Piano di implementazione:**
+    - A sinistra: `for i in range(4):` + un corpo di 2 righe con la freccia di esecuzione;
+      un'etichetta con il valore attuale di `i`; un contatore dei giri ("Giro 2 di 4")
+    - A destra: un piccolo canvas della turtle che disegna un lato a ogni giro, collegato
+      direttamente al laboratorio del quadrato del capitolo
+    - Selettore di esempi predefiniti: disegnare un quadrato, stampare un conto alla
+      rovescia, accumulatore (il totale parziale mostrato come una barra che cresce)
+    - Pulsanti: Next, Auto-play (lento, con pausa), Reset
+    - `CANVAS_HEIGHT` stimato: `500`
 
-### 8. Range Explorer (`range-explorer`)
+### 8. Esploratore di range (`range-explorer`)
 
-- **Chapter:** 7 (For Loops and Drawing Shapes)
-- **Concept and gap:** `range(start, stop, step)` off-by-one confusion ("why
-  is stop not included?") is the top bug source in loop chapters.
-- **Bloom (2001):** Apply — *use, execute, solve*
-- **Learning objective:** The student will be able to choose start, stop, and
-  step values that produce a desired sequence of numbers.
-- **Library:** p5.js
-- **Interaction pattern:** Three sliders with immediate feedback plus
-  challenge mode
-- **Implementation plan:**
-    - Number line 0–20 with generated values lit up as filled dots; `stop`
-      rendered as a hollow "not included" dot
-    - Sliders: start (0–10), stop (1–20), step (1–5, plus negative toggle)
-    - Live code readout `range(2, 12, 3)` → `[2, 5, 8, 11]`
-    - Challenge mode: "light up 3, 6, 9" — student sets sliders, checks answer
-    - Estimated `CANVAS_HEIGHT: 440`
+- **Capitolo:** 7 (Cicli for e disegno di forme)
+- **Concetto e lacuna:** la confusione sull'errore di uno con `range(start, stop, step)`
+  ("perché stop non è incluso?") è la principale fonte di bug nei capitoli sui cicli.
+- **Bloom (2001):** Applicare — *usare, eseguire, risolvere*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di scegliere i valori di start,
+  stop e step che producono la sequenza di numeri desiderata.
+- **Libreria:** p5.js
+- **Schema di interazione:** tre cursori con riscontro immediato, più una modalità sfida
+- **Piano di implementazione:**
+    - Retta dei numeri da 0 a 20 con i valori generati accesi come puntini pieni; `stop`
+      disegnato come un puntino vuoto "non incluso"
+    - Cursori: start (0–10), stop (1–20), step (1–5, più un interruttore per i negativi)
+    - Indicazione del codice in tempo reale: `range(2, 12, 3)` → `[2, 5, 8, 11]`
+    - Modalità sfida: "accendi 3, 6, 9"; lo studente regola i cursori e controlla la
+      risposta
+    - `CANVAS_HEIGHT` stimato: `440`
 
-### 9. Control Flow Explorer (`control-flow-explorer`)
+### 9. Esploratore del flusso di controllo (`control-flow-explorer`)
 
-- **Chapter:** 9 (Making Decisions with If/Else)
-- **Concept and gap:** Students know each branch's output but never see that
-  exactly one path lights up and the others are skipped, especially in
-  `elif` chains.
-- **Bloom (2001):** Understand → Analyze — *predict, trace, differentiate*
-- **Learning objective:** The student will be able to predict which branch of
-  an if/elif/else chain executes for a given input and explain why later
-  branches are skipped.
-- **Library:** p5.js (interactive path highlighting driven by a slider —
-  Mermaid was considered per the flowchart routing rule, but the sim needs
-  input-driven live re-highlighting, which Mermaid does not support)
-- **Interaction pattern:** Slider input + highlighted flowchart path;
-  step-through option for the condition checks
-- **Implementation plan:**
-    - Flowchart of a grade program (`if score >= 90 … elif … else`) drawn on
-      canvas; diamond nodes for conditions, rectangles for actions
-    - Slider: score 0–100; the taken path glows green, skipped branches dim;
-      condition diamonds show True/False verdicts in order
-    - Step mode: watch conditions checked one at a time top-down —
-      demonstrates that the first True wins
-    - Preset selector: simple if, if/else, elif chain, nested if
-    - Estimated `CANVAS_HEIGHT: 540`
+- **Capitolo:** 9 (Prendere decisioni con if/else)
+- **Concetto e lacuna:** gli studenti conoscono l'output di ogni ramo, ma non vedono mai che
+  si accende esattamente un percorso e gli altri vengono saltati, soprattutto nelle catene
+  di `elif`.
+- **Bloom (2001):** da Comprendere ad Analizzare — *prevedere, seguire l'esecuzione,
+  differenziare*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di prevedere quale ramo di una
+  catena if/elif/else viene eseguito con un certo input e di spiegare perché i rami
+  successivi vengono saltati.
+- **Libreria:** p5.js (evidenziazione interattiva del percorso guidata da un cursore; è stato
+  considerato Mermaid, secondo la regola di instradamento per i diagrammi di flusso, ma la
+  sim deve evidenziare di nuovo il percorso in tempo reale in base all'input, e Mermaid non
+  lo permette)
+- **Schema di interazione:** input con un cursore + percorso evidenziato nel diagramma di
+  flusso; opzione di avanzamento passo passo per i controlli delle condizioni
+- **Piano di implementazione:**
+    - Diagramma di flusso di un programma che assegna i voti (`if score >= 90 … elif …
+      else`) disegnato sul canvas; rombi per le condizioni, rettangoli per le azioni
+    - Cursore: punteggio da 0 a 100; il percorso scelto si illumina di verde, i rami
+      saltati si attenuano; i rombi delle condizioni mostrano in ordine il verdetto
+      True/False
+    - Modalità passo passo: si vedono le condizioni controllate una alla volta dall'alto
+      verso il basso, a dimostrare che vince la prima condizione True
+    - Selettore di esempi predefiniti: if semplice, if/else, catena di elif, if annidati
+    - `CANVAS_HEIGHT` stimato: `540`
 
-### 10. Boolean Logic Lab (`boolean-logic-lab`)
+### 10. Laboratorio di logica booleana (`boolean-logic-lab`)
 
-- **Chapter:** 9 and 19 (Booleans and Conditionals)
-- **Concept and gap:** Truth tables are memorized, not understood; and
-  short-circuit evaluation (Ch 19) is completely invisible in code.
-- **Bloom (2001):** Understand → Apply — *classify, explain, demonstrate*
-- **Learning objective:** The student will be able to determine the result of
-  `and`, `or`, and `not` expressions and explain when Python skips evaluating
-  the second operand.
-- **Library:** p5.js
-- **Interaction pattern:** Toggle switches with immediate feedback plus a
-  step-through short-circuit mode
-- **Implementation plan:**
-    - Two large True/False toggle switches feeding an operator block
-      (`and` / `or` / `not` selector); result lamp lights green/red instantly
-    - Short-circuit mode: step through `a and b` — when `a` is False, the `b`
-      switch grays out with a "Python never looked here" badge
-    - Truthiness bonus panel: type or pick a value (`0`, `""`, `[]`, `"hi"`,
-      `42`) and see its `bool()` verdict — covers the Ch 19 falsy table
-    - Estimated `CANVAS_HEIGHT: 480`
+- **Capitolo:** 9 e 19 (Booleani e condizionali)
+- **Concetto e lacuna:** le tavole di verità vengono imparate a memoria, non capite; e la
+  valutazione a corto circuito (Cap. 19) è completamente invisibile nel codice.
+- **Bloom (2001):** da Comprendere ad Applicare — *classificare, spiegare, dimostrare*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di stabilire il risultato delle
+  espressioni con `and`, `or` e `not` e di spiegare quando Python salta il calcolo del
+  secondo operando.
+- **Libreria:** p5.js
+- **Schema di interazione:** interruttori con riscontro immediato, più una modalità passo
+  passo per il corto circuito
+- **Piano di implementazione:**
+    - Due grandi interruttori True/False collegati a un blocco operatore (selettore
+      `and` / `or` / `not`); la lampadina del risultato si accende subito di verde o di rosso
+    - Modalità corto circuito: si avanza passo passo in `a and b`; quando `a` è False,
+      l'interruttore di `b` diventa grigio con un'etichetta "Python non ha mai guardato qui"
+    - Pannello bonus sui valori "veri" e "falsi": scrivi o scegli un valore (`0`, `""`,
+      `[]`, `"hi"`, `42`) e vedi il verdetto di `bool()`; copre la tabella dei valori falsi
+      del Cap. 19
+    - `CANVAS_HEIGHT` stimato: `480`
 
-### 11. While-Loop Stepper (`while-loop-stepper`)
+### 11. Ciclo while passo passo (`while-loop-stepper`)
 
-- **Chapter:** 10 (While Loops and Animation)
-- **Concept and gap:** The check-condition → run-body → check-again rhythm is
-  invisible, and students can't safely experience an infinite loop in Skulpt.
-- **Bloom (2001):** Understand → Analyze — *trace, predict, debug*
-- **Learning objective:** The student will be able to trace a while loop's
-  condition checks and identify why a loop terminates — or never does.
-- **Library:** p5.js
-- **Interaction pattern:** Step-through with an explicit condition-check stage;
-  sandboxed infinite-loop demo
-- **Implementation plan:**
-    - Countdown program (`while count > 0:`) with the execution arrow visiting
-      the condition line before every trip; condition verdict (True/False)
-      stamped each visit; `count` memory box updates live
-    - "Break the loop" toggle: remove the `count -= 1` line and step — a trip
-      odometer spins up with a warning banner ("this would run forever"),
-      capped at 50 trips for safety
-    - Buttons: Next, Reset; preset selector (countdown, wait-for-password,
-      infinite-bug)
-    - Estimated `CANVAS_HEIGHT: 500`
-
----
-
-## Tier 2 — Data and Functions (Chapters 11–20)
-
-### 12. Scope Inspector (`scope-inspector`)
-
-- **Chapter:** 11 (Functions, Parameters, and Scope)
-- **Concept and gap:** Local vs global scope and shadowing are the most
-  abstract ideas in the first half of the book — variables "living" in
-  invisible rooms.
-- **Bloom (2001):** Analyze — *differentiate, attribute, debug*
-- **Learning objective:** The student will be able to determine which variable
-  a name refers to at any line, differentiating local, global, and shadowed
-  variables.
-- **Library:** p5.js
-- **Interaction pattern:** Step-through with nested scope boxes (frames)
-- **Implementation plan:**
-    - Program with a global `score` and a function that creates a local
-      `score`; canvas draws a large "Global" room and, during the call, a
-      "Function" room that appears and later vanishes with its variables
-    - Name-lookup arrows: when a line reads `score`, an arrow probes the local
-      room first, then the global room — shadowing becomes literally visible
-    - Presets: read-only global, shadowing bug, `global` keyword fix
-    - Buttons: Next, Reset
-    - Estimated `CANVAS_HEIGHT: 520`
-
-### 13. RGB Color Mixer (`rgb-color-mixer`)
-
-- **Chapter:** 12 (Colors, Fill, and Turtle Art)
-- **Concept and gap:** Hex strings like `"#FF6B35"` look like magic spells;
-  the RGB→hex mapping needs live manipulation.
-- **Bloom (2001):** Apply — *use, demonstrate, solve*
-- **Learning objective:** The student will be able to produce a target color
-  by adjusting red, green, and blue values and read/write its hex code.
-- **Library:** p5.js
-- **Interaction pattern:** Three sliders with immediate feedback plus
-  match-the-color challenge
-- **Implementation plan:**
-    - Large color swatch; R, G, B sliders (0–255) colored to match channel;
-      live readouts in decimal and hex with the changing hex pair highlighted
-    - "Match this color" challenge mode: target swatch appears, student mixes,
-      proximity meter gives feedback
-    - Copy-ready output line: `t.pencolor("#3FA7D6")` to paste into any
-      chapter lab
-    - Estimated `CANVAS_HEIGHT: 460`
-
-### 14. String Slicer (`string-slicer`)
-
-- **Chapter:** 14 (String Methods and Formatting), foundations in 8
-- **Concept and gap:** Index positions (starting at 0, negative indices) and
-  the end-exclusive slice boundary cause endless off-by-one bugs.
-- **Bloom (2001):** Apply — *use, execute, solve*
-- **Learning objective:** The student will be able to write index and slice
-  expressions that extract a desired substring.
-- **Library:** p5.js
-- **Interaction pattern:** Direct manipulation (drag slice handles) with live
-  notation readout
-- **Implementation plan:**
-    - The string `"PYTHON ROCKS"` in large letter tiles with positive indices
-      above and negative below each tile
-    - Two draggable bracket handles select a range; selected tiles highlight;
-      readout shows `word[2:7]` → `"THON "` live; step slider (1–3) adds the
-      third slice argument
-    - Click a single tile for index mode (`word[3]` → `"H"`)
-    - Challenge mode: "extract ROCKS" — student drags handles, checks answer
-    - Text input to try their own word (12-char max)
-    - Estimated `CANVAS_HEIGHT: 450`
-
-### 15. List Index Explorer (`list-index-explorer`)
-
-- **Chapter:** 15–16 (Lists)
-- **Concept and gap:** Same off-by-one trap as strings, plus mutation: lists
-  change in place (`append`, `pop`, `insert`) and students never see the
-  boxes shift.
-- **Bloom (2001):** Apply → Analyze — *use, demonstrate, differentiate*
-- **Learning objective:** The student will be able to select items by positive
-  and negative index and demonstrate how append, insert, pop, and remove
-  reshape a list in place.
-- **Library:** p5.js
-- **Interaction pattern:** Button-driven operations with one-step-at-a-time
-  visual updates
-- **Implementation plan:**
-    - A list of colored boxes with dual index labels (0,1,2… and −1,−2,…);
-      indices visibly renumber whenever the list changes
-    - Operation buttons: append, insert-at, pop, remove-by-value, each showing
-      the equivalent code line (`colors.append("purple")`) as it runs; boxes
-      slide to make room or close a gap
-    - Contrast panel: try the same "change item 0" on a string → blocked with
-      the actual `TypeError` text (covers mutable vs immutable)
-    - Estimated `CANVAS_HEIGHT: 480`
-
-### 16. Stack and Queue Simulator (`stack-queue-simulator`)
-
-- **Chapter:** 16 (Lists — Methods and Patterns), reused heavily in 30
-- **Concept and gap:** LIFO vs FIFO ordering is temporal and spatial; code
-  output alone can't show why the pop order differs.
-- **Bloom (2001):** Understand → Apply — *compare, demonstrate, predict*
-- **Learning objective:** The student will be able to predict the removal
-  order of items from a stack versus a queue and match each to its list
-  operations.
-- **Library:** p5.js
-- **Interaction pattern:** Button-driven push/pop with side-by-side comparison
-- **Implementation plan:**
-    - Split canvas: stack of plates (vertical) vs waiting line (horizontal),
-      fed by the same "Add item" button so the contrast is controlled
-    - Buttons: Add, Remove (stack pops top / queue leaves from front), with
-      the list-method equivalent shown (`stack.pop()` vs `queue.pop(0)`)
-    - Prediction chip before each Remove: "which item leaves?" click-to-guess
-    - Removal history strips under each structure to compare final orders
-    - Estimated `CANVAS_HEIGHT: 520`
-
-### 17. Dice Roll Histogram (`dice-roll-histogram`)
-
-- **Chapter:** 17 (Modules and Random Numbers)
-- **Concept and gap:** One `randint()` call looks like pure chaos; the uniform
-  distribution only emerges over many trials — impossible to see in a
-  10-line lab.
-- **Bloom (2001):** Analyze — *organize, compare, attribute*
-- **Learning objective:** The student will be able to analyze how the
-  distribution of random rolls flattens as the number of trials grows, and
-  contrast one die with the sum of two dice.
-- **Library:** Chart.js (routing: chart/bar/statistics) with button controls
-- **Interaction pattern:** Experiment runner — student triggers batches and
-  compares outcomes
-- **Implementation plan:**
-    - Bar chart of counts for faces 1–6; buttons: Roll 1, Roll 100, Roll 1000,
-      Reset; running total and per-face percentage labels
-    - Mode toggle: one die (flat) vs sum of two dice (triangle around 7) —
-      a genuinely surprising discovery moment
-    - Optional seed checkbox demonstrating reproducible "random" sequences
-      (ties to `random.seed()` in the chapter)
-    - Estimated `CANVAS_HEIGHT: 505`
-
-### 18. Sine Wave Explorer (`sine-wave-explorer`)
-
-- **Chapter:** 18 (Math Module and Turtle Projects)
-- **Concept and gap:** The chapter's sine-wave turtle project works, but
-  students must edit-and-rerun code to feel amplitude and frequency; sliders
-  give the tight feedback loop.
-- **Bloom (2001):** Apply — *demonstrate, use, solve*
-- **Learning objective:** The student will be able to demonstrate how
-  amplitude, frequency, and phase each change the shape of a sine wave.
-- **Library:** Plotly.js (routing: mathematical function f(x))
-- **Interaction pattern:** Parameter sliders with immediate re-plot
-- **Implementation plan:**
-    - Plot of `y = A * sin(f * x + p)` over 0–4π; sliders for amplitude
-      (0.5–3), frequency (0.5–4), phase (0–2π)
-    - Live annotation of the equation with current values substituted
-    - "Ghost" checkbox keeps the previous curve dimmed for comparison
-    - Estimated `CANVAS_HEIGHT: 475`
-
-### 19. Unit Circle: Degrees and Radians (`unit-circle-radians`)
-
-- **Chapter:** 18 (Math Module and Turtle Projects)
-- **Concept and gap:** `math.sin()` wants radians; students only know degrees
-  from turtle turns. The conversion needs a spatial anchor.
-- **Bloom (2001):** Understand → Apply — *interpret, convert, use*
-- **Learning objective:** The student will be able to convert between degrees
-  and radians and locate an angle on the unit circle.
-- **Library:** p5.js
-- **Interaction pattern:** Drag the angle point; dual readouts update live
-- **Implementation plan:**
-    - Unit circle with a draggable point; the swept arc shades in; readouts
-      show degrees, radians (as both decimal and multiples of π), and
-      sin/cos values with projection lines to the axes
-    - Snap buttons for landmark angles (0°, 90°, 180°, 270°, 45°)
-    - A turtle icon at the circle center rotates to match — bridging turtle
-      headings to the math
-    - Estimated `CANVAS_HEIGHT: 520`
-
-### 20. Set Operations Venn (`set-operations-venn`)
-
-- **Chapter:** 20 (Tuples and Sets)
-- **Concept and gap:** Union, intersection, and difference are inherently
-  spatial; text output of `{...}` hides the overlap structure.
-- **Bloom (2001):** Understand → Analyze — *classify, compare, organize*
-- **Learning objective:** The student will be able to classify which elements
-  belong to A | B, A &amp; B, A − B, and A ^ B for two given sets.
-- **Library:** Custom Venn (routing: sets/overlap → venn guide)
-- **Interaction pattern:** Editable sets + operation buttons that highlight
-  regions
-- **Implementation plan:**
-    - Two-circle Venn with member chips placed in the correct regions from two
-      editable sets (comma-separated inputs, e.g. pets Alice and Bob want)
-    - Operation buttons: `A | B`, `A & B`, `A - B`, `A ^ B` — matching region
-      glows and the Python expression plus result set print below
-    - Duplicate-entry demo: typing a duplicate visibly collapses into one chip
-      (sets remove duplicates)
-    - Estimated `CANVAS_HEIGHT: 560`
+- **Capitolo:** 10 (Cicli while e animazione)
+- **Concetto e lacuna:** il ritmo "controlla la condizione → esegui il corpo → controlla di
+  nuovo" è invisibile, e gli studenti non possono sperimentare in sicurezza un ciclo infinito
+  in Skulpt.
+- **Bloom (2001):** da Comprendere ad Analizzare — *seguire l'esecuzione, prevedere, fare
+  debug*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di seguire i controlli della
+  condizione di un ciclo while e di capire perché un ciclo termina, o perché non termina mai.
+- **Libreria:** p5.js
+- **Schema di interazione:** avanzamento passo passo con una fase esplicita di controllo
+  della condizione; dimostrazione protetta di un ciclo infinito
+- **Piano di implementazione:**
+    - Programma con un conto alla rovescia (`while count > 0:`) in cui la freccia di
+      esecuzione passa sulla riga della condizione prima di ogni giro; a ogni passaggio
+      viene mostrato il verdetto della condizione (True/False); la casella di memoria di
+      `count` si aggiorna in tempo reale
+    - Interruttore "Rompi il ciclo": togli la riga `count -= 1` e procedi; un contagiri
+      comincia a girare con un avviso ("questo andrebbe avanti per sempre"),
+      fermato a 50 giri per sicurezza
+    - Pulsanti: Next, Reset; selettore di esempi predefiniti (conto alla rovescia, attesa
+      della password, bug del ciclo infinito)
+    - `CANVAS_HEIGHT` stimato: `500`
 
 ---
 
-## Tier 3 — Intermediate CS (Chapters 21–30)
+## Priorità 2 — Dati e funzioni (Capitoli 11–20)
 
-### 21. Dictionary Key Lookup (`dictionary-key-lookup`)
+### 12. Ispettore dello scope (`scope-inspector`)
 
-- **Chapter:** 21 (Dictionaries)
-- **Concept and gap:** Why is dict lookup instant, and why must keys be exact?
-  The key → value mapping machinery is invisible; `KeyError` feels arbitrary.
-- **Bloom (2001):** Understand — *explain, compare, infer*
-- **Learning objective:** The student will be able to explain how a dictionary
-  finds a value from a key and why a missing key raises KeyError while
-  `.get()` does not.
-- **Library:** p5.js
-- **Interaction pattern:** Type-a-key lookup with step-through of the search;
-  list-vs-dict comparison
-- **Implementation plan:**
-    - A phone-book dict drawn as key/value drawers; student types a key and
-      the matching drawer springs open with the value; a wrong key shows the
-      red `KeyError` banner vs the `.get()` toggle returning `None` politely
-    - Comparison mode: find the same entry in a list (step through items one
-      by one, counting checks) vs the dict (one hop) — a gentle Big-O seed
-      without hash-table internals (age-appropriate simplification)
-    - Add/update mode: assigning to an existing key replaces; to a new key
-      creates a new drawer
-    - Estimated `CANVAS_HEIGHT: 500`
+- **Capitolo:** 11 (Funzioni con parametri e scope)
+- **Concetto e lacuna:** lo scope locale e globale e l'oscuramento delle variabili
+  (shadowing) sono le idee più astratte della prima metà del libro: variabili che "vivono"
+  in stanze invisibili.
+- **Bloom (2001):** Analizzare — *differenziare, attribuire, fare debug*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di stabilire a quale variabile si
+  riferisce un nome in qualsiasi riga, distinguendo variabili locali, globali e oscurate.
+- **Libreria:** p5.js
+- **Schema di interazione:** avanzamento passo passo con riquadri di scope annidati (frame)
+- **Piano di implementazione:**
+    - Un programma con una variabile globale `score` e una funzione che crea una `score`
+      locale; il canvas disegna una grande stanza "Globale" e, durante la chiamata, una
+      stanza "Funzione" che compare e poi sparisce insieme alle sue variabili
+    - Frecce di ricerca del nome: quando una riga legge `score`, una freccia cerca prima
+      nella stanza locale e poi in quella globale; così l'oscuramento diventa letteralmente
+      visibile
+    - Esempi predefiniti: globale in sola lettura, bug di oscuramento, correzione con la
+      parola chiave `global`
+    - Pulsanti: Next, Reset
+    - `CANVAS_HEIGHT` stimato: `520`
 
-### 22. Recursion Call Stack (`recursion-call-stack`)
+### 13. Miscelatore di colori RGB (`rgb-color-mixer`)
 
-- **Chapter:** 24 (Recursion and Fractals), reusable in 23 (tracebacks)
-- **Concept and gap:** The call stack is *the* canonical invisible machine.
-  Students see `factorial(5) = 120` but not the frames stacking up and
-  unwinding — which is also exactly what a traceback prints.
-- **Bloom (2001):** Analyze — *deconstruct, organize, trace*
-- **Learning objective:** The student will be able to deconstruct a recursive
-  call into stack frames, identify the base case, and trace values returning
-  back down the stack.
-- **Library:** p5.js
-- **Interaction pattern:** Step-through; frames push and pop one click at a
-  time with all values visible
-- **Implementation plan:**
-    - Left: `factorial(n)` code with current-line highlight; right: the stack
-      as physical frames, each labeled with its `n` and its pending
-      `return n * factorial(n-1)`
-    - Push phase stacks frames upward until the base case lights gold; pop
-      phase fills in each pending multiplication as values flow down
-    - Presets: `factorial(4)`, `countdown(3)`, and a missing-base-case bug
-      that hits a "RecursionError" ceiling (max 8 frames drawn)
-    - Buttons: Next, Previous, Reset; frame-count display
-    - Estimated `CANVAS_HEIGHT: 560`
+- **Capitolo:** 12 (Colori, riempimento e arte con la turtle)
+- **Concetto e lacuna:** le stringhe esadecimali come `"#FF6B35"` sembrano formule magiche;
+  il passaggio da RGB a esadecimale va manipolato dal vivo.
+- **Bloom (2001):** Applicare — *usare, dimostrare, risolvere*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di ottenere un colore
+  desiderato regolando i valori di rosso, verde e blu, e di leggerne e scriverne il codice
+  esadecimale.
+- **Libreria:** p5.js
+- **Schema di interazione:** tre cursori con riscontro immediato, più una sfida "trova il
+  colore"
+- **Piano di implementazione:**
+    - Un grande campione di colore; cursori R, G, B (0–255) colorati come il proprio canale;
+      valori in tempo reale in decimale ed esadecimale, con la coppia esadecimale che cambia
+      evidenziata
+    - Modalità sfida "Trova questo colore": compare un campione da raggiungere, lo studente
+      mescola i colori e un indicatore di vicinanza gli dà un riscontro
+    - Una riga di output pronta da copiare: `t.pencolor("#3FA7D6")`, da incollare in
+      qualsiasi laboratorio dei capitoli
+    - `CANVAS_HEIGHT` stimato: `460`
 
-### 23. Fractal Tree Explorer (`fractal-tree-explorer`)
+### 14. Affettatore di stringhe (`string-slicer`)
 
-- **Chapter:** 24 (Recursion and Fractals)
-- **Concept and gap:** The chapter's fractal lab requires edit-and-rerun for
-  each parameter change; live sliders reveal the parameter sensitivity that
-  makes fractals exciting.
-- **Bloom (2001):** Apply → Create — *demonstrate, experiment, design*
-- **Learning objective:** The student will be able to demonstrate how branch
-  angle, depth, and shrink factor shape a recursive tree and design a tree of
-  their own.
-- **Library:** p5.js
-- **Interaction pattern:** Parameter sliders with immediate redraw
-  (appropriate: Apply-level with real-time feedback)
-- **Implementation plan:**
-    - Full-canvas recursive tree; sliders: branch angle (10–60°), depth
-      (1–9), shrink factor (0.5–0.8); depth slider doubles as a live
-      demonstration of recursion levels (each depth tinted its own color)
-    - "Randomize" and "Snapshot" buttons; snapshot overlays a ghost for
-      comparison
-    - Readout shows the recursive call count — connecting beauty back to the
-      call stack sim (#22)
-    - Estimated `CANVAS_HEIGHT: 540`
+- **Capitolo:** 14 (Metodi delle stringhe e formattazione), con le basi nel Cap. 8
+- **Concetto e lacuna:** le posizioni degli indici (che partono da 0, gli indici negativi) e
+  il limite finale escluso dello slicing causano infiniti errori di uno.
+- **Bloom (2001):** Applicare — *usare, eseguire, risolvere*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di scrivere espressioni con
+  indici e slicing che estraggono la sottostringa desiderata.
+- **Libreria:** p5.js
+- **Schema di interazione:** manipolazione diretta (trascinare le maniglie della porzione)
+  con la notazione mostrata in tempo reale
+- **Piano di implementazione:**
+    - La stringa `"PYTHON ROCKS"` in grandi tessere, una per lettera, con gli indici positivi
+      sopra e quelli negativi sotto ogni tessera
+    - Due maniglie a parentesi trascinabili selezionano un intervallo; le tessere
+      selezionate si evidenziano; l'indicazione mostra `word[2:7]` → `"THON "` in tempo
+      reale; un cursore del passo (1–3) aggiunge il terzo argomento dello slicing
+    - Clic su una singola tessera per la modalità indice (`word[3]` → `"H"`)
+    - Modalità sfida: "estrai ROCKS"; lo studente trascina le maniglie e controlla la
+      risposta
+    - Casella di testo per provare una parola propria (massimo 12 caratteri)
+    - `CANVAS_HEIGHT` stimato: `450`
 
-### 24. Object Instance Inspector (`object-instance-inspector`)
+### 15. Esploratore degli indici delle liste (`list-index-explorer`)
 
-- **Chapter:** 25 (Object-Oriented Programming)
-- **Concept and gap:** `self` and instance attributes: which dog's `name` is
-  which? Students conflate the class (blueprint) with its instances.
-- **Bloom (2001):** Understand — *explain, exemplify, differentiate*
-- **Learning objective:** The student will be able to explain the difference
-  between a class and its instances and identify which object `self` refers
-  to during a method call.
-- **Library:** p5.js
-- **Interaction pattern:** Step-through of construction and method calls with
-  instance boxes
-- **Implementation plan:**
-    - Top: a `Dog` class card (blueprint styling, dashed border) with
-      `__init__` and `bark`; below: instances appear as solid cards with
-      their own `name`/`age` values as `Dog("Rex", 3)` etc. step through
-    - During `rex.bark()`, a glowing `self` arrow connects the method in the
-      blueprint to the rex card, and attribute reads pull from that card only
-    - Class-variable demo: a shared `species` field drawn once on the
-      blueprint with dotted arrows from all instances
-    - Estimated `CANVAS_HEIGHT: 540`
+- **Capitolo:** 15–16 (Liste)
+- **Concetto e lacuna:** la stessa trappola dell'errore di uno delle stringhe, più la
+  modifica: le liste cambiano direttamente (`append`, `pop`, `insert`) e gli studenti non
+  vedono mai le caselle spostarsi.
+- **Bloom (2001):** da Applicare ad Analizzare — *usare, dimostrare, differenziare*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di selezionare elementi con
+  indici positivi e negativi e di dimostrare come append, insert, pop e remove modificano
+  direttamente la forma di una lista.
+- **Libreria:** p5.js
+- **Schema di interazione:** operazioni guidate da pulsanti, con aggiornamenti visivi un
+  passo alla volta
+- **Piano di implementazione:**
+    - Una lista di caselle colorate con doppie etichette di indice (0,1,2… e −1,−2,…); gli
+      indici si rinumerano in modo visibile ogni volta che la lista cambia
+    - Pulsanti delle operazioni: append, insert-at, pop, remove-by-value; ognuno mostra la
+      riga di codice equivalente (`colors.append("purple")`) mentre viene eseguita; le
+      caselle scorrono per fare spazio o chiudere un buco
+    - Pannello di confronto: prova lo stesso "cambia l'elemento 0" su una stringa →
+      bloccato con il vero testo del `TypeError` (copre mutabile e immutabile)
+    - `CANVAS_HEIGHT` stimato: `480`
 
-### 25. Inheritance Explorer (`inheritance-explorer`)
+### 16. Simulatore di pila e coda (`stack-queue-simulator`)
 
-- **Chapter:** 25 (Object-Oriented Programming)
-- **Concept and gap:** Method lookup up the class hierarchy (and overriding
-  plus `super()`) is invisible dispatch.
-- **Bloom (2001):** Analyze — *attribute, organize, differentiate*
-- **Learning objective:** The student will be able to determine which class's
-  method runs when a method is called on a subclass instance.
-- **Library:** vis-network (routing: nodes/edges hierarchy) with a call panel
-- **Interaction pattern:** Click a method call; watch the lookup climb the tree
-- **Implementation plan:**
-    - Network of `Animal` → `Dog` / `Cat` class nodes, each listing its
-      methods; an instance node hangs below `Dog`
-    - Buttons for calls (`d.speak()`, `d.eat()`); the lookup path animates
-      node-by-node up the hierarchy until a match highlights; overridden
-      methods show the parent's version grayed with a "shadowed" badge
-    - `super()` preset shows a child method that then hops up explicitly
-    - Estimated `CANVAS_HEIGHT: 600`
+- **Capitolo:** 16 (Liste — Metodi e pattern), riutilizzata molto nel 30
+- **Concetto e lacuna:** l'ordine LIFO e quello FIFO sono questioni di tempo e di spazio;
+  l'output del codice da solo non può mostrare perché l'ordine di estrazione è diverso.
+- **Bloom (2001):** da Comprendere ad Applicare — *confrontare, dimostrare, prevedere*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di prevedere l'ordine in cui gli
+  elementi escono da una pila rispetto a una coda e di associare ciascuna alle sue
+  operazioni sulle liste.
+- **Libreria:** p5.js
+- **Schema di interazione:** inserimento ed estrazione guidati da pulsanti, con un confronto
+  fianco a fianco
+- **Piano di implementazione:**
+    - Canvas diviso: una pila di piatti (verticale) e una fila d'attesa (orizzontale),
+      alimentate dallo stesso pulsante "Aggiungi elemento", così il confronto è controllato
+    - Pulsanti: Aggiungi, Togli (la pila toglie l'elemento in cima, la coda quello davanti),
+      con l'equivalente con i metodi delle liste (`stack.pop()` e `queue.pop(0)`)
+    - Gettone di previsione prima di ogni Togli: "quale elemento esce?", si clicca per
+      indovinare
+    - Strisce con la cronologia delle estrazioni sotto ogni struttura, per confrontare gli
+      ordini finali
+    - `CANVAS_HEIGHT` stimato: `520`
 
-### 26. JSON–Python Type Mapper (`json-python-mapper`)
+### 17. Istogramma dei lanci di dado (`dice-roll-histogram`)
 
-- **Chapter:** 27 (Standard Library and JSON)
-- **Concept and gap:** JSON looks deceptively like Python; the differences
-  (`true`/`True`, `null`/`None`, keys must be strings) cause silent
-  confusion.
-- **Bloom (2001):** Understand → Apply — *interpret, convert, classify*
-- **Learning objective:** The student will be able to convert values between
-  JSON text and Python objects and identify the type mapping in each
-  direction.
-- **Library:** Custom HTML (two-pane editor; routing: matrix/detail-panel
-  style custom interaction)
-- **Interaction pattern:** Side-by-side editable panes with type highlighting
-- **Implementation plan:**
-    - Left pane: JSON text; right pane: the resulting Python literal;
-      editing either side re-renders the other, with per-token color coding
+- **Capitolo:** 17 (Moduli e numeri casuali)
+- **Concetto e lacuna:** una singola chiamata a `randint()` sembra puro caos; la
+  distribuzione uniforme emerge solo dopo molte prove, ed è impossibile vederla in un
+  laboratorio di 10 righe.
+- **Bloom (2001):** Analizzare — *organizzare, confrontare, attribuire*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di analizzare come la
+  distribuzione dei lanci casuali si appiattisce al crescere del numero di prove, e di
+  confrontare un dado con la somma di due dadi.
+- **Libreria:** Chart.js (instradamento: grafico/barre/statistica) con controlli a pulsanti
+- **Schema di interazione:** esecutore di esperimenti: lo studente lancia dei gruppi di prove
+  e confronta i risultati
+- **Piano di implementazione:**
+    - Grafico a barre dei conteggi per le facce da 1 a 6; pulsanti: Lancia 1, Lancia 100,
+      Lancia 1000, Reset; totale progressivo ed etichette con la percentuale di ogni faccia
+    - Interruttore di modalità: un dado (piatto) contro la somma di due dadi (un triangolo
+      attorno al 7), un momento di scoperta davvero sorprendente
+    - Casella facoltativa per il seme, che dimostra le sequenze "casuali" riproducibili
+      (collegata a `random.seed()` nel capitolo)
+    - `CANVAS_HEIGHT` stimato: `505`
+
+### 18. Esploratore dell'onda sinusoidale (`sine-wave-explorer`)
+
+- **Capitolo:** 18 (Modulo math e progetti con la turtle)
+- **Concetto e lacuna:** il progetto dell'onda sinusoidale con la turtle del capitolo
+  funziona, ma gli studenti devono modificare e rieseguire il codice per percepire ampiezza e
+  frequenza; i cursori danno un ciclo di riscontro molto più stretto.
+- **Bloom (2001):** Applicare — *dimostrare, usare, risolvere*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di dimostrare come ampiezza,
+  frequenza e fase cambiano ciascuna la forma di un'onda sinusoidale.
+- **Libreria:** Plotly.js (instradamento: funzione matematica f(x))
+- **Schema di interazione:** cursori dei parametri con nuovo grafico immediato
+- **Piano di implementazione:**
+    - Grafico di `y = A * sin(f * x + p)` tra 0 e 4π; cursori per l'ampiezza (0,5–3), la
+      frequenza (0,5–4) e la fase (0–2π)
+    - Annotazione in tempo reale dell'equazione con i valori attuali sostituiti
+    - Casella "Fantasma" che mantiene la curva precedente attenuata per il confronto
+    - `CANVAS_HEIGHT` stimato: `475`
+
+### 19. Circonferenza unitaria: gradi e radianti (`unit-circle-radians`)
+
+- **Capitolo:** 18 (Modulo math e progetti con la turtle)
+- **Concetto e lacuna:** `math.sin()` vuole i radianti; gli studenti conoscono solo i gradi
+  delle rotazioni della turtle. La conversione ha bisogno di un punto di riferimento spaziale.
+- **Bloom (2001):** da Comprendere ad Applicare — *interpretare, convertire, usare*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di convertire tra gradi e
+  radianti e di individuare un angolo sulla circonferenza unitaria.
+- **Libreria:** p5.js
+- **Schema di interazione:** si trascina il punto dell'angolo; due indicazioni si aggiornano
+  in tempo reale
+- **Piano di implementazione:**
+    - Circonferenza unitaria con un punto trascinabile; l'arco percorso si colora; le
+      indicazioni mostrano i gradi, i radianti (sia in decimale sia come multipli di π) e i
+      valori di seno e coseno, con le linee di proiezione sugli assi
+    - Pulsanti di aggancio per gli angoli di riferimento (0°, 90°, 180°, 270°, 45°)
+    - Un'icona della turtle al centro della circonferenza ruota di conseguenza, per collegare
+      le direzioni della turtle alla matematica
+    - `CANVAS_HEIGHT` stimato: `520`
+
+### 20. Diagramma di Venn delle operazioni sugli insiemi (`set-operations-venn`)
+
+- **Capitolo:** 20 (Tuple e insiemi)
+- **Concetto e lacuna:** unione, intersezione e differenza sono per natura spaziali; l'output
+  testuale `{...}` nasconde la struttura delle sovrapposizioni.
+- **Bloom (2001):** da Comprendere ad Analizzare — *classificare, confrontare, organizzare*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di classificare quali elementi
+  appartengono ad A | B, A &amp; B, A − B e A ^ B, dati due insiemi.
+- **Libreria:** Venn personalizzato (instradamento: insiemi/sovrapposizioni → guida venn)
+- **Schema di interazione:** insiemi modificabili + pulsanti delle operazioni che evidenziano
+  le regioni
+- **Piano di implementazione:**
+    - Diagramma di Venn a due cerchi con dei gettoni per gli elementi, collocati nelle
+      regioni giuste a partire da due insiemi modificabili (input separati da virgole, per
+      esempio gli animali domestici che vogliono Alice e Bob)
+    - Pulsanti delle operazioni: `A | B`, `A & B`, `A - B`, `A ^ B`; la regione
+      corrispondente si illumina e sotto vengono stampati l'espressione Python e l'insieme
+      risultante
+    - Dimostrazione dei duplicati: scrivendo un elemento due volte, i due gettoni si fondono
+      visibilmente in uno (gli insiemi eliminano i duplicati)
+    - `CANVAS_HEIGHT` stimato: `560`
+
+---
+
+## Priorità 3 — Informatica di livello intermedio (Capitoli 21–30)
+
+### 21. Ricerca per chiave nei dizionari (`dictionary-key-lookup`)
+
+- **Capitolo:** 21 (Dizionari)
+- **Concetto e lacuna:** perché la ricerca in un dizionario è istantanea, e perché le chiavi
+  devono essere esatte? Il meccanismo che associa chiave → valore è invisibile; il `KeyError`
+  sembra arbitrario.
+- **Bloom (2001):** Comprendere — *spiegare, confrontare, dedurre*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di spiegare come un dizionario
+  trova un valore a partire da una chiave e perché una chiave mancante solleva un KeyError
+  mentre `.get()` no.
+- **Libreria:** p5.js
+- **Schema di interazione:** ricerca scrivendo una chiave, con avanzamento passo passo della
+  ricerca; confronto tra lista e dizionario
+- **Piano di implementazione:**
+    - Un dizionario-rubrica disegnato come una serie di cassetti chiave/valore; lo studente
+      scrive una chiave e il cassetto corrispondente si apre mostrando il valore; una chiave
+      sbagliata mostra il banner rosso del `KeyError`, mentre con l'interruttore `.get()` si
+      ottiene educatamente `None`
+    - Modalità confronto: trovare la stessa voce in una lista (scorrendo gli elementi uno a
+      uno e contando i controlli) e nel dizionario (un solo salto); un primo seme dell'idea
+      di Big-O, senza i dettagli interni delle tabelle hash (una semplificazione adatta
+      all'età)
+    - Modalità aggiungi/aggiorna: assegnare un valore a una chiave esistente lo sostituisce;
+      assegnarlo a una chiave nuova crea un nuovo cassetto
+    - `CANVAS_HEIGHT` stimato: `500`
+
+### 22. Stack delle chiamate nella ricorsione (`recursion-call-stack`)
+
+- **Capitolo:** 24 (Ricorsione e frattali), riutilizzabile nel 23 (traceback)
+- **Concetto e lacuna:** lo stack delle chiamate è *la* macchina invisibile per eccellenza.
+  Gli studenti vedono `factorial(5) = 120` ma non i frame che si impilano e poi si
+  svuotano, che è anche esattamente ciò che stampa un traceback.
+- **Bloom (2001):** Analizzare — *scomporre, organizzare, seguire l'esecuzione*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di scomporre una chiamata
+  ricorsiva in frame dello stack, di identificare il caso base e di seguire i valori che
+  tornano indietro lungo lo stack.
+- **Libreria:** p5.js
+- **Schema di interazione:** avanzamento passo passo; i frame vengono aggiunti e tolti un
+  clic alla volta, con tutti i valori visibili
+- **Piano di implementazione:**
+    - A sinistra: il codice di `factorial(n)` con la riga corrente evidenziata; a destra: lo
+      stack disegnato come frame fisici, ognuno con il proprio `n` e il proprio
+      `return n * factorial(n-1)` in sospeso
+    - Nella fase di inserimento i frame si impilano verso l'alto finché il caso base non si
+      illumina d'oro; nella fase di estrazione ogni moltiplicazione in sospeso viene
+      completata mentre i valori scendono
+    - Esempi predefiniti: `factorial(4)`, `countdown(3)` e un bug con il caso base mancante
+      che sbatte contro un soffitto "RecursionError" (al massimo 8 frame disegnati)
+    - Pulsanti: Next, Previous, Reset; contatore dei frame
+    - `CANVAS_HEIGHT` stimato: `560`
+
+### 23. Esploratore dell'albero frattale (`fractal-tree-explorer`)
+
+- **Capitolo:** 24 (Ricorsione e frattali)
+- **Concetto e lacuna:** il laboratorio sui frattali del capitolo richiede di modificare e
+  rieseguire il codice a ogni cambio di parametro; dei cursori in tempo reale rivelano la
+  sensibilità ai parametri che rende i frattali così entusiasmanti.
+- **Bloom (2001):** da Applicare a Creare — *dimostrare, sperimentare, progettare*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di dimostrare come l'angolo dei
+  rami, la profondità e il fattore di riduzione danno forma a un albero ricorsivo, e di
+  progettare un albero tutto suo.
+- **Libreria:** p5.js
+- **Schema di interazione:** cursori dei parametri con nuovo disegno immediato (adatto: livello
+  Applicare con riscontro in tempo reale)
+- **Piano di implementazione:**
+    - Un albero ricorsivo che occupa tutto il canvas; cursori: angolo dei rami (10–60°),
+      profondità (1–9), fattore di riduzione (0,5–0,8); il cursore della profondità serve
+      anche a mostrare dal vivo i livelli di ricorsione (ogni profondità ha il suo colore)
+    - Pulsanti "Casuale" e "Istantanea"; l'istantanea sovrappone un'immagine fantasma per il
+      confronto
+    - Un'indicazione mostra il numero di chiamate ricorsive, collegando la bellezza
+      dell'albero alla sim dello stack delle chiamate (#22)
+    - `CANVAS_HEIGHT` stimato: `540`
+
+### 24. Ispettore delle istanze di un oggetto (`object-instance-inspector`)
+
+- **Capitolo:** 25 (Programmazione orientata agli oggetti)
+- **Concetto e lacuna:** `self` e gli attributi d'istanza: quale `name` appartiene a quale
+  cane? Gli studenti confondono la classe (il progetto) con le sue istanze.
+- **Bloom (2001):** Comprendere — *spiegare, esemplificare, differenziare*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di spiegare la differenza tra una
+  classe e le sue istanze e di identificare a quale oggetto si riferisce `self` durante la
+  chiamata di un metodo.
+- **Libreria:** p5.js
+- **Schema di interazione:** avanzamento passo passo nella costruzione degli oggetti e nelle
+  chiamate dei metodi, con dei riquadri per le istanze
+- **Piano di implementazione:**
+    - In alto: la scheda della classe `Dog` (in stile progetto, con il bordo tratteggiato)
+      con `__init__` e `bark`; sotto, le istanze compaiono come schede piene con i propri
+      valori di `name`/`age` man mano che si avanza in `Dog("Rex", 3)` ecc.
+    - Durante `rex.bark()`, una freccia luminosa `self` collega il metodo nel progetto alla
+      scheda di rex, e le letture degli attributi prendono i valori solo da quella scheda
+    - Dimostrazione delle variabili di classe: un campo condiviso `species` disegnato una
+      sola volta sul progetto, con frecce tratteggiate da tutte le istanze
+    - `CANVAS_HEIGHT` stimato: `540`
+
+### 25. Esploratore dell'ereditarietà (`inheritance-explorer`)
+
+- **Capitolo:** 25 (Programmazione orientata agli oggetti)
+- **Concetto e lacuna:** la ricerca dei metodi risalendo la gerarchia delle classi (e la
+  ridefinizione dei metodi più `super()`) è un meccanismo di scelta invisibile.
+- **Bloom (2001):** Analizzare — *attribuire, organizzare, differenziare*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di stabilire quale metodo di quale
+  classe viene eseguito quando si chiama un metodo su un'istanza di una sottoclasse.
+- **Libreria:** vis-network (instradamento: gerarchia di nodi e archi) con un pannello delle
+  chiamate
+- **Schema di interazione:** si clicca su una chiamata di metodo e si guarda la ricerca che
+  risale l'albero
+- **Piano di implementazione:**
+    - Una rete di nodi di classe `Animal` → `Dog` / `Cat`, ognuno con l'elenco dei suoi
+      metodi; un nodo istanza è appeso sotto `Dog`
+    - Pulsanti per le chiamate (`d.speak()`, `d.eat()`); il percorso di ricerca si anima nodo
+      per nodo risalendo la gerarchia finché non si evidenzia una corrispondenza; i metodi
+      ridefiniti mostrano la versione del genitore in grigio con un'etichetta "oscurato"
+    - L'esempio predefinito con `super()` mostra un metodo figlio che poi risale
+      esplicitamente al genitore
+    - `CANVAS_HEIGHT` stimato: `600`
+
+### 26. Corrispondenza tra tipi JSON e Python (`json-python-mapper`)
+
+- **Capitolo:** 27 (Libreria standard e JSON)
+- **Concetto e lacuna:** JSON somiglia in modo ingannevole a Python; le differenze
+  (`true`/`True`, `null`/`None`, le chiavi devono essere stringhe) creano confusione senza
+  dare errori.
+- **Bloom (2001):** da Comprendere ad Applicare — *interpretare, convertire, classificare*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di convertire valori tra testo
+  JSON e oggetti Python e di identificare la corrispondenza tra i tipi in entrambe le
+  direzioni.
+- **Libreria:** HTML personalizzato (editor a due riquadri; instradamento: interazione
+  personalizzata in stile matrice/pannello di dettaglio)
+- **Schema di interazione:** riquadri modificabili affiancati, con evidenziazione dei tipi
+- **Piano di implementazione:**
+    - Riquadro sinistro: testo JSON; riquadro destro: il valore Python risultante;
+      modificando uno dei due lati si aggiorna l'altro, con un colore per ogni elemento
       (object↔dict, array↔list, true↔True, null↔None)
-    - Hover any token to see a tooltip naming both types
-    - Deliberate-error presets: single quotes in JSON, trailing comma — with
-      friendly parse-error explanations
-    - Estimated `CANVAS_HEIGHT: 520`
+    - Passando sopra un elemento compare un suggerimento con il nome di entrambi i tipi
+    - Esempi predefiniti con errori voluti: apici singoli in JSON, virgola finale, con
+      spiegazioni amichevoli degli errori di lettura
+    - `CANVAS_HEIGHT` stimato: `520`
 
-### 27. Regex Match Lab (`regex-match-lab`)
+### 27. Laboratorio delle corrispondenze regex (`regex-match-lab`)
 
-- **Chapter:** 29 (Text Processing and Regular Expressions)
-- **Concept and gap:** Regex is a language of invisible rules; students need
-  live match highlighting to connect pattern pieces to matched characters.
-- **Bloom (2001):** Apply → Analyze — *use, test, deconstruct*
-- **Learning objective:** The student will be able to test a regular
-  expression against sample text and attribute each match to the pattern
-  element that produced it.
-- **Library:** Custom HTML (input fields + highlighting; no canvas needed)
-- **Interaction pattern:** Live pattern editor with token-by-token explainer
-- **Implementation plan:**
-    - Pattern input (pre-filled `\d{3}-\d{4}`) over a sample-text area; all
-      matches highlight in real time; a match counter mirrors `re.findall`
-    - Pattern explainer strip: the pattern rendered as chips (`\d` "a digit",
-      `{3}` "three times", `-` "a dash") — hover a chip to flash its matched
-      characters
-    - Preset patterns: phone numbers, words starting with capital, digits,
-      vowels; preset texts to search
-    - Age-appropriate scope: only the chapter's elements (`\d \w \s . * + ?
+- **Capitolo:** 29 (Elaborazione del testo ed espressioni regolari)
+- **Concetto e lacuna:** le regex sono un linguaggio di regole invisibili; gli studenti hanno
+  bisogno di vedere le corrispondenze evidenziate dal vivo per collegare i pezzi dello schema
+  ai caratteri trovati.
+- **Bloom (2001):** da Applicare ad Analizzare — *usare, testare, scomporre*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di provare un'espressione
+  regolare su un testo di esempio e di attribuire ogni corrispondenza all'elemento dello
+  schema che l'ha prodotta.
+- **Libreria:** HTML personalizzato (campi di input + evidenziazione; non serve un canvas)
+- **Schema di interazione:** editor dello schema in tempo reale, con una spiegazione pezzo per
+  pezzo
+- **Piano di implementazione:**
+    - Campo per lo schema (precompilato con `\d{3}-\d{4}`) sopra un'area di testo di
+      esempio; tutte le corrispondenze si evidenziano in tempo reale; un contatore delle
+      corrispondenze rispecchia `re.findall`
+    - Striscia di spiegazione dello schema: lo schema mostrato come gettoni (`\d` "una
+      cifra", `{3}` "tre volte", `-` "un trattino"); passando sopra un gettone lampeggiano i
+      caratteri che ha trovato
+    - Schemi predefiniti: numeri di telefono, parole che iniziano con la maiuscola, cifre,
+      vocali; testi predefiniti in cui cercare
+    - Ambito adatto all'età: solo gli elementi del capitolo (`\d \w \s . * + ?
       {n,m} [] ^ $ |`)
-    - Estimated `CANVAS_HEIGHT: 540`
+    - `CANVAS_HEIGHT` stimato: `540`
 
-### 28. Sorting Algorithm Comparer (`sorting-comparer`)
+### 28. Confronto tra algoritmi di ordinamento (`sorting-comparer`)
 
-- **Chapter:** 30 (Algorithms and Data Structures)
-- **Concept and gap:** Bubble, selection, and insertion sort differ only in
-  their compare/swap choreography — invisible in code, obvious in animation.
-- **Bloom (2001):** Analyze → Evaluate — *compare, organize, judge*
-- **Learning objective:** The student will be able to compare how bubble,
-  selection, and insertion sort rearrange the same data and judge which does
-  less work for a given input.
-- **Library:** p5.js
-- **Interaction pattern:** Step-through per comparison, with an auto-play
-  race option for the Evaluate objective
-- **Implementation plan:**
-    - Bar chart of 10 values; algorithm selector; Step button highlights the
-      pair being compared and animates swaps; counters for comparisons and
-      swaps
-    - Race mode: two algorithm panels sort identical data side by side with
-      live operation counters
-    - Data presets: random, nearly sorted, reversed — reveals why "it
-      depends on the data"
-    - Shuffle button for new data
-    - Estimated `CANVAS_HEIGHT: 560`
+- **Capitolo:** 30 (Algoritmi e strutture dati)
+- **Concetto e lacuna:** bubble sort, selection sort e insertion sort differiscono solo nella
+  loro coreografia di confronti e scambi: invisibile nel codice, evidente in un'animazione.
+- **Bloom (2001):** da Analizzare a Valutare — *confrontare, organizzare, giudicare*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di confrontare come bubble sort,
+  selection sort e insertion sort riordinano gli stessi dati e di giudicare quale fa meno
+  lavoro con un certo input.
+- **Libreria:** p5.js
+- **Schema di interazione:** avanzamento passo passo a ogni confronto, con l'opzione di una
+  gara automatica per l'obiettivo di livello Valutare
+- **Piano di implementazione:**
+    - Grafico a barre di 10 valori; selettore dell'algoritmo; il pulsante Step evidenzia la
+      coppia che viene confrontata e anima gli scambi; contatori dei confronti e degli
+      scambi
+    - Modalità gara: due pannelli con algoritmi diversi ordinano gli stessi dati fianco a
+      fianco, con contatori delle operazioni in tempo reale
+    - Dati predefiniti: casuali, quasi ordinati, invertiti; mostrano perché "dipende dai
+      dati"
+    - Pulsante Mescola per avere nuovi dati
+    - `CANVAS_HEIGHT` stimato: `560`
 
-### 29. Search Race (`search-race`)
+### 29. Gara di ricerca (`search-race`)
 
-- **Chapter:** 30 (Algorithms and Data Structures)
-- **Concept and gap:** Big-O is abstract; the visceral experience of binary
-  search halving 100 items in 7 checks makes efficiency real.
-- **Bloom (2001):** Analyze → Evaluate — *compare, test, justify*
-- **Learning objective:** The student will be able to compare the number of
-  checks linear and binary search need and justify why binary search requires
-  sorted data.
-- **Library:** p5.js
-- **Interaction pattern:** Pick a target, then step or race both searches
-- **Implementation plan:**
-    - A sorted shelf of 31 numbered boxes duplicated in two lanes; student
-      picks a target; Step mode advances both searches one check at a time —
-      linear plods left-to-right, binary jumps to midpoints and grays out the
-      discarded half
-    - Check counters per lane; results banner ("binary: 5 checks, linear: 24")
-    - "Unsorted trap" preset: run binary search on shuffled data and watch it
-      fail — answering *why sorted matters*
-    - Estimated `CANVAS_HEIGHT: 520`
+- **Capitolo:** 30 (Algoritmi e strutture dati)
+- **Concetto e lacuna:** il Big-O è astratto; vivere sulla propria pelle la ricerca binaria
+  che dimezza 100 elementi in 7 controlli rende concreta l'efficienza.
+- **Bloom (2001):** da Analizzare a Valutare — *confrontare, testare, motivare*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di confrontare il numero di
+  controlli che servono alla ricerca lineare e a quella binaria e di motivare perché la
+  ricerca binaria richiede dati ordinati.
+- **Libreria:** p5.js
+- **Schema di interazione:** si sceglie un obiettivo, poi si fanno avanzare le due ricerche
+  passo passo o in gara
+- **Piano di implementazione:**
+    - Uno scaffale ordinato di 31 scatole numerate, ripetuto su due corsie; lo studente
+      sceglie un obiettivo; la modalità Step fa avanzare entrambe le ricerche di un controllo
+      alla volta: quella lineare arranca da sinistra a destra, quella binaria salta al
+      centro e rende grigia la metà scartata
+    - Contatori dei controlli per ogni corsia; banner dei risultati ("binaria: 5 controlli,
+      lineare: 24")
+    - Esempio predefinito "Trappola dei dati non ordinati": eseguire la ricerca binaria su
+      dati mescolati e vederla fallire, per rispondere al *perché l'ordine conta*
+    - `CANVAS_HEIGHT` stimato: `520`
 
-### 30. Graph Traversal Explorer (`graph-traversal-explorer`)
+### 30. Esploratore della visita dei grafi (`graph-traversal-explorer`)
 
-- **Chapter:** 30 (Algorithms and Data Structures); also reinforces the maze
-  content in `docs/intermediate/`
-- **Concept and gap:** BFS's level-by-level ripple vs DFS's deep dive is
-  spatial and temporal; the hidden queue/stack driving each is the real
-  lesson.
-- **Bloom (2001):** Analyze — *differentiate, organize, trace*
-- **Learning objective:** The student will be able to trace the visit order of
-  BFS and DFS on the same graph and attribute the difference to the queue
-  versus the stack.
-- **Library:** vis-network (routing: nodes/edges) with a side panel
-- **Interaction pattern:** Step-through with the frontier data structure shown
-  live
-- **Implementation plan:**
-    - A 10-node graph; BFS/DFS mode toggle; Step button visits the next node
-      (numbered in visit order); side panel shows the live queue (BFS) or
-      stack (DFS) contents after every step
-    - Start-node selectable by clicking; Reset re-randomizes layout
-    - Shortest-path payoff: after BFS completes, highlight the shortest path
-      to a goal node — the "why BFS" moment
-    - Estimated `CANVAS_HEIGHT: 620`
+- **Capitolo:** 30 (Algoritmi e strutture dati); rafforza anche i contenuti sui labirinti in
+  `docs/intermediate/`
+- **Concetto e lacuna:** l'onda livello per livello di BFS e il tuffo in profondità di DFS
+  sono questioni di spazio e di tempo; la vera lezione è la coda o la pila nascosta che
+  guida ciascuna.
+- **Bloom (2001):** Analizzare — *differenziare, organizzare, seguire l'esecuzione*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di seguire l'ordine di visita di
+  BFS e DFS sullo stesso grafo e di attribuire la differenza alla coda rispetto alla pila.
+- **Libreria:** vis-network (instradamento: nodi/archi) con un pannello laterale
+- **Schema di interazione:** avanzamento passo passo, con la struttura dati della frontiera
+  mostrata in tempo reale
+- **Piano di implementazione:**
+    - Un grafo di 10 nodi; interruttore di modalità BFS/DFS; il pulsante Step visita il nodo
+      successivo (numerato nell'ordine di visita); il pannello laterale mostra il contenuto
+      attuale della coda (BFS) o della pila (DFS) dopo ogni passo
+    - Il nodo di partenza si sceglie cliccandolo; Reset dispone di nuovo i nodi a caso
+    - La ricompensa del percorso più breve: quando BFS ha finito, si evidenzia il percorso
+      più breve verso un nodo di arrivo, il momento del "ecco perché BFS"
+    - `CANVAS_HEIGHT` stimato: `620`
 
 ---
 
-## Tier 4 — Advanced Topics (Chapters 31–38)
+## Priorità 4 — Argomenti avanzati (Capitoli 31–38)
 
-### 31. NumPy Broadcasting Visualizer (`numpy-broadcasting`)
+### 31. Visualizzatore del broadcasting di NumPy (`numpy-broadcasting`)
 
-- **Chapter:** 33 (NumPy and Scientific Computing)
-- **Concept and gap:** `array + 5` silently stretches the scalar across every
-  element; nothing in the printed output shows the pairing.
-- **Bloom (2001):** Understand — *explain, infer, predict*
-- **Learning objective:** The student will be able to explain how a scalar or
-  smaller array is stretched to match a larger array during element-wise
-  operations.
-- **Library:** p5.js
-- **Interaction pattern:** Step-through of one element-pairing at a time
-- **Implementation plan:**
-    - A 1-D array as a row of cells; the scalar (or 1-row array) drawn once,
-      then ghost-copied to align under each cell as steps proceed; each step
-      computes one output cell
-    - Presets: array + scalar, array + array (same length), 2-D grid + row
-      (the classic broadcast); mismatched lengths preset shows the actual
-      ValueError
-    - Operation selector: `+`, `*`, `>` (booleans out — a nice surprise)
-    - Estimated `CANVAS_HEIGHT: 500`
+- **Capitolo:** 33 (NumPy e calcolo scientifico)
+- **Concetto e lacuna:** `array + 5` estende in silenzio lo scalare su ogni elemento; niente
+  nell'output stampato mostra come vengono accoppiati i valori.
+- **Bloom (2001):** Comprendere — *spiegare, dedurre, prevedere*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di spiegare come uno scalare o un
+  array più piccolo viene esteso per adattarsi a un array più grande durante le operazioni
+  elemento per elemento.
+- **Libreria:** p5.js
+- **Schema di interazione:** avanzamento passo passo, un accoppiamento di elementi alla volta
+- **Piano di implementazione:**
+    - Un array a 1 dimensione disegnato come una riga di celle; lo scalare (o l'array di una
+      riga) disegnato una volta sola e poi copiato come fantasma sotto ogni cella man mano che
+      si avanza; ogni passo calcola una cella dell'output
+    - Esempi predefiniti: array + scalare, array + array (stessa lunghezza), griglia a 2
+      dimensioni + riga (il classico caso di broadcasting); l'esempio con lunghezze diverse
+      mostra il vero ValueError
+    - Selettore dell'operazione: `+`, `*`, `>` (in uscita dei booleani: una bella sorpresa)
+    - `CANVAS_HEIGHT` stimato: `500`
 
-### 32. Pixel Grid Editor (`pixel-grid-editor`)
+### 32. Editor di griglie di pixel (`pixel-grid-editor`)
 
-- **Chapter:** 34 (Image Processing with Pillow)
-- **Concept and gap:** "An image is a grid of RGB tuples" is stated but not
-  felt; editing individual pixels closes the loop.
-- **Bloom (2001):** Apply → Create — *demonstrate, produce, construct*
-- **Learning objective:** The student will be able to construct an image by
-  setting pixel RGB values and demonstrate what `getpixel`/`putpixel`
-  operate on.
-- **Library:** p5.js
-- **Interaction pattern:** Direct manipulation canvas (Create-level: builder)
-- **Implementation plan:**
-    - 16×16 pixel grid, zoomed large; RGB sliders set the "paint" color;
-      click/drag to paint; hovering any pixel shows its coordinates and tuple
-      `(255, 107, 53)` — the `getpixel` view
-    - "Actual size" inset shows the true 16×16 rendering next to the zoom
-    - Transform buttons: grayscale, invert, flip horizontal — each described
-      as the pixel math it performs (e.g., gray = average of R, G, B)
-    - Estimated `CANVAS_HEIGHT: 560`
+- **Capitolo:** 34 (Elaborazione delle immagini con Pillow)
+- **Concetto e lacuna:** "un'immagine è una griglia di tuple RGB" viene detto ma non
+  percepito; modificare i singoli pixel chiude il cerchio.
+- **Bloom (2001):** da Applicare a Creare — *dimostrare, produrre, costruire*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di costruire un'immagine
+  impostando i valori RGB dei pixel e di dimostrare su che cosa lavorano
+  `getpixel`/`putpixel`.
+- **Libreria:** p5.js
+- **Schema di interazione:** canvas a manipolazione diretta (livello Creare: strumento di
+  costruzione)
+- **Piano di implementazione:**
+    - Griglia di 16×16 pixel, molto ingrandita; i cursori RGB impostano il colore della
+      "vernice"; si clicca o si trascina per dipingere; passando sopra un pixel se ne vedono
+      le coordinate e la tupla `(255, 107, 53)`, cioè la vista di `getpixel`
+    - Un riquadro "Dimensioni reali" mostra l'immagine vera da 16×16 accanto a quella
+      ingrandita
+    - Pulsanti di trasformazione: scala di grigi, inverti, capovolgi in orizzontale; ognuno
+      descritto con il calcolo che fa sui pixel (per esempio grigio = media di R, G, B)
+    - `CANVAS_HEIGHT` stimato: `560`
 
-### 33. Event Loop Visualizer (`event-loop-visualizer`)
+### 33. Visualizzatore del ciclo degli eventi (`event-loop-visualizer`)
 
-- **Chapter:** 35 (Advanced Turtle and Event-Driven Programming)
-- **Concept and gap:** "Register a callback and wait" inverts everything
-  students know about top-to-bottom execution; the dispatch loop is
-  invisible.
-- **Bloom (2001):** Understand — *explain, interpret, predict*
-- **Learning objective:** The student will be able to explain how a program
-  registers event handlers and predict which handler runs for a given event.
-- **Library:** p5.js
-- **Interaction pattern:** The student IS the event source — clicking and
-  key-pressing inside the sim feeds a visible dispatch pipeline
-- **Implementation plan:**
-    - Left: a mini turtle screen the student clicks / presses keys on;
-      center: an event queue where each event appears as a ticket (CLICK at
-      (x, y), KEY "space"); right: the handler table (`onscreenclick → jump`,
+- **Capitolo:** 35 (Turtle avanzata e programmazione guidata da eventi)
+- **Concetto e lacuna:** "registra una callback e aspetta" ribalta tutto ciò che gli
+  studenti sanno sull'esecuzione dall'alto verso il basso; il ciclo che smista gli eventi è
+  invisibile.
+- **Bloom (2001):** Comprendere — *spiegare, interpretare, prevedere*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di spiegare come un programma
+  registra i gestori di eventi e di prevedere quale gestore viene eseguito per un certo
+  evento.
+- **Libreria:** p5.js
+- **Schema di interazione:** lo studente È la fonte degli eventi: i clic e i tasti premuti
+  dentro la sim alimentano un percorso di smistamento visibile
+- **Piano di implementazione:**
+    - A sinistra: un piccolo schermo della turtle su cui lo studente clicca o preme dei tasti;
+      al centro: una coda degli eventi in cui ogni evento compare come un biglietto (CLICK a
+      (x, y), KEY "space"); a destra: la tabella dei gestori (`onscreenclick → jump`,
       `onkey space → change color`)
-    - Each ticket visibly travels to its matching handler row, which flashes
-      and runs its effect on the mini screen; unhandled events fall through
-      to a "no handler registered" bin
-    - Slow-motion toggle to stretch the dispatch steps
-    - Estimated `CANVAS_HEIGHT: 540`
+    - Ogni biglietto viaggia in modo visibile fino alla riga del suo gestore, che lampeggia e
+      produce il suo effetto sul piccolo schermo; gli eventi senza gestore cadono in un
+      cestino "nessun gestore registrato"
+    - Interruttore del rallentatore per allungare i passi dello smistamento
+    - `CANVAS_HEIGHT` stimato: `540`
 
-### 34. Overfitting Explorer (`overfitting-explorer`)
+### 34. Esploratore dell'overfitting (`overfitting-explorer`)
 
-- **Chapter:** 37 (Machine Learning Foundations)
-- **Concept and gap:** Overfitting is invisible in code and only appears as
-  diverging curves; students need to cause it themselves to believe it.
-- **Bloom (2001):** Analyze → Evaluate — *compare, attribute, judge*
-- **Learning objective:** The student will be able to analyze training versus
-  validation curves and judge when a model has begun to memorize instead of
-  learn.
-- **Library:** Chart.js (line chart) with a p5.js-free control row
-- **Interaction pattern:** Complexity slider with immediate curve response
-- **Implementation plan:**
-    - Left: scatter of ~20 2-D points with a fitted curve whose wiggliness
-      follows a "model complexity" slider (1 = straight line, 10 = hits every
-      point)
-    - Right: train vs validation error lines re-plotted per slider move; the
-      divergence zone shades red with a "memorizing!" label
-    - "New data" button drops fresh validation points onto the fitted curve
-      so students watch the overfit model miss badly
-    - Precomputed data (no real training) keeps it instant and Skulpt-free
-    - Estimated `CANVAS_HEIGHT: 540`
+- **Capitolo:** 37 (Fondamenti di machine learning)
+- **Concetto e lacuna:** l'overfitting è invisibile nel codice e compare solo come curve che
+  si allontanano; gli studenti devono provocarlo con le proprie mani per crederci.
+- **Bloom (2001):** da Analizzare a Valutare — *confrontare, attribuire, giudicare*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di analizzare le curve di
+  addestramento e di validazione e di giudicare quando un modello ha cominciato a
+  memorizzare invece di imparare.
+- **Libreria:** Chart.js (grafico a linee) con una riga di controlli senza p5.js
+- **Schema di interazione:** cursore della complessità con risposta immediata delle curve
+- **Piano di implementazione:**
+    - A sinistra: un grafico a dispersione di circa 20 punti in 2 dimensioni con una curva
+      adattata, che diventa più ondulata seguendo un cursore della "complessità del
+      modello" (1 = linea retta, 10 = passa per ogni punto)
+    - A destra: le linee dell'errore di addestramento e di validazione, ridisegnate a ogni
+      movimento del cursore; la zona in cui si allontanano si colora di rosso con
+      l'etichetta "sta memorizzando!"
+    - Il pulsante "Nuovi dati" aggiunge punti di validazione nuovi sulla curva adattata, così
+      gli studenti vedono il modello in overfitting sbagliare di molto
+    - Dati precalcolati (nessun vero addestramento) che la rendono istantanea e indipendente
+      da Skulpt
+    - `CANVAS_HEIGHT` stimato: `540`
 
-### 35. Neural Network Forward Pass (`nn-forward-pass`)
+### 35. Passaggio in avanti di una rete neurale (`nn-forward-pass`)
 
-- **Chapter:** 37–38 (Machine Learning; Neural Networks and MNIST)
-- **Concept and gap:** Layers, weights, and activations are named in code
-  (`Dense(128, activation="relu")`) but the data flow is a black box.
-- **Bloom (2001):** Understand → Analyze — *explain, trace, attribute*
-- **Learning objective:** The student will be able to trace an input through
-  a tiny network, explaining how weights and activations shape each layer's
-  output.
-- **Library:** p5.js
-- **Interaction pattern:** Step-through, layer by layer, with all numbers
-  visible (Understand-level: concrete data, no particle effects)
-- **Implementation plan:**
-    - A tiny 2–3–2 network drawn as circles and weighted edges (edge
-      thickness = weight magnitude, color = sign); two input sliders
-    - Step button advances one layer: incoming values multiply along edges,
-      sum at each neuron, then pass the ReLU gate (values shown at each
-      stage in small readouts)
-    - Weight-nudge mode: drag one edge weight and watch the output flip —
-      seeds the "training adjusts weights" idea for Ch 38
-    - Estimated `CANVAS_HEIGHT: 560`
+- **Capitolo:** 37–38 (Machine learning; Reti neurali e MNIST)
+- **Concetto e lacuna:** strati, pesi e funzioni di attivazione hanno un nome nel codice
+  (`Dense(128, activation="relu")`), ma il flusso dei dati è una scatola nera.
+- **Bloom (2001):** da Comprendere ad Analizzare — *spiegare, seguire l'esecuzione,
+  attribuire*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di seguire un input attraverso
+  una piccolissima rete, spiegando come pesi e funzioni di attivazione determinano l'output
+  di ogni strato.
+- **Libreria:** p5.js
+- **Schema di interazione:** avanzamento passo passo, uno strato alla volta, con tutti i
+  numeri visibili (livello Comprendere: dati concreti, niente effetti particellari)
+- **Piano di implementazione:**
+    - Una piccolissima rete 2–3–2 disegnata con cerchi e archi pesati (spessore dell'arco =
+      grandezza del peso, colore = segno); due cursori per gli input
+    - Il pulsante Step fa avanzare di uno strato: i valori in entrata vengono moltiplicati
+      lungo gli archi, sommati in ogni neurone e poi passano dalla porta ReLU (i valori sono
+      mostrati a ogni fase in piccole indicazioni)
+    - Modalità "spingi il peso": si trascina il peso di un arco e si vede l'output cambiare;
+      prepara l'idea che "l'addestramento regola i pesi" per il Cap. 38
+    - `CANVAS_HEIGHT` stimato: `560`
 
-### 36. Convolution Kernel Explorer (`convolution-explorer`)
+### 36. Esploratore dei kernel di convoluzione (`convolution-explorer`)
 
-- **Chapter:** 38 (Neural Networks and MNIST), reinforces filters in 34
-- **Concept and gap:** The sliding 3×3 kernel is the heart of CNNs and of
-  Pillow's filters, and it is purely spatial — the ideal MicroSim topic.
-- **Bloom (2001):** Understand → Analyze — *explain, trace, compare*
-- **Learning objective:** The student will be able to trace one kernel
-  position's multiply-and-sum computation and compare what edge-detect,
-  blur, and sharpen kernels each emphasize.
-- **Library:** p5.js
-- **Interaction pattern:** Step-through of kernel positions plus kernel
-  selector
-- **Implementation plan:**
-    - Left: an 8×8 grayscale input grid (preset: a hand-drawn "7"); a 3×3
-      kernel window slides one Step per click; center: the zoomed
-      multiply-and-sum arithmetic for the current position; right: the output
-      feature map filling in cell by cell
-    - Kernel presets: blur, sharpen, vertical edges, horizontal edges;
-      editable kernel cells for the adventurous
-    - Auto-complete button fills the remaining output fast once the point is
-      made; before/after comparison view
-    - Estimated `CANVAS_HEIGHT: 580`
+- **Capitolo:** 38 (Reti neurali e MNIST), rafforza i filtri del Cap. 34
+- **Concetto e lacuna:** il kernel 3×3 che scorre è il cuore delle CNN e dei filtri di
+  Pillow, ed è un'idea puramente spaziale: l'argomento ideale per una MicroSim.
+- **Bloom (2001):** da Comprendere ad Analizzare — *spiegare, seguire l'esecuzione,
+  confrontare*
+- **Obiettivo di apprendimento:** lo studente sarà in grado di seguire il calcolo di
+  moltiplicazione e somma per una posizione del kernel e di confrontare che cosa mettono in
+  risalto i kernel di rilevamento dei bordi, di sfocatura e di nitidezza.
+- **Libreria:** p5.js
+- **Schema di interazione:** avanzamento passo passo tra le posizioni del kernel, più un
+  selettore del kernel
+- **Piano di implementazione:**
+    - A sinistra: una griglia di input 8×8 in scala di grigi (esempio predefinito: un "7"
+      disegnato a mano); una finestra del kernel 3×3 scorre di un passo a ogni clic; al
+      centro: il calcolo ingrandito di moltiplicazione e somma per la posizione attuale; a
+      destra: la mappa delle caratteristiche in uscita, che si riempie cella per cella
+    - Kernel predefiniti: sfocatura, nitidezza, bordi verticali, bordi orizzontali; celle del
+      kernel modificabili per i più avventurosi
+    - Il pulsante di completamento automatico riempie velocemente il resto dell'output una
+      volta capito il concetto; vista di confronto prima/dopo
+    - `CANVAS_HEIGHT` stimato: `580`
 
 ---
 
-## Backlog — Worthy Ideas Not in the First Wave
+## Da fare — Idee valide escluse dalla prima ondata
 
-These surfaced in the chapter scan but are either narrower, partially covered
-by a first-wave sim, or better served by prose plus a Skulpt lab. Kept here so
-nothing is lost.
+Queste idee sono emerse dall'analisi dei capitoli, ma sono più specifiche, in parte coperte da
+una sim della prima ondata, oppure si prestano meglio a un testo più un laboratorio Skulpt. Le
+teniamo qui per non perdere nulla.
 
-| Idea | Chapter | Bloom | Notes |
+| Idea | Capitolo | Bloom | Note |
 |------|---------|-------|-------|
-| Indentation block grouper | 2 | Understand — *classify* | Animated scope-bubble around indented lines; partially covered by #1 and #9 |
-| Escape sequence parser | 8 | Understand — *interpret* | Character-by-character parse of `\n`, `\t`, `\\`; small p5.js sim |
-| Type conversion pipeline | 13 | Understand — *trace* | `input() → "42" → int() → 42` journey; pairs with #2 |
-| HSL vs RGB comparison | 12 | Understand — *compare* | Extension mode for #13 rather than its own sim |
-| zip() lockstep pairing | 22 | Understand — *explain* | Two lists walked in parallel; small step-through |
-| map/filter pipeline | 22, 31 | Analyze — *organize* | Data-flow chips through function boxes |
-| Traceback annotator | 23 | Analyze — *deconstruct* | Color-coded anatomy of a real traceback; #22 covers the stack half |
-| File mode and pointer | 26 | Understand — *differentiate* | r/w/a pointer positions; niche but cheap to build |
-| CSV two-pane viewer | 26 | Understand — *interpret* | Raw text vs table sync view |
-| Counter frequency chart | 27 | Apply — *use* | Live `Counter.most_common()` bar chart; Chart.js |
-| Dunder method dispatch | 31 | Analyze — *attribute* | Which `__dunder__` does `obj + other` call? |
-| Exception hierarchy tree | 31 | Understand — *classify* | vis-network tree of built-in exceptions |
-| Chart type chooser | 32 | Evaluate — *judge* | Same data as line/bar/scatter/histogram; "which chart tells the truth?" |
-| Array reshape simulator | 33 | Understand — *interpret* | Watch elements reflow under `reshape()` |
-| Max pooling animator | 38 | Understand — *explain* | Fold into #36 as a second mode |
-| Train/val/test splitter | 37 | Understand — *classify* | Drag points into three bins; partially covered by #34 |
-| Decomposition tree builder | 36 | Create — *plan* | Break a problem into subtasks interactively |
-| Git commit timeline | 36 | Understand — *summarize* | vis-timeline of a small branching history |
+| Raggruppatore dei blocchi indentati | 2 | Comprendere — *classificare* | Una bolla di scope animata attorno alle righe indentate; in parte coperta dalle #1 e #9 |
+| Interprete delle sequenze di escape | 8 | Comprendere — *interpretare* | Lettura carattere per carattere di `\n`, `\t`, `\\`; piccola sim in p5.js |
+| Percorso della conversione di tipo | 13 | Comprendere — *seguire l'esecuzione* | Il viaggio `input() → "42" → int() → 42`; si abbina alla #2 |
+| Confronto tra HSL e RGB | 12 | Comprendere — *confrontare* | Una modalità aggiuntiva della #13 più che una sim a sé |
+| Accoppiamento in parallelo con zip() | 22 | Comprendere — *spiegare* | Due liste percorse in parallelo; piccola sim passo passo |
+| Catena di map/filter | 22, 31 | Analizzare — *organizzare* | Gettoni di dati che scorrono attraverso le scatole delle funzioni |
+| Annotatore dei traceback | 23 | Analizzare — *scomporre* | L'anatomia di un vero traceback con i colori; la #22 copre la parte sullo stack |
+| Modalità e puntatore dei file | 26 | Comprendere — *differenziare* | Le posizioni del puntatore con r/w/a; di nicchia ma economica da costruire |
+| Visualizzatore CSV a due riquadri | 26 | Comprendere — *interpretare* | Vista sincronizzata tra testo grezzo e tabella |
+| Grafico delle frequenze con Counter | 27 | Applicare — *usare* | Grafico a barre di `Counter.most_common()` in tempo reale; Chart.js |
+| Scelta dei metodi dunder | 31 | Analizzare — *attribuire* | Quale `__dunder__` viene chiamato da `obj + other`? |
+| Albero della gerarchia delle eccezioni | 31 | Comprendere — *classificare* | Albero in vis-network delle eccezioni built-in |
+| Scelta del tipo di grafico | 32 | Valutare — *giudicare* | Gli stessi dati come linee/barre/dispersione/istogramma; "quale grafico dice la verità?" |
+| Simulatore del cambio di forma degli array | 33 | Comprendere — *interpretare* | Si guardano gli elementi riorganizzarsi con `reshape()` |
+| Animazione del max pooling | 38 | Comprendere — *spiegare* | Da integrare nella #36 come seconda modalità |
+| Divisione addestramento/validazione/test | 37 | Comprendere — *classificare* | Si trascinano i punti in tre contenitori; in parte coperta dalla #34 |
+| Costruttore dell'albero di scomposizione | 36 | Creare — *pianificare* | Scomporre un problema in sotto-compiti in modo interattivo |
+| Cronologia dei commit Git | 36 | Comprendere — *riassumere* | Una vis-timeline di una piccola cronologia con diramazioni |
 
 ---
 
-## Suggested Build Order
+## Ordine di costruzione suggerito
 
-1. **Pilot (validate the pipeline):** #7 For-Loop Stepper, #13 RGB Color
-   Mixer, #14 String Slicer — one step-through, one slider sim, one
-   direct-manipulation sim; three different interaction patterns through the
-   full generator workflow (scaffold → js → validate → iframe heights →
-   Playwright → screenshot → layout review)
-2. **Tier 1 completion** in chapter order — these serve every reader
-3. **Tier 2, then Tier 3** — prioritizing #22 Recursion Call Stack and
-   #28/#29 (sorting/search), the highest-demand CS visualizations
-4. **Tier 4** as the advanced chapters gain readers
+1. **Progetto pilota (per verificare il processo):** #7 Ciclo for passo passo, #13
+   Miscelatore di colori RGB, #14 Affettatore di stringhe; una sim passo passo, una con i
+   cursori e una a manipolazione diretta: tre schemi di interazione diversi lungo tutto il
+   processo del generatore (struttura → js → validazione → altezze degli iframe →
+   Playwright → screenshot → revisione dell'impaginazione)
+2. **Completamento della priorità 1** nell'ordine dei capitoli: queste servono a tutti i
+   lettori
+3. **Priorità 2, poi priorità 3**, dando la precedenza alla #22 Stack delle chiamate nella
+   ricorsione e alle #28/#29 (ordinamento/ricerca), le visualizzazioni di informatica più
+   richieste
+4. **Priorità 4** man mano che i capitoli avanzati acquistano lettori
 
-Each sim should be generated with the `microsim-generator` single-sim route
-(Step 1B), embedded in its chapter with a `mascot-thinking` prediction prompt
-immediately above the iframe, and linked from the gallery in
-`docs/sims/index.md`.
+Ogni sim dovrebbe essere generata con il percorso per singola sim di `microsim-generator`
+(Step 1B), inserita nel suo capitolo con una domanda di previsione `mascot-thinking`
+subito sopra l'iframe, e collegata dalla galleria in `docs/sims/index.md`.

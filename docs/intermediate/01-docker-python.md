@@ -1,61 +1,61 @@
-# Running Python in Docker
+# Eseguire Python in Docker
 
-So far in this course you have run Python programs in two ways:
+Finora in questo corso hai eseguito i programmi Python in due modi:
 
-1. **Skulpt** — Python runs right inside your browser, no install needed.
-2. **Your local computer** — Python installed on your machine.
+1. **Skulpt**: Python funziona direttamente nel tuo browser, senza installare nulla.
+2. **Il tuo computer**: Python installato sulla tua macchina.
 
-Now we add a third option: **Docker**.  Docker lets you run Python inside a
-tiny, isolated box called a *container* — directly on your computer, but safely
-separated from everything else.  The container can't see your files, can't reach
-the internet, and disappears the moment your program finishes.
+Ora aggiungiamo una terza possibilità: **Docker**. Docker ti permette di eseguire Python dentro
+una piccola scatola isolata chiamata *container*, direttamente sul tuo computer ma separata in
+modo sicuro da tutto il resto. Il container non può vedere i tuoi file, non può collegarsi a
+Internet e sparisce nel momento in cui il tuo programma finisce.
 
-This is actually how many real companies run student code in coding platforms!
+È proprio così che molte aziende vere eseguono il codice degli studenti sulle piattaforme di programmazione!
 
 ---
 
-## Before You Begin — Start the Docker Service
+## Prima di cominciare: avvia il servizio Docker
 
-You must have the Docker execution service running in a separate terminal before
-the labs on this page will work.
+Perché i laboratori di questa pagina funzionino, il servizio di esecuzione Docker deve essere
+in funzione in un terminale separato.
 
-**Open a terminal in the project folder and run:**
+**Apri un terminale nella cartella del progetto ed esegui:**
 
 ```sh
 bash scripts/run-python-docker.sh
 ```
 
-If Docker is not installed the script will print detailed instructions for
-every operating system.  Once the service is running you will see:
+Se Docker non è installato, lo script stampa istruzioni dettagliate per ogni sistema operativo.
+Quando il servizio è in funzione vedrai:
 
 ```
 Python Docker execution service
 Listening on:  http://127.0.0.1:5001
 ```
 
-Leave that terminal open while you work through this page.
+Lascia aperto quel terminale mentre lavori su questa pagina.
 
 ---
 
-## What Is a Container?
+## Che cos'è un container?
 
-Think of a container like a lunchbox.  Your lunch (Python + your code) sits
-inside the box, completely separate from everything else in your backpack.
-When lunch is over you close the lid and the mess stays inside.
+Immagina un container come un portapranzo. Il tuo pranzo (Python + il tuo codice) sta dentro
+la scatola, completamente separato da tutto il resto che hai nello zaino. Quando hai finito di
+mangiare chiudi il coperchio, e il disordine resta dentro.
 
-| Feature | Description |
+| Caratteristica | Descrizione |
 |---------|-------------|
-| **Isolated** | Your code cannot read files on the host computer |
-| **No network** | Your code cannot connect to the internet |
-| **Limited resources** | Maximum 64 MB of RAM and half a CPU core |
-| **Temporary** | The container is deleted the moment your program exits |
-| **Reproducible** | Every student runs the exact same Python version |
+| **Isolato** | Il tuo codice non può leggere i file del computer che lo ospita |
+| **Senza rete** | Il tuo codice non può collegarsi a Internet |
+| **Risorse limitate** | Al massimo 64 MB di RAM e metà di un core della CPU |
+| **Temporaneo** | Il container viene eliminato nel momento in cui il programma termina |
+| **Riproducibile** | Ogni studente usa esattamente la stessa versione di Python |
 
 ---
 
-## Lab 1 — Hello, World!
+## Laboratorio 1: Hello, World!
 
-The classic first program.  Run it, then try changing the message.
+Il classico primo programma. Eseguilo, poi prova a cambiare il messaggio.
 
 <div id="docker-lab-1">
 <div id="docker-editor-1">
@@ -64,21 +64,21 @@ The classic first program.  Run it, then try changing the message.
   <button id="docker-run-1" onclick="runDocker('1')">&#9654; Run</button>
   <button id="docker-reset-1" onclick="resetDocker('1')">&#8635; Reset</button>
 </div>
-<pre id="docker-output-1" class="docker-output">Output will appear here after you click Run.</pre>
+<pre id="docker-output-1" class="docker-output">L'output apparirà qui dopo che avrai cliccato Run.</pre>
 </div>
 </div>
 
-**Try these experiments:**
+**Prova questi esperimenti:**
 
-- Change `"Hello, World!"` to your own name, like `"Hello, Alex!"`
-- Add a second `print()` line below the first one
-- Try `print(2 + 2)` — can Python do arithmetic?
+- Cambia `"Hello, World!"` con il tuo nome, per esempio `"Hello, Alex!"`
+- Aggiungi una seconda riga `print()` sotto la prima
+- Prova `print(2 + 2)`: Python sa fare i calcoli?
 
 ---
 
-## Lab 2 — Variables and Arithmetic
+## Laboratorio 2: variabili e aritmetica
 
-Python can store values in *variables* and do math with them.
+Python può memorizzare dei valori nelle *variabili* e farci dei calcoli.
 
 <div id="docker-lab-2">
 <div id="docker-editor-2">
@@ -93,21 +93,21 @@ print("Age:", age, "years ago she was born")</textarea>
   <button id="docker-run-2" onclick="runDocker('2')">&#9654; Run</button>
   <button id="docker-reset-2" onclick="resetDocker('2')">&#8635; Reset</button>
 </div>
-<pre id="docker-output-2" class="docker-output">Output will appear here after you click Run.</pre>
+<pre id="docker-output-2" class="docker-output">L'output apparirà qui dopo che avrai cliccato Run.</pre>
 </div>
 </div>
 
-**Try these experiments:**
+**Prova questi esperimenti:**
 
-- Change `name` to your own name
-- Change `year_born` to your own birth year — what does `age` show?
-- Add a line: `print("Python version check:", 3 * 7)`
+- Cambia `name` con il tuo nome
+- Cambia `year_born` con il tuo anno di nascita: che cosa mostra `age`?
+- Aggiungi una riga: `print("Python version check:", 3 * 7)`
 
 ---
 
-## Lab 3 — Loops in the Container
+## Laboratorio 3: cicli nel container
 
-Loops let you repeat code many times.  This one counts from 1 to 5.
+I cicli ti permettono di ripetere il codice molte volte. Questo conta da 1 a 5.
 
 <div id="docker-lab-3">
 <div id="docker-editor-3">
@@ -121,32 +121,32 @@ print("Done!")
   <button id="docker-run-3" onclick="runDocker('3')">&#9654; Run</button>
   <button id="docker-reset-3" onclick="resetDocker('3')">&#8635; Reset</button>
 </div>
-<pre id="docker-output-3" class="docker-output">Output will appear here after you click Run.</pre>
+<pre id="docker-output-3" class="docker-output">L'output apparirà qui dopo che avrai cliccato Run.</pre>
 </div>
 </div>
 
-**Try these experiments:**
+**Prova questi esperimenti:**
 
-- Change `range(1, 6)` to `range(1, 11)` to count to 10
-- Replace `Step` with `Rocket launch in` and count *down* using `range(10, 0, -1)`
+- Cambia `range(1, 6)` in `range(1, 11)` per contare fino a 10
+- Sostituisci `Step` con `Rocket launch in` e fai un conto *alla rovescia* usando `range(10, 0, -1)`
 
 ---
 
-## Lab 4 — How Long Does It Take?
+## Laboratorio 4: quanto tempo ci vuole?
 
-Every time you click **Run**, your code makes a round-trip through four
-distinct phases.  This lab times each one so you can see exactly where the
-milliseconds go.
+Ogni volta che clicchi **Run**, il tuo codice fa un viaggio di andata e ritorno attraverso
+quattro fasi distinte. Questo laboratorio misura il tempo di ciascuna, così puoi vedere
+esattamente dove vanno a finire i millisecondi.
 
-| # | Phase | What is happening |
+| # | Fase | Che cosa succede |
 |---|-------|-------------------|
-| 1 | **Send to service** | Browser encodes your code as JSON and sends it over the loopback network to the Docker service running on port 5001 |
-| 2 | **Container startup** | Docker creates a brand-new Python container from the cached image, sets up the isolated filesystem, and starts the Python process |
-| 3 | **Python execution** | Your code actually runs inside the container |
-| 4 | **Return to browser** | The container's output travels back over the loopback network and the browser renders the result |
+| 1 | **Invio al servizio** | Il browser codifica il tuo codice in JSON e lo invia, tramite la rete di loopback, al servizio Docker in ascolto sulla porta 5001 |
+| 2 | **Avvio del container** | Docker crea un container Python nuovo di zecca dall'immagine in cache, prepara il filesystem isolato e avvia il processo Python |
+| 3 | **Esecuzione di Python** | Il tuo codice viene eseguito davvero dentro il container |
+| 4 | **Ritorno al browser** | L'output del container torna indietro attraverso la rete di loopback e il browser mostra il risultato |
 
-Edit the code below — try a short program vs a long loop — then click **Run**
-and watch which phases change.
+Modifica il codice qui sotto (prova un programma breve e poi un ciclo lungo), poi clicca
+**Run** e osserva quali fasi cambiano.
 
 <div id="docker-lab-4">
 <div id="docker-editor-4">
@@ -163,31 +163,31 @@ print(f"Sum 0–99999 = {total}")</textarea>
 <div id="docker-timing-display" style="display:none; margin-top:12px;">
   <table id="docker-timing-table">
     <thead>
-      <tr><th>#</th><th>Phase</th><th style="text-align:right">Time (ms)</th><th>Bar</th></tr>
+      <tr><th>#</th><th>Fase</th><th style="text-align:right">Tempo (ms)</th><th>Barra</th></tr>
     </thead>
     <tbody>
       <tr id="tr-network-send">
-        <td>1</td><td>Send to service (network)</td>
+        <td>1</td><td>Invio al servizio (rete)</td>
         <td id="td-network-send" style="text-align:right">—</td>
         <td><div class="timing-bar" id="bar-network-send"></div></td>
       </tr>
       <tr id="tr-startup">
-        <td>2</td><td>Container startup</td>
+        <td>2</td><td>Avvio del container</td>
         <td id="td-startup" style="text-align:right">—</td>
         <td><div class="timing-bar" id="bar-startup"></div></td>
       </tr>
       <tr id="tr-exec">
-        <td>3</td><td>Python execution</td>
+        <td>3</td><td>Esecuzione di Python</td>
         <td id="td-exec" style="text-align:right">—</td>
         <td><div class="timing-bar" id="bar-exec"></div></td>
       </tr>
       <tr id="tr-network-return">
-        <td>4</td><td>Return to browser (network)</td>
+        <td>4</td><td>Ritorno al browser (rete)</td>
         <td id="td-network-return" style="text-align:right">—</td>
         <td><div class="timing-bar" id="bar-network-return"></div></td>
       </tr>
       <tr style="font-weight:bold; border-top: 2px solid #642580;">
-        <td colspan="2">Total round-trip</td>
+        <td colspan="2">Andata e ritorno totale</td>
         <td id="td-total" style="text-align:right">—</td>
         <td></td>
       </tr>
@@ -195,68 +195,69 @@ print(f"Sum 0–99999 = {total}")</textarea>
   </table>
   <p id="docker-timing-note" style="font-size:0.85em; color:#666; margin-top:6px;"></p>
 </div>
-<pre id="docker-output-4" class="docker-output" style="margin-top:10px;">Output will appear here after you click Run + Time.</pre>
+<pre id="docker-output-4" class="docker-output" style="margin-top:10px;">L'output apparirà qui dopo che avrai cliccato Run + Time.</pre>
 </div>
 
-**Typical results** (measured on a MacBook, running `python:3.11-alpine`):
+**Risultati tipici** (misurati su un MacBook, con `python:3.11-alpine`):
 
-| # | Phase | Cold start (1st run) | Warm (2nd run+) |
+| # | Fase | Avvio a freddo (1ª esecuzione) | A caldo (dalla 2ª in poi) |
 |---|-------|---------------------:|----------------:|
-| 1 | Send to service (network) | 3.2 ms | 3.2 ms |
-| 2 | Container startup | ~4,700 ms | 258 ms |
-| 3 | Python execution | 9.5 ms | 9.5 ms |
-| 4 | Return to browser (network) | 3.2 ms | 3.2 ms |
-| | **Total round-trip** | **~5,000 ms** | **~274 ms** |
+| 1 | Invio al servizio (rete) | 3,2 ms | 3,2 ms |
+| 2 | Avvio del container | ~4.700 ms | 258 ms |
+| 3 | Esecuzione di Python | 9,5 ms | 9,5 ms |
+| 4 | Ritorno al browser (rete) | 3,2 ms | 3,2 ms |
+| | **Andata e ritorno totale** | **~5.000 ms** | **~274 ms** |
 
-The Python code (`range(100_000)` loop) ran for 9.516 ms — just 3.5% of the
-warm round-trip time.  Container startup dominates in both cases.
+Il codice Python (il ciclo `range(100_000)`) è stato eseguito in 9,516 ms: appena il 3,5% del
+tempo di andata e ritorno a caldo. In entrambi i casi è l'avvio del container a occupare la
+maggior parte del tempo.
 
-**Things to notice:**
+**Cose da notare:**
 
-- The **first run is slow (~5 seconds)** — a *cold start*.  Docker must load the
-  `python:3.11-alpine` image layers from disk into RAM the very first time.
-  Every run after that is a *warm start* (~300 ms) because those layers stay
-  in the operating system's page cache (fast RAM).
-- The **container startup** phase still dominates even on warm runs — Docker
-  creates a fresh isolated process from scratch every time you click Run.
-  This is the cost of safety.
-- **Python execution** is just a few milliseconds even for loops over 100,000
-  numbers — Python is fast once it starts.
-- **Network** time is tiny because everything stays on `127.0.0.1` (your own
-  machine), never touching the internet.
-- Restarting your computer clears the page cache, so the next first run will
-  be slow again.
-
----
-
-## How It Works
-
-When you click **Run**, here is what happens behind the scenes:
-
-1. The browser sends your code to the local service running at `http://127.0.0.1:5001/run`.
-2. The service asks Docker to start a fresh Python container.
-3. Docker runs your code inside the container (no network, limited memory, 10-second timeout).
-4. The container captures everything printed to the screen.
-5. The service sends that output back to your browser.
-6. The container is deleted automatically.
-
-The round-trip takes about **5 seconds on the very first run** (cold start —
-Docker loads the image from disk into RAM).  Every run after that takes about
-**300 milliseconds** because the image stays in the operating system's memory
-cache until you restart your computer.
+- La **prima esecuzione è lenta (~5 secondi)**: è un *avvio a freddo*. La prima volta Docker
+  deve caricare dal disco alla RAM gli strati (layer) dell'immagine `python:3.11-alpine`.
+  Ogni esecuzione successiva è un *avvio a caldo* (~300 ms), perché quegli strati restano
+  nella cache delle pagine del sistema operativo (la RAM veloce).
+- La fase di **avvio del container** occupa la maggior parte del tempo anche a caldo: Docker
+  crea da zero un nuovo processo isolato ogni volta che clicchi Run. È il prezzo della
+  sicurezza.
+- L'**esecuzione di Python** dura pochi millisecondi anche con cicli su 100.000 numeri: una
+  volta partito, Python è veloce.
+- Il tempo di **rete** è minimo perché tutto resta su `127.0.0.1` (il tuo computer), senza mai
+  passare da Internet.
+- Riavviare il computer svuota la cache delle pagine, quindi la prima esecuzione successiva
+  sarà di nuovo lenta.
 
 ---
 
-## Troubleshooting
+## Come funziona
 
-**"Cannot connect to the Python Docker service"**
-: The service is not running.  Open a terminal and run `bash scripts/run-python-docker.sh`.
+Quando clicchi **Run**, ecco che cosa succede dietro le quinte:
 
-**"Docker error: ..."**
-: Make sure Docker Desktop is running (look for the whale icon in your menu bar or system tray).
+1. Il browser invia il tuo codice al servizio locale in ascolto su `http://127.0.0.1:5001/run`.
+2. Il servizio chiede a Docker di avviare un nuovo container Python.
+3. Docker esegue il tuo codice dentro il container (senza rete, con memoria limitata e un limite di tempo di 10 secondi).
+4. Il container raccoglie tutto ciò che viene stampato sullo schermo.
+5. Il servizio rimanda quell'output al tuo browser.
+6. Il container viene eliminato automaticamente.
 
-**"Timed out after 10 seconds"**
-: Your program ran too long.  Check for an infinite loop (`while True:` with no `break`).
+L'andata e ritorno richiede circa **5 secondi alla primissima esecuzione** (avvio a freddo:
+Docker carica l'immagine dal disco alla RAM). Ogni esecuzione successiva richiede circa
+**300 millisecondi**, perché l'immagine resta nella cache di memoria del sistema operativo
+finché non riavvii il computer.
+
+---
+
+## Risoluzione dei problemi
+
+**"Cannot connect to the Python Docker service"** (impossibile collegarsi al servizio Python Docker)
+: Il servizio non è in funzione. Apri un terminale ed esegui `bash scripts/run-python-docker.sh`.
+
+**"Docker error: ..."** (errore di Docker)
+: Assicurati che Docker Desktop sia aperto (cerca l'icona della balena nella barra dei menu o nell'area di notifica).
+
+**"Timed out after 10 seconds"** (tempo scaduto dopo 10 secondi)
+: Il tuo programma è durato troppo. Controlla che non ci sia un ciclo infinito (`while True:` senza `break`).
 
 ---
 
