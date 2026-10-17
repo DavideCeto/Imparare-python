@@ -1,27 +1,18 @@
 {
   "file": "sims/expression-evaluator/index.md",
-  "hash": "f79c8fb81efe671f742d46f326ac19a4a01dafa80ffdec635c1bd4df93f797e1",
+  "hash": "23dff6abd0b9e376005b788c1e43991491fc863feb4d7a4a24fe1cf70dee6e39",
   "model": "sonnet",
   "score": 4,
   "parts": 1,
-  "cost_usd": 0.0256,
+  "cost_usd": 0.0239,
   "issues": [
-    {
-      "severity": "major",
-      "category": "meaning",
-      "english": "each Next Step highlights the operation Python computes next",
-      "italian": "evidenzia l'operazione che Python calcola per prima",
-      "explanation": "\"next\" (la prossima) è tradotto con \"per prima\", che suggerisce la prima in assoluto; a ogni passo è la successiva.",
-      "suggestion": "\"l'operazione che Python calcola subito dopo\" / \"come prossima\".",
-      "part": 1
-    },
     {
       "severity": "minor",
       "category": "meaning",
-      "english": "The amber highlight shows the operation Python runs next",
-      "italian": "l'operazione che Python esegue per prima",
-      "explanation": "Stesso problema: \"next\" reso con \"per prima\".",
-      "suggestion": "\"l'operazione che Python esegue subito dopo\".",
+      "english": "Upper elementary and middle school (ages 10-14)",
+      "italian": "Scuola primaria superiore e scuola media (10-14 anni)",
+      "explanation": "\"Scuola primaria superiore\" non è un termine usato in Italia; è innaturale.",
+      "suggestion": "Ultimi anni della scuola primaria e scuola media (10-14 anni)",
       "part": 1
     },
     {
@@ -29,35 +20,26 @@
       "category": "meaning",
       "english": "Score their predictions.",
       "italian": "Valuta le loro previsioni.",
-      "explanation": "Il soggetto sono gli studenti stessi che controllano le proprie previsioni; \"le loro\" con imperativo è incoerente.",
-      "suggestion": "\"Controlla le tue previsioni e assegnati un punto per ognuna esatta.\"",
+      "explanation": "\"Score\" qui significa assegnare un punteggio/controllare; inoltre il \"loro\" è ambiguo rispetto al \"Procedi\" rivolto agli studenti.",
+      "suggestion": "Controlla le tue previsioni e assegnati un punto per ogni risposta giusta.",
       "part": 1
     },
     {
       "severity": "minor",
       "category": "grammar",
-      "english": "and what rule explains it?",
-      "italian": "e quale regola lo spiega?",
-      "explanation": "Concordanza: \"previsione\" è femminile, quindi \"la spiega\".",
-      "suggestion": "\"e quale regola la spiega?\"",
-      "part": 1
-    },
-    {
-      "severity": "minor",
-      "category": "grammar",
-      "english": "un'\n  operazione alla volta",
-      "italian": "un'\noperazione alla volta",
-      "explanation": "Apostrofo con a capo, residuo di formattazione.",
+      "english": "one operation at a time.",
+      "italian": "un'\noperazione alla volta.",
+      "explanation": "Apostrofo seguito da a capo e spazio: formattazione spezzata (\"un' operazione\").",
       "suggestion": "Unire: \"un'operazione alla volta\".",
       "part": 1
     },
     {
       "severity": "minor",
       "category": "terminology",
-      "english": "Upper elementary and middle school (ages 10-14)",
-      "italian": "Scuola primaria superiore e scuola media",
-      "explanation": "\"Scuola primaria superiore\" non è un termine usuale in Italia.",
-      "suggestion": "\"Ultimi anni della scuola primaria e scuola media\".",
+      "english": "Next Step",
+      "italian": "Passo Successivo",
+      "explanation": "Il pulsante Next Step nel laboratorio probabilmente resta in inglese (come Run/Reset); la traduzione potrebbe non corrispondere all'etichetta reale in main.html.",
+      "suggestion": "Verificare l'etichetta in main.html; se è in inglese, mantenere **Next Step**.",
       "part": 1
     }
   ]

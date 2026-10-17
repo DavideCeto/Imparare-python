@@ -1,8 +1,8 @@
 # Revisione semantica della traduzione
 
 - File revisionati: 338
-- Problemi: 15 critici · 47 importanti · 1204 minori
-- Costo stimato: $13.12
+- Problemi: 15 critici · 42 importanti · 1197 minori
+- Costo stimato: $13.11
 
 | File | Voto | Critici | Importanti | Minori |
 |---|---|---|---|---|
@@ -26,20 +26,18 @@
 | `trinket/14-color-picker.md` | 1 | 0 | 1 | 0 |
 | `trinket/15-sine-wave.md` | 1 | 0 | 2 | 2 |
 | `trinket/examples.md` | 1 | 0 | 2 | 2 |
-| `jupyter/01-inline-test-setup.md` | 2 | 0 | 2 | 0 |
 | `trinket/01b-turtle-graphics.md` | 2 | 0 | 3 | 0 |
 | `turtle-graphics-gallery/honeycomb-grid/index.md` | 2 | 0 | 1 | 4 |
-| `turtle-graphics-gallery/dragon-curve/index.md` | 3 | 0 | 2 | 7 |
 | `chapters/18-math-module-turtle-projects/index.md` | 4 | 0 | 1 | 5 |
-| `sims/expression-evaluator/index.md` | 4 | 0 | 1 | 5 |
 | `sims/sine-wave-explorer/index.md` | 4 | 0 | 1 | 3 |
 | `turtle-graphics-gallery/archimedean-spiral/index.md` | 4 | 0 | 1 | 5 |
-| `turtle-graphics-gallery/index.md` | 4 | 0 | 1 | 7 |
+| `turtle-graphics-gallery/index.md` | 4 | 0 | 1 | 6 |
 | `turtle-graphics-gallery/l-system-plant/index.md` | 4 | 0 | 1 | 5 |
 | `turtle-graphics-gallery/mountain-range/index.md` | 4 | 0 | 1 | 5 |
 | `turtle-graphics-gallery/polka-dot-canvas/index.md` | 4 | 0 | 1 | 5 |
 | `turtle-graphics-gallery/sunflower-spiral/index.md` | 4 | 0 | 1 | 6 |
 | `contact.md` | 3 | 0 | 0 | 2 |
+| `jupyter/01-inline-test-setup.md` | 3 | 0 | 0 | 1 |
 | `sims/graph-traversal-explorer/index.md` | 3 | 0 | 0 | 9 |
 | `turtle-graphics-gallery/cantor-dust/index.md` | 3 | 0 | 0 | 8 |
 | `turtle-graphics-gallery/logarithmic-spiral/index.md` | 3 | 0 | 0 | 9 |
@@ -157,6 +155,7 @@
 | `sims/control-flow-explorer/index.md` | 4 | 0 | 0 | 4 |
 | `sims/dice-roll-histogram/index.md` | 4 | 0 | 0 | 4 |
 | `sims/dictionary-key-lookup/index.md` | 4 | 0 | 0 | 4 |
+| `sims/expression-evaluator/index.md` | 4 | 0 | 0 | 4 |
 | `sims/fractal-tree-explorer/index.md` | 4 | 0 | 0 | 4 |
 | `sims/function-call-flow/index.md` | 4 | 0 | 0 | 4 |
 | `sims/index.md` | 4 | 0 | 0 | 5 |
@@ -210,6 +209,7 @@
 | `turtle-graphics-gallery/dna-helix/index.md` | 4 | 0 | 0 | 6 |
 | `turtle-graphics-gallery/dotted-grid/index.md` | 4 | 0 | 0 | 5 |
 | `turtle-graphics-gallery/double-helix-spiral/index.md` | 4 | 0 | 0 | 5 |
+| `turtle-graphics-gallery/dragon-curve/index.md` | 4 | 0 | 0 | 1 |
 | `turtle-graphics-gallery/epicycloid-star/index.md` | 4 | 0 | 0 | 5 |
 | `turtle-graphics-gallery/epitrochoid/index.md` | 4 | 0 | 0 | 4 |
 | `turtle-graphics-gallery/escher-fish/index.md` | 4 | 0 | 0 | 6 |
@@ -665,19 +665,6 @@
     - Perché: I titoli degli esempi in elenco non sono tradotti.
     - Proposta: Tradurre es. "Come trovare i numeri primi?", "Gioco del Tris", "Disegnare un elefante".
 
-## `jupyter/01-inline-test-setup.md` — voto 2/5
-
-- **major** · untranslated
-    - EN: ## Test of Jupyter Lab Inline Setup
-    - IT: ## Test of Jupyter Lab Inline Setup
-    - Perché: Il titolo della sezione è rimasto in inglese. Non è un nome proprio né codice, quindi andava tradotto (Jupyter Lab resta invariato).
-    - Proposta: ## Test della configurazione inline di Jupyter Lab
-- **major** · untranslated
-    - EN: [Rumor this work](https://github.com/takluyver/mobilechelonian)
-    - IT: [Rumor this work](https://github.com/takluyver/mobilechelonian)
-    - Perché: Il testo del link è rimasto in inglese. L'URL va lasciato com'è, ma il testo visibile andava tradotto. Anche l'originale è insolito: "Rumor this work" sembra un errore, forse "Rumor has it this works" o "Credit to this work". Va verificato il senso prima di tradurre.
-    - Proposta: Tradurre il testo del link in base al senso inteso, ad esempio [Si dice che funzioni così](https://github.com/takluyver/mobilechelonian). Se l'originale è un errore, correggerlo prima.
-
 ## `trinket/01b-turtle-graphics.md` — voto 2/5
 
 - **major** · untranslated
@@ -724,54 +711,6 @@
     - Perché: Ripetizione "angolo ... angolo".
     - Proposta: "L'angolo esterno in ogni vertice è"
 
-## `turtle-graphics-gallery/dragon-curve/index.md` — voto 3/5
-
-- **major** · meaning
-    - EN: add an 'R', then append the reversed + inverted sequence.
-    - IT: aggiungi una 'D', poi aggiungi la sequenza invertita + capovolta.
-    - Perché: Il codice usa 'R' e 'L' ma il testo italiano usa S/D senza spiegare la corrispondenza con le lettere del codice (R=D, L=S). Inoltre 'invertita' (reversed) e 'capovolta' (inverted) sono poco chiari per studenti di 10-13 anni.
-    - Proposta: Spiegare che nel codice 'R' = destra (D) e 'L' = sinistra (S), e chiarire: 'la sequenza letta al contrario e con le svolte scambiate'.
-- **major** · meaning
-    - EN: The right half is the old list reversed and inverted (L↔R)
-    - IT: La metà destra è la vecchia lista invertita e capovolta (S↔D)
-    - Perché: Ambiguità: 'invertita' per reversed e 'capovolta' per inverted sono usate in modo incoerente: in un'altra frase 'invertita + capovolta' ha ordine diverso, e 'Inverte ogni rotazione' nella tabella usa 'inverte' per lo scambio L/R, contraddicendo la terminologia.
-    - Proposta: Usare 'letta al contrario' per reversed e 'scambiata (S↔D)' per inverted, in modo coerente ovunque.
-- **minor** · terminology
-    - EN: Invert each turn: L becomes R, R becomes L
-    - IT: Inverte ogni rotazione: S diventa D, D diventa S
-    - Perché: Usa 'inverte' per l'inversione L/R mentre altrove 'invertita' traduce 'reversed'. Terminologia incoerente.
-    - Proposta: Usare 'Scambia ogni rotazione: S diventa D, D diventa S'.
-- **minor** · terminology
-    - EN: a sequence of L/R turns
-    - IT: una sequenza di rotazioni S/D
-    - Perché: 'turns' tradotto 'rotazioni' e 'creases' come 'pieghe' crea confusione; inoltre 'folds' in 'piegature'. Le lettere S/D non corrispondono a quelle del codice (L/R).
-    - Proposta: Usare 'svolte' per turns e specificare che nel codice si usano L/R.
-- **minor** · grammar
-    - EN: The Dragon Curve is what you get when you draw those creases as 90° turns.
-    - IT: un bellissimo pattern che non si incrocia mai
-    - Perché: 'pattern' lasciato in inglese senza necessità.
-    - Proposta: Usare 'disegno' o 'motivo'.
-- **minor** · terminology
-    - EN: The new middle element is always 'R'
-    - IT: voci
-    - Perché: 'entries' tradotto 'voci' è poco naturale per elementi di una lista.
-    - Proposta: Usare 'elementi'.
-- **minor** · untranslated
-    - EN: The curve fills more canvas.
-    - IT: La curva riempie più canvas.
-    - Perché: 'canvas' lasciato in inglese.
-    - Proposta: Usare 'area di disegno'.
-- **minor** · grammar
-    - EN: Both encode the same self-similar structure.
-    - IT: Entrambi codificano la stessa struttura auto-simile.
-    - Perché: 'Entrambi' si riferisce ad approcci (femminile plurale: 'entrambi' è maschile, 'approcci' è maschile) ma l'originale parla dei due metodi; la frase è ok, tuttavia 'auto-simile' è un termine oscuro per l'età.
-    - Proposta: Usare 'che si ripete in piccolo' o 'autosimile' con breve spiegazione.
-- **minor** · meaning
-    - EN: the path fills space without any two segments overlapping
-    - IT: il percorso riempie lo spazio senza che due segmenti si sovrappongano
-    - Perché: Corretto in italiano ma, come nell'originale, l'affermazione che non si incrocia mai è tecnicamente imprecisa (tocca sé stessa agli angoli); nessuna distorsione introdotta dalla traduzione.
-    - Proposta: Nessuna modifica necessaria.
-
 ## `chapters/18-math-module-turtle-projects/index.md` — voto 4/5
 
 - **major** · prediction
@@ -804,39 +743,6 @@
     - IT: ne infila più ondulazioni nello stesso spazio
     - Perché: Frase poco scorrevole.
     - Proposta: "quale ne mette più ondulazioni nello stesso spazio" → "quale fa stare più ondulazioni nello stesso spazio".
-
-## `sims/expression-evaluator/index.md` — voto 4/5
-
-- **major** · meaning
-    - EN: each Next Step highlights the operation Python computes next
-    - IT: evidenzia l'operazione che Python calcola per prima
-    - Perché: "next" (la prossima) è tradotto con "per prima", che suggerisce la prima in assoluto; a ogni passo è la successiva.
-    - Proposta: "l'operazione che Python calcola subito dopo" / "come prossima".
-- **minor** · meaning
-    - EN: The amber highlight shows the operation Python runs next
-    - IT: l'operazione che Python esegue per prima
-    - Perché: Stesso problema: "next" reso con "per prima".
-    - Proposta: "l'operazione che Python esegue subito dopo".
-- **minor** · meaning
-    - EN: Score their predictions.
-    - IT: Valuta le loro previsioni.
-    - Perché: Il soggetto sono gli studenti stessi che controllano le proprie previsioni; "le loro" con imperativo è incoerente.
-    - Proposta: "Controlla le tue previsioni e assegnati un punto per ognuna esatta."
-- **minor** · grammar
-    - EN: and what rule explains it?
-    - IT: e quale regola lo spiega?
-    - Perché: Concordanza: "previsione" è femminile, quindi "la spiega".
-    - Proposta: "e quale regola la spiega?"
-- **minor** · grammar
-    - EN: un' operazione alla volta
-    - IT: un' operazione alla volta
-    - Perché: Apostrofo con a capo, residuo di formattazione.
-    - Proposta: Unire: "un'operazione alla volta".
-- **minor** · terminology
-    - EN: Upper elementary and middle school (ages 10-14)
-    - IT: Scuola primaria superiore e scuola media
-    - Perché: "Scuola primaria superiore" non è un termine usuale in Italia.
-    - Proposta: "Ultimi anni della scuola primaria e scuola media".
 
 ## `sims/sine-wave-explorer/index.md` — voto 4/5
 
@@ -896,46 +802,41 @@
 
 ## `turtle-graphics-gallery/index.md` — voto 4/5
 
-- **major** · omission
-    - EN: Teaches: polar equations, polar-to-Cartesian conversion, petal counting rules.
-    - IT: Insegna: equazioni polari, regole di conteggio dei petali.
-    - Perché: Manca l'argomento "conversione da polare a cartesiano".
-    - Proposta: Insegna: equazioni polari, conversione da polare a cartesiano, regole di conteggio dei petali.
-- **minor** · meaning
-    - EN: loop count
-    - IT: il rapporto di frequenza controlla il numero di cicli
-    - Perché: "Loop" qui indica le anse/occhielli della curva, non i cicli di programmazione.
-    - Proposta: controlla il numero di anse
+- **major** · meaning
+    - EN: Teaches: `for` loops, color lists, and the modulo operator.
+    - IT: Insegna: cicli `for`, liste di colori, e l'operatore modulo.
+    - Perché: Non è un errore qui, ma in 'Dragon Curve' la codifica L/R è tradotta S/D: coerente. Vedi invece 'T-Square': ridondanza.
+    - Proposta: Nessuna modifica.
 - **minor** · meaning
     - EN: Teaches: quaternary recursion, 4-ary recursion, layered draw order.
     - IT: Insegna: ricorsione quaternaria, ricorsione a 4 vie, ordine di disegno a strati.
-    - Perché: Ridondanza dell'originale, ma l'italiano resta poco chiaro; "T-Square" e "backtracker" lasciati non spiegati.
-    - Proposta: Verificare la coerenza; eventualmente "Frattale del Quadrato a T".
+    - Perché: Resa corretta ma ridondante come l'originale; accettabile.
+    - Proposta: Nessuna modifica necessaria.
 - **minor** · meaning
-    - EN: Teaches: `i // n` for color bands vs `i % n` for segment cycling.
-    - IT: Insegna: `i // n` per le fasce di colore contro `i % n` per il ciclo dei segmenti.
-    - Perché: Corretto, ma in "Delta" e simili il tono è ok; invece "Pianta a Sistema-L" usa "stack a parentesi" non tradotto.
-    - Proposta: "pila (stack) per le parentesi"
+    - EN: Teaches: `step += n` ... Café Wall Illusion
+    - IT: Illusione del Muro del Caffè
+    - Perché: 'Café Wall' è un nome proprio di illusione ottica (in italiano 'illusione del muro del caffè' esiste, ma è poco chiaro per ragazzi).
+    - Proposta: Mantenere, eventualmente aggiungere 'Café Wall' tra parentesi.
+- **minor** · meaning
+    - EN: Teaches: building creature shapes from arc + triangle
+    - IT: Insegna: costruire forme di creature da arco + triangolo
+    - Perché: 'forme di creature' è innaturale in italiano.
+    - Proposta: costruire la forma di un animale con un arco + un triangolo
 - **minor** · terminology
-    - EN: Lévy C Curve
-    - IT: Dragone di Heighway — un frattale auto-evitante
-    - Perché: "Dragone" in Linden-snowflakes e "dragon" lasciato in inglese (hex) nella stessa lista: incoerenza.
-    - Proposta: Usare "esagonale" al posto di "hex".
-- **minor** · grammar
-    - EN: A triangle made of triangles made of triangles
-    - IT: Un triangolo fatto di triangoli fatto di triangoli
-    - Perché: Concordanza scorretta.
-    - Proposta: Un triangolo fatto di triangoli fatti di triangoli
+    - EN: Fish School
+    - IT: Banco di Pesci
+    - Perché: Corretto, ma in 'Escher fish' si usa 'banco' per una griglia 4×4 di tessere: va bene. In 'Turtle Chase' 'ri-mirando' è poco naturale.
+    - Proposta: riprendendo la mira a ogni fotogramma
 - **minor** · terminology
     - EN: A red hunter turtle chases a randomly wandering green prey, re-aiming every frame until "Caught!"
-    - IT: finché non la "Cattura!"
-    - Perché: "Caught!" è un messaggio mostrato ("Preso!"), non un verbo; frase scorretta.
-    - Proposta: finché appare "Preso!"
-- **minor** · terminology
-    - EN: Café Wall Illusion
-    - IT: Illusione del Muro del Caffè
-    - Perché: Il nome corrente italiano è "Illusione del muro del caffè"; accettabile, ma "Cafe Wall" è nome proprio.
-    - Proposta: Valutare "Illusione Café Wall".
+    - IT: ri-mirando ogni fotogramma finché non la "Cattura!"
+    - Perché: "Caught!" è il messaggio mostrato ("Presa!"); "Cattura!" e 'finché non la' sono scorretti.
+    - Proposta: finché non la prende: "Presa!"
+- **minor** · grammar
+    - EN: Draw a square, rotate 10°, draw a larger square
+    - IT: rosso, arancione, giallo, verde, blu, e viola.
+    - Perché: Virgola prima della 'e' non idiomatica in italiano (ricorre in molte voci).
+    - Proposta: rosso, arancione, giallo, verde, blu e viola.
 
 ## `turtle-graphics-gallery/l-system-plant/index.md` — voto 4/5
 
@@ -1086,6 +987,14 @@
     - IT: Domande Specifiche su questo Repositore
     - Perché: "Repositore" non è un termine corretto; in italiano si usa "repository" (invariato). Anche le maiuscole non sono necessarie.
     - Proposta: Domande specifiche su questo repository
+
+## `jupyter/01-inline-test-setup.md` — voto 3/5
+
+- **minor** · meaning
+    - EN: [Rumor this work]
+    - IT: [Si dice che questo funzioni]
+    - Perché: L'originale è un'espressione ellittica ('Si mormora che funzioni'); la resa italiana è accettabile come senso, quindi segnalo solo come adattamento un po' colloquiale per un testo di test.
+    - Proposta: Eventualmente: 'Pare che questo funzioni'.
 
 ## `sims/graph-traversal-explorer/index.md` — voto 3/5
 
@@ -3993,6 +3902,29 @@
     - Perché: "Sentire perché" è un calco; meglio "capire" o "scoprire".
     - Proposta: per scoprire perché la ricerca nel dizionario richiede un solo balzo
 
+## `sims/expression-evaluator/index.md` — voto 4/5
+
+- **minor** · meaning
+    - EN: Upper elementary and middle school (ages 10-14)
+    - IT: Scuola primaria superiore e scuola media (10-14 anni)
+    - Perché: "Scuola primaria superiore" non è un termine usato in Italia; è innaturale.
+    - Proposta: Ultimi anni della scuola primaria e scuola media (10-14 anni)
+- **minor** · meaning
+    - EN: Score their predictions.
+    - IT: Valuta le loro previsioni.
+    - Perché: "Score" qui significa assegnare un punteggio/controllare; inoltre il "loro" è ambiguo rispetto al "Procedi" rivolto agli studenti.
+    - Proposta: Controlla le tue previsioni e assegnati un punto per ogni risposta giusta.
+- **minor** · grammar
+    - EN: one operation at a time.
+    - IT: un' operazione alla volta.
+    - Perché: Apostrofo seguito da a capo e spazio: formattazione spezzata ("un' operazione").
+    - Proposta: Unire: "un'operazione alla volta".
+- **minor** · terminology
+    - EN: Next Step
+    - IT: Passo Successivo
+    - Perché: Il pulsante Next Step nel laboratorio probabilmente resta in inglese (come Run/Reset); la traduzione potrebbe non corrispondere all'etichetta reale in main.html.
+    - Proposta: Verificare l'etichetta in main.html; se è in inglese, mantenere **Next Step**.
+
 ## `sims/fractal-tree-explorer/index.md` — voto 4/5
 
 - **minor** · grammar
@@ -5286,6 +5218,14 @@
     - IT: i due pattern si intrecciano insieme.
     - Perché: «Intrecciano insieme» è ridondante.
     - Proposta: i due pattern si intrecciano.
+
+## `turtle-graphics-gallery/dragon-curve/index.md` — voto 4/5
+
+- **minor** · meaning
+    - EN: The right half is the old list reversed and inverted (L↔R) — that's what the folded half looks like from the unfolded end.
+    - IT: La metà destra è la vecchia lista letta al contrario e con le svolte scambiate (L↔R) — questo è ciò che sembra la metà piegata vista dall'estremità distesa.
+    - Perché: Frase poco naturale e leggermente oscura per studenti di 10-13 anni ("questo è ciò che sembra").
+    - Proposta: "è l'aspetto che ha la metà piegata vista dall'estremità distesa."
 
 ## `turtle-graphics-gallery/epicycloid-star/index.md` — voto 4/5
 

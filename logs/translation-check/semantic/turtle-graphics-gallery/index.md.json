@@ -1,27 +1,18 @@
 {
   "file": "turtle-graphics-gallery/index.md",
-  "hash": "707b45a87888d730040cb3ae0a37840a618e556c3581eb30d6fca7d708e19e7c",
+  "hash": "567597d0a39d441bb500d6d5a62c22f197f80c23a8bd6347d7027620f637f1d7",
   "model": "sonnet",
   "score": 4,
   "parts": 1,
-  "cost_usd": 0.1466,
+  "cost_usd": 0.1494,
   "issues": [
     {
       "severity": "major",
-      "category": "omission",
-      "english": "Teaches: polar equations, polar-to-Cartesian conversion, petal counting rules.",
-      "italian": "Insegna: equazioni polari, regole di conteggio dei petali.",
-      "explanation": "Manca l'argomento \"conversione da polare a cartesiano\".",
-      "suggestion": "Insegna: equazioni polari, conversione da polare a cartesiano, regole di conteggio dei petali.",
-      "part": 1
-    },
-    {
-      "severity": "minor",
       "category": "meaning",
-      "english": "loop count",
-      "italian": "il rapporto di frequenza controlla il numero di cicli",
-      "explanation": "\"Loop\" qui indica le anse/occhielli della curva, non i cicli di programmazione.",
-      "suggestion": "controlla il numero di anse",
+      "english": "Teaches: `for` loops, color lists, and the modulo operator.",
+      "italian": "Insegna: cicli `for`, liste di colori, e l'operatore modulo.",
+      "explanation": "Non è un errore qui, ma in 'Dragon Curve' la codifica L/R è tradotta S/D: coerente. Vedi invece 'T-Square': ridondanza.",
+      "suggestion": "Nessuna modifica.",
       "part": 1
     },
     {
@@ -29,53 +20,53 @@
       "category": "meaning",
       "english": "Teaches: quaternary recursion, 4-ary recursion, layered draw order.",
       "italian": "Insegna: ricorsione quaternaria, ricorsione a 4 vie, ordine di disegno a strati.",
-      "explanation": "Ridondanza dell'originale, ma l'italiano resta poco chiaro; \"T-Square\" e \"backtracker\" lasciati non spiegati.",
-      "suggestion": "Verificare la coerenza; eventualmente \"Frattale del Quadrato a T\".",
+      "explanation": "Resa corretta ma ridondante come l'originale; accettabile.",
+      "suggestion": "Nessuna modifica necessaria.",
       "part": 1
     },
     {
       "severity": "minor",
       "category": "meaning",
-      "english": "Teaches: `i // n` for color bands vs `i % n` for segment cycling.",
-      "italian": "Insegna: `i // n` per le fasce di colore contro `i % n` per il ciclo dei segmenti.",
-      "explanation": "Corretto, ma in \"Delta\" e simili il tono è ok; invece \"Pianta a Sistema-L\" usa \"stack a parentesi\" non tradotto.",
-      "suggestion": "\"pila (stack) per le parentesi\"",
+      "english": "Teaches: `step += n` ... Café Wall Illusion",
+      "italian": "Illusione del Muro del Caffè",
+      "explanation": "'Café Wall' è un nome proprio di illusione ottica (in italiano 'illusione del muro del caffè' esiste, ma è poco chiaro per ragazzi).",
+      "suggestion": "Mantenere, eventualmente aggiungere 'Café Wall' tra parentesi.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Teaches: building creature shapes from arc + triangle",
+      "italian": "Insegna: costruire forme di creature da arco + triangolo",
+      "explanation": "'forme di creature' è innaturale in italiano.",
+      "suggestion": "costruire la forma di un animale con un arco + un triangolo",
       "part": 1
     },
     {
       "severity": "minor",
       "category": "terminology",
-      "english": "Lévy C Curve",
-      "italian": "Dragone di Heighway — un frattale auto-evitante",
-      "explanation": "\"Dragone\" in Linden-snowflakes e \"dragon\" lasciato in inglese (hex) nella stessa lista: incoerenza.",
-      "suggestion": "Usare \"esagonale\" al posto di \"hex\".",
-      "part": 1
-    },
-    {
-      "severity": "minor",
-      "category": "grammar",
-      "english": "A triangle made of triangles made of triangles",
-      "italian": "Un triangolo fatto di triangoli fatto di triangoli",
-      "explanation": "Concordanza scorretta.",
-      "suggestion": "Un triangolo fatto di triangoli fatti di triangoli",
+      "english": "Fish School",
+      "italian": "Banco di Pesci",
+      "explanation": "Corretto, ma in 'Escher fish' si usa 'banco' per una griglia 4×4 di tessere: va bene. In 'Turtle Chase' 'ri-mirando' è poco naturale.",
+      "suggestion": "riprendendo la mira a ogni fotogramma",
       "part": 1
     },
     {
       "severity": "minor",
       "category": "terminology",
       "english": "A red hunter turtle chases a randomly wandering green prey, re-aiming every frame until \"Caught!\"",
-      "italian": "finché non la \"Cattura!\"",
-      "explanation": "\"Caught!\" è un messaggio mostrato (\"Preso!\"), non un verbo; frase scorretta.",
-      "suggestion": "finché appare \"Preso!\"",
+      "italian": "ri-mirando ogni fotogramma finché non la \"Cattura!\"",
+      "explanation": "\"Caught!\" è il messaggio mostrato (\"Presa!\"); \"Cattura!\" e 'finché non la' sono scorretti.",
+      "suggestion": "finché non la prende: \"Presa!\"",
       "part": 1
     },
     {
       "severity": "minor",
-      "category": "terminology",
-      "english": "Café Wall Illusion",
-      "italian": "Illusione del Muro del Caffè",
-      "explanation": "Il nome corrente italiano è \"Illusione del muro del caffè\"; accettabile, ma \"Cafe Wall\" è nome proprio.",
-      "suggestion": "Valutare \"Illusione Café Wall\".",
+      "category": "grammar",
+      "english": "Draw a square, rotate 10°, draw a larger square",
+      "italian": "rosso, arancione, giallo, verde, blu, e viola.",
+      "explanation": "Virgola prima della 'e' non idiomatica in italiano (ricorre in molte voci).",
+      "suggestion": "rosso, arancione, giallo, verde, blu e viola.",
       "part": 1
     }
   ]
