@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/gosper-curve/index.md",
+  "hash": "94da1354c6523ebed0599ac4a2304cb55f0151858c4e0caa172f4c9822b80077",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0389,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Monty waving welcome",
+      "italian": "Monty waving welcome",
+      "explanation": "Il testo alternativo dell'immagine è rimasto in inglese (minore, convenzione probabile).",
+      "suggestion": "Valutare 'Monty saluta per dare il benvenuto'.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "how many characters long will the string be approximately?",
+      "italian": "quanti caratteri lunga sarà approssimativamente la stringa?",
+      "explanation": "Frase innaturale in italiano.",
+      "suggestion": "quanto sarà lunga la stringa, approssimativamente, in caratteri?",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Predict how the shape will look simpler.",
+      "italian": "Prevedi come sembrerà più semplice la forma.",
+      "explanation": "Costruzione poco naturale.",
+      "suggestion": "Prevedi in che modo la forma apparirà più semplice.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Built from just two string rewriting rules applied four times.",
+      "italian": "Costruita da solo due regole di riscrittura di stringhe applicate quattro volte.",
+      "explanation": "Errore di concordanza ('da solo due').",
+      "suggestion": "Costruita con sole due regole di riscrittura di stringhe applicate quattro volte.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to the Gosper Curve!",
+      "italian": "Benvenuto alla Curva di Gosper!",
+      "explanation": "Preposizione preferibile 'nella/alla'; accettabile ma 'Benvenuto' è maschile.",
+      "suggestion": "Benvenuti alla Curva di Gosper!",
+      "part": 1
+    }
+  ]
+}

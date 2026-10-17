@@ -4,24 +4,15 @@
   "model": "sonnet",
   "score": 4,
   "parts": 1,
-  "cost_usd": 0.0267,
+  "cost_usd": 0.0266,
   "issues": [
-    {
-      "severity": "major",
-      "category": "meaning",
-      "english": "well suited for students ages 10–13 exploring scientific Python",
-      "italian": "ben adatte a studenti dai 10 ai 13 anni che esplorano il Python scientifico",
-      "explanation": "La traduzione rende fedelmente l'originale. Il pubblico del manuale però è di 13-15 anni, quindi la fascia 10–13 dell'originale è incoerente. Se la correzione è fatta nell'originale, va allineata anche l'italiano.",
-      "suggestion": "Verificare la fascia d'età nell'originale (13–15 anni) e allinearla in entrambe le versioni.",
-      "part": 1
-    },
     {
       "severity": "minor",
       "category": "grammar",
-      "english": "Covers the history, design, and capabilities",
-      "italian": "Copre la storia, il design, e le capacità",
-      "explanation": "In italiano non si mette la virgola prima della «e» in un elenco. «Design» è anglicismo evitabile.",
-      "suggestion": "Tratta la storia, la progettazione e le funzionalità della libreria NumPy",
+      "english": "Covers the history, design, and capabilities of the NumPy library",
+      "italian": "Copre la storia, il design, e le capacità della libreria NumPy",
+      "explanation": "In italiano non si mette la virgola prima della «e» che chiude un elenco semplice. La stessa virgola compare in altre voci.",
+      "suggestion": "Copre la storia, il design e le capacità della libreria NumPy",
       "part": 1
     },
     {
@@ -29,8 +20,8 @@
       "category": "grammar",
       "english": "Provides a beginner-friendly introduction to Python lists and data structures that serves as direct preparation",
       "italian": "Fornisce un'introduzione adatta ai principianti alle liste Python e alle strutture di dati che serve come preparazione diretta",
-      "explanation": "La frase è ambigua e pesante: «che serve» sembra riferirsi a «strutture di dati».",
-      "suggestion": "Offre un'introduzione per principianti alle liste Python e alle strutture dati, che prepara direttamente a capire gli array NumPy e la loro notazione di slicing.",
+      "explanation": "Il «che serve» sembra riferirsi a «strutture di dati» e la frase risulta pesante. Anche «strutture di dati» è meno naturale di «strutture dati».",
+      "suggestion": "Offre un'introduzione per principianti alle liste Python e alle strutture dati, ottima come preparazione diretta per capire gli array NumPy e la loro notazione di slicing.",
       "part": 1
     },
     {
@@ -38,26 +29,26 @@
       "category": "terminology",
       "english": "vectorized operations",
       "italian": "operazioni vettorializzate",
-      "explanation": "Il termine usato in italiano è «vettorizzate».",
+      "explanation": "Il termine usato in italiano è «vettorizzate». «Vettorializzate» è meno comune.",
       "suggestion": "operazioni vettorizzate",
       "part": 1
     },
     {
       "severity": "minor",
-      "category": "grammar",
-      "english": "with runnable examples",
-      "italian": "con esempi provabili",
-      "explanation": "«Provabili» è innaturale.",
-      "suggestion": "con esempi eseguibili",
+      "category": "tone",
+      "english": "with runnable examples and simple descriptions well suited for students ages 10–13",
+      "italian": "con esempi provabili e descrizioni semplici ben adatte a studenti dai 10 ai 13 anni che esplorano il Python scientifico",
+      "explanation": "«Provabili» è un calco innaturale, e «il Python scientifico» suona forzato.",
+      "suggestion": "con esempi eseguibili e descrizioni semplici, adatte a studenti dai 10 ai 13 anni che scoprono la programmazione scientifica in Python",
       "part": 1
     },
     {
       "severity": "minor",
       "category": "grammar",
-      "english": "how Python has become a leading language for scientific data analysis and simulation",
-      "italian": "come Python è diventato un linguaggio leader per l'analisi dei dati scientifici e la simulazione",
-      "explanation": "«Linguaggio leader» è un po' forzato e la struttura è poco scorrevole.",
-      "suggestion": "uno dei linguaggi principali per l'analisi dei dati scientifici e per la simulazione",
+      "english": "understanding built-in lists is essential context before learning how NumPy arrays extend and improve on them",
+      "italian": "capire le liste built-in è un contesto essenziale prima di imparare come gli array NumPy le estendono e le migliorano",
+      "explanation": "Frase un po' calcata sull'inglese. «Contesto essenziale» è poco naturale.",
+      "suggestion": "capire le liste integrate di Python è fondamentale prima di scoprire come gli array NumPy le estendono e le migliorano",
       "part": 1
     }
   ]

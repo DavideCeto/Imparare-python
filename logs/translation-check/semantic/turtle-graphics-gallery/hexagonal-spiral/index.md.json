@@ -1,0 +1,46 @@
+{
+  "file": "turtle-graphics-gallery/hexagonal-spiral/index.md",
+  "hash": "367f219e7fd4b94fc02eda3164612d8cc37458bde513bf6eea4091a8aa98f265",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0372,
+  "issues": [
+    {
+      "category": "meaning",
+      "severity": "minor",
+      "english": "Each segment is tinted in a cool blue-to-green gradient that cycles outward",
+      "italian": "Ogni segmento è tinto in un fresco gradiente da blu a verde che scorre verso l'esterno",
+      "explanation": "\"cool\" indica colori freddi, non \"fresco\"; \"tinto\" e \"scorre\" sono poco naturali.",
+      "suggestion": "\"Ogni segmento è colorato con un gradiente di colori freddi, dal blu al verde, che si ripete verso l'esterno\"",
+      "part": 1
+    },
+    {
+      "category": "grammar",
+      "severity": "minor",
+      "english": "Seven-hue navy-to-green gradient",
+      "italian": "Gradiente a sette tonalità da navy a verde",
+      "explanation": "\"navy\" lasciato in inglese in prosa; in italiano \"blu scuro\" è più chiaro per gli studenti (anche in \"navy profondo\").",
+      "suggestion": "\"blu scuro\" al posto di \"navy\" nella prosa.",
+      "part": 1
+    },
+    {
+      "category": "terminology",
+      "severity": "minor",
+      "english": "the modulo automatically adjusts",
+      "italian": "il modulo si adatta automaticamente",
+      "explanation": "\"modulo\" è ambiguo (in Python significa anche modulo/module); meglio \"l'operatore modulo (%)\" o \"il resto\".",
+      "suggestion": "\"l'operatore % si adatta automaticamente\"",
+      "part": 1
+    },
+    {
+      "category": "grammar",
+      "severity": "minor",
+      "english": "Find the missing line and add it so the path spirals outward.",
+      "italian": "Trova la riga mancante e aggiungila così il percorso si avvolga verso l'esterno.",
+      "explanation": "Costruzione poco naturale (\"così ... si avvolga\"); inoltre \"si avvolge\" per \"spirals\" è un po' strano.",
+      "suggestion": "\"aggiungila in modo che il percorso formi una spirale verso l'esterno.\"",
+      "part": 1
+    }
+  ]
+}

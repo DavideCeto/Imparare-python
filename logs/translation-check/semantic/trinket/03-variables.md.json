@@ -1,0 +1,46 @@
+{
+  "file": "trinket/03-variables.md",
+  "hash": "191952209ed6a0179941c036408e8ce45dd7c6ce4401b4840473267bcdc325ab",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 1,
+  "cost_usd": 0.0224,
+  "issues": [
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "This lab was written for **Trinket.io**, which is [shutting down in August 2026]",
+      "italian": "This lab was written for **Trinket.io**, which is [shutting down in August 2026]",
+      "explanation": "L'avviso (titolo e corpo dell'admonition) è rimasto interamente in inglese. Il testo va tradotto, lasciando invariati link, URL e nomi di prodotto.",
+      "suggestion": "!!! warning \"Laboratorio obsoleto — Trinket sta chiudendo\" e corpo: \"Questo laboratorio è stato scritto per **Trinket.io**, che [chiuderà ad agosto 2026](../about.md#a-note-on-platform-history). I link `trinket.io` incorporati in questa pagina smetteranno di funzionare dopo quella data.\" Traduci anche il paragrafo successivo.",
+      "part": 1
+    },
+    {
+      "severity": "critical",
+      "category": "untranslated",
+      "english": "In the simple square program we repeated the numbers for the distance and turning angle four times in four different places.",
+      "italian": "In the simple square program we repeated the numbers for the distance and turning angle four times in four different places.",
+      "explanation": "Tutto il testo della lezione (sezioni \"Using Variables\", \"Sample Code\" e \"Experiments\") è identico all'inglese. Gli studenti italiani non possono leggere la spiegazione.",
+      "suggestion": "Traduci titoli e prosa, ad esempio \"Usare le variabili\", \"Codice di esempio\", \"Esperimenti\", \"Riesci a far disegnare alla turtle un quadrato più grande? Suggerimento: cambia forward(40) in forward(100)\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "# let's just put these in one place to make our program easier to modify",
+      "italian": "# let's just put these in one place to make our program easier to modify",
+      "explanation": "Il commento nel codice e la stringa 'done with square' possono essere tradotti ma sono rimasti in inglese. Il codice va invece lasciato intatto.",
+      "suggestion": "# mettiamo questi valori in un posto solo per rendere il programma più facile da modificare; dan.write('quadrato finito')",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "[Run Square With Variables](https://trinket.io/library/trinkets/91be3b90a6)",
+      "italian": "[Run Square With Variables](https://trinket.io/library/trinkets/91be3b90a6)",
+      "explanation": "Il testo del link è in inglese. L'URL va mantenuto.",
+      "suggestion": "[Esegui il quadrato con le variabili](https://trinket.io/library/trinkets/91be3b90a6)",
+      "part": 1
+    }
+  ]
+}

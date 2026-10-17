@@ -1,0 +1,55 @@
+{
+  "file": "python-labs/12-fractal-tree.md",
+  "hash": "5448df9a26119fe53a0e237209cc86d70839d4c6ce6a1847c92b1d2b2d2a35f7",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0395,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Then every function call backtracks with `backward(size)`",
+      "italian": "Poi ogni chiamata di funzione ripercorre il percorso indietro con `backward(size)`",
+      "explanation": "Frase un po' macchinosa; l'idea è che ogni chiamata torna indietro al punto di partenza del ramo.",
+      "suggestion": "Poi ogni chiamata torna indietro con `backward(size)` per riportare la tartaruga al punto in cui il ramo era iniziato.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Angles right before drawing the right sub-branch",
+      "italian": "Angola a destra prima di disegnare il sotto-ramo destro",
+      "explanation": "\"Angola\" è innaturale per studenti.",
+      "suggestion": "Si gira a destra prima di disegnare il sotto-ramo destro",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to This Lesson!",
+      "italian": "Benvenuto a Questa Lezione!",
+      "explanation": "Più naturale \"Benvenuto/a in questa lezione\".",
+      "suggestion": "Benvenuto in Questa Lezione!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Will it look more like a real tree or a geometric pattern?",
+      "italian": "Sembrerà più un albero vero o un pattern geometrico?",
+      "explanation": "Accettabile, ma \"coste\" e simili vanno bene; \"Cosa Pensi che Succederà\" è un po' calco.",
+      "suggestion": "Cosa pensi che succederà?",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "so branches shrink by half each time.\n   **You'll know it worked when** the tree is taller and more symmetrical.",
+      "italian": "così i rami si restringono della metà ogni volta.",
+      "explanation": "Piccola imprecisione nella resa, ma il senso resta; \"taller\" in realtà dubbio nell'originale. Nessuna modifica necessaria se si preferisce fedeltà.",
+      "suggestion": "così i rami si dimezzano ogni volta.",
+      "part": 1
+    }
+  ]
+}

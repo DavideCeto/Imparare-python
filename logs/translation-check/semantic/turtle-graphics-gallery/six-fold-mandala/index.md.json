@@ -1,0 +1,19 @@
+{
+  "file": "turtle-graphics-gallery/six-fold-mandala/index.md",
+  "hash": "b3def97b9666214698b1ecac1695ab58f48e23dfe7ba4f76478a9d88c0a7120a",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.03,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Twelve concentric rings of petals, arcs, and diamonds",
+      "italian": "Dodici anelli concentrici di petali, archi, e diamanti",
+      "explanation": "Traduzione fedele dell'originale, ma l'originale è incoerente con il codice (4 anelli). Inoltre in italiano la virgola prima di 'e' è non naturale.",
+      "suggestion": "Dodici anelli concentrici di petali, archi e diamanti",
+      "part": 1
+    }
+  ]
+}

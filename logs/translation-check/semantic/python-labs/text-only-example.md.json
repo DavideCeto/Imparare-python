@@ -1,0 +1,37 @@
+{
+  "file": "python-labs/text-only-example.md",
+  "hash": "d04637e7663e651150a9298b3e540bf2481e7df983ee4ee33946b23847198e21",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.026,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "No turtle drawing area appears",
+      "italian": "Non appare nessuna area di disegno della tartaruga",
+      "explanation": "Il progetto consente di lasciare \"turtle\" in inglese; \"tartaruga\" è incoerente con \"grafica turtle\" usata poco dopo nella stessa pagina.",
+      "suggestion": "Non appare nessuna area di disegno della turtle",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Use this template for programs that only use `print()`",
+      "italian": "Usa questo template per programmi che usano solo `print()`",
+      "explanation": "Ripetizione di \"usa/usano\", poco scorrevole.",
+      "suggestion": "Usa questo template per programmi che si limitano a `print()` e output di testo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "## Example 1 — Print Statements",
+      "italian": "## Esempio 1 — Istruzioni Print",
+      "explanation": "Maiuscole inusuali in italiano nei titoli (\"Solo Testo\", \"Definita dall'Utente\"); lieve.",
+      "suggestion": "Esempio 1 — Istruzioni print",
+      "part": 1
+    }
+  ]
+}

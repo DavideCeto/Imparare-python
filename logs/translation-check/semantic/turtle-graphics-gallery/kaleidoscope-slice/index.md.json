@@ -1,0 +1,46 @@
+{
+  "file": "turtle-graphics-gallery/kaleidoscope-slice/index.md",
+  "hash": "9ebbee33034402812bd968e955f853819720d897c7739e0e7da3dba020a61a91",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0455,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "mirroring every other copy so the edges line up like a reflection",
+      "italian": "rispecchiando ogni altra copia così i bordi si allineano come una riflessione",
+      "explanation": "\"ogni altra copia\" è un calco e può risultare ambiguo; \"così\" andrebbe \"in modo che\".",
+      "suggestion": "rispecchiando una copia sì e una no, in modo che i bordi si allineino come in una riflessione",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Convert a radius and an angle into `(x, y)`",
+      "italian": "Convertire un raggio e un angolo in `(x, y)`",
+      "explanation": "Incoerenza lieve: \"cuneo\" per wedge e \"sezioni\" per sections vanno bene, ma \"Per disegnare la fetta alla rotazione `base`\" è innaturale.",
+      "suggestion": "Per disegnare la fetta ruotata dell'angolo `base`",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Up next: **Pinwheel Tiling**",
+      "italian": "Prossimo: **Tassellatura a Girandola**",
+      "explanation": "Frase poco naturale in italiano.",
+      "suggestion": "Prossima tappa: **Tassellatura a Girandola**",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Make your guess, then click Run!",
+      "italian": "Fai la tua previsione, poi clicca Esegui!",
+      "explanation": "Il pulsante nel laboratorio resta \"Run\", quindi \"Esegui\" non corrisponde al pulsante visibile.",
+      "suggestion": "poi clicca Run!",
+      "part": 1
+    }
+  ]
+}

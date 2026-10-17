@@ -1,0 +1,91 @@
+{
+  "file": "python-labs/06-functions-and-flowers.md",
+  "hash": "75a19cb71c007e5d54d3e6a4ac8ea3756000194de5f1428ce435dd7a642261fe",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0425,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Define your own function with `def`",
+      "italian": "Definire la tua propria funzione con `def`",
+      "explanation": "\"la tua propria\" è ridondante e poco naturale.",
+      "suggestion": "Definire una tua funzione con `def`",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "That's what a **function** is.",
+      "italian": "Questo è cos'è una **funzione**.",
+      "explanation": "Frase calcata sull'inglese, poco naturale.",
+      "suggestion": "Ecco cos'è una **funzione**.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "What if you could give a chunk of code a name",
+      "italian": "Cosa succede se potessi dare un nome",
+      "explanation": "Costruzione ipotetica non corretta.",
+      "suggestion": "E se potessi dare un nome a un pezzo di codice ed eseguirlo quando vuoi",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "short, clear, and easy to reuse",
+      "italian": "codice che è corto, chiaro, e facile da riutilizzare",
+      "explanation": "Virgola prima della 'e' non idiomatica.",
+      "suggestion": "codice corto, chiaro e facile da riutilizzare",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "the whole function runs!",
+      "italian": "l'intera funzione gira!",
+      "explanation": "\"gira\" è un calco di \"runs\"; meglio \"viene eseguita\".",
+      "suggestion": "l'intera funzione viene eseguita!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "paint the inside of whatever shape the turtle traces",
+      "italian": "qualsiasi forma la tartaruga tracci",
+      "explanation": "Costruzione poco naturale.",
+      "suggestion": "qualsiasi forma la tartaruga tracci → la forma che la tartaruga traccia",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "click Run!",
+      "italian": "clicca Esegui!",
+      "explanation": "Il pulsante resta \"Run\" nell'HTML, quindi il testo non corrisponde al pulsante visibile.",
+      "suggestion": "clicca Run!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Click **Run** to see",
+      "italian": "clicca **Esegui** per vedere",
+      "explanation": "Il pulsante si chiama Run.",
+      "suggestion": "clicca **Run**",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "the turtle cursor",
+      "italian": "il cursore della tartaruga",
+      "explanation": "Mix tra \"turtle\" e \"tartaruga\" nella sezione.",
+      "suggestion": "Usare in modo coerente \"la turtle\" o \"la tartaruga\".",
+      "part": 1
+    }
+  ]
+}

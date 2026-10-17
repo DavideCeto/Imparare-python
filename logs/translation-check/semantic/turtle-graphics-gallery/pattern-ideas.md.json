@@ -1,0 +1,100 @@
+{
+  "file": "turtle-graphics-gallery/pattern-ideas.md",
+  "hash": "c02d5609e2a72f584b573af0558c7968b66141243d313aa85fee29f9d4236a1b",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.1197,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Draw 20 concentric circles... Color them with alternating cyan and navy",
+      "italian": "Coloralli con ciano e blu navy alternati",
+      "explanation": "Imperativo con pronome errato: 'coloralli' non esiste.",
+      "suggestion": "Colorali con ciano e blu navy alternati",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Divide the canvas into 12 pie-slice wedges",
+      "italian": "Divide il canvas in 12 spicchi a fetta di torta",
+      "explanation": "Verbo alla terza persona invece dell'imperativo usato nel resto del testo.",
+      "suggestion": "Dividi il canvas in 12 spicchi...",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Divide a square into 9 equal sub-squares, remove the center",
+      "italian": "Divide un quadrato in 9 sotto-quadrati uguali, rimuovi il centro",
+      "explanation": "Imperativo errato (terza persona).",
+      "suggestion": "Dividi un quadrato in 9 sotto-quadrati uguali",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "catches your eye, and challenge yourself to code it",
+      "italian": "catturi il tuo occhio, e sfida te stesso a programmarlo",
+      "explanation": "'catturi il tuo occhio' è calco innaturale; 'te stesso' non è inclusivo.",
+      "suggestion": "scegli qualcosa che ti colpisca, e sfidati a programmarlo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Fill the canvas with 30 parallel diagonal lines, each 5 pixels apart",
+      "italian": "distanti 5 pixel l'una dall'altra",
+      "explanation": "Resa corretta; ma 'dal basso-sinistra all'alto-destra' è innaturale.",
+      "suggestion": "dal basso a sinistra all'alto a destra",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Teaches: ... how the 12 hues relate to each other",
+      "italian": "Insegna: ... Dividi... Spirale con una rotazione di 72° (pentagono) e cambia colore",
+      "explanation": "Frase #30 non è un imperativo coerente ('Spirale').",
+      "suggestion": "Disegna una spirale con una rotazione di 72° (pentagono) e cambia colore ogni 5 passi.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Each vein curves slightly outward from the leaf edge inward.",
+      "italian": "Ogni vena curva leggermente verso l'esterno dal bordo della foglia verso l'interno.",
+      "explanation": "Frase originale confusa, tradotta letteralmente e resta poco chiara.",
+      "suggestion": "Ogni vena si curva leggermente, dal bordo della foglia verso l'interno.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Moiré Pattern",
+      "italian": "Motivo Moiré",
+      "explanation": "Incoerente: altrove 'pattern' resta in inglese (Pattern a ...).",
+      "suggestion": "Pattern Moiré",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Ripple Waves",
+      "italian": "Onde Concentriche",
+      "explanation": "Titolo cambiato rispetto all'originale (increspature).",
+      "suggestion": "Onde di Increspatura",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "The prey moves in a random walk; the predator always turns toward the prey.",
+      "italian": "il predatore si gira sempre verso la preda",
+      "explanation": "Accettabile, ma 'Insegna' con 'turtle' tradotta 'tartaruga' è incoerente con altri usi 'la Turtle' nel titolo 97.",
+      "suggestion": "Uniformare 'tartaruga'/'turtle'.",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/pinwheel-tiling/index.md",
+  "hash": "d7b348132e77394b15313ca6517b81a96a5cb4a1e06d2d5ac08c771bd88dd375",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0532,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Zoom back out. In the first lab, change `levels = 3` to `levels = 2`. You'll know it worked when only 100 chunky triangles fill the square",
+      "italian": "Allontana lo zoom. Nel primo laboratorio, cambia `levels = 3` in `levels = 2`. Saprai che ha funzionato quando solo 100 grossi triangoli",
+      "explanation": "Il testo originale dice 100 (4×5×5), corretto. Il titolo \"Allontana lo zoom\" è però fuorviante: con meno livelli si ha meno dettaglio (si 'ingrandisce' verso triangoli grossi). Nessun errore numerico.",
+      "suggestion": "Mantenere, oppure \"Torna indietro di un livello.\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "is built from a single humble shape",
+      "italian": "è costruita da una singola forma umile",
+      "explanation": "\"forma umile\" è innaturale in italiano.",
+      "suggestion": "è costruita a partire da un'unica forma semplicissima",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Finer color buckets.",
+      "italian": "Secchi di colore più fini.",
+      "explanation": "\"Secchi\" è una traduzione letterale di \"buckets\"; in italiano è poco chiaro (anche \"secchi di 30°\").",
+      "suggestion": "Gruppi di colore più piccoli / \"intervalli di 30°\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Up next: **Escher-Style Fish Tile** — shape a fish so perfectly that copies of it lock together with no gaps.",
+      "italian": "Prossimo: **Piastrella di Pesci in Stile Escher** — sagomare un pesce così perfettamente che le sue copie si incastrano senza spazi vuoti.",
+      "explanation": "L'infinito \"sagomare\" non è coerente con il tono rivolto al lettore.",
+      "suggestion": "Prossimo laboratorio: ... — dai al pesce una forma così perfetta che le sue copie si incastrano senza spazi vuoti.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Apply it again and again and you get a tiling that mathematicians proved NEVER repeats. Let's build three rounds of it right now!",
+      "italian": "Costruiamo subito tre cicli di questa!",
+      "explanation": "\"cicli\" per \"rounds\" e \"di questa\" suonano poco naturali.",
+      "suggestion": "Costruiamone subito tre livelli!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Mathematicians needed the 1990s to find this one",
+      "italian": "I matematici hanno avuto bisogno degli anni '90 per trovarla",
+      "explanation": "Frase un po' oscura ma resa fedelmente; \"hanno avuto bisogno degli anni '90\" suona strano.",
+      "suggestion": "I matematici l'hanno scoperta solo negli anni '90",
+      "part": 1
+    }
+  ]
+}

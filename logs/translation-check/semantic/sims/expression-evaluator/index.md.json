@@ -1,0 +1,64 @@
+{
+  "file": "sims/expression-evaluator/index.md",
+  "hash": "f79c8fb81efe671f742d46f326ac19a4a01dafa80ffdec635c1bd4df93f797e1",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0256,
+  "issues": [
+    {
+      "severity": "major",
+      "category": "meaning",
+      "english": "each Next Step highlights the operation Python computes next",
+      "italian": "evidenzia l'operazione che Python calcola per prima",
+      "explanation": "\"next\" (la prossima) è tradotto con \"per prima\", che suggerisce la prima in assoluto; a ogni passo è la successiva.",
+      "suggestion": "\"l'operazione che Python calcola subito dopo\" / \"come prossima\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "The amber highlight shows the operation Python runs next",
+      "italian": "l'operazione che Python esegue per prima",
+      "explanation": "Stesso problema: \"next\" reso con \"per prima\".",
+      "suggestion": "\"l'operazione che Python esegue subito dopo\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Score their predictions.",
+      "italian": "Valuta le loro previsioni.",
+      "explanation": "Il soggetto sono gli studenti stessi che controllano le proprie previsioni; \"le loro\" con imperativo è incoerente.",
+      "suggestion": "\"Controlla le tue previsioni e assegnati un punto per ognuna esatta.\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "and what rule explains it?",
+      "italian": "e quale regola lo spiega?",
+      "explanation": "Concordanza: \"previsione\" è femminile, quindi \"la spiega\".",
+      "suggestion": "\"e quale regola la spiega?\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "un'\n  operazione alla volta",
+      "italian": "un'\noperazione alla volta",
+      "explanation": "Apostrofo con a capo, residuo di formattazione.",
+      "suggestion": "Unire: \"un'operazione alla volta\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Upper elementary and middle school (ages 10-14)",
+      "italian": "Scuola primaria superiore e scuola media",
+      "explanation": "\"Scuola primaria superiore\" non è un termine usuale in Italia.",
+      "suggestion": "\"Ultimi anni della scuola primaria e scuola media\".",
+      "part": 1
+    }
+  ]
+}

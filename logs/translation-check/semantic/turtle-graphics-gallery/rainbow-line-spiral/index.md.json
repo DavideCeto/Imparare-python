@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/rainbow-line-spiral/index.md",
+  "hash": "ab4b5a49810bf0c1bcfb8be86a72703de636d28871b0d11b1e9ebabad2e5c71a",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0388,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "200 ÷ 6 = 33 full cycles with 2 segments left over",
+      "italian": "200 ÷ 6 = 33 cicli completi con 2 segmenti rimanenti",
+      "explanation": "Il testo originale ha un errore matematico (200 = 6×33 + 2 è corretto), quindi la traduzione è fedele; nessun problema reale qui.",
+      "suggestion": "Nessuna modifica necessaria.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "the banding interval interacts with the spiral's period",
+      "italian": "l'intervallo di fasciatura interagisce con il periodo della spirale",
+      "explanation": "\"Fasciatura\" è un termine poco naturale per studenti di 10-13 anni.",
+      "suggestion": "Usa \"l'intervallo delle fasce di colore\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "The color bands march diagonally across the arms of the spiral.",
+      "italian": "Le fasce di colore marciano diagonalmente attraverso i bracci della spirale.",
+      "explanation": "\"Marciano\" è calco letterale e suona strano.",
+      "suggestion": "\"Le fasce di colore avanzano in diagonale lungo i bracci della spirale.\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "each revolution of the spiral has 4 segments and the colors cycle every 6 segments",
+      "italian": "ogni rivoluzione della spirale ha 4 segmenti e i colori scorrono ogni 6 segmenti",
+      "explanation": "\"Rivoluzione\" per giro è un calco; \"scorrono\" è impreciso per \"si ripetono\".",
+      "suggestion": "\"ogni giro della spirale ha 4 segmenti e i colori si ripetono ogni 6 segmenti\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Predict what it will look like",
+      "italian": "Prevedi come sembrerà",
+      "explanation": "\"Sembrerà\" è innaturale in questo contesto.",
+      "suggestion": "\"Prevedi che aspetto avrà\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "The pattern repeats every 6 steps regardless of how high `i` gets.",
+      "italian": "Il pattern si ripete ogni 6 passi non importa quanto grande diventi `i`.",
+      "explanation": "Costruzione poco naturale, manca la punteggiatura.",
+      "suggestion": "\"Il pattern si ripete ogni 6 passi, per quanto grande diventi `i`.\"",
+      "part": 1
+    }
+  ]
+}

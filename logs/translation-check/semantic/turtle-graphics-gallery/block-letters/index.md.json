@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/block-letters/index.md",
+  "hash": "3aef08b00e63c7ddc3e2d66d0b9ac3e2023c3633d8ca70dd8b7c3a8522056ad8",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0463,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Store letter shapes as lists of stroke waypoints",
+      "italian": "liste di punti di passaggio di tratto",
+      "explanation": "\"Punti di passaggio di tratto\" è innaturale e poco chiaro per ragazzi di 10-13 anni.",
+      "suggestion": "\"liste di punti di passaggio dei tratti\" oppure \"punti per ogni tratto\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "render any word",
+      "italian": "renderizzare qualsiasi parola",
+      "explanation": "\"Renderizzare\" è gergale; per gli studenti è meglio un verbo più semplice.",
+      "suggestion": "\"disegnare qualsiasi parola\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to Block Letters!",
+      "italian": "Benvenuto alle Lettere Blocco!",
+      "explanation": "\"Benvenuto a\" e \"Lettere Blocco\" suonano innaturali; è più naturale \"Lettere a blocchetti\" o \"in stampatello\".",
+      "suggestion": "\"Benvenuto nel laboratorio delle Lettere in Stampatello!\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "then click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta \"Run\" nel laboratorio, quindi \"Esegui\" non corrisponde all'etichetta visibile.",
+      "suggestion": "\"poi clicca Run per scoprirlo!\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "| `font.get(ch.upper(), [])` | Look up strokes, default to empty |",
+      "italian": "Cerca i tratti, predefinito vuoto",
+      "explanation": "Frase poco naturale.",
+      "suggestion": "\"Cerca i tratti; se la lettera manca, usa una lista vuota\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "readable block letter style!",
+      "italian": "stile lettera blocco leggibile!",
+      "explanation": "Espressione poco naturale.",
+      "suggestion": "\"un bello stile a lettere in stampatello, leggibile!\"",
+      "part": 1
+    }
+  ]
+}

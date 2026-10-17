@@ -1,0 +1,46 @@
+{
+  "file": "turtle-graphics-gallery/cassini-oval/index.md",
+  "hash": "f27cffbf831d57a9b2bbfedbcf3612070d6d6ac44f99eaf3dfa1614c6c7713c5",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0427,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "labels = [['b = 120 (one oval)', 'royalblue'], ['b = 100 (figure eight)', 'forestgreen'], ['b = 90 (two lobes)', 'crimson']]",
+      "italian": "labels = [['b = 120 (one oval)', 'royalblue'], ['b = 100 (figure eight)', 'forestgreen'], ['b = 90 (two lobes)', 'crimson']]",
+      "explanation": "Le stringhe nel codice possono essere tradotte; le etichette visibili nel disegno sono rimaste in inglese, mentre il resto della pagina è in italiano.",
+      "suggestion": "Tradurre le etichette: 'b = 120 (un ovale)', 'b = 100 (figura a otto)', 'b = 90 (due lobi)'.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "`r*r = c*c*cos(2*theta) + or - sqrt(...)`",
+      "italian": "`r*r = c*c*cos(2*theta) + o - sqrt(c**4 * cos(2*theta)**2 + (b**4 - c**4))`",
+      "explanation": "Nella formula 'or' è stato tradotto con 'o' dentro il codice inline: è ambiguo e poco chiaro per gli studenti.",
+      "suggestion": "Usare il simbolo ± oppure '+ oppure -' fuori dal codice.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to the Cassini Oval!",
+      "italian": "Benvenuto all'Ovale di Cassini!",
+      "explanation": "Preposizione non naturale: in italiano si direbbe 'Benvenuto nell'Ovale di Cassini'.",
+      "suggestion": "Benvenuto nell'Ovale di Cassini!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Count the existing angles.",
+      "italian": "Conta gli angoli esistenti.",
+      "explanation": "'Esistenti' è un po' innaturale; il senso è gli angoli in cui la curva esiste.",
+      "suggestion": "Conta gli angoli in cui la curva esiste.",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "file": "trinket/04-loops.md",
+  "hash": "0dc4bda8385a024e61ee003bf47d4351467e79968067598aa92b271ef217f71b",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 1,
+  "cost_usd": 0.0174,
+  "issues": [
+    {
+      "severity": "critical",
+      "category": "untranslated",
+      "english": "## Using a Loop\n\nIn this example program we will make the turtle go forward 40 steps and then make a right turn of 90 degrees.",
+      "italian": "## Using a Loop\n\nIn this example program we will make the turtle go forward 40 steps and then make a right turn of 90 degrees.",
+      "explanation": "Titoli e prosa della spiegazione sono rimasti in inglese.",
+      "suggestion": "## Usare un ciclo\n\nIn questo programma di esempio faremo avanzare la turtle di 40 passi e poi la faremo girare a destra di 90 gradi. Lo ripeteremo quattro volte per completare un quadrato.",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "Can you make a hexagon?  This is a figure with six sides.  Hint: the angle will need to be 60",
+      "italian": "Can you make a hexagon?  This is a figure with six sides.  Hint: the angle will need to be 60",
+      "explanation": "Tutti gli esperimenti sono in inglese, inclusi i suggerimenti.",
+      "suggestion": "Riesci a disegnare un esagono? È una figura con sei lati. Suggerimento: l'angolo dovrà essere 60 e il limite di range dovrà essere 6.",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**",
+      "italian": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**",
+      "explanation": "Titolo e testo dell'avviso non sono tradotti.",
+      "suggestion": "Tradurre titolo e testo dell'avviso, lasciando invariati link e tipo di admonition.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "## Running the Example on Trinket\n\n[Run Loop Program on Trinket]",
+      "italian": "## Running the Example on Trinket\n\n[Run Loop Program on Trinket]",
+      "explanation": "Titolo e testo del link non sono tradotti.",
+      "suggestion": "## Eseguire l'esempio su Trinket; [Esegui il programma del ciclo su Trinket]",
+      "part": 1
+    }
+  ]
+}

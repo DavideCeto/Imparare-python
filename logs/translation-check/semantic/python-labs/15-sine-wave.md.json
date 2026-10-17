@@ -1,0 +1,91 @@
+{
+  "file": "python-labs/15-sine-wave.md",
+  "hash": "8892d8330202c662aa0888decdd1a07494af265bb6663e7cd2326efd54b21068",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.04,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Two steps to plot it with turtle:",
+      "italian": "Due passi per tracciarla con turtle:",
+      "explanation": "L'originale dice «two steps» ma elenca quattro punti; la traduzione mantiene l'incoerenza. Meglio correggere.",
+      "suggestion": "Passi per tracciarla con turtle:",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Turtle graphics aren't just for shapes",
+      "italian": "Le grafiche turtle non servono solo per le forme",
+      "explanation": "«Le grafiche turtle» è innaturale in italiano.",
+      "suggestion": "La grafica turtle non serve solo per le forme",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "a smooth S-shaped curve",
+      "italian": "una curva lisciata a forma di S",
+      "explanation": "«lisciata» è poco naturale.",
+      "suggestion": "una curva morbida a forma di S",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Loop `x` from -180 to 180",
+      "italian": "Scorri `x` da -180 a 180",
+      "explanation": "«Scorri» è poco chiaro per ragazzi; meglio «Fai variare».",
+      "suggestion": "Fai variare `x` da -180 a 180 con un ciclo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Make your guess — then click Run!",
+      "italian": "Fai la tua previsione — poi clicca Esegui!",
+      "explanation": "Il pulsante resta «Run» per convenzione, ma qui è tradotto «Esegui», incoerente con il pulsante reale.",
+      "suggestion": "poi clicca Run!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the wave is twice as tall",
+      "italian": "l'onda è il doppio alta",
+      "explanation": "Forma errata.",
+      "suggestion": "l'onda è alta il doppio",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the wave completes two full cycles in the same x range.",
+      "italian": "l'onda completa due cicli completi nello stesso intervallo di x.",
+      "explanation": "Ripetizione «completa… completi».",
+      "suggestion": "l'onda fa due cicli completi nello stesso intervallo di x.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "draw a second loop in `'red'`",
+      "italian": "disegnare un secondo ciclo in `'red'`",
+      "explanation": "Il codice resta corretto, ma la traduzione è un po' ambigua; inoltre «Scorri» e «ciclo» sono usati in modo vario.",
+      "suggestion": "disegnare un secondo ciclo con colore `'red'`",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to This Lesson!",
+      "italian": "Benvenuto a Questa Lezione!",
+      "explanation": "Innaturale; meglio «Benvenuto in questa lezione!».",
+      "suggestion": "Benvenuto in Questa Lezione!",
+      "part": 1
+    }
+  ]
+}

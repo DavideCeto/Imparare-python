@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/leaf-venation/index.md",
+  "hash": "ca4a2f630a1778f52a397a1307d53b915aa5b1168cfd790cf94fc3f993b21c18",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0562,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "which bulges out in the middle and comes to a point at both ends",
+      "italian": "il che fa rigonfiare nel mezzo e arrivare a una punta a entrambe le estremità",
+      "explanation": "Frase sintatticamente goffa e poco chiara: manca il soggetto (il contorno/la curva).",
+      "suggestion": "«così il contorno si gonfia nel mezzo e finisce a punta alle due estremità».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "# Leaf Venation",
+      "italian": "# Nervatura della Foglia",
+      "explanation": "Il titolo usa «nervatura», mentre nel testo si usa sempre «venatura/venature»: terminologia incoerente.",
+      "suggestion": "Usare un solo termine, ad es. «Venatura della Foglia», oppure «nervature» ovunque.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "then click Run!",
+      "italian": "poi clicca Esegui!",
+      "explanation": "Il pulsante nel laboratorio resta «Run», quindi «Esegui» non corrisponde a ciò che lo studente vede.",
+      "suggestion": "«poi clicca Run!»",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "every 4th step",
+      "italian": "ogni 4° passo",
+      "explanation": "L'ordinale con «°» è innaturale in italiano; inoltre nel testo compare un trattino soffice in «si somma­no».",
+      "suggestion": "«ogni quarto passo» e «si sommano».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "One line forgot to use the `side` variable.",
+      "italian": "Una riga ha scordato di usare la variabile `side`.",
+      "explanation": "«Compila ed esegue» e «ha scordato» suonano innaturali; per una riga è meglio «si è dimenticata».",
+      "suggestion": "«Una riga si è dimenticata di usare la variabile `side`.» e «funziona e viene eseguita».",
+      "part": 1
+    }
+  ]
+}

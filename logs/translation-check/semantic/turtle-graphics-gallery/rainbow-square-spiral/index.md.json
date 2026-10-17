@@ -1,0 +1,73 @@
+{
+  "file": "turtle-graphics-gallery/rainbow-square-spiral/index.md",
+  "hash": "cc305afb3aa66939383cdbc189a3d93babf1e51136b7a634c752bcf26f7acb64",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0405,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Grows** the side length by 8 pixels",
+      "italian": "**Cresce** la lunghezza del lato di 8 pixel",
+      "explanation": "Il verbo 'crescere' è intransitivo: la frase è grammaticalmente scorretta e il senso (far crescere/aumentare) è reso male.",
+      "suggestion": "**Aumenta** la lunghezza del lato di 8 pixel",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Rotation Angle: Now 36 squares only cover 180 degrees",
+      "italian": "Sostituisci `monty.right(10)` con `monty.right(5)`. Ora 36 quadrati coprono solo 180 gradi.",
+      "explanation": "Fedele all'originale. Nessun problema.",
+      "suggestion": "Nessuna modifica.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "a dramatic spiral effect",
+      "italian": "crea un effetto spirale drammatico",
+      "explanation": "'Drammatico' è un calco dall'inglese e suona innaturale; meglio 'spettacolare'.",
+      "suggestion": "crea un effetto a spirale spettacolare",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "a glowing color tunnel that spins right off the screen",
+      "italian": "un tunnel di colore luminoso che gira fuori dallo schermo",
+      "explanation": "Il 'right off' (dritto fuori) è perso e 'gira' è ambiguo.",
+      "suggestion": "un tunnel di colori luminosi che si allarga fino a uscire dallo schermo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta 'Run' (convenzione), ma il testo dice 'Esegui' e non corrisponde.",
+      "suggestion": "poi clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Up next: try the **Pinwheel of Triangles**",
+      "italian": "Prossimo: prova la **Girandola di Triangoli**",
+      "explanation": "Formulazione poco naturale.",
+      "suggestion": "Il prossimo passo: prova la **Girandola di Triangoli**",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "cycles through 0 → 1 → 2",
+      "italian": "`i % 6` scorre tra 0 → 1 → 2",
+      "explanation": "'Scorre tra' è poco chiaro; meglio 'passa per' o 'ripete'.",
+      "suggestion": "`i % 6` ripete la sequenza 0 → 1 → 2 → ...",
+      "part": 1
+    }
+  ]
+}

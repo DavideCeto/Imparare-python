@@ -1,0 +1,28 @@
+{
+  "file": "contact.md",
+  "hash": "6d85f9d279aeb4ec482c873721310fc7a8c64bf9a302f7eb05c3ab0bd611ebc9",
+  "model": "sonnet",
+  "score": 3,
+  "parts": 1,
+  "cost_usd": 0.0108,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "General Code Savvy Contact",
+      "italian": "Generale Contatto per Conoscenze Tecniche",
+      "explanation": "\"Code Savvy\" è un nome proprio (organizzazione) e non va tradotto; inoltre \"Generale\" prima del sostantivo è innaturale in italiano.",
+      "suggestion": "Contatto generale di Code Savvy",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Specific questions on this repository",
+      "italian": "Domande Specifiche su questo Repositore",
+      "explanation": "\"Repositore\" non è un termine corretto; in italiano si usa \"repository\" (invariato). Anche le maiuscole non sono necessarie.",
+      "suggestion": "Domande specifiche su questo repository",
+      "part": 1
+    }
+  ]
+}

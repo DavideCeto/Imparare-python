@@ -1,0 +1,46 @@
+{
+  "file": "sims/sine-wave-explorer/index.md",
+  "hash": "2b1dd1ca0fb1fc235d890f884abc665309d2cb04bc21fc9301473113e353efe1",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0248,
+  "issues": [
+    {
+      "severity": "major",
+      "category": "meaning",
+      "english": "your wave slides left past the dotted reference.",
+      "italian": "la tua onda scivola a sinistra rispetto al riferimento tratteggiato.",
+      "explanation": "Il senso è mantenuto, ma \"scivola a sinistra rispetto al\" è meno chiaro di \"scivola a sinistra oltre/davanti al riferimento\". Accettabile, ma poco naturale.",
+      "suggestion": "la tua onda scivola a sinistra rispetto alla curva tratteggiata di riferimento.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "a dotted plain `sin(x)` reference curve",
+      "italian": "una curva di riferimento tratteggiata `sin(x)` semplice",
+      "explanation": "\"dotted\" significa puntinata, non tratteggiata (dashed). Anche \"semplice\" dopo il codice è poco naturale.",
+      "suggestion": "una curva di riferimento puntinata con il semplice `sin(x)`",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Upper elementary and middle school (ages 10-14)",
+      "italian": "Scuola primaria superiore e scuola media",
+      "explanation": "\"Scuola primaria superiore\" non è una dicitura italiana corrente.",
+      "suggestion": "Ultimi anni della scuola primaria e scuola media (10-14 anni)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the feedback loop",
+      "italian": "chiude il ciclo di riscontro",
+      "explanation": "\"Ciclo di riscontro\" è un po' innaturale; più comune \"ciclo di feedback\".",
+      "suggestion": "chiude il ciclo di feedback",
+      "part": 1
+    }
+  ]
+}

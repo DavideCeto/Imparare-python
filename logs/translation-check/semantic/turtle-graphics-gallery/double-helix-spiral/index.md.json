@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/double-helix-spiral/index.md",
+  "hash": "ac39f0685bdc2545dcfefc6fa78588ec310869aabac028d7aaed5225d2c835da",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0423,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "then click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante nel laboratorio si chiama «Run» (resta in inglese per convenzione), ma il testo dice «Esegui»: lo studente non trova il pulsante con quel nome.",
+      "suggestion": "poi clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "so the loops pack slightly tighter.",
+      "italian": "così i giri si compattano leggermente più stretti.",
+      "explanation": "Frase innaturale: «si compattano più stretti» non è scorrevole.",
+      "suggestion": "così i giri sono leggermente più ravvicinati.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "fewer revolutions fit.",
+      "italian": "meno rivoluzioni entrano.",
+      "explanation": "«Entrano» è calco dall'inglese, poco naturale.",
+      "suggestion": "ne stanno meno giri nello spazio disponibile.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "in red, blue, and green?",
+      "italian": "in rosso, blu, e verde?",
+      "explanation": "In italiano non si mette la virgola prima della «e» in un elenco.",
+      "suggestion": "in rosso, blu e verde?",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the two patterns weave together.",
+      "italian": "i due pattern si intrecciano insieme.",
+      "explanation": "«Intrecciano insieme» è ridondante.",
+      "suggestion": "i due pattern si intrecciano.",
+      "part": 1
+    }
+  ]
+}

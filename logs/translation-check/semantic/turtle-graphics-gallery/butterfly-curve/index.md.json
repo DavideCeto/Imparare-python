@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/butterfly-curve/index.md",
+  "hash": "64ff35771a789536e822512ebdfe98b07a43b4ff301d0ce6fdc7756465bdd3a5",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0376,
+  "issues": [
+    {
+      "category": "meaning",
+      "severity": "minor",
+      "english": "Use `cos(4t)` coefficient 3 instead of 2.",
+      "italian": "Usa il coefficiente 3 invece di 2 per `cos(4t)`.",
+      "explanation": "Corretto nel significato, ma la frase originale è più chiara sul fatto che si parla del coefficiente davanti a cos(4t). Va bene, nessun problema sostanziale.",
+      "suggestion": "Usa 3 al posto di 2 come coefficiente di `cos(4t)`.",
+      "part": 1
+    },
+    {
+      "category": "grammar",
+      "severity": "minor",
+      "english": "the curve is smoother",
+      "italian": "la curva è più lisciata",
+      "explanation": "\"Lisciata\" è innaturale per descrivere una curva più fluida.",
+      "suggestion": "la curva è più liscia / più morbida",
+      "part": 1
+    },
+    {
+      "category": "terminology",
+      "severity": "minor",
+      "english": "can conspire to make art",
+      "italian": "possano congiurare per fare arte",
+      "explanation": "\"Congiurare\" è un registro poco adatto a ragazzi di 10-13 anni.",
+      "suggestion": "possano collaborare per creare arte",
+      "part": 1
+    },
+    {
+      "category": "terminology",
+      "severity": "minor",
+      "english": "click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante nel laboratorio resta \"Run\", ma il testo dice \"Esegui\"; potrebbe confondere lo studente.",
+      "suggestion": "poi clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "category": "grammar",
+      "severity": "minor",
+      "english": "Welcome to the Butterfly Curve!",
+      "italian": "Benvenuto alla Curva a Farfalla!",
+      "explanation": "Preposizione più naturale: \"Benvenuto nella\" / \"alla scoperta della\".",
+      "suggestion": "Benvenuto nella Curva a Farfalla!",
+      "part": 1
+    }
+  ]
+}

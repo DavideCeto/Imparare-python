@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/barnsley-fern/index.md",
+  "hash": "0fedb01ce6c74d06fa40ff76d56754d8b025451b231b4215a6cb82de47fd4ca0",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0423,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante Run resta in inglese per convenzione del progetto; nel testo è tradotto come «Esegui», ma il pulsante mostra «Run».",
+      "suggestion": "Scrivere «clicca Run».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Four transformations are applied randomly",
+      "italian": "Quattro trasformazioni sono applicate casualmente",
+      "explanation": "Forma passiva pesante; meglio «vengono applicate».",
+      "suggestion": "«Vengono applicate quattro trasformazioni in modo casuale».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Dopo aver tracciato 5000 punti casuali",
+      "italian": "emerge una foglia di felce fotorealistica dalla pura matematica. Nessun ciclo di disegno, nessun ramo — solo quattro trasformazioni e probabilità.",
+      "explanation": "Frase poco scorrevole; «e probabilità» senza articolo suona innaturale.",
+      "suggestion": "«…solo quattro trasformazioni e un po' di probabilità».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "the attractor looks like a fern",
+      "italian": "l'attrattore strano\" del sistema — l'insieme di punti che resta invariante sotto queste trasformazioni",
+      "explanation": "Termini molto tecnici per studenti di 10-13 anni, ma presenti anche nell'originale; «sotto queste trasformazioni» è calco dall'inglese.",
+      "suggestion": "«che non cambia quando si applicano queste trasformazioni».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "mimicking how real leaves look in sunlight",
+      "italian": "imitando come sembrano le vere foglie alla luce del sole",
+      "explanation": "Costruzione calcata dall'inglese.",
+      "suggestion": "«imitando l'aspetto delle vere foglie alla luce del sole».",
+      "part": 1
+    }
+  ]
+}

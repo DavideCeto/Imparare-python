@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/city-skyline/index.md",
+  "hash": "80c5531569735646b4e5d82e91174669dd3a30638d9c8afdc60d2fbe3633b6c7",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0428,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta Run nell'HTML; il testo dice «Esegui», che non corrisponde al pulsante visibile (convenzione: i pulsanti Run/Reset restano in inglese).",
+      "suggestion": "poi clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Integer division: number of window rows that fit",
+      "italian": "mura e finestre",
+      "explanation": "«Mura» (di una città/castello) è poco adatto per le pareti di un edificio.",
+      "suggestion": "pareti e finestre",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "right side, top, left side, bottom",
+      "italian": "lato destro, in alto, lato sinistro, in basso",
+      "explanation": "Incoerente: alcuni elementi sono sostantivi, altri avverbi; inoltre il testo originale è poco preciso, ma l'italiano dovrebbe essere coerente.",
+      "suggestion": "lato destro, lato superiore, lato sinistro, lato inferiore",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Ten skyscrapers of varied heights and shades line up across the canvas, their yellow windows glowing",
+      "italian": "le loro finestre gialle che brillano contro le sagome scure",
+      "explanation": "Frase con participio assoluto poco naturale; «attraverso il canvas» è calco dall'inglese.",
+      "suggestion": "Dieci grattacieli di altezze e tonalità diverse si allineano sul canvas, con le finestre gialle che brillano contro le sagome scure.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Then it loops to add yellow window dots.",
+      "italian": "Poi cicla per aggiungere punti gialli per le finestre.",
+      "explanation": "«Cicla» è colloquiale e «per... per» è ripetitivo; inoltre «riempimento color» è poco chiaro.",
+      "suggestion": "Poi usa dei cicli per aggiungere i puntini gialli delle finestre.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "six-fold symmetry",
+      "italian": "simmetria a sei pieghe",
+      "explanation": "Termine non usuale in italiano.",
+      "suggestion": "simmetria a sei punte (o simmetria sestupla)",
+      "part": 1
+    }
+  ]
+}

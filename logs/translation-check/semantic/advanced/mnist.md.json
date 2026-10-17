@@ -1,0 +1,56 @@
+{
+  "file": "advanced/mnist.md",
+  "hash": "8507e12a6b42f487a019029f8c706480b2f880e1d49482b48ea83ea7bb9acca9",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0361,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "In more complex forms, however, this can be training a neural network to fit very non-linear data.",
+      "italian": "In forme più complesse, tuttavia, questo può essere addestrare una rete neurale per adattarsi a dati molto non lineari.",
+      "explanation": "Costruzione poco naturale in italiano (\"può essere addestrare\").",
+      "suggestion": "\"può significare addestrare una rete neurale ad adattarsi a dati molto non lineari.\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Process of determining the function that gives a plausible result **y**",
+      "italian": "Il processo di determinare la funzione che restituisce un risultato plausibile **y**",
+      "explanation": "Frase nominale senza verbo principale, poco chiara per ragazzi; l'originale è un frammento ma l'italiano suona innaturale.",
+      "suggestion": "\"È il processo con cui si determina la funzione che restituisce...\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Preprocessing Data",
+      "italian": "Preelaborazione dei Dati",
+      "explanation": "\"Preelaborazione\" è poco comune; più naturale \"Pre-elaborazione\" o \"Preparazione\".",
+      "suggestion": "\"Pre-elaborazione dei Dati\" o \"Preparare i Dati\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "We will do this by running through our test set and having the model produce a prediction.",
+      "italian": "Lo faremo eseguendo il nostro insieme di test e facendo produrre al modello una previsione.",
+      "explanation": "\"Eseguendo l'insieme di test\" è impreciso: l'insieme di test non si esegue, lo si scorre/passa al modello.",
+      "suggestion": "\"Lo faremo passando in rassegna il nostro insieme di test e facendo produrre al modello una previsione.\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Feed Forward, Recurrent, LSTM, and AutoEncoder neural networks",
+      "italian": "reti neurali Feed Forward, Ricorrenti, LSTM, e AutoEncoder",
+      "experience": "",
+      "explanation": "Virgola prima della \"e\" non usata in italiano.",
+      "suggestion": "Togliere la virgola prima di \"e AutoEncoder\".",
+      "part": 1
+    }
+  ]
+}

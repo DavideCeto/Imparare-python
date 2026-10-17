@@ -1,0 +1,46 @@
+{
+  "file": "turtle-graphics-gallery/astroid/index.md",
+  "hash": "ccbb0706e7040883eb2a425e8044b347080424f0daa8cab31dfb36b90f891821",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.043,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "its midsection sweeps through the region under the curve, but its outer boundary",
+      "italian": "la sua sezione centrale spazza la regione sotto la curva, ma il suo confine esterno",
+      "explanation": "Fedele all'originale, ma l'italiano \"la fisica\" e \"atterra\" suonano un po' innaturali; non è un errore di significato. Più rilevante: \"Saprai che ha funzionato quando appare invece una stella\" è ok.",
+      "suggestion": "Nessuna correzione necessaria; eventualmente \"spiega la fisica\" → \"spiega perché funziona\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "every point lands on the straight line `x + y = R`",
+      "italian": "ogni punto atterra sulla linea retta `x + y = R`",
+      "explanation": "\"atterra\" è un calco dell'inglese \"lands\", poco naturale in italiano.",
+      "suggestion": "\"ogni punto cade sulla linea retta `x + y = R`\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Cube a cosine, cube a sine",
+      "italian": "Eleva al cubo un coseno, eleva al cubo un seno",
+      "explanation": "Accettabile, ma \"string art\" è usato al maschile (\"il string art\"), forma scorretta davanti a 's + consonante'.",
+      "suggestion": "\"lo string art\" invece di \"il string art\" (in due punti: mascot-welcome e Come Funziona).",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Run",
+      "italian": "clicca Esegui!",
+      "explanation": "Il pulsante resta \"Run\" nel laboratorio, ma il testo dice \"Esegui\": lo studente non troverà un pulsante con quel nome.",
+      "suggestion": "\"clicca Run!\"",
+      "part": 1
+    }
+  ]
+}

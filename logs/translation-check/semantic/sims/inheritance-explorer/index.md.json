@@ -1,0 +1,64 @@
+{
+  "file": "sims/inheritance-explorer/index.md",
+  "hash": "58e459e34760c5d4cfb78b2caeec8e248b71b29e2d44593084551490a1ae66f7",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0273,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "This explorer makes the dispatch visible.",
+      "italian": "Questo esploratore rende visibile il dispacciamento.",
+      "explanation": "\"Dispacciamento\" è oscuro per studenti di 10-13 anni.",
+      "suggestion": "Usare \"rende visibile come Python sceglie il metodo da eseguire\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "shadowed",
+      "italian": "oscurata",
+      "explanation": "Il termine \"oscurata/oscurati\" è poco chiaro e nella descrizione \"oscurati\" potrebbe confondere. Meglio una resa più comprensibile, usata in modo coerente.",
+      "suggestion": "Usare \"nascosta\" o \"coperta\" (es. \"segnata come nascosta (shadowed)\").",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "look on the object's own class first",
+      "italian": "guarda prima nella classe propria dell'oggetto",
+      "explanation": "Formulazione innaturale.",
+      "suggestion": "\"guarda prima nella classe dell'oggetto stesso\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "click-a-call lookup animation",
+      "italian": "animazione di ricerca clicca-una-chiamata",
+      "explanation": "Calco dall'inglese, innaturale.",
+      "suggestion": "\"animazione della ricerca che parte cliccando su una chiamata\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Upper elementary and middle school (ages 10-14)",
+      "italian": "Scuola primaria superiore e scuola media",
+      "explanation": "\"Scuola primaria superiore\" non esiste nel sistema italiano.",
+      "suggestion": "\"Ultimi anni della scuola primaria e scuola media\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Override vs inherit",
+      "italian": "Sovrascrittura contro ereditarietà",
+      "explanation": "\"contro\" è innaturale; il senso è un confronto.",
+      "suggestion": "\"Sovrascrivere o ereditare\".",
+      "part": 1
+    }
+  ]
+}

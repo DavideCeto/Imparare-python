@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/bouncing-ball/index.md",
+  "hash": "e4e07e87f2605d468964bea2160f4a83f1e5c4fc857ab430d14e6675ffea8879",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0342,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Add `ball.pendown()` before the loop to leave a trail.",
+      "italian": "Aggiungi `ball.pendown()` prima del ciclo per lasciare una traccia.",
+      "explanation": "Non è un errore di traduzione, ma l'originale è fedele. Nessun problema qui; vedi invece la nota sulla traduzione di 'Learning Check'.",
+      "suggestion": "Nessuna modifica necessaria.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "predict what it looks like!",
+      "italian": "prevedi come sembrerà!",
+      "explanation": "Formulazione un po' innaturale; meglio 'prova a prevedere che aspetto avrà'.",
+      "suggestion": "prova a prevedere che aspetto avrà!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "The trail traces out a Lissajous-like figure!",
+      "italian": "La traccia disegna una figura simile a Lissajous!",
+      "explanation": "Più naturale 'simile a una figura di Lissajous'.",
+      "suggestion": "La traccia disegna una figura simile a una curva di Lissajous!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Learning Check",
+      "italian": "Verifica di Apprendimento",
+      "explanation": "Resa poco naturale in italiano.",
+      "suggestion": "Verifica di ciò che hai imparato",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "The ball's position `(x, y)` is updated each step",
+      "italian": "La posizione `(x, y)` della pallina è aggiornata a ogni passo",
+      "explanation": "Più naturale la forma 'viene aggiornata'.",
+      "suggestion": "viene aggiornata a ogni passo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "![Monty waving welcome]",
+      "italian": "![Monty waving welcome]",
+      "explanation": "Testo alternativo dell'immagine lasciato in inglese (ripetuto per le altre immagini).",
+      "suggestion": "![Monty che ti dà il benvenuto]",
+      "part": 1
+    }
+  ]
+}

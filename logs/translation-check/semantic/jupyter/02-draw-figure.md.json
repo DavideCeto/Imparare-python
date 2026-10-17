@@ -1,0 +1,19 @@
+{
+  "file": "jupyter/02-draw-figure.md",
+  "hash": "5bdf9793d095f251f1476882f8ceb03e69370b8c9f891d1cf76ed225cd4b0edb",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0099,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "In this lab we setup a new Jupyter notebook that will do turtle graphics.",
+      "italian": "impostiamo un nuovo notebook Jupyter che farà grafica turtle.",
+      "explanation": "\"che farà grafica turtle\" è una resa letterale e poco naturale in italiano.",
+      "suggestion": "impostiamo un nuovo notebook Jupyter per fare grafica con la turtle.",
+      "part": 1
+    }
+  ]
+}

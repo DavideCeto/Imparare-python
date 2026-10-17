@@ -1,0 +1,37 @@
+{
+  "file": "sims/code-stepper/index.md",
+  "hash": "5eba8f8ea4e60428a5f803c96fb9378feba40dbd093564314431e402e3a5e408",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0233,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Chapter 1 (Welcome to Python)",
+      "italian": "Capitolo 1 (Benvenuto in Python e Skulpt)",
+      "explanation": "Il titolo del capitolo contiene \"e Skulpt\", assente nell'originale.",
+      "suggestion": "Capitolo 1 (Benvenuto in Python)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Upper elementary and middle school (ages 10-14)",
+      "italian": "Scuola primaria superiore e scuola media (10-14 anni)",
+      "explanation": "\"Scuola primaria superiore\" non è un termine usato in Italia; può confondere.",
+      "suggestion": "Ultimi anni della scuola primaria e scuola secondaria di primo grado (10-14 anni)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Next Step",
+      "italian": "Passo Successivo",
+      "explanation": "Le etichette dei pulsanti sono tradotte, ma i pulsanti reali (HTML/JS) potrebbero essere rimasti in inglese. Verificare la coerenza.",
+      "suggestion": "Verificare che le etichette corrispondano a quelle in main.html.",
+      "part": 1
+    }
+  ]
+}

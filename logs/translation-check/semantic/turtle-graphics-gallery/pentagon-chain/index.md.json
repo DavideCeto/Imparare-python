@@ -1,0 +1,46 @@
+{
+  "file": "turtle-graphics-gallery/pentagon-chain/index.md",
+  "hash": "b66fc2087e282e2911091cda5aef13dc6f86e0262267aa910ff898f68f3afcba",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0367,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Run",
+      "italian": "clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante Run resta \"Run\" (convenzione del progetto), ma nel testo è tradotto come \"Esegui\": il pulsante reale mostra ancora \"Run\", quindi lo studente non lo troverebbe.",
+      "suggestion": "clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "stretching across the canvas",
+      "italian": "si estende attraverso il canvas",
+      "explanation": "\"attraverso il canvas\" è un calco dall'inglese; più naturale \"lungo\"/\"sull'area di disegno\".",
+      "suggestion": "che si estende lungo tutto il canvas",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "You'll know it worked when three colors cycle across the chain.",
+      "italian": "quando tre colori scorrono attraverso la catena",
+      "explanation": "Frase poco naturale; \"cycle\" indica l'alternanza ciclica dei colori.",
+      "suggestion": "quando tre colori si alternano lungo la catena",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "to fit 8 hexagons",
+      "italian": "per far entrare 8 esagoni",
+      "explanation": "Il testo originale ha un'incoerenza (il codice disegna 10), ma la traduzione è fedele; nessun problema aggiuntivo. Nota: \"Prossimo:\" è un po' secco.",
+      "suggestion": "Prossimo passo: **Quadrati Sovrapposti**...",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "file": "trinket/08c-turtle-shapes.md",
+  "hash": "3e1fc7291df487d0f275d761d95497c26d881218c594428e98f7b2162a215672",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 1,
+  "cost_usd": 0.0202,
+  "issues": [
+    {
+      "severity": "critical",
+      "category": "untranslated",
+      "english": "# Change the Turtle Shape\n\nWith the turtle shape() method we can change your turtle shape",
+      "italian": "# Change the Turtle Shape\n\nWith the turtle shape() method we can change your turtle shape",
+      "explanation": "L'intera sezione italiana è identica all'originale inglese: nessuna parte della prosa è stata tradotta (titolo, spiegazioni, titoli di sezione, esperimenti).",
+      "suggestion": "Tradurre tutta la prosa, ad esempio: '# Cambiare la forma della turtle' e 'Con il metodo shape() della turtle possiamo cambiare la forma della tua turtle in una delle seguenti forme'.",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**",
+      "italian": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**",
+      "explanation": "Il titolo e il testo dell'avviso di deprecazione sono rimasti in inglese.",
+      "suggestion": "Tradurre: 'Laboratorio obsoleto — Trinket chiude' e il corpo dell'avviso in italiano, mantenendo i link invariati.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "## Using a List of Shapes\nWhat if we want to use a list of shapes?",
+      "italian": "## Using a List of Shapes\nWhat if we want to use a list of shapes?",
+      "explanation": "Titolo e domanda non tradotti.",
+      "suggestion": "'## Usare una lista di forme' / 'E se volessimo usare una lista di forme?'",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "## Experiments\nCan you use the new shapes to draw a star or any other shape of your chosing",
+      "italian": "## Experiments\nCan you use the new shapes to draw a star or any other shape of your chosing",
+      "explanation": "Sezione esperimenti non tradotta (e 'chosing' nell'originale è un refuso per 'choosing').",
+      "suggestion": "'## Esperimenti' / 'Riesci a usare le nuove forme per disegnare una stella o un'altra figura a tua scelta?'",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "file": "sims/stack-queue-simulator/index.md",
+  "hash": "aa71102a78e026480e02102b6faf320060caf54159792c1d6da2903f863d13b6",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0255,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "one Add button feeds the identical item to both structures",
+      "italian": "un pulsante Aggiungi alimenta l'elemento identico a entrambe le strutture",
+      "explanation": "Frase poco naturale in italiano ('alimenta l'elemento identico').",
+      "suggestion": "un solo pulsante Aggiungi invia lo stesso elemento a entrambe le strutture",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "The removal-history strips give the punchline",
+      "italian": "Le strisce della cronologia delle rimozioni danno la battuta finale",
+      "explanation": "'Battuta finale' è un calco poco chiaro per ragazzi.",
+      "suggestion": "Le strisce della cronologia delle rimozioni mostrano il risultato finale",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "releases the oldest item from the front",
+      "italian": "rilascia l'elemento più vecchio dal fronte",
+      "explanation": "'Fronte' non è naturale; meglio 'davanti' o 'inizio'.",
+      "suggestion": "rilascia l'elemento più vecchio, quello in testa alla coda",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Student can state which list method makes a stack vs a queue",
+      "italian": "quale metodo di lista crea una pila contro una coda",
+      "explanation": "'contro' è un calco innaturale; inoltre il senso è quale uso di pop crea una pila o una coda.",
+      "suggestion": "quale uso del metodo di lista produce una pila e quale una coda",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Upper elementary and middle school (ages 10-14)",
+      "italian": "Scuola primaria superiore e scuola media",
+      "explanation": "'Primaria superiore' non è una dicitura italiana corretta.",
+      "suggestion": "Ultimi anni della scuola primaria e scuola media",
+      "part": 1
+    }
+  ]
+}

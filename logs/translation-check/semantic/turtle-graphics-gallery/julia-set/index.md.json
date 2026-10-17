@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/julia-set/index.md",
+  "hash": "10b305f3d7fe7d96f6570a187dceed1931833af44c22e8077d955a8856cc5615",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0426,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Compare connected vs. disconnected Julia sets (Fatou dust)",
+      "italian": "Confrontare insiemi di Julia connessi contro disconnessi (polvere di Fatou)",
+      "explanation": "\"contro\" è un calco dall'inglese \"vs.\", innaturale in italiano.",
+      "suggestion": "Confrontare insiemi di Julia connessi e disconnessi (polvere di Fatou)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Understand how changing one complex constant `c` produces dramatically different shapes",
+      "italian": "Capire come cambiare una costante complessa `c` produce forme drammaticamente diverse",
+      "explanation": "\"drammaticamente\" è un calco; la costruzione è poco naturale.",
+      "suggestion": "Capire come cambiare una costante complessa `c` produca forme molto diverse",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "a connected, swirling shape sometimes called the \"Douady rabbit.\"",
+      "italian": "una forma connessa e avvolgente a volte chiamata il \"coniglio di Douady\"",
+      "explanation": "\"swirling\" è reso con \"avvolgente\", che non rende l'idea di vorticoso/a spirale.",
+      "suggestion": "una forma connessa e vorticosa (o \"a spirale\")",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Fixed parameter — determines the Julia shape",
+      "italian": "Parametro fisso — determina la forma di Julia",
+      "explanation": "\"forma di Julia\" è poco chiaro.",
+      "suggestion": "determina la forma dell'insieme di Julia",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to the Julia Set!",
+      "italian": "Benvenuto all'Insieme di Julia!",
+      "explanation": "Preposizione scorretta: si dice \"Benvenuto nell'Insieme di Julia\".",
+      "suggestion": "Benvenuto nell'Insieme di Julia!",
+      "part": 1
+    }
+  ]
+}

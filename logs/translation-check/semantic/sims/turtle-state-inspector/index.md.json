@@ -1,0 +1,46 @@
+{
+  "file": "sims/turtle-state-inspector/index.md",
+  "hash": "b95a2779432a4fa3435fe880160460411f2d58bdcadf2b6af8184aba9b978d7f",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0239,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Student can state the four pieces of state the turtle tracks",
+      "italian": "i quattro elementi di stato che la turtle tiene traccia",
+      "explanation": "Costruzione errata: \"tenere traccia\" richiede \"di cui\".",
+      "suggestion": "i quattro elementi di stato di cui la turtle tiene traccia",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "instead of a memorized incantation",
+      "italian": "invece di un incantesimo memorizzato a memoria",
+      "explanation": "Ridondante (memorizzato a memoria).",
+      "suggestion": "invece di una formula magica da imparare a memoria",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Upper elementary and middle school (ages 10-14)",
+      "italian": "Scuola primaria superiore e scuola media",
+      "explanation": "\"Scuola primaria superiore\" non è un termine usato in Italia; è poco naturale.",
+      "suggestion": "Ultimi anni della scuola primaria e scuola media (10-14 anni)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Ask why `t.right(90)` makes the heading go *down* by 90.",
+      "italian": "fa scendere la direzione di 90",
+      "explanation": "Il corsivo *down* è perso e l'unità non è chiara.",
+      "suggestion": "fa *diminuire* la direzione di 90 gradi",
+      "part": 1
+    }
+  ]
+}

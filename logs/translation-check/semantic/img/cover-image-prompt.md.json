@@ -1,0 +1,19 @@
+{
+  "file": "img/cover-image-prompt.md",
+  "hash": "ad0259efd8842757f4ab0b1ba229c6e4853c9e600195fd4b7d18388be8deb305",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.022,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Please generate a cover image for a \"Learning Python\" textbook that can be used by social media previews.",
+      "italian": "Please generate a cover image for a \"Learning Python\" textbook that can be used by social media previews.",
+      "explanation": "Tutto il file italiano è identico all'originale inglese. Se è un prompt per un generatore di immagini, lasciarlo in inglese è plausibile e di solito funziona meglio. Non è però testo per gli studenti. Va segnalato solo se il file doveva essere tradotto.",
+      "suggestion": "Se il file è solo un prompt tecnico, lascialo in inglese e valuta di escluderlo dalla traduzione. Altrimenti traduci la prosa e mantieni in inglese i nomi propri, il titolo \"Learning Python\" e il codice.",
+      "part": 1
+    }
+  ]
+}

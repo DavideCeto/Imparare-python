@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/topographic-map/index.md",
+  "hash": "bc3df5178a7dfd5cf236a3d89136a65bdcc43e3b58d41ce07c7df78e1fcac284",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0437,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "every smaller ring covers the middle of the bigger one",
+      "italian": "ogni anello più piccolo coprа il centro di quello più grande",
+      "explanation": "Nella parola «coprа» c'è una lettera cirillica (а) al posto della «a» latina: è un errore di battitura.",
+      "suggestion": "ogni anello più piccolo copra il centro di quello più grande",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Make your guess, then click Run!",
+      "italian": "Fai la tua ipotesi, poi clicca Esegui!",
+      "explanation": "Il pulsante nel laboratorio si chiama «Run» e resta in inglese, quindi «Esegui» non corrisponde. Lo stesso vale per «Eseguilo» nell'altro riquadro.",
+      "suggestion": "Fai la tua ipotesi, poi clicca Run!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "The blue `bgcolor` plays the ocean",
+      "italian": "Lo sfondo `bgcolor` blu interpreta l'oceano",
+      "explanation": "«Interpreta l'oceano» è una resa poco naturale. Il senso è che il colore fa le veci dell'oceano.",
+      "suggestion": "Il `bgcolor` blu fa da oceano intorno alla costa più esterna.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "so each smaller filled ring paints over the one below it",
+      "italian": "si dipinge sopra quello sotto di lui",
+      "explanation": "Il verbo riflessivo e «di lui» suonano innaturali. Si dice meglio «si dipinge sopra quello sottostante».",
+      "suggestion": "ogni anello riempito più piccolo viene dipinto sopra quello sottostante",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Perturb a circle's radius with sine waves to make natural, wobbly coastlines",
+      "italian": "Perturbare il raggio di un cerchio",
+      "explanation": "«Perturbare» è troppo tecnico e formale per ragazzi di 10-13 anni. Anche «ondulazione» per «wobble» è un po' astratto.",
+      "suggestion": "Modificare leggermente il raggio di un cerchio con onde sinusoidali",
+      "part": 1
+    }
+  ]
+}

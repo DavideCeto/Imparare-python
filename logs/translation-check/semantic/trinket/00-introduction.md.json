@@ -1,0 +1,46 @@
+{
+  "file": "trinket/00-introduction.md",
+  "hash": "3430620a61045b44e7223d626025afdee216f8f590512eb8fad598c92b483ec4",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 1,
+  "cost_usd": 0.023,
+  "issues": [
+    {
+      "severity": "critical",
+      "category": "untranslated",
+      "english": "This lab was written for **Trinket.io**, which is [shutting down in August 2026]",
+      "italian": "This lab was written for **Trinket.io**, which is [shutting down in August 2026]",
+      "explanation": "L'intero avviso di deprecazione è rimasto in inglese. Anche il titolo dell'admonition, che è prosa, non è tradotto.",
+      "suggestion": "Tradurre titolo e corpo dell'avviso, ad esempio: \"Laboratorio obsoleto — Trinket sta per chiudere\". Corpo: \"Questo laboratorio è stato scritto per **Trinket.io**, che [chiuderà ad agosto 2026]...\".",
+      "part": 1
+    },
+    {
+      "severity": "critical",
+      "category": "untranslated",
+      "english": "These labs assume that you have internet access and a modern web browser such as Chrome.",
+      "italian": "These labs assume that you have internet access and a modern web browser such as Chrome.",
+      "explanation": "Tutti i paragrafi dell'introduzione sono rimasti in inglese.",
+      "suggestion": "Tradurre: \"Questi laboratori presuppongono che tu abbia accesso a Internet e un browser web moderno come Chrome.\" Fare lo stesso per i paragrafi successivi.",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "# Introduction \n\n## Introduction to Turtle Graphics with Trinket",
+      "italian": "# Introduction \n\n## Introduction to Turtle Graphics with Trinket",
+      "explanation": "I titoli di sezione e il testo alternativo dell'immagine non sono tradotti.",
+      "suggestion": "Usare \"Introduzione\", \"Introduzione alla grafica turtle con Trinket\", \"Mappa del percorso di Python per principianti\" e \"Elenco dei laboratori Python con Trinket\".",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "1. [Trinket Account](./01a-trinket-account.md) - introduction to the Turtle Graphs library",
+      "italian": "1. [Trinket Account](./01a-trinket-account.md) - introduction to the Turtle Graphs library",
+      "explanation": "Titoli e descrizioni dei 17 elementi dell'elenco dei laboratori sono tutti in inglese.",
+      "suggestion": "Tradurre ogni voce, ad esempio \"[Quadrato semplice](./02-simple-square.md) - disegna un quadrato avanzando e girando a destra quattro volte\". Lasciare invariati i percorsi.",
+      "part": 1
+    }
+  ]
+}

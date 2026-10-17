@@ -1,0 +1,46 @@
+{
+  "file": "intermediate/01-docker-python.md",
+  "hash": "ece8b54c72e7a900f1f4924e824c3c13eab90a581e0bc0502cc0ee8ac3ab4af8",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 1,
+  "cost_usd": 0.047,
+  "issues": [
+    {
+      "severity": "critical",
+      "category": "untranslated",
+      "english": "So far in this course you have run Python programs in two ways:",
+      "italian": "So far in this course you have run Python programs in two ways:",
+      "explanation": "Tutta la sezione italiana è identica all'originale inglese: nessuna parte della prosa è stata tradotta (introduzione, spiegazioni, tabelle, elenchi, istruzioni dei laboratori, risoluzione dei problemi).",
+      "suggestion": "Tradurre tutta la prosa in italiano. Esempio: «Finora in questo corso hai eseguito i programmi Python in due modi:».",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "# Running Python in Docker",
+      "italian": "# Running Python in Docker",
+      "explanation": "Il titolo e tutti i titoli di sezione (Before You Begin, What Is a Container?, Lab 1 — Hello, World!, Troubleshooting, ecc.) sono rimasti in inglese.",
+      "suggestion": "«# Eseguire Python in Docker», «## Prima di iniziare — Avvia il servizio Docker», «## Che cos'è un container?», «## Risoluzione dei problemi».",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "Output will appear here after you click Run.",
+      "italian": "Output will appear here after you click Run.",
+      "explanation": "I testi visibili nell'interfaccia dei laboratori (segnaposto dell'output, intestazioni della tabella dei tempi come Phase, Time (ms), Total round-trip, nota «Run + Time») sono in inglese. I pulsanti Run/Reset possono restare, ma questi testi no.",
+      "suggestion": "«L'output apparirà qui dopo aver cliccato Run.» e tradurre le intestazioni della tabella (Fase, Tempo (ms), Totale andata e ritorno).",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "**Try these experiments:**\n\n- Change `\"Hello, World!\"` to your own name",
+      "italian": "**Try these experiments:**\n\n- Change `\"Hello, World!\"` to your own name",
+      "explanation": "Le istruzioni degli esperimenti per gli studenti non sono tradotte. Anche i messaggi di errore nella risoluzione dei problemi e le descrizioni nelle tabelle sono in inglese.",
+      "suggestion": "«**Prova questi esperimenti:** – Cambia `\"Hello, World!\"` con il tuo nome...». Le stringhe nel codice possono essere tradotte, ma non è obbligatorio.",
+      "part": 1
+    }
+  ]
+}

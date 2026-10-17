@@ -1,0 +1,37 @@
+{
+  "file": "trinket/07-function-parameters.md",
+  "hash": "6c0000b7bccc92ca5689d871e0f00b021ee1f66d1bbc70c21f1530d6fba97e49",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 1,
+  "cost_usd": 0.0189,
+  "issues": [
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "# Function Parameters\n\n## Lesson Objective\nNow we will create a new function that draw a square with a specific color",
+      "italian": "# Function Parameters\n\n## Lesson Objective\nNow we will create a new function that draw a square with a specific color",
+      "explanation": "L'intera sezione italiana è identica all'originale inglese: nessuna parte della prosa (titoli, obiettivo, esperimenti, avviso di deprecazione) è stata tradotta.",
+      "suggestion": "Tradurre in italiano titoli e prosa, ad es. '# Parametri delle funzioni', '## Obiettivo della lezione', 'Ora creeremo una nuova funzione che disegna un quadrato di un colore specifico in un punto x e y specifico.'",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "!!! warning \"Deprecated Lab — Trinket is shutting down\"",
+      "italian": "!!! warning \"Deprecated Lab — Trinket is shutting down\"",
+      "explanation": "Titolo e testo dell'admonition di avviso sono rimasti in inglese.",
+      "suggestion": "!!! warning \"Laboratorio obsoleto — Trinket sta chiudendo\" e tradurre il corpo del messaggio.",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "1. Can you change the name of the function to be \"petal\"?\n2. Can you change the function to include the ability to pass in one color for the border",
+      "italian": "1. Can you change the name of the function to be \"petal\"?\n2. Can you change the function to include the ability to pass in one color for the border",
+      "explanation": "Gli esperimenti e i link ('Link to Function in Trinket', 'Sample of Border Square Program') non sono tradotti.",
+      "suggestion": "Tradurre: 'Riesci a cambiare il nome della funzione in \"petal\"?' ecc.",
+      "part": 1
+    }
+  ]
+}

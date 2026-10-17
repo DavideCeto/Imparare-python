@@ -1,0 +1,46 @@
+{
+  "file": "sims/function-call-flow/index.md",
+  "hash": "6ec7a577c6cf13e1f2fc38a8d81341212984deebaebc9f44e53a5c9bc6834453",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0247,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Upper elementary and middle school (ages 10-14)",
+      "italian": "Scuola primaria superiore e scuola media (10-14 anni)",
+      "explanation": "\"Scuola primaria superiore\" non è un termine usato in Italia; suona innaturale.",
+      "suggestion": "Ultimi anni della scuola primaria e scuola secondaria di primo grado (10-14 anni)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Chapter 4 (Functions and Objects)",
+      "italian": "Capitolo 4 (Funzioni e oggetti)",
+      "explanation": "Incoerenza nelle maiuscole rispetto ai titoli del resto del documento (\"Funzioni e Oggetti\").",
+      "suggestion": "Capitolo 4 (Funzioni e Oggetti)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Run the Function Call Flow MicroSim Fullscreen",
+      "italian": "Esegui il Flusso di Chiamata delle Funzioni a Schermo Intero",
+      "explanation": "Nel testo italiano manca \"MicroSim\", presente nell'originale.",
+      "suggestion": "Esegui il MicroSim Flusso di Chiamata delle Funzioni a Schermo Intero",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "before touching the sim.",
+      "italian": "prima di toccare la simulazione.",
+      "explanation": "\"sim\" indica il MicroSim; \"simulazione\" va bene ma è incoerente con l'uso di \"MicroSim\" altrove.",
+      "suggestion": "prima di toccare il MicroSim.",
+      "part": 1
+    }
+  ]
+}

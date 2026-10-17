@@ -1,0 +1,82 @@
+{
+  "file": "turtle-graphics-gallery/cantor-dust/index.md",
+  "hash": "128213765469f7655812ac31eb97b399b4b8469bf1699473fedc3cc1f4daaa2a",
+  "model": "sonnet",
+  "score": 3,
+  "parts": 1,
+  "cost_usd": 0.0382,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "recurse on the left third `(x, y - 20, w/3, depth-1)` and right third `(x + 2*w/3, y - 20, w/3, depth-1)`",
+      "italian": "ricorri sul terzo sinistro `(x, y - 20, w/3, depth-1)` e sul terzo destro `(x + 2*w/3, y - 20, w/3, depth-1)`",
+      "explanation": "Il testo inglese ha y - 20 (incoerente col codice che usa 30); la traduzione lo ripete. Non è un errore di traduzione, ma l'incoerenza è stata mantenuta.",
+      "suggestion": "Mantenere fedele all'originale o correggere entrambi in y - 30.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "each segment is one-third as long",
+      "italian": "ogni segmento è un terzo lungo",
+      "explanation": "Espressione innaturale in italiano.",
+      "suggestion": "ogni segmento è lungo un terzo di quello precedente",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Monty waving welcome",
+      "italian": "Monty waving welcome",
+      "explanation": "Il testo alternativo delle immagini è rimasto in inglese (anche thinking, warning, celebrating).",
+      "suggestion": "Monty che saluta; Monty che pensa; Monty avvisa; Monty festeggia",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Click Run",
+      "italian": "clicca Esegui",
+      "explanation": "Il pulsante resta Run, quindi 'Esegui' non corrisponde al pulsante visibile.",
+      "suggestion": "clicca Run",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Remove the first third instead.",
+      "italian": "Rimuovi il primo terzo invece.",
+      "explanation": "Ordine innaturale.",
+      "suggestion": "Rimuovi invece il primo terzo.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the 6 rows fit more compactly",
+      "italian": "le 6 righe entrano più compattamente",
+      "explanation": "Formulazione poco naturale.",
+      "suggestion": "le 6 righe stanno in uno spazio più compatto",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Rotate the turtle 90°",
+      "italian": "Ruota la tartaruga di 90°",
+      "explanation": "Incoerente con la convenzione di mantenere 'turtle'; accettabile ma incoerente col resto.",
+      "suggestion": "Ruota la turtle di 90°",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Understand how area shrinks to zero",
+      "italian": "Capire come l'area si riduce a zero",
+      "explanation": "Fedele all'originale, ma si tratta di lunghezza, non area.",
+      "suggestion": "Capire come la lunghezza totale si riduce a zero",
+      "part": 1
+    }
+  ]
+}

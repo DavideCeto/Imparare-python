@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/ring-pulsation/index.md",
+  "hash": "71a69dd499e8e8c3ece22378f477449e146225746cc220a90efa756a00a27964",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0417,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Op artists call this vibration.",
+      "italian": "Gli artisti op art chiamano questo\n    vibrazione.",
+      "explanation": "Frase innaturale: manca la preposizione.",
+      "suggestion": "Gli artisti op art la chiamano vibrazione.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the rings squeezing thinner and thinner toward the center",
+      "italian": "i colori freddi sprofondano via",
+      "explanation": "\"sprofondano via\" è innaturale; inoltre \"si ritirano\" è accettabile ma poco chiaro per ragazzi.",
+      "suggestion": "i colori freddi si allontanano / sprofondano",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the bull's-eye is only two clashing colors",
+      "italian": "il bersaglio è di sole due colori in contrasto",
+      "explanation": "Errore di concordanza: \"colori\" è maschile plurale.",
+      "suggestion": "il bersaglio ha solo due colori in contrasto",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "the warm/cool fight was the engine",
+      "italian": "il combattimento caldo/freddo era il motore",
+      "explanation": "\"combattimento\" è un calco poco naturale; anche \"warring edges\" tradotto \"bordi in lotta\" va bene, ma va uniformato.",
+      "suggestion": "la sfida (o il contrasto) caldo/freddo era il motore",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Click Run!",
+      "italian": "poi clicca Esegui!",
+      "explanation": "Il pulsante resta Run nel laboratorio, ma il testo dice Esegui: incoerenza con il pulsante.",
+      "suggestion": "poi clicca Run!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "The gap between radii",
+      "italian": "Il divario tra i raggi",
+      "explanation": "\"divario\" è poco adatto; meglio \"differenza\" o \"distanza\".",
+      "suggestion": "La differenza tra un raggio e il successivo",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/dotted-grid/index.md",
+  "hash": "fc313400854f0a2a3565d4a8cd91449a1c8ccf01208e43f82549fa5bec6aba88",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.038,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "It converts the row index (0–9) into a pixel size (4–22).",
+      "italian": "convertono l'indice di riga (0–9) in una dimensione in pixel (4–22)",
+      "explanation": "Errore di concordanza: il soggetto è singolare («La formula... è»), quindi il verbo deve essere singolare.",
+      "suggestion": "converte l'indice di riga (0–9) in una dimensione in pixel (4–22)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Without it, Monty would drag a line from dot to dot across every row.",
+      "italian": "Senza, Monty tirerebbe una linea da punto a punto attraverso ogni riga.",
+      "explanation": "Frase poco naturale: «Senza,» è goffo e «tirerebbe una linea» non è idiomatico.",
+      "suggestion": "Senza di essa, Monty traccerebbe una linea da un punto all'altro lungo ogni riga.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Fix the `dot_size` line so the dots grow larger toward the bottom of the grid.",
+      "italian": "Correggi la riga `dot_size` così i punti crescano più grandi verso il fondo della griglia.",
+      "explanation": "«crescano più grandi» è ridondante e poco naturale.",
+      "suggestion": "Correggi la riga `dot_size` in modo che i punti diventino più grandi verso il fondo della griglia.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "click Run to find out!",
+      "italian": "clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta «Run» nell'HTML, ma il testo dice «Esegui»: incoerente con l'interfaccia.",
+      "suggestion": "clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "turtle's current position",
+      "italian": "posizione attuale della tartaruga",
+      "explanation": "Il progetto usa «turtle» in inglese; «tartaruga» è incoerente con il resto.",
+      "suggestion": "posizione attuale della turtle",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/sierpinski-carpet/index.md",
+  "hash": "2a73686ecd5899c45c6f95d024f70ae243744b40d32fe3311442983691245acb",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0416,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Monty waving welcome",
+      "italian": "Monty waving welcome",
+      "explanation": "Il testo alternativo dell'immagine è rimasto in inglese (così anche 'Monty thinking' e 'Monty celebrating').",
+      "suggestion": "Tradurre: 'Monty che saluta', 'Monty che pensa', 'Monty che festeggia'.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "As depth → ∞, this approaches 0",
+      "italian": "Mentre la profondità → ∞, questo si avvicina a 0",
+      "explanation": "'Mentre' è una resa innaturale; ripetuto anche nel messaggio finale.",
+      "suggestion": "Usare 'Quando la profondità tende a ∞, si avvicina a 0'.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "The remaining 8 get recursive calls.",
+      "italian": "I restanti 8 ottengono chiamate ricorsive.",
+      "explanation": "Calco dall'inglese, poco naturale.",
+      "suggestion": "'Gli altri 8 eseguono chiamate ricorsive' / 'Per gli altri 8 si fanno chiamate ricorsive'.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "click Run to find out!",
+      "italian": "clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta 'Run' nel laboratorio, quindi 'Esegui' non corrisponde.",
+      "suggestion": "Usare 'clicca Run'.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Il tappeto sembrerà principalmente riempito, o principalmente buchi?",
+      "italian": "Il tappeto sembrerà principalmente riempito, o principalmente buchi?",
+      "explanation": "Frase poco naturale.",
+      "suggestion": "'Il tappeto sembrerà quasi tutto pieno o quasi tutto buchi?'",
+      "part": 1
+    }
+  ]
+}

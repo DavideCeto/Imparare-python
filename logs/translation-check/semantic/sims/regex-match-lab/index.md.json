@@ -1,0 +1,55 @@
+{
+  "file": "sims/regex-match-lab/index.md",
+  "hash": "89c8752c6fa9d535ae13ea289727454c177d5b75be408d3b814fce16cf25158c",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0258,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "read the pattern as plain-English chips",
+      "italian": "leggi il pattern come gettoni in inglese semplice",
+      "explanation": "\"Chips\" tradotto con \"gettoni\" è poco naturale per un'interfaccia; inoltre \"in inglese semplice\" è letterale: i chip spiegano in parole semplici.",
+      "suggestion": "\"leggi il pattern come etichette (chip) in parole semplici\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "every keystroke in the pattern box re-highlights all matches",
+      "italian": "ogni battitura nella casella del pattern riaccende tutte le corrispondenze",
+      "explanation": "\"riaccende\" non rende \"re-highlights\"; e \"illuminarsi\" è un po' forzato.",
+      "suggestion": "\"evidenzia di nuovo tutte le corrispondenze\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Upper elementary and middle school (ages 10-14)",
+      "italian": "Scuola primaria superiore e scuola media (10-14 anni)",
+      "explanation": "\"Scuola primaria superiore\" non esiste nel sistema italiano; è un calco.",
+      "suggestion": "\"Ultimi anni della scuola primaria e scuola secondaria di primo grado\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Pattern golf",
+      "italian": "Golf del pattern",
+      "explanation": "Il concetto di \"golf\" (pattern più corto possibile) non è spiegato; resta comprensibile per via della descrizione.",
+      "suggestion": "\"Pattern golf (il più corto vince)\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the phone pattern",
+      "italian": "il pattern del telefono",
+      "explanation": "Più naturale \"del numero di telefono\".",
+      "suggestion": "\"il pattern del numero di telefono\"",
+      "part": 1
+    }
+  ]
+}

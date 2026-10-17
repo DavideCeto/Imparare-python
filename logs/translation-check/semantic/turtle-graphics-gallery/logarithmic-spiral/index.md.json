@@ -1,0 +1,92 @@
+{
+  "file": "turtle-graphics-gallery/logarithmic-spiral/index.md",
+  "hash": "21dc2896f5da8ab4b293a60f7ea8436fcc79519aab7d213768bbbc78fc63d4bb",
+  "model": "sonnet",
+  "score": 3,
+  "parts": 1,
+  "cost_usd": 0.0432,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "A smooth, continuously curving spiral — no straight segments or corners.",
+      "italian": "Una spirale lisciata e continuamente curva — nessun segmento retto o angolo.",
+      "explanation": "\"Lisciata\" è innaturale per \"smooth\" (participio, suona come qualcosa di levigato). Usato ripetutamente nel testo e nella risposta alla previsione.",
+      "suggestion": "Usare \"liscia\" / \"morbida\" / \"fluida\": \"Una spirale liscia e sempre curva — niente segmenti dritti né angoli.\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Each revolution of the spiral is colored by cycling through red, orange, yellow, green, blue, and violet",
+      "italian": "blu, e viola, così i bracci brillano",
+      "italian_note": "",
+      "explanation": "Virgola prima di \"e\" non appropriata in italiano; \"rivoluzione\" è calco, meglio \"giro giro\".",
+      "suggestion": "\"Ogni giro della spirale è colorato passando da rosso, arancione, giallo, verde, blu e viola\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "giving a truly smooth curve",
+      "italian": "dando una curva veramente lisciata",
+      "explanation": "Espressione innaturale.",
+      "suggestion": "\"ottenendo una curva davvero liscia\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Then `goto(x, y)` moves the turtle to that point.",
+      "italian": "muove la tartaruga a quel punto",
+      "explanation": "Incoerenza con la convenzione: \"turtle\" può restare, ma altrove si usa un termine misto; inoltre \"computazionale\" e \"computerizzata\" sono usati in modo incoerente per computer graphics.",
+      "suggestion": "Uniformare: \"la turtle\" e \"grafica al computer\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the eye can't detect the individual line segments",
+      "italian": "abbastanza piccolo che l'occhio non può rilevare i singoli segmenti di linea",
+      "explanation": "Costruzione poco naturale.",
+      "suggestion": "\"abbastanza piccolo da non far distinguere all'occhio i singoli segmenti\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "uses modulo to cycle through 0–360 regardless of how many revolutions we've made",
+      "italian": "per scorrere tra 0–360 non importa quante rivoluzioni abbiamo fatto",
+      "explanation": "\"non importa quante\" è un calco dall'inglese.",
+      "suggestion": "\"indipendentemente da quanti giri abbiamo fatto\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Click Run to find out!",
+      "italian": "clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta \"Run\" (convenzione), quindi \"Esegui\" non corrisponde al pulsante reale.",
+      "suggestion": "\"clicca Run per scoprirlo!\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Up next: **Double Helix Spiral** — two interleaved spirals in a single loop.",
+      "italian": "Prossimo: **Spirale a Doppia Elica** — due spirali interlacciate in un singolo ciclo.",
+      "explanation": "\"Prossimo:\" suona brusco.",
+      "suggestion": "\"Prossima tappa: ...\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "More revolutions pack tightly together.",
+      "italian": "Più rivoluzioni si compattano strettamente insieme.",
+      "explanation": "Frase ridondante e poco naturale.",
+      "suggestion": "\"Più giri si stringono l'uno vicino all'altro.\"",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/mach-bands/index.md",
+  "hash": "ad9025d15ae0aefa6e54483f86bb7e68828e980a19494b9fc31be54e62bfb264",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0442,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "stepping from dark to light",
+      "italian": "che avanza dal scuro al chiaro",
+      "explanation": "Errore grammaticale: «dal scuro» è scorretto e «avanza» è poco naturale.",
+      "suggestion": "che passa gradualmente dallo scuro al chiaro",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Click Run!",
+      "italian": "poi clicca Esegui!",
+      "explanation": "Il pulsante resta «Run» (convenzione del progetto), ma il testo dice «Esegui», che non corrisponde al pulsante.",
+      "suggestion": "poi clicca Run!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Each band looks scalloped",
+      "italian": "Ogni banda sembra sagomata",
+      "explanation": "«Sagomata» non rende «scalloped» (sfumata a smerli, come un'onda) ed è poco chiaro.",
+      "suggestion": "Ogni banda sembra sfumata, con un effetto a onda",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the bands run light-to-dark from left to right instead",
+      "italian": "le bande vanno da chiaro a scuro da sinistra a destra invece.",
+      "explanation": "«invece» a fine frase è calco dall'inglese.",
+      "suggestion": "le bande vanno invece da chiaro a scuro, da sinistra a destra.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "so only the blue channel changes",
+      "italian": "così cambia solo il canale blu",
+      "explanation": "Correttezza: «return line» reso come «riga di ritorno», poco naturale.",
+      "suggestion": "la riga con return",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "hugging the edges",
+      "italian": "che si attaccano ai bordi",
+      "explanation": "Resa un po' goffa.",
+      "suggestion": "che corrono lungo i bordi",
+      "part": 1
+    }
+  ]
+}

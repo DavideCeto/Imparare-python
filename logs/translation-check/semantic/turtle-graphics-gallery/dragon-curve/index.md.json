@@ -1,0 +1,91 @@
+{
+  "file": "turtle-graphics-gallery/dragon-curve/index.md",
+  "hash": "f6a561e93156ce9c1909800f028db9cb17db0fedc2dffd5607e033269432a232",
+  "model": "sonnet",
+  "score": 3,
+  "parts": 1,
+  "cost_usd": 0.0467,
+  "issues": [
+    {
+      "severity": "major",
+      "category": "meaning",
+      "english": "add an 'R', then append the reversed + inverted sequence.",
+      "italian": "aggiungi una 'D', poi aggiungi la sequenza invertita + capovolta.",
+      "explanation": "Il codice usa 'R' e 'L' ma il testo italiano usa S/D senza spiegare la corrispondenza con le lettere del codice (R=D, L=S). Inoltre 'invertita' (reversed) e 'capovolta' (inverted) sono poco chiari per studenti di 10-13 anni.",
+      "suggestion": "Spiegare che nel codice 'R' = destra (D) e 'L' = sinistra (S), e chiarire: 'la sequenza letta al contrario e con le svolte scambiate'.",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "meaning",
+      "english": "The right half is the old list reversed and inverted (L↔R)",
+      "italian": "La metà destra è la vecchia lista invertita e capovolta (S↔D)",
+      "explanation": "Ambiguità: 'invertita' per reversed e 'capovolta' per inverted sono usate in modo incoerente: in un'altra frase 'invertita + capovolta' ha ordine diverso, e 'Inverte ogni rotazione' nella tabella usa 'inverte' per lo scambio L/R, contraddicendo la terminologia.",
+      "suggestion": "Usare 'letta al contrario' per reversed e 'scambiata (S↔D)' per inverted, in modo coerente ovunque.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Invert each turn: L becomes R, R becomes L",
+      "italian": "Inverte ogni rotazione: S diventa D, D diventa S",
+      "explanation": "Usa 'inverte' per l'inversione L/R mentre altrove 'invertita' traduce 'reversed'. Terminologia incoerente.",
+      "suggestion": "Usare 'Scambia ogni rotazione: S diventa D, D diventa S'.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "a sequence of L/R turns",
+      "italian": "una sequenza di rotazioni S/D",
+      "explanation": "'turns' tradotto 'rotazioni' e 'creases' come 'pieghe' crea confusione; inoltre 'folds' in 'piegature'. Le lettere S/D non corrispondono a quelle del codice (L/R).",
+      "suggestion": "Usare 'svolte' per turns e specificare che nel codice si usano L/R.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "The Dragon Curve is what you get when you draw those creases as 90° turns.",
+      "italian": "un bellissimo pattern che non si incrocia mai",
+      "explanation": "'pattern' lasciato in inglese senza necessità.",
+      "suggestion": "Usare 'disegno' o 'motivo'.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "The new middle element is always 'R'",
+      "italian": "voci",
+      "explanation": "'entries' tradotto 'voci' è poco naturale per elementi di una lista.",
+      "suggestion": "Usare 'elementi'.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "The curve fills more canvas.",
+      "italian": "La curva riempie più canvas.",
+      "explanation": "'canvas' lasciato in inglese.",
+      "suggestion": "Usare 'area di disegno'.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Both encode the same self-similar structure.",
+      "italian": "Entrambi codificano la stessa struttura auto-simile.",
+      "explanation": "'Entrambi' si riferisce ad approcci (femminile plurale: 'entrambi' è maschile, 'approcci' è maschile) ma l'originale parla dei due metodi; la frase è ok, tuttavia 'auto-simile' è un termine oscuro per l'età.",
+      "suggestion": "Usare 'che si ripete in piccolo' o 'autosimile' con breve spiegazione.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "the path fills space without any two segments overlapping",
+      "italian": "il percorso riempie lo spazio senza che due segmenti si sovrappongano",
+      "explanation": "Corretto in italiano ma, come nell'originale, l'affermazione che non si incrocia mai è tecnicamente imprecisa (tocca sé stessa agli angoli); nessuna distorsione introdotta dalla traduzione.",
+      "suggestion": "Nessuna modifica necessaria.",
+      "part": 1
+    }
+  ]
+}

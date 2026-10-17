@@ -1,0 +1,46 @@
+{
+  "file": "index.md",
+  "hash": "93faf8f5e96d66210a3d33593e2fb71cc056ae8bcfe70550cb797392f91d0ad5",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0347,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Skulpt supports **turtle graphics** out of the box",
+      "italian": "Skulpt supporta nativamente le **grafiche turtle**",
+      "explanation": "\"Grafiche turtle\" è un calco poco naturale; si dice \"grafica turtle\". Incoerente anche con \"la tartaruga\" usato subito dopo, mentre la convenzione è \"la turtle\".",
+      "suggestion": "Usare \"la grafica turtle\" (anche nell'elenco e nella tabella) e \"la turtle disegnare\" invece di \"la tartaruga\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "to see the turtle draw a colorful hexagon",
+      "italian": "per vedere la tartaruga disegnare un esagono colorato",
+      "explanation": "Incoerenza terminologica: altrove si usa \"turtle\", qui \"tartaruga\".",
+      "suggestion": "per vedere la turtle disegnare un esagono colorato",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Try it yourself right now",
+      "italian": "Provalo subito tu stesso/a",
+      "explanation": "Forma pesante e leggermente innaturale; inoltre il resto del testo usa forme diverse.",
+      "suggestion": "Provalo subito tu: clicca su **Run**...",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "That seven-line program",
+      "italian": "Questo programma di sette righe",
+      "explanation": "Corretto rispetto all'originale (il codice ha 7 righe). Nessun problema sostanziale, ma \"chi impara\" e simili sono accettabili.",
+      "suggestion": "Nessuna modifica necessaria.",
+      "part": 1
+    }
+  ]
+}

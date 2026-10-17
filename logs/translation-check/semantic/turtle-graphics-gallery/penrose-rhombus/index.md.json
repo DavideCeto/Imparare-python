@@ -1,0 +1,19 @@
+{
+  "file": "turtle-graphics-gallery/penrose-rhombus/index.md",
+  "hash": "e55c141ad6c1502bac7f22dd601de01c9fc281c186dc6c6c5f6941f64abb90c5",
+  "model": "sonnet",
+  "score": 5,
+  "parts": 1,
+  "cost_usd": 0.053,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "neat whole-number ratio",
+      "italian": "rapporto ordinato di numeri intieri",
+      "explanation": "La forma corretta è \"interi\", non \"intieri\". Inoltre \"rapporto ordinato\" suona un po' innaturale.",
+      "suggestion": "un rapporto \"pulito\" tra numeri interi",
+      "part": 1
+    }
+  ]
+}

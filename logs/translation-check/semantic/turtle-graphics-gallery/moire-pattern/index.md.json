@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/moire-pattern/index.md",
+  "hash": "9d73683d92a03779cfd152a4481ad85de99df94bcd331ee8af61bc41dc1a3dbb",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0409,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Control the Moiré pattern size by changing the angle difference",
+      "italian": "Controllare la dimensione del pattern Moiré cambiando la differenza di angolo",
+      "explanation": "Uso incoerente di \"motivo\" e \"pattern\" per Moiré pattern (titolo e mascotte usano \"motivo\", il resto \"pattern\").",
+      "suggestion": "Usare un termine unico, es. \"motivo Moiré\" o \"pattern Moiré\" ovunque.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il testo dice \"Esegui\" ma il pulsante nel laboratorio resta \"Run\" (convenzione: pulsanti in inglese), quindi lo studente non lo trova.",
+      "suggestion": "poi clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to Moiré Patterns!",
+      "italian": "Benvenuto ai Motivi Moiré!",
+      "explanation": "\"Benvenuto a/ai\" suona poco naturale e al maschile.",
+      "suggestion": "Benvenuto nel mondo dei motivi Moiré!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the same physics describes light interference, sound beats, and radio wave mixing",
+      "italian": "e il mixing delle onde radio. Geometria, ottica, e fisica",
+      "explanation": "Anglicismo \"mixing\" e virgola prima di \"e\" non idiomatica in italiano.",
+      "suggestion": "e la miscelazione delle onde radio. Geometria, ottica e fisica",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "they produce dramatic interference patterns",
+      "italian": "producono drammatici pattern di interferenza",
+      "explanation": "\"drammatici\" è calco poco naturale.",
+      "suggestion": "producono spettacolari pattern di interferenza",
+      "part": 1
+    }
+  ]
+}

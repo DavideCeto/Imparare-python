@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/nested-circles/index.md",
+  "hash": "4c21d76407d35295e0d3d0ee9517428316eb6cd1d7354f469e9c9773f83c95c8",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0394,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Click Run to find out!",
+      "italian": "clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante nel laboratorio resta \"Run\" (convenzione), ma il testo parla di \"Esegui\", che non corrisponde al pulsante visibile.",
+      "suggestion": "clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Replace `monty.circle(radius)` with `monty.circle(radius, steps=60)` — turtle's `circle()` can approximate an ellipse by stretching with `monty.shapesize()` first.",
+      "italian": "il `circle()` di turtle può approssimare un'ellisse allungando prima con `monty.shapesize()`.",
+      "explanation": "L'originale è confuso tecnicamente; la traduzione lo riproduce fedelmente. Segnalo solo per cautela: il testo non spiega bene come ottenere l'ellisse.",
+      "suggestion": "Mantenere il significato, eventualmente chiarire.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "each one covering the last",
+      "italian": "ognuno che copre il precedente",
+      "explanation": "Costruzione poco naturale in italiano.",
+      "suggestion": "ognuno dei quali copre il precedente",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "scattering circles randomly across the canvas",
+      "italian": "disperdendo i cerchi casualmente attraverso il canvas",
+      "explanation": "\"attraverso\" è calco dall'inglese.",
+      "suggestion": "sparpagliando i cerchi a caso sul canvas",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "pulse outward from the center like a ripple frozen in time",
+      "italian": "Venti anelli concentrici che alternano ciano e blu navy pulsano verso l'esterno",
+      "explanation": "Frase senza verbo principale ben formato (\"che alternano... pulsano\"), un po' pesante per ragazzi.",
+      "suggestion": "Venti anelli concentrici, alternati ciano e blu navy, si espandono dal centro come un'increspatura congelata nel tempo.",
+      "part": 1
+    }
+  ]
+}

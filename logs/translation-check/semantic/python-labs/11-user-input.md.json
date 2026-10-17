@@ -1,0 +1,46 @@
+{
+  "file": "python-labs/11-user-input.md",
+  "hash": "1a5aafbbdd7240040f21b535da6e205ad0511d9347a11c3d849821492173496f",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0369,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Scratch you used the **\"Ask ___ and wait\"** block",
+      "italian": "hai usato il blocco **\"Chiedi ___ e aspetta\"**",
+      "explanation": "Corretto come adattamento, ma l'originale è il blocco inglese; va bene. Nessun problema reale.",
+      "suggestion": "Nessuna modifica necessaria.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to This Lesson!",
+      "italian": "Benvenuto a Questa Lezione!",
+      "explanation": "Formulazione poco naturale e solo al maschile.",
+      "suggestion": "Benvenuto alla lezione!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Calling `int()` on it converts `\"5\"` to the integer `5`. Only after that can you use it",
+      "italian": "Chiamare `int()` su di essa converte `\"5\"` nell'intero `5`. Solo dopo puoi usarlo",
+      "explanation": "Concordanza incoerente (\"di essa\" / \"usarlo\") e forma un po' macchinosa.",
+      "suggestion": "Chiamare `int()` sulla stringa la converte nell'intero `5`. Solo dopo puoi usarlo in `range(count)`.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Click **Run**",
+      "italian": "Clicca **Esegui**",
+      "explanation": "Il testo dice Esegui, ma i pulsanti restano Run: incoerenza per lo studente.",
+      "suggestion": "Usare \"Run\" nel testo, ad esempio: Clicca **Run**.",
+      "part": 1
+    }
+  ]
+}

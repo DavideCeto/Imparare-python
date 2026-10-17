@@ -1,0 +1,28 @@
+{
+  "file": "teachers-guide/prompts/05-content-generation-strategy.md",
+  "hash": "6a6660bd5def5733c8c2f0ccf483400d9a2d6c156fb388bba66255ca3bd23681",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.014,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "place interactive turtle graphics inline",
+      "italian": "è posizionare in linea la grafica turtle interattiva",
+      "explanation": "\"In linea\" è un calco poco naturale per \"inline\"; meglio \"direttamente nella pagina\" o \"integrata nel testo\".",
+      "suggestion": "è inserire la grafica turtle interattiva direttamente nelle pagine usando le librerie Skulpt",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "take the opportunity to check their learning, create a new program that needs an additional line added or a small bug fixed.",
+      "italian": "cogli l'occasione per verificare il loro apprendimento, crea un nuovo programma che richiede l'aggiunta di una riga in più o la correzione di un piccolo bug.",
+      "explanation": "La virgola unisce due frasi in modo poco chiaro; meglio \"e crea\" o i due punti.",
+      "suggestion": "cogli l'occasione per verificare il loro apprendimento: crea un nuovo programma a cui manca una riga o che contiene un piccolo bug da correggere.",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "file": "trinket/examples.md",
+  "hash": "e86ddcbc17ccad82b8529f86a7272162455aa3b83b767c6ebea6e80f109ad502",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 1,
+  "cost_usd": 0.0175,
+  "issues": [
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "This lab was written for **Trinket.io**, which is [shutting down in August 2026]",
+      "italian": "This lab was written for **Trinket.io**, which is [shutting down in August 2026]",
+      "explanation": "L'intera sezione italiana è identica all'inglese: la prosa dell'avviso di deprecazione non è stata tradotta.",
+      "suggestion": "Tradurre l'avviso: \"Questo laboratorio è stato scritto per **Trinket.io**, che [chiuderà ad agosto 2026]...\". Anche il titolo dell'admonition (\"Laboratorio obsoleto — Trinket sta per chiudere\") va tradotto.",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "# Trinket Examples",
+      "italian": "# Trinket Examples",
+      "explanation": "Il titolo della pagina è rimasto in inglese.",
+      "suggestion": "# Esempi di Trinket",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Use the [Turtle API](https://docs.python.org/2.7/library/turtle.html) documentation to check out what else is available.",
+      "italian": "Use the [Turtle API](https://docs.python.org/2.7/library/turtle.html) documentation to check out what else is available.",
+      "explanation": "Frase finale non tradotta.",
+      "suggestion": "Consulta la documentazione della [Turtle API](...) per scoprire che cos'altro è disponibile.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "[How to Find Prime Numbers?](https://trinket.io/library/trinkets/aa9d51a7b9)",
+      "italian": "[How to Find Prime Numbers?](https://trinket.io/library/trinkets/aa9d51a7b9)",
+      "explanation": "I titoli degli esempi in elenco non sono tradotti.",
+      "suggestion": "Tradurre es. \"Come trovare i numeri primi?\", \"Gioco del Tris\", \"Disegnare un elefante\".",
+      "part": 1
+    }
+  ]
+}

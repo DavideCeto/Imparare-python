@@ -1,0 +1,46 @@
+{
+  "file": "turtle-graphics-gallery/rose-curve/index.md",
+  "hash": "63d48b14374fba0cfbdd65b40c04c36671fe7d44c377ff8c0a6fb0d2c7ef1f93",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0359,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Convert polar `(r, theta)` to Cartesian `(x, y)` for plotting",
+      "italian": "Convertire polare `(r, theta)` in cartesiano `(x, y)` per il tracciamento",
+      "explanation": "Frase poco naturale: mancano i sostantivi ('coordinate').",
+      "suggestion": "Convertire le coordinate polari `(r, theta)` in coordinate cartesiane `(x, y)` per il disegno",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante nel laboratorio resta 'Run' (convenzione del progetto), ma il testo dice 'Esegui', creando incoerenza.",
+      "suggestion": "poi clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "One short equation produces these petal patterns",
+      "italian": "Un'equazione breve produce questi pattern a petalo",
+      "explanation": "'pattern a petalo' è innaturale e anglicizzante.",
+      "suggestion": "Una breve equazione produce questi disegni a petali",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "places the point 180° opposite. This doubles back through the center",
+      "italian": "posiziona il punto 180° opposto. Questo ripassa attraverso il centro",
+      "explanation": "Formulazione poco chiara in italiano ('180° opposto').",
+      "suggestion": "posiziona il punto dalla parte opposta, a 180°. Così la curva torna indietro passando per il centro",
+      "part": 1
+    }
+  ]
+}

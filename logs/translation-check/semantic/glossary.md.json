@@ -1,0 +1,46 @@
+{
+  "file": "glossary.md",
+  "hash": "9c9aeb2430bfd26a23733f3a66dcb3984f59a20a16c465db1f86f8dd12ad18e3",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.3924,
+  "issues": [
+    {
+      "category": "meaning",
+      "severity": "minor",
+      "english": "The area of a program outside all functions where variables can be accessed from anywhere in the same file, including inside functions that reference them (but do not reassign them without the `global` keyword).",
+      "italian": "(ma senza riassegnarle senza la parola chiave `global`)",
+      "explanation": "Il doppio «senza» è fuorviante e crea ambiguità: sembra dire il contrario.",
+      "suggestion": "«(ma senza riassegnarle, a meno di usare la parola chiave `global`)».",
+      "part": 1
+    },
+    {
+      "category": "grammar",
+      "severity": "minor",
+      "english": "cannot be accessed from the rest of the program.",
+      "italian": "non può essere accessibile dal resto del programma",
+      "explanation": "Forma scorretta: «non può essere accessibile».",
+      "suggestion": "«non è accessibile dal resto del programma» oppure «non può essere acceduta».",
+      "part": 1
+    },
+    {
+      "category": "terminology",
+      "severity": "minor",
+      "english": "Disegnare un'onda sinusoidale con turtle e math / Plotting a sine wave",
+      "italian": "Disegnare un'onda sinusoidale (plotting)",
+      "explanation": "Il titolo «Plotting a sine wave» ha lo stesso verbo «Disegnare» del titolo turtle, perdendo la distinzione (grafico con matplotlib).",
+      "suggestion": "«Tracciare il grafico di un'onda sinusoidale».",
+      "part": 1
+    },
+    {
+      "category": "grammar",
+      "severity": "minor",
+      "english": "The skill of using Python's built-in `help()` to read a function's docstring",
+      "italian": "usare `help()` integrata in Python",
+      "explanation": "Concordanza: help() è femminile solo se «funzione»; meglio chiarire. Lieve scorrevolezza.",
+      "suggestion": "«usare la funzione `help()` integrata in Python».",
+      "part": 1
+    }
+  ]
+}

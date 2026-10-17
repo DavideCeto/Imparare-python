@@ -1,0 +1,19 @@
+{
+  "file": "trinket/04a-stop-sign.md",
+  "hash": "0efb459f60a3fe5eae86b11cc6783d1694bad604da46fea7ef0d00cd98ec4dea",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 1,
+  "cost_usd": 0.0149,
+  "issues": [
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "In this lesson, we will use variables and for loop to draw a stop sign.",
+      "italian": "In this lesson, we will use variables and for loop to draw a stop sign.",
+      "explanation": "L'intera sezione è identica all'originale inglese: nessuna prosa è stata tradotta in italiano (avviso di deprecazione, titolo, introduzione, intestazioni, testo del link).",
+      "suggestion": "Tradurre in italiano avviso, titolo, introduzione, intestazioni (\"Codice di esempio\", \"Link a Trinket\") e testo del link, lasciando invariati codice, URL e percorsi.",
+      "part": 1
+    }
+  ]
+}

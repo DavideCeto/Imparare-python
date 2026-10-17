@@ -1,0 +1,28 @@
+{
+  "file": "teachers-guide/prompts/04-book-chapter-generator.md",
+  "hash": "234c9ddf88c6deb3fc09a816de63e62fc8afa015fcc2b31c6ec13aabe7b0b2c7",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0126,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Book Chapter Generator Skill",
+      "italian": "Skill del Generatore di Capitoli del Libro",
+      "explanation": "Il nome della skill (/book-chapter-generator) compare nel testo come nome di prodotto. Tradurre il titolo con «Generatore di Capitoli» crea una piccola incoerenza con il nome inglese mantenuto nel testo, ma è accettabile.",
+      "suggestion": "Skill Book Chapter Generator (generatore di capitoli del libro)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Start slowly with turtle graphics build around Skulpt labs.",
+      "italian": "Inizia lentamente con la grafica turtle costruita intorno ai laboratori Skulpt.",
+      "explanation": "Il participio «costruita» concorda con «grafica», ma nell'originale il senso è che il libro (o i capitoli) sia costruito intorno ai laboratori Skulpt. L'italiano risulta ambiguo.",
+      "suggestion": "Inizia lentamente con la grafica turtle, costruendo i capitoli intorno ai laboratori Skulpt.",
+      "part": 1
+    }
+  ]
+}

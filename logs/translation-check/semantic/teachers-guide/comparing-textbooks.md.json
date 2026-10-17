@@ -1,0 +1,55 @@
+{
+  "file": "teachers-guide/comparing-textbooks.md",
+  "hash": "3dfb54f3ee46b263f3f27953301b906ee14ca4cc42b8647e02285a116996522a",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0502,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "The rubric weights features that matter most for beginners aged 10–14 ... Several of these resources (especially Automate the Boring Stuff)",
+      "italian": "Molti di queste risorse (specialmente Automate the Boring Stuff)",
+      "explanation": "\"Several\" è reso con \"Molti\", sfumatura leggermente diversa (alcune/diverse).",
+      "suggestion": "Alcune di queste risorse",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "a resource a teacher can truly make their own and one they are permanently locked into using as-is",
+      "italian": "una in cui è permanentemente bloccato a usarla così com'è",
+      "explanation": "Costruzione sgrammaticata e innaturale.",
+      "suggestion": "una che è costretto a usare così com'è, senza possibilità di cambiarla",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Open licensing and open source code",
+      "italian": "La licenza aperta e il codice open source (invece di una piattaforma chiusa) permettono",
+      "explanation": "\"Open licensing\" è generico, non \"la licenza\" specifica; leggera alterazione.",
+      "suggestion": "Le licenze aperte e il codice open source",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Ripunteggiare per i tuoi criteri",
+      "italian": "Ripunteggiare per i tuoi criteri",
+      "explanation": "\"Ripunteggiare\" e \"punteggiarle\" sono neologismi poco naturali; l'italiano usa \"valutare/assegnare punteggi\".",
+      "suggestion": "Rivalutare con i tuoi criteri; \"per valutarle con un punteggio\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "a \"nice to have\" refinement",
+      "italian": "un raffinamento \"gradito ma non essenziale\"",
+      "explanation": "\"Raffinamento\" e vari calchi (\"primer\", \"pattern\", \"remixare\") sono un po' oscuri per studenti/insegnanti.",
+      "suggestion": "un miglioramento \"in più\"; \"introduzione breve\"",
+      "part": 1
+    }
+  ]
+}

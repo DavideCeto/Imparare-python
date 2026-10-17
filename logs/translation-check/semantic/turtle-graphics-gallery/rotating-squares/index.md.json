@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/rotating-squares/index.md",
+  "hash": "54d84e00408b521a9c375c4c97ca6d3aee70f9e605ce69d8bd8691c0cd3dce29",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0337,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Draw concentric squares that each rotate slightly from the last",
+      "italian": "Disegnare quadrati concentrici che ognuno ruota leggermente dal precedente",
+      "explanation": "Costruzione poco naturale in italiano.",
+      "suggestion": "Disegnare quadrati concentrici, ognuno ruotato leggermente rispetto al precedente",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "look slightly to the side of the image",
+      "italian": "guardi leggermente al fianco dell'immagine",
+      "explanation": "Espressione innaturale.",
+      "suggestion": "guardi leggermente di lato rispetto all'immagine",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Click Run to find out!",
+      "italian": "clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta 'Run' (convenzione), ma il testo dice 'Esegui' mentre il pulsante mostra Run: incoerente.",
+      "suggestion": "clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Run the loop twice — once with `rot_step = 5` and once with `-5`.",
+      "italian": "una con `rot_step = 5` e una con `-5`",
+      "explanation": "Concordanza: 'volta' è sottinteso, ma 'una volta' è più chiaro.",
+      "suggestion": "una volta con `rot_step = 5` e una con `-5`",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Café Wall Illusion",
+      "italian": "Illusione del Muro del Caffè",
+      "explanation": "Nome noto dell'illusione, di solito 'illusione del Café Wall'.",
+      "suggestion": "Illusione del Café Wall",
+      "part": 1
+    }
+  ]
+}

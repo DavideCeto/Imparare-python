@@ -1,0 +1,73 @@
+{
+  "file": "turtle-graphics-gallery/sunflower-spiral/index.md",
+  "hash": "f88f71e6ff70eb8cadfdcede9a75274cc3b76bb6559df7c2fc342b4bddba810b",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0424,
+  "issues": [
+    {
+      "severity": "major",
+      "category": "meaning",
+      "english": "The golden angle 137.508° is the most \"irrational\" angle possible, meaning no seed ever lands directly in front of a previous one.",
+      "italian": "significando che nessun seme atterra mai direttamente davanti a uno precedente",
+      "explanation": "La frase è fedele, ma \"significando che\" è un gerundio innaturale e \"atterra\" è calco dall'inglese (\"lands\").",
+      "suggestion": "\"...è l'angolo più \\\"irrazionale\\\" possibile: significa che nessun seme finisce mai esattamente davanti a uno precedente.\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "The seeds in a real sunflower head are arranged by the golden angle",
+      "italian": "sono disposti dall'angolo d'oro",
+      "explanation": "Calco dalla forma passiva inglese; in italiano suona innaturale.",
+      "suggestion": "\"sono disposti secondo l'angolo d'oro\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "The colors cycle through a sunny palette",
+      "italian": "I colori scorrono attraverso una tavolozza solare",
+      "explanation": "\"Scorrono attraverso\" è un calco; meglio \"si alternano\".",
+      "suggestion": "\"I colori si alternano in una tavolozza solare\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "`math.sqrt(n)` for the radius spreads seeds evenly outward — without it all seeds would cluster near the edge.",
+      "italian": "senza di esso tutti i semi si raggrupperebbero vicino al bordo",
+      "explanation": "Frase un po' goffa, ma il senso è mantenuto.",
+      "suggestion": "\"senza la radice quadrata...\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "pinecones, pineapples, and artichokes",
+      "italian": "nelle pigne, negli ananas, e nei carciofi",
+      "explanation": "Virgola prima della \"e\" non usata in italiano (anche in \"girasoli, pigne, e galassie\").",
+      "suggestion": "Eliminare la virgola prima di \"e\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "every 4th seed lands in the same direction",
+      "italian": "ogni 4° seme atterra nella stessa direzione",
+      "explanation": "\"4°\" come ordinale e \"atterra\" suonano innaturali.",
+      "suggestion": "\"ogni quarto seme finisce nella stessa direzione\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Try this value and see if it differs from 137.508°.",
+      "italian": "vedi se differisce da 137,508°",
+      "explanation": "Il valore 222,5° è l'angolo complementare (360−137,5), equivalente specularmente; la frase originale è ambigua e la traduzione la mantiene, ma \"Prova l'angolo esatto della sezione aurea\" è un po' fuorviante.",
+      "suggestion": "\"Prova questo valore e osserva se il risultato è diverso da quello con 137,508°.\"",
+      "part": 1
+    }
+  ]
+}

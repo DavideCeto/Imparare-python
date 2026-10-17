@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/circular-badge/index.md",
+  "hash": "0bf545b6eff0981108eed5d2d3fca2941ef651910561025c10fd33bbce45d2d8",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0397,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "omission",
+      "english": "Up next: **Block Letters** — drawing large outlined letters from line segments.",
+      "italian": "Prossimo: **Nome in Lettere Blocco** — disegnare grandi lettere in contorno da segmenti di linea.",
+      "explanation": "Il titolo della lezione successiva è stato modificato (\"Nome in Lettere Blocco\" invece di \"Block Letters\") e la frase suona poco naturale.",
+      "suggestion": "Prossima lezione: **Lettere a Blocchi** — disegneremo grandi lettere in contorno usando segmenti di linea.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Try padding it with spaces or asterisks to fill the ring evenly.",
+      "italian": "Prova a riempirlo con spazi o asterischi per riempire l'anello uniformemente.",
+      "explanation": "Ripetizione di \"riempire\" e senso di \"padding\" (aggiungere in coda/riempitivo) poco chiaro.",
+      "suggestion": "Prova ad aggiungere spazi o asterischi per distribuire le lettere in modo uniforme lungo l'anello.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "because the turtle faces outward, letters at the bottom face inward",
+      "italian": "perché la tartaruga è rivolta verso l'esterno, le lettere in basso sono rivolte verso l'interno",
+      "explanation": "Frase costruita in modo poco naturale, la causa non è chiara (è rivolta verso l'esterno, quindi in basso le lettere sono capovolte).",
+      "suggestion": "perché la tartaruga è rivolta verso l'esterno, e in basso questo significa che le lettere sono capovolte.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Run",
+      "italian": "clicca Esegui per scoprirlo",
+      "explanation": "Il pulsante resta Run, ma il testo lo chiama \"Esegui\", creando incoerenza con il pulsante visibile.",
+      "suggestion": "clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "a name arranged around the perimeter, two decorative rings, and a filled circle",
+      "italian": "un nome disposto attorno al perimetro, due anelli decorativi, e un cerchio riempito",
+      "explanation": "Virgola prima di \"e\" calcata dall'inglese; ripetuta anche altrove (\"monete, francobolli, e sigilli\").",
+      "suggestion": "Eliminare la virgola prima di \"e\".",
+      "part": 1
+    }
+  ]
+}

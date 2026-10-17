@@ -1,0 +1,37 @@
+{
+  "file": "teachers-guide/code-mirror-example.md",
+  "hash": "e67d253e1a7b233a87f843786bc182b3dd649069538d83e01dc50874c75eea8c",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0563,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Without line numbers, `NameError on line 27` sends students scanning.",
+      "italian": "manda gli studenti a scandagliare.",
+      "explanation": "\"Scandagliare\" senza complemento è innaturale e poco chiaro per ragazzi di 10-13 anni.",
+      "suggestion": "Senza numeri di riga, `NameError on line 27` costringe gli studenti a cercare riga per riga.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "handy for discussion or screenshots",
+      "italian": "utile per discussioni o screenshot",
+      "explanation": "Accettabile, ma \"Resume lo continua\" è poco naturale in italiano.",
+      "suggestion": "**Resume** la fa continuare / la riprende.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Bracket matching",
+      "italian": "Corrispondenza delle parentesi",
+      "explanation": "Termine poco naturale; si usa più comunemente evidenziazione delle parentesi corrispondenti.",
+      "suggestion": "Evidenziazione delle parentesi corrispondenti",
+      "part": 1
+    }
+  ]
+}

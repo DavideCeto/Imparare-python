@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/islamic-star/index.md",
+  "hash": "53d655f9b0288591b2bec6830de8a2c906468549020a827a1b004d258e4b2719",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0454,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Side length adjusted so the two squares create points",
+      "italian": "Lunghezza del lato adattata così i due quadrati creano punte",
+      "explanation": "«così» seguito dall'indicativo suona poco naturale. Serve una finale con il congiuntivo.",
+      "suggestion": "Lunghezza del lato regolata in modo che i due quadrati creino le punte",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante nel laboratorio resta «Run», quindi «Esegui» non corrisponde all'etichetta che lo studente vede.",
+      "suggestion": "poi clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the kind found in mosque tile work",
+      "italian": "il tipo trovato nei lavori di piastrelle delle moschee",
+      "explanation": "Resa letterale e poco naturale in italiano.",
+      "suggestion": "il tipo che si trova nelle piastrelle decorate delle moschee",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to the Islamic Star!",
+      "italian": "Benvenuto alla Stella Islamica!",
+      "explanation": "La preposizione è meno naturale: in italiano si dice «Benvenuto nella...».",
+      "suggestion": "Benvenuto nella Stella Islamica!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "and `forward(size)` steps out to it",
+      "italian": "e `forward(size)` fa i passi per arrivarci",
+      "explanation": "Espressione goffa.",
+      "suggestion": "e `forward(size)` la fa avanzare fino a quell'angolo",
+      "part": 1
+    }
+  ]
+}

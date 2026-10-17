@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/voronoi-regions/index.md",
+  "hash": "1a36fcad76fc260c5aa7f6081f29717277baa3339af1a024908d400b0fdb979c",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0474,
+  "issues": [
+    {
+      "category": "meaning",
+      "severity": "minor",
+      "english": "color every spot on the screen to match whichever seed is closest",
+      "italian": "colora ogni punto dello schermo per farlo corrispondere a qualunque seme sia più vicino",
+      "explanation": "Frase calcata sull'inglese e poco naturale; \"qualunque seme sia\" è innaturale.",
+      "suggestion": "colora ogni punto dello schermo con il colore del seme che gli è più vicino.",
+      "part": 1
+    },
+    {
+      "category": "grammar",
+      "severity": "minor",
+      "english": "you belong to whichever seed you're closest to",
+      "italian": "appartieni a qualunque seme tu sia più vicino",
+      "explanation": "Costruzione calcata e poco naturale.",
+      "suggestion": "appartieni al seme che ti è più vicino.",
+      "part": 1
+    },
+    {
+      "category": "meaning",
+      "severity": "minor",
+      "english": "Use the distance formula `dx*dx + dy*dy` to find the nearest of several points",
+      "italian": "per trovare il più vicino tra diversi punti",
+      "explanation": "\"il più vicino\" senza nome è ambiguo; meglio \"il punto più vicino\".",
+      "suggestion": "per trovare il punto più vicino tra diversi punti",
+      "part": 1
+    },
+    {
+      "category": "terminology",
+      "severity": "minor",
+      "english": "Taxicab distance.",
+      "italian": "Distanza Manhattan.",
+      "explanation": "Il titolo cambia termine rispetto all'originale (Taxicab); accettabile, ma si perde il legame con l'immagine del taxi.",
+      "suggestion": "Distanza del taxi (Manhattan).",
+      "part": 1
+    },
+    {
+      "category": "terminology",
+      "severity": "minor",
+      "english": "even maps of which fire station serves your house",
+      "italian": "quale stazione dei pompieri serve la tua casa",
+      "explanation": "Più naturale \"caserma dei pompieri\".",
+      "suggestion": "quale caserma dei vigili del fuoco serve casa tua",
+      "part": 1
+    },
+    {
+      "category": "tone",
+      "severity": "minor",
+      "english": "Penrose Rhombus Tiling",
+      "italian": "Tassellatura a Rombi di Penrose",
+      "explanation": "\"pattern\" lasciato in inglese in prosa dove esiste \"schema/motivo\".",
+      "suggestion": "il famoso motivo che non si ripete mai",
+      "part": 1
+    }
+  ]
+}

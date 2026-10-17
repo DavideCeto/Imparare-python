@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/overlapping-squares/index.md",
+  "hash": "a2657a68e21647b65a54faec976169ad5dbf4444d42d8d210e9ba93a3ce8dd83",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0403,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Eight large squares, each shifted 25 pixels diagonally from the last, fan out in a cascade of color",
+      "italian": "Otto grandi quadrati, ognuno spostato di 25 pixel in diagonale dal precedente, si apre a ventaglio",
+      "explanation": "Errore di concordanza: il soggetto è plurale (otto quadrati), il verbo è singolare.",
+      "suggestion": "Otto grandi quadrati, ognuno spostato di 25 pixel in diagonale dal precedente, si aprono a ventaglio",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "A gradient of colors (dark to light)",
+      "italian": "(dal scuro al chiaro)",
+      "explanation": "Preposizione articolata errata: davanti a \"scuro\" si usa \"dallo\".",
+      "suggestion": "(dallo scuro al chiaro)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Plan a color sequence so overlapping areas look intentional",
+      "italian": "così le aree sovrapposte sembrino intenzionali",
+      "explanation": "\"così\" va meglio con \"che\" o si usa \"in modo che\".",
+      "suggestion": "in modo che le aree sovrapposte sembrino intenzionali",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "click Run to find out!",
+      "italian": "clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta Run nell'HTML, quindi \"Esegui\" non corrisponde al pulsante reale.",
+      "suggestion": "clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Fix the loop so the lightest square is drawn last.",
+      "italian": "Correggi il ciclo così il quadrato più chiaro sia disegnato ultimo.",
+      "explanation": "Costruzione poco naturale.",
+      "suggestion": "Correggi il ciclo in modo che il quadrato più chiaro venga disegnato per ultimo.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Change `i * offset` to `-i * offset` in the x formula.",
+      "italian": "Cambia `i * offset` in `-i * offset` nella formula x.",
+      "explanation": "Corretto nel significato, ma \"Sovrapponi nella direzione opposta\" e \"Prossimo\" sono un po' goffi; lieve.",
+      "suggestion": "Prossimo passo: **Fiore con Funzione Petalo**...",
+      "part": 1
+    }
+  ]
+}

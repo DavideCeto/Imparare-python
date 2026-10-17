@@ -1,0 +1,46 @@
+{
+  "file": "sims/control-flow-explorer/index.md",
+  "hash": "da333bdc4548032315dd7541320db4adf2f988f3310527497f7436d0d47854b8",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0247,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "conditions after the first `True` are marked **\"never checked.\"**",
+      "italian": "vengono segnate **\"mai controllato.\"**",
+      "explanation": "Concordanza: il soggetto è plurale (condizioni), quindi il participio dovrebbe essere plurale.",
+      "suggestion": "vengono segnate come **\"mai controllate.\"** (e analogamente \"mai controllati\" per i controlli)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Students can read an elif chain and still believe Python checks every condition.",
+      "italian": "Gli studenti sanno leggere una catena elif ma possono ancora credere",
+      "explanation": "\"can read\" è reso con \"sanno leggere\", ma il senso è che possono leggerla e comunque credere il falso; la formulazione è un po' diversa e poco naturale.",
+      "suggestion": "Gli studenti possono leggere una catena elif e credere comunque che Python controlli ogni condizione.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "upper elementary and middle school (ages 10-14)",
+      "italian": "Scuola primaria superiore e scuola media (10-14 anni)",
+      "explanation": "\"Scuola primaria superiore\" non è un termine italiano corrente.",
+      "suggestion": "Ultimi anni della scuola primaria e scuola secondaria di primo grado (10-14 anni)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Student can explain what happens in a simple if with no else when the condition is False",
+      "italian": "quando la condizione è Falsa",
+      "explanation": "False è un valore Python; meglio mantenerlo in inglese come in precedenza si usa True.",
+      "suggestion": "quando la condizione è False",
+      "part": 1
+    }
+  ]
+}

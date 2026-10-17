@@ -1,0 +1,65 @@
+{
+  "file": "turtle-graphics-gallery/inward-spiral/index.md",
+  "hash": "ae685ea7714e644c97b9d1e5d988ba20d75d996bf44903c1ae78d8f13bc8016a",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0353,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Convergence is just divergence in reverse!",
+      "italian": "La convergenza è solo divergenza al contrario!",
+      "explanation": "Accettabile, ma l'originale dice che le due cose sono invertite; resa ok. (Nota minore) Nel testo 'Prossimo: ... una spirale veramente curva' manca l'articolo/forma naturale.",
+      "suggestion": "Prossima tappa: **Colored Logarithmic Spiral** — usare la trigonometria per disegnare una spirale davvero curva.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "so the outer segments look bolder and the inner ones fade away",
+      "italian": "così i segmenti esterni sembrano più audaci e quelli interni svaniscono",
+      "epplanation": "",
+      "explanation": "'Audaci' è un calco innaturale di 'bolder' riferito a colori.",
+      "suggestion": "così i segmenti esterni risaltano di più e quelli interni sfumano.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "`while step > 1` runs until the step becomes too small to matter.",
+      "italian": "`while step > 1` gira finché il passo non diventa troppo piccolo per avere importanza.",
+      "explanation": "'Gira' per un ciclo è calco dall'inglese; 'passo' e 'step' sono usati in modo ambiguo.",
+      "suggestion": "`while step > 1` continua a ripetersi finché il passo non diventa troppo piccolo per contare.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "so there are fewer revolutions and the loops are spaced further apart",
+      "italian": "i giri sono spaziati più distanti",
+      "explanation": "Forma poco naturale.",
+      "suggestion": "i giri sono più distanziati tra loro.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Welcome to the Inward Spiral!",
+      "italian": "Benvenuto alla Spirale verso l'Interno!",
+      "explanation": "'Benvenuto alla' è poco corretto; meglio 'Benvenuto nella'.",
+      "suggestion": "Benvenuto nella Spirale verso l'Interno!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Colors the segments from bright blue ... using a fade list",
+      "italian": "usando una lista di dissolvenza",
+      "explanation": "'Lista di dissolvenza' è poco chiaro per ragazzi.",
+      "suggestion": "usando una lista di colori sfumati",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/mandelbrot-pixel-art/index.md",
+  "hash": "e0da886c8c5e8ad81fc15502ba1a258ed9002157295ef931bfb46588f964081d",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0462,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the **cardioid** (heart-like) main body and the round bulge to its left are recognizable",
+      "italian": "il **cardioide** (a forma di cuore) corpo principale e il rigonfiamento rotondo alla sua sinistra sono riconoscibili",
+      "explanation": "Frase contorta; \"cardioide\" è usato come aggettivo e l'ordine è innaturale. Inoltre \"cardioide\" è maschile o femminile a seconda dell'uso (di solito \"la cardioide\").",
+      "suggestion": "Anche a bassa risoluzione, il corpo principale a forma di cuore (la **cardioide**) e il rigonfiamento rotondo alla sua sinistra sono riconoscibili.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "`abs(z)` gives `√(real² + imag²)`",
+      "italian": "`abs(z)` dà `√(real² + imag²)`",
+      "explanation": "Nel testo italiano \"real\" e \"imag\" restano in inglese; vanno bene come nomi di attributi, ma qui sono prosa matematica spiegata a studenti.",
+      "suggestion": "`abs(z)` dà `√(reale² + immaginaria²)`, la distanza dall'origine.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "Let's code it together!",
+      "italian": "Programmiamo insieme!",
+      "explanation": "Corretto ma \"Benvenuto\" è solo maschile; \"Benvenuto all'Insieme\" è anche poco naturale (meglio \"Benvenuto nell'Insieme\").",
+      "suggestion": "Benvenuto nell'Insieme di Mandelbrot!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "click Run to find out!",
+      "italian": "clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta \"Run\" nell'interfaccia (convenzione del progetto), ma il testo dice \"Esegui\", incoerente con il pulsante visibile.",
+      "suggestion": "clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Up next: **Julia Set** — the Mandelbrot's cousin.",
+      "italian": "Prossimo: **Pixel Art dell'Insieme di Julia** — il cugino di Mandelbrot.",
+      "explanation": "Il titolo del laboratorio successivo è stato modificato/ampliato rispetto all'originale; potrebbe non corrispondere al titolo reale.",
+      "suggestion": "Prossimo: **Insieme di Julia** — il cugino di Mandelbrot.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "small bulges appear that look just like the main shape",
+      "italian": "appaiono piccoli rigonfiamenti che sembrano proprio come la forma principale",
+      "explanation": "\"sembrano proprio come\" è una costruzione poco naturale.",
+      "suggestion": "appaiono piccoli rigonfiamenti che somigliano proprio alla forma principale",
+      "part": 1
+    }
+  ]
+}

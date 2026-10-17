@@ -1,0 +1,19 @@
+{
+  "file": "teachers-guide/prompts/01-list-old-concepts.md",
+  "hash": "ebfa16770419599f9e1b47754de9033c87767398d69b07aaff919eedd9c2043c",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0104,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Add any concepts you think are missing from this course.",
+      "italian": "Aggiungi qualsiasi concetto che pensi manchi da questo corso.",
+      "explanation": "\"che pensi manchi\" è corretto ma \"manchi da\" è innaturale; in italiano si dice \"manchi in questo corso\".",
+      "suggestion": "Aggiungi tutti i concetti che pensi manchino in questo corso.",
+      "part": 1
+    }
+  ]
+}

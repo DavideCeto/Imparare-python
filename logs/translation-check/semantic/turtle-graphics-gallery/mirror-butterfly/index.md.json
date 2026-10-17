@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/mirror-butterfly/index.md",
+  "hash": "498bb13d117837552c7c5bb114c02dd638a5e165d71d81a16ef8a9c45156936b",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0419,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Change `(-x, y)` to `(x, -y)` to flip vertically instead of horizontally.",
+      "italian": "Cambia `(-x, y)` in `(x, -y)` per rifletterlo verticalmente invece che orizzontalmente.",
+      "explanation": "\"rifletterlo\" ha un referente poco chiaro; il titolo \"Rifletti Verticalmente\" è anche un po' calco dell'inglese.",
+      "suggestion": "Cambia `(-x, y)` in `(x, -y)` per ribaltare la forma in verticale invece che in orizzontale.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "negating x flips the shape left-to-right without changing top-to-bottom",
+      "italian": "negare x ribalta la forma da sinistra a destra senza cambiare dall'alto in basso",
+      "explanation": "Formulazione poco naturale.",
+      "suggestion": "negare x ribalta la forma da sinistra a destra senza cambiare l'alto e il basso.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Move turtle to each waypoint",
+      "italian": "Muove la tartaruga a ogni punto di passaggio",
+      "explanation": "Nel resto del testo si usa \"turtle\"; \"tartaruga\" è incoerente. Inoltre \"muove a\" è poco naturale.",
+      "suggestion": "Sposta la turtle a ogni punto di passaggio, disegnando mentre va",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Monty waving welcome",
+      "italian": "Monty waving welcome",
+      "explanation": "Il testo alternativo dell'immagine è rimasto in inglese.",
+      "suggestion": "Monty che saluta per dare il benvenuto",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "click Run to find out",
+      "italian": "clicca Esegui per scoprirlo",
+      "explanation": "Il pulsante resta \"Run\" per convenzione, ma il testo parla di \"Esegui\", incoerente con il pulsante.",
+      "suggestion": "clicca Run per scoprirlo",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/t-square-fractal/index.md",
+  "hash": "b4f6a2f8fd1bfcf56b780425c37107fc9ab5754fc776fe00b36f712210eeaed7",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0435,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta «Run» nell'interfaccia (convenzione del progetto), ma il testo dice «Esegui», che non corrisponde al pulsante visibile.",
+      "suggestion": "Scrivere «clicca Run per scoprirlo!».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "The four corner positions `(±half, ±half)` are computed with a list comprehension over",
+      "italian": "sono calcolate con una list comprehension su",
+      "explanation": "L'originale è tecnicamente impreciso (il codice usa un ciclo for su una lista, non una list comprehension); la traduzione ripete l'errore. Per studenti può confondere.",
+      "suggestion": "«sono ottenute con un ciclo for su una lista di coppie».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "**Use a size-3 starting square.**",
+      "italian": "**Usa un quadrato di partenza di dimensione diversa.**",
+      "explanation": "L'originale ha un titolo poco coerente; la traduzione lo cambia, ma resta fedele all'esempio (240, 6). Differenza lieve.",
+      "suggestion": "«Usa un quadrato di partenza di dimensione 240.»",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Ricorre a ogni angolo",
+      "italian": "Ricorre a ogni angolo",
+      "explanation": "«Ricorre» in italiano significa altro; il termine corretto è chiamare ricorsivamente.",
+      "suggestion": "«Richiama la funzione a ogni angolo» / «Ricorsione a ogni angolo»; analogamente «Ricorri solo su 3 angoli» → «Usa la ricorsione solo su 3 angoli».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "The T-Square is different",
+      "italian": "Il T-Square è diverso",
+      "explanation": "Genere incoerente: il titolo usa «Frattale a T-Square» ma qui è maschile.",
+      "suggestion": "«Il frattale T-Square è diverso».",
+      "part": 1
+    }
+  ]
+}

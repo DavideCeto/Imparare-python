@@ -1,0 +1,19 @@
+{
+  "file": "python-labs/05-conditionals.md",
+  "hash": "bfe7fe996f8bbe2b553db70029a46da3da6aac2b350f27ba45e14967be7e6278",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0347,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Try these changes to the original alternating-color square.",
+      "italian": "Prova questi cambiamenti al quadrato con colori alternati originale.",
+      "explanation": "\"originale\" è posizionato in modo ambiguo/poco naturale.",
+      "suggestion": "Prova questi cambiamenti al quadrato originale con i colori alternati.",
+      "part": 1
+    }
+  ]
+}

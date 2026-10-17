@@ -1,0 +1,64 @@
+{
+  "file": "teachers-guide/adding-custom-python-labs.md",
+  "hash": "fef3537169686000ceaa66995574c8f1ccab25449d746497e5eebc753f325c2f",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0675,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "omission",
+      "english": "Teach `venv` before `pip install` so students develop the habit",
+      "italian": "Insegna `venv` prima di `pip install` così gli studenti",
+      "explanation": "Traduzione corretta; nessun problema. (Nota: nell'originale, la riga 'Use when' è duplicata e nella traduzione si ripete 'Quando usarla' - fedele.)",
+      "suggestion": "Nessuna modifica necessaria.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "# or: conda install jupyterlab\njupyter lab                   # opens in your default browser",
+      "italian": "pip install jupyterlab        # or: conda install jupyterlab\njupyter lab                   # opens in your default browser",
+      "explanation": "I commenti nel codice possono essere tradotti; restano in inglese mentre altri blocchi di codice mantengono i commenti originali. Incoerenza lieve.",
+      "suggestion": "# oppure: conda install jupyterlab / # si apre nel browser predefinito",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Skulpt labs can be contributed back.",
+      "italian": "I laboratori Skulpt possono essere contribuiti indietro.",
+      "explanation": "\"Contribuire indietro\" è un calco innaturale dall'inglese.",
+      "suggestion": "I laboratori Skulpt possono essere condivisi con la community.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Does the lab need turtle graphics or run in the shared textbook?",
+      "italian": "└─ Solo pacchetti generali                → Usa venv (Opzione 3)",
+      "explanation": "Allineamento degli spazi nel diagramma disallineato rispetto all'originale; inoltre 'Quando usarlo' è usato per opzioni femminili/maschili in modo incoerente (Opzione 1-3 'usarla', 4-9 'usarlo').",
+      "suggestion": "Uniformare 'Quando usarla' (opzione) in tutte le sezioni.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Use when:\n- Teaching data science, statistics, or machine learning",
+      "italian": "- Gli studenti devono consegnare lavori che includano sia codice *che*\n  spiegazioni",
+      "explanation": "Gli elementi dell'elenco 'Quando usarlo' hanno costruzioni non parallele (alcuni 'Per + infinito', altri frasi con soggetto).",
+      "suggestion": "Quando gli studenti devono consegnare lavori che includano sia codice sia spiegazioni scritte.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "Skulpt removes the largest barrier to entry.",
+      "italian": "Per studenti di 10-14 anni",
+      "explanation": "Corretto rispetto all'originale (10–14), nessun problema di fedeltà.",
+      "suggestion": "Nessuna modifica necessaria.",
+      "part": 1
+    }
+  ]
+}

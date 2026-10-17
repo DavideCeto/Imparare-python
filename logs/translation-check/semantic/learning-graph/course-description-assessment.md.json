@@ -1,0 +1,46 @@
+{
+  "file": "learning-graph/course-description-assessment.md",
+  "hash": "e0be2353f6aaf7b654496b56ddf0abe24d075f0368a1705f2c4cef182369e31a",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0345,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "The overview does not state how many weeks/hours the course is designed for.",
+      "italian": "La panoramica non indica quante settimane/ore il corso è progettato per durare.",
+      "explanation": "Frase contorta e poco naturale.",
+      "suggestion": "La panoramica non indica per quante settimane/ore è pensato il corso.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Descriptive Context | 5 | 4 | Rich 3-paragraph overview; minor: no explicit mention",
+      "italian": "minore: nessuna menzione esplicita della durata approssimativa del corso",
+      "explanation": "\"minore\" usato come aggettivo isolato risulta innaturale.",
+      "suggestion": "\"lacuna minore: nessuna menzione esplicita...\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "inline coding environment",
+      "italian": "ambiente di programmazione in linea Skulpt",
+      "explanation": "\"in linea\" è un calco; meglio \"integrato\" o \"nella pagina\".",
+      "suggestion": "ambiente di programmazione integrato Skulpt (anche per \"quiz integrati\")",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "ELL learners",
+      "italian": "studenti ELL",
+      "explanation": "Sigla non spiegata in italiano.",
+      "suggestion": "studenti che stanno imparando la lingua (ELL)",
+      "part": 1
+    }
+  ]
+}

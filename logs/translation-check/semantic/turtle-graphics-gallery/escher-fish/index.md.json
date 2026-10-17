@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/escher-fish/index.md",
+  "hash": "4f1ce3739fcfbb82aa24a277c372d8ca73d571ea1aad955cc120620fa2418a13",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0509,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "whatever bumps OUT of one edge must notch IN on the opposite edge",
+      "italian": "qualunque protuberanza ESCE da un lato deve diventare un'intaccatura ENTRA sul lato opposto",
+      "explanation": "Frase agrammaticale: manca la congiunzione/forma corretta (\"che esce\" ... \"che entra\").",
+      "suggestion": "qualunque protuberanza che ESCE da un lato deve diventare un'intaccatura che ENTRA sul lato opposto",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Compare the tail waypoints with the nose waypoints. One number breaks the \"bump equals notch shifted by 80\" rule.",
+      "italian": "Qualcuno ha piegato troppo in profondità la coda di questo pesce, e ora ci sono spazi vuoti bianchi a forma di diamante",
+      "explanation": "\"Troppo in profondità\" e \"spazi vuoti bianchi\" sono ridondanti/poco naturali; \"diamante\" è meglio \"rombo\".",
+      "suggestion": "ci sono dei vuoti bianchi a forma di rombo nel banco",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "One fish's tail water is the next fish's nose.",
+      "italian": "L'acqua della coda di un pesce è il naso del pesce successivo.",
+      "explanation": "Nel testo originale \"tail water\" è un'immagine; la traduzione è letterale e poco chiara. Inoltre \"stessi identici punti, percorsi nella direzione opposta\" va bene, ma l'immagine dell'acqua potrebbe confondere.",
+      "suggestion": "Lo spazio lasciato dalla coda di un pesce è occupato dal naso del pesce successivo.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the school still has zero gaps",
+      "italian": "il banco continua ad avere zero spazi vuoti",
+      "explanation": "Calco dall'inglese, innaturale in italiano.",
+      "suggestion": "il banco non ha ancora nessuno spazio vuoto",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "all 16 fish look wide awake",
+      "italian": "sembrano bene svegli",
+      "explanation": "Espressione innaturale.",
+      "suggestion": "sembrano ben svegli / con gli occhi spalancati",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Because every bump matches a notch one tile-width away",
+      "italian": "a distanza di una tassella",
+      "explanation": "\"Tassella\" non è il termine usuale; meglio \"tessera\" o \"piastrella\".",
+      "suggestion": "a distanza di una piastrella (larghezza di una tessera)",
+      "part": 1
+    }
+  ]
+}

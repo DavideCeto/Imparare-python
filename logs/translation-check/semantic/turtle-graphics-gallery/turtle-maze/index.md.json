@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/turtle-maze/index.md",
+  "hash": "3e1195c5e6d14775016618ed2545d9c9af9c2346fa9ab1fe7fd84d3d5c8529ac",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0534,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Mark it visited. Randomly visit unvisited neighbors by removing the shared wall. When stuck, backtrack.",
+      "italian": "Segnalo visitato. Visita casualmente vicini non visitati rimuovendo il muro condiviso. Quando bloccato, torna indietro.",
+      "explanation": "Frasi telegrafiche e poco naturali; «Segnalo visitato» si legge come pronome clitico, ambiguo. Mancano articoli e concordanze.",
+      "suggestion": "«Segnala la cella come visitata. Visita a caso i vicini non visitati rimuovendo il muro che hai in comune. Quando sei bloccato, torna indietro.»",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta Run nell'HTML, quindi «Esegui» non corrisponde al pulsante visibile.",
+      "suggestion": "«poi clicca Run per scoprirlo!»",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Add entrance and exit openings.",
+      "italian": "Aggiungi apertura di entrata e uscita.",
+      "explanation": "Manca l'articolo e il singolare è innaturale.",
+      "suggestion": "«Aggiungi un'apertura di entrata e una di uscita.»",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Learning Check",
+      "italian": "Verifica di Apprendimento",
+      "explanation": "Formulazione poco naturale.",
+      "suggestion": "«Verifica di apprendimento» o «Verifica le tue conoscenze».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "Up next: **Parametric Surface Projection**",
+      "italian": "Prossimo: **Proiezione di Superficie Parametrica**",
+      "explanation": "Resa un po' secca.",
+      "suggestion": "«Prossimamente:» oppure «Il prossimo laboratorio:».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "code",
+      "english": "monty.pencolor('forestgreen')\nmonty.goto(ox + 2, oy + 2)",
+      "italian": "monty.pencolor('forestgreen')\nmonty.goto(ox + 2, oy + 2)",
+      "explanation": "Il codice di esempio è identico all'originale, quindi non è un errore di traduzione. Resta però la differenza (già presente in EN) rispetto al codice del laboratorio, che usa penup() e not in.",
+      "suggestion": "Nessuna modifica necessaria alla traduzione.",
+      "part": 1
+    }
+  ]
+}

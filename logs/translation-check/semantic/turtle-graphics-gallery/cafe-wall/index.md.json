@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/cafe-wall/index.md",
+  "hash": "fa42219329921c74145bdf39dc66b2f46da7d316bf3a87c6a9e46508b2c1c199",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0456,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Run",
+      "italian": "clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante Run resta in inglese nei laboratori (e nel codice HTML); il testo parla di \"Esegui\", che non corrisponde al pulsante visibile.",
+      "suggestion": "clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Rows of black and white tiles with thin gray mortar lines between them",
+      "italian": "Righe di tessere nere e bianche con sottili linee di malta grigie tra di esse",
+      "explanation": "Concordanza e scorrevolezza: \"grigie\" dovrebbe accordarsi con \"linee\" in modo più naturale; \"tra di esse\" è pesante.",
+      "suggestion": "Righe di tessere nere e bianche separate da sottili linee di malta grigia",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Helper to draw a filled rectangle",
+      "italian": "Aiutante per disegnare un rettangolo riempito",
+      "explanation": "\"Aiutante\" è un calco poco naturale per \"helper\" in programmazione.",
+      "suggestion": "Funzione di supporto per disegnare un rettangolo colorato",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "You'll know it worked when a different strength of illusion appears.",
+      "italian": "Saprai che ha funzionato quando appare una forza diversa dell'illusione.",
+      "explanation": "Frase innaturale in italiano.",
+      "suggestion": "Saprai che ha funzionato quando l'illusione appare più forte o più debole.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Draw a café wall pattern",
+      "italian": "Disegnare un pattern a muro del caffè",
+      "explanation": "Uso incoerente di \"pattern\"/\"motivo\" (altrove \"Motivo Moiré\") e \"offset\" non tradotto in prosa.",
+      "suggestion": "Disegnare un motivo a muro del caffè; usare \"spostamento\" invece di \"offset\" nella prosa",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Up next: **Moiré Pattern**",
+      "italian": "Prossimo: **Motivo Moiré**",
+      "explanation": "Frase telegrafica poco naturale.",
+      "suggestion": "Prossima tappa: **Motivo Moiré**",
+      "part": 1
+    }
+  ]
+}

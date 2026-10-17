@@ -1,0 +1,46 @@
+{
+  "file": "sims/modulo-clock/index.md",
+  "hash": "319e5a00a79ebb73397899a6f1cabb4c637c6e156437de83332483791eba417b",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0249,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "count 17 hops around a 5-slot dial and you land on 2",
+      "italian": "conta 17 salti intorno a un quadrante a 5 posizioni e atterri su 2",
+      "explanation": "Imperativo \"conta\" seguito da \"atterri\" è incoerente; meglio un'unica forma (seconda persona indicativa).",
+      "suggestion": "se conti 17 salti intorno a un quadrante a 5 posizioni, atterri sul 2",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Student can state how `n % 2` tells you whether n is even",
+      "italian": "Lo studente sa indicare come `n % 2` dice se n è pari",
+      "explanation": "Frase poco naturale; l'originale riguarda se n è pari (o dispari).",
+      "suggestion": "Lo studente sa spiegare come `n % 2` indica se n è pari o dispari",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Check each with the sliders. Ask students",
+      "italian": "Controlla ognuno con gli slider. Chiedi agli studenti",
+      "explanation": "Nel piano di lezione l'imperativo singolare \"Controlla\" è rivolto allo studente, mentre il contesto è per l'insegnante; incongruente con \"Gli studenti calcolano\".",
+      "suggestion": "Controllate ognuno con gli slider. Chiedete agli studenti...",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Upper elementary and middle school (ages 10-14)",
+      "italian": "Scuola primaria superiore e scuola media",
+      "explanation": "\"Scuola primaria superiore\" non è un termine usato in Italia.",
+      "suggestion": "Ultimi anni della scuola primaria e scuola media (10-14 anni)",
+      "part": 1
+    }
+  ]
+}

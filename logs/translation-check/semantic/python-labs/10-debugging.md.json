@@ -1,0 +1,55 @@
+{
+  "file": "python-labs/10-debugging.md",
+  "hash": "e35ad89128e1f7f20a22d150028cc760f9b02546845d9bd4d5a5b2678588566c",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0413,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Python can't add a word and a number.",
+      "italian": "Python non può addizionare una parola e un numero.",
+      "explanation": "\"Addizionare\" è poco naturale per studenti di 10-13 anni; meglio \"sommare\". Inoltre l'errore è un TypeError dovuto a tipi diversi.",
+      "suggestion": "Python non può sommare una parola e un numero.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Before you click Run",
+      "italian": "Prima di cliccare Esegui",
+      "explanation": "Il pulsante resta \"Run\" nel progetto, ma il testo lo chiama \"Esegui\": incoerente con l'interfaccia.",
+      "suggestion": "Prima di cliccare Run, ...",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "A red error message is not a sign that you are bad at coding.",
+      "italian": "non è un segno che sei scarso nella programmazione",
+      "explanation": "Frase un po' innaturale e \"scarso\" è colloquiale/negativo; meglio un'espressione più naturale.",
+      "suggestion": "non significa che non sei bravo a programmare.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the name of whatever Python couldn't find",
+      "italian": "il nome di qualsiasi cosa Python non sia riuscito a trovare",
+      "explanation": "Frase pesante e poco scorrevole per ragazzi.",
+      "suggestion": "il nome di ciò che Python non è riuscito a trovare.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to This Lesson!",
+      "italian": "Benvenuto a Questa Lezione!",
+      "explanation": "Preposizione scorretta: si dice \"Benvenuto in questa lezione\".",
+      "suggestion": "Benvenuto in Questa Lezione!",
+      "part": 1
+    }
+  ]
+}

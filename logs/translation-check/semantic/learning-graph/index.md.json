@@ -1,0 +1,37 @@
+{
+  "file": "learning-graph/index.md",
+  "hash": "9176e181be50e8a632a39f7e14a12e15f50da98fb3aa605d30118dda147345a7",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0231,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "They have no outbound edges. They only have inbound edges",
+      "italian": "Non\nhanno archi in uscita. Hanno solo archi in entrata",
+      "explanation": "Resa fedele, ma la frase originale è già confusa; nessun errore di traduzione. Tuttavia 'grado entrante' e 'punti di ingresso' sono coerenti. Nessuna azione necessaria.",
+      "suggestion": "Nessuna modifica necessaria.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "a short Title Case label with most labels under 32 characters long",
+      "italian": "una breve etichetta con la Maiuscola a Ogni Parola, con la maggior parte delle etichette sotto i 32 caratteri di lunghezza",
+      "explanation": "Frase un po' pesante e ripetitiva in italiano.",
+      "suggestion": "una breve etichetta in Title Case (Maiuscola A Ogni Parola), per lo più di meno di 32 caratteri.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "A concept classifier taxonomy with 14 categories",
+      "italian": "Una tassonomia classificatrice di concetti con 14 categorie",
+      "explanation": "'Tassonomia classificatrice' suona innaturale.",
+      "suggestion": "Una tassonomia per classificare i concetti, con 14 categorie",
+      "part": 1
+    }
+  ]
+}

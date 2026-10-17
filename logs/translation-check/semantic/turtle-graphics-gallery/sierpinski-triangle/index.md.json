@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/sierpinski-triangle/index.md",
+  "hash": "96de89f26bca16f7ce91e733dfabe4fc992ee2aac4720cce989964563c242e25",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0393,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Map depth to a color — deeper = lighter",
+      "italian": "Mappa la profondità a un colore — più profondo = più chiaro",
+      "explanation": "Nell'originale c'è un'incoerenza (blu più scuri per i triangoli più profondi vs. 'deeper = lighter'); la traduzione la mantiene fedelmente, ma il codice assegna colori più chiari a depth bassi (più profondi). Il testo 'blu più scuri per triangoli più profondi' è quindi contrario al codice.",
+      "suggestion": "Correggere in 'blu più chiari per triangoli più profondi (più piccoli)'.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Draw only triangles where `depth == 0`, using white fill everywhere else as background.",
+      "italian": "usando riempimento bianco ovunque altro come sfondo",
+      "explanation": "Frase innaturale in italiano.",
+      "suggestion": "usando il bianco come riempimento per tutto il resto, come sfondo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Recurse on bottom-left, bottom-right, top corners",
+      "italian": "Ricorre sugli angoli in basso a sinistra, in basso a destra, in alto",
+      "explanation": "Formulazione poco naturale per ragazzi.",
+      "suggestion": "Richiama la funzione sugli angoli in basso a sinistra, in basso a destra e in alto",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Try a very deep depth.",
+      "italian": "Prova una profondità molto profonda.",
+      "explanation": "Ripetizione goffa.",
+      "suggestion": "Prova una profondità molto alta.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Sub-triangles are half the parent size",
+      "italian": "I sotto-triangoli sono metà della dimensione del genitore",
+      "explanation": "'genitore' è calco poco naturale.",
+      "suggestion": "I sotto-triangoli hanno metà della dimensione del triangolo di partenza",
+      "part": 1
+    }
+  ]
+}

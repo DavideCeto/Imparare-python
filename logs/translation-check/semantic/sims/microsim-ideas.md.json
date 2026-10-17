@@ -1,0 +1,55 @@
+{
+  "file": "sims/microsim-ideas.md",
+  "hash": "a98a1a5b0660ec07c81e888c6e68718ec7f56abe01493b0ac7c12bbebb2a8d0d",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 2,
+  "cost_usd": 0.1747,
+  "issues": [
+    {
+      "severity": "critical",
+      "category": "untranslated",
+      "english": "A prioritized, Bloom-classified list of proposed MicroSims for the Beginning Python textbook, with an implementation plan for each.",
+      "italian": "A prioritized, Bloom-classified list of proposed MicroSims for the Beginning Python textbook, with an implementation plan for each.",
+      "explanation": "Il valore di title e description nel front matter va tradotto, ma è rimasto identico all'inglese.",
+      "suggestion": "title: Idee di MicroSim per Python per principianti; description: Un elenco prioritizzato di MicroSim proposte per il manuale Python per principianti, classificate secondo Bloom, con un piano di implementazione per ciascuna.",
+      "part": 1
+    },
+    {
+      "severity": "critical",
+      "category": "untranslated",
+      "english": "This document was produced by scanning all 38 chapters in `docs/chapters/`, the 17 Python labs, the learning graph, and the turtle graphics gallery.",
+      "italian": "This document was produced by scanning all 38 chapters in `docs/chapters/`, the 17 Python labs, the learning graph, and the turtle graphics gallery.",
+      "explanation": "L'intera sezione è in inglese: introduzione, regole di progettazione, tabelle, riepilogo delle priorità e tutte le 20 schede delle MicroSim (concetto, obiettivo, piano di implementazione) non sono tradotte.",
+      "suggestion": "Tradurre in italiano tutta la prosa, i titoli, le intestazioni delle tabelle e le voci di elenco. Lasciare invariati codice inline, percorsi e nomi di prodotto.",
+      "part": 1
+    },
+    {
+      "severity": "critical",
+      "category": "untranslated",
+      "english": "These surfaced in the chapter scan but are either narrower, partially covered by a first-wave sim, or better served by prose plus a Skulpt lab.",
+      "italian": "These surfaced in the chapter scan but are either narrower, partially covered by a first-wave sim, or better served by prose plus a Skulpt lab.",
+      "explanation": "L'intera sezione italiana è identica all'originale inglese: nessuna prosa è stata tradotta (descrizioni, concetti, obiettivi di apprendimento, piani di implementazione, tabella Backlog, ordine di costruzione).",
+      "suggestion": "Tradurre tutta la prosa in italiano, mantenendo invariati codice inline, nomi di sim tra backtick, percorsi e nomi propri (p5.js, vis-network, Chart.js, Skulpt, Playwright). Esempio: «Queste idee sono emerse dall'analisi dei capitoli, ma sono più circoscritte, coperte in parte da una sim della prima ondata, o più adatte a testo più un laboratorio Skulpt.»",
+      "part": 2
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "The student will be able to explain how a dictionary finds a value from a key and why a missing key raises KeyError while `.get()` does not.",
+      "italian": "The student will be able to explain how a dictionary finds a value from a key and why a missing key raises KeyError while `.get()` does not.",
+      "explanation": "Tutti gli obiettivi di apprendimento (da #21 a #36) sono rimasti in inglese.",
+      "suggestion": "Tradurre: «Lo studente sarà in grado di spiegare come un dizionario trova un valore a partire da una chiave e perché una chiave mancante genera KeyError mentre `.get()` no.»",
+      "part": 2
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "Each sim should be generated with the `microsim-generator` single-sim route (Step 1B), embedded in its chapter with a `mascot-thinking` prediction prompt immediately above the iframe",
+      "italian": "Each sim should be generated with the `microsim-generator` single-sim route (Step 1B), embedded in its chapter with a `mascot-thinking` prediction prompt immediately above the iframe",
+      "explanation": "Anche la sezione conclusiva «Suggested Build Order» è in inglese, titoli di sezione compresi (Tier, Backlog, Suggested Build Order).",
+      "suggestion": "Tradurre titoli e prosa, lasciando in inglese i nomi di codice e di percorso come `microsim-generator`, `mascot-thinking`, `docs/sims/index.md`.",
+      "part": 2
+    }
+  ]
+}

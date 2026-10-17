@@ -1,0 +1,73 @@
+{
+  "file": "turtle-graphics-gallery/anti-koch/index.md",
+  "hash": "0c93acaba755bc26c93dff6160a14e15aac75e854be0a60a8862e6a8d21718c6",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0426,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "(left 60°, left 60°, left 60°, then right 120° between)",
+      "italian": "(sinistra 60°, sinistra 60°, sinistra 60°, poi destra 120° tra l'una e l'altra)",
+      "explanation": "Il testo originale è impreciso e la traduzione lo replica aggiungendo \"tra l'una e l'altra\", poco chiaro.",
+      "suggestion": "(sinistra 60°, poi destra 120°, poi sinistra 60°)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "a shape with both spiky tips and concave notches",
+      "italian": "una forma con sia punte appuntite sia tacche concave",
+      "explanation": "Costruzione \"con sia... sia\" poco naturale in italiano.",
+      "suggestion": "una forma che ha sia punte appuntite sia tacche concave",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "produces dramatically different shapes",
+      "italian": "produce forme drammaticamente diverse",
+      "explanation": "Calco dall'inglese; poco naturale.",
+      "suggestion": "produce forme completamente diverse",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "a shape with both inward notches AND outward spikes",
+      "italian": "una forma con sia tacche verso l'interno SIA punte verso l'esterno",
+      "explanation": "Costruzione poco naturale; inoltre \"complessità infinita\" e \"perché entrambe le direzioni appaiono\" sono calchi.",
+      "suggestion": "una forma che ha sia tacche verso l'interno sia punte verso l'esterno, perché compaiono entrambe le direzioni",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Always-inward bumps (`direction = -1` throughout) creates a Koch snowflake",
+      "italian": "le sporgenze si intaccano nel triangolo",
+      "explanation": "\"si intaccano\" è innaturale.",
+      "suggestion": "le sporgenze incidono il triangolo / entrano nel triangolo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Your Turn — Always Bump Inward",
+      "italian": "Il Tuo Turno — Sporgi Sempre verso l'Interno",
+      "explanation": "Imperativo \"Sporgi\" rivolto allo studente è improprio; il titolo riguarda la curva.",
+      "suggestion": "Il Tuo Turno — Sempre verso l'Interno",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "click Run to find out",
+      "italian": "clicca Esegui per scoprirlo",
+      "explanation": "Il pulsante resta Run nell'HTML, ma il testo dice \"Esegui\": incoerenza con l'interfaccia.",
+      "suggestion": "clicca Run per scoprirlo",
+      "part": 1
+    }
+  ]
+}

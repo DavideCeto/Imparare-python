@@ -1,0 +1,19 @@
+{
+  "file": "teachers-guide/contribute.md",
+  "hash": "53c0929ee53e8a41b098188afa4ffa8982d80df4272d1e23dca9b28155611cac",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0202,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "We especially value teachers that would like to integrate coding, data science and AI into your classrooms",
+      "italian": "Apprezziamo in particolare gli insegnanti che vogliono integrare la programmazione, la data science e l'IA nelle loro classi",
+      "explanation": "Resa corretta, ma 'considereremo tutti i contributi nei limiti del nostro tempo di volontariato' è un po' goffo.",
+      "suggestion": "considereremo tutti i contributi compatibilmente con il tempo che possiamo dedicare come volontari",
+      "part": 1
+    }
+  ]
+}

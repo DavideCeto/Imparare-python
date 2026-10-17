@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/vasarely-sphere/index.md",
+  "hash": "74414bf13366a143b760e4e0b5bd1bcbeff901b3bc84bce3b7561e7932b50259",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0368,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Map distance to dot size so a flat grid appears to bulge into a 3-D sphere",
+      "italian": "Mappare la distanza sulla dimensione del punto così una griglia piatta sembra rigonfiarsi in una sfera 3D",
+      "explanation": "Frase poco scorrevole: manca \"in modo che\" e il verbo richiede il congiuntivo.",
+      "suggestion": "Mappare la distanza sulla dimensione del punto in modo che una griglia piatta sembri rigonfiarsi in una sfera 3D",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Will the middle of the picture look like a flat patch of bigger dots",
+      "italian": "Il centro dell'immagine sembrerà una zona piatta di punti più grandi, o una palla 3D che spinge fuori dalla pagina?",
+      "explanation": "La virgola prima di \"o\" e la struttura risultano un po' innaturali.",
+      "suggestion": "Il centro dell'immagine sembrerà una zona piatta di punti più grandi o una palla 3D che spinge fuori dalla pagina?",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "a real ball tilting away from you",
+      "italian": "una vera palla che si inclina lontano da te",
+      "explanation": "\"inclina lontano da te\" è calco dall'inglese; più naturale \"si allontana\" o \"si curva via da te\".",
+      "suggestion": "come la superficie di una vera palla che si curva allontanandosi da te",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the \"grandfather of op art,\"",
+      "italian": "il \"nonno dell'op art,\"",
+      "explanation": "La virgola dentro le virgolette segue la convenzione inglese; in italiano va fuori.",
+      "suggestion": "il \"nonno dell'op art\", usò",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Hungarian-French artist",
+      "italian": "L'artista ungherese-francese",
+      "explanation": "Più naturale \"franco-ungherese\".",
+      "suggestion": "L'artista franco-ungherese Victor Vasarely",
+      "part": 1
+    }
+  ]
+}

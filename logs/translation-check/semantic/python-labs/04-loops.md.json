@@ -1,0 +1,64 @@
+{
+  "file": "python-labs/04-loops.md",
+  "hash": "f3946708cd409ad5be4d263c82597bca00390c7d7d37894cdc518a4ae67ce75d",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0394,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "A **for loop** is a block of code that runs a set number of times.",
+      "italian": "Un **ciclo for** è un blocco di codice che gira un numero fissato di volte.",
+      "explanation": "\"Gira\" è colloquiale/calco; meglio \"viene eseguito\".",
+      "suggestion": "Un **ciclo for** è un blocco di codice che viene eseguito un numero stabilito di volte.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "The variable `i` tracks which repetition you're on",
+      "italian": "La variabile `i` traccia a quale ripetizione sei",
+      "explanation": "Calco dall'inglese, poco naturale.",
+      "suggestion": "La variabile `i` tiene il conto di quale ripetizione stai eseguendo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta \"Run\" (convenzione del progetto), ma nel testo è tradotto \"Esegui\", incoerente.",
+      "suggestion": "poi clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "click **Run** to see the result",
+      "italian": "clicca **Esegui** per vedere il risultato",
+      "explanation": "Il pulsante nel laboratorio si chiama Run, quindi lo studente non troverà \"Esegui\".",
+      "suggestion": "clicca **Run**",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Check both before you search further!",
+      "italian": "Controlla entrambi prima di cercare oltre!",
+      "explanation": "Frase poco naturale.",
+      "suggestion": "Controlla entrambi prima di cercare altrove!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Try these changes to the hexagon code. Predict first, then run!",
+      "italian": "Prova questi cambiamenti al codice dell'esagono. Prevedi prima, poi esegui!",
+      "explanation": "\"Cambiamenti\" e \"Prevedi\" sono un po' rigidi, ma comprensibili.",
+      "suggestion": "Prova queste modifiche al codice dell'esagono. Prima fai una previsione, poi esegui!",
+      "part": 1
+    }
+  ]
+}

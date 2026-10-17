@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/polka-dot-canvas/index.md",
+  "hash": "064bdc0184030fb2c69344e9016c85a68a49372a5989a7baaa4e20255bcbd8bc",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0339,
+  "issues": [
+    {
+      "severity": "major",
+      "category": "prediction",
+      "english": "Two hundred colorful dots scattered across the canvas",
+      "italian": "Duecento punti colorati disseminati attraverso il canvas",
+      "explanation": "Il numero è lo stesso dell'originale (200), ma il codice disegna solo 80 punti (range(80)). L'incoerenza è nell'originale e la traduzione la mantiene: lo studente vedrebbe 80 punti, non 200.",
+      "suggestion": "Correggere in 'Ottanta punti colorati' (o adeguare il codice), segnalando anche l'errore all'originale.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Write a simple dot-drawing function and call it many times",
+      "italian": "Scrivere una semplice funzione di disegno di punti e chiamarla molte volte",
+      "explanation": "Il codice non definisce alcuna funzione, ma questo è anche nell'originale. Nessun errore di traduzione, solo da notare.",
+      "suggestion": "Nessuna modifica necessaria alla traduzione.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Draw a filled circle of radius `r` in color `c`",
+      "italian": "Disegna un cerchio riempito di raggio `r` nel colore `c`",
+      "explanation": "In realtà il primo argomento di dot() è il diametro, non il raggio. L'errore è nell'originale e viene riportato.",
+      "suggestion": "Usare 'diametro `r`' (e correggere l'originale).",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "each one a random size, color, and position",
+      "italian": "ognuno di dimensione, colore, e posizione casuali",
+      "explanation": "Virgola prima della 'e' non appropriata in italiano.",
+      "suggestion": "ognuno di dimensione, colore e posizione casuali",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Click Reset and Run again",
+      "italian": "clicca Reset ed Esegui",
+      "explanation": "Incoerenza: nel laboratorio i pulsanti restano Run/Reset, mentre il testo parla di 'Esegui'.",
+      "suggestion": "Usare 'Run' come nei pulsanti: 'clicca Reset e poi Run'.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "Wonderful Work!",
+      "italian": "Lavoro Meraviglioso!",
+      "explanation": "Calco poco naturale per studenti.",
+      "suggestion": "Ottimo lavoro!",
+      "part": 1
+    }
+  ]
+}

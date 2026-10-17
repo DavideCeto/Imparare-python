@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/pythagorean-tree/index.md",
+  "hash": "882c785ac3858331bb93f87905f53a17f38dd0dc16e728870b7e81af94354d2f",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0476,
+  "issues": [
+    {
+      "category": "meaning",
+      "severity": "minor",
+      "english": "With `30°/60°` angles the left branches are longer than the right ones — the tree leans to the left",
+      "italian": "Con angoli `30°/60°` i rami sinistri sono più lunghi dei destri — l'albero si inclina a sinistra",
+      "explanation": "Traduzione fedele all'originale, ma il testo originale (e quindi quello italiano) è dubbio; non è un errore di traduzione. Nessuna azione necessaria.",
+      "suggestion": "Nessuna modifica necessaria.",
+      "part": 1
+    },
+    {
+      "category": "grammar",
+      "severity": "minor",
+      "english": "Change `begin_fill()`/`end_fill()` to just drawing the outline (remove those calls).",
+      "italian": "Cambia `begin_fill()`/`end_fill()` in solo disegnare il contorno (rimuovi quelle chiamate).",
+      "explanation": "Frase innaturale in italiano: «in solo disegnare».",
+      "suggestion": "Sostituisci con: «Togli `begin_fill()`/`end_fill()` in modo da disegnare solo il contorno.»",
+      "part": 1
+    },
+    {
+      "category": "terminology",
+      "severity": "minor",
+      "english": "right isoceles triangle",
+      "italian": "triangolo isoscele rettangolo",
+      "explanation": "Corretto, ma «sulla cima di un quadrato» è poco naturale.",
+      "suggestion": "Usa «sul lato superiore di un quadrato».",
+      "part": 1
+    },
+    {
+      "category": "grammar",
+      "severity": "minor",
+      "english": "Your Turn — Use a Non-Equal Right Triangle",
+      "italian": "Il Tuo Turno — Usa un Triangolo Rettangolo Non Uguale",
+      "explanation": "«Non uguale» è innaturale per un triangolo rettangolo con cateti diversi.",
+      "suggestion": "«Usa un Triangolo Rettangolo con Cateti Diversi» o «Non Isoscele».",
+      "part": 1
+    },
+    {
+      "category": "grammar",
+      "severity": "minor",
+      "english": "The tree will lean asymmetrically.",
+      "italian": "L'albero si inclinerà asimmetricamente.",
+      "explanation": "Avverbio poco naturale.",
+      "suggestion": "«L'albero sarà inclinato in modo asimmetrico.»",
+      "part": 1
+    }
+  ]
+}

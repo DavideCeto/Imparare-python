@@ -1,0 +1,55 @@
+{
+  "file": "sims/object-instance-inspector/index.md",
+  "hash": "409f4b2f61b1ff6acd15b5c4ff4165de810a942988e07ad893bf3503fc837970",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0264,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "watch the dotted lookup climb to the blueprint",
+      "italian": "osserva la ricerca tratteggiata risalire fino al progetto",
+      "explanation": "Nel passo 5 la ricerca è \"dotted\" (punteggiata), mentre il blueprint è tratteggiato (dashed); la traduzione usa \"tratteggiata\" per entrambi, creando confusione tra i due elementi.",
+      "suggestion": "osserva la ricerca punteggiata risalire fino al progetto",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "shows the lookup falling through to the shared class variable on the blueprint",
+      "italian": "mostra la ricerca scendere fino alla variabile di classe condivisa sul progetto",
+      "explanation": "\"falling through\" è reso con \"scendere\", mentre più avanti la ricerca \"risale\": incoerenza di direzione.",
+      "suggestion": "mostra la ricerca risalire fino alla variabile di classe condivisa sul progetto",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "predict whose name `rex.bark()` prints",
+      "italian": "prevedi il nome di chi stampa `rex.bark()`",
+      "explanation": "La frase è ambigua e poco naturale in italiano.",
+      "suggestion": "prevedi di chi sarà il nome che stampa `rex.bark()`",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Upper elementary and middle school (ages 10-14)",
+      "italian": "Scuola primaria superiore e scuola media",
+      "explanation": "\"Scuola primaria superiore\" non è un termine usato in Italia.",
+      "suggestion": "Ultimi anni della scuola primaria e scuola media (10-14 anni)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "\"each dog owns one\" vs \"all dogs share one.\"",
+      "italian": "Condiviso contro posseduto",
+      "explanation": "\"contro\" suona innaturale per un titolo; meglio \"o\" / \"e\".",
+      "suggestion": "Condiviso o posseduto",
+      "part": 1
+    }
+  ]
+}

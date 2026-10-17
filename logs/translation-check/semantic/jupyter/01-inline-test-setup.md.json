@@ -1,0 +1,28 @@
+{
+  "file": "jupyter/01-inline-test-setup.md",
+  "hash": "0fbfd6868ef873cbc29c9fe4a117bcdefc1360b56add5fef9959549210e6f20d",
+  "model": "sonnet",
+  "score": 2,
+  "parts": 1,
+  "cost_usd": 0.0099,
+  "issues": [
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "## Test of Jupyter Lab Inline Setup",
+      "italian": "## Test of Jupyter Lab Inline Setup",
+      "explanation": "Il titolo della sezione è rimasto in inglese. Non è un nome proprio né codice, quindi andava tradotto (Jupyter Lab resta invariato).",
+      "suggestion": "## Test della configurazione inline di Jupyter Lab",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "[Rumor this work](https://github.com/takluyver/mobilechelonian)",
+      "italian": "[Rumor this work](https://github.com/takluyver/mobilechelonian)",
+      "explanation": "Il testo del link è rimasto in inglese. L'URL va lasciato com'è, ma il testo visibile andava tradotto. Anche l'originale è insolito: \"Rumor this work\" sembra un errore, forse \"Rumor has it this works\" o \"Credit to this work\". Va verificato il senso prima di tradurre.",
+      "suggestion": "Tradurre il testo del link in base al senso inteso, ad esempio [Si dice che funzioni così](https://github.com/takluyver/mobilechelonian). Se l'originale è un errore, correggerlo prima.",
+      "part": 1
+    }
+  ]
+}

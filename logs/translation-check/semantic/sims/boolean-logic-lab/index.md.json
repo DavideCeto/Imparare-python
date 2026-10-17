@@ -1,0 +1,46 @@
+{
+  "file": "sims/boolean-logic-lab/index.md",
+  "hash": "dcc1a6ce9d902bca81dbe99e1d7adb2ba3f5c9d093b4b32c3cd4415632a36b4b",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0255,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Students predict True/False for all eight bonus values, then check.",
+      "italian": "Gli studenti prevedono True/False per tutti gli otto valori bonus, poi verificano.",
+      "explanation": "Corretto, ma il titolo \"Classificazione di veridicità\" e il termine \"veridicità\" per truthiness sono poco naturali per ragazzi.",
+      "suggestion": "Usare ad esempio \"valori veri e falsi\" / \"pannello dei valori truthy e falsy\" spiegato in modo semplice.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the B block grays out with a \"Python never looked here\" badge",
+      "italian": "il blocco B si oscura con un distintivo \"Python non ha mai guardato qui.\"",
+      "explanation": "Il punto finale è dentro le virgolette; \"distintivo\" per badge è un po' strano; il tempo \"non ha mai guardato\" è ok.",
+      "suggestion": "con un'etichetta \"Python non ha mai guardato qui\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Set it up so that changing B does nothing.",
+      "italian": "Impostalo così che cambiare B non faccia nulla.",
+      "explanation": "Costruzione poco naturale in italiano.",
+      "suggestion": "\"Impostalo in modo che cambiare B non cambi nulla.\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Student can classify 0, \"\", [], and None as falsy",
+      "italian": "Lo studente sa classificare 0, \"\", [] e None come falsi",
+      "explanation": "\"Falsi\" perde la distinzione tra falsy e False.",
+      "suggestion": "Usare \"falsy (valori che contano come False)\".",
+      "part": 1
+    }
+  ]
+}

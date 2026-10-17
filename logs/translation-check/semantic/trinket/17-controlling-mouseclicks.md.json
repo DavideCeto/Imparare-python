@@ -1,0 +1,19 @@
+{
+  "file": "trinket/17-controlling-mouseclicks.md",
+  "hash": "dba703efc67882a7e3bd76a1227ac8cf0366a365fe71a0094bef49e1b8bdc872",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 1,
+  "cost_usd": 0.0224,
+  "issues": [
+    {
+      "severity": "critical",
+      "category": "untranslated",
+      "english": "Getting a handle of the mouse clicks\n\nWe can use trinkets to change the background and control mouse clicks.",
+      "italian": "Getting a handle of the mouse clicks\n\nWe can use trinkets to change the background and control mouse clicks.",
+      "explanation": "L'intera sezione italiana è identica all'originale inglese: nessuna prosa è stata tradotta (titoli, spiegazioni, esperimenti). Anche l'avviso di deprecazione è rimasto in inglese.",
+      "suggestion": "Tradurre in italiano l'avviso, le intestazioni, i paragrafi, gli 'Experiments' e i commenti nel codice (es. '## Gestire i clic del mouse'). Lasciare invariati codice, URL e percorsi.",
+      "part": 1
+    }
+  ]
+}

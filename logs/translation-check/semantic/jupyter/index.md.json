@@ -1,0 +1,19 @@
+{
+  "file": "jupyter/index.md",
+  "hash": "1611b8876c74e73a73a45052300c85361c16c1b83d0127fb8f149df4d05338d3",
+  "model": "sonnet",
+  "score": 5,
+  "parts": 1,
+  "cost_usd": 0.0243,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Programming — code and the explanation",
+      "italian": "si chiama **Programmazione Letterata**",
+      "explanation": "\"Literate Programming\" in italiano è più comunemente reso come \"programmazione letteraria\"; \"letterata\" suona innaturale.",
+      "suggestion": "**Programmazione Letteraria** (Literate Programming)",
+      "part": 1
+    }
+  ]
+}

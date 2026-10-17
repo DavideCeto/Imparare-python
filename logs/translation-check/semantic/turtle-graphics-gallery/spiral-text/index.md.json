@@ -1,0 +1,73 @@
+{
+  "file": "turtle-graphics-gallery/spiral-text/index.md",
+  "hash": "2ead9b7b6c24ac339c20ffb7efe7f453a98e5b3fa59ef0a50835f4e09fc3083d",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0407,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Use `turtle.write()` to place text at computed positions",
+      "italian": "Usare `turtle.write()` per posizionare testo a posizioni calcolate",
+      "explanation": "Ripetizione e preposizione poco naturale.",
+      "suggestion": "Usare `turtle.write()` per posizionare il testo in posizioni calcolate",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Adding 90° makes the turtle face tangentially (along the spiral).",
+      "italian": "perché `setheading(0)` punta a destra (direzione radiale)",
+      "explanation": "\"Direzione radiale\" riferito a setheading(0) è ambiguo, come nell'originale; la resa non chiarisce che 0° coincide con la direzione radiale solo all'angolo 0. Lieve.",
+      "suggestion": "perché `setheading(0)` punta a destra, cioè nella direzione radiale (quando l'angolo è 0)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Will the characters look like a readable spiral, or just scattered letters?",
+      "italian": "I caratteri sembreranno una spirale leggibile, o solo lettere disperse?",
+      "explanation": "Frase un po' innaturale; \"disperse\" meglio \"sparse\".",
+      "suggestion": "I caratteri formeranno una spirale leggibile o saranno solo lettere sparse?",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "each character gets a cycling color",
+      "italian": "ogni carattere ottiene un colore ciclico",
+      "explanation": "Calco dall'inglese, poco naturale.",
+      "suggestion": "ogni carattere riceve un colore a rotazione",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the characters space out faster near the outside",
+      "italian": "i caratteri si spaziano più velocemente vicino all'esterno",
+      "explanation": "\"si spaziano\" non è naturale.",
+      "suggestion": "i caratteri si distanziano più rapidamente verso l'esterno",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Welcome to Spiral Text!",
+      "italian": "Benvenuto al Testo a Spirale!",
+      "explanation": "Preposizione scorretta (\"a\" invece di \"a\" ok ma meglio \"nel\"/\"a\" con articolo).",
+      "suggestion": "Benvenuto nel laboratorio Testo a Spirale!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "click Run to find out!",
+      "italian": "clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta Run nell'HTML, quindi \"Esegui\" non corrisponde al pulsante visibile.",
+      "suggestion": "clicca Run per scoprirlo!",
+      "part": 1
+    }
+  ]
+}

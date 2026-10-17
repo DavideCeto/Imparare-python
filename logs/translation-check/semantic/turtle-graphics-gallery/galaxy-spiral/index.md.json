@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/galaxy-spiral/index.md",
+  "hash": "1b71bc75263461437179d281dbf9c88e434e3dc7344d72a07a27f514d1955c82",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0437,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "offset by 180°",
+      "italian": "spirali logaritmiche distanziate di 180°",
+      "explanation": "\"Offset\" qui significa ruotate/sfasate di 180°, non \"distanziate\". Lo stesso vale per \"distanziato di π\" e \"Tre bracci distanziati di 120°\".",
+      "suggestion": "\"spirali logaritmiche ruotate di 180°\"; \"Il secondo braccio è ruotato di π\"; \"Tre bracci a 120° l'uno dall'altro\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Each star dot gets a random scatter from its ideal position.",
+      "italian": "Ogni punto stellare ottiene una dispersione casuale dalla sua posizione ideale.",
+      "explanation": "\"Ottiene una dispersione\" è un calco dall'inglese e suona innaturale.",
+      "suggestion": "\"Ogni stella viene spostata a caso rispetto alla sua posizione ideale.\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "place dots at positions `r = scale * exp(b * theta)`",
+      "italian": "posiziona punti a posizioni `r = scale * exp(b * theta)`",
+      "explanation": "Formulazione ripetitiva e poco scorrevole (\"punti a posizioni\").",
+      "suggestion": "\"posiziona i punti nelle posizioni `r = ...`\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Real astrophysicists use the same mathematical models",
+      "italian": "Prossimo: **Onde Concentriche**",
+      "explanation": "\"Prossimo:\" è poco naturale in italiano.",
+      "suggestion": "\"Prossima tappa:\" oppure \"Nel prossimo laboratorio:\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the arms wind more steeply inward",
+      "italian": "i bracci si avvolgono più ripidamente verso l'interno",
+      "explanation": "Con b maggiore la spirale si apre più rapidamente verso l'esterno; la frase è fedele all'originale, ma \"ripidamente\" suona un po' strano in italiano.",
+      "suggestion": "\"i bracci si avvolgono in modo più marcato verso l'interno\".",
+      "part": 1
+    }
+  ]
+}

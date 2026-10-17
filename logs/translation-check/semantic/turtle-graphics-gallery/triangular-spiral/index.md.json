@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/triangular-spiral/index.md",
+  "hash": "df474923ee5d2dfc0343adfd9e2f3e213905618cdf264a34ab5371ff4a06e53e",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.035,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "red, orange, and gold",
+      "italian": "rosso, arancione, e oro",
+      "explanation": "In italiano non si mette la virgola prima della congiunzione 'e' in un elenco.",
+      "suggestion": "rosso, arancione e oro",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "sharp equilateral corners",
+      "italian": "angoli equilateri netti",
+      "explanation": "Gli angoli non sono 'equilateri' (lo sono i triangoli); la traduzione è imprecisa.",
+      "suggestion": "angoli netti da triangolo equilatero",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "click Run to find out!",
+      "italian": "clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante nel laboratorio resta 'Run', ma il testo dice 'Esegui': incoerenza con l'interfaccia.",
+      "suggestion": "clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to the Triangular Spiral!",
+      "italian": "Benvenuto alla Spirale Triangolare!",
+      "explanation": "'Benvenuto alla' è meno naturale; meglio 'nella' o 'alla scoperta della'.",
+      "suggestion": "Benvenuto nella Spirale Triangolare!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Hold 'revolution'",
+      "italian": "rivoluzione",
+      "explanation": "'Rivoluzione' per giro completo è un calco; 'giro giro' è più chiaro per ragazzi.",
+      "suggestion": "giro",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "file": "turtle-graphics-gallery/diagonal-stripe-field/index.md",
+  "hash": "3ecb79a3eb027f7b84b7cf7db424138c47c2c1cfa4f352a6861798e7621d3ad3",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0297,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Use `penup()` and `pendown()` to reposition without drawing",
+      "italian": "Usare `penup()` e `pendown()` per riposizionarsi senza disegnare",
+      "explanation": "Il riflessivo «riposizionarsi» è poco chiaro: è la tartaruga a spostarsi.",
+      "suggestion": "Usare `penup()` e `pendown()` per spostare la tartaruga senza disegnare",
+      "part": 1
+    }
+  ]
+}

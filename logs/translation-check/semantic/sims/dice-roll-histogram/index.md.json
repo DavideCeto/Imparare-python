@@ -1,0 +1,46 @@
+{
+  "file": "sims/dice-roll-histogram/index.md",
+  "hash": "2cef61d39e24ffbd792236d4e5007c9169defe120412a75eaed6fa5dde51e5b0",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0257,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Upper elementary and middle school (ages 10-14)",
+      "italian": "Scuola primaria superiore e scuola media (10-14 anni)",
+      "explanation": "\"Scuola primaria superiore\" non è un termine usato in Italia; suona innaturale.",
+      "suggestion": "Ultimi anni della scuola primaria e scuola secondaria di primo grado (10-14 anni)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "This experiment runner lets students roll in batches of 1, 100, or 1000",
+      "italian": "Questo esecutore di esperimenti permette agli studenti di lanciare in lotti di 1, 100 o 1000",
+      "explanation": "\"Esecutore di esperimenti\" e \"lotti\" sono calchi letterali e poco naturali per ragazzi di 10-13 anni.",
+      "suggestion": "Questo simulatore di esperimenti permette di lanciare a gruppi di 1, 100 o 1000 dadi",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "the genuinely surprising triangle peaked at 7",
+      "italian": "il triangolo genuinamente sorprendente con il picco a 7",
+      "explanation": "\"Genuinamente\" è un calco dall'inglese e suona poco naturale.",
+      "suggestion": "il triangolo davvero sorprendente con il picco a 7",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "**Reset** and repeat",
+      "italian": "**Reimposta** e ripeti",
+      "explanation": "Il pulsante Reset resta in inglese per convenzione del progetto; tradurlo può non corrispondere al pulsante reale. Lo stesso vale per Roll 1/Roll 100/Sum of two dice se i pulsanti sono in inglese.",
+      "suggestion": "Verificare le etichette reali dei pulsanti nel main.html e usare gli stessi nomi (es. **Reset**).",
+      "part": 1
+    }
+  ]
+}

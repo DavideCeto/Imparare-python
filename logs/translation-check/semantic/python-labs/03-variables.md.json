@@ -1,0 +1,19 @@
+{
+  "file": "python-labs/03-variables.md",
+  "hash": "60493afc912a1520630915a4fa458be1744d7092772ae3d35518d99fbdbcbc9e",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0293,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Every time it later sees `forward(distance)`, it looks up that stored value",
+      "italian": "Ogni volta che vede dopo `forward(distance)`, cerca quel valore memorizzato",
+      "explanation": "Frase innaturale: «vede dopo» è un calco di «later sees».",
+      "suggestion": "Ogni volta che più avanti incontra `forward(distance)`, cerca quel valore memorizzato e lo usa",
+      "part": 1
+    }
+  ]
+}

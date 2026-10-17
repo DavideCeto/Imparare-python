@@ -1,0 +1,19 @@
+{
+  "file": "course-description.md",
+  "hash": "53ca94840b5f985ae030c3be42ebcd197e80e9d2f7310e3850ca48f012d74926",
+  "model": "sonnet",
+  "score": 5,
+  "parts": 1,
+  "cost_usd": 0.0771,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Python is consistently ranked the most popular first programming language in the world",
+      "italian": "Python è costantemente classificato come il primo linguaggio di programmazione più popolare al mondo",
+      "explanation": "Frase poco naturale e ridondante (\"il primo ... più popolare\").",
+      "suggestion": "Python è costantemente indicato come il linguaggio di programmazione più popolare al mondo per iniziare",
+      "part": 1
+    }
+  ]
+}

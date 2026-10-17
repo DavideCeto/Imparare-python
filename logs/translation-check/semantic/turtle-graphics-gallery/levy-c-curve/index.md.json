@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/levy-c-curve/index.md",
+  "hash": "726b96a8b431b033929e06164dc451b403701af47eef8102dec35274c9fb6cf2",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.033,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Click Run to find out!",
+      "italian": "clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta Run nel codice HTML, ma il testo parla di \"Esegui\": incoerenza per lo studente.",
+      "suggestion": "Usa \"clicca Run\" per corrispondere al pulsante reale.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "bumps",
+      "italian": "protuberanze",
+      "explanation": "Termine poco adatto a ragazzi di 10-13 anni; \"gobbe/picchi\" è più naturale.",
+      "suggestion": "\"picchi\" o \"gobbe\" di 45°.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Compare how different replacement angles",
+      "italian": "Confrontare come angoli di sostituzione diversi producono",
+      "explanation": "Costruzione poco naturale.",
+      "suggestion": "\"Confrontare come angoli di sostituzione diversi producano forme frattali...\" o \"Confrontare le forme prodotte da angoli...\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Use Koch comparison.",
+      "italian": "Usa il confronto con Koch.",
+      "explanation": "Frase finale \"quando vedi la forma di Koch invece\" suona innaturale.",
+      "suggestion": "\"quando vedi invece la forma di Koch\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Turn between the two sub-segments",
+      "italian": "Gira tra i due sotto-segmenti",
+      "explanation": "Imperativo poco naturale in una tabella descrittiva.",
+      "suggestion": "\"Svolta tra i due sotto-segmenti\".",
+      "part": 1
+    }
+  ]
+}

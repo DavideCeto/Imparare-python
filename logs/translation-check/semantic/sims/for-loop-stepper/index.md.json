@@ -1,0 +1,28 @@
+{
+  "file": "sims/for-loop-stepper/index.md",
+  "hash": "6d39db4d6d56470d55fddcba246dd2fc9cf92941a69a475c1357952da9e62d3d",
+  "model": "sonnet",
+  "score": 5,
+  "parts": 1,
+  "cost_usd": 0.0182,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Upper elementary and middle school (ages 10-14)",
+      "italian": "Scuola primaria superiore e scuola media (10-14 anni)",
+      "explanation": "\"Scuola primaria superiore\" non è un termine usato in Italia; suona innaturale.",
+      "suggestion": "Ultimi anni della scuola primaria e scuola media (10-14 anni)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "The static \"loop trip table\" becomes a machine you can crank by hand.",
+      "italian": "La statica \"tabella dei giri del ciclo\" diventa",
+      "explanation": "\"La statica\" come aggettivo prima del nome è innaturale.",
+      "suggestion": "La \"tabella dei giri del ciclo\", prima statica, diventa una macchina...",
+      "part": 1
+    }
+  ]
+}

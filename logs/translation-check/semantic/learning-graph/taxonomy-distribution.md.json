@@ -1,0 +1,28 @@
+{
+  "file": "learning-graph/taxonomy-distribution.md",
+  "hash": "004d71cbf12abcf475e9af216b4d781c7cbc87a77d5156d43c2d11ed6f6d6756",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0467,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "- **Count**: 68 concepts",
+      "italian": "**Conteggio**: 68 concetti",
+      "explanation": "Il resto del file è coerente, ma nel front della tabella 'Count' è tradotto 'Conteggio' correttamente; nessun errore reale. Nota solo che 'Media di Concetti per Tassonomia' usa il punto decimale (32.1) invece della virgola italiana.",
+      "suggestion": "Facoltativo: usare la virgola decimale (32,1; 15,1%) oppure lasciare così per coerenza con il report generato.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Small categories are acceptable for specialized topics",
+      "italian": "Categorie piccole sono accettabili per argomenti specializzati",
+      "explanation": "In italiano serve l'articolo: la frase risulta poco naturale senza.",
+      "suggestion": "Le categorie piccole sono accettabili per argomenti specializzati",
+      "part": 1
+    }
+  ]
+}

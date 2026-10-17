@@ -1,0 +1,46 @@
+{
+  "file": "trinket/16-changing-background.md",
+  "hash": "4a7c5089abad1e77d32af402ebb62ddd2050335e64f8ad2d7be02e8382934cad",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 1,
+  "cost_usd": 0.0184,
+  "issues": [
+    {
+      "severity": "critical",
+      "category": "untranslated",
+      "english": "We can use trinkets to change the background and change the shape of the turtle with a custom image.",
+      "italian": "We can use trinkets to change the background and change the shape of the turtle with a custom image.",
+      "explanation": "L'intera sezione è rimasta in inglese: nessuna parte della prosa è stata tradotta (avviso di deprecazione, titoli, paragrafi, esperimenti).",
+      "suggestion": "Tradurre tutta la prosa in italiano, ad es. «Possiamo usare i trinket per cambiare lo sfondo e la forma della turtle con un'immagine personalizzata.»",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "!!! warning \"Deprecated Lab — Trinket is shutting down\"",
+      "italian": "!!! warning \"Deprecated Lab — Trinket is shutting down\"",
+      "explanation": "Il titolo dell'admonition e tutto il testo dell'avviso sono in inglese.",
+      "suggestion": "!!! warning \"Laboratorio obsoleto — Trinket sta per chiudere\" e tradurre il corpo dell'avviso.",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "## Changing background and using keys to move the rocket",
+      "italian": "## Changing background and using keys to move the rocket",
+      "explanation": "Intestazione non tradotta.",
+      "suggestion": "## Cambiare lo sfondo e usare i tasti per muovere il razzo",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "1. Can you map another keyboard key to take some other actions like jump, draw a circle.",
+      "italian": "1. Can you map another keyboard key to take some other actions like jump, draw a circle.",
+      "explanation": "Gli esperimenti e le intestazioni (Sample Program, Experiments) non sono tradotti.",
+      "suggestion": "Tradurre: «Riesci ad associare un altro tasto della tastiera a un'altra azione, come saltare o disegnare un cerchio?»",
+      "part": 1
+    }
+  ]
+}

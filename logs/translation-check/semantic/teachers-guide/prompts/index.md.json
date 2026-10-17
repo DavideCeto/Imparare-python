@@ -1,0 +1,19 @@
+{
+  "file": "teachers-guide/prompts/index.md",
+  "hash": "e20088bf60c929f0750697aaeeb3944b28b3da648a08c1eb5d3c1622a7b1e087",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0092,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "High effort",
+      "italian": "sforzo Alto",
+      "explanation": "\"Effort\" è un'impostazione del modello; \"sforzo\" è un po' innaturale e la maiuscola di \"Alto\" è incoerente.",
+      "suggestion": "Modello predefinito: Sonnet con impegno alto (oppure \"effort alto\")",
+      "part": 1
+    }
+  ]
+}

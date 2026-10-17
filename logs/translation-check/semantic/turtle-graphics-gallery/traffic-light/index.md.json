@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/traffic-light/index.md",
+  "hash": "c8a593a71e58e39961868cb98704e78ffd9c97fb8505996c2206b134bf204001",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.036,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "once you learn a pattern, it works everywhere",
+      "italian": "una volta che imparai un pattern, funziona ovunque",
+      "explanation": "Forma verbale errata: serve il congiuntivo/indicativo di 'imparare' alla seconda persona singolare.",
+      "suggestion": "una volta che hai imparato un pattern, funziona ovunque",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "The `rect()` helper reuses",
+      "italian": "L'aiutante `rect()` riutilizza",
+      "explanation": "'Aiutante' è una resa letterale poco naturale di 'helper'.",
+      "suggestion": "La funzione di aiuto `rect()` riutilizza",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Press Run",
+      "italian": "prima di cliccare Esegui",
+      "explanation": "Il pulsante resta 'Run' nell'HTML; riferirsi a 'Esegui' crea incoerenza con il pulsante visibile.",
+      "suggestion": "prima di cliccare Run",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Subtracting 25 (half the dot diameter of 50) nudges the center to align visually with the y value passed in.",
+      "italian": "Sottrarre 25 (metà del diametro del punto di 50) sposta il centro",
+      "explanation": "Frase un po' goffa; 'il valore y passato' è poco chiaro.",
+      "suggestion": "Sottrarre 25 (metà del diametro 50 del punto) sposta il centro per allinearlo visivamente al valore y che hai passato.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "stands on screen",
+      "italian": "si erge sullo schermo",
+      "explanation": "Registro un po' elevato per ragazzi di 10-13 anni.",
+      "suggestion": "compare sullo schermo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "red on top, amber in the middle",
+      "italian": "giallo nel mezzo",
+      "explanation": "Il codice usa 'orange'; 'amber' è l'ambra/arancione del semaforo. Va bene 'giallo', ma l'esperimento sul 'walk/don't-walk' è reso con 'cammina/non camminare' in modo letterale.",
+      "suggestion": "segnale 'attraversa / non attraversare'",
+      "part": 1
+    }
+  ]
+}

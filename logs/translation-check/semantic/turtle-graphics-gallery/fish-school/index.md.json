@@ -1,0 +1,46 @@
+{
+  "file": "turtle-graphics-gallery/fish-school/index.md",
+  "hash": "746687d0ae0b5807ddf3f5124a0647eb848615ae87cab11691f4603dadbd273f",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0484,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Combine `circle()` arcs, triangles, and dots to build a fish with a body, tail fin, and eye",
+      "italian": "Combinare archi `circle()`, triangoli, e punti per costruire un pesce con corpo, pinna caudale, e occhio",
+      "explanation": "In italiano non si usa la virgola prima della congiunzione \"e\" in un elenco (calco dell'inglese).",
+      "suggestion": "Combinare archi `circle()`, triangoli e punti per costruire un pesce con corpo, pinna caudale e occhio",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "A dozen blue fish of varied sizes swim leftward across the canvas in a loosely grouped school",
+      "italian": "Una dozzina di pesci blu di dimensioni variate nuotano verso sinistra attraverso il canvas in un banco liberamente raggruppato",
+      "explanation": "\"di dimensioni variate\" e \"liberamente raggruppato\" suonano innaturali.",
+      "suggestion": "Una dozzina di pesci blu di dimensioni diverse nuotano verso sinistra sul canvas in un banco sparso",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "The turtle starts at the fish's nose",
+      "italian": "La tartaruga inizia al naso del pesce",
+      "explanation": "Il resto del progetto lascia \"turtle\" in inglese (\"la turtle\"); \"tartaruga\" è accettabile ma qui \"inizia al naso\" è poco naturale, così come \"timbra\" per stamps.",
+      "suggestion": "La tartaruga parte dal naso del pesce ... e infine disegna due punti per l'occhio",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "One function, infinite variation",
+      "italian": "Una funzione, infinita variazione",
+      "explanation": "Frase poco naturale in italiano.",
+      "suggestion": "Una funzione, infinite variazioni",
+      "part": 1
+    }
+  ]
+}

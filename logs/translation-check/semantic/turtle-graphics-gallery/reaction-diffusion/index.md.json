@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/reaction-diffusion/index.md",
+  "hash": "c928964ac1ac269db24888aefe67954f7edb1af38ecb11537485e35f9b4781f6",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0491,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Monty waving welcome",
+      "italian": "Monty waving welcome",
+      "explanation": "L'alt text delle immagini è rimasto in inglese (anche negli altri admonition).",
+      "suggestion": "Tradurre: \"Monty che saluta\", \"Monty che pensa\", \"Monty che festeggia\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "how different am I from my surroundings",
+      "italian": "quanto sono diverso dal mio ambiente circostante",
+      "explanation": "Formulazione un po' goffa; la cella è femminile (\"sono diversa\").",
+      "suggestion": "\"quanto sono diversa da ciò che mi circonda\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Be patient when you click Run",
+      "italian": "quando clicchi Esegui",
+      "explanation": "Il pulsante resta \"Run\" nel laboratorio, ma il testo dice \"Esegui\": incoerenza con l'interfaccia.",
+      "suggestion": "Usare \"Run\" come nel pulsante.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Diffusion: 8-neighbor weighted average minus self",
+      "italian": "media pesata degli 8 vicini meno se stesso",
+      "explanation": "Riferito alla cella, \"se stessa\" è più corretto.",
+      "suggestion": "\"meno la cella stessa\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "the pattern glows warm instead of ocean-cool",
+      "italian": "brilla caldo invece che freddo-oceano",
+      "explanation": "\"freddo-oceano\" è calco innaturale.",
+      "suggestion": "\"brilla di toni caldi invece che dei freddi colori dell'oceano\"",
+      "part": 1
+    }
+  ]
+}

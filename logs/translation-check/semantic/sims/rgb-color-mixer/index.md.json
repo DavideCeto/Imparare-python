@@ -1,0 +1,46 @@
+{
+  "file": "sims/rgb-color-mixer/index.md",
+  "hash": "2e1f9acb44e254fe01e7ca7b4c9b8e58363ae463834422f2764041fcd79a0226",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0242,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Upper elementary and middle school (ages 10-14)",
+      "italian": "Scuola primaria superiore e scuola media (10-14 anni)",
+      "explanation": "\"Scuola primaria superiore\" non è una denominazione italiana corretta; è innaturale.",
+      "suggestion": "Ultimi anni della scuola primaria e scuola secondaria di primo grado (10-14 anni)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Codice di Incorporamento Iframe",
+      "italian": "Codice di Incorporamento Iframe",
+      "explanation": "\"Incorporamento\" è poco naturale per studenti; più comune \"incorporare/inserire\".",
+      "suggestion": "Codice per Incorporare l'Iframe",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Three New Challenge colors",
+      "italian": "Tre colori di Nuova Sfida",
+      "explanation": "Formulazione poco naturale.",
+      "suggestion": "Tre colori generati da Nuova Sfida",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Predict the mix",
+      "italian": "Prevedi la miscela",
+      "explanation": "Titolo imperativo mentre il testo successivo descrive l'attività; accettabile ma \"Prevedi il mix\" è più naturale.",
+      "suggestion": "Prevedi il mix",
+      "part": 1
+    }
+  ]
+}

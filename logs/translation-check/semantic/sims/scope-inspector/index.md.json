@@ -1,0 +1,55 @@
+{
+  "file": "sims/scope-inspector/index.md",
+  "hash": "ff0b949729bf2c3f971a7133e2e76fbee1662896c25c7bf7d4354062c53ef97a",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0217,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Chapter 11 (Functions, Parameters, and Scope)",
+      "italian": "Capitolo 11 (Funzioni con parametri e scope)",
+      "explanation": "Il titolo del capitolo è reso in modo libero e con «scope» in inglese, incoerente con «ambito» usato nel resto del testo.",
+      "suggestion": "Capitolo 11 (Funzioni, Parametri e Ambito)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Shadowing Bug",
+      "italian": "Bug di Oscuramento",
+      "explanation": "«Oscuramento» è poco naturale per studenti di 10-13 anni; «nasconde» è più chiaro. Il termine è coerente, ma resta oscuro.",
+      "suggestion": "Valutare «Bug dell'Ombra» o spiegare il termine; mantenere coerenza con i pulsanti del laboratorio.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "a badge says",
+      "italian": "un distintivo dice",
+      "explanation": "«Distintivo» è una resa innaturale per badge in un'interfaccia.",
+      "suggestion": "un'etichetta dice",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "where the write lands",
+      "italian": "dove atterra la scrittura",
+      "explanation": "Calco letterale poco naturale.",
+      "suggestion": "dove viene scritto il valore",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Step through Read the Global. Ask:",
+      "italian": "Esegui passo-passo Leggi il Globale. Chiedi:",
+      "explanation": "Nel piano della lezione l'imperativo si rivolge all'insegnante, ma «identifica» nel punto 2 è incoerente con «gli studenti votano»; leggero scarto di registro.",
+      "suggestion": "Esegui passo-passo... e fai identificare agli studenti il passo esatto...",
+      "part": 1
+    }
+  ]
+}

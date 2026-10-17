@@ -1,0 +1,65 @@
+{
+  "file": "turtle-graphics-gallery/l-system-plant/index.md",
+  "hash": "468ec9c0a6aaac7c4878ff74af07c7023de67afa36f6f180859db157b1bf1991",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0457,
+  "issues": [
+    {
+      "severity": "major",
+      "category": "code",
+      "english": "monty.setheading(90)\nmonty.pendown()\nmonty.pencolor('saddlebrown')\nstep = 3",
+      "italian": "monty.setheading(90)\nmonty.pendown()\nstep = 3",
+      "explanation": "Nel blocco 'Sample Code' la riga monty.pencolor('saddlebrown') prima di step è mancante nella versione italiana (in realtà l'originale la ha; nel codice IT è presente). Verificare: nei laboratori interattivi entrambe le versioni la omettono, quindi coerenti. Differenza solo interna all'originale.",
+      "suggestion": "Nessuna modifica necessaria; il codice dei laboratori corrisponde all'originale.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Start with axiom `\"F\"`.",
+      "italian": "Inizia con l'assioma `\"F\"`.",
+      "explanation": "Fedele all'originale, ma il codice usa axiom = 'X'. L'incoerenza è nell'originale; lo studente potrebbe confondersi.",
+      "suggestion": "Eventualmente correggere in `\"X\"` in entrambe le lingue.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Ripristina",
+      "italian": "&#9654; Run ... &#8635; Reset",
+      "explanation": "I pulsanti Run/Reset restano in inglese per convenzione, ma il testo dice 'clicca Esegui', che non corrisponde al pulsante 'Run'.",
+      "suggestion": "Scrivere 'clicca Run' per coerenza con il pulsante.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "a realistic-looking plant with branches, leaves, and stems",
+      "italian": "con rami, foglie, e steli",
+      "explanation": "In italiano non si mette la virgola prima della 'e' finale in un elenco (anche in 'Sierpiński, e molti altri frattali').",
+      "suggestion": "con rami, foglie e steli; ... triangoli di Sierpiński e molti altri frattali.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Will the result look like a geometric pattern, or an actual plant?",
+      "italian": "Il risultato sembrerà un pattern geometrico, o una pianta vera?",
+      "experiment": "",
+      "explanation": "Virgola innaturale prima di 'o'; 'Cosa Pensi che Succederà' e 'più larga, più stretta, o uguale' sono calchi dell'inglese.",
+      "suggestion": "Il risultato sembrerà un disegno geometrico o una vera pianta? / più larga, più stretta o uguale?",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "push state, ... pop state",
+      "italian": "`[`=salva lo stato, `]`=ripristina lo stato",
+      "explanation": "Accettabile come adattamento, ma 'stack' e 'push/pop' sono resi in modo non uniforme; 'Capire come [ e ] implementano uno stack di posizione' va bene. Nessun errore grave.",
+      "suggestion": "Opzionale: mantenere coerente.",
+      "part": 1
+    }
+  ]
+}

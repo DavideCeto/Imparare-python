@@ -1,0 +1,46 @@
+{
+  "file": "learning-graph/faq-quality-report.md",
+  "hash": "c598426cc684be98d9ee78dc315c689ebf43c2fc730e2f3897b3ed5478441926",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0428,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Anchor links: 0 (hard requirement met)",
+      "italian": "Link ancora: 0 (requisito rigido soddisfatto)",
+      "explanation": "\"Anchor links\" sono link ad ancora (a una sezione della pagina); \"link ancora\" è ambiguo e suona come \"ancora\" avverbio.",
+      "suggestion": "Link ad ancore: 0 (requisito obbligatorio soddisfatto)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Target: 60% Remember, 40% Understand",
+      "italian": "Bloom target: 60% Remember, 40% Understand",
+      "explanation": "\"Target\" originale riferito alla tassonomia di Bloom; \"Bloom target\" è una resa incompleta/ambigua (manca \"Target di Bloom\" o \"Obiettivo della tassonomia di Bloom\").",
+      "suggestion": "Obiettivo (tassonomia di Bloom): 60% Remember, ...",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Based on concept coverage gaps, consider adding:",
+      "italian": "In base alle lacune di copertura dei concetti, considera di aggiungere:",
+      "explanation": "Registro e coerenza: nel resto del testo si usa l'imperativo (\"Crea\", \"Aggiungi\"); va bene, ma \"Nessuna virgola prima di 'e'\" è violata in diversi punti (\"termini, e permetterebbe\", \"enumerate(), e zip()\").",
+      "suggestion": "Eliminare la virgola prima di \"e\" (es. \"`enumerate()` e `zip()`\").",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Abstract Data Types Overview** — concept 364",
+      "italian": "Stack LIFO / Queue FIFO** dettagli",
+      "explanation": "Nelle domande suggerite \"stack\" è tradotto \"pila\" e \"queue\" \"coda\", mentre altrove restano in inglese: incoerenza terminologica.",
+      "suggestion": "Usare lo stesso termine, es. \"Cos'è uno stack (pila) e in cosa è diverso da una queue (coda)?\"",
+      "part": 1
+    }
+  ]
+}

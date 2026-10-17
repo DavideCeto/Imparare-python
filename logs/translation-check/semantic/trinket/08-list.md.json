@@ -1,0 +1,37 @@
+{
+  "file": "trinket/08-list.md",
+  "hash": "7089b350b7e91dde8703919cddc08c178f62b2cea3c81004c8f541c13cfbd80b",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 1,
+  "cost_usd": 0.0207,
+  "issues": [
+    {
+      "severity": "critical",
+      "category": "untranslated",
+      "english": "How would we create and access a list of colors in Python?",
+      "italian": "How would we create and access a list of colors in Python?",
+      "explanation": "L'intera sezione italiana è identica all'originale inglese: nessuna prosa è stata tradotta (avviso di deprecazione, intestazioni, spiegazioni, esperimenti).",
+      "suggestion": "Tradurre tutta la prosa in italiano, ad es. «Come possiamo creare e accedere a una lista di colori in Python?», lasciando invariati codice, URL e percorsi.",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "!!! warning \"Deprecated Lab — Trinket is shutting down\"",
+      "italian": "!!! warning \"Deprecated Lab — Trinket is shutting down\"",
+      "explanation": "Il titolo dell'admonition e il testo dell'avviso sono rimasti in inglese.",
+      "suggestion": "!!! warning \"Laboratorio obsoleto — Trinket sta chiudendo\" e tradurre anche il paragrafo seguente.",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "## Experiments\n\n1. Can you change the name of the function to be \"petal\"?",
+      "italian": "## Experiments\n\n1. Can you change the name of the function to be \"petal\"?",
+      "explanation": "Intestazioni e domande degli esperimenti non sono tradotte.",
+      "suggestion": "## Esperimenti; «Riesci a cambiare il nome della funzione in \"petal\"?» e così via per le altre domande.",
+      "part": 1
+    }
+  ]
+}

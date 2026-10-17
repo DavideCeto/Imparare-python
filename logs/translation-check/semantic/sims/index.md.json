@@ -1,0 +1,55 @@
+{
+  "file": "sims/index.md",
+  "hash": "70b79909a85e20a9f3973206ef5c7140c6c8c76a98359116c21693cfdc8bd84f",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0498,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "title: Beginning Python MicroSims\ndescription: A gallery of the interactive MicroSims used in the Beginning Python programming curriculum.",
+      "italian": "title: Beginning Python MicroSims\ndescription: A gallery of the interactive MicroSims used in the Beginning Python programming curriculum.",
+      "explanation": "Il valore di title/description nel front matter va tradotto, ma è rimasto in inglese.",
+      "suggestion": "description: Una galleria dei MicroSims interattivi usati nel corso di programmazione Beginning Python.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "watch them leave in opposite orders",
+      "italian": "poi guardale uscire in ordini opposti",
+      "explanation": "Errore di accento/forma: l'imperativo con pronome è \"guardale\" ma qui il riferimento è ai caratteri; resta accettabile, ma \"Dai in pasto\" è un po' strano e colloquiale.",
+      "suggestion": "Inserisci le stesse lettere in una pila di piatti e in una fila d'attesa — poi guardale uscire in ordine opposto.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "the stop value is a hollow ring because it is never included",
+      "italian": "il valore finale è un anello vuoto perché non è mai incluso",
+      "explanation": "Nel contesto di range, \"stop\" è meglio reso con \"fine\"/\"stop\"; inoltre \"Scorri inizio, fine e passo\" (Slide) è ambiguo, meglio \"Fai scorrere\".",
+      "suggestion": "Fai scorrere inizio, stop e passo...",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "read the pattern as plain-English chips",
+      "italian": "leggi il pattern come gettoni in inglese semplice",
+      "explanation": "\"Chips\" tradotto come \"gettoni\" e \"plain-English\" reso come \"inglese semplice\": gli studenti italiani potrebbero non capire; meglio \"linguaggio semplice\" o \"parole semplici\".",
+      "suggestion": "leggi il pattern come etichette in parole semplici",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "PEMDAS made visible",
+      "italian": "PEMDAS reso visibile",
+      "explanation": "PEMDAS è un acronimo anglosassone sconosciuto agli studenti italiani, lasciato senza spiegazione.",
+      "suggestion": "l'ordine delle operazioni (PEMDAS) reso visibile",
+      "part": 1
+    }
+  ]
+}

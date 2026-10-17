@@ -1,0 +1,46 @@
+{
+  "file": "trinket/15-sine-wave.md",
+  "hash": "a9d72ad9fafc8cc628231f5bea96169c29e65b4f882cb5b8807592dcd94bdc18",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 1,
+  "cost_usd": 0.0176,
+  "issues": [
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "We can also use turtle graphics to do math function plots.",
+      "italian": "We can also use turtle graphics to do math function plots.",
+      "explanation": "L'intera sezione italiana è identica all'originale inglese: nessuna prosa è stata tradotta (avviso di deprecazione, titoli, paragrafi, link).",
+      "suggestion": "Tradurre tutta la prosa: \"Possiamo usare la grafica turtle anche per disegnare i grafici delle funzioni matematiche.\" e così via per ogni paragrafo.",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "!!! warning \"Deprecated Lab — Trinket is shutting down\"",
+      "italian": "!!! warning \"Deprecated Lab — Trinket is shutting down\"",
+      "explanation": "Il titolo e il testo dell'avviso sono rimasti in inglese.",
+      "suggestion": "!!! warning \"Laboratorio obsoleto — Trinket sta chiudendo\" e tradurre il corpo dell'avviso.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "# Sine Wave",
+      "italian": "# Sine Wave",
+      "explanation": "Il titolo della pagina non è tradotto.",
+      "suggestion": "# Onda sinusoidale",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "## Link to Working Trinket Program",
+      "italian": "## Link to Working Trinket Program",
+      "explanation": "Il titolo di sezione e il testo del link sono rimasti in inglese.",
+      "suggestion": "## Link al programma Trinket funzionante",
+      "part": 1
+    }
+  ]
+}

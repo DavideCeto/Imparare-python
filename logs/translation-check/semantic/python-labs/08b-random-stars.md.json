@@ -1,0 +1,64 @@
+{
+  "file": "python-labs/08b-random-stars.md",
+  "hash": "5b6ee6b0206a81bc63bff59d5b256d3f842ddf0881222632a58a6b8af6e9a935",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0425,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Click Reset then Run again",
+      "italian": "Clicca Reset e poi Esegui di nuovo",
+      "explanation": "Incoerenza: i pulsanti restano Run/Reset nell'HTML, ma nel testo 'Run' è tradotto 'Esegui' e 'Reset' no. Il testo dovrebbe corrispondere ai pulsanti reali.",
+      "suggestion": "Usa i nomi dei pulsanti come appaiono (Run e Reset): 'Clicca Reset e poi Run di nuovo'.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Click Run twice",
+      "italian": "Clicca Esegui due volte",
+      "explanation": "Il pulsante nel laboratorio si chiama Run, non Esegui; lo studente non lo troverebbe.",
+      "suggestion": "Clicca Run due volte (e così in 'clicca **Esegui**').",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "each a different random color and size",
+      "italian": "ognuna di un colore e una dimensione casuali diversi",
+      "explanation": "Concordanza poco naturale.",
+      "suggestion": "ognuna con un colore e una dimensione casuali diversi",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Any other angle and the shape won't close into a star.",
+      "italian": "Qualsiasi altro angolo e la forma non si chiuderà in una stella.",
+      "explanation": "Calco dall'inglese, frase poco naturale.",
+      "suggestion": "Con qualsiasi altro angolo la forma non si chiude a stella.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "you'll write a `star()` function, scatter it at random positions",
+      "italian": "la disperderai in posizioni casuali",
+      "explanation": "'Disperdere una funzione' è innaturale; meglio 'userai/richiamerai'.",
+      "suggestion": "la userai per disegnare stelle in posizioni casuali",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "scattered across the canvas",
+      "italian": "disperse attraverso il canvas",
+      "explanation": "Formulazione poco naturale.",
+      "suggestion": "sparse sul canvas",
+      "part": 1
+    }
+  ]
+}

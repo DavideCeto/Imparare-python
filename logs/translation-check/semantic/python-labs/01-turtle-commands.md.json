@@ -1,0 +1,55 @@
+{
+  "file": "python-labs/01-turtle-commands.md",
+  "hash": "c44d5eb1d3f7e99c4828360174ff59eec3a247d02d19d344b7267bb674271b8e",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0365,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Add `monty.back(50)` after the last `forward(100)`. ... leaving a green line on top of the existing green segment.",
+      "italian": "la tartaruga torna indietro, lasciando una linea verde sopra il segmento verde esistente.",
+      "explanation": "Resa corretta, ma 'sopra' può essere ambiguo; accettabile. Nota: l'originale stesso è coerente.",
+      "suggestion": "Eventualmente: 'ripassando sul segmento verde esistente'.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Click Run to find out!",
+      "italian": "clicca Esegui per scoprirlo!",
+      "explanation": "Il testo dice 'Esegui' ma i pulsanti restano 'Run' (convenzione del progetto), quindi lo studente non trova 'Esegui' sullo schermo.",
+      "suggestion": "Usare 'Run' nel testo: 'clicca Run per scoprirlo!' (anche in 'clicca **Run**' e 'eseguilo').",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to This Lesson!",
+      "italian": "Benvenuto a Questa Lezione!",
+      "explanation": "Calco dall'inglese; in italiano è più naturale 'Benvenuto in questa lezione!'.",
+      "suggestion": "Benvenuto in questa lezione!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Move a turtle forward, backward, and in any direction using",
+      "italian": "Muovere una tartaruga avanti, indietro, e in qualsiasi direzione usando `forward()`, `back()`, `left()`, e `right()`",
+      "explanation": "Virgola prima di 'e' non usuale in italiano.",
+      "suggestion": "Muovere una tartaruga avanti, indietro e in qualsiasi direzione usando `forward()`, `back()`, `left()` e `right()`",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Add `monty.left(90)` instead of `monty.right(90)` for both turns.",
+      "italian": "Aggiungi `monty.left(90)` invece di `monty.right(90)` per entrambe le svolte.",
+      "explanation": "Il senso è corretto, ma 'Aggiungi' è fedele a un originale poco chiaro; meglio 'Usa'.",
+      "suggestion": "Usa `monty.left(90)` al posto di `monty.right(90)` in entrambe le svolte.",
+      "part": 1
+    }
+  ]
+}

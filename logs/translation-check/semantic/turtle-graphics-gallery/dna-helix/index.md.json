@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/dna-helix/index.md",
+  "hash": "ac307bfeb561f6494c5605eaa8f7438a776dff33eaa2dd7603b5cb34e34fba7b",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0418,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "This is a different beast from the gallery's Double Helix Spiral",
+      "italian": "Questa è una bestia diversa dalla Spirale a Doppia Elica della galleria",
+      "explanation": "Calco letterale dell'idiomatico inglese, poco naturale in italiano.",
+      "suggestion": "Questo è un tipo di disegno diverso dalla Spirale a Doppia Elica della galleria",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "every 6th point, a straight line connects",
+      "italian": "ogni 6° punto, una linea dritta collega",
+      "explanation": "\"6° punto\" con il simbolo di grado è ambiguo e poco naturale.",
+      "suggestion": "ogni 6 punti, una linea retta collega",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Make your guess, then click Run!",
+      "italian": "poi clicca Esegui!",
+      "explanation": "Il pulsante resta \"Run\" per convenzione, ma il testo dice \"Esegui\", incoerente con il pulsante visibile.",
+      "suggestion": "poi clicca Run!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "This is *parametric plotting*",
+      "italian": "Questo è *plotting parametrico*",
+      "explanation": "Termine inglese poco adatto a ragazzi; esiste un equivalente italiano.",
+      "suggestion": "Questo è il *tracciamento parametrico*",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the geometry does it automatically",
+      "italian": "lo fa automaticamente la geometria",
+      "explanation": "Ordine delle parole innaturale.",
+      "suggestion": "lo fa la geometria in automatico",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "paint an island's elevation with wobbly contour rings",
+      "italian": "colora l'elevazione di un'isola con anelli di curve di livello ondulati",
+      "explanation": "\"Elevazione\" è meno naturale di \"altitudine\"; la frase è pesante.",
+      "suggestion": "colora l'altitudine di un'isola con anelli ondulati di curve di livello",
+      "part": 1
+    }
+  ]
+}

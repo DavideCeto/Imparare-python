@@ -1,0 +1,19 @@
+{
+  "file": "turtle-graphics-gallery/impossible-triangle/index.md",
+  "hash": "0b6757bb1527be810602cae3a35aac11313d5d6dcbbce4fa697d85dcdf4313d0",
+  "model": "sonnet",
+  "score": 5,
+  "parts": 1,
+  "cost_usd": 0.0405,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "three shades of gray fake 3-D depth",
+      "italian": "tre sfumature di grigio simulino una profondità 3D",
+      "explanation": "Il congiuntivo «simulino» è corretto ma pesante per ragazzi di 10-13 anni; una forma più naturale scorre meglio.",
+      "suggestion": "Spiegare come tre sfumature di grigio simulano la profondità 3D in un oggetto che non può esistere",
+      "part": 1
+    }
+  ]
+}

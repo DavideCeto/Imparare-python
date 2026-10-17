@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/river-delta/index.md",
+  "hash": "d10a7a1c7229cff467a1b693492ef5037563ec5b34005be08830b0c336f0a700",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0485,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "so no two lineages look alike",
+      "italian": "così nessuna lineage somiglia a un'altra",
+      "explanation": "\"lineage\" è rimasto in inglese ed è un termine poco adatto a ragazzi di 10-13 anni.",
+      "suggestion": "così nessuna linea di rami somiglia a un'altra",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "recursive branching with random twists",
+      "italian": "ramificazione recursiva con torsioni casuali",
+      "explanation": "\"recursiva\" non esiste in italiano; il termine corretto è \"ricorsiva\". \"Torsioni\" è inoltre poco naturale.",
+      "suggestion": "ramificazione ricorsiva con variazioni casuali",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the delta reaches farther down the canvas",
+      "italian": "il delta raggiunge più in basso sul canvas",
+      "explanation": "Frase un po' goffa.",
+      "suggestion": "il delta arriva più in basso nel canvas",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Up next: **Coral Branch**",
+      "italian": "Prossimo: **Ramo di Corallo**",
+      "explanation": "\"Prossimo:\" è innaturale.",
+      "suggestion": "Prossima tappa:",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "the deterministic fractals like Fractal Tree",
+      "italian": "come l'Albero Frattale",
+      "explanation": "Il nome del laboratorio è tradotto, ma il titolo del lab \"River Delta\" è reso \"Delta del Fiume\": coerente. Lieve incoerenza solo nell'uso di \"Esegui\" al posto del pulsante Run (che resta Run).",
+      "suggestion": "Scrivere \"clicca Run\" per corrispondere al pulsante visibile.",
+      "part": 1
+    }
+  ]
+}

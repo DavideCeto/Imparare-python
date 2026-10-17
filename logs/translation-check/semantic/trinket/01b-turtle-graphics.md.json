@@ -1,0 +1,37 @@
+{
+  "file": "trinket/01b-turtle-graphics.md",
+  "hash": "ae7e4c815602d051da3c6f56a43c9ad9e3fc07653929065538ec895d913ff60c",
+  "model": "sonnet",
+  "score": 2,
+  "parts": 1,
+  "cost_usd": 0.0241,
+  "issues": [
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "Turtle graphs have been around for almost [50 years]",
+      "italian": "Turtle graphs have been around for almost [50 years]",
+      "explanation": "L'intera sezione italiana è identica all'originale inglese: nessuna prosa è stata tradotta (avviso, titoli, paragrafi, descrizioni dei comandi).",
+      "suggestion": "Tradurre in italiano tutta la prosa, lasciando invariati codice, URL e nomi propri. Ad esempio: «La grafica turtle esiste da quasi 50 anni.»",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "!!! warning \"Deprecated Lab — Trinket is shutting down\"",
+      "italian": "!!! warning \"Deprecated Lab — Trinket is shutting down\"",
+      "explanation": "Il titolo e il testo dell'avviso sono rimasti in inglese, anche se sono prosa rivolta agli studenti.",
+      "suggestion": "Tradurre il titolo, ad esempio «Laboratorio obsoleto — Trinket chiude», e tutto il testo dell'avviso.",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "## Moving the Turtle\nThere are five ways to move your turtle around the screen.",
+      "italian": "## Moving the Turtle\nThere are five ways to move your turtle around the screen.",
+      "explanation": "Titoli e descrizioni dei comandi (per esempio «set the pen to a specific color») non sono tradotti. Anche il commento nel codice «# get a random number between -200 and 200» è rimasto in inglese.",
+      "suggestion": "Tradurre titoli, elenchi e il commento nel codice, ad esempio «# ottieni un numero casuale tra -200 e 200».",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/spider-web/index.md",
+  "hash": "d42519189940a52a3fb05fb2b404b804960b11a769f499d125e794a35f2950c4",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0411,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Make your guess — then click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante è indicato come \"Esegui\" mentre nell'HTML resta \"Run\" (convenzione: i pulsanti restano in inglese). Lo studente non troverebbe \"Esegui\".",
+      "suggestion": "poi clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "converts polar (r, angle) to Cartesian (x, y).",
+      "italian": "converte polare (r, angle) in cartesiano (x, y).",
+      "explanation": "Frase poco naturale: mancano i sostantivi e \"angle\" è rimasto in inglese.",
+      "suggestion": "converte le coordinate polari (r, angolo) in coordinate cartesiane (x, y).",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "visits all 12 spokes then returns to the first",
+      "italian": "visita tutti i 12 raggi poi ritorna al primo",
+      "explanation": "Manca la virgola prima di \"poi\"; leggibilità ridotta.",
+      "suggestion": "visita tutti i 12 raggi, poi ritorna al primo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "Learning Check",
+      "italian": "Verifica di Apprendimento",
+      "explanation": "Titolo un po' macchinoso per ragazzi.",
+      "suggestion": "Verifica cosa hai imparato",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Draw radial spokes from the center",
+      "italian": "Disegnare raggi radiali dal centro",
+      "explanation": "\"raggi radiali\" è ridondante; \"anulare\" per \"ring\" è poco comune per ragazzi.",
+      "suggestion": "Disegnare i raggi dal centro ... (radiale e ad anelli)",
+      "part": 1
+    }
+  ]
+}

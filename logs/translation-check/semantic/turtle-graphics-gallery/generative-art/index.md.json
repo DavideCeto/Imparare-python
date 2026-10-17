@@ -1,0 +1,47 @@
+{
+  "file": "turtle-graphics-gallery/generative-art/index.md",
+  "hash": "8ceb0f96ec7fde266529545d2000666b12ea16b34cc0df26edea0aeb53541b89",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0474,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "combines spirals, color cycling, golden-angle placement, and parametric curves",
+      "italian": "combina spirali, ciclo di colori, posizionamento ad angolo d'oro, e curve parametriche",
+      "italian_note": "",
+      "explanation": "In italiano non si usa la virgola prima della 'e' finale di un elenco. Lo stesso vale per altre frasi.",
+      "suggestion": "spirali, ciclo di colori, posizionamento ad angolo d'oro e curve parametriche",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Parametric rose — a rose curve overlaid in semi-transparent white",
+      "italian": "Rosa parametrica — una curva a rosa sovrapposta in bianco semi-trasparente",
+      "explanation": "L'originale descrive il bianco semi-trasparente, ma il codice usa 'navy'. È un difetto dell'originale mantenuto fedelmente; meglio non peggiorarlo, ma 'curva a rosa' va bene. Nota solo l'incoerenza col codice.",
+      "suggestion": "Valutare di correggere in entrambe le lingue: 'sovrapposta in blu navy'.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Combine multiple turtle techniques",
+      "italian": "Combinare più tecniche della tartaruga",
+      "explanation": "La convenzione prevede 'turtle'; 'tartaruga' è accettabile ma incoerente con 'grafica turtle' usato più avanti.",
+      "suggestion": "Combinare più tecniche della turtle",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "Learning Check",
+      "italian": "Verifica di Apprendimento",
+      "explanation": "Il titolo è un po' formale per studenti di 10-13 anni, ma accettabile.",
+      "suggestion": "Verifica ciò che hai imparato",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "file": "sims/json-python-mapper/index.md",
+  "hash": "4cd2fc55108252b473512fb8dcd65974ac2e96011a70fd18b9f5e50579c3d056",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0239,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Upper elementary and middle school (ages 10-14)",
+      "italian": "Scuola primaria superiore e scuola media (10-14 anni)",
+      "explanation": "\"Scuola primaria superiore\" non è un termine usato in Italia; suona innaturale.",
+      "suggestion": "Ultimi anni della scuola primaria e scuola media (10-14 anni)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Hover the colored values on the right",
+      "italian": "Passa il mouse sui valori colorati",
+      "explanation": "Corretto, ma \"Codice di Incorporamento Iframe\" è un calco poco naturale per \"Iframe Embed Code\".",
+      "suggestion": "Codice per incorporare l'iframe",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "with true/True, null/None, and every type pairing color-coded",
+      "italian": "con true/True, null/None, e ogni abbinamento di tipo colorato",
+      "explanation": "Virgola prima della \"e\" non necessaria in italiano.",
+      "suggestion": "con true/True, null/None e ogni abbinamento di tipo colorato",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "the next keystroke / every keystroke",
+      "italian": "ogni battitura",
+      "explanation": "\"Battitura\" è un po' goffo per studenti; più naturale \"ogni tasto che premi\".",
+      "suggestion": "il pannello destro segue ogni tasto che premi",
+      "part": 1
+    }
+  ]
+}

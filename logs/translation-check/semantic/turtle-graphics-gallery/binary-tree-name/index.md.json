@@ -1,0 +1,19 @@
+{
+  "file": "turtle-graphics-gallery/binary-tree-name/index.md",
+  "hash": "6b581b4aca501d82d6901f215f2895e9c351e59e5c39dcc117c1ca449bf31542",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0405,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Up next: **Turtle Chase** — a predator turtle hunts its prey with `atan2()`.",
+      "italian": "Prossimo: **Caccia tra Tartarughe** — una tartaruga predatrice dà la caccia alla sua preda",
+      "explanation": "Il titolo del laboratorio successivo è stato tradotto; potrebbe non corrispondere al titolo reale della pagina. \"Prossimo:\" è anche poco naturale.",
+      "suggestion": "Verificare il titolo del laboratorio successivo; scrivere \"Prossima tappa:\".",
+      "part": 1
+    }
+  ]
+}

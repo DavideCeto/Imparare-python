@@ -1,0 +1,37 @@
+{
+  "file": "turtle-graphics-gallery/spirograph/index.md",
+  "hash": "41d50a4894d6ad35498fe3294dec1b7ddac050e290b85ce1bad1740cd8b17742",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0405,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante nel laboratorio resta \"Run\" (convenzione del progetto), ma il testo dice \"Esegui\". Lo studente non troverebbe un pulsante con quel nome.",
+      "suggestion": "poi clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "a perfect 5-petaled hypotrochoid",
+      "italian": "un perfetto ipotrocoide a 5 petali",
+      "explanation": "\"Ipotrocoide\" (come \"epitrocoide\") è femminile in italiano. Nel testo è usato al maschile.",
+      "suggestion": "un'ipotrocoide perfetta a 5 petali; analogamente \"Prova un'epitrocoide\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Change d to a very small value.",
+      "italian": "Cambia d a un valore molto piccolo.",
+      "explanation": "La preposizione è innaturale. In italiano si dice \"cambiare in\".",
+      "suggestion": "Cambia d in un valore molto piccolo.",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "file": "trinket/08-random.md",
+  "hash": "edbecdb990faace5e491022da4943daf29f1a299124511bd01281678be0a1b03",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 1,
+  "cost_usd": 0.0216,
+  "issues": [
+    {
+      "severity": "critical",
+      "category": "untranslated",
+      "english": "## Random Circles\n\nIn this exercise we will draw 10 random circles on the screen.",
+      "italian": "## Random Circles\n\nIn this exercise we will draw 10 random circles on the screen.",
+      "explanation": "L'intera sezione italiana è identica all'originale inglese: nessuna parte della prosa è stata tradotta (titoli, spiegazioni, esperimenti, link, commenti nel codice).",
+      "suggestion": "Tradurre tutta la prosa in italiano, ad es. «## Cerchi casuali» e «In questo esercizio disegneremo 10 cerchi casuali sullo schermo.»",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**",
+      "italian": "!!! warning \"Deprecated Lab — Trinket is shutting down\"\n    This lab was written for **Trinket.io**",
+      "explanation": "Il titolo e il testo dell'avviso di deprecazione sono rimasti in inglese.",
+      "suggestion": "Tradurre: «Laboratorio obsoleto — Trinket sta per chiudere» e il testo dell'avviso, mantenendo link e nomi propri.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "# this is a list of colors",
+      "italian": "# this is a list of colors",
+      "explanation": "I commenti nel codice possono essere tradotti e per studenti di 10-13 anni è utile che lo siano; sono rimasti in inglese.",
+      "suggestion": "# questa è una lista di colori",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "1. Can you create a variable that is used to control the distance from the origin to wander?",
+      "italian": "1. Can you create a variable that is used to control the distance from the origin to wander?",
+      "explanation": "Gli esperimenti finali sono rimasti in inglese.",
+      "suggestion": "1. Riesci a creare una variabile che controlli la distanza massima dall'origine a cui la turtle può spostarsi?",
+      "part": 1
+    }
+  ]
+}

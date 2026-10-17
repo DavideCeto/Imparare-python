@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/superellipse/index.md",
+  "hash": "6d7d3e96cbf58f186b843dd3566faa5a8c3f327214d6a333d5067499c5ac5cb1",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0456,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Click Run",
+      "italian": "poi clicca Esegui!",
+      "explanation": "Il testo dice \"Esegui\" ma il pulsante resta \"Run\" (convenzione del progetto): lo studente non trova \"Esegui\".",
+      "suggestion": "poi clicca Run!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to the Superellipse!",
+      "italian": "Benvenuto alla Superellisse!",
+      "explanation": "Preposizione poco naturale in italiano.",
+      "suggestion": "Benvenuto nel mondo della Superellisse!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "fattening the curve into the corners",
+      "italian": "ingrassando la curva verso gli angoli",
+      "explanation": "\"Ingrassando\" suona strano e poco adatto; meglio un verbo come \"gonfiando\".",
+      "suggestion": "gonfiando la curva verso gli angoli",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "We clamp the absolute values with a tiny epsilon",
+      "italian": "Blocchiamo i valori assoluti con un piccolo epsilon",
+      "explanation": "\"Blocchiamo\" è impreciso per clamp: si impone un valore minimo.",
+      "suggestion": "Imponiamo ai valori assoluti un minimo molto piccolo (epsilon)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Next up: **Cassini Oval**",
+      "italian": "Prossimo: **Ovale di Cassini**",
+      "explanation": "Resa un po' telegrafica.",
+      "suggestion": "Prossimo laboratorio: **Ovale di Cassini**",
+      "part": 1
+    }
+  ]
+}

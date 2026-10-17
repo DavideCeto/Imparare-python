@@ -1,0 +1,37 @@
+{
+  "file": "license.md",
+  "hash": "d87173751aa75ee361d63c558e41988e62860ed08b0c9e37b7a7e0d461d27974",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0193,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "**ShareAlike** — If you remix",
+      "italian": "**CondividiAllostessoModo** — Se remixi",
+      "explanation": "Il termine ufficiale italiano della licenza CC è \"Condividi allo stesso modo\"; la forma unita in una sola parola è innaturale. Anche \"NonCommerciale\" è meglio come \"Non commerciale\".",
+      "suggestion": "**Condividi allo stesso modo** — Se remixi... ; **Non commerciale** — Non puoi...",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "!!! Notices",
+      "italian": "!!! Notices",
+      "explanation": "Il titolo dell'admonition è rimasto in inglese; è un titolo visibile da tradurre (se non è il tipo di admonition).",
+      "suggestion": "!!! Avvisi",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Link to License Agreement",
+      "italian": "## Tipo di licenza\n\nAttribution-NonCommercial-ShareAlike 4.0 International",
+      "explanation": "Il nome della licenza resta in inglese mentre le voci delle restrizioni sono tradotte: lieve incoerenza (il nome ufficiale in italiano è Attribuzione-Non commerciale-Condividi allo stesso modo 4.0 Internazionale).",
+      "suggestion": "Eventualmente aggiungere il nome italiano tra parentesi.",
+      "part": 1
+    }
+  ]
+}

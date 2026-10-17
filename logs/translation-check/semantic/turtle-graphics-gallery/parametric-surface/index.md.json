@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/parametric-surface/index.md",
+  "hash": "ef51e60e0b80d38ef4ace5aa298de3e9c1b5d041331319fcd464f94dc9304294",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0435,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "The 30° angles create the \"cabinet\" isometric view.",
+      "italian": "Gli angoli di 30° creano la vista isometrica a \"gabinetto\".",
+      "explanation": "\"Cabinet\" è un tipo di proiezione; \"gabinetto\" in italiano significa toilette, quindi è un errore comico e fuorviante.",
+      "suggestion": "Gli angoli di 30° creano la vista isometrica \"cabinet\" (oppure: \"la tipica vista isometrica\").",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante nel laboratorio resta \"Run\", ma il testo dice \"Esegui\": lo studente non trova il pulsante con quel nome.",
+      "suggestion": "poi clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "undulating peaks and valleys like a frozen ocean wave!",
+      "italian": "picchi e valli ondulate come un'onda oceanica congelata!",
+      "explanation": "Concordanza imprecisa (\"picchi e valli ondulate\") e frase poco naturale.",
+      "suggestion": "picchi e valli ondulati come un'onda oceanica congelata!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "multiple L-system snowflakes",
+      "italian": "più fiocchi di neve a sistema-L",
+      "explanation": "Espressione poco naturale per \"L-system\".",
+      "suggestion": "più fiocchi di neve generati con L-system (sistemi di Lindenmayer)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to 3D Projection!",
+      "italian": "Benvenuto alla Proiezione 3D!",
+      "explanation": "Preposizione più naturale: \"nella\"/\"alla scoperta della\"; \"Benvenuto a\" è accettabile ma meno scorrevole.",
+      "suggestion": "Benvenuto nella Proiezione 3D!",
+      "part": 1
+    }
+  ]
+}

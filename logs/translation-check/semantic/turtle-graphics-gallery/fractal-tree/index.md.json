@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/fractal-tree/index.md",
+  "hash": "6f61c92e800ecd0059247ed3a7485a4aac7037239bc5b945af8aa002b5116144",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0427,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Each branch splits into two that are 70% as long.",
+      "italian": "Ogni ramo si divide in due che sono lunghi il 70%.",
+      "explanation": "Frase poco naturale in italiano.",
+      "suggestion": "Ogni ramo si divide in due rami lunghi il 70% di quello precedente.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Turn left 25°, recurse with `branch_len * 0.7`",
+      "italian": "Gira a sinistra di 25°, ricorri con `branch_len * 0.7`",
+      "explanation": "\"ricorri\" è innaturale e poco chiaro per ragazzi.",
+      "suggestion": "Gira a sinistra di 25° e richiama la funzione con `branch_len * 0.7`",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the turtle returns to where it started so the parent call can continue correctly",
+      "italian": "dopo aver ricorso in entrambi i sotto-rami, la tartaruga ritorna dove ha iniziato così la chiamata genitrice può continuare",
+      "explanation": "\"aver ricorso\" e \"chiamata genitrice\" sono forzati e poco naturali.",
+      "suggestion": "dopo aver disegnato entrambi i sotto-rami, la tartaruga torna al punto di partenza così la chiamata precedente può continuare",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Run",
+      "italian": "clicca Esegui!",
+      "explanation": "Il pulsante resta \"Run\" (convenzione del progetto), ma il testo dice \"Esegui\": incoerente.",
+      "suggestion": "clicca Run!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Make a pine tree. ... Slow the shrink rate.",
+      "italian": "Riduci la velocità di restringimento.",
+      "explanation": "Rispetto al ricordo di \"Slow the shrink rate\" va bene, ma \"come una conifera\" ha concordanza debole; \"Benvenuto all'Albero\" è meno corretto di \"Benvenuto nell'Albero\".",
+      "suggestion": "\"Benvenuto nell'Albero Frattale!\"",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "file": "trinket/02-simple-square.md",
+  "hash": "69c576df281c11e4967ff99ca643a76f6e9d17faccfef8c63bc935e3d4bc62fc",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 1,
+  "cost_usd": 0.0203,
+  "issues": [
+    {
+      "severity": "critical",
+      "category": "untranslated",
+      "english": "## Drawing a Square\nThe following code is an example of drawing a square using turtle graphics.",
+      "italian": "## Drawing a Square\nThe following code is an example of drawing a square using turtle graphics.",
+      "explanation": "Tutta la sezione italiana è identica all'inglese: nessuna prosa è stata tradotta (titoli, spiegazioni, esperimenti, avviso).",
+      "suggestion": "Tradurre in italiano tutta la prosa, ad esempio '## Disegnare un quadrato', 'Il codice seguente è un esempio di disegno di un quadrato con la grafica turtle...'.",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "!!! warning \"Deprecated Lab — Trinket is shutting down\"",
+      "italian": "!!! warning \"Deprecated Lab — Trinket is shutting down\"",
+      "explanation": "Il titolo dell'admonition e il suo testo sono rimasti in inglese; vanno tradotti (il tipo 'warning' resta).",
+      "suggestion": "!!! warning \"Laboratorio obsoleto — Trinket sta per chiudere\" e tradurre il corpo dell'avviso.",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "## Reorienting your turtle\nNote that at the start, the turtle is facing to the right.",
+      "italian": "## Reorienting your turtle\nNote that at the start, the turtle is facing to the right.",
+      "explanation": "Le sezioni 'Try it out', 'Explanation', 'Reorienting your turtle' ed 'Experiments' sono in inglese, comprese le domande di sperimentazione per gli studenti.",
+      "suggestion": "Tradurre ogni sezione, ad esempio '## Riorientare la tua turtle' e '## Esperimenti'.",
+      "part": 1
+    }
+  ]
+}

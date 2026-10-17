@@ -1,0 +1,19 @@
+{
+  "file": "trinket/01a-trinket-account.md",
+  "hash": "f5bec86dcaf7be3e5b077b6d69f01b32a1f4564d007cf285fd05c7ce24fa162f",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 1,
+  "cost_usd": 0.0125,
+  "issues": [
+    {
+      "severity": "critical",
+      "category": "untranslated",
+      "english": "Getting Starts With Trinket",
+      "italian": "Getting Starts With Trinket",
+      "explanation": "L'intera sezione italiana è identica all'originale inglese: nulla è stato tradotto (titolo, avviso, paragrafi, lista).",
+      "suggestion": "Tradurre tutto: «Iniziare con Trinket».",
+      "part": 1
+    }
+  ]
+}

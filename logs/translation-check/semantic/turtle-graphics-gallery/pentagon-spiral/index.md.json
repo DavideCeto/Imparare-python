@@ -1,0 +1,46 @@
+{
+  "file": "turtle-graphics-gallery/pentagon-spiral/index.md",
+  "hash": "6046ec36422a3767362043caa7e861aa0ca42cd4133165472977a5c9cd6a5949",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0322,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Una spirale pentagonale con angoli a cinque lati — colorata in fasce di cinque tonalità che tagliano diagonalmente",
+      "italian": "Una spirale pentagonale con angoli a cinque lati — colorata in fasce di cinque tonalità che tagliano diagonalmente attraverso i bracci perché 5 colori × spirale a 5 lati = fasce allineate",
+      "explanation": "Il testo originale è contraddittorio (fasce diagonali vs allineate) e la traduzione lo replica fedelmente, ma resta confuso per gli studenti.",
+      "suggestion": "Mantenere il senso ma eventualmente chiarire.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Click Run to find out!",
+      "italian": "clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta Run nell'interfaccia, quindi 'Esegui' non corrisponde al pulsante visibile.",
+      "suggestion": "clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "creating the visual effect of diagonal stripes",
+      "italian": "producendo un effetto di tessitura a righe attraverso la spirale",
+      "explanation": "Espressione poco naturale ('tessitura a righe').",
+      "suggestion": "producendo un effetto di intreccio a strisce sulla spirale.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Each color occupies 3 full pentagon sides.",
+      "italian": "Ogni colore occupa 3 lati interi del pentagono.",
+      "explanation": "Fedele, ma 'rivoluzioni' per 'revolutions' è un calco poco naturale.",
+      "suggestion": "Usare 'giri' invece di 'rivoluzioni'.",
+      "part": 1
+    }
+  ]
+}

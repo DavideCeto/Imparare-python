@@ -1,0 +1,73 @@
+{
+  "file": "turtle-graphics-gallery/seven-segment/index.md",
+  "hash": "d9171cd17046320a96c213d1ea60a6d39b0c84a724bca9ca50155fce8beebbd8",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0777,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Represent each digit as a bitmask of which of 7 segments are \"on\"",
+      "italian": "Rappresentare ogni cifra come una maschera di bit di quali dei 7 segmenti sono \"accesi\"",
+      "explanation": "Frase letterale e poco chiara per studenti di 10-13 anni.",
+      "suggestion": "Rappresentare ogni cifra con una maschera di bit che indica quali dei 7 segmenti sono \"accesi\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "then click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante nell'interfaccia resta \"Run\", ma il testo dice \"Esegui\": incoerenza.",
+      "suggestion": "poi clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "This lab builds a dictionary-driven display renderer in Python.",
+      "italian": "Questo laboratorio costruisce un renderer di display guidato da dizionario in Python.",
+      "explanation": "Linguaggio troppo tecnico e calco dall'inglese.",
+      "suggestion": "In questo laboratorio costruiamo in Python un programma che disegna il display usando un dizionario.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to the Seven-Segment Display!",
+      "italian": "Benvenuto al Display a Sette Segmenti!",
+      "explanation": "\"Benvenuto al\" è innaturale.",
+      "suggestion": "Benvenuto nel Display a Sette Segmenti!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "ATMs, gas pumps, and alarm clocks",
+      "italian": "i bancomat, le pompe di benzina, e le sveglie",
+      "explanation": "Virgola prima della \"e\" non idiomatica in italiano.",
+      "suggestion": "i bancomat, le pompe di benzina e le sveglie",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "maps each digit character to a 7-tuple",
+      "italian": "mappa ogni carattere cifra a una 7-tupla",
+      "explanation": "Formulazione goffa.",
+      "suggestion": "associa ogni carattere cifra a una tupla di 7 elementi",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Look up the pattern, default to all off",
+      "italian": "Cerca il pattern, predefinito tutti spenti",
+      "explanation": "Frase telegrafica e poco naturale.",
+      "suggestion": "Cerca il pattern; se manca, tutti i segmenti restano spenti",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "file": "sims/dictionary-key-lookup/index.md",
+  "hash": "39a8693b8691940e2ede120236962efbe06ed69447f3e85bac1ede0a46773dce",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0247,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Upper elementary and middle school (ages 10-14)",
+      "italian": "Scuola primaria superiore e scuola media (10-14 anni)",
+      "explanation": "\"Scuola primaria superiore\" non è un termine corretto in Italia.",
+      "suggestion": "Scuola primaria (ultimi anni) e scuola secondaria di primo grado (10-14 anni)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "a polite `None`",
+      "italian": "un educato `None`",
+      "explanation": "Resa letterale poco naturale; \"educato\" riferito a None suona strano.",
+      "suggestion": "un semplice `None` (senza errori)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "planting the efficiency seed without any hash-table jargon",
+      "italian": "piantando il seme dell'efficienza senza alcun gergo sulle tabelle hash",
+      "explanation": "Calco dell'inglese, poco scorrevole per ragazzi.",
+      "suggestion": "gettando le basi del concetto di efficienza senza usare termini come tabelle hash",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "to feel why dict lookup is one hop",
+      "italian": "per sentire perché la ricerca nel dizionario è un solo balzo",
+      "explanation": "\"Sentire perché\" è un calco; meglio \"capire\" o \"scoprire\".",
+      "suggestion": "per scoprire perché la ricerca nel dizionario richiede un solo balzo",
+      "part": 1
+    }
+  ]
+}

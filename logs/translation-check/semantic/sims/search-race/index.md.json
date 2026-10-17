@@ -1,0 +1,46 @@
+{
+  "file": "sims/search-race/index.md",
+  "hash": "c234206bd7a9932a62d2c2c9971be762b4e14c1121c8849ac671380122ecf318",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.025,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Big-O is abstract until you feel it.",
+      "italian": "Il Big-O è astratto finché non lo senti.",
+      "explanation": "\"Lo senti\" è un po' innaturale; meglio \"lo provi\" o \"lo vedi in azione\".",
+      "suggestion": "Il Big-O è astratto finché non lo vedi in azione.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "linear plods left to right while binary discards half the shelf per check.",
+      "italian": "lineare avanza faticosamente da sinistra a destra mentre binaria scarta metà scaffale",
+      "explanation": "\"lineare\" e \"binaria\" senza sostantivo suonano ellittici; meglio \"la ricerca lineare/binaria\".",
+      "suggestion": "la ricerca lineare avanza faticosamente ... mentre quella binaria scarta metà scaffale a ogni controllo.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Step and compare",
+      "italian": "fai Passo e confronta",
+      "explanation": "\"Passo\" come nome di pulsante è incerto e \"Step\" potrebbe essere rimasto nell'interfaccia; incoerente con \"passo-passo\".",
+      "suggestion": "premi Step (Passo) e confronta.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Upper elementary and middle school (ages 10-14)",
+      "italian": "Scuola primaria superiore e scuola media",
+      "explanation": "\"Scuola primaria superiore\" non è un termine usato in Italia.",
+      "suggestion": "Ultimi anni della scuola primaria e scuola media (10-14 anni)",
+      "part": 1
+    }
+  ]
+}

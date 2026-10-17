@@ -1,0 +1,91 @@
+{
+  "file": "sims/graph-traversal-explorer/index.md",
+  "hash": "31dc45e728e476221d61c2207f162f972f03aa19cb774be92a28ddf1312cfac3",
+  "model": "sonnet",
+  "score": 3,
+  "parts": 1,
+  "cost_usd": 0.0268,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "BFS's level-by-level ripple and DFS's deep dive differ for exactly one reason",
+      "italian": "L'ondulazione livello-per-livello di BFS e l'immersione profonda di DFS",
+      "explanation": "Resa letterale e poco naturale per studenti di 10-13 anni; 'ondulazione' e 'immersione profonda' sono oscure.",
+      "suggestion": "L'espansione a onde, livello per livello, di BFS e la discesa in profondità di DFS differiscono per un solo motivo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "the classic \"why BFS\" payoff",
+      "italian": "la classica ricompensa del \"perché BFS\"",
+      "explanation": "Calco dall'inglese, poco chiaro.",
+      "suggestion": "il classico motivo per cui si usa BFS",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "After BFS completes, the final step",
+      "italian": "Dopo che BFS completa, il passo finale",
+      "explanation": "Verbo usato in modo transitivo/intransitivo innaturale.",
+      "suggestion": "Quando BFS termina, l'ultimo passo evidenzia",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "because the stack always grabs the newest discovery",
+      "italian": "la pila afferra sempre la scoperta più recente",
+      "explanation": "'afferra' è innaturale.",
+      "suggestion": "la pila prende sempre per prima l'ultima scoperta",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "each visited node gets its visit number stamped on it",
+      "italian": "riceve il suo numero di visita timbrato sopra",
+      "explanation": "Costruzione innaturale.",
+      "suggestion": "ogni nodo visitato mostra il proprio numero di visita",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "attribute the difference to the queue versus the stack",
+      "italian": "attribuire la differenza alla coda contro la pila",
+      "explanation": "'contro' è un calco; meglio 'alla coda o alla pila'.",
+      "suggestion": "di attribuire la differenza all'uso della coda o della pila",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Step",
+      "italian": "Passo",
+      "explanation": "Il pulsante Step è un pulsante e resta in inglese per convenzione; 'fai Passo' è innaturale.",
+      "suggestion": "Lasciare Step: 'premi Step'",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "ages 10-14",
+      "italian": "Scuola primaria superiore e scuola media (10-14 anni)",
+      "explanation": "'Scuola primaria superiore' non è un termine italiano corretto.",
+      "suggestion": "Ultimi anni della primaria e scuola media (10-14 anni)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the network library used to build this MicroSim",
+      "italian": "la libreria di rete usata",
+      "explanation": "Ambiguo: 'network' qui indica grafi/reti visuali.",
+      "suggestion": "la libreria per reti e grafi usata",
+      "part": 1
+    }
+  ]
+}

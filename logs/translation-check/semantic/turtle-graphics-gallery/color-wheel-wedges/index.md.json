@@ -1,0 +1,46 @@
+{
+  "file": "turtle-graphics-gallery/color-wheel-wedges/index.md",
+  "hash": "c2535a59f0285e2ad0b8f763aedf1bffe7f0f01eefd500ea19f96b61a64bad69",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0533,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "then click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante nel laboratorio si chiama \"Run\" (resta in inglese per convenzione), ma il testo dice \"Esegui\". Lo studente non trova un pulsante con quel nome.",
+      "suggestion": "Usare \"Run\" nel testo, ad esempio: \"poi clicca Run per scoprirlo!\" (anche in \"Prevedi, poi clicca Run.\").",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Pulling the count into a variable makes re-scaling easy",
+      "italian": "Portare il conteggio in una variabile rende facile il riscalaggio",
+      "explanation": "\"Riscalaggio\" e \"portare il conteggio in una variabile\" suonano innaturali e troppo tecnici per ragazzi di 10-13 anni.",
+      "suggestion": "Mettere il numero in una variabile rende facile cambiare la dimensione della ruota.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "every hue gets its own clean slice",
+      "italian": "ogni tonalità ottiene la sua fetta netta",
+      "explanation": "Calco dall'inglese, poco naturale in italiano.",
+      "suggestion": "ogni tonalità ha la sua fetta ben definita.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Because `circle()` lands Monty exactly on the rim",
+      "italian": "Poiché `circle()` fa atterrare Monty esattamente sul bordo",
+      "explanation": "\"Fa atterrare\" è un calco poco naturale.",
+      "suggestion": "Poiché `circle()` porta Monty esattamente sul bordo,",
+      "part": 1
+    }
+  ]
+}

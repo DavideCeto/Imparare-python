@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/archimedean-spiral/index.md",
+  "hash": "70c55286c604fdb7879ca4c2662274253dba0ad955d2f3522fd0d41674e266eb",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0368,
+  "issues": [
+    {
+      "severity": "major",
+      "category": "meaning",
+      "english": "Both! It looks like a **square spiral**",
+      "italian": "Entrambi! Sembra una **spirale quadrata**",
+      "explanation": "La risposta \"Both!\" si riferisce alla domanda \"un quadrato, una spirale, o qualcos'altro?\"; in italiano \"Entrambi!\" è corretto ma la domanda IT usa \"o\", quindi la risposta funziona; tuttavia \"gli dà angoli squadrati\" è poco chiaro (\"gli\" riferito a spirale, che è femminile).",
+      "suggestion": "Entrambi! Sembra una **spirale quadrata** — la rotazione di 90° le dà gli angoli squadrati, mentre la lunghezza crescente del passo la fa allargare verso l'esterno.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "all turning exactly 90° to trace a perfect square path",
+      "italian": "tutti girando esattamente di 90° per tracciare un percorso quadrato perfetto",
+      "explanation": "Frase con gerundio poco naturale; inoltre \"si svolge\" per \"unwinds\" è un po' oscuro.",
+      "suggestion": "tutti con una svolta di esattamente 90° per tracciare un percorso quadrato perfetto",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "click Run to find out!",
+      "italian": "clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta \"Run\" nell'HTML, quindi \"Esegui\" non corrisponde al pulsante visibile.",
+      "suggestion": "clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "push the path outward by a consistent amount per revolution",
+      "italian": "per rivoluzione",
+      "explanation": "\"Rivoluzione\" è un calco; in italiano per un giro di spirale si dice \"giro\" (usato altrove nel testo).",
+      "suggestion": "di una quantità costante a ogni giro",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Find and fix the bug so the path spirals outward.",
+      "italian": "così il percorso si avvolga verso l'esterno",
+      "explanation": "\"Si avvolge verso l'esterno\" è innaturale per una spirale che si allarga.",
+      "suggestion": "così il percorso si allarga a spirale verso l'esterno",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Create a spiral by increasing the forward step by a fixed amount",
+      "italian": "Cambiare un numero trasforma drammaticamente la forma",
+      "explanation": "\"drammaticamente\" è un calco poco adatto a ragazzi.",
+      "suggestion": "cambia completamente la forma",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/scintillating-grid/index.md",
+  "hash": "2d35135c336c2f7a86e7e116168f540eac5e640bf49721ab6d2c69dae0658940",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0444,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "in the corner of your eye",
+      "italian": "nell'angolo del tuo occhio",
+      "explanation": "Calco dall'inglese: in italiano si dice \"con la coda dell'occhio\" o \"ai margini della visione\".",
+      "suggestion": "Punti scuri lampeggiano alle intersezioni che vedi con la coda dell'occhio, ma il punto che fissi resta bianco.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Monty waving welcome",
+      "italian": "Monty waving welcome",
+      "explanation": "Il testo alternativo dell'immagine è rimasto in inglese (vale anche per le altre immagini di Monty).",
+      "suggestion": "Monty che saluta per dare il benvenuto",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "a crisp white dot at every intersection",
+      "italian": "fantomatici punti scuri",
+      "explanation": "\"Fantomatici\" è poco naturale e un po' oscuro per ragazzi di 10-13 anni; meglio \"punti scuri fantasma\".",
+      "suggestion": "punti scuri fantasma",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "stamps a white dot",
+      "italian": "timbra un punto bianco",
+      "explanation": "\"Timbrare\" è poco naturale in italiano per il metodo dot/stamp.",
+      "suggestion": "disegna (stampa) un punto bianco",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "the classic version of this experiment makes the scintillation fade",
+      "italian": "la versione classica di questo esperimento fa svanire la scintillazione",
+      "explanation": "Corretto nel senso, ma \"scintillazione\" e \"lampeggio\" sono usati in modo incoerente nel testo per lo stesso effetto.",
+      "suggestion": "Usare un termine coerente, ad es. \"il lampeggio svanisce\".",
+      "part": 1
+    }
+  ]
+}

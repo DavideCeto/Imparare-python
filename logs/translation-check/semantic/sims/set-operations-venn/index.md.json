@@ -1,0 +1,37 @@
+{
+  "file": "sims/set-operations-venn/index.md",
+  "hash": "6d46a3edba33d023f1e280c8f04a384b3b7f3005f482edb31ae2026b27cc355b",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.026,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Digita due insiemi, guarda i gettoni dei membri atterrare nelle regioni giuste del diagramma di Venn, e illumina unione",
+      "italian": "Digita due insiemi, guarda i gettoni dei membri atterrare nelle regioni giuste del diagramma di Venn, e illumina unione, intersezione, differenza e differenza simmetrica.",
+      "explanation": "La virgola prima di «e» è innaturale. «Illumina» all'imperativo e «gettoni dei membri» suonano un po' forzati.",
+      "suggestion": "Digita due insiemi, guarda i gettoni degli elementi finire nelle regioni giuste del diagramma di Venn e metti in evidenza unione, intersezione, differenza e differenza simmetrica.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Upper elementary and middle school (ages 10-14), Chapter 20 (Tuples and Sets)",
+      "italian": "Scuola primaria superiore e scuola media (10-14 anni), Capitolo 20 (Tuple e insiemi)",
+      "explanation": "«Scuola primaria superiore» non è una dicitura italiana corretta. Inoltre «Tuple e insiemi» non ha l'iniziale maiuscola del titolo come il resto.",
+      "suggestion": "Ultimi anni della scuola primaria e scuola media (10-14 anni), Capitolo 20 (Tuple e Insiemi)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Type two sets, watch member chips land",
+      "italian": "gettoni dei membri",
+      "explanation": "«Membri» per gli elementi di un insieme è incoerente con «elementi» usato altrove nella sezione.",
+      "suggestion": "gettoni degli elementi",
+      "part": 1
+    }
+  ]
+}

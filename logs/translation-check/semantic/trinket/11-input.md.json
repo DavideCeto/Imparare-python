@@ -1,0 +1,55 @@
+{
+  "file": "trinket/11-input.md",
+  "hash": "7b4a6836db56e31883aa101e2fbf5a113d0ede5b1a64b0723f9aea121bb11102",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 1,
+  "cost_usd": 0.0207,
+  "issues": [
+    {
+      "severity": "critical",
+      "category": "untranslated",
+      "english": "We can prompt the user to supply a number using the input() function.",
+      "italian": "We can prompt the user to supply a number using the input() function.",
+      "explanation": "Tutta la sezione italiana è identica all'originale inglese: la prosa non è stata tradotta (titolo, paragrafi, intestazioni, esperimenti e avviso di deprecazione).",
+      "suggestion": "Tradurre in italiano: «Possiamo chiedere all'utente di inserire un numero usando la funzione input().» e analogamente tutto il resto della prosa.",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "# Getting Inputs from the User",
+      "italian": "# Getting Inputs from the User",
+      "explanation": "Il titolo della pagina è rimasto in inglese.",
+      "suggestion": "# Ricevere input dall'utente",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "## Experiments\n\n1. Write a program that will prompt the user to enter the number of shapes to draw",
+      "italian": "## Experiments\n\n1. Write a program that will prompt the user to enter the number of shapes to draw",
+      "explanation": "Gli esercizi sono rimasti in inglese e gli studenti non li capirebbero.",
+      "suggestion": "## Esperimenti; 1. Scrivi un programma che chieda all'utente il numero di forme da disegnare, la loro dimensione, il colore e l'intervallo dello schermo (da 50 a 200).",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "!!! warning \"Deprecated Lab — Trinket is shutting down\"",
+      "italian": "!!! warning \"Deprecated Lab — Trinket is shutting down\"",
+      "explanation": "Titolo e testo dell'avviso sono in inglese; solo il tipo di admonition deve restare invariato.",
+      "suggestion": "!!! warning \"Laboratorio obsoleto — Trinket sta chiudendo\" e tradurre il corpo dell'avviso.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "## Example on Trinket\n\n[Run the Input Example on Trinket]",
+      "italian": "## Example on Trinket\n\n[Run the Input Example on Trinket]",
+      "explanation": "Intestazione e testo del link non tradotti.",
+      "suggestion": "## Esempio su Trinket; [Esegui l'esempio di input su Trinket]",
+      "part": 1
+    }
+  ]
+}

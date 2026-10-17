@@ -1,0 +1,73 @@
+{
+  "file": "turtle-graphics-gallery/spirograph-drawer/index.md",
+  "hash": "4192caa5da1fd390fb3b1a6acf27b7739c00648590d19087ccc652fcd9d968e3",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0456,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Understand how changing `R`, `r`, and `d` produces completely different shapes",
+      "italian": "Capire come cambiare `R`, `r`, e `d` produce forme completamente diverse",
+      "explanation": "Virgola prima della 'e' non necessaria in italiano; la frase suona meno naturale.",
+      "suggestion": "Capire come cambiare `R`, `r` e `d` produca forme completamente diverse",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Use a list of parameter sets to create a sequence of different Spirograph patterns",
+      "italian": "Usare una lista di insiemi di parametri per creare una sequenza di diversi pattern Spirografo",
+      "explanation": "'pattern Spirografo' è un calco poco naturale; meglio 'motivi dello Spirografo'.",
+      "suggestion": "...una sequenza di diversi motivi dello Spirografo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "building up a layered display",
+      "italian": "costruendo un display stratificato",
+      "explanation": "'display stratificato' è un calco poco chiaro per ragazzi di 10-13 anni.",
+      "suggestion": "costruendo un disegno a strati",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Try to make curves that each have different numbers of loops (R/r ratio determines it).",
+      "italian": "Prova a fare curve che abbiano ognuna un numero diverso di anelli (il rapporto R/r lo determina).",
+      "explanation": "Frase un po' goffa; 'lo determina' è innaturale.",
+      "suggestion": "Prova a creare curve con un numero diverso di anelli (lo decide il rapporto R/r).",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the three curves have 3, 5, and 8 loops respectively — matching `R/r`.",
+      "italian": "le tre curve hanno rispettivamente 3, 5, e 8 anelli — corrispondendo a `R/r`.",
+      "explanation": "Gerundio 'corrispondendo a' innaturale e virgola prima di 'e'.",
+      "suggestion": "hanno rispettivamente 3, 5 e 8 anelli, in accordo con `R/r`.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "complex curves look smoother.",
+      "italian": "le curve complesse sembrano più lisciate.",
+      "explanation": "'lisciate' è inadatto; meglio 'più morbide/fluide'.",
+      "suggestion": "le curve complesse appaiono più fluide.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta 'Run' nell'interfaccia, quindi 'Esegui' non corrisponde al pulsante visibile.",
+      "suggestion": "poi clicca Run per scoprirlo!",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "file": "turtle-graphics-gallery/snowflake-arms/index.md",
+  "hash": "8abfd44fc594ad0508d597ab8ac7bb9b19096948fbba93b5b8689315061764a6",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0401,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Recognize how six-fold symmetry is built from one repeated unit",
+      "italian": "Riconoscere come la simmetria a sei pieghe è costruita da un'unità ripetuta",
+      "explanation": "Con 'come' + indicativo suona poco naturale; meglio il congiuntivo/forma impersonale. Inoltre 'a sei pieghe' è una resa letterale poco comune.",
+      "suggestion": "Riconoscere come si costruisce una simmetria a sei lati (o a sei assi) a partire da un'unica unità ripetuta",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Six identical arms radiate from the center, each with two smaller side branches",
+      "italian": "Sei bracci identici si irradiano dal centro, ognuno con due rami laterali più piccoli",
+      "explanation": "Incoerenza terminologica: 'twigs' tradotto talvolta come 'rametti' e talvolta come 'rami'/'branches'; anche 'ramo' per 'branch' nel primo obiettivo.",
+      "suggestion": "Usare 'rametti laterali' in modo coerente per twigs/side branches.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Click Run to find out!",
+      "italian": "clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta 'Run' nel laboratorio, quindi 'Esegui' non corrisponde al pulsante visibile.",
+      "suggestion": "clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to the Snowflake Arms!",
+      "italian": "Benvenuto ai Bracci del Fiocco di Neve!",
+      "explanation": "'Benvenuto a' più preposizione articolata suona un po' innaturale; meglio 'Benvenuto/a nel laboratorio'.",
+      "suggestion": "Benvenuto nei Bracci del Fiocco di Neve!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the turtle goes out, adds side branches at ±45°, and comes back",
+      "italian": "la tartaruga esce, aggiunge rami laterali a ±45°, e ritorna:",
+      "explanation": "Virgola prima di 'e' non necessaria; 'esce' è poco naturale (si allontana dal centro). Inoltre 'tartaruga' mentre la convenzione preferisce 'turtle'.",
+      "suggestion": "la turtle si allontana dal centro, aggiunge rametti laterali a ±45° e ritorna:",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "mirroring the left twig but turning right instead",
+      "italian": "rispecchiando il rametto sinistro ma girando a destra invece.",
+      "explanation": "'invece' a fine frase è un calco dall'inglese.",
+      "suggestion": "come il rametto sinistro, ma girando a destra.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "You built a six-fold symmetric snowflake from a single arm function",
+      "italian": "Hai costruito un fiocco di neve a simmetria sei pieghe da una singola funzione braccio",
+      "explanation": "Frase innaturale: 'simmetria sei pieghe' e 'funzione braccio' sono calchi.",
+      "suggestion": "Hai costruito un fiocco di neve con simmetria a sei pieghe usando una sola funzione per il braccio",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "scattering hundreds of colorful dots with `random`",
+      "italian": "disperdere centinaia di punti colorati con `random`",
+      "explanation": "'Disperdere' è poco naturale per i ragazzi; 'dots' sono pallini.",
+      "suggestion": "sparpagliare centinaia di pallini colorati con `random`",
+      "part": 1
+    }
+  ]
+}

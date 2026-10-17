@@ -1,0 +1,19 @@
+{
+  "file": "teachers-guide/prompts/06-microsim-ideas-given-to-fable-5.md",
+  "hash": "d7e5fe4fcae11608e644da42219d7552d30f6174c646befd82e49e666265fabd",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0109,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Please take the perspective of an experienced senior instructional designer.",
+      "italian": "Prendi la prospettiva di un instructional designer senior esperto.",
+      "explanation": "Calco dall'inglese: in italiano è più naturale \"Assumi la prospettiva\" o \"Mettiti nei panni\". Anche \"senior esperto\" è ridondante.",
+      "suggestion": "Mettiti nei panni di un instructional designer esperto.",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "file": "turtle-graphics-gallery/coral-branch/index.md",
+  "hash": "6fba93baa13f5d36db39c3d6eb95209382e3faa3a91af09d85d1d44077679b90",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0467,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Write a recursive function where each call spawns a *random* number of new calls",
+      "italian": "Scrivere una funzione recursiva dove ogni chiamata genera un numero *casuale* di nuove chiamate",
+      "explanation": "\"recursiva/recursive\" non è italiano corretto: l'aggettivo è \"ricorsiva/ricorsive\". Il resto del testo usa correttamente \"ricorsione\", quindi è anche incoerente.",
+      "suggestion": "Scrivere una funzione ricorsiva in cui ogni chiamata genera un numero *casuale* di nuove chiamate",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "your recursive function will roll the dice",
+      "italian": "la tua funzione recursiva tirerà i dadi a ogni ramo",
+      "explanation": "\"recursiva\" è un errore: l'aggettivo corretto è \"ricorsiva\".",
+      "suggestion": "la tua funzione ricorsiva tirerà i dadi a ogni ramo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "the number of recursive calls varies",
+      "italian": "il numero di chiamate recursive varia",
+      "explanation": "\"recursive\" va scritto \"ricorsive\".",
+      "suggestion": "il numero di chiamate ricorsive varia",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "the *arity* (number of recursive calls) random",
+      "italian": "l'*arità* (numero di chiamate recursive) casuale",
+      "explanation": "Stesso errore: \"recursive\" invece di \"ricorsive\".",
+      "suggestion": "(numero di chiamate ricorsive)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "some nodes sprout one branch",
+      "italian": "alcuni nodi fanno germinare un ramo",
+      "explanation": "\"germinare\" si riferisce ai semi; per i rami è più naturale \"spuntare\" o \"far crescere\".",
+      "suggestion": "alcuni nodi fanno spuntare un ramo, altri due, altri tre",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Recursion plus randomness equals life-like shapes",
+      "italian": "forme simili a quelle della vita",
+      "explanation": "Resa letterale e innaturale di \"life-like\".",
+      "suggestion": "forme che sembrano vive / naturali",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "If you click Run twice in a row",
+      "italian": "Se clicchi Esegui due volte di fila",
+      "explanation": "Il pulsante Run resta in inglese nell'HTML (convenzione del progetto), ma nel testo è tradotto \"Esegui\": lo studente vede \"Run\".",
+      "suggestion": "Se clicchi Run due volte di fila",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/epicycloid-star/index.md",
+  "hash": "770631f5ad182e10c88f36ceb891a0ecaec752009cb7e74b394080cffc2b8e7c",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0396,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Plot an epicycloid",
+      "italian": "Tracciare un epicicloide",
+      "explanation": "In italiano \"epicicloide\" è femminile (l'epicicloide, le epicicloidi); l'uso al maschile è scorretto, anche in \"un ipotrocoide\" (ipotrocoide è femminile) e \"Questi epicicloidi\".",
+      "suggestion": "Usare il femminile: \"Tracciare un'epicicloide\", \"un'ipotrocoide\", \"Queste epicicloidi\", \"le ipotrocoidi\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "While the Spirograph rolls a circle inside, the epicycloid rolls a circle outside!",
+      "italian": "Mentre lo Spirografo rotola un cerchio all'interno, l'epicicloide rotola un cerchio all'esterno!",
+      "explanation": "\"Rotolare\" usato in modo transitivo è innaturale in italiano.",
+      "suggestion": "\"Mentre lo Spirografo fa rotolare un cerchio all'interno, l'epicicloide ne fa rotolare uno all'esterno!\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "This happens `R/r` times per revolution.",
+      "italian": "Questo accade `R/r` volte per rivoluzione.",
+      "explanation": "\"Rivoluzione\" è un calco; in questo contesto è più naturale \"giro\".",
+      "suggestion": "\"R/r volte per giro completo\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "Hint: 100 / r = 7, so r = ?",
+      "italian": "Cambia `r = 20` per far sì che `R/r = 7`. Quale valore di `r` dà 7 cuspidi da R=100?",
+      "explanation": "Formulazione macchinosa per studenti di 10-13 anni.",
+      "suggestion": "\"Cambia `r = 20` in modo che `R/r = 7`. Quale valore di `r` dà 7 cuspidi con R=100?\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "You'll know it worked when an irregular looping shape appears.",
+      "italian": "Saprai che ha funzionato quando appare una forma ad anelli irregolare.",
+      "explanation": "Espressione poco naturale.",
+      "suggestion": "\"quando appare una forma irregolare con degli anelli\".",
+      "part": 1
+    }
+  ]
+}

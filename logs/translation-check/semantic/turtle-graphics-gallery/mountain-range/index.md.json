@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/mountain-range/index.md",
+  "hash": "474cb1c4ff43a29e971a2e8f131bf0e101346e29a13dc04e0aede95393944151",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.042,
+  "issues": [
+    {
+      "severity": "major",
+      "category": "meaning",
+      "english": "Up next: **Archimedean Spiral** — how a growing step length creates a perfect spiral.",
+      "italian": "Prossimo: **Spirale Quadrata di Archimede** — come una lunghezza di passo crescente crea una spirale perfetta.",
+      "explanation": "Il titolo della lezione successiva è stato alterato: \"Quadrata\" non c'è nell'originale.",
+      "suggestion": "Prossimo: **Spirale di Archimede** — come una lunghezza del passo crescente crea una spirale perfetta.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Use color value (dark vs light) to signal distance",
+      "italian": "Usare il valore del colore (scuro contro chiaro) per segnalare la distanza",
+      "explanation": "\"scuro contro chiaro\" è una resa letterale poco naturale.",
+      "suggestion": "(scuro o chiaro)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Layer function calls from back to front",
+      "italian": "Stratificare chiamate di funzione dal retro al fronte",
+      "explanation": "\"dal retro al fronte\" è innaturale in italiano.",
+      "suggestion": "dallo sfondo al primo piano",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "then click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta \"Run\" nel laboratorio, quindi \"Esegui\" non corrisponde al pulsante visibile.",
+      "suggestion": "poi clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "You'll know it worked when the scene looks like dusk.",
+      "italian": "Saprai che ha funzionato quando la scena sembra crepuscolare.",
+      "explanation": "Formulazione un po' forzata e \"Lavoro Bellissimo\" non è naturale.",
+      "suggestion": "quando la scena sembra al crepuscolo; titolo: \"Lavoro Splendido!\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Draw a filled blue ellipse at the bottom center",
+      "italian": "Disegna un'ellisse blu riempita al centro basso",
+      "explanation": "\"centro basso\" è poco naturale.",
+      "suggestion": "in basso al centro",
+      "part": 1
+    }
+  ]
+}

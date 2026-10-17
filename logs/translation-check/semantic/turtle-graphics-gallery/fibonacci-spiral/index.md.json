@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/fibonacci-spiral/index.md",
+  "hash": "92f701dd284a56579e6a3aa4d7186faa2da8b6dbd2458cf5723baf6f1fa1cf79",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0409,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "each arc pivoting 90° into the next",
+      "italian": "ogni arco pivota di 90° nel successivo",
+      "explanation": "\"Pivota\" è un calco poco naturale per studenti di 10-13 anni.",
+      "suggestion": "ogni arco ruota di 90° e prosegue nel successivo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "seashells, sunflowers, and pine cones",
+      "italian": "nelle conchiglie, nei girasoli, e nelle pigne",
+      "explanation": "In italiano non si usa la virgola prima della \"e\" finale (anche nell'elenco dei raggi).",
+      "suggestion": "nelle conchiglie, nei girasoli e nelle pigne",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Welcome to the Fibonacci Spiral!",
+      "italian": "Benvenuto alla Spirale di Fibonacci!",
+      "explanation": "Preposizione non idiomatica; meglio \"nella\" o \"alla\" con \"Benvenuto\" ma inoltre il maschile esclude; lieve.",
+      "suggestion": "Benvenuto nella Spirale di Fibonacci!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "which is exactly how the tiling squares fit",
+      "italian": "che è esattamente come si incastrano i quadrati della tassellatura",
+      "explanation": "Frase un po' oscura per l'età dei lettori.",
+      "suggestion": "che è esattamente il modo in cui si incastrano i quadrati che ricoprono il piano",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "has radius 220 pixels and **just fits**",
+      "italian": "ha raggio di 220 pixel ed **entra giusto giusto**",
+      "explanation": "\"ha raggio di\" è un po' impreciso; \"giusto giusto\" è colloquiale ma accettabile.",
+      "suggestion": "ha raggio 220 pixel ed **ci sta appena**",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "× 4 scale",
+      "italian": "× 4 scala",
+      "explanation": "La variabile nel codice si chiama scale; \"scala\" nel testo può confondere, e \"× 4 scala\" è innaturale.",
+      "suggestion": "(× 4 di scale = 4 pixel)",
+      "part": 1
+    }
+  ]
+}

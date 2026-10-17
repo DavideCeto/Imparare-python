@@ -1,0 +1,55 @@
+{
+  "file": "python-labs/08-color-lists.md",
+  "hash": "c7cc6d496f70e806e911a02e19ff497e0c881975a704570155b9b2c4ab3dc195",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0412,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "so the next one appears beside it without overlapping",
+      "italian": "così il successivo appare affianco senza sovrapporsi",
+      "explanation": "\"affianco\" è scorretto/colloquiale; meglio \"accanto\" o \"a fianco\". Manca anche una virgola prima di \"così\".",
+      "suggestion": "dopo ogni cerchio, così il successivo appare accanto senza sovrapporsi.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to This Lesson!",
+      "italian": "Benvenuto a Questa Lezione!",
+      "explanation": "Formula poco naturale in italiano e al maschile; meglio \"Benvenuto/a in questa lezione!\".",
+      "suggestion": "Benvenuto in questa lezione!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "What Do You Think Will Happen?",
+      "italian": "Cosa Pensi che Succederà?",
+      "explanation": "Calco dall'inglese; più naturale \"Cosa pensi che succederà?\" (senza maiuscole eccessive) o \"Cosa credi che accadrà?\".",
+      "suggestion": "Cosa pensi che succederà?",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "as the starting point",
+      "italian": "Si muove sul lato sinistro del canvas",
+      "explanation": "\"canvas\" lasciato in inglese; per studenti meglio \"area di disegno\". Inoltre \"tartaruga\" e \"turtle\" sono usati in modo misto.",
+      "suggestion": "Si sposta sul lato sinistro dell'area di disegno come punto di partenza",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Click Run",
+      "italian": "clicca Esegui",
+      "explanation": "Il pulsante resta \"Run\" nell'HTML, ma il testo dice \"Esegui\": lo studente non trova il pulsante con quel nome.",
+      "suggestion": "clicca Run",
+      "part": 1
+    }
+  ]
+}

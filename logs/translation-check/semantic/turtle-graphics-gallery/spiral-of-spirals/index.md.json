@@ -1,0 +1,46 @@
+{
+  "file": "turtle-graphics-gallery/spiral-of-spirals/index.md",
+  "hash": "c5456ebb4b9845b64fe05845934fd592470b472f14a60c744c1d286fc2c77b12",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0404,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the spirals' own size, creating a dense, tangled core",
+      "italian": "l'anello più piccolo le compatta più stretto della dimensione propria delle spirali",
+      "explanation": "Frase goffa e poco naturale in italiano.",
+      "suggestion": "l'anello più piccolo le avvicina più di quanto sia grande ciascuna spirale, creando un nucleo denso e aggrovigliato.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "Twelve small square spirals are arranged in a ring, each one rotated to face outward from the center. From a distance the whole arrangement looks like a single rotating burst.",
+      "italian": "Da lontano l'intera disposizione sembra un singolo scoppio rotante.",
+      "explanation": "\"Scoppio rotante\" e \"disposizione\" suonano innaturali per ragazzi.",
+      "suggestion": "Da lontano l'insieme sembra un'unica esplosione che ruota.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "each one starts 30 segments long and grows inward toward the center gap",
+      "italian": "ognuna inizia lunga 30 segmenti e cresce verso l'interno verso lo spazio centrale",
+      "explanation": "Ripetizione \"verso\" e frase poco chiara (anche l'originale è ambiguo).",
+      "suggestion": "ognuna è composta da 30 segmenti e cresce verso l'interno, verso lo spazio vuoto al centro.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "the rotation-around-a-circle trick from the pinwheel",
+      "italian": "il trucco della rotazione-attorno-a-un-cerchio dalla girandola",
+      "explanation": "Costruzione letterale poco scorrevole.",
+      "suggestion": "il trucco della rotazione attorno a un cerchio visto nella girandola.",
+      "part": 1
+    }
+  ]
+}

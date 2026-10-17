@@ -1,0 +1,64 @@
+{
+  "file": "python-labs/17-mouse-clicks.md",
+  "hash": "d8002da804b7cbafe93b26e4079467ec4f9c981da65ed09c82df4f25a568144f",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0455,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Change the drawing code inside `on_click` so it draws a **five-pointed star** at the click position instead.",
+      "italian": "così disegna una **stella a cinque punte** nella posizione del click invece.",
+      "explanation": "\"invece\" in fondo alla frase suona innaturale in italiano.",
+      "suggestion": "Cambia il codice di disegno dentro `on_click` in modo che disegni invece una **stella a cinque punte** nella posizione del click.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Each click draws a filled circle at exactly that spot, cycling through red, orange, green, blue, purple, and pink",
+      "italian": "scorrendo attraverso rosso, arancione, verde, blu, viola, e rosa",
+      "explanation": "Virgola prima della \"e\" non usata in italiano; \"scorrendo attraverso\" è un calco.",
+      "suggestion": "ciclando tra rosso, arancione, verde, blu, viola e rosa",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "in every button, menu, and game in the world",
+      "italian": "in ogni bottone, menu, e gioco nel mondo. Ogni click, tap, e pressione di tasto",
+      "explanation": "Virgole prima della \"e\" non corrette in italiano; \"nel mondo\" è un calco.",
+      "suggestion": "in ogni pulsante, menu e gioco del mondo. Ogni click, tap e pressione di tasto",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "This is a Python scoping trick: plain variables inside a nested function can't be updated directly",
+      "italian": "Questo è un trucco di scoping di Python: le variabili semplici dentro una funzione annidata non possono essere aggiornate direttamente",
+      "explanation": "\"scoping\" è un anglicismo poco chiaro per ragazzi; inoltre si usa \"pulsante\" per i bottoni nel resto del progetto.",
+      "suggestion": "Questo è un trucco legato all'ambito di visibilità delle variabili in Python",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "Dopo aver cliccato Esegui",
+      "italian": "Dopo aver cliccato Esegui",
+      "explanation": "Il pulsante nel laboratorio resta \"Run\", ma il testo dice \"Esegui\": incoerenza con l'interfaccia.",
+      "suggestion": "Usare **Run** come nel pulsante.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Try these changes to the click-to-draw code.",
+      "italian": "Prova questi cambiamenti al codice del click-per-disegnare.",
+      "explanation": "\"click-per-disegnare\" è un calco innaturale.",
+      "suggestion": "al codice per disegnare con il click",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "file": "sims/string-slicer/index.md",
+  "hash": "32a9c616612b0387f58abaff232e18ca23d7b8103bca6ef11f98a5345ba587ff",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0253,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Slice notation causes endless off-by-one bugs",
+      "italian": "La notazione slice causa infiniti bug di sbaglio-per-uno",
+      "explanation": "\"Sbaglio-per-uno\" è un calco poco naturale; il termine usuale è \"errore di off-by-one\" o \"errore di uno\". Inoltre \"slice\" è usato sia al femminile che come termine inglese, ma coerente.",
+      "suggestion": "La notazione slice causa infiniti errori di \"uno di troppo o di meno\" (off-by-one) perché...",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Exclusive drill: End-exclusive drill",
+      "italian": "**Esercizio fine-esclusiva**",
+      "explanation": "\"fine-esclusiva\" è innaturale e grammaticalmente poco chiaro.",
+      "suggestion": "**Esercizio sulla fine esclusa**",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Upper elementary and middle school (ages 10-14)",
+      "italian": "Scuola primaria superiore e scuola media",
+      "explanation": "\"Scuola primaria superiore\" non è una dicitura italiana corretta.",
+      "suggestion": "Ultimi anni della scuola primaria e scuola media (10-14 anni)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Solve all four New Challenge rounds",
+      "italian": "Risolvi tutti e quattro i round di Nuova Sfida",
+      "explanation": "Cambio di forma: nel resto della sezione di attività si usa la terza persona (\"gli studenti\"); l'imperativo è incoerente con l'originale (\"Solve\" è anch'esso imperativo, quindi ok) ma \"round\" è un anglicismo evitabile.",
+      "suggestion": "Risolvi tutti e quattro i turni di Nuova Sfida",
+      "part": 1
+    }
+  ]
+}

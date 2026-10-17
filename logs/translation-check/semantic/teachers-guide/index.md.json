@@ -1,0 +1,82 @@
+{
+  "file": "teachers-guide/index.md",
+  "hash": "04b4530ec5181a2eb99bbc4d72a306e5f71ceac5497e8ff61348112537ec5ce6",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.1139,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Level 5 | Fully Adaptive AI",
+      "italian": "IA Pienamente Adattiva",
+      "explanation": "Accettabile, ma non è un vero errore. Nessun problema.",
+      "suggestion": "Nessuna modifica necessaria.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "written at a Grade 5–8 reading level",
+      "italian": "scritto a un livello di lettura di quinta-ottava elementare",
+      "explanation": "Il sistema scolastico italiano non ha l'ottava elementare (le elementari arrivano alla quinta). Grade 8 corrisponde alla terza media.",
+      "suggestion": "scritto per un livello di lettura dalla quinta elementare alla terza media",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "They can be writing and running Python within 30 seconds of opening the page.",
+      "italian": "Possono essere a scrivere ed eseguire Python entro 30 secondi dall'apertura della pagina.",
+      "explanation": "Costruzione innaturale in italiano.",
+      "suggestion": "Possono scrivere ed eseguire Python entro 30 secondi dall'apertura della pagina.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Monty appears as colored callout boxes (called **admonitions**)",
+      "italian": "riquadri colorati (chiamati **ammonizioni**)",
+      "explanation": "\"Ammonizioni\" suona come rimprovero; in italiano è un calco poco naturale per admonition (riquadri/avvisi).",
+      "suggestion": "chiamati **riquadri** (admonition)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Feedback",
+      "italian": "Riscontro",
+      "explanation": "\"Riscontro\" per feedback è burocratico e poco adatto; meglio \"Feedback\" o \"Segnalazioni\".",
+      "suggestion": "Feedback / Segnalazioni e suggerimenti",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Monty appears no more than 5–6 times per chapter to avoid overuse.",
+      "italian": "Monty appare non più di 5-6 volte per capitolo per evitare l'eccesso.",
+      "explanation": "Frase poco naturale.",
+      "suggestion": "Monty appare al massimo 5-6 volte per capitolo, per non esagerare.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "A **canvas** where turtle graphics renders inline",
+      "italian": "dove la grafica turtle si rende in linea accanto al codice",
+      "explanation": "\"Si rende\" è un calco dell'inglese.",
+      "suggestion": "dove la grafica turtle viene disegnata accanto al codice",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "**Thinking** ... Monty's \"thinking\" admonitions",
+      "italian": "le ammonizioni \"pensanti\"",
+      "explanation": "\"Pensanti\" è innaturale.",
+      "suggestion": "le ammonizioni \"thinking\" (di riflessione)",
+      "part": 1
+    }
+  ]
+}

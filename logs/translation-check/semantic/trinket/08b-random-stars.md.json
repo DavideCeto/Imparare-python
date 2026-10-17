@@ -1,0 +1,46 @@
+{
+  "file": "trinket/08b-random-stars.md",
+  "hash": "c9a94430930b7579c01b74d0b40ad27f901d7048a5c2b359286edc508adbc89a",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 1,
+  "cost_usd": 0.018,
+  "issues": [
+    {
+      "severity": "critical",
+      "category": "untranslated",
+      "english": "In this exercise we will draw 5 stars of different colors:",
+      "italian": "In this exercise we will draw 5 stars of different colors:",
+      "explanation": "Tutta la prosa della sezione è rimasta in inglese: avviso di deprecazione, titoli, spiegazioni, commenti nel codice ed esperimenti. La sezione non è stata tradotta.",
+      "suggestion": "In questo esercizio disegneremo 5 stelle di colori diversi:",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "!!! warning \"Deprecated Lab — Trinket is shutting down\"",
+      "italian": "!!! warning \"Deprecated Lab — Trinket is shutting down\"",
+      "explanation": "Il titolo e il testo dell'avviso sono rimasti in inglese. Vanno tradotti, mentre il tipo di admonition (warning) e i link restano invariati.",
+      "suggestion": "!!! warning \"Laboratorio obsoleto — Trinket sta per chiudere\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "## Random Circles",
+      "italian": "## Random Circles",
+      "explanation": "I titoli delle sezioni (Random Circles, Sample Code, Experiments) non sono tradotti.",
+      "suggestion": "## Cerchi casuali / ## Codice di esempio / ## Esperimenti",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "1. Can you create a variable for the number of circles to draw?",
+      "italian": "1. Can you create a variable for the number of circles to draw?",
+      "explanation": "Gli esperimenti non sono tradotti.",
+      "suggestion": "1. Riesci a creare una variabile per il numero di cerchi da disegnare?",
+      "part": 1
+    }
+  ]
+}

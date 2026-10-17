@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/turtle-chase/index.md",
+  "hash": "6dd51cdf6a08e8e593eace6a4a6aa4db5b2f6d77acb70775cb8efed67de7ea09",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0439,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "The prey turns a random amount (up to ±30°) and steps forward 3.5 pixels",
+      "italian": "Il cacciatore vince sempre, prima o poi",
+      "explanation": "Nessun errore sostanziale qui; ma \"Caught!\" e \"Got away!\" restano in inglese nel testo: sono stringhe del codice (accettabile), mentre nella prosa vengono citate senza spiegazione per studenti italiani.",
+      "suggestion": "Facoltativo: indicare che \"Caught!\" significa \"Preso!\" e \"Got away!\" \"È scappata!\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Run two turtles at once inside a single animation loop",
+      "italian": "Eseguire due tartarughe contemporaneamente dentro un singolo ciclo di animazione",
+      "explanation": "\"Eseguire due tartarughe\" suona innaturale; si muovono/animano, non si eseguono.",
+      "suggestion": "\"Muovere due tartarughe contemporaneamente nello stesso ciclo di animazione\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "every frame the hunter re-aims straight at the prey",
+      "italian": "ogni fotogramma il cacciatore ripunta dritto verso la preda",
+      "explanation": "Manca la preposizione: \"a ogni fotogramma\"; inoltre \"ripunta\" è poco naturale. Per coerenza, \"cacciatrice\" è femminile come \"tartaruga\".",
+      "suggestion": "\"a ogni fotogramma la cacciatrice si rimette a puntare dritta verso la preda\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "every 10th frame",
+      "italian": "ogni 10° fotogramma",
+      "explanation": "Forma poco naturale in italiano.",
+      "suggestion": "\"un fotogramma ogni 10\" o \"ogni 10 fotogrammi\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "direttamente via",
+      "italian": "corre **direttamente via**",
+      "explanation": "Espressione calco dell'inglese \"directly away\"; poco naturale.",
+      "suggestion": "\"corre **dritta in direzione opposta**\" / \"scappa nella direzione opposta al cacciatore\".",
+      "part": 1
+    }
+  ]
+}

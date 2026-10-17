@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/linden-snowflakes/index.md",
+  "hash": "8c04313c57cd07fa6378ed8061a728e049b1c0f515ed38b365ac3e918055929a",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0534,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "then click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante nel laboratorio si chiama Run (i pulsanti restano in inglese), ma il testo parla di \"Esegui\": lo studente potrebbe non riconoscerlo.",
+      "suggestion": "poi clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Design your own rule.",
+      "italian": "Progetta la tua propria regola.",
+      "explanation": "\"tua propria\" è ridondante e un po' goffo.",
+      "suggestion": "Progetta una regola tutta tua.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "one program, infinite possible outputs.",
+      "italian": "un programma, infinite uscite possibili.",
+      "explanation": "\"uscite\" è un calco poco naturale di \"outputs\".",
+      "suggestion": "un programma, infiniti risultati possibili.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to the Snowflake Collection!",
+      "italian": "Benvenuto alla Collezione di Fiocchi di Neve!",
+      "explanation": "La preposizione più naturale è \"nella\".",
+      "suggestion": "Benvenuto nella Collezione di Fiocchi di Neve!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "Both F and G are draw-forward commands",
+      "italian": "Sia F sia G sono comandi avanti-disegna",
+      "explanation": "\"avanti-disegna\" è un calco poco chiaro per studenti.",
+      "suggestion": "Sia F sia G sono comandi che disegnano avanzando",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "file": "jupyter/02-setup-canvas.md",
+  "hash": "fde18eee316ad6e602f69fcecf32bf2ace6b3826506f6e1ab8ec7ba9ca253df9",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0112,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the canvas library has many powerful drawing tools",
+      "italian": "la libreria canvas ha molti strumenti di disegno potenti",
+      "explanation": "Aggettivo posposto poco naturale; meglio anteporlo o riformulare.",
+      "suggestion": "la libreria canvas ha molti potenti strumenti di disegno",
+      "part": 1
+    }
+  ]
+}

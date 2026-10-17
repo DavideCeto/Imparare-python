@@ -1,0 +1,19 @@
+{
+  "file": "trinket/05-conditionals.md",
+  "hash": "584a98fbf27d9620e15a131886e06908652e0dd1ac2b2aaffd956aa9283efb50",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 1,
+  "cost_usd": 0.0211,
+  "issues": [
+    {
+      "severity": "critical",
+      "category": "untranslated",
+      "english": "## Conditionals\n\nIn this example program we will make the turtle draw\ndifferent sides of the square using different colors.",
+      "italian": "## Conditionals\n\nIn this example program we will make the turtle draw\ndifferent sides of the square using different colors.",
+      "explanation": "L'intera sezione italiana è identica all'originale inglese: nessuna parte della prosa è stata tradotta (avviso di deprecazione, spiegazioni, titoli, domande ed esperimenti). Il front matter non è presente, ma tutta la prosa va tradotta.",
+      "suggestion": "Tradurre in italiano tutta la prosa, l'avviso di deprecazione e i titoli (es. «## Condizionali»), lasciando invariati codice, URL e nomi propri.",
+      "part": 1
+    }
+  ]
+}

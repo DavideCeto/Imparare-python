@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/stars-different-sizes/index.md",
+  "hash": "6ee173034d53b9482b16f936525fb2bcccdc1b427d38a93fb8579a871170265e",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0419,
+  "issues": [
+    {
+      "category": "grammar",
+      "severity": "minor",
+      "english": "scatter multiple stars across the canvas",
+      "italian": "Disperdere più stelle attraverso il canvas usando `random`",
+      "explanation": "\"Disperdere... attraverso il canvas\" è un calco innaturale per studenti; meglio \"sparpagliare/distribuire sul canvas\".",
+      "suggestion": "Sparpagliare più stelle sul canvas usando `random`",
+      "part": 1
+    },
+    {
+      "category": "meaning",
+      "severity": "minor",
+      "english": "which is exactly how a star point works geometrically",
+      "italian": "che è esattamente come funziona geometricamente la punta di una stella",
+      "explanation": "Frase poco chiara in italiano; il senso (è così che si forma geometricamente la stella) si perde.",
+      "suggestion": "che è esattamente il modo in cui si forma geometricamente una stella.",
+      "part": 1
+    },
+    {
+      "category": "grammar",
+      "severity": "minor",
+      "english": "Welcome to Stars of Different Sizes!",
+      "italian": "Benvenuto a Stelle di Diverse Dimensioni!",
+      "explanation": "\"Benvenuto a\" non è naturale; meglio \"Benvenuto in\" o \"Benvenuto nel laboratorio\".",
+      "suggestion": "Benvenuto in Stelle di Diverse Dimensioni!",
+      "part": 1
+    },
+    {
+      "category": "grammar",
+      "severity": "minor",
+      "english": "closing the star perfectly without any extra math",
+      "italian": "l'ultima linea fa atterrare la tartaruga di nuovo all'inizio",
+      "explanation": "Formulazione goffa e \"nessuna matematica extra\" innaturale.",
+      "suggestion": "l'ultima linea riporta la tartaruga al punto di partenza... senza bisogno di altri calcoli.",
+      "part": 1
+    },
+    {
+      "category": "untranslated",
+      "severity": "minor",
+      "english": "click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta Run nell'interfaccia, quindi \"Esegui\" non corrisponde.",
+      "suggestion": "poi clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "category": "meaning",
+      "severity": "minor",
+      "english": "Overlapping stars. Remove `random.seed(7)` ... no two runs look the same.",
+      "italian": "Saprai che ha funzionato quando due esecuzioni non si assomigliano mai.",
+      "explanation": "Formulazione ambigua rispetto a \"no two runs look the same\".",
+      "suggestion": "quando nessuna coppia di esecuzioni è uguale.",
+      "part": 1
+    }
+  ]
+}

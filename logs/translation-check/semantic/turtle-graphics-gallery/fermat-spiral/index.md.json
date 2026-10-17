@@ -1,0 +1,73 @@
+{
+  "file": "turtle-graphics-gallery/fermat-spiral/index.md",
+  "hash": "9d45a61b4300ab0eb7cf9decf3422e2e5c2fab3f6ff9fa61f1878af420ee7a99",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0397,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "so each new ring is packed a little tighter",
+      "italian": "ogni nuovo anello è impacchettato un po' più stretto del precedente",
+      "explanation": "Calco dall'inglese ('packed'); poco naturale per ragazzi.",
+      "suggestion": "ogni nuovo anello è un po' più stretto (più vicino al precedente)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Were you right?",
+      "italian": "Avevi indovinato?",
+      "explanation": "Corretto, ma nessun problema reale.",
+      "suggestion": "Nessuna modifica.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Add **one list entry** so the royalblue *minus* arm appears too.",
+      "italian": "così appaia anche il braccio blu *meno*",
+      "explanation": "Congiuntivo 'appaia' corretto ma 'cosi' + registro; inoltre 'braccio cremisi' per crimson ok. Scorrevolezza migliorabile.",
+      "suggestion": "così compare anche il braccio blu *meno*",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "The `±`: sign `+1` and sign `-1` give the two mirrored arms",
+      "italian": "il segno `+1` e il segno `-1` danno le due braccia speculari",
+      "explanation": "'braccia' è plurale femminile di 'braccio' (arti) ma per spirali si usa 'bracci'; incoerente anche col singolare.",
+      "suggestion": "i due bracci speculari / due bracci",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "a negative `r` lands 180° across the origin",
+      "italian": "un `r` negativo atterra a 180° oltre l'origine",
+      "explanation": "'atterra' è un calco poco chiaro.",
+      "suggestion": "un `r` negativo cade dal lato opposto, a 180° rispetto all'origine",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the gaps *widen* outward",
+      "italian": "i divari si *allargano*",
+      "explanation": "'divari' non è naturale per indicare gli spazi tra anelli.",
+      "suggestion": "gli spazi tra gli anelli si *allargano*",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Wind farther out.",
+      "italian": "Avvolgiti più lontano.",
+      "explanation": "Riflessivo non naturale: è la spirale a essere avvolta.",
+      "suggestion": "Avvolgi più giri.",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "file": "python-labs/02-simple-square.md",
+  "hash": "675f3419feb261e5e5a542f0df0c05230328e4961123315d311b5d24c23dc812",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0388,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "exactly the angle at each corner of a square",
+      "italian": "esattamente l'angolo a ogni angolo di un quadrato",
+      "explanation": "Ripetizione di «angolo» poco naturale.",
+      "suggestion": "esattamente l'angolo di ogni vertice (o «in ogni angolo») di un quadrato",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Each corner of an equilateral triangle turns 120 degrees.",
+      "italian": "Ogni angolo di un triangolo equilatero gira di 120 gradi.",
+      "explanation": "Un angolo non «gira»; è la tartaruga che gira a ogni vertice.",
+      "suggestion": "A ogni vertice di un triangolo equilatero la tartaruga gira di 120 gradi.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Before you click Run",
+      "italian": "Prima di cliccare Esegui",
+      "explanation": "Il pulsante resta Run nell'HTML, quindi il testo non corrisponde al pulsante visibile.",
+      "suggestion": "Prima di cliccare Run",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "click **Run** to see Monty draw",
+      "italian": "clicca **Esegui** per vedere",
+      "explanation": "Il pulsante resta Run, quindi il testo non corrisponde al pulsante visibile.",
+      "suggestion": "clicca **Run**",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Common Mistake: Wrong Turn Angle",
+      "italian": "Errore Comune: Angolo di Svolta Sbagliato",
+      "explanation": "Per la tartaruga «angolo di rotazione» suona più naturale di «svolta».",
+      "suggestion": "Angolo di Rotazione Sbagliato",
+      "part": 1
+    }
+  ]
+}

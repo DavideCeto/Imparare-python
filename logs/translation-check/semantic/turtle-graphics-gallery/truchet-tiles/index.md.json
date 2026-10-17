@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/truchet-tiles/index.md",
+  "hash": "4727c9faad749c319ec0415bc8e6d6547099bb9541818c9603a88cf76293353e",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0419,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "form continuous winding paths",
+      "italian": "formano percorsi continui avvolgenti",
+      "explanation": "Formulazione innaturale in italiano.",
+      "suggestion": "formano percorsi continui e sinuosi",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the random placement forms wandering river-like paths",
+      "italian": "forma percorsi simili a fiumi vaganti che si avvolgono attraverso tutto il canvas",
+      "explanation": "Frase poco naturale.",
+      "suggestion": "forma percorsi simili a fiumi che serpeggiano su tutto il canvas",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Position turtle to start arc from the correct corner",
+      "italian": "Posiziona la tartaruga per iniziare l'arco dall'angolo corretto",
+      "explanation": "\"tartaruga\" è incoerente con la convenzione di usare \"turtle\" nel resto del testo.",
+      "suggestion": "Usa \"la turtle\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Welcome to Truchet Tiles!",
+      "italian": "Benvenuto alle Piastrelle di Truchet!",
+      "explanation": "\"Benvenuto a\" è più corretto; \"tessera\" e \"piastrella\" alternano nel testo.",
+      "suggestion": "Benvenuto alle Piastrelle di Truchet (o \"Benvenuto nel mondo delle...\")",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "then click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta Run nell'interfaccia; \"Esegui\" non corrisponde al pulsante visibile.",
+      "suggestion": "clicca Run",
+      "part": 1
+    }
+  ]
+}

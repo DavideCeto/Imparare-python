@@ -1,0 +1,55 @@
+{
+  "file": "trinket/07-flower.md",
+  "hash": "376fa47327c6718a4a1f4fec36c8a1fdfe86fef29129418c01af0b037fd33601",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 1,
+  "cost_usd": 0.0227,
+  "issues": [
+    {
+      "severity": "critical",
+      "category": "untranslated",
+      "english": "Now we will create a new function that will draw a triangle for each side.",
+      "italian": "Now we will create a new function that will draw a triangle for each side.",
+      "explanation": "L'intera prosa della sezione è rimasta in inglese: titoli, spiegazione, istruzioni ed esperimenti non sono tradotti.",
+      "suggestion": "Tradurre tutto il testo: «Ora creeremo una nuova funzione che disegna un triangolo per ogni lato. Andrà avanti e a destra tre volte con un angolo di 120 gradi...»",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "!!! warning \"Deprecated Lab — Trinket is shutting down\"",
+      "italian": "!!! warning \"Deprecated Lab — Trinket is shutting down\"",
+      "explanation": "Il titolo e il testo dell'avviso (admonition) sono rimasti in inglese.",
+      "suggestion": "!!! warning \"Laboratorio obsoleto — Trinket chiude\" e tradurre il corpo dell'avviso.",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "## Run the Example on Trinket\n\n[Run the Flower Example on Trinket]",
+      "italian": "## Run the Example on Trinket\n\n[Run the Flower Example on Trinket]",
+      "explanation": "Titoli delle sezioni e testo del link non sono tradotti (Sample Code, Drawing, Experiments, Flower).",
+      "suggestion": "Usare «Esegui l'esempio su Trinket», «Codice di esempio», «Disegno», «Esperimenti», «Fiore».",
+      "part": 1
+    },
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "Can you change the number of petals?  Why is this problem harder?  What assumptions did the original author of the program make?",
+      "italian": "Can you change the number of petals?  Why is this problem harder?  What assumptions did the original author of the program make?",
+      "explanation": "Le domande degli esperimenti sono in inglese; gli studenti non le comprenderebbero.",
+      "suggestion": "«Riesci a cambiare il numero di petali? Perché questo problema è più difficile? Quali ipotesi ha fatto l'autore originale del programma?»",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "dan.write('done with flower')",
+      "italian": "dan.write('done with flower')",
+      "explanation": "Il commento e la stringa nel codice (es. «# draw a triangle and fill in the color») potrebbero essere tradotti.",
+      "suggestion": "dan.write('fiore finito') e commenti in italiano.",
+      "part": 1
+    }
+  ]
+}

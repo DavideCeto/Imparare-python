@@ -1,0 +1,28 @@
+{
+  "file": "teachers-guide/prompts/02-course-description.md",
+  "hash": "3c0807e5093ddbf132ce06017a015685f594ee683e32e9fffc9827f3884b5537",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0129,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "a class using block programming (scratch)",
+      "italian": "una classe che usa la programmazione a blocchi (scratch)",
+      "explanation": "\"È progettato\" si riferisce a \"corso\" ma la frase è ambigua; inoltre \"classe\" qui è un po' ambiguo (corso/lezione).",
+      "suggestion": "Usare \"un corso che usa la programmazione a blocchi (Scratch)\" e \"Dovrebbe essere un corso divertente\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "leverages the built-in inline Skulpt programming tools",
+      "italian": "sfrutta gli strumenti di programmazione Skulpt incorporati in linea",
+      "explanation": "\"in linea\" è un calco poco naturale di \"inline\".",
+      "suggestion": "\"gli strumenti di programmazione Skulpt integrati direttamente nelle pagine\".",
+      "part": 1
+    }
+  ]
+}

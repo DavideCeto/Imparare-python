@@ -1,0 +1,55 @@
+{
+  "file": "sims/unit-circle-radians/index.md",
+  "hash": "b5c414837ab4729701df768c4ef03dc1545edc5127243b0b75b9acfff45c29c8",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0255,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Upper elementary and middle school (ages 10-14)",
+      "italian": "Scuola primaria superiore e scuola media (10-14 anni)",
+      "explanation": "\"Scuola primaria superiore\" non è un termine corretto in italiano.",
+      "suggestion": "\"Ultimi anni della scuola primaria e scuola secondaria di primo grado (10-14 anni)\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Students meet angles twice in this book, speaking two languages",
+      "italian": "Gli studenti incontrano gli angoli due volte in questo libro, parlando due lingue",
+      "explanation": "Il participio \"parlando\" suggerisce che siano gli studenti a parlare, mentre sono gli angoli a usare due \"lingue\".",
+      "suggestion": "\"...due volte in questo libro, e ogni volta con una lingua diversa\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "This sim anchors the conversion spatially.",
+      "italian": "Questa simulazione ancora la conversione nello spazio.",
+      "explanation": "Resa letterale e poco naturale per studenti di 10-13 anni.",
+      "suggestion": "\"Questa simulazione ti aiuta a visualizzare la conversione nello spazio.\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "(about 3.14)",
+      "italian": "(circa 3.14)",
+      "explanation": "In italiano il separatore decimale è la virgola. Nei valori mostrati dalla sim (0.50π) può restare il punto.",
+      "suggestion": "\"circa 3,14\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Embed Code",
+      "italian": "Codice di Incorporamento Iframe",
+      "explanation": "\"Incorporamento\" è poco usato, mentre \"incorporare\" è più comune.",
+      "suggestion": "\"Codice per incorporare l'Iframe\".",
+      "part": 1
+    }
+  ]
+}

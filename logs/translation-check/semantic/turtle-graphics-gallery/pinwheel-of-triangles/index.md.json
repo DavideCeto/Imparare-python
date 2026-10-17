@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/pinwheel-of-triangles/index.md",
+  "hash": "a6c8488201bf8969b378288a02d7971d0ea7b3320873b0d7e56950bb758c34f9",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0432,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Monty waving welcome",
+      "italian": "Monty waving welcome",
+      "explanation": "Il testo alternativo dell'immagine è rimasto in inglese (vale anche per le altre immagini della mascotte).",
+      "suggestion": "Monty che saluta per dare il benvenuto",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "once per triangle blade",
+      "italian": "una per ogni pala del triangolo",
+      "explanation": "Ogni pala è un triangolo, non una pala 'del' triangolo: il senso è leggermente distorto.",
+      "suggestion": "una per ogni pala (triangolo)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the turtle lands *exactly* back at the center facing the original direction",
+      "italian": "la tartaruga atterra *esattamente* al centro rivolta nella direzione originale",
+      "explanation": "'Atterra' è un calco innaturale; inoltre 'tartaruga' è incoerente con 'la turtle' usato altrove.",
+      "suggestion": "la tartaruga torna *esattamente* al centro, rivolta nella direzione di partenza",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Hai usato la formula `360 / n`, cicli annidati, e forme riempite",
+      "italian": "Hai usato la formula `360 / n`, cicli annidati, e forme riempite",
+      "explanation": "In italiano non si mette la virgola prima di 'e' in un elenco (vale anche per 'quadrati, pentagoni, o esagoni').",
+      "suggestion": "Hai usato la formula `360 / n`, i cicli annidati e le forme riempite",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "so the next blade fans outward",
+      "italian": "dopo ogni triangolo completo così la pala successiva si apre verso l'esterno",
+      "explanation": "Manca una virgola prima di 'così'; la frase risulta poco scorrevole.",
+      "suggestion": "dopo ogni triangolo completo, così la pala successiva si apre verso l'esterno",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "click Run",
+      "italian": "clicca Esegui",
+      "explanation": "Il pulsante resta 'Run' nell'interfaccia, quindi il testo non corrisponde.",
+      "suggestion": "clicca Run",
+      "part": 1
+    }
+  ]
+}

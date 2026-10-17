@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/lightning-bolt/index.md",
+  "hash": "bbe7f0b9c334fb7facb7d67621fd8fff039c282901cb41906209dafd43b9f8e5",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0421,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "At each depth, the displacement shrinks, creating self-similar jaggedness.",
+      "italian": "A ogni profondità, lo spostamento si restringe, creando una frastagliatezza auto-simile.",
+      "explanation": "Nel codice lo spostamento è proporzionale alla lunghezza del segmento, che si dimezza a ogni livello. \"Si restringe\" è poco naturale e \"auto-simile\" è un calco.",
+      "suggestion": "\"A ogni livello lo spostamento diventa più piccolo, creando una frastagliatura che si ripete a scale diverse.\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "code",
+      "english": "Multiplying by `0.3` limits displacement",
+      "italian": "Moltiplicare per `0,3` limita lo spostamento",
+      "explanation": "Nel codice inline il numero è stato scritto con la virgola, ma nel codice è 0.3. Inoltre nelle istruzioni degli esperimenti si usa 0.3.",
+      "suggestion": "Usare `0.3` come nel codice.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Benvenuto al Fulmine",
+      "italian": "Benvenuto al Fulmine!",
+      "explanation": "La preposizione è poco naturale: in italiano si dice \"Benvenuto nel laboratorio del Fulmine\".",
+      "suggestion": "\"Benvenuto nel laboratorio del Fulmine!\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "Understand how branching recursion creates natural-looking electricity shapes",
+      "italian": "Capire come la ricorsione ramificata crea forme simili all'elettricità in natura",
+      "explanation": "Frase innaturale: \"forme simili all'elettricità in natura\" è goffa.",
+      "suggestion": "\"Capire come la ricorsione con ramificazioni crea forme dall'aspetto naturale, simili ai fulmini\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "| `mx, my = midpoint` | Find the midpoint to displace |",
+      "italian": "| `mx, my = midpoint` | Trova il punto medio da spostare |",
+      "explanation": "Il pulsante \"Esegui\" nel testo non corrisponde al pulsante \"Run\" nel laboratorio, che resta in inglese per convenzione.",
+      "suggestion": "Scrivere \"clicca Run\" invece di \"clicca Esegui\".",
+      "part": 1
+    }
+  ]
+}

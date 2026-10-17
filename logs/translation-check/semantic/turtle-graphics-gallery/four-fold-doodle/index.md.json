@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/four-fold-doodle/index.md",
+  "hash": "52ca4e4a330d8dcd3725e061c50c5be92f9666cf1bee5543fb9c8395f4247f6b",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0396,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Six-fold symmetry.",
+      "italian": "Simmetria a sei pieghe.",
+      "explanation": "Incoerente con il titolo 'Simmetria Quadrupla' e 'Simmetria Sestupla' usati altrove; 'a pieghe' suona poco naturale.",
+      "suggestion": "Simmetria sestupla.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "at 90°, 180°, and 270° rotations",
+      "italian": "rotazioni di 90°, 180°, e 270°",
+      "explanation": "In italiano non si mette la virgola prima di 'e'.",
+      "suggestion": "rotazioni di 90°, 180° e 270°",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "One quadrant of a geometric doodle is recorded",
+      "italian": "Un quadrante di uno scarabocchio geometrico è registrato",
+      "explanation": "Forma passiva poco naturale.",
+      "suggestion": "Si registra un quadrante di uno scarabocchio geometrico, poi lo si riproduce...",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "will form one symmetric pattern",
+      "italian": "formeranno un pattern simmetrico",
+      "explanation": "'Pattern' lasciato in inglese; più chiaro per ragazzi usare 'schema' o 'motivo'.",
+      "suggestion": "un motivo simmetrico",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "Spacchetta ogni movimento registrato",
+      "italian": "Spacchetta ogni movimento registrato",
+      "explanation": "'Spacchetta' è un po' colloquiale per 'unpack'; accettabile ma 'scompatta' è più usato.",
+      "suggestion": "Scompatta ogni movimento registrato in cmd e val",
+      "part": 1
+    }
+  ]
+}

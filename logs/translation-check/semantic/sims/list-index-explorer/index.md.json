@@ -1,0 +1,46 @@
+{
+  "file": "sims/list-index-explorer/index.md",
+  "hash": "d388393f84b3f6ae09cfbf0053a9039a455c8b25bb758d01a4a8ce19d3f247f9",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0247,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Upper elementary and middle school (ages 10-14)",
+      "italian": "Scuola primaria superiore e scuola media (10-14 anni)",
+      "explanation": "\"Scuola primaria superiore\" non è un termine italiano standard; è un calco poco naturale.",
+      "suggestion": "Ultimi anni della scuola primaria e scuola secondaria di primo grado (10-14 anni)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "`append()` grows the end, `insert(1, ...)` squeezes in",
+      "italian": "`append()` allunga la fine, `insert(1, ...)` si incunea dentro",
+      "explanation": "\"allunga la fine\" e \"si incunea dentro\" sono formulazioni goffe in italiano.",
+      "suggestion": "`append()` allunga la lista in fondo, `insert(1, ...)` si infila nel mezzo",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "then `pop()` back down",
+      "italian": "poi fai `pop()` all'indietro",
+      "explanation": "\"all'indietro\" non rende bene \"back down\" (svuotare riducendo la lista).",
+      "suggestion": "poi usa `pop()` per farla tornare piccola",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Compare the String Test error with the list behavior; students write",
+      "italian": "Confronta l'errore del Test Stringa con il comportamento della lista; gli studenti scrivono",
+      "explanation": "Incoerenza: imperativo 'Confronta' seguito da terza persona plurale.",
+      "suggestion": "Gli studenti confrontano l'errore del Test Stringa con il comportamento della lista e scrivono",
+      "part": 1
+    }
+  ]
+}

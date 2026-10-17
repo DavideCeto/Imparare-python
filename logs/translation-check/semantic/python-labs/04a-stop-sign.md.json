@@ -1,0 +1,64 @@
+{
+  "file": "python-labs/04a-stop-sign.md",
+  "hash": "11b264454adedc50f113db354b36764762480057a6b52588cd6d3cda373bccdb",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0428,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Click Run / click **Run**",
+      "italian": "poi clicca Esegui!",
+      "explanation": "Il pulsante Run resta in inglese nell'interfaccia (convenzione del progetto), ma il testo italiano lo chiama «Esegui», quindi non corrisponde al pulsante reale.",
+      "suggestion": "Usare «Run» come nel pulsante: «poi clicca Run!» e «clicca **Run**».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the angle for one corner",
+      "italian": "l'angolo per un angolo",
+      "explanation": "Ripetizione goffa di «angolo» e ambiguità.",
+      "suggestion": "«l'angolo di svolta per un vertice».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the size, and number of sides",
+      "italian": "la dimensione, e il numero di lati",
+      "explanation": "Virgola inappropriata prima della «e» in italiano (anche in altri punti dell'elenco).",
+      "suggestion": "«la dimensione e il numero di lati».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "with your own word",
+      "italian": "con la tua propria parola",
+      "explanation": "Espressione innaturale.",
+      "suggestion": "«con una parola a tua scelta».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "in just a few lines",
+      "italian": "in solo poche righe",
+      "explanation": "Forma innaturale.",
+      "suggestion": "«in sole poche righe» oppure «in poche righe».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to This Lesson!",
+      "italian": "Benvenuto a Questa Lezione!",
+      "explanation": "Preposizione non idiomatica; inoltre il maschile esclude parte dei lettori.",
+      "suggestion": "«Benvenuto in questa lezione!»",
+      "part": 1
+    }
+  ]
+}

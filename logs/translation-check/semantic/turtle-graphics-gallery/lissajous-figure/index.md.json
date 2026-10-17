@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/lissajous-figure/index.md",
+  "hash": "3a38b0124c1a8dc737da87623124ec9b567e762dad921d97612e3988ff33496d",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0392,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante nel laboratorio resta \"Run\" (convenzione del progetto), ma il testo dice \"Esegui\": il pulsante non corrisponde.",
+      "suggestion": "Usare \"Run\": \"poi clicca Run per scoprirlo!\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "the figure should have `a` loops in one direction and `b` in the other.",
+      "italian": "la figura dovrebbe avere `a` anelli in una direzione e `b` nell'altra.",
+      "explanation": "Resa fedele all'originale, ma l'affermazione tecnica dell'originale (incroci = a × b, 3×2=6) è imprecisa; non è un errore di traduzione. Nessuna correzione necessaria.",
+      "suggestion": "Nessuna modifica.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to Lissajous Figures!",
+      "italian": "Benvenuto alle Figure di Lissajous!",
+      "explanation": "Preposizione poco naturale in italiano.",
+      "suggestion": "\"Benvenuto tra le Figure di Lissajous!\" o \"Benvenuto nel mondo delle Figure di Lissajous!\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "They show up in physics, music, and even logo designs!",
+      "italian": "nei design dei loghi",
+      "explanation": "\"design dei loghi\" è un anglicismo poco naturale.",
+      "suggestion": "\"nei disegni dei loghi\" o \"nella progettazione di loghi\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Moving the turtle to `(x, y)` traces out the figure.",
+      "italian": "Muovere la tartaruga a `(x, y)`",
+      "explanation": "Si usa \"tartaruga\" mentre la convenzione preferisce \"turtle\"; inoltre \"a\" andrebbe \"in\".",
+      "suggestion": "\"Muovere la turtle in `(x, y)` traccia la figura.\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "it'll precess slowly",
+      "italian": "precederà lentamente",
+      "explanation": "\"Precedere\" significa altro; il termine corretto è \"precedere\" → \"precessione\" (ruoterà lentamente).",
+      "suggestion": "\"ruoterà lentamente (precessione)\"",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/ripple-waves/index.md",
+  "hash": "ab99fa298e32c6024c7fff6e9894759b20bd9090a77d5f6427250367dacd167e",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0391,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "`goto(cx, cy - r)` moves to the bottom of each circle",
+      "italian": "`goto(cx, cy - r)` si muove al fondo di ogni cerchio",
+      "explanation": "\"Si muove al fondo\" è poco naturale; meglio \"va in basso nel cerchio / nel punto più basso\".",
+      "suggestion": "`goto(cx, cy - r)` si sposta nel punto più basso di ogni cerchio prima di disegnarlo.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Position turtle at bottom of circle",
+      "italian": "Posiziona la tartaruga al fondo del cerchio",
+      "explanation": "\"Tartaruga\" è incoerente con la convenzione di lasciare \"turtle\"; inoltre \"al fondo\" è poco naturale.",
+      "suggestion": "Posiziona la turtle nel punto più basso del cerchio",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Draw concentric ellipses to simulate water ripples",
+      "italian": "Disegnare ellissi concentriche per simulare increspature d'acqua",
+      "explanation": "Traduzione fedele all'originale (che dice ellissi ma il codice disegna cerchi); nulla da correggere se si vuole fedeltà, ma si potrebbe segnalare l'incoerenza originale.",
+      "suggestion": "Eventualmente usare \"cerchi concentrici\", coerente con il codice.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Make your guess — then click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta Run nell'HTML, ma il testo dice \"Esegui\": incoerenza con l'interfaccia.",
+      "suggestion": "poi clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Where will it overlap most with the existing rings?",
+      "italian": "Dove si sovrapporrà di più con gli anelli esistenti?",
+      "explanation": "Il soggetto è ambiguo (la quarta increspatura); riformulabile per chiarezza.",
+      "suggestion": "Dove la quarta increspatura si sovrapporrà di più agli anelli esistenti?",
+      "part": 1
+    }
+  ]
+}

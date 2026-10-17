@@ -1,0 +1,55 @@
+{
+  "file": "teachers-guide/run-pause-buttons.md",
+  "hash": "17e3d4273b9b3fe7cb778092fee3a6c24f3dda76e5c380c6761e210062a9df25",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0288,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Runs the code in the editor",
+      "italian": "Cosa fa il click",
+      "explanation": "\"Click\" usato come sostantivo con \"il click\" è accettabile, ma più naturale \"Cosa succede cliccando\".",
+      "suggestion": "\"Cosa succede se clicchi\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "long-running fractals and tilings can be frozen mid-draw",
+      "italian": "frattali e tassellature a lunga esecuzione possono essere bloccati a metà disegno così la classe può discutere il pattern",
+      "explanation": "\"a lunga esecuzione\" è calco poco naturale; \"così la classe\" è colloquiale ma ok. Meglio \"che richiedono molto tempo\".",
+      "suggestion": "\"frattali e tassellature che impiegano molto tempo possono essere bloccati a metà disegno, così la classe può discutere il motivo\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Pause/resume comes from debuggers and simulation tools — it exists because the drawing itself is worth stopping to look at.",
+      "italian": "esiste perché il disegno stesso vale la pena di essere fermato per essere osservato.",
+      "explanation": "Frase contorta e poco naturale.",
+      "suggestion": "\"esiste perché vale la pena fermare il disegno per osservarlo.\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "Python cannot swap new source code into a live program",
+      "italian": "perché Python non può scambiare nuovo codice sorgente dentro un programma attivo",
+      "explanation": "\"scambiare\" per \"swap\" è poco naturale; meglio \"sostituire\" o \"inserire\".",
+      "suggestion": "\"non può sostituire il codice sorgente di un programma già in esecuzione\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "why can't Python push your edit into the running program?",
+      "italian": "perché Python non può spingere la tua modifica nel programma in esecuzione?",
+      "explanation": "\"spingere\" è calco letterale.",
+      "suggestion": "\"inserire la tua modifica\"",
+      "part": 1
+    }
+  ]
+}

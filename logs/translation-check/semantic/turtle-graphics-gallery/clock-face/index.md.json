@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/clock-face/index.md",
+  "hash": "ad6b148e63a396e56b468af740d0867e43c29a1c4ae80a982913947e8ca5221d",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0474,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Convert hours, minutes, and seconds into angles for clock hands",
+      "italian": "Convertire ore, minuti, e secondi in angoli",
+      "explanation": "In italiano non si usa la virgola prima della «e» finale in un elenco (anche in altri punti).",
+      "suggestion": "Convertire ore, minuti e secondi in angoli per le lancette dell'orologio",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "the hour hand between 10 and 11 (already past the 10)",
+      "italian": "già passata le 10",
+      "explanation": "Errore di concordanza: «passata le 10» è scorretto.",
+      "suggestion": "già oltre le 10",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to the Clock Face!",
+      "italian": "Benvenuto al Quadrante dell'Orologio!",
+      "explanation": "Preposizione poco naturale.",
+      "suggestion": "Benvenuto nel Quadrante dell'Orologio!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "interactive spirograph with changing parameters",
+      "italian": "spirografo interattivo con parametri cambianti",
+      "explanation": "«Cambianti» è innaturale.",
+      "suggestion": "con parametri modificabili",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Click Run!",
+      "italian": "clicca Esegui!",
+      "explanation": "I pulsanti Run/Reset restano in inglese nell'interfaccia, quindi il testo dovrebbe corrispondere.",
+      "suggestion": "clicca Run!",
+      "part": 1
+    }
+  ]
+}

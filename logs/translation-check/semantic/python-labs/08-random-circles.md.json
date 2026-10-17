@@ -1,0 +1,55 @@
+{
+  "file": "python-labs/08-random-circles.md",
+  "hash": "9e1a8cf45e5a6ee75e3a2e3c7c6a389c332c68bedd3133f8e5d41207268269ba",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0416,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "picks a random whole number in that range each time it runs!",
+      "italian": "scegli un numero intero casuale",
+      "explanation": "Verbo alla seconda persona invece della terza (soggetto: randint). Inoltre \"gira\" per \"runs\" è un po' colloquiale.",
+      "suggestion": "scegli → sceglie; \"ogni volta che viene eseguita\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Each time this line runs, `x` gets a different value",
+      "italian": "Ogni volta che questa riga gira, `x` ottiene un valore diverso",
+      "explanation": "\"gira\" e \"ottiene\" sono calchi dall'inglese e suonano innaturali.",
+      "suggestion": "Ogni volta che questa riga viene eseguita, `x` riceve un valore diverso",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "so the circles appear quickly instead of crawling into place",
+      "italian": "così i cerchi appaiono velocemente invece di muoversi lentamente in posizione",
+      "explanation": "Frase un po' goffa.",
+      "suggestion": "così i cerchi appaiono subito invece di formarsi lentamente",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "click Run twice",
+      "italian": "clicca Esegui due volte",
+      "explanation": "Il pulsante Run è mantenuto in inglese nel codice HTML, quindi il testo traduce un'etichetta che lo studente vedrà come \"Run\".",
+      "suggestion": "clicca Run due volte (e così nel resto del testo)",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to This Lesson!",
+      "italian": "Benvenuto a Questa Lezione!",
+      "explanation": "Preposizione non naturale; inoltre \"Benvenuto\" è solo maschile.",
+      "suggestion": "Benvenuto nella lezione!",
+      "part": 1
+    }
+  ]
+}

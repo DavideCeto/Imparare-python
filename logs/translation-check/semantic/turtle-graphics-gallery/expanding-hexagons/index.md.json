@@ -1,0 +1,37 @@
+{
+  "file": "turtle-graphics-gallery/expanding-hexagons/index.md",
+  "hash": "e3bc83d7515c0d5cb12848339920f8e6be27f178f0770f0730601d487de78859",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0409,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "then click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante nel laboratorio resta \"Run\", ma il testo dice \"Esegui\". Lo studente potrebbe non riconoscere il pulsante.",
+      "suggestion": "poi clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "the alternating rotation and color gradient create a strong sense of depth",
+      "italian": "la rotazione alterna e il gradiente di colore creano un forte senso di profondità",
+      "explanation": "\"alterna\" si legge come verbo. Qui serve il participio aggettivale.",
+      "suggestion": "la rotazione alternata e il gradiente di colore creano un forte senso di profondità",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "math, color, and repetition can fool the visual system",
+      "italian": "la matematica, il colore, e la ripetizione possono ingannare",
+      "explanation": "In italiano non si mette la virgola prima della \"e\" in un elenco.",
+      "suggestion": "la matematica, il colore e la ripetizione possono ingannare il sistema visivo",
+      "part": 1
+    }
+  ]
+}

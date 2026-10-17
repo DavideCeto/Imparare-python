@@ -1,0 +1,56 @@
+{
+  "file": "turtle-graphics-gallery/checkerboard-grid/index.md",
+  "hash": "58f79536ca487ebf855eac0001a1270c6f23e61c7d01f33263e9fe0e00eb78ef",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0344,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "`(row + col) % 2` is `0` on even squares and `1` on odd squares",
+      "italian": "è `0` sui quadrati pari e `1` sui quadrati dispari",
+      "explanation": "In italiano non è chiaro cosa significhi «quadrati pari»: la parità riguarda la somma row + col, non il quadrato.",
+      "suggestion": "Scrivi «è `0` quando la somma è pari e `1` quando è dispari».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "click Run to check!",
+      "italian": "clicca Esegui per controllare!",
+      "explanation": "Il pulsante nel laboratorio resta «Run» (convenzione del progetto), quindi «Esegui» non corrisponde all'etichetta reale.",
+      "suggestion": "Usa «clicca Run per controllare!».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Scegliere un colore in base a se `row + col` è pari o dispari",
+      "italian": "Scegliere un colore in base a se `row + col` è pari o dispari",
+      "explanation": "«in base a se» è una costruzione innaturale.",
+      "suggestion": "«in base al fatto che `row + col` sia pari o dispari».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "modulo-based color selection",
+      "italian": "scelta del colore basata sul modulo",
+      "explanation": "In italiano si dice «resto» o «operatore modulo»; «il modulo» da solo è ambiguo.",
+      "suggestion": "«scelta del colore basata sull'operatore modulo (%)».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "You mastered nested loops, coordinate arithmetic, and modulo-based color selection",
+      "italian": "Hai padroneggiato cicli annidati, aritmetica delle coordinate, e scelta",
+      "italian_note": "",
+      "explanation": "Virgola prima di «e» non necessaria; mancano gli articoli.",
+      "suggestion": "«Hai padroneggiato i cicli annidati, l'aritmetica delle coordinate e la scelta del colore…».",
+      "part": 1
+    }
+  ]
+}

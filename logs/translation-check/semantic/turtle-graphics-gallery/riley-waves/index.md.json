@@ -1,0 +1,55 @@
+{
+  "file": "turtle-graphics-gallery/riley-waves/index.md",
+  "hash": "88be89dd84cc694517e599ab151e2a18f73d55109674e5d8730b9320c369dd2d",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0398,
+  "issues": [
+    {
+      "category": "meaning",
+      "severity": "minor",
+      "english": "largest in the center, tapering toward the edges",
+      "italian": "massima al centro, che si assottiglia verso i bordi",
+      "explanation": "\"Si assottiglia\" è un calco poco naturale per l'ampiezza; meglio \"diminuisce\".",
+      "suggestion": "massima al centro, e sempre più piccola verso i bordi",
+      "part": 1
+    },
+    {
+      "category": "terminology",
+      "severity": "minor",
+      "english": "Each curve has the same x-frequency.",
+      "italian": "Ogni curva ha la stessa frequenza x.",
+      "explanation": "Calco poco naturale, poco chiaro per studenti di 10-13 anni.",
+      "suggestion": "Ogni curva ha la stessa frequenza orizzontale.",
+      "part": 1
+    },
+    {
+      "category": "grammar",
+      "severity": "minor",
+      "english": "Will this create a flat pattern, or will the center appear to bulge outward?",
+      "italian": "Questo creerà un pattern piatto, o il centro sembrerà rigonfiarsi verso l'esterno?",
+      "explanation": "Costruzione un po' rigida; si può rendere più naturale.",
+      "suggestion": "Il pattern sembrerà piatto, oppure il centro sembrerà gonfiarsi verso l'esterno?",
+      "part": 1
+    },
+    {
+      "category": "grammar",
+      "severity": "minor",
+      "english": "Predict, then run it!",
+      "italian": "Prevedi, poi eseguila!",
+      "explanation": "\"Eseguila\" è poco naturale e il riferimento è vago.",
+      "suggestion": "Fai la tua previsione, poi eseguilo!",
+      "part": 1
+    },
+    {
+      "category": "untranslated",
+      "severity": "minor",
+      "english": "Waving welcome",
+      "italian": "Monty waving welcome",
+      "explanation": "Il testo alternativo dell'immagine è rimasto in inglese (convenzione discutibile, ma è prosa).",
+      "suggestion": "Monty che saluta per dare il benvenuto",
+      "part": 1
+    }
+  ]
+}

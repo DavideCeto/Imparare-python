@@ -1,0 +1,28 @@
+{
+  "file": "references.md",
+  "hash": "d42a3bd6ff159bed91345558586658ba741da31915d9b23b8ac8ecbe76395f6f",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.014,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Unfortunatly, no turtle graphics are supported.",
+      "italian": "Purtroppo non supporta le grafiche turtle.",
+      "explanation": "\"le grafiche turtle\" è innaturale; meglio \"la grafica turtle\".",
+      "suggestion": "Purtroppo non supporta la grafica turtle.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "CircuitPython is a programming language designed to simplify experimenting and learning to program on low-cost microcontroller boards.",
+      "italian": "su microcontrollori economici.",
+      "explanation": "\"boards\" (schede) è perso: i microcontrollori sono i chip, non le schede.",
+      "suggestion": "su schede a microcontrollore economiche.",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "file": "turtle-graphics-gallery/epitrochoid/index.md",
+  "hash": "ebb9a05692cca662439cbd5ffd1f0a4b68fd9d7412285177ffe512e1eebaa9e0",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0353,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Click Run!",
+      "italian": "poi clicca Esegui!",
+      "explanation": "Il pulsante si chiama Run (resta in inglese per convenzione); \"Esegui\" non corrisponde all'etichetta reale.",
+      "suggestion": "poi clicca Run!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "before the curve meets itself",
+      "italian": "prima che la curva si incontri da sola",
+      "explanation": "Espressione innaturale in italiano.",
+      "suggestion": "prima che la curva si richiuda su se stessa",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "how dramatic each loop is",
+      "italian": "quanto è drammatico ogni anello",
+      "explanation": "Calco dall'inglese, poco naturale.",
+      "suggestion": "quanto è ampio e marcato ogni anello",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "gentle bumps",
+      "italian": "protuberanze dolci",
+      "explanation": "Traduzione letterale poco naturale.",
+      "suggestion": "leggere ondulazioni",
+      "part": 1
+    }
+  ]
+}

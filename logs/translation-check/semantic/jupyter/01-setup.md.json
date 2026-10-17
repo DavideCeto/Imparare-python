@@ -1,0 +1,46 @@
+{
+  "file": "jupyter/01-setup.md",
+  "hash": "15496596f1d90d323bfba8b05019881090fed626af93ff4903488f055fdfe8f3",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0242,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "has almost compleatly replaced the [R Progamming](https://trends.google.com/trends/explore?date=all&geo=US&q=Jupyter,R%20Programming) programming language",
+      "italian": "hanno quasi completamente sostituito il linguaggio di programmazione [R]",
+      "explanation": "Il testo del link è stato accorciato a «R» (l'originale è «R Programming»). Il significato resta quasi invariato, ma il link di Google Trends riguardava il termine «R Programming».",
+      "suggestion": "[R Programming](...) oppure «il linguaggio di programmazione [R Programming](...)».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "With the turtle being drawn \"inline\" directly under your code",
+      "italian": "Con la turtle disegnata \"in linea\" direttamente sotto il tuo codice",
+      "explanation": "«In linea» è una resa poco naturale per «inline» nel contesto dei notebook; in italiano si usa «inline» o «integrata nella pagina».",
+      "suggestion": "Usare «inline» (tra virgolette) oppure «direttamente nel notebook»; coerente anche in «in generale, inline è preferibile».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Install the conda python environment systems",
+      "italian": "Installare i sistemi dell'ambiente Python conda",
+      "explanation": "Resa letterale e poco chiara: «sistemi dell'ambiente» suona innaturale.",
+      "suggestion": "Installare conda, il sistema per gestire gli ambienti Python",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Note that \"Chelonians\" are animals in the order Chelonia",
+      "italian": "Nota che i \"Chelonia\" sono animali dell'ordine Chelonia",
+      "explanation": "«Chelonians» (i cheloni) tradotto con «Chelonia» è impreciso: il nome dell'ordine e quello degli animali coincidono, ma in italiano si dice «i cheloni».",
+      "suggestion": "Nota che i \"cheloni\" sono animali dell'ordine Chelonia (o Testudines)",
+      "part": 1
+    }
+  ]
+}

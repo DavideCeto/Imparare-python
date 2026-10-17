@@ -1,0 +1,46 @@
+{
+  "file": "teachers-guide/order-of-concepts.md",
+  "hash": "164a7c98af0e4a8cd4bc36758f938c391fffdecec7e9c5f47cb00bf894c66fcd",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0326,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "for a 9th grade student in the US",
+      "italian": "per uno studente di terza media negli USA",
+      "explanation": "La 9th grade negli USA corrisponde al primo anno di scuola superiore (14-15 anni), non alla terza media. È un adattamento impreciso, anche se vicino all'età del pubblico.",
+      "suggestion": "Usare «per uno studente di 9th grade (primo anno di superiori) negli USA» oppure «di prima superiore».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "tailored for 9th-grade students",
+      "italian": "su misura per studenti di terza media",
+      "explanation": "Stesso problema: 9th grade non è la terza media.",
+      "suggestion": "«su misura per studenti di prima superiore (9th grade)».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Setting Up the Development Environment",
+      "italian": "Impostare l'Ambiente di Sviluppo",
+      "explanation": "«Impostare» è meno naturale; in italiano si usa «Configurare».",
+      "suggestion": "«Configurare l'Ambiente di Sviluppo».",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Cover basic data types like integers and floats in this context.",
+      "italian": "Copri i tipi di dati di base",
+      "explanation": "«Copri» è un calco dall'inglese e suona innaturale.",
+      "suggestion": "«Tratta i tipi di dati di base...».",
+      "part": 1
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "file": "trinket/14-color-picker.md",
+  "hash": "ab8af882882d5798ffe380a93dfbe029214510d09925b3c7599c6920d1bdb276",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 1,
+  "cost_usd": 0.0109,
+  "issues": [
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "You are not limited to the colors by name [Trinket Colors](https://trinket.io/docs/colors).",
+      "italian": "You are not limited to the colors by name [Trinket Colors](https://trinket.io/docs/colors).",
+      "explanation": "Tutta la prosa della sezione è rimasta in inglese: il testo italiano è identico all'originale. Anche il titolo della sezione, l'avviso di deprecazione e la sezione Experiments non sono tradotti.",
+      "suggestion": "Tradurre tutta la prosa in italiano, ad esempio: \"Non sei limitato ai colori indicati per nome [Trinket Colors](https://trinket.io/docs/colors). Puoi usare valori Hex e RGB e lasciare correre la fantasia.\" Tradurre anche \"Experiments\" (\"Esperimenti\"), \"Example code\" e le domande finali.",
+      "part": 1
+    }
+  ]
+}

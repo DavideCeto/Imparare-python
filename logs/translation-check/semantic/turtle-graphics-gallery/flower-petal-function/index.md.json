@@ -1,0 +1,46 @@
+{
+  "file": "turtle-graphics-gallery/flower-petal-function/index.md",
+  "hash": "78ba87e38ed9bd27631835d42e1cba2a8f871e7c5cb5579f0f8fd0382280a392",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0357,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante Run resta in inglese per convenzione del progetto; il testo dice Esegui mentre il pulsante mostra Run.",
+      "suggestion": "poi clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "to form a blooming flower",
+      "italian": "per formare un fiore in boccio",
+      "explanation": "\"In boccio\" significa non ancora sbocciato; \"blooming\" è un fiore sbocciato.",
+      "suggestion": "per formare un fiore sbocciato",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Welcome to the Flower with Petal Function!",
+      "italian": "Benvenuto al Fiore con Funzione Petalo!",
+      "explanation": "Preposizione non naturale in italiano.",
+      "suggestion": "Benvenuto nel laboratorio Fiore con Funzione Petalo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "the turtle rotates 45°",
+      "italian": "la tartaruga ruota di 45°",
+      "explanation": "Nel resto del progetto si usa \"la turtle\"; \"tartaruga\" è accettabile ma può risultare incoerente.",
+      "suggestion": "la turtle ruota di 45°",
+      "part": 1
+    }
+  ]
+}

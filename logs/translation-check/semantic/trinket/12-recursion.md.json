@@ -1,0 +1,19 @@
+{
+  "file": "trinket/12-recursion.md",
+  "hash": "684055df390beae90d9daf320baed8e40d8870ce4263b4c101a4503f18130e4f",
+  "model": "sonnet",
+  "score": 1,
+  "parts": 1,
+  "cost_usd": 0.0147,
+  "issues": [
+    {
+      "severity": "major",
+      "category": "untranslated",
+      "english": "Recursion is when we write a function that calls itself.  It usually passes a parameter that changes",
+      "italian": "Recursion is when we write a function that calls itself.  It usually passes a parameter that changes",
+      "explanation": "Tutta la prosa della sezione è rimasta in inglese, identica all'originale: avviso di deprecazione, spiegazioni, titoli (Recursion, Sample Code, Drawing, Explanation, Experiments), link e domande degli esperimenti. Nessuna parte è stata tradotta.",
+      "suggestion": "Tradurre tutta la prosa in italiano (titolo e testo dell'admonition, titoli, spiegazioni, esperimenti, testo dei link), lasciando invariati codice, URL e percorsi. Esempio: \"La ricorsione è quando scriviamo una funzione che richiama se stessa.\"",
+      "part": 1
+    }
+  ]
+}

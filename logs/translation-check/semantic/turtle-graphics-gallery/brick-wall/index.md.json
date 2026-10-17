@@ -1,0 +1,64 @@
+{
+  "file": "turtle-graphics-gallery/brick-wall/index.md",
+  "hash": "5980a7bf4a3bc176bd7bd695facb75f6395751bbbf8d64bed69070c8830b5b9c",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0435,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "Apply the **offset row** pattern to stagger alternate rows",
+      "italian": "per scalare le righe alterne",
+      "explanation": "\"Scalare\" in italiano significa ridimensionare o ridurre; per \"stagger\" (sfalsare) è fuorviante. Lo stesso problema ricorre in \"Questo scala le righe\", \"NON sono scalati\" e \"lo scalamento\".",
+      "suggestion": "Usare \"sfalsare\" / \"sfalsate\" / \"lo sfalsamento\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "so each brick spans the joint of two bricks below it.",
+      "italian": "così ogni mattone attraversa la giunzione di due mattoni sotto di esso.",
+      "explanation": "Formulazione poco naturale; \"giunzione\" per \"joint\" è poco usato (si dice \"giunto\"/\"fuga\"). Il senso è comprensibile ma sgraziato.",
+      "suggestion": "\"così ogni mattone copre il giunto tra due mattoni della riga sotto.\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "terminology",
+      "english": "that's what makes it a proper offset bond",
+      "italian": "questo è ciò che lo rende un vero legame a offset",
+      "explanation": "\"Bond\" in muratura è \"apparecchiatura\" (del muro); \"legame a offset\" e \"legame corrente\" sono calchi poco naturali, specie per ragazzi.",
+      "suggestion": "\"un'apparecchiatura sfalsata\" / \"posa a metà mattone\"; \"posa a correre\" per running bond.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Fix the one line that computes the offset so alternate rows shift by half a brick width.",
+      "italian": "Correggi l'unica riga che calcola l'offset così le righe alterne si spostino di metà larghezza di un mattone.",
+      "explanation": "Frase un po' pesante; \"così\" andrebbe \"in modo che\".",
+      "suggestion": "\"in modo che le righe alterne si spostino di mezzo mattone.\"",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "untranslated",
+      "english": "Click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta \"Run\" nell'HTML, quindi il testo \"Esegui\" non corrisponde al pulsante visibile.",
+      "suggestion": "Usare \"Run\" nel testo: \"clicca Run per scoprirlo!\".",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Cycle three brick shades across the wall",
+      "italian": "Scorre tre tonalità di mattone attraverso il muro",
+      "explanation": "Traduzione letterale poco chiara.",
+      "suggestion": "\"Alterna ciclicamente tre tonalità di mattone lungo il muro\".",
+      "part": 1
+    }
+  ]
+}

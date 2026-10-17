@@ -1,0 +1,73 @@
+{
+  "file": "turtle-graphics-gallery/koch-snowflake/index.md",
+  "hash": "e44c97b26e588b16c3914b6b3a8ecca7ca5ce4984ce0234e0639a729073a2d2c",
+  "model": "sonnet",
+  "score": 4,
+  "parts": 1,
+  "cost_usd": 0.0453,
+  "issues": [
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "After 4 levels, the edges look smooth and crystalline.",
+      "italian": "Dopo 4 livelli, i bordi sembrano lisciati e cristallini.",
+      "explanation": "\"lisciati\" è innaturale; l'originale dice \"smooth\". (Nota: l'originale stesso è in contrasto con \"jagged\", ma la resa resta da migliorare.)",
+      "suggestion": "i bordi sembrano lisci e cristallini.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "will the edges look smooth or jagged?",
+      "italian": "i bordi sembreranno lisciati o frastagliati?",
+      "explanation": "\"lisciati\" è un participio poco naturale per \"smooth\".",
+      "suggestion": "i bordi sembreranno lisci o frastagliati?",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "you can clearly see the individual triangular bumps on each bumpy bump.",
+      "italian": "puoi vedere chiaramente le singole protuberanze triangolari su ogni protuberanza bitorzoluta.",
+      "explanation": "\"protuberanza bitorzoluta\" è goffo e aggiunge un aggettivo non necessario.",
+      "suggestion": "puoi vedere chiaramente le singole protuberanze triangolari, anche su quelle già bitorzolute.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "tone",
+      "english": "Click Run to find out!",
+      "italian": "poi clicca Esegui per scoprirlo!",
+      "explanation": "Il pulsante resta \"Run\" nell'HTML, ma il testo parla di \"Esegui\": incoerenza con l'interfaccia.",
+      "suggestion": "poi clicca Run per scoprirlo!",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Just one round of bumping — three big triangular notches per side.",
+      "italian": "Solo un giro di protuberanze — tre grandi tacche triangolari per lato.",
+      "explanation": "\"tre ... per lato\" è nell'originale ma impreciso; la resa \"giro di protuberanze\" è poco chiara. Anche \"stella di David\" va bene, ma \"fiocco di neve ... un giro\" è oscuro.",
+      "suggestion": "Solo un passaggio di sporgenze — una sola grande tacca triangolare per lato.",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "grammar",
+      "english": "Replace one segment with four",
+      "italian": "Sostituisce un segmento con quattro",
+      "explanation": "Piccola differenza di forma, accettabile.",
+      "suggestion": "Sostituiscono un segmento con quattro",
+      "part": 1
+    },
+    {
+      "severity": "minor",
+      "category": "meaning",
+      "english": "Change `depth=4` to `depth=2` in the `koch()` calls.",
+      "italian": "Cambia `depth=4` in `depth=2` nelle chiamate a `koch()`.",
+      "explanation": "Resa fedele; nel codice però non esiste \"depth=4\" (è l'originale a essere impreciso). Nessuna correzione necessaria.",
+      "suggestion": "Eventualmente: cambia il 4 in 2 nella chiamata koch(300, 4).",
+      "part": 1
+    }
+  ]
+}
