@@ -21,7 +21,7 @@ quality_score: 93
 
 L'ordine delle operazioni viene di solito insegnato come una tabella da
 memorizzare. Questo MicroSim permette agli studenti di guardarlo *accadere*:
-ogni Passo Successivo evidenzia l'operazione che Python calcola per prima e
+ogni Passo Successivo evidenzia l'operazione che Python calcola subito dopo e
 la riduce al suo valore, mentre una scala di precedenza mostra quale rango
 ("in esecuzione ora") è attivo. I preset coprono la classica sorpresa di
 `2 + 3 * 4`, le parentesi, la valutazione da sinistra a destra, gli
@@ -41,7 +41,7 @@ operazione alla volta.
 1. Scegli un'espressione e **prevedi la risposta finale** prima di
    procedere passo-passo.
 2. Clicca **Passo Successivo**. L'evidenziazione ambra mostra l'operazione
-   che Python esegue per prima; la scala mostra perché è stata scelta.
+   che Python esegue subito dopo; la scala mostra perché è stata scelta.
 3. Confronta `2 + 3 * 4` con `(2 + 3) * 4` — stessi numeri, risposte diverse.
 4. Prova `10 - 4 - 3` per vedere che gli operatori di pari rango vengono
    eseguiti da sinistra a destra.

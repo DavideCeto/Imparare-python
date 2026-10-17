@@ -1,6 +1,6 @@
-## Test of Jupyter Lab Inline Setup
+## Test della configurazione inline di Jupyter Lab
 
-[Rumor this work](https://github.com/takluyver/mobilechelonian)
+[Si dice che questo funzioni](https://github.com/takluyver/mobilechelonian)
 
 ```python
 from ipyturtle import Turtle

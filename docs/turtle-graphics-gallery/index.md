@@ -455,7 +455,7 @@ Ogni pattern è eseguibile nel tuo browser — clicca il link per aprire il labo
     ![Curva a Rosa](./rose-curve/screen-image.png)
 
     `r = cos(k*theta)` in coordinate polari — k dispari dà k petali, k pari dà 2k.
-    Insegna: equazioni polari, regole di conteggio dei petali.
+    Insegna: equazioni polari, conversione da coordinate polari a cartesiane, regole di conteggio dei petali.
 
     [:octicons-arrow-right-24: Apri il Laboratorio](./rose-curve/index.md)
 
@@ -708,7 +708,7 @@ Ogni pattern è eseguibile nel tuo browser — clicca il link per aprire il labo
     ![Curva del Dragone](./dragon-curve/screen-image.png)
 
     Il Dragone di Heighway — un frattale auto-evitante costruito simulando la piegatura della carta con una lista.
-    Insegna: manipolazione di liste per frattali, codifica delle rotazioni S/D, percorsi che non si incrociano mai.
+    Insegna: manipolazione di liste per frattali, codifica delle rotazioni L/R (sinistra/destra), percorsi che non si incrociano mai.
 
     [:octicons-arrow-right-24: Apri il Laboratorio](./dragon-curve/index.md)
 

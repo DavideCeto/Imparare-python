@@ -7,7 +7,7 @@ hide:
 Alla fine di questo laboratorio sarai in grado di:
 
 - Costruire la Curva del Dragone piegando ripetutamente una lista di rotazioni
-- Capire come una sequenza di rotazioni S/D codifica un percorso frattale
+- Capire come una sequenza di rotazioni L/R (sinistra/destra) codifica un percorso frattale
 - Vedere come la manipolazione di liste può sostituire le chiamate ricorsive per alcuni frattali
 
 La Curva del Dragone — o Dragone di Heighway — sembra una striscia di carta piegata e poi distesa. Dopo 12 piegature, il percorso si avvolge e riempie lo spazio in un bellissimo pattern che non si incrocia mai.
@@ -19,9 +19,9 @@ La Curva del Dragone — o Dragone di Heighway — sembra una striscia di carta 
 
 ## Come Funziona
 
-Immagina di piegare a metà ripetutamente una striscia di carta, sempre piegando a destra. Quando la distendi, vedi una sequenza di pieghe sinistra (S) e destra (D). La Curva del Dragone è ciò che ottieni quando disegni quelle pieghe come rotazioni di 90°.
+Immagina di piegare a metà ripetutamente una striscia di carta, sempre piegando a destra. Quando la distendi, vedi una sequenza di pieghe a sinistra e a destra. Nel codice le scriviamo con le iniziali inglesi: 'L' (*left*, sinistra) e 'R' (*right*, destra). La Curva del Dragone è ciò che ottieni quando disegni quelle pieghe come rotazioni di 90°.
 
-La regola della piegatura: prendi la sequenza attuale, aggiungi una 'D', poi aggiungi la sequenza invertita + capovolta.
+La regola della piegatura: prendi la sequenza attuale, aggiungi una 'R', poi aggiungi la stessa sequenza letta al contrario e con le svolte scambiate ('L' diventa 'R' e 'R' diventa 'L').
 
 Dopo 12 piegature, hai `2^12 - 1 = 4095` rotazioni.
 
@@ -109,15 +109,15 @@ La Curva del Dragone **non si incrocia mai** — il percorso riempie lo spazio s
 
 ## Come Funziona
 
-La regola della piegatura raddoppia la lista a ogni iterazione. Dopo la piegatura `n`, la lista ha `2^n - 1` voci. Il nuovo elemento centrale è sempre 'D' (la direzione di piegatura più recente). La metà destra è la vecchia lista invertita e capovolta (S↔D) — questo è ciò che sembra la metà piegata vista dall'estremità distesa.
+La regola della piegatura raddoppia la lista a ogni iterazione. Dopo la piegatura `n`, la lista ha `2^n - 1` voci. Il nuovo elemento centrale è sempre 'R' (la direzione di piegatura più recente). La metà destra è la vecchia lista letta al contrario e con le svolte scambiate (L↔R) — questo è ciò che sembra la metà piegata vista dall'estremità distesa.
 
 ## Tabella delle Spiegazioni
 
 | Riga | Cosa fa |
 |------|-------------|
 | `turns = ['R']` | Inizia con una piegatura |
-| `turns + ['R'] + [...]` | Aggiunge il marcatore di piegatura e la vecchia sequenza invertita e capovolta |
-| `('L' if t == 'R' else 'R')` | Inverte ogni rotazione: S diventa D, D diventa S |
+| `turns + ['R'] + [...]` | Aggiunge il marcatore di piegatura e la vecchia sequenza letta al contrario e con le svolte scambiate |
+| `('L' if t == 'R' else 'R')` | Scambia ogni rotazione: 'L' (sinistra) diventa 'R' (destra) e viceversa |
 | `reversed(turns)` | Legge la vecchia sequenza al contrario (l'altro lato della piegatura) |
 | `if t == 'R': right(90)` | Traduce la lista di rotazioni in movimenti della tartaruga |
 
