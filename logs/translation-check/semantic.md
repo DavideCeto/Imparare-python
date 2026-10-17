@@ -1,13 +1,11 @@
 # Revisione semantica della traduzione
 
 - File revisionati: 338
-- Problemi: 19 critici · 52 importanti · 1199 minori
-- Costo stimato: $13.09
+- Problemi: 15 critici · 47 importanti · 1204 minori
+- Costo stimato: $13.12
 
 | File | Voto | Critici | Importanti | Minori |
 |---|---|---|---|---|
-| `intermediate/01-docker-python.md` | 1 | 1 | 3 | 0 |
-| `sims/microsim-ideas.md` | 1 | 3 | 2 | 0 |
 | `trinket/00-introduction.md` | 1 | 2 | 2 | 0 |
 | `trinket/01a-trinket-account.md` | 1 | 1 | 0 | 0 |
 | `trinket/02-simple-square.md` | 1 | 1 | 2 | 0 |
@@ -165,6 +163,7 @@
 | `sims/inheritance-explorer/index.md` | 4 | 0 | 0 | 6 |
 | `sims/json-python-mapper/index.md` | 4 | 0 | 0 | 4 |
 | `sims/list-index-explorer/index.md` | 4 | 0 | 0 | 4 |
+| `sims/microsim-ideas.md` | 4 | 0 | 0 | 5 |
 | `sims/modulo-clock/index.md` | 4 | 0 | 0 | 4 |
 | `sims/object-instance-inspector/index.md` | 4 | 0 | 0 | 5 |
 | `sims/range-explorer/index.md` | 4 | 0 | 0 | 4 |
@@ -300,57 +299,6 @@
 | `sims/recursion-call-stack/index.md` | 5 | 0 | 0 | 1 |
 | `turtle-graphics-gallery/impossible-triangle/index.md` | 5 | 0 | 0 | 1 |
 | `turtle-graphics-gallery/penrose-rhombus/index.md` | 5 | 0 | 0 | 1 |
-
-## `intermediate/01-docker-python.md` — voto 1/5
-
-- **critical** · untranslated
-    - EN: So far in this course you have run Python programs in two ways:
-    - IT: So far in this course you have run Python programs in two ways:
-    - Perché: Tutta la sezione italiana è identica all'originale inglese: nessuna parte della prosa è stata tradotta (introduzione, spiegazioni, tabelle, elenchi, istruzioni dei laboratori, risoluzione dei problemi).
-    - Proposta: Tradurre tutta la prosa in italiano. Esempio: «Finora in questo corso hai eseguito i programmi Python in due modi:».
-- **major** · untranslated
-    - EN: # Running Python in Docker
-    - IT: # Running Python in Docker
-    - Perché: Il titolo e tutti i titoli di sezione (Before You Begin, What Is a Container?, Lab 1 — Hello, World!, Troubleshooting, ecc.) sono rimasti in inglese.
-    - Proposta: «# Eseguire Python in Docker», «## Prima di iniziare — Avvia il servizio Docker», «## Che cos'è un container?», «## Risoluzione dei problemi».
-- **major** · untranslated
-    - EN: Output will appear here after you click Run.
-    - IT: Output will appear here after you click Run.
-    - Perché: I testi visibili nell'interfaccia dei laboratori (segnaposto dell'output, intestazioni della tabella dei tempi come Phase, Time (ms), Total round-trip, nota «Run + Time») sono in inglese. I pulsanti Run/Reset possono restare, ma questi testi no.
-    - Proposta: «L'output apparirà qui dopo aver cliccato Run.» e tradurre le intestazioni della tabella (Fase, Tempo (ms), Totale andata e ritorno).
-- **major** · untranslated
-    - EN: **Try these experiments:** - Change `"Hello, World!"` to your own name
-    - IT: **Try these experiments:** - Change `"Hello, World!"` to your own name
-    - Perché: Le istruzioni degli esperimenti per gli studenti non sono tradotte. Anche i messaggi di errore nella risoluzione dei problemi e le descrizioni nelle tabelle sono in inglese.
-    - Proposta: «**Prova questi esperimenti:** – Cambia `"Hello, World!"` con il tuo nome...». Le stringhe nel codice possono essere tradotte, ma non è obbligatorio.
-
-## `sims/microsim-ideas.md` — voto 1/5
-
-- **critical** · untranslated · parte 1
-    - EN: A prioritized, Bloom-classified list of proposed MicroSims for the Beginning Python textbook, with an implementation plan for each.
-    - IT: A prioritized, Bloom-classified list of proposed MicroSims for the Beginning Python textbook, with an implementation plan for each.
-    - Perché: Il valore di title e description nel front matter va tradotto, ma è rimasto identico all'inglese.
-    - Proposta: title: Idee di MicroSim per Python per principianti; description: Un elenco prioritizzato di MicroSim proposte per il manuale Python per principianti, classificate secondo Bloom, con un piano di implementazione per ciascuna.
-- **critical** · untranslated · parte 1
-    - EN: This document was produced by scanning all 38 chapters in `docs/chapters/`, the 17 Python labs, the learning graph, and the turtle graphics gallery.
-    - IT: This document was produced by scanning all 38 chapters in `docs/chapters/`, the 17 Python labs, the learning graph, and the turtle graphics gallery.
-    - Perché: L'intera sezione è in inglese: introduzione, regole di progettazione, tabelle, riepilogo delle priorità e tutte le 20 schede delle MicroSim (concetto, obiettivo, piano di implementazione) non sono tradotte.
-    - Proposta: Tradurre in italiano tutta la prosa, i titoli, le intestazioni delle tabelle e le voci di elenco. Lasciare invariati codice inline, percorsi e nomi di prodotto.
-- **critical** · untranslated · parte 2
-    - EN: These surfaced in the chapter scan but are either narrower, partially covered by a first-wave sim, or better served by prose plus a Skulpt lab.
-    - IT: These surfaced in the chapter scan but are either narrower, partially covered by a first-wave sim, or better served by prose plus a Skulpt lab.
-    - Perché: L'intera sezione italiana è identica all'originale inglese: nessuna prosa è stata tradotta (descrizioni, concetti, obiettivi di apprendimento, piani di implementazione, tabella Backlog, ordine di costruzione).
-    - Proposta: Tradurre tutta la prosa in italiano, mantenendo invariati codice inline, nomi di sim tra backtick, percorsi e nomi propri (p5.js, vis-network, Chart.js, Skulpt, Playwright). Esempio: «Queste idee sono emerse dall'analisi dei capitoli, ma sono più circoscritte, coperte in parte da una sim della prima ondata, o più adatte a testo più un laboratorio Skulpt.»
-- **major** · untranslated · parte 2
-    - EN: The student will be able to explain how a dictionary finds a value from a key and why a missing key raises KeyError while `.get()` does not.
-    - IT: The student will be able to explain how a dictionary finds a value from a key and why a missing key raises KeyError while `.get()` does not.
-    - Perché: Tutti gli obiettivi di apprendimento (da #21 a #36) sono rimasti in inglese.
-    - Proposta: Tradurre: «Lo studente sarà in grado di spiegare come un dizionario trova un valore a partire da una chiave e perché una chiave mancante genera KeyError mentre `.get()` no.»
-- **major** · untranslated · parte 2
-    - EN: Each sim should be generated with the `microsim-generator` single-sim route (Step 1B), embedded in its chapter with a `mascot-thinking` prediction prompt immediately above the iframe
-    - IT: Each sim should be generated with the `microsim-generator` single-sim route (Step 1B), embedded in its chapter with a `mascot-thinking` prediction prompt immediately above the iframe
-    - Perché: Anche la sezione conclusiva «Suggested Build Order» è in inglese, titoli di sezione compresi (Tier, Backlog, Suggested Build Order).
-    - Proposta: Tradurre titoli e prosa, lasciando in inglese i nomi di codice e di percorso come `microsim-generator`, `mascot-thinking`, `docs/sims/index.md`.
 
 ## `trinket/00-introduction.md` — voto 1/5
 
@@ -4197,6 +4145,34 @@
     - IT: Confronta l'errore del Test Stringa con il comportamento della lista; gli studenti scrivono
     - Perché: Incoerenza: imperativo 'Confronta' seguito da terza persona plurale.
     - Proposta: Gli studenti confrontano l'errore del Test Stringa con il comportamento della lista e scrivono
+
+## `sims/microsim-ideas.md` — voto 4/5
+
+- **minor** · grammar · parte 1
+    - EN: reused in 11
+    - IT: riutilizzata nel 11
+    - Perché: Davanti a 11 si usa «nell'», non «nel»; inoltre «Cap.» è più coerente con il resto del documento.
+    - Proposta: riutilizzata nel Cap. 11
+- **minor** · terminology · parte 1
+    - EN: Tier
+    - IT: Livello di priorità
+    - Perché: Nell'intestazione della tabella «Tier» è reso con «Livello di priorità», ma nel resto del testo «Livello» indica i livelli di Bloom, e il titolo della colonna è lungo. Il rischio è confonderli.
+    - Proposta: Usare «Fascia» (e «Fascia 1 — ...» nei titoli di sezione) per distinguerlo dai livelli di Bloom.
+- **minor** · terminology · parte 1
+    - EN: Control Flow Explorer ... the first True wins
+    - IT: vince la prima condizione True
+    - Perché: Resa libera ma accettabile; invece «Stack and Queue Simulator» è tradotto «pila e coda» mentre altrove si parla di «stack delle chiamate»: terminologia incoerente.
+    - Proposta: Usare lo stesso termine, per esempio «stack e coda» nel titolo e nel testo.
+- **minor** · meaning · parte 1
+    - EN: the old value visibly pops out and the new value drops in
+    - IT: il vecchio valore salta fuori in modo visibile e quello nuovo ci cade dentro
+    - Perché: Corretto nel senso, ma «Estimated CANVAS_HEIGHT: 460 (400 draw + 60 controls)» è reso correttamente; qui la frase è un po' goffa per studenti.
+    - Proposta: il vecchio valore esce dalla casella e il nuovo ci cade dentro
+- **minor** · grammar · parte 2
+    - EN: Precomputed data (no real training) keeps it instant and Skulpt-free
+    - IT: Dati precalcolati (nessun vero addestramento) che la rendono istantanea e indipendente da Skulpt
+    - Perché: La frase è un frammento privo di verbo principale e il «la» non ha un referente chiaro nella lista. Suona un po' faticosa.
+    - Proposta: Dati precalcolati (nessun vero addestramento): così la sim è istantanea e non dipende da Skulpt
 
 ## `sims/modulo-clock/index.md` — voto 4/5
 
