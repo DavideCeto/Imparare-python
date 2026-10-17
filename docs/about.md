@@ -1,125 +1,197 @@
 ---
 title: "Informazioni su questo libro"
-description: "Informazioni su *Beginning Python* — la sua storia, scopo, pubblico, design e il team che lo ha creato."
+description: "Informazioni su Beginning Python: la sua storia, lo scopo, il pubblico, il progetto e le persone che lo hanno realizzato."
 ---
 
 # Informazioni su questo libro
 
-## Benvenuto da Monty
+## Il benvenuto di Monty
 
 !!! mascot-welcome "Benvenuto!"
     ![Monty waving welcome](./img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Ciao, sono Monty! Sono stato tra le pagine di questo libro fin dall'inizio, guidando gli studenti
-    dalle prime nozioni fino a concetti avanzati come reti neurali e algoritmi per la risoluzione
-    dei labirinti. Questo libro è il mio ambiente di lavoro, e sono felice che tu sia qui.
-    Che tu sia completamente nuovo al linguaggio Python o che tu stia cercando un modo per migliorare le
-    tue competenze, sarò al tuo fianco in ogni fase del percorso. Cominciamo insieme a creare
-    qualcosa di fantastico!
+    Ciao, sono Monty! Vivo in queste pagine fin dall'inizio e accompagno gli studenti
+    dal loro primo `print("Hello!")` fino alle reti neurali e agli algoritmi che
+    risolvono i labirinti. Questo libro è la mia casa, e sono felicissimo che tu sia qui.
+    Che tu sia alle prime armi con Python o che tu stia cercando un posto per salire di livello,
+    sarò al tuo fianco a ogni passo. Programmiamo insieme qualcosa di fantastico!
 
 ---
 
 ## Una nota sulla storia della piattaforma
 
-Questo libro ha una storia, e questa storia è importante per capire perché è stato creato
-nella forma in cui lo abbiamo oggi.
+Questo manuale ha una storia, ed è una storia importante per capire perché oggi è costruito così.
 
-***Beginning Python** è stato creato nel 2020 da Dan McCreary come risorsa didattica volontaria per
-[CoderDojo Twin Cities](https://www.coderdojotc.org/), un club di programmazione gratuito gestito
-da comunità. Le lezioni iniziali utilizzavano **Trinket.io** — una popolare sandbox basata sul browser
-che permetteva agli studenti di scrivere e eseguire programmi Python senza dover installare
-nulla sul loro computer. Dal 2020 al 2025, Trinket ha fornito centinaia di esempi di codice
-interattivi in questo libro, contribuendo molto alla comunità di CoderDojo.
+**Beginning Python** è stato creato nel 2020 da Dan McCreary come risorsa didattica, realizzata
+da volontario, per [CoderDojo Twin Cities](https://www.coderdojotc.org/), un club di
+programmazione gratuito per ragazzi gestito dalla comunità. Le prime lezioni usavano
+**Trinket.io**, un popolare ambiente Python nel browser che permetteva agli studenti di
+scrivere ed eseguire programmi Python senza installare nulla sul proprio computer. Dal 2020 al
+2025 Trinket ha fatto funzionare centinaia di esempi di codice interattivi di questo libro, ed è
+stato molto utile alla comunità di CoderDojo.
 
-Nel 2026, Trinket ha annunciato che avrebbe **chiuso permanentemente all’inizio di agosto 2026**:
+Nel 2026 Trinket ha annunciato che avrebbe
+**[chiuso definitivamente all'inizio di agosto 2026](https://trinket.io/announcement)**:
 
-> *"Trinket si conterà all’inizio di agosto 2026. Dopo questa data, trinket.io non sarà più
-> disponibile, e non potrete accedere ai vostri trinket, ai corsi o a qualsiasi altro contenuto
-> presente su questo sito."*
+> *"Trinket chiuderà all'inizio di agosto 2026. Dopo questa data trinket.io non sarà più
+> disponibile e non potrai più accedere ai tuoi trinket, ai corsi o a qualsiasi contenuto di
+> questo sito."*
 
-Questa è stata una significativa interruzione. Ogni laboratorio incorporato in questo libro è diventato un link morto.  
-Sono passate settimane di ricerca per trovare un sostituto. **Pickcode.io** era l’alternativa più promettente, ma si è rivelata insufficiente: presentava errori di rendering, supporto limitato per le grafiche con il programma “turtle”, e limitava l’accesso ai utenti gratuiti a soli cinque programmi, numero decisamente insufficiente per un corso incentrato su esercizi di disegno visivi e pratici.  
-Dopo aver valutato le alternative, si è deciso di riscrivere il libro da zero utilizzando **[Skulpt](https://skulpt.org/)** – una implementazione Python open-source autoinstallata che funziona interamente nel browser. Skulpt non ha dipendenze esterne, non richiede account specifici, non ha limitazioni per gli utenti gratuiti, e offre un supporto completo per il modulo `turtle` di Python. Ogni laboratorio presente in questo libro è incorporato direttamente nella pagina web; il ambiente di programmazione interattiva funzionerà comunque finché la pagina stessa viene caricata.  
-Inoltre, il libro è stato ufficialmente rinominato, passando da “CoderDojo” a “Beginning Python”, in linea con la sua missione di diventare una risorsa educativa aperta per qualsiasi studente, aula o club di programmazione che desidera un’introduzione gratuita e completa a Python.  
-  
-## Perché questo manuale di programmazione intelligente  
-Python è il linguaggio di programmazione più popolare al mondo – e lo è da anni. È alla base di importanti progressi nel campo della data science, dell’intelligenza artificiale, della computational science, dello sviluppo web, e della comunità dei Raspberry Pi e dei Maker. Tuttavia, la maggior parte delle risorse disponibili per i principianti di Python presuppone che gli studenti sappiano già come installare software, o che siano studenti adulti disposti a leggere documentazioni tecniche. I programmatori principianti tra i 10 e i 13 anni meritano di meglio.
+È stato un duro colpo. Tutti i laboratori Trinket incorporati nel libro sono diventati link non
+funzionanti. Sono seguite settimane di ricerca di un sostituto. **Pickcode.io** era
+l'alternativa più promettente, ma si è rivelata inadeguata: aveva problemi di visualizzazione,
+un supporto limitato alla grafica turtle e, per gli utenti del piano gratuito, un limite di
+appena cinque programmi turtle: troppo pochi per un corso costruito attorno a esercizi di
+disegno visivi e pratici.
+
+Dopo aver valutato le alternative, si è deciso di riscrivere il libro da zero attorno a
+**[Skulpt](https://skulpt.org/)**, un'implementazione di Python open source, ospitata
+direttamente insieme al sito, che funziona interamente nel browser. Skulpt non ha dipendenze
+esterne, non richiede account, non ha limiti da piano gratuito e supporta completamente il
+modulo `turtle` di Python. Ogni laboratorio di questo libro è incorporato direttamente nella
+pagina (il motore Skulpt abbinato all'editor CodeMirror, che aggiunge i numeri di riga e
+l'evidenziazione della sintassi), quindi l'ambiente di programmazione interattivo continuerà a
+funzionare finché la pagina stessa si carica.
+
+In quell'occasione il libro ha anche cambiato ufficialmente nome: dalla sua identità legata a
+CoderDojo è diventato **Beginning Python**, a riflettere la sua missione più ampia di risorsa
+educativa aperta per qualsiasi studente, classe o club di programmazione che voglia
+un'introduzione a Python gratuita e completa.
+
+---
+
+## Perché questo manuale intelligente
+
+Python è il linguaggio di programmazione più popolare al mondo, e lo è da anni. È alla base di
+scoperte nella data science, nell'intelligenza artificiale, nel calcolo scientifico, nello
+sviluppo web e nella comunità di Raspberry Pi e dei Maker. Eppure la maggior parte delle risorse
+per imparare Python presuppone che gli studenti sappiano già installare un software, oppure che
+siano adulti a proprio agio con la documentazione tecnica. I programmatori alle prime armi tra i
+10 e i 13 anni meritano di meglio.
 
 **Negli Stati Uniti (2025–2026):**
 
-- Il Python è la **lingua più utilizzata** nelle scuole K–12 negli Stati Uniti, secondo l’ultima indagine della Computer Science Teachers Association[^1].
-- Il U.S. Bureau of Labor Statistics prevede un **incremento del 25%** nel numero di posti di lavoro legati allo sviluppo software e alla qualità dei testi entro il 2032; la maggior parte di questi posti utilizza il Python come linguaggio principale[^2].
-- Solo **il 57% delle scuole superiori negli Stati Uniti** offre almeno un corso di informatica, lasciando milioni di studenti senza alcuna esperienza pratica con la programmazione prima dell’università[^3].
-- Secondo l’indagine di Stack Overflow del 2024, il Python è la lingua più utilizzata dai sviluppatori per il quinto anno consecutivo, utilizzata da **51% dei rispondenti**[^4].
+- Python è il **linguaggio più insegnato** nelle scuole K–12 (dalla primaria alla secondaria)
+  degli Stati Uniti, secondo l'indagine più recente della Computer Science Teachers Association
+  sullo stato dell'informatica nella scuola[^1]
+- Lo U.S. Bureau of Labor Statistics prevede una **crescita del 25%** dei posti di lavoro per
+  sviluppatori software e per il controllo qualità del software (quality assurance) fino al
+  2032; la maggior parte di questi lavori usa Python come linguaggio principale[^2]
+- Solo il **57% delle scuole superiori statunitensi** offre almeno un corso di informatica,
+  lasciando milioni di studenti senza alcun contatto con la programmazione in classe prima
+  dell'università[^3]
+- Il Developer Survey 2024 di Stack Overflow ha rilevato che **Python è il linguaggio più usato**
+  dagli sviluppatori per il quinto anno consecutivo, usato dal **51% di tutti gli intervistati**[^4]
 
-**A livello mondiale:**
+**Nel mondo:**
 
-- L’indice dei pacchetti di Python (PyPI) ospita più di **550.000 pacchetti**, rendendolo il più grande ecosistema di codice riutilizzabile in qualsiasi linguaggio di programmazione[^5].
-- Il mercato globale degli strumenti e dell’educazione legati al Python è valutato in oltre **8 miliardi di dollari** e cresce con un tasso annuo del 25%[^6].
+- L'indice dei pacchetti di Python (PyPI) ospita più di **550.000 pacchetti**, ed è quindi il
+  più grande ecosistema di codice riutilizzabile di qualsiasi linguaggio di programmazione[^5]
+- Il mercato mondiale degli strumenti per sviluppatori e della formazione legati a Python vale
+  oltre **8 miliardi di dollari** e cresce del 25% all'anno[^6]
 
-Questi numeri rappresentano milioni di giovani apprendenti che hanno bisogno di un percorso di apprendimento accessibile e pratico: un percorso che si adatti alle loro esigenze, utilizzi strumenti che non richiedono installazioni o account personali, e che insegna attraverso progetti visivi e pratici, piuttosto che attraverso esercizi di sintassi noiosa.
+Questi numeri rappresentano milioni di giovani che hanno bisogno di una rampa di accesso davvero
+alla loro portata: che parta da dove sono già (la programmazione a blocchi), che usi strumenti
+che funzionano senza installazioni né account e che insegni attraverso progetti visivi e pratici
+invece che con aridi esercizi di sintassi.
 
-Questo libro adotta un approccio fondamentalmente diverso. È basato su una **grafica di apprendimento** composta da 450 concetti interconnessi, verificati attraverso 38 capitoli. Ogni concetto viene presentato soltanto dopo che i prerequisiti necessari sono stati affrontati. Ogni capitolo iniziale include **Skulpt labs** – editori di Python completamente interattivi, integrati direttamente nel browser, senza bisogno di account o installazioni. Gli studenti eseguono il codice, lo modificano e vedono i risultati immediatamente. Monty, la mascotte del libro, fornisce incoraggiamenti, indicazioni e previsioni a ogni passo. L’intero libro è **open source e gratuito** – senza barriere di pagamento, senza codici di accesso, senza aggiornamenti annuali.
+Questo libro segue un approccio radicalmente diverso. È costruito su un **grafo di
+apprendimento di 450 concetti collegati tra loro**, verificato su 38 capitoli, in cui ogni
+concetto viene introdotto solo dopo i suoi prerequisiti. Ogni capitolo iniziale include dei
+**laboratori Skulpt**: editor Python completamente interattivi incorporati direttamente nel
+browser, senza account né installazioni. Gli studenti eseguono il codice, lo modificano e vedono
+subito i risultati. Monty, la mascotte, offre incoraggiamenti, suggerimenti e domande di
+previsione a ogni passo. L'intero manuale è **open source e gratuito**: niente paywall, niente
+codici di accesso, niente nuove edizioni da comprare ogni anno.
 
 ---
 
-## Come utilizzare questo libro
+## Come usare questo libro
 
-Questo libro è progettato per un apprendimento a ritmo personale, partendo da zero e sviluppando una vera e propria padronanza del Python. Ogni capitolo si basa sul materiale precedente, quindi si consiglia di leggere in ordine, soprattutto per i capitoli 1–18, dove i grafici visivi forniscono la base per l’apprendimento.
+Questo manuale è pensato per lo studio al proprio ritmo: parte da zero e arriva a una vera
+padronanza di Python. Ogni capitolo si basa sul materiale precedente, quindi è consigliato
+leggerlo in ordine, soprattutto per i capitoli 1–18, dove la grafica turtle fornisce la base
+visiva.
 
-Il libro include:
+Il libro comprende:
 
-- **[38 Capitoli](./chapters/index.md)** che trattano della sintassi di base di Python, grafica con turtle, flusso di controllo, funzioni, collezioni, programmazione orientata agli oggetti, algoritmi, visualizzazione dei dati, NumPy, elaborazione delle immagini e un’introduzione al machine learning.
-- **[Skulpt Labs](./python-labs/index.md)** integrati nei capitoli: editor di Python completamente interattivi che si eseguono nel browser, senza bisogno di installazione o account.
-- **Quiz** alla fine di ogni capitolo per testare la comprensione e la memorizzazione.
-- **Riferimenti annotati** che linkano a Wikipedia, documentazione di Python e fonti autorevoli.
-- **[Glossario](./glossary.md)** con definizioni per ogni concetto chiave, scritto a un livello di lettura accessibile.
-- **[FAQ](./faq.md)** che rispondono alle domande comuni degli studenti che passano da una programmazione basata su blocchi a una programmazione orientata agli oggetti.
-- **[Grapha di Apprendimento](./learning-graph/index.md)** che visualizza le 450 dipendenze tra i concetti nel corso.
-- **[Guida per Insegnanti](./teachers-guide/index.md)** con raccomandazioni sul ritmo di apprendimento, domande per la discussione e in linea con gli standard del CSTA.
-- **Cerca** disponibile da qualsiasi pagina utilizzando la barra di ricerca in alto.
+- **[38 capitoli](./chapters/index.md)** che trattano la sintassi di base di Python, la grafica turtle, il controllo del flusso, le funzioni,
+  le collezioni, la programmazione orientata agli oggetti, gli algoritmi, la visualizzazione dei dati, NumPy,
+  l'elaborazione delle immagini e un'introduzione al machine learning
+- **[Laboratori Skulpt](./python-labs/index.md)** incorporati nei capitoli: editor Python completamente interattivi che funzionano nel
+  tuo browser, senza installazioni né account
+- **Quiz** alla fine di ogni capitolo per verificare la comprensione e la memorizzazione
+- **Riferimenti commentati** con link a Wikipedia, alla documentazione di Python e ad altre fonti autorevoli
+- **[Glossario](./glossary.md)** con le definizioni di tutti i concetti chiave, scritte in un linguaggio accessibile
+- **[Domande frequenti](./faq.md)** che rispondono ai dubbi più comuni di chi passa dalla programmazione a blocchi
+- **[Grafo di apprendimento](./learning-graph/index.md)** che mostra tutte le 450 dipendenze tra i concetti del corso
+- **[Guida per gli insegnanti](./teachers-guide/index.md)** con indicazioni sui tempi, domande di discussione e allineamento agli standard CSTA
+- **Ricerca** disponibile da ogni pagina tramite la barra di ricerca in alto
 
-La [Grapha di Apprendimento](learning-graph/index.md) è particolarmente utile se si desidera esplorare in modo non lineare o verificare i prerequisiti per un concetto specifico: mostra esattamente come le idee sono collegate e quali capitoli le introducono.
+Il [grafo di apprendimento](learning-graph/index.md) è particolarmente utile se vuoi esplorare
+il corso senza seguire l'ordine o controllare i prerequisiti di un concetto specifico: mostra
+esattamente come sono collegate le idee e in quali capitoli vengono introdotte.
 
-!!! Consiglio della mascotte "Dove iniziare"
+!!! mascot-tip "Da dove cominciare"
     ![Monty offering a tip](./img/mascot/tip.png){ class="mascot-admonition-img" }
-    Se non hai mai scritto in Python, inizia dal Capitolo 1 e procedi avanti.
-    Se hai già esercitato in Python ma desideri rafforzare le tue basi, consulta la [Grapha di Apprendimento](learning-graph/index.md) per scoprire esattamente dove iniziare.
-    Io sarò lì per guidarti, in qualsiasi momento!
+    Se non hai mai scritto codice Python, comincia dal Capitolo 1 e vai avanti in ordine.
+    Se hai già usato un po' Python ma vuoi rafforzare le basi, guarda il
+    [grafo di apprendimento](learning-graph/index.md) per trovare esattamente da dove partire.
+    In ogni caso, io sarò lì a guidarti!
 
 ---
 
-## Informazioni sull'autore
+## L'autore
 
 ![Dan McCreary headshot](./img/dan-headshot-small.png){ width="150px" align="right"}
 
-Dan McCreary è un ricercatore di intelligenza artificiale, architetto di soluzioni e educatore semi-retroattivo, che ha trascorso più di tre decenni aiutando le organizzazioni del Fortune 100 a ragionare su grandi dataset. All’Optum ha fondato il Generative AI Center of Excellence e ha guidato il team che ha costruito uno dei più grandi grafi di conoscenza nel settore sanitario al mondo, che comprende oltre 25 miliardi di vertici, al fine di unificare le informazioni riguardanti membri, fornitori e pazienti. La profonda conoscenza di Dan nella rappresentazione della conoscenza e nel pensiero sistemico costituisce la base per i grafi di apprendimento precisi e le procedure intelligenti per la creazione di libri di testo.
+Dan McCreary è un ricercatore nel campo dell'intelligenza artificiale, solution architect ed
+educatore, oggi in semi-pensione, che per oltre trent'anni ha aiutato aziende della Fortune 100
+a ragionare su enormi quantità di dati. In Optum ha fondato il Generative AI Center of
+Excellence e ha guidato il team che ha costruito uno dei più grandi grafi di conoscenza
+sanitari al mondo (oltre 25 miliardi di vertici), per unificare le informazioni su iscritti,
+fornitori di servizi e pazienti. La sua profonda esperienza nella rappresentazione della
+conoscenza e nel pensiero sistemico è alla base dei grafi di apprendimento precisi e dei
+processi di creazione dei manuali intelligenti usati in tutto questo corso.
 
-È coautore del libro *Making Sense of NoSQL* (Manning Publications), presidente fondatore della conferenza NoSQL Now!, e un oratore frequente su temi come ricerca semantica, strategie di ontologia e hardware per l’intelligenza artificiale. Oltre che nel settore industriale, Dan ha fornito consulenza agli studenti come volontario STEM dal 2014 attraverso CoderDojo Twin Cities, e ora applica lo stesso rigoroso approccio utilizzato a livello aziendale nella creazione di risorse educative aperte per giovani apprendenti. È possibile visitare la [sezione Case Studies dei Intelligent Textbooks](https://dmccreary.github.io/intelligent-textbooks/case-studies/) per vedere oltre 87 libri di testo creati da Dan o co-creati con altri autori.
+È coautore di *Making Sense of NoSQL* (Manning Publications), è stato il primo presidente della
+conferenza NoSQL Now! ed è spesso relatore principale su ricerca semantica, strategia delle
+ontologie e hardware per l'intelligenza artificiale. Al di fuori del lavoro, dal 2014 Dan fa da
+mentore agli studenti come volontario STEM con CoderDojo Twin Cities, e oggi applica lo stesso
+rigore usato su scala aziendale alla creazione di risorse educative aperte per i più giovani.
+Puoi visitare gli
+[Intelligent Textbooks Case Studies](https://dmccreary.github.io/intelligent-textbooks/case-studies/)
+per vedere gli oltre 87 manuali che Dan ha creato da solo o insieme ad altri autori.
 
-**Credenziali**
-- Laurea in Fisica e Informatica presso il Carleton College
-- Master in Scienze dell’Educazione presso l’Università del Minnesota
-- Corso di MBA presso l’Università di St. Thomas
-- Detentore di brevetti per tecniche di ricerca semantica e gestione di ontologie
-- Promotore dell’adozione di grafi di conoscenza su larga scala nel settore sanitario e educativo
-- Fondatore di iniziative volte a creare esperienze di apprendimento accessibili e a basso costo per gli studenti delle scuole primarie e secondarie
+**Titoli e riconoscimenti principali**
+
+- Laurea (B.A.) in Fisica e Informatica al Carleton College
+- Laurea magistrale in Ingegneria Elettrica (M.S.E.E.) all'Università del Minnesota
+- Corsi di MBA all'University of St. Thomas
+- Titolare di brevetti su tecniche di ricerca semantica e di gestione delle ontologie
+- Sostenitore dell'adozione su larga scala degli Enterprise Knowledge Graph nella sanità e nell'istruzione
+- Da tempo promotore di esperienze di apprendimento basate sull'intelligenza artificiale, accessibili e a basso costo, per gli studenti K–12
 
 ---
 
 ## Come citare questo libro
 
-Seguendo questo libro di testo, se lo si cita in opere accademiche, proposte di curriculum, piani di lezione o altre pubblicazioni, si deve utilizzare uno dei seguenti formati di citazione.
+Se citi questo manuale in lavori accademici, proposte di curricolo, piani di lezione o altre
+pubblicazioni, usa uno dei seguenti formati di citazione.
 
-**APA (7ª edizione)**  
+**APA (7ª edizione)**
+
 McCreary, D. (2026). *Beginning Python: From Blocks to Code with Monty*. https://dmccreary.github.io/python/
 
-**Chicago (17ª edizione)**  
-McCreary, Dan. 2026. *Beginning Python: From Blocks to Code with Monty*. https://dmccreary.github.io/python/
+**Chicago (17ª edizione)**
 
-**MLA (9ª edizione)**  
-McCreary, Dan. *Beginning Python: From Blocks to Code with Monty*. 2026, dmccreary.github.io/python/
+McCreary, Dan. 2026. *Beginning Python: From Blocks to Code with Monty*. https://dmccreary.github.io/python/.
 
-**BibTeX**  
+**MLA (9ª edizione)**
+
+McCreary, Dan. *Beginning Python: From Blocks to Code with Monty*. 2026, dmccreary.github.io/python/.
+
+**BibTeX**
+
 ```bibtex
 @book{mccreary2026python,
   title     = {Beginning Python: From Blocks to Code with Monty},
@@ -130,21 +202,29 @@ McCreary, Dan. *Beginning Python: From Blocks to Code with Monty*. 2026, dmccrea
 }
 ```
 
-Per citare un capitolo specifico, si deve aggiungere il numero del capitolo e il titolo — ad esempio:  
-McCreary, D. (2026). Capitolo 1: Benvenuto in Python e Skulpt. In *Beginning Python: From Blocks to Code with Monty*. https://dmccreary.github.io/python/chapters/01-welcome-to-python/
+Per citare un capitolo specifico, aggiungi il numero e il titolo del capitolo, per esempio:
+
+McCreary, D. (2026). Chapter 1: Welcome to Python and Skulpt. In
+*Beginning Python: From Blocks to Code with Monty*. https://dmccreary.github.io/python/chapters/01-welcome-to-python/
 
 ---
 
-## Licenza  
-Questo lavoro è rilasciato sotto la  
-[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).  
-È libero di condividere e adattare il materiale per scopi non commerciali, purché si fornisca il dovuto credito e si adattino le modifiche sotto la stessa licenza.
+## Licenza
+
+Quest'opera è distribuita con licenza
+[Creative Commons Attribuzione - Non commerciale - Condividi allo stesso modo 4.0
+Internazionale (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+Sei libero di condividere e adattare il materiale per scopi non commerciali, a condizione di
+citare adeguatamente la fonte e di condividere i tuoi adattamenti con la stessa licenza.
 
 ---
 
-## Riferimenti  
-[^1]: Computer Science Teachers Association. (2023). *State of K-12 Computer Science Education*. https://advocacy.code.org/stateofcs  
-[^2]: U.S. Bureau of Labor Statistics. (2024). *Occupational Outlook Handbook: Software Developers, Quality Assurance Analysts, and Testers*. https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm  
+## Riferimenti
+
+[^1]: Computer Science Teachers Association. (2023). *State of K-12 Computer Science Education*. https://advocacy.code.org/stateofcs
+
+[^2]: U.S. Bureau of Labor Statistics. (2024). *Occupational Outlook Handbook: Software Developers, Quality Assurance Analysts, and Testers*. https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm
+
 [^3]: Code.org. (2024). *2024 State of Computer Science Education: Laying the Groundwork*. https://advocacy.code.org/2024_state_of_cs.pdf
 
 [^4]: Stack Overflow. (2024). *2024 Developer Survey*. https://survey.stackoverflow.co/2024/
