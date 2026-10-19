@@ -44,7 +44,7 @@ def mountain(x, peak_y, width, color):
     monty.goto(x + width // 2, -190)
     monty.end_fill()
 
-# sky
+# cielo
 monty.color('lightsteelblue')
 monty.begin_fill()
 monty.goto(-300, -190)
@@ -53,7 +53,7 @@ monty.goto(300, 200)
 monty.goto(300, -190)
 monty.end_fill()
 
-# layers: back to front, light to dark
+# strati: dal fondo al davanti, dal chiaro allo scuro
 mountain(   0,  170, 600, 'lightsteelblue')
 mountain(-150,  120, 320, 'steelblue')
 mountain( 160,  130, 350, 'cornflowerblue')
@@ -180,7 +180,7 @@ mountain(   0,  170, 600, 'lightsteelblue')
 mountain(-150,  120, 320, 'steelblue')
 mountain( 160,  130, 350, 'cornflowerblue')
 mountain( -30,   60, 260, 'navy')
-# ADD ONE CALL: white snow cap on the navy mountain (x=-30, peak slightly higher, narrow width)`);
+# AGGIUNGI UNA CHIAMATA: la cima innevata bianca sulla montagna blu notte (x=-30, picco un po' più alto, larghezza stretta)`);
 </script>
 
 Aggiungi `mountain(-30, 70, 80, 'white')` — un triangolo bianco stretto che si sovrappone alla cima del picco navy.

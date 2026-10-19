@@ -65,7 +65,7 @@ from PIL import Image
 img = Image.open("photo.jpg")
 print(img.size)    # (1920, 1080)
 print(img.mode)    # "RGB"
-img.show()         # opens in the system image viewer
+img.show()         # si apre nel visualizzatore di immagini del sistema
 ```
 
 !!! mascot-thinking "Cosa Pensi che Succederà?"
@@ -90,12 +90,12 @@ img.show()         # opens in the system image viewer
 <script>
 initCmLab('', `from PIL import Image
 
-# Create a 3x3 RGB image manually:
-# Each row is a list of (R, G, B) tuples
+# Crea a mano un'immagine RGB 3x3:
+# Ogni riga è una lista di tuple (R, G, B)
 pixels = [
-    [(255,   0,   0), (  0, 255,   0), (  0,   0, 255)],  # red, green, blue
-    [(255, 255,   0), (  0, 255, 255), (255,   0, 255)],  # yellow, cyan, magenta
-    [(255, 255, 255), (128, 128, 128), (  0,   0,   0)],  # white, gray, black
+    [(255,   0,   0), (  0, 255,   0), (  0,   0, 255)],  # rosso, verde, blu
+    [(255, 255,   0), (  0, 255, 255), (255,   0, 255)],  # giallo, ciano, magenta
+    [(255, 255, 255), (128, 128, 128), (  0,   0,   0)],  # bianco, grigio, nero
 ]
 
 img = Image.new("RGB", (3, 3))
@@ -103,11 +103,11 @@ for row_idx, row in enumerate(pixels):
     for col_idx, color in enumerate(row):
         img.putpixel((col_idx, row_idx), color)
 
-print("Image size:", img.size)
-print("Image mode:", img.mode)
-print("Pixel at (0,0):", img.getpixel((0, 0)))   # top-left
-print("Pixel at (1,0):", img.getpixel((1, 0)))   # top-middle
-print("Pixel at (1,1):", img.getpixel((1, 1)))   # center`);
+print("Dimensioni dell'immagine:", img.size)
+print("Modalità dell'immagine:", img.mode)
+print("Pixel in (0,0):", img.getpixel((0, 0)))   # in alto a sinistra
+print("Pixel in (1,0):", img.getpixel((1, 0)))   # in alto al centro
+print("Pixel in (1,1):", img.getpixel((1, 1)))   # al centro`);
 </script>
 
 ## Capire i Dati dei Pixel
@@ -143,7 +143,7 @@ small.save("photo_small.jpg")
 `image.thumbnail((max_width, max_height))` è più intelligente — rimpicciolisce l'immagine per adattarla al riquadro **mantenendo le proporzioni**. Modifica l'immagine sul posto:
 
 ```python
-img.thumbnail((400, 400))   # fits in 400×400 box, keeps proportions
+img.thumbnail((400, 400))   # entra in un riquadro 400×400, mantenendo le proporzioni
 ```
 
 ## Ritagliare le Immagini
@@ -152,7 +152,7 @@ img.thumbnail((400, 400))   # fits in 400×400 box, keeps proportions
 I quattro numeri sono coordinate in pixel misurate dall'angolo in alto a sinistra.
 
 ```python
-# Crop a 100×100 region starting at pixel (50, 30):
+# Ritaglia una zona 100×100 a partire dal pixel (50, 30):
 region = img.crop((50, 30, 150, 130))
 region.save("cropped.jpg")
 ```
@@ -173,7 +173,7 @@ region.save("cropped.jpg")
 <script>
 initCmLab('-2', `from PIL import Image
 
-# Create a 10x10 image with a color gradient:
+# Crea un'immagine 10x10 con una sfumatura di colore:
 img = Image.new("RGB", (10, 10))
 for y in range(10):
     for x in range(10):
@@ -182,13 +182,13 @@ for y in range(10):
         b = 100
         img.putpixel((x, y), (r, g, b))
 
-print("Original size:", img.size)
+print("Dimensioni originali:", img.size)
 
-# Crop the top-right quadrant:
+# Ritaglia il quadrante in alto a destra:
 cropped = img.crop((5, 0, 10, 5))
-print("Cropped size:", cropped.size)
-print("Cropped pixel (0,0):", cropped.getpixel((0, 0)))
-print("Cropped pixel (4,4):", cropped.getpixel((4, 4)))`);
+print("Dimensioni ritagliate:", cropped.size)
+print("Pixel ritagliato (0,0):", cropped.getpixel((0, 0)))
+print("Pixel ritagliato (4,4):", cropped.getpixel((4, 4)))`);
 </script>
 
 ## Specchiare e Ruotare
@@ -200,9 +200,9 @@ Le costanti del metodo vivono in `Image.Transpose` (o nel namespace `Image` più
 from PIL import Image
 
 img = Image.open("photo.jpg")
-flipped_h = img.transpose(Image.Transpose.FLIP_LEFT_RIGHT)   # mirror horizontally
-flipped_v = img.transpose(Image.Transpose.FLIP_TOP_BOTTOM)   # mirror vertically
-rotated   = img.rotate(90)                                    # rotate 90° counter-clockwise
+flipped_h = img.transpose(Image.Transpose.FLIP_LEFT_RIGHT)   # specchia in orizzontale
+flipped_v = img.transpose(Image.Transpose.FLIP_TOP_BOTTOM)   # specchia in verticale
+rotated   = img.rotate(90)                                    # ruota di 90° in senso antiorario
 ```
 
 `img.rotate(angle)` ruota dell'angolo dato — gli angoli positivi ruotano in senso antiorario.
@@ -246,7 +246,7 @@ gray.save("photo_grayscale.jpg")
 <script>
 initCmLab('-3', `from PIL import Image
 
-# Create a small color image, then convert it to grayscale:
+# Crea una piccola immagine a colori, poi convertila in scala di grigi:
 img = Image.new("RGB", (4, 4))
 colors = [
     (255, 0,   0),   (0,   255, 0),   (0,   0,   255), (255, 255, 0),
@@ -259,11 +259,11 @@ for i, c in enumerate(colors):
 
 gray = img.convert("L")
 
-print("Original RGB pixels (row 0):")
+print("Pixel RGB originali (riga 0):")
 for x in range(4):
     print(f"  ({x},0): {img.getpixel((x, 0))}")
 
-print("Grayscale pixels (row 0):")
+print("Pixel in scala di grigi (riga 0):")
 for x in range(4):
     print(f"  ({x},0): {gray.getpixel((x, 0))}")`);
 </script>
@@ -293,9 +293,9 @@ I filtri funzionano esaminando i vicini di ogni pixel e calcolando un nuovo valo
 Pillow rileva il formato dall'estensione del file:
 
 ```python
-img.save("output.png")   # saves as PNG
-img.save("output.jpg", quality=85)   # JPEG with quality setting (1-95)
-img.save("output.bmp")   # BMP format
+img.save("output.png")   # salva come PNG
+img.save("output.jpg", quality=85)   # JPEG con impostazione di qualità (1-95)
+img.save("output.bmp")   # formato BMP
 ```
 
 Per JPEG: qualità più bassa = file più piccolo ma più artefatti visivi. Qualità 80–90 è di solito un buon equilibrio.
@@ -328,18 +328,18 @@ def brighten(img, amount):
     for y in range(img.height):
         for x in range(img.width):
             r, g, b = img.getpixel((x, y))
-            # Add 'amount' to each channel, but clamp between 0 and 255:
-            nr = r   # TODO: add amount and clamp
-            ng = g   # TODO: add amount and clamp
-            nb = b   # TODO: add amount and clamp
+            # Aggiungi 'amount' a ogni canale, ma limitalo tra 0 e 255:
+            nr = r   # TODO: aggiungi amount e limita il valore
+            ng = g   # TODO: aggiungi amount e limita il valore
+            nb = b   # TODO: aggiungi amount e limita il valore
             result.putpixel((x, y), (nr, ng, nb))
     return result
 
-# Test with a simple 3x3 image:
+# Prova con una semplice immagine 3x3:
 img = Image.new("RGB", (3, 3), (100, 150, 200))
-print("Before brighten:", img.getpixel((0, 0)))
+print("Prima di schiarire:", img.getpixel((0, 0)))
 bright = brighten(img, 80)
-print("After brighten:", bright.getpixel((0, 0)))`);
+print("Dopo aver schiarito:", bright.getpixel((0, 0)))`);
 </script>
 
 ## Esperimenti

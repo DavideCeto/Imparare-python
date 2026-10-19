@@ -141,7 +141,7 @@ monty = turtle.Turtle()
 monty.shape('turtle')
 
 sides = 5
-# Add one line here to calculate the correct angle
+# Aggiungi qui una riga per calcolare l'angolo corretto
 
 for i in range(sides):
     monty.forward(80)

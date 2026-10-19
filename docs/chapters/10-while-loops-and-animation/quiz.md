@@ -27,18 +27,18 @@ count = 3
 while count > 0:
     print(count)
     count -= 1
-print("Done!")
+print("Fatto!")
 ```
 
 <div class="upper-alpha" markdown>
-1. `3 2 1 0` poi `Done!`
-2. Solo `Done!`
-3. `3 2 1` poi `Done!`
-4. `3` poi `Done!`
+1. `3 2 1 0` poi `Fatto!`
+2. Solo `Fatto!`
+3. `3 2 1` poi `Fatto!`
+4. `3` poi `Fatto!`
 </div>
 
 ??? question "Mostra risposta"
-    La risposta corretta è **C**. Il ciclo parte con count = 3 (True), stampa 3, count diventa 2 (True), stampa 2, count diventa 1 (True), stampa 1, count diventa 0. Ora `0 > 0` è `False`, quindi il ciclo finisce senza stampare 0. Poi si stampa `"Done!"`. Il numero 0 non viene mai stampato perché la condizione viene controllata prima di ogni giro.
+    La risposta corretta è **C**. Il ciclo parte con count = 3 (True), stampa 3, count diventa 2 (True), stampa 2, count diventa 1 (True), stampa 1, count diventa 0. Ora `0 > 0` è `False`, quindi il ciclo finisce senza stampare 0. Poi si stampa `"Fatto!"`. Il numero 0 non viene mai stampato perché la condizione viene controllata prima di ogni giro.
 
     **Concept Tested:** while Loop
 

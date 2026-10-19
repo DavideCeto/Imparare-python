@@ -50,11 +50,11 @@ Nelle normali stringhe Python, `\d` viene trattato come una sequenza di escape s
 Per evitare confusione, scrivi sempre i pattern regex come **stringhe raw** mettendo `r` prima della virgoletta: `r"\d"`.
 
 ```python
-# Without raw string: Python interprets \n as newline
-pattern = "\n"   # newline character
+# Senza raw string: Python interpreta \n come un a capo
+pattern = "\n"   # carattere di a capo
 
-# With raw string: Python passes \n literally to the regex engine
-pattern = r"\n"  # the two characters backslash + n
+# Con la raw string: Python passa \n così com'è al motore delle regex
+pattern = r"\n"  # i due caratteri barra rovesciata + n
 ```
 
 **Regola: usa sempre `r"..."` per i pattern regex.**
@@ -124,10 +124,10 @@ texts = [
 for t in texts:
     match = re.search(r"\\d{3}-\\d{4}", t)
     if match:
-        print(f"Found in: {t!r}")
-        print(f"  Match: {match.group()}")
+        print(f"Trovato in: {t!r}")
+        print(f"  Corrispondenza: {match.group()}")
     else:
-        print(f"No match in: {t!r}")`);
+        print(f"Nessuna corrispondenza in: {t!r}")`);
 </script>
 
 `match.group()` restituisce il testo che è stato trovato.
@@ -155,11 +155,11 @@ initCmLab('-2', `import re
 text = "Prices: $5.99, $12.00, $3.50, and $100.00"
 
 prices = re.findall(r"\\$\\d+\\.\\d{2}", text)
-print("Prices found:", prices)
+print("Prezzi trovati:", prices)
 
-# Find all words (sequences of letters):
+# Trova tutte le parole (sequenze di lettere):
 words = re.findall(r"[A-Za-z]+", text)
-print("Words found:", words)`);
+print("Parole trovate:", words)`);
 </script>
 
 ### Guardalo: Il Laboratorio di Corrispondenza Regex
@@ -208,15 +208,15 @@ Una **classe di caratteri** è un insieme di caratteri tra parentesi quadre. Cor
 <script>
 initCmLab('-3', `import re
 
-# Split on any punctuation (,  ;  :  or space):
+# Divide su qualsiasi punteggiatura (,  ;  :  o spazio):
 sentence = "apples, bananas; oranges: mangoes kiwis"
 fruits = re.split(r"[,;:\\s]+", sentence)
-print("Fruits:", fruits)
+print("Frutti:", fruits)
 
-# Split on multiple whitespace:
+# Divide su più spazi bianchi:
 text = "hello    world\\t\\tpython"
 words = re.split(r"\\s+", text)
-print("Words:", words)`);
+print("Parole:", words)`);
 </script>
 
 ## `re.sub()` — Sostituisci le Corrispondenze
@@ -226,11 +226,11 @@ print("Words:", words)`);
 ```python
 import re
 
-# Remove all digits from a string:
+# Rimuove tutte le cifre da una stringa:
 cleaned = re.sub(r"\d", "", "Hello123World456")
 print(cleaned)   # "HelloWorld"
 
-# Replace multiple spaces with one:
+# Sostituisce più spazi con uno solo:
 normalized = re.sub(r"\s+", " ", "too   many    spaces")
 print(normalized)   # "too many spaces"
 ```
@@ -241,13 +241,13 @@ print(normalized)   # "too many spaces"
 `$` corrisponde alla fine.
 
 ```python
-# Matches only if string starts with "Hello":
+# Corrisponde solo se la stringa inizia con "Hello":
 if re.search(r"^Hello", text):
-    print("Starts with Hello")
+    print("Inizia con Hello")
 
-# Matches only if string ends with a digit:
+# Corrisponde solo se la stringa finisce con una cifra:
 if re.search(r"\d$", text):
-    print("Ends with a digit")
+    print("Finisce con una cifra")
 ```
 
 ## Alternanza con `|`
@@ -273,7 +273,7 @@ text = "Born: 2010-06-15"
 match = re.search(r"(\d{4})-(\d{2})-(\d{2})", text)
 if match:
     year, month, day = match.group(1), match.group(2), match.group(3)
-    print(f"Year={year}, Month={month}, Day={day}")
+    print(f"Anno={year}, Mese={month}, Giorno={day}")
 ```
 
 <div class="cm-lab cm-text-only">
@@ -299,16 +299,16 @@ emails = [
     "carol@work.org"
 ]
 
-# Simple email pattern: word@word.word
+# Pattern semplice per le email: parola@parola.parola
 pattern = r"(\\w[\\w.]+)@(\\w+\\.\\w+)"
 
 for email in emails:
     match = re.search(pattern, email)
     if match:
         user, domain = match.group(1), match.group(2)
-        print(f"Valid: user={user}, domain={domain}")
+        print(f"Valida: utente={user}, dominio={domain}")
     else:
-        print(f"Invalid: {email!r}")`);
+        print(f"Non valida: {email!r}")`);
 </script>
 
 ## Escape dei Caratteri Speciali
@@ -317,7 +317,7 @@ Alcuni caratteri hanno un significato speciale nella regex: `.`, `*`, `+`, `?`, 
 Per farli corrispondere letteralmente, fai l'escape con una barra inversa: `\.` corrisponde a un punto letterale.
 
 ```python
-# Match a literal dot (not "any character"):
+# Corrisponde a un punto letterale (non a "qualsiasi carattere"):
 re.findall(r"\d+\.\d+", "3.14 and 2.71 and hello.world")
 # → ['3.14', '2.71']
 ```
@@ -329,10 +329,10 @@ Se usi lo stesso pattern molte volte, **compilalo** prima per una migliore prest
 ```python
 import re
 
-digit_pattern = re.compile(r"\d+")   # compile once
+digit_pattern = re.compile(r"\d+")   # compilato una volta sola
 
 for text in many_strings:
-    matches = digit_pattern.findall(text)   # use repeatedly
+    matches = digit_pattern.findall(text)   # usato più volte
 ```
 
 ## Verifica di Apprendimento
@@ -360,9 +360,9 @@ initCmLab('-5', `import re
 
 text = "Contact us at 800-555-1234 or 415-867-5309. Fax: 888-123-4567."
 
-# Bug: pattern only matches 3 digits!
+# Bug: il pattern trova solo 3 cifre!
 phones = re.findall(r"\\d{3}", text)
-print("Found:", phones)`);
+print("Trovati:", phones)`);
 </script>
 
 ## Esperimenti

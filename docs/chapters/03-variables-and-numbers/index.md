@@ -375,7 +375,7 @@ Imparerai molto di più sulle classi più avanti nel corso.
 initCmLab('-3', `player_score = 42
 bonus_points = 10
 print(player_score)
-# Add one line below to also print bonus_points`);
+# Aggiungi una riga qui sotto per stampare anche bonus_points`);
 </script>
 
 Se il tuo output mostra `42` sulla prima riga e `10` sulla seconda, ce l'hai fatta!

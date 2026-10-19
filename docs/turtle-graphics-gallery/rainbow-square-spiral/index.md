@@ -160,7 +160,7 @@ colors = ['red', 'orange', 'yellow', 'green', 'blue', 'violet']
 side = 20
 
 for i in range(36):
-    # ADD ONE LINE HERE to set the color
+    # AGGIUNGI QUI UNA RIGA per impostare il colore
     for j in range(4):
         monty.forward(side)
         monty.right(90)

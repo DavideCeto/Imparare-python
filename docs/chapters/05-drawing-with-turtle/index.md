@@ -189,11 +189,11 @@ Ecco un programma che disegna due linee separate con uno spazio nel mezzo:
 ```python
 import turtle
 t = turtle.Turtle()
-t.forward(80)      # draw a line
-t.penup()          # lift the pen
-t.forward(40)      # move 40 pixels — nothing drawn here
-t.pendown()        # lower the pen
-t.forward(80)      # draw another line
+t.forward(80)      # disegna una linea
+t.penup()          # solleva la penna
+t.forward(40)      # si sposta di 40 pixel — qui non disegna nulla
+t.pendown()        # abbassa la penna
+t.forward(80)      # disegna un'altra linea
 ```
 
 Provalo nel laboratorio qui sotto — presta molta attenzione allo spazio vuoto nel mezzo del disegno.
@@ -346,7 +346,7 @@ t.forward(100)
 t.right(90)
 t.forward(100)
 t.right(90)
-# Add ONE line below to draw the third side of the square`);
+# Aggiungi UNA riga qui sotto per disegnare il terzo lato del quadrato`);
 </script>
 
 Se hai risposto correttamente, vedrai tre lati di un quadrato disegnati in verde.

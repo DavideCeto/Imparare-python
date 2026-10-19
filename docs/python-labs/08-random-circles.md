@@ -175,8 +175,8 @@ for i in range(10):
     monty.pendown()
     monty.color(color)
     monty.begin_fill()
-    # Add one line: radius = random.randint(5, 25)
-    monty.circle(10)  # change 10 to radius after adding the line above
+    # Aggiungi una riga: radius = random.randint(5, 25)
+    monty.circle(10)  # sostituisci 10 con radius dopo aver aggiunto la riga sopra
     monty.end_fill()
 
 monty.hideturtle()`);

@@ -91,16 +91,16 @@ speed = 10
 
 def reset():
     speed = 0
-    print("Inside:", speed)
+    print("Dentro:", speed)
 
 reset()
-print("Outside:", speed)
+print("Fuori:", speed)
 ```
 
 <div class="upper-alpha" markdown>
-1. `Inside: 0` poi `Outside: 0`
-2. `Inside: 10` poi `Outside: 10`
-3. `Inside: 0` poi `Outside: 10`
+1. `Dentro: 0` poi `Fuori: 0`
+2. `Dentro: 10` poi `Fuori: 10`
+3. `Dentro: 0` poi `Fuori: 10`
 4. Un errore perché `speed` è definita due volte
 </div>
 

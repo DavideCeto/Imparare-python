@@ -20,14 +20,14 @@ Ogni programma che hai scritto finora gira allo stesso modo ogni volta. `input()
 Se hai bisogno di un numero, racchiudi `input()` con `int()` per convertire la stringa:
 
 ```python
-answer = input("How many circles? ")
+answer = input("Quanti cerchi? ")
 count = int(answer)
 ```
 
 Oppure combinali su una riga:
 
 ```python
-count = int(input("How many circles? "))
+count = int(input("Quanti cerchi? "))
 ```
 
 !!! mascot-tip "Ponte Scratch"
@@ -43,7 +43,7 @@ monty = turtle.Turtle()
 monty.shape('turtle')
 monty.speed(10)
 
-count = int(input("How many circles to draw? (try 3 to 10) "))
+count = int(input("Quanti cerchi vuoi disegnare? (prova da 3 a 10) "))
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink']
 
 monty.penup()
@@ -97,7 +97,7 @@ monty = turtle.Turtle()
 monty.shape('turtle')
 monty.speed(10)
 
-count = int(input("How many circles to draw? (try 3 to 10) "))
+count = int(input("Quanti cerchi vuoi disegnare? (prova da 3 a 10) "))
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink']
 
 monty.penup()
@@ -164,8 +164,8 @@ initCmLab('-2', `import turtle
 monty = turtle.Turtle()
 monty.speed(10)
 
-count = int(input("How many circles? (1-7) "))
-# Add one line here: radius = int(input("How big? (10-40) "))
+count = int(input("Quanti cerchi? (1-7) "))
+# Aggiungi qui una riga: radius = int(input("Quanto grandi? (10-40) "))
 
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink']
 
@@ -176,7 +176,7 @@ for i in range(count):
     monty.color(colors[i % len(colors)])
     monty.pendown()
     monty.begin_fill()
-    monty.circle(20)  # change 20 to radius after adding the line above
+    monty.circle(20)  # sostituisci 20 con radius dopo aver aggiunto la riga sopra
     monty.end_fill()
     monty.penup()
     monty.forward(50)

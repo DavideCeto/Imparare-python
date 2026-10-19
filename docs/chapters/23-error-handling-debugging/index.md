@@ -97,9 +97,9 @@ Leggi dal **basso verso l'alto**:
 </div>
 <script>
 initCmLab('', `numbers = [10, 20, 30]
-print("First:", numbers[0])
-print("Last:", numbers[5])   # this will fail!
-print("This line never runs.")`);
+print("Primo:", numbers[0])
+print("Ultimo:", numbers[5])   # questa riga fallirà!
+print("Questa riga non viene mai eseguita.")`);
 </script>
 
 Avevi indovinato? `IndexError: list index out of range` — l'indice 5 non esiste in una lista di 3 elementi.
@@ -112,7 +112,7 @@ Un blocco `try/except` permette al tuo programma di catturare un errore e gestir
 try:
     result = 10 / 0
 except ZeroDivisionError:
-    print("Can't divide by zero!")
+    print("Non si può dividere per zero!")
 ```
 
 Struttura:
@@ -137,7 +137,7 @@ initCmLab('-2', `def safe_divide(a, b):
     try:
         return a / b
     except ZeroDivisionError:
-        print("Error: can't divide by zero!")
+        print("Errore: non si può dividere per zero!")
         return None
 
 print(safe_divide(10, 2))
@@ -151,13 +151,13 @@ Cattura più tipi di eccezione con più clausole `except`:
 
 ```python
 try:
-    number = int(input("Enter a number: "))
+    number = int(input("Inserisci un numero: "))
     result = 100 / number
     print(f"100 / {number} = {result}")
 except ValueError:
-    print("That's not a valid number!")
+    print("Questo non è un numero valido!")
 except ZeroDivisionError:
-    print("Can't divide by zero!")
+    print("Non si può dividere per zero!")
 ```
 
 Catturare eccezioni specifiche è meglio di un semplice `except:` — previene il nascondere bug che non intendevi catturare.
@@ -171,14 +171,14 @@ Due clausole extra opzionali rendono `try/except` ancora più potente:
 
 ```python
 try:
-    n = int(input("Number: "))
+    n = int(input("Numero: "))
     result = 10 / n
 except (ValueError, ZeroDivisionError) as e:
-    print(f"Error: {e}")
+    print(f"Errore: {e}")
 else:
-    print(f"Result: {result}")   # only if no exception occurred
+    print(f"Risultato: {result}")   # solo se non si è verificata nessuna eccezione
 finally:
-    print("Done.")               # always runs
+    print("Fatto.")               # viene sempre eseguito
 ```
 
 ## L'Istruzione `raise`
@@ -201,17 +201,17 @@ Usa `raise` per innescare tu stesso un'eccezione quando l'input viola una regola
 <script>
 initCmLab('-3', `def set_speed(speed):
     if speed < 0:
-        raise ValueError("Speed cannot be negative.")
+        raise ValueError("La velocità non può essere negativa.")
     if speed > 300:
-        raise ValueError("Speed exceeds maximum (300 km/h).")
+        raise ValueError("La velocità supera il massimo (300 km/h).")
     return speed
 
 for s in [60, -10, 400]:
     try:
         result = set_speed(s)
-        print(f"Speed set to {result}")
+        print(f"Velocità impostata a {result}")
     except ValueError as e:
-        print(f"Invalid: {e}")`);
+        print(f"Non valido: {e}")`);
 </script>
 
 ## L'Istruzione `assert`
@@ -222,7 +222,7 @@ Se non lo è, genera `AssertionError`. Usala per controlli interni durante lo sv
 ```python
 def square(n):
     result = n * n
-    assert result >= 0, "Square must be non-negative!"
+    assert result >= 0, "Il quadrato non deve essere negativo!"
     return result
 ```
 
@@ -232,8 +232,8 @@ def square(n):
 
 ```python
 def cast_to_int():
-    user_input = input("Enter an integer: ")
-    return int(user_input)   # crashes with ValueError on bad input
+    user_input = input("Inserisci un numero intero: ")
+    return int(user_input)   # va in crash con un ValueError se l'input non è valido
 
 print(cast_to_int())
 ```
@@ -242,8 +242,8 @@ Scrivere una parola invece di un numero genera `ValueError: invalid literal for 
 
 ```python
 def cast_to_int():
-    user_input = input("Enter an integer: ")
-    assert user_input.isdigit(), "You did not enter an integer!"
+    user_input = input("Inserisci un numero intero: ")
+    assert user_input.isdigit(), "Non hai inserito un numero intero!"
     return int(user_input)
 
 print(cast_to_int())
@@ -259,7 +259,7 @@ Il più semplice strumento di debug è un'istruzione `print()` strategica. Inser
 def total_price(items):
     total = 0
     for item in items:
-        print(f"  DEBUG: adding {item}")   # temporary debug print
+        print(f"  DEBUG: aggiungo {item}")   # print di debug temporaneo
         total += item
     print(f"  DEBUG: total = {total}")
     return total
@@ -294,11 +294,11 @@ Rimuovi i print di debug una volta corretto il problema.
   </div>
 </div>
 <script>
-initCmLab('-4', `raw = input("Enter a number: ")
+initCmLab('-4', `raw = input("Inserisci un numero: ")
 
-# Wrap this in try/except so it doesn't crash on bad input:
+# Racchiudi questo codice in try/except, così non va in crash con un input sbagliato:
 n = int(raw)
-print(f"Double: {n * 2}")`);
+print(f"Doppio: {n * 2}")`);
 </script>
 
 ## Esperimenti

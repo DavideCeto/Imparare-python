@@ -146,7 +146,7 @@ for i in range(19, -1, -1):
     radius = 10 + i * 15
     monty.color(colors[i % 2])
     monty.penup()
-    # ADD ONE LINE HERE to move to (0, -radius)
+    # AGGIUNGI QUI UNA RIGA per spostarti in (0, -radius)
     monty.pendown()
     monty.begin_fill()
     monty.circle(radius)

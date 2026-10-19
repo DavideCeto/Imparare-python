@@ -41,11 +41,11 @@ L'esempio ricorsivo più semplice è il conto alla rovescia:
 
 ```python
 def countdown(n):
-    if n <= 0:          # BASE CASE — stop here
-        print("Go!")
+    if n <= 0:          # CASO BASE — fermati qui
+        print("Via!")
         return
     print(n)
-    countdown(n - 1)    # RECURSIVE CALL — call itself with a smaller problem
+    countdown(n - 1)    # CHIAMATA RICORSIVA — chiama se stessa con un problema più piccolo
 ```
 
 <div class="cm-lab cm-text-only">
@@ -64,7 +64,7 @@ def countdown(n):
 <script>
 initCmLab('', `def countdown(n):
     if n <= 0:
-        print("Go!")
+        print("Via!")
         return
     print(n)
     countdown(n - 1)
@@ -111,9 +111,9 @@ Per la maggior parte dei programmi degli studenti questo è più che sufficiente
 </div>
 <script>
 initCmLab('-2', `def factorial(n):
-    if n <= 1:          # base case
+    if n <= 1:          # caso base
         return 1
-    return n * factorial(n - 1)   # recursive call
+    return n * factorial(n - 1)   # chiamata ricorsiva
 
 print("5! =", factorial(5))
 print("7! =", factorial(7))
@@ -177,7 +177,7 @@ def make_counter():
     count = 0
 
     def increment():
-        nonlocal count   # tells Python: use the outer count, not a new local one
+        nonlocal count   # dice a Python: usa il count esterno, non uno nuovo locale
         count += 1
         return count
 
@@ -218,20 +218,20 @@ Prima del codice, i parametri chiave sono:
 initCmLab('-3', `import turtle
 t = turtle.Turtle()
 t.speed(0)
-t.left(90)   # point upward
+t.left(90)   # punta verso l'alto
 t.penup()
 t.goto(0, -180)
 t.pendown()
 
 def draw_tree(length, angle):
-    if length < 5:   # base case: stop for tiny branches
+    if length < 5:   # caso base: fermati per i rami minuscoli
         return
     t.pensize(max(1, length // 10))
     t.forward(length)
     t.left(angle)
-    draw_tree(length * 0.7, angle)   # left branch (smaller)
+    draw_tree(length * 0.7, angle)   # ramo sinistro (più piccolo)
     t.right(angle * 2)
-    draw_tree(length * 0.7, angle)   # right branch (smaller)
+    draw_tree(length * 0.7, angle)   # ramo destro (più piccolo)
     t.left(angle)
     t.backward(length)
 
@@ -288,7 +288,7 @@ t.penup(); t.goto(0, -180); t.pendown()
 def draw_tree(length, angle):
     if length < 5:
         return
-    # Add: set color to "brown" if length >= 40, else "green"
+    # Aggiungi: imposta il colore a "brown" se length >= 40, altrimenti "green"
     t.pensize(max(1, length // 10))
     t.forward(length)
     t.left(angle)

@@ -126,7 +126,7 @@ Verifica la tua comprensione dell'indicizzazione delle stringhe, dello slicing, 
 </div>
 
 ??? question "Mostra risposta"
-    La risposta corretta è **C**. Una f-string (letterale di stringa formattato) si crea mettendo `f` prima della virgoletta di apertura: `f"Hello, {name}!"`. Qualsiasi espressione dentro `{}` viene valutata e inserita nella stringa. Le f-string eliminano il bisogno di convertire i numeri con `str()` prima di unirli e sono molto più leggibili della concatenazione.
+    La risposta corretta è **C**. Una f-string (letterale di stringa formattato) si crea mettendo `f` prima della virgoletta di apertura: `f"Ciao, {name}!"`. Qualsiasi espressione dentro `{}` viene valutata e inserita nella stringa. Le f-string eliminano il bisogno di convertire i numeri con `str()` prima di unirli e sono molto più leggibili della concatenazione.
 
     **Concept Tested:** f-Strings
 

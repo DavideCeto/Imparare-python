@@ -39,10 +39,10 @@ così `runSkulpt()` può ancora inizializzarsi senza errori.
 <script>
 initCmLab('', `name = "Python"
 version = 3
-print("Hello from", name, version)
-print("No turtle needed!")
+print("Ciao da", name, version)
+print("Non serve la tartaruga!")
 for i in range(1, 6):
-    print(i, "squared =", i * i)`);
+    print(i, "al quadrato =", i * i)`);
 </script>
 
 ## Esempio 2 — Funzione Definita dall'Utente
@@ -63,7 +63,7 @@ for i in range(1, 6):
 <script>
 initCmLab('-2', `def greet(first_name, last_name):
     full_name = first_name + " " + last_name
-    print("Hello,", full_name + "!")
+    print("Ciao,", full_name + "!")
 
 greet("Ada", "Lovelace")
 greet("Grace", "Hopper")
@@ -90,8 +90,8 @@ Copia questo blocco e sostituisci il codice dentro il `<textarea>` per qualsiasi
 </div>
 <script>
 initCmLab('', `
-# your Python code here
-print("Hello!")`);
+# qui il tuo codice Python
+print("Ciao!")`);
 </script>
 ```
 

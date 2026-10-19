@@ -161,7 +161,7 @@ colors = ['hotpink','deeppink','magenta','orchid',
 
 for i in range(8):
     petal(80, colors[i])
-    # ADD ONE LINE HERE to rotate 45° before the next petal`);
+    # AGGIUNGI QUI UNA RIGA per ruotare di 45° prima del petalo successivo`);
 </script>
 
 La riga mancante è `monty.left(45)` — 8 petali × 45° = 360°, un fiore completo.

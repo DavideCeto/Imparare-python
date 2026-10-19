@@ -152,7 +152,7 @@ monty.pensize(3)
 monty.forward(100)
 
 monty.right(90)
-# Add one line here to change the color to blue
+# Aggiungi qui una riga per cambiare il colore in blu
 monty.forward(100)`);
 </script>
 

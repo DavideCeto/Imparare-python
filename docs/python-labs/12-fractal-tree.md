@@ -22,11 +22,11 @@ Ecco il pattern:
 
 ```python
 def draw_branch(size, level):
-    if level == 0:      # base case: stop here
+    if level == 0:      # caso base: fermati qui
         return
     monty.forward(size)
-    draw_branch(size * 0.6, level - 1)   # left branch
-    draw_branch(size * 0.6, level - 1)   # right branch
+    draw_branch(size * 0.6, level - 1)   # ramo sinistro
+    draw_branch(size * 0.6, level - 1)   # ramo destro
     monty.backward(size)
 ```
 
@@ -180,7 +180,7 @@ monty.goto(0, -160)
 monty.pendown()
 
 def draw_branch(size, level):
-    if level == 4:   # bug: this stops when level IS 4, but we start AT 4!
+    if level == 4:   # bug: si ferma quando level È 4, ma noi partiamo PROPRIO da 4!
         return
     monty.color('brown')
     monty.forward(size)

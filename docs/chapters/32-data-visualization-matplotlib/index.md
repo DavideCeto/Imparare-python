@@ -60,9 +60,9 @@ x = [0, 1, 2, 3, 4, 5]
 y = [0, 1, 4, 9, 16, 25]
 
 plt.plot(x, y)
-plt.title("Squares")
-plt.xlabel("Number")
-plt.ylabel("Square")
+plt.title("Quadrati")
+plt.xlabel("Numero")
+plt.ylabel("Quadrato")
 plt.show()
 ```
 
@@ -87,12 +87,12 @@ x = [0, 1, 2, 3, 4, 5]
 y = [0, 1, 4, 9, 16, 25]
 
 plt.plot(x, y)
-plt.title("Squares")
-plt.xlabel("Number")
-plt.ylabel("Square")
+plt.title("Quadrati")
+plt.xlabel("Numero")
+plt.ylabel("Quadrato")
 plt.show()
 
-print("Chart data:")
+print("Dati del grafico:")
 for i, j in zip(x, y):
     print(f"  x={i}, y={j}")`);
 </script>
@@ -144,23 +144,23 @@ x = [0, 1, 2, 3, 4, 5]
 
 y_linear = [v for v in x]
 y_square = [v**2 for v in x]
-y_cube   = [v**3 / 10 for v in x]   # scaled so all fit on one chart
+y_cube   = [v**3 / 10 for v in x]   # in scala, così entrano tutti in un grafico
 
-plt.plot(x, y_linear, label="x (linear)")
-plt.plot(x, y_square, label="x² (quadratic)")
-plt.plot(x, y_cube,   label="x³/10 (cubic)")
+plt.plot(x, y_linear, label="x (lineare)")
+plt.plot(x, y_square, label="x² (quadratica)")
+plt.plot(x, y_cube,   label="x³/10 (cubica)")
 
-plt.title("Growth Comparison")
+plt.title("Confronto della crescita")
 plt.xlabel("x")
 plt.ylabel("y")
 plt.legend()
 plt.grid(True)
 plt.show()
 
-print("Values at x=5:")
-print(f"  linear : {y_linear[-1]}")
-print(f"  quadratic: {y_square[-1]}")
-print(f"  cubic/10 : {y_cube[-1]:.1f}")`);
+print("Valori per x=5:")
+print(f"  lineare   : {y_linear[-1]}")
+print(f"  quadratica: {y_square[-1]}")
+print(f"  cubica/10 : {y_cube[-1]:.1f}")`);
 </script>
 
 ## Scatter Plot
@@ -177,9 +177,9 @@ study_hours = [1, 2, 3, 4, 5, 6, 7, 8]
 test_scores = [45, 55, 60, 70, 75, 80, 88, 95]
 
 plt.scatter(study_hours, test_scores, color="blue", s=80)
-plt.title("Study Hours vs. Test Score")
-plt.xlabel("Hours Studied")
-plt.ylabel("Score")
+plt.title("Ore di studio e voto nella verifica")
+plt.xlabel("Ore di studio")
+plt.ylabel("Punteggio")
 plt.grid(True)
 plt.show()
 ```
@@ -213,17 +213,17 @@ scores   = [88, 92, 76, 85, 95]
 colors   = ["#4C72B0", "#55A868", "#C44E52", "#8172B2", "#CCB974"]
 
 plt.bar(subjects, scores, color=colors)
-plt.title("Student Scores by Subject")
-plt.xlabel("Subject")
-plt.ylabel("Score")
+plt.title("Punteggi degli studenti per materia")
+plt.xlabel("Materia")
+plt.ylabel("Punteggio")
 plt.ylim(0, 100)
 plt.grid(axis="y")
 plt.show()
 
-print("Scores:")
+print("Punteggi:")
 for subj, score in zip(subjects, scores):
     print(f"  {subj}: {score}")
-print(f"Average: {sum(scores)/len(scores):.1f}")`);
+print(f"Media: {sum(scores)/len(scores):.1f}")`);
 </script>
 
 `plt.grid(axis="y")` aggiunge le linee della griglia solo sull'asse y — uno stile comune per i grafici a barre.
@@ -237,7 +237,7 @@ Un **istogramma** mostra la distribuzione di un insieme di numeri — quanti val
 ```python
 import matplotlib.pyplot as plt
 
-# 50 random-ish heights (cm):
+# 50 altezze più o meno casuali (cm):
 heights = [162, 170, 168, 175, 180, 165, 172, 178, 160, 185,
            163, 171, 177, 182, 169, 174, 179, 166, 173, 188,
            160, 171, 164, 176, 183, 168, 175, 180, 162, 170,
@@ -245,9 +245,9 @@ heights = [162, 170, 168, 175, 180, 165, 172, 178, 160, 185,
            161, 170, 166, 175, 181, 169, 173, 178, 164, 172]
 
 plt.hist(heights, bins=8, color="steelblue", edgecolor="white")
-plt.title("Height Distribution")
-plt.xlabel("Height (cm)")
-plt.ylabel("Number of People")
+plt.title("Distribuzione delle altezze")
+plt.xlabel("Altezza (cm)")
+plt.ylabel("Numero di persone")
 plt.show()
 ```
 
@@ -257,8 +257,8 @@ Invece di `plt.show()`, chiama `plt.savefig("filename.png")` per salvare il graf
 
 ```python
 plt.plot(x, y)
-plt.title("My Chart")
-plt.savefig("chart.png", dpi=150)   # 150 dots-per-inch, good for screen
+plt.title("Il mio grafico")
+plt.savefig("chart.png", dpi=150)   # 150 punti per pollice, buono per lo schermo
 ```
 
 I formati supportati includono `.png`, `.jpg`, `.pdf`, e `.svg`.
@@ -273,12 +273,12 @@ Restituisce il `fig` (l'intero canvas) e un array di oggetti `ax` — uno per po
 fig, axes = plt.subplots(1, 2, figsize=(10, 4))
 
 axes[0].plot(x, y_square)
-axes[0].set_title("Quadratic")
+axes[0].set_title("Quadratica")
 
 axes[1].bar(subjects, scores)
-axes[1].set_title("Scores")
+axes[1].set_title("Punteggi")
 
-plt.tight_layout()   # prevent charts from overlapping
+plt.tight_layout()   # evita che i grafici si sovrappongano
 plt.show()
 ```
 
@@ -311,13 +311,13 @@ months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
 sales  = [120, 145, 130, 165, 182, 200]
 
 plt.bar(months, sales, color="coral")
-# Add title, xlabel, and ylabel here:
+# Aggiungi qui title, xlabel e ylabel:
 
 plt.show()
 
-print("Sales data:")
+print("Dati delle vendite:")
 for month, amount in zip(months, sales):
-    print(f"  {month}: {amount} units")`);
+    print(f"  {month}: {amount} unità")`);
 </script>
 
 ## Esperimenti

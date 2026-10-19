@@ -94,14 +94,14 @@ def evaluate(data, labels, threshold):
             correct += 1
     return correct / len(data)
 
-# Training data (scores and actual outcomes):
+# Dati di addestramento (punteggi ed esiti reali):
 scores = [45, 62, 78, 55, 90, 38, 71, 85, 50, 93]
 labels = ["fail", "pass", "pass", "fail", "pass",
           "fail", "pass", "pass", "fail", "pass"]
 
 for threshold in [50, 60, 65, 70, 80]:
     acc = evaluate(scores, labels, threshold)
-    print(f"Threshold {threshold}: accuracy = {acc:.0%}")`);
+    print(f"Soglia {threshold}: accuratezza = {acc:.0%}")`);
 </script>
 
 ## Il Dataset MNIST
@@ -190,33 +190,33 @@ Ecco un modello completo per classificare le cifre MNIST:
 import tensorflow as tf
 from tensorflow import keras
 
-# Load and prepare data:
+# Carica e prepara i dati:
 (x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data()
 
-# Normalize pixel values from 0–255 to 0–1:
+# Normalizza i valori dei pixel da 0–255 a 0–1:
 x_train = x_train / 255.0
 x_test  = x_test  / 255.0
 
-# Build the model:
+# Costruisci il modello:
 model = keras.Sequential([
-    keras.layers.Flatten(input_shape=(28, 28)),   # 784 inputs
-    keras.layers.Dense(128, activation="relu"),    # hidden layer
-    keras.layers.Dense(10,  activation="softmax") # 10 output classes
+    keras.layers.Flatten(input_shape=(28, 28)),   # 784 input
+    keras.layers.Dense(128, activation="relu"),    # strato nascosto
+    keras.layers.Dense(10,  activation="softmax") # 10 classi in uscita
 ])
 
-# Compile: choose loss, optimizer, and metric:
+# Compila: scegli la funzione di perdita, l'ottimizzatore e la metrica:
 model.compile(
     optimizer="adam",
     loss="sparse_categorical_crossentropy",
     metrics=["accuracy"]
 )
 
-# Train for 5 epochs:
+# Addestra per 5 epoche:
 model.fit(x_train, y_train, epochs=5, validation_split=0.1)
 
-# Evaluate on the test set:
+# Valuta sul test set:
 test_loss, test_acc = model.evaluate(x_test, y_test)
-print(f"Test accuracy: {test_acc:.2%}")
+print(f"Accuratezza sul test: {test_acc:.2%}")
 ```
 
 Questo modello raggiunge tipicamente **97–98% di accuratezza** su MNIST — classificando correttamente circa 9.700 delle 10.000 immagini di test.
@@ -253,7 +253,7 @@ Parametri totali: ~101.632 — piccolo per gli standard moderni, ma abbastanza p
   </div>
 </div>
 <script>
-initCmLab('-2', `# Simulate the math of one Dense neuron:
+initCmLab('-2', `# Simula i calcoli di un neurone Dense:
 import math
 
 def relu(x):
@@ -268,20 +268,20 @@ def softmax(vector):
     total = sum(exps)
     return [e / total for e in exps]
 
-# Simulate a tiny 3-input, 1-hidden-neuron, 3-class network:
-inputs  = [0.5, 0.2, 0.8]   # pixel values (normalized)
+# Simula una piccolissima rete con 3 input, 1 neurone nascosto e 3 classi:
+inputs  = [0.5, 0.2, 0.8]   # valori dei pixel (normalizzati)
 weights = [0.4, -0.3, 0.6]
 bias    = 0.1
 
 hidden_output = dense_neuron(inputs, weights, bias)
-print(f"Hidden neuron output: {hidden_output:.4f}")
+print(f"Uscita del neurone nascosto: {hidden_output:.4f}")
 
-# Softmax on a fake output layer:
-logits = [2.0, 1.0, 0.1]   # raw scores for 3 classes
+# Softmax su uno strato di uscita finto:
+logits = [2.0, 1.0, 0.1]   # punteggi grezzi per 3 classi
 probs  = softmax(logits)
-print("Softmax probabilities:", [round(p, 3) for p in probs])
-print(f"Sum of probabilities: {sum(probs):.6f}")
-print(f"Predicted class: {probs.index(max(probs))}")`);
+print("Probabilità softmax:", [round(p, 3) for p in probs])
+print(f"Somma delle probabilità: {sum(probs):.6f}")
+print(f"Classe prevista: {probs.index(max(probs))}")`);
 </script>
 
 ## Dimensione del Batch ed Epoch
@@ -326,15 +326,15 @@ Due impostazioni chiave del training:
 </div>
 <script>
 initCmLab('-3', `def accuracy(predictions, true_labels):
-    # Return the fraction of predictions that match true_labels
-    pass   # replace with your implementation
+    # Restituisci la frazione di previsioni che corrispondono a true_labels
+    pass   # sostituiscilo con la tua implementazione
 
-# Test your function:
+# Prova la tua funzione:
 preds  = [0, 1, 2, 1, 0, 2, 1, 0, 2, 1]
 labels = [0, 1, 2, 0, 0, 1, 1, 0, 2, 1]
 
 acc = accuracy(preds, labels)
-print(f"Accuracy: {acc:.0%}")   # should be 80% (8 out of 10 correct)`);
+print(f"Accuratezza: {acc:.0%}")   # dovrebbe essere 80% (8 corrette su 10)`);
 </script>
 
 ## Esperimenti

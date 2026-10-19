@@ -49,8 +49,8 @@ def hexagon(x, y, size, color):
 
 size = 30
 colors = ['gold', 'orange']
-h = size * 2                     # height of a pointy-top hexagon
-col_w = size * math.sqrt(3)      # width of a pointy-top hexagon
+h = size * 2                     # altezza di un esagono con la punta in alto
+col_w = size * math.sqrt(3)      # larghezza di un esagono con la punta in alto
 
 for row in range(7):
     for col in range(8):
@@ -108,8 +108,8 @@ def hexagon(x, y, size, color):
 
 size = 30
 colors = ['gold', 'orange']
-h = size * 2                     # height of a pointy-top hexagon
-col_w = size * math.sqrt(3)      # width of a pointy-top hexagon
+h = size * 2                     # altezza di un esagono con la punta in alto
+col_w = size * math.sqrt(3)      # larghezza di un esagono con la punta in alto
 
 for row in range(7):
     for col in range(8):

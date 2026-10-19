@@ -35,12 +35,12 @@ Le funzioni built-in di Python sono un set di strumenti potente. Questo capitolo
 Senza `enumerate()`, avresti bisogno di una variabile contatore separata.
 
 ```python
-# Without enumerate — manual counter:
+# Senza enumerate — contatore manuale:
 fruits = ["apple", "banana", "mango"]
 for i in range(len(fruits)):
     print(i, fruits[i])
 
-# With enumerate — cleaner:
+# Con enumerate — più pulito:
 for i, fruit in enumerate(fruits):
     print(i, fruit)
 ```
@@ -63,7 +63,7 @@ Entrambi producono lo stesso output. `enumerate()` inizia da 0 per default; usa 
 <script>
 initCmLab('', `menu = ["Burger", "Pizza", "Salad", "Pasta"]
 
-print("Menu:")
+print("Menù:")
 for num, item in enumerate(menu, 1):
     print(f"  {num}. {item}")`);
 </script>
@@ -105,8 +105,8 @@ initCmLab('-2', `letters = ["A", "B", "C", "D", "E"]
 numbers = [1, 2, 3]
 
 pairs = list(zip(letters, numbers))
-print("Pairs:", pairs)
-print("Count:", len(pairs))`);
+print("Coppie:", pairs)
+print("Quante:", len(pairs))`);
 </script>
 
 Avevi indovinato? `zip()` si ferma a 3 coppie perché `numbers` finisce per primo.
@@ -142,7 +142,7 @@ capitals  = ["Paris", "Tokyo", "Brasília"]
 
 capital_map = dict(zip(countries, capitals))
 print(capital_map)
-print("Japan's capital:", capital_map["Japan"])`);
+print("Capitale del Giappone:", capital_map["Japan"])`);
 </script>
 
 ## `*args` — Numero Variabile di Argomenti Posizionali
@@ -192,9 +192,9 @@ def describe(**kwargs):
     for key, value in kwargs.items():
         print(f"  {key}: {value}")
 
-print("Total:", total(10, 20, 30, 40))
+print("Totale:", total(10, 20, 30, 40))
 
-print("Monty's profile:")
+print("Profilo di Monty:")
 describe(name="Monty", level=7, language="Python")`);
 </script>
 
@@ -205,10 +205,10 @@ Queste tre funzioni built-in funzionano su qualsiasi iterabile di numeri (o di v
 ```python
 scores = [73, 100, 87, 55, 92]
 
-print("Max:", max(scores))    # 100
-print("Min:", min(scores))    # 55
-print("Sum:", sum(scores))    # 407
-print("Avg:", sum(scores) / len(scores))  # 81.4
+print("Massimo:", max(scores))    # 100
+print("Minimo:", min(scores))    # 55
+print("Somma:", sum(scores))    # 407
+print("Media:", sum(scores) / len(scores))  # 81.4
 ```
 
 ## `sorted()` e `reversed()`
@@ -225,8 +225,8 @@ print("Avg:", sum(scores) / len(scores))  # 81.4
 
 ```python
 numbers = [3, 1, 4, 1, 5, 9, 2, 6]
-sorted_nums = sorted(numbers)               # ascending
-desc_nums   = sorted(numbers, reverse=True) # descending
+sorted_nums = sorted(numbers)               # crescente
+desc_nums   = sorted(numbers, reverse=True) # decrescente
 ```
 
 ## `isinstance()` — Controllo del Tipo
@@ -239,7 +239,7 @@ print(isinstance(42, int))         # True
 print(isinstance(3.14, float))     # True
 print(isinstance("hi", str))       # True
 print(isinstance([1,2], list))     # True
-print(isinstance(42, (int, float)))# True — multiple types allowed
+print(isinstance(42, (int, float)))# True — si possono indicare più tipi
 ```
 
 ## `map()` e `filter()`
@@ -255,8 +255,8 @@ numbers = [1, 2, 3, 4, 5, 6]
 doubled  = list(map(lambda x: x * 2, numbers))
 evens    = list(filter(lambda x: x % 2 == 0, numbers))
 
-print("Doubled:", doubled)   # [2, 4, 6, 8, 10, 12]
-print("Evens:", evens)       # [2, 4, 6]
+print("Raddoppiati:", doubled)   # [2, 4, 6, 8, 10, 12]
+print("Pari:", evens)       # [2, 4, 6]
 ```
 
 Una **lambda** è una piccola funzione anonima scritta su una riga: `lambda x: x * 2` significa "prendi x, restituisci x per 2."
@@ -280,9 +280,9 @@ initCmLab('-5', `scores = [45, 78, 92, 61, 88, 73, 55]
 passing  = list(filter(lambda s: s >= 70, scores))
 bonus    = list(map(lambda s: s + 5, scores))
 
-print("Passing scores:", passing)
-print("All scores + 5:", bonus)
-print("Max:", max(scores), "Min:", min(scores), "Avg:", round(sum(scores)/len(scores), 1))`);
+print("Punteggi sufficienti:", passing)
+print("Tutti i punteggi + 5:", bonus)
+print("Massimo:", max(scores), "Minimo:", min(scores), "Media:", round(sum(scores)/len(scores), 1))`);
 </script>
 
 ## Costruttori di Collezioni
@@ -320,7 +320,7 @@ my_set   = set([3, 1, 4, 1, 5])   # {1, 3, 4, 5}
 initCmLab('-6', `names  = ["Alice", "Bob", "Carol"]
 scores = [95, 87, 91]
 
-# Fix: use enumerate(zip(...), 1) to print "1. Alice: 95" etc.
+# Correzione: usa enumerate(zip(...), 1) per stampare "1. Alice: 95" ecc.
 for name in names:
     print(name)`);
 </script>

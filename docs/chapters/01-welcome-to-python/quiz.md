@@ -39,19 +39,19 @@ Verifica la tua comprensione delle basi di Python, dell'ambiente Skulpt e dei tu
 #### 3. Cosa mostrerà il seguente codice quando viene eseguito?
 
 ```python
-print("Hello!")
-print("Bye!")
+print("Ciao!")
+print("Ciao ciao!")
 ```
 
 <div class="upper-alpha" markdown>
-1. Hello! Bye! su una sola riga
-2. Solo la parola Hello!
-3. Hello! su una riga, poi Bye! sulla riga successiva
+1. Ciao! Ciao ciao! su una sola riga
+2. Solo la parola Ciao!
+3. Ciao! su una riga, poi Ciao ciao! sulla riga successiva
 4. Niente — print() ha bisogno di un numero, non di testo
 </div>
 
 ??? question "Mostra risposta"
-    La risposta corretta è **C**. Ogni chiamata a `print()` mostra il suo testo e poi passa a una nuova riga. Quindi la prima chiamata stampa `Hello!` e la seconda stampa `Bye!` sulla riga sottostante. Python esegue ogni istruzione in ordine dall'alto verso il basso, proprio come Scratch esegue i blocchi in uno script.
+    La risposta corretta è **C**. Ogni chiamata a `print()` mostra il suo testo e poi passa a una nuova riga. Quindi la prima chiamata stampa `Ciao!` e la seconda stampa `Ciao ciao!` sulla riga sottostante. Python esegue ogni istruzione in ordine dall'alto verso il basso, proprio come Scratch esegue i blocchi in uno script.
 
     **Concept Tested:** print() Function
 
@@ -76,9 +76,9 @@ print("Bye!")
 #### 5. Quale delle seguenti istruzioni causerà un errore in Python?
 
 <div class="upper-alpha" markdown>
-1. `print("hello")`
-2. `Print("hello")`
-3. `print("Hello, world!")`
+1. `print("ciao")`
+2. `Print("ciao")`
+3. `print("Ciao, mondo!")`
 4. `print("123")`
 </div>
 

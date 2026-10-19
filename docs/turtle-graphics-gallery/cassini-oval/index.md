@@ -119,7 +119,7 @@ monty.dot(8, 'black')
 monty.goto(c, 0)
 monty.dot(8, 'black')
 
-labels = [['b = 120 (one oval)', 'royalblue'], ['b = 100 (figure eight)', 'forestgreen'], ['b = 90 (two lobes)', 'crimson']]
+labels = [['b = 120 (un ovale)', 'royalblue'], ['b = 100 (un otto)', 'forestgreen'], ['b = 90 (due lobi)', 'crimson']]
 for i in range(3):
     monty.goto(-185, 180 - 16 * i)
     monty.pencolor(labels[i][1])

@@ -66,10 +66,10 @@ index:   0   1   2   3   4   5
 </div>
 <script>
 initCmLab('', `word = "Python"
-print("First character:", word[0])
-print("Third character:", word[2])
-print("Last character:", word[-1])
-print("Second to last:", word[-2])`);
+print("Primo carattere:", word[0])
+print("Terzo carattere:", word[2])
+print("Ultimo carattere:", word[-1])
+print("Penultimo:", word[-2])`);
 </script>
 
 ## Slicing delle Stringhe
@@ -79,11 +79,11 @@ La sintassi è `word[start:end]` — ti dà i caratteri da `start` fino a (ma NO
 
 ```python
 word = "Python"
-print(word[0:3])   # "Pyt" — indexes 0, 1, 2
-print(word[2:5])   # "tho" — indexes 2, 3, 4
-print(word[:3])    # "Pyt" — same as [0:3]
-print(word[3:])    # "hon" — from 3 to the end
-print(word[:])     # "Python" — the whole string
+print(word[0:3])   # "Pyt" — indici 0, 1, 2
+print(word[2:5])   # "tho" — indici 2, 3, 4
+print(word[:3])    # "Pyt" — come [0:3]
+print(word[3:])    # "hon" — da 3 fino alla fine
+print(word[:])     # "Python" — l'intera stringa
 ```
 
 !!! mascot-thinking "Cosa Pensi che Succederà?"
@@ -109,7 +109,7 @@ initCmLab('-2', `s = "programming"
 print(s[3:8])
 print(s[:4])
 print(s[-4:])
-print(s[::2])   # every other character (step of 2)`);
+print(s[::2])   # un carattere sì e uno no (passo 2)`);
 </script>
 
 Avevi indovinato? `s[3:8]` ti dà `"gramm"` — i caratteri nelle posizioni 3, 4, 5, 6, e 7.
@@ -151,18 +151,18 @@ Prima di guardare gli esempi, ecco un'anteprima veloce:
 <script>
 initCmLab('-3', `sentence = "the quick brown fox"
 
-# split() — break into words
+# split() — divide in parole
 words = sentence.split()
-print("Words:", words)
-print("Number of words:", len(words))
+print("Parole:", words)
+print("Numero di parole:", len(words))
 
-# join() — glue back together with dashes
+# join() — le riunisce con dei trattini
 dashed = "-".join(words)
-print("Dashed:", dashed)
+print("Con i trattini:", dashed)
 
-# replace() — swap one word for another
+# replace() — sostituisce una parola con un'altra
 new_sentence = sentence.replace("fox", "python")
-print("Replaced:", new_sentence)`);
+print("Sostituita:", new_sentence)`);
 </script>
 
 | Metodo | Cosa fa | Esempio |
@@ -199,9 +199,9 @@ Python ti offre diversi metodi per cercare dentro una stringa:
 <script>
 initCmLab('-4', `filename = "report2024.pdf"
 
-print("Find '.pdf':", filename.find(".pdf"))
-print("Starts with 'report':", filename.startswith("report"))
-print("Ends with '.pdf':", filename.endswith(".pdf"))
+print("Trova '.pdf':", filename.find(".pdf"))
+print("Inizia con 'report':", filename.startswith("report"))
+print("Finisce con '.pdf':", filename.endswith(".pdf"))
 
 code = "ABC123"
 print("isalnum:", code.isalnum())
@@ -219,13 +219,13 @@ Prima delle f-string, dovevi scrivere cose come:
 ```python
 name = "Monty"
 score = 95
-print("Hello, " + name + "! Your score is " + str(score) + ".")
+print("Ciao, " + name + "! Il tuo punteggio è " + str(score) + ".")
 ```
 
 Con una f-string, diventa molto più pulito:
 
 ```python
-print(f"Hello, {name}! Your score is {score}.")
+print(f"Ciao, {name}! Il tuo punteggio è {score}.")
 ```
 
 <div class="cm-lab cm-text-only">
@@ -247,9 +247,9 @@ score = 95
 max_score = 100
 percentage = score / max_score * 100
 
-print(f"Hello, {name}!")
-print(f"Your score: {score}/{max_score}")
-print(f"Percentage: {percentage:.1f}%")   # .1f = 1 decimal place`);
+print(f"Ciao, {name}!")
+print(f"Il tuo punteggio: {score}/{max_score}")
+print(f"Percentuale: {percentage:.1f}%")   # .1f = 1 cifra decimale`);
 </script>
 
 Il codice di formato `:.1f` dentro le parentesi graffe dice "mostra 1 cifra decimale."
@@ -262,9 +262,9 @@ Python confronta le stringhe alfabeticamente, carattere per carattere.
 
 ```python
 print("apple" == "apple")   # True
-print("apple" == "Apple")   # False — case-sensitive!
-print("apple" < "banana")   # True — a comes before b
-print("zebra" > "ant")      # True — z comes after a
+print("apple" == "Apple")   # False — distingue maiuscole e minuscole!
+print("apple" < "banana")   # True — la a viene prima della b
+print("zebra" > "ant")      # True — la z viene dopo la a
 ```
 
 Le maiuscole contano! `"apple" != "Apple"`. Usa `.lower()` su entrambi i lati se vuoi un confronto senza distinzione tra maiuscole e minuscole.
@@ -313,8 +313,8 @@ print(report)
 initCmLab('-6', `player = "Monty"
 level = 5
 
-# Rewrite this as one f-string:
-print("Player: " + player + ", Level: " + str(level))`);
+# Riscrivi questa riga come un'unica f-string:
+print("Giocatore: " + player + ", Livello: " + str(level))`);
 </script>
 
 ## Esperimenti

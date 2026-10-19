@@ -36,8 +36,8 @@ Sai già che gli oggetti hanno **attributi** (dati memorizzati al loro interno) 
 
 ```python
 t = turtle.Turtle()
-t.speed(5)          # method call
-t.pencolor("red")   # method call — sets an attribute
+t.speed(5)          # chiamata di metodo
+t.pencolor("red")   # chiamata di metodo — imposta un attributo
 ```
 
 Ora definirai i tuoi propri oggetti.
@@ -50,7 +50,7 @@ Per convenzione, i nomi delle classi usano il **CamelCase** (ogni parola con la 
 
 ```python
 class Dog:
-    pass   # empty class — just a placeholder for now
+    pass   # classe vuota — per ora è solo un segnaposto
 ```
 
 ## `__init__()` — Il Costruttore
@@ -78,15 +78,15 @@ Prima di definire gli attributi, nota che `self.nome_attributo = valore` memoriz
 <script>
 initCmLab('', `class Dog:
     def __init__(self, name, breed, age):
-        self.name  = name    # instance attribute
+        self.name  = name    # attributo di istanza
         self.breed = breed
         self.age   = age
 
     def bark(self):
-        print(f"{self.name} says: Woof!")
+        print(f"{self.name} dice: Bau!")
 
     def describe(self):
-        print(f"{self.name} is a {self.age}-year-old {self.breed}.")
+        print(f"{self.name} è un {self.breed} di {self.age} anni.")
 
 fido  = Dog("Fido", "Labrador", 3)
 bella = Dog("Bella", "Poodle", 5)
@@ -101,8 +101,8 @@ print(fido.name, fido.age)`);
 Ogni volta che chiami la classe come una funzione, Python crea una nuova **istanza** (un oggetto separato dallo stesso progetto).
 
 ```python
-fido  = Dog("Fido", "Labrador", 3)   # instance 1
-bella = Dog("Bella", "Poodle", 5)    # instance 2
+fido  = Dog("Fido", "Labrador", 3)   # istanza 1
+bella = Dog("Bella", "Poodle", 5)    # istanza 2
 ```
 
 Accedi agli attributi e ai metodi con la **notazione punto**: `fido.name`, `fido.bark()`.
@@ -189,15 +189,15 @@ Una **variabile di classe** (definita direttamente nel corpo della classe, non d
 
 ```python
 class Counter:
-    count = 0   # class variable — shared by all instances
+    count = 0   # variabile di classe — condivisa da tutte le istanze
 
     def __init__(self):
-        Counter.count += 1   # increment the shared counter
+        Counter.count += 1   # incrementa il contatore condiviso
 
 a = Counter()
 b = Counter()
 c = Counter()
-print(Counter.count)   # 3 — three instances created
+print(Counter.count)   # 3 — sono state create tre istanze
 ```
 
 ## Stringhe e Liste come Esempi di OOP
@@ -206,10 +206,10 @@ Hai usato la OOP fin dall'inizio — i metodi delle stringhe e delle liste sono 
 
 ```python
 name = "monty"
-name.upper()       # calls the upper() method on the string object
+name.upper()       # chiama il metodo upper() sull'oggetto stringa
 
 items = [3, 1, 2]
-items.sort()       # calls the sort() method on the list object
+items.sort()       # chiama il metodo sort() sull'oggetto lista
 ```
 
 ## Eredità
@@ -239,35 +239,35 @@ initCmLab('-3', `class Animal:
         self.sound = sound
 
     def speak(self):
-        print(f"{self.name} says {self.sound}!")
+        print(f"{self.name} dice {self.sound}!")
 
     def __str__(self):
         return f"Animal({self.name})"
 
 class Dog(Animal):
     def __init__(self, name):
-        super().__init__(name, "Woof")   # call parent __init__
+        super().__init__(name, "Bau")   # chiama l'__init__ del genitore
 
     def fetch(self):
-        print(f"{self.name} fetches the ball!")
+        print(f"{self.name} va a prendere la palla!")
 
 class Cat(Animal):
     def __init__(self, name):
         super().__init__(name, "Meow")
 
     def purr(self):
-        print(f"{self.name} purrs contentedly.")
+        print(f"{self.name} fa le fusa, contento.")
 
 dog = Dog("Rex")
 cat = Cat("Whiskers")
 
-dog.speak()     # inherited from Animal
-dog.fetch()     # defined in Dog
+dog.speak()     # ereditato da Animal
+dog.fetch()     # definito in Dog
 
-cat.speak()     # inherited from Animal
-cat.purr()      # defined in Cat
+cat.speak()     # ereditato da Animal
+cat.purr()      # definito in Cat
 
-print(dog)      # uses Animal's __str__`);
+print(dog)      # usa il __str__ di Animal`);
 </script>
 
 ## Sovrascrittura dei Metodi (Method Overriding)
@@ -278,7 +278,7 @@ La versione della sottoclasse gira invece di quella del genitore.
 ```python
 class Dog(Animal):
     def speak(self):
-        print(f"{self.name} barks loudly!")   # overrides Animal.speak
+        print(f"{self.name} abbaia forte!")   # sovrascrive Animal.speak
 ```
 
 ### Guardalo: Guarda Salire la Ricerca del Metodo
@@ -320,14 +320,14 @@ initCmLab('-4', `class Rectangle:
     def __str__(self):
         return f"Rectangle({self.width}x{self.height})"
 
-    # Add area() here:
+    # Aggiungi qui area():
 
-    # Add perimeter() here:
+    # Aggiungi qui perimeter():
 
 r = Rectangle(4, 7)
 print(r)
 print("Area:", r.area())
-print("Perimeter:", r.perimeter())`);
+print("Perimetro:", r.perimeter())`);
 </script>
 
 ## Esperimenti

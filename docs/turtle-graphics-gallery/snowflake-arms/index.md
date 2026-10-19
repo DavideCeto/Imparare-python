@@ -155,7 +155,7 @@ def arm(length):
     monty.left(45)
     monty.forward(length / 3)
     monty.backward(length / 3)
-    # ADD TWO LINES: turn to draw the right twig and return to center heading
+    # AGGIUNGI DUE RIGHE: gira per disegnare il rametto destro e torna alla direzione del centro
     monty.left(45)
     monty.backward(length)
 

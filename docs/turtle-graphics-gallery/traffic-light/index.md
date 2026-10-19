@@ -173,7 +173,7 @@ rect(-35, -190, 70, 380, 'dimgray')
 light(150,  'red')
 light( 50,  'orange')
 light(-50, 'green')
-# ADD ONE LINE: white light at y = -150`);
+# AGGIUNGI UNA RIGA: luce bianca a y = -150`);
 </script>
 
 Aggiungi `light(-150, 'white')` come ultima riga.

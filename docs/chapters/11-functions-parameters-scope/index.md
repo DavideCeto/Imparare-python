@@ -51,11 +51,11 @@ def draw_square(size=100):
         t.forward(size)
         t.right(90)
 
-draw_square(50)    # small square
+draw_square(50)    # quadrato piccolo
 t.penup()
 t.goto(120, 0)
 t.pendown()
-draw_square()      # uses the default: size = 100
+draw_square()      # usa il valore predefinito: size = 100
 ```
 
 !!! mascot-thinking "Cosa Pensi che Succederà?"
@@ -86,11 +86,11 @@ def draw_square(size=100):
         t.forward(size)
         t.right(90)
 
-draw_square(50)    # small square
+draw_square(50)    # quadrato piccolo
 t.penup()
 t.goto(120, 0)
 t.pendown()
-draw_square()      # uses the default: size = 100`);
+draw_square()      # usa il valore predefinito: size = 100`);
 </script>
 
 Avevi indovinato? Il primo quadrato (size 50) è più piccolo. Il secondo usa la size predefinita di 100.
@@ -190,16 +190,16 @@ L'esempio sotto mostra entrambi. Una funzione può *leggere* una variabile globa
   </div>
 </div>
 <script>
-initCmLab('-3', `name = "Monty"   # global variable
+initCmLab('-3', `name = "Monty"   # variabile globale
 
 def greet():
-    greeting = "Hello"  # local variable
+    greeting = "Hello"  # variabile locale
     print(greeting + ", " + name + "!")
 
 greet()
-# Uncomment the next line to see a NameError:
+# Togli il commento alla riga seguente per vedere un NameError:
 # print(greeting)
-print("name is:", name)`);
+print("name vale:", name)`);
 </script>
 
 | Variabile | Dove definita | Visibile dentro `greet()`? | Visibile fuori `greet()`? |
@@ -244,15 +244,15 @@ La parola chiave `global score` dentro la funzione dice a Python: "Intendo lo `s
   </div>
 </div>
 <script>
-initCmLab('-4', `score = 0   # global score
+initCmLab('-4', `score = 0   # punteggio globale
 
 def add_points(n):
-    global score   # use the GLOBAL score, not a new local one
+    global score   # usa lo score GLOBALE, non uno nuovo locale
     score = score + n
 
 add_points(10)
 add_points(5)
-print("Final score:", score)`);
+print("Punteggio finale:", score)`);
 </script>
 
 Senza la riga `global score`, Python creerebbe una *nuova* variabile locale chiamata `score` e lascerebbe quella globale intatta — che di solito non è quello che vuoi.
@@ -262,14 +262,14 @@ Senza la riga `global score`, Python creerebbe una *nuova* variabile locale chia
 Se crei una variabile locale con lo *stesso nome* di una variabile globale, quella locale **oscura** (shadow) quella globale dentro quella funzione. Questo può causare bug complicati.
 
 ```python
-speed = 10   # global
+speed = 10   # globale
 
 def reset():
-    speed = 0   # creates a NEW local variable — does NOT change the global!
-    print("Inside:", speed)
+    speed = 0   # crea una NUOVA variabile locale — NON cambia quella globale!
+    print("Dentro:", speed)
 
 reset()
-print("Outside:", speed)   # still 10!
+print("Fuori:", speed)   # ancora 10!
 ```
 
 Per stare al sicuro, scegli nomi diversi per le variabili globali e locali — oppure usa `global` se vuoi davvero cambiare il valore globale.
@@ -296,16 +296,16 @@ L'approccio *sbagliato* perde dati:
 ```python
 a = 5
 b = 10
-a = b    # a is now 10
-b = a    # b gets 10 too — oops! 5 is gone
+a = b    # ora a vale 10
+b = a    # anche b prende 10 — ops! Il 5 è perso
 ```
 
 L'approccio *giusto* usa una variabile temporanea:
 
 ```python
-temp = a   # save a's original value
-a = b      # a gets b's value
-b = temp   # b gets a's original value
+temp = a   # salva il valore originale di a
+a = b      # a prende il valore di b
+b = temp   # b prende il valore originale di a
 ```
 
 Python ha una scorciatoia incorporata che scambia in una riga:
@@ -326,11 +326,11 @@ Python ha una scorciatoia incorporata che scambia in una riga:
 <script>
 initCmLab('-5', `a = 5
 b = 10
-print("Before:", a, b)
+print("Prima:", a, b)
 
-a, b = b, a   # Python swap shortcut
+a, b = b, a   # scorciatoia di Python per lo scambio
 
-print("After: ", a, b)`);
+print("Dopo: ", a, b)`);
 </script>
 
 ## Funzioni Pure vs Funzioni con Effetti Collaterali
@@ -341,17 +341,17 @@ Metti dentro lo stesso numero, ottieni sempre lo stesso risultato — come una c
 Una funzione con **effetti collaterali** cambia qualcosa fuori di sé stessa, come stampare sullo schermo, modificare una variabile globale, o far disegnare la tartaruga.
 
 ```python
-# Pure function — no side effects, always returns the same result
+# Funzione pura — nessun effetto collaterale, restituisce sempre lo stesso risultato
 def square(n):
     return n * n
 
-# Function with side effects — changes global, prints output
+# Funzione con effetti collaterali — cambia una variabile globale, stampa dell'output
 total = 0
 
 def add_to_total(n):
     global total
     total = total + n
-    print("Total is now:", total)
+    print("Ora il totale è:", total)
 ```
 
 Le funzioni pure sono più facili da testare perché sono prevedibili.
@@ -388,7 +388,7 @@ def draw_polygon(sides=4, size=80, color="blue"):
         t.forward(size)
         t.right(360 / sides)
 
-# Add the sides keyword argument to draw a pentagon:
+# Aggiungi l'argomento con parola chiave sides per disegnare un pentagono:
 draw_polygon(color="green", size=70)`);
 </script>
 

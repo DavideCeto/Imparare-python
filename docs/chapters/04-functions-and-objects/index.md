@@ -52,8 +52,8 @@ Ecco la funzione più semplice possibile:
 
 ```python
 def greet():
-    print("Hello, coder!")
-    print("Let's code it together!")
+    print("Ciao, programmatore!")
+    print("Programmiamolo insieme!")
 ```
 
 I due punti alla fine della riga `def` sono obbligatori — proprio come i due punti che vedrai più avanti con i cicli e i condizionali.
@@ -107,8 +107,8 @@ Non serve alcun account — tutto viene eseguito nel tuo browser.
 </div>
 <script>
 initCmLab('', `def greet():
-    print("Hello, coder!")
-    print("Let's code it together!")
+    print("Ciao, programmatore!")
+    print("Programmiamolo insieme!")
 
 greet()
 greet()
@@ -135,8 +135,8 @@ La tabella qui sotto ripercorre ogni riga del programma:
 | Riga | Cosa fa |
 |------|-------------|
 | `def greet():` | Definisce una nuova funzione chiamata `greet` — Python la ricorda ma non la esegue ancora |
-| `    print("Hello, coder!")` | Passaggio 1 dentro il corpo della funzione — indentato di 4 spazi |
-| `    print("Let's code it together!")` | Passaggio 2 dentro il corpo della funzione — indentato di 4 spazi |
+| `    print("Ciao, programmatore!")` | Passaggio 1 dentro il corpo della funzione — indentato di 4 spazi |
+| `    print("Programmiamolo insieme!")` | Passaggio 2 dentro il corpo della funzione — indentato di 4 spazi |
 | `greet()` | Chiama la funzione — Python entra, esegue entrambi i passaggi, poi torna indietro |
 
 ## Parametri Posizionali
@@ -151,7 +151,7 @@ Dichiari i parametri dentro le parentesi di `def`:
 
 ```python
 def greet(name):
-    print("Hello, " + name + "!")
+    print("Ciao, " + name + "!")
 ```
 
 La parola `name` tra le parentesi è il parametro.
@@ -188,14 +188,14 @@ Quali nomi appariranno, e in che ordine?
 </div>
 <script>
 initCmLab('-2', `def greet(name):
-    print("Hello, " + name + "!")
+    print("Ciao, " + name + "!")
 
 greet("Monty")
 greet("Python")
 greet("World")`);
 </script>
 
-Ogni chiamata a `greet` ha usato lo stesso modello — `"Hello, " + name + "!"` — ma con un nome diverso inserito.
+Ogni chiamata a `greet` ha usato lo stesso modello — `"Ciao, " + name + "!"` — ma con un nome diverso inserito.
 Una funzione, tre output diversi.
 Prova a cambiare i nomi nelle tre righe di chiamata per salutare i tuoi amici o la tua famiglia!
 
@@ -257,7 +257,7 @@ Puoi vederlo accadere:
 
 ```python
 def greet():
-    print("Hello, coder!")
+    print("Ciao, programmatore!")
 
 result = greet()
 print(result)
@@ -265,7 +265,7 @@ print(result)
 
 L'output sarà:
 ```
-Hello, coder!
+Ciao, programmatore!
 None
 ```
 
@@ -287,7 +287,7 @@ Una docstring si scrive sulla prima riga dentro il corpo della funzione, racchiu
 
 ```python
 def add(a, b):
-    """Add two numbers together and return the sum."""
+    """Somma due numeri e restituisce il risultato."""
     result = a + b
     return result
 ```
@@ -302,7 +302,7 @@ def greet(name):
     Parameters:
         name (str): The person's name to greet.
     """
-    print("Hello, " + name + "!")
+    print("Ciao, " + name + "!")
 ```
 
 Le docstring hanno due scopi.
@@ -399,9 +399,9 @@ Costruirai il modello mentale passo dopo passo a partire dal Capitolo 5, e scriv
 </div>
 <script>
 initCmLab('-3', `def multiply(a, b):
-    """Multiply two numbers and return the result."""
+    """Moltiplica due numeri e restituisce il risultato."""
     result = a * b
-    # Add one line below to send the result back
+    # Aggiungi una riga qui sotto per restituire il risultato
 
 product = multiply(3, 5)
 print(product)`);
@@ -418,7 +418,7 @@ Per ciascuno, prevedi prima cosa succederà — poi esegui il codice per verific
 
 1. Nel Laboratorio 1, cambia `greet()` in modo che stampi solo una riga: `"Python is awesome!"`. Chiamala cinque volte. **Saprai che ha funzionato quando** l'output mostra cinque righe identiche.
 2. Nel Laboratorio 2, aggiungi una quarta chiamata: `greet("your name here")` ma sostituisci `your name here` con il tuo vero nome. **Saprai che ha funzionato quando** l'output ti saluta personalmente nella quarta riga.
-3. Nel Laboratorio 2, aggiungi un secondo parametro chiamato `language` alla funzione in modo che stampi `"Hello, Monty! You are learning Python."` Suggerimento: dovrai aggiornare la riga `def` e la riga `print` dentro la funzione. **Saprai che ha funzionato quando** l'output include il nome della lingua.
+3. Nel Laboratorio 2, aggiungi un secondo parametro chiamato `language` alla funzione in modo che stampi `"Ciao, Monty! Stai imparando Python."` Suggerimento: dovrai aggiornare la riga `def` e la riga `print` dentro la funzione. **Saprai che ha funzionato quando** l'output include il nome della lingua.
 4. Nel laboratorio della Verifica di Apprendimento, cambia la chiamata in `multiply(7, 6)`. **Saprai che ha funzionato quando** l'output mostra `42`.
 5. Scrivi una funzione completamente nuova chiamata `square(n)` che restituisce `n * n`. Chiamala con alcuni numeri diversi e stampa ogni risultato. **Saprai che ha funzionato quando** `square(4)` stampa `16` e `square(10)` stampa `100`.
 

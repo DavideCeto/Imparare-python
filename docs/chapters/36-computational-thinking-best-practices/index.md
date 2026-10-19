@@ -84,18 +84,18 @@ initCmLab('', `def make_display(secret, guessed):
 def is_solved(secret, guessed):
     return all(ch in guessed for ch in secret)
 
-# Simulate one round (no real input):
+# Simula un turno (senza input reale):
 secret  = "python"
 guessed = set("p_t")
 wrong   = ["x", "z"]
 
-print("Word:", make_display(secret, guessed))
-print("Wrong guesses:", wrong)
-print("Solved?", is_solved(secret, guessed))
+print("Parola:", make_display(secret, guessed))
+print("Tentativi sbagliati:", wrong)
+print("Risolto?", is_solved(secret, guessed))
 
 guessed = set("python")
-print("After all letters:", make_display(secret, guessed))
-print("Solved?", is_solved(secret, guessed))`);
+print("Dopo tutte le lettere:", make_display(secret, guessed))
+print("Risolto?", is_solved(secret, guessed))`);
 </script>
 
 ## DRY — Don't Repeat Yourself
@@ -139,14 +139,14 @@ Un programma ben strutturato ha molte piccole funzioni, ognuna che fa una cosa c
 **Fai il refactor in pezzi più piccoli:**
 
 ```python
-# Before: one long function
+# Prima: una funzione lunga
 def process(data):
     cleaned = [x.strip().lower() for x in data if x.strip()]
     unique  = list(set(cleaned))
     sorted_ = sorted(unique)
     return sorted_
 
-# After: three named steps
+# Dopo: tre passaggi con un nome
 def clean(data):
     return [x.strip().lower() for x in data if x.strip()]
 
@@ -177,11 +177,11 @@ Un lettore che non può eseguire il codice dovrebbe comunque capirlo solo dai no
 I commenti spiegano il **perché**, non il **cosa**. Il codice ben nominato ti dice già cosa — i commenti ti dicono perché quella fosse la scelta giusta.
 
 ```python
-# BAD: repeats what the code says
-i = i + 1   # increment i by 1
+# SBAGLIATO: ripete quello che dice già il codice
+i = i + 1   # incrementa i di 1
 
-# GOOD: explains the non-obvious reason
-# Start from 1 because the first row is always a header
+# GIUSTO: spiega il motivo che non è evidente
+# Parti da 1 perché la prima riga è sempre un'intestazione
 for row in rows[1:]:
     process(row)
 ```
@@ -219,10 +219,10 @@ def letter_grade(score):
     if clamped >= 60: return "D"
     return "F"
 
-# Test with values that need clamping:
+# Prova con valori che devono essere limitati:
 test_scores = [110, 95, 82, 73, 65, -5, 45]
 for s in test_scores:
-    print(f"  {s:4d} → clamped={clamp(s):3d}, grade={letter_grade(s)}")`);
+    print(f"  {s:4d} → limitato={clamp(s):3d}, voto={letter_grade(s)}")`);
 </script>
 
 ## Pseudocodice e Design degli Algoritmi
@@ -263,10 +263,10 @@ def word_frequency(text):
         freq[w] = freq.get(w, 0) + 1
     return freq
 
-# Mental test cases:
-print(word_frequency(""))               # {} — empty input
+# Casi di prova mentali:
+print(word_frequency(""))               # {} — input vuoto
 print(word_frequency("cat cat dog"))    # {'cat': 2, 'dog': 1}
-print(word_frequency("A a A"))          # {'a': 3} — case insensitive
+print(word_frequency("A a A"))          # {'a': 3} — non distingue maiuscole e minuscole
 ```
 
 <div class="cm-lab cm-text-only">
@@ -298,9 +298,9 @@ def most_common(freq):
 
 text = "the quick brown fox jumps over the lazy dog the fox"
 freq = word_frequency(text)
-print("Frequencies:", freq)
+print("Frequenze:", freq)
 word, count = most_common(freq)
-print(f"Most common: '{word}' ({count} times)")`);
+print(f"La più frequente: '{word}' ({count} volte)")`);
 </script>
 
 ## Strategie di Debug
@@ -374,7 +374,7 @@ Anche praticare il pair programming con un compagno di classe per 20 minuti cost
   </div>
 </div>
 <script>
-initCmLab('-4', `# Wet code — grade logic repeated three times:
+initCmLab('-4', `# Codice WET — la logica dei voti è ripetuta tre volte:
 score1 = 87
 if score1 >= 90: grade1 = "A"
 elif score1 >= 80: grade1 = "B"
@@ -393,9 +393,9 @@ elif score3 >= 80: grade3 = "B"
 elif score3 >= 70: grade3 = "C"
 else: grade3 = "F"
 
-print(f"Score 1: {score1} → {grade1}")
-print(f"Score 2: {score2} → {grade2}")
-print(f"Score 3: {score3} → {grade3}")`);
+print(f"Punteggio 1: {score1} → {grade1}")
+print(f"Punteggio 2: {score2} → {grade2}")
+print(f"Punteggio 3: {score3} → {grade3}")`);
 </script>
 
 ## Esperimenti

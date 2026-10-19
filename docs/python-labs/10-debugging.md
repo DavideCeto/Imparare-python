@@ -47,11 +47,11 @@ score = 42
 bonus = 8
 total = score + bonus
 
-print("Player:", name)
-print("Score:", score)
+print("Giocatore:", name)
+print("Punteggio:", score)
 print("Bonus:", bonus)
-print("Total:", total)
-print("Program finished successfully!")`);
+print("Totale:", total)
+print("Programma terminato correttamente!")`);
 </script>
 
 Tutte e cinque le righe si stampano in nero — il programma è girato dall'inizio alla fine senza nessun problema.
@@ -85,13 +85,13 @@ Python non può continuare, quindi si ferma e segnala l'errore.
 initCmLab('-2', `name = "Alex"
 score = 42
 
-print("Player:", name)
-print("Score:", score)
+print("Giocatore:", name)
+print("Punteggio:", score)
 
-# Oops — high_score was never created!
-print("High score:", high_score)
+# Ops — high_score non è mai stata creata!
+print("Record:", high_score)
 
-print("This line never runs.")`);
+print("Questa riga non viene mai eseguita.")`);
 </script>
 
 Avevi indovinato?
@@ -147,23 +147,23 @@ Nota come i checkpoint ti aiutano a individuare la riga del problema con più pr
   </div>
 </div>
 <script>
-initCmLab('-3', `print("Checkpoint 1: program started")
+initCmLab('-3', `print("Checkpoint 1: programma avviato")
 
 name = "Alex"
 score = 42
-print("Checkpoint 2: variables created")
+print("Checkpoint 2: variabili create")
 
 total = score + 10
-print("Checkpoint 3: total calculated:", total)
+print("Checkpoint 3: totale calcolato:", total)
 
-# Remove the # below to introduce an error and watch where the checkpoints stop:
-# print("High score:", high_score)
+# Togli il # qui sotto per introdurre un errore e guarda dove si fermano i checkpoint:
+# print("Record:", high_score)
 
-print("Checkpoint 4: all done!")`);
+print("Checkpoint 4: tutto fatto!")`);
 </script>
 
 Tutti e quattro i checkpoint si stampano in nero — il programma è sano.
-Ora rimuovi il `#` davanti a `print("High score:", high_score)` ed eseguilo di nuovo.
+Ora rimuovi il `#` davanti a `print("Record:", high_score)` ed eseguilo di nuovo.
 Il Checkpoint 3 sarà l'ultima riga nera, e l'errore rosso apparirà subito dopo —
 dicendoti che il crash è avvenuto tra il Checkpoint 3 e il Checkpoint 4.
 
@@ -175,18 +175,18 @@ dicendoti che il crash è avvenuto tra il Checkpoint 3 e il Checkpoint 4.
 
 Prova questi cambiamenti. Per ciascuno, prevedi il pattern di colore dell'output prima di eseguire!
 
-1. Nel Laboratorio 2, aggiungi `high_score = 500` su una nuova riga sopra `print("High score:", high_score)`.
-   **Saprai che ha funzionato quando** tutto l'output è nero e "High score: 500" appare.
+1. Nel Laboratorio 2, aggiungi `high_score = 500` su una nuova riga sopra `print("Record:", high_score)`.
+   **Saprai che ha funzionato quando** tutto l'output è nero e "Record: 500" appare.
 
 2. Nel Laboratorio 2, cambia `score = 42` in `score = "forty-two"` (una parola invece di un numero).
-   Poi cambia `print("Score:", score)` in `print("Score + 1:", score + 1)`.
+   Poi cambia `print("Punteggio:", score)` in `print("Punteggio + 1:", score + 1)`.
    **Saprai che ha funzionato quando** vedi un `TypeError` rosso — Python non può addizionare una parola e un numero.
 
 3. Nel Laboratorio 3, rimuovi il `#` dalla riga rotta ed eseguila.
    Conta le righe di checkpoint nere nell'output.
    **Saprai che ha funzionato quando** riesci a identificare quale checkpoint è stato l'ultimo e spiegare perché il Checkpoint 4 non è mai apparso.
 
-4. Nel Laboratorio 1, rinomina `total` in `final_total` nel calcolo ma lascia `print("Total:", total)` invariato.
+4. Nel Laboratorio 1, rinomina `total` in `final_total` nel calcolo ma lascia `print("Totale:", total)` invariato.
    **Saprai che ha funzionato quando** un `NameError` rosso per `total` appare dopo le prime tre righe nere.
 
 !!! mascot-celebration "Sai Leggere i Messaggi di Errore!"

@@ -67,8 +67,8 @@ L'**istruzione `with`** apre un file, esegue il blocco indentato, poi chiude aut
 
 ```python
 with open("greeting.txt", "w") as f:
-    f.write("Hello from Python!\n")
-# file is automatically closed here
+    f.write("Ciao da Python!\n")
+# qui il file viene chiuso automaticamente
 ```
 
 Usa sempre `with open(...)`. Previene il bug più comune sui file: dimenticare di chiudere il file.
@@ -80,9 +80,9 @@ Usa sempre `with open(...)`. Previene il bug più comune sui file: dimenticare d
 **Vero Python (Thonny / VS Code):**
 ```python
 with open("notes.txt", "w") as f:
-    f.write("Line 1: Hello, Python!\n")
-    f.write("Line 2: I am writing to a file.\n")
-    f.write("Line 3: This is fun!\n")
+    f.write("Riga 1: Ciao, Python!\n")
+    f.write("Riga 2: Sto scrivendo in un file.\n")
+    f.write("Riga 3: È divertente!\n")
 ```
 
 **Simulazione Skulpt** — usando una lista come "file" virtuale:
@@ -107,23 +107,23 @@ with open("notes.txt", "w") as f:
   </div>
 </div>
 <script>
-initCmLab('', `# Virtual file — a list that stores "written" lines
+initCmLab('', `# File virtuale — una lista che conserva le righe "scritte"
 virtual_file = []
 
 def write_line(text):
     virtual_file.append(text)
 
-# "Write" three lines:
-write_line("Line 1: Hello, Python!")
-write_line("Line 2: I am writing to a file.")
-write_line("Line 3: This is fun!")
+# "Scrivi" tre righe:
+write_line("Riga 1: Ciao, Python!")
+write_line("Riga 2: Sto scrivendo in un file.")
+write_line("Riga 3: È divertente!")
 
-# "Read" back what we wrote:
-print("File contents:")
+# "Rileggi" quello che abbiamo scritto:
+print("Contenuto del file:")
 for line in virtual_file:
     print(line)
 
-print(f"\\nTotal lines: {len(virtual_file)}")`);
+print(f"\\nRighe totali: {len(virtual_file)}")`);
 </script>
 
 ## Leggere da un File
@@ -157,15 +157,15 @@ with open("notes.txt") as f:
   </div>
 </div>
 <script>
-initCmLab('-2', `# Simulate a text file as a multi-line string:
+initCmLab('-2', `# Simula un file di testo con una stringa su più righe:
 file_content = "apple\\nbanana\\nmango\\nkiwi"
 
-# Simulate readlines() using split("\\n"):
+# Simula readlines() usando split("\\n"):
 lines = file_content.split("\\n")
-print("Number of lines:", len(lines))
+print("Numero di righe:", len(lines))
 print()
 for i, line in enumerate(lines, 1):
-    print(f"  Line {i}: {line.strip()}")`);
+    print(f"  Riga {i}: {line.strip()}")`);
 </script>
 
 Nota la chiamata `.strip()` — rimuove gli spazi bianchi e `\n` dalle estremità delle righe.
@@ -178,7 +178,7 @@ Il modo più pulito di elaborare un file riga per riga è un semplice ciclo `for
 with open("data.txt") as f:
     for line in f:
         line = line.strip()
-        if line:   # skip empty lines
+        if line:   # salta le righe vuote
             print(line)
 ```
 
@@ -204,18 +204,18 @@ Quando elabori il contenuto di un file, pulisci sempre il testo prima:
   </div>
 </div>
 <script>
-initCmLab('-3', `# Simulate a messy word list file:
+initCmLab('-3', `# Simula un file disordinato con un elenco di parole:
 words_text = "  Apple  \\nbanana\\n  MANGO\\nkiwi  \\n"
 
 clean_words = []
 for line in words_text.split("\\n"):
     word = line.strip().lower()
-    if word:                        # skip empty lines
+    if word:                        # salta le righe vuote
         clean_words.append(word)
 
-print("Cleaned words:", clean_words)
-print("Sorted:       ", sorted(clean_words))
-print("Longest word: ", max(clean_words, key=len))`);
+print("Parole ripulite:", clean_words)
+print("Ordinate:       ", sorted(clean_words))
+print("Parola più lunga:", max(clean_words, key=len))`);
 </script>
 
 ## Aggiungere a un File
@@ -224,7 +224,7 @@ La modalità `"a"` aggiunge alla fine di un file senza eliminare il contenuto es
 
 ```python
 with open("log.txt", "a") as f:
-    f.write("New entry added.\n")
+    f.write("Nuova voce aggiunta.\n")
 ```
 
 Eseguilo più volte e il log crescerà — ogni esecuzione aggiunge una nuova riga.
@@ -267,10 +267,10 @@ Alice,14,95
 Bob,13,87
 Carol,15,91"""
 
-# splitlines() works in Skulpt — no io module needed
+# splitlines() funziona in Skulpt — non serve il modulo io
 reader = csv.DictReader(csv_text.splitlines())
 for row in reader:
-    print(f"{row['name']}: age {row['age']}, score {row['score']}")`);
+    print(f"{row['name']}: età {row['age']}, punteggio {row['score']}")`);
 </script>
 
 `csv.DictReader` usa la prima riga (l'intestazione) come nomi delle colonne e ti dà ogni riga come un dizionario.
@@ -360,7 +360,7 @@ for row in reader:
     count += 1
     print(f"{row['name']}: {score}")
 
-# Add: calculate and print the average score`);
+# Aggiungi: calcola e stampa il punteggio medio`);
 </script>
 
 ## Esperimenti

@@ -97,7 +97,7 @@ initCmLab('', `def max_pool_2d(grid, pool_size=2):
         result.append(row)
     return result
 
-# 4x4 feature map (imagine after a convolution):
+# Feature map 4x4 (immagina che sia dopo una convoluzione):
 feature_map = [
     [1, 3, 2, 4],
     [5, 6, 1, 2],
@@ -110,10 +110,10 @@ for row in feature_map:
     print(" ", row)
 
 pooled = max_pool_2d(feature_map, pool_size=2)
-print("\\nAfter MaxPooling 2x2:")
+print("\\nDopo il MaxPooling 2x2:")
 for row in pooled:
     print(" ", row)
-print(f"Output size: {len(pooled)}x{len(pooled[0])}")`);
+print(f"Dimensione dell'output: {len(pooled)}x{len(pooled[0])}")`);
 </script>
 
 ## Dropout — Combattere l'Overfitting
@@ -127,8 +127,8 @@ Questo forza la rete a imparare **rappresentazioni ridondanti** — più modi pe
 Al momento dell'inferenza (previsione), Dropout viene automaticamente disabilitato e tutti i neuroni partecipano.
 
 ```python
-keras.layers.Dropout(0.5)   # randomly zero out 50% of inputs during training
-keras.layers.Dropout(0.25)  # gentler — zero out 25%
+keras.layers.Dropout(0.5)   # azzera a caso il 50% degli input durante l'addestramento
+keras.layers.Dropout(0.25)  # più delicato — azzera il 25%
 ```
 
 ## Una CNN Completa per MNIST
@@ -139,14 +139,14 @@ Ecco una CNN completa che raggiunge **~99% di accuratezza** su MNIST:
 import tensorflow as tf
 from tensorflow import keras
 
-# Load and prepare data:
+# Carica e prepara i dati:
 (x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data()
 
-# Add channel dimension: (samples, 28, 28) → (samples, 28, 28, 1)
+# Aggiungi la dimensione del canale: (samples, 28, 28) → (samples, 28, 28, 1)
 x_train = x_train.reshape(-1, 28, 28, 1) / 255.0
 x_test  = x_test.reshape(-1, 28, 28, 1) / 255.0
 
-# Build CNN:
+# Costruisci la CNN:
 model = keras.Sequential([
     keras.layers.Conv2D(32, (3, 3), activation="relu",
                         input_shape=(28, 28, 1)),
@@ -165,7 +165,7 @@ model.compile(
     metrics=["accuracy"]
 )
 
-model.summary()   # print layer-by-layer shape info
+model.summary()   # stampa la forma di ogni strato
 ```
 
 ## Capire `model.compile()`
@@ -198,10 +198,10 @@ Puoi disegnare le curve di training per visualizzare l'overfitting:
 ```python
 import matplotlib.pyplot as plt
 
-plt.plot(history.history["accuracy"],     label="train accuracy")
-plt.plot(history.history["val_accuracy"], label="val accuracy")
+plt.plot(history.history["accuracy"],     label="accuratezza addestramento")
+plt.plot(history.history["val_accuracy"], label="accuratezza validazione")
 plt.legend()
-plt.title("Training Curves")
+plt.title("Curve di addestramento")
 plt.show()
 ```
 
@@ -209,7 +209,7 @@ plt.show()
 
 ```python
 test_loss, test_acc = model.evaluate(x_test, y_test)
-print(f"Test accuracy: {test_acc:.2%}")   # e.g., "99.15%"
+print(f"Accuratezza sul test: {test_acc:.2%}")   # per esempio "99.15%"
 ```
 
 Chiamalo **una sola volta**, alla fine, su dati che il modello non ha mai visto.
@@ -217,10 +217,10 @@ Chiamalo **una sola volta**, alla fine, su dati che il modello non ha mai visto.
 ## Fare Previsioni con `model.predict()`
 
 ```python
-predictions = model.predict(x_test[:10])   # probabilities for first 10 images
+predictions = model.predict(x_test[:10])   # probabilità per le prime 10 immagini
 predicted_classes = predictions.argmax(axis=1)
-print("Predicted:", predicted_classes)
-print("True labels:", y_test[:10])
+print("Previste:", predicted_classes)
+print("Etichette vere:", y_test[:10])
 ```
 
 `predictions` è un array di forma `(10, 10)` — 10 immagini, ognuna con 10 probabilità di classe.
@@ -250,13 +250,13 @@ def softmax(vec):
 def argmax(lst):
     return lst.index(max(lst))
 
-# Simulate predictions for 5 "images":
+# Simula le previsioni per 5 "immagini":
 raw_outputs = [
-    [10.2, 0.1, 0.3, 0.0, 0.5, 0.1, 0.2, 0.0, 0.1, 0.1],  # very sure: class 0
-    [0.1, 0.0, 0.2, 0.1, 0.1, 0.0, 0.1, 9.8, 0.2, 0.1],   # very sure: class 7
-    [0.5, 0.3, 9.1, 0.2, 0.1, 0.3, 0.1, 0.2, 0.1, 0.1],   # very sure: class 2
-    [0.1, 9.5, 0.1, 0.0, 0.2, 0.1, 0.1, 0.0, 0.1, 0.0],   # very sure: class 1
-    [2.0, 0.5, 1.5, 1.0, 2.5, 0.8, 1.2, 0.9, 1.8, 2.1],   # uncertain!
+    [10.2, 0.1, 0.3, 0.0, 0.5, 0.1, 0.2, 0.0, 0.1, 0.1],  # molto sicura: classe 0
+    [0.1, 0.0, 0.2, 0.1, 0.1, 0.0, 0.1, 9.8, 0.2, 0.1],   # molto sicura: classe 7
+    [0.5, 0.3, 9.1, 0.2, 0.1, 0.3, 0.1, 0.2, 0.1, 0.1],   # molto sicura: classe 2
+    [0.1, 9.5, 0.1, 0.0, 0.2, 0.1, 0.1, 0.0, 0.1, 0.0],   # molto sicura: classe 1
+    [2.0, 0.5, 1.5, 1.0, 2.5, 0.8, 1.2, 0.9, 1.8, 2.1],   # incerta!
 ]
 true_labels = [0, 7, 2, 1, 5]
 
@@ -265,7 +265,7 @@ for i, (logits, true) in enumerate(zip(raw_outputs, true_labels)):
     pred  = argmax(probs)
     conf  = max(probs)
     status = "✓" if pred == true else "✗"
-    print(f"  {status} True={true}, Pred={pred}, Confidence={conf:.1%}")`);
+    print(f"  {status} Vera={true}, Prevista={pred}, Sicurezza={conf:.1%}")`);
 </script>
 
 ## Estrazione delle Caratteristiche
@@ -356,11 +356,11 @@ initCmLab('-3', `def dense_params(input_size, neurons):
     biases  = neurons
     return weights + biases
 
-# CNN architecture:
+# Architettura della CNN:
 layers = [
-    ("Conv2D(32, 3x3)",  (3 * 3 * 1) * 32 + 32),   # kernel * in_channels * filters + bias
+    ("Conv2D(32, 3x3)",  (3 * 3 * 1) * 32 + 32),   # kernel * canali in ingresso * filtri + bias
     ("MaxPooling2D",     0),
-    ("Conv2D(64, 3x3)",  (3 * 3 * 32) * 64 + 64),  # 32 input channels
+    ("Conv2D(64, 3x3)",  (3 * 3 * 32) * 64 + 64),  # 32 canali in ingresso
     ("MaxPooling2D",     0),
     ("Flatten",          0),
     ("Dense(128)",       dense_params(1600, 128)),
@@ -369,13 +369,13 @@ layers = [
 ]
 
 total = 0
-print(f"{'Layer':<22} {'Parameters':>12}")
+print(f"{'Strato':<22} {'Parametri':>12}")
 print("-" * 36)
 for name, params in layers:
     print(f"{name:<22} {params:>12,}")
     total += params
 print("-" * 36)
-print(f"{'Total':<22} {total:>12,}")`);
+print(f"{'Totale':<22} {total:>12,}")`);
 </script>
 
 ## Esperimenti

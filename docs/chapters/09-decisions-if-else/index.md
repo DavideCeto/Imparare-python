@@ -127,20 +127,20 @@ Modifica il codice qui sotto e clicca **Run** per vedere il risultato.
 <script>
 initCmLab('', `score = 75
 
-print("Score:", score)
-print("Is 75 == 75?", score == 75)
-print("Is 75 > 50? ", score > 50)
-print("Is 75 < 100?", score < 100)
-print("Is 75 == 100?", score == 100)
+print("Punteggio:", score)
+print("75 == 75?", score == 75)
+print("75 > 50? ", score > 50)
+print("75 < 100?", score < 100)
+print("75 == 100?", score == 100)
 
 if score >= 60:
-    print("Passing grade!")
+    print("Voto sufficiente!")
 
 if score == 100:
-    print("Perfect score!")`);
+    print("Punteggio perfetto!")`);
 </script>
 
-Avevi indovinato? La riga `"Perfect score!"` NON è stata stampata perché `75 == 100` è `False`. Il corpo dell'`if` viene eseguito solo quando la sua condizione è `True`.
+Avevi indovinato? La riga `"Punteggio perfetto!"` NON è stata stampata perché `75 == 100` è `False`. Il corpo dell'`if` viene eseguito solo quando la sua condizione è `True`.
 
 ## L'Istruzione if
 
@@ -149,7 +149,7 @@ La struttura è:
 
 ```python
 if condition:
-    # this block runs only when condition is True
+    # questo blocco viene eseguito solo quando la condizione è True
     do_something()
 ```
 
@@ -164,9 +164,9 @@ Un **blocco `if/else`** aggiunge un secondo ramo: codice che viene eseguito quan
 temperature = 15
 
 if temperature > 20:
-    print("It's warm — wear a t-shirt!")
+    print("Fa caldo — metti una maglietta!")
 else:
-    print("It's cool — bring a jacket!")
+    print("Fa fresco — porta una giacca!")
 ```
 
 Ogni `if/else` esegue *esattamente un* ramo — mai entrambi, mai nessuno.
@@ -219,10 +219,10 @@ age = 13
 has_ticket = True
 
 if age >= 10 and has_ticket:
-    print("Welcome to the show!")
+    print("Benvenuto allo spettacolo!")
 
 if age < 5 or age > 65:
-    print("Free admission!")
+    print("Ingresso gratuito!")
 ```
 
 ### Osservalo: Il Boolean Logic Lab
@@ -242,13 +242,13 @@ Python ti permette di scrivere controlli di intervallo in un modo naturale, simi
 ```python
 x = 15
 
-# The Python way (chained):
+# Il modo di Python (concatenato):
 if 10 < x < 20:
-    print("x is between 10 and 20")
+    print("x è tra 10 e 20")
 
-# The long way (same thing):
+# Il modo lungo (stessa cosa):
 if x > 10 and x < 20:
-    print("x is between 10 and 20")
+    print("x è tra 10 e 20")
 ```
 
 Entrambe le forme sono corrette, ma i confronti concatenati si leggono in modo più naturale e somigliano più a come lo scriveresti nella lezione di matematica.
@@ -264,11 +264,11 @@ age = 14
 
 if is_member:
     if age >= 13:
-        print("Full member access!")
+        print("Accesso da socio completo!")
     else:
-        print("Junior member access!")
+        print("Accesso da socio junior!")
 else:
-    print("Please sign up first.")
+    print("Prima iscriviti, per favore.")
 ```
 
 Mantieni l'annidamento a un massimo di due livelli — il codice annidato troppo in profondità diventa difficile da leggere velocemente.
@@ -302,18 +302,18 @@ initCmLab('-2', `import turtle
 t = turtle.Turtle()
 t.speed(3)
 
-shape_choice = "triangle"   # try "square", "triangle", "hexagon"
+shape_choice = "triangle"   # prova "square", "triangle", "hexagon"
 
 if shape_choice == "square":
     for i in range(4):
         t.forward(100)
         t.right(90)
-# Add elif for "triangle" (3 sides, turn 120 degrees each)
+# Aggiungi un elif per "triangle" (3 lati, girando di 120 gradi ogni volta)
 
-# Add elif for "hexagon" (6 sides, turn 60 degrees each)
+# Aggiungi un elif per "hexagon" (6 lati, girando di 60 gradi ogni volta)
 
 else:
-    t.write("Unknown shape: " + shape_choice, font=("Arial", 14, "normal"))`);
+    t.write("Forma sconosciuta: " + shape_choice, font=("Arial", 14, "normal"))`);
 </script>
 
 Una volta che tutte e tre le forme funzionano, prova a impostare `shape_choice = "circle"` per vedere il ramo else disegnare il messaggio "Unknown shape"!

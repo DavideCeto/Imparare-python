@@ -36,7 +36,7 @@ Puoi usare uno strumento come [coolors.co](https://coolors.co) o cercare su Goog
 `monty.write()` disegna del testo nella posizione attuale della tartaruga. Aggiungi un argomento `font` per controllare il carattere, la dimensione, e lo stile:
 
 ```python
-monty.write("Hello!", font=("Arial", 40, "bold"))
+monty.write("Ciao!", font=("Arial", 40, "bold"))
 ```
 
 I tre valori in `font` sono: **nome del carattere**, **dimensione in punti**, e **stile** (`"normal"`, `"bold"`, o `"italic"`).
@@ -56,7 +56,7 @@ monty.speed(10)
 monty.penup()
 monty.goto(-120, 60)
 monty.color('#E94560')
-monty.write("Hello,", font=("Arial", 48, "bold"))
+monty.write("Ciao,", font=("Arial", 48, "bold"))
 
 monty.goto(-80, -20)
 monty.color('#F5A623')
@@ -64,7 +64,7 @@ monty.write("Python!", font=("Arial", 48, "bold"))
 
 monty.goto(-60, -100)
 monty.color('#00C9A7')
-monty.write("Let's code!", font=("Arial", 24, "italic"))
+monty.write("Programmiamo!", font=("Arial", 24, "italic"))
 ```
 
 !!! mascot-thinking "Cosa Pensi che Succederà?"
@@ -110,7 +110,7 @@ monty.speed(10)
 monty.penup()
 monty.goto(-120, 60)
 monty.color('#E94560')
-monty.write("Hello,", font=("Arial", 48, "bold"))
+monty.write("Ciao,", font=("Arial", 48, "bold"))
 
 monty.goto(-80, -20)
 monty.color('#F5A623')
@@ -118,7 +118,7 @@ monty.write("Python!", font=("Arial", 48, "bold"))
 
 monty.goto(-60, -100)
 monty.color('#00C9A7')
-monty.write("Let's code!", font=("Arial", 24, "italic"))`);
+monty.write("Programmiamo!", font=("Arial", 24, "italic"))`);
 </script>
 
 Avevi indovinato? Sfondo blu notte scuro con testo rosso, arancione, e verde acqua vivaci — il contrasto fa risaltare i colori in un modo che i colori con nome raramente raggiungono.
@@ -137,7 +137,7 @@ Avevi indovinato? Sfondo blu notte scuro con testo rosso, arancione, e verde acq
 | `screen.bgcolor('#1A1A2E')` | Colora lo sfondo del canvas con un colore esadecimale |
 | `monty.hideturtle()` | Nasconde l'icona della tartaruga — utile per disegni di solo testo |
 | `monty.goto(-120, 60)` | Muove il cursore del testo a quella posizione |
-| `monty.write("Hello,", font=("Arial", 48, "bold"))` | Scrive testo in Arial grassetto da 48 punti |
+| `monty.write("Ciao,", font=("Arial", 48, "bold"))` | Scrive testo in Arial grassetto da 48 punti |
 
 !!! mascot-tip "Trovare il Colore Perfetto"
     ![Monty with a tip](../img/mascot/tip.png){ class="mascot-admonition-img" }
@@ -178,9 +178,9 @@ monty.penup()
 
 monty.goto(-100, 60)
 monty.color('#FAF0CA')
-monty.write("Hello, Coder!", font=("Arial", 36, "bold"))
+monty.write("Ciao, programmatore!", font=("Arial", 36, "bold"))
 
-# Add two more write() lines here with different colors and positions`);
+# Aggiungi qui altre due righe con write(), con colori e posizioni diversi`);
 </script>
 
 ## Esperimenti

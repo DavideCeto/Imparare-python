@@ -40,8 +40,8 @@ Verifica la tua comprensione sulla definizione di funzioni, i parametri, i valor
 
 ```python
 def say_hi():
-    print("Hi!")
-    print("Welcome!")
+    print("Ciao!")
+    print("Benvenuto!")
 
 say_hi()
 say_hi()
@@ -81,20 +81,20 @@ say_hi()
 
 ```python
 def greet(name):
-    print("Hello, " + name + "!")
+    print("Ciao, " + name + "!")
 
 greet("Monty")
 ```
 
 <div class="upper-alpha" markdown>
-1. `Hello, name!`
-2. `Hello, Monty!`
+1. `Ciao, name!`
+2. `Ciao, Monty!`
 3. `greet("Monty")`
 4. Un errore, perché `name` non è definita fuori dalla funzione
 </div>
 
 ??? question "Mostra risposta"
-    La risposta corretta è **B**. Quando viene chiamata `greet("Monty")`, la stringa `"Monty"` viene copiata nel parametro `name`. Dentro la funzione, `"Hello, " + name + "!"` diventa `"Hello, Monty!"`, che viene stampato. Il parametro `name` è definito solo dentro la funzione, quindi otterresti un errore provando a usare `name` fuori da essa — ma la chiamata in sé funziona perfettamente.
+    La risposta corretta è **B**. Quando viene chiamata `greet("Monty")`, la stringa `"Monty"` viene copiata nel parametro `name`. Dentro la funzione, `"Ciao, " + name + "!"` diventa `"Ciao, Monty!"`, che viene stampato. Il parametro `name` è definito solo dentro la funzione, quindi otterresti un errore provando a usare `name` fuori da essa — ma la chiamata in sé funziona perfettamente.
 
     **Concept Tested:** Positional Parameters
 

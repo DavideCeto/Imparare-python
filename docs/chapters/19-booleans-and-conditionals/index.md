@@ -94,17 +94,17 @@ Questo è importante perché può prevenire errori — e fornisce un utile patte
 </div>
 <script>
 initCmLab('-2', `name = ""
-greeting = name or "stranger"   # if name is falsy, use "stranger"
-print(f"Hello, {greeting}!")
+greeting = name or "sconosciuto"   # se name è falsy, usa "sconosciuto"
+print(f"Ciao, {greeting}!")
 
 name = "Monty"
-greeting = name or "stranger"   # name is truthy, so it's used
-print(f"Hello, {greeting}!")
+greeting = name or "sconosciuto"   # name è truthy, quindi viene usato
+print(f"Ciao, {greeting}!")
 
-# and short-circuits: if data is None, .upper() never runs
+# and fa il cortocircuito: se data è None, .upper() non viene mai eseguito
 data = None
 result = data and data.upper()
-print("Result:", result)   # None — no crash!`);
+print("Risultato:", result)   # None — nessun crash!`);
 </script>
 
 ## Funzioni che Restituiscono None
@@ -115,10 +115,10 @@ Questo spiazza molti principianti:
 ```python
 def add(a, b):
     result = a + b
-    # forgot to write: return result
+    # dimenticato di scrivere: return result
 
 x = add(3, 4)
-print(x)   # None — oops!
+print(x)   # None — ops!
 ```
 
 Usa sempre `return` quando vuoi che una funzione restituisca un valore.
@@ -131,9 +131,9 @@ Per controllare se un valore è `None`, usa `is None` piuttosto che `== None`.
 result = get_data()
 
 if result is None:
-    print("Nothing came back")
+    print("Non è tornato niente")
 else:
-    print("Got:", result)
+    print("Ricevuto:", result)
 ```
 
 `is` controlla l'identità (lo stesso identico oggetto in memoria), mentre `==` controlla l'uguaglianza di valore.
@@ -145,10 +145,10 @@ Python a volte converte i valori automaticamente — questo si chiama **conversi
 Quando converti deliberatamente usando `int()`, `str()`, ecc., questo si chiama **conversione esplicita**.
 
 ```python
-# Implicit: Python automatically converts int to float in mixed math
-result = 3 + 2.5   # 5.5 — int 3 became float 3.0 automatically
+# Implicita: Python converte automaticamente int in float nei calcoli misti
+result = 3 + 2.5   # 5.5 — l'int 3 è diventato automaticamente il float 3.0
 
-# Explicit: you control the conversion
+# Esplicita: sei tu a controllare la conversione
 n = int("42")
 s = str(3.14)
 b = bool(0)
@@ -161,10 +161,10 @@ Capire la differenza ti aiuta a individuare dove Python ti sta "aiutando" — e 
 Puoi chiedere diversi valori su una riga usando `split()`:
 
 ```python
-x, y = input("Enter x and y: ").split()
+x, y = input("Inserisci x e y: ").split()
 x = int(x)
 y = int(y)
-print(f"Sum: {x + y}")
+print(f"Somma: {x + y}")
 ```
 
 L'utente scrive qualcosa come `3 7`, `split()` restituisce `["3", "7"]`, e Python lo scompone in `x` e `y`.
@@ -175,13 +175,13 @@ Un'**espressione ternaria** condensa un semplice if/else in una sola riga.
 Il formato è: `valore_se_vero if condizione else valore_se_falso`.
 
 ```python
-# Normal if/else:
+# if/else normale:
 if score >= 70:
     grade = "pass"
 else:
     grade = "fail"
 
-# Ternary — same result, one line:
+# Ternario — stesso risultato, in una riga:
 grade = "pass" if score >= 70 else "fail"
 ```
 
@@ -206,8 +206,8 @@ grade = "pass" if score >= 70 else "fail"
 </div>
 <script>
 initCmLab('-3', `for score in [95, 85, 55]:
-    label = "excellent" if score >= 90 else ("good" if score >= 70 else "needs work")
-    print(f"Score {score}: {label}")`);
+    label = "eccellente" if score >= 90 else ("buono" if score >= 70 else "da migliorare")
+    print(f"Punteggio {score}: {label}")`);
 </script>
 
 ## Condizioni Composte
@@ -219,13 +219,13 @@ age = 15
 has_ticket = True
 
 if age >= 13 and has_ticket:
-    print("You may enter.")
+    print("Puoi entrare.")
 
 if age < 5 or age > 65:
-    print("Discounted admission!")
+    print("Ingresso ridotto!")
 
 if not has_ticket:
-    print("You need a ticket!")
+    print("Ti serve un biglietto!")
 ```
 
 | Operatore | Significato | Vero quando |
@@ -239,17 +239,17 @@ if not has_ticket:
 Python 3.10 ha introdotto **`match/case`**, che confronta un valore con diversi pattern — simile a una lunga catena di `if/elif` ma molto più pulito.
 
 ```python
-command = input("Command (start/stop/pause): ").strip().lower()
+command = input("Comando (start/stop/pause): ").strip().lower()
 
 match command:
     case "start":
-        print("Starting!")
+        print("Avvio!")
     case "stop":
-        print("Stopping!")
+        print("Mi fermo!")
     case "pause":
-        print("Pausing!")
+        print("In pausa!")
     case _:
-        print("Unknown command.")
+        print("Comando sconosciuto.")
 ```
 
 Il caso `_` è il **carattere jolly** (wildcard) — corrisponde a qualsiasi cosa non già gestita.
@@ -269,13 +269,13 @@ Usa `|` dentro un case per far corrispondere più valori:
   </div>
 </div>
 <script>
-initCmLab('-4', `day = input("Enter a day (Mon/Tue/Wed/Thu/Fri/Sat/Sun): ").strip().title()
+initCmLab('-4', `day = input("Inserisci un giorno (Mon/Tue/Wed/Thu/Fri/Sat/Sun): ").strip().title()
 
 match day:
     case "Sat" | "Sun":
-        print(f"{day}: Weekend!")
+        print(f"{day}: Fine settimana!")
     case "Mon" | "Tue" | "Wed" | "Thu" | "Fri":
-        print(f"{day}: Weekday.")
+        print(f"{day}: Giorno feriale.")
     case _:
         print(f"I don't recognize '{day}'.")`);
 </script>
@@ -284,8 +284,8 @@ match day:
 
 !!! mascot-thinking "Il Tuo Turno — Correggi il Valore Predefinito"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
-    Il programma sotto dovrebbe salutare un utente per nome — oppure dire "Hello, stranger!" se non viene inserito nulla.
-    Ma gli operandi di `or` sono invertiti, quindi dice sempre "stranger".
+    Il programma sotto dovrebbe salutare un utente per nome — oppure dire "Ciao, sconosciuto!" se non viene inserito nulla.
+    Ma gli operandi di `or` sono invertiti, quindi dice sempre "sconosciuto".
     Scambiali per correggerlo!
 
 <div class="cm-lab cm-text-only">
@@ -302,12 +302,12 @@ match day:
   </div>
 </div>
 <script>
-initCmLab('-5', `name = input("Enter your name (or press Enter to skip): ").strip()
+initCmLab('-5', `name = input("Inserisci il tuo nome (o premi Invio per saltare): ").strip()
 
-# Bug: "stranger" is truthy so it always wins!
-greeting = "stranger" or name
+# Bug: "sconosciuto" è truthy, quindi vince sempre!
+greeting = "sconosciuto" or name
 
-print(f"Hello, {greeting}!")`);
+print(f"Ciao, {greeting}!")`);
 </script>
 
 ## Esperimenti

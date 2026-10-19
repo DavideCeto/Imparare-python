@@ -152,12 +152,12 @@ initCmLab('-2', `import turtle
 monty = turtle.Turtle()
 monty.shape('turtle')
 
-# Draw a triangle - each turn is 120 degrees
+# Disegna un triangolo - ogni rotazione è di 120 gradi
 monty.forward(100)
 monty.right(120)
 
 monty.forward(100)
-# Add the missing line here!
+# Aggiungi qui la riga mancante!
 
 monty.forward(100)
 monty.right(120)`);

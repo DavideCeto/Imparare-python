@@ -41,18 +41,18 @@ monty.hideturtle()
 random.seed(3)
 
 def fish(x, y, size):
-    # body: a pointed oval made of two arcs
+    # corpo: un ovale appuntito fatto di due archi
     monty.penup()
-    monty.goto(x, y)          # nose of the fish
+    monty.goto(x, y)          # muso del pesce
     monty.setheading(-60)
     monty.pendown()
     monty.color('midnightblue', 'steelblue')
     monty.begin_fill()
-    monty.circle(size, 120)   # belly arc
+    monty.circle(size, 120)   # arco della pancia
     monty.left(60)
-    monty.circle(size, 120)   # back arc
+    monty.circle(size, 120)   # arco del dorso
     monty.end_fill()
-    # tail fin: a triangle at the back
+    # pinna caudale: un triangolo sul retro
     monty.penup()
     monty.goto(x + size * 1.73, y)
     monty.pendown()
@@ -61,7 +61,7 @@ def fish(x, y, size):
     monty.goto(x + size * 2.3, y - size * 0.5)
     monty.goto(x + size * 1.73, y)
     monty.end_fill()
-    # eye near the nose
+    # occhio vicino al muso
     monty.penup()
     monty.goto(x + size * 0.5, y + size * 0.15)
     monty.dot(size // 3, 'white')
@@ -110,18 +110,18 @@ monty.hideturtle()
 random.seed(3)
 
 def fish(x, y, size):
-    # body: a pointed oval made of two arcs
+    # corpo: un ovale appuntito fatto di due archi
     monty.penup()
-    monty.goto(x, y)          # nose of the fish
+    monty.goto(x, y)          # muso del pesce
     monty.setheading(-60)
     monty.pendown()
     monty.color('midnightblue', 'steelblue')
     monty.begin_fill()
-    monty.circle(size, 120)   # belly arc
+    monty.circle(size, 120)   # arco della pancia
     monty.left(60)
-    monty.circle(size, 120)   # back arc
+    monty.circle(size, 120)   # arco del dorso
     monty.end_fill()
-    # tail fin: a triangle at the back
+    # pinna caudale: un triangolo sul retro
     monty.penup()
     monty.goto(x + size * 1.73, y)
     monty.pendown()
@@ -130,7 +130,7 @@ def fish(x, y, size):
     monty.goto(x + size * 2.3, y - size * 0.5)
     monty.goto(x + size * 1.73, y)
     monty.end_fill()
-    # eye near the nose
+    # occhio vicino al muso
     monty.penup()
     monty.goto(x + size * 0.5, y + size * 0.15)
     monty.dot(size // 3, 'white')
@@ -202,18 +202,18 @@ random.seed(3)
 fish_colors = ['steelblue','royalblue','teal','cornflowerblue','deepskyblue']
 
 def fish(x, y, size, color):
-    # body: a pointed oval made of two arcs
+    # corpo: un ovale appuntito fatto di due archi
     monty.penup()
-    monty.goto(x, y)          # nose of the fish
+    monty.goto(x, y)          # muso del pesce
     monty.setheading(-60)
     monty.pendown()
     monty.color('midnightblue', color)
     monty.begin_fill()
-    monty.circle(size, 120)   # belly arc
+    monty.circle(size, 120)   # arco della pancia
     monty.left(60)
-    monty.circle(size, 120)   # back arc
+    monty.circle(size, 120)   # arco del dorso
     monty.end_fill()
-    # tail fin: a triangle at the back
+    # pinna caudale: un triangolo sul retro
     monty.penup()
     monty.goto(x + size * 1.73, y)
     monty.pendown()
@@ -222,7 +222,7 @@ def fish(x, y, size, color):
     monty.goto(x + size * 2.3, y - size * 0.5)
     monty.goto(x + size * 1.73, y)
     monty.end_fill()
-    # eye near the nose
+    # occhio vicino al muso
     monty.penup()
     monty.goto(x + size * 0.5, y + size * 0.15)
     monty.dot(size // 3, 'white')

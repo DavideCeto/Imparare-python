@@ -39,7 +39,7 @@ Dopo l'importazione, accedi alle sue funzioni con `module.function()`.
 
 ```python
 import random
-print(random.randint(1, 10))   # random number between 1 and 10
+print(random.randint(1, 10))   # numero casuale tra 1 e 10
 ```
 
 ## `from...import` — Prendi Nomi Specifici
@@ -50,7 +50,7 @@ Dopo un `from...import`, chiami la funzione direttamente senza il prefisso del m
 ```python
 from random import randint, choice
 
-print(randint(1, 6))       # no "random." needed
+print(randint(1, 6))       # non serve scrivere "random."
 print(choice(["a","b","c"]))
 ```
 
@@ -110,10 +110,10 @@ Entrambi gli estremi sono inclusi.
 <script>
 initCmLab('', `import random
 
-print("Rolling a die 5 times:")
+print("Lancio un dado 5 volte:")
 for i in range(5):
     roll = random.randint(1, 6)
-    print(f"  Roll {i+1}: {roll}")`);
+    print(f"  Lancio {i+1}: {roll}")`);
 </script>
 
 Eseguilo un paio di volte — i risultati cambiano ogni volta perché i numeri sono casuali.
@@ -149,10 +149,10 @@ Ora passa il menu a tendina a **Sum of two dice** e lancia di nuovo 1000 volte. 
 initCmLab('-2', `import random
 
 colors = ["red", "orange", "yellow", "green", "blue", "violet"]
-print("Random color:", random.choice(colors))
+print("Colore casuale:", random.choice(colors))
 
 directions = ["left", "right", "forward", "back"]
-print("Random direction:", random.choice(directions))`);
+print("Direzione casuale:", random.choice(directions))`);
 </script>
 
 ## `random.shuffle()` — Mescola una Lista
@@ -177,9 +177,9 @@ Modifica la lista **sul posto** e restituisce `None` — quindi non scrivere `ls
 initCmLab('-3', `import random
 
 cards = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
-print("Before shuffle:", cards[:5], "...")
+print("Prima di mescolare:", cards[:5], "...")
 random.shuffle(cards)
-print("After shuffle: ", cards[:5], "...")`);
+print("Dopo aver mescolato:", cards[:5], "...")`);
 </script>
 
 ## `random.random()` — Float Casuale
@@ -190,8 +190,8 @@ Questo è utile quando vuoi una *percentuale* o una *probabilità*. Moltiplica p
 
 ```python
 import random
-prob = random.random()           # between 0.0 and 1.0
-scaled = random.random() * 100  # between 0.0 and 100.0
+prob = random.random()           # tra 0.0 e 1.0
+scaled = random.random() * 100  # tra 0.0 e 100.0
 ```
 
 ## `random.sample()` — Scegli Senza Ripetizione
@@ -202,7 +202,7 @@ scaled = random.random() * 100  # between 0.0 and 100.0
 ```python
 import random
 lottery = random.sample(range(1, 50), 6)
-print("Lottery numbers:", sorted(lottery))
+print("Numeri della lotteria:", sorted(lottery))
 ```
 
 ## `random.seed()` — Casualità Ripetibile
@@ -229,13 +229,13 @@ Questo è utile per i test — vuoi che il tuo programma si comporti nello stess
 initCmLab('-4', `import random
 
 random.seed(42)
-print("With seed 42:", [random.randint(1, 10) for _ in range(5)])
+print("Con seed 42:", [random.randint(1, 10) for _ in range(5)])
 
-random.seed(42)   # reset to the same seed
-print("Same again: ", [random.randint(1, 10) for _ in range(5)])
+random.seed(42)   # torna allo stesso seed
+print("Di nuovo:   ", [random.randint(1, 10) for _ in range(5)])
 
-# No seed — different every run:
-print("No seed:   ", [random.randint(1, 10) for _ in range(5)])`);
+# Senza seed — diversi a ogni esecuzione:
+print("Senza seed: ", [random.randint(1, 10) for _ in range(5)])`);
 </script>
 
 ## Arte Casuale con Turtle
@@ -298,14 +298,14 @@ Salva le funzioni sotto in un file chiamato `fibo.py`:
 
 ```python
 # fibo.py
-def fib(n):    # print the Fibonacci series up to n
+def fib(n):    # stampa la serie di Fibonacci fino a n
     a, b = 0, 1
     while a < n:
         print(a, end=' ')
         a, b = b, a + b
     print()
 
-def fib2(n):   # return the Fibonacci series up to n as a list
+def fib2(n):   # restituisce la serie di Fibonacci fino a n come lista
     result = []
     a, b = 0, 1
     while a < n:
@@ -360,10 +360,10 @@ initCmLab('-6', `import random
 
 cards = ["A", "2", "3", "4", "5"]
 
-# Bug: shuffle returns None, not the shuffled list!
+# Bug: shuffle restituisce None, non la lista mescolata!
 cards = random.shuffle(cards)
 
-print("Shuffled:", cards)`);
+print("Mescolate:", cards)`);
 </script>
 
 ## Esperimenti

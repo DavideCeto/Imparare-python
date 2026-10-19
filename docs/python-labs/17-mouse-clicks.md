@@ -19,7 +19,7 @@ Un **gestore di eventi** è una funzione che scrivi e poi *registri* con lo sche
 
 ```python
 def on_click(x, y):
-    # x and y are where the user clicked
+    # x e y sono il punto in cui l'utente ha cliccato
     monty.goto(x, y)
     monty.circle(15)
 
@@ -36,7 +36,7 @@ import turtle
 
 screen = turtle.Screen()
 screen.bgcolor('lightyellow')
-screen.title("Click to draw!")
+screen.title("Clicca per disegnare!")
 
 monty = turtle.Turtle()
 monty.shape('turtle')
@@ -181,7 +181,7 @@ def on_click(x, y):
     monty.goto(x, y)
     monty.pendown()
     monty.begin_fill()
-    # Change this circle to a 5-pointed star
+    # Trasforma questo cerchio in una stella a 5 punte
     # (for i in range(5): forward(30); right(144))
     monty.circle(20)
     monty.end_fill()

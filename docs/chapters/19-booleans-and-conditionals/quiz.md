@@ -52,17 +52,17 @@ Verifica la tua comprensione della truthiness, della valutazione a corto circuit
 
 ---
 
-#### 4. Cosa restituisce l'espressione `name or "stranger"` quando `name = ""`?
+#### 4. Cosa restituisce l'espressione `name or "sconosciuto"` quando `name = ""`?
 
 <div class="upper-alpha" markdown>
 1. `True`
 2. `""` (la stringa vuota)
-3. `"stranger"`
+3. `"sconosciuto"`
 4. Un errore, perché non puoi usare `or` con le stringhe
 </div>
 
 ??? question "Mostra risposta"
-    La risposta corretta è **C**. `or` fa corto circuito su un lato sinistro truthy, ma `""` è falsy, quindi Python continua al lato destro e restituisce `"stranger"`. Questo è un utile pattern di valore predefinito: `value or default` restituisce `value` se è truthy, altrimenti restituisce `default`. Quando `name = "Monty"`, l'espressione restituisce `"Monty"` perché è truthy.
+    La risposta corretta è **C**. `or` fa corto circuito su un lato sinistro truthy, ma `""` è falsy, quindi Python continua al lato destro e restituisce `"sconosciuto"`. Questo è un utile pattern di valore predefinito: `value or default` restituisce `value` se è truthy, altrimenti restituisce `default`. Quando `name = "Monty"`, l'espressione restituisce `"Monty"` perché è truthy.
 
     **Concept Tested:** Short-Circuit Evaluation
 
@@ -120,7 +120,7 @@ grade = "pass" if score >= 70 else "fail"
 
 ---
 
-#### 8. Cosa fa `x, y = input("Enter x and y: ").split()`?
+#### 8. Cosa fa `x, y = input("Inserisci x e y: ").split()`?
 
 <div class="upper-alpha" markdown>
 1. Chiede all'utente due input separati con due prompt

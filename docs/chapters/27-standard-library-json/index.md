@@ -68,9 +68,9 @@ def circle_area(r):
     return 3.14159 * r * r
 
 if __name__ == "__main__":
-    # This block only runs when you run mymath.py directly
-    # It does NOT run when you do: import mymath
-    print("Testing circle_area:", circle_area(5))
+    # Questo blocco viene eseguito solo quando esegui direttamente mymath.py
+    # NON viene eseguito quando scrivi: import mymath
+    print("Prova di circle_area:", circle_area(5))
 ```
 
 Metti sempre il codice di test e la logica dello script dentro questo guardiano nei file dei moduli.
@@ -103,9 +103,9 @@ Il modulo `sys` ti dà informazioni sull'interprete Python stesso.
 <script>
 initCmLab('', `import sys
 
-print("Python version:", sys.version[:6])
-print("Platform:", sys.platform)
-print("Module search paths (first 2):", sys.path[:2])`);
+print("Versione di Python:", sys.version[:6])
+print("Piattaforma:", sys.platform)
+print("Percorsi di ricerca dei moduli (i primi 2):", sys.path[:2])`);
 </script>
 
 ## Il Modulo `os` e la Gestione dei Percorsi dei File
@@ -127,8 +127,8 @@ Prima di provarle, ecco le funzioni chiave:
 ```python
 import os
 
-print(os.getcwd())                          # current directory
-print(os.path.exists("notes.txt"))          # True or False
+print(os.getcwd())                          # cartella corrente
+print(os.path.exists("notes.txt"))          # True o False
 print(os.path.join("folder", "file.txt"))   # "folder/file.txt"
 ```
 
@@ -187,18 +187,18 @@ Due funzioni convertono tra testo JSON e oggetti Python:
 <script>
 initCmLab('-2', `import json
 
-# JSON string → Python object
+# Stringa JSON → oggetto Python
 json_text = '{"name": "Alice", "score": 95, "active": true}'
 data = json.loads(json_text)
 
-print("Type:", type(data))
-print("Name:", data["name"])
-print("Score:", data["score"])
+print("Tipo:", type(data))
+print("Nome:", data["name"])
+print("Punteggio:", data["score"])
 
-# Python object → JSON string
-data["score"] = 98   # update the score
+# Oggetto Python → stringa JSON
+data["score"] = 98   # aggiorna il punteggio
 new_json = json.dumps(data, indent=2)
-print("\\nUpdated JSON:")
+print("\\nJSON aggiornato:")
 print(new_json)`);
 </script>
 
@@ -224,12 +224,12 @@ Questi richiedono un vero ambiente Python (Thonny, VS Code) perché hanno bisogn
 ```python
 import json
 
-# Write JSON to a file (run in Thonny or VS Code):
+# Scrivi il JSON in un file (da eseguire in Thonny o VS Code):
 data = {"players": ["Alice", "Bob"], "high_score": 1500}
 with open("game.json", "w") as f:
     json.dump(data, f, indent=2)
 
-# Read JSON from a file:
+# Leggi il JSON da un file:
 with open("game.json") as f:
     loaded = json.load(f)
 
@@ -260,16 +260,16 @@ data = {
     "high_score": 2400
 }
 
-# Convert to a JSON string (like writing to a file):
+# Converti in una stringa JSON (come scrivere in un file):
 json_string = json.dumps(data, indent=2)
-print("JSON string:")
+print("Stringa JSON:")
 print(json_string)
 
-# Parse back (like reading from a file):
+# Rileggi i dati (come leggere da un file):
 loaded = json.loads(json_string)
-print("Game:", loaded["game"])
-print("Players:", loaded["players"])
-print("High score:", loaded["high_score"])`);
+print("Gioco:", loaded["game"])
+print("Giocatori:", loaded["players"])
+print("Record:", loaded["high_score"])`);
 </script>
 
 ## Il Modulo `collections`
@@ -300,7 +300,7 @@ from datetime import datetime, date
 
 now = datetime.now()
 print(now.year, now.month, now.day)
-print(now.strftime("%Y-%m-%d %H:%M:%S"))   # formatted string
+print(now.strftime("%Y-%m-%d %H:%M:%S"))   # stringa formattata
 
 today = date.today()
 print(today)
@@ -347,13 +347,13 @@ print(pairs)   # [('A','B'), ('A','C'), ('A','D'), ('B','C'), ('B','D'), ('C','D
 initCmLab('-4', `text = "the quick brown fox jumps over the lazy dog the fox"
 words = text.split()
 
-# Replace this manual counting with collections.Counter:
+# Sostituisci questo conteggio manuale con collections.Counter:
 word_count = {}
 for word in words:
     word_count[word] = word_count.get(word, 0) + 1
 
 print(word_count)
-print("Most common:", max(word_count, key=word_count.get))`);
+print("La più frequente:", max(word_count, key=word_count.get))`);
 </script>
 
 ## Esperimenti

@@ -151,14 +151,14 @@ Verifica la tua comprensione della funzione input(), della conversione di tipo, 
 #### 10. Quale riga di codice legge correttamente un numero dall'utente e lo memorizza come intero?
 
 <div class="upper-alpha" markdown>
-1. `age = input(int("How old are you? "))`
-2. `age = input("How old are you? ")`
-3. `age = int(input("How old are you? "))`
-4. `age = str(int("How old are you? "))`
+1. `age = input(int("Quanti anni hai? "))`
+2. `age = input("Quanti anni hai? ")`
+3. `age = int(input("Quanti anni hai? "))`
+4. `age = str(int("Quanti anni hai? "))`
 </div>
 
 ??? question "Mostra risposta"
-    La risposta corretta è **C**. `int(input("How old are you? "))` funziona chiamando prima `input()` per ottenere la risposta dell'utente come stringa, poi passando immediatamente quella stringa a `int()` per convertirla in un intero. Questo è lo schema standard di Python per leggere un numero dall'utente. L'opzione A tenta erroneamente di convertire il messaggio del prompt stesso.
+    La risposta corretta è **C**. `int(input("Quanti anni hai? "))` funziona chiamando prima `input()` per ottenere la risposta dell'utente come stringa, poi passando immediatamente quella stringa a `int()` per convertirla in un intero. Questo è lo schema standard di Python per leggere un numero dall'utente. L'opzione A tenta erroneamente di convertire il messaggio del prompt stesso.
 
     **Concept Tested:** Type Conversion
 

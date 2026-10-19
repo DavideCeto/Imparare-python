@@ -40,20 +40,20 @@ Verifica la tua comprensione dei valori booleani, degli operatori di confronto, 
 
 ```python
 if score >= 60:
-    print("Passing!")
+    print("Promosso!")
 else:
-    print("Try again!")
+    print("Riprova!")
 ```
 
 <div class="upper-alpha" markdown>
-1. `Try again!`
-2. Sia `Passing!` sia `Try again!`
-3. `Passing!`
+1. `Riprova!`
+2. Sia `Promosso!` sia `Riprova!`
+3. `Promosso!`
 4. Niente — il programma salta entrambi i rami
 </div>
 
 ??? question "Mostra risposta"
-    La risposta corretta è **C**. Quando `score = 75`, la condizione `score >= 60` si valuta come `True` (75 è maggiore o uguale a 60). Quindi Python esegue il blocco `if` e stampa `"Passing!"`. Dato che il blocco `if` è stato eseguito, Python salta completamente il blocco `else`. Un `if/else` esegue sempre esattamente uno dei due rami.
+    La risposta corretta è **C**. Quando `score = 75`, la condizione `score >= 60` si valuta come `True` (75 è maggiore o uguale a 60). Quindi Python esegue il blocco `if` e stampa `"Promosso!"`. Dato che il blocco `if` è stato eseguito, Python salta completamente il blocco `else`. Un `if/else` esegue sempre esattamente uno dei due rami.
 
     **Concept Tested:** if...else Block
 

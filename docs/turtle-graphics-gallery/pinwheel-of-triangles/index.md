@@ -164,7 +164,7 @@ for i in range(12):
         monty.forward(size)
         monty.left(120)
     monty.end_fill()
-    # ADD ONE LINE HERE to rotate before the next triangle
+    # AGGIUNGI QUI UNA RIGA per ruotare prima del triangolo successivo
 
 monty.hideturtle()`);
 </script>

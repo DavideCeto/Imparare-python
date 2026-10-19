@@ -170,7 +170,7 @@ import random
 
 monty = turtle.Turtle()
 monty.speed(10)
-# Add one line here to set the background to 'navy'
+# Aggiungi qui una riga per impostare lo sfondo a 'navy'
 
 colors = ['white', 'yellow', 'orange', 'cyan', 'gold']
 

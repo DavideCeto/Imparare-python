@@ -116,17 +116,17 @@ Verifica la tua comprensione dei tipi di errore Python, dei traceback, di try/ex
 
 ---
 
-#### 8. Cosa fa `raise ValueError("Speed cannot be negative.")`?
+#### 8. Cosa fa `raise ValueError("La velocità non può essere negativa.")`?
 
 <div class="upper-alpha" markdown>
 1. Stampa un messaggio di errore e continua a eseguire il programma
 2. Innesca un'eccezione `ValueError` con il messaggio dato, che farà andare in crash il programma a meno che non venga catturata
-3. Crea un nuovo tipo di errore chiamato "Speed cannot be negative"
+3. Crea un nuovo tipo di errore chiamato "La velocità non può essere negativa"
 4. Memorizza il messaggio in una variabile chiamata `ValueError`
 </div>
 
 ??? question "Mostra risposta"
-    La risposta corretta è **B**. L'istruzione `raise` innesca deliberatamente un'eccezione. `raise ValueError("message")` crea un `ValueError` con il tuo messaggio personalizzato. Questo è utile per imporre regole nel tuo codice — se viene rilevato un input sbagliato, generi un'eccezione così chi chiama sa che qualcosa non va. Chi chiama può catturarla con `try/except ValueError`.
+    La risposta corretta è **B**. L'istruzione `raise` innesca deliberatamente un'eccezione. `raise ValueError("messaggio")` crea un `ValueError` con il tuo messaggio personalizzato. Questo è utile per imporre regole nel tuo codice — se viene rilevato un input sbagliato, generi un'eccezione così chi chiama sa che qualcosa non va. Chi chiama può catturarla con `try/except ValueError`.
 
     **Concept Tested:** raise Statement
 

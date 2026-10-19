@@ -33,7 +33,7 @@ random.seed(42)
 screen = turtle.Screen()
 screen.tracer(0)
 
-# ... create prey (green) and hunter (red) turtles ...
+# ... crea la preda (verde) e il cacciatore (rosso) ...
 
 for frame in range(300):
     prey.right(random.uniform(-30, 30))
@@ -126,11 +126,11 @@ if caught:
     sign.penup()
     sign.pencolor('black')
     sign.goto(hunter.xcor(), hunter.ycor() + 25)
-    sign.write('Caught!', False, 'center')
+    sign.write('Preso!', False, 'center')
 screen.update()`);
 </script>
 
-Il cacciatore si avvicina e appare "Caught!" — con un vantaggio di velocità di 0.5 pixel per fotogramma e una mira perfettamente dritta, il cacciatore vince sempre, prima o poi. Avevi indovinato?
+Il cacciatore si avvicina e appare "Preso!" — con un vantaggio di velocità di 0.5 pixel per fotogramma e una mira perfettamente dritta, il cacciatore vince sempre, prima o poi. Avevi indovinato?
 
 ## Come Funziona
 
@@ -224,10 +224,10 @@ sign.penup()
 sign.pencolor('black')
 if caught:
     sign.goto(hunter.xcor(), hunter.ycor() + 25)
-    sign.write('Caught!', False, 'center')
+    sign.write('Preso!', False, 'center')
 else:
     sign.goto(prey.xcor(), prey.ycor() + 25)
-    sign.write('Got away!', False, 'center')
+    sign.write('Scappato!', False, 'center')
 screen.update()`);
 </script>
 
@@ -235,7 +235,7 @@ La preda in fuga sopravvive molto più a lungo della vagabonda casuale — corre
 
 ## Esperimenti
 
-1. **Pareggia le velocità.** Imposta anche il passo del cacciatore a 3.5. Saprai che ha funzionato quando il cacciatore non riesce più a chiudere il divario e appare "Got away!".
+1. **Pareggia le velocità.** Imposta anche il passo del cacciatore a 3.5. Saprai che ha funzionato quando il cacciatore non riesce più a chiudere il divario e appare "Scappato!".
 
 2. **Aggiungi un secondo cacciatore.** Crea `hunter2` che parte da (150, -140) con la stessa logica di caccia. Saprai che ha funzionato quando la preda viene messa all'angolo tra due tartarughe rosse.
 

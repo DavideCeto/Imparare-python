@@ -179,7 +179,7 @@ def petal():
     monty.right(90)
 
 for i in range(4):
-    pass  # bug: petal() is never called here!`);
+    pass  # bug: qui petal() non viene mai chiamata!`);
 </script>
 
 ## Esperimenti

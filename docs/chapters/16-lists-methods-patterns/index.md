@@ -55,17 +55,17 @@ Prima di provarli, definiamo ciascuno chiaramente:
 </div>
 <script>
 initCmLab('', `fruits = ["apple", "banana"]
-print("Start:", fruits)
+print("Inizio:", fruits)
 
 fruits.append("mango")
-print("After append:", fruits)
+print("Dopo append:", fruits)
 
-fruits.insert(1, "kiwi")   # insert "kiwi" at index 1
-print("After insert:", fruits)
+fruits.insert(1, "kiwi")   # inserisce "kiwi" all'indice 1
+print("Dopo insert:", fruits)
 
 extras = ["grape", "lemon"]
 fruits.extend(extras)
-print("After extend:", fruits)`);
+print("Dopo extend:", fruits)`);
 </script>
 
 !!! mascot-thinking "Cosa Pensi che Succederà?"
@@ -98,18 +98,18 @@ Ci sono tre metodi per rimuovere elementi:
 </div>
 <script>
 initCmLab('-2', `items = ["a", "b", "c", "d", "e"]
-print("Start:", items)
+print("Inizio:", items)
 
 items.remove("c")
-print("After remove('c'):", items)
+print("Dopo remove('c'):", items)
 
 last = items.pop()
-print("Popped:", last)
-print("After pop:", items)
+print("Estratto:", last)
+print("Dopo pop:", items)
 
 second = items.pop(1)
-print("Popped index 1:", second)
-print("After pop(1):", items)`);
+print("Estratto all'indice 1:", second)
+print("Dopo pop(1):", items)`);
 </script>
 
 ## Ordinare e Invertire
@@ -134,17 +134,17 @@ Entrambi i metodi modificano la lista **sul posto** — la lista originale cambi
 </div>
 <script>
 initCmLab('-3', `scores = [73, 100, 87, 55, 92]
-print("Before sort:", scores)
+print("Prima di sort:", scores)
 
 scores.sort()
-print("After sort:", scores)
+print("Dopo sort:", scores)
 
 scores.reverse()
-print("After reverse:", scores)
+print("Dopo reverse:", scores)
 
 words = ["banana", "apple", "cherry"]
 words.sort()
-print("Sorted words:", words)`);
+print("Parole ordinate:", words)`);
 </script>
 
 ## Trovare Elementi con `index()` e `count()`
@@ -164,7 +164,7 @@ Il modo più comune per lavorare con ogni elemento di una lista è un ciclo `for
 
 ```python
 for item in my_list:
-    # do something with item
+    # fai qualcosa con item
 ```
 
 Puoi anche iterare e costruire una nuova lista allo stesso tempo — chiamato il pattern **ciclo-con-costruzione-di-lista**:
@@ -189,8 +189,8 @@ doubled = []
 for s in scores:
     doubled.append(s * 2)
 
-print("Original:", scores)
-print("Doubled: ", doubled)`);
+print("Originale:", scores)
+print("Raddoppiati:", doubled)`);
 </script>
 
 ## List Comprehension
@@ -201,12 +201,12 @@ Racchiude il ciclo e l'espressione in una singola riga dentro parentesi quadre.
 Prima della comprehension, assicurati di capire la versione con il ciclo:
 
 ```python
-# The long way:
+# Il modo lungo:
 doubled = []
 for s in scores:
     doubled.append(s * 2)
 
-# The short way (list comprehension):
+# Il modo breve (list comprehension):
 doubled = [s * 2 for s in scores]
 ```
 
@@ -215,7 +215,7 @@ Entrambe producono esattamente lo stesso risultato. La comprehension si legge co
 Puoi anche aggiungere un filtro `if`:
 
 ```python
-passing = [s for s in scores if s >= 70]   # only scores 70 and above
+passing = [s for s in scores if s >= 70]   # solo i punteggi da 70 in su
 ```
 
 <div class="cm-lab cm-text-only">
@@ -238,9 +238,9 @@ doubled  = [s * 2 for s in scores]
 passing  = [s for s in scores if s >= 70]
 graded   = ["pass" if s >= 70 else "fail" for s in scores]
 
-print("Doubled:", doubled)
-print("Passing:", passing)
-print("Graded: ", graded)`);
+print("Raddoppiati:", doubled)
+print("Sufficienti:", passing)
+print("Con giudizio:", graded)`);
 </script>
 
 ## Liste Annidate
@@ -255,8 +255,8 @@ grid = [
     [7, 8, 9]
 ]
 
-print(grid[0])      # [1, 2, 3] — first row
-print(grid[1][2])   # 6 — row 1, column 2
+print(grid[0])      # [1, 2, 3] — prima riga
+print(grid[1][2])   # 6 — riga 1, colonna 2
 ```
 
 ## Liste come Pile e Code
@@ -269,7 +269,7 @@ stack = []
 stack.append("a")   # push
 stack.append("b")
 stack.append("c")
-print(stack.pop())  # "c" — last in, first out
+print(stack.pop())  # "c" — l'ultimo a entrare è il primo a uscire
 ```
 
 Una **coda** (queue) è "primo entrato, primo uscito" — come una fila alla mensa.
@@ -280,7 +280,7 @@ queue = []
 queue.append("first")
 queue.append("second")
 queue.append("third")
-print(queue.pop(0))   # "first" — first in, first out
+print(queue.pop(0))   # "first" — il primo a entrare è il primo a uscire
 ```
 
 ### Guardalo: Stessi Elementi, Uscite Diverse
@@ -317,10 +317,10 @@ Svuota entrambe le strutture e confronta le due strisce di storico: la pila rest
 <script>
 initCmLab('-6', `numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-# Bug: this keeps odd numbers, not even ones!
+# Bug: questo tiene i numeri dispari, non quelli pari!
 evens = [n for n in numbers if n % 2 == 1]
 
-print("Evens:", evens)`);
+print("Pari:", evens)`);
 </script>
 
 ## Esperimenti

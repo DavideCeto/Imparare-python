@@ -71,14 +71,14 @@ Usa una lista quando hai bisogno di aggiungere, rimuovere, o cambiare elementi n
 </div>
 <script>
 initCmLab('', `point = (3, 5)
-print("Point:", point)
+print("Punto:", point)
 print("x:", point[0], "y:", point[1])
-print("Type:", type(point))
+print("Tipo:", type(point))
 
-# Tuples support indexing and slicing like lists:
+# Le tuple supportano indicizzazione e slicing come le liste:
 colors = ("red", "green", "blue", "yellow")
-print("First:", colors[0])
-print("Last:", colors[-1])
+print("Primo:", colors[0])
+print("Ultimo:", colors[-1])
 print("Slice:", colors[1:3])`);
 </script>
 
@@ -87,8 +87,8 @@ print("Slice:", colors[1:3])`);
 Una tupla con *un* solo elemento ha bisogno di una virgola finale — altrimenti Python vede solo delle parentesi attorno a un valore:
 
 ```python
-not_a_tuple = (42)    # just the integer 42
-is_a_tuple  = (42,)   # a tuple containing 42
+not_a_tuple = (42)    # solo l'intero 42
+is_a_tuple  = (42,)   # una tupla che contiene 42
 ```
 
 La virgola finale è il segnale per Python che intendi una tupla.
@@ -100,7 +100,7 @@ Questo rende il codice pulito ed espressivo.
 
 ```python
 point = (10, 20)
-x, y = point          # unpack into x and y
+x, y = point          # spacchetta in x e y
 print(x)              # 10
 print(y)              # 20
 ```
@@ -127,13 +127,13 @@ print(y)              # 20
 <script>
 initCmLab('-2', `rgb = (255, 128, 0)
 r, g, b = rgb
-print(f"Red={r}, Green={g}, Blue={b}")
+print(f"Rosso={r}, Verde={g}, Blu={b}")
 
-# Swap two variables using tuple unpacking:
+# Scambia due variabili con lo spacchettamento di tuple:
 x = 10
 y = 20
 x, y = y, x
-print(f"After swap: x={x}, y={y}")`);
+print(f"Dopo lo scambio: x={x}, y={y}")`);
 </script>
 
 ## Le Tuple come Valori di Ritorno
@@ -164,12 +164,12 @@ print(f"Min: {lo}, Max: {hi}")
 </div>
 <script>
 initCmLab('-3', `def divide(a, b):
-    quotient  = a // b   # integer division
-    remainder = a % b    # remainder
-    return quotient, remainder   # returns a tuple
+    quotient  = a // b   # divisione intera
+    remainder = a % b    # resto
+    return quotient, remainder   # restituisce una tupla
 
 q, r = divide(17, 5)
-print(f"17 / 5 = {q} remainder {r}")`);
+print(f"17 / 5 = {q} con resto {r}")`);
 </script>
 
 ## Il Tipo Set
@@ -181,8 +181,8 @@ Un **insieme** (set) è una collezione non ordinata di elementi **unici**. Due p
 Crea un insieme con le parentesi graffe `{}` oppure il costruttore `set()`:
 
 ```python
-fruits = {"apple", "banana", "mango", "apple"}   # duplicates removed!
-print(fruits)   # {"mango", "banana", "apple"} — order varies
+fruits = {"apple", "banana", "mango", "apple"}   # i duplicati vengono rimossi!
+print(fruits)   # {"mango", "banana", "apple"} — l'ordine può variare
 ```
 
 Gli insiemi sono più utili per:
@@ -205,12 +205,12 @@ Gli insiemi sono più utili per:
 </div>
 <script>
 initCmLab('-4', `numbers = [1, 2, 2, 3, 3, 3, 4]
-unique = set(numbers)   # remove duplicates
-print("Original list:", numbers)
-print("Unique set:", unique)
-print("Number of unique items:", len(unique))
+unique = set(numbers)   # rimuove i duplicati
+print("Lista originale:", numbers)
+print("Insieme senza duplicati:", unique)
+print("Numero di elementi unici:", len(unique))
 
-# Membership testing:
+# Verifica di appartenenza:
 print("3 in unique:", 3 in unique)
 print("7 in unique:", 7 in unique)`);
 </script>
@@ -258,13 +258,13 @@ B - A  → {5, 6}               in B but not A
 initCmLab('-5', `python_students = {"Alice", "Bob", "Carol", "Dave"}
 math_students   = {"Carol", "Dave", "Eve", "Frank"}
 
-both   = python_students & math_students   # intersection
-either = python_students | math_students   # union
-only_python = python_students - math_students  # difference
+both   = python_students & math_students   # intersezione
+either = python_students | math_students   # unione
+only_python = python_students - math_students  # differenza
 
-print("Both Python and Math:", both)
-print("In either class:", either)
-print("Only in Python:", only_python)`);
+print("Sia Python sia Matematica:", both)
+print("In almeno un corso:", either)
+print("Solo Python:", only_python)`);
 </script>
 
 ### Guardalo: Operazioni sugli Insiemi su un Diagramma di Venn
@@ -290,7 +290,7 @@ Questo lo rende usabile come chiave di dizionario o memorizzabile dentro un altr
 ```python
 fs = frozenset([1, 2, 3])
 print(fs)        # frozenset({1, 2, 3})
-# fs.add(4)      # AttributeError — frozenset is immutable
+# fs.add(4)      # AttributeError — un frozenset è immutabile
 ```
 
 ## Verifica di Apprendimento
@@ -317,10 +317,10 @@ print(fs)        # frozenset({1, 2, 3})
 initCmLab('-6', `alice_favorites = {"cat", "dog", "rabbit", "parrot"}
 bob_favorites   = {"dog", "hamster", "parrot", "fish"}
 
-# Find which animals BOTH Alice and Bob like:
-shared = alice_favorites  # replace this line with the correct operation
+# Trova gli animali che piacciono SIA ad Alice SIA a Bob:
+shared = alice_favorites  # sostituisci questa riga con l'operazione corretta
 
-print("Both like:", shared)`);
+print("Piacciono a entrambi:", shared)`);
 </script>
 
 ## Esperimenti

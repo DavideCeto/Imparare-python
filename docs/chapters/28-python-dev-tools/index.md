@@ -85,7 +85,7 @@ Ha un esploratore di variabili che mostra visivamente i tuoi array NumPy e DataF
 Un **Jupyter Notebook** è un documento che mescola testo (Markdown), celle di codice che puoi eseguire individualmente, e output (grafici, tabelle, risultati) tutto in un singolo file.
 
 ```python
-# In a Jupyter Notebook, each "cell" is a runnable block:
+# In un Jupyter Notebook, ogni "cella" è un blocco eseguibile:
 import matplotlib.pyplot as plt
 
 x = [1, 2, 3, 4, 5]
@@ -159,12 +159,12 @@ La REPL è perfetta per esperimenti rapidi: testare una funzione, controllare un
   </div>
 </div>
 <script>
-initCmLab('', `# This Skulpt window works like a mini-REPL!
-# Try typing expressions and running them.
+initCmLab('', `# Questa finestra Skulpt funziona come una mini-REPL!
+# Prova a scrivere delle espressioni e a eseguirle.
 
 import math
 
-# Quick experiments:
+# Esperimenti rapidi:
 print(math.factorial(10))
 print(math.gcd(48, 36))
 print(2 ** 32)`);
@@ -313,9 +313,9 @@ Senza gli ambienti virtuali, installarne uno rompe l'altro. Con essi, ogni proge
 <script>
 initCmLab('-2', `import sys
 
-print("Python version:", sys.version)
-print("Platform:", sys.platform)
-print("Default encoding:", sys.getdefaultencoding())`);
+print("Versione di Python:", sys.version)
+print("Piattaforma:", sys.platform)
+print("Codifica predefinita:", sys.getdefaultencoding())`);
 </script>
 
 ## Il Percorso di Ricerca dei Moduli di Python
@@ -372,8 +372,8 @@ Librerie come `RPi.GPIO` permettono ai programmi Python di controllare i pin fis
 
 ```python
 import RPi.GPIO as GPIO
-GPIO.setup(17, GPIO.OUT)   # set pin 17 as output
-GPIO.output(17, True)      # turn on an LED
+GPIO.setup(17, GPIO.OUT)   # imposta il pin 17 come uscita
+GPIO.output(17, True)      # accende un LED
 ```
 
 ## Scegliere lo Strumento Giusto
@@ -417,27 +417,27 @@ Usa questa finestra Skulpt per registrare le tue risposte:
   </div>
 </div>
 <script>
-initCmLab('-3', `# Scenario → Best tool
-# 1. A student wants to learn Python without installing anything on the school computer.
-#    Answer:
+initCmLab('-3', `# Scenario → Strumento migliore
+# 1. Uno studente vuole imparare Python senza installare nulla sul computer della scuola.
+#    Risposta:
 
-# 2. A data scientist needs to share analysis with charts and explanation in one document.
-#    Answer:
+# 2. Una data scientist deve condividere un'analisi con grafici e spiegazioni in un unico documento.
+#    Risposta:
 
-# 3. A developer is building a Flask web app with multiple Python files and a database.
-#    Answer:
+# 3. Uno sviluppatore sta costruendo una web app Flask con più file Python e un database.
+#    Risposta:
 
-# 4. A maker wants to control LEDs and sensors with Python on cheap hardware.
-#    Answer:
+# 4. Una maker vuole controllare LED e sensori con Python su hardware economico.
+#    Risposta:
 
-# 5. A team wants one fast tool to create environments, add packages, and lock versions.
-#    Answer:
+# 5. Un team vuole un solo strumento veloce per creare ambienti, aggiungere pacchetti e bloccare le versioni.
+#    Risposta:
 
-# 6. Profiling shows that one image-processing loop uses nearly all the running time.
-#    Should the team keep all the code in Python, or test a Rust version of that loop?
-#    Answer:
+# 6. Il profiling mostra che un ciclo di elaborazione delle immagini occupa quasi tutto il tempo di esecuzione.
+#    Il team dovrebbe tenere tutto il codice in Python, o provare una versione in Rust di quel ciclo?
+#    Risposta:
 
-print("Scenarios answered above!")`);
+print("Hai risposto agli scenari qui sopra!")`);
 </script>
 
 ## Esperimenti

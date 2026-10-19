@@ -102,16 +102,16 @@ Una **funzione** è un'azione con un nome che Python sa eseguire. `print()` è l
 
 !!! mascot-tip "Ponte con Scratch"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch usavi il blocco **“Dì [ ] per 2 secondi”** per far mostrare al tuo sprite un fumetto. In Python, `print("Hello!")` fa lo stesso lavoro — fa mostrare un messaggio al tuo programma. La differenza è che Python mostra il messaggio come testo semplice sotto il codice, non come un fumetto su un personaggio.
+    In Scratch usavi il blocco **“Dì [ ] per 2 secondi”** per far mostrare al tuo sprite un fumetto. In Python, `print("Ciao!")` fa lo stesso lavoro — fa mostrare un messaggio al tuo programma. La differenza è che Python mostra il messaggio come testo semplice sotto il codice, non come un fumetto su un personaggio.
 
 ## Codice di Esempio: print()
 
 Ecco un breve programma con tre chiamate a `print()`. Leggi attentamente ogni riga prima di eseguirlo:
 
 ```python
-print("Hello, world!")
-print("My name is Monty.")
-print("Let's learn Python!")
+print("Ciao, mondo!")
+print("Mi chiamo Monty.")
+print("Impariamo Python!")
 ```
 
 **Prima di cliccare su Run:** quante righe di testo pensi appariranno nel riquadro di output? Fai la tua previsione, poi prova!
@@ -140,9 +140,9 @@ Modifica il codice qui sotto e clicca su **Run** per vedere il risultato diretta
   </div>
 </div>
 <script>
-initCmLab('', `print("Hello, world!")
-print("My name is Monty.")
-print("Let's learn Python!")`);
+initCmLab('', `print("Ciao, mondo!")
+print("Mi chiamo Monty.")
+print("Impariamo Python!")`);
 </script>
 
 Avevi ragione? Dovresti vedere apparire tre righe di testo, una per ogni chiamata a `print()` — Python le esegue in ordine dall'alto verso il basso.
@@ -151,19 +151,19 @@ Avevi ragione? Dovresti vedere apparire tre righe di testo, una per ogni chiamat
 
 ## Come Funziona print()
 
-Ogni riga `print()` viene eseguita una alla volta, dall'inizio del programma fino alla fine — esattamente lo stesso ordine con cui Scratch esegue i blocchi dentro uno script. Quando Python incontra `print("Hello, world!")`, fa tre cose:
+Ogni riga `print()` viene eseguita una alla volta, dall'inizio del programma fino alla fine — esattamente lo stesso ordine con cui Scratch esegue i blocchi dentro uno script. Quando Python incontra `print("Ciao, mondo!")`, fa tre cose:
 
 1. Legge il nome della funzione: `print`
-2. Legge il testo dentro le parentesi: `"Hello, world!"`
+2. Legge il testo dentro le parentesi: `"Ciao, mondo!"`
 3. Mostra quel testo, poi passa alla riga successiva
 
-Le virgolette intorno al testo sono importanti. Dicono a Python che `"Hello, world!"` è un pezzo di testo — quella che i programmatori chiamano una **stringa**. Una stringa è una qualsiasi sequenza di caratteri (lettere, numeri, spazi, punteggiatura) racchiusa tra virgolette. Senza le virgolette, Python penserebbe che stai scrivendo il nome di una variabile o un comando che non riconosce.
+Le virgolette intorno al testo sono importanti. Dicono a Python che `"Ciao, mondo!"` è un pezzo di testo — quella che i programmatori chiamano una **stringa**. Una stringa è una qualsiasi sequenza di caratteri (lettere, numeri, spazi, punteggiatura) racchiusa tra virgolette. Senza le virgolette, Python penserebbe che stai scrivendo il nome di una variabile o un comando che non riconosce.
 
 | Riga | Cosa fa |
 |------|-------------|
-| `print("Hello, world!")` | Mostra il testo: Hello, world! |
-| `print("My name is Monty.")` | Mostra il testo: My name is Monty. |
-| `print("Let's learn Python!")` | Mostra il testo: Let's learn Python! |
+| `print("Ciao, mondo!")` | Mostra il testo: Ciao, mondo! |
+| `print("Mi chiamo Monty.")` | Mostra il testo: Mi chiamo Monty. |
+| `print("Impariamo Python!")` | Mostra il testo: Impariamo Python! |
 
 ## Scrivere Commenti con \#
 
@@ -172,11 +172,11 @@ Man mano che i tuoi programmi crescono, diventa utile lasciare delle note per te
 Un commento si avvia digitando il carattere `#` (chiamato cancelletto). Tutto ciò che si trova su quella riga dopo il `#` viene considerato una nota, non codice.
 
 ```python
-# This line is a comment — Python ignores it completely
-print("But Python runs this line!")
+# Questa riga è un commento — Python la ignora completamente
+print("Ma Python esegue questa riga!")
 
-# Comments explain the WHY behind your code
-print("They make programs easier to read.")
+# I commenti spiegano il PERCHÉ del tuo codice
+print("Rendono i programmi più facili da leggere.")
 ```
 
 I bravi programmatori usano i commenti di continuo. Un commento non cambia cosa fa il programma — aiuta semplicemente la prossima persona (spesso tu stesso, sei mesi dopo) a capire cosa stavi pensando.
@@ -206,13 +206,13 @@ A Python non importa delle righe vuote — puoi aggiungere tutte le righe vuote 
 Le righe vuote dividono il tuo codice in gruppi logici, proprio come gli a capo dividono una storia in scene. Due righe di codice che svolgono lo stesso compito vanno tenute insieme; due righe che svolgono compiti diversi vanno separate da una riga vuota (ed eventualmente un'etichetta di commento).
 
 ```python
-# --- Introduction ---
-print("Welcome to my program!")
-print("Let's get started.")
+# --- Introduzione ---
+print("Benvenuto nel mio programma!")
+print("Cominciamo.")
 
-# --- Main message ---
-print("Python is fun to learn.")
-print("You are doing great!")
+# --- Messaggio principale ---
+print("Python è divertente da imparare.")
+print("Stai andando alla grande!")
 ```
 
 Prendi l'abitudine fin da subito: se due pezzi di codice svolgono compiti diversi, separali con una riga vuota. I tuoi programmi saranno molto più facili da leggere — e da correggere quando qualcosa va storto.
@@ -226,7 +226,7 @@ La parola chiave `import` dice all'interprete Python: “Mi serve questo set di 
 Un'istruzione import va sempre proprio in **cima** al tuo programma — prima di qualsiasi altro codice — così Python carica la libreria prima che ne abbia bisogno.
 
 ```python
-import turtle   # Load the turtle library
+import turtle   # Carica la libreria turtle
 ```
 
 Dopo quella singola riga, tutto ciò che si trova nella libreria turtle è disponibile per il tuo programma.
@@ -335,7 +335,7 @@ t.forward(100)
 t.right(120)
 t.forward(100)
 t.right(120)
-# Add one line here to complete the triangle!`);
+# Aggiungi qui una riga per completare il triangolo!`);
 </script>
 
 Quando aggiungi la riga mancante e clicchi su Run, la tartaruga dovrebbe disegnare un triangolo chiuso. Se la forma non si chiude, controlla che la riga che hai aggiunto scriva `forward` tutto minuscolo e usi le parentesi con il numero 100 dentro.
@@ -344,7 +344,7 @@ Quando aggiungi la riga mancante e clicchi su Run, la tartaruga dovrebbe disegna
 
 Prova queste modifiche ai programmi qui sopra. Per ognuna, **prevedi prima cosa succederà** — poi eseguila per verificare!
 
-1. **Cambia un messaggio in `print()`**. Sostituisci `"Hello, world!"` con il tuo nome, come `print("Hello, I'm Alex!")`. **Saprai che ha funzionato quando** il tuo nome apparirà nel riquadro di output.
+1. **Cambia un messaggio in `print()`**. Sostituisci `"Ciao, mondo!"` con il tuo nome, come `print("Ciao, sono Alex!")`. **Saprai che ha funzionato quando** il tuo nome apparirà nel riquadro di output.
 
 2. **Aggiungi una quarta riga `print()`** con un messaggio a tua scelta. **Saprai che ha funzionato quando** appariranno quattro righe di testo nell'output, non tre.
 

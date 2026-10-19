@@ -65,9 +65,9 @@ initCmLab('', `student = {
     "clubs": ["coding", "chess"]
 }
 
-print("Student:", student)
-print("Type:", type(student))
-print("Keys:", list(student.keys()))`);
+print("Studente:", student)
+print("Tipo:", type(student))
+print("Chiavi:", list(student.keys()))`);
 </script>
 
 ## Accedere ai Valori per Chiave
@@ -101,11 +101,11 @@ Se la chiave non esiste, Python genera un `KeyError` — quindi fai attenzione.
 <script>
 initCmLab('-2', `grades = {"Alice": 95, "Bob": 87, "Carol": 91}
 
-print("Alice's grade:", grades["Alice"])
-print("Bob's grade:", grades["Bob"])
+print("Voto di Alice:", grades["Alice"])
+print("Voto di Bob:", grades["Bob"])
 
-# Uncomment the next line to see a KeyError:
-# print("Dave's grade:", grades["Dave"])`);
+# Togli il commento alla riga seguente per vedere un KeyError:
+# print("Voto di Dave:", grades["Dave"])`);
 </script>
 
 ## Accesso Sicuro con `get()`
@@ -117,7 +117,7 @@ Puoi anche fornire un valore predefinito: `dict.get(key, default)`.
 grades = {"Alice": 95, "Bob": 87}
 print(grades.get("Alice"))          # 95
 print(grades.get("Dave"))           # None
-print(grades.get("Dave", 0))        # 0 — custom default
+print(grades.get("Dave", 0))        # 0 — valore predefinito personalizzato
 ```
 
 Usa `get()` ogni volta che non sei sicuro se una chiave esiste.
@@ -137,8 +137,8 @@ Prova una chiave mancante in entrambi i modi: con le parentesi quadre ottieni il
 Aggiungi una nuova chiave o aggiorna una esistente usando la stessa sintassi di assegnazione:
 
 ```python
-grades["Dave"] = 78     # new key
-grades["Alice"] = 96    # update existing key
+grades["Dave"] = 78     # nuova chiave
+grades["Alice"] = 96    # aggiorna una chiave esistente
 ```
 
 <div class="cm-lab cm-text-only">
@@ -156,11 +156,11 @@ grades["Alice"] = 96    # update existing key
 </div>
 <script>
 initCmLab('-3', `inventory = {"apples": 10, "bananas": 5}
-print("Start:", inventory)
+print("Inizio:", inventory)
 
-inventory["oranges"] = 8    # add new item
-inventory["apples"] = 12    # update existing
-print("After update:", inventory)`);
+inventory["oranges"] = 8    # aggiunge un nuovo elemento
+inventory["apples"] = 12    # aggiorna un elemento esistente
+print("Dopo l'aggiornamento:", inventory)`);
 </script>
 
 ## Rimuovere Voci
@@ -169,8 +169,8 @@ print("After update:", inventory)`);
 - `del d[key]` — rimuove la chiave (genera `KeyError` se mancante)
 
 ```python
-grades.pop("Bob")      # removes Bob, returns 87
-del grades["Carol"]    # removes Carol
+grades.pop("Bob")      # rimuove Bob e restituisce 87
+del grades["Carol"]    # rimuove Carol
 ```
 
 ## Chiavi, Valori, e Coppie
@@ -197,9 +197,9 @@ Tre metodi del dizionario ti danno diverse vedute dei dati:
 <script>
 initCmLab('-4', `scores = {"Alice": 95, "Bob": 87, "Carol": 91}
 
-print("Keys:", list(scores.keys()))
-print("Values:", list(scores.values()))
-print("Items:", list(scores.items()))`);
+print("Chiavi:", list(scores.keys()))
+print("Valori:", list(scores.values()))
+print("Coppie:", list(scores.items()))`);
 </script>
 
 ## Iterare su un Dizionario
@@ -207,11 +207,11 @@ print("Items:", list(scores.items()))`);
 Puoi fare un ciclo sulle chiavi, sui valori, o sulle coppie chiave-valore:
 
 ```python
-# Loop over keys:
+# Ciclo sulle chiavi:
 for name in scores:
     print(name)
 
-# Loop over key-value pairs (most common):
+# Ciclo sulle coppie chiave-valore (il più comune):
 for name, score in scores.items():
     print(f"{name}: {score}")
 ```
@@ -222,7 +222,7 @@ Usa `in` per controllare se una chiave esiste senza causare un `KeyError`:
 
 ```python
 if "Alice" in scores:
-    print("Alice's score:", scores["Alice"])
+    print("Punteggio di Alice:", scores["Alice"])
 ```
 
 ## Dizionari Annidati
@@ -236,7 +236,7 @@ contacts = {
     "Bob":   {"phone": "555-5678", "email": "bob@example.com"}
 }
 
-# Access Alice's phone:
+# Accedi al telefono di Alice:
 print(contacts["Alice"]["phone"])
 ```
 
@@ -249,12 +249,12 @@ Sintassi: `{espressione_chiave: espressione_valore for elemento in iterabile}`
 Prima della comprehension, ecco l'equivalente nella forma lunga per rendere chiaro il pattern:
 
 ```python
-# Long way:
+# Il modo lungo:
 squares = {}
 for n in range(1, 6):
     squares[n] = n * n
 
-# Comprehension — same result:
+# Con la comprehension — stesso risultato:
 squares = {n: n * n for n in range(1, 6)}
 ```
 
@@ -318,10 +318,10 @@ for word, count in sorted(word_count.items()):
 <script>
 initCmLab('-6', `grade_book = {}
 
-# Add Alice (95), Bob (87), and Carol (91):
+# Aggiungi Alice (95), Bob (87) e Carol (91):
 
 
-# Print each name and grade:
+# Stampa ogni nome con il suo voto:
 for name, grade in grade_book.items():
     print(f"{name}: {grade}")`);
 </script>

@@ -33,7 +33,7 @@ Per fare qualcosa con *ogni* elemento, usa un ciclo `for` direttamente sulla lis
 
 ```python
 for color in colors:
-    # 'color' is each item in turn
+    # 'color' è, a turno, ciascun elemento
 ```
 
 !!! mascot-tip "Ponte Scratch"
@@ -179,7 +179,7 @@ for color in colors:
     monty.color(color)
     monty.pendown()
     monty.begin_fill()
-    # Add a for loop here to draw 4 sides of a square (forward 30, right 90)
+    # Aggiungi qui un ciclo for per disegnare 4 lati di un quadrato (forward 30, right 90)
     monty.end_fill()
     monty.penup()
     monty.forward(40)

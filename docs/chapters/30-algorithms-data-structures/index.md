@@ -50,7 +50,7 @@ stack = []
 stack.append("first")    # push
 stack.append("second")   # push
 stack.append("third")    # push
-print(stack.pop())       # "third" — last in, first out
+print(stack.pop())       # "third" — l'ultimo a entrare è il primo a uscire
 print(stack.pop())       # "second"
 ```
 
@@ -77,10 +77,10 @@ print(stack.pop())       # "second"
 initCmLab('', `def reverse_string(s):
     stack = []
     for ch in s:
-        stack.append(ch)   # push each character
+        stack.append(ch)   # push di ogni carattere
     result = ""
     while stack:
-        result += stack.pop()   # pop in reverse order
+        result += stack.pop()   # pop in ordine inverso
     return result
 
 print(reverse_string("Hello"))
@@ -119,10 +119,10 @@ queue.append("Alice")    # enqueue
 queue.append("Bob")
 queue.append("Carol")
 
-print("Queue:", list(queue))
-print("Served:", queue.popleft())   # dequeue — FIFO
-print("Served:", queue.popleft())
-print("Remaining:", list(queue))`);
+print("Coda:", list(queue))
+print("Servito:", queue.popleft())   # dequeue — FIFO
+print("Servito:", queue.popleft())
+print("Rimasti:", list(queue))`);
 </script>
 
 ## Grafi — Nodi e Archi
@@ -194,7 +194,7 @@ def bfs(graph, start):
                 queue.append(neighbor)
     return order
 
-print("BFS from A:", bfs(graph, "A"))`);
+print("BFS da A:", bfs(graph, "A"))`);
 </script>
 
 ## Ricerca in Profondità (DFS)
@@ -237,8 +237,8 @@ def dfs(graph, start, visited=None):
             result += dfs(graph, neighbor, visited)
     return result
 
-print("DFS from A:", dfs(graph, "A"))
-print("BFS is level-by-level; DFS goes deep before backtracking.")`);
+print("DFS da A:", dfs(graph, "A"))
+print("La BFS procede livello per livello; la DFS va in profondità prima di tornare indietro.")`);
 </script>
 
 | | BFS | DFS |
@@ -293,7 +293,7 @@ maze = {
 }
 
 def find_path(maze, start, goal):
-    came_from = {start: None}   # remembers which room led to each room
+    came_from = {start: None}   # ricorda da quale stanza si è arrivati in ogni stanza
     queue = deque([start])
 
     while queue:
@@ -305,14 +305,14 @@ def find_path(maze, start, goal):
                 came_from[neighbor] = current
                 queue.append(neighbor)
 
-    # Walk backwards from the goal to the start using came_from
+    # Torna indietro dall'obiettivo fino alla partenza usando came_from
     path = [goal]
     while path[-1] != start:
         path.append(came_from[path[-1]])
     path.reverse()
     return path
 
-print("Path found:", find_path(maze, "Start", "Goal"))`);
+print("Percorso trovato:", find_path(maze, "Start", "Goal"))`);
 </script>
 
 Avevi indovinato? BFS scopre "A" e "B" nello stesso momento, ma "A" è elencato per primo in `maze["Start"]`, quindi viene scoperto per primo — il percorso passa attraverso "A" e "C".
@@ -362,7 +362,7 @@ Caso peggiore O(n²) ma O(n) per liste quasi ordinate, rendendolo veloce in prat
 </div>
 <script>
 initCmLab('-5', `def bubble_sort(lst):
-    lst = lst[:]   # work on a copy
+    lst = lst[:]   # lavora su una copia
     n = len(lst)
     for i in range(n):
         for j in range(n - i - 1):
@@ -382,10 +382,10 @@ def insertion_sort(lst):
     return lst
 
 data = [64, 34, 25, 12, 22, 11, 90]
-print("Unsorted:", data)
-print("Bubble:  ", bubble_sort(data))
-print("Insertion:", insertion_sort(data))
-print("Built-in:", sorted(data))`);
+print("Non ordinati:", data)
+print("Bubble:      ", bubble_sort(data))
+print("Insertion:   ", insertion_sort(data))
+print("Integrato:   ", sorted(data))`);
 </script>
 
 ### Guardalo: Ordinamento al Rallentatore
@@ -419,7 +419,7 @@ def binary_search(sorted_list, target):
             lo = mid + 1
         else:
             hi = mid - 1
-    return -1   # not found
+    return -1   # non trovato
 ```
 
 ### Guardalo: Lineare vs Binaria, Testa a Testa
@@ -479,13 +479,13 @@ DFS usa O(profondità) memoria — solo il percorso attuale.
 initCmLab('-6', `def binary_search(sorted_list, target):
     lo, hi = 0, len(sorted_list) - 1
     # Implement: while lo <= hi, check middle, adjust lo or hi
-    # Return the index if found, -1 if not found
-    return -1   # placeholder — replace with your implementation
+    # Restituisci l'indice se lo trovi, -1 se non lo trovi
+    return -1   # segnaposto — sostituiscilo con la tua implementazione
 
 data = sorted([34, 7, 23, 32, 5, 62, 12, 77])
-print("Sorted data:", data)
-print("Find 23:", binary_search(data, 23))
-print("Find 99:", binary_search(data, 99))`);
+print("Dati ordinati:", data)
+print("Cerca 23:", binary_search(data, 23))
+print("Cerca 99:", binary_search(data, 99))`);
 </script>
 
 ## Esperimenti

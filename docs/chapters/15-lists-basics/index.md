@@ -38,8 +38,8 @@ La crei usando le parentesi quadre, con gli elementi separati da virgole:
 ```python
 colors = ["red", "green", "blue", "yellow"]
 scores = [95, 87, 100, 73, 88]
-mixed  = ["Monty", 42, True, 3.14]   # lists can hold different types
-empty  = []                           # an empty list
+mixed  = ["Monty", 42, True, 3.14]   # le liste possono contenere tipi diversi
+empty  = []                           # una lista vuota
 ```
 
 Le liste possono contenere qualsiasi tipo di valore — stringhe, numeri, booleani, persino altre liste.
@@ -61,9 +61,9 @@ Le liste possono contenere qualsiasi tipo di valore — stringhe, numeri, boolea
 initCmLab('', `colors = ["red", "green", "blue", "yellow"]
 scores = [95, 87, 100, 73, 88]
 
-print("Colors:", colors)
-print("Scores:", scores)
-print("Type of colors:", type(colors))`);
+print("Colori:", colors)
+print("Punteggi:", scores)
+print("Tipo di colors:", type(colors))`);
 </script>
 
 ## Indicizzazione delle Liste
@@ -106,7 +106,7 @@ Avevi indovinato? L'indice `0` è il primo elemento, l'indice `2` è il terzo.
 Puoi anche cambiare un elemento usando il suo indice:
 
 ```python
-colors[1] = "purple"   # replaces "green" with "purple"
+colors[1] = "purple"   # sostituisce "green" con "purple"
 ```
 
 ## Indicizzazione Negativa
@@ -136,8 +136,8 @@ Questo è particolarmente utile quando non sai quanto è lunga la lista ma vuoi 
 </div>
 <script>
 initCmLab('-3', `colors = ["red", "green", "blue", "yellow"]
-print("Last item:", colors[-1])
-print("Second to last:", colors[-2])`);
+print("Ultimo elemento:", colors[-1])
+print("Penultimo:", colors[-2])`);
 </script>
 
 ## Slicing delle Liste
@@ -189,7 +189,7 @@ print("grape" in fruits)     # False
 print("mango" not in fruits) # False
 
 if "banana" in fruits:
-    print("We have bananas!")`);
+    print("Abbiamo le banane!")`);
 </script>
 
 `not in` è l'opposto — restituisce `True` quando l'elemento **non** è nella lista.
@@ -224,16 +224,16 @@ Le stringhe sono **immutabili** — una volta creata `"hello"`, non puoi cambiar
 </div>
 <script>
 initCmLab('-5', `colors = ["red", "green", "blue"]
-print("Before:", colors)
+print("Prima:", colors)
 
-colors[1] = "purple"   # change the item at index 1
-print("After change:", colors)
+colors[1] = "purple"   # cambia l'elemento all'indice 1
+print("Dopo la modifica:", colors)
 
-# Strings are immutable:
+# Le stringhe sono immutabili:
 word = "hello"
-# word[0] = "H"   # this would cause a TypeError!
-new_word = "H" + word[1:]   # must create a new string
-print("New word:", new_word)`);
+# word[0] = "H"   # questo causerebbe un TypeError!
+new_word = "H" + word[1:]   # bisogna creare una nuova stringa
+print("Nuova parola:", new_word)`);
 </script>
 
 ### Guardalo: Una Lista che Cambia Forma da Sola
@@ -269,8 +269,8 @@ Prova qualche click su `append()` e `pop()` e guarda entrambe le righe di indici
 <script>
 initCmLab('-6', `fruits = ["apple", "banana", "mango", "kiwi"]
 
-# Bug: this prints "mango", not "kiwi"
-print("Last fruit:", fruits[-2])`);
+# Bug: questo stampa "mango", non "kiwi"
+print("Ultimo frutto:", fruits[-2])`);
 </script>
 
 ## Esperimenti

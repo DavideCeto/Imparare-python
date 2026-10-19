@@ -62,7 +62,7 @@ Python memorizza le stringhe con il nome di tipo `str`.
 ```python
 greeting = "Hello, Coder!"
 species  = 'Python snake'
-number   = "42"             # still a string, not an integer!
+number   = "42"             # è ancora una stringa, non un intero!
 ```
 
 Nota che `"42"` (con le virgolette) è una *stringa*, non il numero 42.
@@ -76,8 +76,8 @@ Funzionano in modo identico — scegli quella che preferisci, basta essere coere
 Il motivo principale per conoscerle entrambe è **quando la tua stringa contiene un apostrofo o dei segni di virgolette**:
 
 ```python
-msg1 = "It's a great day!"     # apostrophe inside — use double quotes
-msg2 = 'She said "wow!"'       # quote marks inside — use single quotes
+msg1 = "It's a great day!"     # apostrofo all'interno — usa le virgolette doppie
+msg2 = 'She said "wow!"'       # virgolette all'interno — usa gli apici singoli
 ```
 
 Se usi accidentalmente lo stesso tipo di virgolette sia dentro che fuori dalla stringa, Python si confonde e ti dà un `SyntaxError`.
@@ -134,11 +134,11 @@ initCmLab('', `name = "Alex"
 greeting = "Hello, "
 farewell = "See you later, "
 
-# Concatenation: joining strings with +
+# Concatenazione: unire stringhe con +
 print(greeting + name + "!")
 print(farewell + name + "!")
 
-# Repetition: repeat a string with *
+# Ripetizione: ripetere una stringa con *
 print("-" * 20)
 print("Ha" * 4)`);
 </script>
@@ -151,7 +151,7 @@ Proprio come `+` unisce stringhe, `*` **ripete** una stringa un numero di volte 
 
 ```python
 print("Echo! " * 3)    # Echo! Echo! Echo!
-print("=" * 30)        # ============================== (30 equals signs)
+print("=" * 30)        # ============================== (30 segni di uguale)
 ```
 
 La ripetizione di stringhe è comoda per creare separatori visivi, bordi e pattern.
@@ -171,9 +171,9 @@ Python fornisce i **caratteri di escape** — speciali sequenze di due caratteri
 | `\"` | Virgoletta doppia letterale | Stampa `"` dentro una stringa con virgolette doppie |
 
 ```python
-print("Line one\nLine two\nLine three")
-print("Name:\tMonty\nAge:\t12")
-print("She said \"Wow!\"")
+print("Riga uno\nRiga due\nRiga tre")
+print("Nome:\tMonty\nEtà:\t12")
+print("Lei disse \"Wow!\"")
 ```
 
 Il `\n` (nuova riga) è uno dei caratteri di escape più usati — permette a una singola chiamata `print()` di produrre più righe di output.
@@ -191,7 +191,7 @@ word  = "Python"
 print(len(word))          # 6
 sentence = "Hello, world!"
 print(len(sentence))      # 13
-print(len(""))            # 0  (empty string has length zero)
+print(len(""))            # 0  (la stringa vuota ha lunghezza zero)
 ```
 
 `len()` è una delle **funzioni integrate** di Python — non devi importare nulla, funziona e basta.
@@ -204,7 +204,7 @@ Questa proprietà si chiama **immutabilità**:
 
 ```python
 name = "Monty"
-name[0] = "B"    # ← ERROR! You can't change a single character
+name[0] = "B"    # ← ERRORE! Non puoi cambiare un singolo carattere
 ```
 
 Questo sorprende i principianti che si aspettano che le stringhe funzionino come una lista.
@@ -212,7 +212,7 @@ Per "cambiare" una stringa, crei una *nuova* stringa a partire da quella vecchia
 
 ```python
 name = "Monty"
-name = "B" + name[1:]    # creates a brand-new string "Bonty"
+name = "B" + name[1:]    # crea una stringa completamente nuova, "Bonty"
 print(name)              # Bonty
 ```
 
@@ -228,10 +228,10 @@ Una **stringa raw** si crea mettendo `r` prima della virgoletta di apertura.
 Dentro una stringa raw, le barre rovesciate sono trattate come caratteri letterali:
 
 ```python
-# Without r: \n becomes a newline, \t becomes a tab
-print("C:\new_folder\text.txt")    # messy output!
+# Senza r: \n diventa un a capo, \t diventa una tabulazione
+print("C:\new_folder\text.txt")    # output disordinato!
 
-# With r: backslashes are literal
+# Con r: le barre rovesciate restano letterali
 print(r"C:\new_folder\text.txt")   # C:\new_folder\text.txt
 ```
 
@@ -249,7 +249,7 @@ Questo permette ai tuoi disegni di includere titoli, didascalie, punteggi, o qua
 La forma di base è:
 
 ```python
-t.write("Hello, turtle world!", font=("Arial", 16, "normal"))
+t.write("Ciao, mondo turtle!", font=("Arial", 16, "normal"))
 ```
 
 L'argomento `font` è una tupla di tre valori: il nome del font, la dimensione in punti, e lo stile (`"normal"`, `"bold"` o `"italic"`).
@@ -280,18 +280,18 @@ initCmLab('-2', `import turtle
 t = turtle.Turtle()
 t.speed(3)
 
-# Draw a pentagon
+# Disegna un pentagono
 sides = 5
 turn_angle = 360 / sides
 for i in range(sides):
     t.forward(80)
     t.right(turn_angle)
 
-# Move to a label position and write the name
+# Spostati nella posizione dell'etichetta e scrivi il nome
 t.penup()
 t.goto(-40, -120)
-# Add one line here to call t.write() and display "Pentagon"
-# Use font=("Arial", 16, "bold") for a nice look`);
+# Aggiungi qui una riga per chiamare t.write() e mostrare "Pentagon"
+# Usa font=("Arial", 16, "bold") per un bell'aspetto`);
 </script>
 
 Una volta che l'etichetta appare, prova a cambiare la dimensione del font, lo stile, o il testo stesso!

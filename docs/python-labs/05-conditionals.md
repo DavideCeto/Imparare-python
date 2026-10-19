@@ -20,9 +20,9 @@ Un'istruzione **if/else** esegue un blocco di codice quando una condizione è ve
 
 ```python
 if condition:
-    # runs when condition is True
+    # viene eseguito quando la condizione è True
 else:
-    # runs when condition is False
+    # viene eseguito quando la condizione è False
 ```
 
 Per alternare i colori ogni altro lato, devi sapere se il contatore del ciclo `i` è **dispari** o **pari**. L'**operatore modulo** `%` ti dà il resto dopo la divisione. `i % 2` è:
@@ -154,10 +154,10 @@ angle = 360 / sides
 
 for i in range(sides):
     if i % 3 == 0:
-        # Add monty.color('green') here
+        # Aggiungi qui monty.color('green')
         pass
     else:
-        # Add monty.color('orange') here
+        # Aggiungi qui monty.color('orange')
         pass
     monty.forward(80)
     monty.right(angle)`);

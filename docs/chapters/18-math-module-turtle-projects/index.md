@@ -201,8 +201,8 @@ t.speed(0)
 t.pensize(2)
 t.pencolor("royalblue")
 
-amplitude = 80    # height of the wave
-frequency = 0.05  # how quickly it oscillates
+amplitude = 80    # altezza dell'onda
+frequency = 0.05  # quanto velocemente oscilla
 
 t.penup()
 t.goto(-190, 0)
@@ -279,8 +279,8 @@ while True:
     for i, racer in enumerate(racers):
         racer.forward(random.randint(1, 10))
         if racer.xcor() >= finish:
-            print(f"{names[i]} wins!")
-            racer.write("Winner!", font=("Arial", 12, "bold"))
+            print(f"{names[i]} vince!")
+            racer.write("Vincitore!", font=("Arial", 12, "bold"))
             turtle.done()
             break
     else:
@@ -326,17 +326,17 @@ t2.shape("turtle"); t2.color("blue"); t2.penup(); t2.goto(-160, 20)
 t3 = turtle.Turtle()
 t3.shape("turtle"); t3.color("green"); t3.penup(); t3.goto(-160, -20)
 
-# Add t4 here (orange, starting at y=-60)
+# Aggiungi qui t4 (arancione, che parte da y=-60)
 
-racers = [t1, t2, t3]          # add t4 here too
-names = ["Red", "Blue", "Green"]  # add "Orange" here
+racers = [t1, t2, t3]          # aggiungi t4 anche qui
+names = ["Red", "Blue", "Green"]  # aggiungi qui "Orange"
 finish = 150
 
 while True:
     for i, racer in enumerate(racers):
         racer.forward(random.randint(1, 10))
         if racer.xcor() >= finish:
-            print(f"{names[i]} wins!")
+            print(f"{names[i]} vince!")
             break
     else:
         continue

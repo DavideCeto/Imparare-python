@@ -51,7 +51,7 @@ Converti una lista Python in un array:
 a = np.array([1, 2, 3, 4, 5])
 print(a)          # [1 2 3 4 5]
 print(a.dtype)    # int64
-print(a.shape)    # (5,) — one dimension with 5 elements
+print(a.shape)    # (5,) — una dimensione con 5 elementi
 ```
 
 ## Matematica Element-Wise e Broadcasting
@@ -60,7 +60,7 @@ La grande differenza tra le liste e gli array: **gli operatori matematici funzio
 
 ```python
 a = np.array([1, 2, 3, 4])
-print(a + 10)      # [11 12 13 14]  — adds 10 to every element
+print(a + 10)      # [11 12 13 14]  — aggiunge 10 a ogni elemento
 print(a * 2)       # [2  4  6  8]
 print(a ** 2)      # [1  4  9 16]
 ```
@@ -102,10 +102,10 @@ temps_f = (temps_c * 9/5) + 32
 print("Celsius:   ", temps_c)
 print("Fahrenheit:", temps_f)
 
-# Also works: min, max, mean
-print("Min F:", temps_f.min())
-print("Max F:", temps_f.max())
-print("Mean F:", temps_f.mean())`);
+# Funzionano anche: min, max, mean
+print("Minima F:", temps_f.min())
+print("Massima F:", temps_f.max())
+print("Media F:", temps_f.mean())`);
 </script>
 
 ## Creare Array Automaticamente
@@ -148,11 +148,11 @@ print("ones:", np.ones(4))
 print("arange:", np.arange(0, 10, 2))
 print("linspace:", np.linspace(0, 1, 6))
 
-# Use linspace to simulate a sine wave (without plotting):
+# Usa linspace per simulare un'onda sinusoidale (senza grafico):
 import math
 x = np.linspace(0, 2 * math.pi, 8)
 y = np.array([math.sin(v) for v in x])
-print("\\nSine wave sample (x, sin(x)):")
+print("\\nCampione dell'onda sinusoidale (x, sin(x)):")
 for xi, yi in zip(x, y):
     print(f"  x={xi:.2f}  sin(x)={yi:.3f}")`);
 </script>
@@ -164,8 +164,8 @@ Gli array NumPy usano la stessa sintassi di slicing `[start:stop:step]` delle li
 ```python
 a = np.array([10, 20, 30, 40, 50])
 print(a[1:4])    # [20 30 40]
-print(a[::2])    # [10 30 50]   — every other element
-print(a[-1])     # 50            — last element
+print(a[::2])    # [10 30 50]   — un elemento sì e uno no
+print(a[-1])     # 50            — l'ultimo elemento
 ```
 
 ## Array 2-D — Righe e Colonne
@@ -178,10 +178,10 @@ matrix = np.array([[1, 2, 3],
                    [4, 5, 6],
                    [7, 8, 9]])
 
-print(matrix.shape)     # (3, 3) — 3 rows, 3 columns
-print(matrix[1, 2])     # 6 — row 1, column 2
-print(matrix[0, :])     # [1 2 3] — entire first row
-print(matrix[:, 1])     # [2 5 8] — entire second column
+print(matrix.shape)     # (3, 3) — 3 righe, 3 colonne
+print(matrix[1, 2])     # 6 — riga 1, colonna 2
+print(matrix[0, :])     # [1 2 3] — tutta la prima riga
+print(matrix[:, 1])     # [2 5 8] — tutta la seconda colonna
 ```
 
 L'indice `matrix[row, col]` seleziona una cella specifica.
@@ -194,7 +194,7 @@ Il numero totale di elementi deve rimanere lo stesso.
 
 ```python
 flat = np.arange(12)           # [0 1 2 3 4 5 6 7 8 9 10 11]
-grid = flat.reshape(3, 4)      # 3 rows, 4 columns
+grid = flat.reshape(3, 4)      # 3 righe, 4 colonne
 print(grid)
 ```
 
@@ -231,15 +231,15 @@ initCmLab('-3', `import numpy as np
 
 scores = np.array([78, 95, 88, 62, 91, 74, 99, 83])
 
-print("Scores:", scores)
-print("Mean:", scores.mean())
-print("Std dev:", round(scores.std(), 2))
-print("Min:", scores.min(), "at index", scores.argmin())
-print("Max:", scores.max(), "at index", scores.argmax())
+print("Punteggi:", scores)
+print("Media:", scores.mean())
+print("Deviazione standard:", round(scores.std(), 2))
+print("Minimo:", scores.min(), "all'indice", scores.argmin())
+print("Massimo:", scores.max(), "all'indice", scores.argmax())
 
 names = ["Alice", "Bob", "Carol", "Dave", "Eve", "Frank", "Grace", "Hank"]
 winner = names[scores.argmax()]
-print(f"Top scorer: {winner} with {scores.max()}")`);
+print(f"Miglior punteggio: {winner} con {scores.max()}")`);
 </script>
 
 ## Disegnare un'Onda Sinusoidale con NumPy e matplotlib
@@ -250,14 +250,14 @@ Qui NumPy e matplotlib si combinano: usa `np.linspace()` per generare valori x e
 import numpy as np
 import matplotlib.pyplot as plt
 
-x = np.linspace(0, 4 * np.pi, 200)   # 200 points across 2 full cycles
+x = np.linspace(0, 4 * np.pi, 200)   # 200 punti su 2 cicli completi
 y = np.sin(x)
 
 plt.plot(x, y, color="steelblue")
-plt.title("Sine Wave")
-plt.xlabel("x (radians)")
+plt.title("Onda sinusoidale")
+plt.xlabel("x (radianti)")
 plt.ylabel("sin(x)")
-plt.axhline(0, color="gray", linewidth=0.8)   # horizontal line at y=0
+plt.axhline(0, color="gray", linewidth=0.8)   # linea orizzontale a y=0
 plt.grid(True)
 plt.show()
 ```
@@ -290,10 +290,10 @@ initCmLab('-4', `import numpy as np
 days  = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 temps = np.array([22, 25, 28, 31, 26, 24, 20])
 
-print("Week temperatures:", temps)
-print("Average:", temps.mean(), "°C")
+print("Temperature della settimana:", temps)
+print("Media:", temps.mean(), "°C")
 
-# Add one line here: use argmax() to find and print the hottest day`);
+# Aggiungi qui una riga: usa argmax() per trovare e stampare il giorno più caldo`);
 </script>
 
 ## Esperimenti

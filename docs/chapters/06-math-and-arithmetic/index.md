@@ -108,13 +108,13 @@ Modifica il codice qui sotto e clicca **Run** per vedere il risultato.
   </div>
 </div>
 <script>
-initCmLab('', `print("Addition:        ", 10 + 3)
-print("Subtraction:     ", 10 - 3)
-print("Multiplication:  ", 10 * 3)
-print("Division:        ", 10 / 3)
-print("Integer division:", 10 // 3)
+initCmLab('', `print("Addizione:       ", 10 + 3)
+print("Sottrazione:     ", 10 - 3)
+print("Moltiplicazione: ", 10 * 3)
+print("Divisione:       ", 10 / 3)
+print("Divisione intera:", 10 // 3)
 print("Modulo:          ", 10 % 3)
-print("Exponentiation:  ", 10 ** 3)`);
+print("Potenza:         ", 10 ** 3)`);
 </script>
 
 Avevi indovinato? `10 / 3` e `10 // 3` danno risposte *diverse* — una mantiene il decimale, l'altra lo scarta. E `10 % 3` è uguale a `1`, perché 10 ÷ 3 = 3 con **1** di resto.
@@ -181,8 +181,8 @@ I numeri negativi funzionano esattamente come ti aspetteresti — basta mettere 
 ```python
 temperature = -15
 print(temperature + 5)    # -10
-print(temperature * -2)   # 30   (negative × negative = positive)
-print(abs(temperature))   # 15   (abs() gives the absolute value)
+print(temperature * -2)   # 30   (negativo × negativo = positivo)
+print(abs(temperature))   # 15   (abs() restituisce il valore assoluto)
 ```
 
 Python segue le regole standard dei segni: negativo × positivo = negativo, negativo × negativo = positivo.
@@ -194,7 +194,7 @@ Il numero dopo `e` è la potenza di dieci per cui moltiplicare:
 
 ```python
 speed_of_light = 3e8        # 3 × 10^8 = 300,000,000
-electron_mass  = 9.11e-31   # 9.11 × 10^−31 (incredibly tiny)
+electron_mass  = 9.11e-31   # 9.11 × 10^−31 (piccolissimo)
 print(speed_of_light)       # 300000000.0
 print(2.5e3)                # 2500.0
 ```
@@ -217,7 +217,7 @@ L'assegnazione multipla è particolarmente potente per **scambiare due variabili
 ```python
 a = 5
 b = 100
-a, b = b, a      # swap in one line!
+a, b = b, a      # scambio in una riga sola!
 print(a, b)      # 100  5
 ```
 
@@ -279,7 +279,7 @@ Il programma qui sotto disegna un poligono — ma manca la riga che calcola l'an
 initCmLab('-2', `import turtle
 t = turtle.Turtle()
 sides = 3
-# Add one line here: calculate turn_angle using 360 and sides
+# Aggiungi qui una riga: calcola turn_angle usando 360 e sides
 
 for i in range(sides):
     t.forward(100)

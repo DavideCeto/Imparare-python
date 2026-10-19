@@ -151,14 +151,14 @@ Puoi usare valori RGB direttamente in turtle convertendoli prima in una stringa 
 initCmLab('-2', `import turtle
 
 def to_hex(r, g, b):
-    # Convert 0-255 RGB values to a hex color string like "#ff0000"
+    # Converte valori RGB da 0 a 255 in una stringa di colore esadecimale come "#ff0000"
     return "#%02x%02x%02x" % (r, g, b)
 
 t = turtle.Turtle()
 t.speed(6)
 t.pensize(4)
 
-# Draw three circles with RGB colors
+# Disegna tre cerchi con colori RGB
 rgb_colors = [(255, 0, 0), (0, 200, 80), (0, 100, 255)]
 positions = [(-120, 0), (0, 0), (120, 0)]
 
@@ -197,7 +197,7 @@ Turtle ti permette di impostare due colori separati contemporaneamente.
 Puoi anche impostare penna e riempimento insieme:
 
 ```python
-t.color("blue", "yellow")   # pencolor = blue, fillcolor = yellow
+t.color("blue", "yellow")   # colore penna = blu, colore riempimento = giallo
 ```
 
 ## Riempire Forme con `begin_fill()` ed `end_fill()`
@@ -308,12 +308,12 @@ petal_colors = ["#FF6347", "#FF8C00", "#FFD700", "#ADFF2F", "#00BFFF", "#9370DB"
 for i in range(6):
     t.fillcolor(petal_colors[i])
     t.begin_fill()
-    t.circle(60, 120)   # arc
+    t.circle(60, 120)   # arco
     t.left(60)
-    t.circle(60, 120)   # arc
+    t.circle(60, 120)   # arco
     t.left(60)
     t.end_fill()
-    t.left(60)          # rotate to next petal
+    t.left(60)          # ruota verso il petalo successivo
 
 t.hideturtle()`);
 </script>
@@ -346,12 +346,12 @@ t.speed(6)
 t.pencolor("red")
 t.pensize(3)
 
-# Add: set fill color to "blue"
-# Add: begin_fill()
+# Aggiungi: imposta il colore di riempimento a "blue"
+# Aggiungi: begin_fill()
 for i in range(4):
     t.forward(100)
     t.right(90)
-# Add: end_fill()`);
+# Aggiungi: end_fill()`);
 </script>
 
 ## Esperimenti

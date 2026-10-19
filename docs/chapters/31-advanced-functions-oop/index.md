@@ -70,12 +70,12 @@ Entrambi fanno corto circuito — si fermano non appena la risposta è conosciut
 <script>
 initCmLab('', `scores = [75, 92, 88, 60, 95]
 
-print("Any failing (<70)?", any(s < 70 for s in scores))
-print("All passing (>=60)?", all(s >= 60 for s in scores))
-print("All excellent (>=90)?", all(s >= 90 for s in scores))
+print("Qualcuno insufficiente (<70)?", any(s < 70 for s in scores))
+print("Tutti promossi (>=60)?", all(s >= 60 for s in scores))
+print("Tutti eccellenti (>=90)?", all(s >= 90 for s in scores))
 
 words = ["hello", "world", "Python"]
-print("Any starts with 'P'?", any(w.startswith("P") for w in words))`);
+print("Qualcuna inizia con 'P'?", any(w.startswith("P") for w in words))`);
 </script>
 
 ## `chr()` e `ord()` — Caratteri e Codici ASCII
@@ -87,7 +87,7 @@ print("Any starts with 'P'?", any(w.startswith("P") for w in words))`);
 print(ord("A"))   # 65
 print(ord("a"))   # 97
 print(chr(65))    # "A"
-print(chr(9829))  # "♥" — Unicode heart
+print(chr(9829))  # "♥" — il cuore Unicode
 ```
 
 <div class="cm-lab cm-text-only">
@@ -104,12 +104,12 @@ print(chr(9829))  # "♥" — Unicode heart
   </div>
 </div>
 <script>
-initCmLab('-2', `# Print A-Z using chr() and ord():
+initCmLab('-2', `# Stampa le lettere dalla A alla Z usando chr() e ord():
 for code in range(ord("A"), ord("Z") + 1):
     print(chr(code), end=" ")
 print()
 
-# Simple Caesar cipher (shift each letter by 3):
+# Semplice cifrario di Cesare (sposta ogni lettera di 3):
 def encrypt(text, shift=3):
     result = ""
     for ch in text:
@@ -132,8 +132,8 @@ Questi sono i tuoi migliori amici quando esplori un modulo o un oggetto non fami
 
 ```python
 import math
-print(dir(math))         # see all math functions
-help(math.sqrt)          # full docs for sqrt
+print(dir(math))         # mostra tutte le funzioni di math
+help(math.sqrt)          # la documentazione completa di sqrt
 ```
 
 ## `id()` e `hash()`
@@ -165,7 +165,7 @@ Solo gli oggetti immutabili (stringhe, numeri, tuple) possono essere hashati.
 <script>
 initCmLab('-3', `a = "hello"
 b = "hello"
-c = "hel" + "lo"   # built from parts at runtime
+c = "hel" + "lo"   # costruita a pezzi durante l'esecuzione
 
 print("a == b:", a == b)
 print("a is b:", a is b)
@@ -186,7 +186,7 @@ class InvalidAgeError(ValueError):
 
 class NegativeBalanceError(Exception):
     def __init__(self, amount):
-        super().__init__(f"Cannot withdraw ${amount} — balance would go negative.")
+        super().__init__(f"Impossibile prelevare {amount} $ — il saldo diventerebbe negativo.")
         self.amount = amount
 ```
 
@@ -206,7 +206,7 @@ class NegativeBalanceError(Exception):
 <script>
 initCmLab('-4', `class InvalidScoreError(ValueError):
     def __init__(self, score):
-        super().__init__(f"Score {score} is out of range (0-100).")
+        super().__init__(f"Il punteggio {score} è fuori dall'intervallo (0-100).")
         self.score = score
 
 def record_score(score):
@@ -216,9 +216,9 @@ def record_score(score):
 
 for s in [85, 110, -5, 0, 100]:
     try:
-        print(f"Recorded: {record_score(s)}")
+        print(f"Registrato: {record_score(s)}")
     except InvalidScoreError as e:
-        print(f"Error: {e}")`);
+        print(f"Errore: {e}")`);
 </script>
 
 ## Metodi Statici
@@ -256,7 +256,7 @@ class Circle:
     @radius.setter
     def radius(self, value):
         if value < 0:
-            raise ValueError("Radius cannot be negative.")
+            raise ValueError("Il raggio non può essere negativo.")
         self._radius = value
 
     @property
@@ -264,9 +264,9 @@ class Circle:
         return 3.14159 * self._radius ** 2
 
 c = Circle(5)
-print(c.radius)   # calls the getter
-print(c.area)     # computed property
-c.radius = 10     # calls the setter (validates!)
+print(c.radius)   # chiama il getter
+print(c.area)     # proprietà calcolata
+c.radius = 10     # chiama il setter (che controlla il valore!)
 ```
 
 ## Panoramica dei Metodi Dunder
@@ -298,16 +298,16 @@ class Engine:
         self.hp = horsepower
 
     def start(self):
-        print(f"Engine ({self.hp} hp) running.")
+        print(f"Motore ({self.hp} CV) in funzione.")
 
 class Car:
     def __init__(self, model, horsepower):
         self.model  = model
-        self.engine = Engine(horsepower)   # composition!
+        self.engine = Engine(horsepower)   # composizione!
 
     def drive(self):
         self.engine.start()
-        print(f"{self.model} is moving.")
+        print(f"{self.model} è in movimento.")
 
 car = Car("Python GT", 300)
 car.drive()
@@ -347,15 +347,15 @@ initCmLab('-5', `class Bag:
     def add(self, item):
         self.items.append(item)
 
-    # Add __len__ here so len(bag) works:
+    # Aggiungi qui __len__, così len(bag) funziona:
 
 bag = Bag()
 bag.add("apple")
 bag.add("banana")
 bag.add("mango")
 
-print("Items:", bag.items)
-print("Count:", len(bag))   # this will fail until you add __len__`);
+print("Oggetti:", bag.items)
+print("Quanti:", len(bag))   # questa riga fallisce finché non aggiungi __len__`);
 </script>
 
 ## Esperimenti

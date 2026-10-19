@@ -171,7 +171,7 @@ def building(x, w, h, color):
         monty.forward(side)
         monty.left(90)
     monty.end_fill()
-    # ADD: draw a red rooftop rectangle here
+    # AGGIUNGI: disegna qui il rettangolo rosso del tetto
     for row in range(h // 35):
         for col in range(w // 20):
             monty.penup()

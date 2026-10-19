@@ -38,8 +38,8 @@ Qualsiasi cosa l'utente scriva torna al tuo programma come una **stringa**.
 La parola chiave da ricordare: `input()` **restituisce sempre una stringa**, anche se l'utente scrive un numero.
 
 ```python
-name = input("What is your name? ")
-print("Hello,", name)
+name = input("Come ti chiami? ")
+print("Ciao,", name)
 ```
 
 <div class="cm-lab cm-text-only">
@@ -56,8 +56,8 @@ print("Hello,", name)
   </div>
 </div>
 <script>
-initCmLab('', `name = input("What is your name? ")
-print("Hello,", name + "! Welcome to Python!")`);
+initCmLab('', `name = input("Come ti chiami? ")
+print("Ciao,", name + "! Benvenuto in Python!")`);
 </script>
 
 !!! mascot-tip "Ponte Scratch"
@@ -80,9 +80,9 @@ Prima di immergerci, definiamo tre termini:
 Se la stringa contiene lettere, `int()` genera un `ValueError` — quindi convertila sempre solo dopo aver controllato che l'input sembri un numero.
 
 ```python
-age_text = input("How old are you? ")
-age = int(age_text)          # convert string to integer
-print("Next year you'll be", age + 1)
+age_text = input("Quanti anni hai? ")
+age = int(age_text)          # converte la stringa in intero
+print("L'anno prossimo avrai", age + 1)
 ```
 
 <div class="cm-lab cm-text-only">
@@ -99,9 +99,9 @@ print("Next year you'll be", age + 1)
   </div>
 </div>
 <script>
-initCmLab('-2', `age_text = input("How old are you? ")
+initCmLab('-2', `age_text = input("Quanti anni hai? ")
 age = int(age_text)
-print("Next year you'll be", age + 1)`);
+print("L'anno prossimo avrai", age + 1)`);
 </script>
 
 ### `float()` — Converti in Numero Decimale
@@ -110,9 +110,9 @@ print("Next year you'll be", age + 1)`);
 Usalo quando hai bisogno di precisione oltre i numeri interi — per prezzi, misure, o temperature.
 
 ```python
-price = float(input("Enter price: $"))
+price = float(input("Inserisci il prezzo: €"))
 tax = price * 0.08
-print("Total with tax: $" + str(round(price + tax, 2)))
+print("Totale con le tasse: €" + str(round(price + tax, 2)))
 ```
 
 ### `str()` — Converti in Stringa
@@ -122,7 +122,7 @@ Ne hai bisogno quando vuoi unire un numero con del testo usando `+`.
 
 ```python
 score = 95
-print("Your score: " + str(score) + "/100")   # must convert to string first
+print("Il tuo punteggio: " + str(score) + "/100")   # prima bisogna convertirlo in stringa
 ```
 
 ### `bool()` — Converti in True o False
@@ -163,13 +163,13 @@ print(bool(42))      # True
   </div>
 </div>
 <script>
-initCmLab('-3', `x = input("Type something: ")
-print("You entered:", x)
-print("Type of x:", type(x))
+initCmLab('-3', `x = input("Scrivi qualcosa: ")
+print("Hai inserito:", x)
+print("Tipo di x:", type(x))
 
 y = int(x)
-print("After int():", y)
-print("Type of y:", type(y))`);
+print("Dopo int():", y)
+print("Tipo di y:", type(y))`);
 </script>
 
 Se scrivi un numero come `42`, vedrai prima `<class 'str'>`, poi `<class 'int'>` dopo la conversione.
@@ -185,12 +185,12 @@ Prima di convertire o validare l'input, è una buona idea **pulirlo** prima.
 Questi tre metodi sono molto utili per gestire l'input:
 
 ```python
-answer = input("Do you want to continue? (yes/no) ")
-answer = answer.strip().lower()   # clean the input first
+answer = input("Vuoi continuare? (yes/no) ")
+answer = answer.strip().lower()   # prima ripulisci l'input
 if answer == "yes":
-    print("Great, let's keep going!")
+    print("Ottimo, andiamo avanti!")
 else:
-    print("OK, stopping here.")
+    print("OK, mi fermo qui.")
 ```
 
 ## Le Basi della Validazione dell'Input
@@ -202,14 +202,14 @@ Un approccio semplice è usare `str.isdigit()` — un metodo di stringa che rest
 Prima di chiamare `int()`, puoi usare `isdigit()` per evitare un crash:
 
 ```python
-raw = input("Enter a whole number: ")
+raw = input("Inserisci un numero intero: ")
 raw = raw.strip()
 
 if raw.isdigit():
     n = int(raw)
-    print("Double is:", n * 2)
+    print("Il doppio è:", n * 2)
 else:
-    print("That doesn't look like a number!")
+    print("Questo non sembra un numero!")
 ```
 
 <div class="cm-lab cm-text-only">
@@ -226,14 +226,14 @@ else:
   </div>
 </div>
 <script>
-initCmLab('-4', `raw = input("Enter a whole number: ")
+initCmLab('-4', `raw = input("Inserisci un numero intero: ")
 raw = raw.strip()
 
 if raw.isdigit():
     n = int(raw)
-    print("Double is:", n * 2)
+    print("Il doppio è:", n * 2)
 else:
-    print("That doesn't look like a whole number!")`);
+    print("Questo non sembra un numero intero!")`);
 </script>
 
 Provalo due volte: una volta con un numero come `7`, e una volta con lettere come `hello`.
@@ -271,11 +271,11 @@ Provalo due volte: una volta con un numero come `7`, e una volta con lettere com
   </div>
 </div>
 <script>
-initCmLab('-5', `a = input("Enter first number: ")
-b = input("Enter second number: ")
+initCmLab('-5', `a = input("Inserisci il primo numero: ")
+b = input("Inserisci il secondo numero: ")
 
-# Bug: this joins strings, not adds numbers!
-print("Sum:", a + b)`);
+# Bug: questo unisce le stringhe, non somma i numeri!
+print("Somma:", a + b)`);
 </script>
 
 Se inserisci `3` e `4`, la versione con il bug stampa `34` invece di `7`.

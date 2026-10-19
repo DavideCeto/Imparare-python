@@ -20,7 +20,7 @@ Un **parametro** è una variabile dentro le parentesi di una funzione che riceve
 
 ```python
 def square(my_color, x, y):
-    # my_color, x, and y are filled in by the caller
+    # my_color, x e y vengono forniti da chi chiama la funzione
     monty.color(my_color)
     ...
 ```
@@ -177,7 +177,7 @@ square('red',    -80,  80)
 square('orange',  20,  80)
 square('green',  -80, -20)
 square('blue',    20, -20)
-# Add one line here to draw a purple square at (-30, 30)
+# Aggiungi qui una riga per disegnare un quadrato viola in (-30, 30)
 monty.hideturtle()`);
 </script>
 

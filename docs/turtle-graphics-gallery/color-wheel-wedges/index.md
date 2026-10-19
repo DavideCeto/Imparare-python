@@ -51,7 +51,7 @@ for hue in hues:
     monty.forward(radius)
     monty.left(180 - wedge)
     monty.end_fill()
-    # rotate counterclockwise 30 degrees to the next wedge
+    # ruota di 30 gradi in senso antiorario fino allo spicchio successivo
     monty.left(30)
 ```
 
@@ -104,7 +104,7 @@ for hue in hues:
     monty.forward(radius)
     monty.left(180 - wedge)
     monty.end_fill()
-    # rotate counterclockwise 30 degrees to the next wedge
+    # ruota di 30 gradi in senso antiorario fino allo spicchio successivo
     monty.left(30)`);
 </script>
 
@@ -177,7 +177,7 @@ for hue in hues:
     monty.forward(radius)
     monty.left(180 - wedge)
     monty.end_fill()
-    # rotate counterclockwise 30 degrees to the next wedge
+    # ruota di 30 gradi in senso antiorario fino allo spicchio successivo
     monty.left(30)`);
 </script>
 
@@ -232,7 +232,7 @@ for hue in hues:
     monty.forward(radius)
     monty.left(180 - angle)
     monty.end_fill()
-    # rotate counterclockwise 60 degrees to the next wedge
+    # ruota di 60 gradi in senso antiorario fino allo spicchio successivo
     monty.left(angle)`);
 </script>
 

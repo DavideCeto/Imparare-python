@@ -67,7 +67,7 @@ count = 5
 while count > 0:
     print(count)
     count -= 1
-print("Liftoff!")
+print("Decollo!")
 ```
 
 Ecco cosa succede passo dopo passo:
@@ -79,7 +79,7 @@ Ecco cosa succede passo dopo passo:
 | 3 | 3 | True | stampa 3, count diventa 2 |
 | 4 | 2 | True | stampa 2, count diventa 1 |
 | 5 | 1 | True | stampa 1, count diventa 0 |
-| 6 | 0 | **False** | il ciclo finisce, stampa "Liftoff!" |
+| 6 | 0 | **False** | il ciclo finisce, stampa "Decollo!" |
 
 Il ciclo gira esattamente finché la condizione resta `True`.
 Nel momento in cui diventa `False`, Python esce dal ciclo e continua con la riga successiva.
@@ -93,7 +93,7 @@ Prima di eseguire il programma di conto alla rovescia, pensa a cosa stamperà.
 !!! mascot-thinking "Cosa Pensi che Succederà?"
     ![Monty thinking](../../img/mascot/thinking.png){ class="mascot-admonition-img" }
     La variabile `count` parte da `5`. Il ciclo stampa `count` e poi sottrae 1 a ogni giro.
-    Quante righe pensi che il programma stamperà prima che appaia "Liftoff!"?
+    Quante righe pensi che il programma stamperà prima che appaia "Decollo!"?
     Stamperà il numero `0`? Fai la tua previsione — poi clicca Esegui!
 
 ## Provalo Ora
@@ -124,10 +124,10 @@ initCmLab('', `count = 5
 while count > 0:
     print(count)
     count -= 1
-print("Liftoff!")`);
+print("Decollo!")`);
 </script>
 
-Avevi indovinato? Il ciclo stampa `5`, `4`, `3`, `2`, `1` — cinque righe — e poi `"Liftoff!"`.
+Avevi indovinato? Il ciclo stampa `5`, `4`, `3`, `2`, `1` — cinque righe — e poi `"Decollo!"`.
 Il numero `0` **non** viene stampato perché la condizione `count > 0` viene controllata *prima* di ogni giro.
 Quando `count` è `0`, la condizione è `False`, quindi il ciclo finisce immediatamente.
 
@@ -137,7 +137,7 @@ Un **ciclo infinito** è un ciclo `while` la cui condizione non diventa mai `Fal
 Il programma gira per sempre (finché non lo chiudi forzatamente):
 
 ```python
-# WARNING: this runs forever — don't run it!
+# ATTENZIONE: questo gira all'infinito — non eseguirlo!
 while True:
     print("Help, I can't stop!")
 ```
@@ -149,7 +149,7 @@ La causa più comune: dimenticare `count -= 1` dentro il ciclo.
 count = 5
 while count > 0:
     print(count)
-    # MISSING: count -= 1  ← without this, count stays 5 forever!
+    # MANCA: count -= 1  ← senza questa riga, count resta 5 per sempre!
 ```
 
 **Come risolverlo:** Ogni ciclo `while` ha bisogno di almeno una riga al suo interno che alla fine rende la condizione `False`.
@@ -175,7 +175,7 @@ count = 10
 while count > 0:
     print(count)
     if count == 7:
-        print("Stopping early at 7!")
+        print("Mi fermo prima, al 7!")
         break
     count -= 1
 ```
@@ -191,9 +191,9 @@ Usalo per saltare certi valori senza fermare l'intero ciclo:
 count = 10
 while count > 0:
     count -= 1
-    if count % 2 == 0:   # skip even numbers
+    if count % 2 == 0:   # salta i numeri pari
         continue
-    print(count)         # only prints odd numbers: 9, 7, 5, 3, 1
+    print(count)         # stampa solo i numeri dispari: 9, 7, 5, 3, 1
 ```
 
 Pensa a `break` come "esci dal ciclo completamente" e a `continue` come "salta questo giro e riprova."
@@ -209,7 +209,7 @@ while count > 0:
     print(count)
     count -= 1
 else:
-    print("Countdown finished normally!")   # runs because no break was used
+    print("Conto alla rovescia terminato normalmente!")   # viene eseguito perché non è stato usato break
 ```
 
 ```python
@@ -220,7 +220,7 @@ while count > 0:
     print(count)
     count -= 1
 else:
-    print("This won't print — loop was broken!")  # skipped because break was used
+    print("Questo non verrà stampato — il ciclo è stato interrotto!")  # saltato perché è stato usato break
 ```
 
 L'`else` su un ciclo è raro in pratica, ma è un modo elegante di gestire lo schema "ricerca riuscita / ricerca fallita."
@@ -234,7 +234,7 @@ Il ciclo interno gira completamente per ogni singolo giro del ciclo esterno:
 for row in range(3):
     for col in range(4):
         print("*", end=" ")
-    print()    # move to the next line after each row
+    print()    # va alla riga successiva dopo ogni fila
 ```
 
 Questo stampa una griglia di stelle di 3 righe per 4 colonne.
@@ -255,9 +255,9 @@ La funzione più utile per l'animazione è **`time.sleep(seconds)`** — pausa i
 
 ```python
 import time
-print("Starting...")
-time.sleep(2)          # pause for 2 seconds
-print("Done waiting!")
+print("Inizio...")
+time.sleep(2)          # pausa di 2 secondi
+print("Ho finito di aspettare!")
 ```
 
 `time.sleep()` è come controlli la velocità delle animazioni: pausa di 0.05 secondi tra ogni fotogramma per ottenere circa 20 fotogrammi al secondo.
@@ -302,7 +302,7 @@ step = 5
 while step < 150:
     t.forward(step)
     t.right(45)
-    # Add one line here to increase step by 5 each trip`);
+    # Aggiungi qui una riga per aumentare step di 5 a ogni giro`);
 </script>
 
 Una volta che la spirale appare, nota come la condizione `while step < 150` fermi automaticamente il ciclo quando la spirale è abbastanza grande — senza bisogno di contare manualmente!
@@ -311,7 +311,7 @@ Una volta che la spirale appare, nota come la condizione `while step < 150` ferm
 
 Prova questi cambiamenti ai programmi sopra. Per ognuno, prevedi cosa succederà prima, poi eseguilo per verificare!
 
-1. Nel laboratorio del conto alla rovescia, cambia `count = 5` in `count = 10`. **Saprai che ha funzionato quando** il conto alla rovescia stampa 10 numeri prima di "Liftoff!".
+1. Nel laboratorio del conto alla rovescia, cambia `count = 5` in `count = 10`. **Saprai che ha funzionato quando** il conto alla rovescia stampa 10 numeri prima di "Decollo!".
 2. Cambia `while count > 0` in `while count > 3`. **Saprai che ha funzionato quando** il conto alla rovescia si ferma a 4, non a 1.
 3. Nel laboratorio della spirale, cambia `t.right(45)` in `t.right(90)`. **Saprai che ha funzionato quando** vedi una spirale quadrata invece di una diagonale.
 4. Cambia `t.right(45)` in `t.right(91)`. **Saprai che ha funzionato quando** vedi una spirale che ruota lentamente con degli spazi tra le linee.

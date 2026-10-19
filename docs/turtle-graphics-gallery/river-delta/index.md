@@ -264,7 +264,7 @@ for step in range(44):
             monty.pencolor(river_color(nw))
             monty.goto(nx, ny)
             new_branches.append([nx, ny, nh, nw])
-    # add the missing line here`);
+    # aggiungi qui la riga mancante`);
 </script>
 
 Senza quella riga, `branches` resta bloccato al segmento di partenza, quindi il programma si limita a ridisegnare brevi monconi in alto 44 volte. Con essa, ogni generazione di figli diventa la generazione successiva di genitori — e il delta scorre.

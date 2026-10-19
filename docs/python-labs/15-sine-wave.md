@@ -173,7 +173,7 @@ for x in range(-180, 180):
     y = math.sin(math.radians(x))
     monty.goto(x, y * amplitude)
 
-# Add lines here to reset position and draw a red cosine wave
+# Aggiungi qui delle righe per tornare alla posizione iniziale e disegnare un'onda coseno rossa
 monty.hideturtle()`);
 </script>
 

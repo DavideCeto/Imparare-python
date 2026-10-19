@@ -86,7 +86,7 @@ initCmLab('', `import turtle
 
 screen = turtle.Screen()
 screen.setup(400, 400)
-screen.title("Click to Draw Dots")
+screen.title("Clicca per disegnare dei punti")
 
 t = turtle.Turtle()
 t.speed(0)
@@ -129,7 +129,7 @@ def turn_right():
 screen.onkey(go_forward, "Up")
 screen.onkey(turn_left,  "Left")
 screen.onkey(turn_right, "Right")
-screen.listen()   # must call listen() to activate keyboard events
+screen.listen()   # bisogna chiamare listen() per attivare gli eventi della tastiera
 screen.mainloop()
 ```
 
@@ -151,7 +151,7 @@ initCmLab('-2', `import turtle
 
 screen = turtle.Screen()
 screen.setup(400, 400)
-screen.title("Arrow Keys to Steer")
+screen.title("Usa le frecce per sterzare")
 
 t = turtle.Turtle()
 t.shape("arrow")
@@ -191,9 +191,9 @@ La tecnica chiave per i cicli di animazione è **ri-registrare il timer dentro i
 def animate():
     t.forward(5)
     t.left(3)
-    screen.ontimer(animate, 50)   # schedule ourselves again in 50ms
+    screen.ontimer(animate, 50)   # si richiama da sola dopo 50 ms
 
-animate()   # start the loop
+animate()   # avvia il ciclo
 screen.mainloop()
 ```
 
@@ -217,7 +217,7 @@ initCmLab('-3', `import turtle
 
 screen = turtle.Screen()
 screen.setup(400, 400)
-screen.title("Spinning Spiral")
+screen.title("Spirale rotante")
 screen.bgcolor("black")
 
 t = turtle.Turtle()
@@ -275,8 +275,8 @@ def stop_draw(x, y):
 def clear_screen():
     t.clear()
 
-screen.onscreenclick(start_draw, 1)   # left mouse button down
-screen.onscreenclick(stop_draw,  3)   # right mouse button up
+screen.onscreenclick(start_draw, 1)   # pulsante sinistro del mouse premuto
+screen.onscreenclick(stop_draw,  3)   # pulsante destro del mouse rilasciato
 screen.onkey(clear_screen, "space")
 screen.listen()
 screen.mainloop()
@@ -334,7 +334,7 @@ def on_click(x, y):
     t.goto(x, y)
     t.dot(24, colors[color_index])
 
-# Add a "change_color" function and register it with "c" key:
+# Aggiungi una funzione "change_color" e registrala con il tasto "c":
 # def change_color():
 #   ...
 

@@ -23,8 +23,8 @@ quanto modificare una riga. Una **variabile** è una scatola con un nome che con
 descrittivo così il codice è facile da leggere.
 
 ```python
-distance = 50   # length of each side
-sides = 8       # number of sides (8 = octagon)
+distance = 50   # lunghezza di ogni lato
+sides = 8       # numero di lati (8 = ottagono)
 my_color = "red"
 ```
 
@@ -56,7 +56,7 @@ monty.shape('turtle')
 
 distance = 50
 sides = 8
-angle = 360 / sides  # works for any regular polygon
+angle = 360 / sides  # funziona per qualsiasi poligono regolare
 my_color = "red"
 
 monty.penup()
@@ -116,7 +116,7 @@ monty.shape('turtle')
 
 distance = 50
 sides = 8
-angle = 360 / sides  # works for any regular polygon
+angle = 360 / sides  # funziona per qualsiasi poligono regolare
 my_color = "red"
 
 monty.penup()
@@ -210,7 +210,7 @@ for i in range(sides):
     monty.forward(distance)
     monty.right(angle)
 
-monty.begin_fill()  # bug: this is in the wrong place!
+monty.begin_fill()  # bug: questa riga è nel posto sbagliato!
 monty.end_fill()
 monty.hideturtle()`);
 </script>

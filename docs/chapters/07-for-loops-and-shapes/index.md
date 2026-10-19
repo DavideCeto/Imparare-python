@@ -132,9 +132,9 @@ Dopo quattro svolte di 90° la turtle ha ruotato di un giro completo di 360° ed
 
 ```python
 for i in range(4):
-    t.forward(100)    # ← part of the loop (indented)
-    t.right(90)       # ← part of the loop (indented)
-t.penup()             # ← NOT part of the loop (no indent)
+    t.forward(100)    # ← parte del ciclo (indentata)
+    t.right(90)       # ← parte del ciclo (indentata)
+t.penup()             # ← NON fa parte del ciclo (nessuna indentazione)
 ```
 
 ### Osservalo: Procedi Passo Passo nel Ciclo
@@ -203,9 +203,9 @@ Un **accumulatore** è una variabile che imposti *prima* del ciclo e aggiorni *d
 L'accumulatore più comune semplicemente somma dei valori insieme:
 
 ```python
-total = 0               # start the accumulator at zero
+total = 0               # l'accumulatore parte da zero
 for i in range(1, 6):   # i takes values 1, 2, 3, 4, 5
-    total += i          # add i to total on each trip
+    total += i          # aggiunge i a total a ogni giro
 print(total)            # 15  (1+2+3+4+5)
 ```
 
@@ -293,7 +293,7 @@ t = turtle.Turtle()
 t.speed(3)
 for i in range(5):
     t.forward(150)
-    t.right(???)    # replace ??? with the correct turn angle`);
+    t.right(???)    # sostituisci ??? con l'angolo di rotazione corretto`);
 </script>
 
 Quando la stella si chiude perfettamente tornando al punto di partenza, sai che l'angolo di svolta è corretto!

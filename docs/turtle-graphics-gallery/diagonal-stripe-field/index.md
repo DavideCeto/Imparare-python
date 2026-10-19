@@ -151,7 +151,7 @@ for i in range(30):
     monty.penup()
     monty.goto(-300 + i * 20, -250)
     monty.pendown()
-    # ADD ONE LINE HERE to point Monty North-East
+    # AGGIUNGI QUI UNA RIGA per far puntare Monty verso nord-est
     monty.forward(500)`);
 </script>
 

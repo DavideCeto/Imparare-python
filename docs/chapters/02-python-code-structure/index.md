@@ -119,12 +119,12 @@ La maggior parte dei linguaggi di programmazione usa le **parentesi graffe** `{ 
 Ecco un'anteprima di come appare l'indentazione in azione. Non hai ancora imparato i cicli `for` — arriveranno nel Capitolo 7 — ma osserva subito lo schema degli spazi:
 
 ```python
-# PREVIEW — you will learn for loops in Chapter 7
-# For now, just notice the indentation pattern
+# ANTEPRIMA — imparerai i cicli for nel Capitolo 7
+# Per ora, nota solo lo schema dell'indentazione
 
-for i in range(4):   # This line starts at the left edge
-    t.forward(100)   # These two lines are indented 4 spaces
-    t.right(90)      # They belong INSIDE the for loop
+for i in range(4):   # Questa riga inizia dal bordo sinistro
+    t.forward(100)   # Queste due righe sono rientrate di 4 spazi
+    t.right(90)      # Appartengono all'INTERNO del ciclo for
 ```
 
 Le due righe con 4 spazi davanti sono *dentro* il ciclo. La riga `for` stessa è al margine sinistro. Quella differenza di spaziatura è ciò che Python usa per sapere quali righe fanno parte del ciclo — non le parentesi, non le parole chiave, solo gli spazi.
@@ -140,11 +140,11 @@ Un **blocco di codice** è un gruppo di righe che vanno insieme perché sono tut
 Vedrai questo schema costantemente in Python:
 
 ```python
-some_statement:        # colon opens a block
-    first line         # 4 spaces — inside the block
-    second line        # 4 spaces — still inside the block
-    third line         # 4 spaces — still inside the block
-back_to_normal         # 0 spaces — block is over
+some_statement:        # i due punti aprono un blocco
+    first line         # 4 spazi — dentro il blocco
+    second line        # 4 spazi — ancora dentro il blocco
+    third line         # 4 spazi — ancora dentro il blocco
+back_to_normal         # 0 spazi — il blocco è finito
 ```
 
 Per ora tutti i tuoi programmi sono un elenco piatto di righe senza blocchi. Questo cambierà quando arriverai ai cicli (Capitolo 7) e alle condizioni (Capitolo 9). Quando ci arriverai, capirai già come funzionano i blocchi — perché lo stai imparando adesso.
@@ -160,7 +160,7 @@ Spazio bianco è il nome per qualsiasi carattere invisibile nel tuo codice: spaz
 Ecco lo stesso programma turtle scritto in due modi:
 
 ```python
-# Hard to read — no whitespace
+# Difficile da leggere — niente spazi
 import turtle
 t=turtle.Turtle()
 t.forward(100)
@@ -169,7 +169,7 @@ t.forward(100)
 ```
 
 ```python
-# Easy to read — good whitespace
+# Facile da leggere — buon uso degli spazi
 import turtle
 
 t = turtle.Turtle()
@@ -339,7 +339,7 @@ t.pencolor("red")
 t.forward(100)
 t.right(120)
 
-# Add one line here to change the color to purple
+# Aggiungi qui una riga per cambiare il colore in viola
 
 t.forward(100)
 t.right(120)
