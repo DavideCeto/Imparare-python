@@ -1,17 +1,17 @@
 {
   "title": "Scope Inspector",
   "creator": "Dan McCreary",
-  "subject": "High School Geometry",
+  "subject": "Learning Python",
   "description": "Interactive MicroSim for scope inspector",
   "date": "2026-07-01",
   "educational": {
     "gradeLevel": [
-      "9",
-      "10",
-      "11",
-      "12"
+      "5",
+      "6",
+      "7",
+      "8"
     ],
-    "subjectArea": "Mathematics",
+    "subjectArea": "Computer Science",
     "topic": "Scope Inspector",
     "learningObjectives": [
       "TODO: Add learning objectives"

@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Learn how Python uses indentation to group code, discover Python keywords, and add named colors to your turtle drawings.">
+        <meta name="description" content="Scopri come Python usa l'indentazione per raggruppare il codice, conosci le parole chiave di Python e aggiungi colori con nome ai tuoi disegni turtle.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -21,19 +21,22 @@
         <link rel="next" href="references/">
       
       
+        
+      
+      
       <link rel="icon" href="../../img/favicon.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Python Code Structure - Learning Python</title>
+        <title>Struttura del Codice Python - Introduzione a Python</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -80,33 +83,6 @@
 
     
     
-      
-        <meta  property="og:type"  content="website" >
-      
-        <meta  property="og:title"  content="Python Code Structure - Learning Python" >
-      
-        <meta  property="og:description"  content="Learn how Python uses indentation to group code, discover Python keywords, and add named colors to your turtle drawings." >
-      
-        <meta  property="og:image"  content="https://dmccreary.github.io/learning-python/assets/images/social/chapters/02-python-code-structure/index.png" >
-      
-        <meta  property="og:image:type"  content="image/png" >
-      
-        <meta  property="og:image:width"  content="1200" >
-      
-        <meta  property="og:image:height"  content="630" >
-      
-        <meta  property="og:url"  content="https://dmccreary.github.io/learning-python/chapters/02-python-code-structure/" >
-      
-        <meta  name="twitter:card"  content="summary_large_image" >
-      
-        <meta  name="twitter:title"  content="Python Code Structure - Learning Python" >
-      
-        <meta  name="twitter:description"  content="Learn how Python uses indentation to group code, discover Python keywords, and add named colors to your turtle drawings." >
-      
-        <meta  name="twitter:image"  content="https://dmccreary.github.io/learning-python/assets/images/social/chapters/02-python-code-structure/index.png" >
-      
-    
-    
   </head>
   
   
@@ -124,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#python-code-structure" class="md-skip">
+        <a href="#struttura-del-codice-python" class="md-skip">
           Skip to content
         </a>
       
@@ -140,7 +116,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Learning Python" class="md-header__button md-logo" aria-label="Learning Python" data-md-component="logo">
+    <a href="../.." title="Introduzione a Python" class="md-header__button md-logo" aria-label="Introduzione a Python" data-md-component="logo">
       
   <img src="../../img/mascot/welcome.png" alt="logo">
 
@@ -153,13 +129,13 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Learning Python
+            Introduzione a Python
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Python Code Structure
+              Struttura del Codice Python
             
           </span>
         </div>
@@ -171,11 +147,13 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -207,16 +185,17 @@
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
         <a href="https://github.com/dmccreary/learning-python" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
-    GitHub Repo
+    Repository GitHub
   </div>
 </a>
       </div>
@@ -246,22 +225,22 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Learning Python" class="md-nav__button md-logo" aria-label="Learning Python" data-md-component="logo">
+    <a href="../.." title="Introduzione a Python" class="md-nav__button md-logo" aria-label="Introduzione a Python" data-md-component="logo">
       
   <img src="../../img/mascot/welcome.png" alt="logo">
 
     </a>
-    Learning Python
+    Introduzione a Python
   </label>
   
     <div class="md-nav__source">
       <a href="https://github.com/dmccreary/learning-python" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
-    GitHub Repo
+    Repository GitHub
   </div>
 </a>
     </div>
@@ -278,9 +257,16 @@
       <a href="../.." class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Home
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -298,9 +284,16 @@
       <a href="../../course-description/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Course Description
+    
+  
+    Descrizione del corso
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -318,9 +311,16 @@
       <a href="../../about/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    About Learning Python
+    
+  
+    Informazioni su Introduzione a Python
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -336,6 +336,7 @@
   
   
   
+    
     
     
     
@@ -350,9 +351,16 @@
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    Chapters
+    
+  
+    Capitoli
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -361,7 +369,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Chapters
+            
+  
+    Capitoli
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -375,9 +387,16 @@
       <a href="../" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    List of Chapters
+    
+  
+    Elenco dei capitoli
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -396,6 +415,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -406,9 +426,16 @@
           <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    1. Welcome to Python and Skulpt
+    
+  
+    1. Benvenuto in Python e Skulpt
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -417,7 +444,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_2">
             <span class="md-nav__icon md-icon"></span>
-            1. Welcome to Python and Skulpt
+            
+  
+    1. Benvenuto in Python e Skulpt
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -431,9 +462,16 @@
       <a href="../01-welcome-to-python/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -452,9 +490,16 @@
       <a href="../01-welcome-to-python/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -473,9 +518,16 @@
       <a href="../01-welcome-to-python/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -504,6 +556,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
@@ -514,9 +567,16 @@
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    2. Python Code Structure
+    
+  
+    2. Struttura del codice Python
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -525,7 +585,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
-            2. Python Code Structure
+            
+  
+    2. Struttura del codice Python
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -548,9 +612,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -559,9 +630,16 @@
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -582,144 +660,176 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#riepilogo" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      
+        Riepilogo
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#concetti-trattati" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      
+        Concetti Trattati
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#prerequisiti" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      
+        Prerequisiti
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#multi-line-strings" class="md-nav__link">
+  <a href="#stringhe-multi-riga" class="md-nav__link">
     <span class="md-ellipsis">
-      Multi-Line Strings
+      
+        Stringhe Multi-Riga
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#try-it-multi-line-strings" class="md-nav__link">
+  <a href="#provalo-stringhe-multi-riga" class="md-nav__link">
     <span class="md-ellipsis">
-      Try It: Multi-Line Strings
+      
+        Provalo: Stringhe Multi-Riga
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-multi-line-strings-work" class="md-nav__link">
+  <a href="#come-funzionano-le-stringhe-multi-riga" class="md-nav__link">
     <span class="md-ellipsis">
-      How Multi-Line Strings Work
+      
+        Come Funzionano le Stringhe Multi-Riga
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#indentation-as-syntax" class="md-nav__link">
+  <a href="#lindentazione-come-sintassi" class="md-nav__link">
     <span class="md-ellipsis">
-      Indentation as Syntax
+      
+        L'Indentazione come Sintassi
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#code-block-structure" class="md-nav__link">
+  <a href="#struttura-dei-blocchi-di-codice" class="md-nav__link">
     <span class="md-ellipsis">
-      Code Block Structure
+      
+        Struttura dei Blocchi di Codice
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#whitespace-rules" class="md-nav__link">
+  <a href="#regole-sugli-spazi-bianchi" class="md-nav__link">
     <span class="md-ellipsis">
-      Whitespace Rules
+      
+        Regole sugli Spazi Bianchi
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#python-keywords" class="md-nav__link">
+  <a href="#parole-chiave-di-python" class="md-nav__link">
     <span class="md-ellipsis">
-      Python Keywords
+      
+        Parole Chiave di Python
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#statement-vs-expression" class="md-nav__link">
+  <a href="#istruzione-vs-espressione" class="md-nav__link">
     <span class="md-ellipsis">
-      Statement vs Expression
+      
+        Istruzione vs Espressione
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#named-colors" class="md-nav__link">
+  <a href="#colori-con-nome" class="md-nav__link">
     <span class="md-ellipsis">
-      Named Colors
+      
+        Colori con Nome
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#try-it-colored-turtle-drawing" class="md-nav__link">
+  <a href="#provalo-disegno-turtle-colorato" class="md-nav__link">
     <span class="md-ellipsis">
-      Try It: Colored Turtle Drawing
+      
+        Provalo: Disegno Turtle Colorato
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-pencolor-works" class="md-nav__link">
+  <a href="#come-funziona-pencolor" class="md-nav__link">
     <span class="md-ellipsis">
-      How pencolor() Works
+      
+        Come Funziona pencolor()
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#learning-check" class="md-nav__link">
+  <a href="#verifica-di-apprendimento" class="md-nav__link">
     <span class="md-ellipsis">
-      Learning Check
+      
+        Verifica di Apprendimento
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#experiments" class="md-nav__link">
+  <a href="#esperimenti" class="md-nav__link">
     <span class="md-ellipsis">
-      Experiments
+      
+        Esperimenti
+      
     </span>
   </a>
   
@@ -744,9 +854,16 @@
       <a href="references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -765,9 +882,16 @@
       <a href="quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -794,6 +918,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -804,9 +929,16 @@
           <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    3. Variables and Numbers
+    
+  
+    3. Variabili e numeri
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -815,7 +947,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_4">
             <span class="md-nav__icon md-icon"></span>
-            3. Variables and Numbers
+            
+  
+    3. Variabili e numeri
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -829,9 +965,16 @@
       <a href="../03-variables-and-numbers/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -850,9 +993,16 @@
       <a href="../03-variables-and-numbers/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -871,9 +1021,16 @@
       <a href="../03-variables-and-numbers/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -900,6 +1057,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -910,9 +1068,16 @@
           <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    4. Functions and Objects
+    
+  
+    4. Funzioni e oggetti
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -921,7 +1086,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_5">
             <span class="md-nav__icon md-icon"></span>
-            4. Functions and Objects
+            
+  
+    4. Funzioni e oggetti
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -935,9 +1104,16 @@
       <a href="../04-functions-and-objects/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -956,9 +1132,16 @@
       <a href="../04-functions-and-objects/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -977,9 +1160,16 @@
       <a href="../04-functions-and-objects/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1006,6 +1196,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -1016,9 +1207,16 @@
           <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    5. Drawing with Turtle Graphics
+    
+  
+    5. Disegnare con la grafica turtle
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1027,7 +1225,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_6">
             <span class="md-nav__icon md-icon"></span>
-            5. Drawing with Turtle Graphics
+            
+  
+    5. Disegnare con la grafica turtle
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1041,9 +1243,16 @@
       <a href="../05-drawing-with-turtle/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1062,9 +1271,16 @@
       <a href="../05-drawing-with-turtle/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1083,9 +1299,16 @@
       <a href="../05-drawing-with-turtle/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1112,6 +1335,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -1122,9 +1346,16 @@
           <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    6. Math and Arithmetic
+    
+  
+    6. Matematica e aritmetica
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1133,7 +1364,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_7">
             <span class="md-nav__icon md-icon"></span>
-            6. Math and Arithmetic
+            
+  
+    6. Matematica e aritmetica
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1147,9 +1382,16 @@
       <a href="../06-math-and-arithmetic/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1168,9 +1410,16 @@
       <a href="../06-math-and-arithmetic/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1189,9 +1438,16 @@
       <a href="../06-math-and-arithmetic/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1218,6 +1474,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -1228,9 +1485,16 @@
           <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    7. For Loops and Drawing Shapes
+    
+  
+    7. Cicli for e disegno di forme
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1239,7 +1503,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_8">
             <span class="md-nav__icon md-icon"></span>
-            7. For Loops and Drawing Shapes
+            
+  
+    7. Cicli for e disegno di forme
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1253,9 +1521,16 @@
       <a href="../07-for-loops-and-shapes/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1274,9 +1549,16 @@
       <a href="../07-for-loops-and-shapes/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1295,9 +1577,16 @@
       <a href="../07-for-loops-and-shapes/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1324,6 +1613,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -1334,9 +1624,16 @@
           <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    8. Working with Strings
+    
+  
+    8. Lavorare con le stringhe
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1345,7 +1642,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_9">
             <span class="md-nav__icon md-icon"></span>
-            8. Working with Strings
+            
+  
+    8. Lavorare con le stringhe
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1359,9 +1660,16 @@
       <a href="../08-working-with-strings/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1380,9 +1688,16 @@
       <a href="../08-working-with-strings/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1401,9 +1716,16 @@
       <a href="../08-working-with-strings/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1430,6 +1752,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -1440,9 +1763,16 @@
           <label class="md-nav__link" for="__nav_4_10" id="__nav_4_10_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    9. Making Decisions with If/Else
+    
+  
+    9. Prendere decisioni con if/else
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1451,7 +1781,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_10">
             <span class="md-nav__icon md-icon"></span>
-            9. Making Decisions with If/Else
+            
+  
+    9. Prendere decisioni con if/else
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1465,9 +1799,16 @@
       <a href="../09-decisions-if-else/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1486,9 +1827,16 @@
       <a href="../09-decisions-if-else/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1507,9 +1855,16 @@
       <a href="../09-decisions-if-else/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1536,6 +1891,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -1546,9 +1902,16 @@
           <label class="md-nav__link" for="__nav_4_11" id="__nav_4_11_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    10. While Loops and Animation
+    
+  
+    10. Cicli while e animazione
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1557,7 +1920,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_11_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_11">
             <span class="md-nav__icon md-icon"></span>
-            10. While Loops and Animation
+            
+  
+    10. Cicli while e animazione
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1571,9 +1938,16 @@
       <a href="../10-while-loops-and-animation/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1592,9 +1966,16 @@
       <a href="../10-while-loops-and-animation/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1613,9 +1994,16 @@
       <a href="../10-while-loops-and-animation/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1642,6 +2030,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -1652,9 +2041,16 @@
           <label class="md-nav__link" for="__nav_4_12" id="__nav_4_12_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    11. Functions with Parameters and Scope
+    
+  
+    11. Funzioni con parametri e scope
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1663,7 +2059,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_12">
             <span class="md-nav__icon md-icon"></span>
-            11. Functions with Parameters and Scope
+            
+  
+    11. Funzioni con parametri e scope
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1677,9 +2077,16 @@
       <a href="../11-functions-parameters-scope/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1698,9 +2105,16 @@
       <a href="../11-functions-parameters-scope/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1719,9 +2133,16 @@
       <a href="../11-functions-parameters-scope/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1748,6 +2169,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -1758,9 +2180,16 @@
           <label class="md-nav__link" for="__nav_4_13" id="__nav_4_13_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    12. Colors, Fill, and Turtle Art
+    
+  
+    12. Colori, riempimento e arte con la turtle
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1769,7 +2198,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_13_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_13">
             <span class="md-nav__icon md-icon"></span>
-            12. Colors, Fill, and Turtle Art
+            
+  
+    12. Colori, riempimento e arte con la turtle
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1783,9 +2216,16 @@
       <a href="../12-colors-fill-turtle-art/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1804,9 +2244,16 @@
       <a href="../12-colors-fill-turtle-art/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1825,9 +2272,16 @@
       <a href="../12-colors-fill-turtle-art/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1854,6 +2308,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -1864,9 +2319,16 @@
           <label class="md-nav__link" for="__nav_4_14" id="__nav_4_14_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    13. User Input and Type Conversion
+    
+  
+    13. Input dell'utente e conversione di tipo
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1875,7 +2337,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_14_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_14">
             <span class="md-nav__icon md-icon"></span>
-            13. User Input and Type Conversion
+            
+  
+    13. Input dell'utente e conversione di tipo
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1889,9 +2355,16 @@
       <a href="../13-user-input-type-conversion/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1910,9 +2383,16 @@
       <a href="../13-user-input-type-conversion/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1931,9 +2411,16 @@
       <a href="../13-user-input-type-conversion/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -1960,6 +2447,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -1970,9 +2458,16 @@
           <label class="md-nav__link" for="__nav_4_15" id="__nav_4_15_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    14. String Methods and Formatting
+    
+  
+    14. Metodi delle stringhe e formattazione
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -1981,7 +2476,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_15_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_15">
             <span class="md-nav__icon md-icon"></span>
-            14. String Methods and Formatting
+            
+  
+    14. Metodi delle stringhe e formattazione
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1995,9 +2494,16 @@
       <a href="../14-string-methods-formatting/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2016,9 +2522,16 @@
       <a href="../14-string-methods-formatting/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2037,9 +2550,16 @@
       <a href="../14-string-methods-formatting/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2066,6 +2586,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2076,9 +2597,16 @@
           <label class="md-nav__link" for="__nav_4_16" id="__nav_4_16_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    15. Lists - Basics
+    
+  
+    15. Liste - Nozioni di base
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2087,7 +2615,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_16_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_16">
             <span class="md-nav__icon md-icon"></span>
-            15. Lists - Basics
+            
+  
+    15. Liste - Nozioni di base
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2101,9 +2633,16 @@
       <a href="../15-lists-basics/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2122,9 +2661,16 @@
       <a href="../15-lists-basics/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2143,9 +2689,16 @@
       <a href="../15-lists-basics/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2172,6 +2725,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2182,9 +2736,16 @@
           <label class="md-nav__link" for="__nav_4_17" id="__nav_4_17_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    16. Lists - Methods and Patterns
+    
+  
+    16. Liste - Metodi e pattern
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2193,7 +2754,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_17_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_17">
             <span class="md-nav__icon md-icon"></span>
-            16. Lists - Methods and Patterns
+            
+  
+    16. Liste - Metodi e pattern
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2207,9 +2772,16 @@
       <a href="../16-lists-methods-patterns/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2228,9 +2800,16 @@
       <a href="../16-lists-methods-patterns/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2249,9 +2828,16 @@
       <a href="../16-lists-methods-patterns/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2278,6 +2864,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2288,9 +2875,16 @@
           <label class="md-nav__link" for="__nav_4_18" id="__nav_4_18_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    17. Modules and Random Numbers
+    
+  
+    17. Moduli e numeri casuali
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2299,7 +2893,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_18_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_18">
             <span class="md-nav__icon md-icon"></span>
-            17. Modules and Random Numbers
+            
+  
+    17. Moduli e numeri casuali
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2313,9 +2911,16 @@
       <a href="../17-modules-and-random/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2334,9 +2939,16 @@
       <a href="../17-modules-and-random/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2355,9 +2967,16 @@
       <a href="../17-modules-and-random/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2384,6 +3003,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2394,9 +3014,16 @@
           <label class="md-nav__link" for="__nav_4_19" id="__nav_4_19_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    18. Math Module and Turtle Projects
+    
+  
+    18. Modulo math e progetti con la turtle
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2405,7 +3032,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_19_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_19">
             <span class="md-nav__icon md-icon"></span>
-            18. Math Module and Turtle Projects
+            
+  
+    18. Modulo math e progetti con la turtle
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2419,9 +3050,16 @@
       <a href="../18-math-module-turtle-projects/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2440,9 +3078,16 @@
       <a href="../18-math-module-turtle-projects/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2461,9 +3106,16 @@
       <a href="../18-math-module-turtle-projects/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2490,6 +3142,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2500,9 +3153,16 @@
           <label class="md-nav__link" for="__nav_4_20" id="__nav_4_20_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    19. More Booleans and Conditionals
+    
+  
+    19. Altri booleani e condizionali
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2511,7 +3171,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_20_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_20">
             <span class="md-nav__icon md-icon"></span>
-            19. More Booleans and Conditionals
+            
+  
+    19. Altri booleani e condizionali
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2525,9 +3189,16 @@
       <a href="../19-booleans-and-conditionals/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2546,9 +3217,16 @@
       <a href="../19-booleans-and-conditionals/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2567,9 +3245,16 @@
       <a href="../19-booleans-and-conditionals/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2596,6 +3281,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2606,9 +3292,16 @@
           <label class="md-nav__link" for="__nav_4_21" id="__nav_4_21_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    20. Tuples and Sets
+    
+  
+    20. Tuple e insiemi
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2617,7 +3310,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_21_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_21">
             <span class="md-nav__icon md-icon"></span>
-            20. Tuples and Sets
+            
+  
+    20. Tuple e insiemi
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2631,9 +3328,16 @@
       <a href="../20-tuples-and-sets/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2652,9 +3356,16 @@
       <a href="../20-tuples-and-sets/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2673,9 +3384,16 @@
       <a href="../20-tuples-and-sets/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2702,6 +3420,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2712,9 +3431,16 @@
           <label class="md-nav__link" for="__nav_4_22" id="__nav_4_22_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    21. Dictionaries
+    
+  
+    21. Dizionari
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2723,7 +3449,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_22_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_22">
             <span class="md-nav__icon md-icon"></span>
-            21. Dictionaries
+            
+  
+    21. Dizionari
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2737,9 +3467,16 @@
       <a href="../21-dictionaries/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2758,9 +3495,16 @@
       <a href="../21-dictionaries/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2779,9 +3523,16 @@
       <a href="../21-dictionaries/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2808,6 +3559,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2818,9 +3570,16 @@
           <label class="md-nav__link" for="__nav_4_23" id="__nav_4_23_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    22. Advanced Collections and Built-in Functions
+    
+  
+    22. Collezioni avanzate e funzioni built-in
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2829,7 +3588,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_23_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_23">
             <span class="md-nav__icon md-icon"></span>
-            22. Advanced Collections and Built-in Functions
+            
+  
+    22. Collezioni avanzate e funzioni built-in
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2843,9 +3606,16 @@
       <a href="../22-advanced-collections/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2864,9 +3634,16 @@
       <a href="../22-advanced-collections/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2885,9 +3662,16 @@
       <a href="../22-advanced-collections/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2914,6 +3698,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -2924,9 +3709,16 @@
           <label class="md-nav__link" for="__nav_4_24" id="__nav_4_24_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    23. Error Handling and Debugging
+    
+  
+    23. Gestione degli errori e debugging
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -2935,7 +3727,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_24_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_24">
             <span class="md-nav__icon md-icon"></span>
-            23. Error Handling and Debugging
+            
+  
+    23. Gestione degli errori e debugging
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -2949,9 +3745,16 @@
       <a href="../23-error-handling-debugging/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2970,9 +3773,16 @@
       <a href="../23-error-handling-debugging/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -2991,9 +3801,16 @@
       <a href="../23-error-handling-debugging/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3020,6 +3837,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -3030,9 +3848,16 @@
           <label class="md-nav__link" for="__nav_4_25" id="__nav_4_25_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    24. Recursion and Fractals
+    
+  
+    24. Ricorsione e frattali
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3041,7 +3866,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_25_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_25">
             <span class="md-nav__icon md-icon"></span>
-            24. Recursion and Fractals
+            
+  
+    24. Ricorsione e frattali
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3055,9 +3884,16 @@
       <a href="../24-recursion-and-fractals/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3076,9 +3912,16 @@
       <a href="../24-recursion-and-fractals/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3097,9 +3940,16 @@
       <a href="../24-recursion-and-fractals/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3126,6 +3976,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -3136,9 +3987,16 @@
           <label class="md-nav__link" for="__nav_4_26" id="__nav_4_26_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    25. Object-Oriented Programming
+    
+  
+    25. Programmazione orientata agli oggetti
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3147,7 +4005,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_26_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_26">
             <span class="md-nav__icon md-icon"></span>
-            25. Object-Oriented Programming
+            
+  
+    25. Programmazione orientata agli oggetti
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3161,9 +4023,16 @@
       <a href="../25-object-oriented-programming/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3182,9 +4051,16 @@
       <a href="../25-object-oriented-programming/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3203,9 +4079,16 @@
       <a href="../25-object-oriented-programming/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3232,6 +4115,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -3242,9 +4126,16 @@
           <label class="md-nav__link" for="__nav_4_27" id="__nav_4_27_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    26. File Input and Output
+    
+  
+    26. Input e output su file
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3253,7 +4144,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_27_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_27">
             <span class="md-nav__icon md-icon"></span>
-            26. File Input and Output
+            
+  
+    26. Input e output su file
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3267,9 +4162,16 @@
       <a href="../26-file-input-output/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3288,9 +4190,16 @@
       <a href="../26-file-input-output/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3309,9 +4218,16 @@
       <a href="../26-file-input-output/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3338,6 +4254,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -3348,9 +4265,16 @@
           <label class="md-nav__link" for="__nav_4_28" id="__nav_4_28_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    27. Standard Library and JSON
+    
+  
+    27. Libreria standard e JSON
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3359,7 +4283,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_28_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_28">
             <span class="md-nav__icon md-icon"></span>
-            27. Standard Library and JSON
+            
+  
+    27. Libreria standard e JSON
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3373,9 +4301,16 @@
       <a href="../27-standard-library-json/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3394,9 +4329,16 @@
       <a href="../27-standard-library-json/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3415,9 +4357,16 @@
       <a href="../27-standard-library-json/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3444,6 +4393,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -3454,9 +4404,16 @@
           <label class="md-nav__link" for="__nav_4_29" id="__nav_4_29_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    28. Python Development Tools
+    
+  
+    28. Strumenti di sviluppo Python
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3465,7 +4422,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_29_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_29">
             <span class="md-nav__icon md-icon"></span>
-            28. Python Development Tools
+            
+  
+    28. Strumenti di sviluppo Python
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3479,9 +4440,16 @@
       <a href="../28-python-dev-tools/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3500,9 +4468,16 @@
       <a href="../28-python-dev-tools/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3521,9 +4496,16 @@
       <a href="../28-python-dev-tools/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3550,6 +4532,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -3560,9 +4543,16 @@
           <label class="md-nav__link" for="__nav_4_30" id="__nav_4_30_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    29. Text Processing and Regular Expressions
+    
+  
+    29. Elaborazione del testo ed espressioni regolari
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3571,7 +4561,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_30_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_30">
             <span class="md-nav__icon md-icon"></span>
-            29. Text Processing and Regular Expressions
+            
+  
+    29. Elaborazione del testo ed espressioni regolari
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3585,9 +4579,16 @@
       <a href="../29-text-processing-regex/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3606,9 +4607,16 @@
       <a href="../29-text-processing-regex/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3627,9 +4635,16 @@
       <a href="../29-text-processing-regex/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3656,6 +4671,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -3666,9 +4682,16 @@
           <label class="md-nav__link" for="__nav_4_31" id="__nav_4_31_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    30. Algorithms and Data Structures
+    
+  
+    30. Algoritmi e strutture dati
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3677,7 +4700,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_31_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_31">
             <span class="md-nav__icon md-icon"></span>
-            30. Algorithms and Data Structures
+            
+  
+    30. Algoritmi e strutture dati
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3691,9 +4718,16 @@
       <a href="../30-algorithms-data-structures/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3712,9 +4746,16 @@
       <a href="../30-algorithms-data-structures/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3733,9 +4774,16 @@
       <a href="../30-algorithms-data-structures/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3762,6 +4810,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -3772,9 +4821,16 @@
           <label class="md-nav__link" for="__nav_4_32" id="__nav_4_32_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    31. Advanced Functions and OOP
+    
+  
+    31. Funzioni avanzate e OOP
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3783,7 +4839,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_32_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_32">
             <span class="md-nav__icon md-icon"></span>
-            31. Advanced Functions and OOP
+            
+  
+    31. Funzioni avanzate e OOP
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3797,9 +4857,16 @@
       <a href="../31-advanced-functions-oop/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3818,9 +4885,16 @@
       <a href="../31-advanced-functions-oop/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3839,9 +4913,16 @@
       <a href="../31-advanced-functions-oop/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3868,6 +4949,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -3878,9 +4960,16 @@
           <label class="md-nav__link" for="__nav_4_33" id="__nav_4_33_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    32. Data Visualization with matplotlib
+    
+  
+    32. Visualizzazione dati con matplotlib
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3889,7 +4978,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_33_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_33">
             <span class="md-nav__icon md-icon"></span>
-            32. Data Visualization with matplotlib
+            
+  
+    32. Visualizzazione dati con matplotlib
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -3903,9 +4996,16 @@
       <a href="../32-data-visualization-matplotlib/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3924,9 +5024,16 @@
       <a href="../32-data-visualization-matplotlib/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3945,9 +5052,16 @@
       <a href="../32-data-visualization-matplotlib/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -3974,6 +5088,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -3984,9 +5099,16 @@
           <label class="md-nav__link" for="__nav_4_34" id="__nav_4_34_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    33. NumPy and Scientific Computing
+    
+  
+    33. NumPy e calcolo scientifico
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -3995,7 +5117,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_34_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_34">
             <span class="md-nav__icon md-icon"></span>
-            33. NumPy and Scientific Computing
+            
+  
+    33. NumPy e calcolo scientifico
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4009,9 +5135,16 @@
       <a href="../33-numpy-scientific-computing/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4030,9 +5163,16 @@
       <a href="../33-numpy-scientific-computing/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4051,9 +5191,16 @@
       <a href="../33-numpy-scientific-computing/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4080,6 +5227,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -4090,9 +5238,16 @@
           <label class="md-nav__link" for="__nav_4_35" id="__nav_4_35_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    34. Image Processing with Pillow
+    
+  
+    34. Elaborazione delle immagini con Pillow
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -4101,7 +5256,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_35_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_35">
             <span class="md-nav__icon md-icon"></span>
-            34. Image Processing with Pillow
+            
+  
+    34. Elaborazione delle immagini con Pillow
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4115,9 +5274,16 @@
       <a href="../34-image-processing-pillow/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4136,9 +5302,16 @@
       <a href="../34-image-processing-pillow/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4157,9 +5330,16 @@
       <a href="../34-image-processing-pillow/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4186,6 +5366,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -4196,9 +5377,16 @@
           <label class="md-nav__link" for="__nav_4_36" id="__nav_4_36_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    35. Advanced Turtle and Event-Driven Programming
+    
+  
+    35. Turtle avanzata e programmazione guidata da eventi
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -4207,7 +5395,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_36_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_36">
             <span class="md-nav__icon md-icon"></span>
-            35. Advanced Turtle and Event-Driven Programming
+            
+  
+    35. Turtle avanzata e programmazione guidata da eventi
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4221,9 +5413,16 @@
       <a href="../35-advanced-turtle-event-driven/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4242,9 +5441,16 @@
       <a href="../35-advanced-turtle-event-driven/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4263,9 +5469,16 @@
       <a href="../35-advanced-turtle-event-driven/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4292,6 +5505,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -4302,9 +5516,16 @@
           <label class="md-nav__link" for="__nav_4_37" id="__nav_4_37_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    36. Computational Thinking and Best Practices
+    
+  
+    36. Pensiero computazionale e buone pratiche
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -4313,7 +5534,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_37_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_37">
             <span class="md-nav__icon md-icon"></span>
-            36. Computational Thinking and Best Practices
+            
+  
+    36. Pensiero computazionale e buone pratiche
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4327,9 +5552,16 @@
       <a href="../36-computational-thinking-best-practices/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4348,9 +5580,16 @@
       <a href="../36-computational-thinking-best-practices/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4369,9 +5608,16 @@
       <a href="../36-computational-thinking-best-practices/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4398,6 +5644,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -4408,9 +5655,16 @@
           <label class="md-nav__link" for="__nav_4_38" id="__nav_4_38_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    37. Machine Learning Foundations
+    
+  
+    37. Fondamenti di machine learning
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -4419,7 +5673,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_38_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_38">
             <span class="md-nav__icon md-icon"></span>
-            37. Machine Learning Foundations
+            
+  
+    37. Fondamenti di machine learning
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4433,9 +5691,16 @@
       <a href="../37-machine-learning-foundations/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4454,9 +5719,16 @@
       <a href="../37-machine-learning-foundations/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4475,9 +5747,16 @@
       <a href="../37-machine-learning-foundations/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4504,6 +5783,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -4514,9 +5794,16 @@
           <label class="md-nav__link" for="__nav_4_39" id="__nav_4_39_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    38. Neural Networks and MNIST
+    
+  
+    38. Reti neurali e MNIST
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -4525,7 +5812,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_39_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_39">
             <span class="md-nav__icon md-icon"></span>
-            38. Neural Networks and MNIST
+            
+  
+    38. Reti neurali e MNIST
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4539,9 +5830,16 @@
       <a href="../38-neural-networks-and-mnist/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content
+    
+  
+    Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4560,9 +5858,16 @@
       <a href="../38-neural-networks-and-mnist/references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Annotated References
+    
+  
+    Riferimenti commentati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4581,9 +5886,16 @@
       <a href="../38-neural-networks-and-mnist/quiz/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Quiz
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4617,6 +5929,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -4627,9 +5940,16 @@
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    Python Labs
+    
+  
+    Laboratori Python
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -4638,7 +5958,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
-            Python Labs
+            
+  
+    Laboratori Python
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -4652,9 +5976,16 @@
       <a href="../../python-labs/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    List of Labs
+    
+  
+    Elenco dei laboratori
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4673,9 +6004,16 @@
       <a href="../../python-labs/01-turtle-commands/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    01. Turtle Commands
+    
+  
+    01. Comandi turtle
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4694,9 +6032,16 @@
       <a href="../../python-labs/02-simple-square/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    02. Drawing a Square
+    
+  
+    02. Disegnare un quadrato
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4715,9 +6060,16 @@
       <a href="../../python-labs/03-variables/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    03. Variables
+    
+  
+    03. Variabili
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4736,9 +6088,16 @@
       <a href="../../python-labs/04-loops/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    04. Loops and Polygons
+    
+  
+    04. Cicli e poligoni
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4757,9 +6116,16 @@
       <a href="../../python-labs/04a-stop-sign/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    04a. Stop Sign
+    
+  
+    04a. Segnale di stop
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4778,9 +6144,16 @@
       <a href="../../python-labs/05-conditionals/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    05. If-Else and Colors
+    
+  
+    05. If-else e colori
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4799,9 +6172,16 @@
       <a href="../../python-labs/06-functions-and-flowers/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    06. Functions and Flowers
+    
+  
+    06. Funzioni e fiori
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4820,9 +6200,16 @@
       <a href="../../python-labs/07-function-parameters/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    07. Function Parameters
+    
+  
+    07. Parametri delle funzioni
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4841,9 +6228,16 @@
       <a href="../../python-labs/08-random-circles/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    08. Random Circles
+    
+  
+    08. Cerchi casuali
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4862,9 +6256,16 @@
       <a href="../../python-labs/08-color-lists/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    08. Color Lists
+    
+  
+    08. Liste di colori
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4883,9 +6284,16 @@
       <a href="../../python-labs/08b-random-stars/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    08b. Random Stars
+    
+  
+    08b. Stelle casuali
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4904,9 +6312,16 @@
       <a href="../../python-labs/10-debugging/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    10. Reading Errors
+    
+  
+    10. Leggere gli errori
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4925,9 +6340,16 @@
       <a href="../../python-labs/11-user-input/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    11. User Input
+    
+  
+    11. Input dell'utente
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4946,9 +6368,16 @@
       <a href="../../python-labs/12-fractal-tree/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    12. Fractal Tree
+    
+  
+    12. Albero frattale
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4967,9 +6396,16 @@
       <a href="../../python-labs/14-hex-colors/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    14. Hex Colors
+    
+  
+    14. Colori esadecimali
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -4988,9 +6424,16 @@
       <a href="../../python-labs/15-sine-wave/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    15. Sine Wave
+    
+  
+    15. Onda sinusoidale
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5009,9 +6452,16 @@
       <a href="../../python-labs/17-mouse-clicks/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    17. Mouse Clicks
+    
+  
+    17. Click del mouse
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5037,6 +6487,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -5047,9 +6498,16 @@
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    Turtle Graphics Gallery
+    
+  
+    Galleria della Grafica Turtle
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -5058,7 +6516,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
-            Turtle Graphics Gallery
+            
+  
+    Galleria della Grafica Turtle
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -5072,9 +6534,16 @@
       <a href="../../turtle-graphics-gallery/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Gallery
+    
+  
+    Galleria
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5093,9 +6562,16 @@
       <a href="../../turtle-graphics-gallery/pattern-ideas/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Pattern Ideas
+    
+  
+    Idee per i Pattern
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5114,9 +6590,16 @@
       <a href="../../turtle-graphics-gallery/rainbow-square-spiral/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Rainbow Square Spiral
+    
+  
+    Spirale di Quadrati Arcobaleno
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5135,9 +6618,16 @@
       <a href="../../turtle-graphics-gallery/pinwheel-of-triangles/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Pinwheel of Triangles
+    
+  
+    Girandola di Triangoli
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5156,9 +6646,16 @@
       <a href="../../turtle-graphics-gallery/nested-circles/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Nested Circles
+    
+  
+    Cerchi Annidati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5177,9 +6674,16 @@
       <a href="../../turtle-graphics-gallery/starburst/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Starburst
+    
+  
+    Raggiera a Stella
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5198,9 +6702,16 @@
       <a href="../../turtle-graphics-gallery/checkerboard-grid/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Checkerboard Grid
+    
+  
+    Griglia a Scacchiera
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5219,9 +6730,16 @@
       <a href="../../turtle-graphics-gallery/diagonal-stripe-field/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Diagonal Stripe Field
+    
+  
+    Campo di Strisce Diagonali
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5240,9 +6758,16 @@
       <a href="../../turtle-graphics-gallery/dotted-grid/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Dotted Grid
+    
+  
+    Griglia di Punti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5261,9 +6786,16 @@
       <a href="../../turtle-graphics-gallery/color-wheel-wedges/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Color Wheel Wedges
+    
+  
+    Spicchi della Ruota dei Colori
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5282,9 +6814,16 @@
       <a href="../../turtle-graphics-gallery/pentagon-chain/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Pentagon Chain
+    
+  
+    Catena di Pentagoni
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5303,9 +6842,16 @@
       <a href="../../turtle-graphics-gallery/overlapping-squares/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Overlapping Squares
+    
+  
+    Quadrati Sovrapposti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5324,9 +6870,16 @@
       <a href="../../turtle-graphics-gallery/flower-petal-function/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Flower with Petal Function
+    
+  
+    Fiore con Funzione Petalo
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5345,9 +6898,16 @@
       <a href="../../turtle-graphics-gallery/honeycomb-grid/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Honeycomb Grid
+    
+  
+    Griglia a Nido d'Ape
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5366,9 +6926,16 @@
       <a href="../../turtle-graphics-gallery/city-skyline/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    City Skyline
+    
+  
+    Skyline Urbano
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5387,9 +6954,16 @@
       <a href="../../turtle-graphics-gallery/snowflake-arms/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Snowflake Arms
+    
+  
+    Bracci del Fiocco di Neve
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5408,9 +6982,16 @@
       <a href="../../turtle-graphics-gallery/polka-dot-canvas/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Polka Dot Canvas
+    
+  
+    Canvas a Pois
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5429,9 +7010,16 @@
       <a href="../../turtle-graphics-gallery/brick-wall/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Brick Wall
+    
+  
+    Muro di Mattoni
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5450,9 +7038,16 @@
       <a href="../../turtle-graphics-gallery/stars-different-sizes/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Stars of Different Sizes
+    
+  
+    Stelle di Diverse Dimensioni
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5471,9 +7066,16 @@
       <a href="../../turtle-graphics-gallery/traffic-light/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Traffic Light Stack
+    
+  
+    Semaforo
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5492,9 +7094,16 @@
       <a href="../../turtle-graphics-gallery/fish-school/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Fish School
+    
+  
+    Banco di Pesci
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5513,9 +7122,16 @@
       <a href="../../turtle-graphics-gallery/mountain-range/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Mountain Range
+    
+  
+    Catena Montuosa
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5534,9 +7150,16 @@
       <a href="../../turtle-graphics-gallery/archimedean-spiral/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Archimedean Square Spiral
+    
+  
+    Spirale Quadrata di Archimede
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5555,9 +7178,16 @@
       <a href="../../turtle-graphics-gallery/rainbow-line-spiral/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Rainbow Line Spiral
+    
+  
+    Spirale di Linee Arcobaleno
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5576,9 +7206,16 @@
       <a href="../../turtle-graphics-gallery/hexagonal-spiral/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Hexagonal Spiral
+    
+  
+    Spirale Esagonale
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5597,9 +7234,16 @@
       <a href="../../turtle-graphics-gallery/triangular-spiral/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Triangular Spiral
+    
+  
+    Spirale Triangolare
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5618,9 +7262,16 @@
       <a href="../../turtle-graphics-gallery/inward-spiral/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Inward Collapsing Spiral
+    
+  
+    Spirale che Collassa verso l'Interno
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5639,9 +7290,16 @@
       <a href="../../turtle-graphics-gallery/logarithmic-spiral/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Colored Logarithmic Spiral
+    
+  
+    Spirale Logaritmica Colorata
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5660,9 +7318,16 @@
       <a href="../../turtle-graphics-gallery/double-helix-spiral/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Double Helix Spiral
+    
+  
+    Spirale a Doppia Elica
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5681,9 +7346,16 @@
       <a href="../../turtle-graphics-gallery/fibonacci-spiral/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Fibonacci Spiral
+    
+  
+    Spirale di Fibonacci
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5702,9 +7374,16 @@
       <a href="../../turtle-graphics-gallery/spiral-of-spirals/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Spiral of Spirals
+    
+  
+    Spirale di Spirali
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5723,9 +7402,16 @@
       <a href="../../turtle-graphics-gallery/pentagon-spiral/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Color-Banded Pentagon Spiral
+    
+  
+    Spirale Pentagonale a Fasce Colorate
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5744,9 +7430,16 @@
       <a href="../../turtle-graphics-gallery/koch-snowflake/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Koch Snowflake
+    
+  
+    Fiocco di Neve di Koch
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5765,9 +7458,16 @@
       <a href="../../turtle-graphics-gallery/sierpinski-triangle/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Sierpinski Triangle
+    
+  
+    Triangolo di Sierpiński
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5786,9 +7486,16 @@
       <a href="../../turtle-graphics-gallery/fractal-tree/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Fractal Tree
+    
+  
+    Albero Frattale
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5807,9 +7514,16 @@
       <a href="../../turtle-graphics-gallery/l-system-plant/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    L-System Plant
+    
+  
+    Pianta a Sistema-L
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5828,9 +7542,16 @@
       <a href="../../turtle-graphics-gallery/turtle-maze/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Turtle Maze Generator
+    
+  
+    Generatore di Labirinti con la Turtle
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5849,9 +7570,16 @@
       <a href="../../turtle-graphics-gallery/parametric-surface/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Parametric Surface Projection
+    
+  
+    Proiezione di Superficie Parametrica
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5870,9 +7598,16 @@
       <a href="../../turtle-graphics-gallery/linden-snowflakes/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Lindenmayer Snowflake Collection
+    
+  
+    Collezione di Fiocchi di Neve di Lindenmayer
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5891,9 +7626,16 @@
       <a href="../../turtle-graphics-gallery/generative-art/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Generative Art Loop
+    
+  
+    Ciclo di Arte Generativa
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5912,9 +7654,16 @@
       <a href="../../turtle-graphics-gallery/bouncing-ball/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Bouncing Ball
+    
+  
+    Pallina che Rimbalza
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5933,9 +7682,16 @@
       <a href="../../turtle-graphics-gallery/clock-face/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Clock Face
+    
+  
+    Quadrante dell'Orologio
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5954,9 +7710,16 @@
       <a href="../../turtle-graphics-gallery/spirograph-drawer/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Spirograph Drawer
+    
+  
+    Disegnatore di Spirografi
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5975,9 +7738,16 @@
       <a href="../../turtle-graphics-gallery/spiral-text/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Spiral Text
+    
+  
+    Testo a Spirale
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -5996,9 +7766,16 @@
       <a href="../../turtle-graphics-gallery/seven-segment/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Seven-Segment Display
+    
+  
+    Display a Sette Segmenti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6017,9 +7794,16 @@
       <a href="../../turtle-graphics-gallery/circular-badge/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Circular Name Badge
+    
+  
+    Distintivo Circolare con Nome
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6038,9 +7822,16 @@
       <a href="../../turtle-graphics-gallery/block-letters/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Name in Block Letters
+    
+  
+    Nome in Lettere Blocco
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6059,9 +7850,16 @@
       <a href="../../turtle-graphics-gallery/rotating-squares/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Rotating Squares Illusion
+    
+  
+    Illusione dei Quadrati Rotanti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6080,9 +7878,16 @@
       <a href="../../turtle-graphics-gallery/cafe-wall/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Café Wall Illusion
+    
+  
+    Illusione del Muro del Caffè
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6101,9 +7906,16 @@
       <a href="../../turtle-graphics-gallery/moire-pattern/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Moiré Pattern
+    
+  
+    Motivo Moiré
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6122,9 +7934,16 @@
       <a href="../../turtle-graphics-gallery/riley-waves/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Bridget Riley Waves
+    
+  
+    Onde di Bridget Riley
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6143,9 +7962,16 @@
       <a href="../../turtle-graphics-gallery/expanding-hexagons/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Expanding Hexagons
+    
+  
+    Esagoni in Espansione
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6164,9 +7990,16 @@
       <a href="../../turtle-graphics-gallery/lissajous-figure/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Lissajous Figure
+    
+  
+    Figura di Lissajous
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6185,9 +8018,16 @@
       <a href="../../turtle-graphics-gallery/rose-curve/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Rose Curve
+    
+  
+    Curva a Rosa
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6206,9 +8046,16 @@
       <a href="../../turtle-graphics-gallery/spirograph/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Spirograph
+    
+  
+    Spirografo
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6227,9 +8074,16 @@
       <a href="../../turtle-graphics-gallery/butterfly-curve/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Butterfly Curve
+    
+  
+    Curva a Farfalla
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6248,9 +8102,16 @@
       <a href="../../turtle-graphics-gallery/epicycloid-star/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Epicycloid Star
+    
+  
+    Stella Epicicloidale
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6269,9 +8130,16 @@
       <a href="../../turtle-graphics-gallery/sunflower-spiral/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Sunflower Seed Spiral
+    
+  
+    Spirale dei Semi di Girasole
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6290,9 +8158,16 @@
       <a href="../../turtle-graphics-gallery/spider-web/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Spider Web
+    
+  
+    Ragnatela
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6311,9 +8186,16 @@
       <a href="../../turtle-graphics-gallery/lightning-bolt/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Lightning Bolt
+    
+  
+    Fulmine
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6332,9 +8214,16 @@
       <a href="../../turtle-graphics-gallery/galaxy-spiral/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Galaxy Spiral Arms
+    
+  
+    Bracci a Spirale della Galassia
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6353,9 +8242,16 @@
       <a href="../../turtle-graphics-gallery/ripple-waves/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Ripple Waves
+    
+  
+    Onde Concentriche
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6374,9 +8270,16 @@
       <a href="../../turtle-graphics-gallery/four-fold-doodle/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Four-Fold Symmetric Doodle
+    
+  
+    Scarabocchio a Simmetria Quadrupla
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6395,9 +8298,16 @@
       <a href="../../turtle-graphics-gallery/six-fold-mandala/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Six-Fold Mandala
+    
+  
+    Mandala a Simmetria Sestupla
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6416,9 +8326,16 @@
       <a href="../../turtle-graphics-gallery/mirror-butterfly/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Mirror Butterfly
+    
+  
+    Farfalla a Specchio
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6437,9 +8354,16 @@
       <a href="../../turtle-graphics-gallery/truchet-tiles/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Truchet Tiles
+    
+  
+    Piastrelle di Truchet
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6458,9 +8382,16 @@
       <a href="../../turtle-graphics-gallery/islamic-star/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Islamic Geometric Star
+    
+  
+    Stella Geometrica Islamica
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6479,9 +8410,16 @@
       <a href="../../turtle-graphics-gallery/mandelbrot-pixel-art/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Mandelbrot Pixel Art
+    
+  
+    Pixel Art di Mandelbrot
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6500,9 +8438,16 @@
       <a href="../../turtle-graphics-gallery/julia-set/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Julia Set Pixel Art
+    
+  
+    Pixel Art dell'Insieme di Julia
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6521,9 +8466,16 @@
       <a href="../../turtle-graphics-gallery/sierpinski-carpet/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Sierpinski Carpet
+    
+  
+    Tappeto di Sierpiński
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6542,9 +8494,16 @@
       <a href="../../turtle-graphics-gallery/barnsley-fern/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Barnsley Fern
+    
+  
+    Felce di Barnsley
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6563,9 +8522,16 @@
       <a href="../../turtle-graphics-gallery/anti-koch/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Anti-Koch Snowflake
+    
+  
+    Fiocco di Neve Anti-Koch
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6584,9 +8550,16 @@
       <a href="../../turtle-graphics-gallery/pythagorean-tree/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Pythagorean Tree
+    
+  
+    Albero di Pitagora
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6605,9 +8578,16 @@
       <a href="../../turtle-graphics-gallery/t-square-fractal/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    T-Square Fractal
+    
+  
+    Frattale a T-Square
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6626,9 +8606,16 @@
       <a href="../../turtle-graphics-gallery/levy-c-curve/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Levy C Curve
+    
+  
+    Curva C di Lévy
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6647,9 +8634,16 @@
       <a href="../../turtle-graphics-gallery/gosper-curve/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Gosper Curve
+    
+  
+    Curva di Gosper
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6668,9 +8662,16 @@
       <a href="../../turtle-graphics-gallery/dragon-curve/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Dragon Curve
+    
+  
+    Curva del Dragone
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6689,9 +8690,16 @@
       <a href="../../turtle-graphics-gallery/hilbert-curve/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Hilbert Curve
+    
+  
+    Curva di Hilbert
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6710,9 +8718,16 @@
       <a href="../../turtle-graphics-gallery/cantor-dust/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Cantor Dust
+    
+  
+    Polvere di Cantor
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6731,9 +8746,16 @@
       <a href="../../turtle-graphics-gallery/kaleidoscope-slice/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Kaleidoscope Slice
+    
+  
+    Fetta di Caleidoscopio
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6752,9 +8774,16 @@
       <a href="../../turtle-graphics-gallery/pinwheel-tiling/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Pinwheel Tiling
+    
+  
+    Tassellatura a Girandola
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6773,9 +8802,16 @@
       <a href="../../turtle-graphics-gallery/escher-fish/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Escher-Style Fish Tile
+    
+  
+    Piastrella di Pesci in Stile Escher
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6794,9 +8830,16 @@
       <a href="../../turtle-graphics-gallery/voronoi-regions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Voronoi Color Regions
+    
+  
+    Regioni Colorate di Voronoi
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6815,9 +8858,16 @@
       <a href="../../turtle-graphics-gallery/penrose-rhombus/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Penrose Rhombus Tiling
+    
+  
+    Tassellatura a Rombi di Penrose
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6836,9 +8886,16 @@
       <a href="../../turtle-graphics-gallery/river-delta/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    River Delta
+    
+  
+    Delta del Fiume
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6857,9 +8914,16 @@
       <a href="../../turtle-graphics-gallery/coral-branch/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Coral Branch
+    
+  
+    Ramo di Corallo
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6878,9 +8942,16 @@
       <a href="../../turtle-graphics-gallery/leaf-venation/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Leaf Venation
+    
+  
+    Nervatura della Foglia
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6899,9 +8970,16 @@
       <a href="../../turtle-graphics-gallery/dna-helix/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    DNA Double Helix
+    
+  
+    Doppia Elica del DNA
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6920,9 +8998,16 @@
       <a href="../../turtle-graphics-gallery/topographic-map/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Topographic Map
+    
+  
+    Mappa Topografica
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6941,9 +9026,16 @@
       <a href="../../turtle-graphics-gallery/epitrochoid/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Epitrochoid
+    
+  
+    Epitrocoide
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6962,9 +9054,16 @@
       <a href="../../turtle-graphics-gallery/superellipse/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Superellipse
+    
+  
+    Superellisse
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -6983,9 +9082,16 @@
       <a href="../../turtle-graphics-gallery/cassini-oval/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Cassini Oval
+    
+  
+    Ovale di Cassini
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7004,9 +9110,16 @@
       <a href="../../turtle-graphics-gallery/fermat-spiral/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Fermat's Spiral
+    
+  
+    Spirale di Fermat
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7025,9 +9138,16 @@
       <a href="../../turtle-graphics-gallery/astroid/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Astroid
+    
+  
+    Astroide
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7046,9 +9166,16 @@
       <a href="../../turtle-graphics-gallery/mach-bands/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Mach Bands
+    
+  
+    Bande di Mach
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7067,9 +9194,16 @@
       <a href="../../turtle-graphics-gallery/vasarely-sphere/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Vasarely Sphere
+    
+  
+    Sfera di Vasarely
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7088,9 +9222,16 @@
       <a href="../../turtle-graphics-gallery/scintillating-grid/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Scintillating Grid
+    
+  
+    Griglia Scintillante
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7109,9 +9250,16 @@
       <a href="../../turtle-graphics-gallery/impossible-triangle/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Impossible Triangle
+    
+  
+    Triangolo Impossibile
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7130,9 +9278,16 @@
       <a href="../../turtle-graphics-gallery/ring-pulsation/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Concentric Ring Pulsation
+    
+  
+    Pulsazione di Anelli Concentrici
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7151,9 +9306,16 @@
       <a href="../../turtle-graphics-gallery/binary-tree-name/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Binary Tree Name
+    
+  
+    Nome ad Albero Binario
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7172,9 +9334,16 @@
       <a href="../../turtle-graphics-gallery/turtle-chase/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Turtle Chase
+    
+  
+    Caccia tra Tartarughe
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7193,9 +9362,16 @@
       <a href="../../turtle-graphics-gallery/reaction-diffusion/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Reaction-Diffusion Pattern
+    
+  
+    Motivo di Reazione-Diffusione
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7221,6 +9397,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -7231,9 +9408,16 @@
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    Jupyter Notebooks
+    
+  
+    Notebook Jupyter
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -7242,7 +9426,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
-            Jupyter Notebooks
+            
+  
+    Notebook Jupyter
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -7256,9 +9444,16 @@
       <a href="../../jupyter/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    List of Notebooks
+    
+  
+    Elenco dei Notebook
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7277,9 +9472,16 @@
       <a href="../../jupyter/01-setup/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Setup Turtle on Jupyter
+    
+  
+    Configurare la Turtle su Jupyter
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7298,9 +9500,16 @@
       <a href="../../jupyter/02-draw-figure/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Drawing Figure
+    
+  
+    Disegnare una Figura
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7319,9 +9528,16 @@
       <a href="../../jupyter/02-setup-canvas/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Setup Canvas on Jupyter Lab
+    
+  
+    Configurare il Canvas su Jupyter Lab
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7340,9 +9556,16 @@
       <a href="../../jupyter/20-canvas-color-bars/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Canvas Color Bars
+    
+  
+    Barre Colorate sul Canvas
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7368,6 +9591,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -7378,9 +9602,16 @@
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    Advanced Python Examples
+    
+  
+    Esempi di Python Avanzato
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -7389,7 +9620,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
-            Advanced Python Examples
+            
+  
+    Esempi di Python Avanzato
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -7403,9 +9638,16 @@
       <a href="../../advanced/stocks/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Stock Ticker Analysis
+    
+  
+    Analisi dei Titoli Azionari
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7424,9 +9666,16 @@
       <a href="../../advanced/mnist/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    MNIST Digit Prediction
+    
+  
+    Previsione delle Cifre MNIST
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7452,6 +9701,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -7462,9 +9712,16 @@
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     Trinket Labs (deprecated)
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -7473,7 +9730,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
-            Trinket Labs (deprecated)
+            
+  
+    Trinket Labs (deprecated)
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -7487,9 +9748,16 @@
       <a href="../../trinket/00-introduction/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Introduction
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7508,9 +9776,16 @@
       <a href="../../trinket/01a-trinket-account/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Setting Up Trinket
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7529,9 +9804,16 @@
       <a href="../../trinket/01b-turtle-graphics/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Turtle Graphics
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7550,9 +9832,16 @@
       <a href="../../trinket/02-simple-square/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Turtle Square
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7571,9 +9860,16 @@
       <a href="../../trinket/03-variables/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Variables
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7592,9 +9888,16 @@
       <a href="../../trinket/04-loops/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Loops
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7613,9 +9916,16 @@
       <a href="../../trinket/04a-stop-sign/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Stop Sign
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7634,9 +9944,16 @@
       <a href="../../trinket/05-conditionals/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Conditional
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7655,9 +9972,16 @@
       <a href="../../trinket/06-functions/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Functions
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7676,9 +10000,16 @@
       <a href="../../trinket/07-flower/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Flower
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7697,9 +10028,16 @@
       <a href="../../trinket/07-function-parameters/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Function Parameters
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7718,9 +10056,16 @@
       <a href="../../trinket/08-list/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Lists
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7739,9 +10084,16 @@
       <a href="../../trinket/08c-turtle-shapes/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     List of Turtle Shapes
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7760,9 +10112,16 @@
       <a href="../../trinket/08-random/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Random Numbers
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7781,9 +10140,16 @@
       <a href="../../trinket/08b-random-stars/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Random Stars
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7802,9 +10168,16 @@
       <a href="../../trinket/11-input/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Input
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7823,9 +10196,16 @@
       <a href="../../trinket/12-recursion/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Recursion
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7844,9 +10224,16 @@
       <a href="../../trinket/13-shape-module/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Shape Module
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7865,9 +10252,16 @@
       <a href="../../trinket/14-color-picker/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Color Picker
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7886,9 +10280,16 @@
       <a href="../../trinket/15-sine-wave/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Sine Wave
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7907,9 +10308,16 @@
       <a href="../../trinket/16-changing-background/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Changing background
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7928,9 +10336,16 @@
       <a href="../../trinket/17-controlling-mouseclicks/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Controlling mouseclicks
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7949,9 +10364,16 @@
       <a href="../../trinket/examples/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     Other examples
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -7977,6 +10399,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -7987,9 +10410,16 @@
           <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    Learning Graph
+    
+  
+    Grafo di Apprendimento
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -7998,7 +10428,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
-            Learning Graph
+            
+  
+    Grafo di Apprendimento
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -8012,9 +10446,16 @@
       <a href="../../learning-graph/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Introduction
+    
+  
+    Introduzione
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8033,9 +10474,16 @@
       <a href="../../learning-graph/course-description-assessment/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Course Description Assessment
+    
+  
+    Valutazione della Descrizione del Corso
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8054,9 +10502,16 @@
       <a href="../../learning-graph/concept-list-v1/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Concept List v1
+    
+  
+    Elenco dei Concetti v1
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8075,9 +10530,16 @@
       <a href="../../learning-graph/concept-list/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Concept List
+    
+  
+    Elenco dei Concetti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8096,9 +10558,16 @@
       <a href="../../learning-graph/quality-metrics/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Graph Quality Analysis
+    
+  
+    Analisi della Qualità del Grafo
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8117,9 +10586,16 @@
       <a href="../../learning-graph/concept-taxonomy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Concept Taxonomy
+    
+  
+    Tassonomia dei Concetti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8138,9 +10614,16 @@
       <a href="../../learning-graph/taxonomy-distribution/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Taxonomy Distribution Report
+    
+  
+    Report sulla Distribuzione della Tassonomia
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8159,9 +10642,16 @@
       <a href="../../learning-graph/mascot-test/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Mascot Style Guide
+    
+  
+    Guida di Stile della Mascotte
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8180,9 +10670,16 @@
       <a href="../../learning-graph/faq-quality-report/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    FAQ Quality Report
+    
+  
+    Report sulla Qualità delle FAQ
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8208,6 +10705,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -8218,9 +10716,16 @@
           <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
+    
+  
     MicroSims
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -8229,7 +10734,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
-            MicroSims
+            
+  
+    MicroSims
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -8243,9 +10752,16 @@
       <a href="../../sims/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    List of MicroSims
+    
+  
+    Elenco dei MicroSims
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8264,9 +10780,16 @@
       <a href="../../sims/boolean-logic-lab/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Boolean Logic Lab
+    
+  
+    Laboratorio di Logica Booleana
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8285,9 +10808,16 @@
       <a href="../../sims/code-stepper/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Code Stepper
+    
+  
+    Esecutore di Codice Passo-Passo
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8306,9 +10836,16 @@
       <a href="../../sims/control-flow-explorer/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Control Flow Explorer
+    
+  
+    Esploratore del Flusso di Controllo
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8327,9 +10864,16 @@
       <a href="../../sims/dice-roll-histogram/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Dice Roll Histogram
+    
+  
+    Istogramma dei Lanci di Dadi
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8348,9 +10892,16 @@
       <a href="../../sims/dictionary-key-lookup/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Dictionary Key Lookup
+    
+  
+    Ricerca delle Chiavi nel Dizionario
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8369,9 +10920,16 @@
       <a href="../../sims/expression-evaluator/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Expression Evaluator
+    
+  
+    Valutatore di Espressioni
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8390,9 +10948,16 @@
       <a href="../../sims/for-loop-stepper/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    For-Loop Stepper
+    
+  
+    Esecutore Passo-Passo del Ciclo For
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8411,9 +10976,16 @@
       <a href="../../sims/fractal-tree-explorer/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Fractal Tree Explorer
+    
+  
+    Esploratore dell'Albero Frattale
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8432,9 +11004,16 @@
       <a href="../../sims/function-call-flow/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Function Call Flow
+    
+  
+    Flusso di Chiamata delle Funzioni
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8453,9 +11032,16 @@
       <a href="../../sims/graph-traversal-explorer/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Graph Traversal Explorer
+    
+  
+    Esploratore di Attraversamento del Grafo
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8474,9 +11060,16 @@
       <a href="../../sims/inheritance-explorer/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Inheritance Explorer
+    
+  
+    Esploratore dell'Ereditarietà
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8495,9 +11088,16 @@
       <a href="../../sims/json-python-mapper/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    JSON to Python Type Mapper
+    
+  
+    Mappatore dei Tipi da JSON a Python
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8516,9 +11116,16 @@
       <a href="../../sims/graph-viewer/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Learning Graph Viewer
+    
+  
+    Visualizzatore del Grafo di Apprendimento
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8537,9 +11144,16 @@
       <a href="../../sims/list-index-explorer/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    List Index Explorer
+    
+  
+    Esploratore degli Indici di Lista
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8558,9 +11172,16 @@
       <a href="../../sims/modulo-clock/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Modulo Clock
+    
+  
+    Orologio del Modulo
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8579,9 +11200,16 @@
       <a href="../../sims/object-instance-inspector/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Object Instance Inspector
+    
+  
+    Ispettore delle Istanze degli Oggetti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8600,9 +11228,16 @@
       <a href="../../sims/range-explorer/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Range Explorer
+    
+  
+    Esploratore di Range
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8621,9 +11256,16 @@
       <a href="../../sims/recursion-call-stack/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Recursion Call Stack
+    
+  
+    Pila delle Chiamate Ricorsive
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8642,9 +11284,16 @@
       <a href="../../sims/regex-match-lab/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Regex Match Lab
+    
+  
+    Laboratorio di Corrispondenze Regex
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8663,9 +11312,16 @@
       <a href="../../sims/rgb-color-mixer/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    RGB Color Mixer
+    
+  
+    Miscelatore di Colori RGB
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8684,9 +11340,16 @@
       <a href="../../sims/scope-inspector/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Scope Inspector
+    
+  
+    Ispettore degli Ambiti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8705,9 +11368,16 @@
       <a href="../../sims/search-race/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Search Race
+    
+  
+    Gara di Ricerca
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8726,9 +11396,16 @@
       <a href="../../sims/set-operations-venn/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Set Operations Venn
+    
+  
+    Diagramma di Venn delle Operazioni sugli Insiemi
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8747,9 +11424,16 @@
       <a href="../../sims/sine-wave-explorer/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Sine Wave Explorer
+    
+  
+    Esploratore dell'Onda Sinusoidale
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8768,9 +11452,16 @@
       <a href="../../sims/sorting-comparer/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Sorting Algorithm Comparer
+    
+  
+    Comparatore di Algoritmi di Ordinamento
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8789,9 +11480,16 @@
       <a href="../../sims/stack-queue-simulator/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Stack and Queue Simulator
+    
+  
+    Simulatore di Pila e Coda
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8810,9 +11508,16 @@
       <a href="../../sims/string-slicer/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    String Slicer
+    
+  
+    Affettatore di Stringhe
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8831,9 +11536,16 @@
       <a href="../../sims/turtle-state-inspector/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Turtle State Inspector
+    
+  
+    Ispettore dello Stato della Turtle
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8852,9 +11564,16 @@
       <a href="../../sims/unit-circle-radians/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Unit Circle Degrees and Radians
+    
+  
+    Cerchio Unitario — Gradi e Radianti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8873,9 +11592,16 @@
       <a href="../../sims/variable-memory-model/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Variable Memory Model
+    
+  
+    Modello di Memoria delle Variabili
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8894,9 +11620,16 @@
       <a href="../../sims/while-loop-stepper/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    While-Loop Stepper
+    
+  
+    Esecutore Passo-Passo del Ciclo While
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8922,6 +11655,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -8932,9 +11666,16 @@
           <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    Teacher's Guide
+    
+  
+    Guida per gli Insegnanti
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -8943,7 +11684,11 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
-            Teacher's Guide
+            
+  
+    Guida per gli Insegnanti
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -8957,9 +11702,16 @@
       <a href="../../teachers-guide/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Overview
+    
+  
+    Panoramica
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8978,9 +11730,16 @@
       <a href="../../teachers-guide/contribute/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    How to Contribute Examples
+    
+  
+    Come Contribuire con Esempi
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -8999,9 +11758,16 @@
       <a href="../../teachers-guide/adding-custom-python-labs/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Adding Custom Python Labs
+    
+  
+    Aggiungere Laboratori Python Personalizzati
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -9020,9 +11786,16 @@
       <a href="../../teachers-guide/run-pause-buttons/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    The Run ⇄ Pause Button
+    
+  
+    Il Pulsante Run ⇄ Pause
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -9041,9 +11814,16 @@
       <a href="../../teachers-guide/code-mirror-example/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    CodeMirror Editor Example
+    
+  
+    Esempio dell'Editor CodeMirror
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -9062,9 +11842,16 @@
       <a href="../../teachers-guide/order-of-concepts/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Order of Concepts
+    
+  
+    Ordine dei Concetti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -9083,9 +11870,16 @@
       <a href="../../teachers-guide/comparing-textbooks/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Comparing Textbooks
+    
+  
+    Confronto tra Manuali
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -9104,6 +11898,7 @@
     
     
     
+    
     <li class="md-nav__item md-nav__item--nested">
       
         
@@ -9114,9 +11909,16 @@
           <label class="md-nav__link" for="__nav_12_8" id="__nav_12_8_label" tabindex="0">
             
   
+  
   <span class="md-ellipsis">
-    Sample Prompts
+    
+  
+    Prompt di Esempio
+  
+
+    
   </span>
+  
   
 
             <span class="md-nav__icon md-icon"></span>
@@ -9125,7 +11927,11 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_12_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12_8">
             <span class="md-nav__icon md-icon"></span>
-            Sample Prompts
+            
+  
+    Prompt di Esempio
+  
+
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -9139,9 +11945,16 @@
       <a href="../../teachers-guide/prompts/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    List of Prompts
+    
+  
+    Elenco dei Prompt
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -9160,9 +11973,16 @@
       <a href="../../teachers-guide/prompts/01-list-old-concepts/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    List Old Concepts
+    
+  
+    Elenco dei Vecchi Concetti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -9181,9 +12001,16 @@
       <a href="../../teachers-guide/prompts/02-course-description/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Course Description
+    
+  
+    Descrizione del Corso
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -9202,9 +12029,16 @@
       <a href="../../teachers-guide/prompts/03-learning-graph/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Learning Graph
+    
+  
+    Grafo di Apprendimento
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -9223,9 +12057,16 @@
       <a href="../../teachers-guide/prompts/04-book-chapter-generator/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Book Chapter Generator
+    
+  
+    Generatore di Capitoli del Libro
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -9244,9 +12085,16 @@
       <a href="../../teachers-guide/prompts/05-content-generation-strategy/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Content Generation Strategy
+    
+  
+    Strategia di Generazione dei Contenuti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -9280,9 +12128,16 @@
       <a href="../../glossary/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Glossary
+    
+  
+    Glossario
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -9300,9 +12155,16 @@
       <a href="../../faq/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     FAQ
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -9320,9 +12182,16 @@
       <a href="../../references/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    References
+    
+  
+    Riferimenti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -9340,9 +12209,16 @@
       <a href="../../license/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    License
+    
+  
+    Licenza
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -9360,9 +12236,16 @@
       <a href="../../contact/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Contact
+    
+  
+    Contatti
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -9397,144 +12280,176 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
+  <a href="#riepilogo" class="md-nav__link">
     <span class="md-ellipsis">
-      Summary
+      
+        Riepilogo
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#concepts-covered" class="md-nav__link">
+  <a href="#concetti-trattati" class="md-nav__link">
     <span class="md-ellipsis">
-      Concepts Covered
+      
+        Concetti Trattati
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#prerequisiti" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      
+        Prerequisiti
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#multi-line-strings" class="md-nav__link">
+  <a href="#stringhe-multi-riga" class="md-nav__link">
     <span class="md-ellipsis">
-      Multi-Line Strings
+      
+        Stringhe Multi-Riga
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#try-it-multi-line-strings" class="md-nav__link">
+  <a href="#provalo-stringhe-multi-riga" class="md-nav__link">
     <span class="md-ellipsis">
-      Try It: Multi-Line Strings
+      
+        Provalo: Stringhe Multi-Riga
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-multi-line-strings-work" class="md-nav__link">
+  <a href="#come-funzionano-le-stringhe-multi-riga" class="md-nav__link">
     <span class="md-ellipsis">
-      How Multi-Line Strings Work
+      
+        Come Funzionano le Stringhe Multi-Riga
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#indentation-as-syntax" class="md-nav__link">
+  <a href="#lindentazione-come-sintassi" class="md-nav__link">
     <span class="md-ellipsis">
-      Indentation as Syntax
+      
+        L'Indentazione come Sintassi
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#code-block-structure" class="md-nav__link">
+  <a href="#struttura-dei-blocchi-di-codice" class="md-nav__link">
     <span class="md-ellipsis">
-      Code Block Structure
+      
+        Struttura dei Blocchi di Codice
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#whitespace-rules" class="md-nav__link">
+  <a href="#regole-sugli-spazi-bianchi" class="md-nav__link">
     <span class="md-ellipsis">
-      Whitespace Rules
+      
+        Regole sugli Spazi Bianchi
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#python-keywords" class="md-nav__link">
+  <a href="#parole-chiave-di-python" class="md-nav__link">
     <span class="md-ellipsis">
-      Python Keywords
+      
+        Parole Chiave di Python
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#statement-vs-expression" class="md-nav__link">
+  <a href="#istruzione-vs-espressione" class="md-nav__link">
     <span class="md-ellipsis">
-      Statement vs Expression
+      
+        Istruzione vs Espressione
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#named-colors" class="md-nav__link">
+  <a href="#colori-con-nome" class="md-nav__link">
     <span class="md-ellipsis">
-      Named Colors
+      
+        Colori con Nome
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#try-it-colored-turtle-drawing" class="md-nav__link">
+  <a href="#provalo-disegno-turtle-colorato" class="md-nav__link">
     <span class="md-ellipsis">
-      Try It: Colored Turtle Drawing
+      
+        Provalo: Disegno Turtle Colorato
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-pencolor-works" class="md-nav__link">
+  <a href="#come-funziona-pencolor" class="md-nav__link">
     <span class="md-ellipsis">
-      How pencolor() Works
+      
+        Come Funziona pencolor()
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#learning-check" class="md-nav__link">
+  <a href="#verifica-di-apprendimento" class="md-nav__link">
     <span class="md-ellipsis">
-      Learning Check
+      
+        Verifica di Apprendimento
+      
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#experiments" class="md-nav__link">
+  <a href="#esperimenti" class="md-nav__link">
     <span class="md-ellipsis">
-      Experiments
+      
+        Esperimenti
+      
     </span>
   </a>
   
@@ -9550,22 +12465,24 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
 
+
   
   
 
 
-<h1 id="python-code-structure">Python Code Structure<a class="headerlink" href="#python-code-structure" title="Permanent link">&para;</a></h1>
-<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
-<p>Python has a very clean look: instead of curly braces or <code>begin/end</code> keywords,
-it uses <strong>indentation</strong> (spaces) to group lines of code together.
-This chapter explores those rules — indentation, code blocks, statements,
-whitespace — plus Python keywords and named colors that you'll use with turtle.</p>
-<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">&para;</a></h2>
-<p>This chapter covers the following 7 concepts from the learning graph:</p>
+<h1 id="struttura-del-codice-python">Struttura del Codice Python<a class="headerlink" href="#struttura-del-codice-python" title="Permanent link">&para;</a></h1>
+<h2 id="riepilogo">Riepilogo<a class="headerlink" href="#riepilogo" title="Permanent link">&para;</a></h2>
+<p>Python ha un aspetto molto ordinato: invece delle parentesi graffe o delle parole chiave <code>begin/end</code>,
+usa l'<strong>indentazione</strong> (gli spazi) per raggruppare le righe di codice.
+Questo capitolo esplora queste regole — indentazione, blocchi di codice, istruzioni,
+spazi bianchi — più le parole chiave di Python e i colori con nome che userai con turtle.</p>
+<h2 id="concetti-trattati">Concetti Trattati<a class="headerlink" href="#concetti-trattati" title="Permanent link">&para;</a></h2>
+<p>Questo capitolo tratta i seguenti 7 concetti del grafo di apprendimento:</p>
 <ol>
 <li>Multi-Line Strings</li>
 <li>Indentation as Syntax</li>
@@ -9575,28 +12492,28 @@ whitespace — plus Python keywords and named colors that you'll use with turtle
 <li>Whitespace Rules</li>
 <li>Named Colors</li>
 </ol>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>This chapter builds on concepts from:</p>
+<h2 id="prerequisiti">Prerequisiti<a class="headerlink" href="#prerequisiti" title="Permanent link">&para;</a></h2>
+<p>Questo capitolo si basa sui concetti di:</p>
 <ul>
-<li><a href="../01-welcome-to-python/">Chapter 1: Welcome to Python and Skulpt</a></li>
+<li><a href="../01-welcome-to-python/">Capitolo 1: Benvenuto in Python e Skulpt</a></li>
 </ul>
 <hr />
-<p>By the end of this lesson you'll be able to:</p>
+<p>Alla fine di questa lezione sarai in grado di:</p>
 <ul>
-<li>Write multi-line text using triple quotes</li>
-<li>Explain why Python uses indentation to group lines of code together</li>
-<li>Recognize Python keywords and understand why they cannot be used as variable names</li>
-<li>Use named colors like <code>"red"</code> and <code>"forestgreen"</code> in turtle graphics programs</li>
+<li>Scrivere testo multi-riga usando le triple virgolette</li>
+<li>Spiegare perché Python usa l'indentazione per raggruppare le righe di codice</li>
+<li>Riconoscere le parole chiave di Python e capire perché non possono essere usate come nomi di variabili</li>
+<li>Usare colori con nome come <code>"red"</code> e <code>"forestgreen"</code> nei programmi di grafica turtle</li>
 </ul>
-<p>In Chapter 1 you wrote your first Python lines: <code>print()</code>, comments, and a turtle drawing. Now you are ready to look at how Python is <em>structured</em> — the rules that govern how code is arranged on the page and what makes a Python program readable and correct.</p>
+<p>Nel Capitolo 1 hai scritto le tue prime righe Python: <code>print()</code>, i commenti e un disegno turtle. Ora sei pronto a guardare come Python è <em>strutturato</em> — le regole che governano come il codice è disposto sulla pagina e cosa rende un programma Python leggibile e corretto.</p>
 <div class="admonition mascot-welcome">
-<p class="admonition-title">Welcome Back, Coder!</p>
+<p class="admonition-title">Bentornato, Programmatore!</p>
 <p><img alt="Monty waving welcome" class="mascot-admonition-img" src="../../img/mascot/welcome.png" />
-Ready to go deeper? This chapter is all about how Python code is organized — and the rules are simpler than you might think. By the end you will also make your turtle drawings way more colorful. Let's code it together!</p>
+Pronto ad andare più a fondo? Questo capitolo parla di come è organizzato il codice Python — e le regole sono più semplici di quanto pensi. Alla fine renderai anche i tuoi disegni turtle molto più colorati. Programmiamo insieme!</p>
 </div>
-<h2 id="multi-line-strings">Multi-Line Strings<a class="headerlink" href="#multi-line-strings" title="Permanent link">&para;</a></h2>
-<p>In Chapter 1 you used <code>print()</code> to display text surrounded by double quotes, like <code>"Hello, world!"</code>. That works great for short messages on one line. But what if you want to write several lines of text stored in a single variable?</p>
-<p>Python solves this with a <strong>multi-line string</strong> — a string that spans multiple lines, created by wrapping text in <strong>triple quotes</strong>: three double-quote marks (<code>"""</code>) or three single-quote marks (<code>'''</code>). Everything between the opening triple quotes and the closing triple quotes — including line breaks — becomes part of the string.</p>
+<h2 id="stringhe-multi-riga">Stringhe Multi-Riga<a class="headerlink" href="#stringhe-multi-riga" title="Permanent link">&para;</a></h2>
+<p>Nel Capitolo 1 hai usato <code>print()</code> per mostrare testo racchiuso tra virgolette doppie, come <code>"Hello, world!"</code>. Funziona benissimo per messaggi brevi su una riga. Ma cosa succede se vuoi scrivere diverse righe di testo memorizzate in un'unica variabile?</p>
+<p>Python risolve questo problema con una <strong>stringa multi-riga</strong> — una stringa che si estende su più righe, creata racchiudendo il testo tra <strong>triple virgolette</strong>: tre virgolette doppie (<code>"""</code>) o tre virgolette singole (<code>'''</code>). Tutto ciò che si trova tra le triple virgolette di apertura e quelle di chiusura — incluse le righe a capo — diventa parte della stringa.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -9605,8 +12522,8 @@ Ready to go deeper? This chapter is all about how Python code is organized — a
 <span class="s2">Splash! Silence again.&quot;&quot;&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">haiku</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p><strong>Before you click Run:</strong> how many lines do you think will appear in the output? Count the line breaks inside the triple quotes to make your prediction!</p>
-<h2 id="try-it-multi-line-strings">Try It: Multi-Line Strings<a class="headerlink" href="#try-it-multi-line-strings" title="Permanent link">&para;</a></h2>
+<p><strong>Prima di cliccare su Run:</strong> quante righe pensi appariranno nell'output? Conta gli a capo dentro le triple virgolette per fare la tua previsione!</p>
+<h2 id="provalo-stringhe-multi-riga">Provalo: Stringhe Multi-Riga<a class="headerlink" href="#provalo-stringhe-multi-riga" title="Permanent link">&para;</a></h2>
 <script src="https://skulpt.org/js/skulpt.min.js"></script>
 <script src="https://skulpt.org/js/skulpt-stdlib.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
@@ -9633,97 +12550,97 @@ Splash! Silence again."""
 print(haiku)`);
 </script>
 
-<p>Were you right? Three lines appear — one for each line inside the triple quotes. The variable <code>haiku</code> holds all three lines as a single string, and <code>print()</code> displays them all at once with the line breaks preserved.</p>
-<h2 id="how-multi-line-strings-work">How Multi-Line Strings Work<a class="headerlink" href="#how-multi-line-strings-work" title="Permanent link">&para;</a></h2>
-<p>A regular string uses one pair of quotes: <code>"Hello"</code>. A multi-line string uses three pairs: <code>"""Hello"""</code>. The triple quotes tell Python: "keep reading until you see three more quotes — no matter how many line breaks are in between."</p>
+<p>Avevi ragione? Appaiono tre righe — una per ogni riga dentro le triple virgolette. La variabile <code>haiku</code> contiene tutte e tre le righe come un'unica stringa, e <code>print()</code> le mostra tutte insieme, con gli a capo preservati.</p>
+<h2 id="come-funzionano-le-stringhe-multi-riga">Come Funzionano le Stringhe Multi-Riga<a class="headerlink" href="#come-funzionano-le-stringhe-multi-riga" title="Permanent link">&para;</a></h2>
+<p>Una stringa normale usa una coppia di virgolette: <code>"Hello"</code>. Una stringa multi-riga usa tre coppie: <code>"""Hello"""</code>. Le triple virgolette dicono a Python: “continua a leggere finché non vedi altre tre virgolette — non importa quanti a capo ci siano nel mezzo.”</p>
 <table>
 <thead>
 <tr>
-<th>Syntax</th>
-<th>Can span multiple lines?</th>
-<th>Example</th>
+<th>Sintassi</th>
+<th>Può estendersi su più righe?</th>
+<th>Esempio</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>"text"</code></td>
-<td>No — one line only</td>
+<td>No — solo una riga</td>
 <td><code>"Hello, world!"</code></td>
 </tr>
 <tr>
 <td><code>'text'</code></td>
-<td>No — one line only</td>
+<td>No — solo una riga</td>
 <td><code>'Hello, world!'</code></td>
 </tr>
 <tr>
 <td><code>"""text"""</code></td>
-<td>Yes</td>
+<td>Sì</td>
 <td><code>"""Line one\nLine two"""</code></td>
 </tr>
 <tr>
 <td><code>'''text'''</code></td>
-<td>Yes</td>
+<td>Sì</td>
 <td><code>'''Line one\nLine two'''</code></td>
 </tr>
 </tbody>
 </table>
-<p>Multi-line strings are useful for writing poems, paragraphs, or any block of text you want to keep together in one variable.</p>
-<h2 id="indentation-as-syntax">Indentation as Syntax<a class="headerlink" href="#indentation-as-syntax" title="Permanent link">&para;</a></h2>
-<p>Most programming languages use <strong>curly braces</strong> <code>{ }</code> or the words <code>begin</code> and <code>end</code> to show that lines of code belong together. Python does something different — it uses <strong>indentation</strong>: the number of spaces at the start of each line.</p>
-<p><strong>Indentation</strong> means pressing the spacebar (or the Tab key) before a line of code to push it to the right. In Python, indentation is not just for looks — it is part of the grammar of the language. Python reads the spaces at the start of a line to decide which lines belong together.</p>
+<p>Le stringhe multi-riga sono utili per scrivere poesie, paragrafi, o qualsiasi blocco di testo che vuoi mantenere insieme in un'unica variabile.</p>
+<h2 id="lindentazione-come-sintassi">L'Indentazione come Sintassi<a class="headerlink" href="#lindentazione-come-sintassi" title="Permanent link">&para;</a></h2>
+<p>La maggior parte dei linguaggi di programmazione usa le <strong>parentesi graffe</strong> <code>{ }</code> o le parole <code>begin</code> ed <code>end</code> per mostrare che certe righe di codice vanno insieme. Python fa qualcosa di diverso — usa l'<strong>indentazione</strong>: il numero di spazi all'inizio di ogni riga.</p>
+<p><strong>Indentazione</strong> significa premere la barra spaziatrice (o il tasto Tab) prima di una riga di codice per spostarla verso destra. In Python, l'indentazione non è solo estetica — fa parte della grammatica del linguaggio. Python legge gli spazi all'inizio di una riga per decidere quali righe vanno insieme.</p>
 <div class="admonition mascot-tip">
-<p class="admonition-title">Scratch Bridge</p>
+<p class="admonition-title">Ponte con Scratch</p>
 <p><img alt="Monty with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
-In Scratch, you put blocks <em>inside</em> another block (like a Repeat block) by dragging them so they snap together inside it. In Python, you put lines <em>inside</em> a group by <strong>indenting</strong> them — adding 4 spaces at the start. The visual nesting you saw in Scratch now lives in those 4 spaces of whitespace.</p>
+In Scratch, metti blocchi <em>dentro</em> un altro blocco (come un blocco Repeat) trascinandoli così si incastrano al suo interno. In Python, metti righe <em>dentro</em> un gruppo <strong>indentandole</strong> — aggiungendo 4 spazi all'inizio. L'annidamento visivo che vedevi in Scratch adesso vive in quei 4 spazi bianchi.</p>
 </div>
-<p>Here is a preview of what indentation looks like in action. You have not learned <code>for</code> loops yet — that is Chapter 7 — but look at the spacing pattern right now:</p>
+<p>Ecco un'anteprima di come appare l'indentazione in azione. Non hai ancora imparato i cicli <code>for</code> — arriveranno nel Capitolo 7 — ma osserva subito lo schema degli spazi:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># PREVIEW — you will learn for loops in Chapter 7</span>
-<span class="c1"># For now, just notice the indentation pattern</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># ANTEPRIMA — imparerai i cicli for nel Capitolo 7</span>
+<span class="c1"># Per ora, nota solo lo schema dell&#39;indentazione</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>   <span class="c1"># This line starts at the left edge</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>   <span class="c1"># These two lines are indented 4 spaces</span>
-    <span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>      <span class="c1"># They belong INSIDE the for loop</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>   <span class="c1"># Questa riga inizia dal bordo sinistro</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>   <span class="c1"># Queste due righe sono rientrate di 4 spazi</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>      <span class="c1"># Appartengono all&#39;INTERNO del ciclo for</span>
 </code></pre></div></td></tr></table></div>
-<p>The two lines with 4 spaces before them are <em>inside</em> the loop. The <code>for</code> line itself is at the left edge. That difference in spacing is what Python uses to know which lines are part of the loop — not braces, not keywords, just spaces.</p>
+<p>Le due righe con 4 spazi davanti sono <em>dentro</em> il ciclo. La riga <code>for</code> stessa è al margine sinistro. Quella differenza di spaziatura è ciò che Python usa per sapere quali righe fanno parte del ciclo — non le parentesi, non le parole chiave, solo gli spazi.</p>
 <div class="admonition mascot-warning">
-<p class="admonition-title">IndentationError — The Most Common Python Mistake</p>
+<p class="admonition-title">IndentationError — L'Errore Più Comune in Python</p>
 <p><img alt="Monty warning" class="mascot-admonition-img" src="../../img/mascot/warning.png" />
-If you accidentally put too many spaces, too few spaces, or mix tabs with spaces, Python will stop and show you an <code>IndentationError</code>. This is one of the most common errors beginners see. The fix is always the same: use exactly <strong>4 spaces</strong> for each level of indentation, and never mix tabs and spaces. Most code editors (including Skulpt) automatically insert 4 spaces when you press Tab.</p>
+Se per sbaglio metti troppi spazi, troppo pochi, o mescoli tab e spazi, Python si fermerà e mostrerà un <code>IndentationError</code>. È uno degli errori più comuni che i principianti incontrano. La soluzione è sempre la stessa: usa esattamente <strong>4 spazi</strong> per ogni livello di indentazione, e non mescolare mai tab e spazi. La maggior parte degli editor di codice (incluso Skulpt) inserisce automaticamente 4 spazi quando premi Tab.</p>
 </div>
-<h2 id="code-block-structure">Code Block Structure<a class="headerlink" href="#code-block-structure" title="Permanent link">&para;</a></h2>
-<p>A <strong>code block</strong> is a group of lines that belong together because they are all indented at the same level. Every block starts after a line that ends with a colon <code>:</code>, and every line in the block is indented by exactly 4 more spaces than the line that opened it.</p>
-<p>You will see this pattern constantly in Python:</p>
+<h2 id="struttura-dei-blocchi-di-codice">Struttura dei Blocchi di Codice<a class="headerlink" href="#struttura-dei-blocchi-di-codice" title="Permanent link">&para;</a></h2>
+<p>Un <strong>blocco di codice</strong> è un gruppo di righe che vanno insieme perché sono tutte indentate allo stesso livello. Ogni blocco inizia dopo una riga che termina con i due punti <code>:</code>, e ogni riga nel blocco è indentata di esattamente 4 spazi in più rispetto alla riga che lo ha aperto.</p>
+<p>Vedrai questo schema costantemente in Python:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
-<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">some_statement</span><span class="p">:</span>        <span class="c1"># colon opens a block</span>
-    <span class="n">first</span> <span class="n">line</span>         <span class="c1"># 4 spaces — inside the block</span>
-    <span class="n">second</span> <span class="n">line</span>        <span class="c1"># 4 spaces — still inside the block</span>
-    <span class="n">third</span> <span class="n">line</span>         <span class="c1"># 4 spaces — still inside the block</span>
-<span class="n">back_to_normal</span>         <span class="c1"># 0 spaces — block is over</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">some_statement</span><span class="p">:</span>        <span class="c1"># i due punti aprono un blocco</span>
+    <span class="n">first</span> <span class="n">line</span>         <span class="c1"># 4 spazi — dentro il blocco</span>
+    <span class="n">second</span> <span class="n">line</span>        <span class="c1"># 4 spazi — ancora dentro il blocco</span>
+    <span class="n">third</span> <span class="n">line</span>         <span class="c1"># 4 spazi — ancora dentro il blocco</span>
+<span class="n">back_to_normal</span>         <span class="c1"># 0 spazi — il blocco è finito</span>
 </code></pre></div></td></tr></table></div>
-<p>Right now all your programs are a flat list of lines with no blocks. That changes when you reach loops (Chapter 7) and conditionals (Chapter 9). When you get there, you will already understand how blocks work — because you are learning it now.</p>
-<h2 id="whitespace-rules">Whitespace Rules<a class="headerlink" href="#whitespace-rules" title="Permanent link">&para;</a></h2>
-<p>Whitespace is the name for any invisible characters in your code: spaces, tabs, and blank lines. Python has clear rules about how whitespace is used:</p>
+<p>Per ora tutti i tuoi programmi sono un elenco piatto di righe senza blocchi. Questo cambierà quando arriverai ai cicli (Capitolo 7) e alle condizioni (Capitolo 9). Quando ci arriverai, capirai già come funzionano i blocchi — perché lo stai imparando adesso.</p>
+<h2 id="regole-sugli-spazi-bianchi">Regole sugli Spazi Bianchi<a class="headerlink" href="#regole-sugli-spazi-bianchi" title="Permanent link">&para;</a></h2>
+<p>Spazio bianco è il nome per qualsiasi carattere invisibile nel tuo codice: spazi, tab e righe vuote. Python ha regole chiare su come viene usato lo spazio bianco:</p>
 <ul>
-<li><strong>Inside a line:</strong> add a single space around operators (<code>2 + 3</code>, not <code>2+3</code>) to make expressions easier to read. Python ignores extra spaces inside a line, but one space is the convention.</li>
-<li><strong>At the start of a line:</strong> these spaces are <em>indentation</em> and they matter to Python (see above).</li>
-<li><strong>Blank lines:</strong> Python ignores blank lines completely. Use them to separate logical sections of your program.</li>
+<li><strong>All'interno di una riga:</strong> aggiungi un singolo spazio intorno agli operatori (<code>2 + 3</code>, non <code>2+3</code>) per rendere le espressioni più facili da leggere. Python ignora gli spazi extra dentro una riga, ma uno spazio è la convenzione.</li>
+<li><strong>All'inizio di una riga:</strong> questi spazi sono <em>indentazione</em> e sono importanti per Python (vedi sopra).</li>
+<li><strong>Righe vuote:</strong> Python ignora completamente le righe vuote. Usale per separare le sezioni logiche del tuo programma.</li>
 </ul>
-<p>Here is the same turtle program written two ways:</p>
+<p>Ecco lo stesso programma turtle scritto in due modi:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span>
 <span class="normal">5</span>
-<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Hard to read — no whitespace</span>
-<span class="kn">import</span> <span class="nn">turtle</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Difficile da leggere — niente spazi</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">turtle</span>
 <span class="n">t</span><span class="o">=</span><span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
 <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
@@ -9736,8 +12653,8 @@ If you accidentally put too many spaces, too few spaces, or mix tabs with spaces
 <span class="normal">5</span>
 <span class="normal">6</span>
 <span class="normal">7</span>
-<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Easy to read — good whitespace</span>
-<span class="kn">import</span> <span class="nn">turtle</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Facile da leggere — buon uso degli spazi</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">turtle</span>
 
 <span class="n">t</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
 
@@ -9745,15 +12662,15 @@ If you accidentally put too many spaces, too few spaces, or mix tabs with spaces
 <span class="n">t</span><span class="o">.</span><span class="n">right</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
 <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
-<p>Both programs do exactly the same thing. The second one is much easier to read at a glance. Good programmers always choose the second style.</p>
-<h2 id="python-keywords">Python Keywords<a class="headerlink" href="#python-keywords" title="Permanent link">&para;</a></h2>
-<p>Python reserves certain words for its own use. These are called <strong>keywords</strong> — words that already mean something specific in the Python language and cannot be used as names for your variables or functions.</p>
-<p>For example, <code>for</code> is a Python keyword. You cannot name a variable <code>for</code> because Python would be confused — it would not know whether you meant the loop command or a variable. The same is true for <code>if</code>, <code>while</code>, <code>def</code>, <code>class</code>, and all the others in the table below.</p>
-<p>Here is the complete list of Python keywords:</p>
+<p>Entrambi i programmi fanno esattamente la stessa cosa. Il secondo è molto più facile da leggere a prima vista. I bravi programmatori scelgono sempre il secondo stile.</p>
+<h2 id="parole-chiave-di-python">Parole Chiave di Python<a class="headerlink" href="#parole-chiave-di-python" title="Permanent link">&para;</a></h2>
+<p>Python riserva certe parole per il proprio uso. Si chiamano <strong>parole chiave</strong> — parole che hanno già un significato specifico nel linguaggio Python e non possono essere usate come nomi per le tue variabili o funzioni.</p>
+<p>Per esempio, <code>for</code> è una parola chiave di Python. Non puoi chiamare una variabile <code>for</code> perché Python si confonderebbe — non saprebbe se intendevi il comando del ciclo o una variabile. Lo stesso vale per <code>if</code>, <code>while</code>, <code>def</code>, <code>class</code>, e tutte le altre nella tabella qui sotto.</p>
+<p>Ecco l'elenco completo delle parole chiave di Python:</p>
 <table>
 <thead>
 <tr>
-<th>Keywords</th>
+<th>Parole chiave</th>
 <th></th>
 <th></th>
 <th></th>
@@ -9812,59 +12729,59 @@ If you accidentally put too many spaces, too few spaces, or mix tabs with spaces
 </tr>
 </tbody>
 </table>
-<p>You do not need to memorize this list. As you write more Python programs, you will naturally come to recognize the keywords — most code editors highlight them in a different color to help you spot them at a glance.</p>
-<h2 id="statement-vs-expression">Statement vs Expression<a class="headerlink" href="#statement-vs-expression" title="Permanent link">&para;</a></h2>
-<p>Two words come up constantly when talking about Python code: <strong>statement</strong> and <strong>expression</strong>. They sound similar but they do different jobs.</p>
-<p>A <strong>statement</strong> is an instruction that <em>does</em> something. It performs an action. Statements do not produce a value you can store or pass around — they just act.</p>
-<p>An <strong>expression</strong> is a piece of code that <em>produces a value</em>. You can use an expression anywhere a value is expected — store it in a variable, pass it to a function, or print it.</p>
-<p>The table below shows examples side by side:</p>
+<p>Non devi memorizzare questo elenco. Mentre scrivi più programmi Python, imparerai naturalmente a riconoscere le parole chiave — la maggior parte degli editor di codice le evidenzia con un colore diverso per aiutarti a individuarle a colpo d'occhio.</p>
+<h2 id="istruzione-vs-espressione">Istruzione vs Espressione<a class="headerlink" href="#istruzione-vs-espressione" title="Permanent link">&para;</a></h2>
+<p>Due parole ricorrono costantemente quando si parla di codice Python: <strong>statement</strong> (istruzione) e <strong>expression</strong> (espressione). Sembrano simili ma svolgono compiti diversi.</p>
+<p>Uno <strong>statement</strong> (istruzione) è un comando che <em>fa</em> qualcosa. Compie un'azione. Gli statement non producono un valore che puoi memorizzare o passare in giro — agiscono, semplicemente.</p>
+<p>Un'<strong>expression</strong> (espressione) è un pezzo di codice che <em>produce un valore</em>. Puoi usare un'espressione ovunque sia previsto un valore — memorizzarla in una variabile, passarla a una funzione, o stamparla.</p>
+<p>La tabella qui sotto mostra esempi affiancati:</p>
 <table>
 <thead>
 <tr>
-<th>Type</th>
-<th>Example</th>
-<th>What it does</th>
+<th>Tipo</th>
+<th>Esempio</th>
+<th>Cosa fa</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Statement</td>
 <td><code>print("Hello")</code></td>
-<td>Displays text — does not produce a value</td>
+<td>Mostra testo — non produce un valore</td>
 </tr>
 <tr>
 <td>Statement</td>
 <td><code>import turtle</code></td>
-<td>Loads a library — does not produce a value</td>
+<td>Carica una libreria — non produce un valore</td>
 </tr>
 <tr>
 <td>Expression</td>
 <td><code>2 + 3</code></td>
-<td>Produces the value <code>5</code></td>
+<td>Produce il valore <code>5</code></td>
 </tr>
 <tr>
 <td>Expression</td>
 <td><code>"Hello"</code></td>
-<td>Produces the string <code>"Hello"</code></td>
+<td>Produce la stringa <code>"Hello"</code></td>
 </tr>
 <tr>
 <td>Expression</td>
 <td><code>100 * 2</code></td>
-<td>Produces the value <code>200</code></td>
+<td>Produce il valore <code>200</code></td>
 </tr>
 </tbody>
 </table>
-<p>In practice, many lines of Python combine both: <code>print(2 + 3)</code> is a <em>statement</em> (the print) that contains an <em>expression</em> (the addition). Knowing the difference helps you understand error messages — Python will tell you when it expected an expression and got a statement, or the other way around.</p>
-<h2 id="named-colors">Named Colors<a class="headerlink" href="#named-colors" title="Permanent link">&para;</a></h2>
-<p>The turtle library knows the names of hundreds of colors. Instead of describing a color mathematically, you can use a color's English name — a <strong>named color</strong> — as a string. Just pass it to <code>t.pencolor()</code> before you draw a line and the turtle will switch to that color.</p>
-<p>Some named colors you can use right away:</p>
+<p>In pratica, molte righe di Python combinano entrambi: <code>print(2 + 3)</code> è uno <em>statement</em> (il print) che contiene un'<em>expression</em> (l'addizione). Conoscere la differenza ti aiuta a capire i messaggi di errore — Python ti dirà quando si aspettava un'espressione e ha ricevuto uno statement, o viceversa.</p>
+<h2 id="colori-con-nome">Colori con Nome<a class="headerlink" href="#colori-con-nome" title="Permanent link">&para;</a></h2>
+<p>La libreria turtle conosce i nomi di centinaia di colori. Invece di descrivere un colore matematicamente, puoi usare il nome inglese di un colore — un <strong>colore con nome</strong> — come stringa. Passalo semplicemente a <code>t.pencolor()</code> prima di disegnare una linea e la tartaruga passerà a quel colore.</p>
+<p>Alcuni colori con nome che puoi usare subito:</p>
 <ul>
-<li>Common: <code>"red"</code>, <code>"blue"</code>, <code>"green"</code>, <code>"yellow"</code>, <code>"orange"</code>, <code>"purple"</code>, <code>"black"</code>, <code>"white"</code></li>
-<li>Shades: <code>"forestgreen"</code>, <code>"skyblue"</code>, <code>"salmon"</code>, <code>"coral"</code>, <code>"gold"</code>, <code>"crimson"</code></li>
-<li>Fun ones: <code>"hotpink"</code>, <code>"deepskyblue"</code>, <code>"limegreen"</code>, <code>"tomato"</code>, <code>"orchid"</code></li>
+<li>Comuni: <code>"red"</code>, <code>"blue"</code>, <code>"green"</code>, <code>"yellow"</code>, <code>"orange"</code>, <code>"purple"</code>, <code>"black"</code>, <code>"white"</code></li>
+<li>Sfumature: <code>"forestgreen"</code>, <code>"skyblue"</code>, <code>"salmon"</code>, <code>"coral"</code>, <code>"gold"</code>, <code>"crimson"</code></li>
+<li>Divertenti: <code>"hotpink"</code>, <code>"deepskyblue"</code>, <code>"limegreen"</code>, <code>"tomato"</code>, <code>"orchid"</code></li>
 </ul>
-<p>The complete list of named colors comes from a standard called <strong>X11 colors</strong>, which includes 140 names. You can experiment freely — if a name does not work, you will see an error in the output box and you can try a different spelling.</p>
-<p>Here is a turtle program that draws a square with a different color on each side:</p>
+<p>L'elenco completo dei colori con nome deriva da uno standard chiamato <strong>X11 colors</strong>, che include 140 nomi. Puoi sperimentare liberamente — se un nome non funziona, vedrai un errore nel riquadro di output e potrai provare un'altra grafia.</p>
+<p>Ecco un programma turtle che disegna un quadrato con un colore diverso su ogni lato:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -9882,7 +12799,7 @@ If you accidentally put too many spaces, too few spaces, or mix tabs with spaces
 <span class="normal">15</span>
 <span class="normal">16</span>
 <span class="normal">17</span>
-<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">turtle</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">turtle</span>
 
 <span class="n">t</span> <span class="o">=</span> <span class="n">turtle</span><span class="o">.</span><span class="n">Turtle</span><span class="p">()</span>
 
@@ -9902,11 +12819,11 @@ If you accidentally put too many spaces, too few spaces, or mix tabs with spaces
 <span class="n">t</span><span class="o">.</span><span class="n">forward</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <div class="admonition mascot-thinking">
-<p class="admonition-title">What Will You See?</p>
+<p class="admonition-title">Cosa Vedrai?</p>
 <p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
-Look at the program above. The turtle calls <code>pencolor()</code> four times — once before each side. How many different colors will you see in the drawing? What color will the very last side be? Make your predictions, then click Run!</p>
+Guarda il programma qui sopra. La tartaruga chiama <code>pencolor()</code> quattro volte — una prima di ogni lato. Quanti colori diversi vedrai nel disegno? Di che colore sarà l'ultimissimo lato? Fai le tue previsioni, poi clicca su Run!</p>
 </div>
-<h2 id="try-it-colored-turtle-drawing">Try It: Colored Turtle Drawing<a class="headerlink" href="#try-it-colored-turtle-drawing" title="Permanent link">&para;</a></h2>
+<h2 id="provalo-disegno-turtle-colorato">Provalo: Disegno Turtle Colorato<a class="headerlink" href="#provalo-disegno-turtle-colorato" title="Permanent link">&para;</a></h2>
 <div class="cm-lab">
   <div class="cm-editor-wrap">
     <div id="cm-editor-2"></div>
@@ -9941,41 +12858,41 @@ t.pencolor("orange")
 t.forward(100)`);
 </script>
 
-<p>Were you right? Each side of the square is a different color — red, blue, forest green, and orange. Notice the blank lines in the code separating each color-change group: they do not affect how the program runs, but they make the structure immediately clear to a reader.</p>
-<h2 id="how-pencolor-works">How pencolor() Works<a class="headerlink" href="#how-pencolor-works" title="Permanent link">&para;</a></h2>
-<p><code>t.pencolor("color name")</code> changes the color of the turtle's pen for all lines drawn after that call. It does not affect lines already drawn. Think of it like changing the color of a marker before drawing the next stroke.</p>
+<p>Avevi ragione? Ogni lato del quadrato ha un colore diverso — rosso, blu, verde foresta e arancione. Nota le righe vuote nel codice che separano ogni gruppo di cambio colore: non influenzano come viene eseguito il programma, ma rendono la struttura immediatamente chiara a chi legge.</p>
+<h2 id="come-funziona-pencolor">Come Funziona pencolor()<a class="headerlink" href="#come-funziona-pencolor" title="Permanent link">&para;</a></h2>
+<p><code>t.pencolor("color name")</code> cambia il colore della penna della tartaruga per tutte le linee disegnate dopo quella chiamata. Non influenza le linee già disegnate. Pensalo come cambiare il colore di un pennarello prima di disegnare il prossimo tratto.</p>
 <table>
 <thead>
 <tr>
-<th>Line</th>
-<th>What it does</th>
+<th>Riga</th>
+<th>Cosa fa</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>t.pencolor("red")</code></td>
-<td>Switches the pen to red</td>
+<td>Passa la penna al rosso</td>
 </tr>
 <tr>
 <td><code>t.forward(100)</code></td>
-<td>Draws a red line 100 steps long</td>
+<td>Disegna una linea rossa di 100 passi</td>
 </tr>
 <tr>
 <td><code>t.pencolor("blue")</code></td>
-<td>Switches the pen to blue</td>
+<td>Passa la penna al blu</td>
 </tr>
 <tr>
 <td><code>t.forward(100)</code></td>
-<td>Draws a blue line 100 steps long</td>
+<td>Disegna una linea blu di 100 passi</td>
 </tr>
 </tbody>
 </table>
-<p>The color stays set until you call <code>pencolor()</code> again with a different color. If you never call <code>pencolor()</code>, the turtle draws in black by default.</p>
-<h2 id="learning-check">Learning Check<a class="headerlink" href="#learning-check" title="Permanent link">&para;</a></h2>
+<p>Il colore resta impostato finché non chiami di nuovo <code>pencolor()</code> con un colore diverso. Se non chiami mai <code>pencolor()</code>, la tartaruga disegna in nero per impostazione predefinita.</p>
+<h2 id="verifica-di-apprendimento">Verifica di Apprendimento<a class="headerlink" href="#verifica-di-apprendimento" title="Permanent link">&para;</a></h2>
 <div class="admonition mascot-thinking">
-<p class="admonition-title">Your Turn — Add the Missing Color</p>
+<p class="admonition-title">Tocca a Te — Aggiungi il Colore Mancante</p>
 <p><img alt="Monty thinking" class="mascot-admonition-img" src="../../img/mascot/thinking.png" />
-The program below draws a three-sided shape, but the second side is missing its color change — it will draw in whatever color came before it. Add <strong>one line</strong> — a <code>t.pencolor()</code> call with the color <code>"purple"</code> — between the first <code>t.right(90)</code> and the second <code>t.forward(100)</code> to make the second side purple.</p>
+Il programma qui sotto disegna una forma a tre lati, ma al secondo lato manca il cambio di colore — verrà disegnato con qualunque colore fosse impostato prima. Aggiungi <strong>una riga</strong> — una chiamata a <code>t.pencolor()</code> con il colore <code>"purple"</code> — tra il primo <code>t.right(90)</code> e il secondo <code>t.forward(100)</code> per rendere il secondo lato viola.</p>
 </div>
 <div class="cm-lab">
   <div class="cm-editor-wrap">
@@ -9999,7 +12916,7 @@ t.pencolor("red")
 t.forward(100)
 t.right(120)
 
-# Add one line here to change the color to purple
+# Aggiungi qui una riga per cambiare il colore in viola
 
 t.forward(100)
 t.right(120)
@@ -10008,33 +12925,33 @@ t.pencolor("gold")
 t.forward(100)`);
 </script>
 
-<p>When you add the right line and click Run, you should see a triangle with sides in red, purple, and gold. If the second side is still red, check that you spelled <code>pencolor</code> in all lowercase and passed <code>"purple"</code> in quotes.</p>
-<h2 id="experiments">Experiments<a class="headerlink" href="#experiments" title="Permanent link">&para;</a></h2>
-<p>Try these changes to the programs above. For each one, predict what will happen first — then run it to check!</p>
+<p>Quando aggiungi la riga giusta e clicchi su Run, dovresti vedere un triangolo con i lati in rosso, viola e oro. Se il secondo lato è ancora rosso, controlla di aver scritto <code>pencolor</code> tutto minuscolo e di aver passato <code>"purple"</code> tra virgolette.</p>
+<h2 id="esperimenti">Esperimenti<a class="headerlink" href="#esperimenti" title="Permanent link">&para;</a></h2>
+<p>Prova queste modifiche ai programmi qui sopra. Per ognuna, prevedi prima cosa succederà — poi eseguila per verificare!</p>
 <ol>
 <li>
-<p><strong>Write your own multi-line string.</strong> Change the haiku in the first program to a three-line poem you make up yourself. <strong>You'll know it worked when</strong> your poem appears in the output, one line at a time.</p>
+<p><strong>Scrivi la tua stringa multi-riga.</strong> Cambia l'haiku nel primo programma con una poesia di tre righe inventata da te. <strong>Saprai che ha funzionato quando</strong> la tua poesia apparirà nell'output, una riga alla volta.</p>
 </li>
 <li>
-<p><strong>Change the colors in the square program.</strong> Replace <code>"red"</code> with <code>"hotpink"</code>, <code>"blue"</code> with <code>"deepskyblue"</code>, <code>"forestgreen"</code> with <code>"limegreen"</code>, and <code>"orange"</code> with <code>"gold"</code>. <strong>You'll know it worked when</strong> the square draws in your four new colors.</p>
+<p><strong>Cambia i colori nel programma del quadrato.</strong> Sostituisci <code>"red"</code> con <code>"hotpink"</code>, <code>"blue"</code> con <code>"deepskyblue"</code>, <code>"forestgreen"</code> con <code>"limegreen"</code>, e <code>"orange"</code> con <code>"gold"</code>. <strong>Saprai che ha funzionato quando</strong> il quadrato verrà disegnato con i tuoi quattro nuovi colori.</p>
 </li>
 <li>
-<p><strong>Add a fifth side.</strong> In the square program, add <code>t.pencolor("purple")</code> and <code>t.right(90)</code> and <code>t.forward(100)</code> at the end. Does the result look like a square with an extra line? <strong>You'll know it worked when</strong> you see a fifth line drawn in purple.</p>
+<p><strong>Aggiungi un quinto lato.</strong> Nel programma del quadrato, aggiungi alla fine <code>t.pencolor("purple")</code>, <code>t.right(90)</code> e <code>t.forward(100)</code>. Il risultato sembra un quadrato con una linea in più? <strong>Saprai che ha funzionato quando</strong> vedrai una quinta linea disegnata in viola.</p>
 </li>
 <li>
-<p><strong>Try a color that might not exist.</strong> Change one <code>pencolor()</code> argument to <code>"neonblue"</code> and run the program. Read the error message carefully — it tells you what went wrong. Then switch it back to a valid color like <code>"cornflowerblue"</code>.</p>
+<p><strong>Prova un colore che potrebbe non esistere.</strong> Cambia un argomento di <code>pencolor()</code> in <code>"neonblue"</code> ed esegui il programma. Leggi attentamente il messaggio di errore — ti dice cosa è andato storto. Poi rimettilo su un colore valido come <code>"cornflowerblue"</code>.</p>
 </li>
 <li>
-<p><strong>Challenge — draw a rainbow triangle.</strong> Use three named colors of your choice to draw an equilateral triangle (three equal sides, <code>right(120)</code> at each corner). Add blank lines and comments in the code to label each side. <strong>You'll know it worked when</strong> you see a closed triangle with three distinct colors and clean, readable code.</p>
+<p><strong>Sfida — disegna un triangolo arcobaleno.</strong> Usa tre colori con nome a tua scelta per disegnare un triangolo equilatero (tre lati uguali, <code>right(120)</code> a ogni angolo). Aggiungi righe vuote e commenti nel codice per etichettare ogni lato. <strong>Saprai che ha funzionato quando</strong> vedrai un triangolo chiuso con tre colori distinti e un codice ordinato e leggibile.</p>
 </li>
 </ol>
 <div class="admonition mascot-celebration">
-<p class="admonition-title">Brilliant Work!</p>
+<p class="admonition-title">Lavoro Brillante!</p>
 <p><img alt="Monty celebrating" class="mascot-admonition-img" src="../../img/mascot/celebration.png" />
-You just learned how Python organizes code — multi-line strings, indentation, keywords, code blocks, statements, expressions, and whitespace rules — and you made your turtle drawings colorful in the process. Seven concepts in one chapter, and you handled them all beautifully. Keep going — you are building real programming skills! Let's code it together!</p>
+Hai appena imparato come Python organizza il codice — stringhe multi-riga, indentazione, parole chiave, blocchi di codice, statement, espressioni e regole sugli spazi bianchi — e nel frattempo hai reso i tuoi disegni turtle più colorati. Sette concetti in un solo capitolo, e li hai gestiti tutti magnificamente. Continua così — stai costruendo competenze di programmazione reali! Programmiamo insieme!</p>
 </div>
-<p><a href="quiz/">Take the Chapter Review Quiz</a></p>
-<p><a href="references/">See Annotated References</a></p>
+<p><a href="quiz/">Fai il Quiz di Ripasso del Capitolo</a></p>
+<p><a href="references/">Vedi i Riferimenti Annotati</a></p>
 
 
 
@@ -10083,13 +13000,13 @@ You just learned how Python organizes code — multi-line strings, indentation, 
             </a>
           
           
-            <a href="references/" title="Annotated References" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <a href="references/" title="Riferimenti commentati" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
               <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
                 <span class="md-flex__ellipsis">
                   <span class="md-footer-nav__direction">
                     Next
                   </span>
-                  Annotated References
+                  Riferimenti commentati
                 </span>
               </div>
               <div class="md-flex__cell md-flex__cell--shrink">
@@ -10106,7 +13023,8 @@ You just learned how Python organizes code — multi-line strings, indentation, 
           
             All content is covered under the <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike.</a>
         </div>
-        <div class="md-social">
+        
+<div class="md-social">
   
 </div>
       </div>
@@ -10119,10 +13037,13 @@ You just learned how Python organizes code — multi-line strings, indentation, 
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
         <script src="../../js/extra.js"></script>
       
