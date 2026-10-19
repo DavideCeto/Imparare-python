@@ -1,10 +1,10 @@
-site_name: 'Learning Python'
+site_name: 'Introduzione a Python'
 site_description: 'Risorse per insegnare Python a partire dalla quinta elementare e oltre, da programmatori principianti a sviluppatori esperti.'
 site_author: 'Dan McCreary'
 repo_name: 'Repository GitHub'
 repo_url: 'https://github.com/dmccreary/learning-python'
 site_url: 'https://dmccreary.github.io/learning-python/'
-edit_uri: 'blob/master/docs'
+edit_uri: 'blob/main/docs'
 
 # Files under docs/ to exclude from the built site.
 # Patterns are gitignore-style and relative to docs_dir.
@@ -14,7 +14,7 @@ exclude_docs: |
 nav:
   - Home: index.md
   - Descrizione del corso: course-description.md
-  - Informazioni su Learning Python: about.md
+  - Informazioni su Introduzione a Python: about.md
   - Capitoli:
     - Elenco dei capitoli: chapters/index.md
     - 1. Benvenuto in Python e Skulpt:

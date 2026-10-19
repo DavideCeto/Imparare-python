@@ -2,46 +2,46 @@
 
 ## Panoramica
 
-- **Concetti Totali**: 450
+- **Concetti Totali**: 452
 - **Numero di Tassonomie**: 14
-- **Media di Concetti per Tassonomia**: 32.1
+- **Media di Concetti per Tassonomia**: 32.3
 
 ## Riepilogo della Distribuzione
 
 | Categoria | TaxonomyID | Conteggio | Percentuale | Stato |
 |----------|-----------|-------|------------|--------|
-| COL | COL | 68 | 15.1% | ✅ |
-| VIZ | VIZ | 63 | 14.0% | ✅ |
-| Advanced Topics | ADV | 61 | 13.6% | ✅ |
-| DAT | DAT | 55 | 12.2% | ✅ |
-| MOD | MOD | 36 | 8.0% | ✅ |
-| CTL | CTL | 29 | 6.4% | ✅ |
-| FUN | FUN | 22 | 4.9% | ✅ |
-| ALG | ALG | 22 | 4.9% | ✅ |
-| ENV | ENV | 20 | 4.4% | ✅ |
-| OOP | OOP | 20 | 4.4% | ✅ |
-| FIO | FIO | 16 | 3.6% | ✅ |
-| TXT | TXT | 14 | 3.1% | ✅ |
-| ERR | ERR | 14 | 3.1% | ✅ |
-| SYN | SYN | 10 | 2.2% | ℹ️ Sotto |
+| Collezioni | COL | 68 | 15.0% | ✅ |
+| Grafica Turtle e Visualizzazione | VIZ | 63 | 13.9% | ✅ |
+| Python Avanzato e Applicato | ADV | 61 | 13.5% | ✅ |
+| Variabili e Tipi di Dati | DAT | 55 | 12.2% | ✅ |
+| Moduli e Libreria Standard | MOD | 36 | 8.0% | ✅ |
+| Input e Flusso di Controllo | CTL | 29 | 6.4% | ✅ |
+| Ambiente e Strumenti | ENV | 22 | 4.9% | ✅ |
+| Funzioni e Ambito | FUN | 22 | 4.9% | ✅ |
+| Algoritmi e Strutture Dati | ALG | 22 | 4.9% | ✅ |
+| Programmazione Orientata agli Oggetti | OOP | 20 | 4.4% | ✅ |
+| I/O su File e Dati | FIO | 16 | 3.5% | ✅ |
+| Elaborazione del Testo e Regex | TXT | 14 | 3.1% | ✅ |
+| Gestione degli Errori e Debugging | ERR | 14 | 3.1% | ✅ |
+| Sintassi di Base e Output | SYN | 10 | 2.2% | ℹ️ Sotto |
 
 ## Distribuzione Visiva
 
 ```
-COL             ███████  68 ( 15.1%)
-VIZ             ███████  63 ( 14.0%)
-Advanced Topics ██████  61 ( 13.6%)
-DAT             ██████  55 ( 12.2%)
-MOD             ████  36 (  8.0%)
-CTL             ███  29 (  6.4%)
-FUN             ██  22 (  4.9%)
-ALG             ██  22 (  4.9%)
-ENV             ██  20 (  4.4%)
-OOP             ██  20 (  4.4%)
-FIO             █  16 (  3.6%)
-TXT             █  14 (  3.1%)
-ERR             █  14 (  3.1%)
-SYN             █  10 (  2.2%)
+Collezioni                            ███████  68 ( 15.0%)
+Grafica Turtle e Visualizzazione      ██████  63 ( 13.9%)
+Python Avanzato e Applicato           ██████  61 ( 13.5%)
+Variabili e Tipi di Dati              ██████  55 ( 12.2%)
+Moduli e Libreria Standard            ███  36 (  8.0%)
+Input e Flusso di Controllo           ███  29 (  6.4%)
+Ambiente e Strumenti                  ██  22 (  4.9%)
+Funzioni e Ambito                     ██  22 (  4.9%)
+Algoritmi e Strutture Dati            ██  22 (  4.9%)
+Programmazione Orientata agli Oggetti ██  20 (  4.4%)
+I/O su File e Dati                    █  16 (  3.5%)
+Elaborazione del Testo e Regex        █  14 (  3.1%)
+Gestione degli Errori e Debugging     █  14 (  3.1%)
+Sintassi di Base e Output             █  10 (  2.2%)
 ```
 
 ## Analisi del Bilanciamento
@@ -52,14 +52,14 @@ Tutte le categorie sono sotto la soglia del 30%. Buon bilanciamento!
 
 ### ℹ️ Categorie Sotto-Rappresentate (<3%)
 
-- **SYN** (SYN): 10 concetti (2.2%)
+- **Sintassi di Base e Output** (SYN): 10 concetti (2.2%)
   - *Nota*: Categorie piccole sono accettabili per argomenti specializzati
 
 ## Dettagli delle Categorie
 
-### COL (COL)
+### Collezioni (COL)
 
-**Conteggio**: 68 concetti (15.1%)
+**Conteggio**: 68 concetti (15.0%)
 
 **Concetti**:
 
@@ -80,9 +80,9 @@ Tutte le categorie sono sotto la soglia del 30%. Buon bilanciamento!
 - 151. List Comprehensions
 - *...e altri 53*
 
-### VIZ (VIZ)
+### Grafica Turtle e Visualizzazione (VIZ)
 
-**Conteggio**: 63 concetti (14.0%)
+**Conteggio**: 63 concetti (13.9%)
 
 **Concetti**:
 
@@ -103,9 +103,9 @@ Tutte le categorie sono sotto la soglia del 30%. Buon bilanciamento!
 - 319. Clearing and Resetting
 - *...e altri 48*
 
-### Advanced Topics (ADV)
+### Python Avanzato e Applicato (ADV)
 
-**Conteggio**: 61 concetti (13.6%)
+**Conteggio**: 61 concetti (13.5%)
 
 **Concetti**:
 
@@ -126,7 +126,7 @@ Tutte le categorie sono sotto la soglia del 30%. Buon bilanciamento!
 - 400. Categorical Crossentropy Loss
 - *...e altri 46*
 
-### DAT (DAT)
+### Variabili e Tipi di Dati (DAT)
 
 **Conteggio**: 55 concetti (12.2%)
 
@@ -149,7 +149,7 @@ Tutte le categorie sono sotto la soglia del 30%. Buon bilanciamento!
 - 45. Modulo Operator
 - *...e altri 40*
 
-### MOD (MOD)
+### Moduli e Libreria Standard (MOD)
 
 **Conteggio**: 36 concetti (8.0%)
 
@@ -172,7 +172,7 @@ Tutte le categorie sono sotto la soglia del 30%. Buon bilanciamento!
 - 219. random.random() Float
 - *...e altri 21*
 
-### CTL (CTL)
+### Input e Flusso di Controllo (CTL)
 
 **Conteggio**: 29 concetti (6.4%)
 
@@ -195,7 +195,30 @@ Tutte le categorie sono sotto la soglia del 30%. Buon bilanciamento!
 - 100. for Loop over Sequence
 - *...e altri 14*
 
-### FUN (FUN)
+### Ambiente e Strumenti (ENV)
+
+**Conteggio**: 22 concetti (4.9%)
+
+**Concetti**:
+
+- 1. Python Interpreter Overview
+- 2. Python 2 vs Python 3
+- 3. Browser-Based Python Environments
+- 4. Repl.it Online IDE
+- 5. Thonny Beginner IDE
+- 6. Spyder Scientific IDE
+- 7. VS Code Editor
+- 8. Jupyter Notebooks
+- 9. JupyterLab Environment
+- 10. Conda Package Manager
+- 11. pip Package Installer
+- 12. Virtual Environments
+- 13. Installing Python Locally
+- 14. Running Scripts from Terminal
+- 15. Python REPL Shell
+- *...e altri 7*
+
+### Funzioni e Ambito (FUN)
 
 **Conteggio**: 22 concetti (4.9%)
 
@@ -218,7 +241,7 @@ Tutte le categorie sono sotto la soglia del 30%. Buon bilanciamento!
 - 129. Recursion Base Case
 - *...e altri 7*
 
-### ALG (ALG)
+### Algoritmi e Strutture Dati (ALG)
 
 **Conteggio**: 22 concetti (4.9%)
 
@@ -241,30 +264,7 @@ Tutte le categorie sono sotto la soglia del 30%. Buon bilanciamento!
 - 378. Selection Sort
 - *...e altri 7*
 
-### ENV (ENV)
-
-**Conteggio**: 20 concetti (4.4%)
-
-**Concetti**:
-
-- 1. Python Interpreter Overview
-- 2. Python 2 vs Python 3
-- 3. Browser-Based Python Environments
-- 4. Repl.it Online IDE
-- 5. Thonny Beginner IDE
-- 6. Spyder Scientific IDE
-- 7. VS Code Editor
-- 8. Jupyter Notebooks
-- 9. JupyterLab Environment
-- 10. Conda Package Manager
-- 11. pip Package Installer
-- 12. Virtual Environments
-- 13. Installing Python Locally
-- 14. Running Scripts from Terminal
-- 15. Python REPL Shell
-- *...e altri 5*
-
-### OOP (OOP)
+### Programmazione Orientata agli Oggetti (OOP)
 
 **Conteggio**: 20 concetti (4.4%)
 
@@ -287,9 +287,9 @@ Tutte le categorie sono sotto la soglia del 30%. Buon bilanciamento!
 - 299. super() Function
 - *...e altri 5*
 
-### FIO (FIO)
+### I/O su File e Dati (FIO)
 
-**Conteggio**: 16 concetti (3.6%)
+**Conteggio**: 16 concetti (3.5%)
 
 **Concetti**:
 
@@ -310,7 +310,7 @@ Tutte le categorie sono sotto la soglia del 30%. Buon bilanciamento!
 - 269. File Path Handling
 - *...e altri 1*
 
-### TXT (TXT)
+### Elaborazione del Testo e Regex (TXT)
 
 **Conteggio**: 14 concetti (3.1%)
 
@@ -331,7 +331,7 @@ Tutte le categorie sono sotto la soglia del 30%. Buon bilanciamento!
 - 253. Regex Groups with Parentheses
 - 254. Compiled Regex Patterns
 
-### ERR (ERR)
+### Gestione degli Errori e Debugging (ERR)
 
 **Conteggio**: 14 concetti (3.1%)
 
@@ -352,7 +352,7 @@ Tutte le categorie sono sotto la soglia del 30%. Buon bilanciamento!
 - 283. Custom Exception Classes
 - 284. Exception Chaining
 
-### SYN (SYN)
+### Sintassi di Base e Output (SYN)
 
 **Conteggio**: 10 concetti (2.2%)
 
@@ -371,7 +371,7 @@ Tutte le categorie sono sotto la soglia del 30%. Buon bilanciamento!
 
 ## Raccomandazioni
 
-- ✅ **Bilanciamento eccellente**: Le categorie sono distribuite uniformemente (scarto: 12.9%)
+- ✅ **Bilanciamento eccellente**: Le categorie sono distribuite uniformemente (scarto: 12.8%)
 - ✅ **Categoria MISC minima**: Buona specificità di categorizzazione
 
 ### Raccomandazioni per l'Uso Didattico

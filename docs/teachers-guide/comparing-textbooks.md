@@ -9,7 +9,7 @@ rilevanti per studenti adulti autodidatti, come materiale di riferimento esausti
 
 La griglia totalizza **100 punti** su 15 categorie. Ogni categoria qui sotto spiega cosa misura e
 perché ha ricevuto il valore in punti che ha ricevuto. Segue una tabella di confronto, che valuta
-questo manuale (*Learning Python*) rispetto ad altre tre risorse Python gratuite molto usate.
+questo manuale (*Introduzione a Python*) rispetto ad altre tre risorse Python gratuite molto usate.
 
 ## Categorie della Griglia
 
@@ -144,12 +144,12 @@ agli insegnanti una chiarezza legale che una vaga dichiarazione "gratuito da usa
 
 ## Tabella di Confronto
 
-La tabella sottostante valuta questo manuale (*Learning Python*) rispetto ad altre tre risorse
+La tabella sottostante valuta questo manuale (*Introduzione a Python*) rispetto ad altre tre risorse
 Python gratuite ampiamente usate per principianti: **Automate the Boring Stuff with Python** (Al
 Sweigart), **CS Circles / CEMC** (Università di Waterloo), e **Python for Everybody** (Dr. Chuck,
 Università del Michigan).
 
-| Categoria | Punti Disponibili | Learning Python | Automate the Boring Stuff | CS Circles (CEMC) | Python for Everybody |
+| Categoria | Punti Disponibili | Introduzione a Python | Automate the Boring Stuff | CS Circles (CEMC) | Python for Everybody |
 |---|---|---|---|---|---|
 | Completezza del Corso | 8 | 8 | 7 | 5 | 7 |
 | Evidenziazione della Sintassi | 4 | 4 | 4 | 4 | 3 |
@@ -168,7 +168,7 @@ Università del Michigan).
 | Costo e Licenza | 10 | 10 | 8 | 9 | 8 |
 | **Totale** | **100** | **100** | **27** | **41** | **36** |
 
-*Learning Python* ottiene il massimo dei punti in ogni categoria, poiché le categorie di questa
+*Introduzione a Python* ottiene il massimo dei punti in ogni categoria, poiché le categorie di questa
 griglia sono state tratte direttamente dal suo stesso insieme di caratteristiche. Le altre tre
 risorse sono valutate con gli stessi criteri per il confronto, non aggiustate per favorirle — un
 punteggio più basso significa che la caratteristica manca genuinamente o è più debole, non che la

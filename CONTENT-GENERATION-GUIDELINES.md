@@ -1,4 +1,4 @@
-# Linee guida per la generazione di contenuti — Introduzione al Python
+# Linee guida per la generazione di contenuti — Introduzione a Python
 
 Questo file definisce le regole per la creazione di contenuti rivolti agli studenti in questo corso.
 Tutti gli agenti AI e gli autori umani che creano lezioni, laboratori, quiz o altre pagine rivolte agli studenti devono seguire queste linee guida. I contenuti rivolti agli insegnanti (guida per gli insegnanti, descrizione del corso) non devono utilizzare questa modalità.

@@ -1,4 +1,4 @@
-# Riferimenti per Learning Python
+# Riferimenti per Introduzione a Python
 
 ## Imparare Python su Raspberry Pi
 

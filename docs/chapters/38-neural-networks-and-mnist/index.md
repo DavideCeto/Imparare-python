@@ -21,7 +21,7 @@ Le reti convoluzionali mantengono la struttura 2-D delle immagini e cercano **pa
 
 !!! mascot-welcome "Benvenuto/a al Capitolo 38!"
     ![Monty waving welcome](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Benvenuto/a all'ultimo capitolo di *Beginning Python*!
+    Benvenuto/a all'ultimo capitolo di *Introduzione a Python*!
     Sei arrivato da stampare "Hello, World!" fino a costruire un'IA che legge cifre scritte a mano.
     Finiamo alla grande! Programmiamo insieme!
 
@@ -399,7 +399,7 @@ Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verifi
 
 !!! mascot-celebration "Ce l'Hai Fatta — Diplomato in Python!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Hai completato tutti i 38 capitoli di *Beginning Python*!
+    Hai completato tutti i 38 capitoli di *Introduzione a Python*!
     Hai iniziato stampando un quadrato con la tartaruga e hai finito costruendo un'IA che legge cifre scritte a mano con il 99% di accuratezza.
     Non sei più un principiante — sei un programmatore Python. Vai a costruire qualcosa di straordinario!
 

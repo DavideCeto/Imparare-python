@@ -1,4 +1,4 @@
-# Beginning Python — Elenco dei Concetti
+# Introduzione a Python — Elenco dei Concetti
 
 *(Nota: i titoli dei concetti qui sotto restano in inglese perché corrispondono
 esattamente alle etichette usate nei file dati del grafo di apprendimento —
@@ -7,7 +7,7 @@ Apprendimento interattivo. Tradurli romperebbe la corrispondenza automatica tra
 questo elenco e il grafo.)*
 
 Generato per il grafo di apprendimento. Questo elenco include tutti i 350 concetti da concept-list-v1.md
-più concetti fondamentali e di dipendenza aggiuntivi, espanso a 450 totali.
+più concetti fondamentali e di dipendenza aggiuntivi, espanso a 452 totali.
 
 ---
 
@@ -638,3 +638,10 @@ più concetti fondamentali e di dipendenza aggiuntivi, espanso a 450 totali.
 448. Algorithm Design
 449. Pseudocode Writing
 450. Debugging Strategies
+
+---
+
+## 37. Modern Development Tools
+
+451. uv
+452. Rust

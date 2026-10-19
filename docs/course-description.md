@@ -1,12 +1,12 @@
 ---
-title: Descrizione del corso Beginning Python
-description: Una descrizione dettagliata del corso Beginning Python con panoramica, argomenti trattati e obiettivi di apprendimento secondo la Tassonomia di Bloom rivista nel 2001
+title: Descrizione del corso Introduzione a Python
+description: Una descrizione dettagliata del corso Introduzione a Python con panoramica, argomenti trattati e obiettivi di apprendimento secondo la Tassonomia di Bloom rivista nel 2001
 quality_score: 96
 ---
 
-# Beginning Python
+# Introduzione a Python
 
-**Titolo:** Beginning Python — From Blocks to Code with Monty (dai blocchi al codice con Monty)
+**Titolo:** Introduzione a Python — Dalla programmazione visuale a blocchi al codice con Monty
 
 **Destinatari:** studenti della scuola primaria e secondaria di primo grado, di circa 10–14 anni,
 che hanno completato almeno un semestre di programmazione a blocchi (per esempio Scratch, Snap!
@@ -22,7 +22,7 @@ saper usare le funzioni di copia e incolla, oppure avere l'aiuto di un adulto o 
 
 ## Panoramica del corso
 
-Beginning Python è un corso divertente e basato su progetti che accompagna i giovani
+Introduzione a Python è un corso divertente e basato su progetti che accompagna i giovani
 programmatori nel percorso dalla programmazione a blocchi alla scrittura di vero codice Python.
 Per tutto il corso gli studenti sono affiancati da **Monty**, un pitone mascotte simpatico e
 curioso che presenta i nuovi concetti, offre suggerimenti, festeggia i successi e aiuta a

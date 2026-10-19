@@ -1,6 +1,6 @@
 # Domande frequenti su Python
 
-Benvenuto nelle Domande frequenti di *Beginning Python — From Blocks to Code with Monty*.
+Benvenuto nelle Domande frequenti di *Introduzione a Python — Dalla programmazione visuale a blocchi al codice con Monty*.
 Le domande sono organizzate dagli argomenti introduttivi fino ai concetti avanzati,
 così puoi saltare direttamente a quello che ti serve di più.
 
@@ -10,7 +10,7 @@ così puoi saltare direttamente a quello che ti serve di più.
 
 ### Di che cosa parla questo corso?
 
-*Beginning Python — From Blocks to Code with Monty* (dai blocchi al codice con Monty) è un corso
+*Introduzione a Python — Dalla programmazione visuale a blocchi al codice con Monty* è un corso
 basato su progetti che accompagna gli studenti che hanno già imparato Scratch (o un altro
 linguaggio a blocchi) e insegna loro a scrivere veri programmi in Python. Il corso parte dalla
 grafica turtle, che è visiva e ti fa vedere subito i risultati, e procede passo dopo passo verso

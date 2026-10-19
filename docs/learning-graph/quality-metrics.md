@@ -2,11 +2,11 @@
 
 ## Panoramica
 
-- **Concetti Totali**: 450
+- **Concetti Totali**: 452
 - **Concetti Fondamentali** (nessun prerequisito, altri concetti dipendono da loro): 2
 - **Nodi Terminali** (nulla dipende da loro, ma hanno prerequisiti): 235
 - **Nodi Orfani** (completamente disconnessi, nessun arco): 0
-- **Concetti con Dipendenze**: 448
+- **Concetti con Dipendenze**: 450
 - **Media di Dipendenze per Concetto**: 1.87
 
 ## Validazione della Struttura del Grafo
@@ -46,7 +46,7 @@ Questi concetti non hanno prerequisiti:
 
 I nodi terminali sono concetti da cui nient'altro dipende ma che hanno prerequisiti. Rappresentano i punti finali naturali dei percorsi di apprendimento — concetti culminanti o specializzati.
 
-- **Totale Nodi Terminali**: 235 (52.2% di tutti i concetti)
+- **Totale Nodi Terminali**: 235 (52.0% di tutti i concetti)
 - **Intervallo Sano**: 5-40% del totale dei concetti
 
 Concetti alla fine dei percorsi di apprendimento:
@@ -57,8 +57,6 @@ Concetti alla fine dei percorsi di apprendimento:
 - **6**: Spyder Scientific IDE
 - **7**: VS Code Editor
 - **9**: JupyterLab Environment
-- **12**: Virtual Environments
-- **14**: Running Scripts from Terminal
 - **15**: Python REPL Shell
 - **16**: Raspberry Pi Python Platform
 - **17**: Skulpt Browser Python
@@ -71,6 +69,8 @@ Concetti alla fine dei percorsi di apprendimento:
 - **39**: Swap Two Variables
 - **40**: Naming Conflicts to Avoid
 - **43**: Division Returns Float
+- **44**: Integer Division Operator
+- **45**: Modulo Operator
 
 *...e altri 215*
 
@@ -100,8 +100,8 @@ I primi 10 concetti che sono prerequisiti per il maggior numero di altri concett
 | 4 | 205 | import Statement | 25 |
 | 5 | 31 | Variable Definition and Assignment | 24 |
 | 6 | 41 | Integer Type | 23 |
-| 7 | 100 | for Loop over Sequence | 21 |
-| 8 | 1 | Python Interpreter Overview | 20 |
+| 7 | 1 | Python Interpreter Overview | 21 |
+| 8 | 100 | for Loop over Sequence | 21 |
 | 9 | 285 | Objects and Classes Overview | 18 |
 | 10 | 163 | Dictionary Type | 16 |
 
@@ -111,13 +111,13 @@ I primi 10 concetti che sono prerequisiti per il maggior numero di altri concett
 |--------------|--------------------|
 | 0 | 2 |
 | 1 | 132 |
-| 2 | 247 |
+| 2 | 249 |
 | 3 | 64 |
 | 4 | 5 |
 
 ## Raccomandazioni
 
-- ℹ️ **Percentuale alta di nodi terminali** (52.2%): Considera se alcuni concetti terminali dovrebbero essere prerequisiti per concetti avanzati
+- ℹ️ **Percentuale alta di nodi terminali** (52.0%): Considera se alcuni concetti terminali dovrebbero essere prerequisiti per concetti avanzati
 - ✅ **Struttura DAG verificata**: Il grafo supporta progressioni di apprendimento valide
 
 ---

@@ -1,4 +1,4 @@
-# Inizio di Python — Istruzioni per il progetto
+# Introduzione a Python — Istruzioni per il progetto
 
 ## Filosofia didattica di base
 
@@ -35,7 +35,7 @@ Monty organizza le previsioni utilizzando `mascot-thinking`:
 
 **Struttura del Capitolo**
 
-38 capitoli che coprono 450 concetti, tutti verificati per 0 violazioni delle regole di dipendenza.  
+38 capitoli che coprono 452 concetti, tutti verificati per 0 violazioni delle regole di dipendenza.  
 I file dei capitoli si trovano in `docs/chapters/##-slug/index.md`.  
 L’assegnazione dei concetti è la fonte di verità per cui i concetti appartengono a determinati luoghi.  
 

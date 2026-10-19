@@ -1,4 +1,4 @@
-## Come Contribuire alla Nostra Libreria di Learning Python
+## Come Contribuire alla Nostra Libreria di Introduzione a Python
 
 Siamo un'organizzazione interamente basata sul volontariato. Quindi non abbiamo ancora personale retribuito per curare nuovi contenuti. Tuttavia, apprezziamo il tuo contributo e considereremo tutti i contributi nei limiti del nostro tempo di volontariato. Apprezziamo in particolare gli insegnanti che vogliono integrare la programmazione, la data science e l'IA nelle loro classi in modi nuovi e innovativi.
 

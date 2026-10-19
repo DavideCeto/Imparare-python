@@ -1,9 +1,17 @@
+---
+title: Galleria di programmi di grafica turtle
+description: Una visualizzazione a più colonne delle immagini di una raccolta di oltre 100 programmi di grafica turtle usati per insegnare Python e incuriosire gli studenti su come vengono generati i pattern.
+image: turtle-graphics-gallery/social-media-preview.png
+og:image: turtle-graphics-gallery/social-media-preview.png
+hide:
+    toc
+---
 # Galleria della Grafica Turtle
 
 Scorri questi esempi per vedere cosa può fare la grafica turtle.
 Ogni pattern è eseguibile nel tuo browser — clicca il link per aprire il laboratorio interattivo.
 
-<div class="grid cards" markdown>
+<div class="grid cards gallery-grid-3col" markdown>
 
 -   **Spirale di Quadrati Arcobaleno**
 

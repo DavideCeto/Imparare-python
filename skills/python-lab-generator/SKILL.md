@@ -1,11 +1,11 @@
 ---
 name: python-lab-generator
-description: "Generates a complete, student-facing Python lab page for the Beginning Python intelligent textbook. Use when the user specifies a lab topic, concept, or exercise and wants it written as a finished markdown file in docs/python-labs/ with an in-browser CodeMirror editor (line numbers, syntax highlighting) running Python via the Skulpt interpreter. Outputs two things: (1) a new docs/python-labs/SLUG.md file with interactive turtle graphics (CodeMirror editor wired to Skulpt), prediction prompts, learning checks, experiments, and Monty mascot admonitions; (2) an updated entry in docs/python-labs/index.md using MkDocs grid-cards format. Triggers: create a lab for, generate a python lab about, make a new lab, write a lab on, add a python lab."
+description: "Generates a complete, student-facing Python lab page for the Learning Python intelligent textbook. Use when the user specifies a lab topic, concept, or exercise and wants it written as a finished markdown file in docs/python-labs/ with an in-browser CodeMirror editor (line numbers, syntax highlighting) running Python via the Skulpt interpreter. Outputs two things: (1) a new docs/python-labs/SLUG.md file with interactive turtle graphics (CodeMirror editor wired to Skulpt), prediction prompts, learning checks, experiments, and Monty mascot admonitions; (2) an updated entry in docs/python-labs/index.md using MkDocs grid-cards format. Triggers: create a lab for, generate a python lab about, make a new lab, write a lab on, add a python lab."
 ---
 
 # Python Lab Generator
 
-Generates interactive Python lab pages for the Beginning Python textbook. Each lab pairs the **CodeMirror** code editor — line numbers, syntax highlighting, and auto-indent — with the **Skulpt** in-browser Python interpreter, so students read, run, and edit code without installing anything.
+Generates interactive Python lab pages for the Learning Python textbook. Each lab pairs the **CodeMirror** code editor — line numbers, syntax highlighting, and auto-indent — with the **Skulpt** in-browser Python interpreter, so students read, run, and edit code without installing anything.
 
 Before generating any lab, read `CONTENT-GENERATION-GUIDELINES.md` in the project root for the full rules. The condensed rules below are sufficient for most labs; check the guidelines for edge cases.
 

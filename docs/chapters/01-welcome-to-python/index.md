@@ -51,7 +51,7 @@ Finora hai programmato con blocchi colorati — incastrando pezzi in Scratch per
 
 !!! mascot-welcome "Ciao! Sono Monty."
     ![Monty waving hello](../../img/mascot/welcome.png){ class="mascot-admonition-img" }
-    Benvenuto in **Beginning Python — From Blocks to Code**! Sono **Monty**, un amichevole serpente python che vive proprio qui nel tuo libro di testo. Comparirò in ogni lezione, ma mai a caso — ho esattamente **sette compiti**, e imparerai presto a riconoscermi in base a quale sto svolgendo:
+    Benvenuto in **Introduzione a Python — Dalla programmazione visuale a blocchi al codice con Monty**! Sono **Monty**, un amichevole serpente python che vive proprio qui nel tuo libro di testo. Comparirò in ogni lezione, ma mai a caso — ho esattamente **sette compiti**, e imparerai presto a riconoscermi in base a quale sto svolgendo:
 
     1. **Darti il benvenuto** all'inizio di ogni lezione — esattamente quello che sto facendo ora.
     2. **Aiutarti a pensare e prevedere** prima di eseguire un programma, così da costruire l'abitudine di ragionare sul codice prima di farlo girare.

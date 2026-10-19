@@ -1,4 +1,4 @@
-# Learning Python — Tassonomia dei Concetti
+# Introduzione a Python — Tassonomia dei Concetti
 
 Questa tassonomia organizza i 450 concetti in 14 categorie che riflettono la struttura
 naturale di un corso Python da principiante ad avanzato. Le categorie sono progettate per

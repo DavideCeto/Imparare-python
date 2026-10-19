@@ -1,6 +1,6 @@
 # Report di Valutazione della Descrizione del Corso
 
-**Corso:** Beginning Python — From Blocks to Code with Monty  
+**Corso:** Introduzione a Python — Dalla programmazione visuale a blocchi al codice con Monty  
 **File valutato:** `docs/course-description.md`  
 **Versione della skill:** Course Description Analyzer v0.03  
 

@@ -1,9 +1,9 @@
 ---
-title: Idee di MicroSim per Beginning Python
-description: Un elenco con priorità, classificato secondo Bloom, delle MicroSim proposte per il manuale Beginning Python, con un piano di implementazione per ciascuna.
+title: Idee di MicroSim per Introduzione a Python
+description: Un elenco con priorità, classificato secondo Bloom, delle MicroSim proposte per il manuale Introduzione a Python, con un piano di implementazione per ciascuna.
 status: draft-for-review
 ---
-# Idee di MicroSim per Beginning Python
+# Idee di MicroSim per Introduzione a Python
 
 **Stato: bozza da rivedere — nessuna sim è stata ancora generata.**
 

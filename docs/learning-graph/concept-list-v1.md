@@ -1,4 +1,4 @@
-# Beginning Python — Elenco dei Concetti v1
+# Introduzione a Python — Elenco dei Concetti v1
 
 *(Nota: i titoli dei concetti qui sotto restano in inglese perché corrispondono
 esattamente alle etichette usate nei file dati del grafo di apprendimento —

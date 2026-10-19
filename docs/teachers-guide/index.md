@@ -1,6 +1,6 @@
 # Guida per gli Insegnanti alla Programmazione Python
 
-Benvenuto alla guida per gli insegnanti di *Learning Python: Risorse per insegnare Python a studenti di quinta elementare e oltre, dai programmatori principianti agli sviluppatori esperti.* Questa guida spiega ogni caratteristica del manuale, come usarlo nella tua classe, e come personalizzarlo per i tuoi studenti. Non si presuppone nessuna conoscenza tecnica preliminare — ogni termine tecnico viene definito prima di essere usato.
+Benvenuto alla guida per gli insegnanti di *Introduzione a Python: Risorse per insegnare Python a studenti di quinta elementare e oltre, dai programmatori principianti agli sviluppatori esperti.* Questa guida spiega ogni caratteristica del manuale, come usarlo nella tua classe, e come personalizzarlo per i tuoi studenti. Non si presuppone nessuna conoscenza tecnica preliminare — ogni termine tecnico viene definito prima di essere usato.
 
 ## Informazioni su Questo Manuale Intelligente Interattivo
 

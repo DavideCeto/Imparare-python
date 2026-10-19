@@ -1,9 +1,9 @@
 ---
-title: "Learning Python"
+title: "Introduzione a Python"
 description: "Un libro di testo intelligente e interattivo per imparare Python con esercizi di codice guidati da una mascotte amichevole"
 image: img/cover.png
 ---
-# Learning Python
+# Introduzione a Python
 ![](./img/cover.png)
 
 !!! mascot-welcome "Benvenuto/a da Monty!"
@@ -12,7 +12,7 @@ image: img/cover.png
     mentre impari a scrivere vero codice Python — proprio qui nel tuo browser, senza
     bisogno di installare nulla. Andiamo!
 
-**Beginning Python — From Blocks to Code with Monty** è un libro di testo intelligente e
+**Introduzione a Python — Dalla programmazione visuale a blocchi al codice con Monty** è un libro di testo intelligente e
 interattivo per studenti dai 10 ai 13 anni pronti a passare dalla programmazione a blocchi
 (come Scratch) al vero codice Python testuale. Ogni lezione include finestre di codice dal
 vivo basate su **Skulpt** — un motore Python che funziona direttamente nel tuo browser,

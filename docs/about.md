@@ -1,6 +1,6 @@
 ---
 title: "Informazioni su questo libro"
-description: "Informazioni su Beginning Python: la sua storia, lo scopo, il pubblico, il progetto e le persone che lo hanno realizzato."
+description: "Informazioni su Introduzione a Python: la sua storia, lo scopo, il pubblico, il progetto e le persone che lo hanno realizzato."
 ---
 
 # Informazioni su questo libro
@@ -21,7 +21,7 @@ description: "Informazioni su Beginning Python: la sua storia, lo scopo, il pubb
 
 Questo manuale ha una storia, ed è una storia importante per capire perché oggi è costruito così.
 
-**Beginning Python** è stato creato nel 2020 da Dan McCreary come risorsa didattica, realizzata
+**Introduzione a Python** è stato creato nel 2020 da Dan McCreary come risorsa didattica, realizzata
 da volontario, per [CoderDojo Twin Cities](https://www.coderdojotc.org/), un club di
 programmazione gratuito per ragazzi gestito dalla comunità. Le prime lezioni usavano
 **Trinket.io**, un popolare ambiente Python nel browser che permetteva agli studenti di
@@ -53,7 +53,7 @@ l'evidenziazione della sintassi), quindi l'ambiente di programmazione interattiv
 funzionare finché la pagina stessa si carica.
 
 In quell'occasione il libro ha anche cambiato ufficialmente nome: dalla sua identità legata a
-CoderDojo è diventato **Beginning Python**, a riflettere la sua missione più ampia di risorsa
+CoderDojo è diventato **Introduzione a Python**, a riflettere la sua missione più ampia di risorsa
 educativa aperta per qualsiasi studente, classe o club di programmazione che voglia
 un'introduzione a Python gratuita e completa.
 
@@ -180,24 +180,24 @@ pubblicazioni, usa uno dei seguenti formati di citazione.
 
 **APA (7ª edizione)**
 
-McCreary, D. (2026). *Beginning Python: From Blocks to Code with Monty*. https://dmccreary.github.io/python/
+McCreary, D. (2026). *Learning Python: From Blocks to Code with Monty*. https://dmccreary.github.io/learning-python/
 
 **Chicago (17ª edizione)**
 
-McCreary, Dan. 2026. *Beginning Python: From Blocks to Code with Monty*. https://dmccreary.github.io/python/.
+McCreary, Dan. 2026. *Learning Python: From Blocks to Code with Monty*. https://dmccreary.github.io/learning-python/.
 
 **MLA (9ª edizione)**
 
-McCreary, Dan. *Beginning Python: From Blocks to Code with Monty*. 2026, dmccreary.github.io/python/.
+McCreary, Dan. *Learning Python: From Blocks to Code with Monty*. 2026, dmccreary.github.io/learning-python/.
 
 **BibTeX**
 
 ```bibtex
 @book{mccreary2026python,
-  title     = {Beginning Python: From Blocks to Code with Monty},
+  title     = {Learning Python: From Blocks to Code with Monty},
   author    = {McCreary, Dan},
   year      = {2026},
-  url       = {https://dmccreary.github.io/python/},
+  url       = {https://dmccreary.github.io/learning-python/},
   note      = {Interactive intelligent textbook with Skulpt inline Python labs}
 }
 ```
@@ -205,7 +205,7 @@ McCreary, Dan. *Beginning Python: From Blocks to Code with Monty*. 2026, dmccrea
 Per citare un capitolo specifico, aggiungi il numero e il titolo del capitolo, per esempio:
 
 McCreary, D. (2026). Chapter 1: Welcome to Python and Skulpt. In
-*Beginning Python: From Blocks to Code with Monty*. https://dmccreary.github.io/python/chapters/01-welcome-to-python/
+*Learning Python: From Blocks to Code with Monty*. https://dmccreary.github.io/learning-python/chapters/01-welcome-to-python/
 
 ---
 

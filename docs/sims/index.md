@@ -1,10 +1,10 @@
 ---
-title: Beginning Python MicroSims
-description: A gallery of the interactive MicroSims used in the Beginning Python programming curriculum.
+title: MicroSim di Introduzione a Python
+description: Una galleria delle MicroSim interattive usate nel corso di programmazione Introduzione a Python.
 hide:
   - toc
 ---
-# Elenco dei MicroSims di Beginning Python
+# Elenco delle MicroSim di Introduzione a Python
 
 Micro Simulazioni interattive per aiutare gli studenti che iniziano a programmare in Python. Clicca su una card per aprire il MicroSim.
 

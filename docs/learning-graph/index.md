@@ -1,10 +1,10 @@
-# Grafo di Apprendimento per Beginning Python
+# Grafo di Apprendimento
 
 [Apri il Visualizzatore del Grafo di Apprendimento a Schermo Intero](../sims/graph-viewer/main.html){ .md-button .md-button--primary }
 
 <iframe src="../sims/graph-viewer/main.html" width="100%" height="600px" frameborder="0"></iframe>
 
-Questa sezione contiene il grafo di apprendimento per Beginning Python — From Blocks to Code with Monty.
+Questa sezione contiene il grafo di apprendimento per *Introduzione a Python — Dalla programmazione visuale a blocchi al codice con Monty*.
 Un grafo di apprendimento è un grafo di concetti usati in questo corso. Ogni concetto è rappresentato da un
 nodo in un grafo di rete. I concetti sono collegati da archi diretti che indicano
 da quali concetti dipende ogni nodo prima che quel concetto venga compreso dallo studente.

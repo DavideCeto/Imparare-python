@@ -13,7 +13,8 @@ Alla fine di questa lezione sarai in grado di:
 - Descrivere i principali ambienti di sviluppo Python e quando usare ciascuno
 - Installare Python localmente ed eseguire script dal terminale
 - Usare la **REPL di Python** (shell interattiva) per esperimenti rapidi
-- Installare pacchetti con `pip` e capire gli **ambienti virtuali**
+- Installare pacchetti con `pip` o `uv` e capire gli **ambienti virtuali**
+- Spiegare quando un'attività Python lenta potrebbe essere una buona candidata per Rust
 
 Skulpt è ottimo per imparare — non devi installare nulla.
 Ma i veri progetti Python usano strumenti più ricchi. Questo capitolo è la tua mappa dell'ecosistema Python.
@@ -186,6 +187,83 @@ Per vedere cosa è installato: `pip list`
 
 Per installare una versione specifica: `pip install requests==2.31.0`
 
+## `uv` — Uno strumento Python veloce e tutto-in-uno
+
+Man mano che i progetti crescono, potresti aver bisogno di diversi strumenti per installare Python,
+creare un ambiente virtuale, aggiungere pacchetti, registrare le versioni esatte dei pacchetti,
+eseguire script, costruire un pacchetto e pubblicarlo. **uv** riunisce molti di questi compiti in
+un solo strumento. È un gestore di pacchetti e di progetti Python scritto in Rust, e include
+un'interfaccia familiare, compatibile con `pip`.
+
+Il team di uv riporta che nei suoi benchmark può essere da 10 a 100 volte più veloce di `pip`.
+Il guadagno esatto dipende dal progetto, dal computer, dalla rete e dal fatto che i pacchetti siano
+già nella cache di uv. Una **cache** conserva i file scaricati, così lo strumento può riutilizzarli
+invece di scaricare di nuovo gli stessi file.
+
+Una volta installato uv, questi comandi creano un progetto, aggiungono il pacchetto `requests`,
+eseguono il suo programma Python e costruiscono i file che potrebbero essere pubblicati come pacchetto:
+
+```bash
+uv init weather-app
+cd weather-app
+uv add requests
+uv run main.py
+uv build
+```
+
+Per un progetto esistente che usa già `pip`, uv offre anche comandi simili:
+
+```bash
+uv venv
+uv pip install requests
+uv pip list
+```
+
+uv può prendere il posto di diversi strumenti separati, ma i suoi comandi non sono identici a quelli
+di ogni strumento che sostituisce. Inizia con `uv pip` quando vuoi un modo di lavorare familiare.
+Prova i comandi di livello più alto `uv add`, `uv lock`, `uv sync` e `uv run` quando vuoi che sia uv
+a gestire l'intero progetto. Consulta la [documentazione ufficiale di uv](https://docs.astral.sh/uv/)
+per le istruzioni di installazione per il tuo sistema operativo.
+
+## Python vs. Rust
+
+Di solito Python esegue il tuo codice sorgente tramite un interprete Python. Questo rende Python
+veloce da imparare, modificare e provare. Rust è un **linguaggio compilato**: un compilatore controlla
+il codice sorgente Rust e lo trasforma in un programma in codice macchina prima che tu lo esegua.
+I programmi Rust compilati possono essere molto più veloci per alcuni tipi di lavoro, ma di solito
+Rust richiede più tempo per essere imparato e scritto.
+
+I computer moderni hanno diversi **core** del processore, come diversi lavoratori che possono
+svolgere compiti separati nello stesso momento. Rust ha i thread, i canali per lo scambio di
+messaggi, strumenti per lo stato condiviso e un sistema di tipi che individua molti errori di
+concorrenza non sicuri già durante la compilazione. Queste caratteristiche possono aiutare un
+programma progettato con cura a distribuire il lavoro pesante per la CPU su più core. Rust non
+rende automaticamente parallelo ogni programma: il problema deve contenere lavoro che si possa
+dividere in sicurezza in parti indipendenti.
+
+Il confronto qui sotto riassume quando ciascun linguaggio è spesso la scelta migliore.
+
+| Scegli Python quando... | Valuta Rust quando... |
+|-------------------------|-----------------------|
+| Stai imparando, sperimentando o costruendo una prima versione | Una parte lenta, misurata, esegue un'enorme quantità di calcoli ripetuti |
+| Contano soprattutto un codice chiaro e uno sviluppo rapido | La velocità di esecuzione o il basso uso di memoria sono un requisito importante |
+| Le librerie Python risolvono già le parti difficili | Il lavoro si può dividere in sicurezza su più core della CPU |
+| Il programma passa la maggior parte del tempo ad aspettare file o la rete | Il codice deve diventare uno strumento a riga di comando veloce o un'estensione Python riutilizzabile |
+
+Uno strumento di programmazione con l'IA può aiutarti a creare una prima versione in Rust di una
+funzione Python piccola e ben testata. Può valere la pena provarci per filtri di immagini,
+simulazioni, conversione di dati, compressione o altri cicli pesanti per la CPU che vengono eseguiti
+milioni di volte. Prima, però, fai il **profiling** del programma Python, cioè misura dove passa
+davvero il suo tempo. Convertire codice che non è un vero collo di bottiglia aggiunge complessità
+senza rendere il programma sensibilmente più veloce.
+
+La conversione fatta dall'IA è una bozza, non una prova che il nuovo programma sia corretto. Python
+e Rust gestiscono in modo diverso i tipi, la memoria, gli errori e il lavoro in parallelo, quindi una
+traduzione riga per riga potrebbe essere sbagliata o più lenta del previsto. Tieni dei test con
+risposte note, confronta i risultati di Python e di Rust, misura entrambe le versioni e fai
+controllare il codice Rust a una persona. Spesso la soluzione migliore mantiene la maggior parte del
+progetto nel Python, amichevole e flessibile, e sposta in Rust un solo collo di bottiglia dimostrato.
+
 ## Ambienti Virtuali
 
 Un **ambiente virtuale** è un'installazione Python isolata per un progetto specifico.
@@ -305,6 +383,7 @@ GPIO.output(17, True)      # turn on an LED
 | Sto solo imparando Python | Skulpt (questo corso) o Thonny |
 | Condividere codice online | Repl.it o Google Colab |
 | Progetti professionali | VS Code |
+| Gestione veloce di pacchetti e progetti | uv |
 | Data science / ML | Jupyter Notebook o JupyterLab |
 | Progetti hardware | Raspberry Pi + Thonny |
 | Calcolo scientifico | Spyder + Anaconda |
@@ -351,6 +430,13 @@ initCmLab('-3', `# Scenario → Best tool
 # 4. A maker wants to control LEDs and sensors with Python on cheap hardware.
 #    Answer:
 
+# 5. A team wants one fast tool to create environments, add packages, and lock versions.
+#    Answer:
+
+# 6. Profiling shows that one image-processing loop uses nearly all the running time.
+#    Should the team keep all the code in Python, or test a Rust version of that loop?
+#    Answer:
+
 print("Scenarios answered above!")`);
 </script>
 
@@ -367,7 +453,8 @@ Prova questi cambiamenti. Prevedi cosa succederà prima, poi eseguilo per verifi
 3. Prova `sys.maxsize` — l'intero massimo che Python può memorizzare in modo efficiente.
    **Saprai che ha funzionato quando** vedi un numero molto grande (9.223.372.036.854.775.807 su sistemi a 64 bit).
 
-4. Ricerca: scopri cosa fa `pip show numpy` (in un vero terminale). Scrivi un commento che lo spiega.
+4. Confronta `pip show numpy` con `uv pip show numpy` in un vero terminale. Scrivi un commento
+   che spiega cosa mostrano entrambi i comandi.
    **Saprai che ha funzionato quando** il tuo commento descrive la versione del pacchetto, l'autore, e la posizione di installazione.
 
 5. Scrivi un blocco di commenti elencando tre pacchetti da PyPI che vorresti esplorare in seguito e perché.

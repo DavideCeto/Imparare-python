@@ -213,6 +213,46 @@ Il bug è `angle = i * 100` — le copie atterrano a 0°, 100° e 200°, lascian
 
 4. **Rompi l'illusione di proposito.** Riempi tutte e tre le travi con la stessa sfumatura, `'#989898'`. Saprai che ha funzionato quando la figura si appiattisce in un semplice contorno triangolare 2D — prova che è l'ombreggiatura, non il contorno, a simulare il 3D.
 
+5. **I colori del logo di Drive.** Questa stessa forma a tre travi è anche il contorno di base del logo del servizio di archiviazione online di un'azienda molto grande — il tipo di app che milioni di persone usano per salvare documenti e foto nel cloud. Cerca online quel logo e trova i suoi tre codici colore ufficiali RGB (o esadecimali), poi imposta `shades` con quello che hai trovato, per esempio `shades = ['#FFD14F', '#0EBC5F', '#2882FB']`. Saprai che ha funzionato quando il tuo "triangolo impossibile" comincerà a somigliare a un logo che hai già visto! *Un ringraziamento speciale a Sebastian B. per questa divertente aggiunta.*
+
+    ??? question "Mostra soluzione"
+        ```python
+        import turtle
+        import math
+        monty = turtle.Turtle()
+        monty.speed(0)
+        monty.hideturtle()
+
+        beam = [(0, 76), (101, -99), (137, -99), (154, -69), (36, 137)]
+        shades = ['#FFD14F', '#0EBC5F', '#2882FB']
+
+        def rotate(point, angle):
+            a = math.radians(angle)
+            x = point[0]
+            y = point[1]
+            rx = x * math.cos(a) - y * math.sin(a)
+            ry = x * math.sin(a) + y * math.cos(a)
+            return (rx, ry)
+
+        def draw_beam(points, color):
+            monty.penup()
+            monty.goto(points[0][0], points[0][1])
+            monty.pendown()
+            monty.pencolor(color)
+            monty.fillcolor(color)
+            monty.pensize(2)
+            monty.begin_fill()
+            for p in points:
+                monty.goto(p[0], p[1])
+            monty.goto(points[0][0], points[0][1])
+            monty.end_fill()
+
+        for i in range(3):
+            angle = i * 120
+            turned = [rotate(p, angle) for p in beam]
+            draw_beam(turned, shades[i])
+        ```
+
 !!! mascot-celebration "Hai Disegnato l'Indisegnabile!"
     ![Monty celebrating](../../img/mascot/celebration.png){ class="mascot-admonition-img" }
     Una lista di punti, una formula di rotazione, tre sfumature di
