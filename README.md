@@ -1,6 +1,6 @@
 # Questo è un fork in lingua italiana del bellissimo progetto Learning Python di Dan McCreary (https://github.com/dmccreary/learning-python) 
 
-# Introduzione a Python — Dalle istruzioni di programmazione ai codici con Monty
+# Introduzione a Python — Dalla programmazione visuale a blocchi al codice con Monty
 
 [![MkDocs](https://img.shields.io/badge/Made%20with-MkDocs-526CFE?logo=materialformkdocs)](https://www.mkdocs.org/)
 [![Material for MkDocs](https://img.shields.io/badge/Material%20for%20MkDocs-526CFE?logo=materialformkdocs)](https://squidfunk.github.io/mkdocs-material/)
@@ -13,13 +13,13 @@
 
 ## Visualizza il sito web in tempo reale
 
-Leggi il libro su: **[https://dmccreary.github.io/learning-python/](https://dmccreary.github.io/learning-python/)**
+Leggi il libro (in inglese) su: **[https://dmccreary.github.io/learning-python/](https://dmccreary.github.io/learning-python/)**
 
 ## Descrizione
 
-**Introduzione a Python — Dalle istruzioni di programmazione ai codici con Monty** è un libro di testo interattivo e intelligente, creato da AI, per studenti di età compresa tra 10 e 13 anni che desiderano passare da programmazioni basate su blocchi (come Scratch) a programmazioni reali in Python.
+**Introduzione a Python — Dalla programmazione visuale a blocchi al codice con Monty** è un libro di testo interattivo e intelligente, creato grazie all'intelligenza artificiale, per studenti di età compresa tra 10 e 13 anni che desiderano passare dalla programmazioni basate su blocchi (come Scratch) alla programmazioni reali in Python.
 
-Ogni lezione si basa su una programmazione interattiva, realizzata con **Skulpt**, una implementazione di Python in JavaScript. Gli studenti possono leggere un breve programma, cliccare su **Run** per vedere come viene eseguito immediatamente (senza bisogno di installazione o account), e poi modificarlo: cambiare il colore, il numero, la direzione… e ripetere l’esecuzione. La grafica astratta fornita da Skulpt offre un feedback visivo immediato: gli studenti vedono immediatamente quali forme, spirali e pattern appaiono non appena il codice viene eseguito. Prima di ogni esercizio, una simpatica mascotte chiamata Monty chiede agli studenti di *prevedere* cosa farà il codice prima di cliccare su “Run”… Questo metodo favorisce lo sviluppo delle capacità di ragionamento, non solo di una semplice abitudine di copiare e eseguire.
+Ogni lezione si basa su una programmazione interattiva, realizzata con **Skulpt**, una implementazione di Python in JavaScript. Gli studenti possono leggere un breve programma, cliccare su **Run** per vedere come viene eseguito immediatamente (senza bisogno di installazione o account), e poi modificarlo: cambiare il colore, il numero, la direzione… e ripetere l’esecuzione. La grafica astratta fornita da Skulpt offre un feedback visivo immediato: gli studenti vedono immediatamente quali forme, spirali e pattern appaiono non appena il codice viene eseguito. Prima di ogni esercizio, una simpatica mascotte chiamata Monty chiede agli studenti di *prevedere* cosa farà il codice prima di cliccare su “Run”… Questo metodo favorisce lo sviluppo delle capacità di ragionamento, senza limitarsi ad un semplice copia e incolla.
 
 Il libro copre 38 capitoli che trattano 450 concetti, verificati attraverso un grafico della dipendenza dei concetti, in modo che ogni idea si basi su quella precedente. Il contenuto, i quiz, le voci del glossario e i MicroSims vengono generati e curati utilizzando le competenze di Claude AI, rendendo questo un libro di testo intelligente di livello 2+ con elementi interattivi e pratici in tutto il libro.
 
@@ -42,8 +42,8 @@ Il libro copre 38 capitoli che trattano 450 concetti, verificati attraverso un g
 ### Clonare il repository
 
 ```bash
-git clone https://github.com/dmccreary/learning-python.git
-cd learning-python
+git clone https://github.com/DavideCeto/imparare-python.git
+cd imparare-python
 ```
 
 ### Installare le dipendenze
@@ -55,9 +55,9 @@ pip install mkdocs
 pip install mkdocs-material
 ```
 
-### Creare e servire localmente
+### Esecuzione in locale
 
-**Servire localmente per lo sviluppo (con ricarica in tempo reale):**
+**Esecuzione in locale (con aggiornamento in tempo reale):**
 
 ```bash
 mkdocs serve
@@ -77,7 +77,7 @@ mkdocs build
 mkdocs gh-deploy
 ```
 
-Questo crea il sito e lo spinge sulla branch `gh-pages`.
+Questo crea il sito e sul branch `gh-pages`.
 
 ### Utilizzare il libro
 
