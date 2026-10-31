@@ -2,15 +2,23 @@
 
 ![License](./img/license.png)
 
-Tutti i contenuti di questo repository sono regolati dal seguente accordo di licenza:
+Tutti i contenuti di questo sito sono regolati dal seguente accordo di licenza:
 
 ## Tipo di licenza
 
-Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0 DEED)
+Attribuzione - Non commerciale - Condividi allo stesso modo 4.0 Internazionale (CC BY-NC-SA 4.0)
 
 ## Link all'accordo di licenza
 
-[https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)
+[https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it)
+
+## Opera originale e modifiche
+
+Questo sito è una traduzione e un adattamento in italiano di
+*[Learning Python: From Blocks to Code with Monty](https://dmccreary.github.io/learning-python/)*
+di Dan McCreary, distribuito con licenza CC BY-NC-SA 4.0.
+Le modifiche comprendono la traduzione dei testi, del codice di esempio e dei commenti, oltre ad
+alcuni adattamenti. La versione italiana è distribuita con la stessa licenza.
 
 ## I tuoi diritti
 
@@ -25,10 +33,10 @@ Il licenziante non può revocare queste libertà finché rispetti i termini dell
 
 * **Attribuzione** — Devi riconoscere la paternità dell'opera in modo adeguato, fornire un link alla licenza e indicare se sono state apportate modifiche. Puoi farlo in qualsiasi maniera ragionevole, ma non con modalità che suggeriscano che il licenziante approvi te o il tuo utilizzo.
 * **NonCommerciale** — Non puoi usare il materiale per scopi commerciali.
-* **CondividiAllostessoModo** — Se remixi, trasformi o sviluppi il materiale, devi distribuire i tuoi contributi con la stessa licenza dell'originale.
+* **Condividi allo stesso modo** — Se remixi, trasformi o sviluppi il materiale, devi distribuire i tuoi contributi con la stessa licenza dell'originale.
 * **Nessuna restrizione aggiuntiva** — Non puoi applicare termini legali o misure tecnologiche che limitino legalmente altri dal fare ciò che la licenza permette.
 
-!!! Notices
+!!! note "Avvertenze"
     Non sei tenuto/a a rispettare la licenza per gli elementi del materiale di pubblico dominio o laddove il tuo utilizzo sia consentito da un'eccezione o limitazione applicabile.
 
     Non vengono fornite garanzie. La licenza potrebbe non concederti tutti i permessi necessari per l'uso che intendi farne. Ad esempio, altri diritti come pubblicità, privacy o diritti morali potrebbero limitare il modo in cui utilizzi il materiale.
@@ -37,4 +45,12 @@ Il licenziante non può revocare queste libertà finché rispetti i termini dell
 
 ## Licenza commerciale
 
-I diritti commerciali sono riservati al detentore del copyright. Per licenze commerciali, richieste di pubblicazione o il permesso di utilizzare quest'opera in contesti commerciali, contatta [Dan McCreary su LinkedIn](https://www.linkedin.com/in/danmccreary/).
+I diritti commerciali sono riservati ai titolari dei diritti d'autore:
+
+* sui **contenuti originali** in inglese, a Dan McCreary;
+* sulla **traduzione italiana**, al curatore della versione italiana.
+
+Per usare la versione italiana in contesti commerciali (per esempio pubblicazioni o corsi a
+pagamento) serve quindi il permesso di entrambi: contatta
+[Dan McCreary su LinkedIn](https://www.linkedin.com/in/danmccreary/) per l'opera originale e il
+[curatore della versione italiana su GitHub](https://github.com/DavideCeto) per la traduzione.

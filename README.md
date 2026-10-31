@@ -122,7 +122,7 @@ I problemi che riguardano i contenuti originali in inglese si possono segnalare 
 
 ## Licenza
 
-Questo lavoro è licenziato sotto la [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+Questo lavoro è licenziato sotto la [Creative Commons Attribuzione - Non commerciale - Condividi allo stesso modo 4.0 Internazionale](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.it).
 
 **Sei libero di:**
 
@@ -131,9 +131,11 @@ Questo lavoro è licenziato sotto la [Creative Commons Attribution-NonCommercial
 
 **Sotto i seguenti termini:**
 
-- **Attribuzione** — Dare il dovuto credito con un link all'originale
-- **Non Commerciale** — Nessun uso commerciale senza permesso
-- **ShareAlike** — Distribuire i contributi sotto la stessa licenza
+- **Attribuzione** — Citare l'autore, fornire un link alla licenza e indicare se sono state fatte modifiche
+- **Non commerciale** — Nessun uso commerciale senza permesso
+- **Condividi allo stesso modo** — Distribuire i propri adattamenti con la stessa licenza
+
+Questa versione è una traduzione e un adattamento in italiano di *Learning Python* di Dan McCreary, distribuita con la stessa licenza dell'originale.
 
 Per maggiori dettagli, comprese le richieste di licenza commerciale, consulta [docs/license.md](docs/license.md).
 
