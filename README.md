@@ -146,9 +146,16 @@ Questo progetto si basa sui contributi dei grandi esperti della comunità open s
 
 ## Contatti
 
-**Dan McCreary**
+### Progetto originale (inglese)
+
+**Dan McCreary** — autore di [Learning Python](https://github.com/dmccreary/learning-python)
 
 - LinkedIn: [linkedin.com/in/danmccreary](https://www.linkedin.com/in/danmccreary/)
 - GitHub: [@dmccreary](https://github.com/dmccreary)
 
-Domande, suggerimenti o opportunità di collaborazione? Non esitate a contattarmi su LinkedIn o a creare un issue su GitHub.
+### Versione italiana
+
+Traduzione e adattamento in italiano.
+
+- GitHub: [@DavideCeto](https://github.com/DavideCeto)
+- Segnalazioni sulla traduzione: [issue su GitHub](https://github.com/DavideCeto/Imparare-python/issues)
