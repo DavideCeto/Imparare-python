@@ -16,7 +16,7 @@ Verifica la tua comprensione delle basi di Python, dell'ambiente Skulpt e dei tu
 ??? question "Mostra risposta"
     La risposta corretta è **B**. L'interprete Python legge il tuo codice una riga alla volta, dall'alto verso il basso, ed esegue ogni istruzione. Pensalo come un lettore velocissimo che trasforma le tue parole in azioni — in modo simile a come cliccare sulla bandierina verde in Scratch avvia l'esecuzione del tuo programma.
 
-    **Concept Tested:** Python Interpreter Overview
+    **Concetto verificato:** Panoramica dell'interprete Python
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione delle basi di Python, dell'ambiente Skulpt e dei tu
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Skulpt è una versione di Python che funziona direttamente dentro la pagina web che stai leggendo. Ogni finestra di codice interattiva nei primi capitoli è alimentata da Skulpt — clicchi su Run e il codice viene eseguito proprio sulla pagina, senza bisogno di account o installazioni.
 
-    **Concept Tested:** Skulpt Browser Python
+    **Concetto verificato:** Skulpt: Python nel browser
 
 ---
 
@@ -53,7 +53,7 @@ print("Ciao ciao!")
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Ogni chiamata a `print()` mostra il suo testo e poi passa a una nuova riga. Quindi la prima chiamata stampa `Ciao!` e la seconda stampa `Ciao ciao!` sulla riga sottostante. Python esegue ogni istruzione in ordine dall'alto verso il basso, proprio come Scratch esegue i blocchi in uno script.
 
-    **Concept Tested:** print() Function
+    **Concetto verificato:** Funzione print()
 
 ---
 
@@ -69,7 +69,7 @@ print("Ciao ciao!")
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Il carattere `#` avvia un commento su una riga. Tutto ciò che si trova su quella riga dopo il `#` è una nota per i lettori umani — l'interprete Python la ignora completamente quando esegue il programma. I commenti aiutano a spiegare cosa fa il tuo codice senza cambiare come funziona.
 
-    **Concept Tested:** Single-Line Comments
+    **Concetto verificato:** Commenti su una riga
 
 ---
 
@@ -85,7 +85,7 @@ print("Ciao ciao!")
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Python distingue tra maiuscole e minuscole, quindi `Print` con la P maiuscola non viene riconosciuto come la funzione print integrata. Python risponderà con `NameError: name 'Print' is not defined`. Usa sempre `print()` minuscolo.
 
-    **Concept Tested:** Case Sensitivity
+    **Concetto verificato:** Distinzione tra maiuscole e minuscole
 
 ---
 
@@ -101,7 +101,7 @@ print("Ciao ciao!")
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Python ignora completamente le righe vuote — non hanno alcun effetto su come viene eseguito il programma. Ma per i lettori umani sono molto utili. Le righe vuote dividono il codice in gruppi logici, proprio come gli a capo dividono una storia in scene. È una buona abitudine aggiungerle tra sezioni che svolgono compiti diversi.
 
-    **Concept Tested:** Blank Lines and Readability
+    **Concetto verificato:** Righe vuote e leggibilità
 
 ---
 
@@ -117,7 +117,7 @@ print("Ciao ciao!")
 ??? question "Mostra risposta"
     La risposta corretta è **C**. La parola chiave `import` dice all'interprete Python di caricare una libreria prima di eseguire il resto del tuo programma. Da solo Python sa fare cose di base come `print()`, ma strumenti come `turtle`, `random` e `math` devono prima essere importati. Le istruzioni import vanno sempre proprio in cima al tuo programma.
 
-    **Concept Tested:** import Statement
+    **Concetto verificato:** Istruzione import
 
 ---
 
@@ -133,7 +133,7 @@ print("Ciao ciao!")
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Devi scrivere `import turtle` per caricare la libreria turtle prima che il tuo programma possa usare qualsiasi comando turtle. La parola chiave è `import` — non `use`, `load` o `start`. Questa riga deve comparire in cima al tuo programma, prima di qualsiasi comando turtle.
 
-    **Concept Tested:** import turtle
+    **Concetto verificato:** import turtle
 
 ---
 
@@ -149,7 +149,7 @@ print("Ciao ciao!")
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `turtle.Turtle()` crea un nuovo oggetto tartaruga e lo assegna alla variabile `t`. Una volta che hai questa tartaruga, puoi darle comandi usando la notazione col punto — per esempio, `t.forward(100)` dice alla tartaruga `t` di muoversi in avanti di 100 passi disegnando una linea.
 
-    **Concept Tested:** import turtle
+    **Concetto verificato:** import turtle
 
 ---
 
@@ -165,6 +165,6 @@ print("Ciao ciao!")
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Python è un linguaggio testuale la cui sintassi si legge quasi come l'inglese comune, il che lo rende un passo naturale dopo i blocchi visuali di Scratch. È uno dei linguaggi di programmazione più popolari al mondo, usato da professionisti in aziende come YouTube, NASA e nella ricerca sull'intelligenza artificiale.
 
-    **Concept Tested:** Python Interpreter Overview
+    **Concetto verificato:** Panoramica dell'interprete Python
 
 ---

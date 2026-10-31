@@ -57,7 +57,7 @@ print(score)
 
 !!! mascot-tip "Ponte con Scratch"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch, cliccavi sul blocco **"Set score to 10"** per creare una variabile e darle un valore iniziale. In Python, `score = 10` fa esattamente la stessa cosa — stessa idea, solo scritta come testo invece che incastrata come blocchi!
+    In Scratch, usavi il blocco **"porta [score] a (10)"** per dare a una variabile il suo valore iniziale. In Python, `score = 10` fa esattamente la stessa cosa — stessa idea, solo scritta come testo invece che incastrata come blocchi!
 
 ## Codice di Esempio
 

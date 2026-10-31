@@ -16,7 +16,7 @@ Verifica la tua comprensione delle funzioni matematiche built-in di Python, del 
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `abs(x)` restituisce il valore assoluto di un numero — la distanza da zero, che è sempre non negativa. `abs(-15)` restituisce `15`. Anche `abs(15)` restituisce `15`. La funzione `abs()` è incorporata in Python e non richiede alcun import.
 
-    **Concept Tested:** abs() Function
+    **Concetto verificato:** Funzione abs()
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione delle funzioni matematiche built-in di Python, del 
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `round(x, n)` arrotonda `x` a `n` cifre decimali. `round(3.74, 1)` arrotonda a 1 cifra decimale, dando `3.7` (dato che la cifra dopo la prima decimale è 4, che arrotonda in giù). Senza secondo argomento, `round(x)` arrotonda all'intero più vicino: `round(3.74)` dà `4`.
 
-    **Concept Tested:** round() Function
+    **Concetto verificato:** Funzione round()
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione delle funzioni matematiche built-in di Python, del 
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `math.sqrt(x)` restituisce sempre un float, anche quando il risultato è un numero intero. La radice quadrata di 144 è 12, ma `math.sqrt(144)` restituisce `12.0`. Se hai bisogno di un intero, puoi racchiuderlo: `int(math.sqrt(144))` dà `12`.
 
-    **Concept Tested:** math.sqrt()
+    **Concetto verificato:** math.sqrt()
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione delle funzioni matematiche built-in di Python, del 
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `math.floor(x)` arrotonda **in giù** all'intero più vicino (3.9 → 3), e `math.ceil(x)` arrotonda **in su** all'intero più vicino (3.1 → 4). Questo è diverso da `round()`, che arrotonda all'intero più vicino (in su o in giù in base alla cifra decimale). Floor va sempre in giù, ceil va sempre in su.
 
-    **Concept Tested:** math.floor() and math.ceil()
+    **Concetto verificato:** math.floor() e math.ceil()
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione delle funzioni matematiche built-in di Python, del 
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `math.pi` è la costante matematica π (pi), approssimativamente `3.14159265358979`. Rappresenta il rapporto tra la circonferenza di un cerchio e il suo diametro. La costante `math.e` (approssimativamente 2.71828) è il numero di Euler, e `6.28318` è 2π (due pi), chiamato anche tau.
 
-    **Concept Tested:** math.pi
+    **Concetto verificato:** math.pi
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione delle funzioni matematiche built-in di Python, del 
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `math.sin()` e `math.cos()` prendono i loro argomenti in **radianti**, non in gradi. Se vuoi il seno di 90 gradi, devi prima convertire: `math.sin(math.radians(90))`. Un cerchio completo è 360 gradi = 2π radianti. Un mezzo cerchio è 180 gradi = π radianti.
 
-    **Concept Tested:** Radians vs Degrees
+    **Concetto verificato:** Radianti e gradi
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione delle funzioni matematiche built-in di Python, del 
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `math.radians(degrees)` converte un angolo da gradi a radianti. 180 gradi equivalgono a π radianti (un mezzo cerchio). Quindi `math.radians(180)` restituisce approssimativamente `3.14159`. In modo simile, `math.radians(360)` restituisce `2 * math.pi` (un cerchio completo).
 
-    **Concept Tested:** math.radians()
+    **Concetto verificato:** math.radians()
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione delle funzioni matematiche built-in di Python, del 
 ??? question "Mostra risposta"
     La risposta corretta è **D**. `math.factorial(n)` calcola n! — il prodotto di tutti gli interi positivi fino a n. `5! = 5 × 4 × 3 × 2 × 1 = 120`. I fattoriali crescono molto velocemente: `10! = 3.628.800`. I fattoriali si usano in probabilità, combinazioni, e molte formule matematiche.
 
-    **Concept Tested:** math.factorial()
+    **Concetto verificato:** math.factorial()
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione delle funzioni matematiche built-in di Python, del 
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `math.sin()` restituisce valori che oscillano in modo fluido tra -1.0 e 1.0 all'aumentare dell'angolo di input. Moltiplicando l'output per un'ampiezza (come 100 pixel) e scorrendo gli angoli con un ciclo, puoi far tracciare alla tartaruga un pattern d'onda morbido. Questo stesso principio è usato nei giochi, nella musica, e nelle simulazioni di fisica.
 
-    **Concept Tested:** math.sin() and Turtle Projects
+    **Concetto verificato:** math.sin() e progetti con la turtle
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione delle funzioni matematiche built-in di Python, del 
 ??? question "Mostra risposta"
     La risposta corretta è **D**. `math.degrees(radians)` converte dai radianti ai gradi. π radianti equivale a 180 gradi (un mezzo cerchio). Quindi `math.degrees(math.pi)` restituisce `180.0`. Questo è l'opposto di `math.radians(180)`. Usa `math.degrees()` quando hai un valore in radianti (magari da un calcolo) e hai bisogno di mostrarlo in gradi.
 
-    **Concept Tested:** math.degrees()
+    **Concetto verificato:** math.degrees()
 
 ---

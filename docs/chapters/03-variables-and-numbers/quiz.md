@@ -16,7 +16,7 @@ Verifica la tua comprensione di variabili, interi, float e regole di denominazio
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Una variabile è una posizione di memoria etichettata nella memoria del tuo programma. Le dai un nome, ci memorizzi dentro un valore, e Python ricorda quel valore per te. Pensala come un post-it con un nome sul davanti e il valore attuale sul retro — quando ti serve, lo cerchi per nome.
 
-    **Concept Tested:** Variable Assignment
+    **Concetto verificato:** Assegnazione di variabili
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione di variabili, interi, float e regole di denominazio
 ??? question "Mostra risposta"
     La risposta corretta è **C**. In Python, `=` è l'operatore di assegnazione — significa "prendi il valore a destra e memorizzalo nella variabile a sinistra." È un'istruzione a senso unico; il valore fluisce da destra verso sinistra. Non significa "è uguale a" come in matematica — quel confronto usa `==` (due segni di uguale).
 
-    **Concept Tested:** Variable Assignment
+    **Concetto verificato:** Assegnazione di variabili
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione di variabili, interi, float e regole di denominazio
 ??? question "Mostra risposta"
     La risposta corretta è **D**. Lo snake_case unisce le parole con underscore e mantiene tutte le lettere minuscole: `my_score`. `MyScore` usa lettere maiuscole (quello è camelCase o PascalCase). `my-score` usa un trattino, che Python legge come sottrazione. `myscore` attacca le parole senza alcun separatore, rendendolo più difficile da leggere.
 
-    **Concept Tested:** Variable Naming (snake_case)
+    **Concetto verificato:** Nomi delle variabili (snake_case)
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione di variabili, interi, float e regole di denominazio
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Qualsiasi numero con una virgola decimale è un float (abbreviazione di numero a virgola mobile) in Python. Gli interi sono numeri interi senza virgola decimale. `3.14` ha una virgola decimale, quindi Python lo memorizza come `float`. Usi i float per misurazioni, denaro e valori che non cadono esattamente su un numero intero.
 
-    **Concept Tested:** Floats
+    **Concetto verificato:** Numeri decimali (float)
 
 ---
 
@@ -86,7 +86,7 @@ print(score)
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Python legge ogni riga in ordine. Prima memorizza `10` in `score`, poi sostituisce quel valore con `25`. Quando viene eseguito `print(score)`, la variabile contiene `25`. Non c'è alcun errore — riassegnare una variabile è del tutto normale ed è il modo in cui i programmi aggiornano i valori mentre vengono eseguiti.
 
-    **Concept Tested:** Variable Reassignment
+    **Concetto verificato:** Riassegnazione di variabili
 
 ---
 
@@ -102,7 +102,7 @@ print(score)
 ??? question "Mostra risposta"
     La risposta corretta è **C**. I nomi di variabile non possono iniziare con una cifra. `1st_place` inizia con `1`, quindi Python genera un `SyntaxError`. I nomi di variabile devono iniziare con una lettera o un underscore. `player_score`, `_hidden` e `total_points` seguono tutti questa regola e sono nomi validi.
 
-    **Concept Tested:** Variable Naming Rules
+    **Concetto verificato:** Regole per i nomi delle variabili
 
 ---
 
@@ -123,7 +123,7 @@ print(result)
 ??? question "Mostra risposta"
     La risposta corretta è **B**. In Python 3, dividere con `/` restituisce sempre un float, anche quando il risultato è un numero intero. Quindi `10 / 2` dà `5.0`, non `5`. Se vuoi un risultato intero, usa invece l'operatore di divisione intera `//`: `10 // 2` dà `5`.
 
-    **Concept Tested:** Floats
+    **Concetto verificato:** Numeri decimali (float)
 
 ---
 
@@ -139,7 +139,7 @@ print(result)
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `None` è un valore speciale di Python di tipo `NoneType` che significa "nessun valore" o "niente qui." È diverso da `0` (un intero), `""` (una stringa vuota) e `False` (un booleano) — ognuno di questi è comunque qualcosa, mentre `None` significa l'assenza totale di un valore.
 
-    **Concept Tested:** None Value
+    **Concetto verificato:** Il valore None
 
 ---
 
@@ -155,7 +155,7 @@ print(result)
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Il trattino `-` è l'operatore di sottrazione di Python. Quando Python vede `my-score`, lo legge come la variabile `my` meno la variabile `score`, non come un unico nome. Questo causa un `NameError` perché `my` e `score` non sono state definite. Usa sempre un underscore `_` per unire le parole in un nome di variabile.
 
-    **Concept Tested:** Variable Naming Rules
+    **Concetto verificato:** Regole per i nomi delle variabili
 
 ---
 
@@ -171,6 +171,6 @@ print(result)
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Gli interi (`int`) servono per cose intere e contabili — numero di vite, punteggio di gioco, numero di lati di una forma. I float (`float`) servono per valori che possono avere parti decimali — altezze, prezzi, percentuali, pi greco. Scegliere il tipo giusto rende il tuo codice più chiaro ed evita risultati decimali inaspettati.
 
-    **Concept Tested:** Integers
+    **Concetto verificato:** Numeri interi
 
 ---

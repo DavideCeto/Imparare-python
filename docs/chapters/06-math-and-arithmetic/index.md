@@ -19,16 +19,16 @@ variabili in una volta e a usare operatori aumentati come `+=` per rendere il tu
 
 Questo capitolo tratta i seguenti 10 concetti del grafo di apprendimento:
 
-1. Multiple Assignment
-2. Augmented Assignment Operators
-3. Division Returns Float
-4. Integer Division Operator
-5. Modulo Operator
-6. Exponentiation Operator
-7. Arithmetic Operators
-8. Order of Operations
-9. Negative Numbers
-10. Scientific Notation Floats
+1. Assegnazione multipla
+2. Operatori di assegnazione composta
+3. La divisione restituisce un float
+4. Operatore di divisione intera
+5. Operatore modulo
+6. Operatore di elevamento a potenza
+7. Operatori aritmetici
+8. Ordine delle operazioni
+9. Numeri negativi
+10. Float in notazione scientifica
 
 ## Prerequisiti
 
@@ -73,7 +73,7 @@ Gli ultimi tre — `//`, `%` e `**` — potrebbero essere nuovi per te, ma li us
 
 !!! mascot-tip "Ponte con Scratch"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch, la tavolozza verde **Operators** ha blocchi per `+`, `-`, `×` e `÷`. Python usa le stesse idee ma tu digiti i simboli direttamente invece di trascinare blocchi. I tre operatori bonus di Python — `**`, `//` e `%` — non hanno equivalenti in Scratch, ma sbloccano un intero nuovo mondo di trucchi matematici!
+    In Scratch, la categoria verde **Operatori** ha blocchi per `+`, `-`, `×` e `÷`. Python usa le stesse idee ma tu digiti i simboli direttamente invece di trascinare blocchi. I tre operatori bonus di Python — `**`, `//` e `%` — non hanno equivalenti in Scratch, ma sbloccano un intero nuovo mondo di trucchi matematici!
 
 Il programma qui sotto esegue tutti e sette gli operatori insieme così puoi vedere il loro output fianco a fianco.
 

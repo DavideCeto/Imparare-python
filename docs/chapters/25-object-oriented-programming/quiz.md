@@ -16,7 +16,7 @@ Verifica la tua comprensione delle classi, delle istanze, dei costruttori, dell'
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Una classe è un progetto o modello per creare oggetti. Definisce quali dati (attributi) e comportamenti (metodi) avrà ogni istanza di quella classe. Definisci una classe con la parola chiave `class`, e poi crei singoli oggetti (istanze) chiamando la classe come una funzione.
 
-    **Concept Tested:** class Keyword
+    **Concetto verificato:** Parola chiave class
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione delle classi, delle istanze, dei costruttori, dell'
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `__init__()` è il costruttore — un metodo speciale che Python chiama automaticamente ogni volta che crei una nuova istanza. Imposta lo stato iniziale dell'oggetto assegnando valori agli attributi con `self.nome_attributo = valore`. Senza `__init__()`, l'oggetto non avrebbe attributi finché non li imposti manualmente.
 
-    **Concept Tested:** __init__() Constructor
+    **Concetto verificato:** Costruttore __init__()
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione delle classi, delle istanze, dei costruttori, dell'
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `self` è un riferimento all'istanza particolare su cui viene chiamato il metodo. Quando scrivi `fido.bark()`, Python passa `fido` come argomento `self` automaticamente. Dentro `bark()`, `self.name` si riferisce a `fido.name`. Ogni metodo in una classe prende `self` come primo parametro, anche se Python lo riempie automaticamente — non lo passi mai tu stesso.
 
-    **Concept Tested:** self
+    **Concetto verificato:** self
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione delle classi, delle istanze, dei costruttori, dell'
 ??? question "Mostra risposta"
     La risposta corretta è **D**. Crei un'istanza chiamando la classe come una funzione con gli argomenti che `__init__()` si aspetta (dopo `self`). Python chiama automaticamente `__init__()` e restituisce una nuova istanza. A differenza di altri linguaggi, Python non usa la parola chiave `new` — chiami semplicemente il nome della classe con le parentesi.
 
-    **Concept Tested:** Creating Instances
+    **Concetto verificato:** Creare istanze
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione delle classi, delle istanze, dei costruttori, dell'
 ??? question "Mostra risposta"
     La risposta corretta è **B**. La notazione punto (`oggetto.attributo` oppure `oggetto.metodo()`) è il modo in cui accedi ai dati memorizzati dentro un oggetto o chiami i comportamenti definiti su di esso. Per esempio, `fido.name` legge l'attributo `name`, e `fido.bark()` chiama il metodo `bark`. Hai usato la notazione punto fin dall'inizio con le stringhe (`"hello".upper()`), le liste (`items.append(x)`), e la tartaruga (`t.forward(100)`).
 
-    **Concept Tested:** Dot Notation
+    **Concetto verificato:** Notazione a punto
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione delle classi, delle istanze, dei costruttori, dell'
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `__str__()` definisce la rappresentazione in stringa leggibile dall'uomo di un oggetto. Senza di esso, `print(fido)` mostra qualcosa di poco utile come `<__main__.Dog object at 0x10a3b2c>`. Con `__str__()` che restituisce `f"Dog({self.name}, {self.breed})"`, `print(fido)` mostra invece `Dog(Fido, Labrador)`.
 
-    **Concept Tested:** __str__() Method
+    **Concetto verificato:** Metodo __str__()
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione delle classi, delle istanze, dei costruttori, dell'
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Una variabile di istanza (`self.name = value`) appartiene a un oggetto specifico. Cambiarla su un'istanza non influenza nessun'altra. Una variabile di classe è definita nel corpo della classe (non dentro un metodo) ed è condivisa da tutte le istanze. Un uso comune delle variabili di classe è contare quante istanze sono state create.
 
-    **Concept Tested:** Class vs Instance Variables
+    **Concetto verificato:** Variabili di classe e variabili di istanza
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione delle classi, delle istanze, dei costruttori, dell'
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Metti il nome della classe genitore tra parentesi dopo il nome della sottoclasse: `class Puppy(Dog):`. La sottoclasse eredita automaticamente tutti gli attributi e i metodi dal genitore. Solo Python usa la sintassi `(ClasseGenitore)` per l'eredità; altri linguaggi usano `extends` o parole chiave simili.
 
-    **Concept Tested:** Inheritance
+    **Concetto verificato:** Ereditarietà
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione delle classi, delle istanze, dei costruttori, dell'
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `super().__init__(...)` chiama il costruttore della classe genitore, così puoi eseguire il suo codice di impostazione senza riscriverlo. Questo è importante perché la sottoclasse ha bisogno anche degli attributi del genitore. Per esempio, se `Animal.__init__` imposta `self.name` e `self.sound`, chiamare `super().__init__(name, sound)` in una sottoclasse gestisce tutto questo automaticamente.
 
-    **Concept Tested:** super()
+    **Concetto verificato:** super()
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione delle classi, delle istanze, dei costruttori, dell'
 ??? question "Mostra risposta"
     La risposta corretta è **D**. I nomi delle classi Python usano il CamelCase (chiamato anche PascalCase) — ogni parola inizia con una lettera maiuscola e non ci sono underscore: `Dog`, `Student`, `BankAccount`, `LinkedList`. Questa è una convenzione della PEP 8 (la guida di stile di Python). Al contrario, i nomi di variabili e funzioni usano `snake_case`, e le costanti usano `ALL_CAPS`.
 
-    **Concept Tested:** CamelCase Naming Convention
+    **Concetto verificato:** Convenzione di nomi CamelCase
 
 ---

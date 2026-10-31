@@ -16,7 +16,7 @@ Verifica la tua comprensione dei moduli Python, della sintassi di import, e del 
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `import module_name` carica un modulo dalla Libreria Standard di Python (o un pacchetto installato) e rende disponibili le sue funzioni. Dopo `import random`, accedi alle sue funzioni con `random.function_name()`. Il modulo viene caricato solo una volta, anche se lo importi più volte.
 
-    **Concept Tested:** import Statement
+    **Concetto verificato:** Istruzione import
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione dei moduli Python, della sintassi di import, e del 
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `import random` importa l'intero modulo, e accedi alle funzioni con `random.randint()`. `from random import randint` importa solo la funzione `randint` per nome, così puoi chiamarla direttamente come `randint()` senza il prefisso `random.`. Entrambi gli approcci funzionano; il secondo è più conciso quando hai bisogno solo di una o due funzioni.
 
-    **Concept Tested:** from...import Syntax
+    **Concetto verificato:** Sintassi from...import
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione dei moduli Python, della sintassi di import, e del 
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `import ... as alias` importa un modulo e gli dà un soprannome più corto. Dopo `import random as rnd`, chiami `rnd.randint(1, 6)` invece di `random.randint(1, 6)`. Questo è comunemente usato per moduli con nomi lunghi (come `numpy as np` o `matplotlib.pyplot as plt`) per risparmiare digitazione.
 
-    **Concept Tested:** import...as Alias
+    **Concetto verificato:** Alias con import...as
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione dei moduli Python, della sintassi di import, e del 
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `randint(a, b)` restituisce un intero casuale dove entrambi gli estremi sono inclusi: `a <= result <= b`. Quindi `randint(1, 6)` può restituire 1, 2, 3, 4, 5, o 6 — simulando un dado a sei facce onesto. Questo è diverso da `range(1, 6)` che si ferma prima di 6.
 
-    **Concept Tested:** random.randint()
+    **Concetto verificato:** random.randint()
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione dei moduli Python, della sintassi di import, e del 
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `random.random()` restituisce un numero a virgola mobile casuale nell'intervallo `[0.0, 1.0)` — cioè, 0.0 è possibile ma 1.0 no. Questo è utile per le probabilità: `if random.random() < 0.3:` si attiva circa il 30% delle volte. Moltiplica per un intervallo per ottenere float in altri range: `random.random() * 10` dà un float da 0 a 10.
 
-    **Concept Tested:** random.random()
+    **Concetto verificato:** random.random()
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione dei moduli Python, della sintassi di import, e del 
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `random.choice(sequence)` sceglie un elemento casuale dalla sequenza e lo restituisce. Ogni elemento ha una probabilità uguale di essere scelto. Questo è perfetto per simulare lanci di moneta, scelte casuali di colori, direzioni casuali in un gioco, e compiti simili.
 
-    **Concept Tested:** random.choice()
+    **Concetto verificato:** random.choice()
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione dei moduli Python, della sintassi di import, e del 
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `random.shuffle(lst)` mescola la lista **sul posto**, riorganizzando i suoi elementi casualmente, e restituisce `None`. Questo significa che la lista originale viene cambiata direttamente — una nuova lista NON viene creata. Quindi `shuffled = random.shuffle(cards)` farebbe diventare `shuffled` uguale a `None`, non una lista mescolata.
 
-    **Concept Tested:** random.shuffle()
+    **Concetto verificato:** random.shuffle()
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione dei moduli Python, della sintassi di import, e del 
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `random.seed(n)` imposta il punto di partenza per il generatore di numeri casuali. Con lo stesso seme, ottieni sempre la stessa sequenza di numeri "casuali". Questo è molto utile per i test e il debug — puoi riprodurre gli stessi risultati casuali a ogni esecuzione. Senza un seme, Python usa l'ora attuale come seme, dando risultati diversi a ogni esecuzione.
 
-    **Concept Tested:** random.seed()
+    **Concetto verificato:** random.seed()
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione dei moduli Python, della sintassi di import, e del 
 ??? question "Mostra risposta"
     La risposta corretta è **C**. La sintassi corretta per importare una funzione specifica è `from module import function`. Dopo `from random import randint`, puoi chiamare `randint(1, 6)` direttamente senza il prefisso `random.`. Le opzioni A e D hanno le parole nell'ordine sbagliato, e l'opzione B richiederebbe comunque di chiamare `random.randint()`.
 
-    **Concept Tested:** from...import Syntax
+    **Concetto verificato:** Sintassi from...import
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione dei moduli Python, della sintassi di import, e del 
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `random.sample(population, k)` restituisce una lista di `k` elementi unici scelti dalla popolazione senza ripetizione (nessun duplicato). `sample(range(1, 50), 6)` sceglie 6 numeri unici da 1 a 49 — come scegliere i numeri della lotteria. Nota che `range(1, 50)` va da 1 a 49, non a 50.
 
-    **Concept Tested:** random.sample()
+    **Concetto verificato:** random.sample()
 
 ---

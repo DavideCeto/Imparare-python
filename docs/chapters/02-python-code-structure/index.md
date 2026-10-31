@@ -19,13 +19,13 @@ spazi bianchi — più le parole chiave di Python e i colori con nome che userai
 
 Questo capitolo tratta i seguenti 7 concetti del grafo di apprendimento:
 
-1. Multi-Line Strings
-2. Indentation as Syntax
-3. Python Keywords
-4. Code Block Structure
-5. Statement vs Expression
-6. Whitespace Rules
-7. Named Colors
+1. Stringhe su più righe
+2. L'indentazione come sintassi
+3. Parole chiave di Python
+4. Struttura dei blocchi di codice
+5. Istruzioni ed espressioni
+6. Regole sugli spazi
+7. Colori con nome
 
 ## Prerequisiti
 
@@ -114,7 +114,7 @@ La maggior parte dei linguaggi di programmazione usa le **parentesi graffe** `{ 
 
 !!! mascot-tip "Ponte con Scratch"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch, metti blocchi *dentro* un altro blocco (come un blocco Repeat) trascinandoli così si incastrano al suo interno. In Python, metti righe *dentro* un gruppo **indentandole** — aggiungendo 4 spazi all'inizio. L'annidamento visivo che vedevi in Scratch adesso vive in quei 4 spazi bianchi.
+    In Scratch, metti blocchi *dentro* un altro blocco (come un blocco **ripeti**) trascinandoli così si incastrano al suo interno. In Python, metti righe *dentro* un gruppo **indentandole** — aggiungendo 4 spazi all'inizio. L'annidamento visivo che vedevi in Scratch adesso vive in quei 4 spazi bianchi.
 
 Ecco un'anteprima di come appare l'indentazione in azione. Non hai ancora imparato i cicli `for` — arriveranno nel Capitolo 7 — ma osserva subito lo schema degli spazi:
 

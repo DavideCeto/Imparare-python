@@ -16,7 +16,7 @@ Verifica la tua comprensione dei cicli while, break, continue, e dei concetti di
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Un ciclo `for` è l'ideale quando sai esattamente quante volte ripetere — come `for i in range(10)`. Un ciclo `while` è l'ideale quando vuoi continuare a ripetere finché una certa condizione resta `True`, senza sapere in anticipo quante iterazioni saranno. Entrambi possono compiere compiti simili, ma ognuno ha situazioni in cui si adatta più naturalmente.
 
-    **Concept Tested:** while Loop
+    **Concetto verificato:** Ciclo while
 
 ---
 
@@ -40,7 +40,7 @@ print("Fatto!")
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Il ciclo parte con count = 3 (True), stampa 3, count diventa 2 (True), stampa 2, count diventa 1 (True), stampa 1, count diventa 0. Ora `0 > 0` è `False`, quindi il ciclo finisce senza stampare 0. Poi si stampa `"Fatto!"`. Il numero 0 non viene mai stampato perché la condizione viene controllata prima di ogni giro.
 
-    **Concept Tested:** while Loop
+    **Concetto verificato:** Ciclo while
 
 ---
 
@@ -56,7 +56,7 @@ print("Fatto!")
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Un ciclo infinito si verifica quando la condizione in un ciclo `while` non diventa mai `False` — di solito perché il programmatore ha dimenticato di aggiornare la variabile da cui dipende la condizione. Per esempio, se scrivi `while count > 0:` ma dimentichi `count -= 1` dentro il ciclo, `count` resta lo stesso per sempre e il programma non si ferma mai.
 
-    **Concept Tested:** Infinite Loops to Avoid
+    **Concetto verificato:** Cicli infiniti da evitare
 
 ---
 
@@ -72,7 +72,7 @@ print("Fatto!")
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `break` esce dal ciclo completamente e immediatamente, saltando alla prima riga di codice dopo il ciclo. Non aspetta che la condizione diventi `False` — semplicemente si ferma. Questo è utile quando succede qualcosa dentro il ciclo che significa che non hai più bisogno di continuare, come trovare la risposta che stavi cercando.
 
-    **Concept Tested:** break Statement
+    **Concetto verificato:** Istruzione break
 
 ---
 
@@ -88,7 +88,7 @@ print("Fatto!")
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `continue` salta le righe rimanenti nel giro attuale del ciclo e torna direttamente a controllare la condizione. Il ciclo non finisce — salta solo quell'iterazione. Questo è utile per saltare valori specifici: per esempio, usando `continue` quando un numero è pari così che vengano elaborati solo i numeri dispari.
 
-    **Concept Tested:** continue Statement
+    **Concetto verificato:** Istruzione continue
 
 ---
 
@@ -104,7 +104,7 @@ print("Fatto!")
 ??? question "Mostra risposta"
     La risposta corretta è **C**. La clausola `else` su un ciclo `while` gira quando il ciclo finisce normalmente — cioè, quando la condizione diventa `False` da sola. Se il ciclo finisce a causa di un'istruzione `break`, il blocco `else` viene **saltato**. Questo lo rende utile per lo schema "abbiamo trovato quello che stavamo cercando?" nel codice di ricerca.
 
-    **Concept Tested:** else Clause on Loops
+    **Concetto verificato:** Clausola else nei cicli
 
 ---
 
@@ -120,7 +120,7 @@ print("Fatto!")
 ??? question "Mostra risposta"
     La risposta corretta è **B**. In un ciclo annidato, il ciclo interno gira completamente per ogni singolo giro del ciclo esterno. Se il ciclo esterno fa 3 giri e il ciclo interno fa 4 giri per ogni giro esterno, il corpo del ciclo interno gira 3 × 4 = 12 volte in totale. I cicli annidati sono potenti per disegnare griglie, tabelle e pattern 2D.
 
-    **Concept Tested:** Nested Loops
+    **Concetto verificato:** Cicli annidati
 
 ---
 
@@ -136,7 +136,7 @@ print("Fatto!")
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Il modulo `time` contiene funzioni per lavorare con il tempo, incluso `time.sleep(seconds)` che pausa il programma per il numero di secondi specificato. Lo importi con `import time`, poi chiami `time.sleep(2)` per pausare per 2 secondi. Questo è utile per creare timer di conto alla rovescia e controllare la velocità dell'animazione.
 
-    **Concept Tested:** time Module Overview
+    **Concetto verificato:** Panoramica del modulo time
 
 ---
 
@@ -152,7 +152,7 @@ print("Fatto!")
 ??? question "Mostra risposta"
     La risposta corretta è **D**. `time.sleep(seconds)` pausa il programma per il numero di secondi indicato. Puoi passare valori decimali: `time.sleep(0.5)` pausa per mezzo secondo. Dopo la pausa, il programma continua normalmente. In un ciclo, `time.sleep()` crea un ritardo tra ogni passo — la base dell'animazione semplice.
 
-    **Concept Tested:** time.sleep()
+    **Concetto verificato:** time.sleep()
 
 ---
 
@@ -168,6 +168,6 @@ print("Fatto!")
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Un ciclo `while` è perfetto per l'animazione perché può continuare a girare indefinitamente — o finché non si raggiunge una specifica condizione di arresto — senza bisogno di sapere in anticipo quanti fotogrammi ci saranno. Ogni giro del ciclo può muovere leggermente la tartaruga, creando l'illusione di movimento. Combinato con `time.sleep()`, controlli quanto velocemente gira l'animazione.
 
-    **Concept Tested:** Animation with Turtle Loops
+    **Concetto verificato:** Animazione con i cicli della turtle
 
 ---

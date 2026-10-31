@@ -16,7 +16,7 @@ Verifica la tua comprensione dei metodi delle liste, dell'ordinamento, delle lis
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `append(x)` aggiunge un singolo elemento alla **fine** di una lista esistente, modificandola sul posto. Se `fruits = ["apple", "banana"]`, dopo `fruits.append("mango")` la lista diventa `["apple", "banana", "mango"]`. Usa invece `insert(i, x)` se vuoi aggiungere l'elemento in una posizione specifica.
 
-    **Concept Tested:** append() Method
+    **Concetto verificato:** Metodo append()
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione dei metodi delle liste, dell'ordinamento, delle lis
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `insert(i, x)` inserisce l'elemento `x` **prima** dell'elemento attualmente all'indice `i`. Con `items = ["apple", "banana"]`, chiamare `items.insert(1, "kiwi")` posiziona `"kiwi"` all'indice 1 e spinge `"banana"` all'indice 2: `["apple", "kiwi", "banana"]`. La lista cresce di un elemento.
 
-    **Concept Tested:** insert() Method
+    **Concetto verificato:** Metodo insert()
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione dei metodi delle liste, dell'ordinamento, delle lis
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `pop()` senza argomento rimuove e restituisce l'**ultimo** elemento nella lista. Puoi anche usare `pop(i)` per rimuovere e restituire l'elemento a un indice specifico. Questo rende `pop()` molto utile per implementare le pile (ultimo entrato, primo uscito), dove lavori sempre con l'elemento in cima (l'ultimo).
 
-    **Concept Tested:** pop() Method
+    **Concetto verificato:** Metodo pop()
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione dei metodi delle liste, dell'ordinamento, delle lis
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `sort()` riorganizza gli elementi della lista **sul posto** in ordine crescente (dal più piccolo per i numeri, alfabetico per le stringhe). Dopo `scores.sort()`, `scores` stesso diventa `[55, 73, 87, 100]`. NON restituisce una nuova lista — se scrivi `result = scores.sort()`, `result` sarà `None`.
 
-    **Concept Tested:** sort() Method
+    **Concetto verificato:** Metodo sort()
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione dei metodi delle liste, dell'ordinamento, delle lis
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Questa è una list comprehension — costruisce una nuova lista applicando un'espressione (`s * 2`) a ogni elemento della lista sorgente `[1, 2, 3]`. Il risultato è `[2, 4, 6]`. Le list comprehension sono un modo conciso e leggibile per trasformare le liste senza scrivere un ciclo completo.
 
-    **Concept Tested:** List Comprehensions
+    **Concetto verificato:** List comprehension
 
 ---
 
@@ -100,7 +100,7 @@ Verifica la tua comprensione dei metodi delle liste, dell'ordinamento, delle lis
 ??? question "Mostra risposta"
     La risposta corretta è **B**. La clausola `if` in una list comprehension agisce come un filtro — solo gli elementi per cui la condizione è `True` vengono inclusi nel risultato. `s >= 70` è `True` per `80` e `90`, quindi solo questi due valori appaiono nella lista di output. Questo è un pattern molto comune per filtrare i dati.
 
-    **Concept Tested:** List Comprehensions
+    **Concetto verificato:** List comprehension
 
 ---
 
@@ -116,7 +116,7 @@ Verifica la tua comprensione dei metodi delle liste, dell'ordinamento, delle lis
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `remove(x)` cerca e rimuove la **prima** occorrenza del valore `x`. Dopo `colors.remove("red")`, la lista diventa `["blue", "red"]` — il secondo `"red"` resta. Se `x` non è affatto nella lista, `remove()` genera un `ValueError`.
 
-    **Concept Tested:** remove() Method
+    **Concetto verificato:** Metodo remove()
 
 ---
 
@@ -132,7 +132,7 @@ Verifica la tua comprensione dei metodi delle liste, dell'ordinamento, delle lis
 ??? question "Mostra risposta"
     La risposta corretta è **D**. Una pila segue il principio LIFO (Last In, First Out) — l'elemento aggiunto più di recente è il primo a essere rimosso. Implementi una pila in Python con una lista: `append()` per impilare gli elementi in cima e `pop()` per rimuovere gli elementi dalla cima. Pensa a una pila di piatti — prendi sempre quello in cima per primo.
 
-    **Concept Tested:** Stack Pattern
+    **Concetto verificato:** Schema della pila
 
 ---
 
@@ -148,7 +148,7 @@ Verifica la tua comprensione dei metodi delle liste, dell'ordinamento, delle lis
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `count(x)` restituisce il numero di volte che il valore `x` appare nella lista. `numbers.count(5)` restituirebbe `3` perché ci sono tre `5` nella lista. `index(x)` restituisce la posizione della prima occorrenza (non il conteggio). `find()` è un metodo delle stringhe, non delle liste.
 
-    **Concept Tested:** count() and index() Methods
+    **Concetto verificato:** Metodi count() e index()
 
 ---
 
@@ -164,6 +164,6 @@ Verifica la tua comprensione dei metodi delle liste, dell'ordinamento, delle lis
 ??? question "Mostra risposta"
     La risposta corretta è **A**. `extend(other_list)` scompone `other_list` e aggiunge ogni elemento individualmente alla fine. `append(other_list)` aggiunge l'intera lista come un singolo elemento (creando una lista annidata). Se `my_list = [1, 2]`, allora `extend([3, 4])` dà `[1, 2, 3, 4]`, mentre `append([3, 4])` dà `[1, 2, [3, 4]]`.
 
-    **Concept Tested:** extend() Method
+    **Concetto verificato:** Metodo extend()
 
 ---

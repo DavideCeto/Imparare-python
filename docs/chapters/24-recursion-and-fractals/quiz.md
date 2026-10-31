@@ -16,7 +16,7 @@ Verifica la tua comprensione della ricorsione, dei casi base, delle funzioni lam
 ??? question "Mostra risposta"
     La risposta corretta è **B**. La ricorsione è quando una funzione chiama sé stessa. Ogni chiamata lavora su una versione più piccola o più semplice del problema, finché non raggiunge un punto di arresto (il caso base) e inizia a restituire valori lungo la catena. Pensa alle bambole russe matrioska — ognuna contiene una versione più piccola di sé stessa, fino a quella minuscola e solida al centro.
 
-    **Concept Tested:** Recursion Concept
+    **Concetto verificato:** Il concetto di ricorsione
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione della ricorsione, dei casi base, delle funzioni lam
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Il caso base è ciò che impedisce a una funzione ricorsiva di chiamare sé stessa per sempre. È una condizione che, quando vera, restituisce un valore direttamente invece di fare un'altra chiamata ricorsiva. Senza un caso base, Python chiamerebbe la funzione indefinitamente finché non genera un `RecursionError` (profondità massima di ricorsione superata).
 
-    **Concept Tested:** Base Case
+    **Concetto verificato:** Caso base
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione della ricorsione, dei casi base, delle funzioni lam
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `factorial(5)` si espande come: `5 * factorial(4)` → `5 * 4 * factorial(3)` → `5 * 4 * 3 * factorial(2)` → `5 * 4 * 3 * 2 * factorial(1)` → `5 * 4 * 3 * 2 * 1 = 120`. Il fattoriale (n!) moltiplica tutti gli interi positivi fino a n.
 
-    **Concept Tested:** Recursive Factorial
+    **Concetto verificato:** Fattoriale ricorsivo
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione della ricorsione, dei casi base, delle funzioni lam
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Senza un caso base, la funzione continua a chiamare sé stessa indefinitamente. Python limita lo stack delle chiamate a circa 1.000 chiamate annidate per default. Quando quel limite viene superato, Python genera `RecursionError: maximum recursion depth exceeded`. Assicurati sempre che la tua funzione ricorsiva abbia un caso base che verrà raggiunto alla fine.
 
-    **Concept Tested:** Base Case
+    **Concetto verificato:** Caso base
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione della ricorsione, dei casi base, delle funzioni lam
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Ogni volta che una funzione chiama sé stessa ricorsivamente, Python salva lo stato attuale (variabili locali, dove si è interrotta) sullo stack delle chiamate. Quando viene raggiunto il caso base, Python risale lo stack, riprendendo ogni stato salvato in ordine inverso. Lo stack delle chiamate cresce con ogni chiamata ricorsiva e si riduce quando le chiamate tornano.
 
-    **Concept Tested:** Call Stack
+    **Concetto verificato:** Pila delle chiamate
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione della ricorsione, dei casi base, delle funzioni lam
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Una lambda è una funzione anonima compatta: `lambda parametri: espressione`. Per esempio, `square = lambda x: x * x` crea una funzione su una riga che eleva al quadrato il suo input. Le lambda sono particolarmente utili quando hai bisogno di una funzione breve da passare come argomento a un'altra funzione (come `sorted()` con un argomento `key=`).
 
-    **Concept Tested:** Lambda Functions
+    **Concetto verificato:** Funzioni lambda
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione della ricorsione, dei casi base, delle funzioni lam
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `lambda a, b: a + b` crea una funzione anonima con due parametri `a` e `b` che restituisce la loro somma. Le funzioni lambda possono prendere qualsiasi numero di parametri. Questa lambda equivale a `def add(a, b): return a + b`, solo scritta più compattamente su una riga.
 
-    **Concept Tested:** Lambda Functions
+    **Concetto verificato:** Funzioni lambda
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione della ricorsione, dei casi base, delle funzioni lam
 ??? question "Mostra risposta"
     La risposta corretta è **B**. I frattali sono autosimili — un ramo su un albero frattale sembra una versione più piccola dell'intero albero, che sembra una versione più piccola, e così via. Questo rispecchia perfettamente la struttura della ricorsione: disegna un ramo, poi chiama la stessa funzione per disegnare rami più piccoli alla punta, finché i rami non diventano troppo piccoli da vedere (il caso base).
 
-    **Concept Tested:** Fractal Tree
+    **Concetto verificato:** Albero frattale
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione della ricorsione, dei casi base, delle funzioni lam
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Un conto alla rovescia ricorsivo chiama sé stesso con `n - 1` a ogni chiamata, affidandosi allo stack delle chiamate per tenere traccia di dove si trova. Un ciclo for usa una variabile contatore gestita dalla struttura del ciclo. Entrambi ottengono lo stesso risultato, ma usano meccanismi diversi. I cicli for sono spesso più efficienti e chiari per il conteggio semplice; la ricorsione risplende quando il problema ha una struttura naturalmente ricorsiva.
 
-    **Concept Tested:** Recursion Concept
+    **Concetto verificato:** Il concetto di ricorsione
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione della ricorsione, dei casi base, delle funzioni lam
 ??? question "Mostra risposta"
     La risposta corretta è **C**. La sintassi corretta della lambda è `lambda parametri: espressione`. `lambda x: x * 2` crea una funzione che prende un argomento `x` e restituisce `x * 2`. L'opzione A manca del parametro `x`. L'opzione B mescola la sintassi di `def` e `lambda` in modo scorretto. L'opzione D usa `=>` che non è Python valido (si usa in JavaScript).
 
-    **Concept Tested:** Lambda Functions
+    **Concetto verificato:** Funzioni lambda
 
 ---

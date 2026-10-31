@@ -21,14 +21,14 @@ perché Python è un ottimo passo successivo dopo Scratch.
 
 Questo capitolo tratta i seguenti 9 concetti del grafo di apprendimento:
 
-1. Python Interpreter Overview
-2. Browser-Based Python Environments
-3. Skulpt Browser Python
-4. print() Function
-5. Single-Line Comments
-6. Case Sensitivity
-7. Blank Lines and Readability
-8. import Statement
+1. Panoramica dell'interprete Python
+2. Ambienti Python nel browser
+3. Skulpt: Python nel browser
+4. Funzione print()
+5. Commenti su una riga
+6. Distinzione tra maiuscole e minuscole
+7. Righe vuote e leggibilità
+8. Istruzione import
 9. import turtle
 
 ## Prerequisiti
@@ -102,7 +102,7 @@ Una **funzione** è un'azione con un nome che Python sa eseguire. `print()` è l
 
 !!! mascot-tip "Ponte con Scratch"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch usavi il blocco **“Dì [ ] per 2 secondi”** per far mostrare al tuo sprite un fumetto. In Python, `print("Ciao!")` fa lo stesso lavoro — fa mostrare un messaggio al tuo programma. La differenza è che Python mostra il messaggio come testo semplice sotto il codice, non come un fumetto su un personaggio.
+    In Scratch usavi il blocco **“dire [ ] per (2) secondi”** per far mostrare al tuo sprite un fumetto. In Python, `print("Ciao!")` fa lo stesso lavoro — fa mostrare un messaggio al tuo programma. La differenza è che Python mostra il messaggio come testo semplice sotto il codice, non come un fumetto su un personaggio.
 
 ## Codice di Esempio: print()
 

@@ -11,7 +11,7 @@ version: 0.09
 ## Riepilogo
 
 I cicli ti permettono di ripetere passaggi senza copiare e incollare — proprio come un
-blocco "repeat" di Scratch. Il ciclo `for` con `range()` è il cavallo di battaglia di Python
+blocco "ripeti" di Scratch. Il ciclo `for` con `range()` è il cavallo di battaglia di Python
 per contare. Questo capitolo usa i cicli per disegnare quadrati, triangoli e altri poligoni
 con turtle, poi introduce il posizionamento assoluto (`goto()`), la pulizia dello schermo,
 le interrogazioni di posizione, e un classico progetto di pattern a stella.
@@ -20,17 +20,17 @@ le interrogazioni di posizione, e un classico progetto di pattern a stella.
 
 Questo capitolo tratta i seguenti 11 concetti del grafo di apprendimento:
 
-1. for Loop over Sequence
-2. for Loop with range()
-3. Range with Start Stop Step
-4. Loop Counter Variable
-5. Loop Accumulator Pattern
-6. Absolute Positioning goto()
-7. Drawing circle() and Polygons
-8. Clearing and Resetting
-9. Position Query xcor() ycor()
-10. setheading() Direction
-11. Drawing Star Patterns
+1. Ciclo for su una sequenza
+2. Ciclo for con range()
+3. range() con inizio, fine e passo
+4. Variabile contatore del ciclo
+5. Schema dell'accumulatore nei cicli
+6. Posizionamento assoluto con goto()
+7. Disegnare con circle() e poligoni
+8. Cancellare e reimpostare
+9. Leggere la posizione con xcor() e ycor()
+10. Direzione con setheading()
+11. Disegnare motivi a stella
 
 ## Prerequisiti
 
@@ -71,7 +71,7 @@ La variabile `i` è il **contatore del ciclo** — cambia valore a ogni giro del
 
 !!! mascot-tip "Ponte con Scratch"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch, il blocco **Repeat** esegue il suo contenuto un numero fisso di volte. Il `for i in range(n):` di Python fa esattamente la stessa cosa! La grande differenza: Python ti dà anche il contatore `i` come variabile che puoi usare dentro il ciclo — ottimo per creare pattern che cambiano a ogni passo.
+    In Scratch, il blocco **ripeti (10) volte** esegue il suo contenuto un numero fisso di volte. Il `for i in range(n):` di Python fa esattamente la stessa cosa! La grande differenza: Python ti dà anche il contatore `i` come variabile che puoi usare dentro il ciclo — ottimo per creare pattern che cambiano a ogni passo.
 
 Ora mettiamo al lavoro un ciclo `for` con la turtle.
 Prima di eseguire il programma qui sotto, pensa a cosa disegneranno `forward(100)` e `right(90)` ripetuti quattro volte.

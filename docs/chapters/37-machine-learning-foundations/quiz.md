@@ -16,7 +16,7 @@ Verifica la tua comprensione dell'apprendimento supervisionato vs non supervisio
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Nell'apprendimento supervisionato, ogni esempio di training viene con un'etichetta — la risposta corretta. Il modello impara a mappare gli input agli output (ad es., foto → "dog"). Nell'apprendimento non supervisionato, non ci sono etichette — l'algoritmo scopre una struttura nascosta da solo, come raggruppare i clienti per pattern di acquisto (clustering).
 
-    **Concept Tested:** Supervised vs Unsupervised Learning
+    **Concetto verificato:** Apprendimento supervisionato e non supervisionato
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione dell'apprendimento supervisionato vs non supervisio
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Il validation set viene usato per monitorare le prestazioni durante il training. Dopo ogni epoch, valuti sul validation set (su cui il modello non si è mai allenato) per rilevare l'overfitting: se l'accuratezza di training continua a salire ma quella di validation si stabilizza o scende, il modello sta memorizzando invece di imparare. Il test set viene tenuto da parte fino alla fine.
 
-    **Concept Tested:** Train/Validation/Test Splits
+    **Concetto verificato:** Suddivisione in training, validazione e test
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione dell'apprendimento supervisionato vs non supervisio
 ??? question "Mostra risposta"
     La risposta corretta è **C**. L'overfitting è come uno studente che memorizza le risposte dell'esame dell'anno scorso ma non capisce la materia — va benissimo sul vecchio test ma fallisce sulle nuove domande. Segnali di overfitting: l'accuratezza di training è molto alta (95%+) ma quella di validation è molto più bassa (65%). Il modello ha imparato il rumore nei dati di training invece del pattern generale.
 
-    **Concept Tested:** Overfitting
+    **Concetto verificato:** Overfitting
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione dell'apprendimento supervisionato vs non supervisio
 ??? question "Mostra risposta"
     La risposta corretta è **A**. MNIST contiene 70.000 immagini di cifre scritte a mano in scala di grigi: 60.000 per il training e 10.000 per il test. Ogni immagine è di 28x28 pixel (784 numeri da 0-255). È il "Hello, World!" del machine learning — un dataset ben compreso e gestibile che è perfetto per imparare e fare benchmark delle nuove tecniche.
 
-    **Concept Tested:** MNIST Dataset
+    **Concetto verificato:** Dataset MNIST
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione dell'apprendimento supervisionato vs non supervisio
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Un epoch è un passaggio completo attraverso l'intero dataset di training. Se hai 60.000 esempi di training e ti alleni per 10 epoch, il modello vede ogni esempio di training 10 volte (in ordini diversi). Più epoch permettono al modello di affinare progressivamente i suoi pesi e migliorare l'accuratezza, anche se troppi epoch possono portare all'overfitting.
 
-    **Concept Tested:** Epoch
+    **Concetto verificato:** Epoca
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione dell'apprendimento supervisionato vs non supervisio
 ??? question "Mostra risposta"
     La risposta corretta è **B**. La funzione di loss quantifica quanto sono sbagliate le previsioni del modello rispetto alle etichette corrette. Il training è il processo di aggiustare i pesi del modello per minimizzare la loss. Funzioni di loss comuni includono la cross-entropy (per la classificazione) e l'errore quadratico medio (per la regressione). Una loss più bassa significa previsioni più accurate.
 
-    **Concept Tested:** Loss Function
+    **Concetto verificato:** Funzione di perdita
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione dell'apprendimento supervisionato vs non supervisio
 ??? question "Mostra risposta"
     La risposta corretta è **C**. ReLU (Rectified Linear Unit) è definita come `f(x) = max(0, x)`. Per qualsiasi input negativo, ReLU produce 0. Per qualsiasi input positivo, ReLU lo lascia passare invariato. ReLU viene usata nei layer nascosti perché introduce la non-linearità in modo efficiente, permettendo alla rete di imparare pattern complessi. Senza funzioni di attivazione, impilare i layer non sarebbe più potente di un singolo layer.
 
-    **Concept Tested:** ReLU Activation
+    **Concetto verificato:** Attivazione ReLU
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione dell'apprendimento supervisionato vs non supervisio
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Softmax converte un vettore di numeri grezzi (chiamati logits) in probabilità che sommano esattamente a 1.0. Per un classificatore di cifre a 10 classi, potrebbe produrre `[0.02, 0.85, 0.01, ..., 0.05]`, che significa "85% sicuro che sia la cifra 1." Softmax viene usata nel layer di output finale delle reti di classificazione multi-classe.
 
-    **Concept Tested:** Softmax Activation
+    **Concetto verificato:** Attivazione softmax
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione dell'apprendimento supervisionato vs non supervisio
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Il test set deve essere trattato come dati completamente non visti. Se usi i risultati del test per aggiustare il tuo modello e riallenarlo, stai "barando" — il modello sembra generalizzare meglio di quanto effettivamente faccia. Il test set dovrebbe essere usato esattamente una volta, alla fine, per riportare le prestazioni reali del tuo modello. Usa il validation set per tutte le decisioni di ottimizzazione.
 
-    **Concept Tested:** Train/Validation/Test Splits
+    **Concetto verificato:** Suddivisione in training, validazione e test
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione dell'apprendimento supervisionato vs non supervisio
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Un dense layer (completamente connesso) connette ogni neurone nel layer attuale a ogni neurone nel layer precedente. Questo è il tipo di layer più comune nelle reti neurali di base. Ogni connessione ha un peso apprendibile. Per un layer con 100 neuroni connesso a un layer precedente di 784 input, ci sono 100 × 784 = 78.400 parametri di peso solo in quel layer.
 
-    **Concept Tested:** Neural Network Layers
+    **Concetto verificato:** Livelli di una rete neurale
 
 ---

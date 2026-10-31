@@ -16,7 +16,7 @@ Verifica la tua comprensione dei comandi di grafica turtle, del controllo della 
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `turtle.Screen()` crea la finestra di disegno — la tela vuota dove la tua turtle disegnerà. Pensala come il palcoscenico di uno spettacolo teatrale: lo allestisci prima che gli attori si esibiscano. La memorizzi in una variabile (comunemente `wn` per "window") così da poterle dare istruzioni come cambiare il colore di sfondo.
 
-    **Concept Tested:** turtle.Screen() Object
+    **Concetto verificato:** L'oggetto turtle.Screen()
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione dei comandi di grafica turtle, del controllo della 
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `t.forward(100)` dice alla turtle di camminare in avanti di 100 pixel nella direzione verso cui è attualmente rivolta, disegnando una linea. La turtle inizia rivolta verso destra (Est). Le altre opzioni — `move()`, `go()` e `walk()` — non sono metodi turtle validi e causerebbero un `AttributeError`.
 
-    **Concept Tested:** Turtle Movement Commands
+    **Concetto verificato:** Comandi di movimento della turtle
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione dei comandi di grafica turtle, del controllo della 
 ??? question "Mostra risposta"
     La risposta corretta è **D**. Quando crei una nuova `turtle.Turtle()`, inizia al centro dello schermo rivolta verso Est (destra). Il primo `t.forward(100)` disegnerà quindi una linea puntata verso destra. Usi `t.right()` e `t.left()` per cambiare la direzione verso cui è rivolta prima di muoverla.
 
-    **Concept Tested:** Turtle Movement Commands
+    **Concetto verificato:** Comandi di movimento della turtle
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione dei comandi di grafica turtle, del controllo della 
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `t.penup()` solleva la penna virtuale dalla tela, così la turtle può spostarsi in una nuova posizione senza lasciare traccia. È così che crei spazi vuoti in un disegno. Dopo essersi spostata nella nuova posizione, chiama `t.pendown()` per riabbassare la penna così i movimenti successivi disegnano linee.
 
-    **Concept Tested:** penup() and pendown()
+    **Concetto verificato:** penup() e pendown()
 
 ---
 
@@ -88,7 +88,7 @@ t.forward(100)
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Lo studente ha chiamato `t.penup()` ma non ha mai chiamato `t.pendown()`. La turtle si muove esattamente dove comandato — ma con la penna alzata, non lascia traccia sulla tela. Aggiungere `t.pendown()` prima del secondo `forward()` (o tra i due, a seconda di dove dovrebbe trovarsi lo spazio vuoto) risolverebbe il problema.
 
-    **Concept Tested:** penup() and pendown()
+    **Concetto verificato:** penup() e pendown()
 
 ---
 
@@ -104,7 +104,7 @@ t.forward(100)
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `bgcolor()` è un metodo dell'oggetto **Screen**, non dell'oggetto Turtle. Lo chiami come `wn.bgcolor("lightblue")` dove `wn` è la variabile che contiene il tuo `turtle.Screen()`. Il metodo `pencolor()` della turtle cambia solo il colore della penna di disegno, non lo sfondo.
 
-    **Concept Tested:** turtle.Screen() Object
+    **Concetto verificato:** L'oggetto turtle.Screen()
 
 ---
 
@@ -120,7 +120,7 @@ t.forward(100)
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `t.pensize(5)` imposta la larghezza (spessore) delle linee disegnate dalla turtle a 5 pixel. La dimensione predefinita è 1 pixel, piuttosto sottile. Aumentare lo spessore della penna a 3, 5 o 10 crea linee più marcate e visibili. Non influisce sulla velocità, sulla forma, o sulla dimensione delle forme disegnate.
 
-    **Concept Tested:** Pen Size and Color
+    **Concetto verificato:** Spessore e colore della penna
 
 ---
 
@@ -136,7 +136,7 @@ t.forward(100)
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `t.hideturtle()` rende invisibile il cursore della turtle così non appare sul tuo disegno finito. Il disegno stesso resta completamente visibile sullo schermo. Puoi far riapparire la turtle con `t.showturtle()`. Questo è utile quando vuoi mostrare un'opera pulita senza il cursore a freccia sopra di essa.
 
-    **Concept Tested:** Turtle Appearance
+    **Concetto verificato:** Aspetto della turtle
 
 ---
 
@@ -152,7 +152,7 @@ t.forward(100)
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Un angolo retto è di 90 gradi — un quarto di un cerchio completo di 360 gradi. Per disegnare un quadrato, ripeti `forward()` e `right(90)` quattro volte. È esattamente come la geometria che impari a scuola: gli angoli di un quadrato sono tutti di 90 gradi.
 
-    **Concept Tested:** Turtle Movement Commands
+    **Concetto verificato:** Comandi di movimento della turtle
 
 ---
 
@@ -168,6 +168,6 @@ t.forward(100)
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `t.shape("turtle")` cambia l'aspetto del cursore della turtle — la piccola icona che mostra dove si trova la turtle sullo schermo. Invece della punta di freccia predefinita, mostra una tartaruga a fumetti vista dall'alto. Sono disponibili sei forme integrate: `"arrow"`, `"turtle"`, `"circle"`, `"square"`, `"triangle"` e `"classic"`.
 
-    **Concept Tested:** Turtle Appearance
+    **Concetto verificato:** Aspetto della turtle
 
 ---

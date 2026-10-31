@@ -16,7 +16,7 @@ Verifica la tua comprensione sulla definizione di funzioni, i parametri, i valor
 ??? question "Mostra risposta"
     La risposta corretta è **C**. La parola chiave `def` (abbreviazione di "define", definisci) inizia una definizione di funzione in Python. Scrivi `def`, poi il nome della funzione, poi le parentesi, poi i due punti. Tutto ciò che è indentato sotto quella riga diventa il corpo della funzione — i passaggi che vengono eseguiti quando chiami la funzione.
 
-    **Concept Tested:** def Keyword
+    **Concetto verificato:** Parola chiave def
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione sulla definizione di funzioni, i parametri, i valor
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Definire una funzione (con `def`) scrive la ricetta e la memorizza sotto un nome — Python la legge ma non la esegue ancora. Chiamare una funzione (scrivendo il suo nome con le parentesi) dice a Python di eseguire subito i passaggi memorizzati. Puoi definire una volta e chiamare molte volte.
 
-    **Concept Tested:** Function Calls
+    **Concetto verificato:** Chiamate di funzione
 
 ---
 
@@ -57,7 +57,7 @@ say_hi()
 ??? question "Mostra risposta"
     La risposta corretta è **B**. La funzione `say_hi()` contiene due chiamate a `print()`, quindi ogni chiamata alla funzione produce 2 righe di output. Il programma chiama `say_hi()` due volte, per un totale di 2 × 2 = 4 righe. Questo mostra il potere delle funzioni — scrivi i passaggi una volta, eseguili tutte le volte che ti servono.
 
-    **Concept Tested:** Function Calls
+    **Concetto verificato:** Chiamate di funzione
 
 ---
 
@@ -73,7 +73,7 @@ say_hi()
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Un parametro è una variabile elencata dentro le parentesi di un'istruzione `def`. Quando chiami la funzione e fornisci un valore, Python copia quel valore nel parametro. Dentro il corpo della funzione, il parametro funziona esattamente come qualsiasi altra variabile. Il valore che fornisci al momento della chiamata si chiama argomento.
 
-    **Concept Tested:** Positional Parameters
+    **Concetto verificato:** Parametri posizionali
 
 ---
 
@@ -96,7 +96,7 @@ greet("Monty")
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Quando viene chiamata `greet("Monty")`, la stringa `"Monty"` viene copiata nel parametro `name`. Dentro la funzione, `"Ciao, " + name + "!"` diventa `"Ciao, Monty!"`, che viene stampato. Il parametro `name` è definito solo dentro la funzione, quindi otterresti un errore provando a usare `name` fuori da essa — ma la chiamata in sé funziona perfettamente.
 
-    **Concept Tested:** Positional Parameters
+    **Concetto verificato:** Parametri posizionali
 
 ---
 
@@ -112,7 +112,7 @@ greet("Monty")
 ??? question "Mostra risposta"
     La risposta corretta è **B**. L'istruzione `return` restituisce un valore a qualsiasi codice abbia chiamato la funzione. Chi ha effettuato la chiamata può poi memorizzare quel valore in una variabile o usarlo direttamente. `return` è diverso da `print()` — `print` mostra qualcosa sullo schermo, mentre `return` passa indietro un valore in modo invisibile così il tuo programma può usarlo ulteriormente.
 
-    **Concept Tested:** Return Values
+    **Concetto verificato:** Valori restituiti
 
 ---
 
@@ -128,7 +128,7 @@ greet("Monty")
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Se una funzione termina l'esecuzione senza incontrare un'istruzione `return`, Python restituisce automaticamente `None`. Questo si chiama "funzioni che restituiscono None." Un bug molto comune tra i principianti è dimenticare di scrivere `return` in una funzione che calcola qualcosa — la funzione viene eseguita ma il risultato sparisce, e chi l'ha chiamata riceve `None` invece del valore atteso.
 
-    **Concept Tested:** Functions Returning None
+    **Concetto verificato:** Funzioni che restituiscono None
 
 ---
 
@@ -144,7 +144,7 @@ greet("Monty")
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Una docstring è una stringa racchiusa tra triple virgolette (`"""`) posizionata come primissima riga dentro il corpo della funzione. Gli strumenti Python possono leggere le docstring automaticamente e mostrarle come testo di aiuto. Le docstring spiegano cosa fa la funzione, i suoi parametri, e cosa restituisce — aiutando il prossimo lettore (spesso il te stesso del futuro) a capire rapidamente il codice.
 
-    **Concept Tested:** Docstrings
+    **Concetto verificato:** Docstring
 
 ---
 
@@ -160,7 +160,7 @@ greet("Monty")
 ??? question "Mostra risposta"
     La risposta corretta è **B**. La Standard Library è una grande collezione di moduli già scritti (come `math`, `random`, `time` e `turtle`) che viene fornita insieme a ogni installazione di Python, gratuitamente. Importi un modulo nel tuo programma usando `import`, poi accedi alle sue funzioni con la notazione a punto: `math.sqrt(25)`.
 
-    **Concept Tested:** Standard Library
+    **Concetto verificato:** Libreria standard
 
 ---
 
@@ -176,6 +176,6 @@ greet("Monty")
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Il punto in `math.sqrt(16)` è la notazione a punto — collega il nome del modulo (`math`) a una funzione che si trova al suo interno (`sqrt`). Dopo aver scritto `import math`, accedi a tutto ciò che è dentro il modulo in questo modo: nome del modulo, punto, poi la funzione o il valore che vuoi. Userai questo schema per tutto il corso.
 
-    **Concept Tested:** Standard Library
+    **Concetto verificato:** Libreria standard
 
 ---

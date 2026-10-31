@@ -10,7 +10,7 @@ version: 0.09
 
 ## Riepilogo
 
-I programmi devono fare delle scelte — proprio come i blocchi "if/then/else" di Scratch.
+I programmi devono fare delle scelte — proprio come i blocchi "se… allora… altrimenti" di Scratch.
 Le parole chiave `if`, `elif` ed `else` di Python gestiscono le diramazioni. Questo capitolo
 introduce il tipo booleano (`True`/`False`), gli operatori di confronto
 (`==`, `!=`, `<`, `>`), gli operatori logici (`and`, `or`, `not`),
@@ -20,15 +20,15 @@ i confronti concatenati, e i condizionali annidati per decisioni a più vie.
 
 Questo capitolo tratta i seguenti 9 concetti del grafo di apprendimento:
 
-1. Boolean Type
-2. Comparison Operators
-3. Logical Operators
-4. Boolean in Conditions
-5. Chained Comparisons
-6. if Statement
-7. if...else Block
-8. elif Chains
-9. Nested if Statements
+1. Tipo booleano
+2. Operatori di confronto
+3. Operatori logici
+4. Booleani nelle condizioni
+5. Confronti concatenati
+6. Istruzione if
+7. Blocco if...else
+8. Catene elif
+9. Istruzioni if annidate
 
 ## Prerequisiti
 
@@ -89,7 +89,7 @@ Python ha sei operatori di confronto:
 
 !!! mascot-tip "Ponte con Scratch"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch, i blocchi verdi **Operators** includono `=`, `<` e `>` per i confronti, e la categoria **Control** ha i blocchi "if/then" e "if/then/else". L'istruzione `if` di Python e gli operatori di confronto svolgono esattamente gli stessi compiti — li digiti semplicemente invece di trascinarli!
+    In Scratch, i blocchi verdi della categoria **Operatori** includono `=`, `<` e `>` per i confronti, e la categoria **Controllo** ha i blocchi "se < > allora" e "se < > allora / altrimenti". L'istruzione `if` di Python e gli operatori di confronto svolgono esattamente gli stessi compiti — li digiti semplicemente invece di trascinarli!
 
 Il programma qui sotto usa i confronti per descrivere un punteggio.
 Prima di cliccare su Run, pensa a quali chiamate `print()` verranno effettivamente eseguite.

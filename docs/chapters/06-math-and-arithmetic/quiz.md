@@ -16,7 +16,7 @@ Verifica la tua comprensione degli operatori aritmetici di Python, dell'ordine d
 ??? question "Mostra risposta"
     La risposta corretta è **C**. L'operatore `//` è la divisione intera — divide e mantiene solo la parte di numero intero, scartando ogni decimale. 10 diviso 3 fa 3 con un resto di 1, quindi `10 // 3` dà `3`. Se vuoi il risultato decimale, usa invece `/`: `10 / 3` dà `3.3333...`.
 
-    **Concept Tested:** Integer Division Operator
+    **Concetto verificato:** Operatore di divisione intera
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione degli operatori aritmetici di Python, dell'ordine d
 ??? question "Mostra risposta"
     La risposta corretta è **B**. L'operatore `%` (modulo) ti dà il resto dopo la divisione. Per esempio, `10 % 3` è `1` perché il 3 entra in 10 tre volte (cioè 9), e 10 − 9 = 1 di resto. Il modulo è molto utile per verificare se un numero è pari (`n % 2 == 0`) e per creare pattern ripetuti nei programmi.
 
-    **Concept Tested:** Modulo Operator
+    **Concetto verificato:** Operatore modulo
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione degli operatori aritmetici di Python, dell'ordine d
 ??? question "Mostra risposta"
     La risposta corretta è **B**. L'operatore `**` è l'elevamento a potenza — "elevato alla potenza di." `2 ** 8` significa 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2, che equivale a 256. È lo stesso di 2 elevato all'ottava potenza in matematica. L'elevamento a potenza è uno dei tre operatori aritmetici extra di Python non presenti in Scratch.
 
-    **Concept Tested:** Exponentiation Operator
+    **Concetto verificato:** Operatore di elevamento a potenza
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione degli operatori aritmetici di Python, dell'ordine d
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Python segue l'ordine standard delle operazioni (PEMDAS): la moltiplicazione viene prima dell'addizione. Quindi Python calcola prima `3 * 4 = 12`, poi somma `2 + 12 = 14`. Se volessi sommare prima e poi moltiplicare, scriveresti `(2 + 3) * 4`, che equivale a `20`.
 
-    **Concept Tested:** Order of Operations
+    **Concetto verificato:** Ordine delle operazioni
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione degli operatori aritmetici di Python, dell'ordine d
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `score += 5` è un operatore di assegnazione aumentata — è l'abbreviazione di `score = score + 5`. Legge il valore attuale di `score`, aggiunge 5, e memorizza il risultato di nuovo in `score`. Questo schema si usa costantemente nei cicli: `count += 1` aggiunge 1 a un contatore ogni volta che il ciclo si ripete.
 
-    **Concept Tested:** Augmented Assignment Operators
+    **Concetto verificato:** Operatori di assegnazione composta
 
 ---
 
@@ -103,7 +103,7 @@ print(x)
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Python esegue ogni riga in ordine. Prima `x = 10` imposta x a 10. Poi `x -= 3` significa `x = x - 3` = `10 - 3` = 7, quindi x ora è 7. Poi `x *= 2` significa `x = x * 2` = `7 * 2` = 14. Il valore finale stampato è 14.
 
-    **Concept Tested:** Augmented Assignment Operators
+    **Concetto verificato:** Operatori di assegnazione composta
 
 ---
 
@@ -119,7 +119,7 @@ print(x)
 ??? question "Mostra risposta"
     La risposta corretta è **B**. L'assegnazione multipla ti permette di assegnare valori a due o più variabili in una riga. Python legge i valori a destra (`5` e `10`) e li assegna da sinistra a destra alle variabili a sinistra (`a` e `b`). Dopo questa riga, `a` contiene `5` e `b` contiene `10`.
 
-    **Concept Tested:** Multiple Assignment
+    **Concetto verificato:** Assegnazione multipla
 
 ---
 
@@ -135,7 +135,7 @@ print(x)
 ??? question "Mostra risposta"
     La risposta corretta è **B**. In Python 3, l'operatore di divisione `/` restituisce sempre un float (un numero con una virgola decimale), anche quando i numeri si dividono esattamente. Quindi `10 / 2` dà `5.0`, non `5`. Se vuoi il risultato intero, usa l'operatore `//`: `10 // 2` dà `5`.
 
-    **Concept Tested:** Division Returns Float
+    **Concetto verificato:** La divisione restituisce un float
 
 ---
 
@@ -151,7 +151,7 @@ print(x)
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Python usa la lettera `e` (o `E`) per la notazione scientifica. `3e8` significa 3 × 10^8, che equivale a 300.000.000 (la velocità approssimativa della luce in metri al secondo). La notazione scientifica è utile quando si lavora con numeri molto grandi o molto piccoli per evitare di scrivere molti zeri.
 
-    **Concept Tested:** Scientific Notation Floats
+    **Concetto verificato:** Float in notazione scientifica
 
 ---
 
@@ -167,6 +167,6 @@ print(x)
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Per qualsiasi poligono regolare, l'angolo di svolta a ogni angolo è `360 / numero_di_lati`. Un esagono ha 6 lati, quindi l'angolo di svolta è `360 / 6 = 60` gradi. Dovresti ripetere `t.forward(lunghezza)` e `t.right(60)` sei volte. Per un pentagono (5 lati), la svolta è `360 / 5 = 72` gradi.
 
-    **Concept Tested:** Arithmetic Operators
+    **Concetto verificato:** Operatori aritmetici
 
 ---

@@ -16,7 +16,7 @@ Verifica la tua comprensione degli array NumPy, della matematica element-wise, d
 ??? question "Mostra risposta"
     La risposta corretta è **B**. La convenzione universale è `import numpy as np`. Ogni tutorial, manuale, ed esempio di codice professionale usa `np` come alias. Questo significa che scrivi `np.array()`, `np.zeros()`, ecc. Usare qualsiasi altro alias renderebbe il tuo codice più difficile da leggere per altri programmatori Python.
 
-    **Concept Tested:** Importing NumPy
+    **Concetto verificato:** Importare NumPy
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione degli array NumPy, della matematica element-wise, d
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Gli array NumPy memorizzano tutti i valori in un blocco compatto di memoria (tutti dello stesso tipo) ed eseguono le operazioni in codice C ottimizzato. Questo li rende 10-100 volte più veloci delle liste Python per i calcoli numerici. Il vantaggio di velocità è fondamentale nella data science e nel machine learning, dove gli array possono contenere milioni di valori.
 
-    **Concept Tested:** NumPy Arrays
+    **Concetto verificato:** Array NumPy
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione degli array NumPy, della matematica element-wise, d
 ??? question "Mostra risposta"
     La risposta corretta è **B**. NumPy esegue automaticamente le operazioni element-wise. `a * 2` moltiplica ogni elemento nell'array per 2, dando `[2, 4, 6, 8]`. Questo è diverso dalle liste Python, dove `[1, 2, 3, 4] * 2` ripete la lista. La matematica element-wise è una delle caratteristiche più importanti di NumPy — senza bisogno di nessun ciclo.
 
-    **Concept Tested:** Element-Wise Math
+    **Concetto verificato:** Calcoli elemento per elemento
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione degli array NumPy, della matematica element-wise, d
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Il broadcasting è la capacità di NumPy di espandere automaticamente uno scalare o un array più piccolo per corrispondere alla forma di un array più grande durante le operazioni. Quando scrivi `a + 10`, NumPy "trasmette" il valore `10` attraverso tutti gli elementi — come se avessi creato un array di 10 della stessa dimensione di `a`. Questo elimina il bisogno di cicli espliciti.
 
-    **Concept Tested:** Broadcasting
+    **Concetto verificato:** Broadcasting
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione degli array NumPy, della matematica element-wise, d
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `np.linspace(start, stop, num)` crea esattamente `num` valori equispaziati da `start` a `stop`, inclusi. `np.linspace(0, 1, 5)` dà `[0.0, 0.25, 0.5, 0.75, 1.0]`. Questo è particolarmente utile per generare valori x per funzioni matematiche e disegnare curve morbide, a differenza di `np.arange()` che usa una dimensione del passo.
 
-    **Concept Tested:** np.linspace()
+    **Concetto verificato:** np.linspace()
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione degli array NumPy, della matematica element-wise, d
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `np.zeros(n)` crea un array NumPy 1-D di `n` zeri, con dtype `float64` per default. `np.ones(n)` crea un array di uni. Entrambi sono comunemente usati per inizializzare gli array prima di riempirli con valori calcolati. Per una matrice 2-D di zeri, usa `np.zeros((rows, cols))`.
 
-    **Concept Tested:** np.zeros() and np.ones()
+    **Concetto verificato:** np.zeros() e np.ones()
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione degli array NumPy, della matematica element-wise, d
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `np.argmax(a)` restituisce l'indice (posizione) del valore più grande nell'array. Per esempio, se `a = np.array([3, 7, 2, 9, 1])`, allora `np.argmax(a)` restituisce `3` (l'indice dove vive `9`). `a.max()` restituisce il valore `9` stesso. `argmax` è utile quando hai bisogno di sapere DOVE si trova il massimo, non solo quale sia.
 
-    **Concept Tested:** argmax
+    **Concetto verificato:** argmax
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione degli array NumPy, della matematica element-wise, d
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `a.mean()` restituisce la media aritmetica — la somma di tutti i valori divisa per il conteggio. Per `np.array([2, 4, 6, 8])`, la media è `(2+4+6+8)/4 = 5.0`. Puoi anche usare `np.mean(a)`. Per la deviazione standard (quanto sono sparsi i valori), usa `a.std()` oppure `np.std(a)`.
 
-    **Concept Tested:** mean and std
+    **Concetto verificato:** Media e deviazione standard
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione degli array NumPy, della matematica element-wise, d
 ??? question "Mostra risposta"
     La risposta corretta è **C**. L'attributo `.shape` restituisce una tupla che descrive le dimensioni dell'array. Per un array 1-D di 5 elementi, `a.shape` è `(5,)`. Per un array 2-D con 3 righe e 4 colonne, `a.shape` è `(3, 4)`. Usa `.shape` per verificare che il tuo array abbia la struttura prevista prima di passarlo a una funzione.
 
-    **Concept Tested:** Array Shape
+    **Concetto verificato:** Forma di un array
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione degli array NumPy, della matematica element-wise, d
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Uno slice di un array NumPy è una **veduta** (view) — condivide la stessa memoria dell'array originale. Se modifichi lo slice, cambia anche l'array originale. Uno slice di una lista Python crea una copia indipendente. Questo comportamento a veduta è intenzionale in NumPy per l'efficienza (nessuna copia), ma può causare bug inaspettati se non ne sei consapevole. Usa `.copy()` per ottenere una copia indipendente.
 
-    **Concept Tested:** Array Slicing
+    **Concetto verificato:** Slicing degli array
 
 ---

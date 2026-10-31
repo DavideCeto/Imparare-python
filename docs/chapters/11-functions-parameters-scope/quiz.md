@@ -16,7 +16,7 @@ Verifica la tua comprensione dei parametri predefiniti, degli argomenti keyword,
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Un valore predefinito di un parametro è definito nella riga `def` usando `parametro=predefinito`. Quando qualcuno chiama la funzione senza fornire quell'argomento, Python usa automaticamente il valore predefinito. Quando invece fornisce un valore, quel valore sovrascrive il predefinito. Questo rende le funzioni flessibili — funzionano con o senza certi argomenti.
 
-    **Concept Tested:** Default Parameter Values
+    **Concetto verificato:** Valori predefiniti dei parametri
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione dei parametri predefiniti, degli argomenti keyword,
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Un argomento keyword usa il nome del parametro seguito da `=` e un valore nella chiamata di funzione: `sides=6` e `color="red"`. Gli argomenti keyword possono essere forniti in qualsiasi ordine perché Python li associa per nome, non per posizione. L'opzione A usa argomenti posizionali, che devono essere nell'ordine corretto.
 
-    **Concept Tested:** Keyword Arguments
+    **Concetto verificato:** Argomenti con nome
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione dei parametri predefiniti, degli argomenti keyword,
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Lo scope descrive dove nel tuo programma una variabile è visibile e accessibile. Una variabile creata dentro una funzione ha scope **locale** — esiste solo mentre quella funzione gira. Una variabile creata fuori da tutte le funzioni ha scope **globale** — è visibile in tutto il programma.
 
-    **Concept Tested:** Local Scope and Global Scope
+    **Concetto verificato:** Scope locale e scope globale
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione dei parametri predefiniti, degli argomenti keyword,
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Una variabile locale esiste solo mentre la sua funzione è in esecuzione. Quando la funzione finisce, la variabile locale scompare. Provare a usarla dopo causa un `NameError: name 'variable' is not defined`. Questo è voluto — le variabili locali prevengono conflitti di nomi tra funzioni.
 
-    **Concept Tested:** Local Scope and Global Scope
+    **Concetto verificato:** Scope locale e scope globale
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione dei parametri predefiniti, degli argomenti keyword,
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Senza `global`, se assegni un valore a una variabile dentro una funzione, Python crea una nuova variabile locale che oscura quella globale. Scrivere `global score` dentro una funzione dice a Python "Intendo lo `score` che vive fuori, non uno locale nuovo" — quindi le assegnazioni a `score` dentro quella funzione cambiano davvero la variabile globale.
 
-    **Concept Tested:** global Keyword
+    **Concetto verificato:** Parola chiave global
 
 ---
 
@@ -107,7 +107,7 @@ print("Fuori:", speed)
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Dentro `reset()`, `speed = 0` crea una **nuova variabile locale** chiamata `speed` — NON cambia lo `speed` globale. Quindi dentro la funzione, `speed` è 0. Ma fuori, lo `speed` globale è ancora 10. Questo è un conflitto di nomi comune che causa bug confusi; usare `global speed` dentro la funzione lo risolverebbe se davvero volessi cambiare il valore globale.
 
-    **Concept Tested:** Local Scope and Global Scope
+    **Concetto verificato:** Scope locale e scope globale
 
 ---
 
@@ -123,7 +123,7 @@ print("Fuori:", speed)
 ??? question "Mostra risposta"
     La risposta corretta è **C**. I programmatori Python usano il MAIUSCOLO con underscore per segnalare che una variabile è una costante — un valore che non dovrebbe mai cambiare dopo essere stato impostato. Esempi: `MAX_SPEED = 10`, `CANVAS_WIDTH = 400`. Python non lo impone; è una convenzione di denominazione che dice agli altri programmatori "trattalo come una regola fissa."
 
-    **Concept Tested:** Constants by Convention
+    **Concetto verificato:** Costanti per convenzione
 
 ---
 
@@ -139,7 +139,7 @@ print("Fuori:", speed)
 ??? question "Mostra risposta"
     La risposta corretta è **B**. I parametri obbligatori (quelli senza valori predefiniti) devono venire prima nella definizione della funzione, seguiti dai parametri con valori predefiniti. Per esempio: `def greet(name, greeting="Hello"):` è valido. Scrivere `def greet(greeting="Hello", name):` causerebbe un `SyntaxError` perché il parametro obbligatorio `name` viene dopo il parametro predefinito.
 
-    **Concept Tested:** Default Parameter Values
+    **Concetto verificato:** Valori predefiniti dei parametri
 
 ---
 
@@ -155,7 +155,7 @@ print("Fuori:", speed)
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Una funzione pura restituisce sempre lo stesso risultato dati gli stessi argomenti, e non cambia nessuna variabile fuori dal proprio scope (nessun effetto collaterale). Le funzioni pure sono più facili da testare e debuggare. Al contrario, una funzione che modifica una variabile globale, stampa sullo schermo, o disegna su un canvas ha effetti collaterali.
 
-    **Concept Tested:** Pure Functions vs Side Effects
+    **Concetto verificato:** Funzioni pure ed effetti collaterali
 
 ---
 
@@ -171,6 +171,6 @@ print("Fuori:", speed)
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Python supporta l'assegnazione multipla che valuta completamente il lato destro prima di assegnare, rendendo `a, b = b, a` uno scambio sicuro in una riga. L'opzione A perde il valore originale di `a`. L'opzione B (l'approccio con variabile temporanea) è corretta ma richiede tre righe. L'opzione D non è una funzione Python built-in.
 
-    **Concept Tested:** Swapping Variables
+    **Concetto verificato:** Scambiare variabili
 
 ---

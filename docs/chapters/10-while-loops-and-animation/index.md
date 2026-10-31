@@ -20,16 +20,16 @@ vero disegno animato con la tartaruga che si muove da solo.
 
 Questo capitolo tratta i seguenti 10 concetti del grafo di apprendimento:
 
-1. while Loop
-2. break Statement
-3. continue Statement
-4. else Clause on Loops
-5. Nested Loops
-6. Infinite Loops to Avoid
-7. Countdown Loop
-8. time Module Overview
+1. Ciclo while
+2. Istruzione break
+3. Istruzione continue
+4. Clausola else nei cicli
+5. Cicli annidati
+6. Cicli infiniti da evitare
+7. Ciclo del conto alla rovescia
+8. Panoramica del modulo time
 9. time.sleep()
-10. Animation with Turtle Loops
+10. Animazione con i cicli della turtle
 
 ## Prerequisiti
 
@@ -86,7 +86,7 @@ Nel momento in cui diventa `False`, Python esce dal ciclo e continua con la riga
 
 !!! mascot-tip "Ponte Scratch"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch, il blocco **Ripeti finché** continua a eseguire il suo contenuto finché una condizione non diventa vera. Il ciclo `while` di Python è la stessa idea — tranne che la condizione viene controllata **all'inizio** di ogni giro: il ciclo continua mentre la condizione è `True` e si ferma nel momento in cui diventa `False`.
+    In Scratch, il blocco **ripeti fino a quando < >** continua a eseguire il suo contenuto finché una condizione non diventa vera. Il ciclo `while` di Python è la stessa idea — tranne che la condizione viene controllata **all'inizio** di ogni giro: il ciclo continua mentre la condizione è `True` e si ferma nel momento in cui diventa `False`.
 
 Prima di eseguire il programma di conto alla rovescia, pensa a cosa stamperà.
 

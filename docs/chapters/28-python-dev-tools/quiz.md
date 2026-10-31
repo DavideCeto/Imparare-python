@@ -16,7 +16,7 @@ Verifica la tua comprensione degli IDE Python, della REPL, di pip, degli ambient
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Python 3 è lo standard attuale. Python 2 ha raggiunto la fine del suo ciclo di vita nel 2020 e non è più aggiornato o supportato. Se vedi codice Python 2, puoi riconoscerlo da `print "hello"` (senza parentesi). Installa sempre Python 3 ed esegui i tuoi programmi con `python3`.
 
-    **Concept Tested:** Python 2 vs Python 3
+    **Concetto verificato:** Python 2 e Python 3 a confronto
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione degli IDE Python, della REPL, di pip, degli ambient
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Thonny (thonny.org) è progettato specificamente per imparare Python. Il suo debugger integrato mostra esattamente come cambiano le variabili mentre ogni riga viene eseguita, rendendolo ideale per principianti dai 10 ai 15 anni che imparano il controllo di flusso e il debug. VS Code e PyCharm sono migliori per i progetti professionali; Spyder è migliore per la data science.
 
-    **Concept Tested:** Thonny IDE
+    **Concetto verificato:** IDE Thonny
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione degli IDE Python, della REPL, di pip, degli ambient
 ??? question "Mostra risposta"
     La risposta corretta è **B**. La REPL (Read-Eval-Print Loop) è la shell interattiva di Python. Avviala scrivendo `python3` nel tuo terminale. Scrivi un'espressione, Python la legge, la valuta, stampa il risultato, e torna indietro per altro. È perfetta per esperimenti rapidi, testare una formula, o esplorare un modulo senza scrivere uno script completo.
 
-    **Concept Tested:** Python REPL
+    **Concetto verificato:** REPL di Python
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione degli IDE Python, della REPL, di pip, degli ambient
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `pip` è l'installatore di pacchetti di Python. Esegui `pip install nome_pacchetto` nel tuo terminale per scaricare e installare qualsiasi pacchetto da PyPI (pypi.org), che ospita centinaia di migliaia di pacchetti Python open-source. Per esempio, `pip install matplotlib` installa la libreria matplotlib per creare grafici.
 
-    **Concept Tested:** pip
+    **Concetto verificato:** pip
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione degli IDE Python, della REPL, di pip, degli ambient
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Un ambiente virtuale è una copia isolata di Python con i propri pacchetti installati. Questo previene i conflitti tra progetti — il Progetto A potrebbe aver bisogno di `requests==2.28` e il Progetto B potrebbe aver bisogno di `requests==2.31`. Con gli ambienti virtuali, ogni progetto usa esattamente i pacchetti di cui ha bisogno senza influenzare gli altri. Creane uno con `python3 -m venv venv` e attivalo con `source venv/bin/activate` (Mac/Linux).
 
-    **Concept Tested:** Virtual Environments
+    **Concetto verificato:** Ambienti virtuali
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione degli IDE Python, della REPL, di pip, degli ambient
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Un Jupyter Notebook è un formato di documento che combina celle di codice eseguibile, testo Markdown, e output ricco (grafici, tabelle, immagini) in un singolo file. Questo lo rende ideale per l'analisi dei dati, gli esperimenti di machine learning, e i report condivisibili dove vuoi spiegare il codice insieme ai risultati. Google Colab fornisce Jupyter Notebook gratuiti ospitati nel cloud.
 
-    **Concept Tested:** Jupyter Notebooks
+    **Concetto verificato:** Notebook Jupyter
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione degli IDE Python, della REPL, di pip, degli ambient
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Per eseguire uno script Python dal terminale (Prompt dei Comandi su Windows, Terminale su Mac/Linux), scrivi `python3 my_script.py`. Su Windows potresti usare `python` invece di `python3`. Assicurati di essere nella stessa directory dello script, oppure fornisci il percorso completo. Lo script gira dall'inizio alla fine e termina quando ha finito.
 
-    **Concept Tested:** Running Scripts
+    **Concetto verificato:** Eseguire gli script
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione degli IDE Python, della REPL, di pip, degli ambient
 ??? question "Mostra risposta"
     La risposta corretta è **A**. Google Colab (colab.research.google.com) è un servizio Jupyter Notebook gratuito ospitato nel cloud. Viene fornito pre-installato con NumPy, pandas, TensorFlow, e altre librerie di data science, e fornisce accesso GPU gratuito per il machine learning. Hai bisogno solo di un account Google — nessuna installazione richiesta.
 
-    **Concept Tested:** Google Colab
+    **Concetto verificato:** Google Colab
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione degli IDE Python, della REPL, di pip, degli ambient
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Il codice Python 2 usa `print "hello"` (un'istruzione, non una chiamata di funzione) e la divisione intera dove `5/2 = 2`. Python 3 richiede le parentesi: `print("hello")` e restituisce un float: `5/2 = 2.5`. Python 2 ha raggiunto la fine del suo ciclo di vita nel 2020, quindi evita di usarlo. Se trovi vecchio codice Python 2, usa lo strumento `2to3` per aiutare a convertirlo.
 
-    **Concept Tested:** Python 2 vs Python 3
+    **Concetto verificato:** Python 2 e Python 3 a confronto
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione degli IDE Python, della REPL, di pip, degli ambient
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Eseguire `python3 --version` (oppure `python --version` su Windows) nel terminale stampa la versione di Python installata, come `Python 3.11.4`. Dopo aver installato Python da python.org, questo è il modo standard per verificare che l'installazione sia andata a buon fine. Su alcuni sistemi puoi anche usare `python3 -V` (V maiuscola) come scorciatoia.
 
-    **Concept Tested:** Installing Python
+    **Concetto verificato:** Installare Python
 
 ---

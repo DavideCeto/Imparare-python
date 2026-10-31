@@ -16,7 +16,7 @@ Verifica la tua comprensione delle stringhe Python, della concatenazione, dei ca
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Una stringa (`str`) è qualsiasi sequenza di caratteri — lettere, cifre, spazi, punteggiatura, persino emoji — racchiusa tra virgolette. Puoi usare sia virgolette singole (`'...'`) sia virgolette doppie (`"..."`). Le stringhe sono diverse dai numeri: `"42"` (con le virgolette) è una stringa, non l'intero 42.
 
-    **Concept Tested:** String Type
+    **Concetto verificato:** Tipo stringa
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione delle stringhe Python, della concatenazione, dei ca
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Entrambi i tipi di virgolette funzionano in modo identico in Python. Il motivo principale per cambiare è quando la tua stringa contiene al suo interno un tipo di virgolette. Per esempio, `'She said "wow!"'` usa le virgolette singole all'esterno perché la stringa contiene virgolette doppie. Se usassi lo stesso tipo di virgolette sia dentro che fuori, Python si confonderebbe e genererebbe un `SyntaxError`.
 
-    **Concept Tested:** Single vs Double Quotes
+    **Concetto verificato:** Virgolette singole e doppie
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione delle stringhe Python, della concatenazione, dei ca
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Quando `+` viene usato tra due stringhe, le concatena — le unisce una dopo l'altra in un'unica stringa più lunga. Per esempio, `"Hello, " + "Monty"` produce `"Hello, Monty"`. Python non aggiunge spazi automaticamente, quindi devi includere tu stesso ogni spazio che vuoi nella tua concatenazione.
 
-    **Concept Tested:** String Concatenation
+    **Concetto verificato:** Concatenazione di stringhe
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione delle stringhe Python, della concatenazione, dei ca
 ??? question "Mostra risposta"
     La risposta corretta è **B**. L'operatore `*` ripete una stringa un numero indicato di volte senza alcun separatore. `"Ha" * 3` produce `"HaHaHa"`. Se vuoi spazi tra le ripetizioni, devi includerli tu stesso nella stringa: `"Ha " * 3` darebbe `"Ha Ha Ha "`. Il numero a destra deve essere un intero.
 
-    **Concept Tested:** String Repetition
+    **Concetto verificato:** Ripetizione di stringhe
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione delle stringhe Python, della concatenazione, dei ca
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `\n` è il carattere di escape per la nuova riga. Quando Python incontra `\n` dentro una stringa, sposta il cursore all'inizio della riga successiva nell'output. Questo permette a una singola chiamata `print()` di produrre più righe: `print("Line one\nLine two")` mostra due righe di testo.
 
-    **Concept Tested:** Escape Characters
+    **Concetto verificato:** Caratteri di escape
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione delle stringhe Python, della concatenazione, dei ca
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `len()` conta ogni carattere nella stringa, inclusa la punteggiatura. `"Hello!"` ha sei caratteri: H, e, l, l, o, e !. La funzione `len()` è integrata in Python — non devi importare nulla per usarla. Funziona su stringhe, liste e molti altri tipi di dati.
 
-    **Concept Tested:** String Length with len()
+    **Concetto verificato:** Lunghezza di una stringa con len()
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione delle stringhe Python, della concatenazione, dei ca
 ??? question "Mostra risposta"
     La risposta corretta è **B**. L'immutabilità significa che una volta creata una stringa, non puoi modificare i suoi singoli caratteri. Provare `name[0] = "B"` genera un `TypeError`. Per "cambiare" una stringa, crei una nuova stringa a partire da quella vecchia e riassegni la variabile. L'immutabilità rende le stringhe più veloci e sicure da usare in Python.
 
-    **Concept Tested:** String Immutability
+    **Concetto verificato:** Immutabilità delle stringhe
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione delle stringhe Python, della concatenazione, dei ca
 ??? question "Mostra risposta"
     La risposta corretta è **D**. Puoi gestire un apostrofo dentro una stringa in due modi: usare le virgolette doppie all'esterno (`"It's raining"`) così l'apostrofo è solo un carattere normale, oppure usare una sequenza di escape dentro le virgolette singole (`'It\'s raining'`). L'opzione B causerebbe un `SyntaxError` perché l'apostrofo termina la stringa troppo presto.
 
-    **Concept Tested:** Single vs Double Quotes
+    **Concetto verificato:** Virgolette singole e doppie
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione delle stringhe Python, della concatenazione, dei ca
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Una stringa raw dice a Python di ignorare le sequenze di escape con barra rovesciata e trattare ogni carattere letteralmente. Se ne crea una mettendo `r` prima della virgoletta di apertura: `r"C:\new_folder"` viene stampata come `C:\new_folder` invece di iniziare una nuova riga a `\n`. Le stringhe raw sono particolarmente utili per i percorsi di file Windows e le espressioni regolari.
 
-    **Concept Tested:** Raw Strings
+    **Concetto verificato:** Stringhe raw
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione delle stringhe Python, della concatenazione, dei ca
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `t.write(testo)` disegna un'etichetta di testo direttamente sulla tela turtle nella posizione attuale della turtle. Questo ti permette di aggiungere punteggi, titoli ed etichette ai tuoi disegni turtle. Il testo appare sulla tela stessa — non nell'area di output sottostante — rendendolo perfetto per etichettare forme o mostrare informazioni dentro un disegno.
 
-    **Concept Tested:** Writing Text with turtle.write()
+    **Concetto verificato:** Scrivere testo con turtle.write()
 
 ---

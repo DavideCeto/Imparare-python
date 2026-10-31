@@ -62,7 +62,7 @@ print("Ciao,", name + "! Benvenuto in Python!")`);
 
 !!! mascot-tip "Ponte Scratch"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch, il blocco **"Chiedi ___ e aspetta"** pausa il programma e memorizza la risposta in una variabile speciale chiamata `answer`.
+    In Scratch, il blocco **"chiedi [ ] e attendi"** mette in pausa il programma e memorizza la risposta in una variabile speciale chiamata **risposta**.
     In Python, `input("your question")` fa esattamente la stessa cosa — pausa e restituisce la risposta come una stringa.
 
 ## Conversione di Tipo

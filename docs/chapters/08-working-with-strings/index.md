@@ -20,15 +20,15 @@ disegnare etichette e testo direttamente sulla tua tela turtle.
 
 Questo capitolo tratta i seguenti 9 concetti del grafo di apprendimento:
 
-1. String Type
-2. Single vs Double Quotes
-3. String Concatenation
-4. String Repetition
-5. Escape Characters
-6. String Length with len()
-7. String Immutability
-8. Raw Strings
-9. Writing Text with turtle.write()
+1. Tipo stringa
+2. Virgolette singole e doppie
+3. Concatenazione di stringhe
+4. Ripetizione di stringhe
+5. Caratteri di escape
+6. Lunghezza di una stringa con len()
+7. Immutabilità delle stringhe
+8. Stringhe raw
+9. Scrivere testo con turtle.write()
 
 ## Prerequisiti
 
@@ -180,7 +180,7 @@ Il `\n` (nuova riga) è uno dei caratteri di escape più usati — permette a un
 
 !!! mascot-tip "Ponte con Scratch"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch, il blocco **Say** mostra un messaggio alla volta in un fumetto. Il `print()` di Python è simile, ma molto più flessibile — puoi stampare più righe, aggiungere tabulazioni, unire variabili e testo, e mostrare numeri tutto in una sola chiamata!
+    In Scratch, il blocco **dire [ ]** mostra un messaggio alla volta in un fumetto. Il `print()` di Python è simile, ma molto più flessibile — puoi stampare più righe, aggiungere tabulazioni, unire variabili e testo, e mostrare numeri tutto in una sola chiamata!
 
 ## Lunghezza di una Stringa con len()
 

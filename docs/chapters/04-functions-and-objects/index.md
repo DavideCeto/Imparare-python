@@ -36,7 +36,7 @@ La parola chiave che inizia una definizione di funzione è `def`, abbreviazione 
 
 !!! mascot-tip "Ponte con Scratch"
     ![Monty with a tip](../../img/mascot/tip.png){ class="mascot-admonition-img" }
-    In Scratch, usavi **"Make a Block"** per creare un blocco personalizzato — un gruppo di blocchi che potevi incastrare ovunque ti servisse quell'azione. Il `def` di Python fa esattamente la stessa cosa. Scrivi i passaggi una volta sola sotto un nome, poi chiami quel nome ovunque ti serva. Stessa idea, solo scritta come testo invece che incastrata come blocchi!
+    In Scratch, usavi **"Crea un Blocco"** per creare un blocco personalizzato — un gruppo di blocchi che potevi incastrare ovunque ti servisse quell'azione. Il `def` di Python fa esattamente la stessa cosa. Scrivi i passaggi una volta sola sotto un nome, poi chiami quel nome ovunque ti serva. Stessa idea, solo scritta come testo invece che incastrata come blocchi!
 
 ## Definire una Funzione con `def`
 

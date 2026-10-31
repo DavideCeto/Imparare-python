@@ -16,7 +16,7 @@ Verifica la tua comprensione dei dizionari Python, dell'accesso chiave-valore, d
 ??? question "Mostra risposta"
     La risposta corretta è **C**. I dizionari si creano con le parentesi graffe `{}`, con ogni voce scritta come `chiave: valore` e le voci separate da virgole. Le chiavi devono essere univoche all'interno di un dizionario. I valori possono essere di qualsiasi tipo — stringhe, numeri, liste, o persino altri dizionari.
 
-    **Concept Tested:** Creating Dictionaries
+    **Concetto verificato:** Creare dizionari
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione dei dizionari Python, dell'accesso chiave-valore, d
 ??? question "Mostra risposta"
     La risposta corretta è **D**. La ricerca nel dizionario con le parentesi quadre usa la chiave per recuperare il suo valore associato. `grades["Alice"]` restituisce `95`. A differenza delle liste (che usano indici interi a partire da 0), i dizionari usano le chiavi che hai definito — in questo caso, la stringa `"Alice"` mappa all'intero `95`.
 
-    **Concept Tested:** Accessing Values by Key
+    **Concetto verificato:** Accesso ai valori tramite chiave
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione dei dizionari Python, dell'accesso chiave-valore, d
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Se usi `d[key]` con una chiave che non è nel dizionario, Python genera un `KeyError`. Questo fa andare in crash il tuo programma a meno che tu non catturi l'errore. Per accedere in sicurezza a una chiave che potrebbe non esistere, usa `d.get(key)` che restituisce `None` (o un valore predefinito che specifichi) invece di andare in crash.
 
-    **Concept Tested:** KeyError
+    **Concetto verificato:** KeyError
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione dei dizionari Python, dell'accesso chiave-valore, d
 ??? question "Mostra risposta"
     La risposta corretta è **D**. `dict.get(key, default)` restituisce il valore per `key` se esiste, altrimenti restituisce il valore `default`. Con `grades.get("Dave", 0)`, se `"Dave"` non è una chiave, il metodo restituisce `0`. Senza un valore predefinito, `get()` restituisce `None`. Questo è molto più sicuro che usare `d[key]` quando non sei sicuro se la chiave esiste.
 
-    **Concept Tested:** Safe Access with get()
+    **Concetto verificato:** Accesso sicuro con get()
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione dei dizionari Python, dell'accesso chiave-valore, d
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Aggiungere una nuova voce a un dizionario usa la stessa sintassi di aggiornamento di una esistente: `d[key] = value`. Se la chiave esiste già, questo aggiorna il suo valore. Se la chiave è nuova, questo crea una nuova voce. I dizionari non hanno metodi `add()`, `append()`, o `insert()`.
 
-    **Concept Tested:** Adding and Updating Entries
+    **Concetto verificato:** Aggiungere e aggiornare voci
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione dei dizionari Python, dell'accesso chiave-valore, d
 ??? question "Mostra risposta"
     La risposta corretta è **D**. `d.items()` restituisce una vista di tutte le coppie `(chiave, valore)` come tuple. Puoi iterarci sopra con `for key, value in d.items():`. `d.keys()` dà solo le chiavi, `d.values()` dà solo i valori, e `d.pairs()` non è un metodo valido del dizionario.
 
-    **Concept Tested:** Keys, Values, and Items
+    **Concetto verificato:** Chiavi, valori ed elementi
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione dei dizionari Python, dell'accesso chiave-valore, d
 ??? question "Mostra risposta"
     La risposta corretta è **B**. L'operatore `in` controlla l'appartenenza di una chiave in un dizionario e restituisce `True` o `False`. `"Bob" in grades` è il modo Pythonic standard per verificare se una chiave esiste. `has_key()` è stato rimosso in Python 3, `contains()` non è un metodo del dizionario, e `find()` è un metodo delle stringhe.
 
-    **Concept Tested:** Key Membership with in
+    **Concetto verificato:** Verificare una chiave con in
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione dei dizionari Python, dell'accesso chiave-valore, d
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Un dizionario annidato è uno dove i valori sono essi stessi dizionari. Questo ti permette di rappresentare dati strutturati con più livelli — per esempio, una lista di contatti dove ogni contatto ha un telefono e un'email. L'accesso è concatenato: `contacts["Alice"]["phone"]` prima ottiene il sotto-dizionario di Alice, poi cerca "phone" al suo interno.
 
-    **Concept Tested:** Nested Dictionaries
+    **Concetto verificato:** Dizionari annidati
 
 ---
 
@@ -148,7 +148,7 @@ squares = {n: n * n for n in range(1, 4)}
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Una dictionary comprehension usa la forma `{espressione_chiave: espressione_valore for elemento in iterabile}`. Qui, `n` diventa la chiave e `n * n` diventa il valore. `range(1, 4)` produce 1, 2, 3 — quindi il risultato è `{1: 1, 2: 4, 3: 9}`. Le parentesi graffe con il pattern dei due punti la distinguono da una set comprehension.
 
-    **Concept Tested:** Dictionary Comprehensions
+    **Concetto verificato:** Dictionary comprehension
 
 ---
 
@@ -164,6 +164,6 @@ squares = {n: n * n for n in range(1, 4)}
 ??? question "Mostra risposta"
     La risposta corretta è **A**. `d.pop(key)` rimuove la voce con la chiave data dal dizionario e restituisce il suo valore. Se `grades = {"Bob": 87}`, allora `grades.pop("Bob")` restituisce `87` e `grades` diventa `{}`. Se la chiave non esiste, `pop()` genera un `KeyError` a meno che tu non fornisca un valore predefinito: `d.pop("Bob", None)`.
 
-    **Concept Tested:** Removing Entries
+    **Concetto verificato:** Rimuovere voci
 
 ---

@@ -16,7 +16,7 @@ Verifica la tua comprensione della struttura del codice Python, dell'indentazion
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Le triple virgolette (`"""` o `'''`) creano una stringa multi-riga in Python. Tutto ciò che si trova tra le triple virgolette di apertura e quelle di chiusura — incluse le righe a capo — diventa parte della stringa. Le virgolette singole o doppie normali funzionano solo per testo che resta su una riga.
 
-    **Concept Tested:** Multi-Line Strings
+    **Concetto verificato:** Stringhe su più righe
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione della struttura del codice Python, dell'indentazion
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Indentazione significa aggiungere spazi all'inizio di una riga per spostarla verso destra. In Python, l'indentazione non è solo estetica — fa parte della grammatica del linguaggio. Python usa il numero di spazi all'inizio di ogni riga per decidere quali righe vanno insieme in un blocco.
 
-    **Concept Tested:** Indentation as Syntax
+    **Concetto verificato:** L'indentazione come sintassi
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione della struttura del codice Python, dell'indentazion
 ??? question "Mostra risposta"
     La risposta corretta è **D**. Quando hai troppi spazi, troppo pochi, o mescoli tab e spazi, Python si ferma e mostra un `IndentationError`. La soluzione è sempre usare esattamente 4 spazi per ogni livello di indentazione e non mescolare mai tab e spazi nello stesso file.
 
-    **Concept Tested:** Indentation as Syntax
+    **Concetto verificato:** L'indentazione come sintassi
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione della struttura del codice Python, dell'indentazion
 ??? question "Mostra risposta"
     La risposta corretta è **A**. Le parole chiave di Python sono parole che hanno già un significato specifico nel linguaggio — parole come `for`, `if`, `while`, `def` e `import`. Non puoi usarle come nomi per le tue variabili o funzioni perché Python si confonderebbe su se intendevi il comando o la tua variabile.
 
-    **Concept Tested:** Python Keywords
+    **Concetto verificato:** Parole chiave di Python
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione della struttura del codice Python, dell'indentazion
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `for` è una parola chiave riservata di Python usata per scrivere i cicli. Non puoi usare `for` come nome di variabile. Le altre — `turtle`, `print` e `forward` — non sono parole chiave; sono nomi integrati o nomi di libreria che potrebbero tecnicamente essere riutilizzati (anche se farlo è una pessima idea).
 
-    **Concept Tested:** Python Keywords
+    **Concetto verificato:** Parole chiave di Python
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione della struttura del codice Python, dell'indentazion
 ??? question "Mostra risposta"
     La risposta corretta è **B**. In Python, i due punti `:` alla fine di una riga aprono un nuovo blocco di codice. Le righe successive, indentate di 4 spazi, appartengono a quel blocco. Questo schema compare con i cicli `for`, le istruzioni `if`, le definizioni di funzione e altro ancora. Python non usa parole chiave `begin`/`end` come alcuni altri linguaggi.
 
-    **Concept Tested:** Code Block Structure
+    **Concetto verificato:** Struttura dei blocchi di codice
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione della struttura del codice Python, dell'indentazion
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Uno statement è un'istruzione che *fa* qualcosa (come `print("Hello")` o `import turtle`) ma non produce un valore che puoi memorizzare. Un'espressione è un pezzo di codice che *produce un valore* (come `2 + 3`, che produce `5`). Molte righe Python combinano entrambi — per esempio `print(2 + 3)` è uno statement che contiene un'espressione.
 
-    **Concept Tested:** Statement vs Expression
+    **Concetto verificato:** Istruzioni ed espressioni
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione della struttura del codice Python, dell'indentazion
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Python impone le regole di indentazione — un'indentazione incoerente o scorretta causa un `IndentationError`. Le altre regole (spazi dopo le virgole, spazi intorno a `=`, righe vuote tra statement) sono convenzioni di stile che rendono il codice più leggibile ma non causano errori se le violi.
 
-    **Concept Tested:** Whitespace Rules
+    **Concetto verificato:** Regole sugli spazi
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione della struttura del codice Python, dell'indentazion
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Il metodo turtle `pencolor()` imposta il colore della penna di disegno della tartaruga. Lo chiami con una stringa di colore con nome come `t.pencolor("orange")`. Le altre opzioni usano una sintassi scorretta — Python solleverebbe un `AttributeError` oppure non produrrebbe alcun cambiamento visibile.
 
-    **Concept Tested:** Named Colors
+    **Concetto verificato:** Colori con nome
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione della struttura del codice Python, dell'indentazion
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `"ultraviolet"` non è uno dei 140 colori con nome X11 riconosciuti dalla libreria turtle — causerebbe un errore di colore. Le altre opzioni — `"skyblue"`, `"forestgreen"` e `"crimson"` — sono tutti colori con nome X11 validi che puoi usare con `t.pencolor()`.
 
-    **Concept Tested:** Named Colors
+    **Concetto verificato:** Colori con nome
 
 ---

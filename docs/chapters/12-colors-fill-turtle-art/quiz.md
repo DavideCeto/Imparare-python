@@ -16,7 +16,7 @@ Verifica la tua comprensione dei codici colore esadecimali, del modello di color
 ??? question "Mostra risposta"
     La risposta corretta è **C**. In un codice colore esadecimale, i sei caratteri si dividono in tre coppie: la prima coppia controlla il rosso, la seconda controlla il verde, e la terza controlla il blu. `#FF0000` ha `FF` (massimo = 255) per il rosso e `00` (nessuno) per verde e blu — quindi è rosso puro. `#0000FF` sarebbe blu puro e `#00FF00` sarebbe verde puro.
 
-    **Concept Tested:** Hex Color Codes
+    **Concetto verificato:** Codici colore esadecimali
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione dei codici colore esadecimali, del modello di color
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `#FFFF00` ha rosso massimo (`FF`), verde massimo (`FF`), e nessun blu (`00`). Nel modello di colore RGB, mescolare luce rossa piena e luce verde piena produce il giallo. Questa è la stessa ragione per cui un semaforo giallo usa LED rossi e verdi. `#FFFFFF` sarebbe bianco (tutti al massimo) e `#00FFFF` sarebbe ciano.
 
-    **Concept Tested:** Hex Color Codes
+    **Concetto verificato:** Codici colore esadecimali
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione dei codici colore esadecimali, del modello di color
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Il modello RGB mescola luce rossa, verde, e blu a intensità variabili (0–255 ciascuna) per creare ogni colore che il tuo schermo può mostrare. Ogni pixel su un monitor ha tre minuscole luci — rossa, verde, e blu — e la loro luminosità combinata produce il colore che vedi. Questo è diverso dal mescolare la pittura (dove rosso + verde = marrone scuro).
 
-    **Concept Tested:** RGB Color Model
+    **Concetto verificato:** Modello di colore RGB
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione dei codici colore esadecimali, del modello di color
 ??? question "Mostra risposta"
     La risposta corretta è **D**. Il bianco è prodotto da tutti e tre i canali di colore al loro valore massimo: Rosso=255, Verde=255, Blu=255. In esadecimale, questo è `#FFFFFF`. Al contrario, il nero è tutti zeri: Rosso=0, Verde=0, Blu=0 (esadecimale `#000000`). Il grigio è prodotto da valori uguali tra 0 e 255, come (128, 128, 128).
 
-    **Concept Tested:** RGB Color Model
+    **Concetto verificato:** Modello di colore RGB
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione dei codici colore esadecimali, del modello di color
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `t.fillcolor()` imposta il colore di riempimento — il colore usato per colorare l'interno delle forme quando usi `begin_fill()` e `end_fill()`. Non riempie nulla immediatamente. È separato da `pencolor()`, che controlla il colore del contorno. Puoi impostare entrambi insieme con `t.color(pencolor, fillcolor)`.
 
-    **Concept Tested:** begin_fill() and end_fill()
+    **Concetto verificato:** begin_fill() e end_fill()
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione dei codici colore esadecimali, del modello di color
 ??? question "Mostra risposta"
     La risposta corretta è **C**. L'ordine corretto è: (1) `t.begin_fill()` per segnalare l'inizio della regione da riempire, (2) disegna la forma, (3) `t.end_fill()` per sigillare la regione e colorarla con il colore di riempimento. Se le chiami nell'ordine sbagliato, il riempimento non fa nulla o produce risultati inaspettati. La forma dovrebbe anche essere chiusa (finire dove è iniziata) per un riempimento pulito.
 
-    **Concept Tested:** begin_fill() and end_fill()
+    **Concetto verificato:** begin_fill() e end_fill()
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione dei codici colore esadecimali, del modello di color
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `t.color(pencolor, fillcolor)` imposta entrambi i colori contemporaneamente. Il primo argomento è il colore della penna (contorno) e il secondo è il colore di riempimento. Quindi `t.color("blue", "yellow")` disegna contorni in blu e riempie le forme di giallo. Questa è una comoda scorciatoia per chiamare `t.pencolor()` e `t.fillcolor()` separatamente.
 
-    **Concept Tested:** Background and Pen Colors
+    **Concetto verificato:** Colori dello sfondo e della penna
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione dei codici colore esadecimali, del modello di color
 ??? question "Mostra risposta"
     La risposta corretta è **D**. `#000000` ha zero per tutti e tre i canali di colore — niente rosso, niente verde, niente blu — il che produce il nero. `#FFFFFF` è bianco (tutti i canali al massimo). `#FF0000` è rosso. `#808080` ha tutti i canali a 128, che è grigio medio.
 
-    **Concept Tested:** Hex Color Codes
+    **Concetto verificato:** Codici colore esadecimali
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione dei codici colore esadecimali, del modello di color
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Python riempie la regione delimitata dal percorso tracciato dalla tartaruga tra `begin_fill()` ed `end_fill()`. Se la forma non è chiusa — se il punto finale non è lo stesso del punto iniziale — c'è un vuoto nel confine. Python riempie comunque qualcosa, ma il riempimento potrebbe estendersi oltre o fuori dalla forma prevista in modi inaspettati.
 
-    **Concept Tested:** begin_fill() and end_fill()
+    **Concetto verificato:** begin_fill() e end_fill()
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione dei codici colore esadecimali, del modello di color
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `bgcolor()` è un metodo dell'oggetto Screen (solitamente memorizzato in una variabile come `wn`). Chiami `wn.bgcolor("lightblue")` per cambiare lo sfondo del canvas. `t.fillcolor()` imposta il colore di riempimento per le forme della tartaruga, non lo sfondo. `t.background()` e `turtle.fill()` non sono metodi turtle validi.
 
-    **Concept Tested:** Background and Pen Colors
+    **Concetto verificato:** Colori dello sfondo e della penna
 
 ---

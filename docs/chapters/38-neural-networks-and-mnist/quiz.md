@@ -16,7 +16,7 @@ Verifica la tua comprensione delle Reti Neurali Convoluzionali, di Conv2D, MaxPo
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Le reti dense appiattiscono un'immagine in un vettore 1-D, perdendo tutte le relazioni spaziali tra i pixel. Le CNN fanno scorrere i kernel dei filtri attraverso l'immagine 2-D per rilevare pattern locali (bordi, angoli, forme). Lo stesso kernel rileva un pattern ovunque appaia — un "7" in alto a sinistra e in basso a destra vengono riconosciuti dallo stesso kernel. Questo si chiama invarianza alla traslazione.
 
-    **Concept Tested:** CNN vs Dense Networks
+    **Concetto verificato:** CNN e reti dense a confronto
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione delle Reti Neurali Convoluzionali, di Conv2D, MaxPo
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `Conv2D(filters, kernel_size)` crea `filters` kernel apprendibili, ognuno di dimensione `kernel_size × kernel_size`. Ogni kernel scorre attraverso l'intero input e produce una mappa di caratteristiche. `Conv2D(32, (3,3))` produce 32 mappe di caratteristiche — ognuna rilevando un pattern visivo diverso (bordi orizzontali, curve, angoli, ecc.).
 
-    **Concept Tested:** Conv2D Layer
+    **Concetto verificato:** Livello Conv2D
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione delle Reti Neurali Convoluzionali, di Conv2D, MaxPo
 ??? question "Mostra risposta"
     La risposta corretta è **C**. MaxPooling divide la mappa di caratteristiche in blocchi non sovrapposti della dimensione data e mantiene il valore massimo di ogni blocco. `MaxPooling2D((2,2))` su una mappa di caratteristiche 24×24 produce una mappa di caratteristiche 12×12. Questo riduce il costo computazionale e crea un certo grado di invarianza di posizione — piccoli spostamenti nell'input producono lo stesso output di pooling.
 
-    **Concept Tested:** MaxPooling2D
+    **Concetto verificato:** MaxPooling2D
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione delle Reti Neurali Convoluzionali, di Conv2D, MaxPo
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Dopo i layer convoluzionali e di pooling, i dati sono ancora 2-D (o a dimensionalità più alta). I layer densi richiedono input 1-D. `Flatten()` riforma il tensore multidimensionale in un vettore 1-D senza cambiare nessun valore. Per esempio, un output 5×5×64 diventa un vettore di lunghezza 5×5×64 = 1.600 valori.
 
-    **Concept Tested:** Flatten Layer
+    **Concetto verificato:** Livello Flatten
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione delle Reti Neurali Convoluzionali, di Conv2D, MaxPo
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Dropout silenzia casualmente (imposta a zero) una frazione di neuroni durante ogni passo di training. Con `Dropout(0.5)`, il 50% dei neuroni viene disabilitato casualmente ogni volta. Questo impedisce alla rete di fare troppo affidamento su un singolo neurone, forzandola a sviluppare più percorsi indipendenti per rilevare ogni caratteristica. Al momento della previsione, Dropout viene automaticamente disabilitato e tutti i neuroni sono attivi.
 
-    **Concept Tested:** Dropout
+    **Concetto verificato:** Dropout
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione delle Reti Neurali Convoluzionali, di Conv2D, MaxPo
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `model.compile()` imposta tre scelte chiave di training prima che tu possa chiamare `model.fit()`: (1) l'optimizer — come il modello aggiorna i pesi (ad es., `"adam"`, `"sgd"`); (2) la funzione di loss — quale misura di errore minimizzare; e (3) le metriche da monitorare ma non ottimizzare (ad es., `"accuracy"`). Devi compilare prima di allenare.
 
-    **Concept Tested:** model.compile()
+    **Concetto verificato:** model.compile()
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione delle Reti Neurali Convoluzionali, di Conv2D, MaxPo
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `model.fit(x_train, y_train, epochs=10)` esegue il ciclo di training: per ogni epoch, passa tutti gli esempi di training attraverso il modello, calcola la loss, ed esegue l'optimizer per aggiornare i pesi. Restituisce un oggetto history contenente la loss e le metriche per ogni epoch. Usa `validation_split=0.1` per monitorare l'accuratezza di validation durante il training.
 
-    **Concept Tested:** model.fit()
+    **Concetto verificato:** model.fit()
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione delle Reti Neurali Convoluzionali, di Conv2D, MaxPo
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `batch_size` determina quanti esempi di training vengono raggruppati insieme per ogni aggiornamento dei pesi. Una dimensione del batch di 64 significa che il modello elabora 64 esempi, calcola la loss media, poi aggiorna i pesi una volta. Batch più piccoli danno aggiornamenti più rumorosi ma più frequenti; batch più grandi danno aggiornamenti più fluidi ma meno frequenti. Valori comuni sono 32, 64, e 128.
 
-    **Concept Tested:** Training with model.fit()
+    **Concetto verificato:** Addestramento con model.fit()
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione delle Reti Neurali Convoluzionali, di Conv2D, MaxPo
 ??? question "Mostra risposta"
     La risposta corretta è **C**. L'invarianza alla traslazione significa che una CNN può riconoscere una caratteristica — come la curva in cima a un "6" — che appaia in alto a sinistra o in basso a destra dell'immagine. Questo perché lo stesso kernel imparato viene condiviso e scansionato attraverso l'intera immagine. Le reti dense non hanno questa proprietà: ogni posizione nell'immagine ha pesi indipendenti, quindi la rete deve imparare separatamente ogni posizione.
 
-    **Concept Tested:** CNN Properties
+    **Concetto verificato:** Proprietà delle CNN
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione delle Reti Neurali Convoluzionali, di Conv2D, MaxPo
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Le Reti Neurali Ricorrenti (RNN) elaborano sequenze dove l'ordine conta. A differenza dei layer densi o CNN, le RNN mantengono uno stato nascosto — una "memoria" che porta informazioni dall'inizio della sequenza ai passi successivi. Questo le rende adatte all'elaborazione del linguaggio naturale, al riconoscimento vocale, alla previsione delle serie temporali, e alla generazione musicale. Le LSTM (Long Short-Term Memory) sono una versione migliorata delle RNN che gestiscono sequenze più lunghe.
 
-    **Concept Tested:** RNNs and LSTMs
+    **Concetto verificato:** RNN e LSTM
 
 ---

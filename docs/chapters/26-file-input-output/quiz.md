@@ -16,7 +16,7 @@ Verifica la tua comprensione delle modalità dei file, dell'istruzione with, del
 ??? question "Mostra risposta"
     La risposta corretta è **B**. L'istruzione `with` è un context manager. Quando scrivi `with open("file.txt") as f:`, Python apre il file, esegue il blocco indentato, e chiude il file automaticamente quando il blocco finisce — anche se si verifica un errore dentro il blocco. Questo previene il bug comune di dimenticare di chiudere il file.
 
-    **Concept Tested:** with Statement
+    **Concetto verificato:** Istruzione with
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione delle modalità dei file, dell'istruzione with, del
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Aprire un file con `"a"` (modalità aggiunta/append) aggiunge nuovo contenuto alla fine del file esistente. La modalità `"w"` (scrittura) crea un nuovo file o sovrascrive l'intero contenuto esistente. La modalità `"r"` (lettura) permette solo di leggere — non puoi scriverci. Non esiste una modalità `"e"` in Python.
 
-    **Concept Tested:** File Modes
+    **Concetto verificato:** Modalità di apertura dei file
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione delle modalità dei file, dell'istruzione with, del
 ??? question "Mostra risposta"
     La risposta corretta è **D**. La modalità scrittura (`"w"`) sovrascrive completamente il file. Se il file esiste già, il suo contenuto precedente viene eliminato e sostituito. Se il file non esiste, Python lo crea. Questo è il motivo per cui è importante usare `"a"` (modalità aggiunta) se vuoi preservare il contenuto esistente.
 
-    **Concept Tested:** File Modes
+    **Concetto verificato:** Modalità di apertura dei file
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione delle modalità dei file, dell'istruzione with, del
 ??? question "Mostra risposta"
     La risposta corretta è **B**. A differenza di `print()`, che aggiunge automaticamente un ritorno a capo alla fine di ogni chiamata, `f.write()` scrive esattamente ciò che gli dai — niente di più. Se vuoi che ogni pezzo di testo sia sulla sua propria riga nel file, devi includere `"\n"` alla fine: `f.write("Hello\n")`. Senza di esso, tutto il tuo testo finisce insieme su una riga.
 
-    **Concept Tested:** Writing to a File
+    **Concetto verificato:** Scrivere su un file
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione delle modalità dei file, dell'istruzione with, del
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `f.read()` legge l'intero file e restituisce tutto il suo contenuto come una grande stringa, inclusi tutti i caratteri di ritorno a capo `"\n"`. Per ottenere una lista con ogni riga come elemento separato, usa `f.readlines()`. Per elaborare una riga alla volta in modo efficiente (specialmente per file grandi), itera direttamente sull'oggetto file con `for line in f:`.
 
-    **Concept Tested:** Reading Files
+    **Concetto verificato:** Leggere i file
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione delle modalità dei file, dell'istruzione with, del
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `f.read()` restituisce l'intero file come una stringa. `f.readlines()` legge il file e restituisce una lista dove ogni elemento è una riga del file (con il carattere `"\n"` ancora attaccato). Entrambi richiedono un file aperto in modalità lettura. Usa `readlines()` quando vuoi elaborare ogni riga separatamente senza dividerla manualmente.
 
-    **Concept Tested:** readlines()
+    **Concetto verificato:** readlines()
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione delle modalità dei file, dell'istruzione with, del
 ??? question "Mostra risposta"
     La risposta corretta è **C**. La modalità lettura (`"r"`) richiede che il file esista già. Se il file non viene trovato, Python genera `FileNotFoundError`. Puoi gestirlo con eleganza con un blocco `try/except FileNotFoundError:`. La modalità scrittura (`"w"`) e la modalità aggiunta (`"a"`) creano entrambe il file se non esiste.
 
-    **Concept Tested:** File Modes
+    **Concetto verificato:** Modalità di apertura dei file
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione delle modalità dei file, dell'istruzione with, del
 ??? question "Mostra risposta"
     La risposta corretta è **B**. La libreria standard di Python include il modulo `csv` per leggere e scrivere file CSV (Comma-Separated Values). Gestisce automaticamente casi difficili come le virgole dentro campi tra virgolette. Usa `csv.reader(f)` per leggere le righe e `csv.writer(f)` per scriverle. Non esiste un modulo `files`, `spreadsheet`, o `tabular` nella libreria standard.
 
-    **Concept Tested:** CSV Module
+    **Concetto verificato:** Modulo csv
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione delle modalità dei file, dell'istruzione with, del
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Iterare direttamente su un oggetto file con `for line in f:` ti dà una riga per iterazione come stringa. La riga include il carattere di ritorno a capo finale `"\n"` (eccetto forse l'ultima riga). Usa `line.strip()` per rimuovere gli spazi bianchi iniziali/finali incluso `"\n"`. Questo è efficiente in termini di memoria per i file grandi perché Python legge una riga alla volta invece di caricare tutto in una volta.
 
-    **Concept Tested:** Line Iteration
+    **Concetto verificato:** Leggere un file riga per riga
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione delle modalità dei file, dell'istruzione with, del
 ??? question "Mostra risposta"
     La risposta corretta è **B**. La cartella di lavoro attuale (CWD) è la cartella che Python usa come punto di partenza quando dai un nome di file senza un percorso completo. Se il tuo script è in `~/projects/` e scrivi `open("data.txt")`, Python cerca `data.txt` in `~/projects/`. Puoi controllare la CWD con `import os; print(os.getcwd())` e navigare nel terminale con `cd`.
 
-    **Concept Tested:** Current Working Directory
+    **Concetto verificato:** Cartella di lavoro corrente
 
 ---

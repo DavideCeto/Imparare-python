@@ -16,7 +16,7 @@ Verifica la tua comprensione delle espressioni regolari, del modulo re, degli el
 ??? question "Mostra risposta"
     La risposta corretta è **C**. La libreria standard di Python include il modulo `re` per le espressioni regolari. Importalo con `import re`. Le funzioni principali sono `re.search()`, `re.findall()`, `re.split()`, e `re.sub()`. Le espressioni regolari sono pattern che scrivi per cercare, far corrispondere, dividere, o sostituire il testo in modi potenti che richiederebbero molte righe di metodi delle stringhe per essere replicati.
 
-    **Concept Tested:** re Module
+    **Concetto verificato:** Modulo re
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione delle espressioni regolari, del modulo re, degli el
 ??? question "Mostra risposta"
     La risposta corretta è **B**. I pattern regex usano molte sequenze con barra inversa: `\d` per cifra, `\w` per carattere di parola, `\s` per spazio bianco. In una normale stringa Python, la barra inversa inizia sequenze di escape (`\n` = ritorno a capo). Una stringa raw (`r"..."`) dice a Python di non elaborare le barre inverse, così `r"\d"` passa `\d` letteralmente al motore regex. Usa sempre `r"..."` per i pattern regex.
 
-    **Concept Tested:** Raw Strings for Regex
+    **Concetto verificato:** Stringhe raw per le regex
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione delle espressioni regolari, del modulo re, degli el
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `\d` corrisponde a qualsiasi singolo carattere cifra da 0 a 9. Per far corrispondere un carattere di parola (lettere, cifre, underscore), usa `\w`. Per far corrispondere uno spazio bianco, usa `\s`. Le versioni maiuscole (`\D`, `\W`, `\S`) corrispondono all'opposto — qualsiasi cosa che NON sia rispettivamente una cifra, un carattere di parola, o uno spazio bianco.
 
-    **Concept Tested:** Pattern Elements
+    **Concetto verificato:** Elementi delle espressioni regolari
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione delle espressioni regolari, del modulo re, degli el
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `re.search()` restituisce un **oggetto match** se il pattern viene trovato ovunque nel testo, oppure `None` se non trovato. Non restituisce un semplice booleano o il testo trovato direttamente. Per ottenere la stringa effettivamente trovata, chiama `.group()` sull'oggetto match: `match.group()` restituirebbe `"555-1234"`.
 
-    **Concept Tested:** re.search()
+    **Concetto verificato:** re.search()
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione delle espressioni regolari, del modulo re, degli el
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Il quantificatore `+` significa "una o più volte" — l'elemento precedente deve apparire almeno una volta. Per esempio, `\d+` corrisponde a una o più cifre: corrisponde a `"5"`, `"42"`, `"1000"` ma NON a una stringa vuota. Confronta: `*` significa zero o più (può essere assente), `?` significa zero o una (opzionale), `{n}` significa esattamente n volte.
 
-    **Concept Tested:** Quantifiers
+    **Concetto verificato:** Quantificatori
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione delle espressioni regolari, del modulo re, degli el
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `re.findall()` restituisce una lista di tutte le corrispondenze non sovrapposte come stringhe. Per `\d+` (una o più cifre) applicato a `"I have 3 cats and 12 fish"`, trova `"3"` e `"12"` e le restituisce come `["3", "12"]`. A differenza di `re.search()` che si ferma alla prima corrispondenza, `findall()` raccoglie tutte le occorrenze.
 
-    **Concept Tested:** re.findall()
+    **Concetto verificato:** re.findall()
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione delle espressioni regolari, del modulo re, degli el
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `re.sub(pattern, replacement, text)` sostituisce tutte le corrispondenze del pattern con la stringa di sostituzione. `\s+` corrisponde a uno o più caratteri di spazio bianco. Lo spazio singolo tra "hello" e "world" e il doppio spazio tra "world" e "foo" vengono entrambi sostituiti con `"-"`, dando `"hello-world-foo"`. Per default, `re.sub()` sostituisce tutte le occorrenze.
 
-    **Concept Tested:** re.sub()
+    **Concetto verificato:** re.sub()
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione delle espressioni regolari, del modulo re, degli el
 ??? question "Mostra risposta"
     La risposta corretta è **D**. L'ancora `^` afferma che la corrispondenza deve verificarsi all'inizio della stringa. Per esempio, `r"^\d"` corrisponde a stringhe che iniziano con una cifra. Senza `^`, `re.search(r"\d", text)` trova una cifra ovunque nel testo. L'ancora `$` richiede in modo simile che la corrispondenza sia alla fine della stringa. Insieme, `^...$` corrisponde all'intera stringa.
 
-    **Concept Tested:** Anchors
+    **Concetto verificato:** Ancore
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione delle espressioni regolari, del modulo re, degli el
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `re.split(pattern, text)` divide il testo a ogni corrispondenza del pattern, restituendo una lista dei pezzi. Il pattern `r",\s*"` corrisponde a una virgola seguita da zero o più caratteri di spazio bianco, gestendo tutti i diversi stili di spaziatura attorno alle virgole. Il risultato è una lista pulita: `["apples", "oranges", "bananas", "grapes"]`.
 
-    **Concept Tested:** re.split()
+    **Concetto verificato:** re.split()
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione delle espressioni regolari, del modulo re, degli el
 ??? question "Mostra risposta"
     La risposta corretta è **B**. In una regex, `.` è un carattere jolly che corrisponde a qualsiasi singolo carattere eccetto un ritorno a capo (`\n`). Per esempio, `r"c.t"` corrisponderebbe a `"cat"`, `"cut"`, `"c4t"`, e `"c!t"`. Per far corrispondere un punto letterale, fai l'escape: `r"\."`. I quantificatori `*` e `+` controllano la ripetizione — non corrispondono a `.`.
 
-    **Concept Tested:** Pattern Elements
+    **Concetto verificato:** Elementi delle espressioni regolari
 
 ---

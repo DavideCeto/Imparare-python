@@ -16,7 +16,7 @@ Verifica la tua comprensione dell'indicizzazione delle stringhe, dello slicing, 
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Le stringhe Python (e la maggior parte delle sequenze Python) usano l'indicizzazione a base zero — il primo carattere è all'indice `0`, il secondo all'`1`, e così via. Quindi per la stringa `"Python"`, `word[0]` dà `"P"`, `word[1]` dà `"y"`, e `word[5]` dà `"n"`.
 
-    **Concept Tested:** String Indexing
+    **Concetto verificato:** Indici delle stringhe
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione dell'indicizzazione delle stringhe, dello slicing, 
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Gli indici negativi contano all'indietro dalla fine della stringa. L'indice `-1` è l'ultimo carattere, `-2` è il penultimo, e così via. Per `"Python"`, l'indice `-1` è `"n"`. Questo è comodo quando vuoi l'ultimo carattere senza conoscere la lunghezza della stringa.
 
-    **Concept Tested:** String Indexing
+    **Concetto verificato:** Indici delle stringhe
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione dell'indicizzazione delle stringhe, dello slicing, 
 ??? question "Mostra risposta"
     La risposta corretta è **A**. Lo slicing delle stringhe `[start:end]` restituisce i caratteri dall'indice `start` fino a, ma NON includendo, l'indice `end`. `"programming"[0:4]` dà i caratteri agli indici 0, 1, 2, e 3 — che sono `p`, `r`, `o`, `g` — formando `"prog"`. Il carattere all'indice 4 (`a`) non è incluso.
 
-    **Concept Tested:** String Slicing
+    **Concetto verificato:** Slicing delle stringhe
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione dell'indicizzazione delle stringhe, dello slicing, 
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `split()` senza argomento divide una stringa su ogni spazio bianco e restituisce una lista dei pezzi. `"hello world".split()` restituisce la lista `["hello", "world"]`. Puoi anche dividere su un carattere specifico: `"a,b,c".split(",")` restituisce `["a", "b", "c"]`.
 
-    **Concept Tested:** split() Method
+    **Concetto verificato:** Metodo split()
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione dell'indicizzazione delle stringhe, dello slicing, 
 ??? question "Mostra risposta"
     La risposta corretta è **A**. `join()` incolla insieme una lista di stringhe usando la stringa su cui viene chiamato come separatore. `"-".join(["a", "b", "c"])` restituisce `"a-b-c"`. Il separatore appare tra gli elementi ma non all'inizio o alla fine. `join()` è l'opposto di `split()`.
 
-    **Concept Tested:** join() Method
+    **Concetto verificato:** Metodo join()
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione dell'indicizzazione delle stringhe, dello slicing, 
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `replace(old, new)` restituisce una nuova stringa con ogni occorrenza di `old` sostituita da `new`. `"the fox ran".replace("fox", "dog")` restituisce `"the dog ran"`. Nota che le stringhe sono immutabili — `replace()` non cambia la stringa originale; ne restituisce una nuova.
 
-    **Concept Tested:** replace() Method
+    **Concetto verificato:** Metodo replace()
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione dell'indicizzazione delle stringhe, dello slicing, 
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `endswith(suffix)` restituisce `True` se la stringa finisce con il suffisso dato, `False` altrimenti. `"report.pdf".endswith(".pdf")` restituisce `True` perché la stringa finisce davvero con `".pdf"`. Questo è molto utile per controllare le estensioni dei file, le terminazioni degli URL, e altri pattern di suffisso.
 
-    **Concept Tested:** String Search Methods
+    **Concetto verificato:** Metodi di ricerca nelle stringhe
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione dell'indicizzazione delle stringhe, dello slicing, 
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Una f-string (letterale di stringa formattato) si crea mettendo `f` prima della virgoletta di apertura: `f"Ciao, {name}!"`. Qualsiasi espressione dentro `{}` viene valutata e inserita nella stringa. Le f-string eliminano il bisogno di convertire i numeri con `str()` prima di unirli e sono molto più leggibili della concatenazione.
 
-    **Concept Tested:** f-Strings
+    **Concetto verificato:** f-string
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione dell'indicizzazione delle stringhe, dello slicing, 
 ??? question "Mostra risposta"
     La risposta corretta è **B**. La specifica di formato `:.1f` dentro una f-string formatta un numero come un float con esattamente 1 cifra decimale. `95` formattato come `:.1f` diventa `95.0`. Quindi `f"Score: {95:.1f}%"` produce `"Score: 95.0%"`. Specifiche di formato come `.2f` (2 cifre decimali) o `.0f` (nessuna cifra decimale) ti danno un controllo preciso sulla visualizzazione numerica.
 
-    **Concept Tested:** f-Strings
+    **Concetto verificato:** f-string
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione dell'indicizzazione delle stringhe, dello slicing, 
 ??? question "Mostra risposta"
     La risposta corretta è **D**. `find()` restituisce l'indice della prima occorrenza della stringa cercata. Se la stringa cercata non viene trovata, `find()` restituisce `-1` invece di generare un errore. Questo ti permette di controllare il risultato: `if s.find("xyz") != -1:` significa "se xyz è stato trovato." L'operatore `in` (`"xyz" in s`) è un altro modo comune per controllare senza preoccuparsi dell'indice.
 
-    **Concept Tested:** String Search Methods
+    **Concetto verificato:** Metodi di ricerca nelle stringhe
 
 ---

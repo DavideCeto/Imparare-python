@@ -16,7 +16,7 @@ Verifica la tua comprensione dei tipi tuple e set di Python, della scomposizione
 ??? question "Mostra risposta"
     La risposta corretta è **B**. La differenza più importante è la mutabilità. Alle liste si possono aggiungere, rimuovere, o cambiare elementi. Le tuple no — una volta create, il loro contenuto è fisso. Entrambe supportano l'indicizzazione, lo slicing, e l'iterazione. Usa una tupla quando i dati rappresentano qualcosa di fisso (come una coordinata) e una lista quando la collezione deve cambiare.
 
-    **Concept Tested:** Tuple Type
+    **Concetto verificato:** Tipo tupla
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione dei tipi tuple e set di Python, della scomposizione
 ??? question "Mostra risposta"
     La risposta corretta è **D**. È richiesta una virgola finale per dire a Python che intendi una tupla. `(42)` è solo l'intero 42 tra parentesi — non una tupla. `(42,)` ha la virgola finale che segnala "questa è una tupla a un elemento." Per le tuple con due o più elementi, non è necessaria nessuna virgola finale: `(1, 2)` è già chiaramente una tupla.
 
-    **Concept Tested:** Single-Element Tuple Syntax
+    **Concetto verificato:** Sintassi della tupla con un solo elemento
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione dei tipi tuple e set di Python, della scomposizione
 ??? question "Mostra risposta"
     La risposta corretta è **C**. La scomposizione delle tuple (chiamata anche destructuring) ti permette di scrivere `x, y = (10, 20)` per assegnare `10` a `x` e `20` a `y` in una singola riga. Il numero di variabili a sinistra deve corrispondere al numero di elementi nella tupla. Questo è lo stesso meccanismo che fa funzionare lo scambio di variabili in una riga di Python (`a, b = b, a`).
 
-    **Concept Tested:** Tuple Unpacking
+    **Concetto verificato:** Spacchettamento delle tuple
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione dei tipi tuple e set di Python, della scomposizione
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Una funzione può avere solo un'istruzione `return`, ma puoi impacchettare valori multipli in una tupla e restituirli tutti in una volta. Per esempio, `return min_val, max_val` restituisce una tupla. Chi chiama può poi scomporla: `lo, hi = find_range(data)`. Questo è più pulito che restituire una lista o usare variabili globali.
 
-    **Concept Tested:** Tuples as Return Values
+    **Concetto verificato:** Tuple come valori restituiti
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione dei tipi tuple e set di Python, della scomposizione
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Gli insiemi impongono automaticamente l'unicità — nessun duplicato è permesso. Se fai `add()` di un elemento già nell'insieme, o crei un insieme con valori ripetuti come `{1, 2, 2, 3}`, Python ignora silenziosamente i duplicati. L'insieme `{1, 2, 2, 3}` diventa `{1, 2, 3}`.
 
-    **Concept Tested:** Set Type
+    **Concetto verificato:** Tipo insieme (set)
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione dei tipi tuple e set di Python, della scomposizione
 ??? question "Mostra risposta"
     La risposta corretta è **C**. L'operatore `&` esegue l'intersezione tra insiemi — restituisce un nuovo insieme contenente solo gli elementi che appaiono in **entrambi** gli insiemi. Sia `3` sia `4` sono in A e in B, quindi `A & B = {3, 4}`. L'operatore `|` è l'unione (tutti gli elementi), e `-` è la differenza (nel primo ma non nel secondo).
 
-    **Concept Tested:** Set Intersection
+    **Concetto verificato:** Intersezione tra insiemi
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione dei tipi tuple e set di Python, della scomposizione
 ??? question "Mostra risposta"
     La risposta corretta è **D**. L'operatore `|` esegue l'unione tra insiemi — restituisce un nuovo insieme contenente tutti gli elementi di entrambi gli insiemi, senza duplicati. `{1, 2, 3} | {3, 4, 5}` dà `{1, 2, 3, 4, 5}`. L'elemento condiviso `3` appare solo una volta nel risultato perché gli insiemi non permettono duplicati.
 
-    **Concept Tested:** Set Union
+    **Concetto verificato:** Unione di insiemi
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione dei tipi tuple e set di Python, della scomposizione
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Entrambi i metodi rimuovono un elemento da un insieme per valore, ma differiscono nella gestione degli errori. `remove(x)` genera un `KeyError` se `x` non è nell'insieme. `discard(x)` non fa nulla e non genera errori se `x` è assente. Usa `discard()` quando non sei sicuro se l'elemento esiste e non vuoi controllare prima.
 
-    **Concept Tested:** Set Methods
+    **Concetto verificato:** Metodi degli insiemi
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione dei tipi tuple e set di Python, della scomposizione
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `set(my_list)` converte una lista in un insieme, scartando automaticamente tutti i valori duplicati. Se hai bisogno del risultato di nuovo come lista, racchiudilo: `list(set(my_list))`. L'unico avvertimento è che gli insiemi non sono ordinati, quindi l'ordine originale non viene preservato. Non esiste un metodo built-in `remove_duplicates()` in Python.
 
-    **Concept Tested:** Set Type
+    **Concetto verificato:** Tipo insieme (set)
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione dei tipi tuple e set di Python, della scomposizione
 ??? question "Mostra risposta"
     La risposta corretta è **C**. L'operatore `-` esegue la differenza tra insiemi — restituisce gli elementi che sono nel primo insieme ma NON nel secondo. `{1, 2, 3, 4} - {3, 4, 5}` dà `{1, 2}` perché `3` e `4` vengono rimossi (sono in B) e `5` non viene incluso (era solo in B). Nota che `A - B` e `B - A` danno risultati diversi.
 
-    **Concept Tested:** Set Difference
+    **Concetto verificato:** Differenza tra insiemi
 
 ---

@@ -16,7 +16,7 @@ Verifica la tua comprensione di matplotlib, dei tipi di grafici, delle etichette
 ??? question "Mostra risposta"
     La risposta corretta è **C**. La convenzione standard è `import matplotlib.pyplot as plt`. Il sottomodulo `pyplot` contiene tutte le funzioni per i grafici: `plt.plot()`, `plt.show()`, `plt.title()`, ecc. L'alias `plt` è usato universalmente nella comunità di data science Python — lo vedrai in ogni tutorial, manuale, ed esempio di codice professionale.
 
-    **Concept Tested:** Importing matplotlib
+    **Concetto verificato:** Importare matplotlib
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione di matplotlib, dei tipi di grafici, delle etichette
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `plt.show()` rende e mostra la finestra del grafico. Costruisci un grafico chiamando `plt.plot()`, `plt.title()`, `plt.xlabel()`, ecc., poi chiami `plt.show()` per mostrarlo effettivamente. Nei Jupyter Notebook, i grafici potrebbero rendersi automaticamente senza `plt.show()`, ma è sempre buona pratica includerlo.
 
-    **Concept Tested:** plt.show()
+    **Concetto verificato:** plt.show()
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione di matplotlib, dei tipi di grafici, delle etichette
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `plt.scatter(x, y)` crea uno scatter plot — singoli punti disegnati senza collegare linee. Gli scatter plot sono utili per mostrare la relazione (correlazione) tra due variabili. Usa `plt.plot(x, y)` per i grafici a linee (che collegano i punti). Non esistono funzioni `dots()`, `points()`, o `spot()` in matplotlib.
 
-    **Concept Tested:** Scatter Plots
+    **Concetto verificato:** Grafici a dispersione
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione di matplotlib, dei tipi di grafici, delle etichette
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `plt.xlabel("text")` aggiunge un'etichetta di testo sotto l'asse x (l'asse orizzontale) del grafico. In modo simile, `plt.ylabel("text")` etichetta l'asse y (asse verticale), e `plt.title("text")` imposta il titolo in cima. Etichetta sempre i tuoi assi così i lettori sanno cosa rappresentano i dati e quali unità vengono usate.
 
-    **Concept Tested:** Axis Labels and Titles
+    **Concetto verificato:** Etichette degli assi e titoli
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione di matplotlib, dei tipi di grafici, delle etichette
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Ogni chiamata a `plt.plot()` aggiunge un'altra linea al grafico attuale. Tutte le linee vengono combinate quando chiami `plt.show()`. Usa il parametro `label=` su ogni chiamata a `plt.plot()` e poi chiama `plt.legend()` per mostrare una legenda che identifica quale linea è quale.
 
-    **Concept Tested:** Multiple Lines
+    **Concetto verificato:** Più linee nello stesso grafico
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione di matplotlib, dei tipi di grafici, delle etichette
 ??? question "Mostra risposta"
     La risposta corretta è **D**. Un grafico a linee (creato con `plt.plot()`) è ideale per mostrare dati continui che cambiano nel tempo — come la temperatura durante una settimana, il prezzo di un'azione nel corso di mesi, o un esperimento di fisica durante i secondi. I grafici a barre confrontano categorie discrete. Gli istogrammi mostrano le distribuzioni di frequenza. I grafici a torta mostrano le proporzioni di un totale.
 
-    **Concept Tested:** Chart Types
+    **Concetto verificato:** Tipi di grafici
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione di matplotlib, dei tipi di grafici, delle etichette
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `plt.grid(True)` aggiunge leggere linee della griglia di sfondo al grafico, rendendo più facile leggere visivamente i valori approssimativi dal grafico. Chiamala dopo le tue chiamate a `plt.plot()` ma prima di `plt.show()`. La griglia non influenza i dati o i calcoli — è puramente un aiuto visivo per il lettore.
 
-    **Concept Tested:** Grid Lines
+    **Concetto verificato:** Linee della griglia
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione di matplotlib, dei tipi di grafici, delle etichette
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `plt.savefig("filename.png")` salva il grafico in un file immagine. Chiamala prima di `plt.show()` (o invece di essa). Puoi salvare come PNG, PDF, SVG, o altri formati cambiando l'estensione del file. Questo è essenziale per includere grafici in report, siti web, o condividere risultati senza richiedere che il destinatario abbia matplotlib installato.
 
-    **Concept Tested:** Saving Figures
+    **Concetto verificato:** Salvare i grafici
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione di matplotlib, dei tipi di grafici, delle etichette
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Un istogramma (creato con `plt.hist()`) mostra quanto frequentemente i valori rientrano in intervalli (chiamati bin). Per esempio, un istogramma dei punteggi degli studenti mostra quanti studenti hanno ottenuto 60-70, 70-80, 80-90, ecc. Rivela la forma della distribuzione dei dati — se è simmetrica, asimmetrica, o ha valori anomali. I grafici a barre confrontano categorie distinte; gli istogrammi mostrano distribuzioni di valori continui.
 
-    **Concept Tested:** Histograms
+    **Concetto verificato:** Istogrammi
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione di matplotlib, dei tipi di grafici, delle etichette
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `fig, axes = plt.subplots(rows, cols)` crea una figura con una griglia di pannelli di grafici (sottografici). `plt.subplots(1, 2)` crea una riga e due colonne — due grafici fianco a fianco. Poi disegni su ciascuno con `axes[0].plot(...)` e `axes[1].plot(...)`. Questo è come confronti insiemi di dati correlati in una singola figura.
 
-    **Concept Tested:** Subplots
+    **Concetto verificato:** Sottografici (subplot)
 
 ---

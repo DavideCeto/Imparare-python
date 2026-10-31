@@ -16,7 +16,7 @@ Verifica la tua comprensione delle pile, delle code, dei grafi, di BFS, DFS, del
 ??? question "Mostra risposta"
     La risposta corretta è **C**. LIFO sta per "Last In, First Out" (ultimo entrato, primo uscito). In una pila, l'elemento aggiunto più di recente è il primo a essere rimosso — come una pila di piatti dove prendi sempre dalla cima. Le liste Python funzionano come pile usando `.append()` per fare push e `.pop()` per fare pop. Le code usano FIFO (First In, First Out).
 
-    **Concept Tested:** Stack (LIFO)
+    **Concetto verificato:** Pila (LIFO)
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione delle pile, delle code, dei grafi, di BFS, DFS, del
 ??? question "Mostra risposta"
     La risposta corretta è **A**. FIFO sta per "First In, First Out" (primo entrato, primo uscito). In una coda, il primo elemento aggiunto è il primo elemento rimosso — come una fila alla mensa dove la prima persona in fila viene servita per prima. `collections.deque` di Python è il modo efficiente di implementare una coda, usando `.append()` per fare enqueue e `.popleft()` per fare dequeue.
 
-    **Concept Tested:** Queue (FIFO)
+    **Concetto verificato:** Coda (FIFO)
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione delle pile, delle code, dei grafi, di BFS, DFS, del
 ??? question "Mostra risposta"
     La risposta corretta è **D**. La Ricerca in Ampiezza (BFS) usa una coda per tracciare quali nodi visitare dopo. I nodi vengono messi in coda quando vengono scoperti e tolti dalla coda in ordine FIFO — quindi BFS esplora tutti i nodi a distanza 1 prima di qualsiasi a distanza 2, garantendo il percorso più corto nei grafi non pesati. DFS, al contrario, usa una pila o la ricorsione.
 
-    **Concept Tested:** BFS
+    **Concetto verificato:** BFS (ricerca in ampiezza)
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione delle pile, delle code, dei grafi, di BFS, DFS, del
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Una lista di adiacenza rappresenta un grafo usando un dizionario: ogni chiave è un nodo (vertice) e il suo valore è una lista di nodi vicini (collegati da archi). Per esempio, `{"A": ["B", "C"], "B": ["A", "D"]}` significa che A si collega a B e C, e B si collega ad A e D. Questo è efficiente in termini di memoria per i grafi sparsi.
 
-    **Concept Tested:** Graph and Adjacency List
+    **Concetto verificato:** Grafo e lista di adiacenza
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione delle pile, delle code, dei grafi, di BFS, DFS, del
 ??? question "Mostra risposta"
     La risposta corretta è **B**. BFS (Ricerca in Ampiezza) esplora i vicini livello per livello — prima tutti i nodi a distanza 1, poi distanza 2, garantendo il percorso più corto in un grafo non pesato. Usa una coda. DFS (Ricerca in Profondità) va quanto più lontano possibile lungo un percorso prima di tornare indietro, usando una pila o la ricorsione. DFS usa meno memoria per i grafi profondi ma non garantisce il percorso più corto.
 
-    **Concept Tested:** BFS and DFS
+    **Concetto verificato:** BFS e DFS
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione delle pile, delle code, dei grafi, di BFS, DFS, del
 ??? question "Mostra risposta"
     La risposta corretta è **C**. La notazione Big-O descrive il tasso di crescita dei requisiti di tempo o memoria di un algoritmo all'aumentare della dimensione dell'input. Per esempio, O(n) significa che il tempo cresce linearmente — raddoppiare l'input raddoppia il tempo. O(n²) significa che il tempo cresce quadraticamente. Si concentra sul termine di crescita dominante e ignora le costanti, aiutandoti a confrontare gli algoritmi indipendentemente dalla velocità dell'hardware.
 
-    **Concept Tested:** Big-O Notation
+    **Concetto verificato:** Notazione O-grande
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione delle pile, delle code, dei grafi, di BFS, DFS, del
 ??? question "Mostra risposta"
     La risposta corretta è **D**. La ricerca binaria funziona dimezzando ripetutamente lo spazio di ricerca. A ogni passo, controlla l'elemento centrale: se è troppo alto, elimina la metà superiore; se troppo basso, elimina la metà inferiore. Questo dà un tempo O(log n) — cercare in un milione di elementi richiede circa 20 passi (log₂(1.000.000) ≈ 20). La ricerca binaria richiede che la lista sia ordinata.
 
-    **Concept Tested:** Binary Search
+    **Concetto verificato:** Ricerca binaria
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione delle pile, delle code, dei grafi, di BFS, DFS, del
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Il bubble sort fa passaggi ripetuti attraverso la lista, confrontando coppie adiacenti e scambiandole se quella a sinistra è più grande di quella a destra. Dopo ogni passaggio, l'elemento non ordinato più grande è "risalito a bolla" alla sua posizione corretta. Il bubble sort è O(n²) — facile da capire ma lento per liste grandi. `sorted()` e `.sort()` built-in di Python sono molto più veloci per l'uso reale.
 
-    **Concept Tested:** Bubble Sort
+    **Concetto verificato:** Bubble sort
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione delle pile, delle code, dei grafi, di BFS, DFS, del
 ??? question "Mostra risposta"
     La risposta corretta è **C**. La ricerca binaria si basa sul fatto che la lista sia ordinata. Confronta l'obiettivo con l'elemento centrale e decide quale metà cercare dopo. Se la lista fosse non ordinata, eliminare metà degli elementi non sarebbe valido — l'obiettivo potrebbe essere in entrambe le metà. La ricerca binaria su una lista non ordinata produce risultati scorretti.
 
-    **Concept Tested:** Binary Search
+    **Concetto verificato:** Ricerca binaria
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione delle pile, delle code, dei grafi, di BFS, DFS, del
 ??? question "Mostra risposta"
     La risposta corretta è **B**. La cronologia del browser è un classico caso d'uso di una pila. Quando visiti una nuova pagina, viene spinta sulla pila. Quando clicchi Indietro, la pagina più recente viene tolta — Last In, First Out (LIFO). Una coda ti darebbe la pagina più vecchia prima (direzione sbagliata). Un grafo potrebbe modellare la navigazione tra le pagine, ma una pila è specificamente ciò che modella il pulsante Indietro.
 
-    **Concept Tested:** Stack (LIFO)
+    **Concetto verificato:** Pila (LIFO)
 
 ---

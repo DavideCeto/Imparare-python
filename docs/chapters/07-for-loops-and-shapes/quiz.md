@@ -16,7 +16,7 @@ Verifica la tua comprensione dei cicli for, di range(), del posizionamento della
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `range(4)` genera la sequenza 0, 1, 2, 3 — quattro numeri a partire da zero e fermandosi prima di 4. In Python, `range(n)` inizia sempre da 0 e arriva fino a, ma non include, `n`. Quindi `range(4)` ti dà quattro valori: 0, 1, 2 e 3.
 
-    **Concept Tested:** for Loop with range()
+    **Concetto verificato:** Ciclo for con range()
 
 ---
 
@@ -40,7 +40,7 @@ for i in range(4):
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Il ciclo gira 4 volte. Ogni volta, la turtle si muove avanti di 100 pixel e gira a destra di 90 gradi. Dopo quattro svolte a destra di 90 gradi, la turtle ha ruotato di un giro completo di 360 gradi e torna alla sua direzione di partenza — creando una forma a quadrato chiusa con lati di 100 pixel.
 
-    **Concept Tested:** for Loop with range()
+    **Concetto verificato:** Ciclo for con range()
 
 ---
 
@@ -56,7 +56,7 @@ for i in range(4):
 ??? question "Mostra risposta"
     La risposta corretta è **D**. La variabile `i` è il contatore del ciclo — assume ogni valore prodotto da `range(5)` (cioè, 0, 1, 2, 3, 4) nei giri successivi del ciclo. Puoi usare `i` dentro il corpo del ciclo per rendere ogni passo leggermente diverso, come disegnare linee che si allungano a ogni iterazione.
 
-    **Concept Tested:** Loop Counter Variable
+    **Concetto verificato:** Variabile contatore del ciclo
 
 ---
 
@@ -72,7 +72,7 @@ for i in range(4):
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `range(start, stop, step)` inizia da 2, si ferma prima di 8, e conta a passi di 2. Questo dà 2, 4, 6 — tre valori. Nota che 8 stesso NON è incluso perché `range` si ferma prima del valore di stop. Se cambiassi lo stop a 9, otterresti 2, 4, 6, 8.
 
-    **Concept Tested:** Range with Start Stop Step
+    **Concetto verificato:** range() con inizio, fine e passo
 
 ---
 
@@ -88,7 +88,7 @@ for i in range(4):
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Un accumulatore è una variabile che inizializzi prima del ciclo (di solito a 0 o a un valore vuoto) e poi aggiorni dentro il ciclo a ogni iterazione. Un esempio classico: `total = 0` prima del ciclo, poi `total += i` dentro. Dopo il ciclo, `total` contiene la somma di tutti i valori elaborati dal ciclo.
 
-    **Concept Tested:** Loop Accumulator Pattern
+    **Concetto verificato:** Schema dell'accumulatore nei cicli
 
 ---
 
@@ -104,7 +104,7 @@ for i in range(4):
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `t.goto(x, y)` sposta la turtle in una posizione esatta sulla tela usando le coordinate. Il centro della tela della turtle è in `(0, 0)`. La x positiva è a destra, la y positiva è in alto. La turtle disegnerà una linea mentre si muove a meno che tu non chiami prima `t.penup()`.
 
-    **Concept Tested:** Absolute Positioning goto()
+    **Concetto verificato:** Posizionamento assoluto con goto()
 
 ---
 
@@ -120,7 +120,7 @@ for i in range(4):
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `t.setheading(angle)` imposta la direzione della turtle a un orientamento esatto della bussola, non una svolta relativa. Orientamento 90 significa Nord (su), 0 significa Est (destra), 180 significa Ovest (sinistra), e 270 significa Sud (giù). Questo è diverso da `t.right()` e `t.left()`, che girano relativamente alla direzione attuale verso cui è rivolta la turtle.
 
-    **Concept Tested:** setheading() Direction
+    **Concetto verificato:** Direzione con setheading()
 
 ---
 
@@ -136,7 +136,7 @@ for i in range(4):
 ??? question "Mostra risposta"
     La risposta corretta è **D**. `range(6)` genera 6 valori: 0, 1, 2, 3, 4, 5. Il corpo del ciclo viene eseguito una volta per ogni valore, quindi gira esattamente 6 volte. Un errore comune tra i principianti è pensare che giri 7 volte (includendo 6) o 5 volte (fermandosi a 5). Ricorda sempre: `range(n)` produce esattamente `n` valori.
 
-    **Concept Tested:** for Loop with range()
+    **Concetto verificato:** Ciclo for con range()
 
 ---
 
@@ -152,7 +152,7 @@ for i in range(4):
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `t.circle(radius)` dice alla turtle di disegnare un cerchio con il raggio indicato. La turtle inizia a disegnare dalla sua posizione attuale. Puoi usare valori positivi o negativi per il raggio — un raggio negativo disegna il cerchio sul lato opposto della turtle.
 
-    **Concept Tested:** Drawing circle() and Polygons
+    **Concetto verificato:** Disegnare con circle() e poligoni
 
 ---
 
@@ -168,6 +168,6 @@ for i in range(4):
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Un pentagono ha 5 lati, quindi il ciclo gira 5 volte. L'angolo di svolta a ogni angolo è `360 / 5 = 72` gradi. Puoi usare questa formula per qualsiasi poligono regolare: `angolo_svolta = 360 / numero_di_lati`. Il ciclo si ripete quel numero di volte, muovendosi in avanti e girando di quell'angolo ogni volta.
 
-    **Concept Tested:** Drawing circle() and Polygons
+    **Concetto verificato:** Disegnare con circle() e poligoni
 
 ---

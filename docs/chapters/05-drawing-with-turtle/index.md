@@ -182,7 +182,7 @@ La grafica turtle funziona allo stesso modo.
 
 La turtle inizia sempre con la penna abbassata, ed è per questo che la primissima chiamata a `forward()` disegna una linea.
 
-In Scratch potresti aver usato i blocchi **Pen Up** e **Pen Down** dall'estensione pen — `penup()` e `pendown()` funzionano esattamente allo stesso modo.
+In Scratch potresti aver usato i blocchi **penna su** e **penna giù** dell'estensione **Penna** — `penup()` e `pendown()` funzionano esattamente allo stesso modo.
 
 Ecco un programma che disegna due linee separate con uno spazio nel mezzo:
 
@@ -238,7 +238,7 @@ Due comandi controllano l'aspetto della linea:
 - **`t.pensize(n)`** imposta lo spessore della linea in pixel. Il valore predefinito è `1`. Prova `3`, `5` o `10` per disegnare linee più marcate.
 - **`t.pencolor("colore")`** imposta il colore della linea disegnata dalla turtle. Usa un nome di colore tra virgolette: `"red"`, `"blue"`, `"green"`, `"orange"`, `"purple"`, o qualsiasi colore web con nome.
 
-Proprio come il blocco **Set pen color** in Scratch, `pencolor()` cambia il colore per ogni linea disegnata dopo quella chiamata.
+Proprio come il blocco **usa penna di colore [ ]** in Scratch, `pencolor()` cambia il colore per ogni linea disegnata dopo quella chiamata.
 Puoi cambiare colore a metà di un programma — ogni chiamata a `pencolor()` influisce solo sulle linee che vengono dopo.
 
 ## Aspetto della Turtle: shape(), hideturtle() e showturtle()

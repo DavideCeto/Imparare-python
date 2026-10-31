@@ -16,7 +16,7 @@ Verifica la tua comprensione dei valori booleani, degli operatori di confronto, 
 ??? question "Mostra risposta"
     La risposta corretta è **C**. In Python, i valori booleani si scrivono esattamente come `True` e `False` — con la prima lettera maiuscola. Appartengono al tipo `bool`. I booleani sono il risultato dei confronti e vengono usati nelle istruzioni `if` per decidere quale ramo di codice eseguire.
 
-    **Concept Tested:** Boolean Type
+    **Concetto verificato:** Tipo booleano
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione dei valori booleani, degli operatori di confronto, 
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `=` è l'operatore di assegnazione: `x = 5` memorizza il valore 5 nella variabile `x`. `==` è l'operatore di confronto per l'uguaglianza: `x == 5` verifica se `x` contiene attualmente il valore 5 e restituisce `True` o `False`. Usare `=` dentro una condizione `if` causa un `SyntaxError` — questo è uno degli errori più comuni tra i principianti.
 
-    **Concept Tested:** Comparison Operators
+    **Concetto verificato:** Operatori di confronto
 
 ---
 
@@ -55,7 +55,7 @@ else:
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Quando `score = 75`, la condizione `score >= 60` si valuta come `True` (75 è maggiore o uguale a 60). Quindi Python esegue il blocco `if` e stampa `"Promosso!"`. Dato che il blocco `if` è stato eseguito, Python salta completamente il blocco `else`. Un `if/else` esegue sempre esattamente uno dei due rami.
 
-    **Concept Tested:** if...else Block
+    **Concetto verificato:** Blocco if...else
 
 ---
 
@@ -71,7 +71,7 @@ else:
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `elif` (abbreviazione di "else if") aggiunge un altro ramo a una catena decisionale. Python controlla le condizioni dall'alto verso il basso ed esegue il corpo del **primo** ramo la cui condizione è `True`, poi salta tutti i rami rimanenti. Se nessun `if` o `elif` è `True`, viene eseguito il ramo `else` (se esiste).
 
-    **Concept Tested:** elif Chains
+    **Concetto verificato:** Catene elif
 
 ---
 
@@ -87,7 +87,7 @@ else:
 ??? question "Mostra risposta"
     La risposta corretta è **C**. L'operatore `and` restituisce `True` solo quando **entrambe** le condizioni alla sua sinistra e destra sono `True`. Se anche solo una è `False`, l'intera espressione è `False`. Questo è diverso da `or`, che restituisce `True` quando **almeno una** condizione è `True`.
 
-    **Concept Tested:** Logical Operators
+    **Concetto verificato:** Operatori logici
 
 ---
 
@@ -103,7 +103,7 @@ else:
 ??? question "Mostra risposta"
     La risposta corretta è **D**. L'operatore `not` inverte un valore booleano: `not True` diventa `False`, e `not False` diventa `True`. È utile per rendere le condizioni più leggibili — per esempio, `if not is_finished:` si legge naturalmente come "se non abbiamo ancora finito."
 
-    **Concept Tested:** Logical Operators
+    **Concetto verificato:** Operatori logici
 
 ---
 
@@ -130,7 +130,7 @@ else:
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Python controlla le condizioni dall'alto verso il basso e si ferma alla prima che è `True`. `83 >= 90` è `False`, quindi passa a `83 >= 80`, che è `True`. Python stampa `"B"` e salta tutti i rami rimanenti, incluso `elif score >= 70`. Anche se `83 >= 70` è anch'essa `True`, non viene mai controllata perché un ramo è già stato eseguito.
 
-    **Concept Tested:** elif Chains
+    **Concetto verificato:** Catene elif
 
 ---
 
@@ -150,7 +150,7 @@ if 0 <= age < 18:
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Il confronto concatenato `0 <= age < 18` verifica se `age` è almeno 0 E minore di 18. Questo equivale a `age >= 0 and age < 18`. Python permette questa notazione simile alla matematica per i controlli di intervallo. L'età 0 passerebbe il test (0 <= 0 è True) ma l'età 18 no (18 < 18 è False).
 
-    **Concept Tested:** Chained Comparisons
+    **Concetto verificato:** Confronti concatenati
 
 ---
 
@@ -166,7 +166,7 @@ if 0 <= age < 18:
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Un `if` annidato è un'istruzione `if` scritta dentro il corpo (blocco indentato) di un'altra istruzione `if`. Questo ti permette di controllare una seconda condizione solo quando la prima condizione è già `True`. L'annidamento ti dà un controllo fine, ma troppi livelli di annidamento possono rendere il codice difficile da leggere.
 
-    **Concept Tested:** Nested if Statements
+    **Concetto verificato:** Istruzioni if annidate
 
 ---
 
@@ -182,6 +182,6 @@ if 0 <= age < 18:
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Per richiedere entrambe le condizioni, usa `and`. `n > 0` verifica che il numero sia positivo, e `n % 2 == 0` verifica che il resto dopo la divisione per 2 sia zero (cioè che sia pari). Usare `or` renderebbe la condizione `True` se ne fosse soddisfatta anche solo una, il che non è quello che vogliamo.
 
-    **Concept Tested:** Logical Operators
+    **Concetto verificato:** Operatori logici
 
 ---

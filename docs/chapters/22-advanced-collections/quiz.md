@@ -16,7 +16,7 @@ Verifica la tua comprensione di enumerate(), zip(), *args, **kwargs, e delle fun
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `enumerate(iterable)` incapsula una sequenza e ti dà sia l'indice sia l'elemento a ogni iterazione del ciclo. Usare `for i, item in enumerate(my_list):` è più pulito che mantenere una variabile contatore separata. Per default il conteggio inizia da 0; passa un secondo argomento per iniziare da un numero diverso: `enumerate(items, 1)` inizia da 1.
 
-    **Concept Tested:** enumerate()
+    **Concetto verificato:** enumerate()
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione di enumerate(), zip(), *args, **kwargs, e delle fun
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `zip()` accoppia gli elementi di due o più iterabili e si ferma quando il più corto finisce. Dato che la seconda lista ha solo 2 elementi, `zip()` produce solo 2 coppie: `("A", 1)` e `("B", 2)`. Il terzo elemento `"C"` viene ignorato perché non c'è un elemento corrispondente nella seconda lista.
 
-    **Concept Tested:** zip()
+    **Concetto verificato:** zip()
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione di enumerate(), zip(), *args, **kwargs, e delle fun
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `zip(keys, values)` accoppia ogni chiave con il suo valore corrispondente. Racchiudere con `dict()` converte quelle coppie in un dizionario. Per esempio, `dict(zip(["a", "b"], [1, 2]))` dà `{"a": 1, "b": 2}`. Questo è un pattern molto comune e pulito per costruire dizionari da liste parallele.
 
-    **Concept Tested:** Dictionary from zip()
+    **Concetto verificato:** Dizionario da zip()
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione di enumerate(), zip(), *args, **kwargs, e delle fun
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `*args` in una definizione di funzione raccoglie qualsiasi numero di argomenti posizionali che chi chiama passa in una singola tupla. Per esempio, `def total(*args): return sum(args)` può essere chiamata come `total(1, 2, 3)` o `total(10)` — gli argomenti posizionali extra finiscono tutti in `args`.
 
-    **Concept Tested:** *args
+    **Concetto verificato:** *args
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione di enumerate(), zip(), *args, **kwargs, e delle fun
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `**kwargs` raccoglie gli argomenti keyword extra (quelli passati come `name=value`) in un dizionario. Chiamare `describe(color="red", size=5)` darebbe `kwargs = {"color": "red", "size": 5}` dentro la funzione. Poi ci iteri sopra con `kwargs.items()`. `*args` gestisce gli argomenti posizionali; `**kwargs` gestisce gli argomenti keyword.
 
-    **Concept Tested:** **kwargs
+    **Concetto verificato:** **kwargs
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione di enumerate(), zip(), *args, **kwargs, e delle fun
 ??? question "Mostra risposta"
     La risposta corretta è **D**. `max(iterable)` restituisce il valore più grande nella collezione. Per `[73, 100, 87, 55]`, il valore più grande è `100`. In modo simile, `min()` restituisce il valore più piccolo (`55` qui), e `sum()` restituisce il totale (`415`). Tutte e tre funzionano su qualsiasi iterabile di valori comparabili.
 
-    **Concept Tested:** max(), min(), sum()
+    **Concetto verificato:** max(), min(), sum()
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione di enumerate(), zip(), *args, **kwargs, e delle fun
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `list.sort()` riorganizza la lista **sul posto** e restituisce `None`. `sorted(iterable)` crea e restituisce una **nuova** lista ordinata, lasciando l'originale invariata. Usa `sort()` quando vuoi cambiare la lista direttamente. Usa `sorted()` quando hai bisogno di mantenere l'ordine originale avendo anche una versione ordinata.
 
-    **Concept Tested:** sorted() and reversed()
+    **Concetto verificato:** sorted() e reversed()
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione di enumerate(), zip(), *args, **kwargs, e delle fun
 ??? question "Mostra risposta"
     La risposta corretta è **D**. `isinstance(value, type)` restituisce `True` se il valore è un'istanza del tipo dato, `False` altrimenti. `42` è un intero, quindi `isinstance(42, int)` restituisce `True`. Questo è il modo preferito di controllare i tipi in Python perché gestisce anche l'eredità, a differenza di `type(x) == int` che non lo fa.
 
-    **Concept Tested:** isinstance()
+    **Concetto verificato:** isinstance()
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione di enumerate(), zip(), *args, **kwargs, e delle fun
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `sorted(iterable, reverse=True)` restituisce una nuova lista ordinata in ordine decrescente (il più grande prima). Per `[5, 2, 8, 1]`, il risultato è `[8, 5, 2, 1]`. La lista originale non viene modificata. Per ordinare in modo crescente (il default), usa semplicemente `sorted(iterable)` senza l'argomento `reverse`.
 
-    **Concept Tested:** sorted() and reversed()
+    **Concetto verificato:** sorted() e reversed()
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione di enumerate(), zip(), *args, **kwargs, e delle fun
 ??? question "Mostra risposta"
     La risposta corretta è **D**. `enumerate(iterable, start)` inizia a contare dal valore `start` invece che da 0. Con `enumerate(["x", "y", "z"], 1)`, la prima coppia è `(1, "x")`, la seconda è `(2, "y")`, e così via. Questo è utile quando vuoi mostrare liste numerate a partire da 1 invece che da 0.
 
-    **Concept Tested:** enumerate()
+    **Concetto verificato:** enumerate()
 
 ---

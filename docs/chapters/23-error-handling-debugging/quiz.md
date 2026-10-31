@@ -16,7 +16,7 @@ Verifica la tua comprensione dei tipi di errore Python, dei traceback, di try/ex
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Un errore sintattico viene rilevato prima che il programma venga eseguito perché Python non riesce nemmeno a capire il codice. Esempi includono un `:` mancante dopo `if`, parentesi non corrispondenti, o un'indentazione sbagliata. Gli errori di runtime (eccezioni) si verificano mentre il programma è in esecuzione. Gli errori logici sono quando il programma gira ma produce la risposta sbagliata.
 
-    **Concept Tested:** Types of Errors
+    **Concetto verificato:** Tipi di errori
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione dei tipi di errore Python, dei traceback, di try/ex
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Un `ValueError` si verifica quando una funzione riceve un valore del tipo corretto ma un valore inappropriato per il contesto. `int()` si aspetta una stringa che sembra un numero, ma `"hello"` non può essere convertita in un intero. Un `TypeError` si verificherebbe se passassi un tipo completamente sbagliato (come `int([1, 2, 3])`).
 
-    **Concept Tested:** Common Exception Types
+    **Concetto verificato:** Tipi di eccezioni comuni
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione dei tipi di errore Python, dei traceback, di try/ex
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Un traceback mostra la sequenza di chiamate che ha portato al crash, e soprattutto: il nome del file, il numero di riga, la riga esatta di codice che ha fallito, e il tipo di eccezione con una descrizione. Leggilo dal basso verso l'alto — l'ultima riga dà il tipo di errore e il messaggio, le righe sopra mostrano dove nel codice è successo.
 
-    **Concept Tested:** Reading Tracebacks
+    **Concetto verificato:** Leggere un traceback
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione dei tipi di errore Python, dei traceback, di try/ex
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Un blocco `try/except` ti permette di eseguire codice rischioso dentro `try:` e specificare cosa fare in `except:` se si verifica un errore. Invece di andare in crash, il programma continua con il codice di gestione dell'errore. Questo è essenziale per scrivere programmi che gestiscono input dell'utente, operazioni su file, o connessioni di rete dove gli errori sono previsti e dovrebbero essere gestiti.
 
-    **Concept Tested:** try/except Blocks
+    **Concetto verificato:** Blocchi try/except
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione dei tipi di errore Python, dei traceback, di try/ex
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Python genera `ZeroDivisionError` quando provi a dividere qualsiasi numero per zero (`10 / 0`). La catturi specificamente con `except ZeroDivisionError:`. Controlla sempre un denominatore pari a zero prima di dividere se il denominatore proviene dall'input dell'utente o da un calcolo che potrebbe produrre zero.
 
-    **Concept Tested:** Common Exception Types
+    **Concetto verificato:** Tipi di eccezioni comuni
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione dei tipi di errore Python, dei traceback, di try/ex
 ??? question "Mostra risposta"
     La risposta corretta è **B**. La clausola `else` in un blocco `try/except` gira solo quando il blocco `try` si è completato con successo — senza nessuna eccezione generata. Questo è un modo pulito di scrivere il codice del "percorso di successo" separatamente dal blocco `try` stesso. La clausola `finally`, al contrario, gira sempre indipendentemente dal fatto che si sia verificata un'eccezione.
 
-    **Concept Tested:** else and finally Clauses
+    **Concetto verificato:** Clausole else e finally
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione dei tipi di errore Python, dei traceback, di try/ex
 ??? question "Mostra risposta"
     La risposta corretta è **C**. La clausola `finally` viene sempre eseguita, indipendentemente da cosa succede nei blocchi `try` ed `except`. Gira anche se un'eccezione viene catturata, anche se non viene catturata, e anche se c'è un'istruzione `return` nel blocco `try`. Questo rende `finally` perfetta per operazioni di pulizia come chiudere file o connessioni di rete.
 
-    **Concept Tested:** else and finally Clauses
+    **Concetto verificato:** Clausole else e finally
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione dei tipi di errore Python, dei traceback, di try/ex
 ??? question "Mostra risposta"
     La risposta corretta è **B**. L'istruzione `raise` innesca deliberatamente un'eccezione. `raise ValueError("messaggio")` crea un `ValueError` con il tuo messaggio personalizzato. Questo è utile per imporre regole nel tuo codice — se viene rilevato un input sbagliato, generi un'eccezione così chi chiama sa che qualcosa non va. Chi chiama può catturarla con `try/except ValueError`.
 
-    **Concept Tested:** raise Statement
+    **Concetto verificato:** Istruzione raise
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione dei tipi di errore Python, dei traceback, di try/ex
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Un errore di runtime (eccezione) fa andare in crash il programma a metà esecuzione con un messaggio di errore — Python ha rilevato qualcosa di sbagliato. Un errore logico è quando il programma gira fino al completamento senza andare in crash ma produce risultati scorretti. Gli errori logici sono spesso i più difficili da trovare perché Python non dà nessun messaggio di errore — devi capire da solo perché l'output è sbagliato.
 
-    **Concept Tested:** Types of Errors
+    **Concetto verificato:** Tipi di errori
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione dei tipi di errore Python, dei traceback, di try/ex
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `assert condizione, "messaggio"` controlla che `condizione` sia `True`. Se è `False`, Python genera un `AssertionError` con il tuo messaggio. Viene comunemente usato nel testing e nel debug per verificare che le assunzioni del tuo codice siano corrette in punti specifici. Per esempio, `assert len(items) > 0, "List must not be empty"` conferma che la lista ha elementi prima di elaborarla.
 
-    **Concept Tested:** assert Statement
+    **Concetto verificato:** Istruzione assert
 
 ---

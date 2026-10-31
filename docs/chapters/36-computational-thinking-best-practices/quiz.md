@@ -16,7 +16,7 @@ Verifica la tua comprensione del pensiero computazionale, dei principi DRY, dell
 ??? question "Mostra risposta"
     La risposta corretta è **B**. La scomposizione è uno dei quattro pilastri del pensiero computazionale. Invece di provare a risolvere un intero problema complesso in una volta, lo scomponi in pezzi più piccoli. Per esempio, "costruisci un'app di quiz" si scompone in "memorizza le domande," "chiedi all'utente," "controlla la risposta," e "traccia il punteggio." Ogni pezzo è abbastanza piccolo da essere programmato e testato indipendentemente.
 
-    **Concept Tested:** Decomposition
+    **Concetto verificato:** Scomposizione
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione del pensiero computazionale, dei principi DRY, dell
 ??? question "Mostra risposta"
     La risposta corretta è **B**. L'abstraction significa concentrarsi su ciò che conta per risolvere il problema attuale e nascondere i dettagli che non contano. Una funzione `ask_question(q)` nasconde i dettagli di input/output — chi chiama ha bisogno solo di sapere che fa una domanda e restituisce la risposta. Una buona abstraction rende il codice riutilizzabile e più facile da ragionare.
 
-    **Concept Tested:** Abstraction
+    **Concetto verificato:** Astrazione
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione del pensiero computazionale, dei principi DRY, dell
 ??? question "Mostra risposta"
     La risposta corretta è **B**. DRY significa "Don't Repeat Yourself" (non ripeterti). Se la stessa logica appare in più punti, una correzione di bug o un cambiamento deve essere fatto in ogni copia — ed è facile perderne una. DRY dice: estrai la logica ripetuta in una singola funzione o variabile. L'opposto di DRY è "WET" (Write Everything Twice), che crea codice fragile e difficile da mantenere.
 
-    **Concept Tested:** DRY Principle
+    **Concetto verificato:** Principio DRY
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione del pensiero computazionale, dei principi DRY, dell
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Il riconoscimento dei pattern significa notare quando diverse parti di un problema hanno la stessa struttura. Per esempio, notare che ogni domanda del quiz ha un testo, quattro scelte, e una risposta corretta — quel pattern suggerisce una lista di dizionari o una classe `Question`. Riconoscere i pattern ti permette di riutilizzare le soluzioni invece di risolvere lo stesso problema ripetutamente.
 
-    **Concept Tested:** Pattern Recognition
+    **Concetto verificato:** Riconoscimento di schemi
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione del pensiero computazionale, dei principi DRY, dell
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Un nome significativo comunica lo scopo della variabile a colpo d'occhio. `student_score` è molto più chiaro di `x` o `s`. I nomi autodocumentanti riducono il bisogno di commenti e rendono i bug più facili da trovare. PEP 8 (la guida di stile di Python) raccomanda `snake_case` per le variabili — minuscolo con underscore tra le parole.
 
-    **Concept Tested:** Meaningful Names
+    **Concetto verificato:** Nomi significativi
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione del pensiero computazionale, dei principi DRY, dell
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Il refactoring significa ristrutturare il codice esistente per renderlo più pulito, più leggibile, o meglio organizzato — senza cambiare il suo comportamento esterno. Esempi: rinominare le variabili per chiarezza, estrarre la logica ripetuta in una funzione, semplificare un condizionale complesso. I buoni programmatori fanno il refactor regolarmente per mantenere il loro codice manutenibile.
 
-    **Concept Tested:** Refactoring
+    **Concetto verificato:** Refactoring
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione del pensiero computazionale, dei principi DRY, dell
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Il pensiero test-driven significa decidere cosa dovrebbe fare una funzione e quale dovrebbe essere il suo output prima (o mentre) la scrivi. Per i principianti, questo significa: pensare agli input e output previsti, testare con valori conosciuti, e verificare i casi limite (lista vuota, zero, negativo). Il Test-Driven Development (TDD) formale scrive prima i test automatizzati; il pensiero test-driven applica la stessa mentalità informalmente.
 
-    **Concept Tested:** Test-Driven Thinking
+    **Concetto verificato:** Pensare per test
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione del pensiero computazionale, dei principi DRY, dell
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Il controllo di versione (più comunemente Git) registra ogni cambiamento che fai al tuo codice come una serie di commit. Questo ti permette di vedere la storia completa del tuo progetto, tornare a qualsiasi stato precedente se rompi qualcosa, lavorare su funzionalità sperimentali senza rischiare il codice funzionante, e collaborare con altri senza sovrascrivere i cambiamenti a vicenda. GitHub ospita i repository Git online.
 
-    **Concept Tested:** Version Control
+    **Concetto verificato:** Controllo di versione
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione del pensiero computazionale, dei principi DRY, dell
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Il pair programming è una pratica dove due sviluppatori lavorano insieme su una postazione di lavoro. Uno è il "driver" che scrive il codice; l'altro è il "navigator" che rivede, suggerisce, e individua i problemi. Scambiano i ruoli regolarmente. La ricerca mostra che il pair programming produce meno bug e aiuta entrambi i programmatori a imparare l'uno dall'altro, anche se richiede più tempo totale.
 
-    **Concept Tested:** Pair Programming
+    **Concetto verificato:** Programmazione in coppia
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione del pensiero computazionale, dei principi DRY, dell
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Il codice modulare è organizzato in unità piccole e indipendenti (funzioni, classi, o moduli) dove ogni unità ha un compito chiaro. Il codice modulare è più facile da testare (testare ogni pezzo in isolamento), fare debug (isolare il pezzo rotto), e riutilizzare (copiare una funzione in un nuovo progetto). L'opposto è il codice monolitico — uno script lungo senza funzioni, dove tutto è intrecciato insieme.
 
-    **Concept Tested:** Modularity
+    **Concetto verificato:** Modularità
 
 ---

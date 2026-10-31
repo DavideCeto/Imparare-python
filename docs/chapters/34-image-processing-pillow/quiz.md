@@ -16,7 +16,7 @@ Verifica la tua comprensione di Pillow (PIL), delle modalità delle immagini, de
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Installa con `pip install pillow` (il nome del pacchetto è minuscolo `pillow`), ma importa usando il nome originale: `from PIL import Image`. Questo perché Pillow è il fork mantenuto della più vecchia PIL (Python Imaging Library) e ha mantenuto lo stesso nome di import per compatibilità retroattiva.
 
-    **Concept Tested:** Importing Pillow
+    **Concetto verificato:** Importare Pillow
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione di Pillow (PIL), delle modalità delle immagini, de
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `img.size` restituisce una tupla `(width, height)` — le dimensioni dell'immagine in pixel. Per esempio, un'immagine 1920×1080 ha `img.size = (1920, 1080)`. Nota che questo è `(width, height)` — l'opposto degli array NumPy che usano `(rows, cols)` o `(height, width)`. Puoi anche accedere separatamente a `img.width` e `img.height`.
 
-    **Concept Tested:** Image Attributes
+    **Concetto verificato:** Attributi delle immagini
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione di Pillow (PIL), delle modalità delle immagini, de
 ??? question "Mostra risposta"
     La risposta corretta è **C**. Nel sistema di modalità di Pillow, `"L"` significa scala di grigi (luminanza). Ogni pixel è un singolo intero da 0 (nero) a 255 (bianco). `"RGB"` usa tre valori per pixel (rosso, verde, blu), e `"RGBA"` aggiunge un quarto canale alpha per la trasparenza. Converti in scala di grigi con `img.convert("L")`.
 
-    **Concept Tested:** Image Mode
+    **Concetto verificato:** Modalità dell'immagine
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione di Pillow (PIL), delle modalità delle immagini, de
 ??? question "Mostra risposta"
     La risposta corretta è **B**. In modalità RGB, ogni canale (rosso, verde, blu) va da 0 a 255. Il bianco ha il valore massimo per tutti e tre i canali: `(255, 255, 255)`. Il nero è `(0, 0, 0)` — minimo per tutti i canali. Il grigio è quando tutti e tre sono uguali: `(128, 128, 128)`. Il rosso puro è `(255, 0, 0)`.
 
-    **Concept Tested:** Pixel Data
+    **Concetto verificato:** Dati dei pixel
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione di Pillow (PIL), delle modalità delle immagini, de
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `img.resize((width, height))` restituisce un **nuovo** oggetto immagine alle dimensioni specificate — non modifica l'originale. Assegna sempre il risultato a una variabile. Per una migliore qualità quando riduci la dimensione, passa un filtro di resampling: `img.resize((200, 100), Image.LANCZOS)`. Non esiste un metodo `.scale()` o `.setSize()` in Pillow.
 
-    **Concept Tested:** Resizing Images
+    **Concetto verificato:** Ridimensionare le immagini
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione di Pillow (PIL), delle modalità delle immagini, de
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `img.crop((left, top, right, bottom))` restituisce una nuova immagine che è un ritaglio rettangolare dell'originale. Le coordinate sono in pixel dall'angolo in alto a sinistra: `left` e `top` definiscono l'angolo in alto a sinistra del riquadro di ritaglio, e `right` e `bottom` definiscono l'angolo in basso a destra. Come `resize()`, `crop()` restituisce una nuova immagine senza cambiare l'originale.
 
-    **Concept Tested:** Cropping Images
+    **Concetto verificato:** Ritagliare le immagini
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione di Pillow (PIL), delle modalità delle immagini, de
 ??? question "Mostra risposta"
     La risposta corretta è **D**. `img.save("filename.ext")` salva l'immagine in un file. Pillow determina il formato dall'estensione del file — `.png` salva come PNG, `.jpg` salva come JPEG, `.gif` salva come GIF, ecc. Non esiste una funzione `.export()`, `.write()`, o `Image.save()`.
 
-    **Concept Tested:** Saving Images
+    **Concetto verificato:** Salvare le immagini
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione di Pillow (PIL), delle modalità delle immagini, de
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `img.convert("L")` restituisce una nuova immagine in modalità scala di grigi. Ogni pixel diventa un singolo valore di luminosità da 0 (nero) a 255 (bianco). Altre conversioni utili: `img.convert("RGB")` converte alla modalità colore standard, `img.convert("RGBA")` aggiunge un canale alpha (trasparenza), `img.convert("1")` converte in bianco e nero (binario).
 
-    **Concept Tested:** Color Mode Conversion
+    **Concetto verificato:** Conversione della modalità colore
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione di Pillow (PIL), delle modalità delle immagini, de
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `img.getpixel((x, y))` restituisce il colore del pixel alla colonna `x`, riga `y` come tupla. Per un'immagine RGB, questo è `(R, G, B)` — tre interi 0–255. Per RGBA, include un quarto valore alpha. Per la scala di grigi (modalità `"L"`), restituisce un singolo intero. Le coordinate sono `(x, y)` dove (0,0) è l'angolo in alto a sinistra.
 
-    **Concept Tested:** Pixel Data
+    **Concetto verificato:** Dati dei pixel
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione di Pillow (PIL), delle modalità delle immagini, de
 ??? question "Mostra risposta"
     La risposta corretta è **B**. JPEG usa la compressione lossy — scarta alcuni dati dell'immagine per ottenere dimensioni di file più piccole, il che va bene per le fotografie ma causa artefatti visibili con alta compressione. PNG usa la compressione lossless — nessun dato viene perso, e supporta la trasparenza (canale alpha). Usa JPEG per le foto dove la dimensione piccola del file è importante; usa PNG per i loghi, gli screenshot, e le immagini dove la qualità e la trasparenza sono importanti.
 
-    **Concept Tested:** Image Formats
+    **Concetto verificato:** Formati delle immagini
 
 ---

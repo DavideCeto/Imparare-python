@@ -16,7 +16,7 @@ Verifica la tua comprensione del modello guidato da eventi, dei callback, degli 
 ??? question "Mostra risposta"
     La risposta corretta è **B**. I programmi sequenziali eseguono ogni riga in ordine dall'alto verso il basso e poi finiscono. I programmi guidati da eventi avviano un ciclo di eventi che aspetta indefinitamente. Quando si verifica un evento (un clic del mouse, una pressione di tasto, o uno scatto del timer), il ciclo chiama la funzione di callback registrata. Il programma non sa in anticipo quando o quante volte scatteranno gli eventi.
 
-    **Concept Tested:** Event-Driven Model
+    **Concetto verificato:** Modello a eventi
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione del modello guidato da eventi, dei callback, degli 
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Un callback è una funzione che definisci e passi a una funzione di registrazione di eventi. Non la chiami tu stesso — il ciclo di eventi la chiama automaticamente quando scatta l'evento corrispondente. Per esempio, `screen.onscreenclick(my_function)` registra `my_function` come callback per i clic del mouse, e il sistema di eventi la chiama con le coordinate del clic.
 
-    **Concept Tested:** Callback Functions
+    **Concetto verificato:** Funzioni callback
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione del modello guidato da eventi, dei callback, degli 
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `screen.onscreenclick(callback)` registra una funzione per gestire i clic del mouse sul canvas della turtle. Quando l'utente clicca, Python chiama automaticamente `callback(x, y)`, dove `x` e `y` sono le coordinate nello spazio delle coordinate della turtle (il centro è 0, 0). Puoi poi usare quelle coordinate per disegnare, muovere la turtle, o innescare qualsiasi altra azione.
 
-    **Concept Tested:** onscreenclick()
+    **Concetto verificato:** onscreenclick()
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione del modello guidato da eventi, dei callback, degli 
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `screen.listen()` dice allo screen della turtle di dirigere l'input della tastiera al sistema di eventi. Senza chiamarlo prima, i callback di `screen.onkey()` verranno registrati ma non scatteranno mai — gli eventi della tastiera vengono semplicemente ignorati. Chiama sempre `screen.listen()` dopo aver configurato i tuoi callback della tastiera e prima di `screen.mainloop()`.
 
-    **Concept Tested:** keyboard events and listen()
+    **Concetto verificato:** Eventi della tastiera e listen()
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione del modello guidato da eventi, dei callback, degli 
 ??? question "Mostra risposta"
     La risposta corretta è **B**. La funzione di callback deve accettare due parametri: `x` e `y` — le coordinate del clic nello spazio delle coordinate della turtle dove (0,0) è il centro dello schermo. Definisci il tuo callback come `def on_click(x, y):` e il sistema di eventi li riempie automaticamente quando l'utente clicca.
 
-    **Concept Tested:** onscreenclick()
+    **Concetto verificato:** onscreenclick()
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione del modello guidato da eventi, dei callback, degli 
 ??? question "Mostra risposta"
     La risposta corretta è **D**. `screen.ontimer(callback, ms)` chiama la funzione di callback una volta dopo `ms` millisecondi. Per creare un ciclo di animazione ripetuto, il callback deve ri-registrarsi chiamando di nuovo `screen.ontimer(callback, ms)` alla fine di ogni chiamata. Questo è il pattern standard per l'animazione con la turtle: aggiorna la posizione, disegna, poi pianifica la chiamata successiva.
 
-    **Concept Tested:** ontimer()
+    **Concetto verificato:** ontimer()
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione del modello guidato da eventi, dei callback, degli 
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `screen.mainloop()` avvia il ciclo di eventi della turtle. Mantiene aperta la finestra, osserva gli eventi (clic, pressioni di tasti, timer), e chiama le funzioni di callback appropriate quando scattano gli eventi. Senza `mainloop()`, la finestra si chiuderebbe immediatamente dopo la configurazione. Questa chiamata blocca — il codice dopo di essa non gira finché la finestra non viene chiusa.
 
-    **Concept Tested:** Event Loop
+    **Concetto verificato:** Ciclo degli eventi
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione del modello guidato da eventi, dei callback, degli 
 ??? question "Mostra risposta"
     La risposta corretta è **C**. La sintassi corretta è `screen.onkey(callback, key_name)` — prima la funzione di callback, poi la stringa del nome del tasto. Le stringhe dei nomi per i tasti freccia sono `"Up"`, `"Down"`, `"Left"`, `"Right"`. Per i tasti lettera, usa la lettera stessa: `"w"`. Per altri tasti: `"space"`, `"Return"`, `"Escape"`. Ricorda di chiamare `screen.listen()` perché gli eventi dei tasti funzionino.
 
-    **Concept Tested:** onkey()
+    **Concetto verificato:** onkey()
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione del modello guidato da eventi, dei callback, degli 
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Un ciclo di eventi è un ciclo continuo mantenuto dal framework (il `mainloop()` della turtle, in questo caso) che controlla continuamente gli eventi. Quando si verifica un evento, il ciclo identifica quale callback è stato registrato per quell'evento e lo chiama. Dopo che il callback finisce, il ciclo torna ad aspettare. Questa è la base di tutte le applicazioni interattive — giochi, GUI, e app web usano tutti cicli di eventi.
 
-    **Concept Tested:** Event Loop
+    **Concetto verificato:** Ciclo degli eventi
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione del modello guidato da eventi, dei callback, degli 
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `t.dot(size, color)` disegna un cerchio riempito del diametro specificato nella posizione attuale della turtle. Non muove la turtle. Questo è utile nei programmi guidati da eventi dove vuoi timbrare un punto in una posizione cliccata: `t.goto(x, y)` poi `t.dot(20, "steelblue")`. Il punto viene disegnato immediatamente senza bisogno di chiamate separate a `begin_fill()` / `end_fill()`.
 
-    **Concept Tested:** turtle.dot()
+    **Concetto verificato:** turtle.dot()
 
 ---

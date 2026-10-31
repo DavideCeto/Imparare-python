@@ -16,7 +16,7 @@ Verifica la tua comprensione di map(), filter(), any(), all(), delle eccezioni p
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `map(function, iterable)` applica la funzione a ogni elemento e restituisce un oggetto map (iteratore). Racchiudilo con `list()` per ottenere una lista: `list(map(square, [1, 2, 3, 4]))` dà `[1, 4, 9, 16]`. `map()` è uno strumento di programmazione funzionale — spesso sostituito dalle list comprehension nel Python moderno, ma ancora utile e conciso.
 
-    **Concept Tested:** map()
+    **Concetto verificato:** map()
 
 ---
 
@@ -32,7 +32,7 @@ Verifica la tua comprensione di map(), filter(), any(), all(), delle eccezioni p
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `filter(function, iterable)` restituisce un oggetto filter (iteratore) che produce solo gli elementi per cui la funzione restituisce `True`. Racchiudi con `list()` per ottenere una lista: `list(filter(is_even, [1,2,3,4,5,6]))` dà `[2, 4, 6]`. Come `map()`, `filter()` è lazy — elabora gli elementi uno alla volta secondo necessità.
 
-    **Concept Tested:** filter()
+    **Concetto verificato:** filter()
 
 ---
 
@@ -48,7 +48,7 @@ Verifica la tua comprensione di map(), filter(), any(), all(), delle eccezioni p
 ??? question "Mostra risposta"
     La risposta corretta è **C**. `any(iterable)` restituisce `True` se almeno un elemento nell'iterabile è truthy. Fa corto circuito — non appena trova un elemento truthy, si ferma e restituisce `True` senza controllare il resto. `all(iterable)` restituisce `True` solo se ogni elemento è truthy, e fa corto circuito al primo elemento falsy.
 
-    **Concept Tested:** any() and all()
+    **Concetto verificato:** any() e all()
 
 ---
 
@@ -64,7 +64,7 @@ Verifica la tua comprensione di map(), filter(), any(), all(), delle eccezioni p
 ??? question "Mostra risposta"
     La risposta corretta è **D**. `ord(character)` restituisce il codice intero Unicode (ASCII) per un carattere. `ord("A")` è `65`, `ord("B")` è `66`, e così via. La funzione inversa è `chr(integer)`: `chr(65)` restituisce `"A"`. Sono utili per implementare cifrari, matematica sui caratteri, o generare sequenze di caratteri in un ciclo.
 
-    **Concept Tested:** chr() and ord()
+    **Concetto verificato:** chr() e ord()
 
 ---
 
@@ -80,7 +80,7 @@ Verifica la tua comprensione di map(), filter(), any(), all(), delle eccezioni p
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `dir(obj)` restituisce una lista di tutti gli attributi e i metodi disponibili su un oggetto o modulo. `dir(math)` mostra tutte le funzioni disponibili nel modulo `math` (come `sqrt`, `sin`, `pi`, `factorial`, ecc.). Per la documentazione dettagliata su una funzione, usa `help(math.sqrt)`. Insieme, `dir()` e `help()` sono strumenti essenziali per esplorare moduli non familiari.
 
-    **Concept Tested:** dir() and help()
+    **Concetto verificato:** dir() e help()
 
 ---
 
@@ -96,7 +96,7 @@ Verifica la tua comprensione di map(), filter(), any(), all(), delle eccezioni p
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Le classi di eccezione personalizzate si creano facendo una sottoclasse di `Exception` (o un'eccezione built-in più specifica come `ValueError`). La forma più semplice è `class MyError(Exception): pass`. Puoi anche sovrascrivere `__init__()` per aggiungere attributi o messaggi personalizzati. Chi chiama può catturare la tua eccezione personalizzata specificamente con `except MyError:`, rendendo la gestione degli errori molto più precisa.
 
-    **Concept Tested:** Custom Exception Classes
+    **Concetto verificato:** Classi di eccezioni personalizzate
 
 ---
 
@@ -112,7 +112,7 @@ Verifica la tua comprensione di map(), filter(), any(), all(), delle eccezioni p
 ??? question "Mostra risposta"
     La risposta corretta è **B**. Il decorator `@property` ti permette di definire un metodo che viene accesso come un attributo — `obj.temperature` invece di `obj.temperature()`. Puoi aggiungere un corrispondente `@temperature.setter` per eseguire codice di validazione quando il valore viene assegnato. Questo ti dà una sintassi degli attributi pulita mantenendo il controllo su come i valori vengono letti e impostati.
 
-    **Concept Tested:** @property Decorator
+    **Concetto verificato:** Decoratore @property
 
 ---
 
@@ -128,7 +128,7 @@ Verifica la tua comprensione di map(), filter(), any(), all(), delle eccezioni p
 ??? question "Mostra risposta"
     La risposta corretta è **B**. I metodi dunder (metodi con doppio underscore) come `__init__`, `__str__`, `__add__`, e `__len__` vengono chiamati automaticamente da Python in risposta a operazioni. `__str__` viene chiamato da `print()`, `__add__` viene chiamato dall'operatore `+`, e `__len__` viene chiamato da `len()`. Definirli sulla tua classe personalizza come funzionano le operazioni built-in di Python con i tuoi oggetti.
 
-    **Concept Tested:** Dunder Methods
+    **Concetto verificato:** Metodi dunder
 
 ---
 
@@ -144,7 +144,7 @@ Verifica la tua comprensione di map(), filter(), any(), all(), delle eccezioni p
 ??? question "Mostra risposta"
     La risposta corretta è **B**. La composizione è la relazione "ha-un" (has-a): un oggetto `Car` *ha* un oggetto `Engine` e un oggetto `Wheel` come attributi. Questo è diverso dall'eredità (la relazione "è-un", is-a). La composizione è spesso preferita alle profonde gerarchie di eredità perché è più flessibile e più facile da cambiare — puoi sostituire il componente motore senza cambiare l'interfaccia dell'auto.
 
-    **Concept Tested:** Object Composition
+    **Concetto verificato:** Composizione di oggetti
 
 ---
 
@@ -160,6 +160,6 @@ Verifica la tua comprensione di map(), filter(), any(), all(), delle eccezioni p
 ??? question "Mostra risposta"
     La risposta corretta è **B**. `all(iterable)` restituisce `True` solo se ogni elemento nell'iterabile è truthy. Dato che la lista `[True, True, True, False]` contiene un `False`, `all()` restituisce `False`. Fa corto circuito — nel momento in cui trova il primo elemento falsy, si ferma e restituisce `False` senza controllare gli elementi rimanenti.
 
-    **Concept Tested:** any() and all()
+    **Concetto verificato:** any() e all()
 
 ---
