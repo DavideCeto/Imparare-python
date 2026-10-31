@@ -134,6 +134,6 @@ inviare il tuo codice.
 
 !!! mascot-celebration "Sei nel posto giusto!"
     ![Monty celebrating](./img/mascot/celebration.png){ class="mascot-admonition-img" }
-    Centinaia di studenti hanno usato questo libro per scrivere il loro primo programma
-    Python. Scegli un capitolo dalla barra laterale e inizia a programmare — sarò proprio
+    Questo libro è fatto per aiutarti a scrivere il tuo primo programma Python.
+    Scegli un capitolo dalla barra laterale e inizia a programmare — sarò proprio
     lì con te!
