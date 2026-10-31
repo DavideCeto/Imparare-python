@@ -19,6 +19,8 @@ exclude_docs: |
   python-labs/text-only-example.md
   sims/microsim-ideas.md
   teachers-guide/prompts/06-microsim-ideas-given-to-fable-5.md
+  # Laboratori Trinket: la piattaforma ha chiuso il 31/08/2026, sostituiti dai Laboratori Python con Skulpt
+  trinket/
 
 nav:
   - Home: index.md
@@ -316,31 +318,6 @@ nav:
     - Analisi dei Titoli Azionari: advanced/stocks.md
     - Previsione delle Cifre MNIST: advanced/mnist.md
   
-  - Trinket Labs (deprecated):
-    - Introduction: trinket/00-introduction.md
-    - Setting Up Trinket: trinket/01a-trinket-account.md
-    - Turtle Graphics: trinket/01b-turtle-graphics.md
-    - Turtle Square: trinket/02-simple-square.md
-    - Variables: trinket/03-variables.md
-    - Loops: trinket/04-loops.md
-    - Stop Sign: trinket/04a-stop-sign.md
-    - Conditional: trinket/05-conditionals.md
-    - Functions: trinket/06-functions.md
-    - Flower: trinket/07-flower.md
-    - Function Parameters: trinket/07-function-parameters.md
-    - Lists: trinket/08-list.md
-    - List of Turtle Shapes: trinket/08c-turtle-shapes.md
-    - Random Numbers: trinket/08-random.md
-    - Random Stars: trinket/08b-random-stars.md
-    - Input: trinket/11-input.md
-    - Recursion: trinket/12-recursion.md
-    - Shape Module: trinket/13-shape-module.md
-    - Color Picker: trinket/14-color-picker.md
-    - Sine Wave: trinket/15-sine-wave.md
-    - Changing background: trinket/16-changing-background.md
-    - Controlling mouseclicks: trinket/17-controlling-mouseclicks.md
-    - Other examples: trinket/examples.md
- 
   - Grafo di Apprendimento:
     - Introduzione: learning-graph/index.md
     - Valutazione della Descrizione del Corso: learning-graph/course-description-assessment.md
