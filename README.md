@@ -19,7 +19,7 @@ La versione originale in inglese è su [dmccreary.github.io/learning-python](htt
 
 ## Descrizione
 
-**Introduzione a Python — Dalla programmazione visuale a blocchi al codice con Monty** è un libro di testo interattivo e intelligente, creato grazie all'intelligenza artificiale, per studenti di età compresa tra 10 e 13 anni che desiderano passare dalla programmazione a blocchi (come Scratch) alla vera programmazione in Python.
+**Introduzione a Python — Dalla programmazione visuale a blocchi al codice con Monty** è un libro di testo interattivo e intelligente, creato grazie all'intelligenza artificiale, per studenti di età compresa tra 10 e 14 anni che desiderano passare dalla programmazione a blocchi (come Scratch) alla vera programmazione in Python.
 
 Ogni lezione si basa su una programmazione interattiva, realizzata con **Skulpt**, una implementazione di Python in JavaScript. Gli studenti possono leggere un breve programma, cliccare su **Run** per vedere come viene eseguito immediatamente (senza bisogno di installazione o account), e poi modificarlo: cambiare il colore, il numero, la direzione… e ripetere l’esecuzione. La grafica astratta fornita da Skulpt offre un feedback visivo immediato: gli studenti vedono immediatamente quali forme, spirali e pattern appaiono non appena il codice viene eseguito. Prima di ogni esercizio, una simpatica mascotte chiamata Monty chiede agli studenti di *prevedere* cosa farà il codice prima di cliccare su “Run”… Questo metodo favorisce lo sviluppo delle capacità di ragionamento, senza limitarsi ad un semplice copia e incolla.
 
