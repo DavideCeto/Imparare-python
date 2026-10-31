@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. La differenza più importante è la mutabilità. Alle liste si possono aggiungere, rimuovere, o cambiare elementi. Le tuple no — una volta create, il loro contenuto è fisso. Entrambe supportano l'indicizzazione, lo slicing, e l'iterazione. Usa una tupla quando i dati rappresentano qualcosa di fisso (come una coordinata) e una lista quando la collezione deve cambiare.</p>
-<p><strong>Concept Tested:</strong> Tuple Type</p>
+<p><strong>Concetto verificato:</strong> Tipo tupla</p>
 </details>
 <hr />
 <h4 id="2-come-crei-una-tupla-a-un-solo-elemento-contenente-il-numero-42">2. Come crei una tupla a un solo elemento contenente il numero 42?<a class="headerlink" href="#2-come-crei-una-tupla-a-un-solo-elemento-contenente-il-numero-42" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. È richiesta una virgola finale per dire a Python che intendi una tupla. <code>(42)</code> è solo l'intero 42 tra parentesi — non una tupla. <code>(42,)</code> ha la virgola finale che segnala "questa è una tupla a un elemento." Per le tuple con due o più elementi, non è necessaria nessuna virgola finale: <code>(1, 2)</code> è già chiaramente una tupla.</p>
-<p><strong>Concept Tested:</strong> Single-Element Tuple Syntax</p>
+<p><strong>Concetto verificato:</strong> Sintassi della tupla con un solo elemento</p>
 </details>
 <hr />
 <h4 id="3-cosa-fa-la-scomposizione-delle-tuple-tuple-unpacking">3. Cosa fa la scomposizione delle tuple (tuple unpacking)?<a class="headerlink" href="#3-cosa-fa-la-scomposizione-delle-tuple-tuple-unpacking" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. La scomposizione delle tuple (chiamata anche destructuring) ti permette di scrivere <code>x, y = (10, 20)</code> per assegnare <code>10</code> a <code>x</code> e <code>20</code> a <code>y</code> in una singola riga. Il numero di variabili a sinistra deve corrispondere al numero di elementi nella tupla. Questo è lo stesso meccanismo che fa funzionare lo scambio di variabili in una riga di Python (<code>a, b = b, a</code>).</p>
-<p><strong>Concept Tested:</strong> Tuple Unpacking</p>
+<p><strong>Concetto verificato:</strong> Spacchettamento delle tuple</p>
 </details>
 <hr />
 <h4 id="4-qual-e-un-caso-duso-comune-per-restituire-una-tupla-da-una-funzione">4. Qual è un caso d'uso comune per restituire una tupla da una funzione?<a class="headerlink" href="#4-qual-e-un-caso-duso-comune-per-restituire-una-tupla-da-una-funzione" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Una funzione può avere solo un'istruzione <code>return</code>, ma puoi impacchettare valori multipli in una tupla e restituirli tutti in una volta. Per esempio, <code>return min_val, max_val</code> restituisce una tupla. Chi chiama può poi scomporla: <code>lo, hi = find_range(data)</code>. Questo è più pulito che restituire una lista o usare variabili globali.</p>
-<p><strong>Concept Tested:</strong> Tuples as Return Values</p>
+<p><strong>Concetto verificato:</strong> Tuple come valori restituiti</p>
 </details>
 <hr />
 <h4 id="5-cosa-succede-quando-aggiungi-un-elemento-duplicato-a-un-insieme">5. Cosa succede quando aggiungi un elemento duplicato a un insieme?<a class="headerlink" href="#5-cosa-succede-quando-aggiungi-un-elemento-duplicato-a-un-insieme" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Gli insiemi impongono automaticamente l'unicità — nessun duplicato è permesso. Se fai <code>add()</code> di un elemento già nell'insieme, o crei un insieme con valori ripetuti come <code>{1, 2, 2, 3}</code>, Python ignora silenziosamente i duplicati. L'insieme <code>{1, 2, 2, 3}</code> diventa <code>{1, 2, 3}</code>.</p>
-<p><strong>Concept Tested:</strong> Set Type</p>
+<p><strong>Concetto verificato:</strong> Tipo insieme (set)</p>
 </details>
 <hr />
 <h4 id="6-dati-a-1-2-3-4-e-b-3-4-5-6-cose-a-b">6. Dati <code>A = {1, 2, 3, 4}</code> e <code>B = {3, 4, 5, 6}</code>, cos'è <code>A &amp; B</code>?<a class="headerlink" href="#6-dati-a-1-2-3-4-e-b-3-4-5-6-cose-a-b" title="Permanent link">&para;</a></h4>
@@ -11775,7 +11775,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. L'operatore <code>&amp;</code> esegue l'intersezione tra insiemi — restituisce un nuovo insieme contenente solo gli elementi che appaiono in <strong>entrambi</strong> gli insiemi. Sia <code>3</code> sia <code>4</code> sono in A e in B, quindi <code>A &amp; B = {3, 4}</code>. L'operatore <code>|</code> è l'unione (tutti gli elementi), e <code>-</code> è la differenza (nel primo ma non nel secondo).</p>
-<p><strong>Concept Tested:</strong> Set Intersection</p>
+<p><strong>Concetto verificato:</strong> Intersezione tra insiemi</p>
 </details>
 <hr />
 <h4 id="7-cosa-produce-a-b-per-a-1-2-3-e-b-3-4-5">7. Cosa produce <code>A | B</code> per <code>A = {1, 2, 3}</code> e <code>B = {3, 4, 5}</code>?<a class="headerlink" href="#7-cosa-produce-a-b-per-a-1-2-3-e-b-3-4-5" title="Permanent link">&para;</a></h4>
@@ -11790,7 +11790,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. L'operatore <code>|</code> esegue l'unione tra insiemi — restituisce un nuovo insieme contenente tutti gli elementi di entrambi gli insiemi, senza duplicati. <code>{1, 2, 3} | {3, 4, 5}</code> dà <code>{1, 2, 3, 4, 5}</code>. L'elemento condiviso <code>3</code> appare solo una volta nel risultato perché gli insiemi non permettono duplicati.</p>
-<p><strong>Concept Tested:</strong> Set Union</p>
+<p><strong>Concetto verificato:</strong> Unione di insiemi</p>
 </details>
 <hr />
 <h4 id="8-qual-e-la-differenza-tra-sremovex-e-sdiscardx-su-un-insieme">8. Qual è la differenza tra <code>s.remove(x)</code> e <code>s.discard(x)</code> su un insieme?<a class="headerlink" href="#8-qual-e-la-differenza-tra-sremovex-e-sdiscardx-su-un-insieme" title="Permanent link">&para;</a></h4>
@@ -11805,7 +11805,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Entrambi i metodi rimuovono un elemento da un insieme per valore, ma differiscono nella gestione degli errori. <code>remove(x)</code> genera un <code>KeyError</code> se <code>x</code> non è nell'insieme. <code>discard(x)</code> non fa nulla e non genera errori se <code>x</code> è assente. Usa <code>discard()</code> quando non sei sicuro se l'elemento esiste e non vuoi controllare prima.</p>
-<p><strong>Concept Tested:</strong> Set Methods</p>
+<p><strong>Concetto verificato:</strong> Metodi degli insiemi</p>
 </details>
 <hr />
 <h4 id="9-qual-e-il-modo-piu-rapido-di-rimuovere-i-duplicati-da-una-lista-in-python">9. Qual è il modo più rapido di rimuovere i duplicati da una lista in Python?<a class="headerlink" href="#9-qual-e-il-modo-piu-rapido-di-rimuovere-i-duplicati-da-una-lista-in-python" title="Permanent link">&para;</a></h4>
@@ -11820,7 +11820,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>set(my_list)</code> converte una lista in un insieme, scartando automaticamente tutti i valori duplicati. Se hai bisogno del risultato di nuovo come lista, racchiudilo: <code>list(set(my_list))</code>. L'unico avvertimento è che gli insiemi non sono ordinati, quindi l'ordine originale non viene preservato. Non esiste un metodo built-in <code>remove_duplicates()</code> in Python.</p>
-<p><strong>Concept Tested:</strong> Set Type</p>
+<p><strong>Concetto verificato:</strong> Tipo insieme (set)</p>
 </details>
 <hr />
 <h4 id="10-cosa-produce-a-b-per-a-1-2-3-4-e-b-3-4-5">10. Cosa produce <code>A - B</code> per <code>A = {1, 2, 3, 4}</code> e <code>B = {3, 4, 5}</code>?<a class="headerlink" href="#10-cosa-produce-a-b-per-a-1-2-3-4-e-b-3-4-5" title="Permanent link">&para;</a></h4>
@@ -11835,7 +11835,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. L'operatore <code>-</code> esegue la differenza tra insiemi — restituisce gli elementi che sono nel primo insieme ma NON nel secondo. <code>{1, 2, 3, 4} - {3, 4, 5}</code> dà <code>{1, 2}</code> perché <code>3</code> e <code>4</code> vengono rimossi (sono in B) e <code>5</code> non viene incluso (era solo in B). Nota che <code>A - B</code> e <code>B - A</code> danno risultati diversi.</p>
-<p><strong>Concept Tested:</strong> Set Difference</p>
+<p><strong>Concetto verificato:</strong> Differenza tra insiemi</p>
 </details>
 <hr />
 

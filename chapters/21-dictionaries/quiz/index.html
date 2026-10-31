@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. I dizionari si creano con le parentesi graffe <code>{}</code>, con ogni voce scritta come <code>chiave: valore</code> e le voci separate da virgole. Le chiavi devono essere univoche all'interno di un dizionario. I valori possono essere di qualsiasi tipo — stringhe, numeri, liste, o persino altri dizionari.</p>
-<p><strong>Concept Tested:</strong> Creating Dictionaries</p>
+<p><strong>Concetto verificato:</strong> Creare dizionari</p>
 </details>
 <hr />
 <h4 id="2-dati-grades-alice-95-bob-87-cosa-restituisce-gradesalice">2. Dati <code>grades = {"Alice": 95, "Bob": 87}</code>, cosa restituisce <code>grades["Alice"]</code>?<a class="headerlink" href="#2-dati-grades-alice-95-bob-87-cosa-restituisce-gradesalice" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. La ricerca nel dizionario con le parentesi quadre usa la chiave per recuperare il suo valore associato. <code>grades["Alice"]</code> restituisce <code>95</code>. A differenza delle liste (che usano indici interi a partire da 0), i dizionari usano le chiavi che hai definito — in questo caso, la stringa <code>"Alice"</code> mappa all'intero <code>95</code>.</p>
-<p><strong>Concept Tested:</strong> Accessing Values by Key</p>
+<p><strong>Concetto verificato:</strong> Accesso ai valori tramite chiave</p>
 </details>
 <hr />
 <h4 id="3-cosa-succede-quando-accedi-a-una-chiave-di-dizionario-che-non-esiste-usando-le-parentesi-quadre">3. Cosa succede quando accedi a una chiave di dizionario che non esiste usando le parentesi quadre?<a class="headerlink" href="#3-cosa-succede-quando-accedi-a-una-chiave-di-dizionario-che-non-esiste-usando-le-parentesi-quadre" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Se usi <code>d[key]</code> con una chiave che non è nel dizionario, Python genera un <code>KeyError</code>. Questo fa andare in crash il tuo programma a meno che tu non catturi l'errore. Per accedere in sicurezza a una chiave che potrebbe non esistere, usa <code>d.get(key)</code> che restituisce <code>None</code> (o un valore predefinito che specifichi) invece di andare in crash.</p>
-<p><strong>Concept Tested:</strong> KeyError</p>
+<p><strong>Concetto verificato:</strong> KeyError</p>
 </details>
 <hr />
 <h4 id="4-cosa-restituisce-gradesgetdave-0-se-dave-non-e-nel-dizionario">4. Cosa restituisce <code>grades.get("Dave", 0)</code> se <code>"Dave"</code> non è nel dizionario?<a class="headerlink" href="#4-cosa-restituisce-gradesgetdave-0-se-dave-non-e-nel-dizionario" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. <code>dict.get(key, default)</code> restituisce il valore per <code>key</code> se esiste, altrimenti restituisce il valore <code>default</code>. Con <code>grades.get("Dave", 0)</code>, se <code>"Dave"</code> non è una chiave, il metodo restituisce <code>0</code>. Senza un valore predefinito, <code>get()</code> restituisce <code>None</code>. Questo è molto più sicuro che usare <code>d[key]</code> quando non sei sicuro se la chiave esiste.</p>
-<p><strong>Concept Tested:</strong> Safe Access with get()</p>
+<p><strong>Concetto verificato:</strong> Accesso sicuro con get()</p>
 </details>
 <hr />
 <h4 id="5-come-aggiungi-una-nuova-chiave-eve-con-valore-88-al-dizionario-grades">5. Come aggiungi una nuova chiave <code>"Eve"</code> con valore <code>88</code> al dizionario <code>grades</code>?<a class="headerlink" href="#5-come-aggiungi-una-nuova-chiave-eve-con-valore-88-al-dizionario-grades" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Aggiungere una nuova voce a un dizionario usa la stessa sintassi di aggiornamento di una esistente: <code>d[key] = value</code>. Se la chiave esiste già, questo aggiorna il suo valore. Se la chiave è nuova, questo crea una nuova voce. I dizionari non hanno metodi <code>add()</code>, <code>append()</code>, o <code>insert()</code>.</p>
-<p><strong>Concept Tested:</strong> Adding and Updating Entries</p>
+<p><strong>Concetto verificato:</strong> Aggiungere e aggiornare voci</p>
 </details>
 <hr />
 <h4 id="6-quale-metodo-restituisce-tutte-le-coppie-chiave-valore-come-tuple-per-literazione">6. Quale metodo restituisce tutte le coppie chiave-valore come tuple per l'iterazione?<a class="headerlink" href="#6-quale-metodo-restituisce-tutte-le-coppie-chiave-valore-come-tuple-per-literazione" title="Permanent link">&para;</a></h4>
@@ -11775,7 +11775,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. <code>d.items()</code> restituisce una vista di tutte le coppie <code>(chiave, valore)</code> come tuple. Puoi iterarci sopra con <code>for key, value in d.items():</code>. <code>d.keys()</code> dà solo le chiavi, <code>d.values()</code> dà solo i valori, e <code>d.pairs()</code> non è un metodo valido del dizionario.</p>
-<p><strong>Concept Tested:</strong> Keys, Values, and Items</p>
+<p><strong>Concetto verificato:</strong> Chiavi, valori ed elementi</p>
 </details>
 <hr />
 <h4 id="7-come-controlli-se-la-chiave-bob-e-in-un-dizionario-senza-rischiare-un-keyerror">7. Come controlli se la chiave <code>"Bob"</code> è in un dizionario senza rischiare un <code>KeyError</code>?<a class="headerlink" href="#7-come-controlli-se-la-chiave-bob-e-in-un-dizionario-senza-rischiare-un-keyerror" title="Permanent link">&para;</a></h4>
@@ -11790,7 +11790,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. L'operatore <code>in</code> controlla l'appartenenza di una chiave in un dizionario e restituisce <code>True</code> o <code>False</code>. <code>"Bob" in grades</code> è il modo Pythonic standard per verificare se una chiave esiste. <code>has_key()</code> è stato rimosso in Python 3, <code>contains()</code> non è un metodo del dizionario, e <code>find()</code> è un metodo delle stringhe.</p>
-<p><strong>Concept Tested:</strong> Key Membership with in</p>
+<p><strong>Concetto verificato:</strong> Verificare una chiave con in</p>
 </details>
 <hr />
 <h4 id="8-cosa-ti-permette-di-rappresentare-un-dizionario-annidato">8. Cosa ti permette di rappresentare un dizionario annidato?<a class="headerlink" href="#8-cosa-ti-permette-di-rappresentare-un-dizionario-annidato" title="Permanent link">&para;</a></h4>
@@ -11805,7 +11805,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Un dizionario annidato è uno dove i valori sono essi stessi dizionari. Questo ti permette di rappresentare dati strutturati con più livelli — per esempio, una lista di contatti dove ogni contatto ha un telefono e un'email. L'accesso è concatenato: <code>contacts["Alice"]["phone"]</code> prima ottiene il sotto-dizionario di Alice, poi cerca "phone" al suo interno.</p>
-<p><strong>Concept Tested:</strong> Nested Dictionaries</p>
+<p><strong>Concetto verificato:</strong> Dizionari annidati</p>
 </details>
 <hr />
 <h4 id="9-cosa-produce-questa-dictionary-comprehension">9. Cosa produce questa dictionary comprehension?<a class="headerlink" href="#9-cosa-produce-questa-dictionary-comprehension" title="Permanent link">&para;</a></h4>
@@ -11822,7 +11822,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Una dictionary comprehension usa la forma <code>{espressione_chiave: espressione_valore for elemento in iterabile}</code>. Qui, <code>n</code> diventa la chiave e <code>n * n</code> diventa il valore. <code>range(1, 4)</code> produce 1, 2, 3 — quindi il risultato è <code>{1: 1, 2: 4, 3: 9}</code>. Le parentesi graffe con il pattern dei due punti la distinguono da una set comprehension.</p>
-<p><strong>Concept Tested:</strong> Dictionary Comprehensions</p>
+<p><strong>Concetto verificato:</strong> Dictionary comprehension</p>
 </details>
 <hr />
 <h4 id="10-cosa-fa-dpopbob-se-bob-esiste-nel-dizionario">10. Cosa fa <code>d.pop("Bob")</code> se <code>"Bob"</code> esiste nel dizionario?<a class="headerlink" href="#10-cosa-fa-dpopbob-se-bob-esiste-nel-dizionario" title="Permanent link">&para;</a></h4>
@@ -11837,7 +11837,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>A</strong>. <code>d.pop(key)</code> rimuove la voce con la chiave data dal dizionario e restituisce il suo valore. Se <code>grades = {"Bob": 87}</code>, allora <code>grades.pop("Bob")</code> restituisce <code>87</code> e <code>grades</code> diventa <code>{}</code>. Se la chiave non esiste, <code>pop()</code> genera un <code>KeyError</code> a meno che tu non fornisca un valore predefinito: <code>d.pop("Bob", None)</code>.</p>
-<p><strong>Concept Tested:</strong> Removing Entries</p>
+<p><strong>Concetto verificato:</strong> Rimuovere voci</p>
 </details>
 <hr />
 

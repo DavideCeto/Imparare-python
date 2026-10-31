@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. In Python, una lista vuota <code>[]</code> è falsy — viene trattata come <code>False</code> in un contesto booleano. <code>"False"</code> (una stringa non vuota) è truthy, <code>[0]</code> (una lista con un elemento) è truthy, e <code>1</code> è truthy. La lista completa dei valori falsy include: <code>False</code>, <code>0</code>, <code>0.0</code>, <code>""</code>, <code>[]</code>, <code>{}</code>, e <code>None</code>.</p>
-<p><strong>Concept Tested:</strong> Truthiness and Falsiness</p>
+<p><strong>Concetto verificato:</strong> Valori considerati veri e falsi</p>
 </details>
 <hr />
 <h4 id="2-come-puoi-usare-la-truthiness-per-controllare-se-una-stringa-name-non-e-vuota">2. Come puoi usare la truthiness per controllare se una stringa <code>name</code> non è vuota?<a class="headerlink" href="#2-come-puoi-usare-la-truthiness-per-controllare-se-una-stringa-name-non-e-vuota" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Dato che le stringhe vuote sono falsy e le stringhe non vuote sono truthy, <code>if name:</code> è <code>True</code> quando <code>name</code> contiene testo e <code>False</code> quando è vuota. Questo è più Pythonic (stile Python idiomatico) rispetto a confrontare esplicitamente con <code>!= ""</code> o controllare <code>len(name) != 0</code>. Tutte le tre opzioni B, C, e D producono lo stesso risultato, ma C è lo stile preferito.</p>
-<p><strong>Concept Tested:</strong> Truthiness and Falsiness</p>
+<p><strong>Concetto verificato:</strong> Valori considerati veri e falsi</p>
 </details>
 <hr />
 <h4 id="3-cose-la-valutazione-a-corto-circuito-con-and">3. Cos'è la valutazione a corto circuito con <code>and</code>?<a class="headerlink" href="#3-cose-la-valutazione-a-corto-circuito-con-and" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Con <code>and</code>, se l'operando sinistro è falsy, l'espressione complessiva non può mai essere <code>True</code>, quindi Python restituisce immediatamente il valore sinistro senza valutare il lato destro. Questo previene potenziali errori — per esempio, <code>data and data.upper()</code> non va in crash se <code>data</code> è <code>None</code>, perché il corto circuito si ferma prima di chiamare <code>.upper()</code>.</p>
-<p><strong>Concept Tested:</strong> Short-Circuit Evaluation</p>
+<p><strong>Concetto verificato:</strong> Valutazione a corto circuito</p>
 </details>
 <hr />
 <h4 id="4-cosa-restituisce-lespressione-name-or-sconosciuto-quando-name">4. Cosa restituisce l'espressione <code>name or "sconosciuto"</code> quando <code>name = ""</code>?<a class="headerlink" href="#4-cosa-restituisce-lespressione-name-or-sconosciuto-quando-name" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>or</code> fa corto circuito su un lato sinistro truthy, ma <code>""</code> è falsy, quindi Python continua al lato destro e restituisce <code>"sconosciuto"</code>. Questo è un utile pattern di valore predefinito: <code>value or default</code> restituisce <code>value</code> se è truthy, altrimenti restituisce <code>default</code>. Quando <code>name = "Monty"</code>, l'espressione restituisce <code>"Monty"</code> perché è truthy.</p>
-<p><strong>Concept Tested:</strong> Short-Circuit Evaluation</p>
+<p><strong>Concetto verificato:</strong> Valutazione a corto circuito</p>
 </details>
 <hr />
 <h4 id="5-qual-e-il-modo-corretto-di-controllare-se-result-e-none">5. Qual è il modo corretto di controllare se <code>result</code> è <code>None</code>?<a class="headerlink" href="#5-qual-e-il-modo-corretto-di-controllare-se-result-e-none" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Per <code>None</code>, <code>True</code>, e <code>False</code>, lo stile Python raccomanda di usare <code>is</code> invece di <code>==</code>. <code>is</code> controlla l'identità (se due nomi si riferiscono esattamente allo stesso oggetto in memoria), mentre <code>==</code> controlla l'uguaglianza di valore. Dato che <code>None</code> è un singleton in Python (esiste solo un oggetto <code>None</code>), <code>is None</code> è il modo corretto e Pythonic di controllarlo.</p>
-<p><strong>Concept Tested:</strong> Checking for None with is</p>
+<p><strong>Concetto verificato:</strong> Controllare None con is</p>
 </details>
 <hr />
 <h4 id="6-a-cosa-si-valuta-questa-espressione-ternaria-quando-score-85">6. A cosa si valuta questa espressione ternaria quando <code>score = 85</code>?<a class="headerlink" href="#6-a-cosa-si-valuta-questa-espressione-ternaria-quando-score-85" title="Permanent link">&para;</a></h4>
@@ -11777,7 +11777,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. Un'espressione ternaria ha la forma <code>valore_se_vero if condizione else valore_se_falso</code>. Quando <code>score = 85</code>, la condizione <code>score &gt;= 70</code> è <code>True</code> (85 è almeno 70), quindi l'espressione si valuta a <code>"pass"</code>. Se <code>score</code> fosse <code>65</code>, la condizione sarebbe <code>False</code> e il risultato sarebbe <code>"fail"</code>.</p>
-<p><strong>Concept Tested:</strong> Ternary Expression</p>
+<p><strong>Concetto verificato:</strong> Espressione ternaria</p>
 </details>
 <hr />
 <h4 id="7-qual-e-la-differenza-tra-la-conversione-di-tipo-implicita-ed-esplicita">7. Qual è la differenza tra la conversione di tipo implicita ed esplicita?<a class="headerlink" href="#7-qual-e-la-differenza-tra-la-conversione-di-tipo-implicita-ed-esplicita" title="Permanent link">&para;</a></h4>
@@ -11792,7 +11792,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. La conversione implicita (chiamata anche coercizione) avviene automaticamente quando Python decide che la conversione è sicura — per esempio, <code>3 + 2.5</code> converte <code>3</code> in <code>3.0</code> automaticamente, dando <code>5.5</code>. La conversione esplicita è quando chiami deliberatamente <code>int()</code>, <code>float()</code>, <code>str()</code>, o <code>bool()</code> per controllare tu stesso la conversione.</p>
-<p><strong>Concept Tested:</strong> Implicit vs Explicit Conversion</p>
+<p><strong>Concetto verificato:</strong> Conversione implicita ed esplicita</p>
 </details>
 <hr />
 <h4 id="8-cosa-fa-x-y-inputinserisci-x-e-y-split">8. Cosa fa <code>x, y = input("Inserisci x e y: ").split()</code>?<a class="headerlink" href="#8-cosa-fa-x-y-inputinserisci-x-e-y-split" title="Permanent link">&para;</a></h4>
@@ -11807,7 +11807,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>input()</code> restituisce una stringa con tutto ciò che l'utente ha scritto. <code>.split()</code> la divide sugli spazi bianchi, producendo una lista. L'assegnazione multipla poi scompone quella lista nelle variabili. Se l'utente scrive <code>3 7</code>, il risultato è <code>x = "3"</code> e <code>y = "7"</code> (ancora stringhe — hai bisogno di <code>int()</code> per convertirle per la matematica).</p>
-<p><strong>Concept Tested:</strong> Reading Multiple Inputs</p>
+<p><strong>Concetto verificato:</strong> Leggere più input</p>
 </details>
 <hr />
 <h4 id="9-quale-condizione-composta-controlla-che-age-sia-tra-13-e-17-inclusi">9. Quale condizione composta controlla che <code>age</code> sia tra 13 e 17 (inclusi)?<a class="headerlink" href="#9-quale-condizione-composta-controlla-che-age-sia-tra-13-e-17-inclusi" title="Permanent link">&para;</a></h4>
@@ -11822,7 +11822,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Python supporta i confronti concatenati che si leggono come la matematica: <code>13 &lt;= age &lt;= 17</code> controlla che age sia almeno 13 E al massimo 17. Questo equivale a <code>age &gt;= 13 and age &lt;= 17</code>. Le opzioni A e D che usano <code>or</code> sarebbero vere per quasi qualsiasi età, e l'opzione B (usando <code>==</code> e <code>and</code>) è impossibile — nessun valore può essere uguale sia a 13 sia a 17 contemporaneamente.</p>
-<p><strong>Concept Tested:</strong> Compound Conditions</p>
+<p><strong>Concetto verificato:</strong> Condizioni composte</p>
 </details>
 <hr />
 <h4 id="10-quale-valore-non-e-falsy-in-python">10. Quale valore NON è falsy in Python?<a class="headerlink" href="#10-quale-valore-non-e-falsy-in-python" title="Permanent link">&para;</a></h4>
@@ -11837,7 +11837,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>"0"</code> è una stringa non vuota contenente un carattere — la cifra zero. Le stringhe non vuote sono truthy in Python, indipendentemente dai caratteri che contengono. Il numero <code>0</code> (intero), <code>None</code>, e <code>[]</code> (lista vuota) sono tutti falsy. Questa distinzione tra il numero zero e la stringa <code>"0"</code> è una fonte comune di confusione.</p>
-<p><strong>Concept Tested:</strong> Truthiness and Falsiness</p>
+<p><strong>Concetto verificato:</strong> Valori considerati veri e falsi</p>
 </details>
 <hr />
 

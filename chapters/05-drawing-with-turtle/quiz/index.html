@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>turtle.Screen()</code> crea la finestra di disegno — la tela vuota dove la tua turtle disegnerà. Pensala come il palcoscenico di uno spettacolo teatrale: lo allestisci prima che gli attori si esibiscano. La memorizzi in una variabile (comunemente <code>wn</code> per "window") così da poterle dare istruzioni come cambiare il colore di sfondo.</p>
-<p><strong>Concept Tested:</strong> turtle.Screen() Object</p>
+<p><strong>Concetto verificato:</strong> L'oggetto turtle.Screen()</p>
 </details>
 <hr />
 <h4 id="2-quale-comando-muove-la-turtle-di-100-pixel-in-avanti-nella-direzione-verso-cui-e-rivolta">2. Quale comando muove la turtle di 100 pixel in avanti nella direzione verso cui è rivolta?<a class="headerlink" href="#2-quale-comando-muove-la-turtle-di-100-pixel-in-avanti-nella-direzione-verso-cui-e-rivolta" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>t.forward(100)</code> dice alla turtle di camminare in avanti di 100 pixel nella direzione verso cui è attualmente rivolta, disegnando una linea. La turtle inizia rivolta verso destra (Est). Le altre opzioni — <code>move()</code>, <code>go()</code> e <code>walk()</code> — non sono metodi turtle validi e causerebbero un <code>AttributeError</code>.</p>
-<p><strong>Concept Tested:</strong> Turtle Movement Commands</p>
+<p><strong>Concetto verificato:</strong> Comandi di movimento della turtle</p>
 </details>
 <hr />
 <h4 id="3-la-turtle-inizia-sempre-al-centro-dello-schermo-rivolta-verso-quale-direzione">3. La turtle inizia sempre al centro dello schermo rivolta verso quale direzione?<a class="headerlink" href="#3-la-turtle-inizia-sempre-al-centro-dello-schermo-rivolta-verso-quale-direzione" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. Quando crei una nuova <code>turtle.Turtle()</code>, inizia al centro dello schermo rivolta verso Est (destra). Il primo <code>t.forward(100)</code> disegnerà quindi una linea puntata verso destra. Usi <code>t.right()</code> e <code>t.left()</code> per cambiare la direzione verso cui è rivolta prima di muoverla.</p>
-<p><strong>Concept Tested:</strong> Turtle Movement Commands</p>
+<p><strong>Concetto verificato:</strong> Comandi di movimento della turtle</p>
 </details>
 <hr />
 <h4 id="4-cosa-fa-tpenup">4. Cosa fa <code>t.penup()</code>?<a class="headerlink" href="#4-cosa-fa-tpenup" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>t.penup()</code> solleva la penna virtuale dalla tela, così la turtle può spostarsi in una nuova posizione senza lasciare traccia. È così che crei spazi vuoti in un disegno. Dopo essersi spostata nella nuova posizione, chiama <code>t.pendown()</code> per riabbassare la penna così i movimenti successivi disegnano linee.</p>
-<p><strong>Concept Tested:</strong> penup() and pendown()</p>
+<p><strong>Concetto verificato:</strong> penup() e pendown()</p>
 </details>
 <hr />
 <h4 id="5-uno-studente-esegue-questo-codice-e-non-vede-nulla-disegnato-sulla-tela-cosa-e-piu-probabile-che-sia-sbagliato">5. Uno studente esegue questo codice e non vede nulla disegnato sulla tela. Cosa è più probabile che sia sbagliato?<a class="headerlink" href="#5-uno-studente-esegue-questo-codice-e-non-vede-nulla-disegnato-sulla-tela-cosa-e-piu-probabile-che-sia-sbagliato" title="Permanent link">&para;</a></h4>
@@ -11770,7 +11770,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Lo studente ha chiamato <code>t.penup()</code> ma non ha mai chiamato <code>t.pendown()</code>. La turtle si muove esattamente dove comandato — ma con la penna alzata, non lascia traccia sulla tela. Aggiungere <code>t.pendown()</code> prima del secondo <code>forward()</code> (o tra i due, a seconda di dove dovrebbe trovarsi lo spazio vuoto) risolverebbe il problema.</p>
-<p><strong>Concept Tested:</strong> penup() and pendown()</p>
+<p><strong>Concetto verificato:</strong> penup() e pendown()</p>
 </details>
 <hr />
 <h4 id="6-quale-comando-imposta-il-colore-di-sfondo-della-finestra-turtle-su-azzurro-chiaro">6. Quale comando imposta il colore di sfondo della finestra turtle su azzurro chiaro?<a class="headerlink" href="#6-quale-comando-imposta-il-colore-di-sfondo-della-finestra-turtle-su-azzurro-chiaro" title="Permanent link">&para;</a></h4>
@@ -11785,7 +11785,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>bgcolor()</code> è un metodo dell'oggetto <strong>Screen</strong>, non dell'oggetto Turtle. Lo chiami come <code>wn.bgcolor("lightblue")</code> dove <code>wn</code> è la variabile che contiene il tuo <code>turtle.Screen()</code>. Il metodo <code>pencolor()</code> della turtle cambia solo il colore della penna di disegno, non lo sfondo.</p>
-<p><strong>Concept Tested:</strong> turtle.Screen() Object</p>
+<p><strong>Concetto verificato:</strong> L'oggetto turtle.Screen()</p>
 </details>
 <hr />
 <h4 id="7-cosa-fa-tpensize5">7. Cosa fa <code>t.pensize(5)</code>?<a class="headerlink" href="#7-cosa-fa-tpensize5" title="Permanent link">&para;</a></h4>
@@ -11800,7 +11800,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>t.pensize(5)</code> imposta la larghezza (spessore) delle linee disegnate dalla turtle a 5 pixel. La dimensione predefinita è 1 pixel, piuttosto sottile. Aumentare lo spessore della penna a 3, 5 o 10 crea linee più marcate e visibili. Non influisce sulla velocità, sulla forma, o sulla dimensione delle forme disegnate.</p>
-<p><strong>Concept Tested:</strong> Pen Size and Color</p>
+<p><strong>Concetto verificato:</strong> Spessore e colore della penna</p>
 </details>
 <hr />
 <h4 id="8-quale-comando-turtle-rende-invisibile-il-cursore-della-turtle-senza-cancellare-il-disegno">8. Quale comando turtle rende invisibile il cursore della turtle senza cancellare il disegno?<a class="headerlink" href="#8-quale-comando-turtle-rende-invisibile-il-cursore-della-turtle-senza-cancellare-il-disegno" title="Permanent link">&para;</a></h4>
@@ -11815,7 +11815,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>t.hideturtle()</code> rende invisibile il cursore della turtle così non appare sul tuo disegno finito. Il disegno stesso resta completamente visibile sullo schermo. Puoi far riapparire la turtle con <code>t.showturtle()</code>. Questo è utile quando vuoi mostrare un'opera pulita senza il cursore a freccia sopra di essa.</p>
-<p><strong>Concept Tested:</strong> Turtle Appearance</p>
+<p><strong>Concetto verificato:</strong> Aspetto della turtle</p>
 </details>
 <hr />
 <h4 id="9-di-quanti-gradi-dovrebbe-girare-la-turtle-per-fare-un-angolo-retto-come-langolo-di-un-quadrato">9. Di quanti gradi dovrebbe girare la turtle per fare un angolo retto (come l'angolo di un quadrato)?<a class="headerlink" href="#9-di-quanti-gradi-dovrebbe-girare-la-turtle-per-fare-un-angolo-retto-come-langolo-di-un-quadrato" title="Permanent link">&para;</a></h4>
@@ -11830,7 +11830,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Un angolo retto è di 90 gradi — un quarto di un cerchio completo di 360 gradi. Per disegnare un quadrato, ripeti <code>forward()</code> e <code>right(90)</code> quattro volte. È esattamente come la geometria che impari a scuola: gli angoli di un quadrato sono tutti di 90 gradi.</p>
-<p><strong>Concept Tested:</strong> Turtle Movement Commands</p>
+<p><strong>Concetto verificato:</strong> Comandi di movimento della turtle</p>
 </details>
 <hr />
 <h4 id="10-cosa-fa-tshapeturtle">10. Cosa fa <code>t.shape("turtle")</code>?<a class="headerlink" href="#10-cosa-fa-tshapeturtle" title="Permanent link">&para;</a></h4>
@@ -11845,7 +11845,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>t.shape("turtle")</code> cambia l'aspetto del cursore della turtle — la piccola icona che mostra dove si trova la turtle sullo schermo. Invece della punta di freccia predefinita, mostra una tartaruga a fumetti vista dall'alto. Sono disponibili sei forme integrate: <code>"arrow"</code>, <code>"turtle"</code>, <code>"circle"</code>, <code>"square"</code>, <code>"triangle"</code> e <code>"classic"</code>.</p>
-<p><strong>Concept Tested:</strong> Turtle Appearance</p>
+<p><strong>Concetto verificato:</strong> Aspetto della turtle</p>
 </details>
 <hr />
 

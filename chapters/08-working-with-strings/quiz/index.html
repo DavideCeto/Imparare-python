@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Una stringa (<code>str</code>) è qualsiasi sequenza di caratteri — lettere, cifre, spazi, punteggiatura, persino emoji — racchiusa tra virgolette. Puoi usare sia virgolette singole (<code>'...'</code>) sia virgolette doppie (<code>"..."</code>). Le stringhe sono diverse dai numeri: <code>"42"</code> (con le virgolette) è una stringa, non l'intero 42.</p>
-<p><strong>Concept Tested:</strong> String Type</p>
+<p><strong>Concetto verificato:</strong> Tipo stringa</p>
 </details>
 <hr />
 <h4 id="2-perche-potresti-scegliere-le-virgolette-singole-per-una-stringa-invece-di-quelle-doppie">2. Perché potresti scegliere le virgolette singole per una stringa invece di quelle doppie?<a class="headerlink" href="#2-perche-potresti-scegliere-le-virgolette-singole-per-una-stringa-invece-di-quelle-doppie" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Entrambi i tipi di virgolette funzionano in modo identico in Python. Il motivo principale per cambiare è quando la tua stringa contiene al suo interno un tipo di virgolette. Per esempio, <code>'She said "wow!"'</code> usa le virgolette singole all'esterno perché la stringa contiene virgolette doppie. Se usassi lo stesso tipo di virgolette sia dentro che fuori, Python si confonderebbe e genererebbe un <code>SyntaxError</code>.</p>
-<p><strong>Concept Tested:</strong> Single vs Double Quotes</p>
+<p><strong>Concetto verificato:</strong> Virgolette singole e doppie</p>
 </details>
 <hr />
 <h4 id="3-cosa-fa-loperatore-quando-usato-con-due-stringhe">3. Cosa fa l'operatore <code>+</code> quando usato con due stringhe?<a class="headerlink" href="#3-cosa-fa-loperatore-quando-usato-con-due-stringhe" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Quando <code>+</code> viene usato tra due stringhe, le concatena — le unisce una dopo l'altra in un'unica stringa più lunga. Per esempio, <code>"Hello, " + "Monty"</code> produce <code>"Hello, Monty"</code>. Python non aggiunge spazi automaticamente, quindi devi includere tu stesso ogni spazio che vuoi nella tua concatenazione.</p>
-<p><strong>Concept Tested:</strong> String Concatenation</p>
+<p><strong>Concetto verificato:</strong> Concatenazione di stringhe</p>
 </details>
 <hr />
 <h4 id="4-cosa-produce-ha-3">4. Cosa produce <code>"Ha" * 3</code>?<a class="headerlink" href="#4-cosa-produce-ha-3" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. L'operatore <code>*</code> ripete una stringa un numero indicato di volte senza alcun separatore. <code>"Ha" * 3</code> produce <code>"HaHaHa"</code>. Se vuoi spazi tra le ripetizioni, devi includerli tu stesso nella stringa: <code>"Ha " * 3</code> darebbe <code>"Ha Ha Ha "</code>. Il numero a destra deve essere un intero.</p>
-<p><strong>Concept Tested:</strong> String Repetition</p>
+<p><strong>Concetto verificato:</strong> Ripetizione di stringhe</p>
 </details>
 <hr />
 <h4 id="5-cosa-fa-il-carattere-di-escape-n-dentro-una-stringa">5. Cosa fa il carattere di escape <code>\n</code> dentro una stringa?<a class="headerlink" href="#5-cosa-fa-il-carattere-di-escape-n-dentro-una-stringa" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>\n</code> è il carattere di escape per la nuova riga. Quando Python incontra <code>\n</code> dentro una stringa, sposta il cursore all'inizio della riga successiva nell'output. Questo permette a una singola chiamata <code>print()</code> di produrre più righe: <code>print("Line one\nLine two")</code> mostra due righe di testo.</p>
-<p><strong>Concept Tested:</strong> Escape Characters</p>
+<p><strong>Concetto verificato:</strong> Caratteri di escape</p>
 </details>
 <hr />
 <h4 id="6-cosa-restituisce-lenhello">6. Cosa restituisce <code>len("Hello!")</code>?<a class="headerlink" href="#6-cosa-restituisce-lenhello" title="Permanent link">&para;</a></h4>
@@ -11775,7 +11775,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>len()</code> conta ogni carattere nella stringa, inclusa la punteggiatura. <code>"Hello!"</code> ha sei caratteri: H, e, l, l, o, e !. La funzione <code>len()</code> è integrata in Python — non devi importare nulla per usarla. Funziona su stringhe, liste e molti altri tipi di dati.</p>
-<p><strong>Concept Tested:</strong> String Length with len()</p>
+<p><strong>Concetto verificato:</strong> Lunghezza di una stringa con len()</p>
 </details>
 <hr />
 <h4 id="7-cosa-significa-che-le-stringhe-python-sono-immutabili">7. Cosa significa che le stringhe Python sono immutabili?<a class="headerlink" href="#7-cosa-significa-che-le-stringhe-python-sono-immutabili" title="Permanent link">&para;</a></h4>
@@ -11790,7 +11790,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. L'immutabilità significa che una volta creata una stringa, non puoi modificare i suoi singoli caratteri. Provare <code>name[0] = "B"</code> genera un <code>TypeError</code>. Per "cambiare" una stringa, crei una nuova stringa a partire da quella vecchia e riassegni la variabile. L'immutabilità rende le stringhe più veloci e sicure da usare in Python.</p>
-<p><strong>Concept Tested:</strong> String Immutability</p>
+<p><strong>Concetto verificato:</strong> Immutabilità delle stringhe</p>
 </details>
 <hr />
 <h4 id="8-quale-delle-seguenti-gestisce-correttamente-una-stringa-che-contiene-un-apostrofo">8. Quale delle seguenti gestisce correttamente una stringa che contiene un apostrofo?<a class="headerlink" href="#8-quale-delle-seguenti-gestisce-correttamente-una-stringa-che-contiene-un-apostrofo" title="Permanent link">&para;</a></h4>
@@ -11805,7 +11805,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. Puoi gestire un apostrofo dentro una stringa in due modi: usare le virgolette doppie all'esterno (<code>"It's raining"</code>) così l'apostrofo è solo un carattere normale, oppure usare una sequenza di escape dentro le virgolette singole (<code>'It\'s raining'</code>). L'opzione B causerebbe un <code>SyntaxError</code> perché l'apostrofo termina la stringa troppo presto.</p>
-<p><strong>Concept Tested:</strong> Single vs Double Quotes</p>
+<p><strong>Concetto verificato:</strong> Virgolette singole e doppie</p>
 </details>
 <hr />
 <h4 id="9-cose-una-stringa-raw-in-python-e-come-se-ne-crea-una">9. Cos'è una stringa raw in Python, e come se ne crea una?<a class="headerlink" href="#9-cose-una-stringa-raw-in-python-e-come-se-ne-crea-una" title="Permanent link">&para;</a></h4>
@@ -11820,7 +11820,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Una stringa raw dice a Python di ignorare le sequenze di escape con barra rovesciata e trattare ogni carattere letteralmente. Se ne crea una mettendo <code>r</code> prima della virgoletta di apertura: <code>r"C:\new_folder"</code> viene stampata come <code>C:\new_folder</code> invece di iniziare una nuova riga a <code>\n</code>. Le stringhe raw sono particolarmente utili per i percorsi di file Windows e le espressioni regolari.</p>
-<p><strong>Concept Tested:</strong> Raw Strings</p>
+<p><strong>Concetto verificato:</strong> Stringhe raw</p>
 </details>
 <hr />
 <h4 id="10-cosa-fa-twritescore-10-in-un-programma-turtle">10. Cosa fa <code>t.write("Score: 10")</code> in un programma turtle?<a class="headerlink" href="#10-cosa-fa-twritescore-10-in-un-programma-turtle" title="Permanent link">&para;</a></h4>
@@ -11835,7 +11835,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>t.write(testo)</code> disegna un'etichetta di testo direttamente sulla tela turtle nella posizione attuale della turtle. Questo ti permette di aggiungere punteggi, titoli ed etichette ai tuoi disegni turtle. Il testo appare sulla tela stessa — non nell'area di output sottostante — rendendolo perfetto per etichettare forme o mostrare informazioni dentro un disegno.</p>
-<p><strong>Concept Tested:</strong> Writing Text with turtle.write()</p>
+<p><strong>Concetto verificato:</strong> Scrivere testo con turtle.write()</p>
 </details>
 <hr />
 

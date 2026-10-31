@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>input()</code> restituisce sempre una stringa — indipendentemente da cosa scrive l'utente. Se l'utente scrive <code>42</code>, Python ti dà la stringa <code>"42"</code>, non l'intero <code>42</code>. Questo significa che devi convertire l'input nel tipo di dato giusto prima di fare calcoli matematici o altre operazioni che richiedono un numero.</p>
-<p><strong>Concept Tested:</strong> input() Function</p>
+<p><strong>Concetto verificato:</strong> Funzione input()</p>
 </details>
 <hr />
 <h4 id="2-cosa-succede-se-provi-a-sommare-il-risultato-di-input-a-un-numero-senza-convertirlo-prima">2. Cosa succede se provi a sommare il risultato di <code>input()</code> a un numero senza convertirlo prima?<a class="headerlink" href="#2-cosa-succede-se-provi-a-sommare-il-risultato-di-input-a-un-numero-senza-convertirlo-prima" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Python non converte automaticamente i tipi. Se <code>age</code> contiene la stringa <code>"12"</code> (da <code>input()</code>), allora <code>age + 1</code> genera un <code>TypeError: can only concatenate str (not "int") to str</code>. Devi convertire esplicitamente con <code>int(age)</code> o <code>float(age)</code> prima di eseguire l'aritmetica.</p>
-<p><strong>Concept Tested:</strong> Type Conversion</p>
+<p><strong>Concetto verificato:</strong> Conversione di tipo</p>
 </details>
 <hr />
 <h4 id="3-cosa-restituisce-int42">3. Cosa restituisce <code>int("42")</code>?<a class="headerlink" href="#3-cosa-restituisce-int42" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>int()</code> converte una stringa (o un float) in un numero intero. <code>int("42")</code> restituisce l'intero <code>42</code>. Nota che <code>int("3.14")</code> genererebbe un <code>ValueError</code> perché <code>"3.14"</code> contiene un punto decimale — avresti bisogno prima di <code>float("3.14")</code>, poi di <code>int()</code> se vuoi la parte intera.</p>
-<p><strong>Concept Tested:</strong> int() Conversion</p>
+<p><strong>Concetto verificato:</strong> Conversione con int()</p>
 </details>
 <hr />
 <h4 id="4-perche-hai-bisogno-di-str-quando-costruisci-un-messaggio-come-score-score">4. Perché hai bisogno di <code>str()</code> quando costruisci un messaggio come <code>"Score: " + score</code>?<a class="headerlink" href="#4-perche-hai-bisogno-di-str-quando-costruisci-un-messaggio-come-score-score" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. L'operatore <code>+</code> funziona in modo diverso in base ai tipi. Con due stringhe, concatena. Con due numeri, somma. Ma mischiare una stringa e un numero con <code>+</code> genera un <code>TypeError</code>. Per costruire un messaggio che include un numero, devi convertire prima il numero in una stringa: <code>"Score: " + str(score)</code>.</p>
-<p><strong>Concept Tested:</strong> str() Conversion</p>
+<p><strong>Concetto verificato:</strong> Conversione con str()</p>
 </details>
 <hr />
 <h4 id="5-cosa-restituisce-bool0">5. Cosa restituisce <code>bool(0)</code>?<a class="headerlink" href="#5-cosa-restituisce-bool0" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. <code>bool()</code> converte un valore in <code>True</code> o <code>False</code>. I valori che diventano <code>False</code> sono: <code>0</code>, <code>0.0</code>, <code>""</code> (stringa vuota), <code>None</code>, e le collezioni vuote. Tutto il resto diventa <code>True</code>. Quindi <code>bool(0)</code> restituisce <code>False</code>, ma <code>bool(1)</code> o <code>bool(-5)</code> restituisce <code>True</code>.</p>
-<p><strong>Concept Tested:</strong> bool() Conversion</p>
+<p><strong>Concetto verificato:</strong> Conversione con bool()</p>
 </details>
 <hr />
 <h4 id="6-cosa-restituisce-type314">6. Cosa restituisce <code>type(3.14)</code>?<a class="headerlink" href="#6-cosa-restituisce-type314" title="Permanent link">&para;</a></h4>
@@ -11775,7 +11775,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. <code>type()</code> restituisce il tipo di dato di un valore come oggetto classe. <code>3.14</code> è un numero a virgola mobile, quindi <code>type(3.14)</code> restituisce <code>&lt;class 'float'&gt;</code>. Questo è molto utile per il debug quando non sei sicuro di che tipo contiene una variabile — specialmente dopo aver ricevuto l'input dall'utente.</p>
-<p><strong>Concept Tested:</strong> type() Function</p>
+<p><strong>Concetto verificato:</strong> Funzione type()</p>
 </details>
 <hr />
 <h4 id="7-cosa-restituisce-hello-strip">7. Cosa restituisce <code>"  hello  ".strip()</code>?<a class="headerlink" href="#7-cosa-restituisce-hello-strip" title="Permanent link">&para;</a></h4>
@@ -11790,7 +11790,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>A</strong>. <code>strip()</code> rimuove gli spazi bianchi iniziali e finali (spazi, tabulazioni, ritorni a capo) da una stringa. <code>"  hello  ".strip()</code> restituisce <code>"hello"</code>. Questo è importante per pulire l'input dell'utente, che spesso ha spazi extra accidentali. <code>strip()</code> non modifica gli spazi in mezzo alla stringa.</p>
-<p><strong>Concept Tested:</strong> Input Validation</p>
+<p><strong>Concetto verificato:</strong> Validazione dell'input</p>
 </details>
 <hr />
 <h4 id="8-cosa-restituisce-strisdigit-quando-chiamato-sulla-stringa-123">8. Cosa restituisce <code>str.isdigit()</code> quando chiamato sulla stringa <code>"123"</code>?<a class="headerlink" href="#8-cosa-restituisce-strisdigit-quando-chiamato-sulla-stringa-123" title="Permanent link">&para;</a></h4>
@@ -11805,7 +11805,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>isdigit()</code> restituisce <code>True</code> se ogni carattere nella stringa è una cifra (0-9), e <code>False</code> altrimenti. <code>"123".isdigit()</code> restituisce <code>True</code>. <code>"12.3".isdigit()</code> restituisce <code>False</code> (a causa del punto), e <code>"abc".isdigit()</code> restituisce <code>False</code>. Questo ti permette di controllare in sicurezza prima di chiamare <code>int()</code> per evitare un <code>ValueError</code>.</p>
-<p><strong>Concept Tested:</strong> Input Validation</p>
+<p><strong>Concetto verificato:</strong> Validazione dell'input</p>
 </details>
 <hr />
 <h4 id="9-cose-la-validazione-dellinput">9. Cos'è la validazione dell'input?<a class="headerlink" href="#9-cose-la-validazione-dellinput" title="Permanent link">&para;</a></h4>
@@ -11820,7 +11820,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. La validazione dell'input significa controllare che i dati forniti dall'utente siano nella forma prevista dal tuo programma prima di provare a usarli. Per esempio, controllare <code>raw.isdigit()</code> prima di chiamare <code>int(raw)</code> previene un crash da <code>ValueError</code> se l'utente scrive lettere invece di un numero. I buoni programmi non si fidano mai dell'input grezzo dell'utente senza controllarlo prima.</p>
-<p><strong>Concept Tested:</strong> Input Validation</p>
+<p><strong>Concetto verificato:</strong> Validazione dell'input</p>
 </details>
 <hr />
 <h4 id="10-quale-riga-di-codice-legge-correttamente-un-numero-dallutente-e-lo-memorizza-come-intero">10. Quale riga di codice legge correttamente un numero dall'utente e lo memorizza come intero?<a class="headerlink" href="#10-quale-riga-di-codice-legge-correttamente-un-numero-dallutente-e-lo-memorizza-come-intero" title="Permanent link">&para;</a></h4>
@@ -11835,7 +11835,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>int(input("Quanti anni hai? "))</code> funziona chiamando prima <code>input()</code> per ottenere la risposta dell'utente come stringa, poi passando immediatamente quella stringa a <code>int()</code> per convertirla in un intero. Questo è lo schema standard di Python per leggere un numero dall'utente. L'opzione A tenta erroneamente di convertire il messaggio del prompt stesso.</p>
-<p><strong>Concept Tested:</strong> Type Conversion</p>
+<p><strong>Concetto verificato:</strong> Conversione di tipo</p>
 </details>
 <hr />
 

@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>map(function, iterable)</code> applica la funzione a ogni elemento e restituisce un oggetto map (iteratore). Racchiudilo con <code>list()</code> per ottenere una lista: <code>list(map(square, [1, 2, 3, 4]))</code> dà <code>[1, 4, 9, 16]</code>. <code>map()</code> è uno strumento di programmazione funzionale — spesso sostituito dalle list comprehension nel Python moderno, ma ancora utile e conciso.</p>
-<p><strong>Concept Tested:</strong> map()</p>
+<p><strong>Concetto verificato:</strong> map()</p>
 </details>
 <hr />
 <h4 id="2-cosa-restituisce-filteris_even-1-2-3-4-5-6">2. Cosa restituisce <code>filter(is_even, [1, 2, 3, 4, 5, 6])</code>?<a class="headerlink" href="#2-cosa-restituisce-filteris_even-1-2-3-4-5-6" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>filter(function, iterable)</code> restituisce un oggetto filter (iteratore) che produce solo gli elementi per cui la funzione restituisce <code>True</code>. Racchiudi con <code>list()</code> per ottenere una lista: <code>list(filter(is_even, [1,2,3,4,5,6]))</code> dà <code>[2, 4, 6]</code>. Come <code>map()</code>, <code>filter()</code> è lazy — elabora gli elementi uno alla volta secondo necessità.</p>
-<p><strong>Concept Tested:</strong> filter()</p>
+<p><strong>Concetto verificato:</strong> filter()</p>
 </details>
 <hr />
 <h4 id="3-cosa-restituisce-anyfalse-false-true-false">3. Cosa restituisce <code>any([False, False, True, False])</code>?<a class="headerlink" href="#3-cosa-restituisce-anyfalse-false-true-false" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>any(iterable)</code> restituisce <code>True</code> se almeno un elemento nell'iterabile è truthy. Fa corto circuito — non appena trova un elemento truthy, si ferma e restituisce <code>True</code> senza controllare il resto. <code>all(iterable)</code> restituisce <code>True</code> solo se ogni elemento è truthy, e fa corto circuito al primo elemento falsy.</p>
-<p><strong>Concept Tested:</strong> any() and all()</p>
+<p><strong>Concetto verificato:</strong> any() e all()</p>
 </details>
 <hr />
 <h4 id="4-cosa-restituisce-orda">4. Cosa restituisce <code>ord("A")</code>?<a class="headerlink" href="#4-cosa-restituisce-orda" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. <code>ord(character)</code> restituisce il codice intero Unicode (ASCII) per un carattere. <code>ord("A")</code> è <code>65</code>, <code>ord("B")</code> è <code>66</code>, e così via. La funzione inversa è <code>chr(integer)</code>: <code>chr(65)</code> restituisce <code>"A"</code>. Sono utili per implementare cifrari, matematica sui caratteri, o generare sequenze di caratteri in un ciclo.</p>
-<p><strong>Concept Tested:</strong> chr() and ord()</p>
+<p><strong>Concetto verificato:</strong> chr() e ord()</p>
 </details>
 <hr />
 <h4 id="5-cosa-ti-mostra-dirmath">5. Cosa ti mostra <code>dir(math)</code>?<a class="headerlink" href="#5-cosa-ti-mostra-dirmath" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>dir(obj)</code> restituisce una lista di tutti gli attributi e i metodi disponibili su un oggetto o modulo. <code>dir(math)</code> mostra tutte le funzioni disponibili nel modulo <code>math</code> (come <code>sqrt</code>, <code>sin</code>, <code>pi</code>, <code>factorial</code>, ecc.). Per la documentazione dettagliata su una funzione, usa <code>help(math.sqrt)</code>. Insieme, <code>dir()</code> e <code>help()</code> sono strumenti essenziali per esplorare moduli non familiari.</p>
-<p><strong>Concept Tested:</strong> dir() and help()</p>
+<p><strong>Concetto verificato:</strong> dir() e help()</p>
 </details>
 <hr />
 <h4 id="6-come-crei-una-classe-di-eccezione-personalizzata-in-python">6. Come crei una classe di eccezione personalizzata in Python?<a class="headerlink" href="#6-come-crei-una-classe-di-eccezione-personalizzata-in-python" title="Permanent link">&para;</a></h4>
@@ -11775,7 +11775,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Le classi di eccezione personalizzate si creano facendo una sottoclasse di <code>Exception</code> (o un'eccezione built-in più specifica come <code>ValueError</code>). La forma più semplice è <code>class MyError(Exception): pass</code>. Puoi anche sovrascrivere <code>__init__()</code> per aggiungere attributi o messaggi personalizzati. Chi chiama può catturare la tua eccezione personalizzata specificamente con <code>except MyError:</code>, rendendo la gestione degli errori molto più precisa.</p>
-<p><strong>Concept Tested:</strong> Custom Exception Classes</p>
+<p><strong>Concetto verificato:</strong> Classi di eccezioni personalizzate</p>
 </details>
 <hr />
 <h4 id="7-per-cosa-si-usa-il-decorator-property">7. Per cosa si usa il decorator <code>@property</code>?<a class="headerlink" href="#7-per-cosa-si-usa-il-decorator-property" title="Permanent link">&para;</a></h4>
@@ -11790,7 +11790,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Il decorator <code>@property</code> ti permette di definire un metodo che viene accesso come un attributo — <code>obj.temperature</code> invece di <code>obj.temperature()</code>. Puoi aggiungere un corrispondente <code>@temperature.setter</code> per eseguire codice di validazione quando il valore viene assegnato. Questo ti dà una sintassi degli attributi pulita mantenendo il controllo su come i valori vengono letti e impostati.</p>
-<p><strong>Concept Tested:</strong> @property Decorator</p>
+<p><strong>Concetto verificato:</strong> Decoratore @property</p>
 </details>
 <hr />
 <h4 id="8-cose-un-metodo-dunder-chiamato-anche-metodo-magico-in-python">8. Cos'è un metodo dunder (chiamato anche metodo magico) in Python?<a class="headerlink" href="#8-cose-un-metodo-dunder-chiamato-anche-metodo-magico-in-python" title="Permanent link">&para;</a></h4>
@@ -11805,7 +11805,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. I metodi dunder (metodi con doppio underscore) come <code>__init__</code>, <code>__str__</code>, <code>__add__</code>, e <code>__len__</code> vengono chiamati automaticamente da Python in risposta a operazioni. <code>__str__</code> viene chiamato da <code>print()</code>, <code>__add__</code> viene chiamato dall'operatore <code>+</code>, e <code>__len__</code> viene chiamato da <code>len()</code>. Definirli sulla tua classe personalizza come funzionano le operazioni built-in di Python con i tuoi oggetti.</p>
-<p><strong>Concept Tested:</strong> Dunder Methods</p>
+<p><strong>Concetto verificato:</strong> Metodi dunder</p>
 </details>
 <hr />
 <h4 id="9-cose-la-composizione-di-oggetti">9. Cos'è la composizione di oggetti?<a class="headerlink" href="#9-cose-la-composizione-di-oggetti" title="Permanent link">&para;</a></h4>
@@ -11820,7 +11820,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. La composizione è la relazione "ha-un" (has-a): un oggetto <code>Car</code> <em>ha</em> un oggetto <code>Engine</code> e un oggetto <code>Wheel</code> come attributi. Questo è diverso dall'eredità (la relazione "è-un", is-a). La composizione è spesso preferita alle profonde gerarchie di eredità perché è più flessibile e più facile da cambiare — puoi sostituire il componente motore senza cambiare l'interfaccia dell'auto.</p>
-<p><strong>Concept Tested:</strong> Object Composition</p>
+<p><strong>Concetto verificato:</strong> Composizione di oggetti</p>
 </details>
 <hr />
 <h4 id="10-cosa-restituisce-alltrue-true-true-false">10. Cosa restituisce <code>all([True, True, True, False])</code>?<a class="headerlink" href="#10-cosa-restituisce-alltrue-true-true-false" title="Permanent link">&para;</a></h4>
@@ -11835,7 +11835,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>all(iterable)</code> restituisce <code>True</code> solo se ogni elemento nell'iterabile è truthy. Dato che la lista <code>[True, True, True, False]</code> contiene un <code>False</code>, <code>all()</code> restituisce <code>False</code>. Fa corto circuito — nel momento in cui trova il primo elemento falsy, si ferma e restituisce <code>False</code> senza controllare gli elementi rimanenti.</p>
-<p><strong>Concept Tested:</strong> any() and all()</p>
+<p><strong>Concetto verificato:</strong> any() e all()</p>
 </details>
 <hr />
 

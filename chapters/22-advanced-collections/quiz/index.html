@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>enumerate(iterable)</code> incapsula una sequenza e ti dà sia l'indice sia l'elemento a ogni iterazione del ciclo. Usare <code>for i, item in enumerate(my_list):</code> è più pulito che mantenere una variabile contatore separata. Per default il conteggio inizia da 0; passa un secondo argomento per iniziare da un numero diverso: <code>enumerate(items, 1)</code> inizia da 1.</p>
-<p><strong>Concept Tested:</strong> enumerate()</p>
+<p><strong>Concetto verificato:</strong> enumerate()</p>
 </details>
 <hr />
 <h4 id="2-cosa-produce-zipa-b-c-1-2">2. Cosa produce <code>zip(["A", "B", "C"], [1, 2])</code>?<a class="headerlink" href="#2-cosa-produce-zipa-b-c-1-2" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>zip()</code> accoppia gli elementi di due o più iterabili e si ferma quando il più corto finisce. Dato che la seconda lista ha solo 2 elementi, <code>zip()</code> produce solo 2 coppie: <code>("A", 1)</code> e <code>("B", 2)</code>. Il terzo elemento <code>"C"</code> viene ignorato perché non c'è un elemento corrispondente nella seconda lista.</p>
-<p><strong>Concept Tested:</strong> zip()</p>
+<p><strong>Concetto verificato:</strong> zip()</p>
 </details>
 <hr />
 <h4 id="3-come-costruisci-un-dizionario-da-due-liste-keys-e-values-usando-zip">3. Come costruisci un dizionario da due liste <code>keys</code> e <code>values</code> usando <code>zip()</code>?<a class="headerlink" href="#3-come-costruisci-un-dizionario-da-due-liste-keys-e-values-usando-zip" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>zip(keys, values)</code> accoppia ogni chiave con il suo valore corrispondente. Racchiudere con <code>dict()</code> converte quelle coppie in un dizionario. Per esempio, <code>dict(zip(["a", "b"], [1, 2]))</code> dà <code>{"a": 1, "b": 2}</code>. Questo è un pattern molto comune e pulito per costruire dizionari da liste parallele.</p>
-<p><strong>Concept Tested:</strong> Dictionary from zip()</p>
+<p><strong>Concetto verificato:</strong> Dizionario da zip()</p>
 </details>
 <hr />
 <h4 id="4-cosa-fa-args-in-una-definizione-di-funzione">4. Cosa fa <code>*args</code> in una definizione di funzione?<a class="headerlink" href="#4-cosa-fa-args-in-una-definizione-di-funzione" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>*args</code> in una definizione di funzione raccoglie qualsiasi numero di argomenti posizionali che chi chiama passa in una singola tupla. Per esempio, <code>def total(*args): return sum(args)</code> può essere chiamata come <code>total(1, 2, 3)</code> o <code>total(10)</code> — gli argomenti posizionali extra finiscono tutti in <code>args</code>.</p>
-<p><strong>Concept Tested:</strong> *args</p>
+<p><strong>Concetto verificato:</strong> *args</p>
 </details>
 <hr />
 <h4 id="5-cosa-raccoglie-kwargs-in-una-definizione-di-funzione">5. Cosa raccoglie <code>**kwargs</code> in una definizione di funzione?<a class="headerlink" href="#5-cosa-raccoglie-kwargs-in-una-definizione-di-funzione" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>**kwargs</code> raccoglie gli argomenti keyword extra (quelli passati come <code>name=value</code>) in un dizionario. Chiamare <code>describe(color="red", size=5)</code> darebbe <code>kwargs = {"color": "red", "size": 5}</code> dentro la funzione. Poi ci iteri sopra con <code>kwargs.items()</code>. <code>*args</code> gestisce gli argomenti posizionali; <code>**kwargs</code> gestisce gli argomenti keyword.</p>
-<p><strong>Concept Tested:</strong> **kwargs</p>
+<p><strong>Concetto verificato:</strong> **kwargs</p>
 </details>
 <hr />
 <h4 id="6-cosa-restituisce-max73-100-87-55">6. Cosa restituisce <code>max([73, 100, 87, 55])</code>?<a class="headerlink" href="#6-cosa-restituisce-max73-100-87-55" title="Permanent link">&para;</a></h4>
@@ -11775,7 +11775,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. <code>max(iterable)</code> restituisce il valore più grande nella collezione. Per <code>[73, 100, 87, 55]</code>, il valore più grande è <code>100</code>. In modo simile, <code>min()</code> restituisce il valore più piccolo (<code>55</code> qui), e <code>sum()</code> restituisce il totale (<code>415</code>). Tutte e tre funzionano su qualsiasi iterabile di valori comparabili.</p>
-<p><strong>Concept Tested:</strong> max(), min(), sum()</p>
+<p><strong>Concetto verificato:</strong> max(), min(), sum()</p>
 </details>
 <hr />
 <h4 id="7-qual-e-la-differenza-tra-listsort-e-sortedlist">7. Qual è la differenza tra <code>list.sort()</code> e <code>sorted(list)</code>?<a class="headerlink" href="#7-qual-e-la-differenza-tra-listsort-e-sortedlist" title="Permanent link">&para;</a></h4>
@@ -11790,7 +11790,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>list.sort()</code> riorganizza la lista <strong>sul posto</strong> e restituisce <code>None</code>. <code>sorted(iterable)</code> crea e restituisce una <strong>nuova</strong> lista ordinata, lasciando l'originale invariata. Usa <code>sort()</code> quando vuoi cambiare la lista direttamente. Usa <code>sorted()</code> quando hai bisogno di mantenere l'ordine originale avendo anche una versione ordinata.</p>
-<p><strong>Concept Tested:</strong> sorted() and reversed()</p>
+<p><strong>Concetto verificato:</strong> sorted() e reversed()</p>
 </details>
 <hr />
 <h4 id="8-cosa-restituisce-isinstance42-int">8. Cosa restituisce <code>isinstance(42, int)</code>?<a class="headerlink" href="#8-cosa-restituisce-isinstance42-int" title="Permanent link">&para;</a></h4>
@@ -11805,7 +11805,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. <code>isinstance(value, type)</code> restituisce <code>True</code> se il valore è un'istanza del tipo dato, <code>False</code> altrimenti. <code>42</code> è un intero, quindi <code>isinstance(42, int)</code> restituisce <code>True</code>. Questo è il modo preferito di controllare i tipi in Python perché gestisce anche l'eredità, a differenza di <code>type(x) == int</code> che non lo fa.</p>
-<p><strong>Concept Tested:</strong> isinstance()</p>
+<p><strong>Concetto verificato:</strong> isinstance()</p>
 </details>
 <hr />
 <h4 id="9-cosa-restituisce-sorted5-2-8-1-reversetrue">9. Cosa restituisce <code>sorted([5, 2, 8, 1], reverse=True)</code>?<a class="headerlink" href="#9-cosa-restituisce-sorted5-2-8-1-reversetrue" title="Permanent link">&para;</a></h4>
@@ -11820,7 +11820,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>sorted(iterable, reverse=True)</code> restituisce una nuova lista ordinata in ordine decrescente (il più grande prima). Per <code>[5, 2, 8, 1]</code>, il risultato è <code>[8, 5, 2, 1]</code>. La lista originale non viene modificata. Per ordinare in modo crescente (il default), usa semplicemente <code>sorted(iterable)</code> senza l'argomento <code>reverse</code>.</p>
-<p><strong>Concept Tested:</strong> sorted() and reversed()</p>
+<p><strong>Concetto verificato:</strong> sorted() e reversed()</p>
 </details>
 <hr />
 <h4 id="10-cosa-produce-enumeratex-y-z-1-come-primo-valore-in-un-ciclo">10. Cosa produce <code>enumerate(["x", "y", "z"], 1)</code> come primo valore in un ciclo?<a class="headerlink" href="#10-cosa-produce-enumeratex-y-z-1-come-primo-valore-in-un-ciclo" title="Permanent link">&para;</a></h4>
@@ -11835,7 +11835,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. <code>enumerate(iterable, start)</code> inizia a contare dal valore <code>start</code> invece che da 0. Con <code>enumerate(["x", "y", "z"], 1)</code>, la prima coppia è <code>(1, "x")</code>, la seconda è <code>(2, "y")</code>, e così via. Questo è utile quando vuoi mostrare liste numerate a partire da 1 invece che da 0.</p>
-<p><strong>Concept Tested:</strong> enumerate()</p>
+<p><strong>Concetto verificato:</strong> enumerate()</p>
 </details>
 <hr />
 

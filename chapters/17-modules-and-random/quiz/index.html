@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>import module_name</code> carica un modulo dalla Libreria Standard di Python (o un pacchetto installato) e rende disponibili le sue funzioni. Dopo <code>import random</code>, accedi alle sue funzioni con <code>random.function_name()</code>. Il modulo viene caricato solo una volta, anche se lo importi più volte.</p>
-<p><strong>Concept Tested:</strong> import Statement</p>
+<p><strong>Concetto verificato:</strong> Istruzione import</p>
 </details>
 <hr />
 <h4 id="2-qual-e-la-differenza-tra-import-random-e-from-random-import-randint">2. Qual è la differenza tra <code>import random</code> e <code>from random import randint</code>?<a class="headerlink" href="#2-qual-e-la-differenza-tra-import-random-e-from-random-import-randint" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>import random</code> importa l'intero modulo, e accedi alle funzioni con <code>random.randint()</code>. <code>from random import randint</code> importa solo la funzione <code>randint</code> per nome, così puoi chiamarla direttamente come <code>randint()</code> senza il prefisso <code>random.</code>. Entrambi gli approcci funzionano; il secondo è più conciso quando hai bisogno solo di una o due funzioni.</p>
-<p><strong>Concept Tested:</strong> from...import Syntax</p>
+<p><strong>Concetto verificato:</strong> Sintassi from...import</p>
 </details>
 <hr />
 <h4 id="3-cosa-fa-import-random-as-rnd">3. Cosa fa <code>import random as rnd</code>?<a class="headerlink" href="#3-cosa-fa-import-random-as-rnd" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>import ... as alias</code> importa un modulo e gli dà un soprannome più corto. Dopo <code>import random as rnd</code>, chiami <code>rnd.randint(1, 6)</code> invece di <code>random.randint(1, 6)</code>. Questo è comunemente usato per moduli con nomi lunghi (come <code>numpy as np</code> o <code>matplotlib.pyplot as plt</code>) per risparmiare digitazione.</p>
-<p><strong>Concept Tested:</strong> import...as Alias</p>
+<p><strong>Concetto verificato:</strong> Alias con import...as</p>
 </details>
 <hr />
 <h4 id="4-cosa-restituisce-randomrandint1-6">4. Cosa restituisce <code>random.randint(1, 6)</code>?<a class="headerlink" href="#4-cosa-restituisce-randomrandint1-6" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>randint(a, b)</code> restituisce un intero casuale dove entrambi gli estremi sono inclusi: <code>a &lt;= result &lt;= b</code>. Quindi <code>randint(1, 6)</code> può restituire 1, 2, 3, 4, 5, o 6 — simulando un dado a sei facce onesto. Questo è diverso da <code>range(1, 6)</code> che si ferma prima di 6.</p>
-<p><strong>Concept Tested:</strong> random.randint()</p>
+<p><strong>Concetto verificato:</strong> random.randint()</p>
 </details>
 <hr />
 <h4 id="5-cosa-restituisce-randomrandom">5. Cosa restituisce <code>random.random()</code>?<a class="headerlink" href="#5-cosa-restituisce-randomrandom" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>random.random()</code> restituisce un numero a virgola mobile casuale nell'intervallo <code>[0.0, 1.0)</code> — cioè, 0.0 è possibile ma 1.0 no. Questo è utile per le probabilità: <code>if random.random() &lt; 0.3:</code> si attiva circa il 30% delle volte. Moltiplica per un intervallo per ottenere float in altri range: <code>random.random() * 10</code> dà un float da 0 a 10.</p>
-<p><strong>Concept Tested:</strong> random.random()</p>
+<p><strong>Concetto verificato:</strong> random.random()</p>
 </details>
 <hr />
 <h4 id="6-cosa-fa-randomchoicerock-paper-scissors">6. Cosa fa <code>random.choice(["rock", "paper", "scissors"])</code>?<a class="headerlink" href="#6-cosa-fa-randomchoicerock-paper-scissors" title="Permanent link">&para;</a></h4>
@@ -11775,7 +11775,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>random.choice(sequence)</code> sceglie un elemento casuale dalla sequenza e lo restituisce. Ogni elemento ha una probabilità uguale di essere scelto. Questo è perfetto per simulare lanci di moneta, scelte casuali di colori, direzioni casuali in un gioco, e compiti simili.</p>
-<p><strong>Concept Tested:</strong> random.choice()</p>
+<p><strong>Concetto verificato:</strong> random.choice()</p>
 </details>
 <hr />
 <h4 id="7-cosa-fa-randomshufflecards">7. Cosa fa <code>random.shuffle(cards)</code>?<a class="headerlink" href="#7-cosa-fa-randomshufflecards" title="Permanent link">&para;</a></h4>
@@ -11790,7 +11790,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>random.shuffle(lst)</code> mescola la lista <strong>sul posto</strong>, riorganizzando i suoi elementi casualmente, e restituisce <code>None</code>. Questo significa che la lista originale viene cambiata direttamente — una nuova lista NON viene creata. Quindi <code>shuffled = random.shuffle(cards)</code> farebbe diventare <code>shuffled</code> uguale a <code>None</code>, non una lista mescolata.</p>
-<p><strong>Concept Tested:</strong> random.shuffle()</p>
+<p><strong>Concetto verificato:</strong> random.shuffle()</p>
 </details>
 <hr />
 <h4 id="8-qual-e-lo-scopo-di-randomseed42">8. Qual è lo scopo di <code>random.seed(42)</code>?<a class="headerlink" href="#8-qual-e-lo-scopo-di-randomseed42" title="Permanent link">&para;</a></h4>
@@ -11805,7 +11805,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>random.seed(n)</code> imposta il punto di partenza per il generatore di numeri casuali. Con lo stesso seme, ottieni sempre la stessa sequenza di numeri "casuali". Questo è molto utile per i test e il debug — puoi riprodurre gli stessi risultati casuali a ogni esecuzione. Senza un seme, Python usa l'ora attuale come seme, dando risultati diversi a ogni esecuzione.</p>
-<p><strong>Concept Tested:</strong> random.seed()</p>
+<p><strong>Concetto verificato:</strong> random.seed()</p>
 </details>
 <hr />
 <h4 id="9-quale-riga-fromimport-ti-permette-di-chiamare-randint-senza-il-prefisso-random">9. Quale riga <code>from...import</code> ti permette di chiamare <code>randint()</code> senza il prefisso <code>random.</code>?<a class="headerlink" href="#9-quale-riga-fromimport-ti-permette-di-chiamare-randint-senza-il-prefisso-random" title="Permanent link">&para;</a></h4>
@@ -11820,7 +11820,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. La sintassi corretta per importare una funzione specifica è <code>from module import function</code>. Dopo <code>from random import randint</code>, puoi chiamare <code>randint(1, 6)</code> direttamente senza il prefisso <code>random.</code>. Le opzioni A e D hanno le parole nell'ordine sbagliato, e l'opzione B richiederebbe comunque di chiamare <code>random.randint()</code>.</p>
-<p><strong>Concept Tested:</strong> from...import Syntax</p>
+<p><strong>Concetto verificato:</strong> Sintassi from...import</p>
 </details>
 <hr />
 <h4 id="10-cosa-restituisce-randomsamplerange1-50-6">10. Cosa restituisce <code>random.sample(range(1, 50), 6)</code>?<a class="headerlink" href="#10-cosa-restituisce-randomsamplerange1-50-6" title="Permanent link">&para;</a></h4>
@@ -11835,7 +11835,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>random.sample(population, k)</code> restituisce una lista di <code>k</code> elementi unici scelti dalla popolazione senza ripetizione (nessun duplicato). <code>sample(range(1, 50), 6)</code> sceglie 6 numeri unici da 1 a 49 — come scegliere i numeri della lotteria. Nota che <code>range(1, 50)</code> va da 1 a 49, non a 50.</p>
-<p><strong>Concept Tested:</strong> random.sample()</p>
+<p><strong>Concetto verificato:</strong> random.sample()</p>
 </details>
 <hr />
 

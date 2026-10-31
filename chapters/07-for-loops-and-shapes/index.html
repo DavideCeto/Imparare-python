@@ -11822,24 +11822,24 @@
 <h1 id="cicli-for-e-disegno-di-forme">Cicli For e Disegno di Forme<a class="headerlink" href="#cicli-for-e-disegno-di-forme" title="Permanent link">&para;</a></h1>
 <h2 id="riepilogo">Riepilogo<a class="headerlink" href="#riepilogo" title="Permanent link">&para;</a></h2>
 <p>I cicli ti permettono di ripetere passaggi senza copiare e incollare — proprio come un
-blocco "repeat" di Scratch. Il ciclo <code>for</code> con <code>range()</code> è il cavallo di battaglia di Python
+blocco "ripeti" di Scratch. Il ciclo <code>for</code> con <code>range()</code> è il cavallo di battaglia di Python
 per contare. Questo capitolo usa i cicli per disegnare quadrati, triangoli e altri poligoni
 con turtle, poi introduce il posizionamento assoluto (<code>goto()</code>), la pulizia dello schermo,
 le interrogazioni di posizione, e un classico progetto di pattern a stella.</p>
 <h2 id="concetti-trattati">Concetti Trattati<a class="headerlink" href="#concetti-trattati" title="Permanent link">&para;</a></h2>
 <p>Questo capitolo tratta i seguenti 11 concetti del grafo di apprendimento:</p>
 <ol>
-<li>for Loop over Sequence</li>
-<li>for Loop with range()</li>
-<li>Range with Start Stop Step</li>
-<li>Loop Counter Variable</li>
-<li>Loop Accumulator Pattern</li>
-<li>Absolute Positioning goto()</li>
-<li>Drawing circle() and Polygons</li>
-<li>Clearing and Resetting</li>
-<li>Position Query xcor() ycor()</li>
-<li>setheading() Direction</li>
-<li>Drawing Star Patterns</li>
+<li>Ciclo for su una sequenza</li>
+<li>Ciclo for con range()</li>
+<li>range() con inizio, fine e passo</li>
+<li>Variabile contatore del ciclo</li>
+<li>Schema dell'accumulatore nei cicli</li>
+<li>Posizionamento assoluto con goto()</li>
+<li>Disegnare con circle() e poligoni</li>
+<li>Cancellare e reimpostare</li>
+<li>Leggere la posizione con xcor() e ycor()</li>
+<li>Direzione con setheading()</li>
+<li>Disegnare motivi a stella</li>
 </ol>
 <h2 id="prerequisiti">Prerequisiti<a class="headerlink" href="#prerequisiti" title="Permanent link">&para;</a></h2>
 <p>Questo capitolo si basa sui concetti di:</p>
@@ -11875,7 +11875,7 @@ La variabile <code>i</code> è il <strong>contatore del ciclo</strong> — cambi
 <div class="admonition mascot-tip">
 <p class="admonition-title">Ponte con Scratch</p>
 <p><img alt="Monty with a tip" class="mascot-admonition-img" src="../../img/mascot/tip.png" />
-In Scratch, il blocco <strong>Repeat</strong> esegue il suo contenuto un numero fisso di volte. Il <code>for i in range(n):</code> di Python fa esattamente la stessa cosa! La grande differenza: Python ti dà anche il contatore <code>i</code> come variabile che puoi usare dentro il ciclo — ottimo per creare pattern che cambiano a ogni passo.</p>
+In Scratch, il blocco <strong>ripeti (10) volte</strong> esegue il suo contenuto un numero fisso di volte. Il <code>for i in range(n):</code> di Python fa esattamente la stessa cosa! La grande differenza: Python ti dà anche il contatore <code>i</code> come variabile che puoi usare dentro il ciclo — ottimo per creare pattern che cambiano a ogni passo.</p>
 </div>
 <p>Ora mettiamo al lavoro un ciclo <code>for</code> con la turtle.
 Prima di eseguire il programma qui sotto, pensa a cosa disegneranno <code>forward(100)</code> e <code>right(90)</code> ripetuti quattro volte.</p>

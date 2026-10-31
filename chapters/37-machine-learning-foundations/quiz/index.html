@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Nell'apprendimento supervisionato, ogni esempio di training viene con un'etichetta — la risposta corretta. Il modello impara a mappare gli input agli output (ad es., foto → "dog"). Nell'apprendimento non supervisionato, non ci sono etichette — l'algoritmo scopre una struttura nascosta da solo, come raggruppare i clienti per pattern di acquisto (clustering).</p>
-<p><strong>Concept Tested:</strong> Supervised vs Unsupervised Learning</p>
+<p><strong>Concetto verificato:</strong> Apprendimento supervisionato e non supervisionato</p>
 </details>
 <hr />
 <h4 id="2-qual-e-lo-scopo-del-validation-set-nel-machine-learning">2. Qual è lo scopo del validation set nel machine learning?<a class="headerlink" href="#2-qual-e-lo-scopo-del-validation-set-nel-machine-learning" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Il validation set viene usato per monitorare le prestazioni durante il training. Dopo ogni epoch, valuti sul validation set (su cui il modello non si è mai allenato) per rilevare l'overfitting: se l'accuratezza di training continua a salire ma quella di validation si stabilizza o scende, il modello sta memorizzando invece di imparare. Il test set viene tenuto da parte fino alla fine.</p>
-<p><strong>Concept Tested:</strong> Train/Validation/Test Splits</p>
+<p><strong>Concetto verificato:</strong> Suddivisione in training, validazione e test</p>
 </details>
 <hr />
 <h4 id="3-cose-loverfitting-nel-machine-learning">3. Cos'è l'overfitting nel machine learning?<a class="headerlink" href="#3-cose-loverfitting-nel-machine-learning" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. L'overfitting è come uno studente che memorizza le risposte dell'esame dell'anno scorso ma non capisce la materia — va benissimo sul vecchio test ma fallisce sulle nuove domande. Segnali di overfitting: l'accuratezza di training è molto alta (95%+) ma quella di validation è molto più bassa (65%). Il modello ha imparato il rumore nei dati di training invece del pattern generale.</p>
-<p><strong>Concept Tested:</strong> Overfitting</p>
+<p><strong>Concetto verificato:</strong> Overfitting</p>
 </details>
 <hr />
 <h4 id="4-cose-il-dataset-mnist">4. Cos'è il dataset MNIST?<a class="headerlink" href="#4-cose-il-dataset-mnist" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>A</strong>. MNIST contiene 70.000 immagini di cifre scritte a mano in scala di grigi: 60.000 per il training e 10.000 per il test. Ogni immagine è di 28x28 pixel (784 numeri da 0-255). È il "Hello, World!" del machine learning — un dataset ben compreso e gestibile che è perfetto per imparare e fare benchmark delle nuove tecniche.</p>
-<p><strong>Concept Tested:</strong> MNIST Dataset</p>
+<p><strong>Concetto verificato:</strong> Dataset MNIST</p>
 </details>
 <hr />
 <h4 id="5-cosa-significa-un-epoch-nel-training-di-una-rete-neurale">5. Cosa significa un epoch nel training di una rete neurale?<a class="headerlink" href="#5-cosa-significa-un-epoch-nel-training-di-una-rete-neurale" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Un epoch è un passaggio completo attraverso l'intero dataset di training. Se hai 60.000 esempi di training e ti alleni per 10 epoch, il modello vede ogni esempio di training 10 volte (in ordini diversi). Più epoch permettono al modello di affinare progressivamente i suoi pesi e migliorare l'accuratezza, anche se troppi epoch possono portare all'overfitting.</p>
-<p><strong>Concept Tested:</strong> Epoch</p>
+<p><strong>Concetto verificato:</strong> Epoca</p>
 </details>
 <hr />
 <h4 id="6-cosa-misura-la-funzione-di-loss-nel-machine-learning">6. Cosa misura la funzione di loss nel machine learning?<a class="headerlink" href="#6-cosa-misura-la-funzione-di-loss-nel-machine-learning" title="Permanent link">&para;</a></h4>
@@ -11775,7 +11775,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. La funzione di loss quantifica quanto sono sbagliate le previsioni del modello rispetto alle etichette corrette. Il training è il processo di aggiustare i pesi del modello per minimizzare la loss. Funzioni di loss comuni includono la cross-entropy (per la classificazione) e l'errore quadratico medio (per la regressione). Una loss più bassa significa previsioni più accurate.</p>
-<p><strong>Concept Tested:</strong> Loss Function</p>
+<p><strong>Concetto verificato:</strong> Funzione di perdita</p>
 </details>
 <hr />
 <h4 id="7-cosa-fa-la-funzione-di-attivazione-relu">7. Cosa fa la funzione di attivazione ReLU?<a class="headerlink" href="#7-cosa-fa-la-funzione-di-attivazione-relu" title="Permanent link">&para;</a></h4>
@@ -11790,7 +11790,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. ReLU (Rectified Linear Unit) è definita come <code>f(x) = max(0, x)</code>. Per qualsiasi input negativo, ReLU produce 0. Per qualsiasi input positivo, ReLU lo lascia passare invariato. ReLU viene usata nei layer nascosti perché introduce la non-linearità in modo efficiente, permettendo alla rete di imparare pattern complessi. Senza funzioni di attivazione, impilare i layer non sarebbe più potente di un singolo layer.</p>
-<p><strong>Concept Tested:</strong> ReLU Activation</p>
+<p><strong>Concetto verificato:</strong> Attivazione ReLU</p>
 </details>
 <hr />
 <h4 id="8-cosa-fa-la-funzione-di-attivazione-softmax">8. Cosa fa la funzione di attivazione softmax?<a class="headerlink" href="#8-cosa-fa-la-funzione-di-attivazione-softmax" title="Permanent link">&para;</a></h4>
@@ -11805,7 +11805,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Softmax converte un vettore di numeri grezzi (chiamati logits) in probabilità che sommano esattamente a 1.0. Per un classificatore di cifre a 10 classi, potrebbe produrre <code>[0.02, 0.85, 0.01, ..., 0.05]</code>, che significa "85% sicuro che sia la cifra 1." Softmax viene usata nel layer di output finale delle reti di classificazione multi-classe.</p>
-<p><strong>Concept Tested:</strong> Softmax Activation</p>
+<p><strong>Concetto verificato:</strong> Attivazione softmax</p>
 </details>
 <hr />
 <h4 id="9-qual-e-una-regola-fondamentale-riguardo-al-test-set">9. Qual è una regola fondamentale riguardo al test set?<a class="headerlink" href="#9-qual-e-una-regola-fondamentale-riguardo-al-test-set" title="Permanent link">&para;</a></h4>
@@ -11820,7 +11820,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Il test set deve essere trattato come dati completamente non visti. Se usi i risultati del test per aggiustare il tuo modello e riallenarlo, stai "barando" — il modello sembra generalizzare meglio di quanto effettivamente faccia. Il test set dovrebbe essere usato esattamente una volta, alla fine, per riportare le prestazioni reali del tuo modello. Usa il validation set per tutte le decisioni di ottimizzazione.</p>
-<p><strong>Concept Tested:</strong> Train/Validation/Test Splits</p>
+<p><strong>Concetto verificato:</strong> Suddivisione in training, validazione e test</p>
 </details>
 <hr />
 <h4 id="10-cose-un-dense-layer-in-una-rete-neurale">10. Cos'è un dense layer in una rete neurale?<a class="headerlink" href="#10-cose-un-dense-layer-in-una-rete-neurale" title="Permanent link">&para;</a></h4>
@@ -11835,7 +11835,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Un dense layer (completamente connesso) connette ogni neurone nel layer attuale a ogni neurone nel layer precedente. Questo è il tipo di layer più comune nelle reti neurali di base. Ogni connessione ha un peso apprendibile. Per un layer con 100 neuroni connesso a un layer precedente di 784 input, ci sono 100 × 784 = 78.400 parametri di peso solo in quel layer.</p>
-<p><strong>Concept Tested:</strong> Neural Network Layers</p>
+<p><strong>Concetto verificato:</strong> Livelli di una rete neurale</p>
 </details>
 <hr />
 

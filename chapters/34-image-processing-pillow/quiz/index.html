@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Installa con <code>pip install pillow</code> (il nome del pacchetto è minuscolo <code>pillow</code>), ma importa usando il nome originale: <code>from PIL import Image</code>. Questo perché Pillow è il fork mantenuto della più vecchia PIL (Python Imaging Library) e ha mantenuto lo stesso nome di import per compatibilità retroattiva.</p>
-<p><strong>Concept Tested:</strong> Importing Pillow</p>
+<p><strong>Concetto verificato:</strong> Importare Pillow</p>
 </details>
 <hr />
 <h4 id="2-cosa-restituisce-imgsize-per-unimmagine-pillow">2. Cosa restituisce <code>img.size</code> per un'immagine Pillow?<a class="headerlink" href="#2-cosa-restituisce-imgsize-per-unimmagine-pillow" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>img.size</code> restituisce una tupla <code>(width, height)</code> — le dimensioni dell'immagine in pixel. Per esempio, un'immagine 1920×1080 ha <code>img.size = (1920, 1080)</code>. Nota che questo è <code>(width, height)</code> — l'opposto degli array NumPy che usano <code>(rows, cols)</code> o <code>(height, width)</code>. Puoi anche accedere separatamente a <code>img.width</code> e <code>img.height</code>.</p>
-<p><strong>Concept Tested:</strong> Image Attributes</p>
+<p><strong>Concetto verificato:</strong> Attributi delle immagini</p>
 </details>
 <hr />
 <h4 id="3-cosa-significa-l-per-imagemode">3. Cosa significa <code>"L"</code> per <code>image.mode</code>?<a class="headerlink" href="#3-cosa-significa-l-per-imagemode" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Nel sistema di modalità di Pillow, <code>"L"</code> significa scala di grigi (luminanza). Ogni pixel è un singolo intero da 0 (nero) a 255 (bianco). <code>"RGB"</code> usa tre valori per pixel (rosso, verde, blu), e <code>"RGBA"</code> aggiunge un quarto canale alpha per la trasparenza. Converti in scala di grigi con <code>img.convert("L")</code>.</p>
-<p><strong>Concept Tested:</strong> Image Mode</p>
+<p><strong>Concetto verificato:</strong> Modalità dell'immagine</p>
 </details>
 <hr />
 <h4 id="4-quali-sono-i-valori-rgb-per-il-bianco-puro">4. Quali sono i valori RGB per il bianco puro?<a class="headerlink" href="#4-quali-sono-i-valori-rgb-per-il-bianco-puro" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. In modalità RGB, ogni canale (rosso, verde, blu) va da 0 a 255. Il bianco ha il valore massimo per tutti e tre i canali: <code>(255, 255, 255)</code>. Il nero è <code>(0, 0, 0)</code> — minimo per tutti i canali. Il grigio è quando tutti e tre sono uguali: <code>(128, 128, 128)</code>. Il rosso puro è <code>(255, 0, 0)</code>.</p>
-<p><strong>Concept Tested:</strong> Pixel Data</p>
+<p><strong>Concetto verificato:</strong> Dati dei pixel</p>
 </details>
 <hr />
 <h4 id="5-come-ridimensioni-unimmagine-pillow-a-200100-pixel">5. Come ridimensioni un'immagine Pillow a 200×100 pixel?<a class="headerlink" href="#5-come-ridimensioni-unimmagine-pillow-a-200100-pixel" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>img.resize((width, height))</code> restituisce un <strong>nuovo</strong> oggetto immagine alle dimensioni specificate — non modifica l'originale. Assegna sempre il risultato a una variabile. Per una migliore qualità quando riduci la dimensione, passa un filtro di resampling: <code>img.resize((200, 100), Image.LANCZOS)</code>. Non esiste un metodo <code>.scale()</code> o <code>.setSize()</code> in Pillow.</p>
-<p><strong>Concept Tested:</strong> Resizing Images</p>
+<p><strong>Concetto verificato:</strong> Ridimensionare le immagini</p>
 </details>
 <hr />
 <h4 id="6-cosa-fa-imgcropleft-top-right-bottom">6. Cosa fa <code>img.crop((left, top, right, bottom))</code>?<a class="headerlink" href="#6-cosa-fa-imgcropleft-top-right-bottom" title="Permanent link">&para;</a></h4>
@@ -11775,7 +11775,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>img.crop((left, top, right, bottom))</code> restituisce una nuova immagine che è un ritaglio rettangolare dell'originale. Le coordinate sono in pixel dall'angolo in alto a sinistra: <code>left</code> e <code>top</code> definiscono l'angolo in alto a sinistra del riquadro di ritaglio, e <code>right</code> e <code>bottom</code> definiscono l'angolo in basso a destra. Come <code>resize()</code>, <code>crop()</code> restituisce una nuova immagine senza cambiare l'originale.</p>
-<p><strong>Concept Tested:</strong> Cropping Images</p>
+<p><strong>Concetto verificato:</strong> Ritagliare le immagini</p>
 </details>
 <hr />
 <h4 id="7-come-salvi-unimmagine-pillow-come-file-png">7. Come salvi un'immagine Pillow come file PNG?<a class="headerlink" href="#7-come-salvi-unimmagine-pillow-come-file-png" title="Permanent link">&para;</a></h4>
@@ -11790,7 +11790,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. <code>img.save("filename.ext")</code> salva l'immagine in un file. Pillow determina il formato dall'estensione del file — <code>.png</code> salva come PNG, <code>.jpg</code> salva come JPEG, <code>.gif</code> salva come GIF, ecc. Non esiste una funzione <code>.export()</code>, <code>.write()</code>, o <code>Image.save()</code>.</p>
-<p><strong>Concept Tested:</strong> Saving Images</p>
+<p><strong>Concetto verificato:</strong> Salvare le immagini</p>
 </details>
 <hr />
 <h4 id="8-cosa-fa-imgconvertl">8. Cosa fa <code>img.convert("L")</code>?<a class="headerlink" href="#8-cosa-fa-imgconvertl" title="Permanent link">&para;</a></h4>
@@ -11805,7 +11805,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>img.convert("L")</code> restituisce una nuova immagine in modalità scala di grigi. Ogni pixel diventa un singolo valore di luminosità da 0 (nero) a 255 (bianco). Altre conversioni utili: <code>img.convert("RGB")</code> converte alla modalità colore standard, <code>img.convert("RGBA")</code> aggiunge un canale alpha (trasparenza), <code>img.convert("1")</code> converte in bianco e nero (binario).</p>
-<p><strong>Concept Tested:</strong> Color Mode Conversion</p>
+<p><strong>Concetto verificato:</strong> Conversione della modalità colore</p>
 </details>
 <hr />
 <h4 id="9-cosa-restituisce-imggetpixelx-y-per-unimmagine-rgb">9. Cosa restituisce <code>img.getpixel((x, y))</code> per un'immagine RGB?<a class="headerlink" href="#9-cosa-restituisce-imggetpixelx-y-per-unimmagine-rgb" title="Permanent link">&para;</a></h4>
@@ -11820,7 +11820,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>img.getpixel((x, y))</code> restituisce il colore del pixel alla colonna <code>x</code>, riga <code>y</code> come tupla. Per un'immagine RGB, questo è <code>(R, G, B)</code> — tre interi 0–255. Per RGBA, include un quarto valore alpha. Per la scala di grigi (modalità <code>"L"</code>), restituisce un singolo intero. Le coordinate sono <code>(x, y)</code> dove (0,0) è l'angolo in alto a sinistra.</p>
-<p><strong>Concept Tested:</strong> Pixel Data</p>
+<p><strong>Concetto verificato:</strong> Dati dei pixel</p>
 </details>
 <hr />
 <h4 id="10-qual-e-la-differenza-principale-tra-i-formati-immagine-jpeg-e-png">10. Qual è la differenza principale tra i formati immagine JPEG e PNG?<a class="headerlink" href="#10-qual-e-la-differenza-principale-tra-i-formati-immagine-jpeg-e-png" title="Permanent link">&para;</a></h4>
@@ -11835,7 +11835,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. JPEG usa la compressione lossy — scarta alcuni dati dell'immagine per ottenere dimensioni di file più piccole, il che va bene per le fotografie ma causa artefatti visibili con alta compressione. PNG usa la compressione lossless — nessun dato viene perso, e supporta la trasparenza (canale alpha). Usa JPEG per le foto dove la dimensione piccola del file è importante; usa PNG per i loghi, gli screenshot, e le immagini dove la qualità e la trasparenza sono importanti.</p>
-<p><strong>Concept Tested:</strong> Image Formats</p>
+<p><strong>Concetto verificato:</strong> Formati delle immagini</p>
 </details>
 <hr />
 

@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Una classe è un progetto o modello per creare oggetti. Definisce quali dati (attributi) e comportamenti (metodi) avrà ogni istanza di quella classe. Definisci una classe con la parola chiave <code>class</code>, e poi crei singoli oggetti (istanze) chiamando la classe come una funzione.</p>
-<p><strong>Concept Tested:</strong> class Keyword</p>
+<p><strong>Concetto verificato:</strong> Parola chiave class</p>
 </details>
 <hr />
 <h4 id="2-qual-e-lo-scopo-di-__init__-in-una-classe">2. Qual è lo scopo di <code>__init__()</code> in una classe?<a class="headerlink" href="#2-qual-e-lo-scopo-di-__init__-in-una-classe" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>__init__()</code> è il costruttore — un metodo speciale che Python chiama automaticamente ogni volta che crei una nuova istanza. Imposta lo stato iniziale dell'oggetto assegnando valori agli attributi con <code>self.nome_attributo = valore</code>. Senza <code>__init__()</code>, l'oggetto non avrebbe attributi finché non li imposti manualmente.</p>
-<p><strong>Concept Tested:</strong> <strong>init</strong>() Constructor</p>
+<p><strong>Concetto verificato:</strong> Costruttore <strong>init</strong>()</p>
 </details>
 <hr />
 <h4 id="3-a-cosa-si-riferisce-self-dentro-un-metodo-di-classe">3. A cosa si riferisce <code>self</code> dentro un metodo di classe?<a class="headerlink" href="#3-a-cosa-si-riferisce-self-dentro-un-metodo-di-classe" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>self</code> è un riferimento all'istanza particolare su cui viene chiamato il metodo. Quando scrivi <code>fido.bark()</code>, Python passa <code>fido</code> come argomento <code>self</code> automaticamente. Dentro <code>bark()</code>, <code>self.name</code> si riferisce a <code>fido.name</code>. Ogni metodo in una classe prende <code>self</code> come primo parametro, anche se Python lo riempie automaticamente — non lo passi mai tu stesso.</p>
-<p><strong>Concept Tested:</strong> self</p>
+<p><strong>Concetto verificato:</strong> self</p>
 </details>
 <hr />
 <h4 id="4-come-crei-unistanza-di-una-classe-chiamata-dog">4. Come crei un'istanza di una classe chiamata <code>Dog</code>?<a class="headerlink" href="#4-come-crei-unistanza-di-una-classe-chiamata-dog" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. Crei un'istanza chiamando la classe come una funzione con gli argomenti che <code>__init__()</code> si aspetta (dopo <code>self</code>). Python chiama automaticamente <code>__init__()</code> e restituisce una nuova istanza. A differenza di altri linguaggi, Python non usa la parola chiave <code>new</code> — chiami semplicemente il nome della classe con le parentesi.</p>
-<p><strong>Concept Tested:</strong> Creating Instances</p>
+<p><strong>Concetto verificato:</strong> Creare istanze</p>
 </details>
 <hr />
 <h4 id="5-per-cosa-si-usa-la-notazione-punto-con-gli-oggetti">5. Per cosa si usa la notazione punto con gli oggetti?<a class="headerlink" href="#5-per-cosa-si-usa-la-notazione-punto-con-gli-oggetti" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. La notazione punto (<code>oggetto.attributo</code> oppure <code>oggetto.metodo()</code>) è il modo in cui accedi ai dati memorizzati dentro un oggetto o chiami i comportamenti definiti su di esso. Per esempio, <code>fido.name</code> legge l'attributo <code>name</code>, e <code>fido.bark()</code> chiama il metodo <code>bark</code>. Hai usato la notazione punto fin dall'inizio con le stringhe (<code>"hello".upper()</code>), le liste (<code>items.append(x)</code>), e la tartaruga (<code>t.forward(100)</code>).</p>
-<p><strong>Concept Tested:</strong> Dot Notation</p>
+<p><strong>Concetto verificato:</strong> Notazione a punto</p>
 </details>
 <hr />
 <h4 id="6-cosa-controlla-__str__-in-una-classe">6. Cosa controlla <code>__str__()</code> in una classe?<a class="headerlink" href="#6-cosa-controlla-__str__-in-una-classe" title="Permanent link">&para;</a></h4>
@@ -11775,7 +11775,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>__str__()</code> definisce la rappresentazione in stringa leggibile dall'uomo di un oggetto. Senza di esso, <code>print(fido)</code> mostra qualcosa di poco utile come <code>&lt;__main__.Dog object at 0x10a3b2c&gt;</code>. Con <code>__str__()</code> che restituisce <code>f"Dog({self.name}, {self.breed})"</code>, <code>print(fido)</code> mostra invece <code>Dog(Fido, Labrador)</code>.</p>
-<p><strong>Concept Tested:</strong> <strong>str</strong>() Method</p>
+<p><strong>Concetto verificato:</strong> Metodo <strong>str</strong>()</p>
 </details>
 <hr />
 <h4 id="7-qual-e-la-differenza-tra-una-variabile-di-classe-e-una-variabile-di-istanza">7. Qual è la differenza tra una variabile di classe e una variabile di istanza?<a class="headerlink" href="#7-qual-e-la-differenza-tra-una-variabile-di-classe-e-una-variabile-di-istanza" title="Permanent link">&para;</a></h4>
@@ -11790,7 +11790,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Una variabile di istanza (<code>self.name = value</code>) appartiene a un oggetto specifico. Cambiarla su un'istanza non influenza nessun'altra. Una variabile di classe è definita nel corpo della classe (non dentro un metodo) ed è condivisa da tutte le istanze. Un uso comune delle variabili di classe è contare quante istanze sono state create.</p>
-<p><strong>Concept Tested:</strong> Class vs Instance Variables</p>
+<p><strong>Concetto verificato:</strong> Variabili di classe e variabili di istanza</p>
 </details>
 <hr />
 <h4 id="8-come-si-dichiara-leredita-in-python">8. Come si dichiara l'eredità in Python?<a class="headerlink" href="#8-come-si-dichiara-leredita-in-python" title="Permanent link">&para;</a></h4>
@@ -11805,7 +11805,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Metti il nome della classe genitore tra parentesi dopo il nome della sottoclasse: <code>class Puppy(Dog):</code>. La sottoclasse eredita automaticamente tutti gli attributi e i metodi dal genitore. Solo Python usa la sintassi <code>(ClasseGenitore)</code> per l'eredità; altri linguaggi usano <code>extends</code> o parole chiave simili.</p>
-<p><strong>Concept Tested:</strong> Inheritance</p>
+<p><strong>Concetto verificato:</strong> Ereditarietà</p>
 </details>
 <hr />
 <h4 id="9-cosa-fa-super-dentro-il-costruttore-di-una-sottoclasse">9. Cosa fa <code>super()</code> dentro il costruttore di una sottoclasse?<a class="headerlink" href="#9-cosa-fa-super-dentro-il-costruttore-di-una-sottoclasse" title="Permanent link">&para;</a></h4>
@@ -11820,7 +11820,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>super().__init__(...)</code> chiama il costruttore della classe genitore, così puoi eseguire il suo codice di impostazione senza riscriverlo. Questo è importante perché la sottoclasse ha bisogno anche degli attributi del genitore. Per esempio, se <code>Animal.__init__</code> imposta <code>self.name</code> e <code>self.sound</code>, chiamare <code>super().__init__(name, sound)</code> in una sottoclasse gestisce tutto questo automaticamente.</p>
-<p><strong>Concept Tested:</strong> super()</p>
+<p><strong>Concetto verificato:</strong> super()</p>
 </details>
 <hr />
 <h4 id="10-quale-convenzione-di-denominazione-usa-python-per-i-nomi-delle-classi">10. Quale convenzione di denominazione usa Python per i nomi delle classi?<a class="headerlink" href="#10-quale-convenzione-di-denominazione-usa-python-per-i-nomi-delle-classi" title="Permanent link">&para;</a></h4>
@@ -11835,7 +11835,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. I nomi delle classi Python usano il CamelCase (chiamato anche PascalCase) — ogni parola inizia con una lettera maiuscola e non ci sono underscore: <code>Dog</code>, <code>Student</code>, <code>BankAccount</code>, <code>LinkedList</code>. Questa è una convenzione della PEP 8 (la guida di stile di Python). Al contrario, i nomi di variabili e funzioni usano <code>snake_case</code>, e le costanti usano <code>ALL_CAPS</code>.</p>
-<p><strong>Concept Tested:</strong> CamelCase Naming Convention</p>
+<p><strong>Concetto verificato:</strong> Convenzione di nomi CamelCase</p>
 </details>
 <hr />
 

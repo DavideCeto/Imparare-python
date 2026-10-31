@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Le reti dense appiattiscono un'immagine in un vettore 1-D, perdendo tutte le relazioni spaziali tra i pixel. Le CNN fanno scorrere i kernel dei filtri attraverso l'immagine 2-D per rilevare pattern locali (bordi, angoli, forme). Lo stesso kernel rileva un pattern ovunque appaia — un "7" in alto a sinistra e in basso a destra vengono riconosciuti dallo stesso kernel. Questo si chiama invarianza alla traslazione.</p>
-<p><strong>Concept Tested:</strong> CNN vs Dense Networks</p>
+<p><strong>Concetto verificato:</strong> CNN e reti dense a confronto</p>
 </details>
 <hr />
 <h4 id="2-cosa-fa-un-layer-conv2d32-33">2. Cosa fa un layer <code>Conv2D(32, (3,3))</code>?<a class="headerlink" href="#2-cosa-fa-un-layer-conv2d32-33" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>Conv2D(filters, kernel_size)</code> crea <code>filters</code> kernel apprendibili, ognuno di dimensione <code>kernel_size × kernel_size</code>. Ogni kernel scorre attraverso l'intero input e produce una mappa di caratteristiche. <code>Conv2D(32, (3,3))</code> produce 32 mappe di caratteristiche — ognuna rilevando un pattern visivo diverso (bordi orizzontali, curve, angoli, ecc.).</p>
-<p><strong>Concept Tested:</strong> Conv2D Layer</p>
+<p><strong>Concetto verificato:</strong> Livello Conv2D</p>
 </details>
 <hr />
 <h4 id="3-cosa-fa-maxpooling2d22-a-una-mappa-di-caratteristiche">3. Cosa fa <code>MaxPooling2D((2,2))</code> a una mappa di caratteristiche?<a class="headerlink" href="#3-cosa-fa-maxpooling2d22-a-una-mappa-di-caratteristiche" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. MaxPooling divide la mappa di caratteristiche in blocchi non sovrapposti della dimensione data e mantiene il valore massimo di ogni blocco. <code>MaxPooling2D((2,2))</code> su una mappa di caratteristiche 24×24 produce una mappa di caratteristiche 12×12. Questo riduce il costo computazionale e crea un certo grado di invarianza di posizione — piccoli spostamenti nell'input producono lo stesso output di pooling.</p>
-<p><strong>Concept Tested:</strong> MaxPooling2D</p>
+<p><strong>Concetto verificato:</strong> MaxPooling2D</p>
 </details>
 <hr />
 <h4 id="4-cosa-fa-il-layer-flatten-in-una-cnn">4. Cosa fa il layer <code>Flatten()</code> in una CNN?<a class="headerlink" href="#4-cosa-fa-il-layer-flatten-in-una-cnn" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Dopo i layer convoluzionali e di pooling, i dati sono ancora 2-D (o a dimensionalità più alta). I layer densi richiedono input 1-D. <code>Flatten()</code> riforma il tensore multidimensionale in un vettore 1-D senza cambiare nessun valore. Per esempio, un output 5×5×64 diventa un vettore di lunghezza 5×5×64 = 1.600 valori.</p>
-<p><strong>Concept Tested:</strong> Flatten Layer</p>
+<p><strong>Concetto verificato:</strong> Livello Flatten</p>
 </details>
 <hr />
 <h4 id="5-cosa-fa-dropout05-durante-il-training">5. Cosa fa <code>Dropout(0.5)</code> durante il training?<a class="headerlink" href="#5-cosa-fa-dropout05-durante-il-training" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Dropout silenzia casualmente (imposta a zero) una frazione di neuroni durante ogni passo di training. Con <code>Dropout(0.5)</code>, il 50% dei neuroni viene disabilitato casualmente ogni volta. Questo impedisce alla rete di fare troppo affidamento su un singolo neurone, forzandola a sviluppare più percorsi indipendenti per rilevare ogni caratteristica. Al momento della previsione, Dropout viene automaticamente disabilitato e tutti i neuroni sono attivi.</p>
-<p><strong>Concept Tested:</strong> Dropout</p>
+<p><strong>Concetto verificato:</strong> Dropout</p>
 </details>
 <hr />
 <h4 id="6-cosa-configura-modelcompile">6. Cosa configura <code>model.compile()</code>?<a class="headerlink" href="#6-cosa-configura-modelcompile" title="Permanent link">&para;</a></h4>
@@ -11775,7 +11775,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>model.compile()</code> imposta tre scelte chiave di training prima che tu possa chiamare <code>model.fit()</code>: (1) l'optimizer — come il modello aggiorna i pesi (ad es., <code>"adam"</code>, <code>"sgd"</code>); (2) la funzione di loss — quale misura di errore minimizzare; e (3) le metriche da monitorare ma non ottimizzare (ad es., <code>"accuracy"</code>). Devi compilare prima di allenare.</p>
-<p><strong>Concept Tested:</strong> model.compile()</p>
+<p><strong>Concetto verificato:</strong> model.compile()</p>
 </details>
 <hr />
 <h4 id="7-cosa-fa-modelfit">7. Cosa fa <code>model.fit()</code>?<a class="headerlink" href="#7-cosa-fa-modelfit" title="Permanent link">&para;</a></h4>
@@ -11790,7 +11790,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>model.fit(x_train, y_train, epochs=10)</code> esegue il ciclo di training: per ogni epoch, passa tutti gli esempi di training attraverso il modello, calcola la loss, ed esegue l'optimizer per aggiornare i pesi. Restituisce un oggetto history contenente la loss e le metriche per ogni epoch. Usa <code>validation_split=0.1</code> per monitorare l'accuratezza di validation durante il training.</p>
-<p><strong>Concept Tested:</strong> model.fit()</p>
+<p><strong>Concetto verificato:</strong> model.fit()</p>
 </details>
 <hr />
 <h4 id="8-cosa-controlla-il-parametro-batch_size-in-modelfit">8. Cosa controlla il parametro batch_size in <code>model.fit()</code>?<a class="headerlink" href="#8-cosa-controlla-il-parametro-batch_size-in-modelfit" title="Permanent link">&para;</a></h4>
@@ -11805,7 +11805,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>batch_size</code> determina quanti esempi di training vengono raggruppati insieme per ogni aggiornamento dei pesi. Una dimensione del batch di 64 significa che il modello elabora 64 esempi, calcola la loss media, poi aggiorna i pesi una volta. Batch più piccoli danno aggiornamenti più rumorosi ma più frequenti; batch più grandi danno aggiornamenti più fluidi ma meno frequenti. Valori comuni sono 32, 64, e 128.</p>
-<p><strong>Concept Tested:</strong> Training with model.fit()</p>
+<p><strong>Concetto verificato:</strong> Addestramento con model.fit()</p>
 </details>
 <hr />
 <h4 id="9-cose-linvarianza-alla-traslazione-nelle-cnn">9. Cos'è l'invarianza alla traslazione nelle CNN?<a class="headerlink" href="#9-cose-linvarianza-alla-traslazione-nelle-cnn" title="Permanent link">&para;</a></h4>
@@ -11820,7 +11820,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. L'invarianza alla traslazione significa che una CNN può riconoscere una caratteristica — come la curva in cima a un "6" — che appaia in alto a sinistra o in basso a destra dell'immagine. Questo perché lo stesso kernel imparato viene condiviso e scansionato attraverso l'intera immagine. Le reti dense non hanno questa proprietà: ogni posizione nell'immagine ha pesi indipendenti, quindi la rete deve imparare separatamente ogni posizione.</p>
-<p><strong>Concept Tested:</strong> CNN Properties</p>
+<p><strong>Concetto verificato:</strong> Proprietà delle CNN</p>
 </details>
 <hr />
 <h4 id="10-per-cosa-si-usano-le-rnn-reti-neurali-ricorrenti">10. Per cosa si usano le RNN (Reti Neurali Ricorrenti)?<a class="headerlink" href="#10-per-cosa-si-usano-le-rnn-reti-neurali-ricorrenti" title="Permanent link">&para;</a></h4>
@@ -11835,7 +11835,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Le Reti Neurali Ricorrenti (RNN) elaborano sequenze dove l'ordine conta. A differenza dei layer densi o CNN, le RNN mantengono uno stato nascosto — una "memoria" che porta informazioni dall'inizio della sequenza ai passi successivi. Questo le rende adatte all'elaborazione del linguaggio naturale, al riconoscimento vocale, alla previsione delle serie temporali, e alla generazione musicale. Le LSTM (Long Short-Term Memory) sono una versione migliorata delle RNN che gestiscono sequenze più lunghe.</p>
-<p><strong>Concept Tested:</strong> RNNs and LSTMs</p>
+<p><strong>Concetto verificato:</strong> RNN e LSTM</p>
 </details>
 <hr />
 

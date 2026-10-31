@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Le stringhe Python (e la maggior parte delle sequenze Python) usano l'indicizzazione a base zero — il primo carattere è all'indice <code>0</code>, il secondo all'<code>1</code>, e così via. Quindi per la stringa <code>"Python"</code>, <code>word[0]</code> dà <code>"P"</code>, <code>word[1]</code> dà <code>"y"</code>, e <code>word[5]</code> dà <code>"n"</code>.</p>
-<p><strong>Concept Tested:</strong> String Indexing</p>
+<p><strong>Concetto verificato:</strong> Indici delle stringhe</p>
 </details>
 <hr />
 <h4 id="2-cosa-restituisce-python-1">2. Cosa restituisce <code>"Python"[-1]</code>?<a class="headerlink" href="#2-cosa-restituisce-python-1" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Gli indici negativi contano all'indietro dalla fine della stringa. L'indice <code>-1</code> è l'ultimo carattere, <code>-2</code> è il penultimo, e così via. Per <code>"Python"</code>, l'indice <code>-1</code> è <code>"n"</code>. Questo è comodo quando vuoi l'ultimo carattere senza conoscere la lunghezza della stringa.</p>
-<p><strong>Concept Tested:</strong> String Indexing</p>
+<p><strong>Concetto verificato:</strong> Indici delle stringhe</p>
 </details>
 <hr />
 <h4 id="3-cosa-restituisce-programming04">3. Cosa restituisce <code>"programming"[0:4]</code>?<a class="headerlink" href="#3-cosa-restituisce-programming04" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>A</strong>. Lo slicing delle stringhe <code>[start:end]</code> restituisce i caratteri dall'indice <code>start</code> fino a, ma NON includendo, l'indice <code>end</code>. <code>"programming"[0:4]</code> dà i caratteri agli indici 0, 1, 2, e 3 — che sono <code>p</code>, <code>r</code>, <code>o</code>, <code>g</code> — formando <code>"prog"</code>. Il carattere all'indice 4 (<code>a</code>) non è incluso.</p>
-<p><strong>Concept Tested:</strong> String Slicing</p>
+<p><strong>Concetto verificato:</strong> Slicing delle stringhe</p>
 </details>
 <hr />
 <h4 id="4-cosa-restituisce-hello-worldsplit">4. Cosa restituisce <code>"hello world".split()</code>?<a class="headerlink" href="#4-cosa-restituisce-hello-worldsplit" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>split()</code> senza argomento divide una stringa su ogni spazio bianco e restituisce una lista dei pezzi. <code>"hello world".split()</code> restituisce la lista <code>["hello", "world"]</code>. Puoi anche dividere su un carattere specifico: <code>"a,b,c".split(",")</code> restituisce <code>["a", "b", "c"]</code>.</p>
-<p><strong>Concept Tested:</strong> split() Method</p>
+<p><strong>Concetto verificato:</strong> Metodo split()</p>
 </details>
 <hr />
 <h4 id="5-cosa-restituisce-joina-b-c">5. Cosa restituisce <code>"-".join(["a", "b", "c"])</code>?<a class="headerlink" href="#5-cosa-restituisce-joina-b-c" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>A</strong>. <code>join()</code> incolla insieme una lista di stringhe usando la stringa su cui viene chiamato come separatore. <code>"-".join(["a", "b", "c"])</code> restituisce <code>"a-b-c"</code>. Il separatore appare tra gli elementi ma non all'inizio o alla fine. <code>join()</code> è l'opposto di <code>split()</code>.</p>
-<p><strong>Concept Tested:</strong> join() Method</p>
+<p><strong>Concetto verificato:</strong> Metodo join()</p>
 </details>
 <hr />
 <h4 id="6-cosa-restituisce-the-fox-ranreplacefox-dog">6. Cosa restituisce <code>"the fox ran".replace("fox", "dog")</code>?<a class="headerlink" href="#6-cosa-restituisce-the-fox-ranreplacefox-dog" title="Permanent link">&para;</a></h4>
@@ -11775,7 +11775,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>replace(old, new)</code> restituisce una nuova stringa con ogni occorrenza di <code>old</code> sostituita da <code>new</code>. <code>"the fox ran".replace("fox", "dog")</code> restituisce <code>"the dog ran"</code>. Nota che le stringhe sono immutabili — <code>replace()</code> non cambia la stringa originale; ne restituisce una nuova.</p>
-<p><strong>Concept Tested:</strong> replace() Method</p>
+<p><strong>Concetto verificato:</strong> Metodo replace()</p>
 </details>
 <hr />
 <h4 id="7-cosa-restituisce-reportpdfendswithpdf">7. Cosa restituisce <code>"report.pdf".endswith(".pdf")</code>?<a class="headerlink" href="#7-cosa-restituisce-reportpdfendswithpdf" title="Permanent link">&para;</a></h4>
@@ -11790,7 +11790,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>endswith(suffix)</code> restituisce <code>True</code> se la stringa finisce con il suffisso dato, <code>False</code> altrimenti. <code>"report.pdf".endswith(".pdf")</code> restituisce <code>True</code> perché la stringa finisce davvero con <code>".pdf"</code>. Questo è molto utile per controllare le estensioni dei file, le terminazioni degli URL, e altri pattern di suffisso.</p>
-<p><strong>Concept Tested:</strong> String Search Methods</p>
+<p><strong>Concetto verificato:</strong> Metodi di ricerca nelle stringhe</p>
 </details>
 <hr />
 <h4 id="8-cose-una-f-string-in-python">8. Cos'è una f-string in Python?<a class="headerlink" href="#8-cose-una-f-string-in-python" title="Permanent link">&para;</a></h4>
@@ -11805,7 +11805,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Una f-string (letterale di stringa formattato) si crea mettendo <code>f</code> prima della virgoletta di apertura: <code>f"Ciao, {name}!"</code>. Qualsiasi espressione dentro <code>{}</code> viene valutata e inserita nella stringa. Le f-string eliminano il bisogno di convertire i numeri con <code>str()</code> prima di unirli e sono molto più leggibili della concatenazione.</p>
-<p><strong>Concept Tested:</strong> f-Strings</p>
+<p><strong>Concetto verificato:</strong> f-string</p>
 </details>
 <hr />
 <h4 id="9-cosa-produce-fscore-951f">9. Cosa produce <code>f"Score: {95:.1f}%"</code>?<a class="headerlink" href="#9-cosa-produce-fscore-951f" title="Permanent link">&para;</a></h4>
@@ -11820,7 +11820,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. La specifica di formato <code>:.1f</code> dentro una f-string formatta un numero come un float con esattamente 1 cifra decimale. <code>95</code> formattato come <code>:.1f</code> diventa <code>95.0</code>. Quindi <code>f"Score: {95:.1f}%"</code> produce <code>"Score: 95.0%"</code>. Specifiche di formato come <code>.2f</code> (2 cifre decimali) o <code>.0f</code> (nessuna cifra decimale) ti danno un controllo preciso sulla visualizzazione numerica.</p>
-<p><strong>Concept Tested:</strong> f-Strings</p>
+<p><strong>Concetto verificato:</strong> f-string</p>
 </details>
 <hr />
 <h4 id="10-cosa-restituisce-sfindxyz-quando-xyz-non-viene-trovato-nella-stringa-s">10. Cosa restituisce <code>s.find("xyz")</code> quando <code>"xyz"</code> non viene trovato nella stringa <code>s</code>?<a class="headerlink" href="#10-cosa-restituisce-sfindxyz-quando-xyz-non-viene-trovato-nella-stringa-s" title="Permanent link">&para;</a></h4>
@@ -11835,7 +11835,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. <code>find()</code> restituisce l'indice della prima occorrenza della stringa cercata. Se la stringa cercata non viene trovata, <code>find()</code> restituisce <code>-1</code> invece di generare un errore. Questo ti permette di controllare il risultato: <code>if s.find("xyz") != -1:</code> significa "se xyz è stato trovato." L'operatore <code>in</code> (<code>"xyz" in s</code>) è un altro modo comune per controllare senza preoccuparsi dell'indice.</p>
-<p><strong>Concept Tested:</strong> String Search Methods</p>
+<p><strong>Concetto verificato:</strong> Metodi di ricerca nelle stringhe</p>
 </details>
 <hr />
 

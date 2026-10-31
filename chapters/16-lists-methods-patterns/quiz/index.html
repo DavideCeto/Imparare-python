@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>append(x)</code> aggiunge un singolo elemento alla <strong>fine</strong> di una lista esistente, modificandola sul posto. Se <code>fruits = ["apple", "banana"]</code>, dopo <code>fruits.append("mango")</code> la lista diventa <code>["apple", "banana", "mango"]</code>. Usa invece <code>insert(i, x)</code> se vuoi aggiungere l'elemento in una posizione specifica.</p>
-<p><strong>Concept Tested:</strong> append() Method</p>
+<p><strong>Concetto verificato:</strong> Metodo append()</p>
 </details>
 <hr />
 <h4 id="2-cosa-fa-itemsinsert1-kiwi-a-items-apple-banana">2. Cosa fa <code>items.insert(1, "kiwi")</code> a <code>items = ["apple", "banana"]</code>?<a class="headerlink" href="#2-cosa-fa-itemsinsert1-kiwi-a-items-apple-banana" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>insert(i, x)</code> inserisce l'elemento <code>x</code> <strong>prima</strong> dell'elemento attualmente all'indice <code>i</code>. Con <code>items = ["apple", "banana"]</code>, chiamare <code>items.insert(1, "kiwi")</code> posiziona <code>"kiwi"</code> all'indice 1 e spinge <code>"banana"</code> all'indice 2: <code>["apple", "kiwi", "banana"]</code>. La lista cresce di un elemento.</p>
-<p><strong>Concept Tested:</strong> insert() Method</p>
+<p><strong>Concetto verificato:</strong> Metodo insert()</p>
 </details>
 <hr />
 <h4 id="3-cosa-fa-itemspop">3. Cosa fa <code>items.pop()</code>?<a class="headerlink" href="#3-cosa-fa-itemspop" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>pop()</code> senza argomento rimuove e restituisce l'<strong>ultimo</strong> elemento nella lista. Puoi anche usare <code>pop(i)</code> per rimuovere e restituire l'elemento a un indice specifico. Questo rende <code>pop()</code> molto utile per implementare le pile (ultimo entrato, primo uscito), dove lavori sempre con l'elemento in cima (l'ultimo).</p>
-<p><strong>Concept Tested:</strong> pop() Method</p>
+<p><strong>Concetto verificato:</strong> Metodo pop()</p>
 </details>
 <hr />
 <h4 id="4-cosa-fa-scoressort-a-scores-73-100-87-55">4. Cosa fa <code>scores.sort()</code> a <code>scores = [73, 100, 87, 55]</code>?<a class="headerlink" href="#4-cosa-fa-scoressort-a-scores-73-100-87-55" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>sort()</code> riorganizza gli elementi della lista <strong>sul posto</strong> in ordine crescente (dal più piccolo per i numeri, alfabetico per le stringhe). Dopo <code>scores.sort()</code>, <code>scores</code> stesso diventa <code>[55, 73, 87, 100]</code>. NON restituisce una nuova lista — se scrivi <code>result = scores.sort()</code>, <code>result</code> sarà <code>None</code>.</p>
-<p><strong>Concept Tested:</strong> sort() Method</p>
+<p><strong>Concetto verificato:</strong> Metodo sort()</p>
 </details>
 <hr />
 <h4 id="5-qual-e-il-risultato-di-s-2-for-s-in-1-2-3">5. Qual è il risultato di <code>[s * 2 for s in [1, 2, 3]]</code>?<a class="headerlink" href="#5-qual-e-il-risultato-di-s-2-for-s-in-1-2-3" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Questa è una list comprehension — costruisce una nuova lista applicando un'espressione (<code>s * 2</code>) a ogni elemento della lista sorgente <code>[1, 2, 3]</code>. Il risultato è <code>[2, 4, 6]</code>. Le list comprehension sono un modo conciso e leggibile per trasformare le liste senza scrivere un ciclo completo.</p>
-<p><strong>Concept Tested:</strong> List Comprehensions</p>
+<p><strong>Concetto verificato:</strong> List comprehension</p>
 </details>
 <hr />
 <h4 id="6-cosa-produce-la-seguente-list-comprehension">6. Cosa produce la seguente list comprehension?<a class="headerlink" href="#6-cosa-produce-la-seguente-list-comprehension" title="Permanent link">&para;</a></h4>
@@ -11777,7 +11777,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. La clausola <code>if</code> in una list comprehension agisce come un filtro — solo gli elementi per cui la condizione è <code>True</code> vengono inclusi nel risultato. <code>s &gt;= 70</code> è <code>True</code> per <code>80</code> e <code>90</code>, quindi solo questi due valori appaiono nella lista di output. Questo è un pattern molto comune per filtrare i dati.</p>
-<p><strong>Concept Tested:</strong> List Comprehensions</p>
+<p><strong>Concetto verificato:</strong> List comprehension</p>
 </details>
 <hr />
 <h4 id="7-cosa-fa-colorsremovered-se-colors-red-blue-red">7. Cosa fa <code>colors.remove("red")</code> se <code>colors = ["red", "blue", "red"]</code>?<a class="headerlink" href="#7-cosa-fa-colorsremovered-se-colors-red-blue-red" title="Permanent link">&para;</a></h4>
@@ -11792,7 +11792,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>remove(x)</code> cerca e rimuove la <strong>prima</strong> occorrenza del valore <code>x</code>. Dopo <code>colors.remove("red")</code>, la lista diventa <code>["blue", "red"]</code> — il secondo <code>"red"</code> resta. Se <code>x</code> non è affatto nella lista, <code>remove()</code> genera un <code>ValueError</code>.</p>
-<p><strong>Concept Tested:</strong> remove() Method</p>
+<p><strong>Concetto verificato:</strong> Metodo remove()</p>
 </details>
 <hr />
 <h4 id="8-in-una-struttura-di-dati-a-pila-quale-elemento-viene-rimosso-per-primo">8. In una struttura di dati a pila, quale elemento viene rimosso per primo?<a class="headerlink" href="#8-in-una-struttura-di-dati-a-pila-quale-elemento-viene-rimosso-per-primo" title="Permanent link">&para;</a></h4>
@@ -11807,7 +11807,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. Una pila segue il principio LIFO (Last In, First Out) — l'elemento aggiunto più di recente è il primo a essere rimosso. Implementi una pila in Python con una lista: <code>append()</code> per impilare gli elementi in cima e <code>pop()</code> per rimuovere gli elementi dalla cima. Pensa a una pila di piatti — prendi sempre quello in cima per primo.</p>
-<p><strong>Concept Tested:</strong> Stack Pattern</p>
+<p><strong>Concetto verificato:</strong> Schema della pila</p>
 </details>
 <hr />
 <h4 id="9-come-trovi-quante-volte-appare-il-valore-5-in-numbers-5-3-5-8-5">9. Come trovi quante volte appare il valore <code>5</code> in <code>numbers = [5, 3, 5, 8, 5]</code>?<a class="headerlink" href="#9-come-trovi-quante-volte-appare-il-valore-5-in-numbers-5-3-5-8-5" title="Permanent link">&para;</a></h4>
@@ -11822,7 +11822,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>count(x)</code> restituisce il numero di volte che il valore <code>x</code> appare nella lista. <code>numbers.count(5)</code> restituirebbe <code>3</code> perché ci sono tre <code>5</code> nella lista. <code>index(x)</code> restituisce la posizione della prima occorrenza (non il conteggio). <code>find()</code> è un metodo delle stringhe, non delle liste.</p>
-<p><strong>Concept Tested:</strong> count() and index() Methods</p>
+<p><strong>Concetto verificato:</strong> Metodi count() e index()</p>
 </details>
 <hr />
 <h4 id="10-cosa-fa-my_listextendx-y-che-my_listappendx-y-non-fa">10. Cosa fa <code>my_list.extend(["x", "y"])</code> che <code>my_list.append(["x", "y"])</code> NON fa?<a class="headerlink" href="#10-cosa-fa-my_listextendx-y-che-my_listappendx-y-non-fa" title="Permanent link">&para;</a></h4>
@@ -11837,7 +11837,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>A</strong>. <code>extend(other_list)</code> scompone <code>other_list</code> e aggiunge ogni elemento individualmente alla fine. <code>append(other_list)</code> aggiunge l'intera lista come un singolo elemento (creando una lista annidata). Se <code>my_list = [1, 2]</code>, allora <code>extend([3, 4])</code> dà <code>[1, 2, 3, 4]</code>, mentre <code>append([3, 4])</code> dà <code>[1, 2, [3, 4]]</code>.</p>
-<p><strong>Concept Tested:</strong> extend() Method</p>
+<p><strong>Concetto verificato:</strong> Metodo extend()</p>
 </details>
 <hr />
 

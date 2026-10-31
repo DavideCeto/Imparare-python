@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. La ricorsione è quando una funzione chiama sé stessa. Ogni chiamata lavora su una versione più piccola o più semplice del problema, finché non raggiunge un punto di arresto (il caso base) e inizia a restituire valori lungo la catena. Pensa alle bambole russe matrioska — ognuna contiene una versione più piccola di sé stessa, fino a quella minuscola e solida al centro.</p>
-<p><strong>Concept Tested:</strong> Recursion Concept</p>
+<p><strong>Concetto verificato:</strong> Il concetto di ricorsione</p>
 </details>
 <hr />
 <h4 id="2-cose-un-caso-base-in-una-funzione-ricorsiva">2. Cos'è un caso base in una funzione ricorsiva?<a class="headerlink" href="#2-cose-un-caso-base-in-una-funzione-ricorsiva" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Il caso base è ciò che impedisce a una funzione ricorsiva di chiamare sé stessa per sempre. È una condizione che, quando vera, restituisce un valore direttamente invece di fare un'altra chiamata ricorsiva. Senza un caso base, Python chiamerebbe la funzione indefinitamente finché non genera un <code>RecursionError</code> (profondità massima di ricorsione superata).</p>
-<p><strong>Concept Tested:</strong> Base Case</p>
+<p><strong>Concetto verificato:</strong> Caso base</p>
 </details>
 <hr />
 <h4 id="3-cosa-restituisce-factorial5-se-factorialn-restituisce-n-factorialn-1-con-un-caso-base-di-factorial1-1">3. Cosa restituisce <code>factorial(5)</code> se <code>factorial(n)</code> restituisce <code>n * factorial(n-1)</code> con un caso base di <code>factorial(1) = 1</code>?<a class="headerlink" href="#3-cosa-restituisce-factorial5-se-factorialn-restituisce-n-factorialn-1-con-un-caso-base-di-factorial1-1" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>factorial(5)</code> si espande come: <code>5 * factorial(4)</code> → <code>5 * 4 * factorial(3)</code> → <code>5 * 4 * 3 * factorial(2)</code> → <code>5 * 4 * 3 * 2 * factorial(1)</code> → <code>5 * 4 * 3 * 2 * 1 = 120</code>. Il fattoriale (n!) moltiplica tutti gli interi positivi fino a n.</p>
-<p><strong>Concept Tested:</strong> Recursive Factorial</p>
+<p><strong>Concetto verificato:</strong> Fattoriale ricorsivo</p>
 </details>
 <hr />
 <h4 id="4-cosa-succede-se-una-funzione-ricorsiva-non-ha-un-caso-base">4. Cosa succede se una funzione ricorsiva non ha un caso base?<a class="headerlink" href="#4-cosa-succede-se-una-funzione-ricorsiva-non-ha-un-caso-base" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Senza un caso base, la funzione continua a chiamare sé stessa indefinitamente. Python limita lo stack delle chiamate a circa 1.000 chiamate annidate per default. Quando quel limite viene superato, Python genera <code>RecursionError: maximum recursion depth exceeded</code>. Assicurati sempre che la tua funzione ricorsiva abbia un caso base che verrà raggiunto alla fine.</p>
-<p><strong>Concept Tested:</strong> Base Case</p>
+<p><strong>Concetto verificato:</strong> Caso base</p>
 </details>
 <hr />
 <h4 id="5-cose-lo-stack-delle-chiamate-nel-contesto-della-ricorsione">5. Cos'è lo stack delle chiamate nel contesto della ricorsione?<a class="headerlink" href="#5-cose-lo-stack-delle-chiamate-nel-contesto-della-ricorsione" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Ogni volta che una funzione chiama sé stessa ricorsivamente, Python salva lo stato attuale (variabili locali, dove si è interrotta) sullo stack delle chiamate. Quando viene raggiunto il caso base, Python risale lo stack, riprendendo ogni stato salvato in ordine inverso. Lo stack delle chiamate cresce con ogni chiamata ricorsiva e si riduce quando le chiamate tornano.</p>
-<p><strong>Concept Tested:</strong> Call Stack</p>
+<p><strong>Concetto verificato:</strong> Pila delle chiamate</p>
 </details>
 <hr />
 <h4 id="6-cose-una-funzione-lambda-in-python">6. Cos'è una funzione lambda in Python?<a class="headerlink" href="#6-cose-una-funzione-lambda-in-python" title="Permanent link">&para;</a></h4>
@@ -11775,7 +11775,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Una lambda è una funzione anonima compatta: <code>lambda parametri: espressione</code>. Per esempio, <code>square = lambda x: x * x</code> crea una funzione su una riga che eleva al quadrato il suo input. Le lambda sono particolarmente utili quando hai bisogno di una funzione breve da passare come argomento a un'altra funzione (come <code>sorted()</code> con un argomento <code>key=</code>).</p>
-<p><strong>Concept Tested:</strong> Lambda Functions</p>
+<p><strong>Concetto verificato:</strong> Funzioni lambda</p>
 </details>
 <hr />
 <h4 id="7-cosa-fa-lambda-a-b-a-b">7. Cosa fa <code>lambda a, b: a + b</code>?<a class="headerlink" href="#7-cosa-fa-lambda-a-b-a-b" title="Permanent link">&para;</a></h4>
@@ -11790,7 +11790,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>lambda a, b: a + b</code> crea una funzione anonima con due parametri <code>a</code> e <code>b</code> che restituisce la loro somma. Le funzioni lambda possono prendere qualsiasi numero di parametri. Questa lambda equivale a <code>def add(a, b): return a + b</code>, solo scritta più compattamente su una riga.</p>
-<p><strong>Concept Tested:</strong> Lambda Functions</p>
+<p><strong>Concetto verificato:</strong> Funzioni lambda</p>
 </details>
 <hr />
 <h4 id="8-perche-la-ricorsione-e-particolarmente-adatta-a-disegnare-i-frattali">8. Perché la ricorsione è particolarmente adatta a disegnare i frattali?<a class="headerlink" href="#8-perche-la-ricorsione-e-particolarmente-adatta-a-disegnare-i-frattali" title="Permanent link">&para;</a></h4>
@@ -11805,7 +11805,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. I frattali sono autosimili — un ramo su un albero frattale sembra una versione più piccola dell'intero albero, che sembra una versione più piccola, e così via. Questo rispecchia perfettamente la struttura della ricorsione: disegna un ramo, poi chiama la stessa funzione per disegnare rami più piccoli alla punta, finché i rami non diventano troppo piccoli da vedere (il caso base).</p>
-<p><strong>Concept Tested:</strong> Fractal Tree</p>
+<p><strong>Concetto verificato:</strong> Albero frattale</p>
 </details>
 <hr />
 <h4 id="9-cosa-fa-diversamente-la-funzione-ricorsiva-countdownn-rispetto-a-un-conto-alla-rovescia-con-ciclo-for">9. Cosa fa diversamente la funzione ricorsiva <code>countdown(n)</code> rispetto a un conto alla rovescia con ciclo <code>for</code>?<a class="headerlink" href="#9-cosa-fa-diversamente-la-funzione-ricorsiva-countdownn-rispetto-a-un-conto-alla-rovescia-con-ciclo-for" title="Permanent link">&para;</a></h4>
@@ -11820,7 +11820,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Un conto alla rovescia ricorsivo chiama sé stesso con <code>n - 1</code> a ogni chiamata, affidandosi allo stack delle chiamate per tenere traccia di dove si trova. Un ciclo for usa una variabile contatore gestita dalla struttura del ciclo. Entrambi ottengono lo stesso risultato, ma usano meccanismi diversi. I cicli for sono spesso più efficienti e chiari per il conteggio semplice; la ricorsione risplende quando il problema ha una struttura naturalmente ricorsiva.</p>
-<p><strong>Concept Tested:</strong> Recursion Concept</p>
+<p><strong>Concetto verificato:</strong> Il concetto di ricorsione</p>
 </details>
 <hr />
 <h4 id="10-quale-delle-seguenti-definisce-correttamente-una-lambda-che-raddoppia-il-suo-input">10. Quale delle seguenti definisce correttamente una lambda che raddoppia il suo input?<a class="headerlink" href="#10-quale-delle-seguenti-definisce-correttamente-una-lambda-che-raddoppia-il-suo-input" title="Permanent link">&para;</a></h4>
@@ -11835,7 +11835,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. La sintassi corretta della lambda è <code>lambda parametri: espressione</code>. <code>lambda x: x * 2</code> crea una funzione che prende un argomento <code>x</code> e restituisce <code>x * 2</code>. L'opzione A manca del parametro <code>x</code>. L'opzione B mescola la sintassi di <code>def</code> e <code>lambda</code> in modo scorretto. L'opzione D usa <code>=&gt;</code> che non è Python valido (si usa in JavaScript).</p>
-<p><strong>Concept Tested:</strong> Lambda Functions</p>
+<p><strong>Concetto verificato:</strong> Funzioni lambda</p>
 </details>
 <hr />
 

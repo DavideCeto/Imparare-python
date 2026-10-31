@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. L'istruzione <code>with</code> è un context manager. Quando scrivi <code>with open("file.txt") as f:</code>, Python apre il file, esegue il blocco indentato, e chiude il file automaticamente quando il blocco finisce — anche se si verifica un errore dentro il blocco. Questo previene il bug comune di dimenticare di chiudere il file.</p>
-<p><strong>Concept Tested:</strong> with Statement</p>
+<p><strong>Concetto verificato:</strong> Istruzione with</p>
 </details>
 <hr />
 <h4 id="2-quale-modalita-di-file-dovresti-usare-per-aggiungere-contenuto-alla-fine-di-un-file-esistente-senza-eliminare-cio-che-ce-gia">2. Quale modalità di file dovresti usare per aggiungere contenuto alla fine di un file esistente senza eliminare ciò che c'è già?<a class="headerlink" href="#2-quale-modalita-di-file-dovresti-usare-per-aggiungere-contenuto-alla-fine-di-un-file-esistente-senza-eliminare-cio-che-ce-gia" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Aprire un file con <code>"a"</code> (modalità aggiunta/append) aggiunge nuovo contenuto alla fine del file esistente. La modalità <code>"w"</code> (scrittura) crea un nuovo file o sovrascrive l'intero contenuto esistente. La modalità <code>"r"</code> (lettura) permette solo di leggere — non puoi scriverci. Non esiste una modalità <code>"e"</code> in Python.</p>
-<p><strong>Concept Tested:</strong> File Modes</p>
+<p><strong>Concetto verificato:</strong> Modalità di apertura dei file</p>
 </details>
 <hr />
 <h4 id="3-cosa-fa-opendatatxt-w-se-datatxt-esiste-gia">3. Cosa fa <code>open("data.txt", "w")</code> se <code>data.txt</code> esiste già?<a class="headerlink" href="#3-cosa-fa-opendatatxt-w-se-datatxt-esiste-gia" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. La modalità scrittura (<code>"w"</code>) sovrascrive completamente il file. Se il file esiste già, il suo contenuto precedente viene eliminato e sostituito. Se il file non esiste, Python lo crea. Questo è il motivo per cui è importante usare <code>"a"</code> (modalità aggiunta) se vuoi preservare il contenuto esistente.</p>
-<p><strong>Concept Tested:</strong> File Modes</p>
+<p><strong>Concetto verificato:</strong> Modalità di apertura dei file</p>
 </details>
 <hr />
 <h4 id="4-perche-devi-aggiungere-n-quando-scrivi-righe-in-un-file-con-fwrite">4. Perché devi aggiungere <code>"\n"</code> quando scrivi righe in un file con <code>f.write()</code>?<a class="headerlink" href="#4-perche-devi-aggiungere-n-quando-scrivi-righe-in-un-file-con-fwrite" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. A differenza di <code>print()</code>, che aggiunge automaticamente un ritorno a capo alla fine di ogni chiamata, <code>f.write()</code> scrive esattamente ciò che gli dai — niente di più. Se vuoi che ogni pezzo di testo sia sulla sua propria riga nel file, devi includere <code>"\n"</code> alla fine: <code>f.write("Hello\n")</code>. Senza di esso, tutto il tuo testo finisce insieme su una riga.</p>
-<p><strong>Concept Tested:</strong> Writing to a File</p>
+<p><strong>Concetto verificato:</strong> Scrivere su un file</p>
 </details>
 <hr />
 <h4 id="5-cosa-restituisce-fread">5. Cosa restituisce <code>f.read()</code>?<a class="headerlink" href="#5-cosa-restituisce-fread" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>f.read()</code> legge l'intero file e restituisce tutto il suo contenuto come una grande stringa, inclusi tutti i caratteri di ritorno a capo <code>"\n"</code>. Per ottenere una lista con ogni riga come elemento separato, usa <code>f.readlines()</code>. Per elaborare una riga alla volta in modo efficiente (specialmente per file grandi), itera direttamente sull'oggetto file con <code>for line in f:</code>.</p>
-<p><strong>Concept Tested:</strong> Reading Files</p>
+<p><strong>Concetto verificato:</strong> Leggere i file</p>
 </details>
 <hr />
 <h4 id="6-qual-e-la-differenza-tra-fread-e-freadlines">6. Qual è la differenza tra <code>f.read()</code> e <code>f.readlines()</code>?<a class="headerlink" href="#6-qual-e-la-differenza-tra-fread-e-freadlines" title="Permanent link">&para;</a></h4>
@@ -11775,7 +11775,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>f.read()</code> restituisce l'intero file come una stringa. <code>f.readlines()</code> legge il file e restituisce una lista dove ogni elemento è una riga del file (con il carattere <code>"\n"</code> ancora attaccato). Entrambi richiedono un file aperto in modalità lettura. Usa <code>readlines()</code> quando vuoi elaborare ogni riga separatamente senza dividerla manualmente.</p>
-<p><strong>Concept Tested:</strong> readlines()</p>
+<p><strong>Concetto verificato:</strong> readlines()</p>
 </details>
 <hr />
 <h4 id="7-cosa-fa-r-modalita-lettura-se-il-file-non-esiste">7. Cosa fa <code>"r"</code> (modalità lettura) se il file non esiste?<a class="headerlink" href="#7-cosa-fa-r-modalita-lettura-se-il-file-non-esiste" title="Permanent link">&para;</a></h4>
@@ -11790,7 +11790,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. La modalità lettura (<code>"r"</code>) richiede che il file esista già. Se il file non viene trovato, Python genera <code>FileNotFoundError</code>. Puoi gestirlo con eleganza con un blocco <code>try/except FileNotFoundError:</code>. La modalità scrittura (<code>"w"</code>) e la modalità aggiunta (<code>"a"</code>) creano entrambe il file se non esiste.</p>
-<p><strong>Concept Tested:</strong> File Modes</p>
+<p><strong>Concetto verificato:</strong> Modalità di apertura dei file</p>
 </details>
 <hr />
 <h4 id="8-quale-modulo-python-importi-per-leggere-e-scrivere-file-csv">8. Quale modulo Python importi per leggere e scrivere file CSV?<a class="headerlink" href="#8-quale-modulo-python-importi-per-leggere-e-scrivere-file-csv" title="Permanent link">&para;</a></h4>
@@ -11805,7 +11805,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. La libreria standard di Python include il modulo <code>csv</code> per leggere e scrivere file CSV (Comma-Separated Values). Gestisce automaticamente casi difficili come le virgole dentro campi tra virgolette. Usa <code>csv.reader(f)</code> per leggere le righe e <code>csv.writer(f)</code> per scriverle. Non esiste un modulo <code>files</code>, <code>spreadsheet</code>, o <code>tabular</code> nella libreria standard.</p>
-<p><strong>Concept Tested:</strong> CSV Module</p>
+<p><strong>Concetto verificato:</strong> Modulo csv</p>
 </details>
 <hr />
 <h4 id="9-cosa-ti-da-ogni-iterazione-quando-fai-un-ciclo-su-un-oggetto-file-con-for-line-in-f">9. Cosa ti dà ogni iterazione quando fai un ciclo su un oggetto file con <code>for line in f:</code>?<a class="headerlink" href="#9-cosa-ti-da-ogni-iterazione-quando-fai-un-ciclo-su-un-oggetto-file-con-for-line-in-f" title="Permanent link">&para;</a></h4>
@@ -11820,7 +11820,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Iterare direttamente su un oggetto file con <code>for line in f:</code> ti dà una riga per iterazione come stringa. La riga include il carattere di ritorno a capo finale <code>"\n"</code> (eccetto forse l'ultima riga). Usa <code>line.strip()</code> per rimuovere gli spazi bianchi iniziali/finali incluso <code>"\n"</code>. Questo è efficiente in termini di memoria per i file grandi perché Python legge una riga alla volta invece di caricare tutto in una volta.</p>
-<p><strong>Concept Tested:</strong> Line Iteration</p>
+<p><strong>Concetto verificato:</strong> Leggere un file riga per riga</p>
 </details>
 <hr />
 <h4 id="10-cose-la-cartella-di-lavoro-attuale-current-working-directory">10. Cos'è la cartella di lavoro attuale (current working directory)?<a class="headerlink" href="#10-cose-la-cartella-di-lavoro-attuale-current-working-directory" title="Permanent link">&para;</a></h4>
@@ -11835,7 +11835,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. La cartella di lavoro attuale (CWD) è la cartella che Python usa come punto di partenza quando dai un nome di file senza un percorso completo. Se il tuo script è in <code>~/projects/</code> e scrivi <code>open("data.txt")</code>, Python cerca <code>data.txt</code> in <code>~/projects/</code>. Puoi controllare la CWD con <code>import os; print(os.getcwd())</code> e navigare nel terminale con <code>cd</code>.</p>
-<p><strong>Concept Tested:</strong> Current Working Directory</p>
+<p><strong>Concetto verificato:</strong> Cartella di lavoro corrente</p>
 </details>
 <hr />
 

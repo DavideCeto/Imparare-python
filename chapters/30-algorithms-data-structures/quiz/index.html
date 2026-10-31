@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. LIFO sta per "Last In, First Out" (ultimo entrato, primo uscito). In una pila, l'elemento aggiunto più di recente è il primo a essere rimosso — come una pila di piatti dove prendi sempre dalla cima. Le liste Python funzionano come pile usando <code>.append()</code> per fare push e <code>.pop()</code> per fare pop. Le code usano FIFO (First In, First Out).</p>
-<p><strong>Concept Tested:</strong> Stack (LIFO)</p>
+<p><strong>Concetto verificato:</strong> Pila (LIFO)</p>
 </details>
 <hr />
 <h4 id="2-cosa-significa-fifo-e-quale-struttura-di-dati-lo-usa">2. Cosa significa FIFO, e quale struttura di dati lo usa?<a class="headerlink" href="#2-cosa-significa-fifo-e-quale-struttura-di-dati-lo-usa" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>A</strong>. FIFO sta per "First In, First Out" (primo entrato, primo uscito). In una coda, il primo elemento aggiunto è il primo elemento rimosso — come una fila alla mensa dove la prima persona in fila viene servita per prima. <code>collections.deque</code> di Python è il modo efficiente di implementare una coda, usando <code>.append()</code> per fare enqueue e <code>.popleft()</code> per fare dequeue.</p>
-<p><strong>Concept Tested:</strong> Queue (FIFO)</p>
+<p><strong>Concetto verificato:</strong> Coda (FIFO)</p>
 </details>
 <hr />
 <h4 id="3-quale-struttura-di-dati-usa-bfs-per-decidere-quale-nodo-visitare-dopo">3. Quale struttura di dati usa BFS per decidere quale nodo visitare dopo?<a class="headerlink" href="#3-quale-struttura-di-dati-usa-bfs-per-decidere-quale-nodo-visitare-dopo" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. La Ricerca in Ampiezza (BFS) usa una coda per tracciare quali nodi visitare dopo. I nodi vengono messi in coda quando vengono scoperti e tolti dalla coda in ordine FIFO — quindi BFS esplora tutti i nodi a distanza 1 prima di qualsiasi a distanza 2, garantendo il percorso più corto nei grafi non pesati. DFS, al contrario, usa una pila o la ricorsione.</p>
-<p><strong>Concept Tested:</strong> BFS</p>
+<p><strong>Concetto verificato:</strong> BFS (ricerca in ampiezza)</p>
 </details>
 <hr />
 <h4 id="4-per-cosa-si-usa-una-lista-di-adiacenza">4. Per cosa si usa una lista di adiacenza?<a class="headerlink" href="#4-per-cosa-si-usa-una-lista-di-adiacenza" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Una lista di adiacenza rappresenta un grafo usando un dizionario: ogni chiave è un nodo (vertice) e il suo valore è una lista di nodi vicini (collegati da archi). Per esempio, <code>{"A": ["B", "C"], "B": ["A", "D"]}</code> significa che A si collega a B e C, e B si collega ad A e D. Questo è efficiente in termini di memoria per i grafi sparsi.</p>
-<p><strong>Concept Tested:</strong> Graph and Adjacency List</p>
+<p><strong>Concetto verificato:</strong> Grafo e lista di adiacenza</p>
 </details>
 <hr />
 <h4 id="5-qual-e-la-differenza-fondamentale-tra-bfs-e-dfs">5. Qual è la differenza fondamentale tra BFS e DFS?<a class="headerlink" href="#5-qual-e-la-differenza-fondamentale-tra-bfs-e-dfs" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. BFS (Ricerca in Ampiezza) esplora i vicini livello per livello — prima tutti i nodi a distanza 1, poi distanza 2, garantendo il percorso più corto in un grafo non pesato. Usa una coda. DFS (Ricerca in Profondità) va quanto più lontano possibile lungo un percorso prima di tornare indietro, usando una pila o la ricorsione. DFS usa meno memoria per i grafi profondi ma non garantisce il percorso più corto.</p>
-<p><strong>Concept Tested:</strong> BFS and DFS</p>
+<p><strong>Concetto verificato:</strong> BFS e DFS</p>
 </details>
 <hr />
 <h4 id="6-cosa-descrive-la-notazione-big-o">6. Cosa descrive la notazione Big-O?<a class="headerlink" href="#6-cosa-descrive-la-notazione-big-o" title="Permanent link">&para;</a></h4>
@@ -11775,7 +11775,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. La notazione Big-O descrive il tasso di crescita dei requisiti di tempo o memoria di un algoritmo all'aumentare della dimensione dell'input. Per esempio, O(n) significa che il tempo cresce linearmente — raddoppiare l'input raddoppia il tempo. O(n²) significa che il tempo cresce quadraticamente. Si concentra sul termine di crescita dominante e ignora le costanti, aiutandoti a confrontare gli algoritmi indipendentemente dalla velocità dell'hardware.</p>
-<p><strong>Concept Tested:</strong> Big-O Notation</p>
+<p><strong>Concetto verificato:</strong> Notazione O-grande</p>
 </details>
 <hr />
 <h4 id="7-qual-e-la-complessita-temporale-della-ricerca-binaria-su-una-lista-ordinata-di-n-elementi">7. Qual è la complessità temporale della ricerca binaria su una lista ordinata di n elementi?<a class="headerlink" href="#7-qual-e-la-complessita-temporale-della-ricerca-binaria-su-una-lista-ordinata-di-n-elementi" title="Permanent link">&para;</a></h4>
@@ -11790,7 +11790,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. La ricerca binaria funziona dimezzando ripetutamente lo spazio di ricerca. A ogni passo, controlla l'elemento centrale: se è troppo alto, elimina la metà superiore; se troppo basso, elimina la metà inferiore. Questo dà un tempo O(log n) — cercare in un milione di elementi richiede circa 20 passi (log₂(1.000.000) ≈ 20). La ricerca binaria richiede che la lista sia ordinata.</p>
-<p><strong>Concept Tested:</strong> Binary Search</p>
+<p><strong>Concetto verificato:</strong> Ricerca binaria</p>
 </details>
 <hr />
 <h4 id="8-come-funziona-il-bubble-sort">8. Come funziona il bubble sort?<a class="headerlink" href="#8-come-funziona-il-bubble-sort" title="Permanent link">&para;</a></h4>
@@ -11805,7 +11805,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Il bubble sort fa passaggi ripetuti attraverso la lista, confrontando coppie adiacenti e scambiandole se quella a sinistra è più grande di quella a destra. Dopo ogni passaggio, l'elemento non ordinato più grande è "risalito a bolla" alla sua posizione corretta. Il bubble sort è O(n²) — facile da capire ma lento per liste grandi. <code>sorted()</code> e <code>.sort()</code> built-in di Python sono molto più veloci per l'uso reale.</p>
-<p><strong>Concept Tested:</strong> Bubble Sort</p>
+<p><strong>Concetto verificato:</strong> Bubble sort</p>
 </details>
 <hr />
 <h4 id="9-cosa-deve-essere-vero-riguardo-a-una-lista-perche-la-ricerca-binaria-funzioni">9. Cosa deve essere vero riguardo a una lista perché la ricerca binaria funzioni?<a class="headerlink" href="#9-cosa-deve-essere-vero-riguardo-a-una-lista-perche-la-ricerca-binaria-funzioni" title="Permanent link">&para;</a></h4>
@@ -11820,7 +11820,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. La ricerca binaria si basa sul fatto che la lista sia ordinata. Confronta l'obiettivo con l'elemento centrale e decide quale metà cercare dopo. Se la lista fosse non ordinata, eliminare metà degli elementi non sarebbe valido — l'obiettivo potrebbe essere in entrambe le metà. La ricerca binaria su una lista non ordinata produce risultati scorretti.</p>
-<p><strong>Concept Tested:</strong> Binary Search</p>
+<p><strong>Concetto verificato:</strong> Ricerca binaria</p>
 </details>
 <hr />
 <h4 id="10-quale-struttura-di-dati-e-piu-appropriata-per-tracciare-la-cronologia-del-browser-dove-il-pulsante-indietro-ti-porta-alla-pagina-visitata-piu-di-recente">10. Quale struttura di dati è più appropriata per tracciare la cronologia del browser dove il pulsante indietro ti porta alla pagina visitata più di recente?<a class="headerlink" href="#10-quale-struttura-di-dati-e-piu-appropriata-per-tracciare-la-cronologia-del-browser-dove-il-pulsante-indietro-ti-porta-alla-pagina-visitata-piu-di-recente" title="Permanent link">&para;</a></h4>
@@ -11835,7 +11835,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. La cronologia del browser è un classico caso d'uso di una pila. Quando visiti una nuova pagina, viene spinta sulla pila. Quando clicchi Indietro, la pagina più recente viene tolta — Last In, First Out (LIFO). Una coda ti darebbe la pagina più vecchia prima (direzione sbagliata). Un grafo potrebbe modellare la navigazione tra le pagine, ma una pila è specificamente ciò che modella il pulsante Indietro.</p>
-<p><strong>Concept Tested:</strong> Stack (LIFO)</p>
+<p><strong>Concetto verificato:</strong> Pila (LIFO)</p>
 </details>
 <hr />
 

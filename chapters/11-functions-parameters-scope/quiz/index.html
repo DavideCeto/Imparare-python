@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Un valore predefinito di un parametro è definito nella riga <code>def</code> usando <code>parametro=predefinito</code>. Quando qualcuno chiama la funzione senza fornire quell'argomento, Python usa automaticamente il valore predefinito. Quando invece fornisce un valore, quel valore sovrascrive il predefinito. Questo rende le funzioni flessibili — funzionano con o senza certi argomenti.</p>
-<p><strong>Concept Tested:</strong> Default Parameter Values</p>
+<p><strong>Concetto verificato:</strong> Valori predefiniti dei parametri</p>
 </details>
 <hr />
 <h4 id="2-quale-chiamata-di-funzione-usa-un-argomento-keyword">2. Quale chiamata di funzione usa un argomento keyword?<a class="headerlink" href="#2-quale-chiamata-di-funzione-usa-un-argomento-keyword" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Un argomento keyword usa il nome del parametro seguito da <code>=</code> e un valore nella chiamata di funzione: <code>sides=6</code> e <code>color="red"</code>. Gli argomenti keyword possono essere forniti in qualsiasi ordine perché Python li associa per nome, non per posizione. L'opzione A usa argomenti posizionali, che devono essere nell'ordine corretto.</p>
-<p><strong>Concept Tested:</strong> Keyword Arguments</p>
+<p><strong>Concetto verificato:</strong> Argomenti con nome</p>
 </details>
 <hr />
 <h4 id="3-cose-lo-scope-di-una-variabile">3. Cos'è lo scope di una variabile?<a class="headerlink" href="#3-cose-lo-scope-di-una-variabile" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Lo scope descrive dove nel tuo programma una variabile è visibile e accessibile. Una variabile creata dentro una funzione ha scope <strong>locale</strong> — esiste solo mentre quella funzione gira. Una variabile creata fuori da tutte le funzioni ha scope <strong>globale</strong> — è visibile in tutto il programma.</p>
-<p><strong>Concept Tested:</strong> Local Scope and Global Scope</p>
+<p><strong>Concetto verificato:</strong> Scope locale e scope globale</p>
 </details>
 <hr />
 <h4 id="4-cosa-succede-quando-provi-a-usare-una-variabile-locale-fuori-dalla-funzione-che-lha-creata">4. Cosa succede quando provi a usare una variabile locale fuori dalla funzione che l'ha creata?<a class="headerlink" href="#4-cosa-succede-quando-provi-a-usare-una-variabile-locale-fuori-dalla-funzione-che-lha-creata" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Una variabile locale esiste solo mentre la sua funzione è in esecuzione. Quando la funzione finisce, la variabile locale scompare. Provare a usarla dopo causa un <code>NameError: name 'variable' is not defined</code>. Questo è voluto — le variabili locali prevengono conflitti di nomi tra funzioni.</p>
-<p><strong>Concept Tested:</strong> Local Scope and Global Scope</p>
+<p><strong>Concetto verificato:</strong> Scope locale e scope globale</p>
 </details>
 <hr />
 <h4 id="5-cosa-dice-a-python-la-parola-chiave-global-dentro-una-funzione">5. Cosa dice a Python la parola chiave <code>global</code> dentro una funzione?<a class="headerlink" href="#5-cosa-dice-a-python-la-parola-chiave-global-dentro-una-funzione" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Senza <code>global</code>, se assegni un valore a una variabile dentro una funzione, Python crea una nuova variabile locale che oscura quella globale. Scrivere <code>global score</code> dentro una funzione dice a Python "Intendo lo <code>score</code> che vive fuori, non uno locale nuovo" — quindi le assegnazioni a <code>score</code> dentro quella funzione cambiano davvero la variabile globale.</p>
-<p><strong>Concept Tested:</strong> global Keyword</p>
+<p><strong>Concetto verificato:</strong> Parola chiave global</p>
 </details>
 <hr />
 <h4 id="6-quale-output-produce-questo-programma">6. Quale output produce questo programma?<a class="headerlink" href="#6-quale-output-produce-questo-programma" title="Permanent link">&para;</a></h4>
@@ -11791,7 +11791,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Dentro <code>reset()</code>, <code>speed = 0</code> crea una <strong>nuova variabile locale</strong> chiamata <code>speed</code> — NON cambia lo <code>speed</code> globale. Quindi dentro la funzione, <code>speed</code> è 0. Ma fuori, lo <code>speed</code> globale è ancora 10. Questo è un conflitto di nomi comune che causa bug confusi; usare <code>global speed</code> dentro la funzione lo risolverebbe se davvero volessi cambiare il valore globale.</p>
-<p><strong>Concept Tested:</strong> Local Scope and Global Scope</p>
+<p><strong>Concetto verificato:</strong> Scope locale e scope globale</p>
 </details>
 <hr />
 <h4 id="7-per-convenzione-come-scrivono-i-programmatori-python-il-nome-di-una-costante">7. Per convenzione, come scrivono i programmatori Python il nome di una costante?<a class="headerlink" href="#7-per-convenzione-come-scrivono-i-programmatori-python-il-nome-di-una-costante" title="Permanent link">&para;</a></h4>
@@ -11806,7 +11806,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. I programmatori Python usano il MAIUSCOLO con underscore per segnalare che una variabile è una costante — un valore che non dovrebbe mai cambiare dopo essere stato impostato. Esempi: <code>MAX_SPEED = 10</code>, <code>CANVAS_WIDTH = 400</code>. Python non lo impone; è una convenzione di denominazione che dice agli altri programmatori "trattalo come una regola fissa."</p>
-<p><strong>Concept Tested:</strong> Constants by Convention</p>
+<p><strong>Concetto verificato:</strong> Costanti per convenzione</p>
 </details>
 <hr />
 <h4 id="8-quale-regola-si-applica-quando-definisci-una-funzione-che-ha-sia-parametri-obbligatori-sia-parametri-predefiniti">8. Quale regola si applica quando definisci una funzione che ha sia parametri obbligatori sia parametri predefiniti?<a class="headerlink" href="#8-quale-regola-si-applica-quando-definisci-una-funzione-che-ha-sia-parametri-obbligatori-sia-parametri-predefiniti" title="Permanent link">&para;</a></h4>
@@ -11821,7 +11821,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. I parametri obbligatori (quelli senza valori predefiniti) devono venire prima nella definizione della funzione, seguiti dai parametri con valori predefiniti. Per esempio: <code>def greet(name, greeting="Hello"):</code> è valido. Scrivere <code>def greet(greeting="Hello", name):</code> causerebbe un <code>SyntaxError</code> perché il parametro obbligatorio <code>name</code> viene dopo il parametro predefinito.</p>
-<p><strong>Concept Tested:</strong> Default Parameter Values</p>
+<p><strong>Concetto verificato:</strong> Valori predefiniti dei parametri</p>
 </details>
 <hr />
 <h4 id="9-cose-una-funzione-pura">9. Cos'è una funzione pura?<a class="headerlink" href="#9-cose-una-funzione-pura" title="Permanent link">&para;</a></h4>
@@ -11836,7 +11836,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Una funzione pura restituisce sempre lo stesso risultato dati gli stessi argomenti, e non cambia nessuna variabile fuori dal proprio scope (nessun effetto collaterale). Le funzioni pure sono più facili da testare e debuggare. Al contrario, una funzione che modifica una variabile globale, stampa sullo schermo, o disegna su un canvas ha effetti collaterali.</p>
-<p><strong>Concept Tested:</strong> Pure Functions vs Side Effects</p>
+<p><strong>Concetto verificato:</strong> Funzioni pure ed effetti collaterali</p>
 </details>
 <hr />
 <h4 id="10-qual-e-il-modo-piu-veloce-per-scambiare-i-valori-delle-variabili-a-e-b-in-python">10. Qual è il modo più veloce per scambiare i valori delle variabili <code>a</code> e <code>b</code> in Python?<a class="headerlink" href="#10-qual-e-il-modo-piu-veloce-per-scambiare-i-valori-delle-variabili-a-e-b-in-python" title="Permanent link">&para;</a></h4>
@@ -11851,7 +11851,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Python supporta l'assegnazione multipla che valuta completamente il lato destro prima di assegnare, rendendo <code>a, b = b, a</code> uno scambio sicuro in una riga. L'opzione A perde il valore originale di <code>a</code>. L'opzione B (l'approccio con variabile temporanea) è corretta ma richiede tre righe. L'opzione D non è una funzione Python built-in.</p>
-<p><strong>Concept Tested:</strong> Swapping Variables</p>
+<p><strong>Concetto verificato:</strong> Scambiare variabili</p>
 </details>
 <hr />
 

@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. La convenzione standard è <code>import matplotlib.pyplot as plt</code>. Il sottomodulo <code>pyplot</code> contiene tutte le funzioni per i grafici: <code>plt.plot()</code>, <code>plt.show()</code>, <code>plt.title()</code>, ecc. L'alias <code>plt</code> è usato universalmente nella comunità di data science Python — lo vedrai in ogni tutorial, manuale, ed esempio di codice professionale.</p>
-<p><strong>Concept Tested:</strong> Importing matplotlib</p>
+<p><strong>Concetto verificato:</strong> Importare matplotlib</p>
 </details>
 <hr />
 <h4 id="2-cosa-fa-pltshow">2. Cosa fa <code>plt.show()</code>?<a class="headerlink" href="#2-cosa-fa-pltshow" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>plt.show()</code> rende e mostra la finestra del grafico. Costruisci un grafico chiamando <code>plt.plot()</code>, <code>plt.title()</code>, <code>plt.xlabel()</code>, ecc., poi chiami <code>plt.show()</code> per mostrarlo effettivamente. Nei Jupyter Notebook, i grafici potrebbero rendersi automaticamente senza <code>plt.show()</code>, ma è sempre buona pratica includerlo.</p>
-<p><strong>Concept Tested:</strong> plt.show()</p>
+<p><strong>Concetto verificato:</strong> plt.show()</p>
 </details>
 <hr />
 <h4 id="3-quale-funzione-matplotlib-crea-uno-scatter-plot">3. Quale funzione matplotlib crea uno scatter plot?<a class="headerlink" href="#3-quale-funzione-matplotlib-crea-uno-scatter-plot" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>plt.scatter(x, y)</code> crea uno scatter plot — singoli punti disegnati senza collegare linee. Gli scatter plot sono utili per mostrare la relazione (correlazione) tra due variabili. Usa <code>plt.plot(x, y)</code> per i grafici a linee (che collegano i punti). Non esistono funzioni <code>dots()</code>, <code>points()</code>, o <code>spot()</code> in matplotlib.</p>
-<p><strong>Concept Tested:</strong> Scatter Plots</p>
+<p><strong>Concetto verificato:</strong> Grafici a dispersione</p>
 </details>
 <hr />
 <h4 id="4-cosa-fa-pltxlabeltime-seconds">4. Cosa fa <code>plt.xlabel("Time (seconds)")</code>?<a class="headerlink" href="#4-cosa-fa-pltxlabeltime-seconds" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>plt.xlabel("text")</code> aggiunge un'etichetta di testo sotto l'asse x (l'asse orizzontale) del grafico. In modo simile, <code>plt.ylabel("text")</code> etichetta l'asse y (asse verticale), e <code>plt.title("text")</code> imposta il titolo in cima. Etichetta sempre i tuoi assi così i lettori sanno cosa rappresentano i dati e quali unità vengono usate.</p>
-<p><strong>Concept Tested:</strong> Axis Labels and Titles</p>
+<p><strong>Concetto verificato:</strong> Etichette degli assi e titoli</p>
 </details>
 <hr />
 <h4 id="5-come-aggiungi-piu-linee-a-un-grafico">5. Come aggiungi più linee a un grafico?<a class="headerlink" href="#5-come-aggiungi-piu-linee-a-un-grafico" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Ogni chiamata a <code>plt.plot()</code> aggiunge un'altra linea al grafico attuale. Tutte le linee vengono combinate quando chiami <code>plt.show()</code>. Usa il parametro <code>label=</code> su ogni chiamata a <code>plt.plot()</code> e poi chiama <code>plt.legend()</code> per mostrare una legenda che identifica quale linea è quale.</p>
-<p><strong>Concept Tested:</strong> Multiple Lines</p>
+<p><strong>Concetto verificato:</strong> Più linee nello stesso grafico</p>
 </details>
 <hr />
 <h4 id="6-quale-tipo-di-grafico-e-migliore-per-mostrare-come-cambia-un-valore-continuo-nel-tempo">6. Quale tipo di grafico è migliore per mostrare come cambia un valore continuo nel tempo?<a class="headerlink" href="#6-quale-tipo-di-grafico-e-migliore-per-mostrare-come-cambia-un-valore-continuo-nel-tempo" title="Permanent link">&para;</a></h4>
@@ -11775,7 +11775,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. Un grafico a linee (creato con <code>plt.plot()</code>) è ideale per mostrare dati continui che cambiano nel tempo — come la temperatura durante una settimana, il prezzo di un'azione nel corso di mesi, o un esperimento di fisica durante i secondi. I grafici a barre confrontano categorie discrete. Gli istogrammi mostrano le distribuzioni di frequenza. I grafici a torta mostrano le proporzioni di un totale.</p>
-<p><strong>Concept Tested:</strong> Chart Types</p>
+<p><strong>Concetto verificato:</strong> Tipi di grafici</p>
 </details>
 <hr />
 <h4 id="7-cosa-fa-pltgridtrue">7. Cosa fa <code>plt.grid(True)</code>?<a class="headerlink" href="#7-cosa-fa-pltgridtrue" title="Permanent link">&para;</a></h4>
@@ -11790,7 +11790,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>plt.grid(True)</code> aggiunge leggere linee della griglia di sfondo al grafico, rendendo più facile leggere visivamente i valori approssimativi dal grafico. Chiamala dopo le tue chiamate a <code>plt.plot()</code> ma prima di <code>plt.show()</code>. La griglia non influenza i dati o i calcoli — è puramente un aiuto visivo per il lettore.</p>
-<p><strong>Concept Tested:</strong> Grid Lines</p>
+<p><strong>Concetto verificato:</strong> Linee della griglia</p>
 </details>
 <hr />
 <h4 id="8-cosa-fa-pltsavefigchartpng">8. Cosa fa <code>plt.savefig("chart.png")</code>?<a class="headerlink" href="#8-cosa-fa-pltsavefigchartpng" title="Permanent link">&para;</a></h4>
@@ -11805,7 +11805,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>plt.savefig("filename.png")</code> salva il grafico in un file immagine. Chiamala prima di <code>plt.show()</code> (o invece di essa). Puoi salvare come PNG, PDF, SVG, o altri formati cambiando l'estensione del file. Questo è essenziale per includere grafici in report, siti web, o condividere risultati senza richiedere che il destinatario abbia matplotlib installato.</p>
-<p><strong>Concept Tested:</strong> Saving Figures</p>
+<p><strong>Concetto verificato:</strong> Salvare i grafici</p>
 </details>
 <hr />
 <h4 id="9-cosa-mostra-un-grafico-a-istogramma">9. Cosa mostra un grafico a istogramma?<a class="headerlink" href="#9-cosa-mostra-un-grafico-a-istogramma" title="Permanent link">&para;</a></h4>
@@ -11820,7 +11820,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Un istogramma (creato con <code>plt.hist()</code>) mostra quanto frequentemente i valori rientrano in intervalli (chiamati bin). Per esempio, un istogramma dei punteggi degli studenti mostra quanti studenti hanno ottenuto 60-70, 70-80, 80-90, ecc. Rivela la forma della distribuzione dei dati — se è simmetrica, asimmetrica, o ha valori anomali. I grafici a barre confrontano categorie distinte; gli istogrammi mostrano distribuzioni di valori continui.</p>
-<p><strong>Concept Tested:</strong> Histograms</p>
+<p><strong>Concetto verificato:</strong> Istogrammi</p>
 </details>
 <hr />
 <h4 id="10-cosa-crea-pltsubplots1-2">10. Cosa crea <code>plt.subplots(1, 2)</code>?<a class="headerlink" href="#10-cosa-crea-pltsubplots1-2" title="Permanent link">&para;</a></h4>
@@ -11835,7 +11835,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>fig, axes = plt.subplots(rows, cols)</code> crea una figura con una griglia di pannelli di grafici (sottografici). <code>plt.subplots(1, 2)</code> crea una riga e due colonne — due grafici fianco a fianco. Poi disegni su ciascuno con <code>axes[0].plot(...)</code> e <code>axes[1].plot(...)</code>. Questo è come confronti insiemi di dati correlati in una singola figura.</p>
-<p><strong>Concept Tested:</strong> Subplots</p>
+<p><strong>Concetto verificato:</strong> Sottografici (subplot)</p>
 </details>
 <hr />
 

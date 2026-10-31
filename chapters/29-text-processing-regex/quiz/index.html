@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. La libreria standard di Python include il modulo <code>re</code> per le espressioni regolari. Importalo con <code>import re</code>. Le funzioni principali sono <code>re.search()</code>, <code>re.findall()</code>, <code>re.split()</code>, e <code>re.sub()</code>. Le espressioni regolari sono pattern che scrivi per cercare, far corrispondere, dividere, o sostituire il testo in modi potenti che richiederebbero molte righe di metodi delle stringhe per essere replicati.</p>
-<p><strong>Concept Tested:</strong> re Module</p>
+<p><strong>Concetto verificato:</strong> Modulo re</p>
 </details>
 <hr />
 <h4 id="2-perche-dovresti-usare-le-stringhe-raw-r-per-i-pattern-regex">2. Perché dovresti usare le stringhe raw (<code>r"..."</code>) per i pattern regex?<a class="headerlink" href="#2-perche-dovresti-usare-le-stringhe-raw-r-per-i-pattern-regex" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. I pattern regex usano molte sequenze con barra inversa: <code>\d</code> per cifra, <code>\w</code> per carattere di parola, <code>\s</code> per spazio bianco. In una normale stringa Python, la barra inversa inizia sequenze di escape (<code>\n</code> = ritorno a capo). Una stringa raw (<code>r"..."</code>) dice a Python di non elaborare le barre inverse, così <code>r"\d"</code> passa <code>\d</code> letteralmente al motore regex. Usa sempre <code>r"..."</code> per i pattern regex.</p>
-<p><strong>Concept Tested:</strong> Raw Strings for Regex</p>
+<p><strong>Concetto verificato:</strong> Stringhe raw per le regex</p>
 </details>
 <hr />
 <h4 id="3-a-cosa-corrisponde-il-pattern-regex-d">3. A cosa corrisponde il pattern regex <code>\d</code>?<a class="headerlink" href="#3-a-cosa-corrisponde-il-pattern-regex-d" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>\d</code> corrisponde a qualsiasi singolo carattere cifra da 0 a 9. Per far corrispondere un carattere di parola (lettere, cifre, underscore), usa <code>\w</code>. Per far corrispondere uno spazio bianco, usa <code>\s</code>. Le versioni maiuscole (<code>\D</code>, <code>\W</code>, <code>\S</code>) corrispondono all'opposto — qualsiasi cosa che NON sia rispettivamente una cifra, un carattere di parola, o uno spazio bianco.</p>
-<p><strong>Concept Tested:</strong> Pattern Elements</p>
+<p><strong>Concetto verificato:</strong> Elementi delle espressioni regolari</p>
 </details>
 <hr />
 <h4 id="4-cosa-restituisce-researchrd3-d4-call-555-1234">4. Cosa restituisce <code>re.search(r"\d{3}-\d{4}", "Call 555-1234!")</code>?<a class="headerlink" href="#4-cosa-restituisce-researchrd3-d4-call-555-1234" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>re.search()</code> restituisce un <strong>oggetto match</strong> se il pattern viene trovato ovunque nel testo, oppure <code>None</code> se non trovato. Non restituisce un semplice booleano o il testo trovato direttamente. Per ottenere la stringa effettivamente trovata, chiama <code>.group()</code> sull'oggetto match: <code>match.group()</code> restituirebbe <code>"555-1234"</code>.</p>
-<p><strong>Concept Tested:</strong> re.search()</p>
+<p><strong>Concetto verificato:</strong> re.search()</p>
 </details>
 <hr />
 <h4 id="5-cosa-significa-il-quantificatore-in-un-pattern-regex">5. Cosa significa il quantificatore <code>+</code> in un pattern regex?<a class="headerlink" href="#5-cosa-significa-il-quantificatore-in-un-pattern-regex" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Il quantificatore <code>+</code> significa "una o più volte" — l'elemento precedente deve apparire almeno una volta. Per esempio, <code>\d+</code> corrisponde a una o più cifre: corrisponde a <code>"5"</code>, <code>"42"</code>, <code>"1000"</code> ma NON a una stringa vuota. Confronta: <code>*</code> significa zero o più (può essere assente), <code>?</code> significa zero o una (opzionale), <code>{n}</code> significa esattamente n volte.</p>
-<p><strong>Concept Tested:</strong> Quantifiers</p>
+<p><strong>Concetto verificato:</strong> Quantificatori</p>
 </details>
 <hr />
 <h4 id="6-cosa-restituisce-refindallrd-i-have-3-cats-and-12-fish">6. Cosa restituisce <code>re.findall(r"\d+", "I have 3 cats and 12 fish")</code>?<a class="headerlink" href="#6-cosa-restituisce-refindallrd-i-have-3-cats-and-12-fish" title="Permanent link">&para;</a></h4>
@@ -11775,7 +11775,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>re.findall()</code> restituisce una lista di tutte le corrispondenze non sovrapposte come stringhe. Per <code>\d+</code> (una o più cifre) applicato a <code>"I have 3 cats and 12 fish"</code>, trova <code>"3"</code> e <code>"12"</code> e le restituisce come <code>["3", "12"]</code>. A differenza di <code>re.search()</code> che si ferma alla prima corrispondenza, <code>findall()</code> raccoglie tutte le occorrenze.</p>
-<p><strong>Concept Tested:</strong> re.findall()</p>
+<p><strong>Concetto verificato:</strong> re.findall()</p>
 </details>
 <hr />
 <h4 id="7-cosa-produce-resubrs-hello-world-foo">7. Cosa produce <code>re.sub(r"\s+", "-", "hello world  foo")</code>?<a class="headerlink" href="#7-cosa-produce-resubrs-hello-world-foo" title="Permanent link">&para;</a></h4>
@@ -11790,7 +11790,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>re.sub(pattern, replacement, text)</code> sostituisce tutte le corrispondenze del pattern con la stringa di sostituzione. <code>\s+</code> corrisponde a uno o più caratteri di spazio bianco. Lo spazio singolo tra "hello" e "world" e il doppio spazio tra "world" e "foo" vengono entrambi sostituiti con <code>"-"</code>, dando <code>"hello-world-foo"</code>. Per default, <code>re.sub()</code> sostituisce tutte le occorrenze.</p>
-<p><strong>Concept Tested:</strong> re.sub()</p>
+<p><strong>Concetto verificato:</strong> re.sub()</p>
 </details>
 <hr />
 <h4 id="8-cosa-fa-lancora-in-un-pattern-regex">8. Cosa fa l'ancora <code>^</code> in un pattern regex?<a class="headerlink" href="#8-cosa-fa-lancora-in-un-pattern-regex" title="Permanent link">&para;</a></h4>
@@ -11805,7 +11805,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>D</strong>. L'ancora <code>^</code> afferma che la corrispondenza deve verificarsi all'inizio della stringa. Per esempio, <code>r"^\d"</code> corrisponde a stringhe che iniziano con una cifra. Senza <code>^</code>, <code>re.search(r"\d", text)</code> trova una cifra ovunque nel testo. L'ancora <code>$</code> richiede in modo simile che la corrispondenza sia alla fine della stringa. Insieme, <code>^...$</code> corrisponde all'intera stringa.</p>
-<p><strong>Concept Tested:</strong> Anchors</p>
+<p><strong>Concetto verificato:</strong> Ancore</p>
 </details>
 <hr />
 <h4 id="9-cosa-restituisce-resplitrs-apples-orangesbananas-grapes">9. Cosa restituisce <code>re.split(r",\s*", "apples, oranges,bananas,  grapes")</code>?<a class="headerlink" href="#9-cosa-restituisce-resplitrs-apples-orangesbananas-grapes" title="Permanent link">&para;</a></h4>
@@ -11820,7 +11820,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>re.split(pattern, text)</code> divide il testo a ogni corrispondenza del pattern, restituendo una lista dei pezzi. Il pattern <code>r",\s*"</code> corrisponde a una virgola seguita da zero o più caratteri di spazio bianco, gestendo tutti i diversi stili di spaziatura attorno alle virgole. Il risultato è una lista pulita: <code>["apples", "oranges", "bananas", "grapes"]</code>.</p>
-<p><strong>Concept Tested:</strong> re.split()</p>
+<p><strong>Concetto verificato:</strong> re.split()</p>
 </details>
 <hr />
 <h4 id="10-a-cosa-corrisponde-il-carattere-in-unespressione-regolare">10. A cosa corrisponde il carattere <code>.</code> in un'espressione regolare?<a class="headerlink" href="#10-a-cosa-corrisponde-il-carattere-in-unespressione-regolare" title="Permanent link">&para;</a></h4>
@@ -11835,7 +11835,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. In una regex, <code>.</code> è un carattere jolly che corrisponde a qualsiasi singolo carattere eccetto un ritorno a capo (<code>\n</code>). Per esempio, <code>r"c.t"</code> corrisponderebbe a <code>"cat"</code>, <code>"cut"</code>, <code>"c4t"</code>, e <code>"c!t"</code>. Per far corrispondere un punto letterale, fai l'escape: <code>r"\."</code>. I quantificatori <code>*</code> e <code>+</code> controllano la ripetizione — non corrispondono a <code>.</code>.</p>
-<p><strong>Concept Tested:</strong> Pattern Elements</p>
+<p><strong>Concetto verificato:</strong> Elementi delle espressioni regolari</p>
 </details>
 <hr />
 

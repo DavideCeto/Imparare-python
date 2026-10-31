@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Un modulo è semplicemente un file <code>.py</code>. Qualsiasi file Python può essere un modulo — ci scrivi funzioni e variabili, poi usi <code>import nome_modulo</code> in un altro file per accedervi. Python viene anche fornito con molti moduli pre-costruiti (la libreria standard) come <code>math</code>, <code>random</code>, <code>os</code>, <code>sys</code>, e <code>json</code>.</p>
-<p><strong>Concept Tested:</strong> Custom Modules</p>
+<p><strong>Concetto verificato:</strong> Moduli personalizzati</p>
 </details>
 <hr />
 <h4 id="2-cosa-fa-il-guardiano-if-__name__-__main__">2. Cosa fa il guardiano <code>if __name__ == "__main__":</code>?<a class="headerlink" href="#2-cosa-fa-il-guardiano-if-__name__-__main__" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Quando Python esegue un file direttamente, <code>__name__</code> è uguale a <code>"__main__"</code>. Quando un file viene importato come modulo, <code>__name__</code> è uguale al nome del file del modulo. Il guardiano <code>if __name__ == "__main__":</code> si usa per mettere il codice di test o la logica dello script che dovrebbe girare solo quando esegui il file direttamente — non quando un altro programma lo importa.</p>
-<p><strong>Concept Tested:</strong> <strong>name</strong> Guard</p>
+<p><strong>Concetto verificato:</strong> Controllo con <strong>name</strong></p>
 </details>
 <hr />
 <h4 id="3-cosa-contiene-sysargv">3. Cosa contiene <code>sys.argv</code>?<a class="headerlink" href="#3-cosa-contiene-sysargv" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>sys.argv</code> è una lista di stringhe che rappresentano gli argomenti della riga di comando. <code>sys.argv[0]</code> è sempre il nome dello script stesso. Se esegui <code>python my_script.py hello 42</code>, allora <code>sys.argv</code> è uguale a <code>["my_script.py", "hello", "42"]</code>. Questo permette ai programmi di accettare configurazioni dalla riga di comando senza usare <code>input()</code>.</p>
-<p><strong>Concept Tested:</strong> sys Module</p>
+<p><strong>Concetto verificato:</strong> Modulo sys</p>
 </details>
 <hr />
 <h4 id="4-cosa-restituisce-ospathexistsdatatxt">4. Cosa restituisce <code>os.path.exists("data.txt")</code>?<a class="headerlink" href="#4-cosa-restituisce-ospathexistsdatatxt" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>os.path.exists(path)</code> controlla se un file o una directory esiste al percorso dato e restituisce <code>True</code> o <code>False</code>. Questo è utile prima di provare ad aprire un file — puoi controllare prima per evitare un <code>FileNotFoundError</code>. Il sottomodulo <code>os.path</code> ha molte altre funzioni utili come <code>os.path.join()</code> e <code>os.path.basename()</code>.</p>
-<p><strong>Concept Tested:</strong> os Module</p>
+<p><strong>Concetto verificato:</strong> Modulo os</p>
 </details>
 <hr />
 <h4 id="5-cose-json">5. Cos'è JSON?<a class="headerlink" href="#5-cose-json" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. JSON (JavaScript Object Notation) è un formato di testo leggero per i dati strutturati. Usa le parentesi graffe <code>{}</code> per gli oggetti (come i dizionari Python), le parentesi quadre <code>[]</code> per gli array (come le liste Python), e <code>true</code>/<code>false</code>/<code>null</code> per i booleani e None. JSON è il formato più comune per le API web e i file di configurazione, e il modulo <code>json</code> di Python lo rende facile da leggere e scrivere.</p>
-<p><strong>Concept Tested:</strong> JSON Format</p>
+<p><strong>Concetto verificato:</strong> Formato JSON</p>
 </details>
 <hr />
 <h4 id="6-cosa-restituisce-jsonloadsx-1">6. Cosa restituisce <code>json.loads('{"x": 1}')</code>?<a class="headerlink" href="#6-cosa-restituisce-jsonloadsx-1" title="Permanent link">&para;</a></h4>
@@ -11775,7 +11775,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>json.loads(text)</code> analizza una stringa JSON e restituisce l'oggetto Python equivalente. <code>{"x": 1}</code> in JSON diventa un <code>dict</code> Python. Il nome della funzione "loads" sta per "load string". JSON usa le virgolette doppie per le stringhe, il che è Python valido quando la stringa è dentro virgolette singole. Il risultato è un dizionario Python nativo che puoi usare come qualsiasi altro.</p>
-<p><strong>Concept Tested:</strong> json.loads()</p>
+<p><strong>Concetto verificato:</strong> json.loads()</p>
 </details>
 <hr />
 <h4 id="7-cosa-fa-jsondumpsname-alice-age-14">7. Cosa fa <code>json.dumps({"name": "Alice", "age": 14})</code>?<a class="headerlink" href="#7-cosa-fa-jsondumpsname-alice-age-14" title="Permanent link">&para;</a></h4>
@@ -11790,7 +11790,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>json.dumps(obj)</code> converte un oggetto Python (dict, list, numero, stringa, bool, o None) in una stringa in formato JSON. Il nome "dumps" sta per "dump string". Per salvare JSON in un file, usa invece <code>json.dump(obj, file_object)</code>. <code>json.dumps()</code> è utile quando hai bisogno di una stringa JSON in memoria, per esempio per inviarla su una rete.</p>
-<p><strong>Concept Tested:</strong> json.dumps()</p>
+<p><strong>Concetto verificato:</strong> json.dumps()</p>
 </details>
 <hr />
 <h4 id="8-a-quale-tipo-python-corrisponde-true-di-json">8. A quale tipo Python corrisponde <code>true</code> di JSON?<a class="headerlink" href="#8-a-quale-tipo-python-corrisponde-true-di-json" title="Permanent link">&para;</a></h4>
@@ -11805,7 +11805,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. JSON usa <code>true</code> e <code>false</code> minuscoli per i booleani; Python usa <code>True</code> e <code>False</code> con la maiuscola. Quando <code>json.loads()</code> incontra <code>true</code> in JSON, lo converte nel <code>True</code> di Python. In modo simile, <code>false</code> di JSON diventa <code>False</code> di Python, e <code>null</code> di JSON diventa <code>None</code> di Python.</p>
-<p><strong>Concept Tested:</strong> JSON Type Mapping</p>
+<p><strong>Concetto verificato:</strong> Corrispondenza tra tipi JSON e Python</p>
 </details>
 <hr />
 <h4 id="9-cosa-produce-ospathjoinfolder-filetxt">9. Cosa produce <code>os.path.join("folder", "file.txt")</code>?<a class="headerlink" href="#9-cosa-produce-ospathjoinfolder-filetxt" title="Permanent link">&para;</a></h4>
@@ -11820,7 +11820,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>os.path.join()</code> costruisce un percorso di file usando il separatore corretto per il sistema operativo attuale — barra <code>/</code> su Mac e Linux, backslash <code>\</code> su Windows. Non concatenare mai manualmente le stringhe dei percorsi con <code>"/"</code> perché il tuo codice si romperebbe su Windows. Usa sempre <code>os.path.join()</code> per costruire percorsi portabili e multipiattaforma.</p>
-<p><strong>Concept Tested:</strong> os.path</p>
+<p><strong>Concetto verificato:</strong> os.path</p>
 </details>
 <hr />
 <h4 id="10-qual-e-la-differenza-tra-jsonloadsjsondumps-e-jsonloadjsondump">10. Qual è la differenza tra <code>json.loads()</code>/<code>json.dumps()</code> e <code>json.load()</code>/<code>json.dump()</code>?<a class="headerlink" href="#10-qual-e-la-differenza-tra-jsonloadsjsondumps-e-jsonloadjsondump" title="Permanent link">&para;</a></h4>
@@ -11835,7 +11835,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. <code>json.loads(text)</code> analizza da una stringa; <code>json.dumps(obj)</code> serializza in una stringa. <code>json.load(file)</code> legge JSON direttamente da un oggetto file aperto; <code>json.dump(obj, file)</code> scrive JSON direttamente su un oggetto file aperto. Usa le versioni con la <code>s</code> (loads/dumps) per le stringhe in memoria; usa le versioni senza <code>s</code> (load/dump) quando lavori con i file.</p>
-<p><strong>Concept Tested:</strong> json Module Functions</p>
+<p><strong>Concetto verificato:</strong> Funzioni del modulo json</p>
 </details>
 <hr />
 

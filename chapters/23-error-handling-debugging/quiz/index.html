@@ -11700,7 +11700,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Un errore sintattico viene rilevato prima che il programma venga eseguito perché Python non riesce nemmeno a capire il codice. Esempi includono un <code>:</code> mancante dopo <code>if</code>, parentesi non corrispondenti, o un'indentazione sbagliata. Gli errori di runtime (eccezioni) si verificano mentre il programma è in esecuzione. Gli errori logici sono quando il programma gira ma produce la risposta sbagliata.</p>
-<p><strong>Concept Tested:</strong> Types of Errors</p>
+<p><strong>Concetto verificato:</strong> Tipi di errori</p>
 </details>
 <hr />
 <h4 id="2-quale-tipo-di-errore-produce-inthello">2. Quale tipo di errore produce <code>int("hello")</code>?<a class="headerlink" href="#2-quale-tipo-di-errore-produce-inthello" title="Permanent link">&para;</a></h4>
@@ -11715,7 +11715,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Un <code>ValueError</code> si verifica quando una funzione riceve un valore del tipo corretto ma un valore inappropriato per il contesto. <code>int()</code> si aspetta una stringa che sembra un numero, ma <code>"hello"</code> non può essere convertita in un intero. Un <code>TypeError</code> si verificherebbe se passassi un tipo completamente sbagliato (come <code>int([1, 2, 3])</code>).</p>
-<p><strong>Concept Tested:</strong> Common Exception Types</p>
+<p><strong>Concetto verificato:</strong> Tipi di eccezioni comuni</p>
 </details>
 <hr />
 <h4 id="3-cosa-ti-dice-un-traceback-di-python">3. Cosa ti dice un traceback di Python?<a class="headerlink" href="#3-cosa-ti-dice-un-traceback-di-python" title="Permanent link">&para;</a></h4>
@@ -11730,7 +11730,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Un traceback mostra la sequenza di chiamate che ha portato al crash, e soprattutto: il nome del file, il numero di riga, la riga esatta di codice che ha fallito, e il tipo di eccezione con una descrizione. Leggilo dal basso verso l'alto — l'ultima riga dà il tipo di errore e il messaggio, le righe sopra mostrano dove nel codice è successo.</p>
-<p><strong>Concept Tested:</strong> Reading Tracebacks</p>
+<p><strong>Concetto verificato:</strong> Leggere un traceback</p>
 </details>
 <hr />
 <h4 id="4-qual-e-lo-scopo-di-un-blocco-tryexcept">4. Qual è lo scopo di un blocco <code>try/except</code>?<a class="headerlink" href="#4-qual-e-lo-scopo-di-un-blocco-tryexcept" title="Permanent link">&para;</a></h4>
@@ -11745,7 +11745,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Un blocco <code>try/except</code> ti permette di eseguire codice rischioso dentro <code>try:</code> e specificare cosa fare in <code>except:</code> se si verifica un errore. Invece di andare in crash, il programma continua con il codice di gestione dell'errore. Questo è essenziale per scrivere programmi che gestiscono input dell'utente, operazioni su file, o connessioni di rete dove gli errori sono previsti e dovrebbero essere gestiti.</p>
-<p><strong>Concept Tested:</strong> try/except Blocks</p>
+<p><strong>Concetto verificato:</strong> Blocchi try/except</p>
 </details>
 <hr />
 <h4 id="5-quale-eccezione-viene-generata-quando-provi-a-dividere-per-zero">5. Quale eccezione viene generata quando provi a dividere per zero?<a class="headerlink" href="#5-quale-eccezione-viene-generata-quando-provi-a-dividere-per-zero" title="Permanent link">&para;</a></h4>
@@ -11760,7 +11760,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. Python genera <code>ZeroDivisionError</code> quando provi a dividere qualsiasi numero per zero (<code>10 / 0</code>). La catturi specificamente con <code>except ZeroDivisionError:</code>. Controlla sempre un denominatore pari a zero prima di dividere se il denominatore proviene dall'input dell'utente o da un calcolo che potrebbe produrre zero.</p>
-<p><strong>Concept Tested:</strong> Common Exception Types</p>
+<p><strong>Concetto verificato:</strong> Tipi di eccezioni comuni</p>
 </details>
 <hr />
 <h4 id="6-cosa-fa-la-clausola-else-in-un-blocco-tryexceptelse">6. Cosa fa la clausola <code>else</code> in un blocco <code>try/except/else</code>?<a class="headerlink" href="#6-cosa-fa-la-clausola-else-in-un-blocco-tryexceptelse" title="Permanent link">&para;</a></h4>
@@ -11775,7 +11775,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. La clausola <code>else</code> in un blocco <code>try/except</code> gira solo quando il blocco <code>try</code> si è completato con successo — senza nessuna eccezione generata. Questo è un modo pulito di scrivere il codice del "percorso di successo" separatamente dal blocco <code>try</code> stesso. La clausola <code>finally</code>, al contrario, gira sempre indipendentemente dal fatto che si sia verificata un'eccezione.</p>
-<p><strong>Concept Tested:</strong> else and finally Clauses</p>
+<p><strong>Concetto verificato:</strong> Clausole else e finally</p>
 </details>
 <hr />
 <h4 id="7-quando-viene-eseguito-il-blocco-finally">7. Quando viene eseguito il blocco <code>finally</code>?<a class="headerlink" href="#7-quando-viene-eseguito-il-blocco-finally" title="Permanent link">&para;</a></h4>
@@ -11790,7 +11790,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. La clausola <code>finally</code> viene sempre eseguita, indipendentemente da cosa succede nei blocchi <code>try</code> ed <code>except</code>. Gira anche se un'eccezione viene catturata, anche se non viene catturata, e anche se c'è un'istruzione <code>return</code> nel blocco <code>try</code>. Questo rende <code>finally</code> perfetta per operazioni di pulizia come chiudere file o connessioni di rete.</p>
-<p><strong>Concept Tested:</strong> else and finally Clauses</p>
+<p><strong>Concetto verificato:</strong> Clausole else e finally</p>
 </details>
 <hr />
 <h4 id="8-cosa-fa-raise-valueerrorla-velocita-non-puo-essere-negativa">8. Cosa fa <code>raise ValueError("La velocità non può essere negativa.")</code>?<a class="headerlink" href="#8-cosa-fa-raise-valueerrorla-velocita-non-puo-essere-negativa" title="Permanent link">&para;</a></h4>
@@ -11805,7 +11805,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. L'istruzione <code>raise</code> innesca deliberatamente un'eccezione. <code>raise ValueError("messaggio")</code> crea un <code>ValueError</code> con il tuo messaggio personalizzato. Questo è utile per imporre regole nel tuo codice — se viene rilevato un input sbagliato, generi un'eccezione così chi chiama sa che qualcosa non va. Chi chiama può catturarla con <code>try/except ValueError</code>.</p>
-<p><strong>Concept Tested:</strong> raise Statement</p>
+<p><strong>Concetto verificato:</strong> Istruzione raise</p>
 </details>
 <hr />
 <h4 id="9-qual-e-la-differenza-tra-un-errore-di-runtime-e-un-errore-logico">9. Qual è la differenza tra un errore di runtime e un errore logico?<a class="headerlink" href="#9-qual-e-la-differenza-tra-un-errore-di-runtime-e-un-errore-logico" title="Permanent link">&para;</a></h4>
@@ -11820,7 +11820,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>B</strong>. Un errore di runtime (eccezione) fa andare in crash il programma a metà esecuzione con un messaggio di errore — Python ha rilevato qualcosa di sbagliato. Un errore logico è quando il programma gira fino al completamento senza andare in crash ma produce risultati scorretti. Gli errori logici sono spesso i più difficili da trovare perché Python non dà nessun messaggio di errore — devi capire da solo perché l'output è sbagliato.</p>
-<p><strong>Concept Tested:</strong> Types of Errors</p>
+<p><strong>Concetto verificato:</strong> Tipi di errori</p>
 </details>
 <hr />
 <h4 id="10-per-cosa-si-usa-listruzione-assert">10. Per cosa si usa l'istruzione <code>assert</code>?<a class="headerlink" href="#10-per-cosa-si-usa-listruzione-assert" title="Permanent link">&para;</a></h4>
@@ -11835,7 +11835,7 @@
 <details class="question">
 <summary>Mostra risposta</summary>
 <p>La risposta corretta è <strong>C</strong>. <code>assert condizione, "messaggio"</code> controlla che <code>condizione</code> sia <code>True</code>. Se è <code>False</code>, Python genera un <code>AssertionError</code> con il tuo messaggio. Viene comunemente usato nel testing e nel debug per verificare che le assunzioni del tuo codice siano corrette in punti specifici. Per esempio, <code>assert len(items) &gt; 0, "List must not be empty"</code> conferma che la lista ha elementi prima di elaborarla.</p>
-<p><strong>Concept Tested:</strong> assert Statement</p>
+<p><strong>Concetto verificato:</strong> Istruzione assert</p>
 </details>
 <hr />
 
