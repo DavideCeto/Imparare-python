@@ -10,6 +10,15 @@ edit_uri: 'blob/main/docs'
 # Patterns are gitignore-style and relative to docs_dir.
 exclude_docs: |
   img/cover-image-prompt.md
+  # Bozze e materiale di lavoro dell'originale: restano nel repo ma non vengono pubblicati
+  running-python.md
+  advanced-python/
+  jupyter/01-inline-test-setup.md
+  learning-graph/book-metrics.md
+  learning-graph/chapter-metrics.md
+  python-labs/text-only-example.md
+  sims/microsim-ideas.md
+  teachers-guide/prompts/06-microsim-ideas-given-to-fable-5.md
 
 nav:
   - Home: index.md
@@ -300,6 +309,8 @@ nav:
     - Disegnare una Figura: jupyter/02-draw-figure.md
     - Configurare il Canvas su Jupyter Lab: jupyter/02-setup-canvas.md
     - Barre Colorate sul Canvas: jupyter/20-canvas-color-bars.md
+
+  - Eseguire Python in Docker: intermediate/01-docker-python.md
 
   - Esempi di Python Avanzato:
     - Analisi dei Titoli Azionari: advanced/stocks.md
